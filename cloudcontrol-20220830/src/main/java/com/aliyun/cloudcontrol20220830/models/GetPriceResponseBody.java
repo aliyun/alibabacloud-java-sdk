@@ -4,10 +4,15 @@ package com.aliyun.cloudcontrol20220830.models;
 import com.aliyun.tea.*;
 
 public class GetPriceResponseBody extends TeaModel {
+    /**
+     * <p>The price.</p>
+     */
     @NameInMap("price")
     public GetPriceResponseBodyPrice price;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
@@ -37,6 +42,8 @@ public class GetPriceResponseBody extends TeaModel {
 
     public static class GetPriceResponseBodyPriceModuleDetails extends TeaModel {
         /**
+         * <p>The discount price.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.02</p>
          */
@@ -44,6 +51,8 @@ public class GetPriceResponseBody extends TeaModel {
         public Float costAfterDiscount;
 
         /**
+         * <p>The discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
@@ -51,6 +60,8 @@ public class GetPriceResponseBody extends TeaModel {
         public Float invoiceDiscount;
 
         /**
+         * <p>The code of the pricing module.</p>
+         * 
          * <strong>example:</strong>
          * <p>InstanceRent</p>
          */
@@ -58,6 +69,8 @@ public class GetPriceResponseBody extends TeaModel {
         public String moduleCode;
 
         /**
+         * <p>The name of the pricing module.</p>
+         * 
          * <strong>example:</strong>
          * <p>InstanceRent</p>
          */
@@ -65,6 +78,8 @@ public class GetPriceResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000.0</p>
          */
@@ -72,6 +87,8 @@ public class GetPriceResponseBody extends TeaModel {
         public Float originalCost;
 
         /**
+         * <p>The price type.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -135,15 +152,23 @@ public class GetPriceResponseBody extends TeaModel {
 
     public static class GetPriceResponseBodyPricePromotionDetails extends TeaModel {
         /**
+         * <p>The description of the promotion.</p>
+         * 
          * <strong>example:</strong>
          * <p>37284</p>
          */
         @NameInMap("promotionDesc")
         public String promotionDesc;
 
+        /**
+         * <p>The ID of the promotion.</p>
+         */
         @NameInMap("promotionId")
         public Long promotionId;
 
+        /**
+         * <p>The name of the promotion.</p>
+         */
         @NameInMap("promotionName")
         public String promotionName;
 
@@ -180,6 +205,8 @@ public class GetPriceResponseBody extends TeaModel {
 
     public static class GetPriceResponseBodyPrice extends TeaModel {
         /**
+         * <p>The currency type. Valid values: CNY: Chinese Yuan. USD: US dollar. JPY: Japanese Yen.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -187,26 +214,38 @@ public class GetPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */
         @NameInMap("discountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The order details of the pricing module.</p>
+         */
         @NameInMap("moduleDetails")
         public java.util.List<GetPriceResponseBodyPriceModuleDetails> moduleDetails;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>760.0</p>
          */
         @NameInMap("originalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The details of the promotion.</p>
+         */
         @NameInMap("promotionDetails")
         public java.util.List<GetPriceResponseBodyPricePromotionDetails> promotionDetails;
 
         /**
+         * <p>The discount price.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0</p>
          */

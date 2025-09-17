@@ -3,7 +3,7 @@ package com.aliyun.cloudcontrol20220830.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteResourceRequest extends TeaModel {
+public class DeleteResourceShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. If a cloud service supports idempotence, the parameter takes effect.</p>
      * 
@@ -14,7 +14,7 @@ public class DeleteResourceRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("filter")
-    public java.util.Map<String, ?> filter;
+    public String filterShrink;
 
     /**
      * <p>The region. This parameter is required if a cloud service is a regionalized.</p>
@@ -25,12 +25,12 @@ public class DeleteResourceRequest extends TeaModel {
     @NameInMap("regionId")
     public String regionId;
 
-    public static DeleteResourceRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteResourceRequest self = new DeleteResourceRequest();
+    public static DeleteResourceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteResourceShrinkRequest self = new DeleteResourceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteResourceRequest setClientToken(String clientToken) {
+    public DeleteResourceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -38,15 +38,15 @@ public class DeleteResourceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DeleteResourceRequest setFilter(java.util.Map<String, ?> filter) {
-        this.filter = filter;
+    public DeleteResourceShrinkRequest setFilterShrink(String filterShrink) {
+        this.filterShrink = filterShrink;
         return this;
     }
-    public java.util.Map<String, ?> getFilter() {
-        return this.filter;
+    public String getFilterShrink() {
+        return this.filterShrink;
     }
 
-    public DeleteResourceRequest setRegionId(String regionId) {
+    public DeleteResourceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

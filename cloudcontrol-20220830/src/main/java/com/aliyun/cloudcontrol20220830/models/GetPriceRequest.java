@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPriceRequest extends TeaModel {
     /**
+     * <p>The region ID. This parameter is required if the cloud product is deployed in a region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,8 @@ public class GetPriceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The attributes based on which the price is queried (in JSON format).</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *         &quot;LoadBalancerName&quot;: &quot;cc-test&quot;,

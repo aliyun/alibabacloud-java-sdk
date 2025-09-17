@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,16 +14,23 @@ public class ListProductsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>Redis</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The cloud services.</p>
+     */
     @NameInMap("products")
     public java.util.List<ListProductsResponseBodyProducts> products;
 
     /**
+     * <p>The ID of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
@@ -29,6 +38,8 @@ public class ListProductsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,8 @@ public class ListProductsResponseBody extends TeaModel {
 
     public static class ListProductsResponseBodyProducts extends TeaModel {
         /**
+         * <p>The code of the service.</p>
+         * 
          * <strong>example:</strong>
          * <p>ECS</p>
          */
@@ -89,6 +102,8 @@ public class ListProductsResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Elastic Compute Service</p>
          */

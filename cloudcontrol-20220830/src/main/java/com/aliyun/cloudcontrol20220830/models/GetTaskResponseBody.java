@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
     /**
+     * <p>The ID of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the task.</p>
+     */
     @NameInMap("task")
     public GetTaskResponseBodyTask task;
 
@@ -37,6 +42,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskError extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>OperationFailure.OperationFailed</p>
          */
@@ -44,6 +51,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *      &quot;requestId&quot;: &quot;123****&quot;,
@@ -79,16 +88,23 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTask extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-09T00:46:03Z</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The error returned for the task.</p>
+         */
         @NameInMap("error")
         public GetTaskResponseBodyTaskError error;
 
         /**
+         * <p>The code of the service.</p>
+         * 
          * <strong>example:</strong>
          * <p>ECS</p>
          */
@@ -96,6 +112,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String product;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -103,6 +121,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-8vbascjthm7kzhp3****</p>
          */
@@ -110,6 +130,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The path of the resources. The relative resource ID. The resource path contains the complete resource location (parent resource/child resource).</p>
+         * 
          * <strong>example:</strong>
          * <p>Instance/i-8vbascjthm7kzhp3****
          * Instance/r-8vbf5abe31c9c4d4/Account/cctest</p>
@@ -118,6 +140,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String resourcePath;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Instance</p>
          */
@@ -125,6 +149,14 @@ public class GetTaskResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The task state.</p>
+         * <p>Pending</p>
+         * <p>Running</p>
+         * <p>Succeeded</p>
+         * <p>Failed</p>
+         * <p>Cancelling</p>
+         * <p>Cancelled.</p>
+         * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
          */
@@ -132,6 +164,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the task operation. Valid values: Create, Update, and Delete.</p>
+         * 
          * <strong>example:</strong>
          * <p>Create</p>
          */
@@ -139,6 +173,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String taskAction;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-433aead756057fff8189a7ce5****</p>
          */

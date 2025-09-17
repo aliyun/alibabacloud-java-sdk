@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourcesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned. Return result of the List operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class GetResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. Return result of the List operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
      */
@@ -19,19 +23,29 @@ public class GetResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The specified resource. Return result of the Get operation.</p>
+     */
     @NameInMap("resource")
     public GetResourcesResponseBodyResource resource;
 
+    /**
+     * <p>The resource list. Return result of the List operation.</p>
+     */
     @NameInMap("resources")
     public java.util.List<GetResourcesResponseBodyResources> resources;
 
     /**
+     * <p>The total number of entries returned. Return result of the List operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -93,6 +107,8 @@ public class GetResourcesResponseBody extends TeaModel {
 
     public static class GetResourcesResponseBodyResource extends TeaModel {
         /**
+         * <p>The resource properties in the JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
          */
@@ -100,6 +116,8 @@ public class GetResourcesResponseBody extends TeaModel {
         public java.util.Map<String, ?> resourceAttributes;
 
         /**
+         * <p>The ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cctest</p>
          */
@@ -131,6 +149,8 @@ public class GetResourcesResponseBody extends TeaModel {
 
     public static class GetResourcesResponseBodyResources extends TeaModel {
         /**
+         * <p>The resource properties in the JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
          */
@@ -138,6 +158,8 @@ public class GetResourcesResponseBody extends TeaModel {
         public java.util.Map<String, ?> resourceAttributes;
 
         /**
+         * <p>The ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cctest</p>
          */

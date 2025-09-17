@@ -8,6 +8,10 @@ public class ListResourceTypesHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>Select the language in which the response is returned.</p>
+     * <p>zh_CH: Chinese (default).</p>
+     * <p>en_US: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh_CH</p>
      */

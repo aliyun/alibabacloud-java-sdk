@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypesShrinkRequest extends TeaModel {
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,12 +14,17 @@ public class ListResourceTypesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS::Disk</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The information about the resource types.</p>
+     */
     @NameInMap("resourceTypes")
     public String resourceTypesShrink;
 

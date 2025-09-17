@@ -27,8 +27,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only tasks that are in the Pending or Running state can be canceled.
+     * You can call the CancelTask operation to cancel a Cloud Control API task, but the tasks that have been started in the downstream Alibaba Cloud services cannot be canceled.</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消任务</p>
+     * <p>Calls this operation to cancel a specified asynchronous task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -53,8 +57,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only tasks that are in the Pending or Running state can be canceled.
+     * You can call the CancelTask operation to cancel a Cloud Control API task, but the tasks that have been started in the downstream Alibaba Cloud services cannot be canceled.</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消任务</p>
+     * <p>Calls this operation to cancel a specified asynchronous task.</p>
      * @return CancelTaskResponse
      */
     public CancelTaskResponse cancelTask(String taskId) throws Exception {
@@ -64,8 +72,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建资源</p>
+     * <p>Calls this operation to create resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request CreateResourceRequest
@@ -104,8 +115,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建资源</p>
+     * <p>Calls this operation to create resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request CreateResourceRequest
@@ -118,20 +132,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除资源</p>
+     * <p>Calls this operation to delete resources.</p>
      * 
      * @param requestPath the whole path of resource string
-     * @param request DeleteResourceRequest
+     * @param tmpReq DeleteResourceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteResourceResponse
      */
-    public DeleteResourceResponse deleteResourceWithOptions(String requestPath, DeleteResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DeleteResourceResponse deleteResourceWithOptions(String requestPath, DeleteResourceRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteResourceShrinkRequest request = new DeleteResourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "filter", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("filter", request.filterShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -157,8 +184,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除资源</p>
+     * <p>Calls this operation to delete resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request DeleteResourceRequest
@@ -172,7 +202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询价格</p>
+     * <p>An RFQ interface through which users can query resource prices.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param tmpReq GetPriceRequest
@@ -217,7 +247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询价格</p>
+     * <p>An RFQ interface through which users can query resource prices.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request GetPriceRequest
@@ -231,7 +261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源元数据</p>
+     * <p>You can call the operation to obtain resource metadata.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param headers GetResourceTypeHeaders
@@ -267,7 +297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源元数据</p>
+     * <p>You can call the operation to obtain resource metadata.</p>
      * 
      * @param requestPath the whole path of resource string
      * @return GetResourceTypeResponse
@@ -279,8 +309,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
+     * You can call this operation to query resources List and Get based on different request paths.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源</p>
+     * <p>You can call the operation to query resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param tmpReq GetResourcesRequest
@@ -332,8 +366,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
+     * You can call this operation to query resources List and Get based on different request paths.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源</p>
+     * <p>You can call the operation to query resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request GetResourcesRequest
@@ -347,10 +385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>GET /api/v1/tasks/{taskId}。</p>
+     * <p>GET /api/v1/tasks/{taskId}.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询任务</p>
+     * <p>Calls this operation to query a specified asynchronous task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -376,10 +414,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>GET /api/v1/tasks/{taskId}。</p>
+     * <p>GET /api/v1/tasks/{taskId}.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询任务</p>
+     * <p>Calls this operation to query a specified asynchronous task.</p>
      * @return GetTaskResponse
      */
     public GetTaskResponse getTask(String taskId) throws Exception {
@@ -390,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举资源属性可选值</p>
+     * <p>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param tmpReq ListDataSourcesRequest
@@ -435,7 +473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举资源属性可选值</p>
+     * <p>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request ListDataSourcesRequest
@@ -449,10 +487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>GET /api/v1/providers/{provider}/products。</p>
+     * <p>GET /api/v1/providers/{provider}/products.</p>
      * 
      * <b>summary</b> : 
-     * <p>列举资源类型</p>
+     * <p>Calls this operation to list the supported services.</p>
      * 
      * @param request ListProductsRequest
      * @param headers ListProductsHeaders
@@ -499,10 +537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>GET /api/v1/providers/{provider}/products。</p>
+     * <p>GET /api/v1/providers/{provider}/products.</p>
      * 
      * <b>summary</b> : 
-     * <p>列举资源类型</p>
+     * <p>Calls this operation to list the supported services.</p>
      * 
      * @param request ListProductsRequest
      * @return ListProductsResponse
@@ -515,10 +553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>GET /api/v1/providers/{provider}/products/{product}/resourceTypes。</p>
+     * <p>GET /api/v1/providers/{provider}/products/{product}/resourceTypes.</p>
      * 
      * <b>summary</b> : 
-     * <p>列举资源类型</p>
+     * <p>Calls this operation to list the resource types of a service.</p>
      * 
      * @param tmpReq ListResourceTypesRequest
      * @param headers ListResourceTypesHeaders
@@ -575,10 +613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>GET /api/v1/providers/{provider}/products/{product}/resourceTypes。</p>
+     * <p>GET /api/v1/providers/{provider}/products/{product}/resourceTypes.</p>
      * 
      * <b>summary</b> : 
-     * <p>列举资源类型</p>
+     * <p>Calls this operation to list the resource types of a service.</p>
      * 
      * @param request ListResourceTypesRequest
      * @return ListResourceTypesResponse
@@ -590,8 +628,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.
+     * If resources fail to be updated at any time, the Cloud Control API does not roll the resource back to the original status.
+     * The resource APIs cannot be rolled back. If the API operation is partially failed to be called, you can call the GetResource operation to view the latest status of the resource. If necessary, you can call the UpdateResource or DeleteResource operation to manually compensate for the failure.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新资源</p>
+     * <p>Calls this operation to update resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request UpdateResourceRequest
@@ -630,8 +673,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.
+     * If resources fail to be updated at any time, the Cloud Control API does not roll the resource back to the original status.
+     * The resource APIs cannot be rolled back. If the API operation is partially failed to be called, you can call the GetResource operation to view the latest status of the resource. If necessary, you can call the UpdateResource or DeleteResource operation to manually compensate for the failure.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新资源</p>
+     * <p>Calls this operation to update resources.</p>
      * 
      * @param requestPath the whole path of resource string
      * @param request UpdateResourceRequest

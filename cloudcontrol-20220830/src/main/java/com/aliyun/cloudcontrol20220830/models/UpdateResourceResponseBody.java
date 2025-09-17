@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
@@ -12,6 +14,8 @@ public class UpdateResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the asynchronous task. If the operation is asynchronous, this field is returned. In this case, the HTTP status code 202 is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-433aead756057fff8189a7ce5****</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateResourceResponseBody extends TeaModel {
     /**
+     * <p>The ID of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
@@ -12,6 +14,8 @@ public class CreateResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>cctest</p>
      */
@@ -19,6 +23,8 @@ public class CreateResourceResponseBody extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The path of the resources. The relative resource ID. The resource path contains the complete resource location (parent resource/child resource).</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance/r-8vbf5abe31c9c4d4/Account/cctest</p>
      */
@@ -26,6 +32,8 @@ public class CreateResourceResponseBody extends TeaModel {
     public String resourcePath;
 
     /**
+     * <p>The ID of the asynchronous task. If the operation is asynchronous, this field is returned. In this case, the HTTP status code 202 is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-433aead756057fff8189a7ce5****</p>
      */
