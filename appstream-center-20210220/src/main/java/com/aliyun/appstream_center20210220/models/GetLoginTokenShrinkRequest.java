@@ -14,6 +14,9 @@ public class GetLoginTokenShrinkRequest extends TeaModel {
     @NameInMap("AvailableFeatures")
     public String availableFeaturesShrink;
 
+    @NameInMap("Channel")
+    public String channel;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -261,6 +264,14 @@ public class GetLoginTokenShrinkRequest extends TeaModel {
     }
     public String getAvailableFeaturesShrink() {
         return this.availableFeaturesShrink;
+    }
+
+    public GetLoginTokenShrinkRequest setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
     }
 
     public GetLoginTokenShrinkRequest setClientId(String clientId) {

@@ -14,6 +14,9 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("AvailableFeatures")
     public java.util.Map<String, String> availableFeatures;
 
+    @NameInMap("Channel")
+    public String channel;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -261,6 +264,14 @@ public class GetLoginTokenRequest extends TeaModel {
     }
     public java.util.Map<String, String> getAvailableFeatures() {
         return this.availableFeatures;
+    }
+
+    public GetLoginTokenRequest setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
     }
 
     public GetLoginTokenRequest setClientId(String clientId) {
