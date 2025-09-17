@@ -205,8 +205,8 @@ public class CreateImageCacheRequest extends TeaModel {
          * <strong>example:</strong>
          * <p>myusername</p>
          */
-        @NameInMap("UserName")
-        public String userName;
+        @NameInMap("Username")
+        public String username;
 
         public static CreateImageCacheRequestImageRegistryCredentials build(java.util.Map<String, ?> map) throws Exception {
             CreateImageCacheRequestImageRegistryCredentials self = new CreateImageCacheRequestImageRegistryCredentials();
@@ -245,12 +245,12 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.usePlainHttp;
         }
 
-        public CreateImageCacheRequestImageRegistryCredentials setUserName(String userName) {
-            this.userName = userName;
+        public CreateImageCacheRequestImageRegistryCredentials setUsername(String username) {
+            this.username = username;
             return this;
         }
-        public String getUserName() {
-            return this.userName;
+        public String getUsername() {
+            return this.username;
         }
 
     }
