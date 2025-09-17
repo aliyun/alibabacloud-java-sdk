@@ -757,6 +757,12 @@ public class CreateDomainRequest extends TeaModel {
         @NameInMap("SniHost")
         public String sniHost;
 
+        @NameInMap("WLProxyClientIp")
+        public Boolean WLProxyClientIp;
+
+        @NameInMap("WebServerType")
+        public Boolean webServerType;
+
         /**
          * <p>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
@@ -765,6 +771,12 @@ public class CreateDomainRequest extends TeaModel {
          */
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
+
+        @NameInMap("XClientIp")
+        public Boolean XClientIp;
+
+        @NameInMap("XTrueIp")
+        public Boolean XTrueIp;
 
         /**
          * <p>Specifies whether to use the X-Forward-For-Proto header field to pass the protocol used by WAF to forward requests to the origin server. Valid values:</p>
@@ -912,12 +924,44 @@ public class CreateDomainRequest extends TeaModel {
             return this.sniHost;
         }
 
+        public CreateDomainRequestRedirect setWLProxyClientIp(Boolean WLProxyClientIp) {
+            this.WLProxyClientIp = WLProxyClientIp;
+            return this;
+        }
+        public Boolean getWLProxyClientIp() {
+            return this.WLProxyClientIp;
+        }
+
+        public CreateDomainRequestRedirect setWebServerType(Boolean webServerType) {
+            this.webServerType = webServerType;
+            return this;
+        }
+        public Boolean getWebServerType() {
+            return this.webServerType;
+        }
+
         public CreateDomainRequestRedirect setWriteTimeout(Integer writeTimeout) {
             this.writeTimeout = writeTimeout;
             return this;
         }
         public Integer getWriteTimeout() {
             return this.writeTimeout;
+        }
+
+        public CreateDomainRequestRedirect setXClientIp(Boolean XClientIp) {
+            this.XClientIp = XClientIp;
+            return this;
+        }
+        public Boolean getXClientIp() {
+            return this.XClientIp;
+        }
+
+        public CreateDomainRequestRedirect setXTrueIp(Boolean XTrueIp) {
+            this.XTrueIp = XTrueIp;
+            return this;
+        }
+        public Boolean getXTrueIp() {
+            return this.XTrueIp;
         }
 
         public CreateDomainRequestRedirect setXffProto(Boolean xffProto) {

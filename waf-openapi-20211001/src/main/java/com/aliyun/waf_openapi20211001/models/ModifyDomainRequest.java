@@ -728,6 +728,20 @@ public class ModifyDomainRequest extends TeaModel {
         public String sniHost;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("WLProxyClientIp")
+        public Boolean WLProxyClientIp;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("WebServerType")
+        public Boolean webServerType;
+
+        /**
          * <p>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
@@ -735,6 +749,20 @@ public class ModifyDomainRequest extends TeaModel {
          */
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("XClientIp")
+        public Boolean XClientIp;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("XTrueIp")
+        public Boolean XTrueIp;
 
         /**
          * <p>Specifies whether to use the X-Forward-For-Proto header field to pass the protocol used by WAF to forward requests to the origin server. Valid values:</p>
@@ -882,12 +910,44 @@ public class ModifyDomainRequest extends TeaModel {
             return this.sniHost;
         }
 
+        public ModifyDomainRequestRedirect setWLProxyClientIp(Boolean WLProxyClientIp) {
+            this.WLProxyClientIp = WLProxyClientIp;
+            return this;
+        }
+        public Boolean getWLProxyClientIp() {
+            return this.WLProxyClientIp;
+        }
+
+        public ModifyDomainRequestRedirect setWebServerType(Boolean webServerType) {
+            this.webServerType = webServerType;
+            return this;
+        }
+        public Boolean getWebServerType() {
+            return this.webServerType;
+        }
+
         public ModifyDomainRequestRedirect setWriteTimeout(Integer writeTimeout) {
             this.writeTimeout = writeTimeout;
             return this;
         }
         public Integer getWriteTimeout() {
             return this.writeTimeout;
+        }
+
+        public ModifyDomainRequestRedirect setXClientIp(Boolean XClientIp) {
+            this.XClientIp = XClientIp;
+            return this;
+        }
+        public Boolean getXClientIp() {
+            return this.XClientIp;
+        }
+
+        public ModifyDomainRequestRedirect setXTrueIp(Boolean XTrueIp) {
+            this.XTrueIp = XTrueIp;
+            return this;
+        }
+        public Boolean getXTrueIp() {
+            return this.XTrueIp;
         }
 
         public ModifyDomainRequestRedirect setXffProto(Boolean xffProto) {

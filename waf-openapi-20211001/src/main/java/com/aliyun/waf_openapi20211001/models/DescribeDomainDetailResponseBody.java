@@ -890,6 +890,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("SniHost")
         public String sniHost;
 
+        @NameInMap("WLProxyClientIp")
+        public Boolean WLProxyClientIp;
+
+        @NameInMap("WebServerType")
+        public Boolean webServerType;
+
         /**
          * <p>The write timeout period. Unit: seconds. Valid values: 5 to 1800.</p>
          * 
@@ -898,6 +904,12 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
          */
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
+
+        @NameInMap("XClientIp")
+        public Boolean XClientIp;
+
+        @NameInMap("XTrueIp")
+        public Boolean XTrueIp;
 
         /**
          * <p>Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
@@ -1047,12 +1059,44 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             return this.sniHost;
         }
 
+        public DescribeDomainDetailResponseBodyRedirect setWLProxyClientIp(Boolean WLProxyClientIp) {
+            this.WLProxyClientIp = WLProxyClientIp;
+            return this;
+        }
+        public Boolean getWLProxyClientIp() {
+            return this.WLProxyClientIp;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setWebServerType(Boolean webServerType) {
+            this.webServerType = webServerType;
+            return this;
+        }
+        public Boolean getWebServerType() {
+            return this.webServerType;
+        }
+
         public DescribeDomainDetailResponseBodyRedirect setWriteTimeout(Integer writeTimeout) {
             this.writeTimeout = writeTimeout;
             return this;
         }
         public Integer getWriteTimeout() {
             return this.writeTimeout;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setXClientIp(Boolean XClientIp) {
+            this.XClientIp = XClientIp;
+            return this;
+        }
+        public Boolean getXClientIp() {
+            return this.XClientIp;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setXTrueIp(Boolean XTrueIp) {
+            this.XTrueIp = XTrueIp;
+            return this;
+        }
+        public Boolean getXTrueIp() {
+            return this.XTrueIp;
         }
 
         public DescribeDomainDetailResponseBodyRedirect setXffProto(Boolean xffProto) {
