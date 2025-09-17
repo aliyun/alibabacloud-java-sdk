@@ -4030,6 +4030,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建四层应用</p>
+     * 
+     * @param tmpReq CreateTransportLayerApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTransportLayerApplicationResponse
+     */
+    public CreateTransportLayerApplicationResponse createTransportLayerApplicationWithOptions(CreateTransportLayerApplicationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateTransportLayerApplicationShrinkRequest request = new CreateTransportLayerApplicationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
+            request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crossBorderOptimization)) {
+            query.put("CrossBorderOptimization", request.crossBorderOptimization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipAccessRule)) {
+            query.put("IpAccessRule", request.ipAccessRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6)) {
+            query.put("Ipv6", request.ipv6);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordName)) {
+            query.put("RecordName", request.recordName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rulesShrink)) {
+            query.put("Rules", request.rulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTransportLayerApplication"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTransportLayerApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建四层应用</p>
+     * 
+     * @param request CreateTransportLayerApplicationRequest
+     * @return CreateTransportLayerApplicationResponse
+     */
+    public CreateTransportLayerApplicationResponse createTransportLayerApplication(CreateTransportLayerApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTransportLayerApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建网页监测配置</p>
      * 
      * @param request CreateUrlObservationRequest
@@ -6031,6 +6101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RecordId", request.recordId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -6580,6 +6654,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSiteOriginClientCertificateResponse deleteSiteOriginClientCertificate(DeleteSiteOriginClientCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSiteOriginClientCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除四层应用</p>
+     * 
+     * @param request DeleteTransportLayerApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTransportLayerApplicationResponse
+     */
+    public DeleteTransportLayerApplicationResponse deleteTransportLayerApplicationWithOptions(DeleteTransportLayerApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTransportLayerApplication"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTransportLayerApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除四层应用</p>
+     * 
+     * @param request DeleteTransportLayerApplicationRequest
+     * @return DeleteTransportLayerApplicationResponse
+     */
+    public DeleteTransportLayerApplicationResponse deleteTransportLayerApplication(DeleteTransportLayerApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteTransportLayerApplicationWithOptions(request, runtime);
     }
 
     /**
@@ -10722,6 +10844,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询四层应用详情</p>
+     * 
+     * @param request GetTransportLayerApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTransportLayerApplicationResponse
+     */
+    public GetTransportLayerApplicationResponse getTransportLayerApplicationWithOptions(GetTransportLayerApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTransportLayerApplication"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTransportLayerApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询四层应用详情</p>
+     * 
+     * @param request GetTransportLayerApplicationRequest
+     * @return GetTransportLayerApplicationResponse
+     */
+    public GetTransportLayerApplicationResponse getTransportLayerApplication(GetTransportLayerApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTransportLayerApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the execution status and running information of a file upload task based on the task ID.</p>
      * 
      * @param request GetUploadTaskRequest
@@ -13302,6 +13464,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询四层应用列表</p>
+     * 
+     * @param request ListTransportLayerApplicationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTransportLayerApplicationsResponse
+     */
+    public ListTransportLayerApplicationsResponse listTransportLayerApplicationsWithOptions(ListTransportLayerApplicationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTransportLayerApplications"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTransportLayerApplicationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询四层应用列表</p>
+     * 
+     * @param request ListTransportLayerApplicationsRequest
+     * @return ListTransportLayerApplicationsResponse
+     */
+    public ListTransportLayerApplicationsResponse listTransportLayerApplications(ListTransportLayerApplicationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTransportLayerApplicationsWithOptions(request, runtime);
     }
 
     /**
@@ -18544,6 +18746,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTieredCacheResponse updateTieredCache(UpdateTieredCacheRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTieredCacheWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改四层应用</p>
+     * 
+     * @param tmpReq UpdateTransportLayerApplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTransportLayerApplicationResponse
+     */
+    public UpdateTransportLayerApplicationResponse updateTransportLayerApplicationWithOptions(UpdateTransportLayerApplicationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateTransportLayerApplicationShrinkRequest request = new UpdateTransportLayerApplicationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
+            request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossBorderOptimization)) {
+            query.put("CrossBorderOptimization", request.crossBorderOptimization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipAccessRule)) {
+            query.put("IpAccessRule", request.ipAccessRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6)) {
+            query.put("Ipv6", request.ipv6);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rulesShrink)) {
+            query.put("Rules", request.rulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTransportLayerApplication"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTransportLayerApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改四层应用</p>
+     * 
+     * @param request UpdateTransportLayerApplicationRequest
+     * @return UpdateTransportLayerApplicationResponse
+     */
+    public UpdateTransportLayerApplicationResponse updateTransportLayerApplication(UpdateTransportLayerApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateTransportLayerApplicationWithOptions(request, runtime);
     }
 
     /**

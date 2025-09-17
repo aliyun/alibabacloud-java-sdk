@@ -110,6 +110,7 @@ public class CreateRecordShrinkRequest extends TeaModel {
 
     /**
      * <p>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

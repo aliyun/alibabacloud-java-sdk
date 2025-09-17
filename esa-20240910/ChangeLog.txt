@@ -1,3 +1,12 @@
+2025-09-17 Version: 2.36.0
+- Support API CreateTransportLayerApplication.
+- Support API DeleteTransportLayerApplication.
+- Support API GetTransportLayerApplication.
+- Support API ListTransportLayerApplications.
+- Support API UpdateTransportLayerApplication.
+- Update API DeleteRecord: add request parameters SecurityToken.
+
+
 2025-09-16 Version: 2.35.0
 - Support API CreateHttpIncomingRequestHeaderModificationRule.
 - Support API CreateHttpIncomingResponseHeaderModificationRule.

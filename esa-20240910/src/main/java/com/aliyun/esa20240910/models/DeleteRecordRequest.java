@@ -14,6 +14,9 @@ public class DeleteRecordRequest extends TeaModel {
     @NameInMap("RecordId")
     public Long recordId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DeleteRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRecordRequest self = new DeleteRecordRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class DeleteRecordRequest extends TeaModel {
     }
     public Long getRecordId() {
         return this.recordId;
+    }
+
+    public DeleteRecordRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
