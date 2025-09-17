@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeUserResourcesResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
      */
     @NameInMap("NextToken")
@@ -31,9 +38,24 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     @NameInMap("Resources")
     public java.util.List<DescribeUserResourcesResponseBodyResources> resources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeUserResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserResourcesResponseBody self = new DescribeUserResourcesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeUserResourcesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public DescribeUserResourcesResponseBody setNextToken(String nextToken) {
@@ -74,6 +96,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     }
     public java.util.List<DescribeUserResourcesResponseBodyResources> getResources() {
         return this.resources;
+    }
+
+    public DescribeUserResourcesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeUserResourcesResponseBodyResourcesClients extends TeaModel {

@@ -60,6 +60,7 @@ public class DescribeUserResourcesRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("DualCenterForward")
+    @Deprecated
     public Boolean dualCenterForward;
 
     /**
@@ -118,6 +119,20 @@ public class DescribeUserResourcesRequest extends TeaModel {
      */
     @NameInMap("ProtocolType")
     public String protocolType;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("QueryDesktopDurationList")
+    public Boolean queryDesktopDurationList;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("QueryDesktopTimers")
+    public Boolean queryDesktopTimers;
 
     /**
      * <strong>example:</strong>
@@ -235,6 +250,7 @@ public class DescribeUserResourcesRequest extends TeaModel {
         return this.clientVersion;
     }
 
+    @Deprecated
     public DescribeUserResourcesRequest setDualCenterForward(Boolean dualCenterForward) {
         this.dualCenterForward = dualCenterForward;
         return this;
@@ -313,6 +329,22 @@ public class DescribeUserResourcesRequest extends TeaModel {
     }
     public String getProtocolType() {
         return this.protocolType;
+    }
+
+    public DescribeUserResourcesRequest setQueryDesktopDurationList(Boolean queryDesktopDurationList) {
+        this.queryDesktopDurationList = queryDesktopDurationList;
+        return this;
+    }
+    public Boolean getQueryDesktopDurationList() {
+        return this.queryDesktopDurationList;
+    }
+
+    public DescribeUserResourcesRequest setQueryDesktopTimers(Boolean queryDesktopTimers) {
+        this.queryDesktopTimers = queryDesktopTimers;
+        return this;
+    }
+    public Boolean getQueryDesktopTimers() {
+        return this.queryDesktopTimers;
     }
 
     public DescribeUserResourcesRequest setQueryFotaUpdate(Boolean queryFotaUpdate) {

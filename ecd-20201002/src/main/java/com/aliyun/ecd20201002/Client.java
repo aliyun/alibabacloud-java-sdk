@@ -689,6 +689,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProtocolType", request.protocolType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryDesktopDurationList)) {
+            query.put("QueryDesktopDurationList", request.queryDesktopDurationList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryDesktopTimers)) {
+            query.put("QueryDesktopTimers", request.queryDesktopTimers);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.queryFotaUpdate)) {
             query.put("QueryFotaUpdate", request.queryFotaUpdate);
         }
