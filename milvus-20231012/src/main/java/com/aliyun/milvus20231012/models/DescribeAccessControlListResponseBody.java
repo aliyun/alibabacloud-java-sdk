@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessControlListResponseBody extends TeaModel {
     /**
+     * <p>The detailed information about the failed permission verification.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DescribeAccessControlListResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Failed to find instance c-123xxx</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The error code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance.NotFound</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABCD-1234-5678-EFGH</p>
      */
@@ -43,6 +56,8 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,12 +127,17 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
 
     public static class DescribeAccessControlListResponseBodyData extends TeaModel {
         /**
+         * <p>AclId for public network access control.</p>
+         * 
          * <strong>example:</strong>
          * <p>acl-xxxx</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>The CIDR blocks.</p>
+         */
         @NameInMap("Cidr")
         public java.util.List<String> cidr;
 

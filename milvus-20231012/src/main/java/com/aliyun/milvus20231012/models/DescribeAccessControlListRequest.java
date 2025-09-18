@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessControlListRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-123xxx</p>
      */

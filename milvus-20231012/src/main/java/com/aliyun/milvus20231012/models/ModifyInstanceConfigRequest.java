@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The reason for the update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String reason;
 
     /**
+     * <p>User-defined configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>dataCoord:\n  segment:\n    maxSize: 1024</p>
      */

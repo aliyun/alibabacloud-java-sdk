@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
+     * <p>The detailed information about the failed permission verification.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListInstancesResponseBodyData> data;
 
     /**
+     * <p>The error code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance.NotFound</p>
      */
@@ -22,6 +29,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Failed to find instance c-123xxx</p>
      */
@@ -29,6 +38,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABCD-1234-5678-EFGH</p>
      */
@@ -43,6 +56,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -127,6 +144,16 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataClusterInfoMilvusResourceInfoList extends TeaModel {
         /**
+         * <p>The type of the component. Valid values:</p>
+         * <ul>
+         * <li>standalone</li>
+         * <li>proxy</li>
+         * <li>mix_coordinator</li>
+         * <li>query</li>
+         * <li>index</li>
+         * <li>data</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>standalone</p>
          */
@@ -134,6 +161,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String componentType;
 
         /**
+         * <p>The number of CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -141,6 +170,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer cuNum;
 
         /**
+         * <p>The disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -148,6 +179,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer diskSize;
 
         /**
+         * <p>The disk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>essd</p>
          */
@@ -155,6 +188,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String diskType;
 
         /**
+         * <p>The number of replicas.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -210,6 +245,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataClusterInfo extends TeaModel {
         /**
+         * <p>The port of the Attu component.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000</p>
          */
@@ -217,6 +254,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer attuPort;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-123xxx.milvus.aliyuncs.com</p>
          */
@@ -224,16 +263,23 @@ public class ListInstancesResponseBody extends TeaModel {
         public String internetUrl;
 
         /**
+         * <p>The internal endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-123xxx-internal.milvus.aliyuncs.com</p>
          */
         @NameInMap("IntranetUrl")
         public String intranetUrl;
 
+        /**
+         * <p>The resource details.</p>
+         */
         @NameInMap("MilvusResourceInfoList")
         public java.util.List<ListInstancesResponseBodyDataClusterInfoMilvusResourceInfoList> milvusResourceInfoList;
 
         /**
+         * <p>The proxy port.</p>
+         * 
          * <strong>example:</strong>
          * <p>19530</p>
          */
@@ -241,6 +287,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer proxyPort;
 
         /**
+         * <p>The number of CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -248,6 +296,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer totalCuNum;
 
         /**
+         * <p>The total capacity of the disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -317,21 +367,70 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyDataTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListInstancesResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyDataTags self = new ListInstancesResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyDataTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListInstancesResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoBackup")
         public Boolean autoBackup;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1718608505000</p>
          */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <p>The instance details.</p>
+         */
         @NameInMap("ClusterInfo")
         public ListInstancesResponseBodyDataClusterInfo clusterInfo;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>milvus-test</p>
          */
@@ -339,6 +438,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1721232000000</p>
          */
@@ -346,6 +447,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-123xxx</p>
          */
@@ -353,16 +456,32 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The status of the bastion host. Valid values:</p>
+         * <ul>
+         * <li>creating.</li>
+         * <li>running.</li>
+         * <li>updating. Cluster scaling (up/down), configuration changes, and enabling/disabling public network access.</li>
+         * <li>disable. The cluster has expired and needs to be renewed for activation.</li>
+         * <li>deleting.</li>
+         * <li>deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>perf</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
+         * <p>Indicates whether Internet access is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -370,6 +489,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean openPublicNet;
 
         /**
+         * <p>The specification details. Valid values:</p>
+         * <ul>
+         * <li>trial.</li>
+         * <li>standard.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>trial</p>
          */
@@ -377,6 +502,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public String packageType;
 
         /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>0: pay-as-you-go</li>
+         * <li>1: subscription</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -384,6 +515,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer payType;
 
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>milvus_milvuspre_public_cn</p>
          */
@@ -391,6 +524,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The region code.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -398,6 +533,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-123xxx</p>
          */
@@ -405,6 +542,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The runtime.</p>
+         * 
          * <strong>example:</strong>
          * <p>536611</p>
          */
@@ -412,13 +551,20 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer runningTime;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-123xxx</p>
          */
         @NameInMap("SgId")
         public String sgId;
 
+        @NameInMap("Tags")
+        public java.util.List<ListInstancesResponseBodyDataTags> tags;
+
         /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-123xxx</p>
          */
@@ -426,6 +572,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-123xxx</p>
          */
@@ -433,6 +581,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String vswId;
 
         /**
+         * <p>The zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-g</p>
          */
@@ -570,6 +720,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getSgId() {
             return this.sgId;
+        }
+
+        public ListInstancesResponseBodyData setTags(java.util.List<ListInstancesResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public ListInstancesResponseBodyData setVpcId(String vpcId) {

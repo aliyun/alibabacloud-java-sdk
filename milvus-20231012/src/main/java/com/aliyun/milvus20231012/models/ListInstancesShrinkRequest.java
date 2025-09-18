@@ -3,7 +3,7 @@ package com.aliyun.milvus20231012.models;
 
 import com.aliyun.tea.*;
 
-public class ListInstancesRequest extends TeaModel {
+public class ListInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * 
@@ -59,14 +59,14 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Tag")
-    public java.util.List<ListInstancesRequestTag> tag;
+    public String tagShrink;
 
-    public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListInstancesRequest self = new ListInstancesRequest();
+    public static ListInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListInstancesShrinkRequest self = new ListInstancesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListInstancesRequest setClusterId(String clusterId) {
+    public ListInstancesShrinkRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -74,7 +74,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ListInstancesRequest setClusterName(String clusterName) {
+    public ListInstancesShrinkRequest setClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
     }
@@ -82,7 +82,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.clusterName;
     }
 
-    public ListInstancesRequest setPageNumber(Integer pageNumber) {
+    public ListInstancesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -90,7 +90,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListInstancesRequest setPageSize(Integer pageSize) {
+    public ListInstancesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -98,7 +98,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListInstancesRequest setRegionId(String regionId) {
+    public ListInstancesShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -106,7 +106,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListInstancesRequest setResourceGroupId(String resourceGroupId) {
+    public ListInstancesShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -114,50 +114,12 @@ public class ListInstancesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListInstancesRequest setTag(java.util.List<ListInstancesRequestTag> tag) {
-        this.tag = tag;
+    public ListInstancesShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<ListInstancesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class ListInstancesRequestTag extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>key1</p>
-         */
-        @NameInMap("Key")
-        public String key;
-
-        /**
-         * <strong>example:</strong>
-         * <p>value1</p>
-         */
-        @NameInMap("Value")
-        public String value;
-
-        public static ListInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListInstancesRequestTag self = new ListInstancesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListInstancesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListInstancesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

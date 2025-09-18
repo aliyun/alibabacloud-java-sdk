@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为用户创建AliyunServiceRoleForMilvus</p>
+     * <p>Create a service role for Milvus to access other cloud products</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -49,17 +49,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDefaultRoleResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateDefaultRoleResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDefaultRoleResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>为用户创建AliyunServiceRoleForMilvus</p>
+     * <p>Create a service role for Milvus to access other cloud products</p>
      * @return CreateDefaultRoleResponse
      */
     public CreateDefaultRoleResponse createDefaultRole() throws Exception {
@@ -70,7 +65,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Milvus公网访问ACL信息</p>
+     * <p>Get the public IP address whitelist of a Milvus instance.</p>
      * 
      * @param request DescribeAccessControlListRequest
      * @param headers map
@@ -99,17 +94,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAccessControlListResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeAccessControlListResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAccessControlListResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取Milvus公网访问ACL信息</p>
+     * <p>Get the public IP address whitelist of a Milvus instance.</p>
      * 
      * @param request DescribeAccessControlListRequest
      * @return DescribeAccessControlListResponse
@@ -122,7 +112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例用户配置</p>
+     * <p>Get information about the custom configuration of each component of Milvus.</p>
      * 
      * @param request DescribeInstanceConfigsRequest
      * @param headers map
@@ -151,17 +141,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceConfigsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeInstanceConfigsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceConfigsResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例用户配置</p>
+     * <p>Get information about the custom configuration of each component of Milvus.</p>
      * 
      * @param request DescribeInstanceConfigsRequest
      * @return DescribeInstanceConfigsResponse
@@ -174,7 +159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据集群ID获取集群的详细信息</p>
+     * <p>Get the details of an instance.</p>
      * 
      * @param request GetInstanceDetailRequest
      * @param headers map
@@ -203,17 +188,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceDetailResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceDetailResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceDetailResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>根据集群ID获取集群的详细信息</p>
+     * <p>Get the details of an instance.</p>
      * 
      * @param request GetInstanceDetailRequest
      * @return GetInstanceDetailResponse
@@ -226,15 +206,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据集群ID或者名称搜索集群</p>
+     * <p>Get the list of Milvus instances under the current account.</p>
      * 
-     * @param request ListInstancesRequest
+     * @param tmpReq ListInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstancesResponse
      */
-    public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListInstancesShrinkRequest request = new ListInstancesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
@@ -260,6 +246,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -275,17 +265,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstancesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>根据集群ID或者名称搜索集群</p>
+     * <p>Get the list of Milvus instances under the current account.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -298,7 +283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例配置</p>
+     * <p>Update the configuration parameters of each component of Milvus.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @param headers map
@@ -335,17 +320,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceConfigResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyInstanceConfigResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceConfigResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例配置</p>
+     * <p>Update the configuration parameters of each component of Milvus.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @return ModifyInstanceConfigResponse
@@ -358,7 +338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Milvus公网访问ACL信息</p>
+     * <p>Configure Public IP Address Whitelist</p>
      * 
      * @param request UpdateAccessControlListRequest
      * @param headers map
@@ -395,17 +375,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAccessControlListResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAccessControlListResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAccessControlListResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>更新Milvus公网访问ACL信息</p>
+     * <p>Configure Public IP Address Whitelist</p>
      * 
      * @param request UpdateAccessControlListRequest
      * @return UpdateAccessControlListResponse
@@ -418,7 +393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改集群名称</p>
+     * <p>Modifies the name of an instance.</p>
      * 
      * @param request UpdateInstanceNameRequest
      * @param headers map
@@ -451,17 +426,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceNameResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateInstanceNameResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceNameResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>修改集群名称</p>
+     * <p>Modifies the name of an instance.</p>
      * 
      * @param request UpdateInstanceNameRequest
      * @return UpdateInstanceNameResponse
@@ -474,7 +444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>该接口用于开通/关闭 Proxy的公网SLB。</p>
+     * <p>Enable or disable Internet access for Milvus.</p>
      * 
      * @param request UpdatePublicNetworkStatusRequest
      * @param headers map
@@ -515,17 +485,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePublicNetworkStatusResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdatePublicNetworkStatusResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePublicNetworkStatusResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>该接口用于开通/关闭 Proxy的公网SLB。</p>
+     * <p>Enable or disable Internet access for Milvus.</p>
      * 
      * @param request UpdatePublicNetworkStatusRequest
      * @return UpdatePublicNetworkStatusResponse
