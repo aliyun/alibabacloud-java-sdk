@@ -7,6 +7,15 @@
 - Update API UpdateTransportLayerApplication: add request parameters StaticIp.
 
 
+2025-09-18 Version: 2.36.1
+- Update API CreateTransportLayerApplication: add request parameters StaticIp.
+- Update API GetTransportLayerApplication: add response parameters Body.StaticIp.
+- Update API GetTransportLayerApplication: add response parameters Body.StaticIpV4List.
+- Update API ListTransportLayerApplications: add response parameters Body.Applications.$.StaticIp.
+- Update API ListTransportLayerApplications: add response parameters Body.Applications.$.StaticIpV4List.
+- Update API UpdateTransportLayerApplication: add request parameters StaticIp.
+
+
 2025-09-17 Version: 2.36.0
 - Support API CreateTransportLayerApplication.
 - Support API DeleteTransportLayerApplication.
