@@ -138,6 +138,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>执行场景（全屋）</p>
+     * 
+     * @param request ExecuteSmartHomeSceneRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteSmartHomeSceneResponse
+     */
+    public ExecuteSmartHomeSceneResponse executeSmartHomeSceneWithOptions(ExecuteSmartHomeSceneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.familyId)) {
+            body.put("FamilyId", request.familyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteSmartHomeScene"),
+            new TeaPair("version", "oauth2_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/oauth2/iot/smart_home/scene/execute"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteSmartHomeSceneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行场景（全屋）</p>
+     * 
+     * @param request ExecuteSmartHomeSceneRequest
+     * @return ExecuteSmartHomeSceneResponse
+     */
+    public ExecuteSmartHomeSceneResponse executeSmartHomeScene(ExecuteSmartHomeSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeSmartHomeSceneWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取场景列表</p>
      * 
      * @param headers map
@@ -171,6 +222,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSceneListWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景列表（全屋）</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSmartHomeSceneListResponse
+     */
+    public GetSmartHomeSceneListResponse getSmartHomeSceneListWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSmartHomeSceneList"),
+            new TeaPair("version", "oauth2_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/oauth2/iot/smart_home/scene/list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSmartHomeSceneListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取场景列表（全屋）</p>
+     * @return GetSmartHomeSceneListResponse
+     */
+    public GetSmartHomeSceneListResponse getSmartHomeSceneList() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSmartHomeSceneListWithOptions(headers, runtime);
     }
 
     /**
