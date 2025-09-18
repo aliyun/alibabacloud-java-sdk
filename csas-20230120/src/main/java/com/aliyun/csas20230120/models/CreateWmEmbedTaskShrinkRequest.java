@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
+    @NameInMap("AudioControl")
+    public String audioControlShrink;
+
     @NameInMap("CsvControl")
     public String csvControlShrink;
 
@@ -45,12 +48,18 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     @NameInMap("ImageEmbedLevel")
     public Long imageEmbedLevel;
 
+    @NameInMap("InvisibleEnable")
+    public Boolean invisibleEnable;
+
     /**
      * <strong>example:</strong>
      * <p>3000k</p>
      */
     @NameInMap("VideoBitrate")
     public String videoBitrate;
+
+    @NameInMap("VideoControl")
+    public String videoControlShrink;
 
     /**
      * <strong>example:</strong>
@@ -92,6 +101,14 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     public static CreateWmEmbedTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWmEmbedTaskShrinkRequest self = new CreateWmEmbedTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateWmEmbedTaskShrinkRequest setAudioControlShrink(String audioControlShrink) {
+        this.audioControlShrink = audioControlShrink;
+        return this;
+    }
+    public String getAudioControlShrink() {
+        return this.audioControlShrink;
     }
 
     public CreateWmEmbedTaskShrinkRequest setCsvControlShrink(String csvControlShrink) {
@@ -150,12 +167,28 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
         return this.imageEmbedLevel;
     }
 
+    public CreateWmEmbedTaskShrinkRequest setInvisibleEnable(Boolean invisibleEnable) {
+        this.invisibleEnable = invisibleEnable;
+        return this;
+    }
+    public Boolean getInvisibleEnable() {
+        return this.invisibleEnable;
+    }
+
     public CreateWmEmbedTaskShrinkRequest setVideoBitrate(String videoBitrate) {
         this.videoBitrate = videoBitrate;
         return this;
     }
     public String getVideoBitrate() {
         return this.videoBitrate;
+    }
+
+    public CreateWmEmbedTaskShrinkRequest setVideoControlShrink(String videoControlShrink) {
+        this.videoControlShrink = videoControlShrink;
+        return this;
+    }
+    public String getVideoControlShrink() {
+        return this.videoControlShrink;
     }
 
     public CreateWmEmbedTaskShrinkRequest setVideoIsLong(Boolean videoIsLong) {

@@ -79,8 +79,17 @@ public class OpenStructSaseUserSimple extends TeaModel {
         @NameInMap("DepartmentId")
         public String departmentId;
 
+        @NameInMap("FullDepartmentIdPath")
+        public String fullDepartmentIdPath;
+
+        @NameInMap("FullDn")
+        public String fullDn;
+
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("ParentDepartmentId")
+        public String parentDepartmentId;
 
         public static OpenStructSaseUserSimpleDepartments build(java.util.Map<String, ?> map) throws Exception {
             OpenStructSaseUserSimpleDepartments self = new OpenStructSaseUserSimpleDepartments();
@@ -95,12 +104,36 @@ public class OpenStructSaseUserSimple extends TeaModel {
             return this.departmentId;
         }
 
+        public OpenStructSaseUserSimpleDepartments setFullDepartmentIdPath(String fullDepartmentIdPath) {
+            this.fullDepartmentIdPath = fullDepartmentIdPath;
+            return this;
+        }
+        public String getFullDepartmentIdPath() {
+            return this.fullDepartmentIdPath;
+        }
+
+        public OpenStructSaseUserSimpleDepartments setFullDn(String fullDn) {
+            this.fullDn = fullDn;
+            return this;
+        }
+        public String getFullDn() {
+            return this.fullDn;
+        }
+
         public OpenStructSaseUserSimpleDepartments setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public OpenStructSaseUserSimpleDepartments setParentDepartmentId(String parentDepartmentId) {
+            this.parentDepartmentId = parentDepartmentId;
+            return this;
+        }
+        public String getParentDepartmentId() {
+            return this.parentDepartmentId;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateWmEmbedTaskRequest extends TeaModel {
+    @NameInMap("AudioControl")
+    public CreateWmEmbedTaskRequestAudioControl audioControl;
+
     @NameInMap("CsvControl")
     public CreateWmEmbedTaskRequestCsvControl csvControl;
 
@@ -45,12 +48,18 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
     @NameInMap("ImageEmbedLevel")
     public Long imageEmbedLevel;
 
+    @NameInMap("InvisibleEnable")
+    public Boolean invisibleEnable;
+
     /**
      * <strong>example:</strong>
      * <p>3000k</p>
      */
     @NameInMap("VideoBitrate")
     public String videoBitrate;
+
+    @NameInMap("VideoControl")
+    public CreateWmEmbedTaskRequestVideoControl videoControl;
 
     /**
      * <strong>example:</strong>
@@ -92,6 +101,14 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
     public static CreateWmEmbedTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWmEmbedTaskRequest self = new CreateWmEmbedTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateWmEmbedTaskRequest setAudioControl(CreateWmEmbedTaskRequestAudioControl audioControl) {
+        this.audioControl = audioControl;
+        return this;
+    }
+    public CreateWmEmbedTaskRequestAudioControl getAudioControl() {
+        return this.audioControl;
     }
 
     public CreateWmEmbedTaskRequest setCsvControl(CreateWmEmbedTaskRequestCsvControl csvControl) {
@@ -150,12 +167,28 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
         return this.imageEmbedLevel;
     }
 
+    public CreateWmEmbedTaskRequest setInvisibleEnable(Boolean invisibleEnable) {
+        this.invisibleEnable = invisibleEnable;
+        return this;
+    }
+    public Boolean getInvisibleEnable() {
+        return this.invisibleEnable;
+    }
+
     public CreateWmEmbedTaskRequest setVideoBitrate(String videoBitrate) {
         this.videoBitrate = videoBitrate;
         return this;
     }
     public String getVideoBitrate() {
         return this.videoBitrate;
+    }
+
+    public CreateWmEmbedTaskRequest setVideoControl(CreateWmEmbedTaskRequestVideoControl videoControl) {
+        this.videoControl = videoControl;
+        return this;
+    }
+    public CreateWmEmbedTaskRequestVideoControl getVideoControl() {
+        return this.videoControl;
     }
 
     public CreateWmEmbedTaskRequest setVideoIsLong(Boolean videoIsLong) {
@@ -196,6 +229,55 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
     }
     public String getWmType() {
         return this.wmType;
+    }
+
+    public static class CreateWmEmbedTaskRequestAudioControlMetadataControl extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("XmpKvBase64")
+        public String xmpKvBase64;
+
+        public static CreateWmEmbedTaskRequestAudioControlMetadataControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestAudioControlMetadataControl self = new CreateWmEmbedTaskRequestAudioControlMetadataControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestAudioControlMetadataControl setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public CreateWmEmbedTaskRequestAudioControlMetadataControl setXmpKvBase64(String xmpKvBase64) {
+            this.xmpKvBase64 = xmpKvBase64;
+            return this;
+        }
+        public String getXmpKvBase64() {
+            return this.xmpKvBase64;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestAudioControl extends TeaModel {
+        @NameInMap("MetadataControl")
+        public CreateWmEmbedTaskRequestAudioControlMetadataControl metadataControl;
+
+        public static CreateWmEmbedTaskRequestAudioControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestAudioControl self = new CreateWmEmbedTaskRequestAudioControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestAudioControl setMetadataControl(CreateWmEmbedTaskRequestAudioControlMetadataControl metadataControl) {
+            this.metadataControl = metadataControl;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestAudioControlMetadataControl getMetadataControl() {
+            return this.metadataControl;
+        }
+
     }
 
     public static class CreateWmEmbedTaskRequestCsvControl extends TeaModel {
@@ -629,6 +711,9 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
         @NameInMap("Angle")
         public Long angle;
 
+        @NameInMap("Enhance")
+        public Boolean enhance;
+
         @NameInMap("LogoBase64")
         public String logoBase64;
 
@@ -673,6 +758,14 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
         }
         public Long getAngle() {
             return this.angle;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setEnhance(Boolean enhance) {
+            this.enhance = enhance;
+            return this;
+        }
+        public Boolean getEnhance() {
+            return this.enhance;
         }
 
         public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setLogoBase64(String logoBase64) {
@@ -1045,6 +1138,203 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
             return this;
         }
         public CreateWmEmbedTaskRequestImageControlTextVisibleControl getTextVisibleControl() {
+            return this.textVisibleControl;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestVideoControlMetadataControl extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("XmpKvBase64")
+        public String xmpKvBase64;
+
+        public static CreateWmEmbedTaskRequestVideoControlMetadataControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestVideoControlMetadataControl self = new CreateWmEmbedTaskRequestVideoControlMetadataControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlMetadataControl setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlMetadataControl setXmpKvBase64(String xmpKvBase64) {
+            this.xmpKvBase64 = xmpKvBase64;
+            return this;
+        }
+        public String getXmpKvBase64() {
+            return this.xmpKvBase64;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin extends TeaModel {
+        @NameInMap("Bottom")
+        public Integer bottom;
+
+        @NameInMap("Right")
+        public Integer right;
+
+        public static CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin self = new CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin setBottom(Integer bottom) {
+            this.bottom = bottom;
+            return this;
+        }
+        public Integer getBottom() {
+            return this.bottom;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin setRight(Integer right) {
+            this.right = right;
+            return this;
+        }
+        public Integer getRight() {
+            return this.right;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestVideoControlTextVisibleControl extends TeaModel {
+        @NameInMap("FontColor")
+        public String fontColor;
+
+        @NameInMap("FontSize")
+        public Integer fontSize;
+
+        @NameInMap("Margin")
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin margin;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("Opacity")
+        public Integer opacity;
+
+        @NameInMap("PosX")
+        public Integer posX;
+
+        @NameInMap("PosY")
+        public Integer posY;
+
+        @NameInMap("Visible")
+        public Boolean visible;
+
+        @NameInMap("VisibleText")
+        public String visibleText;
+
+        public static CreateWmEmbedTaskRequestVideoControlTextVisibleControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestVideoControlTextVisibleControl self = new CreateWmEmbedTaskRequestVideoControlTextVisibleControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setFontColor(String fontColor) {
+            this.fontColor = fontColor;
+            return this;
+        }
+        public String getFontColor() {
+            return this.fontColor;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setFontSize(Integer fontSize) {
+            this.fontSize = fontSize;
+            return this;
+        }
+        public Integer getFontSize() {
+            return this.fontSize;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setMargin(CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin margin) {
+            this.margin = margin;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin getMargin() {
+            return this.margin;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setOpacity(Integer opacity) {
+            this.opacity = opacity;
+            return this;
+        }
+        public Integer getOpacity() {
+            return this.opacity;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setPosX(Integer posX) {
+            this.posX = posX;
+            return this;
+        }
+        public Integer getPosX() {
+            return this.posX;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setPosY(Integer posY) {
+            this.posY = posY;
+            return this;
+        }
+        public Integer getPosY() {
+            return this.posY;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setVisible(Boolean visible) {
+            this.visible = visible;
+            return this;
+        }
+        public Boolean getVisible() {
+            return this.visible;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl setVisibleText(String visibleText) {
+            this.visibleText = visibleText;
+            return this;
+        }
+        public String getVisibleText() {
+            return this.visibleText;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestVideoControl extends TeaModel {
+        @NameInMap("MetadataControl")
+        public CreateWmEmbedTaskRequestVideoControlMetadataControl metadataControl;
+
+        @NameInMap("TextVisibleControl")
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl textVisibleControl;
+
+        public static CreateWmEmbedTaskRequestVideoControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestVideoControl self = new CreateWmEmbedTaskRequestVideoControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestVideoControl setMetadataControl(CreateWmEmbedTaskRequestVideoControlMetadataControl metadataControl) {
+            this.metadataControl = metadataControl;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestVideoControlMetadataControl getMetadataControl() {
+            return this.metadataControl;
+        }
+
+        public CreateWmEmbedTaskRequestVideoControl setTextVisibleControl(CreateWmEmbedTaskRequestVideoControlTextVisibleControl textVisibleControl) {
+            this.textVisibleControl = textVisibleControl;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestVideoControlTextVisibleControl getTextVisibleControl() {
             return this.textVisibleControl;
         }
 

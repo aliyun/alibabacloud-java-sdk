@@ -1,3 +1,15 @@
+2025-09-18 Version: 1.15.0
+- Update API CreateWmEmbedTask: add request parameters AudioControl.
+- Update API CreateWmEmbedTask: add request parameters InvisibleEnable.
+- Update API CreateWmEmbedTask: add request parameters VideoControl.
+- Update API CreateWmEmbedTask: add request parameters ImageControl.LogoVisibleControl.Enhance.
+- Update API GetUserDevice: add response parameters Body.Device.AutoLoginStatus.
+- Update API ListConnectors: add response parameters Body.Connectors.$.ClusterIP.
+- Update API ListConnectors: add response parameters Body.Connectors.$.ClusterPort.
+- Update API ListUserDevices: add request parameters AutoLoginStatuses.
+- Update API ListUserDevices: add response parameters Body.Devices.$.AutoLoginStatus.
+
+
 2025-08-27 Version: 1.14.8
 - Generated java 2023-01-20 for csas.
 

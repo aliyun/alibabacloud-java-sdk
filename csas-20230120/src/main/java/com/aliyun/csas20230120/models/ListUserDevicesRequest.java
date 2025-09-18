@@ -10,6 +10,9 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("AppVersions")
     public java.util.List<String> appVersions;
 
+    @NameInMap("AutoLoginStatuses")
+    public java.util.List<String> autoLoginStatuses;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -124,6 +127,14 @@ public class ListUserDevicesRequest extends TeaModel {
     }
     public java.util.List<String> getAppVersions() {
         return this.appVersions;
+    }
+
+    public ListUserDevicesRequest setAutoLoginStatuses(java.util.List<String> autoLoginStatuses) {
+        this.autoLoginStatuses = autoLoginStatuses;
+        return this;
+    }
+    public java.util.List<String> getAutoLoginStatuses() {
+        return this.autoLoginStatuses;
     }
 
     public ListUserDevicesRequest setCurrentPage(Long currentPage) {

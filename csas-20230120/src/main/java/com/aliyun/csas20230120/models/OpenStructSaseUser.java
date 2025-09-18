@@ -13,6 +13,9 @@ public class OpenStructSaseUser extends TeaModel {
     @NameInMap("Departments")
     public java.util.List<OpenStructSaseDepartment> departments;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("Email")
     public String email;
 
@@ -76,6 +79,14 @@ public class OpenStructSaseUser extends TeaModel {
     }
     public java.util.List<OpenStructSaseDepartment> getDepartments() {
         return this.departments;
+    }
+
+    public OpenStructSaseUser setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public OpenStructSaseUser setEmail(String email) {

@@ -4,10 +4,14 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListConnectorsRequest extends TeaModel {
+    /**
+     * <p>Collection of Connector IDs. Up to 100 Connector IDs can be entered.</p>
+     */
     @NameInMap("ConnectorIds")
     public java.util.List<String> connectorIds;
 
     /**
+     * <p>The page number of the current page in a paginated query. Range: 1~10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class ListConnectorsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Connector name. Length: 1~128 characters, supporting Chinese and both uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</p>
+     * 
      * <strong>example:</strong>
      * <p>connector_name</p>
      */
@@ -24,6 +30,7 @@ public class ListConnectorsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of items per page in a paginated query. Range: 1~1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,9 +39,29 @@ public class ListConnectorsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Connector connection status. Values:</p>
+     * <ul>
+     * <li><strong>Online</strong>: Online.</li>
+     * <li><strong>Offline</strong>: Offline.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Online</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Connector instance status. Values:</p>
+     * <ul>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("SwitchStatus")
     public String switchStatus;
 

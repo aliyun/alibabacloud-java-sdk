@@ -95,6 +95,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @NameInMap("AppVersion")
         public String appVersion;
 
+        @NameInMap("AutoLoginStatus")
+        public String autoLoginStatus;
+
         /**
          * <strong>example:</strong>
          * <p>Apple M1</p>
@@ -294,6 +297,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
         public String getAppVersion() {
             return this.appVersion;
+        }
+
+        public ListUserDevicesResponseBodyDevices setAutoLoginStatus(String autoLoginStatus) {
+            this.autoLoginStatus = autoLoginStatus;
+            return this;
+        }
+        public String getAutoLoginStatus() {
+            return this.autoLoginStatus;
         }
 
         public ListUserDevicesResponseBodyDevices setCPU(String CPU) {

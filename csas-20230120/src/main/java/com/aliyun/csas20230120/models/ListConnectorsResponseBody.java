@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListConnectorsResponseBody extends TeaModel {
+    /**
+     * <p>List of Connectors.</p>
+     */
     @NameInMap("Connectors")
     public java.util.List<ListConnectorsResponseBodyConnectors> connectors;
 
     /**
+     * <p>ID of the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
      */
@@ -15,6 +20,8 @@ public class ListConnectorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of Connectors.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,8 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyConnectorsApplications extends TeaModel {
         /**
+         * <p>Internal network access application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-application-e12860ef6c48****</p>
          */
@@ -59,6 +68,8 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
+         * <p>Internal network access application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>application_name</p>
          */
@@ -89,15 +100,39 @@ public class ListConnectorsResponseBody extends TeaModel {
     }
 
     public static class ListConnectorsResponseBodyConnectorsConnectorClients extends TeaModel {
+        /**
+         * <p>Connection status between ConnectorClient and ConnectorServer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disconnected</p>
+         */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
+        /**
+         * <p>Unique device identifier for the ConnectorClient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C50A2386-F851-4F11-920B-DF7148DA0C22</p>
+         */
         @NameInMap("DevTag")
         public String devTag;
 
+        /**
+         * <p>Hostname of the ConnectorClient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector_client</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>Public IP of the ConnectorClient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.1</p>
+         */
         @NameInMap("PublicIp")
         public String publicIp;
 
@@ -142,6 +177,8 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     public static class ListConnectorsResponseBodyConnectorsUpgradeTime extends TeaModel {
         /**
+         * <p>End time.</p>
+         * 
          * <strong>example:</strong>
          * <p>23:00</p>
          */
@@ -149,6 +186,8 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String end;
 
         /**
+         * <p>Start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>20:00</p>
          */
@@ -179,14 +218,38 @@ public class ListConnectorsResponseBody extends TeaModel {
     }
 
     public static class ListConnectorsResponseBodyConnectors extends TeaModel {
+        /**
+         * <p>Collection of associated internal network access applications.</p>
+         */
         @NameInMap("Applications")
         public java.util.List<ListConnectorsResponseBodyConnectorsApplications> applications;
 
+        /**
+         * <p>Cluster IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
+        @NameInMap("ClusterIP")
+        public String clusterIP;
+
+        /**
+         * <p>Cluster port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
+         */
+        @NameInMap("ClusterPort")
+        public String clusterPort;
+
+        /**
+         * <p>Collection of deployed ConnectorClients.</p>
+         */
         @NameInMap("ConnectorClients")
         public java.util.List<ListConnectorsResponseBodyConnectorsConnectorClients> connectorClients;
 
         /**
-         * <p>ConnectorID。</p>
+         * <p>Connector ID.</p>
          * 
          * <strong>example:</strong>
          * <p>connector-94db94e06b98****</p>
@@ -195,6 +258,8 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String connectorId;
 
         /**
+         * <p>Creation time of the Connector.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-27 18:10:25</p>
          */
@@ -202,6 +267,8 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Connector name.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector_name</p>
          */
@@ -209,6 +276,8 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -216,6 +285,12 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Connector connection status. Values:</p>
+         * <ul>
+         * <li><strong>Online</strong>: Online.</li>
+         * <li><strong>Offline</strong>: Offline.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
@@ -223,12 +298,21 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Connector instance status. Values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("SwitchStatus")
         public String switchStatus;
 
+        /**
+         * <p>Connector upgrade time.</p>
+         */
         @NameInMap("UpgradeTime")
         public ListConnectorsResponseBodyConnectorsUpgradeTime upgradeTime;
 
@@ -243,6 +327,22 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
         public java.util.List<ListConnectorsResponseBodyConnectorsApplications> getApplications() {
             return this.applications;
+        }
+
+        public ListConnectorsResponseBodyConnectors setClusterIP(String clusterIP) {
+            this.clusterIP = clusterIP;
+            return this;
+        }
+        public String getClusterIP() {
+            return this.clusterIP;
+        }
+
+        public ListConnectorsResponseBodyConnectors setClusterPort(String clusterPort) {
+            this.clusterPort = clusterPort;
+            return this;
+        }
+        public String getClusterPort() {
+            return this.clusterPort;
         }
 
         public ListConnectorsResponseBodyConnectors setConnectorClients(java.util.List<ListConnectorsResponseBodyConnectorsConnectorClients> connectorClients) {

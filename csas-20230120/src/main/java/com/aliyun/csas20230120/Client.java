@@ -1053,6 +1053,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateWmEmbedTaskShrinkRequest request = new CreateWmEmbedTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.audioControl)) {
+            request.audioControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.audioControl, "AudioControl", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.csvControl)) {
             request.csvControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.csvControl, "CsvControl", "json");
         }
@@ -1065,12 +1069,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.imageControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imageControl, "ImageControl", "json");
         }
 
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.csvControlShrink)) {
-            query.put("CsvControl", request.csvControlShrink);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoControl)) {
+            request.videoControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoControl, "VideoControl", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioControlShrink)) {
+            body.put("AudioControl", request.audioControlShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.csvControlShrink)) {
+            body.put("CsvControl", request.csvControlShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.documentControlShrink)) {
             body.put("DocumentControl", request.documentControlShrink);
         }
@@ -1095,8 +1106,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ImageEmbedLevel", request.imageEmbedLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.invisibleEnable)) {
+            body.put("InvisibleEnable", request.invisibleEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.videoBitrate)) {
             body.put("VideoBitrate", request.videoBitrate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoControlShrink)) {
+            body.put("VideoControl", request.videoControlShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoIsLong)) {
@@ -1120,7 +1139,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3150,7 +3168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询connector</p>
+     * <p>Batch query connectors</p>
      * 
      * @param request ListConnectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3178,7 +3196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询connector</p>
+     * <p>Batch query connectors</p>
      * 
      * @param request ListConnectorsRequest
      * @return ListConnectorsResponse
