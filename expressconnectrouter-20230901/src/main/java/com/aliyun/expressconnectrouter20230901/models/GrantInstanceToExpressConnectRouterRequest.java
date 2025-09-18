@@ -84,6 +84,9 @@ public class GrantInstanceToExpressConnectRouterRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("Version")
+    public String version;
+
     public static GrantInstanceToExpressConnectRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantInstanceToExpressConnectRouterRequest self = new GrantInstanceToExpressConnectRouterRequest();
         return TeaModel.build(map, self);
@@ -143,6 +146,14 @@ public class GrantInstanceToExpressConnectRouterRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public GrantInstanceToExpressConnectRouterRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

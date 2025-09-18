@@ -60,6 +60,9 @@ public class EnableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("NexthopInstanceId")
     public String nexthopInstanceId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static EnableExpressConnectRouterRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableExpressConnectRouterRouteEntriesRequest self = new EnableExpressConnectRouterRouteEntriesRequest();
         return TeaModel.build(map, self);
@@ -103,6 +106,14 @@ public class EnableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     }
     public String getNexthopInstanceId() {
         return this.nexthopInstanceId;
+    }
+
+    public EnableExpressConnectRouterRouteEntriesRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

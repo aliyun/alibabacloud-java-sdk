@@ -46,6 +46,9 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Tea
     @NameInMap("TransitModeList")
     public java.util.List<ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList> transitModeList;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ModifyExpressConnectRouterInterRegionTransitModeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyExpressConnectRouterInterRegionTransitModeRequest self = new ModifyExpressConnectRouterInterRegionTransitModeRequest();
         return TeaModel.build(map, self);
@@ -81,6 +84,14 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Tea
     }
     public java.util.List<ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList> getTransitModeList() {
         return this.transitModeList;
+    }
+
+    public ModifyExpressConnectRouterInterRegionTransitModeRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList extends TeaModel {

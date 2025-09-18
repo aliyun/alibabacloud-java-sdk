@@ -107,6 +107,9 @@ public class DescribeExpressConnectRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("QueryRegionId")
     public String queryRegionId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeExpressConnectRouterRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExpressConnectRouterRouteEntriesRequest self = new DescribeExpressConnectRouterRouteEntriesRequest();
         return TeaModel.build(map, self);
@@ -190,6 +193,14 @@ public class DescribeExpressConnectRouterRouteEntriesRequest extends TeaModel {
     }
     public String getQueryRegionId() {
         return this.queryRegionId;
+    }
+
+    public DescribeExpressConnectRouterRouteEntriesRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -130,6 +130,9 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     @NameInMap("TagModels")
     public java.util.List<DescribeInstanceGrantedToExpressConnectRouterRequestTagModels> tagModels;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeInstanceGrantedToExpressConnectRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceGrantedToExpressConnectRouterRequest self = new DescribeInstanceGrantedToExpressConnectRouterRequest();
         return TeaModel.build(map, self);
@@ -229,6 +232,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     }
     public java.util.List<DescribeInstanceGrantedToExpressConnectRouterRequestTagModels> getTagModels() {
         return this.tagModels;
+    }
+
+    public DescribeInstanceGrantedToExpressConnectRouterRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class DescribeInstanceGrantedToExpressConnectRouterRequestTagModels extends TeaModel {

@@ -77,6 +77,9 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Tea
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeExpressConnectRouterAllowedPrefixHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExpressConnectRouterAllowedPrefixHistoryRequest self = new DescribeExpressConnectRouterAllowedPrefixHistoryRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Tea
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public DescribeExpressConnectRouterAllowedPrefixHistoryRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

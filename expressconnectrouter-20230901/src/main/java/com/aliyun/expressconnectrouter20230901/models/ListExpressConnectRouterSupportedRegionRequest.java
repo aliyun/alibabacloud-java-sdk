@@ -32,6 +32,9 @@ public class ListExpressConnectRouterSupportedRegionRequest extends TeaModel {
     @NameInMap("NodeType")
     public String nodeType;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ListExpressConnectRouterSupportedRegionRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExpressConnectRouterSupportedRegionRequest self = new ListExpressConnectRouterSupportedRegionRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListExpressConnectRouterSupportedRegionRequest extends TeaModel {
     }
     public String getNodeType() {
         return this.nodeType;
+    }
+
+    public ListExpressConnectRouterSupportedRegionRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

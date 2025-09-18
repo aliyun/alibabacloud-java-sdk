@@ -85,6 +85,9 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeExpressConnectRouterRequestTag> tag;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeExpressConnectRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExpressConnectRouterRequest self = new DescribeExpressConnectRouterRequest();
         return TeaModel.build(map, self);
@@ -152,6 +155,14 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     }
     public java.util.List<DescribeExpressConnectRouterRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeExpressConnectRouterRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class DescribeExpressConnectRouterRequestTag extends TeaModel {

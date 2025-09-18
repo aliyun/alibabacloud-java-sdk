@@ -50,6 +50,9 @@ public class DeleteFlowlogRequest extends TeaModel {
     @NameInMap("FlowLogId")
     public String flowLogId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DeleteFlowlogRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteFlowlogRequest self = new DeleteFlowlogRequest();
         return TeaModel.build(map, self);
@@ -85,6 +88,14 @@ public class DeleteFlowlogRequest extends TeaModel {
     }
     public String getFlowLogId() {
         return this.flowLogId;
+    }
+
+    public DeleteFlowlogRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -50,6 +50,9 @@ public class ActivateFlowLogRequest extends TeaModel {
     @NameInMap("FlowLogId")
     public String flowLogId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ActivateFlowLogRequest build(java.util.Map<String, ?> map) throws Exception {
         ActivateFlowLogRequest self = new ActivateFlowLogRequest();
         return TeaModel.build(map, self);
@@ -85,6 +88,14 @@ public class ActivateFlowLogRequest extends TeaModel {
     }
     public String getFlowLogId() {
         return this.flowLogId;
+    }
+
+    public ActivateFlowLogRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

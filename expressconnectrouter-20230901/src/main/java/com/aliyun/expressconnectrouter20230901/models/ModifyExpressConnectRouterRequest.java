@@ -64,6 +64,9 @@ public class ModifyExpressConnectRouterRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ModifyExpressConnectRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyExpressConnectRouterRequest self = new ModifyExpressConnectRouterRequest();
         return TeaModel.build(map, self);
@@ -107,6 +110,14 @@ public class ModifyExpressConnectRouterRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyExpressConnectRouterRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

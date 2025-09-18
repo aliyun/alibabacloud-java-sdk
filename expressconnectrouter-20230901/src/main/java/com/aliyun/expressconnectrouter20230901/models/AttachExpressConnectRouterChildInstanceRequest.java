@@ -91,6 +91,9 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     @NameInMap("EcrId")
     public String ecrId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static AttachExpressConnectRouterChildInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachExpressConnectRouterChildInstanceRequest self = new AttachExpressConnectRouterChildInstanceRequest();
         return TeaModel.build(map, self);
@@ -158,6 +161,14 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     }
     public String getEcrId() {
         return this.ecrId;
+    }
+
+    public AttachExpressConnectRouterChildInstanceRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -49,6 +49,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
@@ -92,6 +95,14 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public java.util.List<ListTagResourcesRequestTag> getTag() {
         return this.tag;
+    }
+
+    public ListTagResourcesRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

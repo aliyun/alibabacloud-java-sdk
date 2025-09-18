@@ -62,6 +62,9 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Tea
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeDisabledExpressConnectRouterRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDisabledExpressConnectRouterRouteEntriesRequest self = new DescribeDisabledExpressConnectRouterRouteEntriesRequest();
         return TeaModel.build(map, self);
@@ -105,6 +108,14 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends Tea
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeDisabledExpressConnectRouterRouteEntriesRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

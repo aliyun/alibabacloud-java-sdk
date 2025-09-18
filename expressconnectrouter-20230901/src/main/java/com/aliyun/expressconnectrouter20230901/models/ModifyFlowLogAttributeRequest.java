@@ -98,6 +98,9 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     @NameInMap("SamplingRate")
     public String samplingRate;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ModifyFlowLogAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyFlowLogAttributeRequest self = new ModifyFlowLogAttributeRequest();
         return TeaModel.build(map, self);
@@ -165,6 +168,14 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     }
     public String getSamplingRate() {
         return this.samplingRate;
+    }
+
+    public ModifyFlowLogAttributeRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

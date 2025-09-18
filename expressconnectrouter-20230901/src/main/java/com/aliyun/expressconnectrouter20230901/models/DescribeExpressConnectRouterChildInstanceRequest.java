@@ -98,6 +98,9 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeExpressConnectRouterChildInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExpressConnectRouterChildInstanceRequest self = new DescribeExpressConnectRouterChildInstanceRequest();
         return TeaModel.build(map, self);
@@ -173,6 +176,14 @@ public class DescribeExpressConnectRouterChildInstanceRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeExpressConnectRouterChildInstanceRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

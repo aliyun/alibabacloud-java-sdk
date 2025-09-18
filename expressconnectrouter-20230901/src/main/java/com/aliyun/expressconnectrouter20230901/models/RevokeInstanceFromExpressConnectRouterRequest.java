@@ -84,6 +84,9 @@ public class RevokeInstanceFromExpressConnectRouterRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("Version")
+    public String version;
+
     public static RevokeInstanceFromExpressConnectRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         RevokeInstanceFromExpressConnectRouterRequest self = new RevokeInstanceFromExpressConnectRouterRequest();
         return TeaModel.build(map, self);
@@ -143,6 +146,14 @@ public class RevokeInstanceFromExpressConnectRouterRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public RevokeInstanceFromExpressConnectRouterRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

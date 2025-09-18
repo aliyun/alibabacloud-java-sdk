@@ -56,6 +56,9 @@ public class MoveResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("Version")
+    public String version;
+
     public static MoveResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveResourceGroupRequest self = new MoveResourceGroupRequest();
         return TeaModel.build(map, self);
@@ -99,6 +102,14 @@ public class MoveResourceGroupRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public MoveResourceGroupRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

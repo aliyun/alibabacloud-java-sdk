@@ -133,6 +133,9 @@ public class DescribeFlowLogsRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeFlowLogsRequestTag> tag;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeFlowLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowLogsRequest self = new DescribeFlowLogsRequest();
         return TeaModel.build(map, self);
@@ -232,6 +235,14 @@ public class DescribeFlowLogsRequest extends TeaModel {
     }
     public java.util.List<DescribeFlowLogsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeFlowLogsRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class DescribeFlowLogsRequestTag extends TeaModel {

@@ -123,6 +123,9 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("TransitRouterOwnerId")
     public Long transitRouterOwnerId;
 
+    @NameInMap("Version")
+    public String version;
+
     /**
      * <p>The VPC ID.</p>
      * 
@@ -235,6 +238,14 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     }
     public Long getTransitRouterOwnerId() {
         return this.transitRouterOwnerId;
+    }
+
+    public CreateExpressConnectRouterAssociationRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public CreateExpressConnectRouterAssociationRequest setVpcId(String vpcId) {

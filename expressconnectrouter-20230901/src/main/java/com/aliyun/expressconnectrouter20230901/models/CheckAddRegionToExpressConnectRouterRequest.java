@@ -50,6 +50,9 @@ public class CheckAddRegionToExpressConnectRouterRequest extends TeaModel {
     @NameInMap("FreshRegionId")
     public String freshRegionId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static CheckAddRegionToExpressConnectRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckAddRegionToExpressConnectRouterRequest self = new CheckAddRegionToExpressConnectRouterRequest();
         return TeaModel.build(map, self);
@@ -85,6 +88,14 @@ public class CheckAddRegionToExpressConnectRouterRequest extends TeaModel {
     }
     public String getFreshRegionId() {
         return this.freshRegionId;
+    }
+
+    public CheckAddRegionToExpressConnectRouterRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

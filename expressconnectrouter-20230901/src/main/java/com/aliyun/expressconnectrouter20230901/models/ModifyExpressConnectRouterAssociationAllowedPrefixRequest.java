@@ -72,6 +72,9 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends T
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("Version")
+    public String version;
+
     public static ModifyExpressConnectRouterAssociationAllowedPrefixRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyExpressConnectRouterAssociationAllowedPrefixRequest self = new ModifyExpressConnectRouterAssociationAllowedPrefixRequest();
         return TeaModel.build(map, self);
@@ -131,6 +134,14 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends T
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public ModifyExpressConnectRouterAssociationAllowedPrefixRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

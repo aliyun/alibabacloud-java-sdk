@@ -40,6 +40,9 @@ public class DescribeExpressConnectRouterInterRegionTransitModeRequest extends T
     @NameInMap("EcrId")
     public String ecrId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeExpressConnectRouterInterRegionTransitModeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExpressConnectRouterInterRegionTransitModeRequest self = new DescribeExpressConnectRouterInterRegionTransitModeRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class DescribeExpressConnectRouterInterRegionTransitModeRequest extends T
     }
     public String getEcrId() {
         return this.ecrId;
+    }
+
+    public DescribeExpressConnectRouterInterRegionTransitModeRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -69,6 +69,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 
+    @NameInMap("Version")
+    public String version;
+
     public static UntagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesRequest self = new UntagResourcesRequest();
         return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public java.util.List<String> getTagKey() {
         return this.tagKey;
+    }
+
+    public UntagResourcesRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

@@ -40,6 +40,9 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthRequest extends 
     @NameInMap("EcrId")
     public String ecrId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static SynchronizeExpressConnectRouterInterRegionBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         SynchronizeExpressConnectRouterInterRegionBandwidthRequest self = new SynchronizeExpressConnectRouterInterRegionBandwidthRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthRequest extends 
     }
     public String getEcrId() {
         return this.ecrId;
+    }
+
+    public SynchronizeExpressConnectRouterInterRegionBandwidthRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

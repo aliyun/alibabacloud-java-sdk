@@ -162,6 +162,9 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateFlowLogRequestTag> tag;
 
+    @NameInMap("Version")
+    public String version;
+
     public static CreateFlowLogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowLogRequest self = new CreateFlowLogRequest();
         return TeaModel.build(map, self);
@@ -269,6 +272,14 @@ public class CreateFlowLogRequest extends TeaModel {
     }
     public java.util.List<CreateFlowLogRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateFlowLogRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class CreateFlowLogRequestTag extends TeaModel {

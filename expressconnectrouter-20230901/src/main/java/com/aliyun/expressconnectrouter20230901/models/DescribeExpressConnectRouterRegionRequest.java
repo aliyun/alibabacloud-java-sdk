@@ -40,6 +40,9 @@ public class DescribeExpressConnectRouterRegionRequest extends TeaModel {
     @NameInMap("EcrId")
     public String ecrId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DescribeExpressConnectRouterRegionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExpressConnectRouterRegionRequest self = new DescribeExpressConnectRouterRegionRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class DescribeExpressConnectRouterRegionRequest extends TeaModel {
     }
     public String getEcrId() {
         return this.ecrId;
+    }
+
+    public DescribeExpressConnectRouterRegionRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

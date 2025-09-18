@@ -60,6 +60,9 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("NexthopInstanceId")
     public String nexthopInstanceId;
 
+    @NameInMap("Version")
+    public String version;
+
     public static DisableExpressConnectRouterRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableExpressConnectRouterRouteEntriesRequest self = new DisableExpressConnectRouterRouteEntriesRequest();
         return TeaModel.build(map, self);
@@ -103,6 +106,14 @@ public class DisableExpressConnectRouterRouteEntriesRequest extends TeaModel {
     }
     public String getNexthopInstanceId() {
         return this.nexthopInstanceId;
+    }
+
+    public DisableExpressConnectRouterRouteEntriesRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }
