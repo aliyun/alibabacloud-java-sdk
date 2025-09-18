@@ -13,6 +13,9 @@ public class InitContainerConfig extends TeaModel {
     @NameInMap("ConfigMapMountDesc")
     public String configMapMountDesc;
 
+    @NameInMap("EmptyDirDesc")
+    public String emptyDirDesc;
+
     @NameInMap("Envs")
     public String envs;
 
@@ -49,6 +52,14 @@ public class InitContainerConfig extends TeaModel {
     }
     public String getConfigMapMountDesc() {
         return this.configMapMountDesc;
+    }
+
+    public InitContainerConfig setEmptyDirDesc(String emptyDirDesc) {
+        this.emptyDirDesc = emptyDirDesc;
+        return this;
+    }
+    public String getEmptyDirDesc() {
+        return this.emptyDirDesc;
     }
 
     public InitContainerConfig setEnvs(String envs) {

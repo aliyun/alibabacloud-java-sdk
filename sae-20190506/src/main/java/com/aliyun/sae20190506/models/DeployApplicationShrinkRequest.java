@@ -207,6 +207,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
+    @NameInMap("EmptyDirDesc")
+    public String emptyDirDesc;
+
     /**
      * <p>Indicates whether access to Application High Availability Service (AHAS) is enabled. Take note of the following rules:</p>
      * <ul>
@@ -1130,6 +1133,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getEdasContainerVersion() {
         return this.edasContainerVersion;
+    }
+
+    public DeployApplicationShrinkRequest setEmptyDirDesc(String emptyDirDesc) {
+        this.emptyDirDesc = emptyDirDesc;
+        return this;
+    }
+    public String getEmptyDirDesc() {
+        return this.emptyDirDesc;
     }
 
     public DeployApplicationShrinkRequest setEnableAhas(String enableAhas) {

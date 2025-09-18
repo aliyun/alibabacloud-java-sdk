@@ -716,6 +716,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ConfigMapMountDesc", request.configMapMountDesc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.emptyDirDesc)) {
+            body.put("EmptyDirDesc", request.emptyDirDesc);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableSidecarResourceIsolated)) {
             body.put("EnableSidecarResourceIsolated", request.enableSidecarResourceIsolated);
         }
@@ -2808,6 +2812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.configMapMountDesc)) {
             body.put("ConfigMapMountDesc", request.configMapMountDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emptyDirDesc)) {
+            body.put("EmptyDirDesc", request.emptyDirDesc);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableSidecarResourceIsolated)) {
@@ -7133,6 +7141,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.publishWebApplicationRevisionWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * @param request QueryArmsEnableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryArmsEnableResponse
+     */
+    public QueryArmsEnableResponse queryArmsEnableWithOptions(QueryArmsEnableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryArmsEnable"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/arms/queryArms"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryArmsEnableResponse());
+    }
+
+    /**
+     * @param request QueryArmsEnableRequest
+     * @return QueryArmsEnableResponse
+     */
+    public QueryArmsEnableResponse queryArmsEnable(QueryArmsEnableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryArmsEnableWithOptions(request, headers, runtime);
     }
 
     /**

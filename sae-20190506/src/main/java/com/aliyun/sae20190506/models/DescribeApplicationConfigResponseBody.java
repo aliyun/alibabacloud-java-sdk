@@ -215,6 +215,36 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationConfigResponseBodyDataEmptyDirDesc extends TeaModel {
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeApplicationConfigResponseBodyDataEmptyDirDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataEmptyDirDesc self = new DescribeApplicationConfigResponseBodyDataEmptyDirDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataEmptyDirDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataEmptyDirDesc setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc extends TeaModel {
         /**
          * <p>ConfigMap ID。</p>
@@ -291,6 +321,36 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc extends TeaModel {
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc self = new DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class DescribeApplicationConfigResponseBodyDataInitContainersConfig extends TeaModel {
         /**
          * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
@@ -324,6 +384,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("ConfigMapMountDesc")
         public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc> configMapMountDesc;
+
+        @NameInMap("EmptyDirDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc> emptyDirDesc;
 
         /**
          * <p>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</p>
@@ -395,6 +458,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc> getConfigMapMountDesc() {
             return this.configMapMountDesc;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfig setEmptyDirDesc(java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc> emptyDirDesc) {
+            this.emptyDirDesc = emptyDirDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc> getEmptyDirDesc() {
+            return this.emptyDirDesc;
         }
 
         public DescribeApplicationConfigResponseBodyDataInitContainersConfig setEnvs(String envs) {
@@ -1204,6 +1275,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("EdasContainerVersion")
         public String edasContainerVersion;
+
+        @NameInMap("EmptyDirDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataEmptyDirDesc> emptyDirDesc;
 
         /**
          * <p>Indicates whether access to Application High Availability Service (AHAS) is enabled. Valid values:</p>
@@ -2152,6 +2226,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getEdasContainerVersion() {
             return this.edasContainerVersion;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setEmptyDirDesc(java.util.List<DescribeApplicationConfigResponseBodyDataEmptyDirDesc> emptyDirDesc) {
+            this.emptyDirDesc = emptyDirDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataEmptyDirDesc> getEmptyDirDesc() {
+            return this.emptyDirDesc;
         }
 
         public DescribeApplicationConfigResponseBodyData setEnableAhas(String enableAhas) {

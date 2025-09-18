@@ -228,6 +228,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
+    @NameInMap("EmptyDirDesc")
+    public String emptyDirDesc;
+
     /**
      * <p>Enable CPU Burst.</p>
      * <ul>
@@ -1110,6 +1113,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getEdasContainerVersion() {
         return this.edasContainerVersion;
+    }
+
+    public CreateApplicationShrinkRequest setEmptyDirDesc(String emptyDirDesc) {
+        this.emptyDirDesc = emptyDirDesc;
+        return this;
+    }
+    public String getEmptyDirDesc() {
+        return this.emptyDirDesc;
     }
 
     public CreateApplicationShrinkRequest setEnableCpuBurst(Boolean enableCpuBurst) {
