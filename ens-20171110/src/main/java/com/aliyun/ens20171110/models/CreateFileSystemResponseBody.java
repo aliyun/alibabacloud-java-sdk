@@ -10,6 +10,9 @@ public class CreateFileSystemResponseBody extends TeaModel {
     @NameInMap("AllocationId")
     public java.util.List<String> allocationId;
 
+    @NameInMap("AllocationIds")
+    public java.util.List<CreateFileSystemResponseBodyAllocationIds> allocationIds;
+
     /**
      * <p>The status code for successful operations. Valid values:</p>
      * <ul>
@@ -51,6 +54,14 @@ public class CreateFileSystemResponseBody extends TeaModel {
         return this.allocationId;
     }
 
+    public CreateFileSystemResponseBody setAllocationIds(java.util.List<CreateFileSystemResponseBodyAllocationIds> allocationIds) {
+        this.allocationIds = allocationIds;
+        return this;
+    }
+    public java.util.List<CreateFileSystemResponseBodyAllocationIds> getAllocationIds() {
+        return this.allocationIds;
+    }
+
     public CreateFileSystemResponseBody setBizStatusCode(String bizStatusCode) {
         this.bizStatusCode = bizStatusCode;
         return this;
@@ -73,6 +84,36 @@ public class CreateFileSystemResponseBody extends TeaModel {
     }
     public java.util.List<String> getUnAllocationId() {
         return this.unAllocationId;
+    }
+
+    public static class CreateFileSystemResponseBodyAllocationIds extends TeaModel {
+        @NameInMap("EnsRegionId")
+        public String ensRegionId;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        public static CreateFileSystemResponseBodyAllocationIds build(java.util.Map<String, ?> map) throws Exception {
+            CreateFileSystemResponseBodyAllocationIds self = new CreateFileSystemResponseBodyAllocationIds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFileSystemResponseBodyAllocationIds setEnsRegionId(String ensRegionId) {
+            this.ensRegionId = ensRegionId;
+            return this;
+        }
+        public String getEnsRegionId() {
+            return this.ensRegionId;
+        }
+
+        public CreateFileSystemResponseBodyAllocationIds setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
     }
 
 }
