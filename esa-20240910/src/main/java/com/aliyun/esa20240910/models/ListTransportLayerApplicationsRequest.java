@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListTransportLayerApplicationsRequest extends TeaModel {
     /**
+     * <p>Query type for the transport layer application host record, supporting the following 4 types, with exact query as the default.</p>
+     * <ul>
+     * <li>fuzzy: Fuzzy query.</li>
+     * <li>exact: Exact query.</li>
+     * <li>prefix: Prefix match query.</li>
+     * <li>suffix: Suffix match query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>fuzzy</p>
      */
@@ -12,6 +20,8 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public String matchType;
 
     /**
+     * <p>Page number set for pagination. Starting value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +29,8 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size. The maximum value is 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -26,6 +38,8 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Host record of the transport layer application.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
      */
@@ -33,6 +47,7 @@ public class ListTransportLayerApplicationsRequest extends TeaModel {
     public String recordName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

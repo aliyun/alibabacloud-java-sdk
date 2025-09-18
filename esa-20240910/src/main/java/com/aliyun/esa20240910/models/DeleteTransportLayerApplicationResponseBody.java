@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteTransportLayerApplicationResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>90510C29-1E40-5A11-93F1-B9F5EDF57EE1</p>
      */

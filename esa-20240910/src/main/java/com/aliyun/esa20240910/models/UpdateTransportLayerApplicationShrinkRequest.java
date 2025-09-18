@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     /**
+     * <p>Transport layer application ID, which can be obtained by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,19 +14,49 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public Long applicationId;
 
+    /**
+     * <p>Whether to enable China mainland network access optimization, default is disabled. Value range:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("CrossBorderOptimization")
     public String crossBorderOptimization;
 
+    /**
+     * <p>IP access rule switch. When enabled, the IP access rules in WAF will take effect on the transport layer application.</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("IpAccessRule")
     public String ipAccessRule;
 
+    /**
+     * <p>IPv6 switch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Ipv6")
     public String ipv6;
 
+    /**
+     * <p>Forwarding rule list. Details of each rule. Except for the comment, all other parameters are required.</p>
+     */
     @NameInMap("Rules")
     public String rulesShrink;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +64,9 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
      */
     @NameInMap("SiteId")
     public Long siteId;
+
+    @NameInMap("StaticIp")
+    public String staticIp;
 
     public static UpdateTransportLayerApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTransportLayerApplicationShrinkRequest self = new UpdateTransportLayerApplicationShrinkRequest();
@@ -85,6 +119,14 @@ public class UpdateTransportLayerApplicationShrinkRequest extends TeaModel {
     }
     public Long getSiteId() {
         return this.siteId;
+    }
+
+    public UpdateTransportLayerApplicationShrinkRequest setStaticIp(String staticIp) {
+        this.staticIp = staticIp;
+        return this;
+    }
+    public String getStaticIp() {
+        return this.staticIp;
     }
 
 }

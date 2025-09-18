@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTransportLayerApplicationResponseBody extends TeaModel {
     /**
+     * <p>Layer 4 application ID</p>
+     * 
      * <strong>example:</strong>
      * <p>165503967****</p>
      */
@@ -12,6 +14,8 @@ public class CreateTransportLayerApplicationResponseBody extends TeaModel {
     public Long applicationId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9e5448c7-edaf-49aa-9887-0fcd0832306c</p>
      */

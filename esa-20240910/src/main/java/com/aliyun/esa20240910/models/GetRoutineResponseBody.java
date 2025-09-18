@@ -207,32 +207,8 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static class GetRoutineResponseBodyEnvs extends TeaModel {
-        /**
-         * <p>The regions for canary release.</p>
-         */
-        @NameInMap("CanaryAreaList")
-        public java.util.List<String> canaryAreaList;
-
-        /**
-         * <p>The version number for canary release.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1710120201067577628</p>
-         */
-        @NameInMap("CanaryCodeVersion")
-        public String canaryCodeVersion;
-
         @NameInMap("CodeDeploy")
         public GetRoutineResponseBodyEnvsCodeDeploy codeDeploy;
-
-        /**
-         * <p>The version number of the code in the environment.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1710120201067577628</p>
-         */
-        @NameInMap("CodeVersion")
-        public String codeVersion;
 
         /**
          * <p>The environment type.</p>
@@ -248,36 +224,12 @@ public class GetRoutineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetRoutineResponseBodyEnvs setCanaryAreaList(java.util.List<String> canaryAreaList) {
-            this.canaryAreaList = canaryAreaList;
-            return this;
-        }
-        public java.util.List<String> getCanaryAreaList() {
-            return this.canaryAreaList;
-        }
-
-        public GetRoutineResponseBodyEnvs setCanaryCodeVersion(String canaryCodeVersion) {
-            this.canaryCodeVersion = canaryCodeVersion;
-            return this;
-        }
-        public String getCanaryCodeVersion() {
-            return this.canaryCodeVersion;
-        }
-
         public GetRoutineResponseBodyEnvs setCodeDeploy(GetRoutineResponseBodyEnvsCodeDeploy codeDeploy) {
             this.codeDeploy = codeDeploy;
             return this;
         }
         public GetRoutineResponseBodyEnvsCodeDeploy getCodeDeploy() {
             return this.codeDeploy;
-        }
-
-        public GetRoutineResponseBodyEnvs setCodeVersion(String codeVersion) {
-            this.codeVersion = codeVersion;
-            return this;
-        }
-        public String getCodeVersion() {
-            return this.codeVersion;
         }
 
         public GetRoutineResponseBodyEnvs setEnv(String env) {

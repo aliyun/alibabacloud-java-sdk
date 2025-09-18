@@ -4,16 +4,43 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
+    /**
+     * <p>Whether to enable China mainland network access optimization, default is disabled. Value range:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("CrossBorderOptimization")
     public String crossBorderOptimization;
 
+    /**
+     * <p>IP access rule switch. When enabled, the WAF\&quot;s IP access rules apply to the transport layer application.</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("IpAccessRule")
     public String ipAccessRule;
 
+    /**
+     * <p>IPv6 switch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("Ipv6")
     public String ipv6;
 
     /**
+     * <p>Domain name of the transport layer application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +50,14 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     public String recordName;
 
     /**
+     * <p>List of forwarding rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +65,9 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
      */
     @NameInMap("SiteId")
     public Long siteId;
+
+    @NameInMap("StaticIp")
+    public String staticIp;
 
     public static CreateTransportLayerApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTransportLayerApplicationShrinkRequest self = new CreateTransportLayerApplicationShrinkRequest();
@@ -88,6 +120,14 @@ public class CreateTransportLayerApplicationShrinkRequest extends TeaModel {
     }
     public Long getSiteId() {
         return this.siteId;
+    }
+
+    public CreateTransportLayerApplicationShrinkRequest setStaticIp(String staticIp) {
+        this.staticIp = staticIp;
+        return this;
+    }
+    public String getStaticIp() {
+        return this.staticIp;
     }
 
 }

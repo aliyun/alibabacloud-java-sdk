@@ -4030,7 +4030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建四层应用</p>
+     * <p>Create Transport Layer Application</p>
      * 
      * @param tmpReq CreateTransportLayerApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4069,6 +4069,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SiteId", request.siteId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.staticIp)) {
+            query.put("StaticIp", request.staticIp);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4088,7 +4092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建四层应用</p>
+     * <p>Create Transport Layer Application</p>
      * 
      * @param request CreateTransportLayerApplicationRequest
      * @return CreateTransportLayerApplicationResponse
@@ -6658,7 +6662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除四层应用</p>
+     * <p>Delete Transport Layer Application</p>
      * 
      * @param request DeleteTransportLayerApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6694,7 +6698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除四层应用</p>
+     * <p>Delete Transport Layer Application</p>
      * 
      * @param request DeleteTransportLayerApplicationRequest
      * @return DeleteTransportLayerApplicationResponse
@@ -10844,7 +10848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询四层应用详情</p>
+     * <p>Query details of the transport layer application</p>
      * 
      * @param request GetTransportLayerApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10872,7 +10876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询四层应用详情</p>
+     * <p>Query details of the transport layer application</p>
      * 
      * @param request GetTransportLayerApplicationRequest
      * @return GetTransportLayerApplicationResponse
@@ -13468,7 +13472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询四层应用列表</p>
+     * <p>List of Transport Layer Applications</p>
      * 
      * @param request ListTransportLayerApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13496,7 +13500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询四层应用列表</p>
+     * <p>List of Transport Layer Applications</p>
      * 
      * @param request ListTransportLayerApplicationsRequest
      * @return ListTransportLayerApplicationsResponse
@@ -18750,7 +18754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改四层应用</p>
+     * <p>Modify Transport Layer Application</p>
      * 
      * @param tmpReq UpdateTransportLayerApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18789,6 +18793,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SiteId", request.siteId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.staticIp)) {
+            query.put("StaticIp", request.staticIp);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -18808,7 +18816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改四层应用</p>
+     * <p>Modify Transport Layer Application</p>
      * 
      * @param request UpdateTransportLayerApplicationRequest
      * @return UpdateTransportLayerApplicationResponse
