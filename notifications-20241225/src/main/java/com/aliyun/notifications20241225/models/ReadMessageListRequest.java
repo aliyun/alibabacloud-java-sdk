@@ -76,6 +76,12 @@ public class ReadMessageListRequest extends TeaModel {
     @NameInMap("Cookies")
     public String cookies;
 
+    @NameInMap("GroupCode")
+    public String groupCode;
+
+    @NameInMap("History")
+    public String history;
+
     /**
      * <p>栏位 nav代表控制台topbar</p>
      * 
@@ -233,6 +239,22 @@ public class ReadMessageListRequest extends TeaModel {
     }
     public String getCookies() {
         return this.cookies;
+    }
+
+    public ReadMessageListRequest setGroupCode(String groupCode) {
+        this.groupCode = groupCode;
+        return this;
+    }
+    public String getGroupCode() {
+        return this.groupCode;
+    }
+
+    public ReadMessageListRequest setHistory(String history) {
+        this.history = history;
+        return this;
+    }
+    public String getHistory() {
+        return this.history;
     }
 
     public ReadMessageListRequest setLoc(String loc) {

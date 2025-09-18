@@ -73,6 +73,9 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
     }
 
     public static class ReadNumGroupTotalResponseBodyData extends TeaModel {
+        @NameInMap("GroupCode")
+        public String groupCode;
+
         @NameInMap("Id")
         public Long id;
 
@@ -88,6 +91,14 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         public static ReadNumGroupTotalResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ReadNumGroupTotalResponseBodyData self = new ReadNumGroupTotalResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ReadNumGroupTotalResponseBodyData setGroupCode(String groupCode) {
+            this.groupCode = groupCode;
+            return this;
+        }
+        public String getGroupCode() {
+            return this.groupCode;
         }
 
         public ReadNumGroupTotalResponseBodyData setId(Long id) {

@@ -96,6 +96,9 @@ public class ReadMessageListResponseBody extends TeaModel {
     }
 
     public static class ReadMessageListResponseBodyDataRows extends TeaModel {
+        @NameInMap("CategoryCode")
+        public String categoryCode;
+
         /**
          * <p>CategoryName</p>
          * 
@@ -208,6 +211,14 @@ public class ReadMessageListResponseBody extends TeaModel {
         public static ReadMessageListResponseBodyDataRows build(java.util.Map<String, ?> map) throws Exception {
             ReadMessageListResponseBodyDataRows self = new ReadMessageListResponseBodyDataRows();
             return TeaModel.build(map, self);
+        }
+
+        public ReadMessageListResponseBodyDataRows setCategoryCode(String categoryCode) {
+            this.categoryCode = categoryCode;
+            return this;
+        }
+        public String getCategoryCode() {
+            return this.categoryCode;
         }
 
         public ReadMessageListResponseBodyDataRows setCategoryName(String categoryName) {

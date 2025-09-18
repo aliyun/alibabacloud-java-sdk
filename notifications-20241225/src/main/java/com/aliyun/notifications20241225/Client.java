@@ -145,6 +145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Cookies", request.cookies);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupCode)) {
+            body.put("GroupCode", request.groupCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.srcUrl)) {
             body.put("SrcUrl", request.srcUrl);
         }
@@ -223,6 +227,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cookies)) {
             body.put("Cookies", request.cookies);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupCode)) {
+            body.put("GroupCode", request.groupCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.srcUrl)) {
@@ -461,6 +469,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Cookies", request.cookies);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupCode)) {
+            body.put("GroupCode", request.groupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.history)) {
+            body.put("History", request.history);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.msgId)) {
             body.put("MsgId", request.msgId);
         }
@@ -551,6 +567,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cookies)) {
             body.put("Cookies", request.cookies);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupCode)) {
+            body.put("GroupCode", request.groupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.history)) {
+            body.put("History", request.history);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.loc)) {

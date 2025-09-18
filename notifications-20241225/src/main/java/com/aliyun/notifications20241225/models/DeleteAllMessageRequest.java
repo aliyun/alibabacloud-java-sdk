@@ -25,6 +25,9 @@ public class DeleteAllMessageRequest extends TeaModel {
     @NameInMap("Cookies")
     public String cookies;
 
+    @NameInMap("GroupCode")
+    public String groupCode;
+
     @NameInMap("SrcUrl")
     public String srcUrl;
 
@@ -93,6 +96,14 @@ public class DeleteAllMessageRequest extends TeaModel {
     }
     public String getCookies() {
         return this.cookies;
+    }
+
+    public DeleteAllMessageRequest setGroupCode(String groupCode) {
+        this.groupCode = groupCode;
+        return this;
+    }
+    public String getGroupCode() {
+        return this.groupCode;
     }
 
     public DeleteAllMessageRequest setSrcUrl(String srcUrl) {

@@ -25,6 +25,12 @@ public class ReadMessageContentRequest extends TeaModel {
     @NameInMap("Cookies")
     public String cookies;
 
+    @NameInMap("GroupCode")
+    public String groupCode;
+
+    @NameInMap("History")
+    public Boolean history;
+
     @NameInMap("MsgId")
     public String msgId;
 
@@ -99,6 +105,22 @@ public class ReadMessageContentRequest extends TeaModel {
     }
     public String getCookies() {
         return this.cookies;
+    }
+
+    public ReadMessageContentRequest setGroupCode(String groupCode) {
+        this.groupCode = groupCode;
+        return this;
+    }
+    public String getGroupCode() {
+        return this.groupCode;
+    }
+
+    public ReadMessageContentRequest setHistory(Boolean history) {
+        this.history = history;
+        return this;
+    }
+    public Boolean getHistory() {
+        return this.history;
     }
 
     public ReadMessageContentRequest setMsgId(String msgId) {

@@ -25,6 +25,9 @@ public class ReadAllMessageRequest extends TeaModel {
     @NameInMap("Cookies")
     public String cookies;
 
+    @NameInMap("GroupCode")
+    public String groupCode;
+
     @NameInMap("SrcUrl")
     public String srcUrl;
 
@@ -93,6 +96,14 @@ public class ReadAllMessageRequest extends TeaModel {
     }
     public String getCookies() {
         return this.cookies;
+    }
+
+    public ReadAllMessageRequest setGroupCode(String groupCode) {
+        this.groupCode = groupCode;
+        return this;
+    }
+    public String getGroupCode() {
+        return this.groupCode;
     }
 
     public ReadAllMessageRequest setSrcUrl(String srcUrl) {
