@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ListDatasourceTablesRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("SchemaName")
+    public String schemaName;
+
+    /**
+     * <strong>example:</strong>
      * <p>table1</p>
      */
     @NameInMap("TableName")
@@ -14,6 +21,14 @@ public class ListDatasourceTablesRequest extends TeaModel {
     public static ListDatasourceTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDatasourceTablesRequest self = new ListDatasourceTablesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDatasourceTablesRequest setSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    public String getSchemaName() {
+        return this.schemaName;
     }
 
     public ListDatasourceTablesRequest setTableName(String tableName) {
