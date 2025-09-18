@@ -235,6 +235,12 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Extend")
         public String extend;
 
+        @NameInMap("ExtendInput")
+        public String extendInput;
+
+        @NameInMap("ExtendOutput")
+        public String extendOutput;
+
         /**
          * <p>The input configurations. For more information, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</p>
          */
@@ -341,6 +347,22 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         }
         public String getExtend() {
             return this.extend;
+        }
+
+        public GetBatchMediaProducingJobResponseBodyEditingBatchJob setExtendInput(String extendInput) {
+            this.extendInput = extendInput;
+            return this;
+        }
+        public String getExtendInput() {
+            return this.extendInput;
+        }
+
+        public GetBatchMediaProducingJobResponseBodyEditingBatchJob setExtendOutput(String extendOutput) {
+            this.extendOutput = extendOutput;
+            return this;
+        }
+        public String getExtendOutput() {
+            return this.extendOutput;
         }
 
         public GetBatchMediaProducingJobResponseBodyEditingBatchJob setInputConfig(String inputConfig) {

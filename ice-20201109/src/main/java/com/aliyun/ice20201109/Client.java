@@ -591,6 +591,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>打标流媒资</p>
+     * 
+     * @param request AddStreamTagToSearchLibRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddStreamTagToSearchLibResponse
+     */
+    public AddStreamTagToSearchLibResponse addStreamTagToSearchLibWithOptions(AddStreamTagToSearchLibRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.msgBody)) {
+            query.put("MsgBody", request.msgBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddStreamTagToSearchLib"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddStreamTagToSearchLibResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>打标流媒资</p>
+     * 
+     * @param request AddStreamTagToSearchLibRequest
+     * @return AddStreamTagToSearchLibResponse
+     */
+    public AddStreamTagToSearchLibResponse addStreamTagToSearchLib(AddStreamTagToSearchLibRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addStreamTagToSearchLibWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</p>
      * <ul>
@@ -1090,6 +1146,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CloseMediaConnectFlowFailoverResponse closeMediaConnectFlowFailover(CloseMediaConnectFlowFailoverRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeMediaConnectFlowFailoverWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭流媒资</p>
+     * 
+     * @param request CloseStreamToSearchLibRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloseStreamToSearchLibResponse
+     */
+    public CloseStreamToSearchLibResponse closeStreamToSearchLibWithOptions(CloseStreamToSearchLibRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloseStreamToSearchLib"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloseStreamToSearchLibResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭流媒资</p>
+     * 
+     * @param request CloseStreamToSearchLibRequest
+     * @return CloseStreamToSearchLibResponse
+     */
+    public CloseStreamToSearchLibResponse closeStreamToSearchLib(CloseStreamToSearchLibRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.closeStreamToSearchLibWithOptions(request, runtime);
     }
 
     /**
@@ -2880,6 +2988,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSourceLocationResponse createSourceLocation(CreateSourceLocationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSourceLocationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建流媒资</p>
+     * 
+     * @param request CreateStreamToSearchLibRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateStreamToSearchLibResponse
+     */
+    public CreateStreamToSearchLibResponse createStreamToSearchLibWithOptions(CreateStreamToSearchLibRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateStreamToSearchLib"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStreamToSearchLibResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建流媒资</p>
+     * 
+     * @param request CreateStreamToSearchLibRequest
+     * @return CreateStreamToSearchLibResponse
+     */
+    public CreateStreamToSearchLibResponse createStreamToSearchLib(CreateStreamToSearchLibRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createStreamToSearchLibWithOptions(request, runtime);
     }
 
     /**
@@ -8958,6 +9118,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetStorageListResponse getStorageList(GetStorageListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStorageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询流媒资打标</p>
+     * 
+     * @param request GetStreamTagListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetStreamTagListResponse
+     */
+    public GetStreamTagListResponse getStreamTagListWithOptions(GetStreamTagListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStreamTagList"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStreamTagListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询流媒资打标</p>
+     * 
+     * @param request GetStreamTagListRequest
+     * @return GetStreamTagListResponse
+     */
+    public GetStreamTagListResponse getStreamTagList(GetStreamTagListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getStreamTagListWithOptions(request, runtime);
     }
 
     /**

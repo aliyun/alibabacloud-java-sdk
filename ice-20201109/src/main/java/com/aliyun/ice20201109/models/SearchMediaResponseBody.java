@@ -1244,6 +1244,13 @@ public class SearchMediaResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
+        @NameInMap("StreamStatus")
+        public String streamStatus;
+
+        /**
          * <p>The title of the media asset.</p>
          */
         @NameInMap("Title")
@@ -1442,6 +1449,14 @@ public class SearchMediaResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListMediaBasicInfo setStreamStatus(String streamStatus) {
+            this.streamStatus = streamStatus;
+            return this;
+        }
+        public String getStreamStatus() {
+            return this.streamStatus;
         }
 
         public SearchMediaResponseBodyMediaInfoListMediaBasicInfo setTitle(String title) {
