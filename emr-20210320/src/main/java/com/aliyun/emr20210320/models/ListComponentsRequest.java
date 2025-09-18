@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListComponentsRequest extends TeaModel {
     /**
-     * <p>应用名称列表。</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListComponentsRequest extends TeaModel {
     public java.util.List<String> applicationNames;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListComponentsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>组件名称列表。</p>
+     * <p>The list of component names.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;HDFS&quot;]</p>
@@ -33,6 +33,8 @@ public class ListComponentsRequest extends TeaModel {
     public java.util.List<String> componentNames;
 
     /**
+     * <p>The list of component status.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -40,7 +42,7 @@ public class ListComponentsRequest extends TeaModel {
     public java.util.List<String> componentStates;
 
     /**
-     * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -49,7 +51,7 @@ public class ListComponentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -58,7 +60,7 @@ public class ListComponentsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>地域ID。</p>
+     * <p>The region ID. You can call the <a href="url">ListRegions</a> view.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

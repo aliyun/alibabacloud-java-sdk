@@ -16,7 +16,6 @@ public class CreateNodeGroupRequest extends TeaModel {
 
     /**
      * <p>The information about the node group.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroup")
     public NodeGroupConfig nodeGroup;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationRequest extends TeaModel {
     /**
-     * <p>应用名称。</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetApplicationRequest extends TeaModel {
     public String applicationName;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetApplicationRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>地域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

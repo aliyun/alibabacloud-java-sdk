@@ -4,6 +4,9 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class UpdateSpecNodeGroup extends TeaModel {
+    @NameInMap("ModifyType")
+    public String modifyType;
+
     /**
      * <p>新实例类型。</p>
      * <p>This parameter is required.</p>
@@ -27,6 +30,14 @@ public class UpdateSpecNodeGroup extends TeaModel {
     public static UpdateSpecNodeGroup build(java.util.Map<String, ?> map) throws Exception {
         UpdateSpecNodeGroup self = new UpdateSpecNodeGroup();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSpecNodeGroup setModifyType(String modifyType) {
+        this.modifyType = modifyType;
+        return this;
+    }
+    public String getModifyType() {
+        return this.modifyType;
     }
 
     public UpdateSpecNodeGroup setNewInstanceType(String newInstanceType) {

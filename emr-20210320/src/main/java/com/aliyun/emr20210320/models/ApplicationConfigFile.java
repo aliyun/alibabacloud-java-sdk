@@ -16,7 +16,6 @@ public class ApplicationConfigFile extends TeaModel {
 
     /**
      * <p>配置文件名称。</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>core-site.xml</p>

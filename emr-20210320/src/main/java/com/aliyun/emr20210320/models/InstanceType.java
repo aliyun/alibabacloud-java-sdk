@@ -84,6 +84,9 @@ public class InstanceType extends TeaModel {
     @NameInMap("LocalStorageCapacity")
     public Long localStorageCapacity;
 
+    @NameInMap("ModifyType")
+    public String modifyType;
+
     /**
      * <p>是否IO优化类型。</p>
      * 
@@ -152,6 +155,14 @@ public class InstanceType extends TeaModel {
     }
     public Long getLocalStorageCapacity() {
         return this.localStorageCapacity;
+    }
+
+    public InstanceType setModifyType(String modifyType) {
+        this.modifyType = modifyType;
+        return this;
+    }
+    public String getModifyType() {
+        return this.modifyType;
     }
 
     public InstanceType setOptimized(Boolean optimized) {

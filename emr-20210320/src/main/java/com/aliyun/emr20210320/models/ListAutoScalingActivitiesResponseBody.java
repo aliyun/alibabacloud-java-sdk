@@ -91,6 +91,51 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class InstanceTypeDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.g6.xlarge</p>
+         */
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("OnDemandInstanceIds")
+        public java.util.List<String> onDemandInstanceIds;
+
+        @NameInMap("SpotInstanceIds")
+        public java.util.List<String> spotInstanceIds;
+
+        public static InstanceTypeDetails build(java.util.Map<String, ?> map) throws Exception {
+            InstanceTypeDetails self = new InstanceTypeDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public InstanceTypeDetails setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public InstanceTypeDetails setOnDemandInstanceIds(java.util.List<String> onDemandInstanceIds) {
+            this.onDemandInstanceIds = onDemandInstanceIds;
+            return this;
+        }
+        public java.util.List<String> getOnDemandInstanceIds() {
+            return this.onDemandInstanceIds;
+        }
+
+        public InstanceTypeDetails setSpotInstanceIds(java.util.List<String> spotInstanceIds) {
+            this.spotInstanceIds = spotInstanceIds;
+            return this;
+        }
+        public java.util.List<String> getSpotInstanceIds() {
+            return this.spotInstanceIds;
+        }
+
+    }
+
     public static class ScalingActivities extends TeaModel {
         /**
          * <p>The ID of the scaling activity.</p>
@@ -165,6 +210,9 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("ExpectNum")
         public Integer expectNum;
 
+        @NameInMap("InstanceTypeDetails")
+        public java.util.List<InstanceTypeDetails> instanceTypeDetails;
+
         @NameInMap("InstanceTypeToNum")
         public java.util.Map<String, Integer> instanceTypeToNum;
 
@@ -195,6 +243,10 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("OperationId")
         public String operationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRIORITY</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
@@ -275,6 +327,14 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         }
         public Integer getExpectNum() {
             return this.expectNum;
+        }
+
+        public ScalingActivities setInstanceTypeDetails(java.util.List<InstanceTypeDetails> instanceTypeDetails) {
+            this.instanceTypeDetails = instanceTypeDetails;
+            return this;
+        }
+        public java.util.List<InstanceTypeDetails> getInstanceTypeDetails() {
+            return this.instanceTypeDetails;
         }
 
         public ScalingActivities setInstanceTypeToNum(java.util.Map<String, Integer> instanceTypeToNum) {

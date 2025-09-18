@@ -707,6 +707,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ExportApplicationConfigsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportApplicationConfigsResponse
+     */
+    public ExportApplicationConfigsResponse exportApplicationConfigsWithOptions(ExportApplicationConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationConfigFiles)) {
+            query.put("ApplicationConfigFiles", request.applicationConfigFiles);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportMode)) {
+            query.put("ExportMode", request.exportMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileFormat)) {
+            query.put("FileFormat", request.fileFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportApplicationConfigs"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportApplicationConfigsResponse());
+    }
+
+    /**
+     * @param request ExportApplicationConfigsRequest
+     * @return ExportApplicationConfigsResponse
+     */
+    public ExportApplicationConfigsResponse exportApplicationConfigs(ExportApplicationConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportApplicationConfigsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the detailed configuration information about an API operation template.</p>
      * 
@@ -758,6 +812,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>查询应用详情。</p>
      * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an application.</p>
+     * 
      * @param request GetApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApplicationResponse
@@ -797,6 +854,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>查询应用详情。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of an application.</p>
      * 
      * @param request GetApplicationRequest
      * @return GetApplicationResponse
@@ -2325,6 +2385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeTypes)) {
+            query.put("InstanceChargeTypes", request.instanceChargeTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -2471,6 +2535,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of component instances.</p>
+     * 
      * @param request ListComponentInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListComponentInstancesResponse
@@ -2536,6 +2603,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of component instances.</p>
+     * 
      * @param request ListComponentInstancesRequest
      * @return ListComponentInstancesResponse
      */
@@ -2545,6 +2615,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of components.</p>
+     * 
      * @param request ListComponentsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListComponentsResponse
@@ -2598,6 +2671,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of components.</p>
+     * 
      * @param request ListComponentsRequest
      * @return ListComponentsResponse
      */

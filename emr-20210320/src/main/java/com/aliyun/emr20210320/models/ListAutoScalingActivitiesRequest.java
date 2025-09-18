@@ -24,6 +24,21 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>实例付费类型枚举值：</p>
+     * <ul>
+     * <li>ONDEMAND: 按量付费实例</li>
+     * <li>SPOT: 竞价实例
+     * 默认为null代表全选
+     * 举例: [&quot;ONDEMAND&quot;, &quot;SPOT&quot;]</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ONDEMAND</p>
+     */
+    @NameInMap("InstanceChargeTypes")
+    public java.util.List<String> instanceChargeTypes;
+
+    /**
      * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +97,10 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     @NameInMap("ScalingActivityType")
     public String scalingActivityType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MANAGED</p>
+     */
     @NameInMap("ScalingPolicyType")
     public String scalingPolicyType;
 
@@ -122,6 +141,14 @@ public class ListAutoScalingActivitiesRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public ListAutoScalingActivitiesRequest setInstanceChargeTypes(java.util.List<String> instanceChargeTypes) {
+        this.instanceChargeTypes = instanceChargeTypes;
+        return this;
+    }
+    public java.util.List<String> getInstanceChargeTypes() {
+        return this.instanceChargeTypes;
     }
 
     public ListAutoScalingActivitiesRequest setMaxResults(Integer maxResults) {

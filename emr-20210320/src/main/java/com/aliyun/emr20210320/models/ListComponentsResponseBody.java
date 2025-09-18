@@ -4,11 +4,14 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListComponentsResponseBody extends TeaModel {
+    /**
+     * <p>The list of component information.</p>
+     */
     @NameInMap("Components")
     public java.util.List<Components> components;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +20,7 @@ public class ListComponentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -26,7 +29,7 @@ public class ListComponentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FFAC608A-5DC3-174F-93C6-9F88CA6D5875</p>
@@ -35,7 +38,7 @@ public class ListComponentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -90,7 +93,7 @@ public class ListComponentsResponseBody extends TeaModel {
 
     public static class Components extends TeaModel {
         /**
-         * <p>应用名称。</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>KNOX</p>
@@ -99,13 +102,13 @@ public class ListComponentsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>属性列表。</p>
+         * <p>The list of attributes.</p>
          */
         @NameInMap("Attributes")
         public java.util.List<Attribute> attributes;
 
         /**
-         * <p>组件名称。</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>KNOX</p>
@@ -114,7 +117,7 @@ public class ListComponentsResponseBody extends TeaModel {
         public String componentName;
 
         /**
-         * <p>命名空间。</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -123,7 +126,7 @@ public class ListComponentsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>安装该组件的机器总数。</p>
+         * <p>The total number of instances on which the component is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
