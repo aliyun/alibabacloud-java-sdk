@@ -270,6 +270,47 @@ public class ListServicesResponseBody extends TeaModel {
 
     }
 
+    public static class ListServicesResponseBodyServicesServiceLocaleConfigs extends TeaModel {
+        @NameInMap("EnValue")
+        public String enValue;
+
+        @NameInMap("OriginalValue")
+        public String originalValue;
+
+        @NameInMap("ZhValue")
+        public String zhValue;
+
+        public static ListServicesResponseBodyServicesServiceLocaleConfigs build(java.util.Map<String, ?> map) throws Exception {
+            ListServicesResponseBodyServicesServiceLocaleConfigs self = new ListServicesResponseBodyServicesServiceLocaleConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServicesResponseBodyServicesServiceLocaleConfigs setEnValue(String enValue) {
+            this.enValue = enValue;
+            return this;
+        }
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        public ListServicesResponseBodyServicesServiceLocaleConfigs setOriginalValue(String originalValue) {
+            this.originalValue = originalValue;
+            return this;
+        }
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        public ListServicesResponseBodyServicesServiceLocaleConfigs setZhValue(String zhValue) {
+            this.zhValue = zhValue;
+            return this;
+        }
+        public String getZhValue() {
+            return this.zhValue;
+        }
+
+    }
+
     public static class ListServicesResponseBodyServicesTags extends TeaModel {
         /**
          * <p>The tag key.</p>
@@ -402,6 +443,9 @@ public class ListServicesResponseBody extends TeaModel {
          */
         @NameInMap("ServiceInfos")
         public java.util.List<ListServicesResponseBodyServicesServiceInfos> serviceInfos;
+
+        @NameInMap("ServiceLocaleConfigs")
+        public java.util.List<ListServicesResponseBodyServicesServiceLocaleConfigs> serviceLocaleConfigs;
 
         /**
          * <p>The URL of the service page.</p>
@@ -626,6 +670,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public java.util.List<ListServicesResponseBodyServicesServiceInfos> getServiceInfos() {
             return this.serviceInfos;
+        }
+
+        public ListServicesResponseBodyServices setServiceLocaleConfigs(java.util.List<ListServicesResponseBodyServicesServiceLocaleConfigs> serviceLocaleConfigs) {
+            this.serviceLocaleConfigs = serviceLocaleConfigs;
+            return this;
+        }
+        public java.util.List<ListServicesResponseBodyServicesServiceLocaleConfigs> getServiceLocaleConfigs() {
+            return this.serviceLocaleConfigs;
         }
 
         public ListServicesResponseBodyServices setServiceProductUrl(String serviceProductUrl) {

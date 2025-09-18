@@ -192,6 +192,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ServiceInfos")
     public java.util.List<GetServiceResponseBodyServiceInfos> serviceInfos;
 
+    @NameInMap("ServiceLocaleConfigs")
+    public java.util.List<GetServiceResponseBodyServiceLocaleConfigs> serviceLocaleConfigs;
+
     /**
      * <p>The URL of the service page.</p>
      * 
@@ -523,6 +526,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public java.util.List<GetServiceResponseBodyServiceInfos> getServiceInfos() {
         return this.serviceInfos;
+    }
+
+    public GetServiceResponseBody setServiceLocaleConfigs(java.util.List<GetServiceResponseBodyServiceLocaleConfigs> serviceLocaleConfigs) {
+        this.serviceLocaleConfigs = serviceLocaleConfigs;
+        return this;
+    }
+    public java.util.List<GetServiceResponseBodyServiceLocaleConfigs> getServiceLocaleConfigs() {
+        return this.serviceLocaleConfigs;
     }
 
     public GetServiceResponseBody setServiceProductUrl(String serviceProductUrl) {
@@ -1353,6 +1364,47 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public java.util.List<GetServiceResponseBodyServiceInfosSoftwares> getSoftwares() {
             return this.softwares;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyServiceLocaleConfigs extends TeaModel {
+        @NameInMap("EnValue")
+        public String enValue;
+
+        @NameInMap("OriginalValue")
+        public String originalValue;
+
+        @NameInMap("ZhValue")
+        public String zhValue;
+
+        public static GetServiceResponseBodyServiceLocaleConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyServiceLocaleConfigs self = new GetServiceResponseBodyServiceLocaleConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyServiceLocaleConfigs setEnValue(String enValue) {
+            this.enValue = enValue;
+            return this;
+        }
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        public GetServiceResponseBodyServiceLocaleConfigs setOriginalValue(String originalValue) {
+            this.originalValue = originalValue;
+            return this;
+        }
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        public GetServiceResponseBodyServiceLocaleConfigs setZhValue(String zhValue) {
+            this.zhValue = zhValue;
+            return this;
+        }
+        public String getZhValue() {
+            return this.zhValue;
         }
 
     }
