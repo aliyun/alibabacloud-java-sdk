@@ -10,10 +10,23 @@ public class TableCompaction extends TeaModel {
     @NameInMap("cuUsage")
     public Double cuUsage;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("lastCompactedFileTime")
+    @Deprecated
     public Long lastCompactedFileTime;
 
+    @NameInMap("latencyFileEarliestTime")
+    public Long latencyFileEarliestTime;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("maxLevel0FileCount")
+    @Deprecated
     public String maxLevel0FileCount;
 
     @NameInMap("tableId")
@@ -40,6 +53,7 @@ public class TableCompaction extends TeaModel {
         return this.cuUsage;
     }
 
+    @Deprecated
     public TableCompaction setLastCompactedFileTime(Long lastCompactedFileTime) {
         this.lastCompactedFileTime = lastCompactedFileTime;
         return this;
@@ -48,6 +62,15 @@ public class TableCompaction extends TeaModel {
         return this.lastCompactedFileTime;
     }
 
+    public TableCompaction setLatencyFileEarliestTime(Long latencyFileEarliestTime) {
+        this.latencyFileEarliestTime = latencyFileEarliestTime;
+        return this;
+    }
+    public Long getLatencyFileEarliestTime() {
+        return this.latencyFileEarliestTime;
+    }
+
+    @Deprecated
     public TableCompaction setMaxLevel0FileCount(String maxLevel0FileCount) {
         this.maxLevel0FileCount = maxLevel0FileCount;
         return this;

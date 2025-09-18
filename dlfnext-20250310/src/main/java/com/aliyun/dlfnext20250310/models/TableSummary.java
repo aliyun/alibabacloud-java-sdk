@@ -67,6 +67,9 @@ public class TableSummary extends TeaModel {
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
 
+    @NameInMap("totalMetaSizeInBytes")
+    public Long totalMetaSizeInBytes;
+
     @NameInMap("updatedAt")
     public Long updatedAt;
 
@@ -201,6 +204,14 @@ public class TableSummary extends TeaModel {
     }
     public Long getTotalFileSizeInBytes() {
         return this.totalFileSizeInBytes;
+    }
+
+    public TableSummary setTotalMetaSizeInBytes(Long totalMetaSizeInBytes) {
+        this.totalMetaSizeInBytes = totalMetaSizeInBytes;
+        return this;
+    }
+    public Long getTotalMetaSizeInBytes() {
+        return this.totalMetaSizeInBytes;
     }
 
     public TableSummary setUpdatedAt(Long updatedAt) {

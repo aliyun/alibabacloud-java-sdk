@@ -46,6 +46,9 @@ public class CatalogSummary extends TeaModel {
     @NameInMap("totalFileSizeInBytes")
     public MoMValues totalFileSizeInBytes;
 
+    @NameInMap("totalMetaSizeInBytes")
+    public MoMValues totalMetaSizeInBytes;
+
     public static CatalogSummary build(java.util.Map<String, ?> map) throws Exception {
         CatalogSummary self = new CatalogSummary();
         return TeaModel.build(map, self);
@@ -153,6 +156,14 @@ public class CatalogSummary extends TeaModel {
     }
     public MoMValues getTotalFileSizeInBytes() {
         return this.totalFileSizeInBytes;
+    }
+
+    public CatalogSummary setTotalMetaSizeInBytes(MoMValues totalMetaSizeInBytes) {
+        this.totalMetaSizeInBytes = totalMetaSizeInBytes;
+        return this;
+    }
+    public MoMValues getTotalMetaSizeInBytes() {
+        return this.totalMetaSizeInBytes;
     }
 
 }

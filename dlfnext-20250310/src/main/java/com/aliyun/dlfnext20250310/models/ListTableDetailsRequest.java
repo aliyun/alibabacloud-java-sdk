@@ -21,6 +21,9 @@ public class ListTableDetailsRequest extends TeaModel {
     @NameInMap("tableNamePattern")
     public String tableNamePattern;
 
+    @NameInMap("type")
+    public String type;
+
     public static ListTableDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTableDetailsRequest self = new ListTableDetailsRequest();
         return TeaModel.build(map, self);
@@ -48,6 +51,14 @@ public class ListTableDetailsRequest extends TeaModel {
     }
     public String getTableNamePattern() {
         return this.tableNamePattern;
+    }
+
+    public ListTableDetailsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

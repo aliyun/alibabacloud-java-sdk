@@ -58,6 +58,9 @@ public class DatabaseSummary extends TeaModel {
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
 
+    @NameInMap("totalMetaSizeInBytes")
+    public Long totalMetaSizeInBytes;
+
     public static DatabaseSummary build(java.util.Map<String, ?> map) throws Exception {
         DatabaseSummary self = new DatabaseSummary();
         return TeaModel.build(map, self);
@@ -157,6 +160,14 @@ public class DatabaseSummary extends TeaModel {
     }
     public Long getTotalFileSizeInBytes() {
         return this.totalFileSizeInBytes;
+    }
+
+    public DatabaseSummary setTotalMetaSizeInBytes(Long totalMetaSizeInBytes) {
+        this.totalMetaSizeInBytes = totalMetaSizeInBytes;
+        return this;
+    }
+    public Long getTotalMetaSizeInBytes() {
+        return this.totalMetaSizeInBytes;
     }
 
 }

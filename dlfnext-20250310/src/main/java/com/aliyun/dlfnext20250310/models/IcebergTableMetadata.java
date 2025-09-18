@@ -10,6 +10,9 @@ public class IcebergTableMetadata extends TeaModel {
     @NameInMap("fields")
     public java.util.List<IcebergNestedField> fields;
 
+    @NameInMap("identifierFieldIds")
+    public java.util.List<Integer> identifierFieldIds;
+
     @NameInMap("partitionFields")
     public java.util.List<IcebergPartitionField> partitionFields;
 
@@ -35,6 +38,14 @@ public class IcebergTableMetadata extends TeaModel {
     }
     public java.util.List<IcebergNestedField> getFields() {
         return this.fields;
+    }
+
+    public IcebergTableMetadata setIdentifierFieldIds(java.util.List<Integer> identifierFieldIds) {
+        this.identifierFieldIds = identifierFieldIds;
+        return this;
+    }
+    public java.util.List<Integer> getIdentifierFieldIds() {
+        return this.identifierFieldIds;
     }
 
     public IcebergTableMetadata setPartitionFields(java.util.List<IcebergPartitionField> partitionFields) {
