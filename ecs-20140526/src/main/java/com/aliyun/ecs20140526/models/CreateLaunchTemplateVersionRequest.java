@@ -460,6 +460,9 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    @NameInMap("SecurityOptions")
+    public CreateLaunchTemplateVersionRequestSecurityOptions securityOptions;
+
     /**
      * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
@@ -906,6 +909,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
     public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
+    }
+
+    public CreateLaunchTemplateVersionRequest setSecurityOptions(CreateLaunchTemplateVersionRequestSecurityOptions securityOptions) {
+        this.securityOptions = securityOptions;
+        return this;
+    }
+    public CreateLaunchTemplateVersionRequestSecurityOptions getSecurityOptions() {
+        return this.securityOptions;
     }
 
     public CreateLaunchTemplateVersionRequest setSpotDuration(Integer spotDuration) {
@@ -1733,6 +1744,25 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+    }
+
+    public static class CreateLaunchTemplateVersionRequestSecurityOptions extends TeaModel {
+        @NameInMap("TrustedSystemMode")
+        public String trustedSystemMode;
+
+        public static CreateLaunchTemplateVersionRequestSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateLaunchTemplateVersionRequestSecurityOptions self = new CreateLaunchTemplateVersionRequestSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateVersionRequestSecurityOptions setTrustedSystemMode(String trustedSystemMode) {
+            this.trustedSystemMode = trustedSystemMode;
+            return this;
+        }
+        public String getTrustedSystemMode() {
+            return this.trustedSystemMode;
         }
 
     }

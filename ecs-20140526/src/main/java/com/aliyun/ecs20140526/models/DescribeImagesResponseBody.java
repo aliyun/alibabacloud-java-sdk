@@ -806,6 +806,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("IsSupportIoOptimized")
         public Boolean isSupportIoOptimized;
 
+        @NameInMap("LicenseType")
+        public String licenseType;
+
         /**
          * <p>Indicates whether the image supports logons of non-root users. Valid values:</p>
          * <ul>
@@ -1096,6 +1099,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public Boolean getIsSupportIoOptimized() {
             return this.isSupportIoOptimized;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setLicenseType(String licenseType) {
+            this.licenseType = licenseType;
+            return this;
+        }
+        public String getLicenseType() {
+            return this.licenseType;
         }
 
         public DescribeImagesResponseBodyImagesImage setLoginAsNonRootSupported(Boolean loginAsNonRootSupported) {

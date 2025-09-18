@@ -456,6 +456,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    @NameInMap("SecurityOptions")
+    public CreateLaunchTemplateRequestSecurityOptions securityOptions;
+
     /**
      * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
@@ -914,6 +917,14 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     }
     public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
+    }
+
+    public CreateLaunchTemplateRequest setSecurityOptions(CreateLaunchTemplateRequestSecurityOptions securityOptions) {
+        this.securityOptions = securityOptions;
+        return this;
+    }
+    public CreateLaunchTemplateRequestSecurityOptions getSecurityOptions() {
+        return this.securityOptions;
     }
 
     public CreateLaunchTemplateRequest setSpotDuration(Integer spotDuration) {
@@ -1795,6 +1806,25 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+    }
+
+    public static class CreateLaunchTemplateRequestSecurityOptions extends TeaModel {
+        @NameInMap("TrustedSystemMode")
+        public String trustedSystemMode;
+
+        public static CreateLaunchTemplateRequestSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateLaunchTemplateRequestSecurityOptions self = new CreateLaunchTemplateRequestSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateRequestSecurityOptions setTrustedSystemMode(String trustedSystemMode) {
+            this.trustedSystemMode = trustedSystemMode;
+            return this;
+        }
+        public String getTrustedSystemMode() {
+            return this.trustedSystemMode;
         }
 
     }

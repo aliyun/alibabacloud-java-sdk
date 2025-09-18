@@ -3,7 +3,7 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class StartTerminalSessionRequest extends TeaModel {
+public class StartTerminalSessionShrinkRequest extends TeaModel {
     /**
      * <p>The command to run after the session is initiated. The command length cannot exceed 512 characters.</p>
      * <blockquote>
@@ -30,7 +30,7 @@ public class StartTerminalSessionRequest extends TeaModel {
     public String connectionType;
 
     @NameInMap("EncryptionOptions")
-    public StartTerminalSessionRequestEncryptionOptions encryptionOptions;
+    public String encryptionOptionsShrink;
 
     /**
      * <p>The instance IDs.</p>
@@ -95,12 +95,12 @@ public class StartTerminalSessionRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
-    public static StartTerminalSessionRequest build(java.util.Map<String, ?> map) throws Exception {
-        StartTerminalSessionRequest self = new StartTerminalSessionRequest();
+    public static StartTerminalSessionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartTerminalSessionShrinkRequest self = new StartTerminalSessionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartTerminalSessionRequest setCommandLine(String commandLine) {
+    public StartTerminalSessionShrinkRequest setCommandLine(String commandLine) {
         this.commandLine = commandLine;
         return this;
     }
@@ -108,7 +108,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.commandLine;
     }
 
-    public StartTerminalSessionRequest setConnectionType(String connectionType) {
+    public StartTerminalSessionShrinkRequest setConnectionType(String connectionType) {
         this.connectionType = connectionType;
         return this;
     }
@@ -116,15 +116,15 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.connectionType;
     }
 
-    public StartTerminalSessionRequest setEncryptionOptions(StartTerminalSessionRequestEncryptionOptions encryptionOptions) {
-        this.encryptionOptions = encryptionOptions;
+    public StartTerminalSessionShrinkRequest setEncryptionOptionsShrink(String encryptionOptionsShrink) {
+        this.encryptionOptionsShrink = encryptionOptionsShrink;
         return this;
     }
-    public StartTerminalSessionRequestEncryptionOptions getEncryptionOptions() {
-        return this.encryptionOptions;
+    public String getEncryptionOptionsShrink() {
+        return this.encryptionOptionsShrink;
     }
 
-    public StartTerminalSessionRequest setInstanceId(java.util.List<String> instanceId) {
+    public StartTerminalSessionShrinkRequest setInstanceId(java.util.List<String> instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -132,7 +132,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public StartTerminalSessionRequest setOwnerAccount(String ownerAccount) {
+    public StartTerminalSessionShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -140,7 +140,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public StartTerminalSessionRequest setOwnerId(Long ownerId) {
+    public StartTerminalSessionShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -148,7 +148,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public StartTerminalSessionRequest setPasswordName(String passwordName) {
+    public StartTerminalSessionShrinkRequest setPasswordName(String passwordName) {
         this.passwordName = passwordName;
         return this;
     }
@@ -156,7 +156,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.passwordName;
     }
 
-    public StartTerminalSessionRequest setPortNumber(Integer portNumber) {
+    public StartTerminalSessionShrinkRequest setPortNumber(Integer portNumber) {
         this.portNumber = portNumber;
         return this;
     }
@@ -164,7 +164,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.portNumber;
     }
 
-    public StartTerminalSessionRequest setRegionId(String regionId) {
+    public StartTerminalSessionShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -172,7 +172,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.regionId;
     }
 
-    public StartTerminalSessionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public StartTerminalSessionShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -180,7 +180,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public StartTerminalSessionRequest setResourceOwnerId(Long resourceOwnerId) {
+    public StartTerminalSessionShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -188,7 +188,7 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public StartTerminalSessionRequest setTargetServer(String targetServer) {
+    public StartTerminalSessionShrinkRequest setTargetServer(String targetServer) {
         this.targetServer = targetServer;
         return this;
     }
@@ -196,53 +196,12 @@ public class StartTerminalSessionRequest extends TeaModel {
         return this.targetServer;
     }
 
-    public StartTerminalSessionRequest setUsername(String username) {
+    public StartTerminalSessionShrinkRequest setUsername(String username) {
         this.username = username;
         return this;
     }
     public String getUsername() {
         return this.username;
-    }
-
-    public static class StartTerminalSessionRequestEncryptionOptions extends TeaModel {
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
-
-        @NameInMap("Mode")
-        public String mode;
-
-        public static StartTerminalSessionRequestEncryptionOptions build(java.util.Map<String, ?> map) throws Exception {
-            StartTerminalSessionRequestEncryptionOptions self = new StartTerminalSessionRequestEncryptionOptions();
-            return TeaModel.build(map, self);
-        }
-
-        public StartTerminalSessionRequestEncryptionOptions setEnabled(Boolean enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public Boolean getEnabled() {
-            return this.enabled;
-        }
-
-        public StartTerminalSessionRequestEncryptionOptions setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
-        }
-
-        public StartTerminalSessionRequestEncryptionOptions setMode(String mode) {
-            this.mode = mode;
-            return this;
-        }
-        public String getMode() {
-            return this.mode;
-        }
-
     }
 
 }

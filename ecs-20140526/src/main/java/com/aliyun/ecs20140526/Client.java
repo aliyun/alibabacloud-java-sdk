@@ -5730,6 +5730,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityGroupIds", request.securityGroupIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityOptions)) {
+            query.put("SecurityOptions", request.securityOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.spotDuration)) {
             query.put("SpotDuration", request.spotDuration);
         }
@@ -6006,6 +6010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIds)) {
             query.put("SecurityGroupIds", request.securityGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityOptions)) {
+            query.put("SecurityOptions", request.securityOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.spotDuration)) {
@@ -35758,12 +35766,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a session by using the session management feature. When you call this operation, you can include the ID of an Elastic Compute Service (ECS) instance in the request to create a WebSocket session for the instance. The URL of the WebSocket session returned by the operation can be used to connect to the instance.</p>
      * 
-     * @param request StartTerminalSessionRequest
+     * @param tmpReq StartTerminalSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartTerminalSessionResponse
      */
-    public StartTerminalSessionResponse startTerminalSessionWithOptions(StartTerminalSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public StartTerminalSessionResponse startTerminalSessionWithOptions(StartTerminalSessionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartTerminalSessionShrinkRequest request = new StartTerminalSessionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.encryptionOptions)) {
+            request.encryptionOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.encryptionOptions, "EncryptionOptions", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.commandLine)) {
             query.put("CommandLine", request.commandLine);
@@ -35771,6 +35785,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.connectionType)) {
             query.put("ConnectionType", request.connectionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptionOptionsShrink)) {
+            query.put("EncryptionOptions", request.encryptionOptionsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {

@@ -82,6 +82,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("EnableNetworkEncryption")
     public Boolean enableNetworkEncryption;
 
@@ -227,6 +231,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>Details about network options.</p>
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     */
     @NameInMap("NetworkOptions")
     public DescribeInstanceAttributeResponseBodyNetworkOptions networkOptions;
 
@@ -772,9 +782,17 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("BandwidthWeighting")
         public String bandwidthWeighting;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableJumboFrame")
         public Boolean enableJumboFrame;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("EnableNetworkEncryption")
         public Boolean enableNetworkEncryption;
 

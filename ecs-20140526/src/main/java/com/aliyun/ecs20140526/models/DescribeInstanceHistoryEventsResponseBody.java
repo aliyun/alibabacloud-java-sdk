@@ -424,6 +424,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("InactiveDisks")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("MetricValue")
+        public String metricValue;
+
         /**
          * <p>The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.</p>
          */
@@ -547,6 +553,22 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks getInactiveDisks() {
             return this.inactiveDisks;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setMetricValue(String metricValue) {
+            this.metricValue = metricValue;
+            return this;
+        }
+        public String getMetricValue() {
+            return this.metricValue;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setMigrationOptions(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions migrationOptions) {
