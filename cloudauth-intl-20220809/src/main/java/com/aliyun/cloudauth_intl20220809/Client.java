@@ -1191,6 +1191,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FaceCompareResponse faceCompareWithOptions(FaceCompareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.facePictureQualityCheck)) {
+            query.put("FacePictureQualityCheck", request.facePictureQualityCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
             query.put("MerchantBizId", request.merchantBizId);
         }

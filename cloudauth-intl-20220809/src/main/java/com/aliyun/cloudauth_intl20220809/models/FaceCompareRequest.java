@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class FaceCompareRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>N</p>
+     */
+    @NameInMap("FacePictureQualityCheck")
+    public String facePictureQualityCheck;
+
+    /**
+     * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
      */
     @NameInMap("MerchantBizId")
@@ -34,6 +41,14 @@ public class FaceCompareRequest extends TeaModel {
     public static FaceCompareRequest build(java.util.Map<String, ?> map) throws Exception {
         FaceCompareRequest self = new FaceCompareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public FaceCompareRequest setFacePictureQualityCheck(String facePictureQualityCheck) {
+        this.facePictureQualityCheck = facePictureQualityCheck;
+        return this;
+    }
+    public String getFacePictureQualityCheck() {
+        return this.facePictureQualityCheck;
     }
 
     public FaceCompareRequest setMerchantBizId(String merchantBizId) {
