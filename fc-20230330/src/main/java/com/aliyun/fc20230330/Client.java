@@ -250,6 +250,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建会话资源</p>
+     * 
+     * @param request CreateSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSessionResponse
+     */
+    public CreateSessionResponse createSessionWithOptions(String functionName, CreateSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSession"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/sessions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建会话资源</p>
+     * 
+     * @param request CreateSessionRequest
+     * @return CreateSessionResponse
+     */
+    public CreateSessionResponse createSession(String functionName, CreateSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSessionWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建函数触发器。</p>
      * 
      * @param request CreateTriggerRequest
@@ -693,6 +741,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteScalingConfigWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除会话资源</p>
+     * 
+     * @param request DeleteSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSessionResponse
+     */
+    public DeleteSessionResponse deleteSessionWithOptions(String functionName, String sessionId, DeleteSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSession"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/sessions/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除会话资源</p>
+     * 
+     * @param request DeleteSessionRequest
+     * @return DeleteSessionResponse
+     */
+    public DeleteSessionResponse deleteSession(String functionName, String sessionId, DeleteSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSessionWithOptions(functionName, sessionId, request, headers, runtime);
     }
 
     /**
@@ -1375,6 +1470,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getScalingConfigWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取函数会话信息。</p>
+     * 
+     * @param request GetSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSessionResponse
+     */
+    public GetSessionResponse getSessionWithOptions(String functionName, String sessionId, GetSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSession"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/sessions/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取函数会话信息。</p>
+     * 
+     * @param request GetSessionRequest
+     * @return GetSessionResponse
+     */
+    public GetSessionResponse getSession(String functionName, String sessionId, GetSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSessionWithOptions(functionName, sessionId, request, headers, runtime);
     }
 
     /**
@@ -2257,6 +2399,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列出函数会话信息</p>
+     * 
+     * @param request ListSessionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSessionsResponse
+     */
+    public ListSessionsResponse listSessionsWithOptions(String functionName, ListSessionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionStatus)) {
+            query.put("sessionStatus", request.sessionStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSessions"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/sessions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSessionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出函数会话信息</p>
+     * 
+     * @param request ListSessionsRequest
+     * @return ListSessionsResponse
+     */
+    public ListSessionsResponse listSessions(String functionName, ListSessionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSessionsWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Lists all tagged resources.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
@@ -2987,6 +3192,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateFunctionWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新会话配置</p>
+     * 
+     * @param request UpdateSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSessionResponse
+     */
+    public UpdateSessionResponse updateSessionWithOptions(String functionName, String sessionId, UpdateSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSession"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/sessions/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新会话配置</p>
+     * 
+     * @param request UpdateSessionRequest
+     * @return UpdateSessionResponse
+     */
+    public UpdateSessionResponse updateSession(String functionName, String sessionId, UpdateSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateSessionWithOptions(functionName, sessionId, request, headers, runtime);
     }
 
     /**
