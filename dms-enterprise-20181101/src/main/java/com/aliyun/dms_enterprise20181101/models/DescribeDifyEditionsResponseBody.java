@@ -93,6 +93,9 @@ public class DescribeDifyEditionsResponseBody extends TeaModel {
         @NameInMap("Enterprise")
         public java.util.List<String> enterprise;
 
+        @NameInMap("OpenCommunity")
+        public java.util.List<String> openCommunity;
+
         public static DescribeDifyEditionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDifyEditionsResponseBodyData self = new DescribeDifyEditionsResponseBodyData();
             return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class DescribeDifyEditionsResponseBody extends TeaModel {
         }
         public java.util.List<String> getEnterprise() {
             return this.enterprise;
+        }
+
+        public DescribeDifyEditionsResponseBodyData setOpenCommunity(java.util.List<String> openCommunity) {
+            this.openCommunity = openCommunity;
+            return this;
+        }
+        public java.util.List<String> getOpenCommunity() {
+            return this.openCommunity;
         }
 
     }

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GenMetaKnowledgeAssetRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1860****</p>
      */
     @NameInMap("DbId")
     public Integer dbId;

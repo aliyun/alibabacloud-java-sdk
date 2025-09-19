@@ -646,6 +646,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * 
+     * <b>summary</b> : 
+     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * 
+     * @param request AnswerSqlSyntaxByMetaAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AnswerSqlSyntaxByMetaAgentResponse
+     */
+    public AnswerSqlSyntaxByMetaAgentResponse answerSqlSyntaxByMetaAgentWithOptions(AnswerSqlSyntaxByMetaAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AnswerSqlSyntaxByMetaAgent"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AnswerSqlSyntaxByMetaAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * 
+     * <b>summary</b> : 
+     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * 
+     * @param request AnswerSqlSyntaxByMetaAgentRequest
+     * @return AnswerSqlSyntaxByMetaAgentResponse
+     */
+    public AnswerSqlSyntaxByMetaAgentResponse answerSqlSyntaxByMetaAgent(AnswerSqlSyntaxByMetaAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.answerSqlSyntaxByMetaAgentWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Reviews a ticket.</p>
      * 
@@ -5983,6 +6041,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecuteStructSyncResponse executeStructSync(ExecuteStructSyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeStructSyncWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * 
+     * <b>summary</b> : 
+     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * 
+     * @param request FixSqlByMetaAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FixSqlByMetaAgentResponse
+     */
+    public FixSqlByMetaAgentResponse fixSqlByMetaAgentWithOptions(FixSqlByMetaAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.error)) {
+            query.put("Error", request.error);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sql)) {
+            query.put("Sql", request.sql);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FixSqlByMetaAgent"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FixSqlByMetaAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * 
+     * <b>summary</b> : 
+     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * 
+     * @param request FixSqlByMetaAgentRequest
+     * @return FixSqlByMetaAgentResponse
+     */
+    public FixSqlByMetaAgentResponse fixSqlByMetaAgent(FixSqlByMetaAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.fixSqlByMetaAgentWithOptions(request, runtime);
     }
 
     /**
@@ -14777,6 +14901,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OfflineTaskFlowResponse offlineTaskFlow(OfflineTaskFlowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.offlineTaskFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * 
+     * <b>summary</b> : 
+     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * 
+     * @param request OptimizeSqlByMetaAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OptimizeSqlByMetaAgentResponse
+     */
+    public OptimizeSqlByMetaAgentResponse optimizeSqlByMetaAgentWithOptions(OptimizeSqlByMetaAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sql)) {
+            query.put("Sql", request.sql);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OptimizeSqlByMetaAgent"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OptimizeSqlByMetaAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * 
+     * <b>summary</b> : 
+     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * 
+     * @param request OptimizeSqlByMetaAgentRequest
+     * @return OptimizeSqlByMetaAgentResponse
+     */
+    public OptimizeSqlByMetaAgentResponse optimizeSqlByMetaAgent(OptimizeSqlByMetaAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.optimizeSqlByMetaAgentWithOptions(request, runtime);
     }
 
     /**

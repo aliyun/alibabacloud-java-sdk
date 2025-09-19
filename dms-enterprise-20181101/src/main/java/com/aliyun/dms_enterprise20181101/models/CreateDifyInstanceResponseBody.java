@@ -87,8 +87,14 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateDifyInstanceResponseBodyData extends TeaModel {
+        @NameInMap("AppUuid")
+        public String appUuid;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
 
         @NameInMap("Replicas")
         public Integer replicas;
@@ -119,12 +125,28 @@ public class CreateDifyInstanceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateDifyInstanceResponseBodyData setAppUuid(String appUuid) {
+            this.appUuid = appUuid;
+            return this;
+        }
+        public String getAppUuid() {
+            return this.appUuid;
+        }
+
         public CreateDifyInstanceResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public CreateDifyInstanceResponseBodyData setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public CreateDifyInstanceResponseBodyData setReplicas(Integer replicas) {

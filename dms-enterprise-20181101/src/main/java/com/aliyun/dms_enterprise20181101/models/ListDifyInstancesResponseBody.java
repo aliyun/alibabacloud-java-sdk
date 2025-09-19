@@ -127,6 +127,9 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         @NameInMap("InternetUrl")
         public String internetUrl;
 
@@ -202,6 +205,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public ListDifyInstancesResponseBodyRootData setInternetUrl(String internetUrl) {

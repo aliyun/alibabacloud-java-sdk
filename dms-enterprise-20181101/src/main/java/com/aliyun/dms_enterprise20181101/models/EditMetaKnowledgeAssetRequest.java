@@ -6,25 +6,42 @@ import com.aliyun.tea.*;
 public class EditMetaKnowledgeAssetRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AssetDescription")
     public String assetDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_column</p>
+     */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1930****</p>
      */
     @NameInMap("DbId")
     public Integer dbId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table_name</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dbo</p>
+     */
     @NameInMap("TableSchemaName")
     public String tableSchemaName;
 

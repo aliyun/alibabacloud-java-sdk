@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class GetTableKnowledgeInfoRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>325</p>
      */
     @NameInMap("DbId")
     public Integer dbId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table_name</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dbo</p>
+     */
     @NameInMap("TableSchemaName")
     public String tableSchemaName;
 

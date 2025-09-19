@@ -4,15 +4,31 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class EditMetaKnowledgeAssetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C51420E3-144A-4A94-B473-8662FCF4AD10</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
