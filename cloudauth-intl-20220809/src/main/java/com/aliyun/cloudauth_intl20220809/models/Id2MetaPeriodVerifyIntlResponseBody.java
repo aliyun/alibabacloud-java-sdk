@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
     /**
+     * <p><a href="https://www.alibabacloud.com/help/en/ekyc/latest/dateverify?spm=a2c63.p38356.0.i32#22facb6ab6ui1">Return to Code</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>A detailed description of the response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B97D932-7FF5-517D-BF39-7CA1BEE3CDD9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("Result")
     public Id2MetaPeriodVerifyIntlResponseBodyResult result;
 
@@ -67,6 +76,14 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
 
     public static class Id2MetaPeriodVerifyIntlResponseBodyResult extends TeaModel {
         /**
+         * <p>The final authentication result. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Y</strong>, via</p>
+         * </li>
+         * <li><p><strong>N</strong>: The authentication is not passed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -74,6 +91,8 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>A description of the authentication result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/dateverify?spm=a2c63.p38356.0.i32#d1f36d445az8i">ResultObject.SubCode error codes</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */

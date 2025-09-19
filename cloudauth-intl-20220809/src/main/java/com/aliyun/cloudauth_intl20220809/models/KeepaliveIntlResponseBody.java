@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class KeepaliveIntlResponseBody extends TeaModel {
     /**
+     * <p>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/client-connection-hold?spm=a3c0i.23458820.2359477120.1.48207d3ftEYld2#74d291dfaaxci">return code.</a></p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class KeepaliveIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>A detailed description of the Code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class KeepaliveIntlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("Result")
     public KeepaliveIntlResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class KeepaliveIntlResponseBody extends TeaModel {
 
     public static class KeepaliveIntlResponseBodyResult extends TeaModel {
         /**
+         * <p>The result of the call.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */

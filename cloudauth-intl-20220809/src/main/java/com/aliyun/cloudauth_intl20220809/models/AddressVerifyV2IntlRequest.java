@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddressVerifyV2IntlRequest extends TeaModel {
     /**
+     * <p>DeviceToken obtained via the client SDK</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AddressVerifyV2IntlRequest extends TeaModel {
     public String deviceToken;
 
     /**
+     * <p>Supported: Chinese mobile phone numbers</p>
+     * 
      * <strong>example:</strong>
      * <p>1872334****</p>
      */
@@ -21,6 +24,7 @@ public class AddressVerifyV2IntlRequest extends TeaModel {
     public String mobile;
 
     /**
+     * <p>Fixed value: ADD_VERIFY_PRO</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,15 +34,33 @@ public class AddressVerifyV2IntlRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>List of prohibited countries or regions</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Currently supported: USA</p>
      */
     @NameInMap("RegCountry")
     public String regCountry;
 
+    /**
+     * <p>Detailed address text content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>浙江省杭州市西湖区灯彩街云谷园区</p>
+     */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>Address verification method:</p>
+     * <ul>
+     * <li><p><strong>HOME</strong>: Home address verification</p>
+     * </li>
+     * <li><p><strong>WORK</strong>: Work address verification</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HOME</p>
      */

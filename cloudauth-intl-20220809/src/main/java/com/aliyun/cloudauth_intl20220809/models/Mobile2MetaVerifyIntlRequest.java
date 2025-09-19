@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class Mobile2MetaVerifyIntlRequest extends TeaModel {
     /**
+     * <p>The mobile number.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If <strong>paramType</strong> is set to <strong>normal</strong>, enter the plaintext value.</li>
+     * <li>If <strong>paramType</strong> is set to <strong>md5</strong>, enter the 32-bit lowercase MD5 string.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,13 @@ public class Mobile2MetaVerifyIntlRequest extends TeaModel {
     public String mobile;
 
     /**
+     * <p>The parameter type:</p>
+     * <ul>
+     * <li><p><strong>normal</strong>: plaintext</p>
+     * </li>
+     * <li><p><strong>md5</strong>: MD5-encrypted</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +37,7 @@ public class Mobile2MetaVerifyIntlRequest extends TeaModel {
     public String paramType;
 
     /**
+     * <p>The product to use. Set this parameter to the static value <strong>MOBILE_2META</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +47,17 @@ public class Mobile2MetaVerifyIntlRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The name.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If <strong>paramType</strong> is set to <strong>normal</strong>, enter the plaintext value.</li>
+     * <li>If <strong>paramType</strong> is set to <strong>md5</strong>, enter the 32-bit lowercase MD5 string.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Zhang*</p>
      */
     @NameInMap("UserName")
     public String userName;

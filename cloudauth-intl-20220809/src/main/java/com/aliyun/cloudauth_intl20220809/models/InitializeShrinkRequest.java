@@ -10,6 +10,13 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("Authorize")
     public String authorize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("AutoRegistration")
+    public String autoRegistration;
+
     @NameInMap("CallbackToken")
     public String callbackToken;
 
@@ -65,6 +72,13 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("ExperienceCode")
     public String experienceCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0e0c34a77f</p>
+     */
+    @NameInMap("FaceGroupCodes")
+    public String faceGroupCodes;
+
     @NameInMap("FacePictureBase64")
     public String facePictureBase64;
 
@@ -74,6 +88,20 @@ public class InitializeShrinkRequest extends TeaModel {
      */
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0e0c34a77f</p>
+     */
+    @NameInMap("FaceRegisterGroupCode")
+    public String faceRegisterGroupCode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0.5</p>
+     */
+    @NameInMap("FaceVerifyThreshold")
+    public String faceVerifyThreshold;
 
     /**
      * <strong>example:</strong>
@@ -157,10 +185,24 @@ public class InitializeShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ReturnFaces")
+    public String returnFaces;
+
+    /**
+     * <strong>example:</strong>
      * <p>http*****</p>
      */
     @NameInMap("ReturnUrl")
     public String returnUrl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("SaveFacePicture")
+    public String saveFacePicture;
 
     /**
      * <strong>example:</strong>
@@ -184,8 +226,29 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("StyleConfig")
     public String styleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>base64</p>
+     */
+    @NameInMap("TargetFacePicture")
+    public String targetFacePicture;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://www.xxxxx.com/1.jpg">https://www.xxxxx.com/1.jpg</a></p>
+     */
+    @NameInMap("TargetFacePictureUrl")
+    public String targetFacePictureUrl;
+
     @NameInMap("UseNFC")
     public String useNFC;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("VerifyModel")
+    public String verifyModel;
 
     public static InitializeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         InitializeShrinkRequest self = new InitializeShrinkRequest();
@@ -206,6 +269,14 @@ public class InitializeShrinkRequest extends TeaModel {
     }
     public String getAuthorize() {
         return this.authorize;
+    }
+
+    public InitializeShrinkRequest setAutoRegistration(String autoRegistration) {
+        this.autoRegistration = autoRegistration;
+        return this;
+    }
+    public String getAutoRegistration() {
+        return this.autoRegistration;
     }
 
     public InitializeShrinkRequest setCallbackToken(String callbackToken) {
@@ -328,6 +399,14 @@ public class InitializeShrinkRequest extends TeaModel {
         return this.experienceCode;
     }
 
+    public InitializeShrinkRequest setFaceGroupCodes(String faceGroupCodes) {
+        this.faceGroupCodes = faceGroupCodes;
+        return this;
+    }
+    public String getFaceGroupCodes() {
+        return this.faceGroupCodes;
+    }
+
     public InitializeShrinkRequest setFacePictureBase64(String facePictureBase64) {
         this.facePictureBase64 = facePictureBase64;
         return this;
@@ -342,6 +421,22 @@ public class InitializeShrinkRequest extends TeaModel {
     }
     public String getFacePictureUrl() {
         return this.facePictureUrl;
+    }
+
+    public InitializeShrinkRequest setFaceRegisterGroupCode(String faceRegisterGroupCode) {
+        this.faceRegisterGroupCode = faceRegisterGroupCode;
+        return this;
+    }
+    public String getFaceRegisterGroupCode() {
+        return this.faceRegisterGroupCode;
+    }
+
+    public InitializeShrinkRequest setFaceVerifyThreshold(String faceVerifyThreshold) {
+        this.faceVerifyThreshold = faceVerifyThreshold;
+        return this;
+    }
+    public String getFaceVerifyThreshold() {
+        return this.faceVerifyThreshold;
     }
 
     public InitializeShrinkRequest setIdFaceQuality(String idFaceQuality) {
@@ -456,12 +551,28 @@ public class InitializeShrinkRequest extends TeaModel {
         return this.productFlow;
     }
 
+    public InitializeShrinkRequest setReturnFaces(String returnFaces) {
+        this.returnFaces = returnFaces;
+        return this;
+    }
+    public String getReturnFaces() {
+        return this.returnFaces;
+    }
+
     public InitializeShrinkRequest setReturnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
         return this;
     }
     public String getReturnUrl() {
         return this.returnUrl;
+    }
+
+    public InitializeShrinkRequest setSaveFacePicture(String saveFacePicture) {
+        this.saveFacePicture = saveFacePicture;
+        return this;
+    }
+    public String getSaveFacePicture() {
+        return this.saveFacePicture;
     }
 
     public InitializeShrinkRequest setSceneCode(String sceneCode) {
@@ -512,12 +623,36 @@ public class InitializeShrinkRequest extends TeaModel {
         return this.styleConfig;
     }
 
+    public InitializeShrinkRequest setTargetFacePicture(String targetFacePicture) {
+        this.targetFacePicture = targetFacePicture;
+        return this;
+    }
+    public String getTargetFacePicture() {
+        return this.targetFacePicture;
+    }
+
+    public InitializeShrinkRequest setTargetFacePictureUrl(String targetFacePictureUrl) {
+        this.targetFacePictureUrl = targetFacePictureUrl;
+        return this;
+    }
+    public String getTargetFacePictureUrl() {
+        return this.targetFacePictureUrl;
+    }
+
     public InitializeShrinkRequest setUseNFC(String useNFC) {
         this.useNFC = useNFC;
         return this;
     }
     public String getUseNFC() {
         return this.useNFC;
+    }
+
+    public InitializeShrinkRequest setVerifyModel(String verifyModel) {
+        this.verifyModel = verifyModel;
+        return this;
+    }
+    public String getVerifyModel() {
+        return this.verifyModel;
     }
 
 }

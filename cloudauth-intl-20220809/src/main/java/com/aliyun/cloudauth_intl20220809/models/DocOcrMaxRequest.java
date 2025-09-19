@@ -4,10 +4,26 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DocOcrMaxRequest extends TeaModel {
+    /**
+     * <p>Page expected to be recognized</p>
+     * <ul>
+     * <li><p>01 (default): ID portrait.</p>
+     * </li>
+     * <li><p>02: Back of the certificate</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>01</p>
+     */
     @NameInMap("DocPage")
     public String docPage;
 
     /**
+     * <p>Document type.
+     * Format: Country (region) code + document type abbreviation + page (optional)
+     * Note: If provided, it will automatically check if it matches the model recognition result; if empty, the document type will be returned after model recognition.</p>
+     * 
      * <strong>example:</strong>
      * <p>CNSSC01</p>
      */
@@ -15,6 +31,8 @@ public class DocOcrMaxRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>Document image, base64 encoded binary stream</p>
+     * 
      * <strong>example:</strong>
      * <p>base64</p>
      */
@@ -22,16 +40,38 @@ public class DocOcrMaxRequest extends TeaModel {
     public String idOcrPictureBase64;
 
     /**
+     * <p>Document image URL</p>
+     * 
      * <strong>example:</strong>
      * <p>https://***********.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</p>
      */
     @NameInMap("IdOcrPictureUrl")
     public String idOcrPictureUrl;
 
+    /**
+     * <p>Whether to turn on the certificate anti-counterfeiting function:</p>
+     * <ul>
+     * <li><p>T: open</p>
+     * </li>
+     * <li><p>F (default): not turned on.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>F</p>
+     */
     @NameInMap("IdSpoof")
     public String idSpoof;
 
     /**
+     * <p>Custom OCR quality detection threshold mode:</p>
+     * <ul>
+     * <li>0: System default</li>
+     * <li>1: Strict mode</li>
+     * <li>2: Lenient mode</li>
+     * <li>3 (default): Disable quality detection</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -39,6 +79,8 @@ public class DocOcrMaxRequest extends TeaModel {
     public String idThreshold;
 
     /**
+     * <p>A unique business identifier defined by the merchant, used for subsequent problem localization and troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+     * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c******</p>
      */
@@ -46,6 +88,8 @@ public class DocOcrMaxRequest extends TeaModel {
     public String merchantBizId;
 
     /**
+     * <p>Your custom user ID or other identifiers that can uniquely identify a specific user, such as a phone number or email address. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -53,6 +97,10 @@ public class DocOcrMaxRequest extends TeaModel {
     public String merchantUserId;
 
     /**
+     * <p>OCR recognition mode.
+     * 0: General document mode.
+     * 1: Custom mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -60,16 +108,27 @@ public class DocOcrMaxRequest extends TeaModel {
     public String ocrModel;
 
     /**
+     * <p>The product solution to be integrated.</p>
+     * <p>Value: ID_OCR_MAX</p>
+     * 
      * <strong>example:</strong>
      * <p>ID_OCR_MAX</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>Prompt (for custom mode)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxocr识别</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
+     * <p>Custom scene code, used to distinguish business scenarios, a 10-digit number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -77,6 +136,12 @@ public class DocOcrMaxRequest extends TeaModel {
     public String sceneCode;
 
     /**
+     * <p>Whether to enable document anti-counterfeiting function, default is not enabled.</p>
+     * <ul>
+     * <li>T: Enable document anti-counterfeiting function.</li>
+     * <li>F: Do not enable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>F</p>
      */

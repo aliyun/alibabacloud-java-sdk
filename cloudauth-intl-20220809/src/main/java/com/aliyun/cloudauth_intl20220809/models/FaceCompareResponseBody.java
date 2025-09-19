@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FaceCompareResponseBody extends TeaModel {
     /**
+     * <p>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/facecompare?spm=a3c0i.23458820.2359477120.28.21167d3fzUmXQC#c43fd16d07mae">response code</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class FaceCompareResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The detailed description of the response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +31,9 @@ public class FaceCompareResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result object</p>
+     */
     @NameInMap("Result")
     public FaceCompareResponseBodyResult result;
 
@@ -69,6 +76,8 @@ public class FaceCompareResponseBody extends TeaModel {
 
     public static class FaceCompareResponseBodyResult extends TeaModel {
         /**
+         * <p>The face comparison score. The value ranges from 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>98</p>
          */
@@ -76,6 +85,14 @@ public class FaceCompareResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
+         * <p>The final authentication result. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Y</strong>: The authentication is passed.</p>
+         * </li>
+         * <li><p><strong>N</strong>: The authentication failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -83,6 +100,8 @@ public class FaceCompareResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>The transaction ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>
          */

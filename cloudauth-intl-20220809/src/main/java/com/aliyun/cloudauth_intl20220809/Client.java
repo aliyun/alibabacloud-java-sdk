@@ -83,8 +83,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>API for comparing two addresses, standardizing and checking address consistency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>地址相似比对</p>
+     * <p>Address Similarity Comparison</p>
      * 
      * @param request AddressCompareIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -127,8 +130,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>API for comparing two addresses, standardizing and checking address consistency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>地址相似比对</p>
+     * <p>Address Similarity Comparison</p>
      * 
      * @param request AddressCompareIntlRequest
      * @return AddressCompareIntlResponse
@@ -230,7 +236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>地址核验</p>
+     * <p>This topic describes the address verification API operation, which verifies the region and address of a device using device data and carrier big data capabilities.</p>
      * 
      * @param request AddressVerifyV2IntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -282,7 +288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>地址核验</p>
+     * <p>This topic describes the address verification API operation, which verifies the region and address of a device using device data and carrier big data capabilities.</p>
      * 
      * @param request AddressVerifyV2IntlRequest
      * @return AddressVerifyV2IntlResponse
@@ -791,8 +797,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Input a face image and use the algorithm to detect if there is a risk of deep forgery. This includes risk scenarios such as AIGC-generated faces, deepfake face swapping, template faces, and rephotographed faces, and outputs risk labels and confidence levels.</p>
+     * 
      * <b>summary</b> : 
-     * <p>人脸凭证核验</p>
+     * <p>Face Credential Verification</p>
      * 
      * @param request DeepfakeDetectIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -845,8 +854,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Input a face image and use the algorithm to detect if there is a risk of deep forgery. This includes risk scenarios such as AIGC-generated faces, deepfake face swapping, template faces, and rephotographed faces, and outputs risk labels and confidence levels.</p>
+     * 
      * <b>summary</b> : 
-     * <p>人脸凭证核验</p>
+     * <p>Face Credential Verification</p>
      * 
      * @param request DeepfakeDetectIntlRequest
      * @return DeepfakeDetectIntlResponse
@@ -996,7 +1008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>全球证件ocr识别接口</p>
+     * <p>Global Document OCR Recognition Interface</p>
      * 
      * @param request DocOcrMaxRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1076,7 +1088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>全球证件ocr识别接口</p>
+     * <p>Global Document OCR Recognition Interface</p>
      * 
      * @param request DocOcrMaxRequest
      * @return DocOcrMaxResponse
@@ -1088,7 +1100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ekyc纯服务端接口</p>
+     * <p>This topic describes how to integrate with ID Verification using only the server-side API.</p>
      * 
      * @param request EkycVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1170,7 +1182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ekyc纯服务端接口</p>
+     * <p>This topic describes how to integrate with ID Verification using only the server-side API.</p>
      * 
      * @param request EkycVerifyRequest
      * @return EkycVerifyResponse
@@ -1182,7 +1194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>人脸比对</p>
+     * <p>This topic describes how to integrate FaceCompare using only the server-side API.</p>
      * 
      * @param request FaceCompareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1236,7 +1248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>人脸比对</p>
+     * <p>This topic describes how to integrate FaceCompare using only the server-side API.</p>
      * 
      * @param request FaceCompareRequest
      * @return FaceCompareResponse
@@ -1248,7 +1260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>国际人脸保镖纯服务端接口</p>
+     * <p>This topic describes how to set up the server for FACE_GUARD.</p>
      * 
      * @param request FaceGuardRiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1292,7 +1304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>国际人脸保镖纯服务端接口</p>
+     * <p>This topic describes how to set up the server for FACE_GUARD.</p>
      * 
      * @param request FaceGuardRiskRequest
      * @return FaceGuardRiskResponse
@@ -1304,7 +1316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>静默活体API 纯服务端</p>
+     * <p>Passive liveness detection (FaceLiveness) is a service that detects whether a pre-captured facial image, submitted to an API operation, is a real face. The algorithm primarily detects presentation attacks, such as screen replays and printed photos. This service is suitable for low-risk business scen</p>
      * 
      * @param request FaceLivenessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1366,7 +1378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>静默活体API 纯服务端</p>
+     * <p>Passive liveness detection (FaceLiveness) is a service that detects whether a pre-captured facial image, submitted to an API operation, is a real face. The algorithm primarily detects presentation attacks, such as screen replays and printed photos. This service is suitable for low-risk business scen</p>
      * 
      * @param request FaceLivenessRequest
      * @return FaceLivenessResponse
@@ -1434,7 +1446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>身份二要素有效期核验</p>
+     * <p>This operation verifies the authenticity and consistency of a name, ID card number, and the start and end dates of the ID card\&quot;s validity period against an authoritative source.</p>
      * 
      * @param request Id2MetaPeriodVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1498,7 +1510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>身份二要素有效期核验</p>
+     * <p>This operation verifies the authenticity and consistency of a name, ID card number, and the start and end dates of the ID card\&quot;s validity period against an authoritative source.</p>
      * 
      * @param request Id2MetaPeriodVerifyIntlRequest
      * @return Id2MetaPeriodVerifyIntlResponse
@@ -1510,7 +1522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>身份二要素国际版接口</p>
+     * <p>Verifies that a name and an ID card number are consistent.</p>
      * 
      * @param request Id2MetaVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1554,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>身份二要素国际版接口</p>
+     * <p>Verifies that a name and an ID card number are consistent.</p>
      * 
      * @param request Id2MetaVerifyIntlRequest
      * @return Id2MetaVerifyIntlResponse
@@ -1587,6 +1599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.authorize)) {
             query.put("Authorize", request.authorize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRegistration)) {
+            query.put("AutoRegistration", request.autoRegistration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.callbackToken)) {
@@ -1649,8 +1665,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExperienceCode", request.experienceCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCodes)) {
+            query.put("FaceGroupCodes", request.faceGroupCodes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.facePictureUrl)) {
             query.put("FacePictureUrl", request.facePictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceRegisterGroupCode)) {
+            query.put("FaceRegisterGroupCode", request.faceRegisterGroupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceVerifyThreshold)) {
+            query.put("FaceVerifyThreshold", request.faceVerifyThreshold);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.idFaceQuality)) {
@@ -1709,8 +1737,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductFlow", request.productFlow);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.returnFaces)) {
+            query.put("ReturnFaces", request.returnFaces);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.returnUrl)) {
             query.put("ReturnUrl", request.returnUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saveFacePicture)) {
+            query.put("SaveFacePicture", request.saveFacePicture);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
@@ -1737,8 +1773,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StyleConfig", request.styleConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetFacePicture)) {
+            query.put("TargetFacePicture", request.targetFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetFacePictureUrl)) {
+            query.put("TargetFacePictureUrl", request.targetFacePictureUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.useNFC)) {
             query.put("UseNFC", request.useNFC);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyModel)) {
+            query.put("VerifyModel", request.verifyModel);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1778,7 +1826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户端连接保持</p>
+     * <p>If your server makes infrequent calls to the ID Verification API, you can call the KeepaliveIntl operation to maintain the client connection.</p>
      * 
      * @param request KeepaliveIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1802,7 +1850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户端连接保持</p>
+     * <p>If your server makes infrequent calls to the ID Verification API, you can call the KeepaliveIntl operation to maintain the client connection.</p>
      * @return KeepaliveIntlResponse
      */
     public KeepaliveIntlResponse keepaliveIntl() throws Exception {
@@ -1812,7 +1860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>手机号二要素核验API</p>
+     * <p>Verifies the authenticity and consistency of a mobile number and name against an authoritative data source.</p>
      * 
      * @param request Mobile2MetaVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1856,7 +1904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>手机号二要素核验API</p>
+     * <p>Verifies the authenticity and consistency of a mobile number and name against an authoritative data source.</p>
      * 
      * @param request Mobile2MetaVerifyIntlRequest
      * @return Mobile2MetaVerifyIntlResponse

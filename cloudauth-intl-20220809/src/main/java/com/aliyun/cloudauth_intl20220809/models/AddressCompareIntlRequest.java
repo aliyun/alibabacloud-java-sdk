@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddressCompareIntlRequest extends TeaModel {
     /**
+     * <p>Country name</p>
+     * <ul>
+     * <li>China</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fixed value：中国</p>
      */
     @NameInMap("DefaultCountry")
     public String defaultCountry;
@@ -13,18 +20,29 @@ public class AddressCompareIntlRequest extends TeaModel {
     /**
      * <p>ADD_VERIFY</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fixed value：ADD_VERIFY</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
+     * <p>Address 1</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州市阿里巴巴西溪园区</p>
      */
     @NameInMap("Text1")
     public String text1;
 
     /**
+     * <p>Address 2</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州市文一西路969号1号楼</p>
      */
     @NameInMap("Text2")
     public String text2;

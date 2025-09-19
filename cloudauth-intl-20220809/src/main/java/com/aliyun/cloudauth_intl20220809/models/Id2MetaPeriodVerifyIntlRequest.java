@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class Id2MetaPeriodVerifyIntlRequest extends TeaModel {
     /**
+     * <p>The user\&quot;s name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Zhang San</p>
      */
     @NameInMap("DocName")
     public String docName;
 
     /**
+     * <p>The user\&quot;s certificate number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,9 @@ public class Id2MetaPeriodVerifyIntlRequest extends TeaModel {
     public String docNo;
 
     /**
+     * <p>The certificate type, which is uniquely identified by an 8-digit number.</p>
+     * <p>Currently, only second-generation resident ID cards from the Chinese mainland are supported. Set the value to the static field: <strong>00000001</strong>.</p>
+     * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i13#Hu5TG">Certificate types</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +37,7 @@ public class Id2MetaPeriodVerifyIntlRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>A unique business identifier that you can customize. Use this identifier to locate and troubleshoot issues. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure that the identifier is unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +47,8 @@ public class Id2MetaPeriodVerifyIntlRequest extends TeaModel {
     public String merchantBizId;
 
     /**
+     * <p>A custom user ID or another identifier for a specific user, such as a mobile number or email address. Desensitize the value of this field in advance, for example, by hashing the value.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -45,6 +56,7 @@ public class Id2MetaPeriodVerifyIntlRequest extends TeaModel {
     public String merchantUserId;
 
     /**
+     * <p>The product solution to integrate. Set the value to <strong>eKYC_Date_MIN</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +66,8 @@ public class Id2MetaPeriodVerifyIntlRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>A custom authentication scenario ID. You can use this ID to query related records in the console. The ID can be up to 10 characters in length and can contain letters, digits, and underscores (_).</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -61,6 +75,10 @@ public class Id2MetaPeriodVerifyIntlRequest extends TeaModel {
     public String sceneCode;
 
     /**
+     * <p>The expiration date of the ID card\&quot;s validity period. The format is YYYYMMDD.</p>
+     * <blockquote>
+     * <p>If the ID card is valid for a long term, enter <strong>long-term</strong> for this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +88,7 @@ public class Id2MetaPeriodVerifyIntlRequest extends TeaModel {
     public String validityEndDate;
 
     /**
+     * <p>The start date of the validity period. The format is YYYYMMDD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

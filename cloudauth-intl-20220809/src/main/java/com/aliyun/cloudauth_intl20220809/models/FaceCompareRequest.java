@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FaceCompareRequest extends TeaModel {
     /**
+     * <p>是否开启传入人脸图片质量检测</p>
+     * 
      * <strong>example:</strong>
      * <p>N</p>
      */
@@ -12,6 +14,8 @@ public class FaceCompareRequest extends TeaModel {
     public String facePictureQualityCheck;
 
     /**
+     * <p>A custom unique business ID used for troubleshooting. It can be a combination of up to 32 letters and digits. Make sure that the ID is unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
      */
@@ -22,6 +26,11 @@ public class FaceCompareRequest extends TeaModel {
     public String sourceFacePicture;
 
     /**
+     * <p>The URL of the portrait photo. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
+     * <blockquote>
+     * <p>You must specify either SourceFacePicture or SourceFacePictureUrl.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>https://***face1.jpeg</p>
      */
@@ -32,6 +41,11 @@ public class FaceCompareRequest extends TeaModel {
     public String targetFacePicture;
 
     /**
+     * <p>The URL of the base portrait photo. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
+     * <blockquote>
+     * <p>You must specify either TargetFacePicture or TargetFacePictureUrl.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>https://***face2.jpeg</p>
      */

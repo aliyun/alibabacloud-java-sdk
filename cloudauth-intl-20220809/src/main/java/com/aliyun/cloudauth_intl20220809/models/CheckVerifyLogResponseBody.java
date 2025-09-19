@@ -108,6 +108,29 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         @NameInMap("InterruptPage")
         public String interruptPage;
 
+        /**
+         * <p>The page where the authentication process stops. Possible English values:</p>
+         * <p>The following are the values in an unordered list:</p>
+         * <ul>
+         * <li><p>LOADING</p>
+         * </li>
+         * <li><p>GUIDE</p>
+         * </li>
+         * <li><p>FACE</p>
+         * </li>
+         * <li><p>OCR_SCAN</p>
+         * </li>
+         * <li><p>OCR_RESULT</p>
+         * </li>
+         * <li><p>NFC_INPUT</p>
+         * </li>
+         * <li><p>NFC_READ</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LOADING</p>
+         */
         @NameInMap("InterruptPageEn")
         public String interruptPageEn;
 
@@ -117,6 +140,9 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         @NameInMap("LogInfo")
         public java.util.List<String> logInfo;
 
+        /**
+         * <p>SDK Operation Log Details (English Version)</p>
+         */
         @NameInMap("LogInfoEn")
         public java.util.List<String> logInfoEn;
 
