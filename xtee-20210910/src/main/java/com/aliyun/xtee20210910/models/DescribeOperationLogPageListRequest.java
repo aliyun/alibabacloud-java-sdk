@@ -36,6 +36,15 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Operation Summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Update</p>
+     */
+    @NameInMap("operationSummary")
+    public String operationSummary;
+
+    /**
      * <p>Page size, default value is 10</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +54,7 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>Region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -61,6 +70,15 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
      */
     @NameInMap("startDate")
     public Long startDate;
+
+    /**
+     * <p>User Name Search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
+    @NameInMap("userNameSearch")
+    public String userNameSearch;
 
     public static DescribeOperationLogPageListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOperationLogPageListRequest self = new DescribeOperationLogPageListRequest();
@@ -91,6 +109,14 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
         return this.endDate;
     }
 
+    public DescribeOperationLogPageListRequest setOperationSummary(String operationSummary) {
+        this.operationSummary = operationSummary;
+        return this;
+    }
+    public String getOperationSummary() {
+        return this.operationSummary;
+    }
+
     public DescribeOperationLogPageListRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -113,6 +139,14 @@ public class DescribeOperationLogPageListRequest extends TeaModel {
     }
     public Long getStartDate() {
         return this.startDate;
+    }
+
+    public DescribeOperationLogPageListRequest setUserNameSearch(String userNameSearch) {
+        this.userNameSearch = userNameSearch;
+        return this;
+    }
+    public String getUserNameSearch() {
+        return this.userNameSearch;
     }
 
 }

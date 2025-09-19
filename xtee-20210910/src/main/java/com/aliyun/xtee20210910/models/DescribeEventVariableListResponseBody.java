@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventVariableListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object.</p>
+     */
     @NameInMap("resultObject")
     public DescribeEventVariableListResponseBodyResultObject resultObject;
 
@@ -32,9 +41,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectActionsOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -62,6 +83,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectActionsVariableVelocity extends TeaModel {
+        /**
+         * <p>iv value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -81,78 +108,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectActions extends TeaModel {
+        /**
+         * <p>Variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deAddResult</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Variable definition ID. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>决策结果</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTION</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Expression display. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Favorite identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>Field sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>Source of the field. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Input type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Required parameter. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input parameters. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>addDeResult</strong></p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Anomaly value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectActionsOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>决策结果</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTION</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectActionsVariableVelocity variableVelocity;
 
+        /**
+         * <p>x label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>y label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -364,9 +535,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectDeviceVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -394,6 +577,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectDeviceVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -413,78 +602,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectDeviceVariables extends TeaModel {
+        /**
+         * <p>Variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>queryPhoneSimulatorInfo(deviceToken)?.deviceName</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Variable definition ID. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>设备信息-设备名称</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The display type and grouping label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEVICE</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>The display value of the calculation expression. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>The favorite flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>The field rank.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input for the variable. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>device_name</strong></p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>The output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectDeviceVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>设备信息-设备名称-deviceName</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEVICE</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectDeviceVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>The X label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -696,9 +1029,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectExpressionVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -726,6 +1071,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectExpressionVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -745,78 +1096,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectExpressionVariables extends TeaModel {
+        /**
+         * <p>The code of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deInvokeSelfVariable(390397)</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>The definition ID of the variable. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>The description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>获取手机号前7位</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The display type and grouping label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPRESSION</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>The display value of the calculation expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@testaaa +1</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>The favorite flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>The field rank.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>The input type of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3148</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Multiple input parameters separated by commas. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>The name of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex_w2yIClHCc150</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The outlier value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>The output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectExpressionVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>The parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>获取手机号前7位</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>The type of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPRESSION</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectExpressionVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>The X label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -1028,9 +1523,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -1058,6 +1565,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>iv value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -1077,78 +1590,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectFavoriteVariables extends TeaModel {
+        /**
+         * <p>Variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deFunctionProcess(ip,\&quot;isIp\&quot;)</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Variable definition ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>判断是否符合IPv4标准</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_BIND</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Expression display value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Favorite identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>Field sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>Source of the field. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BOOLEAN</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input parameters should be separated by commas. Some variables may not have this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>isIpAddressV4</strong></p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Anomaly value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP是否符合IPV4格式</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_BIND</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>x label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>y label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -1360,9 +2017,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectMiddleVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -1390,6 +2059,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectMiddleVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>id value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -1409,78 +2084,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectMiddleVariables extends TeaModel {
+        /**
+         * <p>Variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mid</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Variable definition ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Variable description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIDDLE</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Calculate the display value of the expression. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Favorite identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>Field sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>Variable source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Input field type, indicating the type of input parameters, mainly used for function classification. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mid</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Outlier value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectMiddleVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>midVaribale</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIDDLE</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Variable metric information. This type of variable does not return this field.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectMiddleVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>x label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>y label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -1692,9 +2511,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectModelVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -1722,6 +2553,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectModelVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -1741,78 +2578,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectModelVariables extends TeaModel {
+        /**
+         * <p>The code of the model variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>getAIData(model)</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>The definition ID of the model variable. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>The description of the model variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BL_t_show</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The display type and grouping label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODEL</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>The display value of the calculation expression. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>The favorite flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>The field rank.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>The type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOUBLE</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>The primary key ID of the model variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Multiple input parameters separated by commas. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>The name of the model variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mo_qbbyf33o66f2</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>The output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectModelVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>The parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The title of the model variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BL_t_show</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>The type of the model variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODEL</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectModelVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>The X label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -2024,9 +3005,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNameListOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -2054,6 +3047,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNameListVariableVelocity extends TeaModel {
+        /**
+         * <p>iv value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -2073,78 +3072,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNameList extends TeaModel {
+        /**
+         * <p>Variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nl_UN8otElLb490</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display in JSON format. This field is not currently returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Variable definition ID. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAME_LIST</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Calculate the expression display value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Favorite identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>Field sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>Source of the field. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input parameters. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nl_UN8otElLb490</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Outlier value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectNameListOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent node. This field is not returned currently.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白名单</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAME_LIST</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectNameListVariableVelocity variableVelocity;
 
+        /**
+         * <p>x label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>y label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -2356,9 +3499,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -2386,6 +3541,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsVariableVelocity extends TeaModel {
+        /**
+         * <p>iv value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -2405,78 +3566,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctions extends TeaModel {
+        /**
+         * <p>Variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>getHourOfTimestamp({data})</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Variable definition ID. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>时间戳，可以是秒或者毫秒</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FUNC</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Calculate the expression display value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Favorite identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>Field sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>Source of the field. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Variable return type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LONG</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The input type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATE</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input field. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>getHourOfTimestamp</strong></p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Exception value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Variable title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>根据时间戳获取小时</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FUNC</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Variable metric information. This type of variable does not return this field.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsVariableVelocity variableVelocity;
 
+        /**
+         * <p>x label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>y label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -2688,9 +3993,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -2718,6 +4035,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>iv value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -2737,78 +4060,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectNativeVariables extends TeaModel {
+        /**
+         * <p>variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Associated variable definition ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Variable description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Calculate expression display value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Favorite Identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Field pool field details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>Field Sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>Variable source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFINE</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Variable ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Input field type, indicating the type of input parameters, mainly used for function categorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Required parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input of the variable. Event field is not present.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>outlier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output score threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectNativeVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parentName</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>Variable source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Variable indicator information.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectNativeVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>x label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>y label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>y</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -3020,9 +4487,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectQueryVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -3050,6 +4529,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectQueryVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -3069,78 +4554,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectQueryVariables extends TeaModel {
+        /**
+         * <p>The code of the query variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deInvokeQueryVariable(376773)</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>The definition ID of the query variable. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>The description of the query variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄计算</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The display type and grouping label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QUERY_EXPRESSION</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>The display value of the calculation expression. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT  AVG( $source )\nFROM testCase\nWHERE  $age &gt; 0</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>The favorite flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>The field rank.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>The type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>The primary key ID of the query variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3148</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Multiple input parameters separated by commas. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>The name of the query variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex_qWtKgCox350f</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The outlier value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYS_ERROR</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>The output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectQueryVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>The parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_SOURCE</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The title of the query variable. The title of the query variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄计算</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>The type of the query variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QUERY_EXPRESSION</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectQueryVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>The X label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -3352,9 +4981,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectSelfVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -3382,6 +5023,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectSelfVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>iv value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -3401,78 +5048,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectSelfVariables extends TeaModel {
+        /**
+         * <p>Variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deReadVelocity(hitRules,\&quot;dUd5ioJ8014\&quot;,1,\&quot;MO\&quot;,0,true,\&quot;SUM\&quot;)</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Variable definition ID. Only returned for custom system variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量的描述信息</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF_BIND</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Expression name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@IP地址</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Favorite identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>Field sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>Source of the field. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Variable ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3174</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input parameters. Only returned when custom system variables are defined.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex_isvspbF2c7ac</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Anomaly value. Returned when the variable is a custom variable (type= EXPRESSION).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectSelfVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent node. This field is not returned currently.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>获取手机号前七位</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPRESSION</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectSelfVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>x label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>y label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -3684,9 +5475,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectSysVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -3714,6 +5517,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectSysVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>iv value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -3733,78 +5542,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectSysVariables extends TeaModel {
+        /**
+         * <p>Variable code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parseIpV2(ip)?.cityId</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>ID of the bound variable definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2488</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>Description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通过IP地址库解析IP所在的城市Code，例如，输入“42.120.74.211”，经过该变量运算，输出“330100”。</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_BIND</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Calculate the expression display value. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Favorite identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Details of the field pool. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>Field sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>Source of the field. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Variable ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3151</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Variable value input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>ipLocationCityCode</strong></p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Outlier value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectSysVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>Parent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>Source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP所在地_城市Code</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_BIND</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectSysVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>x label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>y label. This type of variable does not return this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -4016,9 +5969,21 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectVelocityVariablesOutputThreshold extends TeaModel {
+        /**
+         * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -4046,6 +6011,12 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectVelocityVariablesVariableVelocity extends TeaModel {
+        /**
+         * <p>The IV value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("iv")
         public String iv;
 
@@ -4065,78 +6036,222 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObjectVelocityVariables extends TeaModel {
+        /**
+         * <p>The code of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deReadVelocity(userId,\&quot;hFsEFUEe88a\&quot;,1,\&quot;H\&quot;,0,true,\&quot;COUNT\&quot;)</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Data distribution display, in JSON format. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>The definition ID of the variable. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("defineId")
         public String defineId;
 
+        /**
+         * <p>The description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>累计用户省份次数。</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The display type and grouping label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF_VELOCITY</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>The display value of the calculation expression. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>The favorite flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>The detailed information of the field in the field pool. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldDetail")
         public String fieldDetail;
 
+        /**
+         * <p>The field rank.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fieldRank")
         public Integer fieldRank;
 
+        /**
+         * <p>The source of the field. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>The type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOUBLE</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3148</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The input type of the parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>The required parameter. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Multiple input parameters separated by commas. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>The name of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hFsEFUEe88a</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The outlier value. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>The output value threshold.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeEventVariableListResponseBodyResultObjectVelocityVariablesOutputThreshold outputThreshold;
 
+        /**
+         * <p>The parent node. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("parentName")
         public String parentName;
 
+        /**
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF_SELF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The title of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>累计用户省份次数</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>The type of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF_VELOCITY</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The variable metric information. This field is not returned for this type of variable.</p>
+         */
         @NameInMap("variableVelocity")
         public DescribeEventVariableListResponseBodyResultObjectVelocityVariablesVariableVelocity variableVelocity;
 
+        /**
+         * <p>The X label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>The Y label. This field is not returned for this type of variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This type does not have this field</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -4348,45 +6463,90 @@ public class DescribeEventVariableListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Action variable.</p>
+         */
         @NameInMap("actions")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectActions> actions;
 
+        /**
+         * <p>Device variable.</p>
+         */
         @NameInMap("deviceVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectDeviceVariables> deviceVariables;
 
+        /**
+         * <p>Custom variable.</p>
+         */
         @NameInMap("expressionVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectExpressionVariables> expressionVariables;
 
+        /**
+         * <p>Favorite variables.</p>
+         */
         @NameInMap("favoriteVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectFavoriteVariables> favoriteVariables;
 
+        /**
+         * <p>Intermediate variable return object.</p>
+         */
         @NameInMap("middleVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectMiddleVariables> middleVariables;
 
+        /**
+         * <p>An array of model variables.</p>
+         */
         @NameInMap("modelVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectModelVariables> modelVariables;
 
+        /**
+         * <p>List of name variables.</p>
+         */
         @NameInMap("nameList")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectNameList> nameList;
 
+        /**
+         * <p>List of available functions for the original variable.</p>
+         */
         @NameInMap("nativeVariableFunctions")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctions> nativeVariableFunctions;
 
+        /**
+         * <p>List of event fields.</p>
+         */
         @NameInMap("nativeVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectNativeVariables> nativeVariables;
 
+        /**
+         * <p>An array of custom query variables.</p>
+         */
         @NameInMap("queryVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectQueryVariables> queryVariables;
 
+        /**
+         * <p>Custom variables (custom variables, cumulative variables, custom system variables).</p>
+         */
         @NameInMap("selfVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectSelfVariables> selfVariables;
 
+        /**
+         * <p>System variables.</p>
+         */
         @NameInMap("sysVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectSysVariables> sysVariables;
 
+        /**
+         * <p>Other related variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("thirdVariables")
         public java.util.Map<String, ?> thirdVariables;
 
+        /**
+         * <p>An array of accumulated variables.</p>
+         */
         @NameInMap("velocityVariables")
         public java.util.List<DescribeEventVariableListResponseBodyResultObjectVelocityVariables> velocityVariables;
 

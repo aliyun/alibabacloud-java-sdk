@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEventLogPageResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
      */
@@ -12,6 +14,8 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,23 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Page size, default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeEventLogPageResponseBodyResultObject> resultObject;
 
     /**
+     * <p>Total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -36,6 +47,8 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
     public Integer totalItem;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -97,6 +110,8 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
 
     public static class DescribeEventLogPageResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1631801314885832</p>
          */
@@ -104,6 +119,8 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>Email.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxxx@123.com">xxxx@123.com</a></p>
          */
@@ -111,7 +128,7 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>ip。</p>
+         * <p>IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10.200.5.100</p>
@@ -120,16 +137,26 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>Mobile phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>13817606333</p>
          */
         @NameInMap("mobile")
         public String mobile;
 
+        /**
+         * <p>Nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>昵称</p>
+         */
         @NameInMap("nickName")
         public String nickName;
 
         /**
+         * <p>Request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>546F8063-0104-5271-9EB7-56FB3F375BAD</p>
          */
@@ -137,16 +164,26 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>Score.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
         @NameInMap("score")
         public String score;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册事件</p>
+         */
         @NameInMap("service")
         public String service;
 
         /**
+         * <p>Tags.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm0102</p>
          */
@@ -154,6 +191,8 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         public String tags;
 
         /**
+         * <p>Transaction time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1737101348000</p>
          */
@@ -161,6 +200,8 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
         public String timestamp;
 
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4239</p>
          */

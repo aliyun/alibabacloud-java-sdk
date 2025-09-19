@@ -4,30 +4,71 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventVariableListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. The values are: - <strong>zh</strong>: Chinese - <strong>en</strong>: English</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Create Type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("createType")
     public String createType;
 
+    /**
+     * <p>Filter object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;type&quot;: &quot;EXPRESSION&quot;,
+     *     &quot;name&quot;: &quot;ex_NgR6nDVD821c&quot;
+     * }</p>
+     */
     @NameInMap("filterDTO")
     public String filterDTO;
 
     /**
+     * <p>Associated event eventCode.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_awkhwh0314</p>
      */
     @NameInMap("refObjId")
     public String refObjId;
 
     /**
+     * <p>Association Type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EVENT</p>
      */
     @NameInMap("refObjType")
     public String refObjType;
 
+    /**
+     * <p>Region Code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NATIVE</p>
+     */
     @NameInMap("type")
     public String type;
 

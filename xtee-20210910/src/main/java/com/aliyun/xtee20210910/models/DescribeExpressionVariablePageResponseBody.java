@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
@@ -23,7 +23,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Page size, with a default value of 10</p>
+     * <p>Page size, with a default value of 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Returned object</p>
+     * <p>Returned object.</p>
      */
     @NameInMap("resultObject")
     public java.util.List<DescribeExpressionVariablePageResponseBodyResultObject> resultObject;
 
     /**
-     * <p>Total number of items</p>
+     * <p>Total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>31</p>
@@ -137,7 +137,7 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Primary key of custom variable</p>
+         * <p>Primary key of custom variable.</p>
          * 
          * <strong>example:</strong>
          * <p>2793</p>
@@ -146,13 +146,28 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Variable return type</p>
+         * <p>Query variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex_OERlw0Zqfb23</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>Variable return type.</p>
          * 
          * <strong>example:</strong>
          * <p>DOUBLE</p>
          */
         @NameInMap("outputs")
         public String outputs;
+
+        /**
+         * <p>Associated Strategies.</p>
+         */
+        @NameInMap("ruleList")
+        public java.util.List<String> ruleList;
 
         /**
          * <p>Status.</p>
@@ -218,12 +233,28 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
             return this.id;
         }
 
+        public DescribeExpressionVariablePageResponseBodyResultObject setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public DescribeExpressionVariablePageResponseBodyResultObject setOutputs(String outputs) {
             this.outputs = outputs;
             return this;
         }
         public String getOutputs() {
             return this.outputs;
+        }
+
+        public DescribeExpressionVariablePageResponseBodyResultObject setRuleList(java.util.List<String> ruleList) {
+            this.ruleList = ruleList;
+            return this;
+        }
+        public java.util.List<String> getRuleList() {
+            return this.ruleList;
         }
 
         public DescribeExpressionVariablePageResponseBodyResultObject setStatus(String status) {

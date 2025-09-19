@@ -8,7 +8,7 @@ public class DescribeOssTokenResponseBody extends TeaModel {
      * <p>AccessKeyId for OSS file upload.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI5tJWSnmmTpJGN6sJCNG3</p>
+     * <p>LTAxxxxxxxxxxxx</p>
      */
     @NameInMap("AccessId")
     public String accessId;

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeEventLogPageRequest extends TeaModel {
     /**
+     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Account ID (request_param.accountId), up to 50 characters, supports “*” and “?” wildcards.</p>
+     * 
      * <strong>example:</strong>
      * <p>180650758xxxxxxx</p>
      */
@@ -19,6 +27,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String accountIdPRP;
 
     /**
+     * <p>Start timestamp of the log. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1737101348000</p>
      */
@@ -26,6 +36,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public Long beginTime;
 
     /**
+     * <p>Full-text match 1, cannot exceed 30 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm0102</p>
      */
@@ -33,6 +45,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String condition1AL;
 
     /**
+     * <p>Full-text match 2, cannot exceed 30 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm0102</p>
      */
@@ -40,6 +54,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String condition2AL;
 
     /**
+     * <p>Full-text match 3, cannot exceed 30 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm0102</p>
      */
@@ -47,6 +63,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String condition3AL;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +72,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Device type (request_param.deviceType), examples: 1. PC, 2. MOBILE.</p>
+     * 
      * <strong>example:</strong>
      * <p>PC</p>
      */
@@ -61,6 +81,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String deviceTypeLRP;
 
     /**
+     * <p>Email (request_param.email), up to 100 characters, supports “*” and “?” wildcards.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:xxxx@123.com">xxxx@123.com</a></p>
      */
@@ -68,6 +90,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String emailPRP;
 
     /**
+     * <p>End time, accurate to milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>1746669075000</p>
      */
@@ -75,6 +99,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Login failure reason (-request_param.failReason).</p>
+     * 
      * <strong>example:</strong>
      * <p>wrongPassword</p>
      */
@@ -82,6 +108,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String failReasonLRP;
 
     /**
+     * <p>IP (request_param.ip), up to 20 characters, supports “*” and “?” wildcards.</p>
+     * 
      * <strong>example:</strong>
      * <p>168.168.168.168</p>
      */
@@ -89,6 +117,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String ipPRP;
 
     /**
+     * <p>Login success indicator (request_param.loginResult).</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -96,6 +126,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String loginResultARP;
 
     /**
+     * <p>Login verification method (-request_param.loginType).</p>
+     * 
      * <strong>example:</strong>
      * <p>PASSWORD</p>
      */
@@ -103,6 +135,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String loginTypeLRP;
 
     /**
+     * <p>Device MAC address (-request_param.mac), up to 30 characters, supports “*” and “?” wildcards.</p>
+     * 
      * <strong>example:</strong>
      * <p>00-1C-F0-1D-A7-81</p>
      */
@@ -110,16 +144,26 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String macPRP;
 
     /**
+     * <p>Phone number (supports MD5 request_param.mobile/request_param.mobileMd5), up to 30 characters, supports “*” and “?” wildcards, searchable by mobile and mobileMd5 fields.</p>
+     * 
      * <strong>example:</strong>
      * <p>17600000000</p>
      */
     @NameInMap("mobilePRP")
     public String mobilePRP;
 
+    /**
+     * <p>Account nickname (request_param.nickName), up to 50 characters, supports “*” and “?” wildcards.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试xx</p>
+     */
     @NameInMap("nickNamePRP")
     public String nickNamePRP;
 
     /**
+     * <p>Operation source (request_param.operateSource), examples: 1. PC, 2. H5, 3. App.</p>
+     * 
      * <strong>example:</strong>
      * <p>PC</p>
      */
@@ -127,6 +171,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String operateSourceLRP;
 
     /**
+     * <p>Number of items per page, default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -134,6 +180,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Referer (-request_param.refer), up to 50 characters, supports “*” and “?” wildcards.</p>
+     * 
      * <strong>example:</strong>
      * <p>refer</p>
      */
@@ -141,6 +189,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String referPRP;
 
     /**
+     * <p>Region code.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -148,6 +198,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>Account registration IP (request_param.registerIp), up to 20 characters, supports “*” and “?” wildcards.</p>
+     * 
      * <strong>example:</strong>
      * <p>168.168.168.168</p>
      */
@@ -155,7 +207,7 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String registerIpPRP;
 
     /**
-     * <p>requestId。</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BD6B08EC-1B44-5378-8838-C76A36415C55</p>
@@ -164,6 +216,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String reqIdPBS;
 
     /**
+     * <p>End value of the score range (score), only non-negative integers are allowed, and the right interval must be greater than the left interval, with both intervals being closed.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -171,6 +225,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public Integer scoreEBS;
 
     /**
+     * <p>Starting value of the score range (score), only non-negative integers are allowed, the right interval must be greater than the left interval, both intervals are inclusive.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -178,6 +234,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public Integer scoreSBS;
 
     /**
+     * <p>Event name (instance_id).</p>
+     * 
      * <strong>example:</strong>
      * <p>de_afghcf6411</p>
      */
@@ -185,16 +243,26 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String serviceABS;
 
     /**
+     * <p>Risk tags (tags), data source DescribeTagsList.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg0001</p>
      */
     @NameInMap("tagsLBS")
     public String tagsLBS;
 
+    /**
+     * <p>Device ID (device_info.umid).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>设备ID</p>
+     */
     @NameInMap("umidPDI")
     public String umidPDI;
 
     /**
+     * <p>User agent (-request_param.userAgent), up to 50 characters, supports “*” and “?” wildcards.</p>
+     * 
      * <strong>example:</strong>
      * <p>00-1C-F0-1D-A7-81</p>
      */
@@ -202,6 +270,8 @@ public class DescribeEventLogPageRequest extends TeaModel {
     public String userAgentPRP;
 
     /**
+     * <p>Username type, login scenario (-request_param.userNameType).</p>
+     * 
      * <strong>example:</strong>
      * <p>type</p>
      */

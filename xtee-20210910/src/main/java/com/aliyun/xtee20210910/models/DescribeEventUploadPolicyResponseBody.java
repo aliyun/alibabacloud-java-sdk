@@ -8,7 +8,7 @@ public class DescribeEventUploadPolicyResponseBody extends TeaModel {
      * <p>ID for accessing OSS</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI5tPXz8Y9tLVh5xxnnEAC</p>
+     * <p>LTAxxxxxxxxxxxx</p>
      */
     @NameInMap("AccessId")
     public String accessId;

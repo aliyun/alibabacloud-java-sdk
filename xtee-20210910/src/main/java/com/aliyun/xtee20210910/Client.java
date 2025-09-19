@@ -4680,6 +4680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("regId", request.regId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5338,7 +5342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件历史列表</p>
+     * <p>Query Event History List</p>
      * 
      * @param request DescribeEventLogPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5486,7 +5490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件历史列表</p>
+     * <p>Query Event History List</p>
      * 
      * @param request DescribeEventLogPageRequest
      * @return DescribeEventLogPageResponse
@@ -5837,8 +5841,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cumulative Variable List Query</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询事件变量</p>
+     * <p>Query event variables</p>
      * 
      * @param request DescribeEventVariableListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5893,8 +5900,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cumulative Variable List Query</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询事件变量</p>
+     * <p>Query event variables</p>
      * 
      * @param request DescribeEventVariableListRequest
      * @return DescribeEventVariableListResponse
@@ -6089,6 +6099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Self-service call list.</p>
+     * 
      * @param request DescribeExcuteNumRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeExcuteNumResponse
@@ -6138,6 +6151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Self-service call list.</p>
+     * 
      * @param request DescribeExcuteNumRequest
      * @return DescribeExcuteNumResponse
      */
@@ -6352,7 +6368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Query for Custom Variables</p>
+     * <p>Paged Query for Custom Variables.</p>
      * 
      * @param request DescribeExpressionVariablePageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6412,7 +6428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Query for Custom Variables</p>
+     * <p>Paged Query for Custom Variables.</p>
      * 
      * @param request DescribeExpressionVariablePageRequest
      * @return DescribeExpressionVariablePageResponse
@@ -8210,6 +8226,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Query Operation Log Monitoring Statistics</p>
+     * 
+     * @param request DescribeOperationLogMonitoringRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOperationLogMonitoringResponse
+     */
+    public DescribeOperationLogMonitoringResponse describeOperationLogMonitoringWithOptions(DescribeOperationLogMonitoringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regId)) {
+            query.put("regId", request.regId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userNameSearch)) {
+            query.put("userNameSearch", request.userNameSearch);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOperationLogMonitoring"),
+            new TeaPair("version", "2021-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOperationLogMonitoringResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Operation Log Monitoring Statistics</p>
+     * 
+     * @param request DescribeOperationLogMonitoringRequest
+     * @return DescribeOperationLogMonitoringResponse
+     */
+    public DescribeOperationLogMonitoringResponse describeOperationLogMonitoring(DescribeOperationLogMonitoringRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOperationLogMonitoringWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query event list by event name</p>
      * 
      * @param request DescribeOperationLogPageListRequest
@@ -8231,6 +8307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("endDate", request.endDate);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.operationSummary)) {
+            query.put("operationSummary", request.operationSummary);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
         }
@@ -8241,6 +8321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
             query.put("startDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userNameSearch)) {
+            query.put("userNameSearch", request.userNameSearch);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -10049,6 +10133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query SAF permissions.</p>
+     * 
      * @param request DescribeSafConsoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSafConsoleResponse
@@ -10086,6 +10173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query SAF permissions.</p>
+     * 
      * @param request DescribeSafConsoleRequest
      * @return DescribeSafConsoleResponse
      */
@@ -13232,6 +13322,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVariableSceneListResponse describeVariableSceneList(DescribeVariableSceneListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVariableSceneListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Variable Version List Query</p>
+     * 
+     * @param request DescribeVersionPageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVersionPageListResponse
+     */
+    public DescribeVersionPageListResponse describeVersionPageListWithOptions(DescribeVersionPageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("currentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectCode)) {
+            query.put("objectCode", request.objectCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectId)) {
+            query.put("objectId", request.objectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paging)) {
+            query.put("paging", request.paging);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regId)) {
+            query.put("regId", request.regId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVersionPageList"),
+            new TeaPair("version", "2021-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVersionPageListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Variable Version List Query</p>
+     * 
+     * @param request DescribeVersionPageListRequest
+     * @return DescribeVersionPageListResponse
+     */
+    public DescribeVersionPageListResponse describeVersionPageList(DescribeVersionPageListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVersionPageListWithOptions(request, runtime);
     }
 
     /**

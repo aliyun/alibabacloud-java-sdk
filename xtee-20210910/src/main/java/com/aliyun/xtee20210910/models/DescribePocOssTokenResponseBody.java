@@ -8,7 +8,7 @@ public class DescribePocOssTokenResponseBody extends TeaModel {
      * <p>AccessKeyId for OSS file upload</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI5tE7sActovY6Hvpu5oTh</p>
+     * <p>LTAxxxxxxxxxxxx</p>
      */
     @NameInMap("AccessId")
     public String accessId;

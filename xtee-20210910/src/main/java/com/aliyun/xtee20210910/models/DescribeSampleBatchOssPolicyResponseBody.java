@@ -8,7 +8,7 @@ public class DescribeSampleBatchOssPolicyResponseBody extends TeaModel {
      * <p>OSS Access ID</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI5tE7sActovY6Hvpu5oTh</p>
+     * <p>LTAxxxxxxxxxxxx</p>
      */
     @NameInMap("AccessId")
     public String accessId;

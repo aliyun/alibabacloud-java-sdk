@@ -18,7 +18,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Creation type</p>
+     * <p>Creation type.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -36,7 +36,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Description</p>
+     * <p>Description.</p>
      * 
      * <strong>example:</strong>
      * <p>累计变量描述</p>
@@ -45,7 +45,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Event code</p>
+     * <p>Event code.</p>
      * 
      * <strong>example:</strong>
      * <p>de_aheldm3876</p>
@@ -54,7 +54,7 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public String eventCode;
 
     /**
-     * <p>Number of records per page, default value: 10</p>
+     * <p>Number of records per page, default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,13 +63,22 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Region code</p>
+     * <p>Region code.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
+
+    /**
+     * <p>status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENABLE</p>
+     */
+    @NameInMap("status")
+    public String status;
 
     public static DescribeCustVariablePageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustVariablePageRequest self = new DescribeCustVariablePageRequest();
@@ -130,6 +139,14 @@ public class DescribeCustVariablePageRequest extends TeaModel {
     }
     public String getRegId() {
         return this.regId;
+    }
+
+    public DescribeCustVariablePageRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }
