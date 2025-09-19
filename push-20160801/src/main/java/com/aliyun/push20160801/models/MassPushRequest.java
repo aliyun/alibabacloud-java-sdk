@@ -99,6 +99,9 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidHonorTargetUserType")
         public Integer androidHonorTargetUserType;
 
+        @NameInMap("AndroidHuaweiLiveNotificationPayload")
+        public String androidHuaweiLiveNotificationPayload;
+
         /**
          * <strong>example:</strong>
          * <p>RCP4C123456</p>
@@ -387,6 +390,9 @@ public class MassPushRequest extends TeaModel {
 
         @NameInMap("HarmonyInboxContent")
         public String harmonyInboxContent;
+
+        @NameInMap("HarmonyLiveViewPayload")
+        public String harmonyLiveViewPayload;
 
         @NameInMap("HarmonyNotificationSlotType")
         public String harmonyNotificationSlotType;
@@ -689,6 +695,14 @@ public class MassPushRequest extends TeaModel {
         }
         public Integer getAndroidHonorTargetUserType() {
             return this.androidHonorTargetUserType;
+        }
+
+        public MassPushRequestPushTask setAndroidHuaweiLiveNotificationPayload(String androidHuaweiLiveNotificationPayload) {
+            this.androidHuaweiLiveNotificationPayload = androidHuaweiLiveNotificationPayload;
+            return this;
+        }
+        public String getAndroidHuaweiLiveNotificationPayload() {
+            return this.androidHuaweiLiveNotificationPayload;
         }
 
         public MassPushRequestPushTask setAndroidHuaweiReceiptId(String androidHuaweiReceiptId) {
@@ -1118,6 +1132,14 @@ public class MassPushRequest extends TeaModel {
         }
         public String getHarmonyInboxContent() {
             return this.harmonyInboxContent;
+        }
+
+        public MassPushRequestPushTask setHarmonyLiveViewPayload(String harmonyLiveViewPayload) {
+            this.harmonyLiveViewPayload = harmonyLiveViewPayload;
+            return this;
+        }
+        public String getHarmonyLiveViewPayload() {
+            return this.harmonyLiveViewPayload;
         }
 
         public MassPushRequestPushTask setHarmonyNotificationSlotType(String harmonyNotificationSlotType) {

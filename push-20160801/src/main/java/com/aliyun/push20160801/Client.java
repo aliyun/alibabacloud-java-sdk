@@ -733,6 +733,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidHonorTargetUserType", request.androidHonorTargetUserType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidHuaweiLiveNotificationPayload)) {
+            query.put("AndroidHuaweiLiveNotificationPayload", request.androidHuaweiLiveNotificationPayload);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidHuaweiReceiptId)) {
             query.put("AndroidHuaweiReceiptId", request.androidHuaweiReceiptId);
         }
@@ -947,6 +951,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.harmonyInboxContent)) {
             query.put("HarmonyInboxContent", request.harmonyInboxContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyLiveViewPayload)) {
+            query.put("HarmonyLiveViewPayload", request.harmonyLiveViewPayload);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.harmonyNotificationSlotType)) {
