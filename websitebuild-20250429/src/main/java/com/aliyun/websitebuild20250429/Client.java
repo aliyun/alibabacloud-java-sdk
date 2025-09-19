@@ -28,6 +28,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>绑定应用域名</p>
+     * 
+     * @param request BindAppDomainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindAppDomainResponse
+     */
+    public BindAppDomainResponse bindAppDomainWithOptions(BindAppDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            query.put("Extend", request.extend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
+            query.put("OperateType", request.operateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindAppDomain"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindAppDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>绑定应用域名</p>
+     * 
+     * @param request BindAppDomainRequest
+     * @return BindAppDomainResponse
+     */
+    public BindAppDomainResponse bindAppDomain(BindAppDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindAppDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>提交创建Logo任务</p>
      * 
      * @param request CreateLogoTaskRequest
@@ -80,6 +136,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLogoTaskResponse createLogoTask(CreateLogoTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLogoTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除域名的SSL证书</p>
+     * 
+     * @param request DeleteAppDomainCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAppDomainCertificateResponse
+     */
+    public DeleteAppDomainCertificateResponse deleteAppDomainCertificateWithOptions(DeleteAppDomainCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAppDomainCertificate"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppDomainCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除域名的SSL证书</p>
+     * 
+     * @param request DeleteAppDomainCertificateRequest
+     * @return DeleteAppDomainCertificateResponse
+     */
+    public DeleteAppDomainCertificateResponse deleteAppDomainCertificate(DeleteAppDomainCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAppDomainCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除域名的跳转规则</p>
+     * 
+     * @param request DeleteAppDomainRedirectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAppDomainRedirectResponse
+     */
+    public DeleteAppDomainRedirectResponse deleteAppDomainRedirectWithOptions(DeleteAppDomainRedirectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAppDomainRedirect"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppDomainRedirectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除域名的跳转规则</p>
+     * 
+     * @param request DeleteAppDomainRedirectRequest
+     * @return DeleteAppDomainRedirectResponse
+     */
+    public DeleteAppDomainRedirectResponse deleteAppDomainRedirect(DeleteAppDomainRedirectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAppDomainRedirectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名的DNS解析记录</p>
+     * 
+     * @param request DescribeAppDomainDnsRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAppDomainDnsRecordResponse
+     */
+    public DescribeAppDomainDnsRecordResponse describeAppDomainDnsRecordWithOptions(DescribeAppDomainDnsRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.purpose)) {
+            query.put("Purpose", request.purpose);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAppDomainDnsRecord"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAppDomainDnsRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名的DNS解析记录</p>
+     * 
+     * @param request DescribeAppDomainDnsRecordRequest
+     * @return DescribeAppDomainDnsRecordResponse
+     */
+    public DescribeAppDomainDnsRecordResponse describeAppDomainDnsRecord(DescribeAppDomainDnsRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAppDomainDnsRecordWithOptions(request, runtime);
     }
 
     /**
@@ -284,6 +488,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserTmpIdentityForPartnerResponse getUserTmpIdentityForPartner(GetUserTmpIdentityForPartnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserTmpIdentityForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名的跳转规则列表</p>
+     * 
+     * @param request ListAppDomainRedirectRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAppDomainRedirectRecordsResponse
+     */
+    public ListAppDomainRedirectRecordsResponse listAppDomainRedirectRecordsWithOptions(ListAppDomainRedirectRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAppDomainRedirectRecords"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppDomainRedirectRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名的跳转规则列表</p>
+     * 
+     * @param request ListAppDomainRedirectRecordsRequest
+     * @return ListAppDomainRedirectRecordsResponse
+     */
+    public ListAppDomainRedirectRecordsResponse listAppDomainRedirectRecords(ListAppDomainRedirectRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAppDomainRedirectRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询应用实例下的所有域名列表</p>
+     * 
+     * @param request ListAppInstanceDomainsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAppInstanceDomainsResponse
+     */
+    public ListAppInstanceDomainsResponse listAppInstanceDomainsWithOptions(ListAppInstanceDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
+            query.put("OrderColumn", request.orderColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAppInstanceDomains"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppInstanceDomainsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询应用实例下的所有域名列表</p>
+     * 
+     * @param request ListAppInstanceDomainsRequest
+     * @return ListAppInstanceDomainsResponse
+     */
+    public ListAppInstanceDomainsResponse listAppInstanceDomains(ListAppInstanceDomainsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAppInstanceDomainsWithOptions(request, runtime);
     }
 
     /**
@@ -498,6 +822,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>设置域名的SSL证书</p>
+     * 
+     * @param request SetAppDomainCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetAppDomainCertificateResponse
+     */
+    public SetAppDomainCertificateResponse setAppDomainCertificateWithOptions(SetAppDomainCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certificateName)) {
+            query.put("CertificateName", request.certificateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certificateType)) {
+            query.put("CertificateType", request.certificateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateKey)) {
+            query.put("PrivateKey", request.privateKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publicKey)) {
+            query.put("PublicKey", request.publicKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetAppDomainCertificate"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetAppDomainCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置域名的SSL证书</p>
+     * 
+     * @param request SetAppDomainCertificateRequest
+     * @return SetAppDomainCertificateResponse
+     */
+    public SetAppDomainCertificateResponse setAppDomainCertificate(SetAppDomainCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setAppDomainCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>合作伙伴同步应用实例</p>
      * 
      * @param tmpReq SyncAppInstanceForPartnerRequest
@@ -560,5 +948,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SyncAppInstanceForPartnerResponse syncAppInstanceForPartner(SyncAppInstanceForPartnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.syncAppInstanceForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑应用域名</p>
+     * 
+     * @param request UnbindAppDomainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindAppDomainResponse
+     */
+    public UnbindAppDomainResponse unbindAppDomainWithOptions(UnbindAppDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindAppDomain"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindAppDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑应用域名</p>
+     * 
+     * @param request UnbindAppDomainRequest
+     * @return UnbindAppDomainResponse
+     */
+    public UnbindAppDomainResponse unbindAppDomain(UnbindAppDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unbindAppDomainWithOptions(request, runtime);
     }
 }
