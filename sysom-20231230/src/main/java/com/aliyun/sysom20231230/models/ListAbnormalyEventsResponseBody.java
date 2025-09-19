@@ -128,6 +128,47 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAbnormalyEventsResponseBodyDataRawMetrics extends TeaModel {
+        @NameInMap("end_time")
+        public Float endTime;
+
+        @NameInMap("metrics")
+        public java.util.List<String> metrics;
+
+        @NameInMap("start_time")
+        public Float startTime;
+
+        public static ListAbnormalyEventsResponseBodyDataRawMetrics build(java.util.Map<String, ?> map) throws Exception {
+            ListAbnormalyEventsResponseBodyDataRawMetrics self = new ListAbnormalyEventsResponseBodyDataRawMetrics();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAbnormalyEventsResponseBodyDataRawMetrics setEndTime(Float endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Float getEndTime() {
+            return this.endTime;
+        }
+
+        public ListAbnormalyEventsResponseBodyDataRawMetrics setMetrics(java.util.List<String> metrics) {
+            this.metrics = metrics;
+            return this;
+        }
+        public java.util.List<String> getMetrics() {
+            return this.metrics;
+        }
+
+        public ListAbnormalyEventsResponseBodyDataRawMetrics setStartTime(Float startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Float getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class ListAbnormalyEventsResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -166,6 +207,9 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
 
         @NameInMap("pod")
         public String pod;
+
+        @NameInMap("raw_metrics")
+        public ListAbnormalyEventsResponseBodyDataRawMetrics rawMetrics;
 
         /**
          * <strong>example:</strong>
@@ -267,6 +311,14 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
         public String getPod() {
             return this.pod;
+        }
+
+        public ListAbnormalyEventsResponseBodyData setRawMetrics(ListAbnormalyEventsResponseBodyDataRawMetrics rawMetrics) {
+            this.rawMetrics = rawMetrics;
+            return this;
+        }
+        public ListAbnormalyEventsResponseBodyDataRawMetrics getRawMetrics() {
+            return this.rawMetrics;
         }
 
         public ListAbnormalyEventsResponseBodyData setRegionId(String regionId) {
