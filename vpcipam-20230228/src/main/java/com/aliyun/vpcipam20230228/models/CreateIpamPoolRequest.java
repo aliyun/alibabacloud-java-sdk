@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateIpamPoolRequest extends TeaModel {
     /**
-     * <p>The default network mask assigned to the IPAM pool.</p>
-     * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+     * <p>The default network mask assigned by the IPAM address pool.  </p>
+     * <blockquote>
+     * <p>The IPv4 network mask value range is 0 to 32 bits, and the IPv6 network mask value range is 0 to 128 bits.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>28</p>
@@ -15,8 +17,10 @@ public class CreateIpamPoolRequest extends TeaModel {
     public Integer allocationDefaultCidrMask;
 
     /**
-     * <p>The maximum network mask assigned to the IPAM pool.</p>
-     * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+     * <p>The maximum network mask assigned by the IPAM address pool.  </p>
+     * <blockquote>
+     * <p>The IPv4 network mask value range is <strong>0 to 32</strong> bits, and the IPv6 network mask value range is <strong>0 to 128</strong> bits.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -25,8 +29,10 @@ public class CreateIpamPoolRequest extends TeaModel {
     public Integer allocationMaxCidrMask;
 
     /**
-     * <p>The minimum network mask assigned to the IPAM pool.</p>
-     * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+     * <p>The minimum network mask assigned by the IPAM address pool.  </p>
+     * <blockquote>
+     * <p>The IPv4 network mask value range is <strong>0 to 32</strong> bits, and the IPv6 network mask value range is <strong>0 to 128</strong> bits.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -69,7 +75,11 @@ public class CreateIpamPoolRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The IP version. Only <strong>IPv4</strong> is supported.</p>
+     * <p>IP address protocol version. Values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong>: IPv4 protocol.</li>
+     * <li><strong>IPv6</strong>: IPv6 protocol.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
@@ -78,8 +88,8 @@ public class CreateIpamPoolRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The description of the IPAM pool.</p>
-     * <p>It must be 2 to 256 characters in length. It must start with a letter, but cannot start with a <code>http://</code> or <code>https://</code>. This parameter is empty by default.</p>
+     * <p>Description of the IPAM address pool. 
+     * The length should be between 1 to 256 characters, and it must start with an uppercase or lowercase English letter or a Chinese character, but cannot begin with <code>http://</code> or <code>https://</code>. If left blank, the default value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>test description</p>
@@ -107,6 +117,21 @@ public class CreateIpamPoolRequest extends TeaModel {
     @NameInMap("IpamScopeId")
     public String ipamScopeId;
 
+    /**
+     * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
+     * <ul>
+     * <li><strong>BGP</strong> (default)</li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaTelecom</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If you are allowed to use single-ISP bandwidth, you can set the value to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
+     */
     @NameInMap("Ipv6Isp")
     public String ipv6Isp;
 

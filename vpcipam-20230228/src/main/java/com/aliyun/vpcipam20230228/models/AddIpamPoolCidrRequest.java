@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddIpamPoolCidrRequest extends TeaModel {
     /**
-     * <p>The CIDR block that you want to provision.</p>
+     * <p>The CIDR block to be provisioned. </p>
      * <blockquote>
-     * <p> Only IPv4 CIDR blocks are supported.</p>
+     * <p>For private top-level pools, provisioning can only be done by entering a CIDR block.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,6 +51,15 @@ public class AddIpamPoolCidrRequest extends TeaModel {
     @NameInMap("IpamPoolId")
     public String ipamPoolId;
 
+    /**
+     * <p>Provision CIDR address segments through a mask method.  </p>
+     * <blockquote>
+     * <p>The public IPv6 top-level pool only supports provisioning via a mask.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("NetmaskLength")
     public Integer netmaskLength;
 

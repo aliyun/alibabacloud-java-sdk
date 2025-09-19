@@ -194,6 +194,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         @NameInMap("AutoImport")
         public Boolean autoImport;
 
+        @NameInMap("Cidrs")
+        public java.util.List<String> cidrs;
+
         /**
          * <p>The time when the IPAM pool was created.</p>
          * 
@@ -415,6 +418,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
         public Boolean getAutoImport() {
             return this.autoImport;
+        }
+
+        public ListIpamPoolsResponseBodyIpamPools setCidrs(java.util.List<String> cidrs) {
+            this.cidrs = cidrs;
+            return this;
+        }
+        public java.util.List<String> getCidrs() {
+            return this.cidrs;
         }
 
         public ListIpamPoolsResponseBodyIpamPools setCreateTime(String createTime) {
