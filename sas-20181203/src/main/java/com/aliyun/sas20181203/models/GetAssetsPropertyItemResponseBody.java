@@ -152,6 +152,12 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        @NameInMap("MiddlewareName")
+        public String middlewareName;
+
+        @NameInMap("ModelName")
+        public String modelName;
+
         /**
          * <p>The name of the module.</p>
          * <blockquote>
@@ -195,6 +201,22 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public GetAssetsPropertyItemResponseBodyPropertyItems setMiddlewareName(String middlewareName) {
+            this.middlewareName = middlewareName;
+            return this;
+        }
+        public String getMiddlewareName() {
+            return this.middlewareName;
+        }
+
+        public GetAssetsPropertyItemResponseBodyPropertyItems setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
         }
 
         public GetAssetsPropertyItemResponseBodyPropertyItems setModuleName(String moduleName) {

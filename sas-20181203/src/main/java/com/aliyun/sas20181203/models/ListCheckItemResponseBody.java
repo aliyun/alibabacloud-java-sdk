@@ -212,6 +212,19 @@ public class ListCheckItemResponseBody extends TeaModel {
         public String checkShowName;
 
         /**
+         * <p>The source type of the Situation Awareness check item: </p>
+         * <ul>
+         * <li><strong>CUSTOM</strong>: User-defined </li>
+         * <li><strong>SYSTEM</strong>: Predefined by the Situation Awareness platform</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
+        @NameInMap("CheckType")
+        public String checkType;
+
+        /**
          * <p>The check items.</p>
          */
         @NameInMap("CustomConfigs")
@@ -362,6 +375,14 @@ public class ListCheckItemResponseBody extends TeaModel {
         }
         public String getCheckShowName() {
             return this.checkShowName;
+        }
+
+        public ListCheckItemResponseBodyCheckItems setCheckType(String checkType) {
+            this.checkType = checkType;
+            return this;
+        }
+        public String getCheckType() {
+            return this.checkType;
         }
 
         public ListCheckItemResponseBodyCheckItems setCustomConfigs(java.util.List<ListCheckItemResponseBodyCheckItemsCustomConfigs> customConfigs) {

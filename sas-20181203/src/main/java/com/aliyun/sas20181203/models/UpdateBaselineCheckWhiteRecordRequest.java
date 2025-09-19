@@ -48,6 +48,12 @@ public class UpdateBaselineCheckWhiteRecordRequest extends TeaModel {
     public Long recordId;
 
     /**
+     * <p>A list of asset UUIDs from which container names need to be removed from the whitelist.</p>
+     */
+    @NameInMap("RemoveContainerUuids")
+    public java.util.List<String> removeContainerUuids;
+
+    /**
      * <p>The data source. Valid values:</p>
      * <ul>
      * <li><strong>default</strong>: server</li>
@@ -108,6 +114,14 @@ public class UpdateBaselineCheckWhiteRecordRequest extends TeaModel {
     }
     public Long getRecordId() {
         return this.recordId;
+    }
+
+    public UpdateBaselineCheckWhiteRecordRequest setRemoveContainerUuids(java.util.List<String> removeContainerUuids) {
+        this.removeContainerUuids = removeContainerUuids;
+        return this;
+    }
+    public java.util.List<String> getRemoveContainerUuids() {
+        return this.removeContainerUuids;
     }
 
     public UpdateBaselineCheckWhiteRecordRequest setSource(String source) {

@@ -137,6 +137,9 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("Path")
     public String path;
 
+    @NameInMap("RaspDefend")
+    public Integer raspDefend;
+
     /**
      * <p>The tag that is used to search for the vulnerabilities. Valid values:</p>
      * <ul>
@@ -291,6 +294,14 @@ public class ExportVulRequest extends TeaModel {
     }
     public String getPath() {
         return this.path;
+    }
+
+    public ExportVulRequest setRaspDefend(Integer raspDefend) {
+        this.raspDefend = raspDefend;
+        return this;
+    }
+    public Integer getRaspDefend() {
+        return this.raspDefend;
     }
 
     public ExportVulRequest setSearchTags(String searchTags) {

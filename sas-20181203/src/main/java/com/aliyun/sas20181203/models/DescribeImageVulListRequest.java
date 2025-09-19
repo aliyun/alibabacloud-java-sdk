@@ -41,7 +41,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong></p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,8 +52,8 @@ public class DescribeImageVulListRequest extends TeaModel {
     /**
      * <p>Specifies whether the vulnerability is handled. Valid values:</p>
      * <ul>
-     * <li><strong>y</strong>: handled</li>
-     * <li><strong>n</strong>: unhandled</li>
+     * <li><strong>y</strong>: yes</li>
+     * <li><strong>n</strong>: no</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong></p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -180,7 +180,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String repoInstanceId;
 
     /**
-     * <p>The name of the image repository.</p>
+     * <p>The name of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>libssh2</p>
@@ -207,6 +207,18 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String repoRegionId;
 
     /**
+     * <p>The tag of this vulnerability. Valid values:</p>
+     * <ul>
+     * <li><strong>AI</strong>: AI-related components.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AI</p>
+     */
+    @NameInMap("RuleTag")
+    public String ruleTag;
+
+    /**
      * <p>The types of the assets that you want to scan.</p>
      */
     @NameInMap("ScanRange")
@@ -227,7 +239,7 @@ public class DescribeImageVulListRequest extends TeaModel {
     public String statusList;
 
     /**
-     * <p>The tag that is added to the image.</p>
+     * <p>The tag that is added to the image vulnerability.</p>
      * 
      * <strong>example:</strong>
      * <p>oval</p>
@@ -425,6 +437,14 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public String getRepoRegionId() {
         return this.repoRegionId;
+    }
+
+    public DescribeImageVulListRequest setRuleTag(String ruleTag) {
+        this.ruleTag = ruleTag;
+        return this;
+    }
+    public String getRuleTag() {
+        return this.ruleTag;
     }
 
     public DescribeImageVulListRequest setScanRange(java.util.List<String> scanRange) {

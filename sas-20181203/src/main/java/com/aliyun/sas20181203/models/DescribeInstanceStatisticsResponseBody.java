@@ -132,6 +132,15 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         public Integer cmsNum;
 
         /**
+         * <p>Number of high-risk CSPM issues in the system</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("CspmHighRiskNum")
+        public String cspmHighRiskNum;
+
+        /**
          * <p>The number of configuration risks detected on the asset.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +177,15 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         public Integer health;
 
         /**
+         * <p>Number of security alerts for asset existence reminders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RemindSuspiciousNum")
+        public String remindSuspiciousNum;
+
+        /**
          * <p>The number of middleware vulnerabilities detected on the asset.</p>
          * 
          * <strong>example:</strong>
@@ -177,6 +195,24 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         public Integer scaNum;
 
         /**
+         * <p>Number of high-risk security alerts for the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("SeriousSuspiciousNum")
+        public String seriousSuspiciousNum;
+
+        /**
+         * <p>Number of suspicious security alerts for the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SuspectSuspiciousNum")
+        public String suspectSuspiciousNum;
+
+        /**
          * <p>The number of alerts generated for the asset.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +220,15 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
          */
         @NameInMap("Suspicious")
         public Integer suspicious;
+
+        /**
+         * <p>Number of system vulnerabilities in the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SysAsapVulCount")
+        public String sysAsapVulCount;
 
         /**
          * <p>The number of Windows system vulnerabilities detected on the asset.</p>
@@ -315,6 +360,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.cmsNum;
         }
 
+        public DescribeInstanceStatisticsResponseBodyData setCspmHighRiskNum(String cspmHighRiskNum) {
+            this.cspmHighRiskNum = cspmHighRiskNum;
+            return this;
+        }
+        public String getCspmHighRiskNum() {
+            return this.cspmHighRiskNum;
+        }
+
         public DescribeInstanceStatisticsResponseBodyData setCspmNum(Integer cspmNum) {
             this.cspmNum = cspmNum;
             return this;
@@ -347,6 +400,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.health;
         }
 
+        public DescribeInstanceStatisticsResponseBodyData setRemindSuspiciousNum(String remindSuspiciousNum) {
+            this.remindSuspiciousNum = remindSuspiciousNum;
+            return this;
+        }
+        public String getRemindSuspiciousNum() {
+            return this.remindSuspiciousNum;
+        }
+
         public DescribeInstanceStatisticsResponseBodyData setScaNum(Integer scaNum) {
             this.scaNum = scaNum;
             return this;
@@ -355,12 +416,36 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.scaNum;
         }
 
+        public DescribeInstanceStatisticsResponseBodyData setSeriousSuspiciousNum(String seriousSuspiciousNum) {
+            this.seriousSuspiciousNum = seriousSuspiciousNum;
+            return this;
+        }
+        public String getSeriousSuspiciousNum() {
+            return this.seriousSuspiciousNum;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setSuspectSuspiciousNum(String suspectSuspiciousNum) {
+            this.suspectSuspiciousNum = suspectSuspiciousNum;
+            return this;
+        }
+        public String getSuspectSuspiciousNum() {
+            return this.suspectSuspiciousNum;
+        }
+
         public DescribeInstanceStatisticsResponseBodyData setSuspicious(Integer suspicious) {
             this.suspicious = suspicious;
             return this;
         }
         public Integer getSuspicious() {
             return this.suspicious;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setSysAsapVulCount(String sysAsapVulCount) {
+            this.sysAsapVulCount = sysAsapVulCount;
+            return this;
+        }
+        public String getSysAsapVulCount() {
+            return this.sysAsapVulCount;
         }
 
         public DescribeInstanceStatisticsResponseBodyData setSysNum(Integer sysNum) {

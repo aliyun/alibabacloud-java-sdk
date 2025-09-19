@@ -198,6 +198,15 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         public String riskStatus;
 
         /**
+         * <p>The usage label of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI</p>
+         */
+        @NameInMap("SourceBizTag")
+        public String sourceBizTag;
+
+        /**
          * <p>The status of the image.</p>
          * 
          * <strong>example:</strong>
@@ -386,6 +395,14 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         }
         public String getRiskStatus() {
             return this.riskStatus;
+        }
+
+        public DescribeImageInfoListResponseBodyImageInfos setSourceBizTag(String sourceBizTag) {
+            this.sourceBizTag = sourceBizTag;
+            return this;
+        }
+        public String getSourceBizTag() {
+            return this.sourceBizTag;
         }
 
         public DescribeImageInfoListResponseBodyImageInfos setStatus(String status) {

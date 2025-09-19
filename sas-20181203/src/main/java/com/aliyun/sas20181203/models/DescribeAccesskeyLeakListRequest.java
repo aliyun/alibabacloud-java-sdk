@@ -32,7 +32,7 @@ public class DescribeAccesskeyLeakListRequest extends TeaModel {
      * <p>The AccessKey ID that you want to query. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI4Fytv7ALKzkNVBV6****</p>
+     * <p>yourAccessKeyID</p>
      */
     @NameInMap("Query")
     public String query;

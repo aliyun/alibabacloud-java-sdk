@@ -42,6 +42,9 @@ public class GetCheckSummaryRequest extends TeaModel {
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;
 
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
     /**
      * <p>The cloud service providers.</p>
      */
@@ -75,6 +78,14 @@ public class GetCheckSummaryRequest extends TeaModel {
     }
     public String getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
+    }
+
+    public GetCheckSummaryRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
     public GetCheckSummaryRequest setVendors(java.util.List<String> vendors) {

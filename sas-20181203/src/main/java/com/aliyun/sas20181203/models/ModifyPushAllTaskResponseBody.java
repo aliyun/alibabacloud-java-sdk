@@ -231,7 +231,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
 
     public static class ModifyPushAllTaskResponseBodyPushTaskRsp extends TeaModel {
         /**
-         * <p>An array consisting of the servers on which security check tasks failed.</p>
+         * <p>The information about the server on which security check tasks failed.</p>
          */
         @NameInMap("PushTaskResultList")
         public java.util.List<ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList> pushTaskResultList;

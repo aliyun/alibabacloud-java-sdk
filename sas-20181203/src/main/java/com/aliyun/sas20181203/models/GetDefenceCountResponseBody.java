@@ -32,6 +32,15 @@ public class GetDefenceCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of handled security alerts of Cloud Security Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("SuspiciousDealtCount")
+    public Integer suspiciousDealtCount;
+
+    /**
      * <p>The number of handled alerts of the web tamper proofing type in the last 15 days.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +85,14 @@ public class GetDefenceCountResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetDefenceCountResponseBody setSuspiciousDealtCount(Integer suspiciousDealtCount) {
+        this.suspiciousDealtCount = suspiciousDealtCount;
+        return this;
+    }
+    public Integer getSuspiciousDealtCount() {
+        return this.suspiciousDealtCount;
     }
 
     public GetDefenceCountResponseBody setTamperProof15Days(Integer tamperProof15Days) {

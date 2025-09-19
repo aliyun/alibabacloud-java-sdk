@@ -69,6 +69,13 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <strong>example:</strong>
+     * <p>arm</p>
+     */
+    @NameInMap("CpuArch")
+    public String cpuArch;
+
+    /**
      * <p>The time at which the container ends to be added.</p>
      * <p>This parameter is required.</p>
      * 
@@ -164,6 +171,14 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    public GenerateK8sAccessInfoRequest setCpuArch(String cpuArch) {
+        this.cpuArch = cpuArch;
+        return this;
+    }
+    public String getCpuArch() {
+        return this.cpuArch;
     }
 
     public GenerateK8sAccessInfoRequest setExpireDate(Long expireDate) {

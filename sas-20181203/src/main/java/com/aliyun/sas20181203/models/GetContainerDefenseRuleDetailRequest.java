@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetContainerDefenseRuleDetailRequest extends TeaModel {
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The rule ID.</p>
      * <blockquote>
@@ -19,6 +22,14 @@ public class GetContainerDefenseRuleDetailRequest extends TeaModel {
     public static GetContainerDefenseRuleDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetContainerDefenseRuleDetailRequest self = new GetContainerDefenseRuleDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetContainerDefenseRuleDetailRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public GetContainerDefenseRuleDetailRequest setRuleId(Long ruleId) {

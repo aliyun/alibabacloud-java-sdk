@@ -48,6 +48,9 @@ public class GetCheckStructureRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
     public static GetCheckStructureRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCheckStructureRequest self = new GetCheckStructureRequest();
         return TeaModel.build(map, self);
@@ -83,6 +86,14 @@ public class GetCheckStructureRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetCheckStructureRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
 }

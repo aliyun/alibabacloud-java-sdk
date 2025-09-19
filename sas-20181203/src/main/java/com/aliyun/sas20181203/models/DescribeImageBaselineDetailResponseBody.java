@@ -113,7 +113,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
          * <p>The issue that is detected by using the baseline.</p>
          * 
          * <strong>example:</strong>
-         * <p>/usr/aksk.txt:LTAI4GBEG5zaqX**********</p>
+         * <p>/usr/aksk.txt:yourAccessKeyID</p>
          */
         @NameInMap("Prompt")
         public String prompt;

@@ -24,6 +24,9 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
     @NameInMap("AuthModules")
     public java.util.List<String> authModules;
 
+    @NameInMap("CtdrCloudUserId")
+    public String ctdrCloudUserId;
+
     /**
      * <p>The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:</p>
      * <ul>
@@ -36,6 +39,9 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
      */
     @NameInMap("Domain")
     public String domain;
+
+    @NameInMap("ExtendInfo")
+    public String extendInfo;
 
     /**
      * <p>The language of the content in the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
@@ -171,12 +177,28 @@ public class AddCloudVendorAccountAKRequest extends TeaModel {
         return this.authModules;
     }
 
+    public AddCloudVendorAccountAKRequest setCtdrCloudUserId(String ctdrCloudUserId) {
+        this.ctdrCloudUserId = ctdrCloudUserId;
+        return this;
+    }
+    public String getCtdrCloudUserId() {
+        return this.ctdrCloudUserId;
+    }
+
     public AddCloudVendorAccountAKRequest setDomain(String domain) {
         this.domain = domain;
         return this;
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public AddCloudVendorAccountAKRequest setExtendInfo(String extendInfo) {
+        this.extendInfo = extendInfo;
+        return this;
+    }
+    public String getExtendInfo() {
+        return this.extendInfo;
     }
 
     public AddCloudVendorAccountAKRequest setLang(String lang) {

@@ -140,6 +140,12 @@ public class ListOperationProcessResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("DetailTaskReadyCount")
+        public Integer detailTaskReadyCount;
+
+        @NameInMap("DetailTaskTotalCount")
+        public Integer detailTaskTotalCount;
+
         /**
          * <p>The end time of the task. Unit: milliseconds.</p>
          * 
@@ -191,6 +197,9 @@ public class ListOperationProcessResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        @NameInMap("TaskSource")
+        public String taskSource;
+
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
@@ -227,6 +236,22 @@ public class ListOperationProcessResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListOperationProcessResponseBodyProcesses setDetailTaskReadyCount(Integer detailTaskReadyCount) {
+            this.detailTaskReadyCount = detailTaskReadyCount;
+            return this;
+        }
+        public Integer getDetailTaskReadyCount() {
+            return this.detailTaskReadyCount;
+        }
+
+        public ListOperationProcessResponseBodyProcesses setDetailTaskTotalCount(Integer detailTaskTotalCount) {
+            this.detailTaskTotalCount = detailTaskTotalCount;
+            return this;
+        }
+        public Integer getDetailTaskTotalCount() {
+            return this.detailTaskTotalCount;
         }
 
         public ListOperationProcessResponseBodyProcesses setEndTime(Long endTime) {
@@ -267,6 +292,14 @@ public class ListOperationProcessResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public ListOperationProcessResponseBodyProcesses setTaskSource(String taskSource) {
+            this.taskSource = taskSource;
+            return this;
+        }
+        public String getTaskSource() {
+            return this.taskSource;
         }
 
         public ListOperationProcessResponseBodyProcesses setTaskType(String taskType) {

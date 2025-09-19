@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCountResponseBody extends TeaModel {
+    @NameInMap("AgentlessLlmService")
+    public Integer agentlessLlmService;
+
+    @NameInMap("AgentlessScaAiComponent")
+    public Integer agentlessScaAiComponent;
+
     /**
      * <p>The number of startup items.</p>
      * 
@@ -115,6 +121,22 @@ public class DescribePropertyCountResponseBody extends TeaModel {
     public static DescribePropertyCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertyCountResponseBody self = new DescribePropertyCountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePropertyCountResponseBody setAgentlessLlmService(Integer agentlessLlmService) {
+        this.agentlessLlmService = agentlessLlmService;
+        return this;
+    }
+    public Integer getAgentlessLlmService() {
+        return this.agentlessLlmService;
+    }
+
+    public DescribePropertyCountResponseBody setAgentlessScaAiComponent(Integer agentlessScaAiComponent) {
+        this.agentlessScaAiComponent = agentlessScaAiComponent;
+        return this;
+    }
+    public Integer getAgentlessScaAiComponent() {
+        return this.agentlessScaAiComponent;
     }
 
     public DescribePropertyCountResponseBody setAutorun(Integer autorun) {

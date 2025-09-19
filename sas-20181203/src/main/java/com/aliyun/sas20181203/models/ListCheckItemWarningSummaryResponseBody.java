@@ -83,6 +83,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
          * <p>week_pa****</p>
          */
         @NameInMap("Alias")
+        @Deprecated
         public String alias;
 
         /**
@@ -161,6 +162,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
          * <p>weak_password</p>
          */
         @NameInMap("RiskType")
+        @Deprecated
         public String riskType;
 
         /**
@@ -215,6 +217,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             return this.affiliatedRisks;
         }
 
+        @Deprecated
         public ListCheckItemWarningSummaryResponseBodyList setAlias(String alias) {
             this.alias = alias;
             return this;
@@ -279,6 +282,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             return this.enableRisks;
         }
 
+        @Deprecated
         public ListCheckItemWarningSummaryResponseBodyList setRiskType(String riskType) {
             this.riskType = riskType;
             return this;

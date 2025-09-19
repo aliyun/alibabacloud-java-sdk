@@ -4,6 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCycleTaskListRequest extends TeaModel {
+    /**
+     * <p>The ID of the task configuration.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~CreateCycleTask~~">CreateCycleTask</a> operation to query the IDs of task configurations.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>f93b6ee24cfd0aad44b897ad5051****</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 

@@ -40,6 +40,15 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String attachTypes;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c88fb10da1168494091db6aafc5dd****</p>
+     */
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    /**
      * <p>The key of the condition that is used to query containers. Valid values:</p>
      * <ul>
      * <li><strong>instanceId</strong>: the ID of the asset</li>
@@ -63,6 +72,15 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String containerFieldName;
 
     /**
+     * <p>The value specified by <strong>ContainerFieldName</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc914b0df156d40148412afe4a581****</p>
+     */
+    @NameInMap("ContainerFieldValue")
+    public String containerFieldValue;
+
+    /**
      * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +88,18 @@ public class DescribeGroupedVulRequest extends TeaModel {
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    /**
+     * <p>The CVE ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeVulListPage~~">DescribeVulListPage</a> operation to query the CVE ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>CVE-2017-15420</p>
+     */
+    @NameInMap("CveId")
+    public String cveId;
 
     /**
      * <p>Specifies whether the vulnerability is handled. Valid values:</p>
@@ -128,6 +158,9 @@ public class DescribeGroupedVulRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RaspDefend")
+    public Integer raspDefend;
 
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
@@ -225,6 +258,14 @@ public class DescribeGroupedVulRequest extends TeaModel {
         return this.attachTypes;
     }
 
+    public DescribeGroupedVulRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
     public DescribeGroupedVulRequest setContainerFieldName(String containerFieldName) {
         this.containerFieldName = containerFieldName;
         return this;
@@ -233,12 +274,28 @@ public class DescribeGroupedVulRequest extends TeaModel {
         return this.containerFieldName;
     }
 
+    public DescribeGroupedVulRequest setContainerFieldValue(String containerFieldValue) {
+        this.containerFieldValue = containerFieldValue;
+        return this;
+    }
+    public String getContainerFieldValue() {
+        return this.containerFieldValue;
+    }
+
     public DescribeGroupedVulRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeGroupedVulRequest setCveId(String cveId) {
+        this.cveId = cveId;
+        return this;
+    }
+    public String getCveId() {
+        return this.cveId;
     }
 
     public DescribeGroupedVulRequest setDealed(String dealed) {
@@ -279,6 +336,14 @@ public class DescribeGroupedVulRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeGroupedVulRequest setRaspDefend(Integer raspDefend) {
+        this.raspDefend = raspDefend;
+        return this;
+    }
+    public Integer getRaspDefend() {
+        return this.raspDefend;
     }
 
     public DescribeGroupedVulRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {

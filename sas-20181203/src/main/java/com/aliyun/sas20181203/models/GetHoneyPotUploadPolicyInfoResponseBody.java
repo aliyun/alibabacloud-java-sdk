@@ -117,7 +117,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
          * <p>The key ID that is required for the file upload.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4G1mgPbjvGQuiV1X****</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("Accessid")
         public String accessid;

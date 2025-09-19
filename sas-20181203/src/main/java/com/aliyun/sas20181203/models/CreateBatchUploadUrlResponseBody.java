@@ -45,7 +45,7 @@ public class CreateBatchUploadUrlResponseBody extends TeaModel {
          * <p>The AccessKey ID that is used to access the OSS bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4G1mgPbjvGQuiV1X****</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("AccessId")
         public String accessId;

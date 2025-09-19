@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCloudVendorTrialConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>

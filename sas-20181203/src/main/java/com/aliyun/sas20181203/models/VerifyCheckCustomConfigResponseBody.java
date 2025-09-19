@@ -11,6 +11,12 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
     public java.util.List<VerifyCheckCustomConfigResponseBodyErrorCheckConfigs> errorCheckConfigs;
 
     /**
+     * <p>Check the error code returned by the custom check item.</p>
+     */
+    @NameInMap("ErrorCheckCustomConfig")
+    public VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig errorCheckCustomConfig;
+
+    /**
      * <p>List of repair parameters with configuration check errors.</p>
      */
     @NameInMap("ErrorRepairConfigs")
@@ -36,6 +42,14 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
     }
     public java.util.List<VerifyCheckCustomConfigResponseBodyErrorCheckConfigs> getErrorCheckConfigs() {
         return this.errorCheckConfigs;
+    }
+
+    public VerifyCheckCustomConfigResponseBody setErrorCheckCustomConfig(VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig errorCheckCustomConfig) {
+        this.errorCheckCustomConfig = errorCheckCustomConfig;
+        return this;
+    }
+    public VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig getErrorCheckCustomConfig() {
+        return this.errorCheckCustomConfig;
     }
 
     public VerifyCheckCustomConfigResponseBody setErrorRepairConfigs(java.util.List<VerifyCheckCustomConfigResponseBodyErrorRepairConfigs> errorRepairConfigs) {
@@ -223,6 +237,52 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig extends TeaModel {
+        /**
+         * <p>Error code when failed. This parameter is not returned upon success. </p>
+         * <ul>
+         * <li><strong>CspmVerifyCheckCustomItemNoPass</strong>: The asset did not pass the set custom rules. </li>
+         * <li><strong>CspmVerifyCheckCustomItemError</strong>: Verification error, there is an issue with the input rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CspmVerifyCheckCustomItemNoPass</p>
+         */
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        /**
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creation verification failed.</p>
+         */
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
+
+        public static VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig build(java.util.Map<String, ?> map) throws Exception {
+            VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig self = new VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
     }

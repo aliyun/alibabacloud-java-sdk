@@ -310,6 +310,15 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         public String scaStatus;
 
         /**
+         * <p>The usage label of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI</p>
+         */
+        @NameInMap("SourceBizTag")
+        public String sourceBizTag;
+
+        /**
          * <p>The status of the image. Valid values:</p>
          * <ul>
          * <li><strong>NORMAL</strong></li>
@@ -548,6 +557,14 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         }
         public String getScaStatus() {
             return this.scaStatus;
+        }
+
+        public DescribeImageInstancesResponseBodyImageInstanceList setSourceBizTag(String sourceBizTag) {
+            this.sourceBizTag = sourceBizTag;
+            return this;
+        }
+        public String getSourceBizTag() {
+            return this.sourceBizTag;
         }
 
         public DescribeImageInstancesResponseBodyImageInstanceList setStatus(String status) {

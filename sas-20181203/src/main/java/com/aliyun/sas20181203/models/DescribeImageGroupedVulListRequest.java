@@ -192,6 +192,18 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     public String repoRegionId;
 
     /**
+     * <p>The tag of this vulnerability. Valid values:</p>
+     * <ul>
+     * <li><strong>AI</strong>: AI-related components.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AI</p>
+     */
+    @NameInMap("RuleTag")
+    public String ruleTag;
+
+    /**
      * <p>An array consisting of the types of the assets that you want to scan.</p>
      */
     @NameInMap("ScanRange")
@@ -374,6 +386,14 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     }
     public String getRepoRegionId() {
         return this.repoRegionId;
+    }
+
+    public DescribeImageGroupedVulListRequest setRuleTag(String ruleTag) {
+        this.ruleTag = ruleTag;
+        return this;
+    }
+    public String getRuleTag() {
+        return this.ruleTag;
     }
 
     public DescribeImageGroupedVulListRequest setScanRange(java.util.List<String> scanRange) {

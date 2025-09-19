@@ -17,6 +17,9 @@ public class SubmitCheckRequest extends TeaModel {
     @NameInMap("ScanRange")
     public String scanRange;
 
+    @NameInMap("TaskSource")
+    public String taskSource;
+
     public static SubmitCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCheckRequest self = new SubmitCheckRequest();
         return TeaModel.build(map, self);
@@ -28,6 +31,14 @@ public class SubmitCheckRequest extends TeaModel {
     }
     public String getScanRange() {
         return this.scanRange;
+    }
+
+    public SubmitCheckRequest setTaskSource(String taskSource) {
+        this.taskSource = taskSource;
+        return this;
+    }
+    public String getTaskSource() {
+        return this.taskSource;
     }
 
 }

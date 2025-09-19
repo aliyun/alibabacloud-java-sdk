@@ -61,7 +61,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
          * <li><strong>intranetIp</strong>: the private IP address.</li>
          * <li><strong>instanceName</strong>: the name of the instance.</li>
          * <li><strong>instanceId</strong>: the instance ID.</li>
-         * <li><strong>vpcInstanceId</strong>: the ID of the virtual private cloud (VPC) to which the instance belongs.</li>
+         * <li><strong>vpcInstanceId</strong>: The ID of the virtual private cloud (VPC) to which the instance belongs.</li>
          * <li><strong>osName</strong>: the operating system.</li>
          * <li><strong>osType</strong>: the operating system type.</li>
          * <li><strong>hcStatus</strong>: indicates whether baseline risks exist.</li>
@@ -77,9 +77,10 @@ public class DescribeCriteriaResponseBody extends TeaModel {
          * <li><strong>exposedStatus</strong>: indicates whether the server is exposed.</li>
          * <li><strong>authVersion</strong>: the authorization version.</li>
          * <li><strong>flag</strong>: the cloud service provider.</li>
-         * <li><strong>ipList</strong>: the IP addresses.</li>
+         * <li><strong>ipList</strong>: the IP address list.</li>
          * <li><strong>uuidList</strong> :the UUID.</li>
          * <li><strong>tagKeyValue</strong>: the ECS tag.</li>
+         * <li><strong>vendorAuthAlias</strong>: the account name.</li>
          * </ul>
          * 
          * <strong>example:</strong>

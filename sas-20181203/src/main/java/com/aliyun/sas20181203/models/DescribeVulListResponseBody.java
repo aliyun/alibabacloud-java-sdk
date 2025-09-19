@@ -781,6 +781,15 @@ public class DescribeVulListResponseBody extends TeaModel {
         public Integer groupId;
 
         /**
+         * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-cn-<strong>-vpc.ack.</strong>.com/acs/ack-node-problem-detector:v0.8.16-8ed7053-**</p>
+         */
+        @NameInMap("Image")
+        public String image;
+
+        /**
          * <p>The ID of the asset.</p>
          * 
          * <strong>example:</strong>
@@ -902,6 +911,15 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system</p>
+         */
+        @NameInMap("Namespace")
+        public String namespace;
 
         /**
          * <p>The priority to fix the vulnerability. Valid values:</p>
@@ -1059,6 +1077,18 @@ public class DescribeVulListResponseBody extends TeaModel {
         public String resultMessage;
 
         /**
+         * <p>The tag of this vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>AI</strong>: AI-related components.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
+         */
+        @NameInMap("RuleTag")
+        public String ruleTag;
+
+        /**
          * <p>The status of the vulnerability. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: unfixed.</li>
@@ -1170,6 +1200,14 @@ public class DescribeVulListResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        public DescribeVulListResponseBodyVulRecords setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
         public DescribeVulListResponseBodyVulRecords setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -1264,6 +1302,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public DescribeVulListResponseBodyVulRecords setNecessity(String necessity) {
@@ -1376,6 +1422,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getResultMessage() {
             return this.resultMessage;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setRuleTag(String ruleTag) {
+            this.ruleTag = ruleTag;
+            return this;
+        }
+        public String getRuleTag() {
+            return this.ruleTag;
         }
 
         public DescribeVulListResponseBodyVulRecords setStatus(Integer status) {

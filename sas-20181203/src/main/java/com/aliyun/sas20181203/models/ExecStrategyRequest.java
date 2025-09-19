@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExecStrategyRequest extends TeaModel {
+    @NameInMap("ExecAction")
+    public String execAction;
+
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
@@ -32,6 +35,14 @@ public class ExecStrategyRequest extends TeaModel {
     public static ExecStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecStrategyRequest self = new ExecStrategyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExecStrategyRequest setExecAction(String execAction) {
+        this.execAction = execAction;
+        return this;
+    }
+    public String getExecAction() {
+        return this.execAction;
     }
 
     public ExecStrategyRequest setLang(String lang) {

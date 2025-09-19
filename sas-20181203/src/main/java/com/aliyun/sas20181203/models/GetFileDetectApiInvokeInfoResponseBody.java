@@ -51,6 +51,15 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         public Long authCount;
 
         /**
+         * <p>The total number of authorizations(excluding trials).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("AuthCountInSaleVersion")
+        public Long authCountInSaleVersion;
+
+        /**
          * <p>The timestamp of the expiration date of the authorization number.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +76,24 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
          */
         @NameInMap("FlowRate")
         public Integer flowRate;
+
+        /**
+         * <p>The number of authorizations used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("InvokeCount")
+        public Long invokeCount;
+
+        /**
+         * <p>The number of authorizations used(excluding trials).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("InvokeCountInSaleVersion")
+        public Long invokeCountInSaleVersion;
 
         /**
          * <p>The number of remaining authorizations.</p>
@@ -116,6 +143,14 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             return this.authCount;
         }
 
+        public GetFileDetectApiInvokeInfoResponseBodyData setAuthCountInSaleVersion(Long authCountInSaleVersion) {
+            this.authCountInSaleVersion = authCountInSaleVersion;
+            return this;
+        }
+        public Long getAuthCountInSaleVersion() {
+            return this.authCountInSaleVersion;
+        }
+
         public GetFileDetectApiInvokeInfoResponseBodyData setExpire(Long expire) {
             this.expire = expire;
             return this;
@@ -130,6 +165,22 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         }
         public Integer getFlowRate() {
             return this.flowRate;
+        }
+
+        public GetFileDetectApiInvokeInfoResponseBodyData setInvokeCount(Long invokeCount) {
+            this.invokeCount = invokeCount;
+            return this;
+        }
+        public Long getInvokeCount() {
+            return this.invokeCount;
+        }
+
+        public GetFileDetectApiInvokeInfoResponseBodyData setInvokeCountInSaleVersion(Long invokeCountInSaleVersion) {
+            this.invokeCountInSaleVersion = invokeCountInSaleVersion;
+            return this;
+        }
+        public Long getInvokeCountInSaleVersion() {
+            return this.invokeCountInSaleVersion;
         }
 
         public GetFileDetectApiInvokeInfoResponseBodyData setRemainAuthCount(Long remainAuthCount) {

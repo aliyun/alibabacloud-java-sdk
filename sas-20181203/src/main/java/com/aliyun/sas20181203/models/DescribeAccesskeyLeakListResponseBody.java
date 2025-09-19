@@ -130,7 +130,7 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
          * <p>The ID of the AccessKey pair that is leaked.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4Fytv7ALKzkNVBV6****</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("AccesskeyId")
         public String accesskeyId;

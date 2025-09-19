@@ -219,6 +219,15 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         public String riskStatus;
 
         /**
+         * <p>The usage label of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI</p>
+         */
+        @NameInMap("SourceBizTag")
+        public String sourceBizTag;
+
+        /**
          * <p>The number of vulnerabilities detected on the image repository.</p>
          * 
          * <strong>example:</strong>
@@ -355,6 +364,14 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         }
         public String getRiskStatus() {
             return this.riskStatus;
+        }
+
+        public DescribeImageRepoDetailListResponseBodyImageRepoResponses setSourceBizTag(String sourceBizTag) {
+            this.sourceBizTag = sourceBizTag;
+            return this;
+        }
+        public String getSourceBizTag() {
+            return this.sourceBizTag;
         }
 
         public DescribeImageRepoDetailListResponseBodyImageRepoResponses setVulCount(Integer vulCount) {

@@ -188,6 +188,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("ExecStatus")
         public Integer execStatus;
 
+        @NameInMap("ExecutionType")
+        public String executionType;
+
         /**
          * <p>The ID of the baseline check policy.</p>
          * 
@@ -332,6 +335,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
         public Integer getExecStatus() {
             return this.execStatus;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setExecutionType(String executionType) {
+            this.executionType = executionType;
+            return this;
+        }
+        public String getExecutionType() {
+            return this.executionType;
         }
 
         public DescribeStrategyResponseBodyStrategies setId(Integer id) {

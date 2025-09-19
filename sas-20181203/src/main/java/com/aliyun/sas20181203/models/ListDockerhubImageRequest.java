@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDockerhubImageRequest extends TeaModel {
     /**
-     * <p>Image query condition, supports the format of <code>[namespace/]repoName[:version]</code>, where the conditions within <code>[]</code> are optional.</p>
+     * <p>The query condition for images. You can query images in the <code>[namespace/]repoName[:version]</code> format. Conditions in <code>[]</code> are optional.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

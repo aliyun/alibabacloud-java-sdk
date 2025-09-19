@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationTaskResponseBody extends TeaModel {
     /**
-     * <p>操作任务的详细实例信息列表。</p>
+     * <p>Detailed instance information list of operation tasks.</p>
      */
     @NameInMap("OperationTasks")
     public java.util.List<ListOperationTaskResponseBodyOperationTasks> operationTasks;
@@ -56,7 +56,7 @@ public class ListOperationTaskResponseBody extends TeaModel {
 
     public static class ListOperationTaskResponseBodyOperationTasks extends TeaModel {
         /**
-         * <p>检查项的ID。</p>
+         * <p>The ID of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -132,7 +132,7 @@ public class ListOperationTaskResponseBody extends TeaModel {
         public Long lastCheckTime;
 
         /**
-         * <p>服务器所在的地域的ID。</p>
+         * <p>The ID of the region where the server is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -155,11 +155,11 @@ public class ListOperationTaskResponseBody extends TeaModel {
         public Integer repairSupportType;
 
         /**
-         * <p>扫描出的告警的风险等级。取值：</p>
+         * <p>The risk level of the detected alert. Values:</p>
          * <ul>
-         * <li><strong>high</strong>：高危。</li>
-         * <li><strong>medium</strong>：中危。</li>
-         * <li><strong>low</strong>：低危。</li>
+         * <li><strong>high</strong>: High risk.</li>
+         * <li><strong>medium</strong>: Medium risk. </li>
+         * <li><strong>low</strong>: Low risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>

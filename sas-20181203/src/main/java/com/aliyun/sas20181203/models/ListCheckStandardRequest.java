@@ -35,6 +35,9 @@ public class ListCheckStandardRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
     /**
      * <p>The cloud service providers. Valid values:</p>
      * <ul>
@@ -83,6 +86,14 @@ public class ListCheckStandardRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ListCheckStandardRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
     public ListCheckStandardRequest setVendors(java.util.List<String> vendors) {

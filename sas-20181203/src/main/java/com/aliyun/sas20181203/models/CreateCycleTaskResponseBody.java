@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateCycleTaskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the task configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00cfa8161da093089e6804ba6a33****</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 

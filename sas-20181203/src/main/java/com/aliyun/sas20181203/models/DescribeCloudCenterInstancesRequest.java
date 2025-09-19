@@ -26,12 +26,12 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The service provider of the asset. Separate multiple service providers with commas (,). Valid values:</p>
+     * <p>Asset vendor. Multiple asset vendors should be separated by a comma (,). Values:</p>
      * <ul>
      * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
      * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
      * <li><strong>2</strong>: an asset in a data center</li>
-     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider</li>
+     * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>, <strong>14</strong>, <strong>16</strong>: an asset from a third-party cloud service provider</li>
      * <li><strong>8</strong>: a lightweight asset</li>
      * <li><strong>9</strong>: a Serverless App Engine (SAE) instance</li>
      * <li><strong>10</strong>: an instance in Platform for AI (PAI)</li>
@@ -84,10 +84,13 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String logicalExp;
 
     /**
-     * <p>The type of the assets that you want to query. Valid values:</p>
+     * <p>The type of asset to be queried. Values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: servers</li>
-     * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+     * <li><strong>ecs</strong>: Server </li>
+     * <li><strong>cloud_product</strong>: Cloud Product </li>
+     * <li><strong>eci</strong>: Elastic Container Instance </li>
+     * <li><strong>rund</strong>: RunD Container Instance </li>
+     * <li><strong>runc</strong>: RunC Container Instance</li>
      * </ul>
      * 
      * <strong>example:</strong>

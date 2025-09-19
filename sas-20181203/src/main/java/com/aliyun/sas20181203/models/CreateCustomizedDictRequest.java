@@ -17,6 +17,9 @@ public class CreateCustomizedDictRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Override")
+    public Boolean override;
+
     /**
      * <p>The source IP address.</p>
      * 
@@ -37,6 +40,14 @@ public class CreateCustomizedDictRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public CreateCustomizedDictRequest setOverride(Boolean override) {
+        this.override = override;
+        return this;
+    }
+    public Boolean getOverride() {
+        return this.override;
     }
 
     public CreateCustomizedDictRequest setSourceIp(String sourceIp) {

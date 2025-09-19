@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnBindHybridProxyRequest extends TeaModel {
     /**
-     * <p>The cluster name.</p>
-     * <blockquote>
-     * <p>This parameter is deprecated.</p>
-     * </blockquote>
+     * <p>The name of the proxy cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +15,7 @@ public class UnBindHybridProxyRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The UUIDs of servers that you want to add to Security Center over the proxy server.</p>
+     * <p>The UUIDs of the servers that you want to remove from the proxy cluster.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("YundunUuids")

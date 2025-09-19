@@ -15,6 +15,19 @@ public class DescribeScreenScoreThreadRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Source of security score, default is Cloud Security Center if left empty. Enum values: </p>
+     * <ul>
+     * <li>0:Cloud Security Center. </li>
+     * <li>1:Yaochi Console.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("Source")
+    public Integer source;
+
+    /**
      * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
@@ -35,6 +48,14 @@ public class DescribeScreenScoreThreadRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeScreenScoreThreadRequest setSource(Integer source) {
+        this.source = source;
+        return this;
+    }
+    public Integer getSource() {
+        return this.source;
     }
 
     public DescribeScreenScoreThreadRequest setStartTime(Long startTime) {

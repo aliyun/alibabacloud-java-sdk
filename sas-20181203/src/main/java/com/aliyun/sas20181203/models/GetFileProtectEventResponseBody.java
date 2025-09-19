@@ -218,6 +218,12 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserName")
+        public String userName;
+
         /**
          * <p>The UUID of the asset.</p>
          * 
@@ -374,6 +380,22 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public GetFileProtectEventResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public GetFileProtectEventResponseBodyData setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
         public GetFileProtectEventResponseBodyData setUuid(String uuid) {

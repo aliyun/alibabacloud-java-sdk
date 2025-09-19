@@ -20,6 +20,12 @@ public class ListCheckResultRequest extends TeaModel {
     public String checkKey;
 
     /**
+     * <p>Source type of the situation awareness check item.</p>
+     */
+    @NameInMap("CheckTypes")
+    public java.util.List<String> checkTypes;
+
+    /**
      * <p>The page number.</p>
      * 
      * <strong>example:</strong>
@@ -169,6 +175,12 @@ public class ListCheckResultRequest extends TeaModel {
     public java.util.List<String> statuses;
 
     /**
+     * <p>Delete the custom category in a custom inspection item.</p>
+     */
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
+    /**
      * <p>The types of check standards.</p>
      */
     @NameInMap("Types")
@@ -205,6 +217,14 @@ public class ListCheckResultRequest extends TeaModel {
     }
     public String getCheckKey() {
         return this.checkKey;
+    }
+
+    public ListCheckResultRequest setCheckTypes(java.util.List<String> checkTypes) {
+        this.checkTypes = checkTypes;
+        return this;
+    }
+    public java.util.List<String> getCheckTypes() {
+        return this.checkTypes;
     }
 
     public ListCheckResultRequest setCurrentPage(Integer currentPage) {
@@ -309,6 +329,14 @@ public class ListCheckResultRequest extends TeaModel {
     }
     public java.util.List<String> getStatuses() {
         return this.statuses;
+    }
+
+    public ListCheckResultRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
     public ListCheckResultRequest setTypes(java.util.List<String> types) {

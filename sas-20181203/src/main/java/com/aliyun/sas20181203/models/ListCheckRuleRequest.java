@@ -81,6 +81,9 @@ public class ListCheckRuleRequest extends TeaModel {
     @NameInMap("ScopeType")
     public String scopeType;
 
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
     public static ListCheckRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCheckRuleRequest self = new ListCheckRuleRequest();
         return TeaModel.build(map, self);
@@ -140,6 +143,14 @@ public class ListCheckRuleRequest extends TeaModel {
     }
     public String getScopeType() {
         return this.scopeType;
+    }
+
+    public ListCheckRuleRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
 }

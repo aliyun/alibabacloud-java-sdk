@@ -102,6 +102,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @NameInMap("HighestVersion")
     public Integer highestVersion;
 
+    @NameInMap("InvalidBindStatus")
+    public String invalidBindStatus;
+
     /**
      * <p>Indicates whether Security Center Multi-edition is purchased. Valid values:</p>
      * <ul>
@@ -228,6 +231,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     }
     public Integer getHighestVersion() {
         return this.highestVersion;
+    }
+
+    public GetAuthSummaryResponseBody setInvalidBindStatus(String invalidBindStatus) {
+        this.invalidBindStatus = invalidBindStatus;
+        return this;
+    }
+    public String getInvalidBindStatus() {
+        return this.invalidBindStatus;
     }
 
     public GetAuthSummaryResponseBody setIsMultiVersion(Integer isMultiVersion) {

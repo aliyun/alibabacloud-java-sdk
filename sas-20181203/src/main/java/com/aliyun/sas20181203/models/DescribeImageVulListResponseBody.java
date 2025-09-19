@@ -14,7 +14,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries returned per page. Default value: <strong>10</strong></p>
+     * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>D6B20156-49B0-5CF0-B14D-7ECA4B50DAAB</p>
@@ -32,7 +32,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of vulnerabilities returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The vulnerabilities.</p>
+     * <p>An array that consists of the vulnerabilities.</p>
      */
     @NameInMap("VulRecords")
     public java.util.List<DescribeImageVulListResponseBodyVulRecords> vulRecords;
@@ -120,7 +120,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String matchDetail;
 
         /**
-         * <p>The details of the rules that are used to detect the vulnerability.</p>
+         * <p>The details of the rule that is used to detect the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;libseccomp2 version less than equals 2.3.3-4&quot;]</p>
@@ -138,7 +138,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The path to the software that has the vulnerability.</p>
+         * <p>The path of the software that has the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/lib64/libssh2.so.1</p>
@@ -255,7 +255,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String osRelease;
 
         /**
-         * <p>The details of the packages of the software that has the vulnerability.</p>
+         * <p>The details of the package of the software that has the vulnerability.</p>
          */
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
@@ -304,8 +304,8 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
          * <ul>
-         * <li><strong>yes</strong></li>
-         * <li><strong>no</strong></li>
+         * <li><strong>yes</strong>: yes</li>
+         * <li><strong>no</strong>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,10 +315,10 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String canFix;
 
         /**
-         * <p>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
+         * <p>Indicates whether the package of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -530,6 +530,18 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String repoNamespace;
 
         /**
+         * <p>The tag of this vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>AI</strong>: AI-related components.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
+         */
+        @NameInMap("RuleTag")
+        public String ruleTag;
+
+        /**
          * <p>The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
@@ -552,7 +564,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The tag that is added to the vulnerability.</p>
+         * <p>The tag that is added to the image vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>oval</p>
@@ -581,8 +593,8 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * <p>The type of the asset on which the vulnerability is detected. Valid values:</p>
          * <ul>
-         * <li><strong>ECS_IMAGE</strong>: image</li>
          * <li><strong>ECS_SNAPSHOT</strong>: snapshot</li>
+         * <li><strong>ECS_IMAGE</strong>: image</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -592,7 +604,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The type of the vulnerability. The value is fixed as cve, which indicates image vulnerabilities.</p>
+         * <p>The type of the vulnerability. The value is fixed as CVE, which indicates image vulnerabilities.</p>
          * 
          * <strong>example:</strong>
          * <p>cve</p>
@@ -812,6 +824,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
         public String getRepoNamespace() {
             return this.repoNamespace;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setRuleTag(String ruleTag) {
+            this.ruleTag = ruleTag;
+            return this;
+        }
+        public String getRuleTag() {
+            return this.ruleTag;
         }
 
         public DescribeImageVulListResponseBodyVulRecords setScanTime(Long scanTime) {

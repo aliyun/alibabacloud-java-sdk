@@ -42,6 +42,12 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
 
     public static class GetVirusScanConfigResponseBodyData extends TeaModel {
         /**
+         * <p>Extended scan types.</p>
+         */
+        @NameInMap("AdditionType")
+        public java.util.List<String> additionType;
+
+        /**
          * <p>The ID of the task configuration.</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</p>
@@ -151,6 +157,14 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         public static GetVirusScanConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetVirusScanConfigResponseBodyData self = new GetVirusScanConfigResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetVirusScanConfigResponseBodyData setAdditionType(java.util.List<String> additionType) {
+            this.additionType = additionType;
+            return this;
+        }
+        public java.util.List<String> getAdditionType() {
+            return this.additionType;
         }
 
         public GetVirusScanConfigResponseBodyData setConfigId(String configId) {

@@ -8,7 +8,7 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
      * <p>The AccessKey ID that is used to access OSS.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI4G1mgPbjvG********</p>
+     * <p>yourAccessKeyID</p>
      */
     @NameInMap("Accessid")
     public String accessid;

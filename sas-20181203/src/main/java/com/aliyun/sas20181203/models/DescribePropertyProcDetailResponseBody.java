@@ -158,6 +158,9 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         @NameInMap("EuidName")
         public String euidName;
 
+        @NameInMap("FileHash")
+        public String fileHash;
+
         /**
          * <p>The ID of the server that is associated with the process.</p>
          * 
@@ -321,6 +324,14 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         }
         public String getEuidName() {
             return this.euidName;
+        }
+
+        public DescribePropertyProcDetailResponseBodyPropertys setFileHash(String fileHash) {
+            this.fileHash = fileHash;
+            return this;
+        }
+        public String getFileHash() {
+            return this.fileHash;
         }
 
         public DescribePropertyProcDetailResponseBodyPropertys setInstanceId(String instanceId) {

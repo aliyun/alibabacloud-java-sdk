@@ -50,6 +50,16 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
 
+        @NameInMap("BuySas")
+        @Deprecated
+        public Integer buySas;
+
+        @NameInMap("BuySasNew")
+        public Boolean buySasNew;
+
+        @NameInMap("ChargeType")
+        public Integer chargeType;
+
         /**
          * <p>The name of the member.</p>
          * 
@@ -67,6 +77,9 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
          */
         @NameInMap("FolderId")
         public String folderId;
+
+        @NameInMap("InstanceBuyType")
+        public Integer instanceBuyType;
 
         /**
          * <p>Indicates whether the member is an administrator account of the resource directory. Valid values:</p>
@@ -129,6 +142,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("IsSiemDaAccount")
         public String isSiemDaAccount;
 
+        @NameInMap("PostPayModuleSwitch")
+        public String postPayModuleSwitch;
+
+        @NameInMap("SaleInstance")
+        public String saleInstance;
+
         /**
          * <p>The edition of Security Center that you use. Valid value:</p>
          * <ul>
@@ -158,6 +177,31 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        @Deprecated
+        public ListAccountsInResourceDirectoryResponseBodyAccounts setBuySas(Integer buySas) {
+            this.buySas = buySas;
+            return this;
+        }
+        public Integer getBuySas() {
+            return this.buySas;
+        }
+
+        public ListAccountsInResourceDirectoryResponseBodyAccounts setBuySasNew(Boolean buySasNew) {
+            this.buySasNew = buySasNew;
+            return this;
+        }
+        public Boolean getBuySasNew() {
+            return this.buySasNew;
+        }
+
+        public ListAccountsInResourceDirectoryResponseBodyAccounts setChargeType(Integer chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public Integer getChargeType() {
+            return this.chargeType;
+        }
+
         public ListAccountsInResourceDirectoryResponseBodyAccounts setDisplayName(String displayName) {
             this.displayName = displayName;
             return this;
@@ -172,6 +216,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         }
         public String getFolderId() {
             return this.folderId;
+        }
+
+        public ListAccountsInResourceDirectoryResponseBodyAccounts setInstanceBuyType(Integer instanceBuyType) {
+            this.instanceBuyType = instanceBuyType;
+            return this;
+        }
+        public Integer getInstanceBuyType() {
+            return this.instanceBuyType;
         }
 
         public ListAccountsInResourceDirectoryResponseBodyAccounts setIsMaAccount(String isMaAccount) {
@@ -212,6 +264,22 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         }
         public String getIsSiemDaAccount() {
             return this.isSiemDaAccount;
+        }
+
+        public ListAccountsInResourceDirectoryResponseBodyAccounts setPostPayModuleSwitch(String postPayModuleSwitch) {
+            this.postPayModuleSwitch = postPayModuleSwitch;
+            return this;
+        }
+        public String getPostPayModuleSwitch() {
+            return this.postPayModuleSwitch;
+        }
+
+        public ListAccountsInResourceDirectoryResponseBodyAccounts setSaleInstance(String saleInstance) {
+            this.saleInstance = saleInstance;
+            return this;
+        }
+        public String getSaleInstance() {
+            return this.saleInstance;
         }
 
         public ListAccountsInResourceDirectoryResponseBodyAccounts setSasVersion(String sasVersion) {

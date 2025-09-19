@@ -14,7 +14,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The information about the urgent vulnerabilities.</p>
+     * <p>An array that consists of the urgent vulnerabilities returned.</p>
      */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeEmgVulItemResponseBodyGroupedVulItems> groupedVulItems;
@@ -111,6 +111,15 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         public Integer checkType;
 
         /**
+         * <p>The introduction to the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chanjet T-Plus is an Internet business management software. There is an unauthorized access vulnerability in one of its interfaces disclosed on the Internet. Attackers can construct malicious requests to upload malicious files to execute arbitrary code and control the server.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
          * <p>The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +129,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         public Long gmtLastCheck;
 
         /**
-         * <p>The timestamp when the vulnerability was disclosed. Unit: milliseconds.</p>
+         * <p>The timestamp when the urgent vulnerability was last disclosed. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1618887687000</p>
@@ -149,7 +158,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         /**
          * <p>The progress of the urgent vulnerability detection task. Valid values: 0 to 100.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when an urgent vulnerability is being detected.</p>
+         * <p> This parameter is returned only when an urgent vulnerability is being detected.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -162,11 +171,11 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
          * <p>Indicates whether the application protection feature is supported. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: no</li>
-         * <li><strong>1</strong>: yes</li>
-         * </ul>
-         * <blockquote>
+         * <li><strong>1</strong>: yes<blockquote>
          * <p> If this parameter is not returned, the application protection is not supported.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -220,6 +229,14 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
         public Integer getCheckType() {
             return this.checkType;
+        }
+
+        public DescribeEmgVulItemResponseBodyGroupedVulItems setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeEmgVulItemResponseBodyGroupedVulItems setGmtLastCheck(Long gmtLastCheck) {

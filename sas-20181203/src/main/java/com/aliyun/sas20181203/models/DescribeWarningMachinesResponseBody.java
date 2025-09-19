@@ -109,6 +109,9 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeWarningMachinesResponseBodyWarningMachines extends TeaModel {
+        @NameInMap("AssetType")
+        public String assetType;
+
         /**
          * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
          * <ul>
@@ -221,6 +224,19 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         public Integer mediumWarningCount;
 
         /**
+         * <p>Indicates whether the agent is online. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Online")
+        public Boolean online;
+
+        /**
          * <p>The number of the check items that passed the baseline check on the server.</p>
          * 
          * <strong>example:</strong>
@@ -276,6 +292,14 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         public static DescribeWarningMachinesResponseBodyWarningMachines build(java.util.Map<String, ?> map) throws Exception {
             DescribeWarningMachinesResponseBodyWarningMachines self = new DescribeWarningMachinesResponseBodyWarningMachines();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setAssetType(String assetType) {
+            this.assetType = assetType;
+            return this;
+        }
+        public String getAssetType() {
+            return this.assetType;
         }
 
         public DescribeWarningMachinesResponseBodyWarningMachines setAuthVersion(Integer authVersion) {
@@ -364,6 +388,14 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
         public Integer getMediumWarningCount() {
             return this.mediumWarningCount;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setOnline(Boolean online) {
+            this.online = online;
+            return this;
+        }
+        public Boolean getOnline() {
+            return this.online;
         }
 
         public DescribeWarningMachinesResponseBodyWarningMachines setPassCount(Integer passCount) {

@@ -16,17 +16,21 @@ public class ModifyPushAllTaskRequest extends TeaModel {
     /**
      * <p>The check items. Separate multiple check items with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>OVAL_ENTITY</strong>: Common Vulnerabilities and Exposures (CVE) vulnerabilities</li>
-     * <li><strong>CMS</strong>: Web-CMS vulnerabilities</li>
-     * <li><strong>SYSVUL</strong>: Windows system vulnerabilities</li>
-     * <li><strong>SCA</strong>: application vulnerabilities</li>
-     * <li><strong>HEALTH_CHECK</strong>: baselines</li>
-     * <li><strong>WEBSHELL</strong>: webshells</li>
-     * <li><strong>PROC_SNAPSHOT</strong>: processes</li>
-     * <li><strong>PORT_SNAPSHOT</strong>: ports</li>
-     * <li><strong>ACCOUNT_SNAPSHOT</strong>: accounts</li>
-     * <li><strong>SOFTWARE_SNAPSHOT</strong>: software assets</li>
-     * <li><strong>SCA_SNAPSHOT</strong>: middleware</li>
+     * <li><strong>OVAL_ENTITY</strong>: Common Vulnerabilities and Exposures (CVE) vulnerabilities.</li>
+     * <li><strong>CMS</strong>: Web-CMS vulnerabilities.</li>
+     * <li><strong>SYSVUL</strong>: Windows system vulnerabilities.</li>
+     * <li><strong>SCA</strong>: application vulnerabilities.</li>
+     * <li><strong>HEALTH_CHECK</strong>: baselines.</li>
+     * <li><strong>WEBSHELL</strong>: webshells.</li>
+     * <li><strong>PROC_SNAPSHOT</strong>: processes.</li>
+     * <li><strong>PORT_SNAPSHOT</strong>: ports.</li>
+     * <li><strong>ACCOUNT_SNAPSHOT</strong>: accounts.</li>
+     * <li><strong>SOFTWARE_SNAPSHOT</strong>: software assets.</li>
+     * <li><strong>SCA_SNAPSHOT</strong>: middleware, databases, and web services.</li>
+     * <li><strong>CROND_SNAPSHOT</strong>: scheduled tasks.</li>
+     * <li><strong>AUTORUN_SNAPSHOT</strong>: startup items.</li>
+     * <li><strong>LKM_SNAPSHOT</strong>: kernel modules.</li>
+     * <li><strong>SCA_PROXY_SNAPSHOT</strong>: websites.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -105,6 +105,15 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("RealTimeIncr")
+    public Boolean realTimeIncr;
+
+    /**
      * <p>The time when the check is performed. The value specifies the days of the week.</p>
      */
     @NameInMap("ScanDayList")
@@ -218,6 +227,14 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateOssScanConfigRequest setRealTimeIncr(Boolean realTimeIncr) {
+        this.realTimeIncr = realTimeIncr;
+        return this;
+    }
+    public Boolean getRealTimeIncr() {
+        return this.realTimeIncr;
     }
 
     public UpdateOssScanConfigRequest setScanDayList(java.util.List<Integer> scanDayList) {

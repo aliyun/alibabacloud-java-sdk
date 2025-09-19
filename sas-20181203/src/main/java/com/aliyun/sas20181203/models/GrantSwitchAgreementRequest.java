@@ -13,6 +13,9 @@ public class GrantSwitchAgreementRequest extends TeaModel {
     @NameInMap("IsAgree")
     public Boolean isAgree;
 
+    @NameInMap("IsImmediate")
+    public Boolean isImmediate;
+
     /**
      * <p>The language type for requests and responses. The default value is <strong>zh</strong>. Possible values:</p>
      * <ul>
@@ -49,6 +52,14 @@ public class GrantSwitchAgreementRequest extends TeaModel {
     }
     public Boolean getIsAgree() {
         return this.isAgree;
+    }
+
+    public GrantSwitchAgreementRequest setIsImmediate(Boolean isImmediate) {
+        this.isImmediate = isImmediate;
+        return this;
+    }
+    public Boolean getIsImmediate() {
+        return this.isImmediate;
     }
 
     public GrantSwitchAgreementRequest setLang(String lang) {

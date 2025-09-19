@@ -39,6 +39,9 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     @NameInMap("IsDefault")
     public Integer isDefault;
 
+    @NameInMap("MemberAccountSyncFlag")
+    public Boolean memberAccountSyncFlag;
+
     /**
      * <p>The time when the report is pinned.</p>
      * 
@@ -262,6 +265,14 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     }
     public Integer getIsDefault() {
         return this.isDefault;
+    }
+
+    public DescribeCustomizeReportConfigDetailResponseBody setMemberAccountSyncFlag(Boolean memberAccountSyncFlag) {
+        this.memberAccountSyncFlag = memberAccountSyncFlag;
+        return this;
+    }
+    public Boolean getMemberAccountSyncFlag() {
+        return this.memberAccountSyncFlag;
     }
 
     public DescribeCustomizeReportConfigDetailResponseBody setPinnedTime(Long pinnedTime) {

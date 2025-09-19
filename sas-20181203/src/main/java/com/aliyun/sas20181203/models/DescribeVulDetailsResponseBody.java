@@ -122,6 +122,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>CNVD-2019-9167</p>
          */
         @NameInMap("CnvdId")
+        @Deprecated
         public String cnvdId;
 
         /**
@@ -136,6 +137,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>LOW</p>
          */
         @NameInMap("Complexity")
+        @Deprecated
         public String complexity;
 
         /**
@@ -146,6 +148,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * Check whether the fastjson version currently running on the system is in the affected version and whether safeMode is configured to disable autoType. If it is in the affected version and safeMode is not configured to disable autoType, the vulnerability is considered to exist.</p>
          */
         @NameInMap("Content")
+        @Deprecated
         public String content;
 
         /**
@@ -194,6 +197,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>sql-test-001</p>
          */
         @NameInMap("InstanceName")
+        @Deprecated
         public String instanceName;
 
         /**
@@ -206,6 +210,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>47.114.XX.XX</p>
          */
         @NameInMap("InternetIp")
+        @Deprecated
         public String internetIp;
 
         /**
@@ -218,6 +223,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>172.19.XX.XX</p>
          */
         @NameInMap("IntranetIp")
+        @Deprecated
         public String intranetIp;
 
         /**
@@ -233,6 +239,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>The POC content.</p>
          */
         @NameInMap("Poc")
+        @Deprecated
         public String poc;
 
         /**
@@ -242,6 +249,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>1554189334000</p>
          */
         @NameInMap("PocCreateTime")
+        @Deprecated
         public Long pocCreateTime;
 
         /**
@@ -251,6 +259,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>1554189334000</p>
          */
         @NameInMap("PocDisclosureTime")
+        @Deprecated
         public Long pocDisclosureTime;
 
         /**
@@ -260,6 +269,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>Log4j2</p>
          */
         @NameInMap("Product")
+        @Deprecated
         public String product;
 
         /**
@@ -308,6 +318,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>m-bp17m0pc0xprzbwo****</p>
          */
         @NameInMap("TargetId")
+        @Deprecated
         public String targetId;
 
         /**
@@ -320,6 +331,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>frontend</p>
          */
         @NameInMap("TargetName")
+        @Deprecated
         public String targetName;
 
         /**
@@ -338,6 +350,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          * <p>Apache</p>
          */
         @NameInMap("Vendor")
+        @Deprecated
         public String vendor;
 
         /**
@@ -376,6 +389,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.classifys;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setCnvdId(String cnvdId) {
             this.cnvdId = cnvdId;
             return this;
@@ -384,6 +398,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.cnvdId;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setComplexity(String complexity) {
             this.complexity = complexity;
             return this;
@@ -392,6 +407,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.complexity;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setContent(String content) {
             this.content = content;
             return this;
@@ -432,6 +448,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.cvssVector;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
@@ -440,6 +457,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.instanceName;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setInternetIp(String internetIp) {
             this.internetIp = internetIp;
             return this;
@@ -448,6 +466,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.internetIp;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setIntranetIp(String intranetIp) {
             this.intranetIp = intranetIp;
             return this;
@@ -464,6 +483,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.otherId;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setPoc(String poc) {
             this.poc = poc;
             return this;
@@ -472,6 +492,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.poc;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setPocCreateTime(Long pocCreateTime) {
             this.pocCreateTime = pocCreateTime;
             return this;
@@ -480,6 +501,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.pocCreateTime;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setPocDisclosureTime(Long pocDisclosureTime) {
             this.pocDisclosureTime = pocDisclosureTime;
             return this;
@@ -488,6 +510,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.pocDisclosureTime;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setProduct(String product) {
             this.product = product;
             return this;
@@ -528,6 +551,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.summary;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setTargetId(String targetId) {
             this.targetId = targetId;
             return this;
@@ -536,6 +560,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.targetId;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setTargetName(String targetName) {
             this.targetName = targetName;
             return this;
@@ -552,6 +577,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             return this.title;
         }
 
+        @Deprecated
         public DescribeVulDetailsResponseBodyCves setVendor(String vendor) {
             this.vendor = vendor;
             return this;

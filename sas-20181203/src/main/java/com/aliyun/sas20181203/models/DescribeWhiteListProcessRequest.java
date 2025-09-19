@@ -68,7 +68,7 @@ public class DescribeWhiteListProcessRequest extends TeaModel {
      * <p>The name of the process.</p>
      * 
      * <strong>example:</strong>
-     * <p>sys_creat</p>
+     * <p>JAVA</p>
      */
     @NameInMap("ProcessName")
     public String processName;

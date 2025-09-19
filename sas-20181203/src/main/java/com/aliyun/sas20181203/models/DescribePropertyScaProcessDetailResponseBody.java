@@ -212,6 +212,9 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
+        @NameInMap("Version")
+        public String version;
+
         public static DescribePropertyScaProcessDetailResponseBodyPropertys build(java.util.Map<String, ?> map) throws Exception {
             DescribePropertyScaProcessDetailResponseBodyPropertys self = new DescribePropertyScaProcessDetailResponseBodyPropertys();
             return TeaModel.build(map, self);
@@ -287,6 +290,14 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         }
         public String getUuid() {
             return this.uuid;
+        }
+
+        public DescribePropertyScaProcessDetailResponseBodyPropertys setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

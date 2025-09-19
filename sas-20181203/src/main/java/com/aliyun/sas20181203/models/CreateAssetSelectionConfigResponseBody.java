@@ -79,7 +79,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         /**
          * <p>The dimension based on which the asset is selected. Valid values:</p>
          * <ul>
-         * <li><strong>group</strong>: The asset is selected by server.</li>
+         * <li><strong>instance</strong>: The asset is selected by server.</li>
          * <li><strong>group</strong>: The asset is selected by group.</li>
          * <li><strong>vpc</strong>: The asset is selected by VPC.</li>
          * </ul>

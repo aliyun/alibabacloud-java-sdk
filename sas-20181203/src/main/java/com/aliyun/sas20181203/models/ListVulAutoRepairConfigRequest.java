@@ -25,8 +25,8 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

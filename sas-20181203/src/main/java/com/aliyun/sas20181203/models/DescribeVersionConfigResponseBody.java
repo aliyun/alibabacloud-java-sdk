@@ -29,6 +29,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("AllowPartialBuy")
     public Integer allowPartialBuy;
 
+    @NameInMap("AntiRansomwareCapacity")
+    public Integer antiRansomwareCapacity;
+
     /**
      * <p>Switch of anti-ransomware hosting service. Valid values:</p>
      * <ul>
@@ -122,6 +125,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     @NameInMap("ImageScanCapacity")
     public Long imageScanCapacity;
+
+    @NameInMap("InstanceBuyType")
+    public Integer instanceBuyType;
 
     /**
      * <p>The ID of purchased Security Center.</p>
@@ -235,6 +241,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     @NameInMap("MergedVersion")
     public Integer mergedVersion;
+
+    @NameInMap("MultiVersion")
+    public String multiVersion;
 
     /**
      * <p>Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:</p>
@@ -497,6 +506,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return this.allowPartialBuy;
     }
 
+    public DescribeVersionConfigResponseBody setAntiRansomwareCapacity(Integer antiRansomwareCapacity) {
+        this.antiRansomwareCapacity = antiRansomwareCapacity;
+        return this;
+    }
+    public Integer getAntiRansomwareCapacity() {
+        return this.antiRansomwareCapacity;
+    }
+
     public DescribeVersionConfigResponseBody setAntiRansomwareService(Integer antiRansomwareService) {
         this.antiRansomwareService = antiRansomwareService;
         return this;
@@ -559,6 +576,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Long getImageScanCapacity() {
         return this.imageScanCapacity;
+    }
+
+    public DescribeVersionConfigResponseBody setInstanceBuyType(Integer instanceBuyType) {
+        this.instanceBuyType = instanceBuyType;
+        return this;
+    }
+    public Integer getInstanceBuyType() {
+        return this.instanceBuyType;
     }
 
     public DescribeVersionConfigResponseBody setInstanceId(String instanceId) {
@@ -639,6 +664,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getMergedVersion() {
         return this.mergedVersion;
+    }
+
+    public DescribeVersionConfigResponseBody setMultiVersion(String multiVersion) {
+        this.multiVersion = multiVersion;
+        return this;
+    }
+    public String getMultiVersion() {
+        return this.multiVersion;
     }
 
     public DescribeVersionConfigResponseBody setNewThreatAnalysis(Integer newThreatAnalysis) {

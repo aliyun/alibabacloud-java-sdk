@@ -96,6 +96,13 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <strong>example:</strong>
+         * <p>arm</p>
+         */
+        @NameInMap("CpuArch")
+        public String cpuArch;
+
+        /**
          * <p>The expiration time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +180,14 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         }
         public String getClusterName() {
             return this.clusterName;
+        }
+
+        public GenerateK8sAccessInfoResponseBodyData setCpuArch(String cpuArch) {
+            this.cpuArch = cpuArch;
+            return this;
+        }
+        public String getCpuArch() {
+            return this.cpuArch;
         }
 
         public GenerateK8sAccessInfoResponseBodyData setExpireDate(Long expireDate) {

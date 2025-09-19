@@ -161,6 +161,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        @NameInMap("EndPoint")
+        public String endPoint;
+
+        @NameInMap("File")
+        public String file;
+
         /**
          * <p>The path to the kernel module file.</p>
          * <blockquote>
@@ -181,6 +187,9 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
          */
         @NameInMap("ImageName")
         public String imageName;
+
+        @NameInMap("InstallationPath")
+        public String installationPath;
 
         /**
          * <p>The ID of the server.</p>
@@ -238,6 +247,15 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
          */
         @NameInMap("ListenProtocol")
         public String listenProtocol;
+
+        @NameInMap("MiddlewareName")
+        public String middlewareName;
+
+        @NameInMap("MiddlewareVersion")
+        public String middlewareVersion;
+
+        @NameInMap("ModelName")
+        public String modelName;
 
         /**
          * <p>The name of the module.</p>
@@ -419,6 +437,22 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             return this.domain;
         }
 
+        public GetAssetsPropertyDetailResponseBodyPropertys setEndPoint(String endPoint) {
+            this.endPoint = endPoint;
+            return this;
+        }
+        public String getEndPoint() {
+            return this.endPoint;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPropertys setFile(String file) {
+            this.file = file;
+            return this;
+        }
+        public String getFile() {
+            return this.file;
+        }
+
         public GetAssetsPropertyDetailResponseBodyPropertys setFilepath(String filepath) {
             this.filepath = filepath;
             return this;
@@ -433,6 +467,14 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
         public String getImageName() {
             return this.imageName;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPropertys setInstallationPath(String installationPath) {
+            this.installationPath = installationPath;
+            return this;
+        }
+        public String getInstallationPath() {
+            return this.installationPath;
         }
 
         public GetAssetsPropertyDetailResponseBodyPropertys setInstanceId(String instanceId) {
@@ -481,6 +523,30 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
         public String getListenProtocol() {
             return this.listenProtocol;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPropertys setMiddlewareName(String middlewareName) {
+            this.middlewareName = middlewareName;
+            return this;
+        }
+        public String getMiddlewareName() {
+            return this.middlewareName;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPropertys setMiddlewareVersion(String middlewareVersion) {
+            this.middlewareVersion = middlewareVersion;
+            return this;
+        }
+        public String getMiddlewareVersion() {
+            return this.middlewareVersion;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPropertys setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
         }
 
         public GetAssetsPropertyDetailResponseBodyPropertys setModuleName(String moduleName) {

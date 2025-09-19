@@ -247,6 +247,12 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         @NameInMap("AuthModules")
         public java.util.List<DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKsAuthModules> authModules;
 
+        @NameInMap("CtdrCloudUserId")
+        public String ctdrCloudUserId;
+
+        @NameInMap("ExtendInfo")
+        public String extendInfo;
+
         /**
          * <p>The error message of the AccessKey pair.</p>
          * 
@@ -344,6 +350,22 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKsAuthModules> getAuthModules() {
             return this.authModules;
+        }
+
+        public DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs setCtdrCloudUserId(String ctdrCloudUserId) {
+            this.ctdrCloudUserId = ctdrCloudUserId;
+            return this;
+        }
+        public String getCtdrCloudUserId() {
+            return this.ctdrCloudUserId;
+        }
+
+        public DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs setExtendInfo(String extendInfo) {
+            this.extendInfo = extendInfo;
+            return this;
+        }
+        public String getExtendInfo() {
+            return this.extendInfo;
         }
 
         public DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs setMessage(String message) {

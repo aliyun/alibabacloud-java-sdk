@@ -8,7 +8,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
      * <p>The ID of the AccessKey pair that is leaked.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI4G4VjkC9wenfEvgX****</p>
+     * <p>yourAccessKeyID</p>
      */
     @NameInMap("AccesskeyId")
     public String accesskeyId;
@@ -26,7 +26,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
      * <p>The code snippet that is leaked.</p>
      * 
      * <strong>example:</strong>
-     * <p>\n1231 \nak=LTAI4G4VjkC9wenfEvgX**** \n12311123 \nsk1999 \nsk1999sk1999 \nsk1999sk1999 \n\n\ntest001 ak hht \nak=LTAI4G4VjkC9wenfEvgX**** \nsk=AjEhS9XmnIzllpAx2LxMTMdrTG****</p>
+     * <p>\n1231 \nak=yourAccessKeyID \n12311123 \nsk1999 \nsk1999sk1999 \nsk1999sk1999 \n\n\ntest001 ak hht \nak=yourAccessKeyID \nsk=yourAccessKeySecret</p>
      */
     @NameInMap("Code")
     public String code;

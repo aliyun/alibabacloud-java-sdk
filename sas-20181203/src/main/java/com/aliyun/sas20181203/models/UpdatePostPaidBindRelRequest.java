@@ -39,6 +39,9 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     @NameInMap("BindAction")
     public java.util.List<UpdatePostPaidBindRelRequestBindAction> bindAction;
 
+    @NameInMap("UpdateIfNecessary")
+    public Boolean updateIfNecessary;
+
     public static UpdatePostPaidBindRelRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePostPaidBindRelRequest self = new UpdatePostPaidBindRelRequest();
         return TeaModel.build(map, self);
@@ -66,6 +69,14 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     }
     public java.util.List<UpdatePostPaidBindRelRequestBindAction> getBindAction() {
         return this.bindAction;
+    }
+
+    public UpdatePostPaidBindRelRequest setUpdateIfNecessary(Boolean updateIfNecessary) {
+        this.updateIfNecessary = updateIfNecessary;
+        return this;
+    }
+    public Boolean getUpdateIfNecessary() {
+        return this.updateIfNecessary;
     }
 
     public static class UpdatePostPaidBindRelRequestBindAction extends TeaModel {

@@ -35,6 +35,12 @@ public class ListCheckItemRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>List of task sources.</p>
+     */
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
     public static ListCheckItemRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCheckItemRequest self = new ListCheckItemRequest();
         return TeaModel.build(map, self);
@@ -62,6 +68,14 @@ public class ListCheckItemRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCheckItemRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
 }

@@ -52,6 +52,9 @@ public class ListOperationProcessRequest extends TeaModel {
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
     /**
      * <p>The task types. Valid values:</p>
      * <ul>
@@ -116,6 +119,14 @@ public class ListOperationProcessRequest extends TeaModel {
     }
     public java.util.List<String> getTaskIds() {
         return this.taskIds;
+    }
+
+    public ListOperationProcessRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
     public ListOperationProcessRequest setTaskTypes(java.util.List<String> taskTypes) {

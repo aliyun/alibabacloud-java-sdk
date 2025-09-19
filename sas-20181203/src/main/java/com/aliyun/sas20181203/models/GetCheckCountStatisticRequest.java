@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetCheckCountStatisticRequest extends TeaModel {
     /**
-     * <p>Type of data statistics. Values:  </p>
+     * <p>The type of the statistics. Valid values:</p>
      * <ul>
-     * <li><strong>user</strong>: Top 5 over-authorized users.  </li>
-     * <li><strong>role</strong>: Top 5 over-authorized roles.  </li>
-     * <li><strong>instance</strong>: Top 5 risky cloud products.</li>
+     * <li><strong>user</strong>: the top five users that are granted excessive permissions.</li>
+     * <li><strong>role</strong>: the top five roles that are granted excessive permissions.</li>
+     * <li><strong>instance</strong>: the top five cloud services on which risks are detected.</li>
+     * <li><strong>host</strong>: the top five servers on which baseline risks are detected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +19,11 @@ public class GetCheckCountStatisticRequest extends TeaModel {
     @NameInMap("StatisticType")
     public String statisticType;
 
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
     /**
-     * <p>List of cloud vendors.</p>
+     * <p>The cloud service providers.</p>
      */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
@@ -35,6 +39,14 @@ public class GetCheckCountStatisticRequest extends TeaModel {
     }
     public String getStatisticType() {
         return this.statisticType;
+    }
+
+    public GetCheckCountStatisticRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
     public GetCheckCountStatisticRequest setVendors(java.util.List<String> vendors) {

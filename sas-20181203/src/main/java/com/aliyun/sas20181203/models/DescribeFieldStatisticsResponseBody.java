@@ -96,6 +96,15 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer generalAssetCount;
 
         /**
+         * <p>The number of instances that are provisioned by third-party providers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("GoogleInstanceCount")
+        public Integer googleInstanceCount;
+
+        /**
          * <p>The number of server groups.</p>
          * 
          * <strong>example:</strong>
@@ -321,6 +330,15 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer unprotectedInstanceCount;
 
         /**
+         * <p>The number of instances that are provisioned by third-party providers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("VolcengineInstanceCount")
+        public Integer volcengineInstanceCount;
+
+        /**
          * <p>The number of virtual private clouds (VPCs).</p>
          * 
          * <strong>example:</strong>
@@ -380,6 +398,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getGeneralAssetCount() {
             return this.generalAssetCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setGoogleInstanceCount(Integer googleInstanceCount) {
+            this.googleInstanceCount = googleInstanceCount;
+            return this;
+        }
+        public Integer getGoogleInstanceCount() {
+            return this.googleInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setGroupCount(Integer groupCount) {
@@ -580,6 +606,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getUnprotectedInstanceCount() {
             return this.unprotectedInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setVolcengineInstanceCount(Integer volcengineInstanceCount) {
+            this.volcengineInstanceCount = volcengineInstanceCount;
+            return this;
+        }
+        public Integer getVolcengineInstanceCount() {
+            return this.volcengineInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setVpcCount(Integer vpcCount) {

@@ -32,6 +32,9 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
     @NameInMap("AuthModules")
     public java.util.List<String> authModules;
 
+    @NameInMap("CtdrCloudUserId")
+    public String ctdrCloudUserId;
+
     /**
      * <p>The Active Directory (AD) domain. Valid values:</p>
      * <ul>
@@ -47,6 +50,9 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
      */
     @NameInMap("Domain")
     public String domain;
+
+    @NameInMap("ExtendInfo")
+    public String extendInfo;
 
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
@@ -161,12 +167,28 @@ public class ModifyCloudVendorAccountAKRequest extends TeaModel {
         return this.authModules;
     }
 
+    public ModifyCloudVendorAccountAKRequest setCtdrCloudUserId(String ctdrCloudUserId) {
+        this.ctdrCloudUserId = ctdrCloudUserId;
+        return this;
+    }
+    public String getCtdrCloudUserId() {
+        return this.ctdrCloudUserId;
+    }
+
     public ModifyCloudVendorAccountAKRequest setDomain(String domain) {
         this.domain = domain;
         return this;
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public ModifyCloudVendorAccountAKRequest setExtendInfo(String extendInfo) {
+        this.extendInfo = extendInfo;
+        return this;
+    }
+    public String getExtendInfo() {
+        return this.extendInfo;
     }
 
     public ModifyCloudVendorAccountAKRequest setLang(String lang) {

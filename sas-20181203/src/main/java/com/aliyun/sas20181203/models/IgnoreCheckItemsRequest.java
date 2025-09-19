@@ -17,6 +17,12 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     public java.util.List<Long> checkIds;
 
     /**
+     * <p>List of container names that need to be whitelisted.</p>
+     */
+    @NameInMap("ContainerItems")
+    public java.util.List<IgnoreCheckItemsRequestContainerItems> containerItems;
+
+    /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
@@ -93,6 +99,14 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    public IgnoreCheckItemsRequest setContainerItems(java.util.List<IgnoreCheckItemsRequestContainerItems> containerItems) {
+        this.containerItems = containerItems;
+        return this;
+    }
+    public java.util.List<IgnoreCheckItemsRequestContainerItems> getContainerItems() {
+        return this.containerItems;
     }
 
     public IgnoreCheckItemsRequest setLang(String lang) {
@@ -173,6 +187,51 @@ public class IgnoreCheckItemsRequest extends TeaModel {
         }
         public String getRiskType() {
             return this.riskType;
+        }
+
+    }
+
+    public static class IgnoreCheckItemsRequestContainerItems extends TeaModel {
+        /**
+         * <p>The names of the containers that need to be whitelisted for the current asset, separated by English commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;anythingllm,ChuanhuChat&quot;</p>
+         */
+        @NameInMap("ContainerNames")
+        public String containerNames;
+
+        /**
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>14eb2fb6-ab02-4869-a1e1-2cdb0f7*****</p>
+         */
+        @NameInMap("Uuid")
+        public String uuid;
+
+        public static IgnoreCheckItemsRequestContainerItems build(java.util.Map<String, ?> map) throws Exception {
+            IgnoreCheckItemsRequestContainerItems self = new IgnoreCheckItemsRequestContainerItems();
+            return TeaModel.build(map, self);
+        }
+
+        public IgnoreCheckItemsRequestContainerItems setContainerNames(String containerNames) {
+            this.containerNames = containerNames;
+            return this;
+        }
+        public String getContainerNames() {
+            return this.containerNames;
+        }
+
+        public IgnoreCheckItemsRequestContainerItems setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

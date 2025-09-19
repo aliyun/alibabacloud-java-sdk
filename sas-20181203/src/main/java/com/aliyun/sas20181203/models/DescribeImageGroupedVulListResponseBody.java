@@ -169,6 +169,18 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public Integer nntfCount;
 
         /**
+         * <p>The tag of this vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>AI</strong>: AI-related components.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
+         */
+        @NameInMap("RuleTag")
+        public String ruleTag;
+
+        /**
          * <p>The status of the vulnerability. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: unhandled</li>
@@ -280,6 +292,14 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         }
         public Integer getNntfCount() {
             return this.nntfCount;
+        }
+
+        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setRuleTag(String ruleTag) {
+            this.ruleTag = ruleTag;
+            return this;
+        }
+        public String getRuleTag() {
+            return this.ruleTag;
         }
 
         public DescribeImageGroupedVulListResponseBodyGroupedVulItems setStatus(Integer status) {

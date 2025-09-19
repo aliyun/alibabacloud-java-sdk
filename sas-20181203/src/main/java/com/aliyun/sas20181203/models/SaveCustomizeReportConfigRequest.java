@@ -20,6 +20,9 @@ public class SaveCustomizeReportConfigRequest extends TeaModel {
     @NameInMap("GroupType")
     public String groupType;
 
+    @NameInMap("MemberAccountSyncFlag")
+    public Boolean memberAccountSyncFlag;
+
     /**
      * <p>The time when the report is pinned. Unit: milliseconds.</p>
      * <blockquote>
@@ -260,6 +263,14 @@ public class SaveCustomizeReportConfigRequest extends TeaModel {
     }
     public String getGroupType() {
         return this.groupType;
+    }
+
+    public SaveCustomizeReportConfigRequest setMemberAccountSyncFlag(Boolean memberAccountSyncFlag) {
+        this.memberAccountSyncFlag = memberAccountSyncFlag;
+        return this;
+    }
+    public Boolean getMemberAccountSyncFlag() {
+        return this.memberAccountSyncFlag;
     }
 
     public SaveCustomizeReportConfigRequest setPinnedTime(Long pinnedTime) {

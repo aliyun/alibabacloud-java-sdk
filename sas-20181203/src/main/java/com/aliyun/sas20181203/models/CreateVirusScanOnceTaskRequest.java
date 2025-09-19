@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateVirusScanOnceTaskRequest extends TeaModel {
     /**
+     * <p>Additional information fields: </p>
+     * <ul>
+     * <li><strong>additionType</strong>: The type of extended scan</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;additionType\&quot;:[\&quot;SCAN_MEMORY\&quot;]}</p>
+     */
+    @NameInMap("Param")
+    public String param;
+
+    /**
      * <p>The information about the scan path that is required for a custom scan.</p>
      */
     @NameInMap("ScanPath")
@@ -38,6 +50,14 @@ public class CreateVirusScanOnceTaskRequest extends TeaModel {
     public static CreateVirusScanOnceTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVirusScanOnceTaskRequest self = new CreateVirusScanOnceTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVirusScanOnceTaskRequest setParam(String param) {
+        this.param = param;
+        return this;
+    }
+    public String getParam() {
+        return this.param;
     }
 
     public CreateVirusScanOnceTaskRequest setScanPath(java.util.List<String> scanPath) {

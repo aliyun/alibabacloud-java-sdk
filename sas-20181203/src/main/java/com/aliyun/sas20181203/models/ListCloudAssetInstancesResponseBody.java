@@ -348,6 +348,12 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         public String securityInfo;
 
         /**
+         * <p>Tag list.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<String> tags;
+
+        /**
          * <p>The service provider (SP) of the cloud asset. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: a cloud asset provided by Alibaba Cloud</li>
@@ -462,6 +468,14 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
         public String getSecurityInfo() {
             return this.securityInfo;
+        }
+
+        public ListCloudAssetInstancesResponseBodyInstances setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         public ListCloudAssetInstancesResponseBodyInstances setVendor(Integer vendor) {

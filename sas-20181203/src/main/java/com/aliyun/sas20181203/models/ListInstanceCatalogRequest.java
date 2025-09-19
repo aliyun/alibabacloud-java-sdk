@@ -18,6 +18,19 @@ public class ListInstanceCatalogRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Specifies whether to filter the assets that support custom checks. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Filter assets that support custom checks.</li>
+     * <li><strong>false</strong>: All assets are selected. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("OnlyCustom")
+    public Boolean onlyCustom;
+
+    /**
      * <p>The ID of the region in which the asset resides. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: International</li>
@@ -42,6 +55,9 @@ public class ListInstanceCatalogRequest extends TeaModel {
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
 
+    @NameInMap("TaskSources")
+    public java.util.List<String> taskSources;
+
     /**
      * <p>The types of check standards.</p>
      */
@@ -59,6 +75,14 @@ public class ListInstanceCatalogRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ListInstanceCatalogRequest setOnlyCustom(Boolean onlyCustom) {
+        this.onlyCustom = onlyCustom;
+        return this;
+    }
+    public Boolean getOnlyCustom() {
+        return this.onlyCustom;
     }
 
     public ListInstanceCatalogRequest setRegionId(String regionId) {
@@ -83,6 +107,14 @@ public class ListInstanceCatalogRequest extends TeaModel {
     }
     public java.util.List<Long> getStandardIds() {
         return this.standardIds;
+    }
+
+    public ListInstanceCatalogRequest setTaskSources(java.util.List<String> taskSources) {
+        this.taskSources = taskSources;
+        return this;
+    }
+    public java.util.List<String> getTaskSources() {
+        return this.taskSources;
     }
 
     public ListInstanceCatalogRequest setTypes(java.util.List<String> types) {

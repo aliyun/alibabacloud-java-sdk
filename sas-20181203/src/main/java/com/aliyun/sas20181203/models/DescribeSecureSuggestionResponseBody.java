@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeSecureSuggestionResponseBody extends TeaModel {
     /**
+     * <p>The timestamp of security score calculation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1755744253000</p>
+     */
+    @NameInMap("CalTime")
+    public Long calTime;
+
+    /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +40,14 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     public static DescribeSecureSuggestionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecureSuggestionResponseBody self = new DescribeSecureSuggestionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSecureSuggestionResponseBody setCalTime(Long calTime) {
+        this.calTime = calTime;
+        return this;
+    }
+    public Long getCalTime() {
+        return this.calTime;
     }
 
     public DescribeSecureSuggestionResponseBody setRequestId(String requestId) {

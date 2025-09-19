@@ -54,6 +54,48 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListBaselineCheckWhiteRecordResponseBodyListContainerItems extends TeaModel {
+        /**
+         * <p>Names of the whitelisted containers for the current asset, separated by English commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;anythingllm,ChuanhuChat&quot;</p>
+         */
+        @NameInMap("ContainerNames")
+        public String containerNames;
+
+        /**
+         * <p>Server UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beeea5c2-1857-4b2b-a794-7d21eae*****</p>
+         */
+        @NameInMap("Uuid")
+        public String uuid;
+
+        public static ListBaselineCheckWhiteRecordResponseBodyListContainerItems build(java.util.Map<String, ?> map) throws Exception {
+            ListBaselineCheckWhiteRecordResponseBodyListContainerItems self = new ListBaselineCheckWhiteRecordResponseBodyListContainerItems();
+            return TeaModel.build(map, self);
+        }
+
+        public ListBaselineCheckWhiteRecordResponseBodyListContainerItems setContainerNames(String containerNames) {
+            this.containerNames = containerNames;
+            return this;
+        }
+        public String getContainerNames() {
+            return this.containerNames;
+        }
+
+        public ListBaselineCheckWhiteRecordResponseBodyListContainerItems setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
+        }
+
+    }
+
     public static class ListBaselineCheckWhiteRecordResponseBodyList extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
@@ -90,6 +132,12 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
          */
         @NameInMap("CheckTypeDisName")
         public String checkTypeDisName;
+
+        /**
+         * <p>List of whitelisted container names in the check item.</p>
+         */
+        @NameInMap("ContainerItems")
+        public java.util.List<ListBaselineCheckWhiteRecordResponseBodyListContainerItems> containerItems;
 
         /**
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
@@ -192,6 +240,14 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         }
         public String getCheckTypeDisName() {
             return this.checkTypeDisName;
+        }
+
+        public ListBaselineCheckWhiteRecordResponseBodyList setContainerItems(java.util.List<ListBaselineCheckWhiteRecordResponseBodyListContainerItems> containerItems) {
+            this.containerItems = containerItems;
+            return this;
+        }
+        public java.util.List<ListBaselineCheckWhiteRecordResponseBodyListContainerItems> getContainerItems() {
+            return this.containerItems;
         }
 
         public ListBaselineCheckWhiteRecordResponseBodyList setLang(String lang) {

@@ -51,6 +51,15 @@ public class DescribeExposedInstanceListRequest extends TeaModel {
     public String exposureComponent;
 
     /**
+     * <p>Expose component type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system_service</p>
+     */
+    @NameInMap("ExposureComponentBizType")
+    public String exposureComponentBizType;
+
+    /**
      * <p>The public IP address of the server or the public endpoint of the database.</p>
      * 
      * <strong>example:</strong>
@@ -183,6 +192,14 @@ public class DescribeExposedInstanceListRequest extends TeaModel {
     }
     public String getExposureComponent() {
         return this.exposureComponent;
+    }
+
+    public DescribeExposedInstanceListRequest setExposureComponentBizType(String exposureComponentBizType) {
+        this.exposureComponentBizType = exposureComponentBizType;
+        return this;
+    }
+    public String getExposureComponentBizType() {
+        return this.exposureComponentBizType;
     }
 
     public DescribeExposedInstanceListRequest setExposureIp(String exposureIp) {

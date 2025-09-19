@@ -10,6 +10,9 @@ public class VerifyCheckResultRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    @NameInMap("TaskSource")
+    public String taskSource;
+
     public static VerifyCheckResultRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifyCheckResultRequest self = new VerifyCheckResultRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class VerifyCheckResultRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    public VerifyCheckResultRequest setTaskSource(String taskSource) {
+        this.taskSource = taskSource;
+        return this;
+    }
+    public String getTaskSource() {
+        return this.taskSource;
     }
 
 }

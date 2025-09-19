@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDockerhubImageRiskRankInfoRequest extends TeaModel {
     /**
-     * <p>The types of image dimensions to be counted.</p>
+     * <p>The dimension types.</p>
      */
     @NameInMap("Types")
     public java.util.List<String> types;

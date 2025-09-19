@@ -54,6 +54,82 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList extends TeaModel {
+        /**
+         * <p>Expose component type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_service</p>
+         */
+        @NameInMap("ComponentBizType")
+        public String componentBizType;
+
+        /**
+         * <p>Expose components.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openssh</p>
+         */
+        @NameInMap("ComponentName")
+        public String componentName;
+
+        /**
+         * <p>Expose component version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.7p1</p>
+         */
+        @NameInMap("ComponentVersion")
+        public String componentVersion;
+
+        /**
+         * <p>Exposed port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
+        @NameInMap("ListenPort")
+        public String listenPort;
+
+        public static DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList self = new DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList setComponentBizType(String componentBizType) {
+            this.componentBizType = componentBizType;
+            return this;
+        }
+        public String getComponentBizType() {
+            return this.componentBizType;
+        }
+
+        public DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList setComponentName(String componentName) {
+            this.componentName = componentName;
+            return this;
+        }
+        public String getComponentName() {
+            return this.componentName;
+        }
+
+        public DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList setComponentVersion(String componentVersion) {
+            this.componentVersion = componentVersion;
+            return this;
+        }
+        public String getComponentVersion() {
+            return this.componentVersion;
+        }
+
+        public DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList setListenPort(String listenPort) {
+            this.listenPort = listenPort;
+            return this;
+        }
+        public String getListenPort() {
+            return this.listenPort;
+        }
+
+    }
+
     public static class DescribeExposedInstanceListResponseBodyExposedInstances extends TeaModel {
         /**
          * <p>The number of high-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
@@ -125,6 +201,12 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
          */
         @NameInMap("ExposureComponent")
         public String exposureComponent;
+
+        /**
+         * <p>Expose component information list.</p>
+         */
+        @NameInMap("ExposureComponentList")
+        public java.util.List<DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList> exposureComponentList;
 
         /**
          * <p>The public IP address that is exposed on the Internet.</p>
@@ -329,6 +411,14 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         }
         public String getExposureComponent() {
             return this.exposureComponent;
+        }
+
+        public DescribeExposedInstanceListResponseBodyExposedInstances setExposureComponentList(java.util.List<DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList> exposureComponentList) {
+            this.exposureComponentList = exposureComponentList;
+            return this;
+        }
+        public java.util.List<DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList> getExposureComponentList() {
+            return this.exposureComponentList;
         }
 
         public DescribeExposedInstanceListResponseBodyExposedInstances setExposureIp(String exposureIp) {

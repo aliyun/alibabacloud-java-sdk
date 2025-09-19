@@ -59,7 +59,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
      * <p>The URL at which you can download the exported Excel file.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&OSSAccessKeyId=LTAIxxxxxxxxxxxxxx&Signature=xxxxxxxxxxxxxxxxxx">http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&amp;OSSAccessKeyId=LTAIxxxxxxxxxxxxxx&amp;Signature=xxxxxxxxxxxxxxxxxx</a></p>
+     * <p><a href="http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&OSSAccessKeyId=yourAccessKeyID&Signature=xxxxxxxxxxxxxxxxxx">http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=xxxxxxxxxxxxxxxxxx</a></p>
      */
     @NameInMap("Link")
     public String link;

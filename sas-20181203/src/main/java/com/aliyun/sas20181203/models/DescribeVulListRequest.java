@@ -26,6 +26,15 @@ public class DescribeVulListRequest extends TeaModel {
     public String attachTypes;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c88fb10da1168494091db6aafc5dd****</p>
+     */
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    /**
      * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -123,6 +132,21 @@ public class DescribeVulListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: no.</p>
+     * </li>
+     * <li><p><strong>1</strong>: yes.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("RaspDefend")
+    public Integer raspDefend;
+
+    /**
      * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset.</p>
      * 
      * <strong>example:</strong>
@@ -166,6 +190,20 @@ public class DescribeVulListRequest extends TeaModel {
      */
     @NameInMap("StatusList")
     public String statusList;
+
+    /**
+     * <p>The type of the asset on which the vulnerability is detected. Valid values:</p>
+     * <ul>
+     * <li><strong>k8s</strong>: Kubernetes component.</li>
+     * <li><strong>uuid</strong>: server.</li>
+     * <li><strong>containerId</strong>: container.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s</p>
+     */
+    @NameInMap("TargetType")
+    public String targetType;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
@@ -240,6 +278,14 @@ public class DescribeVulListRequest extends TeaModel {
         return this.attachTypes;
     }
 
+    public DescribeVulListRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
     public DescribeVulListRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -312,6 +358,14 @@ public class DescribeVulListRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeVulListRequest setRaspDefend(Integer raspDefend) {
+        this.raspDefend = raspDefend;
+        return this;
+    }
+    public Integer getRaspDefend() {
+        return this.raspDefend;
+    }
+
     public DescribeVulListRequest setRemark(String remark) {
         this.remark = remark;
         return this;
@@ -334,6 +388,14 @@ public class DescribeVulListRequest extends TeaModel {
     }
     public String getStatusList() {
         return this.statusList;
+    }
+
+    public DescribeVulListRequest setTargetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    public String getTargetType() {
+        return this.targetType;
     }
 
     public DescribeVulListRequest setType(String type) {

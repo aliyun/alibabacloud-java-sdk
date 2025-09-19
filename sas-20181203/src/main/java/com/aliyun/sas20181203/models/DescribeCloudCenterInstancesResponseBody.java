@@ -298,19 +298,21 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer flag;
 
         /**
-         * <p>The service provider of the asset. Valid values:</p>
+         * <p>Asset vendor. Values: </p>
          * <ul>
-         * <li><strong>ALIYUN</strong></li>
+         * <li><strong>ALIYUN</strong> </li>
          * <li><strong>OUT</strong></li>
-         * <li><strong>IDC</strong></li>
-         * <li><strong>Tencent</strong></li>
-         * <li><strong>HUAWEICLOUD</strong></li>
-         * <li><strong>Azure</strong></li>
-         * <li><strong>AWS</strong></li>
-         * <li><strong>ASK</strong></li>
-         * <li><strong>TRIPARTITE</strong></li>
-         * <li><strong>SAE</strong></li>
-         * <li><strong>PAI</strong></li>
+         * <li><strong>IDC</strong> </li>
+         * <li><strong>Tencent</strong> </li>
+         * <li><strong>HUAWEICLOUD</strong> </li>
+         * <li><strong>Azure</strong> </li>
+         * <li><strong>AWS</strong> </li>
+         * <li><strong>ASK</strong> </li>
+         * <li><strong>TRIPARTITE</strong> </li>
+         * <li><strong>SAE</strong> </li>
+         * <li><strong>PAI</strong> </li>
+         * <li><strong>google</strong> </li>
+         * <li><strong>VOLCENGINE</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -336,6 +338,19 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          */
         @NameInMap("GroupTrace")
         public String groupTrace;
+
+        /**
+         * <p>Indicates if containers are included. Valid values:</p>
+         * <ul>
+         * <li><strong>YES</strong>: yes.</li>
+         * <li><strong>NO</strong>: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
+         */
+        @NameInMap("HasContainer")
+        public String hasContainer;
 
         /**
          * <p>Indicates whether baseline risks are detected on the asset. Valid values:</p>
@@ -602,6 +617,15 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer safeEventCount;
 
         /**
+         * <p>Service ID. Only available for PAI instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-76jlywunsif09bp15p</p>
+         */
+        @NameInMap("ServiceId")
+        public String serviceId;
+
+        /**
          * <p>The status of the asset. Valid values:</p>
          * <ul>
          * <li><strong>Running</strong>: running</li>
@@ -651,15 +675,15 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>The service provider of the asset. Valid values:</p>
+         * <p>Asset vendor. Values:</p>
          * <ul>
          * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
          * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
          * <li><strong>2</strong>: an asset in a data center</li>
-         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>7</strong>, <strong>14</strong>, <strong>16</strong>: an asset from a third-party cloud service provider</li>
          * <li><strong>8</strong>: a lightweight asset</li>
-         * <li><strong>9</strong>: a SAE instance</li>
-         * <li><strong>10</strong>: an instance in PAI</li>
+         * <li><strong>9</strong>: a Serverless App Engine (SAE) instance</li>
+         * <li><strong>10</strong>: an instance in Platform for AI (PAI)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -669,19 +693,21 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer vendor;
 
         /**
-         * <p>The name of the service provider for the asset.</p>
-         * <p>Valid values:</p>
+         * <p>The name of the service provider for the asset.
+         * Values:</p>
          * <ul>
-         * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud </li>
          * <li><strong>OUT</strong>: a third-party service provider</li>
-         * <li><strong>IDC</strong>: a data center</li>
+         * <li><strong>IDC</strong>: an asset in a data center</li>
          * <li><strong>TENCENT</strong>: Tencent Cloud</li>
          * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
          * <li><strong>Microsoft</strong>: Microsoft Azure</li>
          * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
          * <li><strong>TRIPARTITE</strong>: a lightweight server</li>
-         * <li><strong>SAE</strong>: a SAE instance</li>
-         * <li><strong>PAI</strong>: an instance in PAI</li>
+         * <li><strong>SAE</strong>: a Serverless App Engine (SAE) instance</li>
+         * <li><strong>PAI</strong>: an instance in Platform for AI (PAI)</li>
+         * <li><strong>VOLCENGINE</strong>: VOLCENGINE Cloud</li>
+         * <li><strong>google</strong>: GOOGLE Cloud</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -894,6 +920,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.groupTrace;
         }
 
+        public DescribeCloudCenterInstancesResponseBodyInstances setHasContainer(String hasContainer) {
+            this.hasContainer = hasContainer;
+            return this;
+        }
+        public String getHasContainer() {
+            return this.hasContainer;
+        }
+
         public DescribeCloudCenterInstancesResponseBodyInstances setHcStatus(String hcStatus) {
             this.hcStatus = hcStatus;
             return this;
@@ -1076,6 +1110,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public Integer getSafeEventCount() {
             return this.safeEventCount;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setStatus(String status) {
