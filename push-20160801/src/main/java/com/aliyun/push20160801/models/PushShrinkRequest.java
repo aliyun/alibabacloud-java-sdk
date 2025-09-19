@@ -194,6 +194,15 @@ public class PushShrinkRequest extends TeaModel {
     @NameInMap("AndroidOpenUrl")
     public String androidOpenUrl;
 
+    @NameInMap("AndroidOppoPrivateContentParameters")
+    public String androidOppoPrivateContentParametersShrink;
+
+    @NameInMap("AndroidOppoPrivateMsgTemplateId")
+    public String androidOppoPrivateMsgTemplateId;
+
+    @NameInMap("AndroidOppoPrivateTitleParameters")
+    public String androidOppoPrivateTitleParametersShrink;
+
     /**
      * <strong>example:</strong>
      * <p>com.alibaba.cloudpushdemo.bizactivity</p>
@@ -465,15 +474,6 @@ public class PushShrinkRequest extends TeaModel {
      */
     @NameInMap("Trim")
     public Boolean trim;
-
-    @NameInMap("androidOppoPrivateContentParameters")
-    public String androidOppoPrivateContentParametersShrink;
-
-    @NameInMap("androidOppoPrivateMsgTemplateId")
-    public String androidOppoPrivateMsgTemplateId;
-
-    @NameInMap("androidOppoPrivateTitleParameters")
-    public String androidOppoPrivateTitleParametersShrink;
 
     /**
      * <strong>example:</strong>
@@ -864,6 +864,30 @@ public class PushShrinkRequest extends TeaModel {
     }
     public String getAndroidOpenUrl() {
         return this.androidOpenUrl;
+    }
+
+    public PushShrinkRequest setAndroidOppoPrivateContentParametersShrink(String androidOppoPrivateContentParametersShrink) {
+        this.androidOppoPrivateContentParametersShrink = androidOppoPrivateContentParametersShrink;
+        return this;
+    }
+    public String getAndroidOppoPrivateContentParametersShrink() {
+        return this.androidOppoPrivateContentParametersShrink;
+    }
+
+    public PushShrinkRequest setAndroidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
+        this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
+        return this;
+    }
+    public String getAndroidOppoPrivateMsgTemplateId() {
+        return this.androidOppoPrivateMsgTemplateId;
+    }
+
+    public PushShrinkRequest setAndroidOppoPrivateTitleParametersShrink(String androidOppoPrivateTitleParametersShrink) {
+        this.androidOppoPrivateTitleParametersShrink = androidOppoPrivateTitleParametersShrink;
+        return this;
+    }
+    public String getAndroidOppoPrivateTitleParametersShrink() {
+        return this.androidOppoPrivateTitleParametersShrink;
     }
 
     public PushShrinkRequest setAndroidPopupActivity(String androidPopupActivity) {
@@ -1286,30 +1310,6 @@ public class PushShrinkRequest extends TeaModel {
     }
     public Boolean getTrim() {
         return this.trim;
-    }
-
-    public PushShrinkRequest setAndroidOppoPrivateContentParametersShrink(String androidOppoPrivateContentParametersShrink) {
-        this.androidOppoPrivateContentParametersShrink = androidOppoPrivateContentParametersShrink;
-        return this;
-    }
-    public String getAndroidOppoPrivateContentParametersShrink() {
-        return this.androidOppoPrivateContentParametersShrink;
-    }
-
-    public PushShrinkRequest setAndroidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
-        this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
-        return this;
-    }
-    public String getAndroidOppoPrivateMsgTemplateId() {
-        return this.androidOppoPrivateMsgTemplateId;
-    }
-
-    public PushShrinkRequest setAndroidOppoPrivateTitleParametersShrink(String androidOppoPrivateTitleParametersShrink) {
-        this.androidOppoPrivateTitleParametersShrink = androidOppoPrivateTitleParametersShrink;
-        return this;
-    }
-    public String getAndroidOppoPrivateTitleParametersShrink() {
-        return this.androidOppoPrivateTitleParametersShrink;
     }
 
     public PushShrinkRequest setIOSApnsEnv(String iOSApnsEnv) {

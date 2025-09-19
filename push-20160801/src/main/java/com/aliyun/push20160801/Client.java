@@ -689,11 +689,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         PushShrinkRequest request = new PushShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.androidOppoPrivateContentParameters)) {
-            request.androidOppoPrivateContentParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidOppoPrivateContentParameters, "androidOppoPrivateContentParameters", "json");
+            request.androidOppoPrivateContentParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidOppoPrivateContentParameters, "AndroidOppoPrivateContentParameters", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.androidOppoPrivateTitleParameters)) {
-            request.androidOppoPrivateTitleParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidOppoPrivateTitleParameters, "androidOppoPrivateTitleParameters", "json");
+            request.androidOppoPrivateTitleParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.androidOppoPrivateTitleParameters, "AndroidOppoPrivateTitleParameters", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -827,6 +827,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidOpenUrl)) {
             query.put("AndroidOpenUrl", request.androidOpenUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoPrivateContentParametersShrink)) {
+            query.put("AndroidOppoPrivateContentParameters", request.androidOppoPrivateContentParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoPrivateMsgTemplateId)) {
+            query.put("AndroidOppoPrivateMsgTemplateId", request.androidOppoPrivateMsgTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoPrivateTitleParametersShrink)) {
+            query.put("AndroidOppoPrivateTitleParameters", request.androidOppoPrivateTitleParametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidPopupActivity)) {
@@ -1035,18 +1047,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.trim)) {
             query.put("Trim", request.trim);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoPrivateContentParametersShrink)) {
-            query.put("androidOppoPrivateContentParameters", request.androidOppoPrivateContentParametersShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoPrivateMsgTemplateId)) {
-            query.put("androidOppoPrivateMsgTemplateId", request.androidOppoPrivateMsgTemplateId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoPrivateTitleParametersShrink)) {
-            query.put("androidOppoPrivateTitleParameters", request.androidOppoPrivateTitleParametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iOSApnsEnv)) {

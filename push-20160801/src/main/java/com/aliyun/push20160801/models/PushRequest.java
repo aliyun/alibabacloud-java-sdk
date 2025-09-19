@@ -194,6 +194,15 @@ public class PushRequest extends TeaModel {
     @NameInMap("AndroidOpenUrl")
     public String androidOpenUrl;
 
+    @NameInMap("AndroidOppoPrivateContentParameters")
+    public java.util.Map<String, String> androidOppoPrivateContentParameters;
+
+    @NameInMap("AndroidOppoPrivateMsgTemplateId")
+    public String androidOppoPrivateMsgTemplateId;
+
+    @NameInMap("AndroidOppoPrivateTitleParameters")
+    public java.util.Map<String, String> androidOppoPrivateTitleParameters;
+
     /**
      * <strong>example:</strong>
      * <p>com.alibaba.cloudpushdemo.bizactivity</p>
@@ -465,15 +474,6 @@ public class PushRequest extends TeaModel {
      */
     @NameInMap("Trim")
     public Boolean trim;
-
-    @NameInMap("androidOppoPrivateContentParameters")
-    public java.util.Map<String, String> androidOppoPrivateContentParameters;
-
-    @NameInMap("androidOppoPrivateMsgTemplateId")
-    public String androidOppoPrivateMsgTemplateId;
-
-    @NameInMap("androidOppoPrivateTitleParameters")
-    public java.util.Map<String, String> androidOppoPrivateTitleParameters;
 
     /**
      * <strong>example:</strong>
@@ -864,6 +864,30 @@ public class PushRequest extends TeaModel {
     }
     public String getAndroidOpenUrl() {
         return this.androidOpenUrl;
+    }
+
+    public PushRequest setAndroidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
+        this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
+        return this;
+    }
+    public java.util.Map<String, String> getAndroidOppoPrivateContentParameters() {
+        return this.androidOppoPrivateContentParameters;
+    }
+
+    public PushRequest setAndroidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
+        this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
+        return this;
+    }
+    public String getAndroidOppoPrivateMsgTemplateId() {
+        return this.androidOppoPrivateMsgTemplateId;
+    }
+
+    public PushRequest setAndroidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
+        this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
+        return this;
+    }
+    public java.util.Map<String, String> getAndroidOppoPrivateTitleParameters() {
+        return this.androidOppoPrivateTitleParameters;
     }
 
     public PushRequest setAndroidPopupActivity(String androidPopupActivity) {
@@ -1286,30 +1310,6 @@ public class PushRequest extends TeaModel {
     }
     public Boolean getTrim() {
         return this.trim;
-    }
-
-    public PushRequest setAndroidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
-        this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
-        return this;
-    }
-    public java.util.Map<String, String> getAndroidOppoPrivateContentParameters() {
-        return this.androidOppoPrivateContentParameters;
-    }
-
-    public PushRequest setAndroidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
-        this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
-        return this;
-    }
-    public String getAndroidOppoPrivateMsgTemplateId() {
-        return this.androidOppoPrivateMsgTemplateId;
-    }
-
-    public PushRequest setAndroidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
-        this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
-        return this;
-    }
-    public java.util.Map<String, String> getAndroidOppoPrivateTitleParameters() {
-        return this.androidOppoPrivateTitleParameters;
     }
 
     public PushRequest setIOSApnsEnv(String iOSApnsEnv) {
