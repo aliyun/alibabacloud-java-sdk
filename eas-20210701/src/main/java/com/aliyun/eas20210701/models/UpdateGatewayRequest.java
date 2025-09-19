@@ -83,6 +83,12 @@ public class UpdateGatewayRequest extends TeaModel {
     @NameInMap("Replicas")
     public Integer replicas;
 
+    @NameInMap("VSwitchIds")
+    public java.util.List<String> vSwitchIds;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static UpdateGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayRequest self = new UpdateGatewayRequest();
         return TeaModel.build(map, self);
@@ -142,6 +148,22 @@ public class UpdateGatewayRequest extends TeaModel {
     }
     public Integer getReplicas() {
         return this.replicas;
+    }
+
+    public UpdateGatewayRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
+        this.vSwitchIds = vSwitchIds;
+        return this;
+    }
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
+    public UpdateGatewayRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

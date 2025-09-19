@@ -64,6 +64,9 @@ public class CreateGatewayRequest extends TeaModel {
     @NameInMap("EnableIntranet")
     public Boolean enableIntranet;
 
+    @NameInMap("GatewayType")
+    public String gatewayType;
+
     /**
      * <p>The instance type used by the private gateway. Valid values:</p>
      * <ul>
@@ -72,7 +75,6 @@ public class CreateGatewayRequest extends TeaModel {
      * <li>8c16g</li>
      * <li>16c32g</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.4xlarge</p>
@@ -141,6 +143,14 @@ public class CreateGatewayRequest extends TeaModel {
     }
     public Boolean getEnableIntranet() {
         return this.enableIntranet;
+    }
+
+    public CreateGatewayRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public CreateGatewayRequest setInstanceType(String instanceType) {

@@ -168,6 +168,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
+        @NameInMap("IntranetEnabled")
+        public Boolean intranetEnabled;
+
         /**
          * <p>Indicates whether it is the default private gateway.</p>
          * 
@@ -290,6 +293,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public String getIntranetDomain() {
             return this.intranetDomain;
+        }
+
+        public ListGatewayResponseBodyGateways setIntranetEnabled(Boolean intranetEnabled) {
+            this.intranetEnabled = intranetEnabled;
+            return this;
+        }
+        public Boolean getIntranetEnabled() {
+            return this.intranetEnabled;
         }
 
         public ListGatewayResponseBodyGateways setIsDefault(Boolean isDefault) {

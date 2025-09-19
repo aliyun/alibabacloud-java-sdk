@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayRequest extends TeaModel {
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     /**
      * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
      * 
@@ -21,6 +24,15 @@ public class ListGatewayRequest extends TeaModel {
      */
     @NameInMap("GatewayName")
     public String gatewayName;
+
+    @NameInMap("GatewayType")
+    public String gatewayType;
+
+    @NameInMap("InternetEnabled")
+    public Boolean internetEnabled;
+
+    @NameInMap("Order")
+    public String order;
 
     /**
      * <p>The page number. Default value: 1.</p>
@@ -49,9 +61,23 @@ public class ListGatewayRequest extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    @NameInMap("Sort")
+    public String sort;
+
+    @NameInMap("Status")
+    public String status;
+
     public static ListGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewayRequest self = new ListGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListGatewayRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public ListGatewayRequest setGatewayId(String gatewayId) {
@@ -68,6 +94,30 @@ public class ListGatewayRequest extends TeaModel {
     }
     public String getGatewayName() {
         return this.gatewayName;
+    }
+
+    public ListGatewayRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
+    }
+
+    public ListGatewayRequest setInternetEnabled(Boolean internetEnabled) {
+        this.internetEnabled = internetEnabled;
+        return this;
+    }
+    public Boolean getInternetEnabled() {
+        return this.internetEnabled;
+    }
+
+    public ListGatewayRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListGatewayRequest setPageNumber(Integer pageNumber) {
@@ -92,6 +142,22 @@ public class ListGatewayRequest extends TeaModel {
     }
     public String getResourceName() {
         return this.resourceName;
+    }
+
+    public ListGatewayRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
+    }
+
+    public ListGatewayRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }
