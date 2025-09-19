@@ -41,6 +41,9 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
     }
 
     public static class DescribeL7UsKeepaliveResponseBodyRsKeepalive extends TeaModel {
+        @NameInMap("DsKeepaliveTimeout")
+        public Long dsKeepaliveTimeout;
+
         /**
          * <p>Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:</p>
          * <ul>
@@ -75,6 +78,14 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         public static DescribeL7UsKeepaliveResponseBodyRsKeepalive build(java.util.Map<String, ?> map) throws Exception {
             DescribeL7UsKeepaliveResponseBodyRsKeepalive self = new DescribeL7UsKeepaliveResponseBodyRsKeepalive();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeL7UsKeepaliveResponseBodyRsKeepalive setDsKeepaliveTimeout(Long dsKeepaliveTimeout) {
+            this.dsKeepaliveTimeout = dsKeepaliveTimeout;
+            return this;
+        }
+        public Long getDsKeepaliveTimeout() {
+            return this.dsKeepaliveTimeout;
         }
 
         public DescribeL7UsKeepaliveResponseBodyRsKeepalive setEnabled(Boolean enabled) {

@@ -16,6 +16,9 @@ public class ConfigL7UsKeepaliveRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("DownstreamKeepalive")
+    public String downstreamKeepalive;
+
     /**
      * <p>The settings for back-to-origin persistent connections. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
      * <ul>
@@ -42,6 +45,14 @@ public class ConfigL7UsKeepaliveRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public ConfigL7UsKeepaliveRequest setDownstreamKeepalive(String downstreamKeepalive) {
+        this.downstreamKeepalive = downstreamKeepalive;
+        return this;
+    }
+    public String getDownstreamKeepalive() {
+        return this.downstreamKeepalive;
     }
 
     public ConfigL7UsKeepaliveRequest setUpstreamKeepalive(String upstreamKeepalive) {

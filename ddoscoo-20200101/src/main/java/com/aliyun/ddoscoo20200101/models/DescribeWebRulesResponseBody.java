@@ -263,6 +263,9 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
+        @NameInMap("CertExpireTime")
+        public Long certExpireTime;
+
         /**
          * <p>The name of the SSL certificate.</p>
          * 
@@ -474,6 +477,9 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @NameInMap("SslProtocols")
         public String sslProtocols;
 
+        @NameInMap("Tls13CustomCiphers")
+        public java.util.List<String> tls13CustomCiphers;
+
         /**
          * <p>The name of the certificate uploaded by the user to the certificate center.</p>
          * 
@@ -524,6 +530,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
         public String getCcTemplate() {
             return this.ccTemplate;
+        }
+
+        public DescribeWebRulesResponseBodyWebRules setCertExpireTime(Long certExpireTime) {
+            this.certExpireTime = certExpireTime;
+            return this;
+        }
+        public Long getCertExpireTime() {
+            return this.certExpireTime;
         }
 
         public DescribeWebRulesResponseBodyWebRules setCertName(String certName) {
@@ -676,6 +690,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
         public String getSslProtocols() {
             return this.sslProtocols;
+        }
+
+        public DescribeWebRulesResponseBodyWebRules setTls13CustomCiphers(java.util.List<String> tls13CustomCiphers) {
+            this.tls13CustomCiphers = tls13CustomCiphers;
+            return this;
+        }
+        public java.util.List<String> getTls13CustomCiphers() {
+            return this.tls13CustomCiphers;
         }
 
         public DescribeWebRulesResponseBodyWebRules setUserCertName(String userCertName) {

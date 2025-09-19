@@ -433,6 +433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Domain", request.domain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.downstreamKeepalive)) {
+            query.put("DownstreamKeepalive", request.downstreamKeepalive);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.upstreamKeepalive)) {
             query.put("UpstreamKeepalive", request.upstreamKeepalive);
         }
