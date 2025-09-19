@@ -42,6 +42,47 @@ public class LoginInstanceRequest extends TeaModel {
         return this.userAccount;
     }
 
+    public static class LoginInstanceRequestInstanceLoginInfoEncryptionOptions extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        public static LoginInstanceRequestInstanceLoginInfoEncryptionOptions build(java.util.Map<String, ?> map) throws Exception {
+            LoginInstanceRequestInstanceLoginInfoEncryptionOptions self = new LoginInstanceRequestInstanceLoginInfoEncryptionOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public LoginInstanceRequestInstanceLoginInfoEncryptionOptions setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfoEncryptionOptions setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfoEncryptionOptions setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+    }
+
     public static class LoginInstanceRequestInstanceLoginInfoOptionsContainerInfo extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -351,6 +392,9 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("DurationSeconds")
         public Long durationSeconds;
 
+        @NameInMap("EncryptionOptions")
+        public LoginInstanceRequestInstanceLoginInfoEncryptionOptions encryptionOptions;
+
         /**
          * <strong>example:</strong>
          * <p>2022-11-30 00:00:00</p>
@@ -501,6 +545,14 @@ public class LoginInstanceRequest extends TeaModel {
         }
         public Long getDurationSeconds() {
             return this.durationSeconds;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfo setEncryptionOptions(LoginInstanceRequestInstanceLoginInfoEncryptionOptions encryptionOptions) {
+            this.encryptionOptions = encryptionOptions;
+            return this;
+        }
+        public LoginInstanceRequestInstanceLoginInfoEncryptionOptions getEncryptionOptions() {
+            return this.encryptionOptions;
         }
 
         public LoginInstanceRequestInstanceLoginInfo setExpireTime(String expireTime) {
