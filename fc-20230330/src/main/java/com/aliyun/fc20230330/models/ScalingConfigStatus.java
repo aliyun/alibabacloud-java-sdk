@@ -4,64 +4,97 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ScalingConfigStatus extends TeaModel {
-    @NameInMap("functionName")
-    public String functionName;
+    @NameInMap("currentError")
+    public String currentError;
 
-    @NameInMap("qualifier")
-    public String qualifier;
+    @NameInMap("currentInstances")
+    public Long currentInstances;
 
-    @NameInMap("residentConfig")
-    public ResidentConfig residentConfig;
+    @NameInMap("functionArn")
+    public String functionArn;
 
-    @NameInMap("resourceType")
-    public String resourceType;
+    @NameInMap("horizontalScalingPolicies")
+    public java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
-    @NameInMap("scalingStatus")
-    public ScalingStatus scalingStatus;
+    @NameInMap("minInstances")
+    public Long minInstances;
+
+    @NameInMap("residentPoolId")
+    public String residentPoolId;
+
+    @NameInMap("scheduledPolicies")
+    public java.util.List<ScheduledPolicy> scheduledPolicies;
+
+    @NameInMap("targetInstances")
+    public Long targetInstances;
 
     public static ScalingConfigStatus build(java.util.Map<String, ?> map) throws Exception {
         ScalingConfigStatus self = new ScalingConfigStatus();
         return TeaModel.build(map, self);
     }
 
-    public ScalingConfigStatus setFunctionName(String functionName) {
-        this.functionName = functionName;
+    public ScalingConfigStatus setCurrentError(String currentError) {
+        this.currentError = currentError;
         return this;
     }
-    public String getFunctionName() {
-        return this.functionName;
+    public String getCurrentError() {
+        return this.currentError;
     }
 
-    public ScalingConfigStatus setQualifier(String qualifier) {
-        this.qualifier = qualifier;
+    public ScalingConfigStatus setCurrentInstances(Long currentInstances) {
+        this.currentInstances = currentInstances;
         return this;
     }
-    public String getQualifier() {
-        return this.qualifier;
+    public Long getCurrentInstances() {
+        return this.currentInstances;
     }
 
-    public ScalingConfigStatus setResidentConfig(ResidentConfig residentConfig) {
-        this.residentConfig = residentConfig;
+    public ScalingConfigStatus setFunctionArn(String functionArn) {
+        this.functionArn = functionArn;
         return this;
     }
-    public ResidentConfig getResidentConfig() {
-        return this.residentConfig;
+    public String getFunctionArn() {
+        return this.functionArn;
     }
 
-    public ScalingConfigStatus setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public ScalingConfigStatus setHorizontalScalingPolicies(java.util.List<ScalingPolicy> horizontalScalingPolicies) {
+        this.horizontalScalingPolicies = horizontalScalingPolicies;
         return this;
     }
-    public String getResourceType() {
-        return this.resourceType;
+    public java.util.List<ScalingPolicy> getHorizontalScalingPolicies() {
+        return this.horizontalScalingPolicies;
     }
 
-    public ScalingConfigStatus setScalingStatus(ScalingStatus scalingStatus) {
-        this.scalingStatus = scalingStatus;
+    public ScalingConfigStatus setMinInstances(Long minInstances) {
+        this.minInstances = minInstances;
         return this;
     }
-    public ScalingStatus getScalingStatus() {
-        return this.scalingStatus;
+    public Long getMinInstances() {
+        return this.minInstances;
+    }
+
+    public ScalingConfigStatus setResidentPoolId(String residentPoolId) {
+        this.residentPoolId = residentPoolId;
+        return this;
+    }
+    public String getResidentPoolId() {
+        return this.residentPoolId;
+    }
+
+    public ScalingConfigStatus setScheduledPolicies(java.util.List<ScheduledPolicy> scheduledPolicies) {
+        this.scheduledPolicies = scheduledPolicies;
+        return this;
+    }
+    public java.util.List<ScheduledPolicy> getScheduledPolicies() {
+        return this.scheduledPolicies;
+    }
+
+    public ScalingConfigStatus setTargetInstances(Long targetInstances) {
+        this.targetInstances = targetInstances;
+        return this;
+    }
+    public Long getTargetInstances() {
+        return this.targetInstances;
     }
 
 }

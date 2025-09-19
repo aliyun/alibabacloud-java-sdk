@@ -25,6 +25,9 @@ public class ElasticConfigStatus extends TeaModel {
     @NameInMap("scheduledPolicies")
     public java.util.List<ScheduledPolicy> scheduledPolicies;
 
+    @NameInMap("targetInstances")
+    public Long targetInstances;
+
     public static ElasticConfigStatus build(java.util.Map<String, ?> map) throws Exception {
         ElasticConfigStatus self = new ElasticConfigStatus();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class ElasticConfigStatus extends TeaModel {
     }
     public java.util.List<ScheduledPolicy> getScheduledPolicies() {
         return this.scheduledPolicies;
+    }
+
+    public ElasticConfigStatus setTargetInstances(Long targetInstances) {
+        this.targetInstances = targetInstances;
+        return this;
+    }
+    public Long getTargetInstances() {
+        return this.targetInstances;
     }
 
 }

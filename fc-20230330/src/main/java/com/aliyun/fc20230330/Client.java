@@ -650,6 +650,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除弹性配置</p>
+     * 
+     * @param request DeleteScalingConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteScalingConfigResponse
+     */
+    public DeleteScalingConfigResponse deleteScalingConfigWithOptions(String functionName, DeleteScalingConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteScalingConfig"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/scaling-config"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScalingConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除弹性配置</p>
+     * 
+     * @param request DeleteScalingConfigRequest
+     * @return DeleteScalingConfigResponse
+     */
+    public DeleteScalingConfigResponse deleteScalingConfig(String functionName, DeleteScalingConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteScalingConfigWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a trigger.</p>
      * 
      * @param headers map
@@ -1281,6 +1328,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getProvisionConfigWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取弹性配置</p>
+     * 
+     * @param request GetScalingConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetScalingConfigResponse
+     */
+    public GetScalingConfigResponse getScalingConfigWithOptions(String functionName, GetScalingConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetScalingConfig"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/scaling-config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetScalingConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取弹性配置</p>
+     * 
+     * @param request GetScalingConfigRequest
+     * @return GetScalingConfigResponse
+     */
+    public GetScalingConfigResponse getScalingConfig(String functionName, GetScalingConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getScalingConfigWithOptions(functionName, request, headers, runtime);
     }
 
     /**
@@ -2108,6 +2202,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取弹性配置列表</p>
+     * 
+     * @param request ListScalingConfigsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScalingConfigsResponse
+     */
+    public ListScalingConfigsResponse listScalingConfigsWithOptions(ListScalingConfigsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.functionName)) {
+            query.put("functionName", request.functionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListScalingConfigs"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/scaling-configs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListScalingConfigsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取弹性配置列表</p>
+     * 
+     * @param request ListScalingConfigsRequest
+     * @return ListScalingConfigsResponse
+     */
+    public ListScalingConfigsResponse listScalingConfigs(ListScalingConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listScalingConfigsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Lists all tagged resources.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
@@ -2500,6 +2649,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.putProvisionConfigWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置弹性配置</p>
+     * 
+     * @param request PutScalingConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutScalingConfigResponse
+     */
+    public PutScalingConfigResponse putScalingConfigWithOptions(String functionName, PutScalingConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutScalingConfig"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/scaling-config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutScalingConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置弹性配置</p>
+     * 
+     * @param request PutScalingConfigRequest
+     * @return PutScalingConfigResponse
+     */
+    public PutScalingConfigResponse putScalingConfig(String functionName, PutScalingConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.putScalingConfigWithOptions(functionName, request, headers, runtime);
     }
 
     /**

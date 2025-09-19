@@ -4,31 +4,53 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutScalingConfigInput extends TeaModel {
-    @NameInMap("residentConfig")
-    public ResidentConfig residentConfig;
+    @NameInMap("horizontalScalingPolicies")
+    public java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
-    @NameInMap("resourceType")
-    public String resourceType;
+    @NameInMap("minInstances")
+    public Long minInstances;
+
+    @NameInMap("residentPoolId")
+    public String residentPoolId;
+
+    @NameInMap("scheduledPolicies")
+    public java.util.List<ScheduledPolicy> scheduledPolicies;
 
     public static PutScalingConfigInput build(java.util.Map<String, ?> map) throws Exception {
         PutScalingConfigInput self = new PutScalingConfigInput();
         return TeaModel.build(map, self);
     }
 
-    public PutScalingConfigInput setResidentConfig(ResidentConfig residentConfig) {
-        this.residentConfig = residentConfig;
+    public PutScalingConfigInput setHorizontalScalingPolicies(java.util.List<ScalingPolicy> horizontalScalingPolicies) {
+        this.horizontalScalingPolicies = horizontalScalingPolicies;
         return this;
     }
-    public ResidentConfig getResidentConfig() {
-        return this.residentConfig;
+    public java.util.List<ScalingPolicy> getHorizontalScalingPolicies() {
+        return this.horizontalScalingPolicies;
     }
 
-    public PutScalingConfigInput setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public PutScalingConfigInput setMinInstances(Long minInstances) {
+        this.minInstances = minInstances;
         return this;
     }
-    public String getResourceType() {
-        return this.resourceType;
+    public Long getMinInstances() {
+        return this.minInstances;
+    }
+
+    public PutScalingConfigInput setResidentPoolId(String residentPoolId) {
+        this.residentPoolId = residentPoolId;
+        return this;
+    }
+    public String getResidentPoolId() {
+        return this.residentPoolId;
+    }
+
+    public PutScalingConfigInput setScheduledPolicies(java.util.List<ScheduledPolicy> scheduledPolicies) {
+        this.scheduledPolicies = scheduledPolicies;
+        return this;
+    }
+    public java.util.List<ScheduledPolicy> getScheduledPolicies() {
+        return this.scheduledPolicies;
     }
 
 }

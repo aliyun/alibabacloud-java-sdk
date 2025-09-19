@@ -8,7 +8,7 @@ public class ResidentResourceAllocationStatus extends TeaModel {
     public String lastAllocatedTime;
 
     @NameInMap("lastAllocation")
-    public ResidentResourceAllocation lastAllocation;
+    public java.util.List<ResidentResourceAllocation> lastAllocation;
 
     public static ResidentResourceAllocationStatus build(java.util.Map<String, ?> map) throws Exception {
         ResidentResourceAllocationStatus self = new ResidentResourceAllocationStatus();
@@ -23,11 +23,11 @@ public class ResidentResourceAllocationStatus extends TeaModel {
         return this.lastAllocatedTime;
     }
 
-    public ResidentResourceAllocationStatus setLastAllocation(ResidentResourceAllocation lastAllocation) {
+    public ResidentResourceAllocationStatus setLastAllocation(java.util.List<ResidentResourceAllocation> lastAllocation) {
         this.lastAllocation = lastAllocation;
         return this;
     }
-    public ResidentResourceAllocation getLastAllocation() {
+    public java.util.List<ResidentResourceAllocation> getLastAllocation() {
         return this.lastAllocation;
     }
 
