@@ -7,6 +7,9 @@ public class StreamOptions extends TeaModel {
     @NameInMap("IncrementalOutput")
     public Boolean incrementalOutput;
 
+    @NameInMap("NeedReturnFinalResult")
+    public Boolean needReturnFinalResult;
+
     public static StreamOptions build(java.util.Map<String, ?> map) throws Exception {
         StreamOptions self = new StreamOptions();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class StreamOptions extends TeaModel {
     }
     public Boolean getIncrementalOutput() {
         return this.incrementalOutput;
+    }
+
+    public StreamOptions setNeedReturnFinalResult(Boolean needReturnFinalResult) {
+        this.needReturnFinalResult = needReturnFinalResult;
+        return this;
+    }
+    public Boolean getNeedReturnFinalResult() {
+        return this.needReturnFinalResult;
     }
 
 }

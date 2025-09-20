@@ -51,7 +51,6 @@ public class SemanticQueryShrinkRequest extends TeaModel {
 
     /**
      * <p>The content of the query that you input.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Query")
     public String query;

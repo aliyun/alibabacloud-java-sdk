@@ -46,6 +46,13 @@ public class Dataset extends TeaModel {
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("WorkflowParameters")
+    public java.util.List<WorkflowParameter> workflowParameters;
+
     public static Dataset build(java.util.Map<String, ?> map) throws Exception {
         Dataset self = new Dataset();
         return TeaModel.build(map, self);
@@ -161,6 +168,14 @@ public class Dataset extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public Dataset setWorkflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
+        this.workflowParameters = workflowParameters;
+        return this;
+    }
+    public java.util.List<WorkflowParameter> getWorkflowParameters() {
+        return this.workflowParameters;
     }
 
 }
