@@ -338,6 +338,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改类目解析配置</p>
+     * 
+     * @param tmpReq ChangeParseSettingRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeParseSettingResponse
+     */
+    public ChangeParseSettingResponse changeParseSettingWithOptions(String WorkspaceId, ChangeParseSettingRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ChangeParseSettingShrinkRequest request = new ChangeParseSettingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parserConfig)) {
+            request.parserConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parserConfig, "ParserConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            body.put("CategoryId", request.categoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            body.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parser)) {
+            body.put("Parser", request.parser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parserConfigShrink)) {
+            body.put("ParserConfig", request.parserConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeParseSetting"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/parser/settings"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeParseSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改类目解析配置</p>
+     * 
+     * @param request ChangeParseSettingRequest
+     * @return ChangeParseSettingResponse
+     */
+    public ChangeParseSettingResponse changeParseSetting(String WorkspaceId, ChangeParseSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.changeParseSettingWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建并发布智能体应用</p>
      * 
      * @param tmpReq CreateAndPulishAgentRequest
@@ -1304,6 +1369,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取文件支持的解析器类型</p>
+     * 
+     * @param request GetAvailableParserTypesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAvailableParserTypesResponse
+     */
+    public GetAvailableParserTypesResponse getAvailableParserTypesWithOptions(String WorkspaceId, GetAvailableParserTypesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            query.put("FileType", request.fileType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAvailableParserTypes"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/parser/parsertype"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAvailableParserTypesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件支持的解析器类型</p>
+     * 
+     * @param request GetAvailableParserTypesRequest
+     * @return GetAvailableParserTypesResponse
+     */
+    public GetAvailableParserTypesResponse getAvailableParserTypes(String WorkspaceId, GetAvailableParserTypesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAvailableParserTypesWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>A knowledge base job is running. You can call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> operation to create a creation job or the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operation to create a add document job. Then, obtain the <code>JobId</code> returned by the operations.</li>
@@ -1452,6 +1564,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取类目解析配置</p>
+     * 
+     * @param request GetParseSettingsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetParseSettingsResponse
+     */
+    public GetParseSettingsResponse getParseSettingsWithOptions(String WorkspaceId, GetParseSettingsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetParseSettings"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/parser/settings"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetParseSettingsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取类目解析配置</p>
+     * 
+     * @param request GetParseSettingsRequest
+     * @return GetParseSettingsResponse
+     */
+    public GetParseSettingsResponse getParseSettings(String WorkspaceId, GetParseSettingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getParseSettingsWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtains a prompt template based on the template ID.</p>
      * 
      * @param headers map
@@ -1522,6 +1681,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPublishedAgentWithOptions(workspaceId, appCode, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>高代码部署服务</p>
+     * 
+     * @param request HighCodeDeployRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HighCodeDeployResponse
+     */
+    public HighCodeDeployResponse highCodeDeployWithOptions(String workspaceId, HighCodeDeployRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentDesc)) {
+            body.put("agentDesc", request.agentDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            body.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("agentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCodeName)) {
+            body.put("sourceCodeName", request.sourceCodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCodeOssUrl)) {
+            body.put("sourceCodeOssUrl", request.sourceCodeOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telemetryEnabled)) {
+            body.put("telemetryEnabled", request.telemetryEnabled);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HighCodeDeploy"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/highCode/publish"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HighCodeDeployResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>高代码部署服务</p>
+     * 
+     * @param request HighCodeDeployRequest
+     * @return HighCodeDeployResponse
+     */
+    public HighCodeDeployResponse highCodeDeploy(String workspaceId, HighCodeDeployRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.highCodeDeployWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
