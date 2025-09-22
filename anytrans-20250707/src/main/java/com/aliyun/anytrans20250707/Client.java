@@ -109,6 +109,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>通义多模态翻译获文档翻译任务</p>
+     * 
+     * @param request GetDocTranslateTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocTranslateTaskResponse
+     */
+    public GetDocTranslateTaskResponse getDocTranslateTaskWithOptions(GetDocTranslateTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDocTranslateTask"),
+            new TeaPair("version", "2025-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/anytrans/translate/doc/get"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocTranslateTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通义多模态翻译获文档翻译任务</p>
+     * 
+     * @param request GetDocTranslateTaskRequest
+     * @return GetDocTranslateTaskResponse
+     */
+    public GetDocTranslateTaskResponse getDocTranslateTask(GetDocTranslateTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDocTranslateTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>通义多模态翻译获取html翻译结果</p>
      * 
      * @param request GetHtmlTranslateTaskRequest
@@ -258,6 +309,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getLongTextTranslateTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通义多模态翻译提交文档翻译任务</p>
+     * 
+     * @param tmpReq SubmitDocTranslateTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDocTranslateTaskResponse
+     */
+    public SubmitDocTranslateTaskResponse submitDocTranslateTaskWithOptions(SubmitDocTranslateTaskRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitDocTranslateTaskShrinkRequest request = new SubmitDocTranslateTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ext)) {
+            request.extShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ext, "ext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extShrink)) {
+            body.put("ext", request.extShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.format)) {
+            body.put("format", request.format);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("sourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("targetLanguage", request.targetLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            body.put("text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitDocTranslateTask"),
+            new TeaPair("version", "2025-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/anytrans/translate/doc/submit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocTranslateTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通义多模态翻译提交文档翻译任务</p>
+     * 
+     * @param request SubmitDocTranslateTaskRequest
+     * @return SubmitDocTranslateTaskResponse
+     */
+    public SubmitDocTranslateTaskResponse submitDocTranslateTask(SubmitDocTranslateTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitDocTranslateTaskWithOptions(request, headers, runtime);
     }
 
     /**
