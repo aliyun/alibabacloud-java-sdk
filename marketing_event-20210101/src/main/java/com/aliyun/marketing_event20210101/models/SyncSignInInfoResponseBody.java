@@ -4,11 +4,17 @@ package com.aliyun.marketing_event20210101.models;
 import com.aliyun.tea.*;
 
 public class SyncSignInInfoResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public Integer data;
+
+    @NameInMap("HttpStatusCode")
+    public String httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -22,6 +28,14 @@ public class SyncSignInInfoResponseBody extends TeaModel {
     public static SyncSignInInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SyncSignInInfoResponseBody self = new SyncSignInInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SyncSignInInfoResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public SyncSignInInfoResponseBody setCode(String code) {
@@ -38,6 +52,14 @@ public class SyncSignInInfoResponseBody extends TeaModel {
     }
     public Integer getData() {
         return this.data;
+    }
+
+    public SyncSignInInfoResponseBody setHttpStatusCode(String httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public SyncSignInInfoResponseBody setMessage(String message) {

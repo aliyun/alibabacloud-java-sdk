@@ -394,6 +394,9 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         @NameInMap("TicketName")
         public String ticketName;
 
+        @NameInMap("TicketReceiveDates")
+        public String ticketReceiveDates;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -484,6 +487,14 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         }
         public String getTicketName() {
             return this.ticketName;
+        }
+
+        public FindGuestTicketRecordResponseBodyData setTicketReceiveDates(String ticketReceiveDates) {
+            this.ticketReceiveDates = ticketReceiveDates;
+            return this;
+        }
+        public String getTicketReceiveDates() {
+            return this.ticketReceiveDates;
         }
 
         public FindGuestTicketRecordResponseBodyData setTicketType(String ticketType) {

@@ -4,6 +4,9 @@ package com.aliyun.marketing_event20210101.models;
 import com.aliyun.tea.*;
 
 public class QueryAllActivityInfoResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -13,6 +16,9 @@ public class QueryAllActivityInfoResponseBody extends TeaModel {
 
     @NameInMap("Data")
     public java.util.List<QueryAllActivityInfoResponseBodyData> data;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     /**
      * <strong>example:</strong>
@@ -36,6 +42,14 @@ public class QueryAllActivityInfoResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryAllActivityInfoResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
     public QueryAllActivityInfoResponseBody setCode(String code) {
         this.code = code;
         return this;
@@ -50,6 +64,14 @@ public class QueryAllActivityInfoResponseBody extends TeaModel {
     }
     public java.util.List<QueryAllActivityInfoResponseBodyData> getData() {
         return this.data;
+    }
+
+    public QueryAllActivityInfoResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public QueryAllActivityInfoResponseBody setMessage(String message) {
