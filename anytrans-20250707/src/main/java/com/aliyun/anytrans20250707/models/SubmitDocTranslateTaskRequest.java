@@ -43,7 +43,7 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="https://xxx-hangzhou.aliyuncs.com/docs/tmp/%E6%A0%B7%E4%BE%8B_%E6%97%A0%E5%9B%BE.pdf?OSSAccessKeyId=LTAI5tBVMtznbk7xyCa56gof&Expires=1755883153&Signature=H23MpMZqFVPGTPCU2GtFqOFfmII%3D">https://xxx-hangzhou.aliyuncs.com/docs/tmp/%E6%A0%B7%E4%BE%8B_%E6%97%A0%E5%9B%BE.pdf?OSSAccessKeyId=LTAI5tBVMtznbk7xyCa56gof&amp;Expires=1755883153&amp;Signature=H23MpMZqFVPGTPCU2GtFqOFfmII%3D</a></p>
+     * <p><a href="https://xxx-hangzhou.aliyuncs.com/docs/tmp/%E6%A0%B7%E4%BE%8B_%E6%97%A0%E5%9B%BE.pdf">https://xxx-hangzhou.aliyuncs.com/docs/tmp/%E6%A0%B7%E4%BE%8B_%E6%97%A0%E5%9B%BE.pdf</a></p>
      */
     @NameInMap("text")
     public String text;
@@ -240,6 +240,10 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitDocTranslateTaskRequestExt extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>This text comes from a rigorous academic paper. Please provide a translation that complies with academic standards.</p>
+         */
         @NameInMap("domainHint")
         public String domainHint;
 
