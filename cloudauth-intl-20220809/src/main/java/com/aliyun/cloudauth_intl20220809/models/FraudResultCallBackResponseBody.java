@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FraudResultCallBackResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class FraudResultCallBackResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class FraudResultCallBackResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
      */
@@ -26,6 +32,12 @@ public class FraudResultCallBackResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong>: Call succeeded.</li>
+     * <li><strong>false</strong>: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

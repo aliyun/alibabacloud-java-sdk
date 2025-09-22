@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
+     * <p>Base64 encoded image. If you choose to upload the photo via IdOcrPictureBase64 (photo Base64 encoding), please check the photo size and do not upload overly large photos.</p>
+     * 
      * <strong>example:</strong>
      * <p>base64</p>
      */
@@ -12,6 +14,8 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String credentialOcrPictureBase64;
 
     /**
+     * <p>Image URL, accessible over the public network via HTTP or HTTPS links.</p>
+     * 
      * <strong>example:</strong>
      * <p>https://***</p>
      */
@@ -19,6 +23,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String credentialOcrPictureUrl;
 
     /**
+     * <p>Voucher type.</p>
+     * <ul>
+     * <li>Transaction Voucher: 01 (including: water, electricity, gas, credit card, and other types of e-bill images)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +36,11 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>Whether to enable tampering detection</p>
+     * <ul>
+     * <li>true: Enable</li>
+     * <li>false: Disable</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +50,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String fraudCheck;
 
     /**
+     * <p>Extraction type:</p>
+     * <ul>
+     * <li>0101: E-bill Address &amp; Name Module (extracts address and name modules through intelligent analysis)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +63,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String ocrArea;
 
     /**
+     * <p>The product solution to be integrated. Value: CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

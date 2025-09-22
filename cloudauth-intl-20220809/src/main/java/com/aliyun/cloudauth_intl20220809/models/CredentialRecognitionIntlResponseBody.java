@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CredentialRecognitionIntlResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response message for the returned information.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result.</p>
+     */
     @NameInMap("Result")
     public CredentialRecognitionIntlResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
 
     public static class CredentialRecognitionIntlResponseBodyResult extends TeaModel {
         /**
+         * <p>Identified key information in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;address&quot;: &quot;&quot;,
@@ -77,6 +88,8 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
+         * <p>Authentication result description</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -84,6 +97,12 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>Extraction result. Values:</p>
+         * <ul>
+         * <li>S: Success.</li>
+         * <li>F: Failure.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>S</p>
          */

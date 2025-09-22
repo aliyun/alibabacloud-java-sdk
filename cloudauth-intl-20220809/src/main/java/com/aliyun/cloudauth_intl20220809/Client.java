@@ -575,8 +575,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Detects whether a voucher (such as water, electricity, gas, credit card, etc., e-bills) is forged using AI technology and extracts key information from the voucher.</p>
+     * 
      * <b>summary</b> : 
-     * <p>凭证识别</p>
+     * <p>Credential Recognition</p>
      * 
      * @param request CredentialRecognitionIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -629,8 +632,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Detects whether a voucher (such as water, electricity, gas, credit card, etc., e-bills) is forged using AI technology and extracts key information from the voucher.</p>
+     * 
      * <b>summary</b> : 
-     * <p>凭证识别</p>
+     * <p>Credential Recognition</p>
      * 
      * @param request CredentialRecognitionIntlRequest
      * @return CredentialRecognitionIntlResponse
@@ -1390,7 +1396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>防伪回调接口</p>
+     * <p>Anti-Fraud Callback Interface</p>
      * 
      * @param request FraudResultCallBackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1434,7 +1440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>防伪回调接口</p>
+     * <p>Anti-Fraud Callback Interface</p>
      * 
      * @param request FraudResultCallBackRequest
      * @return FraudResultCallBackResponse
