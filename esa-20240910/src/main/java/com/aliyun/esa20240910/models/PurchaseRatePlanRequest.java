@@ -29,6 +29,9 @@ public class PurchaseRatePlanRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("Channel")
+    public String channel;
+
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
@@ -132,6 +135,14 @@ public class PurchaseRatePlanRequest extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public PurchaseRatePlanRequest setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
     }
 
     public PurchaseRatePlanRequest setChargeType(String chargeType) {

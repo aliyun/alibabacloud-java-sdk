@@ -14,13 +14,16 @@ public class CreateRoutineCodeDeploymentShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>production</p>
+     * <p>staging</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;

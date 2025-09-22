@@ -14,13 +14,16 @@ public class CreateRoutineCodeDeploymentRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>production</p>
+     * <p>staging</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -74,12 +77,18 @@ public class CreateRoutineCodeDeploymentRequest extends TeaModel {
     public static class CreateRoutineCodeDeploymentRequestCodeVersions extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1723599747213377175</p>
          */
         @NameInMap("CodeVersion")
         public String codeVersion;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percentage")
         public Long percentage;

@@ -7,12 +7,24 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
     @NameInMap("CodeVersions")
     public java.util.List<CreateRoutineCodeDeploymentResponseBodyCodeVersions> codeVersions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>234</p>
+     */
     @NameInMap("DeploymentId")
     public String deploymentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>percentage</p>
+     */
     @NameInMap("Strategy")
     public String strategy;
 
@@ -54,9 +66,17 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
     }
 
     public static class CreateRoutineCodeDeploymentResponseBodyCodeVersions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1723599747213377175</p>
+         */
         @NameInMap("CodeVersion")
         public String codeVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Percentage")
         public Long percentage;
 
