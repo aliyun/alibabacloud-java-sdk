@@ -4,6 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateSAMLProviderRequest extends TeaModel {
+    @NameInMap("AuthnSignAlgo")
+    public String authnSignAlgo;
+
     /**
      * <p>The new description.</p>
      * <blockquote>
@@ -41,6 +44,14 @@ public class UpdateSAMLProviderRequest extends TeaModel {
     public static UpdateSAMLProviderRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSAMLProviderRequest self = new UpdateSAMLProviderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSAMLProviderRequest setAuthnSignAlgo(String authnSignAlgo) {
+        this.authnSignAlgo = authnSignAlgo;
+        return this;
+    }
+    public String getAuthnSignAlgo() {
+        return this.authnSignAlgo;
     }
 
     public UpdateSAMLProviderRequest setNewDescription(String newDescription) {

@@ -50,6 +50,9 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
+        @NameInMap("AuthnSignAlgo")
+        public String authnSignAlgo;
+
         /**
          * <p>The creation time.</p>
          * 
@@ -106,6 +109,14 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public GetSAMLProviderResponseBodySAMLProvider setAuthnSignAlgo(String authnSignAlgo) {
+            this.authnSignAlgo = authnSignAlgo;
+            return this;
+        }
+        public String getAuthnSignAlgo() {
+            return this.authnSignAlgo;
         }
 
         public GetSAMLProviderResponseBodySAMLProvider setCreateDate(String createDate) {

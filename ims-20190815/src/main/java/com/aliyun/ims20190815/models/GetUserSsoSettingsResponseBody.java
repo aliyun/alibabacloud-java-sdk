@@ -41,6 +41,9 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
     }
 
     public static class GetUserSsoSettingsResponseBodyUserSsoSettings extends TeaModel {
+        @NameInMap("AuthnSignAlgo")
+        public String authnSignAlgo;
+
         /**
          * <p>The auxiliary domain name.</p>
          * 
@@ -85,6 +88,14 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         public static GetUserSsoSettingsResponseBodyUserSsoSettings build(java.util.Map<String, ?> map) throws Exception {
             GetUserSsoSettingsResponseBodyUserSsoSettings self = new GetUserSsoSettingsResponseBodyUserSsoSettings();
             return TeaModel.build(map, self);
+        }
+
+        public GetUserSsoSettingsResponseBodyUserSsoSettings setAuthnSignAlgo(String authnSignAlgo) {
+            this.authnSignAlgo = authnSignAlgo;
+            return this;
+        }
+        public String getAuthnSignAlgo() {
+            return this.authnSignAlgo;
         }
 
         public GetUserSsoSettingsResponseBodyUserSsoSettings setAuxiliaryDomain(String auxiliaryDomain) {

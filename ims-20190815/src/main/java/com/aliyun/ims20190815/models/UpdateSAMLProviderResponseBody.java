@@ -50,6 +50,9 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
+        @NameInMap("AuthnSignAlgo")
+        public String authnSignAlgo;
+
         /**
          * <p>The point in time at which the IdP was created. The time is displayed in UTC.</p>
          * 
@@ -97,6 +100,14 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public UpdateSAMLProviderResponseBodySAMLProvider setAuthnSignAlgo(String authnSignAlgo) {
+            this.authnSignAlgo = authnSignAlgo;
+            return this;
+        }
+        public String getAuthnSignAlgo() {
+            return this.authnSignAlgo;
         }
 
         public UpdateSAMLProviderResponseBodySAMLProvider setCreateDate(String createDate) {

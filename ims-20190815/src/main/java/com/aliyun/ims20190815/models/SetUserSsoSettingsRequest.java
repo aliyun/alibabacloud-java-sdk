@@ -4,6 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class SetUserSsoSettingsRequest extends TeaModel {
+    @NameInMap("AuthnSignAlgo")
+    public String authnSignAlgo;
+
     /**
      * <p>The auxiliary domain name.</p>
      * 
@@ -53,6 +56,14 @@ public class SetUserSsoSettingsRequest extends TeaModel {
     public static SetUserSsoSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         SetUserSsoSettingsRequest self = new SetUserSsoSettingsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetUserSsoSettingsRequest setAuthnSignAlgo(String authnSignAlgo) {
+        this.authnSignAlgo = authnSignAlgo;
+        return this;
+    }
+    public String getAuthnSignAlgo() {
+        return this.authnSignAlgo;
     }
 
     public SetUserSsoSettingsRequest setAuxiliaryDomain(String auxiliaryDomain) {

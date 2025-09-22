@@ -675,6 +675,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSAMLProviderResponse createSAMLProviderWithOptions(CreateSAMLProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authnSignAlgo)) {
+            query.put("AuthnSignAlgo", request.authnSignAlgo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -4155,6 +4159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetUserSsoSettingsResponse setUserSsoSettingsWithOptions(SetUserSsoSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authnSignAlgo)) {
+            query.put("AuthnSignAlgo", request.authnSignAlgo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.auxiliaryDomain)) {
             query.put("AuxiliaryDomain", request.auxiliaryDomain);
         }
@@ -4846,6 +4854,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSAMLProviderResponse updateSAMLProviderWithOptions(UpdateSAMLProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authnSignAlgo)) {
+            query.put("AuthnSignAlgo", request.authnSignAlgo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newDescription)) {
             query.put("NewDescription", request.newDescription);
         }
