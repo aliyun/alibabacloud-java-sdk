@@ -220,6 +220,9 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     @NameInMap("TaskAction")
     public String taskAction;
 
+    @NameInMap("TransferFileListPath")
+    public String transferFileListPath;
+
     public static CreateDataFlowTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataFlowTaskRequest self = new CreateDataFlowTaskRequest();
         return TeaModel.build(map, self);
@@ -327,6 +330,14 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     }
     public String getTaskAction() {
         return this.taskAction;
+    }
+
+    public CreateDataFlowTaskRequest setTransferFileListPath(String transferFileListPath) {
+        this.transferFileListPath = transferFileListPath;
+        return this;
+    }
+    public String getTransferFileListPath() {
+        return this.transferFileListPath;
     }
 
 }

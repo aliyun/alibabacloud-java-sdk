@@ -543,6 +543,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        @NameInMap("TransferFileListPath")
+        public String transferFileListPath;
+
         public static DescribeDataFlowTasksResponseBodyTaskInfoTask build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataFlowTasksResponseBodyTaskInfoTask self = new DescribeDataFlowTasksResponseBodyTaskInfoTask();
             return TeaModel.build(map, self);
@@ -723,6 +726,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public DescribeDataFlowTasksResponseBodyTaskInfoTask setTransferFileListPath(String transferFileListPath) {
+            this.transferFileListPath = transferFileListPath;
+            return this;
+        }
+        public String getTransferFileListPath() {
+            return this.transferFileListPath;
         }
 
     }
