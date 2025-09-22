@@ -581,6 +581,9 @@ public class ExtendClusterRequest extends TeaModel {
     }
 
     public static class ExtendClusterRequestNodeGroupsNodesDataDisk extends TeaModel {
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         /**
          * <p>Type</p>
          * 
@@ -608,6 +611,9 @@ public class ExtendClusterRequest extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
         /**
          * <p>Disk Size</p>
          * 
@@ -620,6 +626,14 @@ public class ExtendClusterRequest extends TeaModel {
         public static ExtendClusterRequestNodeGroupsNodesDataDisk build(java.util.Map<String, ?> map) throws Exception {
             ExtendClusterRequestNodeGroupsNodesDataDisk self = new ExtendClusterRequestNodeGroupsNodesDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public ExtendClusterRequestNodeGroupsNodesDataDisk setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public ExtendClusterRequestNodeGroupsNodesDataDisk setCategory(String category) {
@@ -644,6 +658,14 @@ public class ExtendClusterRequest extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+        public ExtendClusterRequestNodeGroupsNodesDataDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
         }
 
         public ExtendClusterRequestNodeGroupsNodesDataDisk setSize(Integer size) {
