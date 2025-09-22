@@ -10,6 +10,12 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     @NameInMap("ApiKeys")
     public DescribeInstanceAuthInfoResponseBodyApiKeys apiKeys;
 
+    @NameInMap("ConfigList")
+    public java.util.List<DescribeInstanceAuthInfoResponseBodyConfigList> configList;
+
+    @NameInMap("InstanceName")
+    public String instanceName;
+
     /**
      * <strong>example:</strong>
      * <p>i5o1XAp4sR*****oyOb3O</p>
@@ -35,6 +41,22 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     }
     public DescribeInstanceAuthInfoResponseBodyApiKeys getApiKeys() {
         return this.apiKeys;
+    }
+
+    public DescribeInstanceAuthInfoResponseBody setConfigList(java.util.List<DescribeInstanceAuthInfoResponseBodyConfigList> configList) {
+        this.configList = configList;
+        return this;
+    }
+    public java.util.List<DescribeInstanceAuthInfoResponseBodyConfigList> getConfigList() {
+        return this.configList;
+    }
+
+    public DescribeInstanceAuthInfoResponseBody setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public DescribeInstanceAuthInfoResponseBody setJwtSecret(String jwtSecret) {
@@ -91,6 +113,36 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
         }
         public String getServiceKey() {
             return this.serviceKey;
+        }
+
+    }
+
+    public static class DescribeInstanceAuthInfoResponseBodyConfigList extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstanceAuthInfoResponseBodyConfigList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAuthInfoResponseBodyConfigList self = new DescribeInstanceAuthInfoResponseBodyConfigList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAuthInfoResponseBodyConfigList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeInstanceAuthInfoResponseBodyConfigList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
