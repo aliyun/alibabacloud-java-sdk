@@ -1,3 +1,7 @@
+2025-09-22 Version: 3.8.0
+- Support API DescribeVodUserVipsByDomain.
+
+
 2025-08-06 Version: 3.7.0
 - Support API AddCustomTemplateAndGroupConsole.
 - Support API AddFilterConfigs.
