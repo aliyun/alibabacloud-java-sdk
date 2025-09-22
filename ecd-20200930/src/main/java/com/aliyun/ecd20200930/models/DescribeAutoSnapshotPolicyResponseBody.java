@@ -85,6 +85,9 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         @NameInMap("DesktopNum")
         public Integer desktopNum;
 
+        @NameInMap("DiskType")
+        public String diskType;
+
         /**
          * <p>The ID of the automatic snapshot policy.</p>
          * 
@@ -183,6 +186,14 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         }
         public Integer getDesktopNum() {
             return this.desktopNum;
+        }
+
+        public DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
         }
 
         public DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies setPolicyId(String policyId) {

@@ -14,6 +14,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("CronExpression")
     public String cronExpression;
 
+    @NameInMap("DiskType")
+    public String diskType;
+
     /**
      * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</p>
      * <p>This parameter is required.</p>
@@ -55,6 +58,14 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     }
     public String getCronExpression() {
         return this.cronExpression;
+    }
+
+    public CreateAutoSnapshotPolicyRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public CreateAutoSnapshotPolicyRequest setPolicyName(String policyName) {

@@ -71,6 +71,9 @@ public class CreateNetworkPackageRequest extends TeaModel {
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    @NameInMap("ChannelCookie")
+    public String channelCookie;
+
     /**
      * <p>The charge type of the premium bandwidth plan.</p>
      * <ul>
@@ -212,6 +215,14 @@ public class CreateNetworkPackageRequest extends TeaModel {
     }
     public Integer getBandwidth() {
         return this.bandwidth;
+    }
+
+    public CreateNetworkPackageRequest setChannelCookie(String channelCookie) {
+        this.channelCookie = channelCookie;
+        return this;
+    }
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     public CreateNetworkPackageRequest setInternetChargeType(String internetChargeType) {

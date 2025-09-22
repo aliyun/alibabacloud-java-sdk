@@ -52,6 +52,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("BundleModels")
     public java.util.List<CreateDesktopsRequestBundleModels> bundleModels;
 
+    @NameInMap("ChannelCookie")
+    public String channelCookie;
+
     /**
      * <p>The billing method of the cloud computers.</p>
      * <p>Default value: PostPaid. Valid values:</p>
@@ -448,6 +451,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public java.util.List<CreateDesktopsRequestBundleModels> getBundleModels() {
         return this.bundleModels;
+    }
+
+    public CreateDesktopsRequest setChannelCookie(String channelCookie) {
+        this.channelCookie = channelCookie;
+        return this;
+    }
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     public CreateDesktopsRequest setChargeType(String chargeType) {

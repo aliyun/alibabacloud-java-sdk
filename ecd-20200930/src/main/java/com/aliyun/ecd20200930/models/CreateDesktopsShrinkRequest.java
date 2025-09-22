@@ -52,6 +52,9 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     @NameInMap("BundleModels")
     public java.util.List<CreateDesktopsShrinkRequestBundleModels> bundleModels;
 
+    @NameInMap("ChannelCookie")
+    public String channelCookie;
+
     /**
      * <p>The billing method of the cloud computers.</p>
      * <p>Default value: PostPaid. Valid values:</p>
@@ -448,6 +451,14 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     }
     public java.util.List<CreateDesktopsShrinkRequestBundleModels> getBundleModels() {
         return this.bundleModels;
+    }
+
+    public CreateDesktopsShrinkRequest setChannelCookie(String channelCookie) {
+        this.channelCookie = channelCookie;
+        return this;
+    }
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     public CreateDesktopsShrinkRequest setChargeType(String chargeType) {

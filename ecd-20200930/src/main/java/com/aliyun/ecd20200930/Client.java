@@ -2032,6 +2032,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CronExpression", request.cronExpression);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.diskType)) {
+            query.put("DiskType", request.diskType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
             query.put("PolicyName", request.policyName);
         }
@@ -3674,6 +3678,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BundleModels", request.bundleModels);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.channelCookie)) {
+            query.put("ChannelCookie", request.channelCookie);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             query.put("ChargeType", request.chargeType);
         }
@@ -4341,6 +4349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
             query.put("Bandwidth", request.bandwidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelCookie)) {
+            query.put("ChannelCookie", request.channelCookie);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
@@ -13748,6 +13760,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cronExpression)) {
             query.put("CronExpression", request.cronExpression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskType)) {
+            query.put("DiskType", request.diskType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {

@@ -13,6 +13,9 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("CronExpression")
     public String cronExpression;
 
+    @NameInMap("DiskType")
+    public String diskType;
+
     /**
      * <p>The ID of the automatic snapshot policy.</p>
      * <p>This parameter is required.</p>
@@ -62,6 +65,14 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     }
     public String getCronExpression() {
         return this.cronExpression;
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public ModifyAutoSnapshotPolicyRequest setPolicyId(String policyId) {
