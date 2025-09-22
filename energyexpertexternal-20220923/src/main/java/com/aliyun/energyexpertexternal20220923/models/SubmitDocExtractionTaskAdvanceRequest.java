@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitDocExtractionTaskAdvanceRequest extends TeaModel {
     /**
-     * <p>Document parsing type:
+     * <p>Document extraction type:
      * Supports rag and long text understanding types, default is rag.</p>
      * 
      * <strong>example:</strong>
@@ -33,11 +33,11 @@ public class SubmitDocExtractionTaskAdvanceRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The relationship between file parsing methods and supported document types</p>
+     * <p>The relationship between file extraction methods and supported document types</p>
      * <ul>
-     * <li>Long text RAG: Supports pdf, doc/docx, up to 1000 pages</li>
-     * <li>Image processing: Supports pdf, jpg, jpeg, png, bmp</li>
-     * <li>Long text understanding: Supports pdf, doc/docx, xls/xlsx</li>
+     * <li>Long text RAG: Supports pdf, doc/docx, xlsx, csv, txt, up to 1000 pages</li>
+     * <li>Image processing: Supports pdf, jpg, jpeg, png, bmp, jpe, tif, tiff, webp, heic</li>
+     * <li>Long text understanding: Supports doc/docx, xlsx, pdf, csv, txt</li>
      * </ul>
      * </blockquote>
      * 
@@ -61,7 +61,7 @@ public class SubmitDocExtractionTaskAdvanceRequest extends TeaModel {
     public String folderId;
 
     /**
-     * <p>A unique parsing template ID used to specify the key-value pairs to be extracted from the document. You need to log in to the template management page to configure the template and obtain the corresponding template ID.</p>
+     * <p>A unique extraction template ID used to specify the content to be extracted from the document. You need to log in to the template management page to configure the template and obtain the corresponding template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -190,7 +190,7 @@ public class GetDocExtractionResultResponseBody extends TeaModel {
 
     public static class GetDocExtractionResultResponseBodyData extends TeaModel {
         /**
-         * <p>Details of document parsing results</p>
+         * <p>Details of document extraction results</p>
          */
         @NameInMap("kvListInfo")
         public java.util.List<GetDocExtractionResultResponseBodyDataKvListInfo> kvListInfo;
