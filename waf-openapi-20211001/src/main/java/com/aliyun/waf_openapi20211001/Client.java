@@ -9553,6 +9553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeTemplateResourcesResponse describeTemplateResourcesWithOptions(DescribeTemplateResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetApi)) {
+            query.put("AssetApi", request.assetApi);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -12619,6 +12623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyTemplateResourcesResponse modifyTemplateResourcesWithOptions(ModifyTemplateResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bindAssets)) {
+            query.put("BindAssets", request.bindAssets);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bindResourceGroups)) {
             query.put("BindResourceGroups", request.bindResourceGroups);
         }
@@ -12641,6 +12649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unbindAssets)) {
+            query.put("UnbindAssets", request.unbindAssets);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.unbindResourceGroups)) {

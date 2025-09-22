@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyTemplateResourcesRequest extends TeaModel {
+    @NameInMap("BindAssets")
+    public java.util.List<String> bindAssets;
+
     /**
      * <p>The protected object groups that you want to associate with the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
      */
@@ -61,6 +64,9 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     @NameInMap("TemplateId")
     public Long templateId;
 
+    @NameInMap("UnbindAssets")
+    public java.util.List<String> unbindAssets;
+
     /**
      * <p>The protected object groups that you want to disassociate from the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
      */
@@ -76,6 +82,14 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     public static ModifyTemplateResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTemplateResourcesRequest self = new ModifyTemplateResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyTemplateResourcesRequest setBindAssets(java.util.List<String> bindAssets) {
+        this.bindAssets = bindAssets;
+        return this;
+    }
+    public java.util.List<String> getBindAssets() {
+        return this.bindAssets;
     }
 
     public ModifyTemplateResourcesRequest setBindResourceGroups(java.util.List<String> bindResourceGroups) {
@@ -124,6 +138,14 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     }
     public Long getTemplateId() {
         return this.templateId;
+    }
+
+    public ModifyTemplateResourcesRequest setUnbindAssets(java.util.List<String> unbindAssets) {
+        this.unbindAssets = unbindAssets;
+        return this;
+    }
+    public java.util.List<String> getUnbindAssets() {
+        return this.unbindAssets;
     }
 
     public ModifyTemplateResourcesRequest setUnbindResourceGroups(java.util.List<String> unbindResourceGroups) {

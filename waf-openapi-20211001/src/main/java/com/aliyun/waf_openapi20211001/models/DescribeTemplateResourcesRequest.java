@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplateResourcesRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>abc.com</p>
+     */
+    @NameInMap("AssetApi")
+    public String assetApi;
+
+    /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
@@ -75,6 +82,14 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
     public static DescribeTemplateResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTemplateResourcesRequest self = new DescribeTemplateResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTemplateResourcesRequest setAssetApi(String assetApi) {
+        this.assetApi = assetApi;
+        return this;
+    }
+    public String getAssetApi() {
+        return this.assetApi;
     }
 
     public DescribeTemplateResourcesRequest setInstanceId(String instanceId) {

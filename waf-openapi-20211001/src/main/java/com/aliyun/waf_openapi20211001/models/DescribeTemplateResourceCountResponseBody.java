@@ -42,6 +42,13 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
 
     public static class DescribeTemplateResourceCountResponseBodyResourceCount extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("AssetCount")
+        public Integer assetCount;
+
+        /**
          * <p>The number of protected object groups.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +78,14 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         public static DescribeTemplateResourceCountResponseBodyResourceCount build(java.util.Map<String, ?> map) throws Exception {
             DescribeTemplateResourceCountResponseBodyResourceCount self = new DescribeTemplateResourceCountResponseBodyResourceCount();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTemplateResourceCountResponseBodyResourceCount setAssetCount(Integer assetCount) {
+            this.assetCount = assetCount;
+            return this;
+        }
+        public Integer getAssetCount() {
+            return this.assetCount;
         }
 
         public DescribeTemplateResourceCountResponseBodyResourceCount setGroupCount(Integer groupCount) {
