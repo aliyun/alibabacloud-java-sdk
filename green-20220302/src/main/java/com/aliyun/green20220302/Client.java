@@ -534,6 +534,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>图片审核</p>
+     * 
+     * @param request ImageQueueModerationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImageQueueModerationResponse
+     */
+    public ImageQueueModerationResponse imageQueueModerationWithOptions(ImageQueueModerationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            body.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            body.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImageQueueModeration"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageQueueModerationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>图片审核</p>
+     * 
+     * @param request ImageQueueModerationRequest
+     * @return ImageQueueModerationResponse
+     */
+    public ImageQueueModerationResponse imageQueueModeration(ImageQueueModerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.imageQueueModerationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Content Security Manual Review Result Callback Interface</p>
      * 
      * @param request ManualCallbackRequest

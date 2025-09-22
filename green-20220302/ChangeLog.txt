@@ -1,3 +1,7 @@
+2025-09-22 Version: 2.24.0
+- Support API ImageQueueModeration.
+
+
 2025-09-08 Version: 2.23.0
 - Support API DescribeMultimodalModerationResult.
 - Support API MultimodalAsyncModeration.
