@@ -22,6 +22,9 @@ public class RunCommandResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RunCommandInfos")
+    public java.util.List<RunCommandResponseBodyRunCommandInfos> runCommandInfos;
+
     public static RunCommandResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunCommandResponseBody self = new RunCommandResponseBody();
         return TeaModel.build(map, self);
@@ -41,6 +44,44 @@ public class RunCommandResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RunCommandResponseBody setRunCommandInfos(java.util.List<RunCommandResponseBodyRunCommandInfos> runCommandInfos) {
+        this.runCommandInfos = runCommandInfos;
+        return this;
+    }
+    public java.util.List<RunCommandResponseBodyRunCommandInfos> getRunCommandInfos() {
+        return this.runCommandInfos;
+    }
+
+    public static class RunCommandResponseBodyRunCommandInfos extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InvokeId")
+        public String invokeId;
+
+        public static RunCommandResponseBodyRunCommandInfos build(java.util.Map<String, ?> map) throws Exception {
+            RunCommandResponseBodyRunCommandInfos self = new RunCommandResponseBodyRunCommandInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCommandResponseBodyRunCommandInfos setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public RunCommandResponseBodyRunCommandInfos setInvokeId(String invokeId) {
+            this.invokeId = invokeId;
+            return this;
+        }
+        public String getInvokeId() {
+            return this.invokeId;
+        }
+
     }
 
 }

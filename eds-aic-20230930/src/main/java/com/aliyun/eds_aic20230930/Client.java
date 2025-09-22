@@ -2961,6 +2961,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>扩容实例的独立机身存储</p>
+     * 
+     * @param request ExpandPhoneDataVolumeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExpandPhoneDataVolumeResponse
+     */
+    public ExpandPhoneDataVolumeResponse expandPhoneDataVolumeWithOptions(ExpandPhoneDataVolumeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneDataVolume)) {
+            query.put("PhoneDataVolume", request.phoneDataVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExpandPhoneDataVolume"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExpandPhoneDataVolumeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>扩容实例的独立机身存储</p>
+     * 
+     * @param request ExpandPhoneDataVolumeRequest
+     * @return ExpandPhoneDataVolumeResponse
+     */
+    public ExpandPhoneDataVolumeResponse expandPhoneDataVolume(ExpandPhoneDataVolumeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.expandPhoneDataVolumeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</p>
      * 
