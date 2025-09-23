@@ -68,6 +68,9 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("handler")
     public String handler;
 
+    @NameInMap("idleTimeout")
+    public Integer idleTimeout;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -260,6 +263,14 @@ public class CreateFunctionInput extends TeaModel {
     }
     public String getHandler() {
         return this.handler;
+    }
+
+    public CreateFunctionInput setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     public CreateFunctionInput setInstanceConcurrency(Integer instanceConcurrency) {

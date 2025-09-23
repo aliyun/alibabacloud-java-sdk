@@ -96,6 +96,9 @@ public class Function extends TeaModel {
     @NameInMap("handler")
     public String handler;
 
+    @NameInMap("idleTimeout")
+    public Integer idleTimeout;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -186,6 +189,10 @@ public class Function extends TeaModel {
     @NameInMap("sessionAffinity")
     public String sessionAffinity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;sseEndpointPath&quot;:&quot;/sse&quot;, &quot;sessionConcurrencyPerInstance&quot;:20}</p>
+     */
     @NameInMap("sessionAffinityConfig")
     public String sessionAffinityConfig;
 
@@ -366,6 +373,14 @@ public class Function extends TeaModel {
     }
     public String getHandler() {
         return this.handler;
+    }
+
+    public Function setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     public Function setInstanceConcurrency(Integer instanceConcurrency) {
