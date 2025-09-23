@@ -77,6 +77,9 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         @NameInMap("Voice")
         public String voice;
 
+        @NameInMap("VoiceSource")
+        public String voiceSource;
+
         /**
          * <p>The speaker type.</p>
          * <p>Valid values:</p>
@@ -153,6 +156,14 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         }
         public String getVoice() {
             return this.voice;
+        }
+
+        public ListSmartVoiceGroupsResponseBodyVoiceGroupsVoiceList setVoiceSource(String voiceSource) {
+            this.voiceSource = voiceSource;
+            return this;
+        }
+        public String getVoiceSource() {
+            return this.voiceSource;
         }
 
         public ListSmartVoiceGroupsResponseBodyVoiceGroupsVoiceList setVoiceType(String voiceType) {
