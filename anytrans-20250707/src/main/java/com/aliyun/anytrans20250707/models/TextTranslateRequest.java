@@ -115,6 +115,25 @@ public class TextTranslateRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class TextTranslateRequestExtConfig extends TeaModel {
+        @NameInMap("skipCsiCheck")
+        public Boolean skipCsiCheck;
+
+        public static TextTranslateRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
+            TextTranslateRequestExtConfig self = new TextTranslateRequestExtConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public TextTranslateRequestExtConfig setSkipCsiCheck(Boolean skipCsiCheck) {
+            this.skipCsiCheck = skipCsiCheck;
+            return this;
+        }
+        public Boolean getSkipCsiCheck() {
+            return this.skipCsiCheck;
+        }
+
+    }
+
     public static class TextTranslateRequestExtExamples extends TeaModel {
         @NameInMap("src")
         public String src;
@@ -237,6 +256,9 @@ public class TextTranslateRequest extends TeaModel {
     }
 
     public static class TextTranslateRequestExt extends TeaModel {
+        @NameInMap("config")
+        public TextTranslateRequestExtConfig config;
+
         /**
          * <strong>example:</strong>
          * <p>technology</p>
@@ -259,6 +281,14 @@ public class TextTranslateRequest extends TeaModel {
         public static TextTranslateRequestExt build(java.util.Map<String, ?> map) throws Exception {
             TextTranslateRequestExt self = new TextTranslateRequestExt();
             return TeaModel.build(map, self);
+        }
+
+        public TextTranslateRequestExt setConfig(TextTranslateRequestExtConfig config) {
+            this.config = config;
+            return this;
+        }
+        public TextTranslateRequestExtConfig getConfig() {
+            return this.config;
         }
 
         public TextTranslateRequestExt setDomainHint(String domainHint) {

@@ -108,6 +108,25 @@ public class SubmitLongTextTranslateTaskRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class SubmitLongTextTranslateTaskRequestExtConfig extends TeaModel {
+        @NameInMap("skipCsiCheck")
+        public Boolean skipCsiCheck;
+
+        public static SubmitLongTextTranslateTaskRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitLongTextTranslateTaskRequestExtConfig self = new SubmitLongTextTranslateTaskRequestExtConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitLongTextTranslateTaskRequestExtConfig setSkipCsiCheck(Boolean skipCsiCheck) {
+            this.skipCsiCheck = skipCsiCheck;
+            return this;
+        }
+        public Boolean getSkipCsiCheck() {
+            return this.skipCsiCheck;
+        }
+
+    }
+
     public static class SubmitLongTextTranslateTaskRequestExtExamples extends TeaModel {
         @NameInMap("src")
         public String src;
@@ -230,6 +249,9 @@ public class SubmitLongTextTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitLongTextTranslateTaskRequestExt extends TeaModel {
+        @NameInMap("config")
+        public SubmitLongTextTranslateTaskRequestExtConfig config;
+
         /**
          * <strong>example:</strong>
          * <p>technology</p>
@@ -252,6 +274,14 @@ public class SubmitLongTextTranslateTaskRequest extends TeaModel {
         public static SubmitLongTextTranslateTaskRequestExt build(java.util.Map<String, ?> map) throws Exception {
             SubmitLongTextTranslateTaskRequestExt self = new SubmitLongTextTranslateTaskRequestExt();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitLongTextTranslateTaskRequestExt setConfig(SubmitLongTextTranslateTaskRequestExtConfig config) {
+            this.config = config;
+            return this;
+        }
+        public SubmitLongTextTranslateTaskRequestExtConfig getConfig() {
+            return this.config;
         }
 
         public SubmitLongTextTranslateTaskRequestExt setDomainHint(String domainHint) {

@@ -4,6 +4,9 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class BatchTranslateRequest extends TeaModel {
+    @NameInMap("appName")
+    public String appName;
+
     @NameInMap("ext")
     public BatchTranslateRequestExt ext;
 
@@ -57,6 +60,14 @@ public class BatchTranslateRequest extends TeaModel {
     public static BatchTranslateRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchTranslateRequest self = new BatchTranslateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchTranslateRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public BatchTranslateRequest setExt(BatchTranslateRequestExt ext) {
@@ -113,6 +124,25 @@ public class BatchTranslateRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class BatchTranslateRequestExtConfig extends TeaModel {
+        @NameInMap("skipCsiCheck")
+        public Boolean skipCsiCheck;
+
+        public static BatchTranslateRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
+            BatchTranslateRequestExtConfig self = new BatchTranslateRequestExtConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchTranslateRequestExtConfig setSkipCsiCheck(Boolean skipCsiCheck) {
+            this.skipCsiCheck = skipCsiCheck;
+            return this;
+        }
+        public Boolean getSkipCsiCheck() {
+            return this.skipCsiCheck;
+        }
+
     }
 
     public static class BatchTranslateRequestExtExamples extends TeaModel {
@@ -237,6 +267,9 @@ public class BatchTranslateRequest extends TeaModel {
     }
 
     public static class BatchTranslateRequestExt extends TeaModel {
+        @NameInMap("config")
+        public BatchTranslateRequestExtConfig config;
+
         /**
          * <strong>example:</strong>
          * <p>technology</p>
@@ -259,6 +292,14 @@ public class BatchTranslateRequest extends TeaModel {
         public static BatchTranslateRequestExt build(java.util.Map<String, ?> map) throws Exception {
             BatchTranslateRequestExt self = new BatchTranslateRequestExt();
             return TeaModel.build(map, self);
+        }
+
+        public BatchTranslateRequestExt setConfig(BatchTranslateRequestExtConfig config) {
+            this.config = config;
+            return this;
+        }
+        public BatchTranslateRequestExtConfig getConfig() {
+            return this.config;
         }
 
         public BatchTranslateRequestExt setDomainHint(String domainHint) {

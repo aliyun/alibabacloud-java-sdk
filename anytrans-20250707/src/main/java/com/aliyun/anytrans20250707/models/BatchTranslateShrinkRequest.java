@@ -4,6 +4,9 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class BatchTranslateShrinkRequest extends TeaModel {
+    @NameInMap("appName")
+    public String appName;
+
     @NameInMap("ext")
     public String extShrink;
 
@@ -57,6 +60,14 @@ public class BatchTranslateShrinkRequest extends TeaModel {
     public static BatchTranslateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchTranslateShrinkRequest self = new BatchTranslateShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchTranslateShrinkRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public BatchTranslateShrinkRequest setExtShrink(String extShrink) {

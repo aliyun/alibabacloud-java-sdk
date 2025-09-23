@@ -108,6 +108,25 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class SubmitHtmlTranslateTaskRequestExtConfig extends TeaModel {
+        @NameInMap("skipCsiCheck")
+        public Boolean skipCsiCheck;
+
+        public static SubmitHtmlTranslateTaskRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitHtmlTranslateTaskRequestExtConfig self = new SubmitHtmlTranslateTaskRequestExtConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitHtmlTranslateTaskRequestExtConfig setSkipCsiCheck(Boolean skipCsiCheck) {
+            this.skipCsiCheck = skipCsiCheck;
+            return this;
+        }
+        public Boolean getSkipCsiCheck() {
+            return this.skipCsiCheck;
+        }
+
+    }
+
     public static class SubmitHtmlTranslateTaskRequestExtExamples extends TeaModel {
         @NameInMap("src")
         public String src;
@@ -230,6 +249,9 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitHtmlTranslateTaskRequestExt extends TeaModel {
+        @NameInMap("config")
+        public SubmitHtmlTranslateTaskRequestExtConfig config;
+
         /**
          * <strong>example:</strong>
          * <p>technology</p>
@@ -252,6 +274,14 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
         public static SubmitHtmlTranslateTaskRequestExt build(java.util.Map<String, ?> map) throws Exception {
             SubmitHtmlTranslateTaskRequestExt self = new SubmitHtmlTranslateTaskRequestExt();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitHtmlTranslateTaskRequestExt setConfig(SubmitHtmlTranslateTaskRequestExtConfig config) {
+            this.config = config;
+            return this;
+        }
+        public SubmitHtmlTranslateTaskRequestExtConfig getConfig() {
+            return this.config;
         }
 
         public SubmitHtmlTranslateTaskRequestExt setDomainHint(String domainHint) {

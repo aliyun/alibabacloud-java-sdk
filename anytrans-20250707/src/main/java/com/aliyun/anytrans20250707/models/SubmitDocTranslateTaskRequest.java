@@ -118,40 +118,6 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
         return this.workspaceId;
     }
 
-    public static class SubmitDocTranslateTaskRequestExtExamples extends TeaModel {
-        @NameInMap("src")
-        public String src;
-
-        /**
-         * <strong>example:</strong>
-         * <p>llm</p>
-         */
-        @NameInMap("tgt")
-        public String tgt;
-
-        public static SubmitDocTranslateTaskRequestExtExamples build(java.util.Map<String, ?> map) throws Exception {
-            SubmitDocTranslateTaskRequestExtExamples self = new SubmitDocTranslateTaskRequestExtExamples();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitDocTranslateTaskRequestExtExamples setSrc(String src) {
-            this.src = src;
-            return this;
-        }
-        public String getSrc() {
-            return this.src;
-        }
-
-        public SubmitDocTranslateTaskRequestExtExamples setTgt(String tgt) {
-            this.tgt = tgt;
-            return this;
-        }
-        public String getTgt() {
-            return this.tgt;
-        }
-
-    }
-
     public static class SubmitDocTranslateTaskRequestExtTerminologies extends TeaModel {
         @NameInMap("src")
         public String src;
@@ -186,59 +152,6 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
 
     }
 
-    public static class SubmitDocTranslateTaskRequestExtTextTransform extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("toLower")
-        public Boolean toLower;
-
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("toTitle")
-        public Boolean toTitle;
-
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("toUpper")
-        public Boolean toUpper;
-
-        public static SubmitDocTranslateTaskRequestExtTextTransform build(java.util.Map<String, ?> map) throws Exception {
-            SubmitDocTranslateTaskRequestExtTextTransform self = new SubmitDocTranslateTaskRequestExtTextTransform();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitDocTranslateTaskRequestExtTextTransform setToLower(Boolean toLower) {
-            this.toLower = toLower;
-            return this;
-        }
-        public Boolean getToLower() {
-            return this.toLower;
-        }
-
-        public SubmitDocTranslateTaskRequestExtTextTransform setToTitle(Boolean toTitle) {
-            this.toTitle = toTitle;
-            return this;
-        }
-        public Boolean getToTitle() {
-            return this.toTitle;
-        }
-
-        public SubmitDocTranslateTaskRequestExtTextTransform setToUpper(Boolean toUpper) {
-            this.toUpper = toUpper;
-            return this;
-        }
-        public Boolean getToUpper() {
-            return this.toUpper;
-        }
-
-    }
-
     public static class SubmitDocTranslateTaskRequestExt extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -247,17 +160,8 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
         @NameInMap("domainHint")
         public String domainHint;
 
-        @NameInMap("examples")
-        public java.util.List<SubmitDocTranslateTaskRequestExtExamples> examples;
-
-        @NameInMap("sensitives")
-        public java.util.List<String> sensitives;
-
         @NameInMap("terminologies")
         public java.util.List<SubmitDocTranslateTaskRequestExtTerminologies> terminologies;
-
-        @NameInMap("textTransform")
-        public SubmitDocTranslateTaskRequestExtTextTransform textTransform;
 
         public static SubmitDocTranslateTaskRequestExt build(java.util.Map<String, ?> map) throws Exception {
             SubmitDocTranslateTaskRequestExt self = new SubmitDocTranslateTaskRequestExt();
@@ -272,36 +176,12 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
             return this.domainHint;
         }
 
-        public SubmitDocTranslateTaskRequestExt setExamples(java.util.List<SubmitDocTranslateTaskRequestExtExamples> examples) {
-            this.examples = examples;
-            return this;
-        }
-        public java.util.List<SubmitDocTranslateTaskRequestExtExamples> getExamples() {
-            return this.examples;
-        }
-
-        public SubmitDocTranslateTaskRequestExt setSensitives(java.util.List<String> sensitives) {
-            this.sensitives = sensitives;
-            return this;
-        }
-        public java.util.List<String> getSensitives() {
-            return this.sensitives;
-        }
-
         public SubmitDocTranslateTaskRequestExt setTerminologies(java.util.List<SubmitDocTranslateTaskRequestExtTerminologies> terminologies) {
             this.terminologies = terminologies;
             return this;
         }
         public java.util.List<SubmitDocTranslateTaskRequestExtTerminologies> getTerminologies() {
             return this.terminologies;
-        }
-
-        public SubmitDocTranslateTaskRequestExt setTextTransform(SubmitDocTranslateTaskRequestExtTextTransform textTransform) {
-            this.textTransform = textTransform;
-            return this;
-        }
-        public SubmitDocTranslateTaskRequestExtTextTransform getTextTransform() {
-            return this.textTransform;
         }
 
     }
