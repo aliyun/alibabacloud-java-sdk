@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryAppMetadataRequest extends TeaModel {
+    @NameInMap("EndTimeMs")
+    public Long endTimeMs;
+
     /**
      * <p>The metadata IDs. Separate multiple IDs with commas (,).</p>
      * <p>You can obtain the exception ID on the <strong>Exception Analysis</strong> page of your application in the ARMS console.</p>
@@ -49,9 +52,20 @@ public class QueryAppMetadataRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StartTimeMs")
+    public Long startTimeMs;
+
     public static QueryAppMetadataRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAppMetadataRequest self = new QueryAppMetadataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAppMetadataRequest setEndTimeMs(Long endTimeMs) {
+        this.endTimeMs = endTimeMs;
+        return this;
+    }
+    public Long getEndTimeMs() {
+        return this.endTimeMs;
     }
 
     public QueryAppMetadataRequest setMetaIds(String metaIds) {
@@ -84,6 +98,14 @@ public class QueryAppMetadataRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public QueryAppMetadataRequest setStartTimeMs(Long startTimeMs) {
+        this.startTimeMs = startTimeMs;
+        return this;
+    }
+    public Long getStartTimeMs() {
+        return this.startTimeMs;
     }
 
 }
