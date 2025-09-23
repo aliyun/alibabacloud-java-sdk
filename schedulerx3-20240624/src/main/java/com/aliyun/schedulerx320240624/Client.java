@@ -120,6 +120,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            body.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
             body.put("ClusterName", request.clusterName);
         }
@@ -128,8 +132,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClusterSpec", request.clusterSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            body.put("Duration", request.duration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.engineType)) {
             body.put("EngineType", request.engineType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pricingCycle)) {
+            body.put("PricingCycle", request.pricingCycle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchesShrink)) {

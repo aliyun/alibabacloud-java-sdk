@@ -178,6 +178,13 @@ public class ListAppsResponseBody extends TeaModel {
         @NameInMap("Updater")
         public String updater;
 
+        /**
+         * <strong>example:</strong>
+         * <p>k8s_service</p>
+         */
+        @NameInMap("WorkerRegistry")
+        public String workerRegistry;
+
         public static ListAppsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListAppsResponseBodyDataRecords self = new ListAppsResponseBodyDataRecords();
             return TeaModel.build(map, self);
@@ -293,6 +300,14 @@ public class ListAppsResponseBody extends TeaModel {
         }
         public String getUpdater() {
             return this.updater;
+        }
+
+        public ListAppsResponseBodyDataRecords setWorkerRegistry(String workerRegistry) {
+            this.workerRegistry = workerRegistry;
+            return this;
+        }
+        public String getWorkerRegistry() {
+            return this.workerRegistry;
         }
 
     }

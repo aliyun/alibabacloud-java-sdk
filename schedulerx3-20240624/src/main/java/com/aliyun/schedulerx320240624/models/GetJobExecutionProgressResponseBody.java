@@ -553,6 +553,13 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
     }
 
     public static class GetJobExecutionProgressResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1758594961000</p>
+         */
+        @NameInMap("EndTime")
+        public String endTime;
+
         @NameInMap("JobDescription")
         public String jobDescription;
 
@@ -561,6 +568,13 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
 
         @NameInMap("ShardingProgress")
         public java.util.List<GetJobExecutionProgressResponseBodyDataShardingProgress> shardingProgress;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1758506761000</p>
+         */
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("TaskProgress")
         public java.util.List<GetJobExecutionProgressResponseBodyDataTaskProgress> taskProgress;
@@ -574,6 +588,14 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         public static GetJobExecutionProgressResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetJobExecutionProgressResponseBodyData self = new GetJobExecutionProgressResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetJobExecutionProgressResponseBodyData setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public GetJobExecutionProgressResponseBodyData setJobDescription(String jobDescription) {
@@ -598,6 +620,14 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         }
         public java.util.List<GetJobExecutionProgressResponseBodyDataShardingProgress> getShardingProgress() {
             return this.shardingProgress;
+        }
+
+        public GetJobExecutionProgressResponseBodyData setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public GetJobExecutionProgressResponseBodyData setTaskProgress(java.util.List<GetJobExecutionProgressResponseBodyDataTaskProgress> taskProgress) {

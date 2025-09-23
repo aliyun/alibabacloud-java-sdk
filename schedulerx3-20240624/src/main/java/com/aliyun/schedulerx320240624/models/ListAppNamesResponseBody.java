@@ -100,6 +100,13 @@ public class ListAppNamesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AppType")
+        public Integer appType;
+
+        /**
+         * <strong>example:</strong>
          * <p>15</p>
          */
         @NameInMap("Id")
@@ -107,6 +114,13 @@ public class ListAppNamesResponseBody extends TeaModel {
 
         @NameInMap("Title")
         public String title;
+
+        /**
+         * <strong>example:</strong>
+         * <p>k8s_service</p>
+         */
+        @NameInMap("WorkerRegistry")
+        public String workerRegistry;
 
         public static ListAppNamesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAppNamesResponseBodyData self = new ListAppNamesResponseBodyData();
@@ -129,6 +143,14 @@ public class ListAppNamesResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListAppNamesResponseBodyData setAppType(Integer appType) {
+            this.appType = appType;
+            return this;
+        }
+        public Integer getAppType() {
+            return this.appType;
+        }
+
         public ListAppNamesResponseBodyData setId(Long id) {
             this.id = id;
             return this;
@@ -143,6 +165,14 @@ public class ListAppNamesResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public ListAppNamesResponseBodyData setWorkerRegistry(String workerRegistry) {
+            this.workerRegistry = workerRegistry;
+            return this;
+        }
+        public String getWorkerRegistry() {
+            return this.workerRegistry;
         }
 
     }

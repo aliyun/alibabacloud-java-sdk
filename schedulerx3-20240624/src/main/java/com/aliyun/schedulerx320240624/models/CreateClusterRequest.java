@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>POSTPAY</p>
+     */
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +30,13 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterSpec;
 
     /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
+    @NameInMap("Duration")
+    public Integer duration;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +44,13 @@ public class CreateClusterRequest extends TeaModel {
      */
     @NameInMap("EngineType")
     public String engineType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Year</p>
+     */
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
 
     @NameInMap("Tag")
     public java.util.List<CreateClusterRequestTag> tag;
@@ -55,6 +76,14 @@ public class CreateClusterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateClusterRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
     public CreateClusterRequest setClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -71,12 +100,28 @@ public class CreateClusterRequest extends TeaModel {
         return this.clusterSpec;
     }
 
+    public CreateClusterRequest setDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Integer getDuration() {
+        return this.duration;
+    }
+
     public CreateClusterRequest setEngineType(String engineType) {
         this.engineType = engineType;
         return this;
     }
     public String getEngineType() {
         return this.engineType;
+    }
+
+    public CreateClusterRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
     }
 
     public CreateClusterRequest setTag(java.util.List<CreateClusterRequestTag> tag) {
