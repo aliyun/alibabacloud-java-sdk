@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.gpdb20160503.models;
+
+import com.aliyun.tea.*;
+
+public class CreateModelServiceResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public CreateModelServiceResponseBody body;
+
+    public static CreateModelServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateModelServiceResponse self = new CreateModelServiceResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateModelServiceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateModelServiceResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public CreateModelServiceResponse setBody(CreateModelServiceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateModelServiceResponseBody getBody() {
+        return this.body;
+    }
+
+}
