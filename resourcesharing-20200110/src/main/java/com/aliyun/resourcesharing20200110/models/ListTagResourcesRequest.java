@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
@@ -12,6 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID of the resource shares.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,16 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource share.</p>
+     * <p>You can specify up to 20 resource shares.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
+     * <p>Set the value to <code>ResourceShare</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,10 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     * <p>This parameter specifies a filter condition for the query. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -82,6 +95,11 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * <blockquote>
+         * <p> The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>k1</p>
          */
@@ -89,6 +107,11 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * <blockquote>
+         * <p> The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */

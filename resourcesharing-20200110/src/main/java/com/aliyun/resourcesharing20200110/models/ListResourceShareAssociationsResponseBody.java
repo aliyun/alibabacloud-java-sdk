@@ -131,6 +131,9 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         @NameInMap("OperationType")
         public String operationType;
 
+        @NameInMap("ResourceArn")
+        public String resourceArn;
+
         /**
          * <p>This parameter is deprecated. The FailureReason parameter is used instead.</p>
          * 
@@ -200,6 +203,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
         public String getOperationType() {
             return this.operationType;
+        }
+
+        public ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails setResourceArn(String resourceArn) {
+            this.resourceArn = resourceArn;
+            return this;
+        }
+        public String getResourceArn() {
+            return this.resourceArn;
         }
 
         public ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails setStatus(String status) {
@@ -319,6 +330,9 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
          */
         @NameInMap("External")
         public Boolean external;
+
+        @NameInMap("ResourceArn")
+        public String resourceArn;
 
         /**
          * <p>The ID of the resource share.</p>
@@ -441,6 +455,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
         public Boolean getExternal() {
             return this.external;
+        }
+
+        public ListResourceShareAssociationsResponseBodyResourceShareAssociations setResourceArn(String resourceArn) {
+            this.resourceArn = resourceArn;
+            return this;
+        }
+        public String getResourceArn() {
+            return this.resourceArn;
         }
 
         public ListResourceShareAssociationsResponseBodyResourceShareAssociations setResourceShareId(String resourceShareId) {

@@ -10,6 +10,9 @@ public class AssociateResourceShareRequest extends TeaModel {
     @NameInMap("PermissionNames")
     public java.util.List<String> permissionNames;
 
+    @NameInMap("ResourceArns")
+    public java.util.List<String> resourceArns;
+
     /**
      * <p>The ID of the resource share.</p>
      * <p>This parameter is required.</p>
@@ -55,6 +58,14 @@ public class AssociateResourceShareRequest extends TeaModel {
     }
     public java.util.List<String> getPermissionNames() {
         return this.permissionNames;
+    }
+
+    public AssociateResourceShareRequest setResourceArns(java.util.List<String> resourceArns) {
+        this.resourceArns = resourceArns;
+        return this;
+    }
+    public java.util.List<String> getResourceArns() {
+        return this.resourceArns;
     }
 
     public AssociateResourceShareRequest setResourceShareId(String resourceShareId) {

@@ -23,6 +23,15 @@ public class CreateResourceShareRequest extends TeaModel {
     @NameInMap("PermissionNames")
     public java.util.List<String> permissionNames;
 
+    @NameInMap("ResourceArns")
+    public java.util.List<String> resourceArns;
+
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz5nlvlak****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -44,6 +53,9 @@ public class CreateResourceShareRequest extends TeaModel {
     @NameInMap("Resources")
     public java.util.List<CreateResourceShareRequestResources> resources;
 
+    /**
+     * <p>The tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateResourceShareRequestTag> tag;
 
@@ -84,6 +96,14 @@ public class CreateResourceShareRequest extends TeaModel {
     }
     public java.util.List<String> getPermissionNames() {
         return this.permissionNames;
+    }
+
+    public CreateResourceShareRequest setResourceArns(java.util.List<String> resourceArns) {
+        this.resourceArns = resourceArns;
+        return this;
+    }
+    public java.util.List<String> getResourceArns() {
+        return this.resourceArns;
     }
 
     public CreateResourceShareRequest setResourceGroupId(String resourceGroupId) {
@@ -186,9 +206,27 @@ public class CreateResourceShareRequest extends TeaModel {
     }
 
     public static class CreateResourceShareRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <blockquote>
+         * <p> The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <blockquote>
+         * <p> The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -67,6 +67,9 @@ public class ListSharedResourcesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("ResourceArn")
+        public String resourceArn;
+
         /**
          * <p>The ID of the shared resource.</p>
          * 
@@ -140,6 +143,14 @@ public class ListSharedResourcesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListSharedResourcesResponseBodySharedResources setResourceArn(String resourceArn) {
+            this.resourceArn = resourceArn;
+            return this;
+        }
+        public String getResourceArn() {
+            return this.resourceArn;
         }
 
         public ListSharedResourcesResponseBodySharedResources setResourceId(String resourceId) {

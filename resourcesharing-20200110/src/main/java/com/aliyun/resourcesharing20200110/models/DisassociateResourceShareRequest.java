@@ -4,6 +4,9 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class DisassociateResourceShareRequest extends TeaModel {
+    @NameInMap("ResourceArns")
+    public java.util.List<String> resourceArns;
+
     /**
      * <p>The owner of the resource share. Valid values:</p>
      * <ul>
@@ -45,6 +48,14 @@ public class DisassociateResourceShareRequest extends TeaModel {
     public static DisassociateResourceShareRequest build(java.util.Map<String, ?> map) throws Exception {
         DisassociateResourceShareRequest self = new DisassociateResourceShareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisassociateResourceShareRequest setResourceArns(java.util.List<String> resourceArns) {
+        this.resourceArns = resourceArns;
+        return this;
+    }
+    public java.util.List<String> getResourceArns() {
+        return this.resourceArns;
     }
 
     public DisassociateResourceShareRequest setResourceOwner(String resourceOwner) {

@@ -56,6 +56,9 @@ public class ListResourceShareAssociationsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("ResourceArn")
+    public String resourceArn;
+
     /**
      * <p>The ID of the resource.</p>
      * <blockquote>
@@ -125,6 +128,14 @@ public class ListResourceShareAssociationsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListResourceShareAssociationsRequest setResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+    public String getResourceArn() {
+        return this.resourceArn;
     }
 
     public ListResourceShareAssociationsRequest setResourceId(String resourceId) {

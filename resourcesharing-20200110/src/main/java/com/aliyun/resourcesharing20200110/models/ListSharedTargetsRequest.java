@@ -23,6 +23,9 @@ public class ListSharedTargetsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("ResourceArn")
+    public String resourceArn;
+
     /**
      * <p>The ID of the shared resource.</p>
      * 
@@ -94,6 +97,14 @@ public class ListSharedTargetsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListSharedTargetsRequest setResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+    public String getResourceArn() {
+        return this.resourceArn;
     }
 
     public ListSharedTargetsRequest setResourceId(String resourceId) {

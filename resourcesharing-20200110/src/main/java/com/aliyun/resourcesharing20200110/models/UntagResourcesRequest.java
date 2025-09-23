@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to remove all tags. Valid values:</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +18,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>The region ID of the resource shares.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +27,16 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource share.</p>
+     * <p>You can specify up to 20 resource shares.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type.</p>
+     * <p>Set the value to <code>ResourceShare</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +45,13 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag key.</p>
+     * <p>You can specify up to 20 tag keys.</p>
+     * <blockquote>
+     * <p> If you set the <code>All</code> parameter to <code>true</code>, you do not need to configure this parameter.</p>
+     * </blockquote>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

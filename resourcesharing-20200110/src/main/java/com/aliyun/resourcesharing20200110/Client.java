@@ -104,6 +104,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PermissionNames", request.permissionNames);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceArns)) {
+            query.put("ResourceArns", request.resourceArns);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceShareId)) {
             query.put("ResourceShareId", request.resourceShareId);
         }
@@ -319,6 +323,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PermissionNames", request.permissionNames);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceArns)) {
+            query.put("ResourceArns", request.resourceArns);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -383,7 +391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to delete the resource share <code>rs-qSkW1HBY****</code> in the <code>cn-hangzhou</code> region.</p>
      * 
      * <b>summary</b> : 
-     * <p>调用DeleteResourceShare删除共享单元。</p>
+     * <p>Deletes a resource share.</p>
      * 
      * @param request DeleteResourceShareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -420,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to delete the resource share <code>rs-qSkW1HBY****</code> in the <code>cn-hangzhou</code> region.</p>
      * 
      * <b>summary</b> : 
-     * <p>调用DeleteResourceShare删除共享单元。</p>
+     * <p>Deletes a resource share.</p>
      * 
      * @param request DeleteResourceShareRequest
      * @return DeleteResourceShareResponse
@@ -492,6 +500,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisassociateResourceShareResponse disassociateResourceShareWithOptions(DisassociateResourceShareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceArns)) {
+            query.put("ResourceArns", request.resourceArns);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwner)) {
             query.put("ResourceOwner", request.resourceOwner);
         }
@@ -844,6 +856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceArn)) {
+            query.put("ResourceArn", request.resourceArn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
             query.put("ResourceId", request.resourceId);
         }
@@ -1020,7 +1036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created by using the account whose ID is <code>151266687691****</code>:</p>
+     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created within the account <code>151266687691****</code>:</p>
      * <ul>
      * <li><code>rs-hX9wC5jO****</code>, which is in the <code>Deleted</code> state</li>
      * <li><code>rs-PqysnzIj****</code>, which is in the <code>Active</code> state</li>
@@ -1091,7 +1107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created by using the account whose ID is <code>151266687691****</code>:</p>
+     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created within the account <code>151266687691****</code>:</p>
      * <ul>
      * <li><code>rs-hX9wC5jO****</code>, which is in the <code>Deleted</code> state</li>
      * <li><code>rs-PqysnzIj****</code>, which is in the <code>Active</code> state</li>
@@ -1128,6 +1144,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceArns)) {
+            query.put("ResourceArns", request.resourceArns);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
@@ -1205,6 +1225,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceArn)) {
+            query.put("ResourceArn", request.resourceArn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
             query.put("ResourceId", request.resourceId);
         }
@@ -1260,7 +1284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源标签</p>
+     * <p>Queries the tags that are added to resource shares.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1308,7 +1332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源标签</p>
+     * <p>Queries the tags that are added to resource shares.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -1370,7 +1394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源打用户标签</p>
+     * <p>Adds tags to a resource share.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1414,7 +1438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源打用户标签</p>
+     * <p>Adds tags to a resource share.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -1426,7 +1450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源去除用户标签</p>
+     * <p>Removes tags from resource shares.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1474,7 +1498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源去除用户标签</p>
+     * <p>Removes tags from resource shares.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

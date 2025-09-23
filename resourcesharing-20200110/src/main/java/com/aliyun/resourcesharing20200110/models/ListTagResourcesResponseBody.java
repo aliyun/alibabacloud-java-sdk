@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
@@ -12,12 +14,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8054B059-6B36-53BF-AA45-B8C9A0ED05AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -52,6 +59,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
+         * <p>The ID of the resource share.</p>
+         * 
          * <strong>example:</strong>
          * <p>rs-PqysnzIj****</p>
          */
@@ -59,6 +68,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * <p>The value can be only <code>ResourceShare</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ResourceShare</p>
          */
@@ -66,6 +78,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>k1</p>
          */
@@ -73,6 +87,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */

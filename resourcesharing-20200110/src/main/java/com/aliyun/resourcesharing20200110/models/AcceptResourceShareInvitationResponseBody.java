@@ -86,6 +86,9 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         @NameInMap("OperationType")
         public String operationType;
 
+        @NameInMap("ResourceArn")
+        public String resourceArn;
+
         /**
          * <p>The ID of the shared resource.</p>
          * 
@@ -158,6 +161,14 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         }
         public String getOperationType() {
             return this.operationType;
+        }
+
+        public AcceptResourceShareInvitationResponseBodyResourceShareInvitationAcceptInvitationFailedDetails setResourceArn(String resourceArn) {
+            this.resourceArn = resourceArn;
+            return this;
+        }
+        public String getResourceArn() {
+            return this.resourceArn;
         }
 
         public AcceptResourceShareInvitationResponseBodyResourceShareInvitationAcceptInvitationFailedDetails setResourceId(String resourceId) {

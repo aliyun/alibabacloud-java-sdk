@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceSharesResponseBody extends TeaModel {
     /**
-     * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
@@ -14,7 +14,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2F23CFB6-A721-4E90-AC1E-0E30FA8B45DA</p>
@@ -23,7 +23,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the resource shares.</p>
+     * <p>The information about the resource shares.</p>
      */
     @NameInMap("ResourceShares")
     public java.util.List<ListResourceSharesResponseBodyResourceShares> resourceShares;
@@ -58,9 +58,21 @@ public class ListResourceSharesResponseBody extends TeaModel {
     }
 
     public static class ListResourceSharesResponseBodyResourceSharesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -110,6 +122,12 @@ public class ListResourceSharesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz5nlvlak****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -143,13 +161,13 @@ public class ListResourceSharesResponseBody extends TeaModel {
         /**
          * <p>The status of the resource share. Valid values:</p>
          * <ul>
-         * <li>Active: The resource share is enabled.</li>
-         * <li>Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</li>
-         * <li>Deleting: The resource share is being deleted.</li>
-         * <li>Deleted: The resource share is deleted.</li>
+         * <li>Active</li>
+         * <li>Pending</li>
+         * <li>Deleting</li>
+         * <li>Deleted</li>
          * </ul>
          * <blockquote>
-         * <p> The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+         * <p> The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,6 +176,9 @@ public class ListResourceSharesResponseBody extends TeaModel {
         @NameInMap("ResourceShareStatus")
         public String resourceShareStatus;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListResourceSharesResponseBodyResourceSharesTags> tags;
 

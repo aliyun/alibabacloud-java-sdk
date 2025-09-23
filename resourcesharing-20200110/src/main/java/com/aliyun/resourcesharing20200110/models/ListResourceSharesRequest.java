@@ -15,7 +15,7 @@ public class ListResourceSharesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The <code>token</code> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
@@ -24,7 +24,7 @@ public class ListResourceSharesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The name of the permission. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
+     * <p>The information about the permissions. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunRSDefaultPermissionVSwitch</p>
@@ -32,6 +32,12 @@ public class ListResourceSharesRequest extends TeaModel {
     @NameInMap("PermissionName")
     public String permissionName;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz5nlvlak****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -50,7 +56,8 @@ public class ListResourceSharesRequest extends TeaModel {
     public String resourceOwner;
 
     /**
-     * <p>The ID of a resource share.</p>
+     * <p>The IDs of the resource shares.</p>
+     * <p>Valid values of N: 1 to 5. This indicates that a maximum of five resource shares can be specified at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>rs-PqysnzIj****</p>
@@ -68,15 +75,15 @@ public class ListResourceSharesRequest extends TeaModel {
     public String resourceShareName;
 
     /**
-     * <p>The status of the resource share. Valid values:</p>
+     * <p>The status of the resource shares. Valid values:</p>
      * <ul>
-     * <li>Active: The resource share is enabled.</li>
-     * <li>Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</li>
-     * <li>Deleting: The resource share is being deleted.</li>
-     * <li>Deleted: The resource share is deleted.</li>
+     * <li>Active</li>
+     * <li>Pending</li>
+     * <li>Deleting</li>
+     * <li>Deleted</li>
      * </ul>
      * <blockquote>
-     * <p> The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+     * <p> The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,6 +92,9 @@ public class ListResourceSharesRequest extends TeaModel {
     @NameInMap("ResourceShareStatus")
     public String resourceShareStatus;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListResourceSharesRequestTag> tag;
 
@@ -166,9 +176,27 @@ public class ListResourceSharesRequest extends TeaModel {
     }
 
     public static class ListResourceSharesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <blockquote>
+         * <p> The tag key can be 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <blockquote>
+         * <p> The tag value can be 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("Value")
         public String value;
 

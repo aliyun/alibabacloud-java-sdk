@@ -121,6 +121,9 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         @NameInMap("EntityType")
         public String entityType;
 
+        @NameInMap("ResourceArn")
+        public String resourceArn;
+
         /**
          * <p>The ID of the resource share.</p>
          * 
@@ -222,6 +225,14 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
+        }
+
+        public DisassociateResourceShareResponseBodyResourceShareAssociations setResourceArn(String resourceArn) {
+            this.resourceArn = resourceArn;
+            return this;
+        }
+        public String getResourceArn() {
+            return this.resourceArn;
         }
 
         public DisassociateResourceShareResponseBodyResourceShareAssociations setResourceShareId(String resourceShareId) {
