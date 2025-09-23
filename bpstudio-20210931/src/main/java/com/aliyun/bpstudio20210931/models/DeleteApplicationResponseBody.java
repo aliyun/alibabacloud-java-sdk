@@ -11,7 +11,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <p>The error message.</p>
@@ -36,11 +36,11 @@ public class DeleteApplicationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteApplicationResponseBody setCode(Integer code) {
+    public DeleteApplicationResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

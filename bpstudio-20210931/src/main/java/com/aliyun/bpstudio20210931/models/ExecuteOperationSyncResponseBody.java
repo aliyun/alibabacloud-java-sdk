@@ -9,7 +9,7 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <strong>example:</strong>
@@ -37,11 +37,11 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExecuteOperationSyncResponseBody setCode(Integer code) {
+    public ExecuteOperationSyncResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

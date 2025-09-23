@@ -11,7 +11,7 @@ public class ListApplicationResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <p>App listing information</p>
@@ -60,11 +60,11 @@ public class ListApplicationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListApplicationResponseBody setCode(Integer code) {
+    public ListApplicationResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

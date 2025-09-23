@@ -9,7 +9,7 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     @NameInMap("Data")
     public java.util.List<GetApplicationVariablesResponseBodyData> data;
@@ -35,11 +35,11 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetApplicationVariablesResponseBody setCode(Integer code) {
+    public GetApplicationVariablesResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

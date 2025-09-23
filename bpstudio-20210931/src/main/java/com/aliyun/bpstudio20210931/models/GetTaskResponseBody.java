@@ -9,7 +9,7 @@ public class GetTaskResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     @NameInMap("Data")
     public GetTaskResponseBodyData data;
@@ -35,11 +35,11 @@ public class GetTaskResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetTaskResponseBody setCode(Integer code) {
+    public GetTaskResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

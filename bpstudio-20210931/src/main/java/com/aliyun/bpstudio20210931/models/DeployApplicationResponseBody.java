@@ -11,7 +11,7 @@ public class DeployApplicationResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <p>The data of the application.</p>
@@ -45,11 +45,11 @@ public class DeployApplicationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeployApplicationResponseBody setCode(Integer code) {
+    public DeployApplicationResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

@@ -11,7 +11,7 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <p>The detailed result of the queried operation.</p>
@@ -42,11 +42,11 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetExecuteOperationResultResponseBody setCode(Integer code) {
+    public GetExecuteOperationResultResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

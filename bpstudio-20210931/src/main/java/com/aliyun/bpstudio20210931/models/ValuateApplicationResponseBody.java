@@ -11,7 +11,7 @@ public class ValuateApplicationResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <p>The ID of the request.</p>
@@ -45,11 +45,11 @@ public class ValuateApplicationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ValuateApplicationResponseBody setCode(Integer code) {
+    public ValuateApplicationResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

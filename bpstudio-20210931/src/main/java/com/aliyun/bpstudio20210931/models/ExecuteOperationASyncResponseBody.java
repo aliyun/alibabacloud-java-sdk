@@ -11,7 +11,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <p>The operation ID. You can call the GetExecuteOperationResult operation to asynchronously query the result of an operation. The ID expires after one hour.</p>
@@ -45,11 +45,11 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExecuteOperationASyncResponseBody setCode(Integer code) {
+    public ExecuteOperationASyncResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

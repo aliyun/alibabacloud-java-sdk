@@ -11,7 +11,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Long code;
+    public String code;
 
     /**
      * <p>No business data is returned for this parameter.</p>
@@ -45,11 +45,11 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ChangeResourceGroupResponseBody setCode(Long code) {
+    public ChangeResourceGroupResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Long getCode() {
+    public String getCode() {
         return this.code;
     }
 

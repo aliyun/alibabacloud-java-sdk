@@ -11,7 +11,7 @@ public class ListTemplateResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <p>The details about templates.</p>
@@ -60,11 +60,11 @@ public class ListTemplateResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListTemplateResponseBody setCode(Integer code) {
+    public ListTemplateResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

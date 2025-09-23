@@ -9,7 +9,7 @@ public class ReConfigApplicationResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <strong>example:</strong>
@@ -32,11 +32,11 @@ public class ReConfigApplicationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ReConfigApplicationResponseBody setCode(Integer code) {
+    public ReConfigApplicationResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 

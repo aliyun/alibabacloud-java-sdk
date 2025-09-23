@@ -9,7 +9,7 @@ public class CreateTaskResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     /**
      * <strong>example:</strong>
@@ -39,11 +39,11 @@ public class CreateTaskResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateTaskResponseBody setCode(Integer code) {
+    public CreateTaskResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
