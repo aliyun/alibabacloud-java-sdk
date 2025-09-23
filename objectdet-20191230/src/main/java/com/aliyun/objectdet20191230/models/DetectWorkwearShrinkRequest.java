@@ -7,6 +7,10 @@ public class DetectWorkwearShrinkRequest extends TeaModel {
     @NameInMap("Clothes")
     public String clothesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/zhangchaorun/tiyan/xxxx.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/zhangchaorun/tiyan/xxxx.jpg</a></p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 

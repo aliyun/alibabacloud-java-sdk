@@ -7,6 +7,10 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAsyncJobResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>87FC80D2-2571-4BBD-BD61-AFF7912C556D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     }
 
     public static class GetAsyncJobResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paramsIllegal</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35B11E1B-800C-4598-B5AA-577E3BDBD917</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;inputFile\&quot;:\&quot;oss://public-vigen-video/guotian.xgt/test_images/test_video\&quot;,\&quot;width\&quot;:1280,\&quot;height\&quot;:720,\&quot;frames\&quot;:[{\&quot;time\&quot;:6124533574,\&quot;elements\&quot;:[{\&quot;type\&quot;:\&quot;PERSON\&quot;,\&quot;score\&quot;:0.7812,\&quot;x\&quot;:289,\&quot;y\&quot;:271,\&quot;width\&quot;:100,\&quot;height\&quot;:156},{\&quot;type\&quot;:\&quot;PERSON\&quot;,\&quot;score\&quot;:0.4377,\&quot;x\&quot;:917,\&quot;y\&quot;:267,\&quot;width\&quot;:34,\&quot;height\&quot;:51}]}]}]}&quot;}</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROCESS_SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 

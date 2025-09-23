@@ -4,12 +4,21 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVehicleICongestionAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/objectdet/DetectVehicleICongestion/DetectVehicleICongestion1.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/objectdet/DetectVehicleICongestion/DetectVehicleICongestion1.jpg</a></p>
+     */
     @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
     @NameInMap("PreRegionIntersectFeatures")
     public java.util.List<DetectVehicleICongestionAdvanceRequestPreRegionIntersectFeatures> preRegionIntersectFeatures;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoadRegions")
     public java.util.List<DetectVehicleICongestionAdvanceRequestRoadRegions> roadRegions;
 
@@ -62,9 +71,21 @@ public class DetectVehicleICongestionAdvanceRequest extends TeaModel {
     }
 
     public static class DetectVehicleICongestionAdvanceRequestRoadRegionsRoadRegionPoint extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -92,6 +113,9 @@ public class DetectVehicleICongestionAdvanceRequest extends TeaModel {
     }
 
     public static class DetectVehicleICongestionAdvanceRequestRoadRegionsRoadRegion extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Point")
         public DetectVehicleICongestionAdvanceRequestRoadRegionsRoadRegionPoint point;
 
@@ -111,6 +135,9 @@ public class DetectVehicleICongestionAdvanceRequest extends TeaModel {
     }
 
     public static class DetectVehicleICongestionAdvanceRequestRoadRegions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RoadRegion")
         public java.util.List<DetectVehicleICongestionAdvanceRequestRoadRegionsRoadRegion> roadRegion;
 

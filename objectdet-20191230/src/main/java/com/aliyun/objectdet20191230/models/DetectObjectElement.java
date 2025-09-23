@@ -4,21 +4,45 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectObjectElement extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Height")
     public Long height;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.68225745</p>
+     */
     @NameInMap("Score")
     public Float score;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VEHICLE</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Width")
     public Long width;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("X")
     public Long x;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Y")
     public Long y;
 

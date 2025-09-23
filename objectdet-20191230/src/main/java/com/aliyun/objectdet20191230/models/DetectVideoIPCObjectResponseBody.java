@@ -10,6 +10,10 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35B11E1B-800C-4598-B5AA-577E3BDBD917</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +47,45 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
     }
 
     public static class DetectVideoIPCObjectResponseBodyDataFramesElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>156</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7812</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PERSON</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Width")
         public Long width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>289</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>271</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -120,6 +148,10 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<DetectVideoIPCObjectResponseBodyDataFramesElements> elements;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6124533574</p>
+         */
         @NameInMap("Time")
         public Long time;
 
@@ -150,12 +182,24 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
         @NameInMap("Frames")
         public java.util.List<DetectVideoIPCObjectResponseBodyDataFrames> frames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://viapi-test/viapi-3.0domepic/objectdet/DetectVideoIPCObject/DetectVideoIPCObject4.mp4</p>
+         */
         @NameInMap("InputFile")
         public String inputFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Width")
         public Long width;
 

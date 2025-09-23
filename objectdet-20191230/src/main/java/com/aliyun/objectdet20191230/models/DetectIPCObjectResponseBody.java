@@ -7,6 +7,10 @@ public class DetectIPCObjectResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectIPCObjectResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7AE23740-A3E5-5607-8E10-895DCBD4C260</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,12 +39,24 @@ public class DetectIPCObjectResponseBody extends TeaModel {
         @NameInMap("Box")
         public java.util.List<Long> box;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7138671875</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8566723958333333</p>
+         */
         @NameInMap("TargetRate")
         public Float targetRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DOG</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -87,9 +103,17 @@ public class DetectIPCObjectResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<DetectIPCObjectResponseBodyDataElements> elements;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1200</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1600</p>
+         */
         @NameInMap("Width")
         public Long width;
 

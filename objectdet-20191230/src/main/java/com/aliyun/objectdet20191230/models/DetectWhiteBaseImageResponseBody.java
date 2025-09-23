@@ -7,6 +7,10 @@ public class DetectWhiteBaseImageResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectWhiteBaseImageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7A7F9EEB-44C4-4592-9089-A6185B222B23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DetectWhiteBaseImageResponseBody extends TeaModel {
     }
 
     public static class DetectWhiteBaseImageResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WhiteBase")
         public Integer whiteBase;
 

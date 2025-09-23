@@ -4,12 +4,21 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVehicleICongestionShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/objectdet/DetectVehicleICongestion/DetectVehicleICongestion1.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/objectdet/DetectVehicleICongestion/DetectVehicleICongestion1.jpg</a></p>
+     */
     @NameInMap("ImageURL")
     public String imageURL;
 
     @NameInMap("PreRegionIntersectFeatures")
     public String preRegionIntersectFeaturesShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoadRegions")
     public String roadRegionsShrink;
 

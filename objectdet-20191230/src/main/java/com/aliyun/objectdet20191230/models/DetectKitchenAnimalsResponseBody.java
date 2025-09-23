@@ -7,6 +7,10 @@ public class DetectKitchenAnimalsResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectKitchenAnimalsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C306F16F-30E1-54F4-93DF-A52CCF6664D1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DetectKitchenAnimalsResponseBody extends TeaModel {
     }
 
     public static class DetectKitchenAnimalsResponseBodyDataElementsRectangles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>292</p>
+         */
         @NameInMap("Left")
         public Long left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1048</p>
+         */
         @NameInMap("Top")
         public Long top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("Width")
         public Long width;
 
@@ -87,9 +107,17 @@ public class DetectKitchenAnimalsResponseBody extends TeaModel {
         @NameInMap("Rectangles")
         public DetectKitchenAnimalsResponseBodyDataElementsRectangles rectangles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.75105053</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mouse</p>
+         */
         @NameInMap("Type")
         public String type;
 

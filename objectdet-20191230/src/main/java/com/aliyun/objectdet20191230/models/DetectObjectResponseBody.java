@@ -7,6 +7,10 @@ public class DetectObjectResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectObjectResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6EF97B44-2763-4EAD-8737-FB9F5EE25FE2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class DetectObjectResponseBody extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.266</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chair</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -76,9 +88,17 @@ public class DetectObjectResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<DetectObjectResponseBodyDataElements> elements;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>533</p>
+         */
         @NameInMap("Width")
         public Integer width;
 

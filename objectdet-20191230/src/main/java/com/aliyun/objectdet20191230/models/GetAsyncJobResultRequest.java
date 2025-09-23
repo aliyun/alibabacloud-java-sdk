@@ -4,6 +4,12 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncJobResultRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35B11E1B-800C-4598-B5AA-577E3BDBD917</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

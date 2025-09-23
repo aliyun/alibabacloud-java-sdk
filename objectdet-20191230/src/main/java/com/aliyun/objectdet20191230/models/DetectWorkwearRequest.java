@@ -7,6 +7,10 @@ public class DetectWorkwearRequest extends TeaModel {
     @NameInMap("Clothes")
     public DetectWorkwearRequestClothes clothes;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/zhangchaorun/tiyan/xxxx.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/zhangchaorun/tiyan/xxxx.jpg</a></p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
@@ -46,9 +50,17 @@ public class DetectWorkwearRequest extends TeaModel {
     }
 
     public static class DetectWorkwearRequestClothes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MaxNum")
         public Long maxNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.4</p>
+         */
         @NameInMap("Threshold")
         public Double threshold;
 

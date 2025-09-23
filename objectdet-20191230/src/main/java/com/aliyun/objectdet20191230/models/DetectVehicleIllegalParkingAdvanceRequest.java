@@ -4,9 +4,18 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVehicleIllegalParkingAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/objectdet/DetectVehicleIllegalParking/DetectVehicleIllegalParking2.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/objectdet/DetectVehicleIllegalParking/DetectVehicleIllegalParking2.jpg</a></p>
+     */
     @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoadRegions")
     public java.util.List<DetectVehicleIllegalParkingAdvanceRequestRoadRegions> roadRegions;
 
@@ -32,9 +41,21 @@ public class DetectVehicleIllegalParkingAdvanceRequest extends TeaModel {
     }
 
     public static class DetectVehicleIllegalParkingAdvanceRequestRoadRegionsRoadRegionPoint extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -62,6 +83,9 @@ public class DetectVehicleIllegalParkingAdvanceRequest extends TeaModel {
     }
 
     public static class DetectVehicleIllegalParkingAdvanceRequestRoadRegionsRoadRegion extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Point")
         public DetectVehicleIllegalParkingAdvanceRequestRoadRegionsRoadRegionPoint point;
 
@@ -81,6 +105,9 @@ public class DetectVehicleIllegalParkingAdvanceRequest extends TeaModel {
     }
 
     public static class DetectVehicleIllegalParkingAdvanceRequestRoadRegions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RoadRegion")
         public java.util.List<DetectVehicleIllegalParkingAdvanceRequestRoadRegionsRoadRegion> roadRegion;
 

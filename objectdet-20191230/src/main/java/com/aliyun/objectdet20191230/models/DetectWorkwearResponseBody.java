@@ -7,6 +7,10 @@ public class DetectWorkwearResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectWorkwearResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16CA8094-D7BC-51D4-8D55-6AC59AB20E0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DetectWorkwearResponseBody extends TeaModel {
     }
 
     public static class DetectWorkwearResponseBodyDataElementsPropertyProbability extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.00036084422</p>
+         */
         @NameInMap("No")
         public Double no;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Threshold")
         public Long threshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0006906331</p>
+         */
         @NameInMap("Unknown")
         public Double unknown;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9989485</p>
+         */
         @NameInMap("Yes")
         public Double yes;
 
@@ -84,6 +104,10 @@ public class DetectWorkwearResponseBody extends TeaModel {
     }
 
     public static class DetectWorkwearResponseBodyDataElementsProperty extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hat</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -114,15 +138,31 @@ public class DetectWorkwearResponseBody extends TeaModel {
     }
 
     public static class DetectWorkwearResponseBodyDataElementsRectangles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>96</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1067</p>
+         */
         @NameInMap("Left")
         public Long left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>426</p>
+         */
         @NameInMap("Top")
         public Long top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>88</p>
+         */
         @NameInMap("Width")
         public Long width;
 
@@ -172,9 +212,17 @@ public class DetectWorkwearResponseBody extends TeaModel {
         @NameInMap("Rectangles")
         public DetectWorkwearResponseBodyDataElementsRectangles rectangles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.63913465</p>
+         */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public String type;
 

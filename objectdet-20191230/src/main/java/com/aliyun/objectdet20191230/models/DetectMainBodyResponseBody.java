@@ -7,6 +7,10 @@ public class DetectMainBodyResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectMainBodyResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2E59C333-5480-4231-A8AB-BEE1001EA7FE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DetectMainBodyResponseBody extends TeaModel {
     }
 
     public static class DetectMainBodyResponseBodyDataLocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>320</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>583</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>28</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Y")
         public Integer y;
 

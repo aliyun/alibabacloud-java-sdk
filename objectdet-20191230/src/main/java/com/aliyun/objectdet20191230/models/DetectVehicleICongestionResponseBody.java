@@ -7,6 +7,10 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVehicleICongestionResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4FC381BB-04F2-50F4-B54B-593042BCF3C6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
     }
 
     public static class DetectVehicleICongestionResponseBodyDataElementsBoxes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>576</p>
+         */
         @NameInMap("Bottom")
         public Long bottom;
 
+        /**
+         * <strong>example:</strong>
+         * <p>341</p>
+         */
         @NameInMap("Left")
         public Long left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>589</p>
+         */
         @NameInMap("Right")
         public Long right;
 
+        /**
+         * <strong>example:</strong>
+         * <p>434</p>
+         */
         @NameInMap("Top")
         public Long top;
 
@@ -87,12 +107,24 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<DetectVehicleICongestionResponseBodyDataElementsBoxes> boxes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.962890625</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vehicle</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 

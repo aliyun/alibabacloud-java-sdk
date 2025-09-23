@@ -7,6 +7,10 @@ public class DetectVehicleIllegalParkingResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVehicleIllegalParkingResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DB882EDD-991A-5A0C-A19B-CC7C4BA65E35</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DetectVehicleIllegalParkingResponseBody extends TeaModel {
     }
 
     public static class DetectVehicleIllegalParkingResponseBodyDataElementsBoxes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>268</p>
+         */
         @NameInMap("Bottom")
         public Long bottom;
 
+        /**
+         * <strong>example:</strong>
+         * <p>413</p>
+         */
         @NameInMap("Left")
         public Long left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>499</p>
+         */
         @NameInMap("Right")
         public Long right;
 
+        /**
+         * <strong>example:</strong>
+         * <p>138</p>
+         */
         @NameInMap("Top")
         public Long top;
 
@@ -87,12 +107,24 @@ public class DetectVehicleIllegalParkingResponseBody extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<DetectVehicleIllegalParkingResponseBodyDataElementsBoxes> boxes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9599609375</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vehicle</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 
