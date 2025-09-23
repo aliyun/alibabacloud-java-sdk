@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Used for external deletion of community samples in risk identification services.</p>
+     * 
+     * @param request RevokeFeedbackRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeFeedbackResponse
+     */
     public RevokeFeedbackResponse revokeFeedbackWithOptions(RevokeFeedbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -54,14 +62,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeFeedbackResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Used for external deletion of community samples in risk identification services.</p>
+     * 
+     * @param request RevokeFeedbackRequest
+     * @return RevokeFeedbackResponse
+     */
     public RevokeFeedbackResponse revokeFeedback(RevokeFeedbackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeFeedbackWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Used for the external creation of community samples in risk identification services.</p>
+     * 
+     * @param request SendFeedbackRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendFeedbackResponse
+     */
     public SendFeedbackResponse sendFeedbackWithOptions(SendFeedbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            query.put("Reason", request.reason);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.riskLabel)) {
             query.put("RiskLabel", request.riskLabel);
         }
@@ -91,11 +118,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendFeedbackResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Used for the external creation of community samples in risk identification services.</p>
+     * 
+     * @param request SendFeedbackRequest
+     * @return SendFeedbackResponse
+     */
     public SendFeedbackResponse sendFeedback(SendFeedbackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendFeedbackWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Single User API for Sample Creation</p>
+     * 
+     * @param request UploadSampleApiRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadSampleApiResponse
+     */
     public UploadSampleApiResponse uploadSampleApiWithOptions(UploadSampleApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -132,6 +174,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadSampleApiResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Single User API for Sample Creation</p>
+     * 
+     * @param request UploadSampleApiRequest
+     * @return UploadSampleApiResponse
+     */
     public UploadSampleApiResponse uploadSampleApi(UploadSampleApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadSampleApiWithOptions(request, runtime);

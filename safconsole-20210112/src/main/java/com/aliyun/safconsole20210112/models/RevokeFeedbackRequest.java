@@ -4,9 +4,23 @@ package com.aliyun.safconsole20210112.models;
 import com.aliyun.tea.*;
 
 public class RevokeFeedbackRequest extends TeaModel {
+    /**
+     * <p>Sample type. For phone number type samples, input PHONE; for email type samples, input EMAIL; for account type samples, input ACCOUNT.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PHONE</p>
+     */
     @NameInMap("SampleType")
     public String sampleType;
 
+    /**
+     * <p>Sample value.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000000000</p>
+     */
     @NameInMap("Value")
     public String value;
 

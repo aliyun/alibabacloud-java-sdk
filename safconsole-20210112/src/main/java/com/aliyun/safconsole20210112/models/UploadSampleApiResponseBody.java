@@ -4,18 +4,39 @@ package com.aliyun.safconsole20210112.models;
 import com.aliyun.tea.*;
 
 public class UploadSampleApiResponseBody extends TeaModel {
+    /**
+     * <p>Request code returned</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Error message returned</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicator of whether the access was successful</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
