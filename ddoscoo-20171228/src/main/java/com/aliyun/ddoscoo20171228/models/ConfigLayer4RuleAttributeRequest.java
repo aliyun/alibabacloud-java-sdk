@@ -40,6 +40,9 @@ public class ConfigLayer4RuleAttributeRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Module")
+    public String module;
+
     public static ConfigLayer4RuleAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigLayer4RuleAttributeRequest self = new ConfigLayer4RuleAttributeRequest();
         return TeaModel.build(map, self);
@@ -75,6 +78,14 @@ public class ConfigLayer4RuleAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ConfigLayer4RuleAttributeRequest setModule(String module) {
+        this.module = module;
+        return this;
+    }
+    public String getModule() {
+        return this.module;
     }
 
 }
