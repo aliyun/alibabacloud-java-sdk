@@ -1033,6 +1033,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>执行迁移操作</p>
+     * 
+     * @param request ExecuteMigrationOperationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteMigrationOperationResponse
+     */
+    public ExecuteMigrationOperationResponse executeMigrationOperationWithOptions(String migrationId, String stageType, String operationId, ExecuteMigrationOperationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.operationParam)) {
+            body.put("operationParam", request.operationParam);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteMigrationOperation"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/migrations/" + com.aliyun.openapiutil.Client.getEncodeParam(migrationId) + "/stages/" + com.aliyun.openapiutil.Client.getEncodeParam(stageType) + "/operations/" + com.aliyun.openapiutil.Client.getEncodeParam(operationId) + "/execute"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteMigrationOperationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行迁移操作</p>
+     * 
+     * @param request ExecuteMigrationOperationRequest
+     * @return ExecuteMigrationOperationResponse
+     */
+    public ExecuteMigrationOperationResponse executeMigrationOperation(String migrationId, String stageType, String operationId, ExecuteMigrationOperationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeMigrationOperationWithOptions(migrationId, stageType, operationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>完成当前迁移阶段</p>
+     * 
+     * @param request FinishMigrationStageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FinishMigrationStageResponse
+     */
+    public FinishMigrationStageResponse finishMigrationStageWithOptions(String migrationId, String stageType, FinishMigrationStageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FinishMigrationStage"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/migrations/" + com.aliyun.openapiutil.Client.getEncodeParam(migrationId) + "/stages/" + com.aliyun.openapiutil.Client.getEncodeParam(stageType) + "/finish"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FinishMigrationStageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>完成当前迁移阶段</p>
+     * 
+     * @param request FinishMigrationStageRequest
+     * @return FinishMigrationStageResponse
+     */
+    public FinishMigrationStageResponse finishMigrationStage(String migrationId, String stageType, FinishMigrationStageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.finishMigrationStageWithOptions(migrationId, stageType, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -2350,6 +2450,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listMetricMetaWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询迁移操作列表</p>
+     * 
+     * @param request ListMigrationOperationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMigrationOperationsResponse
+     */
+    public ListMigrationOperationsResponse listMigrationOperationsWithOptions(String migrationId, String stageType, ListMigrationOperationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            query.put("operationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMigrationOperations"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/migrations/" + com.aliyun.openapiutil.Client.getEncodeParam(migrationId) + "/stages/" + com.aliyun.openapiutil.Client.getEncodeParam(stageType) + "/operations"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMigrationOperationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询迁移操作列表</p>
+     * 
+     * @param request ListMigrationOperationsRequest
+     * @return ListMigrationOperationsResponse
+     */
+    public ListMigrationOperationsResponse listMigrationOperations(String migrationId, String stageType, ListMigrationOperationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMigrationOperationsWithOptions(migrationId, stageType, request, headers, runtime);
     }
 
     /**
