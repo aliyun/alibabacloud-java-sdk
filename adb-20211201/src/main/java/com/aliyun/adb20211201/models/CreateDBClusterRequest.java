@@ -94,6 +94,9 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("EnableDefaultResourcePool")
     public Boolean enableDefaultResourcePool;
 
+    @NameInMap("EnableSSL")
+    public Boolean enableSSL;
+
     /**
      * <p>The ID of the key that is used to encrypt disk data.</p>
      * <blockquote>
@@ -404,6 +407,14 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public Boolean getEnableDefaultResourcePool() {
         return this.enableDefaultResourcePool;
+    }
+
+    public CreateDBClusterRequest setEnableSSL(Boolean enableSSL) {
+        this.enableSSL = enableSSL;
+        return this;
+    }
+    public Boolean getEnableSSL() {
+        return this.enableSSL;
     }
 
     public CreateDBClusterRequest setKmsId(String kmsId) {

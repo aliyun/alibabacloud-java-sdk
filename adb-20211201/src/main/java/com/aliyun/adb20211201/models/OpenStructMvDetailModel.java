@@ -10,6 +10,12 @@ public class OpenStructMvDetailModel extends TeaModel {
     @NameInMap("BaseTableNames")
     public java.util.List<java.util.List<String>> baseTableNames;
 
+    @NameInMap("EnableDelayAlert")
+    public Integer enableDelayAlert;
+
+    @NameInMap("EnableFailureAlert")
+    public Integer enableFailureAlert;
+
     @NameInMap("ExplicitHit")
     public Long explicitHit;
 
@@ -21,6 +27,9 @@ public class OpenStructMvDetailModel extends TeaModel {
 
     @NameInMap("IsInactive")
     public Boolean isInactive;
+
+    @NameInMap("LatencyTolerance")
+    public Integer latencyTolerance;
 
     @NameInMap("LocalSize")
     public Long localSize;
@@ -67,6 +76,22 @@ public class OpenStructMvDetailModel extends TeaModel {
         return this.baseTableNames;
     }
 
+    public OpenStructMvDetailModel setEnableDelayAlert(Integer enableDelayAlert) {
+        this.enableDelayAlert = enableDelayAlert;
+        return this;
+    }
+    public Integer getEnableDelayAlert() {
+        return this.enableDelayAlert;
+    }
+
+    public OpenStructMvDetailModel setEnableFailureAlert(Integer enableFailureAlert) {
+        this.enableFailureAlert = enableFailureAlert;
+        return this;
+    }
+    public Integer getEnableFailureAlert() {
+        return this.enableFailureAlert;
+    }
+
     public OpenStructMvDetailModel setExplicitHit(Long explicitHit) {
         this.explicitHit = explicitHit;
         return this;
@@ -97,6 +122,14 @@ public class OpenStructMvDetailModel extends TeaModel {
     }
     public Boolean getIsInactive() {
         return this.isInactive;
+    }
+
+    public OpenStructMvDetailModel setLatencyTolerance(Integer latencyTolerance) {
+        this.latencyTolerance = latencyTolerance;
+        return this;
+    }
+    public Integer getLatencyTolerance() {
+        return this.latencyTolerance;
     }
 
     public OpenStructMvDetailModel setLocalSize(Long localSize) {

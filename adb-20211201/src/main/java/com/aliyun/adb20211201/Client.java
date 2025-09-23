@@ -633,6 +633,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>配置导出的SLS 或者OSS 信息，实例级别唯一，遵循一次配置多次使用的原则</p>
+     * 
+     * @param tmpReq ConfigureResultExportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureResultExportResponse
+     */
+    public ConfigureResultExportResponse configureResultExportWithOptions(ConfigureResultExportRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ConfigureResultExportShrinkRequest request = new ConfigureResultExportShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ossInfo)) {
+            request.ossInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ossInfo, "OssInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.slsInfo)) {
+            request.slsInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.slsInfo, "SlsInfo", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            body.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportType)) {
+            body.put("ExportType", request.exportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossInfoShrink)) {
+            body.put("OssInfo", request.ossInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsInfoShrink)) {
+            body.put("SlsInfo", request.slsInfoShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConfigureResultExport"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigureResultExportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置导出的SLS 或者OSS 信息，实例级别唯一，遵循一次配置多次使用的原则</p>
+     * 
+     * @param request ConfigureResultExportRequest
+     * @return ConfigureResultExportResponse
+     */
+    public ConfigureResultExportResponse configureResultExport(ConfigureResultExportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.configureResultExportWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -1435,6 +1505,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>手动创建备份集</p>
+     * 
+     * @param request CreateBackupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBackupResponse
+     */
+    public CreateBackupResponse createBackupWithOptions(CreateBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBackup"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBackupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手动创建备份集</p>
+     * 
+     * @param request CreateBackupRequest
+     * @return CreateBackupResponse
+     */
+    public CreateBackupResponse createBackup(CreateBackupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBackupWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>CreateDBCluster</p>
      * 
@@ -1478,6 +1612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableDefaultResourcePool)) {
             query.put("EnableDefaultResourcePool", request.enableDefaultResourcePool);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSSL)) {
+            query.put("EnableSSL", request.enableSSL);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.kmsId)) {
@@ -7648,6 +7786,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeResourceGroupSpecResponse describeResourceGroupSpec(DescribeResourceGroupSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeResourceGroupSpecWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户配置的导出信息</p>
+     * 
+     * @param request DescribeResultExportConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeResultExportConfigResponse
+     */
+    public DescribeResultExportConfigResponse describeResultExportConfigWithOptions(DescribeResultExportConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportType)) {
+            query.put("ExportType", request.exportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeResultExportConfig"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResultExportConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户配置的导出信息</p>
+     * 
+     * @param request DescribeResultExportConfigRequest
+     * @return DescribeResultExportConfigResponse
+     */
+    public DescribeResultExportConfigResponse describeResultExportConfig(DescribeResultExportConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeResultExportConfigWithOptions(request, runtime);
     }
 
     /**

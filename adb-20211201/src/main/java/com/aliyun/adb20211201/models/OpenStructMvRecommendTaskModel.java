@@ -13,11 +13,20 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
     @NameInMap("LastRunAt")
     public String lastRunAt;
 
+    @NameInMap("MinRewriteQueryCount")
+    public Integer minRewriteQueryCount;
+
+    @NameInMap("MinRewriteQueryPattern")
+    public Integer minRewriteQueryPattern;
+
     @NameInMap("ScanQueriesRange")
     public Integer scanQueriesRange;
 
     @NameInMap("SchedulingSettings")
     public String schedulingSettings;
+
+    @NameInMap("SlowQueryThreshold")
+    public Integer slowQueryThreshold;
 
     @NameInMap("TaskName")
     public String taskName;
@@ -51,6 +60,22 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
         return this.lastRunAt;
     }
 
+    public OpenStructMvRecommendTaskModel setMinRewriteQueryCount(Integer minRewriteQueryCount) {
+        this.minRewriteQueryCount = minRewriteQueryCount;
+        return this;
+    }
+    public Integer getMinRewriteQueryCount() {
+        return this.minRewriteQueryCount;
+    }
+
+    public OpenStructMvRecommendTaskModel setMinRewriteQueryPattern(Integer minRewriteQueryPattern) {
+        this.minRewriteQueryPattern = minRewriteQueryPattern;
+        return this;
+    }
+    public Integer getMinRewriteQueryPattern() {
+        return this.minRewriteQueryPattern;
+    }
+
     public OpenStructMvRecommendTaskModel setScanQueriesRange(Integer scanQueriesRange) {
         this.scanQueriesRange = scanQueriesRange;
         return this;
@@ -65,6 +90,14 @@ public class OpenStructMvRecommendTaskModel extends TeaModel {
     }
     public String getSchedulingSettings() {
         return this.schedulingSettings;
+    }
+
+    public OpenStructMvRecommendTaskModel setSlowQueryThreshold(Integer slowQueryThreshold) {
+        this.slowQueryThreshold = slowQueryThreshold;
+        return this;
+    }
+    public Integer getSlowQueryThreshold() {
+        return this.slowQueryThreshold;
     }
 
     public OpenStructMvRecommendTaskModel setTaskName(String taskName) {
