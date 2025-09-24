@@ -876,6 +876,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Delete Face Group</p>
+     * 
+     * @param request DeleteFaceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFaceGroupResponse
+     */
+    public DeleteFaceGroupResponse deleteFaceGroupWithOptions(DeleteFaceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFaceGroup"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFaceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delete Face Group</p>
+     * 
+     * @param request DeleteFaceGroupRequest
+     * @return DeleteFaceGroupResponse
+     */
+    public DeleteFaceGroupResponse deleteFaceGroup(DeleteFaceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFaceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delete Face</p>
+     * 
+     * @param request DeleteFaceRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFaceRecordResponse
+     */
+    public DeleteFaceRecordResponse deleteFaceRecordWithOptions(DeleteFaceRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFaceRecord"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFaceRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Delete Face</p>
+     * 
+     * @param request DeleteFaceRecordRequest
+     * @return DeleteFaceRecordResponse
+     */
+    public DeleteFaceRecordResponse deleteFaceRecord(DeleteFaceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFaceRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Delete user authentication record results</p>
      * 
      * @param request DeleteVerifyResultRequest
@@ -1266,6 +1354,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Face Duplication Detection API</p>
+     * 
+     * @param request FaceDuplicationCheckIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FaceDuplicationCheckIntlResponse
+     */
+    public FaceDuplicationCheckIntlResponse faceDuplicationCheckIntlWithOptions(FaceDuplicationCheckIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRegistration)) {
+            body.put("AutoRegistration", request.autoRegistration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCodes)) {
+            body.put("FaceGroupCodes", request.faceGroupCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceRegisterGroupCode)) {
+            body.put("FaceRegisterGroupCode", request.faceRegisterGroupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceVerifyThreshold)) {
+            body.put("FaceVerifyThreshold", request.faceVerifyThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
+            body.put("Liveness", request.liveness);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            body.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            body.put("MerchantUserId", request.merchantUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnFaces)) {
+            body.put("ReturnFaces", request.returnFaces);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saveFacePicture)) {
+            body.put("SaveFacePicture", request.saveFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            body.put("SceneCode", request.sceneCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceFacePicture)) {
+            body.put("SourceFacePicture", request.sourceFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceFacePictureUrl)) {
+            body.put("SourceFacePictureUrl", request.sourceFacePictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetFacePicture)) {
+            body.put("TargetFacePicture", request.targetFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetFacePictureUrl)) {
+            body.put("TargetFacePictureUrl", request.targetFacePictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyModel)) {
+            body.put("VerifyModel", request.verifyModel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FaceDuplicationCheckIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FaceDuplicationCheckIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Face Duplication Detection API</p>
+     * 
+     * @param request FaceDuplicationCheckIntlRequest
+     * @return FaceDuplicationCheckIntlResponse
+     */
+    public FaceDuplicationCheckIntlResponse faceDuplicationCheckIntl(FaceDuplicationCheckIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.faceDuplicationCheckIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>This topic describes how to set up the server for FACE_GUARD.</p>
      * 
      * @param request FaceGuardRiskRequest
@@ -1584,7 +1778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认证初始化</p>
+     * <p>Authentication Initialization</p>
      * 
      * @param tmpReq InitializeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1820,7 +2014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认证初始化</p>
+     * <p>Authentication Initialization</p>
      * 
      * @param request InitializeRequest
      * @return InitializeResponse
@@ -1978,5 +2172,285 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Mobile3MetaVerifyIntlResponse mobile3MetaVerifyIntl(Mobile3MetaVerifyIntlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.mobile3MetaVerifyIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改人脸库</p>
+     * 
+     * @param request ModifyFaceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyFaceGroupResponse
+     */
+    public ModifyFaceGroupResponse modifyFaceGroupWithOptions(ModifyFaceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyFaceGroup"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFaceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改人脸库</p>
+     * 
+     * @param request ModifyFaceGroupRequest
+     * @return ModifyFaceGroupResponse
+     */
+    public ModifyFaceGroupResponse modifyFaceGroup(ModifyFaceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyFaceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增人脸</p>
+     * 
+     * @param request ModifyFaceRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyFaceRecordResponse
+     */
+    public ModifyFaceRecordResponse modifyFaceRecordWithOptions(ModifyFaceRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCode)) {
+            body.put("FaceGroupCode", request.faceGroupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imgOssInfos)) {
+            body.put("ImgOssInfos", request.imgOssInfos);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyFaceRecord"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFaceRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增人脸</p>
+     * 
+     * @param request ModifyFaceRecordRequest
+     * @return ModifyFaceRecordResponse
+     */
+    public ModifyFaceRecordResponse modifyFaceRecord(ModifyFaceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyFaceRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询人脸库</p>
+     * 
+     * @param request QueryFaceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryFaceGroupResponse
+     */
+    public QueryFaceGroupResponse queryFaceGroupWithOptions(QueryFaceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupCode)) {
+            query.put("GroupCode", request.groupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryFaceGroup"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryFaceGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询人脸库</p>
+     * 
+     * @param request QueryFaceGroupRequest
+     * @return QueryFaceGroupResponse
+     */
+    public QueryFaceGroupResponse queryFaceGroup(QueryFaceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryFaceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询人脸记录</p>
+     * 
+     * @param request QueryFaceRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryFaceRecordResponse
+     */
+    public QueryFaceRecordResponse queryFaceRecordWithOptions(QueryFaceRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCode)) {
+            query.put("FaceGroupCode", request.faceGroupCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceId)) {
+            query.put("FaceId", request.faceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            query.put("MerchantUserId", request.merchantUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrationType)) {
+            query.put("RegistrationType", request.registrationType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryFaceRecord"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryFaceRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询人脸记录</p>
+     * 
+     * @param request QueryFaceRecordRequest
+     * @return QueryFaceRecordResponse
+     */
+    public QueryFaceRecordResponse queryFaceRecord(QueryFaceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryFaceRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取临时token</p>
+     * 
+     * @param request TempAccessTokenIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TempAccessTokenIntlResponse
+     */
+    public TempAccessTokenIntlResponse tempAccessTokenIntlWithOptions(TempAccessTokenIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TempAccessTokenIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TempAccessTokenIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取临时token</p>
+     * 
+     * @param request TempAccessTokenIntlRequest
+     * @return TempAccessTokenIntlResponse
+     */
+    public TempAccessTokenIntlResponse tempAccessTokenIntl(TempAccessTokenIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tempAccessTokenIntlWithOptions(request, runtime);
     }
 }

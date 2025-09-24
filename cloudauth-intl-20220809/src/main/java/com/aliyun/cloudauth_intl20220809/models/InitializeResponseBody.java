@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InitializeResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class InitializeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +31,9 @@ public class InitializeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("Result")
     public InitializeResponseBodyResult result;
 
@@ -69,16 +76,29 @@ public class InitializeResponseBody extends TeaModel {
 
     public static class InitializeResponseBodyResult extends TeaModel {
         /**
+         * <p>Client configuration</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
         @NameInMap("ClientCfg")
         public String clientCfg;
 
+        /**
+         * <p>Standard encryption protocol for authentication.</p>
+         * <blockquote>
+         * <p>This field is required when integrating with H5 web pages using iframe embedding.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hksb7ba1b28130d24e015d*********</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
+         * <p>Authentication ID</p>
+         * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>
          */
@@ -86,6 +106,8 @@ public class InitializeResponseBody extends TeaModel {
         public String transactionId;
 
         /**
+         * <p>Web authentication URL</p>
+         * 
          * <strong>example:</strong>
          * <p>http****</p>
          */
