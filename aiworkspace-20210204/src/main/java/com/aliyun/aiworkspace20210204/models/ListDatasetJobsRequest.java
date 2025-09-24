@@ -22,6 +22,9 @@ public class ListDatasetJobsRequest extends TeaModel {
     @NameInMap("JobAction")
     public String jobAction;
 
+    @NameInMap("Order")
+    public String order;
+
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
@@ -39,6 +42,12 @@ public class ListDatasetJobsRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SortBy")
+    public String sortBy;
+
+    @NameInMap("Status")
+    public String status;
 
     /**
      * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
@@ -70,6 +79,14 @@ public class ListDatasetJobsRequest extends TeaModel {
         return this.jobAction;
     }
 
+    public ListDatasetJobsRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public ListDatasetJobsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -84,6 +101,22 @@ public class ListDatasetJobsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDatasetJobsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    public ListDatasetJobsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListDatasetJobsRequest setWorkspaceId(String workspaceId) {

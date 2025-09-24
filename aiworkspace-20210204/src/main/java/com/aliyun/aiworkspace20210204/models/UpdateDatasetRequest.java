@@ -44,6 +44,13 @@ public class UpdateDatasetRequest extends TeaModel {
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("SharingConfig")
+    public UpdateDatasetRequestSharingConfig sharingConfig;
+
     public static UpdateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetRequest self = new UpdateDatasetRequest();
         return TeaModel.build(map, self);
@@ -87,6 +94,33 @@ public class UpdateDatasetRequest extends TeaModel {
     }
     public String getOptions() {
         return this.options;
+    }
+
+    public UpdateDatasetRequest setSharingConfig(UpdateDatasetRequestSharingConfig sharingConfig) {
+        this.sharingConfig = sharingConfig;
+        return this;
+    }
+    public UpdateDatasetRequestSharingConfig getSharingConfig() {
+        return this.sharingConfig;
+    }
+
+    public static class UpdateDatasetRequestSharingConfig extends TeaModel {
+        @NameInMap("SharedTo")
+        public java.util.List<DatasetShareRelationship> sharedTo;
+
+        public static UpdateDatasetRequestSharingConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDatasetRequestSharingConfig self = new UpdateDatasetRequestSharingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDatasetRequestSharingConfig setSharedTo(java.util.List<DatasetShareRelationship> sharedTo) {
+            this.sharedTo = sharedTo;
+            return this;
+        }
+        public java.util.List<DatasetShareRelationship> getSharedTo() {
+            return this.sharedTo;
+        }
+
     }
 
 }

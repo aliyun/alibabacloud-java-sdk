@@ -13,6 +13,9 @@ public class ListModelsRequest extends TeaModel {
     @NameInMap("Collections")
     public String collections;
 
+    @NameInMap("Conditions")
+    public java.util.List<ListModelsRequestConditions> conditions;
+
     /**
      * <p>The domain. Only models in the domain are returned. Valid values: nlp (Natural Language Processing) and cv (Computer Vision).</p>
      * 
@@ -150,6 +153,14 @@ public class ListModelsRequest extends TeaModel {
         return this.collections;
     }
 
+    public ListModelsRequest setConditions(java.util.List<ListModelsRequestConditions> conditions) {
+        this.conditions = conditions;
+        return this;
+    }
+    public java.util.List<ListModelsRequestConditions> getConditions() {
+        return this.conditions;
+    }
+
     public ListModelsRequest setDomain(String domain) {
         this.domain = domain;
         return this;
@@ -260,6 +271,47 @@ public class ListModelsRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class ListModelsRequestConditions extends TeaModel {
+        @NameInMap("Column")
+        public String column;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListModelsRequestConditions build(java.util.Map<String, ?> map) throws Exception {
+            ListModelsRequestConditions self = new ListModelsRequestConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListModelsRequestConditions setColumn(String column) {
+            this.column = column;
+            return this;
+        }
+        public String getColumn() {
+            return this.column;
+        }
+
+        public ListModelsRequestConditions setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public ListModelsRequestConditions setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class ListModelsRequestTag extends TeaModel {

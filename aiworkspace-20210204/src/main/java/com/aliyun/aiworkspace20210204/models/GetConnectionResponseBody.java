@@ -327,6 +327,9 @@ public class GetConnectionResponseBody extends TeaModel {
     }
 
     public static class GetConnectionResponseBodyResourceMeta extends TeaModel {
+        @NameInMap("Extra")
+        public String extra;
+
         /**
          * <p>The instance ID.</p>
          * 
@@ -345,6 +348,14 @@ public class GetConnectionResponseBody extends TeaModel {
         public static GetConnectionResponseBodyResourceMeta build(java.util.Map<String, ?> map) throws Exception {
             GetConnectionResponseBodyResourceMeta self = new GetConnectionResponseBodyResourceMeta();
             return TeaModel.build(map, self);
+        }
+
+        public GetConnectionResponseBodyResourceMeta setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
         }
 
         public GetConnectionResponseBodyResourceMeta setInstanceId(String instanceId) {

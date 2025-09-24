@@ -22,6 +22,9 @@ public class ListConnectionsShrinkRequest extends TeaModel {
     @NameInMap("ConnectionTypes")
     public String connectionTypesShrink;
 
+    @NameInMap("Creator")
+    public String creator;
+
     /**
      * <p>The encryption settings. Valid values:</p>
      * <ul>
@@ -142,6 +145,14 @@ public class ListConnectionsShrinkRequest extends TeaModel {
     }
     public String getConnectionTypesShrink() {
         return this.connectionTypesShrink;
+    }
+
+    public ListConnectionsShrinkRequest setCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
+    public String getCreator() {
+        return this.creator;
     }
 
     public ListConnectionsShrinkRequest setEncryptOption(String encryptOption) {

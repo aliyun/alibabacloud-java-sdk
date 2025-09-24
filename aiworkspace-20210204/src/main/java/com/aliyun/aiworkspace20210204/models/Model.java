@@ -32,6 +32,13 @@ public class Model extends TeaModel {
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
      */
+    @NameInMap("GmtLatestVersionModifiedTime")
+    public String gmtLatestVersionModifiedTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
@@ -88,6 +95,13 @@ public class Model extends TeaModel {
      */
     @NameInMap("OwnerId")
     public String ownerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
+    @NameInMap("ParameterSize")
+    public Long parameterSize;
 
     /**
      * <strong>example:</strong>
@@ -155,6 +169,14 @@ public class Model extends TeaModel {
     }
     public String getGmtCreateTime() {
         return this.gmtCreateTime;
+    }
+
+    public Model setGmtLatestVersionModifiedTime(String gmtLatestVersionModifiedTime) {
+        this.gmtLatestVersionModifiedTime = gmtLatestVersionModifiedTime;
+        return this;
+    }
+    public String getGmtLatestVersionModifiedTime() {
+        return this.gmtLatestVersionModifiedTime;
     }
 
     public Model setGmtModifiedTime(String gmtModifiedTime) {
@@ -243,6 +265,14 @@ public class Model extends TeaModel {
     }
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    public Model setParameterSize(Long parameterSize) {
+        this.parameterSize = parameterSize;
+        return this;
+    }
+    public Long getParameterSize() {
+        return this.parameterSize;
     }
 
     public Model setProvider(String provider) {

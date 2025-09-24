@@ -75,6 +75,12 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     @Deprecated
     public Integer pageSize;
 
+    @NameInMap("QueryContentTypeIncludeAny")
+    public java.util.List<String> queryContentTypeIncludeAny;
+
+    @NameInMap("QueryExpression")
+    public String queryExpression;
+
     /**
      * <strong>example:</strong>
      * <p>cars/20250221/</p>
@@ -254,6 +260,22 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDatasetFileMetasRequest setQueryContentTypeIncludeAny(java.util.List<String> queryContentTypeIncludeAny) {
+        this.queryContentTypeIncludeAny = queryContentTypeIncludeAny;
+        return this;
+    }
+    public java.util.List<String> getQueryContentTypeIncludeAny() {
+        return this.queryContentTypeIncludeAny;
+    }
+
+    public ListDatasetFileMetasRequest setQueryExpression(String queryExpression) {
+        this.queryExpression = queryExpression;
+        return this;
+    }
+    public String getQueryExpression() {
+        return this.queryExpression;
     }
 
     public ListDatasetFileMetasRequest setQueryFileDir(String queryFileDir) {

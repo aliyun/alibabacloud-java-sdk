@@ -27,6 +27,9 @@ public class GetModelVersionResponseBody extends TeaModel {
     @NameInMap("CompressionSpec")
     public java.util.Map<String, ?> compressionSpec;
 
+    @NameInMap("DistillationSpec")
+    public java.util.Map<String, ?> distillationSpec;
+
     /**
      * <p>The evaluation configuration.</p>
      * 
@@ -257,6 +260,14 @@ public class GetModelVersionResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getCompressionSpec() {
         return this.compressionSpec;
+    }
+
+    public GetModelVersionResponseBody setDistillationSpec(java.util.Map<String, ?> distillationSpec) {
+        this.distillationSpec = distillationSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getDistillationSpec() {
+        return this.distillationSpec;
     }
 
     public GetModelVersionResponseBody setEvaluationSpec(java.util.Map<String, ?> evaluationSpec) {

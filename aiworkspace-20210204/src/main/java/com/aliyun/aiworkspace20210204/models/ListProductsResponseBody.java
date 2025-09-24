@@ -64,8 +64,8 @@ public class ListProductsResponseBody extends TeaModel {
         @NameInMap("ProductCode")
         public String productCode;
 
-        @NameInMap("ProductInstanceId")
-        public String productInstanceId;
+        @NameInMap("ProductId")
+        public String productId;
 
         /**
          * <strong>example:</strong>
@@ -103,12 +103,12 @@ public class ListProductsResponseBody extends TeaModel {
             return this.productCode;
         }
 
-        public ListProductsResponseBodyProducts setProductInstanceId(String productInstanceId) {
-            this.productInstanceId = productInstanceId;
+        public ListProductsResponseBodyProducts setProductId(String productId) {
+            this.productId = productId;
             return this;
         }
-        public String getProductInstanceId() {
-            return this.productInstanceId;
+        public String getProductId() {
+            return this.productId;
         }
 
         public ListProductsResponseBodyProducts setPurchaseUrl(String purchaseUrl) {

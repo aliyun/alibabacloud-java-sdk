@@ -63,6 +63,9 @@ public class Dataset extends TeaModel {
     @NameInMap("ImportInfo")
     public String importInfo;
 
+    @NameInMap("IsShared")
+    public Boolean isShared;
+
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
@@ -113,6 +116,12 @@ public class Dataset extends TeaModel {
      */
     @NameInMap("ProviderType")
     public String providerType;
+
+    @NameInMap("SharedFrom")
+    public DatasetShareRelationship sharedFrom;
+
+    @NameInMap("SharingConfig")
+    public DatasetSharingConfig sharingConfig;
 
     /**
      * <strong>example:</strong>
@@ -247,6 +256,14 @@ public class Dataset extends TeaModel {
         return this.importInfo;
     }
 
+    public Dataset setIsShared(Boolean isShared) {
+        this.isShared = isShared;
+        return this;
+    }
+    public Boolean getIsShared() {
+        return this.isShared;
+    }
+
     public Dataset setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
@@ -319,6 +336,22 @@ public class Dataset extends TeaModel {
         return this.providerType;
     }
 
+    public Dataset setSharedFrom(DatasetShareRelationship sharedFrom) {
+        this.sharedFrom = sharedFrom;
+        return this;
+    }
+    public DatasetShareRelationship getSharedFrom() {
+        return this.sharedFrom;
+    }
+
+    public Dataset setSharingConfig(DatasetSharingConfig sharingConfig) {
+        this.sharingConfig = sharingConfig;
+        return this;
+    }
+    public DatasetSharingConfig getSharingConfig() {
+        return this.sharingConfig;
+    }
+
     public Dataset setSourceDatasetId(String sourceDatasetId) {
         this.sourceDatasetId = sourceDatasetId;
         return this;
@@ -381,6 +414,25 @@ public class Dataset extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class DatasetSharingConfig extends TeaModel {
+        @NameInMap("SharedTo")
+        public java.util.List<DatasetShareRelationship> sharedTo;
+
+        public static DatasetSharingConfig build(java.util.Map<String, ?> map) throws Exception {
+            DatasetSharingConfig self = new DatasetSharingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DatasetSharingConfig setSharedTo(java.util.List<DatasetShareRelationship> sharedTo) {
+            this.sharedTo = sharedTo;
+            return this;
+        }
+        public java.util.List<DatasetShareRelationship> getSharedTo() {
+            return this.sharedTo;
+        }
+
     }
 
 }

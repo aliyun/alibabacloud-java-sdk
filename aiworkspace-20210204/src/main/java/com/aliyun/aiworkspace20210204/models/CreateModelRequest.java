@@ -101,6 +101,9 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    @NameInMap("ParameterSize")
+    public Long parameterSize;
+
     /**
      * <p>The tags.</p>
      */
@@ -208,6 +211,14 @@ public class CreateModelRequest extends TeaModel {
     }
     public String getOrigin() {
         return this.origin;
+    }
+
+    public CreateModelRequest setParameterSize(Long parameterSize) {
+        this.parameterSize = parameterSize;
+        return this;
+    }
+    public Long getParameterSize() {
+        return this.parameterSize;
     }
 
     public CreateModelRequest setTag(java.util.List<Label> tag) {

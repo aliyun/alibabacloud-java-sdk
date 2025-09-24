@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspaceUsersRequest extends TeaModel {
+    @NameInMap("UserId")
+    public String userId;
+
     /**
      * <p>The display names of users who can be added to the workspace as members.</p>
      * 
@@ -16,6 +19,14 @@ public class ListWorkspaceUsersRequest extends TeaModel {
     public static ListWorkspaceUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWorkspaceUsersRequest self = new ListWorkspaceUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListWorkspaceUsersRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public ListWorkspaceUsersRequest setUserName(String userName) {

@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     /**
      * <p>The storage types of the data source. Multiple data source types are separated by commas (,). Valid values:</p>
      * <ul>
@@ -32,6 +35,9 @@ public class ListDatasetsRequest extends TeaModel {
      */
     @NameInMap("DataTypes")
     public String dataTypes;
+
+    @NameInMap("Edition")
+    public String edition;
 
     /**
      * <p>The dataset tag, which is used to filter datasets. Datasets whose tag key or tag value contains a specified string are filtered.</p>
@@ -104,6 +110,9 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("Provider")
     public String provider;
 
+    @NameInMap("ShareScope")
+    public String shareScope;
+
     /**
      * <p>The field used for sorting.</p>
      * 
@@ -164,6 +173,14 @@ public class ListDatasetsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDatasetsRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
     public ListDatasetsRequest setDataSourceTypes(String dataSourceTypes) {
         this.dataSourceTypes = dataSourceTypes;
         return this;
@@ -178,6 +195,14 @@ public class ListDatasetsRequest extends TeaModel {
     }
     public String getDataTypes() {
         return this.dataTypes;
+    }
+
+    public ListDatasetsRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public ListDatasetsRequest setLabel(String label) {
@@ -234,6 +259,14 @@ public class ListDatasetsRequest extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public ListDatasetsRequest setShareScope(String shareScope) {
+        this.shareScope = shareScope;
+        return this;
+    }
+    public String getShareScope() {
+        return this.shareScope;
     }
 
     public ListDatasetsRequest setSortBy(String sortBy) {

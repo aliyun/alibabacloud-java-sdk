@@ -16,6 +16,9 @@ public class DatasetJobConfig extends TeaModel {
     @NameInMap("DatasetJobConfigId")
     public String datasetJobConfigId;
 
+    @NameInMap("DatasetVersion")
+    public String datasetVersion;
+
     @NameInMap("ModifyTime")
     public String modifyTime;
 
@@ -57,6 +60,14 @@ public class DatasetJobConfig extends TeaModel {
     }
     public String getDatasetJobConfigId() {
         return this.datasetJobConfigId;
+    }
+
+    public DatasetJobConfig setDatasetVersion(String datasetVersion) {
+        this.datasetVersion = datasetVersion;
+        return this;
+    }
+    public String getDatasetVersion() {
+        return this.datasetVersion;
     }
 
     public DatasetJobConfig setModifyTime(String modifyTime) {

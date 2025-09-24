@@ -52,6 +52,9 @@ public class GetModelResponseBody extends TeaModel {
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    @NameInMap("GmtLatestVersionModifiedTime")
+    public String gmtLatestVersionModifiedTime;
+
     /**
      * <p>The time when the model is last modified, in UTC. The time follows the ISO 8601 standard.</p>
      * 
@@ -139,6 +142,9 @@ public class GetModelResponseBody extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    @NameInMap("ParameterSize")
+    public Long parameterSize;
+
     /**
      * <p>The provider.</p>
      * 
@@ -219,6 +225,14 @@ public class GetModelResponseBody extends TeaModel {
     }
     public String getGmtCreateTime() {
         return this.gmtCreateTime;
+    }
+
+    public GetModelResponseBody setGmtLatestVersionModifiedTime(String gmtLatestVersionModifiedTime) {
+        this.gmtLatestVersionModifiedTime = gmtLatestVersionModifiedTime;
+        return this;
+    }
+    public String getGmtLatestVersionModifiedTime() {
+        return this.gmtLatestVersionModifiedTime;
     }
 
     public GetModelResponseBody setGmtModifiedTime(String gmtModifiedTime) {
@@ -307,6 +321,14 @@ public class GetModelResponseBody extends TeaModel {
     }
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetModelResponseBody setParameterSize(Long parameterSize) {
+        this.parameterSize = parameterSize;
+        return this;
+    }
+    public Long getParameterSize() {
+        return this.parameterSize;
     }
 
     public GetModelResponseBody setProvider(String provider) {

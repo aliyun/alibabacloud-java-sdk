@@ -10,6 +10,9 @@ public class ModelVersion extends TeaModel {
     @NameInMap("CompressionSpec")
     public java.util.Map<String, ?> compressionSpec;
 
+    @NameInMap("DistillationSpec")
+    public java.util.Map<String, ?> distillationSpec;
+
     @NameInMap("EvaluationSpec")
     public java.util.Map<String, ?> evaluationSpec;
 
@@ -48,7 +51,7 @@ public class ModelVersion extends TeaModel {
     public java.util.Map<String, ?> inferenceSpec;
 
     @NameInMap("Labels")
-    public java.util.List<Label> labels;
+    public java.util.List<ModelVersionLabels> labels;
 
     @NameInMap("Metrics")
     public java.util.Map<String, ?> metrics;
@@ -117,6 +120,14 @@ public class ModelVersion extends TeaModel {
         return this.compressionSpec;
     }
 
+    public ModelVersion setDistillationSpec(java.util.Map<String, ?> distillationSpec) {
+        this.distillationSpec = distillationSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getDistillationSpec() {
+        return this.distillationSpec;
+    }
+
     public ModelVersion setEvaluationSpec(java.util.Map<String, ?> evaluationSpec) {
         this.evaluationSpec = evaluationSpec;
         return this;
@@ -173,11 +184,11 @@ public class ModelVersion extends TeaModel {
         return this.inferenceSpec;
     }
 
-    public ModelVersion setLabels(java.util.List<Label> labels) {
+    public ModelVersion setLabels(java.util.List<ModelVersionLabels> labels) {
         this.labels = labels;
         return this;
     }
-    public java.util.List<Label> getLabels() {
+    public java.util.List<ModelVersionLabels> getLabels() {
         return this.labels;
     }
 
@@ -259,6 +270,36 @@ public class ModelVersion extends TeaModel {
     }
     public String getVersionName() {
         return this.versionName;
+    }
+
+    public static class ModelVersionLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ModelVersionLabels build(java.util.Map<String, ?> map) throws Exception {
+            ModelVersionLabels self = new ModelVersionLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ModelVersionLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ModelVersionLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

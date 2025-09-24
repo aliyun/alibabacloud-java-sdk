@@ -247,6 +247,9 @@ public class CreateConnectionRequest extends TeaModel {
     }
 
     public static class CreateConnectionRequestResourceMeta extends TeaModel {
+        @NameInMap("Extra")
+        public String extra;
+
         /**
          * <p>The instance ID.</p>
          * 
@@ -265,6 +268,14 @@ public class CreateConnectionRequest extends TeaModel {
         public static CreateConnectionRequestResourceMeta build(java.util.Map<String, ?> map) throws Exception {
             CreateConnectionRequestResourceMeta self = new CreateConnectionRequestResourceMeta();
             return TeaModel.build(map, self);
+        }
+
+        public CreateConnectionRequestResourceMeta setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
         }
 
         public CreateConnectionRequestResourceMeta setInstanceId(String instanceId) {

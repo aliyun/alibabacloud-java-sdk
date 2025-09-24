@@ -17,6 +17,9 @@ public class ListDatasetJobConfigsRequest extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    @NameInMap("DatasetVersion")
+    public String datasetVersion;
+
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
@@ -55,6 +58,14 @@ public class ListDatasetJobConfigsRequest extends TeaModel {
     }
     public String getConfigType() {
         return this.configType;
+    }
+
+    public ListDatasetJobConfigsRequest setDatasetVersion(String datasetVersion) {
+        this.datasetVersion = datasetVersion;
+        return this;
+    }
+    public String getDatasetVersion() {
+        return this.datasetVersion;
     }
 
     public ListDatasetJobConfigsRequest setPageNumber(String pageNumber) {

@@ -22,6 +22,9 @@ public class ListConnectionsRequest extends TeaModel {
     @NameInMap("ConnectionTypes")
     public java.util.List<String> connectionTypes;
 
+    @NameInMap("Creator")
+    public String creator;
+
     /**
      * <p>The encryption settings. Valid values:</p>
      * <ul>
@@ -142,6 +145,14 @@ public class ListConnectionsRequest extends TeaModel {
     }
     public java.util.List<String> getConnectionTypes() {
         return this.connectionTypes;
+    }
+
+    public ListConnectionsRequest setCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
+    public String getCreator() {
+        return this.creator;
     }
 
     public ListConnectionsRequest setEncryptOption(String encryptOption) {

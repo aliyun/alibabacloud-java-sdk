@@ -37,6 +37,9 @@ public class CreateDatasetJobConfigRequest extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    @NameInMap("DatasetVersion")
+    public String datasetVersion;
+
     /**
      * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
@@ -66,6 +69,14 @@ public class CreateDatasetJobConfigRequest extends TeaModel {
     }
     public String getConfigType() {
         return this.configType;
+    }
+
+    public CreateDatasetJobConfigRequest setDatasetVersion(String datasetVersion) {
+        this.datasetVersion = datasetVersion;
+        return this;
+    }
+    public String getDatasetVersion() {
+        return this.datasetVersion;
     }
 
     public CreateDatasetJobConfigRequest setWorkspaceId(String workspaceId) {

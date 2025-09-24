@@ -126,6 +126,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("ImportInfo")
     public String importInfo;
 
+    @NameInMap("IsShared")
+    public Boolean isShared;
+
     /**
      * <p>The tags.</p>
      */
@@ -229,6 +232,12 @@ public class GetDatasetResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SharedFrom")
+    public DatasetShareRelationship sharedFrom;
+
+    @NameInMap("SharingConfig")
+    public GetDatasetResponseBodySharingConfig sharingConfig;
 
     /**
      * <p>The ID of the source dataset generated from a labeling job of iTAG.</p>
@@ -393,6 +402,14 @@ public class GetDatasetResponseBody extends TeaModel {
         return this.importInfo;
     }
 
+    public GetDatasetResponseBody setIsShared(Boolean isShared) {
+        this.isShared = isShared;
+        return this;
+    }
+    public Boolean getIsShared() {
+        return this.isShared;
+    }
+
     public GetDatasetResponseBody setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
@@ -481,6 +498,22 @@ public class GetDatasetResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetDatasetResponseBody setSharedFrom(DatasetShareRelationship sharedFrom) {
+        this.sharedFrom = sharedFrom;
+        return this;
+    }
+    public DatasetShareRelationship getSharedFrom() {
+        return this.sharedFrom;
+    }
+
+    public GetDatasetResponseBody setSharingConfig(GetDatasetResponseBodySharingConfig sharingConfig) {
+        this.sharingConfig = sharingConfig;
+        return this;
+    }
+    public GetDatasetResponseBodySharingConfig getSharingConfig() {
+        return this.sharingConfig;
+    }
+
     public GetDatasetResponseBody setSourceDatasetId(String sourceDatasetId) {
         this.sourceDatasetId = sourceDatasetId;
         return this;
@@ -543,6 +576,25 @@ public class GetDatasetResponseBody extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class GetDatasetResponseBodySharingConfig extends TeaModel {
+        @NameInMap("SharedTo")
+        public java.util.List<DatasetShareRelationship> sharedTo;
+
+        public static GetDatasetResponseBodySharingConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetResponseBodySharingConfig self = new GetDatasetResponseBodySharingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetResponseBodySharingConfig setSharedTo(java.util.List<DatasetShareRelationship> sharedTo) {
+            this.sharedTo = sharedTo;
+            return this;
+        }
+        public java.util.List<DatasetShareRelationship> getSharedTo() {
+            return this.sharedTo;
+        }
+
     }
 
 }

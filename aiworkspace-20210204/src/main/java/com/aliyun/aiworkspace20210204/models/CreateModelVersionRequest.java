@@ -27,6 +27,9 @@ public class CreateModelVersionRequest extends TeaModel {
     @NameInMap("CompressionSpec")
     public java.util.Map<String, ?> compressionSpec;
 
+    @NameInMap("DistillationSpec")
+    public java.util.Map<String, ?> distillationSpec;
+
     /**
      * <p>The evaluation configuration.</p>
      * 
@@ -233,6 +236,14 @@ public class CreateModelVersionRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getCompressionSpec() {
         return this.compressionSpec;
+    }
+
+    public CreateModelVersionRequest setDistillationSpec(java.util.Map<String, ?> distillationSpec) {
+        this.distillationSpec = distillationSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getDistillationSpec() {
+        return this.distillationSpec;
     }
 
     public CreateModelVersionRequest setEvaluationSpec(java.util.Map<String, ?> evaluationSpec) {

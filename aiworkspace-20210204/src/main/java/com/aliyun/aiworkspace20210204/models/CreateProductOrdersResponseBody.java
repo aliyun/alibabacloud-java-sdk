@@ -28,6 +28,9 @@ public class CreateProductOrdersResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("ProductIds")
+    public java.util.List<String> productIds;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -64,6 +67,14 @@ public class CreateProductOrdersResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateProductOrdersResponseBody setProductIds(java.util.List<String> productIds) {
+        this.productIds = productIds;
+        return this;
+    }
+    public java.util.List<String> getProductIds() {
+        return this.productIds;
     }
 
     public CreateProductOrdersResponseBody setRequestId(String requestId) {

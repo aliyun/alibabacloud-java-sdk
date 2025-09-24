@@ -91,6 +91,9 @@ public class UpdateModelRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    @NameInMap("ParameterSize")
+    public Long parameterSize;
+
     /**
      * <p>The task. This parameter specifies the specific issue that the model resolves. Example: text-classification.</p>
      * 
@@ -175,6 +178,14 @@ public class UpdateModelRequest extends TeaModel {
     }
     public String getOrigin() {
         return this.origin;
+    }
+
+    public UpdateModelRequest setParameterSize(Long parameterSize) {
+        this.parameterSize = parameterSize;
+        return this;
+    }
+    public Long getParameterSize() {
+        return this.parameterSize;
     }
 
     public UpdateModelRequest setTask(String task) {

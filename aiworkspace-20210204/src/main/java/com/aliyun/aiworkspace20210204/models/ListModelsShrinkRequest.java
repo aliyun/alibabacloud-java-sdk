@@ -13,6 +13,9 @@ public class ListModelsShrinkRequest extends TeaModel {
     @NameInMap("Collections")
     public String collections;
 
+    @NameInMap("Conditions")
+    public String conditionsShrink;
+
     /**
      * <p>The domain. Only models in the domain are returned. Valid values: nlp (Natural Language Processing) and cv (Computer Vision).</p>
      * 
@@ -148,6 +151,14 @@ public class ListModelsShrinkRequest extends TeaModel {
     }
     public String getCollections() {
         return this.collections;
+    }
+
+    public ListModelsShrinkRequest setConditionsShrink(String conditionsShrink) {
+        this.conditionsShrink = conditionsShrink;
+        return this;
+    }
+    public String getConditionsShrink() {
+        return this.conditionsShrink;
     }
 
     public ListModelsShrinkRequest setDomain(String domain) {
