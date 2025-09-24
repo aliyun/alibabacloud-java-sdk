@@ -5,23 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateResourcePackageResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public CreateResourcePackageResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -29,8 +22,6 @@ public class CreateResourcePackageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the order.</p>
-     * 
      * <strong>example:</strong>
      * <p>202407022550621</p>
      */
@@ -38,8 +29,6 @@ public class CreateResourcePackageResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
@@ -47,8 +36,6 @@ public class CreateResourcePackageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -110,8 +97,6 @@ public class CreateResourcePackageResponseBody extends TeaModel {
 
     public static class CreateResourcePackageResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the resource plan.</p>
-         * 
          * <strong>example:</strong>
          * <p>OSSBAG-cn-****s</p>
          */
@@ -119,8 +104,6 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the order.</p>
-         * 
          * <strong>example:</strong>
          * <p>202407022550621</p>
          */

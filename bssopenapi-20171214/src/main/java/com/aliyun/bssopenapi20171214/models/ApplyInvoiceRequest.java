@@ -97,6 +97,9 @@ public class ApplyInvoiceRequest extends TeaModel {
     @NameInMap("UserRemark")
     public String userRemark;
 
+    @NameInMap("emails")
+    public String emails;
+
     public static ApplyInvoiceRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyInvoiceRequest self = new ApplyInvoiceRequest();
         return TeaModel.build(map, self);
@@ -180,6 +183,14 @@ public class ApplyInvoiceRequest extends TeaModel {
     }
     public String getUserRemark() {
         return this.userRemark;
+    }
+
+    public ApplyInvoiceRequest setEmails(String emails) {
+        this.emails = emails;
+        return this;
+    }
+    public String getEmails() {
+        return this.emails;
     }
 
 }

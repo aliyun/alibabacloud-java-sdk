@@ -273,6 +273,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserRemark", request.userRemark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.emails)) {
+            query.put("emails", request.emails);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -905,6 +909,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
             query.put("CommodityCode", request.commodityCode);
         }
@@ -2869,7 +2877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ol>
      * <li><strong>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</strong></li>
      * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -2920,7 +2928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ol>
      * <li><strong>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</strong></li>
      * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -3124,6 +3132,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyInstanceResponse modifyInstance(ModifyInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>对客订单支付接口</p>
+     * 
+     * @param request PayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PayOrderResponse
+     */
+    public PayOrderResponse payOrderWithOptions(PayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerId)) {
+            query.put("BuyerId", request.buyerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIds)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paySubmitUid)) {
+            query.put("PaySubmitUid", request.paySubmitUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payerId)) {
+            query.put("PayerId", request.payerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PayOrder"),
+            new TeaPair("version", "2017-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PayOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>对客订单支付接口</p>
+     * 
+     * @param request PayOrderRequest
+     * @return PayOrderResponse
+     */
+    public PayOrderResponse payOrder(PayOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.payOrderWithOptions(request, runtime);
     }
 
     /**
@@ -5535,7 +5611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ol>
      * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
      * <li>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5590,7 +5666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ol>
      * <li>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</li>
      * <li>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</li>
-     * <li>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</li>
+     * <li>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</li>
      * </ol>
      * 
      * <b>summary</b> : 

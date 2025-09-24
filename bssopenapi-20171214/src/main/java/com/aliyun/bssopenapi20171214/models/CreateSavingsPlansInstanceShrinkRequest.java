@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateSavingsPlansInstanceShrinkRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
     /**
      * <p>The code of the service.</p>
      * <p>This parameter is required.</p>
@@ -130,6 +133,14 @@ public class CreateSavingsPlansInstanceShrinkRequest extends TeaModel {
     public static CreateSavingsPlansInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSavingsPlansInstanceShrinkRequest self = new CreateSavingsPlansInstanceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSavingsPlansInstanceShrinkRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public CreateSavingsPlansInstanceShrinkRequest setCommodityCode(String commodityCode) {

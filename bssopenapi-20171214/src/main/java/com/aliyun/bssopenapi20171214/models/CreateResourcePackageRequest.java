@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourcePackageRequest extends TeaModel {
     /**
-     * <p>The validity period of the resource plan.</p>
+     * <p>The ID of the resource plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,7 @@ public class CreateResourcePackageRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-03-03T12:00:00Z</p>
@@ -28,7 +27,7 @@ public class CreateResourcePackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The type of the resource plan. Set this parameter to the code of the <strong>resource plan</strong> returned by calling the <strong>DescribeResourcePackageProduct</strong> operation.</p>
+     * <p>The ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,13 +37,6 @@ public class CreateResourcePackageRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The unit of the validity period of the resource plan. Valid values:</p>
-     * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
-     * </ul>
-     * <p>Default value: Month.</p>
-     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -52,7 +44,7 @@ public class CreateResourcePackageRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The code of the service. You can query the code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud services</strong>.</p>
+     * <p>Indicates whether the request is successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +54,7 @@ public class CreateResourcePackageRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The specifications of the resource plan. Set this parameter to the value of the <strong>specifications</strong> returned by calling the <strong>DescribeResourcePackageProduct</strong> operation.</p>
+     * <p>The ID of the order.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
