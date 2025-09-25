@@ -140,6 +140,9 @@ public class RealTimeDialogResponseBody extends TeaModel {
         @NameInMap("selfDirectedScriptFullContent")
         public String selfDirectedScriptFullContent;
 
+        @NameInMap("skipCurrentRecognize")
+        public Boolean skipCurrentRecognize;
+
         public static RealTimeDialogResponseBodyChoicesDelta build(java.util.Map<String, ?> map) throws Exception {
             RealTimeDialogResponseBodyChoicesDelta self = new RealTimeDialogResponseBodyChoicesDelta();
             return TeaModel.build(map, self);
@@ -233,6 +236,14 @@ public class RealTimeDialogResponseBody extends TeaModel {
             return this.selfDirectedScriptFullContent;
         }
 
+        public RealTimeDialogResponseBodyChoicesDelta setSkipCurrentRecognize(Boolean skipCurrentRecognize) {
+            this.skipCurrentRecognize = skipCurrentRecognize;
+            return this;
+        }
+        public Boolean getSkipCurrentRecognize() {
+            return this.skipCurrentRecognize;
+        }
+
     }
 
     public static class RealTimeDialogResponseBodyChoicesMessage extends TeaModel {
@@ -298,6 +309,9 @@ public class RealTimeDialogResponseBody extends TeaModel {
 
         @NameInMap("selfDirectedScriptFullContent")
         public String selfDirectedScriptFullContent;
+
+        @NameInMap("skipCurrentRecognize")
+        public Boolean skipCurrentRecognize;
 
         public static RealTimeDialogResponseBodyChoicesMessage build(java.util.Map<String, ?> map) throws Exception {
             RealTimeDialogResponseBodyChoicesMessage self = new RealTimeDialogResponseBodyChoicesMessage();
@@ -390,6 +404,14 @@ public class RealTimeDialogResponseBody extends TeaModel {
         }
         public String getSelfDirectedScriptFullContent() {
             return this.selfDirectedScriptFullContent;
+        }
+
+        public RealTimeDialogResponseBodyChoicesMessage setSkipCurrentRecognize(Boolean skipCurrentRecognize) {
+            this.skipCurrentRecognize = skipCurrentRecognize;
+            return this;
+        }
+        public Boolean getSkipCurrentRecognize() {
+            return this.skipCurrentRecognize;
         }
 
     }
