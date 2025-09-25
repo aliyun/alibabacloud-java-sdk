@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeDeviceInfoResponseBody extends TeaModel {
     /**
+     * <p>The current page number being queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Array of device information.</p>
+     */
     @NameInMap("DeviceInfoList")
     public DescribeDeviceInfoResponseBodyDeviceInfoList deviceInfoList;
 
     /**
+     * <p>Number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
 
     public static class DescribeDeviceInfoResponseBodyDeviceInfoListDeviceInfo extends TeaModel {
         /**
+         * <p>Authorization start date.</p>
+         * 
          * <strong>example:</strong>
          * <p>20180101</p>
          */
@@ -89,6 +102,8 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         public String beginDay;
 
         /**
+         * <p>Corresponds to the BizType in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>FACE_TEST</p>
          */
@@ -96,6 +111,8 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         public String bizType;
 
         /**
+         * <p>Corresponds to the DeviceId in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</p>
          */
@@ -103,6 +120,8 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Authorization expiration date.</p>
+         * 
          * <strong>example:</strong>
          * <p>20180101</p>
          */
@@ -110,6 +129,8 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         public String expiredDay;
 
         /**
+         * <p>Corresponds to the UserDeviceId in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>3iJ1AY$oHcu7mC69</p>
          */

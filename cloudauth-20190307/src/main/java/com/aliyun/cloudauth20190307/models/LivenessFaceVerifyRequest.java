@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LivenessFaceVerifyRequest extends TeaModel {
     /**
+     * <p>Unique identifier for real-person authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
      */
@@ -12,6 +14,14 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String certifyId;
 
     /**
+     * <p>Whether to allow cropping of the face image:</p>
+     * <ul>
+     * <li><p>T: Allow cropping</p>
+     * </li>
+     * <li><p>F (default): Do not allow cropping.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>T</p>
      */
@@ -19,6 +29,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String crop;
 
     /**
+     * <p>Device token, used for risk identification.</p>
+     * 
      * <strong>example:</strong>
      * <p>McozS1ZWRcRZStlERcZZo_QOytx5jcgZoZJEoRLOxxxxxxx</p>
      */
@@ -26,6 +38,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String deviceToken;
 
     /**
+     * <p>Base64 encoded photo.</p>
+     * 
      * <strong>example:</strong>
      * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
      */
@@ -33,6 +47,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String faceContrastPicture;
 
     /**
+     * <p>Image URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://ware.cdeledu.com/upfile/uploadPic/2025/03/21/dd62fbb9c966433ab0ba9a7252816b30.jpg">https://ware.cdeledu.com/upfile/uploadPic/2025/03/21/dd62fbb9c966433ab0ba9a7252816b30.jpg</a></p>
      */
@@ -40,6 +56,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String faceContrastPictureUrl;
 
     /**
+     * <p>User\&quot;s network IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>114.xxx.xxx.xxx</p>
      */
@@ -47,6 +65,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>User\&quot;s mobile phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>130xxxxxxxx</p>
      */
@@ -54,6 +74,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String mobile;
 
     /**
+     * <p>Liveness detection parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>FRONT_CAMERA_LIVENESS</p>
      */
@@ -61,6 +83,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>Authorized OSS bucket name.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai-aliyun-cloudauth-1494517779820665</p>
      */
@@ -68,6 +92,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>Authorized OSS file name.</p>
+     * 
      * <strong>example:</strong>
      * <p>facedetect/17483113370916034.jpg</p>
      */
@@ -75,6 +101,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String ossObjectName;
 
     /**
+     * <p>A unique business identifier defined by the client side, used for subsequent troubleshooting. The value should be a combination of letters and numbers up to 32 characters long, ensuring uniqueness.</p>
+     * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
      */
@@ -82,6 +110,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
+     * <p>Fixed value: LR_FR_MIN.</p>
+     * 
      * <strong>example:</strong>
      * <p>LR_FR_MIN</p>
      */
@@ -89,6 +119,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>Authentication scenario ID. This ID is automatically generated after creating an authentication scenario in the console.</p>
+     * 
      * <strong>example:</strong>
      * <p>100000****</p>
      */
@@ -96,6 +128,8 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     public Long sceneId;
 
     /**
+     * <p>Your custom user ID (up to 100 characters), please ensure it is unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */

@@ -469,6 +469,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Interface Name: ContrastFaceVerify.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Interface Description: An interface for real person authentication through server-side integration.</li>
+     * </ul>
+     * <h4>Image Format Requirements</h4>
+     * <p>When performing real person authentication, please ensure that the images you upload meet all of the following conditions:</p>
+     * <ul>
+     * <li>Recent photo with a clear, unobstructed, and natural expression, facing the camera directly.</li>
+     * <li>Clear and properly exposed photo, without overly dark, bright, or haloed faces, and with minimal angle deviation.</li>
+     * <li>Resolution not exceeding 1920<em>1080, at least 640</em>480, with the shorter side recommended to be resized to 720 pixels, and a compression ratio greater than 0.9.</li>
+     * <li>Photo size: &lt;1MB.</li>
+     * <li>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>This interface is used to submit authentication materials for verification and comparison, and it synchronously returns the authentication result.</p>
+     * 
      * @param request ContrastFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ContrastFaceVerifyResponse
@@ -572,6 +592,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Interface Name: ContrastFaceVerify.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Interface Description: An interface for real person authentication through server-side integration.</li>
+     * </ul>
+     * <h4>Image Format Requirements</h4>
+     * <p>When performing real person authentication, please ensure that the images you upload meet all of the following conditions:</p>
+     * <ul>
+     * <li>Recent photo with a clear, unobstructed, and natural expression, facing the camera directly.</li>
+     * <li>Clear and properly exposed photo, without overly dark, bright, or haloed faces, and with minimal angle deviation.</li>
+     * <li>Resolution not exceeding 1920<em>1080, at least 640</em>480, with the shorter side recommended to be resized to 720 pixels, and a compression ratio greater than 0.9.</li>
+     * <li>Photo size: &lt;1MB.</li>
+     * <li>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>This interface is used to submit authentication materials for verification and comparison, and it synchronously returns the authentication result.</p>
+     * 
      * @param request ContrastFaceVerifyRequest
      * @return ContrastFaceVerifyResponse
      */
@@ -669,6 +709,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Call CreateAuthKey to get the authorization key, which is used for offline face recognition SDK activation.</p>
+     * 
      * @param request CreateAuthKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAuthKeyResponse
@@ -710,6 +759,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Call CreateAuthKey to get the authorization key, which is used for offline face recognition SDK activation.</p>
+     * 
      * @param request CreateAuthKeyRequest
      * @return CreateAuthKeyResponse
      */
@@ -719,6 +777,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call CreateVerifySetting to create a verification scenario configuration. This operation is equivalent to creating a new verification scenario on the console.</p>
+     * 
      * @param request CreateVerifySettingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateVerifySettingResponse
@@ -768,6 +832,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call CreateVerifySetting to create a verification scenario configuration. This operation is equivalent to creating a new verification scenario on the console.</p>
+     * 
      * @param request CreateVerifySettingRequest
      * @return CreateVerifySettingResponse
      */
@@ -938,7 +1008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>凭证核验</p>
+     * <p>Credential verification</p>
      * 
      * @param tmpReq CredentialVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1030,7 +1100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>凭证核验</p>
+     * <p>Credential verification</p>
      * 
      * @param request CredentialVerifyRequest
      * @return CredentialVerifyResponse
@@ -1375,8 +1445,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>图片要素核验获取认证结果</p>
+     * <p>Obtain Authentication Results from Image Element Verification</p>
      * 
      * @param request DescribeCardVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1407,8 +1480,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>图片要素核验获取认证结果</p>
+     * <p>Obtain Authentication Results from Image Element Verification</p>
      * 
      * @param request DescribeCardVerifyRequest
      * @return DescribeCardVerifyResponse
@@ -1419,6 +1495,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call DescribeDeviceInfo to query device-related information, such as the validity period of authorization, business identifiers customized by the access party, and device ID, etc.</p>
+     * 
      * @param request DescribeDeviceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeviceInfoResponse
@@ -1472,6 +1554,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call DescribeDeviceInfo to query device-related information, such as the validity period of authorization, business identifiers customized by the access party, and device ID, etc.</p>
+     * 
      * @param request DescribeDeviceInfoRequest
      * @return DescribeDeviceInfoResponse
      */
@@ -1482,7 +1570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>金融级人脸保镖服务</p>
+     * <p>Financial-Grade Face Guard Service</p>
      * 
      * @param request DescribeFaceGuardRiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1526,7 +1614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>金融级人脸保镖服务</p>
+     * <p>Financial-Grade Face Guard Service</p>
      * 
      * @param request DescribeFaceGuardRiskRequest
      * @return DescribeFaceGuardRiskResponse
@@ -1537,6 +1625,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>After the mobile end of the integrator receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.</p>
+     * 
      * @param request DescribeFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFaceVerifyResponse
@@ -1574,6 +1671,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>After the mobile end of the integrator receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.</p>
+     * 
      * @param request DescribeFaceVerifyRequest
      * @return DescribeFaceVerifyResponse
      */
@@ -1583,6 +1689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</p>
+     * 
      * @param request DescribeOssUploadTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOssUploadTokenResponse
@@ -1604,6 +1713,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</p>
      * @return DescribeOssUploadTokenResponse
      */
     public DescribeOssUploadTokenResponse describeOssUploadToken() throws Exception {
@@ -1613,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Open API新增金融级数据统计API</p>
+     * <p>Open API adds financial-grade data statistics API</p>
      * 
      * @param request DescribePageFaceVerifyDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1665,7 +1776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Open API新增金融级数据统计API</p>
+     * <p>Open API adds financial-grade data statistics API</p>
      * 
      * @param request DescribePageFaceVerifyDataRequest
      * @return DescribePageFaceVerifyDataResponse
@@ -1676,6 +1787,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enhanced Real Person Authentication Call Statistics Pagination Query Interface</p>
+     * 
      * @param request DescribeSmartStatisticsPageListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSmartStatisticsPageListResponse
@@ -1725,6 +1839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Enhanced Real Person Authentication Call Statistics Pagination Query Interface</p>
+     * 
      * @param request DescribeSmartStatisticsPageListRequest
      * @return DescribeSmartStatisticsPageListResponse
      */
@@ -1734,6 +1851,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before accessing this API, please ensure that you have completed the necessary preparations. For more details, see <a href="https://help.aliyun.com/document_detail/127471.html">Real Person Authentication Server-side Preparation</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Liveness Face Verification Server-side Preparation</a>.</p>
+     * <blockquote>
+     * <p>Alibaba Cloud Real Person Authentication only stores authentication data for the last 180 days. For any subsequent business use, please call this interface in a timely manner to retrieve and store the data yourself to avoid any impact on usage.
+     * Request Method: HTTPS POST and GET.
+     * Interface Description: After the mobile end of the access party receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.
+     * Applicable Scope: This interface is applicable to the authentication solution with SDK + server-side integration.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the result of real-person authentication.</p>
+     * 
      * @param request DescribeVerifyResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVerifyResultResponse
@@ -1767,6 +1896,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before accessing this API, please ensure that you have completed the necessary preparations. For more details, see <a href="https://help.aliyun.com/document_detail/127471.html">Real Person Authentication Server-side Preparation</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Liveness Face Verification Server-side Preparation</a>.</p>
+     * <blockquote>
+     * <p>Alibaba Cloud Real Person Authentication only stores authentication data for the last 180 days. For any subsequent business use, please call this interface in a timely manner to retrieve and store the data yourself to avoid any impact on usage.
+     * Request Method: HTTPS POST and GET.
+     * Interface Description: After the mobile end of the access party receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.
+     * Applicable Scope: This interface is applicable to the authentication solution with SDK + server-side integration.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the result of real-person authentication.</p>
+     * 
      * @param request DescribeVerifyResultRequest
      * @return DescribeVerifyResultResponse
      */
@@ -1776,6 +1917,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.
+     * Interface Description: Obtain the SDK generation result based on the task ID for generating an offline facial recognition SDK.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call DescribeVerifySDK to get the offline SDK download address.</p>
+     * 
      * @param request DescribeVerifySDKRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVerifySDKResponse
@@ -1805,6 +1953,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.
+     * Interface Description: Obtain the SDK generation result based on the task ID for generating an offline facial recognition SDK.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Call DescribeVerifySDK to get the offline SDK download address.</p>
+     * 
      * @param request DescribeVerifySDKRequest
      * @return DescribeVerifySDKResponse
      */
@@ -1814,6 +1969,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
+     * Request Method: HTTPS POST and GET
+     * API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
+     * Applicable Scope: This interface is suitable for wireless SDK integration.
+     * Image Address: Use HTTP or HTTPS addresses that are publicly accessible over the Internet. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.
+     * Image Restrictions:</p>
+     * <ul>
+     * <li>Relative or absolute paths of local images are not supported.</li>
+     * <li>The size of a single image should be controlled within 2 MB to avoid algorithm retrieval timeout.</li>
+     * <li>The face area in the image must be at least 64*64 pixels (px).</li>
+     * <li>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Call DescribeVerifyToken to initiate an authentication request and obtain an authentication Token. This interface is suitable for authentication solutions using SDK + server-side integration.</p>
+     * 
      * @param request DescribeVerifyTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVerifyTokenResponse
@@ -1899,6 +2071,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
+     * Request Method: HTTPS POST and GET
+     * API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
+     * Applicable Scope: This interface is suitable for wireless SDK integration.
+     * Image Address: Use HTTP or HTTPS addresses that are publicly accessible over the Internet. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.
+     * Image Restrictions:</p>
+     * <ul>
+     * <li>Relative or absolute paths of local images are not supported.</li>
+     * <li>The size of a single image should be controlled within 2 MB to avoid algorithm retrieval timeout.</li>
+     * <li>The face area in the image must be at least 64*64 pixels (px).</li>
+     * <li>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Call DescribeVerifyToken to initiate an authentication request and obtain an authentication Token. This interface is suitable for authentication solutions using SDK + server-side integration.</p>
+     * 
      * @param request DescribeVerifyTokenRequest
      * @return DescribeVerifyTokenResponse
      */
@@ -1908,6 +2097,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.
+     * Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
+     * Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</p>
+     * <ul>
+     * <li>HTTP Address: A publicly accessible HTTP address. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>Base64 Encoding: An image encoded through base64, with the format being <code>base64://&lt;image base64 string&gt;</code>.
+     * Image Limitations:</li>
+     * <li>Does not support relative or absolute paths of local images.</li>
+     * <li>Please keep the size of a single image within 2 MB to avoid algorithm timeout.</li>
+     * <li>There is an 8 MB size limit for the Body of a single request; please calculate the total size of all images and other information in the request and do not exceed the limit.</li>
+     * <li>When using Base64 to pass images, the request method needs to be changed to POST; the header description of the image Base64 string, such as <code>data:image/png;base64</code>, should be removed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Detect Validity Attributes in Face Photos</p>
+     * 
      * @param request DetectFaceAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetectFaceAttributesResponse
@@ -1941,6 +2147,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.
+     * Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
+     * Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</p>
+     * <ul>
+     * <li>HTTP Address: A publicly accessible HTTP address. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>Base64 Encoding: An image encoded through base64, with the format being <code>base64://&lt;image base64 string&gt;</code>.
+     * Image Limitations:</li>
+     * <li>Does not support relative or absolute paths of local images.</li>
+     * <li>Please keep the size of a single image within 2 MB to avoid algorithm timeout.</li>
+     * <li>There is an 8 MB size limit for the Body of a single request; please calculate the total size of all images and other information in the request and do not exceed the limit.</li>
+     * <li>When using Base64 to pass images, the request method needs to be changed to POST; the header description of the image Base64 string, such as <code>data:image/png;base64</code>, should be removed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Detect Validity Attributes in Face Photos</p>
+     * 
      * @param request DetectFaceAttributesRequest
      * @return DetectFaceAttributesResponse
      */
@@ -2303,6 +2526,164 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Input name, ID number, and face photo to verify their authenticity and consistency through authoritative sources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Identity Three Elements Verification</p>
+     * 
+     * @param request Id3MetaVerifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Id3MetaVerifyResponse
+     */
+    public Id3MetaVerifyResponse id3MetaVerifyWithOptions(Id3MetaVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crop)) {
+            body.put("Crop", request.crop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceFile)) {
+            body.put("FaceFile", request.faceFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceUrl)) {
+            body.put("FaceUrl", request.faceUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            body.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            body.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Id3MetaVerify"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Id3MetaVerifyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Input name, ID number, and face photo to verify their authenticity and consistency through authoritative sources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Identity Three Elements Verification</p>
+     * 
+     * @param request Id3MetaVerifyRequest
+     * @return Id3MetaVerifyResponse
+     */
+    public Id3MetaVerifyResponse id3MetaVerify(Id3MetaVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.id3MetaVerifyWithOptions(request, runtime);
+    }
+
+    public Id3MetaVerifyResponse id3MetaVerifyAdvance(Id3MetaVerifyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        com.aliyun.credentials.models.CredentialModel credentialModel = null;
+        if (com.aliyun.teautil.Common.isUnset(_credential)) {
+            throw new TeaException(TeaConverter.buildMap(
+                new TeaPair("code", "InvalidCredentials"),
+                new TeaPair("message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details.")
+            ));
+        }
+
+        credentialModel = _credential.getCredential();
+        String accessKeyId = credentialModel.accessKeyId;
+        String accessKeySecret = credentialModel.accessKeySecret;
+        String securityToken = credentialModel.securityToken;
+        String credentialType = credentialModel.type;
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.teaopenapi.Client authClient = new com.aliyun.teaopenapi.Client(authConfig);
+        java.util.Map<String, String> authRequest = TeaConverter.buildMap(
+            new TeaPair("Product", "Cloudauth"),
+            new TeaPair("RegionId", _regionId)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest authReq = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(authRequest))
+        ));
+        com.aliyun.teaopenapi.models.Params authParams = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeFileUpload"),
+            new TeaPair("version", "2019-12-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        java.util.Map<String, Object> authResponse = new java.util.HashMap<>();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        java.util.Map<String, Object> ossHeader = new java.util.HashMap<>();
+        java.util.Map<String, Object> tmpBody = new java.util.HashMap<>();
+        Boolean useAccelerate = false;
+        java.util.Map<String, String> authResponseBody = new java.util.HashMap<>();
+        Id3MetaVerifyRequest id3MetaVerifyReq = new Id3MetaVerifyRequest();
+        com.aliyun.openapiutil.Client.convert(request, id3MetaVerifyReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.faceFileObject)) {
+            Object tmpResp0 = authClient.callApi(authParams, authReq, runtime);
+            authResponse = com.aliyun.teautil.Common.assertAsMap(tmpResp0);
+            tmpBody = com.aliyun.teautil.Common.assertAsMap(authResponse.get("body"));
+            useAccelerate = com.aliyun.teautil.Common.assertAsBoolean(tmpBody.get("UseAccelerate"));
+            authResponseBody = com.aliyun.teautil.Common.stringifyMapValue(tmpBody);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponseBody.get("ObjectKey")),
+                new TeaPair("content", request.faceFileObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = TeaConverter.buildMap(
+                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
+                new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
+                new TeaPair("Signature", authResponseBody.get("Signature")),
+                new TeaPair("key", authResponseBody.get("ObjectKey")),
+                new TeaPair("file", fileObj),
+                new TeaPair("success_action_status", "201")
+            );
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            id3MetaVerifyReq.faceFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
+        }
+
+        Id3MetaVerifyResponse id3MetaVerifyResp = this.id3MetaVerifyWithOptions(id3MetaVerifyReq, runtime);
+        return id3MetaVerifyResp;
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Before each authentication, use this interface to obtain the CertifyId, which is used to link various interfaces in the authentication request.</p>
      * 
      * <b>summary</b> : 
@@ -2388,8 +2769,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</li>
+     * </ul>
+     * <h4>Image Format Requirements</h4>
+     * <p>When performing real-person authentication, please provide images that meet all of the following conditions:</p>
+     * <ul>
+     * <li>Recent photo with a clear, unobstructed face, natural expression, and facing the camera directly.</li>
+     * <li>Clear photo with normal exposure, no overexposure, underexposure, or halo effects, and no significant angle deviation.</li>
+     * <li>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended short side scaled to 720 pixels, compression ratio greater than 0.9.</li>
+     * <li>Photo size: &lt;1MB.</li>
+     * <li>Supports 90, 180, and 270-degree photos; in the case of multiple faces, the largest face will be selected.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>实人服务端初始化接口</p>
+     * <p>Real-Person Server Initialization Interface</p>
      * 
      * @param request InitFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2570,8 +2967,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</li>
+     * </ul>
+     * <h4>Image Format Requirements</h4>
+     * <p>When performing real-person authentication, please provide images that meet all of the following conditions:</p>
+     * <ul>
+     * <li>Recent photo with a clear, unobstructed face, natural expression, and facing the camera directly.</li>
+     * <li>Clear photo with normal exposure, no overexposure, underexposure, or halo effects, and no significant angle deviation.</li>
+     * <li>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended short side scaled to 720 pixels, compression ratio greater than 0.9.</li>
+     * <li>Photo size: &lt;1MB.</li>
+     * <li>Supports 90, 180, and 270-degree photos; in the case of multiple faces, the largest face will be selected.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>实人服务端初始化接口</p>
+     * <p>Real-Person Server Initialization Interface</p>
      * 
      * @param request InitFaceVerifyRequest
      * @return InitFaceVerifyResponse
@@ -2646,6 +3059,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invoke the LivenessFaceVerify interface to perform liveness detection on a face image.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Silent Liveness Face (LivenessFaceVerify) refers to a service that performs real face detection by inputting pre-obtained face images through an API. The algorithm primarily identifies whether the face is from a screen recording, printed picture, or other types of liveness attacks. This service is suitable for low-risk business scenarios or in conjunction with offline facial recognition SDKs. If your business has higher requirements for real face security, it is recommended to integrate App or WebSDK mode, or integrate with Deepfake face detection services to assist in identifying more dimensions of face forgery risks.</p>
+     * 
      * @param request LivenessFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return LivenessFaceVerifyResponse
@@ -2729,6 +3148,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invoke the LivenessFaceVerify interface to perform liveness detection on a face image.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Silent Liveness Face (LivenessFaceVerify) refers to a service that performs real face detection by inputting pre-obtained face images through an API. The algorithm primarily identifies whether the face is from a screen recording, printed picture, or other types of liveness attacks. This service is suitable for low-risk business scenarios or in conjunction with offline facial recognition SDKs. If your business has higher requirements for real face security, it is recommended to integrate App or WebSDK mode, or integrate with Deepfake face detection services to assist in identifying more dimensions of face forgery risks.</p>
+     * 
      * @param request LivenessFaceVerifyRequest
      * @return LivenessFaceVerifyResponse
      */
@@ -3718,6 +4143,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparatory work has been completed. For details, please refer to <a href="https://help.aliyun.com/document_detail/127471.html">Server-side Access Preparation</a>.
+     * Request Method: HTTPS POST and GET.
+     * API Description: The server of the access party submits the authentication materials to the real-person authentication service for verification and comparison, with the results returned synchronously.
+     * Applicable Scope: This interface is only applicable to pure server-side access authentication solutions.
+     * Image Upload Address Explanation:</p>
+     * <ul>
+     * <li>HTTP or HTTPS address: Supports publicly accessible HTTP or HTTPS addresses. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>OSS address: If the images from the access party are local files, Alibaba Cloud also provides an upload SDK, supporting the business party to upload the images to the specified OSS bucket of the real-person authentication service, and use the obtained OSS address as the image address parameter in the interface. If your business needs to use the upload SDK, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us for acquisition.
+     * Image Limitations:</li>
+     * <li>Does not support relative or absolute paths of local images.</li>
+     * <li>Please keep the size of a single image within 2 MB to avoid algorithm retrieval timeout.</li>
+     * <li>The face area in the image should be at least 64*64 pixels.</li>
+     * <li>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request, and do not exceed the limit.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Call VerifyMaterial, in a pure server-side access authentication solution, input name, ID number, portrait photo, and front and back photos of the ID card (optional) for real-person authentication, and return the authentication result synchronously.</p>
+     * 
      * @param request VerifyMaterialRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VerifyMaterialResponse
@@ -3775,6 +4219,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Preparation for Access: When integrating this API, please ensure that the corresponding preparatory work has been completed. For details, please refer to <a href="https://help.aliyun.com/document_detail/127471.html">Server-side Access Preparation</a>.
+     * Request Method: HTTPS POST and GET.
+     * API Description: The server of the access party submits the authentication materials to the real-person authentication service for verification and comparison, with the results returned synchronously.
+     * Applicable Scope: This interface is only applicable to pure server-side access authentication solutions.
+     * Image Upload Address Explanation:</p>
+     * <ul>
+     * <li>HTTP or HTTPS address: Supports publicly accessible HTTP or HTTPS addresses. For example, <code>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</code>.</li>
+     * <li>OSS address: If the images from the access party are local files, Alibaba Cloud also provides an upload SDK, supporting the business party to upload the images to the specified OSS bucket of the real-person authentication service, and use the obtained OSS address as the image address parameter in the interface. If your business needs to use the upload SDK, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us for acquisition.
+     * Image Limitations:</li>
+     * <li>Does not support relative or absolute paths of local images.</li>
+     * <li>Please keep the size of a single image within 2 MB to avoid algorithm retrieval timeout.</li>
+     * <li>The face area in the image should be at least 64*64 pixels.</li>
+     * <li>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request, and do not exceed the limit.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Call VerifyMaterial, in a pure server-side access authentication solution, input name, ID number, portrait photo, and front and back photos of the ID card (optional) for real-person authentication, and return the authentication result synchronously.</p>
+     * 
      * @param request VerifyMaterialRequest
      * @return VerifyMaterialResponse
      */

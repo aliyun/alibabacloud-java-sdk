@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyTokenRequest extends TeaModel {
     /**
+     * <p>Verification ID. A unique ID that identifies a verification task, not exceeding 64 characters. For a single verification task, the system supports unlimited submissions until the final verification is passed and the task is completed.</p>
+     * <blockquote>
+     * <p>Different BizIds are required for different verification tasks.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Identifier for the business scenario using the real person authentication service. Please refer to <a href="https://help.aliyun.com/document_detail/127885.html">Business Settings</a> and complete the creation in the console first.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Callback seed.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -32,6 +39,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String callbackSeed;
 
     /**
+     * <p>Callback URL.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -41,6 +50,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String callbackUrl;
 
     /**
+     * <p>HTTP or HTTPS link to the retained portrait photo.</p>
+     * 
      * <strong>example:</strong>
      * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
      */
@@ -48,6 +59,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String faceRetainedImageUrl;
 
     /**
+     * <p>Redirect URL for failed verification.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -57,6 +70,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String failedRedirectUrl;
 
     /**
+     * <p>HTTP or HTTPS link to the national emblem side of the ID card image.</p>
+     * 
      * <strong>example:</strong>
      * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
      */
@@ -64,6 +79,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String idCardBackImageUrl;
 
     /**
+     * <p>HTTP or HTTPS link to the portrait side of the ID card image.</p>
+     * 
      * <strong>example:</strong>
      * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
      */
@@ -71,16 +88,26 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String idCardFrontImageUrl;
 
     /**
+     * <p>ID card number.</p>
+     * 
      * <strong>example:</strong>
      * <p>330100xxxxxxxxxxxx</p>
      */
     @NameInMap("IdCardNumber")
     public String idCardNumber;
 
+    /**
+     * <p>Name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Redirect URL upon successful verification.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -90,6 +117,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String passedRedirectUrl;
 
     /**
+     * <p>ID of the end user, such as the account ID of the end user.</p>
+     * 
      * <strong>example:</strong>
      * <p>user111</p>
      */
@@ -97,6 +126,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>User IP.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.<em><strong>.</strong></em></p>
      */
@@ -104,6 +135,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String userIp;
 
     /**
+     * <p>User phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>187********</p>
      */
@@ -111,6 +144,8 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String userPhoneNumber;
 
     /**
+     * <p>User registration time. Expressed in timestamp format, unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1577808000000</p>
      */

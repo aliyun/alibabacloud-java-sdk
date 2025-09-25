@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class VerifyMaterialResponseBody extends TeaModel {
     /**
+     * <p>Comparison score between the facial photo submitted during the authentication process and authoritative data, with a range of <strong>0</strong>~<strong>100</strong>.</p>
+     * <p>Confidence threshold references:</p>
+     * <ul>
+     * <li>False recognition rate 0.001% corresponds to a threshold of 95.</li>
+     * <li>False recognition rate 0.01% corresponds to a threshold of 90.</li>
+     * <li>False recognition rate 0.1% corresponds to a threshold of 80.</li>
+     * <li>False recognition rate 1% corresponds to a threshold of 60.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This field only indicates the comparison result between the face and authoritative data, serving as a reference score. It is generally not recommended to use this score alone as the pass/fail criterion. For the comprehensive authentication result, please refer to the <strong>VerifyStatus</strong> field. The <strong>VerifyStatus</strong> result integrates the face-to-authoritative data comparison and other various strategies, enhancing security levels.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>97</p>
      */
@@ -12,16 +24,30 @@ public class VerifyMaterialResponseBody extends TeaModel {
     public Float authorityComparisionScore;
 
     /**
+     * <p>Comparison score between the facial photo submitted during the authentication process and the face on the portrait side of the ID card image, with a range of <strong>0</strong>~<strong>100</strong>.</p>
+     * <p>Confidence threshold references:</p>
+     * <ul>
+     * <li>False recognition rate 0.001% corresponds to a threshold of 95.</li>
+     * <li>False recognition rate 0.01% corresponds to a threshold of 90.</li>
+     * <li>False recognition rate 0.1% corresponds to a threshold of 80.</li>
+     * <li>False recognition rate 1% corresponds to a threshold of 60.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>97</p>
      */
     @NameInMap("IdCardFaceComparisonScore")
     public Float idCardFaceComparisonScore;
 
+    /**
+     * <p>Authentication materials.</p>
+     */
     @NameInMap("Material")
     public VerifyMaterialResponseBodyMaterial material;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -29,6 +55,12 @@ public class VerifyMaterialResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Authentication status. Values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Authentication passed.</li>
+     * <li><strong>2</strong>~<strong>n</strong>: Authentication failed due to various reasons. For detailed descriptions, see the <strong>Authentication Status Explanation</strong> below.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +68,8 @@ public class VerifyMaterialResponseBody extends TeaModel {
     public Integer verifyStatus;
 
     /**
+     * <p>Token for this authentication, used to link various interfaces in the authentication request, valid for 30 minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>c302c0797679457685410ee51a5ba375</p>
      */
@@ -96,13 +130,27 @@ public class VerifyMaterialResponseBody extends TeaModel {
     }
 
     public static class VerifyMaterialResponseBodyMaterialIdCardInfo extends TeaModel {
+        /**
+         * <p>Address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江省杭州市余杭区文一西路969号</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>Issuing authority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市公安局</p>
+         */
         @NameInMap("Authority")
         public String authority;
 
         /**
+         * <p>HTTP or HTTPS link to the national emblem side of the ID card. The link is valid for 5 minutes. It is recommended to store it in your business system to avoid any impact on usage.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg</a></p>
          */
@@ -110,6 +158,8 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String backImageUrl;
 
         /**
+         * <p>Date of birth.</p>
+         * 
          * <strong>example:</strong>
          * <p>19900101</p>
          */
@@ -117,6 +167,8 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String birth;
 
         /**
+         * <p>End date of the document\&quot;s validity period. Format: yyyymmdd.</p>
+         * 
          * <strong>example:</strong>
          * <p>20201101</p>
          */
@@ -124,19 +176,35 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String endDate;
 
         /**
+         * <p>HTTP or HTTPS link to the portrait side of the ID card. The link is valid for 5 minutes. It is recommended to store it in your business system to avoid any impact on usage.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg</a></p>
          */
         @NameInMap("FrontImageUrl")
         public String frontImageUrl;
 
+        /**
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Nationality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>汉</p>
+         */
         @NameInMap("Nationality")
         public String nationality;
 
         /**
+         * <p>ID number.</p>
+         * 
          * <strong>example:</strong>
          * <p>02343218901123****</p>
          */
@@ -144,6 +212,8 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String number;
 
         /**
+         * <p>Start date of the document\&quot;s validity period. Format: yyyymmdd.</p>
+         * 
          * <strong>example:</strong>
          * <p>20201101</p>
          */
@@ -239,6 +309,11 @@ public class VerifyMaterialResponseBody extends TeaModel {
 
     public static class VerifyMaterialResponseBodyMaterial extends TeaModel {
         /**
+         * <p>Global camera image captured by the real-person authentication SDK.</p>
+         * <blockquote>
+         * <p>This parameter will take effect after configuration. If you need to use this parameter, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/face-global-example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/face-global-example.jpg</a></p>
          */
@@ -246,6 +321,8 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String faceGlobalUrl;
 
         /**
+         * <p>HTTP or HTTPS link to the frontal face image, corresponding to the request parameter <strong>FaceImageUrl</strong>. The link is valid for 5 minutes, and it is recommended to store it in your business to avoid affecting usage.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</a></p>
          */
@@ -253,6 +330,12 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String faceImageUrl;
 
         /**
+         * <p>Whether the face is wearing a mask. Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Wearing a mask</li>
+         * <li><strong>false</strong>: Not wearing a mask</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -260,19 +343,41 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String faceMask;
 
         /**
+         * <p>The quality of the frontal face image. Possible values:</p>
+         * <ul>
+         * <li><strong>UNQUALIFIED</strong>: Poor quality</li>
+         * <li><strong>LOW</strong>: Low</li>
+         * <li><strong>NORMAL</strong>: Average</li>
+         * <li><strong>HIGH</strong>: High</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
         @NameInMap("FaceQuality")
         public String faceQuality;
 
+        /**
+         * <p>OCR result of the ID card information.</p>
+         * <blockquote>
+         * <p>If there is no front or back of the ID card during the verification process, the OCR result of the ID card information will not be returned. Even if the front and back of the ID card are present during the verification process, it does not guarantee that all the information on the ID card will be returned. Due to issues such as poor ID card photography, the OCR may fail to recognize some information, leading to incomplete OCR results. It is recommended that the business side does not heavily rely on the ID card OCR information.</p>
+         * </blockquote>
+         */
         @NameInMap("IdCardInfo")
         public VerifyMaterialResponseBodyMaterialIdCardInfo idCardInfo;
 
+        /**
+         * <p>Name, corresponding to the request parameter <strong>Name</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("IdCardName")
         public String idCardName;
 
         /**
+         * <p>ID number, corresponding to the request parameter <strong>IdCardNumber</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>02343218901123****</p>
          */

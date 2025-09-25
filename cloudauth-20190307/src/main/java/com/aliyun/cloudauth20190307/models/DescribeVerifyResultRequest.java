@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyResultRequest extends TeaModel {
     /**
+     * <p>Authentication ID. A unique ID that identifies an authentication task, not exceeding 64 characters. For a single authentication task, the system supports an unlimited number of submissions until the final authentication is successful and the task is completed. &gt; You need to use a different BizId for each new authentication task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeVerifyResultRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>Business scenario identifier for real-person authentication service</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Returned data list.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeSmartStatisticsPageListResponseBodyItems> items;
 
     /**
+     * <p>Number of items displayed per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>96943***4E39F805</p>
      */
@@ -29,6 +38,8 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>29</p>
      */
@@ -36,6 +47,8 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -97,6 +110,8 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
 
     public static class DescribeSmartStatisticsPageListResponseBodyItems extends TeaModel {
         /**
+         * <p>Date. Format: <i>month/day</i></p>
+         * 
          * <strong>example:</strong>
          * <p>11/8</p>
          */
@@ -104,6 +119,8 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>Pass rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
@@ -111,6 +128,8 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         public String passRate;
 
         /**
+         * <p>Product solution Code, please refer to the Enhanced Real Person Help Documentation.</p>
+         * 
          * <strong>example:</strong>
          * <p>SMART_VERIFY</p>
          */
@@ -118,16 +137,26 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>Scene ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20**40</p>
          */
         @NameInMap("SceneId")
         public Long sceneId;
 
+        /**
+         * <p>Scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****实名认证</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
         /**
+         * <p>Number of successful calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -135,6 +164,8 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

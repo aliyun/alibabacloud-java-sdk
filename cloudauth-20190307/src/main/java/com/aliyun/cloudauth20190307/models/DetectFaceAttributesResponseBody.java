@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DetectFaceAttributesResponseBody extends TeaModel {
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public DetectFaceAttributesResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Error.InternalError</p>
      */
@@ -22,6 +29,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -29,6 +38,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the response was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesHeadpose extends TeaModel {
         /**
+         * <p>Pitch angle, in degrees.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1.5683923959732056</p>
          */
@@ -89,6 +102,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Float pitchAngle;
 
         /**
+         * <p>Roll angle, in degrees.</p>
+         * 
          * <strong>example:</strong>
          * <p>7.163370132446289</p>
          */
@@ -96,6 +111,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Float rollAngle;
 
         /**
+         * <p>Yaw angle, in degrees.</p>
+         * 
          * <strong>example:</strong>
          * <p>-6.925303936004639</p>
          */
@@ -135,6 +152,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling extends TeaModel {
         /**
+         * <p>Smile threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>95</p>
          */
@@ -142,6 +161,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Float threshold;
 
         /**
+         * <p>Smile score.</p>
+         * 
          * <strong>example:</strong>
          * <p>97</p>
          */
@@ -173,6 +194,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributes extends TeaModel {
         /**
+         * <p>Face blur level, with higher values indicating more blurriness. Typically, a value ≥2.0 is considered quite blurry. It is recommended to adjust based on actual business data testing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1419367790222168</p>
          */
@@ -180,6 +203,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Float blur;
 
         /**
+         * <p>A score ranging from 0 to 100. The higher the score, the better the quality. It is recommended to consider a score of 50 or above as acceptable quality.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -187,6 +212,16 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Float facequal;
 
         /**
+         * <p>Whether it is a human face. Values:</p>
+         * <ul>
+         * <li><strong>None</strong>: Not a human face</li>
+         * <li><strong>Face</strong>: Human face</li>
+         * <li><strong>Profile</strong>: Profile (head turned left or right by more than 30°)</li>
+         * </ul>
+         * <blockquote>
+         * <p>If no face is detected, the <code>faceInfos</code> in the response will be empty; here, <code>None</code> means that a face was detected but is considered to be a cartoon, pet, etc.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Face</p>
          */
@@ -194,16 +229,28 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public String facetype;
 
         /**
+         * <p>Whether wearing glasses. Values:</p>
+         * <ul>
+         * <li><strong>None</strong>: Not wearing glasses</li>
+         * <li><strong>Wear</strong>: Wearing regular glasses</li>
+         * <li><strong>Sunglass</strong>: Wearing sunglasses</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>None</p>
          */
         @NameInMap("Glasses")
         public String glasses;
 
+        /**
+         * <p>Face pose.</p>
+         */
         @NameInMap("Headpose")
         public DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesHeadpose headpose;
 
         /**
+         * <p>A score ranging from 0 to 100. The higher the score, the more complete the face. It is recommended to consider a score of 70 or above as acceptable completeness.</p>
+         * 
          * <strong>example:</strong>
          * <p>70</p>
          */
@@ -211,12 +258,21 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Integer integrity;
 
         /**
+         * <p>Whether wearing a mask. Values:</p>
+         * <ul>
+         * <li>Wear: Wearing a mask.</li>
+         * <li>None: Not wearing a mask.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Wear</p>
          */
         @NameInMap("Respirator")
         public String respirator;
 
+        /**
+         * <p>Whether smiling.</p>
+         */
         @NameInMap("Smiling")
         public DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling smiling;
 
@@ -293,6 +349,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceRect extends TeaModel {
         /**
+         * <p>Height of the face rectangle.</p>
+         * 
          * <strong>example:</strong>
          * <p>473</p>
          */
@@ -300,6 +358,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>Distance from the top-left corner of the face rectangle to the left edge of the original image, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>354</p>
          */
@@ -307,6 +367,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Integer left;
 
         /**
+         * <p>Distance from the top-left corner of the face rectangle to the top edge of the original image, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>453</p>
          */
@@ -314,6 +376,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Integer top;
 
         /**
+         * <p>Width of the face rectangle.</p>
+         * 
          * <strong>example:</strong>
          * <p>473</p>
          */
@@ -360,9 +424,15 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     }
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfo extends TeaModel {
+        /**
+         * <p>Face attributes.</p>
+         */
         @NameInMap("FaceAttributes")
         public DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributes faceAttributes;
 
+        /**
+         * <p>Position of the face in the original image.</p>
+         */
         @NameInMap("FaceRect")
         public DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceRect faceRect;
 
@@ -409,10 +479,15 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     }
 
     public static class DetectFaceAttributesResponseBodyData extends TeaModel {
+        /**
+         * <p>Face detection results.</p>
+         */
         @NameInMap("FaceInfos")
         public DetectFaceAttributesResponseBodyDataFaceInfos faceInfos;
 
         /**
+         * <p>Original image height, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */
@@ -420,6 +495,8 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Integer imgHeight;
 
         /**
+         * <p>Original image width, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */

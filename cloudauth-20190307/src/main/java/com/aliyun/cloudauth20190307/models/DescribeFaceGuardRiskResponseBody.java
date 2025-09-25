@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFaceGuardRiskResponseBody extends TeaModel {
     /**
+     * <p>Return code, <strong>200</strong> indicates successful response from the interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
@@ -27,6 +31,9 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information.</p>
+     */
     @NameInMap("ResultObject")
     public DescribeFaceGuardRiskResponseBodyResultObject resultObject;
 
@@ -68,10 +75,18 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
     }
 
     public static class DescribeFaceGuardRiskResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Unique real-person authentication identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha43d9cabd52d370d9f4cca9468f71e</p>
+         */
         @NameInMap("CertifyId")
         public String certifyId;
 
         /**
+         * <p>Extended information, in JSON format. (Customized return based on tenant requirements)</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;code&quot;: 200
@@ -87,6 +102,18 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         @NameInMap("RiskExtends")
         public String riskExtends;
 
+        /**
+         * <p>Device risk tags.</p>
+         * <ul>
+         * <li><p>Multiple device risk tags are separated by commas (,). For example, “ROOT,VPN,HOOK”,</p>
+         * </li>
+         * <li><p>For more information about device risk tags and their meanings, please refer to the official documentation on Face Guard Tag Descriptions.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ROOT,VPN,HOOK</p>
+         */
         @NameInMap("RiskTags")
         public String riskTags;
 

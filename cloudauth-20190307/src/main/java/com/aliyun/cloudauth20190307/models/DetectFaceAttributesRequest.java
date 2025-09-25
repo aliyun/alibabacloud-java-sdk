@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DetectFaceAttributesRequest extends TeaModel {
     /**
+     * <p>Identifier for the business scenario using real-person authentication services.</p>
+     * 
      * <strong>example:</strong>
      * <p>RPBasicTest</p>
      */
@@ -12,6 +14,7 @@ public class DetectFaceAttributesRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The photo to be detected, see the instructions for uploading image addresses for format description. A maximum of 5 faces can be detected in a single image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

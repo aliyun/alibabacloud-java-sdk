@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePageFaceVerifyDataRequest extends TeaModel {
     /**
+     * <p>Current page number, default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribePageFaceVerifyDataRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>Required, end time, format is yyyy-MM-dd, default is yyyy-MM-dd 00:00:00, the query interval cannot exceed 90 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-30</p>
      */
@@ -19,6 +23,8 @@ public class DescribePageFaceVerifyDataRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Number of items per page, default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class DescribePageFaceVerifyDataRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Product code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ID_PLUS</p>
      */
@@ -33,6 +41,8 @@ public class DescribePageFaceVerifyDataRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>Scene ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36**01</p>
      */
@@ -40,6 +50,8 @@ public class DescribePageFaceVerifyDataRequest extends TeaModel {
     public Long sceneId;
 
     /**
+     * <p>Required, start time, format is yyyy-MM-dd, default is yyyy-MM-dd 00:00:00, the query interval cannot exceed 90 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-10</p>
      */
