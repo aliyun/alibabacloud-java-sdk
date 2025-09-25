@@ -8155,6 +8155,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询Spark审计日志</p>
+     * 
+     * @param request DescribeSparkAuditLogRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSparkAuditLogRecordsResponse
+     */
+    public DescribeSparkAuditLogRecordsResponse describeSparkAuditLogRecordsWithOptions(DescribeSparkAuditLogRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIp)) {
+            query.put("ClientIp", request.clientIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processId)) {
+            query.put("ProcessId", request.processId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyUser)) {
+            query.put("ProxyUser", request.proxyUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("ResourceGroupName", request.resourceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SQLText)) {
+            query.put("SQLText", request.SQLText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statementId)) {
+            query.put("StatementId", request.statementId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statementSource)) {
+            query.put("StatementSource", request.statementSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalTime)) {
+            query.put("TotalTime", request.totalTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.user)) {
+            query.put("User", request.user);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSparkAuditLogRecords"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSparkAuditLogRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Spark审计日志</p>
+     * 
+     * @param request DescribeSparkAuditLogRecordsRequest
+     * @return DescribeSparkAuditLogRecordsResponse
+     */
+    public DescribeSparkAuditLogRecordsResponse describeSparkAuditLogRecords(DescribeSparkAuditLogRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSparkAuditLogRecordsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
@@ -14096,6 +14220,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPerformanceViewResponse modifyPerformanceView(ModifyPerformanceViewRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPerformanceViewWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改SQL脚本模板位置</p>
+     * 
+     * @param request ModifySqlTemplatePositionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySqlTemplatePositionResponse
+     */
+    public ModifySqlTemplatePositionResponse modifySqlTemplatePositionWithOptions(ModifySqlTemplatePositionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetTemplateGroupId)) {
+            query.put("TargetTemplateGroupId", request.targetTemplateGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySqlTemplatePosition"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySqlTemplatePositionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改SQL脚本模板位置</p>
+     * 
+     * @param request ModifySqlTemplatePositionRequest
+     * @return ModifySqlTemplatePositionResponse
+     */
+    public ModifySqlTemplatePositionResponse modifySqlTemplatePosition(ModifySqlTemplatePositionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySqlTemplatePositionWithOptions(request, runtime);
     }
 
     /**

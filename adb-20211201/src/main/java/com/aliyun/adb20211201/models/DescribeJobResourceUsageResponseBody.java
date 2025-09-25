@@ -193,6 +193,9 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
+        @NameInMap("UseCachePool")
+        public Boolean useCachePool;
+
         public static DescribeJobResourceUsageResponseBodyDataJobAcuUsage build(java.util.Map<String, ?> map) throws Exception {
             DescribeJobResourceUsageResponseBodyDataJobAcuUsage self = new DescribeJobResourceUsageResponseBodyDataJobAcuUsage();
             return TeaModel.build(map, self);
@@ -236,6 +239,14 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
         public String getResourceGroupName() {
             return this.resourceGroupName;
+        }
+
+        public DescribeJobResourceUsageResponseBodyDataJobAcuUsage setUseCachePool(Boolean useCachePool) {
+            this.useCachePool = useCachePool;
+            return this;
+        }
+        public Boolean getUseCachePool() {
+            return this.useCachePool;
         }
 
     }
