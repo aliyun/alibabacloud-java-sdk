@@ -434,6 +434,110 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo extends TeaModel {
+        @NameInMap("ColumnName")
+        public String columnName;
+
+        @NameInMap("DbId")
+        public Long dbId;
+
+        @NameInMap("Logic")
+        public Boolean logic;
+
+        @NameInMap("MatchMode")
+        public String matchMode;
+
+        @NameInMap("RowGroupId")
+        public Long rowGroupId;
+
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        public static GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo self = new GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo setColumnName(String columnName) {
+            this.columnName = columnName;
+            return this;
+        }
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo setDbId(Long dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public Long getDbId() {
+            return this.dbId;
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo setLogic(Boolean logic) {
+            this.logic = logic;
+            return this;
+        }
+        public Boolean getLogic() {
+            return this.logic;
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo setMatchMode(String matchMode) {
+            this.matchMode = matchMode;
+            return this;
+        }
+        public String getMatchMode() {
+            return this.matchMode;
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo setRowGroupId(Long rowGroupId) {
+            this.rowGroupId = rowGroupId;
+            return this;
+        }
+        public Long getRowGroupId() {
+            return this.rowGroupId;
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+    }
+
+    public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo extends TeaModel {
+        @NameInMap("RowValue")
+        public String rowValue;
+
+        public static GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo self = new GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo setRowValue(String rowValue) {
+            this.rowValue = rowValue;
+            return this;
+        }
+        public String getRowValue() {
+            return this.rowValue;
+        }
+
+    }
+
     public static class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesTableInfo extends TeaModel {
         /**
          * <p>The name of the table.</p>
@@ -478,6 +582,12 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         @NameInMap("InstanceInfo")
         public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesInstanceInfo instanceInfo;
 
+        @NameInMap("RowInfo")
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo rowInfo;
+
+        @NameInMap("RowValueInfo")
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo rowValueInfo;
+
         /**
          * <p>The information about the table.</p>
          */
@@ -511,6 +621,22 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         }
         public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesInstanceInfo getInstanceInfo() {
             return this.instanceInfo;
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources setRowInfo(GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo rowInfo) {
+            this.rowInfo = rowInfo;
+            return this;
+        }
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo getRowInfo() {
+            return this.rowInfo;
+        }
+
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources setRowValueInfo(GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo rowValueInfo) {
+            this.rowValueInfo = rowValueInfo;
+            return this;
+        }
+        public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo getRowValueInfo() {
+            return this.rowValueInfo;
         }
 
         public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResources setTableInfo(GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesTableInfo tableInfo) {
