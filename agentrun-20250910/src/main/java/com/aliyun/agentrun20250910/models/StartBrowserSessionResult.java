@@ -1,0 +1,48 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.agentrun20250910.models;
+
+import com.aliyun.tea.*;
+
+public class StartBrowserSessionResult extends TeaModel {
+    /**
+     * <p>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</p>
+     */
+    @NameInMap("code")
+    public String code;
+
+    @NameInMap("data")
+    public BrowserSessionOut data;
+
+    @NameInMap("requestId")
+    public String requestId;
+
+    public static StartBrowserSessionResult build(java.util.Map<String, ?> map) throws Exception {
+        StartBrowserSessionResult self = new StartBrowserSessionResult();
+        return TeaModel.build(map, self);
+    }
+
+    public StartBrowserSessionResult setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public StartBrowserSessionResult setData(BrowserSessionOut data) {
+        this.data = data;
+        return this;
+    }
+    public BrowserSessionOut getData() {
+        return this.data;
+    }
+
+    public StartBrowserSessionResult setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}

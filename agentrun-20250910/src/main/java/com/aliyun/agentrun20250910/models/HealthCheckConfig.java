@@ -1,0 +1,96 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.agentrun20250910.models;
+
+import com.aliyun.tea.*;
+
+public class HealthCheckConfig extends TeaModel {
+    /**
+     * <p>在将容器视为不健康之前，连续失败的健康检查次数</p>
+     */
+    @NameInMap("failureThreshold")
+    public Integer failureThreshold;
+
+    /**
+     * <p>用于健康检查的HTTP GET请求的URL地址</p>
+     */
+    @NameInMap("httpGetUrl")
+    public String httpGetUrl;
+
+    /**
+     * <p>在容器启动后，首次执行健康检查前的延迟时间（秒）</p>
+     */
+    @NameInMap("initialDelaySeconds")
+    public Integer initialDelaySeconds;
+
+    /**
+     * <p>执行健康检查的时间间隔（秒）</p>
+     */
+    @NameInMap("periodSeconds")
+    public Integer periodSeconds;
+
+    /**
+     * <p>在将容器视为健康之前，连续成功的健康检查次数</p>
+     */
+    @NameInMap("successThreshold")
+    public Integer successThreshold;
+
+    /**
+     * <p>健康检查的超时时间（秒）</p>
+     */
+    @NameInMap("timeoutSeconds")
+    public Integer timeoutSeconds;
+
+    public static HealthCheckConfig build(java.util.Map<String, ?> map) throws Exception {
+        HealthCheckConfig self = new HealthCheckConfig();
+        return TeaModel.build(map, self);
+    }
+
+    public HealthCheckConfig setFailureThreshold(Integer failureThreshold) {
+        this.failureThreshold = failureThreshold;
+        return this;
+    }
+    public Integer getFailureThreshold() {
+        return this.failureThreshold;
+    }
+
+    public HealthCheckConfig setHttpGetUrl(String httpGetUrl) {
+        this.httpGetUrl = httpGetUrl;
+        return this;
+    }
+    public String getHttpGetUrl() {
+        return this.httpGetUrl;
+    }
+
+    public HealthCheckConfig setInitialDelaySeconds(Integer initialDelaySeconds) {
+        this.initialDelaySeconds = initialDelaySeconds;
+        return this;
+    }
+    public Integer getInitialDelaySeconds() {
+        return this.initialDelaySeconds;
+    }
+
+    public HealthCheckConfig setPeriodSeconds(Integer periodSeconds) {
+        this.periodSeconds = periodSeconds;
+        return this;
+    }
+    public Integer getPeriodSeconds() {
+        return this.periodSeconds;
+    }
+
+    public HealthCheckConfig setSuccessThreshold(Integer successThreshold) {
+        this.successThreshold = successThreshold;
+        return this;
+    }
+    public Integer getSuccessThreshold() {
+        return this.successThreshold;
+    }
+
+    public HealthCheckConfig setTimeoutSeconds(Integer timeoutSeconds) {
+        this.timeoutSeconds = timeoutSeconds;
+        return this;
+    }
+    public Integer getTimeoutSeconds() {
+        return this.timeoutSeconds;
+    }
+
+}
