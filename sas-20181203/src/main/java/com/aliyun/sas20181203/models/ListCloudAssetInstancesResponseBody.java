@@ -369,6 +369,12 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         @NameInMap("Vendor")
         public Integer vendor;
 
+        @NameInMap("VendorUid")
+        public String vendorUid;
+
+        @NameInMap("VendorUserName")
+        public String vendorUserName;
+
         public static ListCloudAssetInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             ListCloudAssetInstancesResponseBodyInstances self = new ListCloudAssetInstancesResponseBodyInstances();
             return TeaModel.build(map, self);
@@ -484,6 +490,22 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         }
         public Integer getVendor() {
             return this.vendor;
+        }
+
+        public ListCloudAssetInstancesResponseBodyInstances setVendorUid(String vendorUid) {
+            this.vendorUid = vendorUid;
+            return this;
+        }
+        public String getVendorUid() {
+            return this.vendorUid;
+        }
+
+        public ListCloudAssetInstancesResponseBodyInstances setVendorUserName(String vendorUserName) {
+            this.vendorUserName = vendorUserName;
+            return this;
+        }
+        public String getVendorUserName() {
+            return this.vendorUserName;
         }
 
     }

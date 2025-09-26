@@ -323,6 +323,12 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         @NameInMap("VendorAuthAlias")
         public String vendorAuthAlias;
 
+        @NameInMap("VendorUid")
+        public String vendorUid;
+
+        @NameInMap("VendorUserName")
+        public String vendorUserName;
+
         public static DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs self = new DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs();
             return TeaModel.build(map, self);
@@ -414,6 +420,22 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         }
         public String getVendorAuthAlias() {
             return this.vendorAuthAlias;
+        }
+
+        public DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs setVendorUid(String vendorUid) {
+            this.vendorUid = vendorUid;
+            return this;
+        }
+        public String getVendorUid() {
+            return this.vendorUid;
+        }
+
+        public DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs setVendorUserName(String vendorUserName) {
+            this.vendorUserName = vendorUserName;
+            return this;
+        }
+        public String getVendorUserName() {
+            return this.vendorUserName;
         }
 
     }

@@ -17,28 +17,36 @@ public class ExportRecordRequest extends TeaModel {
     public String exportFileType;
 
     /**
-     * <p>The type of the check result list that you want to export. Valid values:</p>
+     * <p>The type of detection result list to be exported. Values:</p>
      * <ul>
-     * <li><strong>assetInstance</strong>: the list of servers displayed on the Host page</li>
-     * <li><strong>user</strong>: the list of fingerprints for accounts</li>
-     * <li><strong>port</strong>: the list of fingerprints for ports</li>
-     * <li><strong>process</strong>: the list of fingerprints for processes</li>
-     * <li><strong>sca</strong>: the list of fingerprints for middleware assets</li>
-     * <li><strong>database</strong>: the list of fingerprints for databases</li>
-     * <li><strong>web</strong>: the list of fingerprints for web services</li>
-     * <li><strong>software</strong>: the list of fingerprints for software assets</li>
-     * <li><strong>cron</strong>: the list of fingerprints for scheduled tasks</li>
-     * <li><strong>autorun</strong>: the list of fingerprints for startup items</li>
-     * <li><strong>lkm</strong>: the list of fingerprints for kernel modules</li>
-     * <li><strong>webserver</strong>: the list of fingerprints for websites</li>
-     * <li><strong>virusScanExport</strong>: the details of the virus scan tasks</li>
-     * <li><strong>imageVulExport</strong>: the list of image system vulnerabilities</li>
-     * <li><strong>imageBaseLineExport</strong>: the list of check results for image baselines</li>
-     * <li><strong>imageAffectedMaliciousExport</strong>: the list of check results for malicious image samples</li>
-     * <li><strong>baselineCspm</strong>: the list of check results for configuration assessment</li>
-     * <li><strong>attack</strong>: the list of alert events for attack analysis</li>
-     * <li><strong>accessKey</strong>: the list of alerts that are generated for AccessKey pair leaks</li>
-     * <li><strong>exportObjectScanEvents</strong>: the list of alerts generated for malicious files</li>
+     * <li><strong>assetInstance</strong>: List of servers in the asset center </li>
+     * <li><strong>user</strong>: List of asset fingerprints for accounts </li>
+     * <li><strong>port</strong>: List of asset fingerprints for ports </li>
+     * <li><strong>process</strong>: List of asset fingerprints for processes </li>
+     * <li><strong>sca</strong>: List of asset fingerprints for middleware </li>
+     * <li><strong>database</strong>: List of asset fingerprints for databases </li>
+     * <li><strong>web</strong>: List of asset fingerprints for web services </li>
+     * <li><strong>software</strong>: List of asset fingerprints for software </li>
+     * <li><strong>cron</strong>: List of asset fingerprints for scheduled tasks </li>
+     * <li><strong>autorun</strong>: List of asset fingerprints for startup items </li>
+     * <li><strong>lkm</strong>: List of asset fingerprints for kernel modules </li>
+     * <li><strong>webserver</strong>: List of asset fingerprints for web sites </li>
+     * <li><strong>virusScanExport</strong>: List of details for virus scan tasks </li>
+     * <li><strong>imageVulExport</strong>: List of system vulnerabilities in images </li>
+     * <li><strong>imageBaseLineExport</strong>: List of baseline check results in images </li>
+     * <li><strong>imageAffectedMaliciousExport</strong>: List of malicious sample check results in images </li>
+     * <li><strong>baselineCspm</strong>: List of detection results for cloud platform configuration checks </li>
+     * <li><strong>attack</strong>: List of alert events for attack analysis </li>
+     * <li><strong>accessKey</strong>: List of alert events for AK leak detection </li>
+     * <li><strong>exportObjectScanEvents</strong>: List of alert events for malicious file detection </li>
+     * <li><strong>domainDetail</strong>: Website assets </li>
+     * <li><strong>assetsPropertyScaProcessDetail</strong>: RASP protection process for application protection </li>
+     * <li><strong>exportHcWarning</strong>: List of system baseline risks </li>
+     * <li><strong>raspAttackAlert</strong>: List of attack alerts for Application Protection</li>
+     * <li><strong>raspApplicationConfiguration</strong>: List of application configurations for Application Protection</li>
+     * <li><strong>raspWeaknessDetection</strong>: List of weakness detections for Application Protection</li>
+     * <li><strong>raspInMemoryWebshellDetection</strong>: List of in-memory webshell detection alerts for Application Protection</li>
+     * <li><strong>raspInMemoryWebshellInsertion</strong>: List of in-memory webshell insertion alerts for Application Protection</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

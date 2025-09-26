@@ -176,6 +176,9 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         @NameInMap("InternetIp")
         public String internetIp;
 
+        @NameInMap("OriginalAssetInfo")
+        public String originalAssetInfo;
+
         /**
          * <p>The region in which the cloud asset resides.</p>
          * <blockquote>
@@ -225,6 +228,12 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
          */
         @NameInMap("Vendor")
         public Integer vendor;
+
+        @NameInMap("VendorUid")
+        public String vendorUid;
+
+        @NameInMap("VendorUserName")
+        public String vendorUserName;
 
         public static GetCloudAssetDetailResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             GetCloudAssetDetailResponseBodyInstances self = new GetCloudAssetDetailResponseBodyInstances();
@@ -311,6 +320,14 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
             return this.internetIp;
         }
 
+        public GetCloudAssetDetailResponseBodyInstances setOriginalAssetInfo(String originalAssetInfo) {
+            this.originalAssetInfo = originalAssetInfo;
+            return this;
+        }
+        public String getOriginalAssetInfo() {
+            return this.originalAssetInfo;
+        }
+
         public GetCloudAssetDetailResponseBodyInstances setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -341,6 +358,22 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         }
         public Integer getVendor() {
             return this.vendor;
+        }
+
+        public GetCloudAssetDetailResponseBodyInstances setVendorUid(String vendorUid) {
+            this.vendorUid = vendorUid;
+            return this;
+        }
+        public String getVendorUid() {
+            return this.vendorUid;
+        }
+
+        public GetCloudAssetDetailResponseBodyInstances setVendorUserName(String vendorUserName) {
+            this.vendorUserName = vendorUserName;
+            return this;
+        }
+        public String getVendorUserName() {
+            return this.vendorUserName;
         }
 
     }

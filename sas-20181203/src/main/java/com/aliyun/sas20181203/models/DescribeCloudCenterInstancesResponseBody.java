@@ -717,6 +717,20 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String vendorName;
 
         /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
+        @NameInMap("VendorUid")
+        public String vendorUid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>VendorUserName</p>
+         */
+        @NameInMap("VendorUserName")
+        public String vendorUserName;
+
+        /**
          * <p>The ID of the VPC to which the asset belongs.</p>
          * 
          * <strong>example:</strong>
@@ -1174,6 +1188,22 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public String getVendorName() {
             return this.vendorName;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setVendorUid(String vendorUid) {
+            this.vendorUid = vendorUid;
+            return this;
+        }
+        public String getVendorUid() {
+            return this.vendorUid;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setVendorUserName(String vendorUserName) {
+            this.vendorUserName = vendorUserName;
+            return this;
+        }
+        public String getVendorUserName() {
+            return this.vendorUserName;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setVpcInstanceId(String vpcInstanceId) {
