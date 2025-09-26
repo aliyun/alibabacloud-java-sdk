@@ -43,6 +43,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         /**
          * <strong>example:</strong>
          * <p>名称</p>
@@ -61,6 +64,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap setSystemField(String systemField) {
@@ -133,6 +144,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -147,6 +161,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap setSystemField(String systemField) {
@@ -219,6 +241,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -233,6 +258,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap setSystemField(String systemField) {
@@ -305,6 +338,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -319,6 +355,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap setSystemField(String systemField) {
@@ -391,6 +435,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -405,6 +452,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap setSystemField(String systemField) {
@@ -477,6 +532,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -491,6 +549,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap setSystemField(String systemField) {
@@ -559,6 +625,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -573,6 +642,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessPeripheralBlockPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessPeripheralBlockPoliciesFieldMap setSystemField(String systemField) {
@@ -679,6 +756,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -693,6 +773,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap setSystemField(String systemField) {
@@ -765,6 +853,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -779,6 +870,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public GetApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public GetApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap setSystemField(String systemField) {

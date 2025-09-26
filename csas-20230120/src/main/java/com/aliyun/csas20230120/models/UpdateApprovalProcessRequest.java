@@ -118,6 +118,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -132,6 +135,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsAppUninstallSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsAppUninstallSchemaConfigFieldMap setSystemField(String systemField) {
@@ -189,6 +200,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -203,6 +217,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsDeviceRegistrationSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsDeviceRegistrationSchemaConfigFieldMap setSystemField(String systemField) {
@@ -260,6 +282,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -274,6 +299,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsDlpSendSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsDlpSendSchemaConfigFieldMap setSystemField(String systemField) {
@@ -331,6 +364,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -345,6 +381,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsDomainBlacklistSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsDomainBlacklistSchemaConfigFieldMap setSystemField(String systemField) {
@@ -402,6 +446,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -416,6 +463,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsDomainWhitelistSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsDomainWhitelistSchemaConfigFieldMap setSystemField(String systemField) {
@@ -473,6 +528,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -487,6 +545,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsEndpointHardeningSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsEndpointHardeningSchemaConfigFieldMap setSystemField(String systemField) {
@@ -544,6 +610,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -558,6 +627,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPeripheralBlockSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsPeripheralBlockSchemaConfigFieldMap setSystemField(String systemField) {
@@ -615,6 +692,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -629,6 +709,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfigFieldMap setSystemField(String systemField) {
@@ -686,6 +774,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
 
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
         @NameInMap("SystemField")
         public String systemField;
 
@@ -700,6 +791,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getDisplayField() {
             return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareHardeningSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
         }
 
         public UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareHardeningSchemaConfigFieldMap setSystemField(String systemField) {
