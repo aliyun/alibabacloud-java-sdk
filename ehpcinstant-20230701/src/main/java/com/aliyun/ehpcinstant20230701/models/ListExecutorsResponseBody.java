@@ -193,6 +193,9 @@ public class ListExecutorsResponseBody extends TeaModel {
     }
 
     public static class ListExecutorsResponseBodyExecutors extends TeaModel {
+        @NameInMap("AllocationSpec")
+        public String allocationSpec;
+
         @NameInMap("AppName")
         public String appName;
 
@@ -301,6 +304,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         public static ListExecutorsResponseBodyExecutors build(java.util.Map<String, ?> map) throws Exception {
             ListExecutorsResponseBodyExecutors self = new ListExecutorsResponseBodyExecutors();
             return TeaModel.build(map, self);
+        }
+
+        public ListExecutorsResponseBodyExecutors setAllocationSpec(String allocationSpec) {
+            this.allocationSpec = allocationSpec;
+            return this;
+        }
+        public String getAllocationSpec() {
+            return this.allocationSpec;
         }
 
         public ListExecutorsResponseBodyExecutors setAppName(String appName) {

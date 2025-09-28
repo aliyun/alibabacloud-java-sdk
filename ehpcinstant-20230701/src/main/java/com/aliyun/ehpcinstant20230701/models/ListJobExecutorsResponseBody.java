@@ -259,6 +259,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     }
 
     public static class ListJobExecutorsResponseBodyExecutors extends TeaModel {
+        @NameInMap("AllocationSpec")
+        public String allocationSpec;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -324,6 +327,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public static ListJobExecutorsResponseBodyExecutors build(java.util.Map<String, ?> map) throws Exception {
             ListJobExecutorsResponseBodyExecutors self = new ListJobExecutorsResponseBodyExecutors();
             return TeaModel.build(map, self);
+        }
+
+        public ListJobExecutorsResponseBodyExecutors setAllocationSpec(String allocationSpec) {
+            this.allocationSpec = allocationSpec;
+            return this;
+        }
+        public String getAllocationSpec() {
+            return this.allocationSpec;
         }
 
         public ListJobExecutorsResponseBodyExecutors setArrayIndex(Integer arrayIndex) {

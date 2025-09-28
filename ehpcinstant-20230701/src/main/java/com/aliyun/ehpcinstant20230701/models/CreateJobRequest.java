@@ -466,6 +466,12 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<CreateJobRequestTasksTaskSpecResourceDisks> disks;
 
+        @NameInMap("EnableHT")
+        public Boolean enableHT;
+
+        @NameInMap("HostNamePrefix")
+        public String hostNamePrefix;
+
         @NameInMap("InstanceTypes")
         public java.util.List<String> instanceTypes;
 
@@ -495,6 +501,22 @@ public class CreateJobRequest extends TeaModel {
         }
         public java.util.List<CreateJobRequestTasksTaskSpecResourceDisks> getDisks() {
             return this.disks;
+        }
+
+        public CreateJobRequestTasksTaskSpecResource setEnableHT(Boolean enableHT) {
+            this.enableHT = enableHT;
+            return this;
+        }
+        public Boolean getEnableHT() {
+            return this.enableHT;
+        }
+
+        public CreateJobRequestTasksTaskSpecResource setHostNamePrefix(String hostNamePrefix) {
+            this.hostNamePrefix = hostNamePrefix;
+            return this;
+        }
+        public String getHostNamePrefix() {
+            return this.hostNamePrefix;
         }
 
         public CreateJobRequestTasksTaskSpecResource setInstanceTypes(java.util.List<String> instanceTypes) {
