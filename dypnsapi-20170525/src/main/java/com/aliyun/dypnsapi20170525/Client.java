@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dypnsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -956,166 +955,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>创建方案号（为极意临时定制）</p>
-     * 
-     * @deprecated OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
-     * 
-     * @param request JyCreateVerifySchemeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return JyCreateVerifySchemeResponse
-     */
-    @Deprecated
-    // Deprecated
-    public JyCreateVerifySchemeResponse jyCreateVerifySchemeWithOptions(JyCreateVerifySchemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
-            query.put("AppName", request.appName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.bundleId)) {
-            query.put("BundleId", request.bundleId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cmApiCode)) {
-            query.put("CmApiCode", request.cmApiCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ctApiCode)) {
-            query.put("CtApiCode", request.ctApiCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.cuApiCode)) {
-            query.put("CuApiCode", request.cuApiCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
-            query.put("OsType", request.osType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.packName)) {
-            query.put("PackName", request.packName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.packSign)) {
-            query.put("PackSign", request.packSign);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.schemeName)) {
-            query.put("SchemeName", request.schemeName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "JyCreateVerifyScheme"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new JyCreateVerifySchemeResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>创建方案号（为极意临时定制）</p>
-     * 
-     * @deprecated OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
-     * 
-     * @param request JyCreateVerifySchemeRequest
-     * @return JyCreateVerifySchemeResponse
-     */
-    @Deprecated
-    // Deprecated
-    public JyCreateVerifySchemeResponse jyCreateVerifyScheme(JyCreateVerifySchemeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.jyCreateVerifySchemeWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>根据方案号查询运营商APP信（为极意临时定制）</p>
-     * 
-     * @deprecated OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
-     * 
-     * @param request JyQueryAppInfoBySceneCodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return JyQueryAppInfoBySceneCodeResponse
-     */
-    @Deprecated
-    // Deprecated
-    public JyQueryAppInfoBySceneCodeResponse jyQueryAppInfoBySceneCodeWithOptions(JyQueryAppInfoBySceneCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
-            query.put("SceneCode", request.sceneCode);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "JyQueryAppInfoBySceneCode"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new JyQueryAppInfoBySceneCodeResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>根据方案号查询运营商APP信（为极意临时定制）</p>
-     * 
-     * @deprecated OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
-     * 
-     * @param request JyQueryAppInfoBySceneCodeRequest
-     * @return JyQueryAppInfoBySceneCodeResponse
-     */
-    @Deprecated
-    // Deprecated
-    public JyQueryAppInfoBySceneCodeResponse jyQueryAppInfoBySceneCode(JyQueryAppInfoBySceneCodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.jyQueryAppInfoBySceneCodeWithOptions(request, runtime);
-    }
-
-    /**
      * <b>description</b> :
      * <h3><a href="#qps"></a>QPS limits</h3>
      * <p>You can call this operation up to 500 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -1346,6 +1185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendSmsVerifyCodeResponse sendSmsVerifyCodeWithOptions(SendSmsVerifyCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRetry)) {
+            query.put("AutoRetry", request.autoRetry);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.codeLength)) {
             query.put("CodeLength", request.codeLength);
         }

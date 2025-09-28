@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SendSmsVerifyCodeRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>是否自动重试</p>
+     */
+    @NameInMap("AutoRetry")
+    public Long autoRetry;
+
+    /**
      * <p>The length of the verification code. Default value: 4. Valid values: 4 to 8.</p>
      * 
      * <strong>example:</strong>
@@ -180,6 +187,14 @@ public class SendSmsVerifyCodeRequest extends TeaModel {
     public static SendSmsVerifyCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         SendSmsVerifyCodeRequest self = new SendSmsVerifyCodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendSmsVerifyCodeRequest setAutoRetry(Long autoRetry) {
+        this.autoRetry = autoRetry;
+        return this;
+    }
+    public Long getAutoRetry() {
+        return this.autoRetry;
     }
 
     public SendSmsVerifyCodeRequest setCodeLength(Long codeLength) {

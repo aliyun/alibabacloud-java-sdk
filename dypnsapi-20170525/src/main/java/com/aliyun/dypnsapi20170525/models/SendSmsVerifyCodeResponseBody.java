@@ -37,6 +37,9 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
     @NameInMap("Model")
     public SendSmsVerifyCodeResponseBodyModel model;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
@@ -85,6 +88,14 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
     }
     public SendSmsVerifyCodeResponseBodyModel getModel() {
         return this.model;
+    }
+
+    public SendSmsVerifyCodeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SendSmsVerifyCodeResponseBody setSuccess(Boolean success) {
