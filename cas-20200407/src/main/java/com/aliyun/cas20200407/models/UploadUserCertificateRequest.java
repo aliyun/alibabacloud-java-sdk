@@ -51,6 +51,7 @@ public class UploadUserCertificateRequest extends TeaModel {
      * <blockquote>
      * <p> The name must be unique within an Alibaba Cloud account.</p>
      * </blockquote>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cert-1</p>
