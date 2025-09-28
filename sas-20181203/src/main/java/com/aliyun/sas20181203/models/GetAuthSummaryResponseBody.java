@@ -56,6 +56,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @NameInMap("AutoBind")
     public Integer autoBind;
 
+    @NameInMap("ClusterNodeCheck")
+    public Integer clusterNodeCheck;
+
     /**
      * <p>Indicates whether the protection quota is supported for all assets. Valid values:</p>
      * <ul>
@@ -207,6 +210,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     }
     public Integer getAutoBind() {
         return this.autoBind;
+    }
+
+    public GetAuthSummaryResponseBody setClusterNodeCheck(Integer clusterNodeCheck) {
+        this.clusterNodeCheck = clusterNodeCheck;
+        return this;
+    }
+    public Integer getClusterNodeCheck() {
+        return this.clusterNodeCheck;
     }
 
     public GetAuthSummaryResponseBody setDefaultAuthToAll(Integer defaultAuthToAll) {

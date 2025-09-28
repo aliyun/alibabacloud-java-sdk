@@ -142,6 +142,9 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("IsSiemDaAccount")
         public String isSiemDaAccount;
 
+        @NameInMap("PostBasicService")
+        public Integer postBasicService;
+
         @NameInMap("PostPayModuleSwitch")
         public String postPayModuleSwitch;
 
@@ -264,6 +267,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         }
         public String getIsSiemDaAccount() {
             return this.isSiemDaAccount;
+        }
+
+        public ListAccountsInResourceDirectoryResponseBodyAccounts setPostBasicService(Integer postBasicService) {
+            this.postBasicService = postBasicService;
+            return this;
+        }
+        public Integer getPostBasicService() {
+            return this.postBasicService;
         }
 
         public ListAccountsInResourceDirectoryResponseBodyAccounts setPostPayModuleSwitch(String postPayModuleSwitch) {

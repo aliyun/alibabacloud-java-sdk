@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorAccountsResponseBody extends TeaModel {
+    @NameInMap("AccountIdInfos")
+    public java.util.List<DescribeMonitorAccountsResponseBodyAccountIdInfos> accountIdInfos;
+
     /**
      * <p>The IDs of the members.</p>
      */
@@ -24,6 +27,14 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeMonitorAccountsResponseBody setAccountIdInfos(java.util.List<DescribeMonitorAccountsResponseBodyAccountIdInfos> accountIdInfos) {
+        this.accountIdInfos = accountIdInfos;
+        return this;
+    }
+    public java.util.List<DescribeMonitorAccountsResponseBodyAccountIdInfos> getAccountIdInfos() {
+        return this.accountIdInfos;
+    }
+
     public DescribeMonitorAccountsResponseBody setAccountIds(java.util.List<String> accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -38,6 +49,113 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DescribeMonitorAccountsResponseBodyAccountIdInfos extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
+        @NameInMap("AddTime")
+        public Long addTime;
+
+        @NameInMap("IsCloudSiemAccount")
+        public String isCloudSiemAccount;
+
+        @NameInMap("IsSasAccount")
+        public String isSasAccount;
+
+        @NameInMap("OperatorUid")
+        public String operatorUid;
+
+        @NameInMap("PostBasicService")
+        public Integer postBasicService;
+
+        @NameInMap("SasVersion")
+        public String sasVersion;
+
+        @NameInMap("aliUid")
+        public String aliUid;
+
+        @NameInMap("isMarked")
+        public String isMarked;
+
+        public static DescribeMonitorAccountsResponseBodyAccountIdInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorAccountsResponseBodyAccountIdInfos self = new DescribeMonitorAccountsResponseBodyAccountIdInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setAddTime(Long addTime) {
+            this.addTime = addTime;
+            return this;
+        }
+        public Long getAddTime() {
+            return this.addTime;
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setIsCloudSiemAccount(String isCloudSiemAccount) {
+            this.isCloudSiemAccount = isCloudSiemAccount;
+            return this;
+        }
+        public String getIsCloudSiemAccount() {
+            return this.isCloudSiemAccount;
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setIsSasAccount(String isSasAccount) {
+            this.isSasAccount = isSasAccount;
+            return this;
+        }
+        public String getIsSasAccount() {
+            return this.isSasAccount;
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setOperatorUid(String operatorUid) {
+            this.operatorUid = operatorUid;
+            return this;
+        }
+        public String getOperatorUid() {
+            return this.operatorUid;
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setPostBasicService(Integer postBasicService) {
+            this.postBasicService = postBasicService;
+            return this;
+        }
+        public Integer getPostBasicService() {
+            return this.postBasicService;
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setSasVersion(String sasVersion) {
+            this.sasVersion = sasVersion;
+            return this;
+        }
+        public String getSasVersion() {
+            return this.sasVersion;
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setAliUid(String aliUid) {
+            this.aliUid = aliUid;
+            return this;
+        }
+        public String getAliUid() {
+            return this.aliUid;
+        }
+
+        public DescribeMonitorAccountsResponseBodyAccountIdInfos setIsMarked(String isMarked) {
+            this.isMarked = isMarked;
+            return this;
+        }
+        public String getIsMarked() {
+            return this.isMarked;
+        }
+
     }
 
 }
