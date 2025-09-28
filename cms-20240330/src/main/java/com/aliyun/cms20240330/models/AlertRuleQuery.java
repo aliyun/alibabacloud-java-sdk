@@ -10,8 +10,14 @@ public class AlertRuleQuery extends TeaModel {
     @NameInMap("dimensions")
     public java.util.List<java.util.Map<String, String>> dimensions;
 
+    @NameInMap("domain")
+    public String domain;
+
     @NameInMap("duration")
     public Long duration;
+
+    @NameInMap("entityFilter")
+    public AlertRuleQueryEntityFilter entityFilter;
 
     @NameInMap("expr")
     public String expr;
@@ -27,6 +33,12 @@ public class AlertRuleQuery extends TeaModel {
 
     @NameInMap("groupType")
     public String groupType;
+
+    @NameInMap("metric")
+    public String metric;
+
+    @NameInMap("metricSet")
+    public String metricSet;
 
     @NameInMap("namespace")
     public String namespace;
@@ -71,12 +83,28 @@ public class AlertRuleQuery extends TeaModel {
         return this.dimensions;
     }
 
+    public AlertRuleQuery setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
     public AlertRuleQuery setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
     public Long getDuration() {
         return this.duration;
+    }
+
+    public AlertRuleQuery setEntityFilter(AlertRuleQueryEntityFilter entityFilter) {
+        this.entityFilter = entityFilter;
+        return this;
+    }
+    public AlertRuleQueryEntityFilter getEntityFilter() {
+        return this.entityFilter;
     }
 
     public AlertRuleQuery setExpr(String expr) {
@@ -117,6 +145,22 @@ public class AlertRuleQuery extends TeaModel {
     }
     public String getGroupType() {
         return this.groupType;
+    }
+
+    public AlertRuleQuery setMetric(String metric) {
+        this.metric = metric;
+        return this;
+    }
+    public String getMetric() {
+        return this.metric;
+    }
+
+    public AlertRuleQuery setMetricSet(String metricSet) {
+        this.metricSet = metricSet;
+        return this;
+    }
+    public String getMetricSet() {
+        return this.metricSet;
     }
 
     public AlertRuleQuery setNamespace(String namespace) {
@@ -165,6 +209,88 @@ public class AlertRuleQuery extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class AlertRuleQueryEntityFilterFilters extends TeaModel {
+        @NameInMap("field")
+        public String field;
+
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("value")
+        public String value;
+
+        public static AlertRuleQueryEntityFilterFilters build(java.util.Map<String, ?> map) throws Exception {
+            AlertRuleQueryEntityFilterFilters self = new AlertRuleQueryEntityFilterFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public AlertRuleQueryEntityFilterFilters setField(String field) {
+            this.field = field;
+            return this;
+        }
+        public String getField() {
+            return this.field;
+        }
+
+        public AlertRuleQueryEntityFilterFilters setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public AlertRuleQueryEntityFilterFilters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class AlertRuleQueryEntityFilter extends TeaModel {
+        @NameInMap("domain")
+        public String domain;
+
+        @NameInMap("filters")
+        public java.util.List<AlertRuleQueryEntityFilterFilters> filters;
+
+        @NameInMap("type")
+        public String type;
+
+        public static AlertRuleQueryEntityFilter build(java.util.Map<String, ?> map) throws Exception {
+            AlertRuleQueryEntityFilter self = new AlertRuleQueryEntityFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public AlertRuleQueryEntityFilter setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public AlertRuleQueryEntityFilter setFilters(java.util.List<AlertRuleQueryEntityFilterFilters> filters) {
+            this.filters = filters;
+            return this;
+        }
+        public java.util.List<AlertRuleQueryEntityFilterFilters> getFilters() {
+            return this.filters;
+        }
+
+        public AlertRuleQueryEntityFilter setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class AlertRuleQueryQueriesApmFilters extends TeaModel {

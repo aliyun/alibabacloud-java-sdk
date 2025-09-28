@@ -1850,6 +1850,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询接入中心策略列表信息</p>
+     * 
+     * @param tmpReq ListIntegrationPoliciesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIntegrationPoliciesResponse
+     */
+    public ListIntegrationPoliciesResponse listIntegrationPoliciesWithOptions(ListIntegrationPoliciesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListIntegrationPoliciesShrinkRequest request = new ListIntegrationPoliciesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonName)) {
+            query.put("addonName", request.addonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityGroupIds)) {
+            query.put("entityGroupIds", request.entityGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterRegionIds)) {
+            query.put("filterRegionIds", request.filterRegionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("policyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
+            query.put("policyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
+            query.put("policyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusInstanceId)) {
+            query.put("prometheusInstanceId", request.prometheusInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("tag", request.tagShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIntegrationPolicies"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIntegrationPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询接入中心策略列表信息</p>
+     * 
+     * @param request ListIntegrationPoliciesRequest
+     * @return ListIntegrationPoliciesResponse
+     */
+    public ListIntegrationPoliciesResponse listIntegrationPolicies(ListIntegrationPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIntegrationPoliciesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取接入中心策略的存储要求信息</p>
      * 
      * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
@@ -1901,6 +2002,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listIntegrationPolicyCustomScrapeJobRulesWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>策略大盘列表</p>
+     * 
+     * @param request ListIntegrationPolicyDashboardsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIntegrationPolicyDashboardsResponse
+     */
+    public ListIntegrationPolicyDashboardsResponse listIntegrationPolicyDashboardsWithOptions(String policyId, ListIntegrationPolicyDashboardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonName)) {
+            query.put("addonName", request.addonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            query.put("scene", request.scene);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIntegrationPolicyDashboards"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/dashboards"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIntegrationPolicyDashboardsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>策略大盘列表</p>
+     * 
+     * @param request ListIntegrationPolicyDashboardsRequest
+     * @return ListIntegrationPolicyDashboardsResponse
+     */
+    public ListIntegrationPolicyDashboardsResponse listIntegrationPolicyDashboards(String policyId, ListIntegrationPolicyDashboardsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIntegrationPolicyDashboardsWithOptions(policyId, request, headers, runtime);
     }
 
     /**
