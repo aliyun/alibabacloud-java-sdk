@@ -836,6 +836,178 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>因底层升级批量迁移</p>
+     * 
+     * @param tmpReq BatchEventMigrateInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchEventMigrateInstanceResponse
+     */
+    public BatchEventMigrateInstanceResponse batchEventMigrateInstanceWithOptions(BatchEventMigrateInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchEventMigrateInstanceShrinkRequest request = new BatchEventMigrateInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventInfos)) {
+            request.eventInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventInfos, "EventInfos", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventInfosShrink)) {
+            query.put("EventInfos", request.eventInfosShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchEventMigrateInstance"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchEventMigrateInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>因底层升级批量迁移</p>
+     * 
+     * @param request BatchEventMigrateInstanceRequest
+     * @return BatchEventMigrateInstanceResponse
+     */
+    public BatchEventMigrateInstanceResponse batchEventMigrateInstance(BatchEventMigrateInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchEventMigrateInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>Action</code> 参数固定为 <code>BatchEventRebootInstance</code>。</li>
+     * <li><code>Version</code> 参数固定为 <code>2017-11-10</code>。</li>
+     * <li><code>EventInfos</code> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</li>
+     * <li>如果选择预约执行，则必须提供 <code>PlanTime</code> 字段的时间戳。</li>
+     * <li>返回结果中，<code>Results</code> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</li>
+     * <li>错误情况下，返回相应的错误代码和消息。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>批量因系统维护实例重启</p>
+     * 
+     * @param tmpReq BatchEventRebootInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchEventRebootInstanceResponse
+     */
+    public BatchEventRebootInstanceResponse batchEventRebootInstanceWithOptions(BatchEventRebootInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchEventRebootInstanceShrinkRequest request = new BatchEventRebootInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventInfos)) {
+            request.eventInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventInfos, "EventInfos", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventInfosShrink)) {
+            query.put("EventInfos", request.eventInfosShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchEventRebootInstance"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchEventRebootInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>Action</code> 参数固定为 <code>BatchEventRebootInstance</code>。</li>
+     * <li><code>Version</code> 参数固定为 <code>2017-11-10</code>。</li>
+     * <li><code>EventInfos</code> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</li>
+     * <li>如果选择预约执行，则必须提供 <code>PlanTime</code> 字段的时间戳。</li>
+     * <li>返回结果中，<code>Results</code> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</li>
+     * <li>错误情况下，返回相应的错误代码和消息。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>批量因系统维护实例重启</p>
+     * 
+     * @param request BatchEventRebootInstanceRequest
+     * @return BatchEventRebootInstanceResponse
+     */
+    public BatchEventRebootInstanceResponse batchEventRebootInstance(BatchEventRebootInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchEventRebootInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量操作重新部署</p>
+     * 
+     * @param tmpReq BatchEventRedeployInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchEventRedeployInstanceResponse
+     */
+    public BatchEventRedeployInstanceResponse batchEventRedeployInstanceWithOptions(BatchEventRedeployInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchEventRedeployInstanceShrinkRequest request = new BatchEventRedeployInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventInfos)) {
+            request.eventInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventInfos, "EventInfos", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventInfosShrink)) {
+            query.put("EventInfos", request.eventInfosShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchEventRedeployInstance"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchEventRedeployInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量操作重新部署</p>
+     * 
+     * @param request BatchEventRedeployInstanceRequest
+     * @return BatchEventRedeployInstanceResponse
+     */
+    public BatchEventRedeployInstanceResponse batchEventRedeployInstance(BatchEventRedeployInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchEventRedeployInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>清理分发数据</p>
      * 
      * @param request CleanDistDataRequest
@@ -6389,6 +6561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NetDistrictCode", request.netDistrictCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.netDistrictCodeNode)) {
+            query.put("NetDistrictCodeNode", request.netDistrictCodeNode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.netLevelCode)) {
             query.put("NetLevelCode", request.netLevelCode);
         }
@@ -7576,6 +7752,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeHaVipsResponse describeHaVips(DescribeHaVipsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHaVipsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询事件列表</p>
+     * 
+     * @param tmpReq DescribeHistoryEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHistoryEventsResponse
+     */
+    public DescribeHistoryEventsResponse describeHistoryEventsWithOptions(DescribeHistoryEventsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeHistoryEventsShrinkRequest request = new DescribeHistoryEventsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventLevels)) {
+            request.eventLevelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventLevels, "EventLevels", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventStatus)) {
+            request.eventStatusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventStatus, "EventStatus", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventTypes)) {
+            request.eventTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventTypes, "EventTypes", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceIds)) {
+            request.resourceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceIds, "ResourceIds", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventLevelsShrink)) {
+            query.put("EventLevels", request.eventLevelsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventStatusShrink)) {
+            query.put("EventStatus", request.eventStatusShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventTypesShrink)) {
+            query.put("EventTypes", request.eventTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsShrink)) {
+            query.put("ResourceIds", request.resourceIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHistoryEvents"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHistoryEventsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询事件列表</p>
+     * 
+     * @param request DescribeHistoryEventsRequest
+     * @return DescribeHistoryEventsResponse
+     */
+    public DescribeHistoryEventsResponse describeHistoryEvents(DescribeHistoryEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHistoryEventsWithOptions(request, runtime);
     }
 
     /**
@@ -10880,6 +11138,200 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DistApplicationDataResponse distApplicationData(DistApplicationDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.distApplicationDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>因底层升级需要迁移</p>
+     * 
+     * @param request EventMigrateInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EventMigrateInstanceResponse
+     */
+    public EventMigrateInstanceResponse eventMigrateInstanceWithOptions(EventMigrateInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataPolicy)) {
+            query.put("DataPolicy", request.dataPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opsType)) {
+            query.put("OpsType", request.opsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planTime)) {
+            query.put("PlanTime", request.planTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EventMigrateInstance"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EventMigrateInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>因底层升级需要迁移</p>
+     * 
+     * @param request EventMigrateInstanceRequest
+     * @return EventMigrateInstanceResponse
+     */
+    public EventMigrateInstanceResponse eventMigrateInstance(EventMigrateInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.eventMigrateInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于触发一个实例的重启事件。</li>
+     * <li><code>OpsType</code>参数可选，若不提供，默认为<code>scheduled</code>（预约执行）。</li>
+     * <li>当选择<code>scheduled</code>时，必须提供<code>PlanTime</code>参数，格式为时间戳（毫秒）。</li>
+     * <li>如果需要立即执行重启，请设置<code>OpsType</code>为<code>immediate</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>因系统维护实例重启</p>
+     * 
+     * @param request EventRebootInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EventRebootInstanceResponse
+     */
+    public EventRebootInstanceResponse eventRebootInstanceWithOptions(EventRebootInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opsType)) {
+            query.put("OpsType", request.opsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planTime)) {
+            query.put("PlanTime", request.planTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EventRebootInstance"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EventRebootInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于触发一个实例的重启事件。</li>
+     * <li><code>OpsType</code>参数可选，若不提供，默认为<code>scheduled</code>（预约执行）。</li>
+     * <li>当选择<code>scheduled</code>时，必须提供<code>PlanTime</code>参数，格式为时间戳（毫秒）。</li>
+     * <li>如果需要立即执行重启，请设置<code>OpsType</code>为<code>immediate</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>因系统维护实例重启</p>
+     * 
+     * @param request EventRebootInstanceRequest
+     * @return EventRebootInstanceResponse
+     */
+    public EventRebootInstanceResponse eventRebootInstance(EventRebootInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.eventRebootInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>节点内迁移</p>
+     * 
+     * @param request EventRedeployInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EventRedeployInstanceResponse
+     */
+    public EventRedeployInstanceResponse eventRedeployInstanceWithOptions(EventRedeployInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opsType)) {
+            query.put("OpsType", request.opsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planTime)) {
+            query.put("PlanTime", request.planTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EventRedeployInstance"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EventRedeployInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>节点内迁移</p>
+     * 
+     * @param request EventRedeployInstanceRequest
+     * @return EventRedeployInstanceResponse
+     */
+    public EventRedeployInstanceResponse eventRedeployInstance(EventRedeployInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.eventRedeployInstanceWithOptions(request, runtime);
     }
 
     /**

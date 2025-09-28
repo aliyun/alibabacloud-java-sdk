@@ -15,6 +15,9 @@ public class DescribeEnsNetDistrictRequest extends TeaModel {
     @NameInMap("NetDistrictCode")
     public String netDistrictCode;
 
+    @NameInMap("NetDistrictCodeNode")
+    public Boolean netDistrictCodeNode;
+
     /**
      * <p>The level of the region.</p>
      * <ul>
@@ -41,6 +44,14 @@ public class DescribeEnsNetDistrictRequest extends TeaModel {
     }
     public String getNetDistrictCode() {
         return this.netDistrictCode;
+    }
+
+    public DescribeEnsNetDistrictRequest setNetDistrictCodeNode(Boolean netDistrictCodeNode) {
+        this.netDistrictCodeNode = netDistrictCodeNode;
+        return this;
+    }
+    public Boolean getNetDistrictCodeNode() {
+        return this.netDistrictCodeNode;
     }
 
     public DescribeEnsNetDistrictRequest setNetLevelCode(String netLevelCode) {
