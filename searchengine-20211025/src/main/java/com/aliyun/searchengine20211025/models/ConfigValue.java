@@ -102,7 +102,7 @@ public class ConfigValue extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>/intervene_dict/中文-通用分析器.dict</p>
+         * <p>/intervene_dict/example.dict</p>
          */
         @NameInMap("fileName")
         public String fileName;

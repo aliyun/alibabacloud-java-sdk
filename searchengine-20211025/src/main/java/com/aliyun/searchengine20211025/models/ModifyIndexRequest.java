@@ -76,6 +76,21 @@ public class ModifyIndexRequest extends TeaModel {
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *         &quot;vector&quot;:
+     *         [
+     *             &quot;source_image_vector&quot;
+     *         ],
+     *         &quot;embeding&quot;:
+     *         [
+     *             &quot;source_image&quot;
+     *         ],
+     *         &quot;description&quot;:
+     *         []
+     *     }</p>
+     */
     @NameInMap("extend")
     public java.util.Map<String, ?> extend;
 
@@ -265,9 +280,17 @@ public class ModifyIndexRequest extends TeaModel {
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-catalog</p>
+         */
         @NameInMap("catalog")
         public String catalog;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-database</p>
+         */
         @NameInMap("database")
         public String database;
 
@@ -280,6 +303,10 @@ public class ModifyIndexRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ha3</p>
+         */
         @NameInMap("format")
         public String format;
 
@@ -337,9 +364,19 @@ public class ModifyIndexRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paimon
+         * lance
+         * object</p>
+         */
         @NameInMap("tableFormat")
         public String tableFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-tag</p>
+         */
         @NameInMap("tag")
         public String tag;
 
@@ -573,9 +610,17 @@ public class ModifyIndexRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/opensearch/oss.json</p>
+         */
         @NameInMap("ossDataPath")
         public String ossDataPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds=20230114</p>
+         */
         @NameInMap("partition")
         public String partition;
 

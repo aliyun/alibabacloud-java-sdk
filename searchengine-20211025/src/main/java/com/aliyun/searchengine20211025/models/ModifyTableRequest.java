@@ -368,6 +368,9 @@ public class ModifyTableRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("format")
+        public String format;
+
         /**
          * <p>The path of the Object Storage Service (OSS) object.</p>
          * 
@@ -385,6 +388,9 @@ public class ModifyTableRequest extends TeaModel {
          */
         @NameInMap("partition")
         public String partition;
+
+        @NameInMap("path")
+        public String path;
 
         /**
          * <p>The name of the MaxCompute project that is used as the data source.</p>
@@ -463,6 +469,14 @@ public class ModifyTableRequest extends TeaModel {
             return this.endpoint;
         }
 
+        public ModifyTableRequestDataSourceConfig setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
         public ModifyTableRequestDataSourceConfig setOssPath(String ossPath) {
             this.ossPath = ossPath;
             return this;
@@ -477,6 +491,14 @@ public class ModifyTableRequest extends TeaModel {
         }
         public String getPartition() {
             return this.partition;
+        }
+
+        public ModifyTableRequestDataSourceConfig setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
         public ModifyTableRequestDataSourceConfig setProject(String project) {
