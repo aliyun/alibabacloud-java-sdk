@@ -575,6 +575,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>凭证识别查询</p>
+     * 
+     * @param request CredentialGetResultIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CredentialGetResultIntlResponse
+     */
+    public CredentialGetResultIntlResponse credentialGetResultIntlWithOptions(CredentialGetResultIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.transactionId)) {
+            query.put("TransactionId", request.transactionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CredentialGetResultIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CredentialGetResultIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>凭证识别查询</p>
+     * 
+     * @param request CredentialGetResultIntlRequest
+     * @return CredentialGetResultIntlResponse
+     */
+    public CredentialGetResultIntlResponse credentialGetResultIntl(CredentialGetResultIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.credentialGetResultIntlWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Detects whether a voucher (such as water, electricity, gas, credit card, etc., e-bills) is forged using AI technology and extracts key information from the voucher.</p>
      * 
@@ -644,6 +688,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CredentialRecognitionIntlResponse credentialRecognitionIntl(CredentialRecognitionIntlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.credentialRecognitionIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>凭证识别提交</p>
+     * 
+     * @param request CredentialSubmitIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CredentialSubmitIntlResponse
+     */
+    public CredentialSubmitIntlResponse credentialSubmitIntlWithOptions(CredentialSubmitIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
+            query.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fraudCheck)) {
+            query.put("FraudCheck", request.fraudCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrArea)) {
+            query.put("OcrArea", request.ocrArea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            query.put("SceneCode", request.sceneCode);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureBase64)) {
+            body.put("CredentialOcrPictureBase64", request.credentialOcrPictureBase64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureUrl)) {
+            body.put("CredentialOcrPictureUrl", request.credentialOcrPictureUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CredentialSubmitIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CredentialSubmitIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>凭证识别提交</p>
+     * 
+     * @param request CredentialSubmitIntlRequest
+     * @return CredentialSubmitIntlResponse
+     */
+    public CredentialSubmitIntlResponse credentialSubmitIntl(CredentialSubmitIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.credentialSubmitIntlWithOptions(request, runtime);
     }
 
     /**
@@ -1350,6 +1468,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FaceCompareResponse faceCompare(FaceCompareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.faceCompareWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>人脸交叉比对</p>
+     * 
+     * @param request FaceCrossCompareIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FaceCrossCompareIntlResponse
+     */
+    public FaceCrossCompareIntlResponse faceCrossCompareIntlWithOptions(FaceCrossCompareIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.compareModel)) {
+            query.put("CompareModel", request.compareModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceVerifyThreshold)) {
+            query.put("FaceVerifyThreshold", request.faceVerifyThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            query.put("SceneCode", request.sceneCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceAFacePicture)) {
+            query.put("SourceAFacePicture", request.sourceAFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceAFacePictureUrl)) {
+            query.put("SourceAFacePictureUrl", request.sourceAFacePictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceBFacePicture)) {
+            query.put("SourceBFacePicture", request.sourceBFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceBFacePictureUrl)) {
+            query.put("SourceBFacePictureUrl", request.sourceBFacePictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCFacePicture)) {
+            query.put("SourceCFacePicture", request.sourceCFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCFacePictureUrl)) {
+            query.put("SourceCFacePictureUrl", request.sourceCFacePictureUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FaceCrossCompareIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FaceCrossCompareIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>人脸交叉比对</p>
+     * 
+     * @param request FaceCrossCompareIntlRequest
+     * @return FaceCrossCompareIntlResponse
+     */
+    public FaceCrossCompareIntlResponse faceCrossCompareIntl(FaceCrossCompareIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.faceCrossCompareIntlWithOptions(request, runtime);
     }
 
     /**
@@ -2452,5 +2654,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TempAccessTokenIntlResponse tempAccessTokenIntl(TempAccessTokenIntlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tempAccessTokenIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件临时地址</p>
+     * 
+     * @param request TempOssUrlIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TempOssUrlIntlResponse
+     */
+    public TempOssUrlIntlResponse tempOssUrlIntlWithOptions(TempOssUrlIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.objectName)) {
+            body.put("ObjectName", request.objectName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TempOssUrlIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TempOssUrlIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件临时地址</p>
+     * 
+     * @param request TempOssUrlIntlRequest
+     * @return TempOssUrlIntlResponse
+     */
+    public TempOssUrlIntlResponse tempOssUrlIntl(TempOssUrlIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tempOssUrlIntlWithOptions(request, runtime);
     }
 }
