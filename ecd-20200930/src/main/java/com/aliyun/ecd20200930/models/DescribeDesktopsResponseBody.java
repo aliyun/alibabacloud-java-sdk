@@ -1198,6 +1198,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ResourceGroups")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsResourceGroups> resourceGroups;
 
+        @NameInMap("SerialNumber")
+        public String serialNumber;
+
         /**
          * <p>The type of the session.</p>
          * <p>Valid values:</p>
@@ -1748,6 +1751,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDesktopsResponseBodyDesktopsResourceGroups> getResourceGroups() {
             return this.resourceGroups;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
         }
 
         public DescribeDesktopsResponseBodyDesktops setSessionType(String sessionType) {
