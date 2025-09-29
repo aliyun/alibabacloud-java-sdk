@@ -262,6 +262,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        @NameInMap("ImageVersion")
+        public String imageVersion;
+
         /**
          * <p>The list of installed applications.</p>
          * 
@@ -557,6 +560,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setImageVersion(String imageVersion) {
+            this.imageVersion = imageVersion;
+            return this;
+        }
+        public String getImageVersion() {
+            return this.imageVersion;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setInstalledAppList(String installedAppList) {

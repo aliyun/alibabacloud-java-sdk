@@ -48,6 +48,9 @@ public class BackupFileRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ExcludeSourceFilePathList")
+    public java.util.List<String> excludeSourceFilePathList;
+
     /**
      * <p>The names of the application packages that you want to back up.</p>
      */
@@ -128,6 +131,14 @@ public class BackupFileRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public BackupFileRequest setExcludeSourceFilePathList(java.util.List<String> excludeSourceFilePathList) {
+        this.excludeSourceFilePathList = excludeSourceFilePathList;
+        return this;
+    }
+    public java.util.List<String> getExcludeSourceFilePathList() {
+        return this.excludeSourceFilePathList;
     }
 
     public BackupFileRequest setSourceAppList(java.util.List<String> sourceAppList) {

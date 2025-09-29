@@ -180,6 +180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeSourceFilePathList)) {
+            query.put("ExcludeSourceFilePathList", request.excludeSourceFilePathList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceAppList)) {
             query.put("SourceAppList", request.sourceAppList);
         }
