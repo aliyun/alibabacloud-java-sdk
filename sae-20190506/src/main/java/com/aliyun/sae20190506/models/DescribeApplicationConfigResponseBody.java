@@ -1242,6 +1242,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("CustomImageNetworkType")
         public String customImageNetworkType;
 
+        @NameInMap("DeploymentName")
+        public String deploymentName;
+
         /**
          * <p>The disk size. Unit: GB.</p>
          * 
@@ -2202,6 +2205,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getCustomImageNetworkType() {
             return this.customImageNetworkType;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setDeploymentName(String deploymentName) {
+            this.deploymentName = deploymentName;
+            return this;
+        }
+        public String getDeploymentName() {
+            return this.deploymentName;
         }
 
         public DescribeApplicationConfigResponseBodyData setDiskSize(Integer diskSize) {
