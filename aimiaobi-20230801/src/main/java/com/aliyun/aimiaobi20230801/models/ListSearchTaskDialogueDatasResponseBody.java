@@ -7,6 +7,9 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     @NameInMap("Articles")
     public java.util.List<ListSearchTaskDialogueDatasResponseBodyArticles> articles;
 
+    @NameInMap("Audios")
+    public java.util.List<ListSearchTaskDialogueDatasResponseBodyAudios> audios;
+
     /**
      * <strong>example:</strong>
      * <p>NoData</p>
@@ -94,6 +97,14 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
     }
     public java.util.List<ListSearchTaskDialogueDatasResponseBodyArticles> getArticles() {
         return this.articles;
+    }
+
+    public ListSearchTaskDialogueDatasResponseBody setAudios(java.util.List<ListSearchTaskDialogueDatasResponseBodyAudios> audios) {
+        this.audios = audios;
+        return this;
+    }
+    public java.util.List<ListSearchTaskDialogueDatasResponseBodyAudios> getAudios() {
+        return this.audios;
     }
 
     public ListSearchTaskDialogueDatasResponseBody setCode(String code) {
@@ -470,6 +481,44 @@ public class ListSearchTaskDialogueDatasResponseBody extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class ListSearchTaskDialogueDatasResponseBodyAudios extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx">http://xxx</a></p>
+         */
+        @NameInMap("FileUrl")
+        public String fileUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
+        @NameInMap("MediaId")
+        public String mediaId;
+
+        public static ListSearchTaskDialogueDatasResponseBodyAudios build(java.util.Map<String, ?> map) throws Exception {
+            ListSearchTaskDialogueDatasResponseBodyAudios self = new ListSearchTaskDialogueDatasResponseBodyAudios();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSearchTaskDialogueDatasResponseBodyAudios setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        public ListSearchTaskDialogueDatasResponseBodyAudios setMediaId(String mediaId) {
+            this.mediaId = mediaId;
+            return this;
+        }
+        public String getMediaId() {
+            return this.mediaId;
         }
 
     }

@@ -16,6 +16,13 @@ public class RunSearchGenerationRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p><a href="http://xxxx">http://xxxx</a></p>
+     */
+    @NameInMap("FileUrl")
+    public String fileUrl;
+
+    /**
+     * <strong>example:</strong>
      * <p>qwen-max-latest</p>
      */
     @NameInMap("ModelId")
@@ -70,6 +77,14 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
     public RunSearchGenerationRequestChatConfig getChatConfig() {
         return this.chatConfig;
+    }
+
+    public RunSearchGenerationRequest setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
+        return this;
+    }
+    public String getFileUrl() {
+        return this.fileUrl;
     }
 
     public RunSearchGenerationRequest setModelId(String modelId) {

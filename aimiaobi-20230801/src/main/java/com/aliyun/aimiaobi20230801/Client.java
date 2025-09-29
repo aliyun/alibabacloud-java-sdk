@@ -8641,6 +8641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ChatConfig", request.chatConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("FileUrl", request.fileUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
             body.put("ModelId", request.modelId);
         }

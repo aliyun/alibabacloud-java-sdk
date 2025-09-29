@@ -16,6 +16,13 @@ public class RunSearchGenerationShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p><a href="http://xxxx">http://xxxx</a></p>
+     */
+    @NameInMap("FileUrl")
+    public String fileUrl;
+
+    /**
+     * <strong>example:</strong>
      * <p>qwen-max-latest</p>
      */
     @NameInMap("ModelId")
@@ -70,6 +77,14 @@ public class RunSearchGenerationShrinkRequest extends TeaModel {
     }
     public String getChatConfigShrink() {
         return this.chatConfigShrink;
+    }
+
+    public RunSearchGenerationShrinkRequest setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
+        return this;
+    }
+    public String getFileUrl() {
+        return this.fileUrl;
     }
 
     public RunSearchGenerationShrinkRequest setModelId(String modelId) {
