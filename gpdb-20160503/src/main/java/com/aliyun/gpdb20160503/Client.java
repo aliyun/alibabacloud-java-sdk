@@ -12962,6 +12962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IncludeMetadataFields", request.includeMetadataFields);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeSparseValues)) {
+            query.put("IncludeSparseValues", request.includeSparseValues);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeValues)) {
             query.put("IncludeValues", request.includeValues);
         }

@@ -96,6 +96,9 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     @NameInMap("IncludeMetadataFields")
     public String includeMetadataFields;
 
+    @NameInMap("IncludeSparseValues")
+    public Boolean includeSparseValues;
+
     /**
      * <p>Whether to return vector data. Value descriptions:</p>
      * <ul>
@@ -290,6 +293,14 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     }
     public String getIncludeMetadataFields() {
         return this.includeMetadataFields;
+    }
+
+    public QueryCollectionDataShrinkRequest setIncludeSparseValues(Boolean includeSparseValues) {
+        this.includeSparseValues = includeSparseValues;
+        return this;
+    }
+    public Boolean getIncludeSparseValues() {
+        return this.includeSparseValues;
     }
 
     public QueryCollectionDataShrinkRequest setIncludeValues(Boolean includeValues) {

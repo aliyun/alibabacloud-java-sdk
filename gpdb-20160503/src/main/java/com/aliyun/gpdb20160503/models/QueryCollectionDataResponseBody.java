@@ -95,6 +95,74 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices extends TeaModel {
+        @NameInMap("Indice")
+        public java.util.List<Integer> indice;
+
+        public static QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices build(java.util.Map<String, ?> map) throws Exception {
+            QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices self = new QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices setIndice(java.util.List<Integer> indice) {
+            this.indice = indice;
+            return this;
+        }
+        public java.util.List<Integer> getIndice() {
+            return this.indice;
+        }
+
+    }
+
+    public static class QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues extends TeaModel {
+        @NameInMap("Value")
+        public java.util.List<Float> value;
+
+        public static QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues build(java.util.Map<String, ?> map) throws Exception {
+            QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues self = new QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues setValue(java.util.List<Float> value) {
+            this.value = value;
+            return this;
+        }
+        public java.util.List<Float> getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class QueryCollectionDataResponseBodyMatchesMatchSparseValues extends TeaModel {
+        @NameInMap("Indices")
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices indices;
+
+        @NameInMap("Values")
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues values;
+
+        public static QueryCollectionDataResponseBodyMatchesMatchSparseValues build(java.util.Map<String, ?> map) throws Exception {
+            QueryCollectionDataResponseBodyMatchesMatchSparseValues self = new QueryCollectionDataResponseBodyMatchesMatchSparseValues();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValues setIndices(QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices indices) {
+            this.indices = indices;
+            return this;
+        }
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices getIndices() {
+            return this.indices;
+        }
+
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValues setValues(QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues values) {
+            this.values = values;
+            return this;
+        }
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class QueryCollectionDataResponseBodyMatchesMatchValues extends TeaModel {
         @NameInMap("value")
         public java.util.List<Double> value;
@@ -142,6 +210,9 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         @NameInMap("Score")
         public Double score;
 
+        @NameInMap("SparseValues")
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValues sparseValues;
+
         /**
          * <p>List of vector data.</p>
          */
@@ -183,6 +254,14 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
         public Double getScore() {
             return this.score;
+        }
+
+        public QueryCollectionDataResponseBodyMatchesMatch setSparseValues(QueryCollectionDataResponseBodyMatchesMatchSparseValues sparseValues) {
+            this.sparseValues = sparseValues;
+            return this;
+        }
+        public QueryCollectionDataResponseBodyMatchesMatchSparseValues getSparseValues() {
+            return this.sparseValues;
         }
 
         public QueryCollectionDataResponseBodyMatchesMatch setValues(QueryCollectionDataResponseBodyMatchesMatchValues values) {
