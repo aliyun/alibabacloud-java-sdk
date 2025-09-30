@@ -530,6 +530,166 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * @param tmpReq ChatWithKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChatWithKnowledgeBaseResponse
+     */
+    public ChatWithKnowledgeBaseResponse chatWithKnowledgeBaseWithOptions(ChatWithKnowledgeBaseRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ChatWithKnowledgeBaseShrinkRequest request = new ChatWithKnowledgeBaseShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.knowledgeParams)) {
+            request.knowledgeParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeParams, "KnowledgeParams", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modelParams)) {
+            request.modelParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modelParams, "ModelParams", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeKnowledgeBaseResults)) {
+            query.put("IncludeKnowledgeBaseResults", request.includeKnowledgeBaseResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeParamsShrink)) {
+            query.put("KnowledgeParams", request.knowledgeParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelParamsShrink)) {
+            query.put("ModelParams", request.modelParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptParams)) {
+            query.put("PromptParams", request.promptParams);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChatWithKnowledgeBase"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChatWithKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * @param request ChatWithKnowledgeBaseRequest
+     * @return ChatWithKnowledgeBaseResponse
+     */
+    public ChatWithKnowledgeBaseResponse chatWithKnowledgeBase(ChatWithKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.chatWithKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * @param tmpReq ChatWithKnowledgeBaseStreamRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChatWithKnowledgeBaseStreamResponse
+     */
+    public ChatWithKnowledgeBaseStreamResponse chatWithKnowledgeBaseStreamWithOptions(ChatWithKnowledgeBaseStreamRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ChatWithKnowledgeBaseStreamShrinkRequest request = new ChatWithKnowledgeBaseStreamShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.knowledgeParams)) {
+            request.knowledgeParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeParams, "KnowledgeParams", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modelParams)) {
+            request.modelParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modelParams, "ModelParams", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeKnowledgeBaseResults)) {
+            query.put("IncludeKnowledgeBaseResults", request.includeKnowledgeBaseResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeParamsShrink)) {
+            query.put("KnowledgeParams", request.knowledgeParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelParamsShrink)) {
+            query.put("ModelParams", request.modelParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptParams)) {
+            query.put("PromptParams", request.promptParams);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChatWithKnowledgeBaseStream"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChatWithKnowledgeBaseStreamResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>通过结合知识库和大模型，提供智能问答服务。</p>
+     * 
+     * @param request ChatWithKnowledgeBaseStreamRequest
+     * @return ChatWithKnowledgeBaseStreamResponse
+     */
+    public ChatWithKnowledgeBaseStreamResponse chatWithKnowledgeBaseStream(ChatWithKnowledgeBaseStreamRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.chatWithKnowledgeBaseStreamWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Checks the configurations of a Hadoop data source.</p>
      * 
