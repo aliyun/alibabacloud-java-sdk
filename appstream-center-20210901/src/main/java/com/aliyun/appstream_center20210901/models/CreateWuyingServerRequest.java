@@ -44,6 +44,13 @@ public class CreateWuyingServerRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>6a1b8c3d</p>
+     */
+    @NameInMap("IdempotenceToken")
+    public String idempotenceToken;
+
+    /**
+     * <strong>example:</strong>
      * <p>img-bp13mu****</p>
      */
     @NameInMap("ImageId")
@@ -176,6 +183,14 @@ public class CreateWuyingServerRequest extends TeaModel {
     }
     public java.util.List<CreateWuyingServerRequestDataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    public CreateWuyingServerRequest setIdempotenceToken(String idempotenceToken) {
+        this.idempotenceToken = idempotenceToken;
+        return this;
+    }
+    public String getIdempotenceToken() {
+        return this.idempotenceToken;
     }
 
     public CreateWuyingServerRequest setImageId(String imageId) {
