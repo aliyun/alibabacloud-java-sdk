@@ -11,6 +11,9 @@ public class CreateNacosMcpServerRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("EncryptToolSpec")
+    public Boolean encryptToolSpec;
+
     /**
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;REF&quot;,&quot;data&quot;:{&quot;namespaceId&quot;:&quot;public&quot;,&quot;groupName&quot;:&quot;mcp-endpoints&quot;,&quot;serviceName&quot;:&quot;mcp-demo&quot;}}</p>
@@ -86,6 +89,14 @@ public class CreateNacosMcpServerRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public CreateNacosMcpServerRequest setEncryptToolSpec(Boolean encryptToolSpec) {
+        this.encryptToolSpec = encryptToolSpec;
+        return this;
+    }
+    public Boolean getEncryptToolSpec() {
+        return this.encryptToolSpec;
     }
 
     public CreateNacosMcpServerRequest setEndpointSpecification(String endpointSpecification) {

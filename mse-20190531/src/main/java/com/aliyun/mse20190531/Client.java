@@ -2923,6 +2923,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptToolSpec)) {
+            query.put("EncryptToolSpec", request.encryptToolSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

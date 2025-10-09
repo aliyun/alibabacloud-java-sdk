@@ -278,6 +278,12 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
     }
 
     public static class GetNacosMcpServerResponseBodyDataToolSpec extends TeaModel {
+        @NameInMap("SecuritySchemes")
+        public Object securitySchemes;
+
+        @NameInMap("SpecificationType")
+        public String specificationType;
+
         @NameInMap("Tools")
         public java.util.List<GetNacosMcpServerResponseBodyDataToolSpecTools> tools;
 
@@ -287,6 +293,22 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public static GetNacosMcpServerResponseBodyDataToolSpec build(java.util.Map<String, ?> map) throws Exception {
             GetNacosMcpServerResponseBodyDataToolSpec self = new GetNacosMcpServerResponseBodyDataToolSpec();
             return TeaModel.build(map, self);
+        }
+
+        public GetNacosMcpServerResponseBodyDataToolSpec setSecuritySchemes(Object securitySchemes) {
+            this.securitySchemes = securitySchemes;
+            return this;
+        }
+        public Object getSecuritySchemes() {
+            return this.securitySchemes;
+        }
+
+        public GetNacosMcpServerResponseBodyDataToolSpec setSpecificationType(String specificationType) {
+            this.specificationType = specificationType;
+            return this;
+        }
+        public String getSpecificationType() {
+            return this.specificationType;
         }
 
         public GetNacosMcpServerResponseBodyDataToolSpec setTools(java.util.List<GetNacosMcpServerResponseBodyDataToolSpecTools> tools) {
