@@ -45,6 +45,9 @@ public class PodItem extends TeaModel {
     @NameInMap("PodId")
     public String podId;
 
+    @NameInMap("PodIp")
+    public String podIp;
+
     /**
      * <strong>example:</strong>
      * <p>fe846462-af2c-4521-bd6f-96787a57591d</p>
@@ -128,6 +131,14 @@ public class PodItem extends TeaModel {
     }
     public String getPodId() {
         return this.podId;
+    }
+
+    public PodItem setPodIp(String podIp) {
+        this.podIp = podIp;
+        return this;
+    }
+    public String getPodIp() {
+        return this.podIp;
     }
 
     public PodItem setPodUid(String podUid) {

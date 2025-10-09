@@ -107,6 +107,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("JobReservedPolicy")
     public String jobReservedPolicy;
 
+    @NameInMap("ModelConfig")
+    public ModelConfig modelConfig;
+
     /**
      * <strong>example:</strong>
      * <p>AcceptQuotaOverSold</p>
@@ -270,6 +273,14 @@ public class JobSettings extends TeaModel {
     }
     public String getJobReservedPolicy() {
         return this.jobReservedPolicy;
+    }
+
+    public JobSettings setModelConfig(ModelConfig modelConfig) {
+        this.modelConfig = modelConfig;
+        return this;
+    }
+    public ModelConfig getModelConfig() {
+        return this.modelConfig;
     }
 
     public JobSettings setOversoldType(String oversoldType) {
