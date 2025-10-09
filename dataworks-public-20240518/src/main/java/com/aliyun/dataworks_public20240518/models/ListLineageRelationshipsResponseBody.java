@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListLineageRelationshipsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination result.</p>
+     */
     @NameInMap("PagingInfo")
     public ListLineageRelationshipsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID. Used for locating and troubleshooting issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
      */
@@ -15,6 +20,8 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,10 +58,15 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
     }
 
     public static class ListLineageRelationshipsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The list of data tables.</p>
+         */
         @NameInMap("LineageRelationships")
         public java.util.List<LineageRelationship> lineageRelationships;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -62,6 +74,8 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -69,6 +83,8 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

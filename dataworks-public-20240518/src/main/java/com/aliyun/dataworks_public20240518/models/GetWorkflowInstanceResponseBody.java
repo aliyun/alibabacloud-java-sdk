@@ -40,6 +40,36 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         return this.workflowInstance;
     }
 
+    public static class GetWorkflowInstanceResponseBodyWorkflowInstanceTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetWorkflowInstanceResponseBodyWorkflowInstanceTags build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkflowInstanceResponseBodyWorkflowInstanceTags self = new GetWorkflowInstanceResponseBodyWorkflowInstanceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkflowInstanceResponseBodyWorkflowInstanceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetWorkflowInstanceResponseBodyWorkflowInstanceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetWorkflowInstanceResponseBodyWorkflowInstance extends TeaModel {
         /**
          * <p>The data timestamp.</p>
@@ -162,6 +192,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<GetWorkflowInstanceResponseBodyWorkflowInstanceTags> tags;
 
         /**
          * <p>The type of the workflow instance. Valid values:</p>
@@ -290,6 +323,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetWorkflowInstanceResponseBodyWorkflowInstance setTags(java.util.List<GetWorkflowInstanceResponseBodyWorkflowInstanceTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetWorkflowInstanceResponseBodyWorkflowInstanceTags> getTags() {
+            return this.tags;
         }
 
         public GetWorkflowInstanceResponseBodyWorkflowInstance setType(String type) {

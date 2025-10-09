@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityAlertRulesRequest extends TeaModel {
     /**
+     * <p>The ID of the data quality monitor that the alert rule targets.</p>
+     * 
      * <strong>example:</strong>
      * <p>10001</p>
      */
@@ -12,6 +14,7 @@ public class ListDataQualityAlertRulesRequest extends TeaModel {
     public Long dataQualityScanId;
 
     /**
+     * <p>The page number of the results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ListDataQualityAlertRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ListDataQualityAlertRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,12 @@ public class ListDataQualityAlertRulesRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The list of sorting fields. Supports fields such as last modified time and creation time. Format: &quot;SortField+SortOrder (Desc/Asc)&quot;, where Asc is the default. Valid values:</p>
+     * <ul>
+     * <li>CreateTime (Desc/Asc)</li>
+     * <li>Id (Desc/Asc)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime Desc</p>
      */

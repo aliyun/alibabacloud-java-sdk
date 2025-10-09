@@ -14,6 +14,8 @@ public class DeleteDataQualityScanResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -4,13 +4,27 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDataQualityTemplatesRequest extends TeaModel {
+    /**
+     * <p>The directory path to which the data quality template belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/timeliness/ods_layer</p>
+     */
     @NameInMap("Catalog")
     public String catalog;
 
+    /**
+     * <p>Fuzzy match for the template rule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table_rows</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The number of records per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +32,8 @@ public class ListDataQualityTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page number of the results. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +41,8 @@ public class ListDataQualityTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */

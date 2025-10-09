@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDataQualityTemplateRequest extends TeaModel {
     /**
+     * <p>The ID of the custom rule template.</p>
+     * 
      * <strong>example:</strong>
      * <p>USER_DEFINED:2001</p>
      */

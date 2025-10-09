@@ -35,10 +35,10 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The environment of the workspace. Valid values:</p>
+     * <p>The project environment.</p>
      * <ul>
-     * <li>Prod: production environment</li>
-     * <li>Dev: development environment</li>
+     * <li>Prod</li>
+     * <li>Dev</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     /**
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
-     * <li>T+1</li>
+     * <li>T+1: the next day</li>
      * <li>Immediately</li>
      * </ul>
      * 
@@ -77,7 +77,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String instanceMode;
 
     /**
-     * <p>The name.</p>
+     * <p>Name.</p>
      * 
      * <strong>example:</strong>
      * <p>SQL node</p>
@@ -112,9 +112,9 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     /**
      * <p>The rerun mode. Valid values:</p>
      * <ul>
-     * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
-     * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-     * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+     * <li>AllDenied: The task cannot be rerun.</li>
+     * <li>FailureAllowed: The task can be rerun only after it fails.</li>
+     * <li>AllAllowed: The task can always be rerun.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,13 +133,13 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public Integer rerunTimes;
 
     /**
-     * <p>The configurations of the runtime environment, such as the resource group information.</p>
+     * <p>Runtime environment configurations, such as resource group information.</p>
      */
     @NameInMap("RuntimeResource")
     public String runtimeResourceShrink;
 
     /**
-     * <p>The script information.</p>
+     * <p>The run script information.</p>
      */
     @NameInMap("Script")
     public String scriptShrink;
@@ -160,7 +160,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The trigger method.</p>
+     * <p>The triggering method.</p>
      */
     @NameInMap("Trigger")
     public String triggerShrink;

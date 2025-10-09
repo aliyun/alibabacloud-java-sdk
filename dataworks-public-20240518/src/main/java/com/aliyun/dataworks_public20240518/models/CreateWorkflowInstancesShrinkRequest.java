@@ -29,7 +29,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String defaultRunPropertiesShrink;
 
     /**
-     * <p>The environment of the workspace. Valid values:</p>
+     * <p>The project environment.</p>
      * <ul>
      * <li>Prod</li>
      * <li>Dev</li>
@@ -67,9 +67,22 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The tag creation policy. Valid values:</p>
+     * <ul>
+     * <li>Append: New tags are added on top of the existing tags of the manual workflow.</li>
+     * <li>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Append</p>
+     */
     @NameInMap("TagCreationPolicy")
     public String tagCreationPolicy;
 
+    /**
+     * <p>The task tag list.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
@@ -88,10 +101,10 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>SupplementData: The values of the RootTaskIds and IncludeTaskIds parameters vary based on the value of the Mode parameter. For more information, see the Mode parameter in this API operation.</li>
-     * <li>ManualWorkflow: If you set the Type parameter to ManualWorkflow, you must set the WorkflowId parameter to the ID of the manually triggered workflow. The RootTaskIds parameter is optional. If you do not configure the RootTaskIds parameter, the IDs of the default root nodes of the manually triggered workflow are used.</li>
-     * <li>Manual: You need to configure only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the manually triggered tasks that need to be run.</li>
-     * <li>SmokeTest: You need to configure only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the test tasks that need to be run.</li>
+     * <li>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</li>
+     * <li>ManualWorkflow: Manual workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</li>
+     * <li>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</li>
+     * <li>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

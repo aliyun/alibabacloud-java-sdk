@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDataQualityScanRunLogResponseBody extends TeaModel {
+    /**
+     * <p>The task log information.</p>
+     */
     @NameInMap("LogSegment")
     public GetDataQualityScanRunLogResponseBodyLogSegment logSegment;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc14115***159376359</p>
      */
@@ -36,10 +41,19 @@ public class GetDataQualityScanRunLogResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityScanRunLogResponseBodyLogSegment extends TeaModel {
+        /**
+         * <p>The task log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running on Serverless_resource_group_xxxxx
+         * Begin to check rule ***</p>
+         */
         @NameInMap("Log")
         public String log;
 
         /**
+         * <p>The starting offset of the next log segment. A value of -1 indicates that all logs have been read.</p>
+         * 
          * <strong>example:</strong>
          * <p>512000</p>
          */

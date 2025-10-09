@@ -35,10 +35,10 @@ public class UpdateTaskRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The environment of the workspace. Valid values:</p>
+     * <p>The project environment.</p>
      * <ul>
-     * <li>Prod: production environment</li>
-     * <li>Dev: development environment</li>
+     * <li>Prod</li>
+     * <li>Dev</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class UpdateTaskRequest extends TeaModel {
     /**
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
-     * <li>T+1</li>
+     * <li>T+1: the next day</li>
      * <li>Immediately</li>
      * </ul>
      * 
@@ -77,7 +77,7 @@ public class UpdateTaskRequest extends TeaModel {
     public String instanceMode;
 
     /**
-     * <p>The name.</p>
+     * <p>Name.</p>
      * 
      * <strong>example:</strong>
      * <p>SQL node</p>
@@ -112,9 +112,9 @@ public class UpdateTaskRequest extends TeaModel {
     /**
      * <p>The rerun mode. Valid values:</p>
      * <ul>
-     * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
-     * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-     * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+     * <li>AllDenied: The task cannot be rerun.</li>
+     * <li>FailureAllowed: The task can be rerun only after it fails.</li>
+     * <li>AllAllowed: The task can always be rerun.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,13 +133,13 @@ public class UpdateTaskRequest extends TeaModel {
     public Integer rerunTimes;
 
     /**
-     * <p>The configurations of the runtime environment, such as the resource group information.</p>
+     * <p>Runtime environment configurations, such as resource group information.</p>
      */
     @NameInMap("RuntimeResource")
     public UpdateTaskRequestRuntimeResource runtimeResource;
 
     /**
-     * <p>The script information.</p>
+     * <p>The run script information.</p>
      */
     @NameInMap("Script")
     public UpdateTaskRequestScript script;
@@ -160,7 +160,7 @@ public class UpdateTaskRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The trigger method.</p>
+     * <p>The triggering method.</p>
      */
     @NameInMap("Trigger")
     public UpdateTaskRequestTrigger trigger;
@@ -351,10 +351,10 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The dependency type. Valid values:</p>
          * <ul>
-         * <li>CrossCycleDependsOnChildren: cross-cycle dependency on level-1 descendant nodes</li>
-         * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
-         * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
-         * <li>Normal: same-cycle scheduling dependency</li>
+         * <li>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</li>
+         * <li>CrossCycleDependsOnSelf: Depends on itself across cycles.</li>
+         * <li>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</li>
+         * <li>Normal: Depends on nodes in the same cycle.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -365,7 +365,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The identifier of the output of the ancestor task. This parameter is returned only if <code>same-cycle scheduling dependencies</code> and the node input are configured.</p>
+         * <p>The output identifier of the upstream task. (This parameter is returned only if <code>Normal</code> is set and the node input is configured.)</p>
          * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
@@ -374,7 +374,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String upstreamOutput;
 
         /**
-         * <p>The ancestor task ID. This parameter is returned only if <code>cross-cycle scheduling dependencies</code> or <code>same-cycle scheduling dependencies</code> and the node input are not configured.</p>
+         * <p>The ID of the upstream task. (This parameter is returned only if <code>Normal</code> or <code>CrossCycleDependsOnOtherNode</code> is set and the node input is not configured.)</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -426,10 +426,10 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>Constant: constant</li>
-         * <li>PassThrough: node output</li>
-         * <li>System: variable</li>
-         * <li>NodeOutput: script output</li>
+         * <li>Constant: constant.</li>
+         * <li>PassThrough: node output.</li>
+         * <li>System: variable.</li>
+         * <li>NodeOutput: script output.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -539,10 +539,10 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>Constant: constant</li>
-         * <li>PassThrough: node output</li>
-         * <li>System: variable</li>
-         * <li>NodeOutput: script output</li>
+         * <li>Constant: constant.</li>
+         * <li>PassThrough: node output.</li>
+         * <li>System: variable.</li>
+         * <li>NodeOutput: script output.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -639,7 +639,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String cu;
 
         /**
-         * <p>The ID of the image configured for task running.</p>
+         * <p>The image ID used in the task runtime configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -648,7 +648,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The ID of the resource group for scheduling configured for task running.</p>
+         * <p>The identifier of the scheduling resource group used in the task runtime configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -695,10 +695,11 @@ public class UpdateTaskRequest extends TeaModel {
          * <p>echo &quot;helloWorld&quot;</p>
          */
         @NameInMap("Content")
+        @Deprecated
         public String content;
 
         /**
-         * <p>The script parameters.</p>
+         * <p>The script parameter list.</p>
          * 
          * <strong>example:</strong>
          * <p>para1=$bizdate</p>
@@ -711,6 +712,7 @@ public class UpdateTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public UpdateTaskRequestScript setContent(String content) {
             this.content = content;
             return this;
@@ -731,7 +733,7 @@ public class UpdateTaskRequest extends TeaModel {
 
     public static class UpdateTaskRequestTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of a tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -741,7 +743,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of a tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -774,7 +776,7 @@ public class UpdateTaskRequest extends TeaModel {
 
     public static class UpdateTaskRequestTrigger extends TeaModel {
         /**
-         * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>The Cron expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
@@ -782,8 +784,11 @@ public class UpdateTaskRequest extends TeaModel {
         @NameInMap("Cron")
         public String cron;
 
+        @NameInMap("CycleType")
+        public String cycleType;
+
         /**
-         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
+         * <p>The expiration time of periodic triggering. Takes effect only when type is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
@@ -806,7 +811,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String recurrence;
 
         /**
-         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
+         * <p>The time when periodic triggering takes effect. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the<code>yyyy-mm-dd hh:mm:ss</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
@@ -815,10 +820,10 @@ public class UpdateTaskRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The trigger type. Valid values:</p>
+         * <p>The triggering type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li>Scheduler: periodically triggered</li>
+         * <li>Manual</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -838,6 +843,14 @@ public class UpdateTaskRequest extends TeaModel {
         }
         public String getCron() {
             return this.cron;
+        }
+
+        public UpdateTaskRequestTrigger setCycleType(String cycleType) {
+            this.cycleType = cycleType;
+            return this;
+        }
+        public String getCycleType() {
+            return this.cycleType;
         }
 
         public UpdateTaskRequestTrigger setEndTime(String endTime) {

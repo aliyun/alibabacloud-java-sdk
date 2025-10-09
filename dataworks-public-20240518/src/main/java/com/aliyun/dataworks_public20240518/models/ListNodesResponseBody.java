@@ -134,7 +134,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesInputsVariablesNode extends TeaModel {
         /**
-         * <p>The output of the node.</p>
+         * <p>The node output.</p>
          * 
          * <strong>example:</strong>
          * <p>623731286945488XXXX</p>
@@ -223,7 +223,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the variable.</p>
+         * <p>The variable value.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -296,19 +296,19 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesInputs extends TeaModel {
         /**
-         * <p>The node outputs.</p>
+         * <p>The node output list.</p>
          */
         @NameInMap("NodeOutputs")
         public java.util.List<ListNodesResponseBodyPagingInfoNodesInputsNodeOutputs> nodeOutputs;
 
         /**
-         * <p>The tables.</p>
+         * <p>The table list.</p>
          */
         @NameInMap("Tables")
         public java.util.List<ListNodesResponseBodyPagingInfoNodesInputsTables> tables;
 
         /**
-         * <p>The variables.</p>
+         * <p>The variable list.</p>
          */
         @NameInMap("Variables")
         public java.util.List<ListNodesResponseBodyPagingInfoNodesInputsVariables> variables;
@@ -396,7 +396,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode extends TeaModel {
         /**
-         * <p>The output of the node.</p>
+         * <p>The node output.</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
@@ -454,7 +454,7 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode node;
 
         /**
-         * <p>The scope of the variable. Valid values:</p>
+         * <p>The variable scope. Valid values:</p>
          * <ul>
          * <li>NodeParameter</li>
          * <li>NodeContext</li>
@@ -469,7 +469,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The type of the variable. Valid values:</p>
+         * <p>The variable type. Valid values:</p>
          * <ul>
          * <li>NoKvVariableExpression</li>
          * <li>Constant</li>
@@ -485,7 +485,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the variable.</p>
+         * <p>The variable value.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -558,19 +558,19 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesOutputs extends TeaModel {
         /**
-         * <p>The node outputs.</p>
+         * <p>The node output list.</p>
          */
         @NameInMap("NodeOutputs")
         public java.util.List<ListNodesResponseBodyPagingInfoNodesOutputsNodeOutputs> nodeOutputs;
 
         /**
-         * <p>The tables.</p>
+         * <p>The table list.</p>
          */
         @NameInMap("Tables")
         public java.util.List<ListNodesResponseBodyPagingInfoNodesOutputsTables> tables;
 
         /**
-         * <p>The variables.</p>
+         * <p>The variable list.</p>
          */
         @NameInMap("Variables")
         public java.util.List<ListNodesResponseBodyPagingInfoNodesOutputsVariables> variables;
@@ -607,6 +607,12 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyPagingInfoNodesRuntimeResource extends TeaModel {
+        /**
+         * <p>The identifier of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S_res_group_XXXX</p>
+         */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
@@ -770,7 +776,7 @@ public class ListNodesResponseBody extends TeaModel {
         public Integer rerunTimes;
 
         /**
-         * <p>The timeout period.</p>
+         * <p>Timeout.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -836,7 +842,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -869,7 +875,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesTrigger extends TeaModel {
         /**
-         * <p>The CRON expression for scheduling.</p>
+         * <p>The cron expression for scheduling</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
@@ -914,12 +920,12 @@ public class ListNodesResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The type of the trigger.</p>
+         * <p>The trigger type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Scheduler</li>
-         * <li>Manual</li>
-         * <li>Steaming</li>
+         * <li>Scheduler: periodic scheduling</li>
+         * <li>Manual: manual trigger</li>
+         * <li>Streaming: streaming task</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -985,7 +991,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodes extends TeaModel {
         /**
-         * <p>The time when the node was created. This value is a UNIX timestamp.</p>
+         * <p>The timestamp when the node in DataStudio was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1722910655000</p>
@@ -994,7 +1000,7 @@ public class ListNodesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The information about the data source.</p>
+         * <p>The data source.</p>
          */
         @NameInMap("DataSource")
         public ListNodesResponseBodyPagingInfoNodesDataSource dataSource;
@@ -1018,13 +1024,13 @@ public class ListNodesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The input of the node.</p>
+         * <p>The node input.</p>
          */
         @NameInMap("Inputs")
         public ListNodesResponseBodyPagingInfoNodesInputs inputs;
 
         /**
-         * <p>The time when the node was last modified. This value is a UNIX timestamp.</p>
+         * <p>The timestamp when the node in DataStudio was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1722910655000</p>
@@ -1042,13 +1048,13 @@ public class ListNodesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output of the node.</p>
+         * <p>The node output.</p>
          */
         @NameInMap("Outputs")
         public ListNodesResponseBodyPagingInfoNodesOutputs outputs;
 
         /**
-         * <p>The owner of the node.</p>
+         * <p>The owner of nodes in DataStudio.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -1099,7 +1105,7 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyPagingInfoNodesStrategy strategy;
 
         /**
-         * <p>The tags. This parameter is not in use.</p>
+         * <p>The tag information (not in use).</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListNodesResponseBodyPagingInfoNodesTags> tags;
@@ -1264,7 +1270,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The nodes.</p>
+         * <p>The list of nodes in DataStudio.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ListNodesResponseBodyPagingInfoNodes> nodes;

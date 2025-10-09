@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityAlertRuleRequest extends TeaModel {
     /**
+     * <p>The data quality monitoring alert rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>113642</p>
      */

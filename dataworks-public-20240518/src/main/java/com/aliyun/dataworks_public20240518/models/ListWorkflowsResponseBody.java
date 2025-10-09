@@ -40,6 +40,36 @@ public class ListWorkflowsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListWorkflowsResponseBodyPagingInfoWorkflowsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListWorkflowsResponseBodyPagingInfoWorkflowsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkflowsResponseBodyPagingInfoWorkflowsTags self = new ListWorkflowsResponseBodyPagingInfoWorkflowsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWorkflowsResponseBodyPagingInfoWorkflowsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListWorkflowsResponseBodyPagingInfoWorkflowsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListWorkflowsResponseBodyPagingInfoWorkflowsTrigger extends TeaModel {
         /**
          * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
@@ -255,6 +285,9 @@ public class ListWorkflowsResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public Long projectId;
 
+        @NameInMap("Tags")
+        public java.util.List<ListWorkflowsResponseBodyPagingInfoWorkflowsTags> tags;
+
         /**
          * <p>The trigger method.</p>
          */
@@ -360,6 +393,14 @@ public class ListWorkflowsResponseBody extends TeaModel {
         }
         public Long getProjectId() {
             return this.projectId;
+        }
+
+        public ListWorkflowsResponseBodyPagingInfoWorkflows setTags(java.util.List<ListWorkflowsResponseBodyPagingInfoWorkflowsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListWorkflowsResponseBodyPagingInfoWorkflowsTags> getTags() {
+            return this.tags;
         }
 
         public ListWorkflowsResponseBodyPagingInfoWorkflows setTrigger(ListWorkflowsResponseBodyPagingInfoWorkflowsTrigger trigger) {

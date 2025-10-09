@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDataQualityTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>Paged query results of data quality rule templates.</p>
+     */
     @NameInMap("PageInfo")
     public ListDataQualityTemplatesResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The API request ID, which is generated as a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc14115***159376359</p>
      */
@@ -37,6 +42,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
 
     public static class ListDataQualityTemplatesResponseBodyPageInfoDataQualityTemplates extends TeaModel {
         /**
+         * <p>The time when the data quality rule template was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1729816478147</p>
          */
@@ -44,6 +51,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The creator of the data quality rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>7892346529452</p>
          */
@@ -51,6 +60,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The ID of the data quality rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>819cf1f8-29be-4f94-a9d0-c5c06c0c3d2a</p>
          */
@@ -58,6 +69,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The time when the data quality rule template was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1729816478147</p>
          */
@@ -65,6 +78,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The last updater of the data quality rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>205250754596036836</p>
          */
@@ -72,6 +87,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The owner of the data quality rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>205250754596036836</p>
          */
@@ -79,6 +96,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7635</p>
          */
@@ -86,6 +105,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>Specific configurations of the data quality rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;assertion&quot;: &quot;anomaly detection fro id_not_null_cnt&quot;,
@@ -170,10 +191,15 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityTemplatesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The list of rule templates.</p>
+         */
         @NameInMap("DataQualityTemplates")
         public java.util.List<ListDataQualityTemplatesResponseBodyPageInfoDataQualityTemplates> dataQualityTemplates;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -181,6 +207,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -188,6 +216,8 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDataQualityTemplateResponseBody extends TeaModel {
     /**
+     * <p>The API request ID, which is generated as a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc14115****159376359</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDataQualityTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Deleted</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

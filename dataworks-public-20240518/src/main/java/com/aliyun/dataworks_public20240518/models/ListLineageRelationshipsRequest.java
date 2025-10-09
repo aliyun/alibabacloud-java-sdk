@@ -20,6 +20,8 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String dstEntityId;
 
     /**
+     * <p>The destination entity name. Supports fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>dstName</p>
      */
@@ -27,6 +29,12 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String dstEntityName;
 
     /**
+     * <p>The order in which schemas are sorted. Default value: Asc. Valid values:</p>
+     * <ul>
+     * <li>Asc: ascending.</li>
+     * <li>Desc: descending.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -34,6 +42,8 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -41,6 +51,8 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -48,6 +60,8 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sort field. Default value: Name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Name</p>
      */
@@ -70,6 +84,8 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String srcEntityId;
 
     /**
+     * <p>The source entity name. Supports fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>srcName</p>
      */

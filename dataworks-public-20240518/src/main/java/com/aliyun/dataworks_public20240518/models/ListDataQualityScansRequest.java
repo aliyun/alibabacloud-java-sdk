@@ -4,10 +4,17 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDataQualityScansRequest extends TeaModel {
+    /**
+     * <p>The data quality scan task name for fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class ListDataQualityScansRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class ListDataQualityScansRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +44,13 @@ public class ListDataQualityScansRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The list of sorting fields. Supports fields such as last modified time and creation time. Format: &quot;SortField+SortOrder (Desc/Asc)&quot;, where Asc is the default. Valid values:</p>
+     * <ul>
+     * <li>ModifyTime (Desc/Asc)</li>
+     * <li>CreateTime (Desc/Asc)</li>
+     * <li>Id (Desc/Asc)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ModifyTime Desc</p>
      */
@@ -42,6 +58,8 @@ public class ListDataQualityScansRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Fuzzy match for the monitored table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>video_album</p>
      */

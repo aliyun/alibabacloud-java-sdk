@@ -13,11 +13,17 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("ContainerId")
     public Long containerId;
 
+    /**
+     * <p>The name of the node. Fuzzy search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the data to retrieve, used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +32,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default is 10, and the maximum is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

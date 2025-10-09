@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityAlertRuleResponseBody extends TeaModel {
     /**
+     * <p>The user-defined rule ID returned after the monitoring rule is successfully created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1010543619</p>
      */
@@ -12,6 +14,8 @@ public class CreateDataQualityAlertRuleResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc14115***159376359</p>
      */

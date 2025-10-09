@@ -4,10 +4,18 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataQualityScanRequest extends TeaModel {
+    /**
+     * <p>The deprecated parameter. No configuration is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the data quality monitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDataQualityAlertRuleResponseBody extends TeaModel {
+    /**
+     * <p>Data quality monitoring alert rules.</p>
+     */
     @NameInMap("DataQualityAlertRule")
     public GetDataQualityAlertRuleResponseBodyDataQualityAlertRule dataQualityAlertRule;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc14115****159376359</p>
      */
@@ -37,6 +42,8 @@ public class GetDataQualityAlertRuleResponseBody extends TeaModel {
 
     public static class GetDataQualityAlertRuleResponseBodyDataQualityAlertRuleNotificationReceivers extends TeaModel {
         /**
+         * <p>Additional configurations required for the alert recipients. When ReceiverType is DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:true}</p>
          */
@@ -44,12 +51,27 @@ public class GetDataQualityAlertRuleResponseBody extends TeaModel {
         public String extension;
 
         /**
+         * <p>The type of alert recipients.</p>
+         * <ul>
+         * <li>ShiftSchedule</li>
+         * <li>WebhookUrl</li>
+         * <li>FeishuUrl</li>
+         * <li>TaskOwner</li>
+         * <li>WeixinUrl</li>
+         * <li>DingdingUrl</li>
+         * <li>DataQualityScanOwner</li>
+         * <li>AliUid</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TaskOwner</p>
          */
         @NameInMap("ReceiverType")
         public String receiverType;
 
+        /**
+         * <p>The value of alert recipients.</p>
+         */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
 
@@ -85,9 +107,15 @@ public class GetDataQualityAlertRuleResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityAlertRuleResponseBodyDataQualityAlertRuleNotification extends TeaModel {
+        /**
+         * <p>In Channels, you can set both Email and Sms at the same time. In other cases, only one channel can be set.</p>
+         */
         @NameInMap("Channels")
         public java.util.List<String> channels;
 
+        /**
+         * <p>The alert recipients.</p>
+         */
         @NameInMap("Receivers")
         public java.util.List<GetDataQualityAlertRuleResponseBodyDataQualityAlertRuleNotificationReceivers> receivers;
 
@@ -115,10 +143,15 @@ public class GetDataQualityAlertRuleResponseBody extends TeaModel {
     }
 
     public static class GetDataQualityAlertRuleResponseBodyDataQualityAlertRuleTarget extends TeaModel {
+        /**
+         * <p>The list of monitored target IDs.</p>
+         */
         @NameInMap("Ids")
         public java.util.List<Long> ids;
 
         /**
+         * <p>The type of the monitored target. Only <code>DataQualityScan</code> is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>DataQualityScan</p>
          */
@@ -150,6 +183,8 @@ public class GetDataQualityAlertRuleResponseBody extends TeaModel {
 
     public static class GetDataQualityAlertRuleResponseBodyDataQualityAlertRule extends TeaModel {
         /**
+         * <p>Alert conditions of the data quality monitoring alert rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>results.any { r -&gt; r.status == \&quot;fail\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
          */
@@ -157,22 +192,32 @@ public class GetDataQualityAlertRuleResponseBody extends TeaModel {
         public String condition;
 
         /**
+         * <p>The ID of the data quality monitoring alert rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>21045</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Alert notification settings.</p>
+         */
         @NameInMap("Notification")
         public GetDataQualityAlertRuleResponseBodyDataQualityAlertRuleNotification notification;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>90912</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The monitored target of the data quality monitoring alert rule.</p>
+         */
         @NameInMap("Target")
         public GetDataQualityAlertRuleResponseBodyDataQualityAlertRuleTarget target;
 

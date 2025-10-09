@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDataQualityTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The data quality rule template.</p>
+     */
     @NameInMap("DataQualityTemplate")
     public GetDataQualityTemplateResponseBodyDataQualityTemplate dataQualityTemplate;
 
     /**
+     * <p>The API request ID, which is generated as a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc14115***159376359</p>
      */
@@ -37,6 +42,8 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
 
     public static class GetDataQualityTemplateResponseBodyDataQualityTemplate extends TeaModel {
         /**
+         * <p>The time when the data quality rule template was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1606724043000</p>
          */
@@ -44,6 +51,8 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The creator of the data quality rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>238428342865</p>
          */
@@ -51,6 +60,8 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The ID of the data quality rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>10001</p>
          */
@@ -58,6 +69,8 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The time when the data quality rule template was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1606724043000</p>
          */
@@ -65,6 +78,8 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The last updater of the data quality rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>238428342865</p>
          */
@@ -72,6 +87,8 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The owner of the data quality rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>238428342865</p>
          */
@@ -79,6 +96,8 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>97535</p>
          */
@@ -86,6 +105,8 @@ public class GetDataQualityTemplateResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>Specific configurations of the data quality rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;assertion&quot;: &quot;anomaly detection fro id_not_null_cnt&quot;,

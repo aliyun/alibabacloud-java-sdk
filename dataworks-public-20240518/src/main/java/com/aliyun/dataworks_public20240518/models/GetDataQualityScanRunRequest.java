@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityScanRunRequest extends TeaModel {
     /**
+     * <p>The data quality monitoring run record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1006059507</p>
      */

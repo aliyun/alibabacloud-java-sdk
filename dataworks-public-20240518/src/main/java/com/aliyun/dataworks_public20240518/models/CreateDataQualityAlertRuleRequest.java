@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityAlertRuleRequest extends TeaModel {
     /**
+     * <p>The alert condition of the data quality monitoring rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class CreateDataQualityAlertRuleRequest extends TeaModel {
     public String condition;
 
     /**
+     * <p>The list of alert channels.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Notification")
     public CreateDataQualityAlertRuleRequestNotification notification;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class CreateDataQualityAlertRuleRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The monitored target of the data quality monitoring rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Target")
@@ -73,6 +77,8 @@ public class CreateDataQualityAlertRuleRequest extends TeaModel {
 
     public static class CreateDataQualityAlertRuleRequestNotificationReceivers extends TeaModel {
         /**
+         * <p>Additional configurations required for the alert recipients. When ReceiverType is DingdingUrl, you can set <code>{&quot;atAll&quot;:true}</code> to mention all members.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:true}</p>
          */
@@ -80,6 +86,17 @@ public class CreateDataQualityAlertRuleRequest extends TeaModel {
         public String extension;
 
         /**
+         * <p>The type of alert recipients.</p>
+         * <ul>
+         * <li>AliUid</li>
+         * <li>WebhookUrl</li>
+         * <li>DingdingUrl</li>
+         * <li>WeixinUrl</li>
+         * <li>FeishuUrl</li>
+         * <li>TaskOwner</li>
+         * <li>DataQualityScanOwner</li>
+         * <li>ShiftSchedule</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +105,9 @@ public class CreateDataQualityAlertRuleRequest extends TeaModel {
         @NameInMap("ReceiverType")
         public String receiverType;
 
+        /**
+         * <p>The value of alert recipients.</p>
+         */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
 
@@ -124,12 +144,14 @@ public class CreateDataQualityAlertRuleRequest extends TeaModel {
 
     public static class CreateDataQualityAlertRuleRequestNotification extends TeaModel {
         /**
+         * <p>The list of alert channels. You can set both <code>Email</code> and <code>Sms</code> at the same time. In other cases, only one channel can be set.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
 
         /**
+         * <p>The alert recipients.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Receivers")
@@ -160,12 +182,14 @@ public class CreateDataQualityAlertRuleRequest extends TeaModel {
 
     public static class CreateDataQualityAlertRuleRequestTarget extends TeaModel {
         /**
+         * <p>The list of monitored target IDs. Currently, only one ID can be set.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Ids")
         public java.util.List<Long> ids;
 
         /**
+         * <p>The type of the monitored target. Only DataQualityScan is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

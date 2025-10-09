@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDataQualityTemplateResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier of the newly created rule template.</p>
+     * 
      * <strong>example:</strong>
      * <p>USER-DEFINED:2001</p>
      */
@@ -12,6 +14,8 @@ public class CreateDataQualityTemplateResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The API request ID, which is generated as a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc14115***159376359</p>
      */

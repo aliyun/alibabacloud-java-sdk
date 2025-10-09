@@ -4,15 +4,33 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateDataQualityScanRunShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the data quality monitor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20000001</p>
+     */
     @NameInMap("DataQualityScanId")
     public Long dataQualityScanId;
 
+    /**
+     * <p>The parameter settings used during the actual run. The <code>triggerTime</code> parameter is required.</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The scheduling resource group used when running the data quality monitor. This resource group uses the same data structure as in the scheduling API.</p>
+     */
     @NameInMap("RuntimeResource")
     public String runtimeResourceShrink;
 

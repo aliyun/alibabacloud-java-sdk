@@ -177,7 +177,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>input</p>
@@ -223,7 +223,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -296,19 +296,19 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesInputs extends TeaModel {
         /**
-         * <p>The node outputs.</p>
+         * <p>The list of node outputs.</p>
          */
         @NameInMap("NodeOutputs")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs> nodeOutputs;
 
         /**
-         * <p>The tables.</p>
+         * <p>The table list.</p>
          */
         @NameInMap("Tables")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsTables> tables;
 
         /**
-         * <p>The variables.</p>
+         * <p>The variable list.</p>
          */
         @NameInMap("Variables")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables> variables;
@@ -346,7 +346,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs extends TeaModel {
         /**
-         * <p>The node output.</p>
+         * <p>The output of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
@@ -396,7 +396,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariablesNode extends TeaModel {
         /**
-         * <p>The output of the node to which the variable belongs.</p>
+         * <p>The node output corresponding to the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
@@ -439,7 +439,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>output</p>
@@ -558,19 +558,19 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesOutputs extends TeaModel {
         /**
-         * <p>The node outputs.</p>
+         * <p>The list of node outputs.</p>
          */
         @NameInMap("NodeOutputs")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs> nodeOutputs;
 
         /**
-         * <p>The tables.</p>
+         * <p>The table list.</p>
          */
         @NameInMap("Tables")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsTables> tables;
 
         /**
-         * <p>The variables.</p>
+         * <p>The variable list.</p>
          */
         @NameInMap("Variables")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables> variables;
@@ -727,7 +727,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String instanceMode;
 
         /**
-         * <p>The rerun interval after a failure. Unit: milliseconds.</p>
+         * <p>The interval between retries after failure. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -750,7 +750,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String rerunMode;
 
         /**
-         * <p>The number of reruns after a failure.</p>
+         * <p>The number of retries after failure.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -858,7 +858,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesTrigger extends TeaModel {
         /**
-         * <p>The CRON expression for scheduling.</p>
+         * <p>The cron expression for scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
@@ -867,7 +867,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String cron;
 
         /**
-         * <p>The end time of the validity period of the scheduling. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The effective end time of the schedule, in the format yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
@@ -876,7 +876,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The trigger ID.</p>
+         * <p>The unique identifier of the trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>543680677872062XXXX</p>
@@ -885,7 +885,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The start time of the validity period of the scheduling. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The effective start time of the schedule, in the format yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
@@ -903,12 +903,12 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The type of the trigger.</p>
+         * <p>The trigger type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Scheduler</li>
-         * <li>Manual</li>
-         * <li>Streaming</li>
+         * <li>Scheduler: periodic scheduling.</li>
+         * <li>Manual: manual scheduling.</li>
+         * <li>Streaming: streaming scheduler.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -974,7 +974,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodes extends TeaModel {
         /**
-         * <p>The time when the node was created. This value is a UNIX timestamp.</p>
+         * <p>The timestamp when the node was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1724505917000</p>
@@ -983,7 +983,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The information about the data source.</p>
+         * <p>The data source.</p>
          */
         @NameInMap("DataSource")
         public ListNodeDependenciesResponseBodyPagingInfoNodesDataSource dataSource;
@@ -1013,7 +1013,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public ListNodeDependenciesResponseBodyPagingInfoNodesInputs inputs;
 
         /**
-         * <p>The time when the node was last modified. This value is a UNIX timestamp.</p>
+         * <p>The timestamp when the node was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1724505917000</p>
@@ -1253,7 +1253,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The descendant nodes.</p>
+         * <p>The list of dependent nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ListNodeDependenciesResponseBodyPagingInfoNodes> nodes;

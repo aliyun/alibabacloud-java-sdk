@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataQualityScanRequest extends TeaModel {
     /**
+     * <p>The ID of the monitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>10001</p>
      */

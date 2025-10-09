@@ -40,6 +40,36 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags self = new ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -161,6 +191,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags> tags;
+
         /**
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -279,6 +312,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances setTags(java.util.List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags> getTags() {
+            return this.tags;
         }
 
         public ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances setType(String type) {

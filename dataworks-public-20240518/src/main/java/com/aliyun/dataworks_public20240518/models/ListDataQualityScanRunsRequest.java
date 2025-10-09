@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityScanRunsRequest extends TeaModel {
     /**
+     * <p>The earliest time when the data quality monitor starts to run.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -12,6 +14,8 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long createTimeFrom;
 
     /**
+     * <p>The latest time when the data quality monitor starts to run.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -19,6 +23,8 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long createTimeTo;
 
     /**
+     * <p>The ID of the data quality monitor.</p>
+     * 
      * <strong>example:</strong>
      * <p>10001</p>
      */
@@ -26,6 +32,8 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long dataQualityScanId;
 
     /**
+     * <p>The page number of the results. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,6 +50,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +60,12 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The list of sorting fields. Supports fields such as last modified time and creation time. Format: &quot;SortField+SortOrder (Desc/Asc)&quot;, where Asc is the default. Valid values:</p>
+     * <ul>
+     * <li>CreateTime (Desc/Asc)</li>
+     * <li>Id (Desc/Asc)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime Desc</p>
      */
@@ -56,6 +73,15 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The status of the data quality check result.</p>
+     * <ul>
+     * <li>Pass</li>
+     * <li>Running</li>
+     * <li>Error</li>
+     * <li>Fail</li>
+     * <li>Warn</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Fail</p>
      */

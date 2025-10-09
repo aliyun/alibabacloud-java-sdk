@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDataQualityScanRunsResponseBody extends TeaModel {
+    /**
+     * <p>The page information.</p>
+     */
     @NameInMap("PageInfo")
     public ListDataQualityScanRunsResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc14115***159376359</p>
      */
@@ -37,6 +42,8 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
 
     public static class ListDataQualityScanRunsResponseBodyPageInfoDataQualityScanRunsParameters extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dt</p>
          */
@@ -44,6 +51,8 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter value. You can use a scheduling time expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>$[yyyy-mm-dd-1]</p>
          */
@@ -75,6 +84,8 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
 
     public static class ListDataQualityScanRunsResponseBodyPageInfoDataQualityScanRuns extends TeaModel {
         /**
+         * <p>The time when the data quality monitor starts running.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -82,6 +93,8 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The time when the data quality monitor stops.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -89,16 +102,30 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
         public Long finishTime;
 
         /**
+         * <p>The ID of the data quality monitor running record.</p>
+         * 
          * <strong>example:</strong>
          * <p>3155</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The parameters configured for the instance.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<ListDataQualityScanRunsResponseBodyPageInfoDataQualityScanRunsParameters> parameters;
 
         /**
+         * <p>The status of the instance.</p>
+         * <ul>
+         * <li>Pass</li>
+         * <li>Running</li>
+         * <li>Error</li>
+         * <li>Warn</li>
+         * <li>Fail</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Fail</p>
          */
@@ -153,10 +180,15 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityScanRunsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The list of data quality monitor run records.</p>
+         */
         @NameInMap("DataQualityScanRuns")
         public java.util.List<ListDataQualityScanRunsResponseBodyPageInfoDataQualityScanRuns> dataQualityScanRuns;
 
         /**
+         * <p>The page number of the results. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -164,6 +196,8 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of records per page. Default value: 10.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -171,6 +205,8 @@ public class ListDataQualityScanRunsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>324</p>
          */
