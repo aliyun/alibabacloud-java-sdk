@@ -221,6 +221,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList extends TeaModel {
+        @NameInMap("Accumulate")
+        public Long accumulate;
+
         /**
          * <p>The latest offset in the partition of the topic.</p>
          * 
@@ -287,6 +290,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         public static GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList self = new GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList();
             return TeaModel.build(map, self);
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setAccumulate(Long accumulate) {
+            this.accumulate = accumulate;
+            return this;
+        }
+        public Long getAccumulate() {
+            return this.accumulate;
         }
 
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setBrokerOffset(Long brokerOffset) {
