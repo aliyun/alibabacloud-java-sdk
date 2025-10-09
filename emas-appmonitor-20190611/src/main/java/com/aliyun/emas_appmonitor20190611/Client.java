@@ -444,6 +444,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>RequestUploadToken</p>
+     * 
      * @param request RequestUploadTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RequestUploadTokenResponse
@@ -477,6 +480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>RequestUploadToken</p>
+     * 
      * @param request RequestUploadTokenRequest
      * @return RequestUploadTokenResponse
      */
@@ -486,6 +492,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>SubmitSymbolic</p>
+     * 
      * @param request SubmitSymbolicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitSymbolicResponse
@@ -543,6 +552,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>SubmitSymbolic</p>
+     * 
      * @param request SubmitSymbolicRequest
      * @return SubmitSymbolicResponse
      */

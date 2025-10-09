@@ -722,6 +722,12 @@ public class GetErrorResponseBody extends TeaModel {
         @NameInMap("IsBackTrace")
         public Integer isBackTrace;
 
+        @NameInMap("IsJailbroken")
+        public Integer isJailbroken;
+
+        @NameInMap("IsSimulator")
+        public Integer isSimulator;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -1850,6 +1856,22 @@ public class GetErrorResponseBody extends TeaModel {
         }
         public Integer getIsBackTrace() {
             return this.isBackTrace;
+        }
+
+        public GetErrorResponseBodyModel setIsJailbroken(Integer isJailbroken) {
+            this.isJailbroken = isJailbroken;
+            return this;
+        }
+        public Integer getIsJailbroken() {
+            return this.isJailbroken;
+        }
+
+        public GetErrorResponseBodyModel setIsSimulator(Integer isSimulator) {
+            this.isSimulator = isSimulator;
+            return this;
+        }
+        public Integer getIsSimulator() {
+            return this.isSimulator;
         }
 
         public GetErrorResponseBodyModel setIsSpeedVersion(Integer isSpeedVersion) {
