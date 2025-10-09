@@ -4,10 +4,16 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListESAIPInfoResponseBody extends TeaModel {
+    /**
+     * <p>The objects that are returned.</p>
+     */
     @NameInMap("Content")
     public java.util.List<ListESAIPInfoResponseBodyContent> content;
 
     /**
+     * <p>The request ID.</p>
+     * <p>Example D03F9502-6653-127C-8A5F-0647197\<em>\</em>\<em>\</em>\*</p>
+     * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
      */
@@ -37,6 +43,12 @@ public class ListESAIPInfoResponseBody extends TeaModel {
 
     public static class ListESAIPInfoResponseBodyContent extends TeaModel {
         /**
+         * <p>Whether the IP address in the parameter belongs to ESA POPs.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +56,8 @@ public class ListESAIPInfoResponseBody extends TeaModel {
         public String cdnIp;
 
         /**
+         * <p>The IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>27.129.167.239</p>
          */

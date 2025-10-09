@@ -12,6 +12,7 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The metric to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")
@@ -84,10 +85,18 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     }
 
     public static class DescribeSiteTimeSeriesDataRequestFields extends TeaModel {
+        /**
+         * <p>The dimensions at which you want to query the data.</p>
+         */
         @NameInMap("Dimension")
         public java.util.List<String> dimension;
 
         /**
+         * <p>The metric to query.</p>
+         * <blockquote>
+         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/2878520.html">Data analysis field description</a>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Traffic</p>
          */

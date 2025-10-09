@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetCrossBorderOptimizationResponseBody extends TeaModel {
     /**
+     * <p>Whether to enable Chinese mainland network access optimization. By default, it is disabled. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,8 @@ public class GetCrossBorderOptimizationResponseBody extends TeaModel {
     public String enable;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CF521A24-633F-5350-A6A5-42AD503D0D20</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListESAIPInfoRequest extends TeaModel {
     /**
+     * <p>You can enter IPv4 or IPv6 addresses. Separate multiple IP addresses with commas (,). You can enter up to 20 IP addresses at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

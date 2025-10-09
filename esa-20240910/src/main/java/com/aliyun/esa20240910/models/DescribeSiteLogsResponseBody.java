@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteLogsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -13,6 +13,9 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the website log files.</p>
+     */
     @NameInMap("SiteLogDetails")
     public java.util.List<DescribeSiteLogsResponseBodySiteLogDetails> siteLogDetails;
 
@@ -39,6 +42,8 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
 
     public static class DescribeSiteLogsResponseBodySiteLogDetailsLogInfos extends TeaModel {
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-06T17:00:00Z</p>
          */
@@ -46,6 +51,8 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The name of the log file.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com_2022_11_07_000000_020000.gz.xxxxxx</p>
          */
@@ -53,6 +60,11 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public String logName;
 
         /**
+         * <p>The log path.</p>
+         * <blockquote>
+         * <p> Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com /v1.l1cache/105252530/example.com/2022_11_07/example.com_2022_11_07_000000_020000.gz.xxxxxx?Expires=1636963354&amp;OSSAccessKeyId=LTAIviCc6zy8****&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</p>
          */
@@ -60,6 +72,8 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public String logPath;
 
         /**
+         * <p>The size of the log file. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>438304768</p>
          */
@@ -67,6 +81,8 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public Integer logSize;
 
         /**
+         * <p>The create time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-06T16:00:00Z</p>
          */
@@ -122,6 +138,8 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
 
     public static class DescribeSiteLogsResponseBodySiteLogDetailsPageInfos extends TeaModel {
         /**
+         * <p>The page number returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -129,6 +147,8 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public Integer pageIndex;
 
         /**
+         * <p>The number of entries per page. Default value: <strong>300</strong>. Valid values: <strong>1 to 1000</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -136,6 +156,8 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>47</p>
          */
@@ -175,19 +197,29 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
 
     public static class DescribeSiteLogsResponseBodySiteLogDetails extends TeaModel {
         /**
+         * <p>The total number of entries returned on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
         @NameInMap("LogCount")
         public Integer logCount;
 
+        /**
+         * <p>The details of the website log files.</p>
+         */
         @NameInMap("LogInfos")
         public java.util.List<DescribeSiteLogsResponseBodySiteLogDetailsLogInfos> logInfos;
 
+        /**
+         * <p>Pagination information.</p>
+         */
         @NameInMap("PageInfos")
         public DescribeSiteLogsResponseBodySiteLogDetailsPageInfos pageInfos;
 
         /**
+         * <p>The website ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456***</p>
          */
@@ -195,6 +227,8 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         public Long siteId;
 
         /**
+         * <p>The website name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */

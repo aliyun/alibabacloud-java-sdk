@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVideoProcessingResponseBody extends TeaModel {
     /**
+     * <p>The configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>352816**********</p>
      */
@@ -12,6 +14,8 @@ public class CreateVideoProcessingResponseBody extends TeaModel {
     public Long configId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
      */

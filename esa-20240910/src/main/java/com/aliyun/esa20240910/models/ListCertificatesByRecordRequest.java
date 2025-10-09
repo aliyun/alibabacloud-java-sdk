@@ -4,16 +4,27 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListCertificatesByRecordRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the certificate details. 0 indicates that the certificate details are not returned. 1 indicates that the certificate details are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Detail")
     public Boolean detail;
 
     /**
+     * <p>The record name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("RecordName")
     public String recordName;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +33,12 @@ public class ListCertificatesByRecordRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <p>Specifies whether to return only valid certificates. 0 indicates that all matched certificates are returned. 1 indicates that only valid certificates are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ValidOnly")
     public Boolean validOnly;
 

@@ -4,27 +4,63 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListUserRoutinesResponseBody extends TeaModel {
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The maximum number of functions supported by the billing plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("QuotaRoutineNumber")
     public Long quotaRoutineNumber;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890ABCDEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The functions.</p>
+     */
     @NameInMap("Routines")
     public java.util.List<ListUserRoutinesResponseBodyRoutines> routines;
 
+    /**
+     * <p>The total count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The number of functions that were already created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("UsedRoutineNumber")
     public Long usedRoutineNumber;
 
@@ -90,18 +126,48 @@ public class ListUserRoutinesResponseBody extends TeaModel {
     }
 
     public static class ListUserRoutinesResponseBodyRoutines extends TeaModel {
+        /**
+         * <p>The time when the function was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-11T01:23:02.883361712Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The default record name to access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serverless-test-2.154edaf6.er.aliyun-esa.net</p>
+         */
         @NameInMap("DefaultRelatedRecord")
         public String defaultRelatedRecord;
 
+        /**
+         * <p>The function description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg==</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Specifies whether to include the Assets file tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasAssets")
         public Boolean hasAssets;
 
+        /**
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("RoutineName")
         public String routineName;
 

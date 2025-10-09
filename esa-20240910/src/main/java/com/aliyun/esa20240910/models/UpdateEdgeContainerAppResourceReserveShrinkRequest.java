@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel {
     /**
+     * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-88068867578379****</p>
      */
@@ -12,6 +14,8 @@ public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel
     public String appId;
 
     /**
+     * <p>The end time of the reservation. The input time is UTC. It takes +8 hours to enter Beijing time. For example, if the current time is 2006-01-02 06:04:05, you need to enter &quot;2006-01-02T14:04:05Z&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>2006-01-02T15:04:05Z</p>
      */
@@ -19,6 +23,8 @@ public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel
     public String durationTime;
 
     /**
+     * <p>Whether to enable resource reservation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,12 +32,17 @@ public class UpdateEdgeContainerAppResourceReserveShrinkRequest extends TeaModel
     public Boolean enable;
 
     /**
+     * <p>Whether to permanently enable the reservation. Once it is enabled, you are not allowed to set the reservation deadline.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Forever")
     public Boolean forever;
 
+    /**
+     * <p>Reserved resource list.</p>
+     */
     @NameInMap("ReserveSet")
     public String reserveSetShrink;
 

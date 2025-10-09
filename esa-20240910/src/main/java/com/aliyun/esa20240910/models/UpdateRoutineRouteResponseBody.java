@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRoutineRouteResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
      */

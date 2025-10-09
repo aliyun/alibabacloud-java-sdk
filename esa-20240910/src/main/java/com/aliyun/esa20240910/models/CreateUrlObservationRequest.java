@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateUrlObservationRequest extends TeaModel {
     /**
+     * <p>SDK integration. Supported</p>
+     * <ul>
+     * <li><strong>automatic</strong></li>
+     * <li><strong>manual</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class CreateUrlObservationRequest extends TeaModel {
     public String sdkType;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,7 @@ public class CreateUrlObservationRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The URL of the web page to monitor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

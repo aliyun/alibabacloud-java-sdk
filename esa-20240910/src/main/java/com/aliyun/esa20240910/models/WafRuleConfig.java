@@ -671,7 +671,7 @@ public class WafRuleConfig extends TeaModel {
 
     public static class WafRuleConfigRateLimit extends TeaModel {
         @NameInMap("Characteristics")
-        public WafRuleMatch2 characteristics;
+        public WafRatelimitCharacteristics characteristics;
 
         @NameInMap("Interval")
         public Integer interval;
@@ -690,11 +690,11 @@ public class WafRuleConfig extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public WafRuleConfigRateLimit setCharacteristics(WafRuleMatch2 characteristics) {
+        public WafRuleConfigRateLimit setCharacteristics(WafRatelimitCharacteristics characteristics) {
             this.characteristics = characteristics;
             return this;
         }
-        public WafRuleMatch2 getCharacteristics() {
+        public WafRatelimitCharacteristics getCharacteristics() {
             return this.characteristics;
         }
 

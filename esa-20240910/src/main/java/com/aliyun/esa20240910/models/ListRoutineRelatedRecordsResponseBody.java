@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The list of records associated with the edge function.</p>
+     */
     @NameInMap("RelatedRecords")
     public java.util.List<ListRoutineRelatedRecordsResponseBodyRelatedRecords> relatedRecords;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
@@ -29,6 +38,8 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -82,6 +93,8 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
 
     public static class ListRoutineRelatedRecordsResponseBodyRelatedRecords extends TeaModel {
         /**
+         * <p>The record ID of the domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>509348423011904</p>
          */
@@ -89,6 +102,8 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         public Long recordId;
 
         /**
+         * <p>The name of the record.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-record-1.example.com</p>
          */
@@ -96,6 +111,8 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         public String recordName;
 
         /**
+         * <p>The website ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>54362329990032</p>
          */
@@ -103,6 +120,8 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         public Long siteId;
 
         /**
+         * <p>The website name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */

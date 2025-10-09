@@ -4,6 +4,9 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeSiteTimeSeriesDataResponseBodyData> data;
 
@@ -42,6 +45,9 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The queried summary data.</p>
+     */
     @NameInMap("SummarizedData")
     public java.util.List<DescribeSiteTimeSeriesDataResponseBodySummarizedData> summarizedData;
 

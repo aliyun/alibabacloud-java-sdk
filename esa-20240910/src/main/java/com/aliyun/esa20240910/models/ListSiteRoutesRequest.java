@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSiteRoutesRequest extends TeaModel {
     /**
+     * <p>The configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
      */
@@ -12,6 +14,13 @@ public class ListSiteRoutesRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>The configuration type. You can use this parameter to query global configurations or feature configurations. This parameter takes effect only if the functionName parameter is passed.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>global</li>
+     * <li>rule</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>global</p>
      */
@@ -19,6 +28,8 @@ public class ListSiteRoutesRequest extends TeaModel {
     public String configType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +37,8 @@ public class ListSiteRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +46,8 @@ public class ListSiteRoutesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The rule name. This parameter takes effect only when parameter functionName is specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_route</p>
      */
@@ -40,6 +55,7 @@ public class ListSiteRoutesRequest extends TeaModel {
     public String routeName;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

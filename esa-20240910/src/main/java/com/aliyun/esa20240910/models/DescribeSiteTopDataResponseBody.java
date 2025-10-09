@@ -4,10 +4,16 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteTopDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeSiteTopDataResponseBodyData> data;
 
     /**
+     * <p>The end of the time range during which data was queried.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-09T16:00:00Z</p>
      */
@@ -15,6 +21,8 @@ public class DescribeSiteTopDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35C66C7B-671H-4297-9187-2C447724****</p>
      */
@@ -22,6 +30,8 @@ public class DescribeSiteTopDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The sampling rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -29,6 +39,9 @@ public class DescribeSiteTopDataResponseBody extends TeaModel {
     public Float samplingRate;
 
     /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-08T16:00:00Z</p>
      */
@@ -82,6 +95,8 @@ public class DescribeSiteTopDataResponseBody extends TeaModel {
 
     public static class DescribeSiteTopDataResponseBodyDataDetailData extends TeaModel {
         /**
+         * <p>The dimension value.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALL</p>
          */
@@ -89,6 +104,8 @@ public class DescribeSiteTopDataResponseBody extends TeaModel {
         public String dimensionValue;
 
         /**
+         * <p>The queried numeric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -119,10 +136,15 @@ public class DescribeSiteTopDataResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteTopDataResponseBodyData extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("DetailData")
         public java.util.List<DescribeSiteTopDataResponseBodyDataDetailData> detailData;
 
         /**
+         * <p>The dimension at which data was queried.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALL</p>
          */
@@ -130,6 +152,8 @@ public class DescribeSiteTopDataResponseBody extends TeaModel {
         public String dimensionName;
 
         /**
+         * <p>The metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Traffic</p>
          */

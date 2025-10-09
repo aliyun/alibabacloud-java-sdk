@@ -3472,7 +3472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增边缘函数路由配置</p>
+     * <p>Adds edge function routing configurations.</p>
      * 
      * @param request CreateRoutineRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3532,7 +3532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增边缘函数路由配置</p>
+     * <p>Adds edge function routing configurations.</p>
      * 
      * @param request CreateRoutineRouteRequest
      * @return CreateRoutineRouteResponse
@@ -4104,7 +4104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网页监测配置</p>
+     * <p>Create a web page monitoring configuration.</p>
      * 
      * @param request CreateUrlObservationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4144,7 +4144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网页监测配置</p>
+     * <p>Create a web page monitoring configuration.</p>
      * 
      * @param request CreateUrlObservationRequest
      * @return CreateUrlObservationResponse
@@ -4300,7 +4300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点视频处理配置</p>
+     * <p>Add video processing configurations for a website.</p>
      * 
      * @param request CreateVideoProcessingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4376,7 +4376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点视频处理配置</p>
+     * <p>Add video processing configurations for a website.</p>
      * 
      * @param request CreateVideoProcessingRequest
      * @return CreateVideoProcessingResponse
@@ -6386,7 +6386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除边缘函数路由配置</p>
+     * <p>Deletes the route configuration of an edge function.</p>
      * 
      * @param request DeleteRoutineRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6422,7 +6422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除边缘函数路由配置</p>
+     * <p>Deletes the route configuration of an edge function.</p>
      * 
      * @param request DeleteRoutineRouteRequest
      * @return DeleteRoutineRouteResponse
@@ -6710,7 +6710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网页监测配置</p>
+     * <p>Deletes page monitoring configurations.</p>
      * 
      * @param request DeleteUrlObservationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6746,7 +6746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网页监测配置</p>
+     * <p>Deletes page monitoring configurations.</p>
      * 
      * @param request DeleteUrlObservationRequest
      * @return DeleteUrlObservationResponse
@@ -6818,7 +6818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除站点视频处理配置</p>
+     * <p>Deletes a video processing configuration.</p>
      * 
      * @param request DeleteVideoProcessingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6854,7 +6854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除站点视频处理配置</p>
+     * <p>Deletes a video processing configuration.</p>
      * 
      * @param request DeleteVideoProcessingRequest
      * @return DeleteVideoProcessingResponse
@@ -7334,7 +7334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</p>
+     * <p>Provides monitoring data for metrics of ESA edge containers.</p>
      * 
      * @param request DescribeEdgeContainerAppStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7362,7 +7362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</p>
+     * <p>Provides monitoring data for metrics of ESA edge containers.</p>
      * 
      * @param request DescribeEdgeContainerAppStatsRequest
      * @return DescribeEdgeContainerAppStatsResponse
@@ -7625,8 +7625,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</p>
+     * <ul>
+     * <li>The log data is collected every hour.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * <li>You can query only logs in the last month. The time range cannot exceed 31 days.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询站点离线日志</p>
+     * <p>Queries the URLs from which you can download the raw access logs of a website.</p>
      * 
      * @param request DescribeSiteLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7673,8 +7681,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</p>
+     * <ul>
+     * <li>The log data is collected every hour.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * <li>You can query only logs in the last month. The time range cannot exceed 31 days.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询站点离线日志</p>
+     * <p>Queries the URLs from which you can download the raw access logs of a website.</p>
      * 
      * @param request DescribeSiteLogsRequest
      * @return DescribeSiteLogsResponse
@@ -7685,6 +7701,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</p>
+     * <ul>
+     * <li>The time interval at which data is returned varies according to the span of StartTime and EndTime.<ul>
+     * <li>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</li>
+     * <li>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</li>
+     * <li>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</li>
+     * <li>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</li>
+     * <li>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</li>
+     * </ul>
+     * </li>
+     * <li>Data analysis may be sampled due to a large number of visits during the query period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>获取时序数据</p>
      * 
@@ -7739,6 +7769,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</p>
+     * <ul>
+     * <li>The time interval at which data is returned varies according to the span of StartTime and EndTime.<ul>
+     * <li>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</li>
+     * <li>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</li>
+     * <li>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</li>
+     * <li>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</li>
+     * <li>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</li>
+     * </ul>
+     * </li>
+     * <li>Data analysis may be sampled due to a large number of visits during the query period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>获取时序数据</p>
      * 
@@ -7751,8 +7795,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Top数据</p>
+     * <p>Queries the top-ranking records in a traffic analytics report by website or Alibaba Cloud account.</p>
      * 
      * @param tmpReq DescribeSiteTopDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7809,8 +7856,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Top数据</p>
+     * <p>Queries the top-ranking records in a traffic analytics report by website or Alibaba Cloud account.</p>
      * 
      * @param request DescribeSiteTopDataRequest
      * @return DescribeSiteTopDataResponse
@@ -7821,8 +7871,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询网页观测质量数据</p>
+     * <p>Queries the page monitoring data.</p>
      * 
      * @param request DescribeUrlObservationDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7873,8 +7926,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询网页观测质量数据</p>
+     * <p>Queries the page monitoring data.</p>
      * 
      * @param request DescribeUrlObservationDataRequest
      * @return DescribeUrlObservationDataResponse
@@ -8468,7 +8524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点中国大陆网络接入优化配置</p>
+     * <p>Queries the configuration of Chinese mainland access optimization.</p>
      * 
      * @param request GetCrossBorderOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8496,7 +8552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点中国大陆网络接入优化配置</p>
+     * <p>Queries the configuration of Chinese mainland access optimization.</p>
      * 
      * @param request GetCrossBorderOptimizationRequest
      * @return GetCrossBorderOptimizationResponse
@@ -8632,7 +8688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取边缘容器资源预留配置</p>
+     * <p>Obtain the resource reservation configuration of the edge container.</p>
      * 
      * @param request GetEdgeContainerAppResourceReserveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8664,7 +8720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取边缘容器资源预留配置</p>
+     * <p>Obtain the resource reservation configuration of the edge container.</p>
      * 
      * @param request GetEdgeContainerAppResourceReserveRequest
      * @return GetEdgeContainerAppResourceReserveResponse
@@ -8676,7 +8732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取边缘容器应用资源分布</p>
+     * <p>Obtains the distribution of edge container application resources.</p>
      * 
      * @param request GetEdgeContainerAppResourceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8708,7 +8764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取边缘容器应用资源分布</p>
+     * <p>Obtains the distribution of edge container application resources.</p>
      * 
      * @param request GetEdgeContainerAppResourceStatusRequest
      * @return GetEdgeContainerAppResourceStatusResponse
@@ -10192,7 +10248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条边缘函数路由配置</p>
+     * <p>Queries the route configurations of a single edge function.</p>
      * 
      * @param request GetRoutineRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10228,7 +10284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条边缘函数路由配置</p>
+     * <p>Queries the route configurations of a single edge function.</p>
      * 
      * @param request GetRoutineRouteRequest
      * @return GetRoutineRouteResponse
@@ -11076,7 +11132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点视频处理配置详情</p>
+     * <p>Queries the video processing configuration details of a site.</p>
      * 
      * @param request GetVideoProcessingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11112,7 +11168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点视频处理配置详情</p>
+     * <p>Queries the video processing configuration details of a site.</p>
      * 
      * @param request GetVideoProcessingRequest
      * @return GetVideoProcessingResponse
@@ -11478,7 +11534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询匹配记录名的站点证书列表</p>
+     * <p>Lists certificates that match specified records for a website. You can specify multiple records at a time.</p>
      * 
      * @param request ListCertificatesByRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11506,7 +11562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询匹配记录名的站点证书列表</p>
+     * <p>Lists certificates that match specified records for a website. You can specify multiple records at a time.</p>
      * 
      * @param request ListCertificatesByRecordRequest
      * @return ListCertificatesByRecordResponse
@@ -11677,8 +11733,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量查询IP是否为VIP</p>
+     * <p>Batch query whether the IP address is included in the ESA resolution result.</p>
      * 
      * @param request ListESAIPInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11705,8 +11764,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量查询IP是否为VIP</p>
+     * <p>Batch query whether the IP address is included in the ESA resolution result.</p>
      * 
      * @param request ListESAIPInfoRequest
      * @return ListESAIPInfoResponse
@@ -13053,8 +13115,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <code>Name</code> to specify the name of a function.
+     * Specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries returned in a request, and use <code>SearchKeyWord</code> to specify a keyword for fuzzy search.
+     * The response includes the number, description, and creation time of each code version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Routine的代码版本列表</p>
+     * <p>Queries the code versions of a function (routine) by page.</p>
      * 
      * @param request ListRoutineCodeVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13097,8 +13164,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <code>Name</code> to specify the name of a function.
+     * Specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries returned in a request, and use <code>SearchKeyWord</code> to specify a keyword for fuzzy search.
+     * The response includes the number, description, and creation time of each code version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询Routine的代码版本列表</p>
+     * <p>Queries the code versions of a function (routine) by page.</p>
      * 
      * @param request ListRoutineCodeVersionsRequest
      * @return ListRoutineCodeVersionsResponse
@@ -13109,8 +13181,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询函数关联域名列表</p>
+     * <p>The records associated with the function.</p>
      * 
      * @param request ListRoutineRelatedRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13153,8 +13228,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询函数关联域名列表</p>
+     * <p>The records associated with the function.</p>
      * 
      * @param request ListRoutineRelatedRecordsRequest
      * @return ListRoutineRelatedRecordsResponse
@@ -13166,7 +13244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询边缘程序的函数路由列表</p>
+     * <p>Queries the routes of an edge function.</p>
      * 
      * @param request ListRoutineRoutesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13206,7 +13284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询边缘程序的函数路由列表</p>
+     * <p>Queries the routes of an edge function.</p>
      * 
      * @param request ListRoutineRoutesRequest
      * @return ListRoutineRoutesResponse
@@ -13338,7 +13416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点的函数路由列表</p>
+     * <p>Queries the edge function routes for a website.</p>
      * 
      * @param request ListSiteRoutesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13390,7 +13468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点的函数路由列表</p>
+     * <p>Queries the edge function routes for a website.</p>
      * 
      * @param request ListSiteRoutesRequest
      * @return ListSiteRoutesResponse
@@ -13600,7 +13678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网页观测配置列表</p>
+     * <p>Queries the list of page monitoring configurations.</p>
      * 
      * @param request ListUrlObservationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13644,7 +13722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网页观测配置列表</p>
+     * <p>Queries the list of page monitoring configurations.</p>
      * 
      * @param request ListUrlObservationsRequest
      * @return ListUrlObservationsResponse
@@ -13735,8 +13813,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries to be returned in the response and specify <code>SearchKeyWord</code> to perform a fuzzy search to filter specific routine names.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户的Routine列表</p>
+     * <p>Queries the functions created in your account and the maximum number of functions supported by your plan. You can call this operation to perform a paged query.</p>
      * 
      * @param request ListUserRoutinesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13775,8 +13856,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries to be returned in the response and specify <code>SearchKeyWord</code> to perform a fuzzy search to filter specific routine names.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户的Routine列表</p>
+     * <p>Queries the functions created in your account and the maximum number of functions supported by your plan. You can call this operation to perform a paged query.</p>
      * 
      * @param request ListUserRoutinesRequest
      * @return ListUserRoutinesResponse
@@ -13788,7 +13872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点视频处理配置列表</p>
+     * <p>Queries the video processing configurations of a site.</p>
      * 
      * @param request ListVideoProcessingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13844,7 +13928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点视频处理配置列表</p>
+     * <p>Queries the video processing configurations of a site.</p>
      * 
      * @param request ListVideoProcessingsRequest
      * @return ListVideoProcessingsResponse
@@ -16430,7 +16514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新边缘容器资源预留配置</p>
+     * <p>Updates the resource reservation configuration of an edge container.</p>
      * 
      * @param tmpReq UpdateEdgeContainerAppResourceReserveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16484,7 +16568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新边缘容器资源预留配置</p>
+     * <p>Updates the resource reservation configuration of an edge container.</p>
      * 
      * @param request UpdateEdgeContainerAppResourceReserveRequest
      * @return UpdateEdgeContainerAppResourceReserveResponse
@@ -18192,7 +18276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改边缘函数路由配置</p>
+     * <p>Modifies the route configuration of an edge function.</p>
      * 
      * @param request UpdateRoutineRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18256,7 +18340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改边缘函数路由配置</p>
+     * <p>Modifies the route configuration of an edge function.</p>
      * 
      * @param request UpdateRoutineRouteRequest
      * @return UpdateRoutineRouteResponse
@@ -18330,7 +18414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点放行搜索引擎爬虫配置</p>
+     * <p>Modifies the search engine crawler configuration for a website.</p>
      * 
      * @param request UpdateSeoBypassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18366,7 +18450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点放行搜索引擎爬虫配置</p>
+     * <p>Modifies the search engine crawler configuration for a website.</p>
      * 
      * @param request UpdateSeoBypassRequest
      * @return UpdateSeoBypassResponse
@@ -18928,7 +19012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网页监测配置</p>
+     * <p>Updates the webpage monitoring configuration.</p>
      * 
      * @param request UpdateUrlObservationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18968,7 +19052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新网页监测配置</p>
+     * <p>Updates the webpage monitoring configuration.</p>
      * 
      * @param request UpdateUrlObservationRequest
      * @return UpdateUrlObservationResponse
@@ -19092,7 +19176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点视频处理配置</p>
+     * <p>Modifies the video processing configuration of the site.</p>
      * 
      * @param request UpdateVideoProcessingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19168,7 +19252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点视频处理配置</p>
+     * <p>Modifies the video processing configuration of the site.</p>
      * 
      * @param request UpdateVideoProcessingRequest
      * @return UpdateVideoProcessingResponse

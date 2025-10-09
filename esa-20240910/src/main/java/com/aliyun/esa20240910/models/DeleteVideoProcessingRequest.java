@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVideoProcessingRequest extends TeaModel {
     /**
+     * <p>The configuration ID. You can call the <a href="~~ListVideoProcessings~~">ListVideoProcessings</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteVideoProcessingRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,24 +4,66 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
+    /**
+     * <p>Average CPU limit ratio</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
+     */
     @NameInMap("CpuUsageSecondsQuotaRateAvg")
     public Double cpuUsageSecondsQuotaRateAvg;
 
+    /**
+     * <p>Average number of CPU cores</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CpuUsageSecondsTotalAvg")
     public Double cpuUsageSecondsTotalAvg;
 
+    /**
+     * <p>Average read IO</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FsReadsBytesAvgAvg")
     public Double fsReadsBytesAvgAvg;
 
+    /**
+     * <p>Average write IO</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FsWritesBytesAvgAvg")
     public Double fsWritesBytesAvgAvg;
 
+    /**
+     * <p>Average memory usage</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
+     */
     @NameInMap("MemoryRssAvg")
     public Double memoryRssAvg;
 
+    /**
+     * <p>Average memory limit proportion</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MemoryRssQuotaRateAvg")
     public Double memoryRssQuotaRateAvg;
 
+    /**
+     * <p>Average PodReady rate</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PodReadyRateAvg")
     public Double podReadyRateAvg;
 

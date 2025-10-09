@@ -4,21 +4,45 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListRoutineCodeVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The code versions of the routine.</p>
+     */
     @NameInMap("CodeVersions")
     public java.util.List<ListRoutineCodeVersionsResponseBodyCodeVersions> codeVersions;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of code versions returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -68,6 +92,12 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
     }
 
     public static class ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions extends TeaModel {
+        /**
+         * <p>Code version configuration items NotFoundStrategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SinglePageApplication</p>
+         */
         @NameInMap("NotFoundStrategy")
         public String notFoundStrategy;
 
@@ -87,24 +117,63 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
     }
 
     public static class ListRoutineCodeVersionsResponseBodyCodeVersions extends TeaModel {
+        /**
+         * <p>The ID of the code version build.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25801233</p>
+         */
         @NameInMap("BuildId")
         public Long buildId;
 
+        /**
+         * <p>The description of the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test desc</p>
+         */
         @NameInMap("CodeDescription")
         public String codeDescription;
 
+        /**
+         * <p>The version of the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1723599747213377175</p>
+         */
         @NameInMap("CodeVersion")
         public String codeVersion;
 
+        /**
+         * <p>Code version configuration items.</p>
+         */
         @NameInMap("ConfOptions")
         public ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions confOptions;
 
+        /**
+         * <p>The time when the code version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-16T09:42:47Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Additional information about the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;approver\&quot;:[\&quot;348678\&quot;,\&quot;111133\&quot;,\&quot;411544\&quot;]}</p>
+         */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
+        /**
+         * <p>The status of the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateVideoProcessingResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3558df77-8a7a-4060-a900-2d7949403836</p>
      */

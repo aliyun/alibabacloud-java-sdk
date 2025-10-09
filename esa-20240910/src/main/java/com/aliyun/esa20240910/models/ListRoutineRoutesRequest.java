@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRoutineRoutesRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListRoutineRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,7 @@ public class ListRoutineRoutesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The function name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

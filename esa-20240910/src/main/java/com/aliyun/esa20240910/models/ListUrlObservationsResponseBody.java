@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListUrlObservationsResponseBody extends TeaModel {
+    /**
+     * <p>The configurations of the feature.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<ListUrlObservationsResponseBodyConfigs> configs;
 
     /**
+     * <p>The number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListUrlObservationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -31,6 +38,8 @@ public class ListUrlObservationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -38,6 +47,8 @@ public class ListUrlObservationsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,6 +110,8 @@ public class ListUrlObservationsResponseBody extends TeaModel {
 
     public static class ListUrlObservationsResponseBodyConfigs extends TeaModel {
         /**
+         * <p>The configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
          */
@@ -106,6 +119,12 @@ public class ListUrlObservationsResponseBody extends TeaModel {
         public Long configId;
 
         /**
+         * <p>SDK integration. Valid values:</p>
+         * <ul>
+         * <li><strong>automatic</strong></li>
+         * <li><strong>manual</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>manual</p>
          */
@@ -113,6 +132,8 @@ public class ListUrlObservationsResponseBody extends TeaModel {
         public String sdkType;
 
         /**
+         * <p>The URL of the web page to monitor.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com/test</p>
          */

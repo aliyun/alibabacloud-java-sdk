@@ -12,6 +12,7 @@ public class DescribeSiteTimeSeriesDataShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The metric to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")

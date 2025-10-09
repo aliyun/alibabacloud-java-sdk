@@ -28,6 +28,7 @@ public class ListWafRulesShrinkRequest extends TeaModel {
      * <li>http_anti_scan: Scan protection</li>
      * <li>http_bot: Bots</li>
      * </ul>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>http_custom</p>

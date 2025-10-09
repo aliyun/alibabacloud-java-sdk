@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateSeoBypassRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the feature. Valid values:</p>
+     * <ul>
+     * <li><strong>on:</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class UpdateSeoBypassRequest extends TeaModel {
     public String enable;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

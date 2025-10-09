@@ -51,6 +51,8 @@ public class DescribeEdgeContainerAppStatsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-xxxx</p>
      */

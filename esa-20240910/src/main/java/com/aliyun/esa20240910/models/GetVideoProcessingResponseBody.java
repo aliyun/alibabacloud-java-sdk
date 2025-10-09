@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetVideoProcessingResponseBody extends TeaModel {
     /**
+     * <p>The configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
      */
@@ -12,6 +14,12 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public Long configId;
 
     /**
+     * <p>The type of the configuration. Valid values:</p>
+     * <ul>
+     * <li>global: global configuration.</li>
+     * <li>rule: rule configuration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>global</p>
      */
@@ -19,6 +27,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String configType;
 
     /**
+     * <p>The custom end parameter for FLV files.</p>
+     * 
      * <strong>example:</strong>
      * <p>end</p>
      */
@@ -26,6 +36,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String flvSeekEnd;
 
     /**
+     * <p>The custom start parameter for FLV files.</p>
+     * 
      * <strong>example:</strong>
      * <p>start</p>
      */
@@ -33,6 +45,12 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String flvSeekStart;
 
     /**
+     * <p>FLV Seeking Valid values:</p>
+     * <ul>
+     * <li>by_byte: Seek by byte.</li>
+     * <li>by_time: Seek by time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>by_byte</p>
      */
@@ -40,6 +58,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String flvVideoSeekMode;
 
     /**
+     * <p>Customize the mp4 end parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>end</p>
      */
@@ -47,6 +67,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String mp4SeekEnd;
 
     /**
+     * <p>Customize the mp4 start parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>start</p>
      */
@@ -54,6 +76,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String mp4SeekStart;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
      */
@@ -61,6 +85,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -68,6 +94,12 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String rule;
 
     /**
+     * <p>Indicates whether the rule is enabled. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -75,6 +107,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>The name of the scaling rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -82,6 +116,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -89,6 +125,8 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
+     * <p>The version number of the website configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -96,6 +134,12 @@ public class GetVideoProcessingResponseBody extends TeaModel {
     public Integer siteVersion;
 
     /**
+     * <p>Video seeking. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */

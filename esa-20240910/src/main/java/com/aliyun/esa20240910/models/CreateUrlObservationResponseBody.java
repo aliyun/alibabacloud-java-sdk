@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUrlObservationResponseBody extends TeaModel {
     /**
+     * <p>The configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
      */

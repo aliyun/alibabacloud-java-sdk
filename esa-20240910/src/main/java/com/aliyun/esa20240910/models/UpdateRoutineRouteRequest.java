@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateRoutineRouteRequest extends TeaModel {
     /**
+     * <p>Bypass mode. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String bypass;
 
     /**
+     * <p>The ID of the configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +27,26 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     @NameInMap("ConfigId")
     public Long configId;
 
+    /**
+     * <p>The exception origin switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent to the origin. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Fallback")
     public String fallback;
 
     /**
+     * <p>The routing switch. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -31,6 +54,8 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String routeEnable;
 
     /**
+     * <p>The name of the route.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_route</p>
      */
@@ -38,6 +63,8 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String routeName;
 
     /**
+     * <p>The name of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-routine1</p>
      */
@@ -45,6 +72,8 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String routineName;
 
     /**
+     * <p>The content of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -52,6 +81,8 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>The order in which the rule is executed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -59,6 +90,7 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     public Integer sequence;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

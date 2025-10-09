@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListSiteRoutesResponseBody extends TeaModel {
+    /**
+     * <p>The returned configurations.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<ListSiteRoutesResponseBodyConfigs> configs;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -29,6 +38,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -36,6 +47,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -97,6 +110,12 @@ public class ListSiteRoutesResponseBody extends TeaModel {
 
     public static class ListSiteRoutesResponseBodyConfigs extends TeaModel {
         /**
+         * <p>The bypass mode. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -104,6 +123,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String bypass;
 
         /**
+         * <p>The configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
          */
@@ -111,6 +132,12 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public Long configId;
 
         /**
+         * <p>The configuration type to query. Valid values:</p>
+         * <ul>
+         * <li>global: global configurations.</li>
+         * <li>rule: queries rule configurations.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>global</p>
          */
@@ -121,6 +148,12 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String fallback;
 
         /**
+         * <p>The configuration mode. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+         * <ul>
+         * <li>simple: Simple Mode</li>
+         * <li>custom: Custom Mode</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>simple</p>
          */
@@ -128,6 +161,12 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The route switch. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -135,6 +174,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String routeEnable;
 
         /**
+         * <p>The route name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_route</p>
          */
@@ -142,6 +183,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String routeName;
 
         /**
+         * <p>The function name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-routine1</p>
          */
@@ -149,6 +192,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String routineName;
 
         /**
+         * <p>The rule content.</p>
+         * 
          * <strong>example:</strong>
          * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
          */
@@ -156,6 +201,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public String rule;
 
         /**
+         * <p>The order in which the rule is executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -163,6 +210,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
+         * <p>The version number of the website.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
