@@ -62,7 +62,6 @@ public class DescribeLogMetaResponseBody extends TeaModel {
          * <p>The category of logs. Valid values:</p>
          * <ul>
          * <li><strong>host</strong></li>
-         * <li><strong>network</strong></li>
          * <li><strong>security</strong></li>
          * </ul>
          * 

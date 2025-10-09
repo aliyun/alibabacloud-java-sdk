@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventDetailResponseBody extends TeaModel {
+    @NameInMap("AlarmUniqueInfo")
+    public String alarmUniqueInfo;
+
     /**
      * <p>Indicates whether the online processing of exceptions is supported, such as blocking an exception, adding an exception to the whitelist, and ignoring an exception. Valid values:</p>
      * <ul>
@@ -189,6 +192,14 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     public static DescribeSuspEventDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSuspEventDetailResponseBody self = new DescribeSuspEventDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSuspEventDetailResponseBody setAlarmUniqueInfo(String alarmUniqueInfo) {
+        this.alarmUniqueInfo = alarmUniqueInfo;
+        return this;
+    }
+    public String getAlarmUniqueInfo() {
+        return this.alarmUniqueInfo;
     }
 
     public DescribeSuspEventDetailResponseBody setCanBeDealOnLine(Boolean canBeDealOnLine) {

@@ -783,6 +783,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Stages")
         public String stages;
 
+        @NameInMap("SupportOperateCode")
+        public String supportOperateCode;
+
         /**
          * <p>The display name of the attack stage.</p>
          */
@@ -1227,6 +1230,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public String getStages() {
             return this.stages;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setSupportOperateCode(String supportOperateCode) {
+            this.supportOperateCode = supportOperateCode;
+            return this;
+        }
+        public String getSupportOperateCode() {
+            return this.supportOperateCode;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setTacticItems(java.util.List<DescribeSuspEventsResponseBodySuspEventsTacticItems> tacticItems) {

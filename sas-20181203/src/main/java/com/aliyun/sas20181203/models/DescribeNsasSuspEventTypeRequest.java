@@ -87,6 +87,9 @@ public class DescribeNsasSuspEventTypeRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    @NameInMap("SupportOperateCodeList")
+    public java.util.List<String> supportOperateCodeList;
+
     /**
      * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
      * <blockquote>
@@ -166,6 +169,14 @@ public class DescribeNsasSuspEventTypeRequest extends TeaModel {
     }
     public String getSourceIp() {
         return this.sourceIp;
+    }
+
+    public DescribeNsasSuspEventTypeRequest setSupportOperateCodeList(java.util.List<String> supportOperateCodeList) {
+        this.supportOperateCodeList = supportOperateCodeList;
+        return this;
+    }
+    public java.util.List<String> getSupportOperateCodeList() {
+        return this.supportOperateCodeList;
     }
 
     public DescribeNsasSuspEventTypeRequest setUuids(String uuids) {

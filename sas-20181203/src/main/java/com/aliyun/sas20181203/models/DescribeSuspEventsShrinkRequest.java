@@ -352,6 +352,9 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     @NameInMap("StrictMode")
     public String strictMode;
 
+    @NameInMap("SupportOperateCodeList")
+    public java.util.List<String> supportOperateCodeList;
+
     /**
      * <p>The tactic ID of ATT\&amp;CK.</p>
      * 
@@ -646,6 +649,14 @@ public class DescribeSuspEventsShrinkRequest extends TeaModel {
     }
     public String getStrictMode() {
         return this.strictMode;
+    }
+
+    public DescribeSuspEventsShrinkRequest setSupportOperateCodeList(java.util.List<String> supportOperateCodeList) {
+        this.supportOperateCodeList = supportOperateCodeList;
+        return this;
+    }
+    public java.util.List<String> getSupportOperateCodeList() {
+        return this.supportOperateCodeList;
     }
 
     public DescribeSuspEventsShrinkRequest setTacticId(String tacticId) {

@@ -66,7 +66,7 @@ public class DescribeTraceInfoDetailRequest extends TeaModel {
     public String uuid;
 
     /**
-     * <p>The ID of the vertex. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the ID.</p>
+     * <p>Vertex ID, which can be obtained from the AlarmUniqueInfo in the response of the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

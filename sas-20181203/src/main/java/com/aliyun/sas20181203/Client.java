@@ -18620,6 +18620,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceIp", request.sourceIp);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.supportOperateCodeList)) {
+            query.put("SupportOperateCodeList", request.supportOperateCodeList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
             query.put("Uuids", request.uuids);
         }
@@ -22786,6 +22790,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.strictMode)) {
             query.put("StrictMode", request.strictMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportOperateCodeList)) {
+            query.put("SupportOperateCodeList", request.supportOperateCodeList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
