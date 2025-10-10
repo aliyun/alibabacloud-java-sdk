@@ -862,6 +862,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("autoScaling")
         public Boolean autoScaling;
 
+        @NameInMap("capacityType")
+        public String capacityType;
+
         /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section in <a href="https://help.aliyun.com/document_detail/440347.html">Usage limits</a>.</p>
@@ -881,6 +884,9 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         @NameInMap("msgProcessSpec")
         public String msgProcessSpec;
+
+        @NameInMap("provisionedCapacity")
+        public Long provisionedCapacity;
 
         /**
          * <p>The ratio between sent messages and received messages in the instance.</p>
@@ -954,6 +960,14 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.autoScaling;
         }
 
+        public GetInstanceResponseBodyDataProductInfo setCapacityType(String capacityType) {
+            this.capacityType = capacityType;
+            return this;
+        }
+        public String getCapacityType() {
+            return this.capacityType;
+        }
+
         public GetInstanceResponseBodyDataProductInfo setMessageRetentionTime(Integer messageRetentionTime) {
             this.messageRetentionTime = messageRetentionTime;
             return this;
@@ -968,6 +982,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getMsgProcessSpec() {
             return this.msgProcessSpec;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setProvisionedCapacity(Long provisionedCapacity) {
+            this.provisionedCapacity = provisionedCapacity;
+            return this;
+        }
+        public Long getProvisionedCapacity() {
+            return this.provisionedCapacity;
         }
 
         public GetInstanceResponseBodyDataProductInfo setSendReceiveRatio(Float sendReceiveRatio) {

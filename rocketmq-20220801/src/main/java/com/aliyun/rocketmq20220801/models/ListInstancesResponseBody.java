@@ -143,6 +143,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyDataListProductInfo extends TeaModel {
+        @NameInMap("capacityType")
+        public String capacityType;
+
         /**
          * <p>Indicates whether the message trace feature is enabled. Valid values:</p>
          * <ul>
@@ -160,6 +163,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static ListInstancesResponseBodyDataListProductInfo build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyDataListProductInfo self = new ListInstancesResponseBodyDataListProductInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyDataListProductInfo setCapacityType(String capacityType) {
+            this.capacityType = capacityType;
+            return this;
+        }
+        public String getCapacityType() {
+            return this.capacityType;
         }
 
         public ListInstancesResponseBodyDataListProductInfo setTraceOn(Boolean traceOn) {

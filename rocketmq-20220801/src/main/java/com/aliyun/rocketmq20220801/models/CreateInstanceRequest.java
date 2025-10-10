@@ -601,6 +601,9 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("autoScaling")
         public Boolean autoScaling;
 
+        @NameInMap("capacityType")
+        public String capacityType;
+
         /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</p>
@@ -620,6 +623,9 @@ public class CreateInstanceRequest extends TeaModel {
          */
         @NameInMap("msgProcessSpec")
         public String msgProcessSpec;
+
+        @NameInMap("provisionedCapacity")
+        public Long provisionedCapacity;
 
         /**
          * <p>The ratio of the message sending TPS to the messaging TPS of the instance.</p>
@@ -663,6 +669,14 @@ public class CreateInstanceRequest extends TeaModel {
             return this.autoScaling;
         }
 
+        public CreateInstanceRequestProductInfo setCapacityType(String capacityType) {
+            this.capacityType = capacityType;
+            return this;
+        }
+        public String getCapacityType() {
+            return this.capacityType;
+        }
+
         public CreateInstanceRequestProductInfo setMessageRetentionTime(Integer messageRetentionTime) {
             this.messageRetentionTime = messageRetentionTime;
             return this;
@@ -677,6 +691,14 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getMsgProcessSpec() {
             return this.msgProcessSpec;
+        }
+
+        public CreateInstanceRequestProductInfo setProvisionedCapacity(Long provisionedCapacity) {
+            this.provisionedCapacity = provisionedCapacity;
+            return this;
+        }
+        public Long getProvisionedCapacity() {
+            return this.provisionedCapacity;
         }
 
         public CreateInstanceRequestProductInfo setSendReceiveRatio(Float sendReceiveRatio) {
