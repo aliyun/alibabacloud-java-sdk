@@ -47,6 +47,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>multi_az</p>
+     */
     @NameInMap("DeployScheme")
     public String deployScheme;
 
@@ -192,6 +196,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("SecGroupConnValid")
+    public String secGroupConnValid;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Serverless")
     public Boolean serverless;
 
@@ -236,6 +251,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<DescribeDBInstanceAttributeResponseBodyTags> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp18iztwqrs8qj2nc6nyu</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -438,6 +457,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeDBInstanceAttributeResponseBody setSecGroupConnValid(String secGroupConnValid) {
+        this.secGroupConnValid = secGroupConnValid;
+        return this;
+    }
+    public String getSecGroupConnValid() {
+        return this.secGroupConnValid;
+    }
+
     public DescribeDBInstanceAttributeResponseBody setServerless(Boolean serverless) {
         this.serverless = serverless;
         return this;
@@ -534,6 +561,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>selectdb-cn-7213cjv****-be</p>
+         */
         @NameInMap("ClusterBinding")
         public String clusterBinding;
 
@@ -633,12 +664,24 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("ScaleMax")
         public Double scaleMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("ScaleMin")
         public Double scaleMin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ScalingRulesEnable")
         public Boolean scalingRulesEnable;
 
@@ -668,12 +711,24 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>预留参数，暂不返回。</p>
+         */
         @NameInMap("SubDomain")
         public String subDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-t4n8x7jcc8rknon85tqoa</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -869,15 +924,27 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyMultiZone extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4096</p>
+         */
         @NameInMap("AvailableIpCount")
         public Long availableIpCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>113.88.14.211/32</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
