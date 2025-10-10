@@ -102,6 +102,9 @@ public class ScorePageItem extends TeaModel {
     @NameInMap("publishTime")
     public Long publishTime;
 
+    @NameInMap("richMainBody")
+    public String richMainBody;
+
     /**
      * <strong>example:</strong>
      * <p>0.234325235</p>
@@ -250,6 +253,14 @@ public class ScorePageItem extends TeaModel {
     }
     public Long getPublishTime() {
         return this.publishTime;
+    }
+
+    public ScorePageItem setRichMainBody(String richMainBody) {
+        this.richMainBody = richMainBody;
+        return this;
+    }
+    public String getRichMainBody() {
+        return this.richMainBody;
     }
 
     public ScorePageItem setScore(Double score) {
