@@ -119,6 +119,44 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>office</p>
+         */
+        @NameInMap("SoundId")
+        public String soundId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
+        @NameInMap("Volume")
+        public Integer volume;
+
+        public static DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig self = new DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig setSoundId(String soundId) {
+            this.soundId = soundId;
+            return this;
+        }
+        public String getSoundId() {
+            return this.soundId;
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+    }
+
     public static class DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig extends TeaModel {
         @NameInMap("InterruptSpeechDuration")
         public Integer interruptSpeechDuration;
@@ -254,6 +292,44 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigWordWeights> getWordWeights() {
             return this.wordWeights;
+        }
+
+    }
+
+    public static class DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig extends TeaModel {
+        @NameInMap("UserTurnEnd")
+        public Boolean userTurnEnd;
+
+        public static DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig self = new DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig setUserTurnEnd(Boolean userTurnEnd) {
+            this.userTurnEnd = userTurnEnd;
+            return this;
+        }
+        public Boolean getUserTurnEnd() {
+            return this.userTurnEnd;
+        }
+
+    }
+
+    public static class DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig extends TeaModel {
+        @NameInMap("SemanticsInterrupt")
+        public Boolean semanticsInterrupt;
+
+        public static DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig self = new DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig setSemanticsInterrupt(Boolean semanticsInterrupt) {
+            this.semanticsInterrupt = semanticsInterrupt;
+            return this;
+        }
+        public Boolean getSemanticsInterrupt() {
+            return this.semanticsInterrupt;
         }
 
     }
@@ -566,8 +642,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         @NameInMap("AgentSilenceConfig")
         public DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig agentSilenceConfig;
 
+        @NameInMap("AmbientSoundConfig")
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig ambientSoundConfig;
+
         @NameInMap("AsrConfig")
         public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig asrConfig;
+
+        @NameInMap("BackChannelConfig")
+        public DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig backChannelConfig;
 
         /**
          * <strong>example:</strong>
@@ -596,6 +678,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("InterruptConfig")
+        public DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig interruptConfig;
 
         /**
          * <strong>example:</strong>
@@ -637,12 +722,28 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             return this.agentSilenceConfig;
         }
 
+        public DescribeAppAgentTemplatesResponseBodyTemplates setAmbientSoundConfig(DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig ambientSoundConfig) {
+            this.ambientSoundConfig = ambientSoundConfig;
+            return this;
+        }
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig getAmbientSoundConfig() {
+            return this.ambientSoundConfig;
+        }
+
         public DescribeAppAgentTemplatesResponseBodyTemplates setAsrConfig(DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig asrConfig) {
             this.asrConfig = asrConfig;
             return this;
         }
         public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig getAsrConfig() {
             return this.asrConfig;
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplates setBackChannelConfig(DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig backChannelConfig) {
+            this.backChannelConfig = backChannelConfig;
+            return this;
+        }
+        public DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig getBackChannelConfig() {
+            return this.backChannelConfig;
         }
 
         public DescribeAppAgentTemplatesResponseBodyTemplates setChatMode(Integer chatMode) {
@@ -675,6 +776,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplates setInterruptConfig(DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig interruptConfig) {
+            this.interruptConfig = interruptConfig;
+            return this;
+        }
+        public DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig getInterruptConfig() {
+            return this.interruptConfig;
         }
 
         public DescribeAppAgentTemplatesResponseBodyTemplates setInterruptMode(Integer interruptMode) {

@@ -321,6 +321,82 @@ public class StartAgentRequest extends TeaModel {
 
     }
 
+    public static class StartAgentRequestVoiceChatConfigAmbientSoundConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>office</p>
+         */
+        @NameInMap("SoundId")
+        public String soundId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Volume")
+        public Integer volume;
+
+        public static StartAgentRequestVoiceChatConfigAmbientSoundConfig build(java.util.Map<String, ?> map) throws Exception {
+            StartAgentRequestVoiceChatConfigAmbientSoundConfig self = new StartAgentRequestVoiceChatConfigAmbientSoundConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public StartAgentRequestVoiceChatConfigAmbientSoundConfig setSoundId(String soundId) {
+            this.soundId = soundId;
+            return this;
+        }
+        public String getSoundId() {
+            return this.soundId;
+        }
+
+        public StartAgentRequestVoiceChatConfigAmbientSoundConfig setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+    }
+
+    public static class StartAgentRequestVoiceChatConfigBackChannelConfig extends TeaModel {
+        @NameInMap("UserTurnEnd")
+        public Boolean userTurnEnd;
+
+        public static StartAgentRequestVoiceChatConfigBackChannelConfig build(java.util.Map<String, ?> map) throws Exception {
+            StartAgentRequestVoiceChatConfigBackChannelConfig self = new StartAgentRequestVoiceChatConfigBackChannelConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public StartAgentRequestVoiceChatConfigBackChannelConfig setUserTurnEnd(Boolean userTurnEnd) {
+            this.userTurnEnd = userTurnEnd;
+            return this;
+        }
+        public Boolean getUserTurnEnd() {
+            return this.userTurnEnd;
+        }
+
+    }
+
+    public static class StartAgentRequestVoiceChatConfigInterruptConfig extends TeaModel {
+        @NameInMap("SemanticsInterrupt")
+        public Boolean semanticsInterrupt;
+
+        public static StartAgentRequestVoiceChatConfigInterruptConfig build(java.util.Map<String, ?> map) throws Exception {
+            StartAgentRequestVoiceChatConfigInterruptConfig self = new StartAgentRequestVoiceChatConfigInterruptConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public StartAgentRequestVoiceChatConfigInterruptConfig setSemanticsInterrupt(Boolean semanticsInterrupt) {
+            this.semanticsInterrupt = semanticsInterrupt;
+            return this;
+        }
+        public Boolean getSemanticsInterrupt() {
+            return this.semanticsInterrupt;
+        }
+
+    }
+
     public static class StartAgentRequestVoiceChatConfigLLMConfig extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -617,6 +693,12 @@ public class StartAgentRequest extends TeaModel {
         @NameInMap("AgentSilenceConfig")
         public StartAgentRequestVoiceChatConfigAgentSilenceConfig agentSilenceConfig;
 
+        @NameInMap("AmbientSoundConfig")
+        public StartAgentRequestVoiceChatConfigAmbientSoundConfig ambientSoundConfig;
+
+        @NameInMap("BackChannelConfig")
+        public StartAgentRequestVoiceChatConfigBackChannelConfig backChannelConfig;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -626,6 +708,9 @@ public class StartAgentRequest extends TeaModel {
 
         @NameInMap("Greeting")
         public String greeting;
+
+        @NameInMap("InterruptConfig")
+        public StartAgentRequestVoiceChatConfigInterruptConfig interruptConfig;
 
         /**
          * <strong>example:</strong>
@@ -661,6 +746,22 @@ public class StartAgentRequest extends TeaModel {
             return this.agentSilenceConfig;
         }
 
+        public StartAgentRequestVoiceChatConfig setAmbientSoundConfig(StartAgentRequestVoiceChatConfigAmbientSoundConfig ambientSoundConfig) {
+            this.ambientSoundConfig = ambientSoundConfig;
+            return this;
+        }
+        public StartAgentRequestVoiceChatConfigAmbientSoundConfig getAmbientSoundConfig() {
+            return this.ambientSoundConfig;
+        }
+
+        public StartAgentRequestVoiceChatConfig setBackChannelConfig(StartAgentRequestVoiceChatConfigBackChannelConfig backChannelConfig) {
+            this.backChannelConfig = backChannelConfig;
+            return this;
+        }
+        public StartAgentRequestVoiceChatConfigBackChannelConfig getBackChannelConfig() {
+            return this.backChannelConfig;
+        }
+
         public StartAgentRequestVoiceChatConfig setChatMode(Integer chatMode) {
             this.chatMode = chatMode;
             return this;
@@ -675,6 +776,14 @@ public class StartAgentRequest extends TeaModel {
         }
         public String getGreeting() {
             return this.greeting;
+        }
+
+        public StartAgentRequestVoiceChatConfig setInterruptConfig(StartAgentRequestVoiceChatConfigInterruptConfig interruptConfig) {
+            this.interruptConfig = interruptConfig;
+            return this;
+        }
+        public StartAgentRequestVoiceChatConfigInterruptConfig getInterruptConfig() {
+            return this.interruptConfig;
         }
 
         public StartAgentRequestVoiceChatConfig setInterruptMode(Integer interruptMode) {

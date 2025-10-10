@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rtc20180111</artifactId>
-  <version>5.2.3</version>
+  <version>5.2.4</version>
   <packaging>jar</packaging>
   <name>rtc20180111</name>
   <description>Alibaba Cloud Real-Time Communication (20180111) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.8</version>
+      <version>0.3.10</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

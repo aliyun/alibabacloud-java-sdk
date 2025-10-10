@@ -7,6 +7,9 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     @NameInMap("AgentSilenceConfig")
     public CreateAppAgentTemplateRequestAgentSilenceConfig agentSilenceConfig;
 
+    @NameInMap("AmbientSoundConfig")
+    public CreateAppAgentTemplateRequestAmbientSoundConfig ambientSoundConfig;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -19,6 +22,9 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     @NameInMap("AsrConfig")
     public CreateAppAgentTemplateRequestAsrConfig asrConfig;
 
+    @NameInMap("BackChannelConfig")
+    public CreateAppAgentTemplateRequestBackChannelConfig backChannelConfig;
+
     /**
      * <strong>example:</strong>
      * <p>2</p>
@@ -28,6 +34,9 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
 
     @NameInMap("Greeting")
     public String greeting;
+
+    @NameInMap("InterruptConfig")
+    public CreateAppAgentTemplateRequestInterruptConfig interruptConfig;
 
     /**
      * <strong>example:</strong>
@@ -71,6 +80,14 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         return this.agentSilenceConfig;
     }
 
+    public CreateAppAgentTemplateRequest setAmbientSoundConfig(CreateAppAgentTemplateRequestAmbientSoundConfig ambientSoundConfig) {
+        this.ambientSoundConfig = ambientSoundConfig;
+        return this;
+    }
+    public CreateAppAgentTemplateRequestAmbientSoundConfig getAmbientSoundConfig() {
+        return this.ambientSoundConfig;
+    }
+
     public CreateAppAgentTemplateRequest setAppId(String appId) {
         this.appId = appId;
         return this;
@@ -87,6 +104,14 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         return this.asrConfig;
     }
 
+    public CreateAppAgentTemplateRequest setBackChannelConfig(CreateAppAgentTemplateRequestBackChannelConfig backChannelConfig) {
+        this.backChannelConfig = backChannelConfig;
+        return this;
+    }
+    public CreateAppAgentTemplateRequestBackChannelConfig getBackChannelConfig() {
+        return this.backChannelConfig;
+    }
+
     public CreateAppAgentTemplateRequest setChatMode(Integer chatMode) {
         this.chatMode = chatMode;
         return this;
@@ -101,6 +126,14 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     }
     public String getGreeting() {
         return this.greeting;
+    }
+
+    public CreateAppAgentTemplateRequest setInterruptConfig(CreateAppAgentTemplateRequestInterruptConfig interruptConfig) {
+        this.interruptConfig = interruptConfig;
+        return this;
+    }
+    public CreateAppAgentTemplateRequestInterruptConfig getInterruptConfig() {
+        return this.interruptConfig;
     }
 
     public CreateAppAgentTemplateRequest setInterruptMode(Integer interruptMode) {
@@ -203,6 +236,44 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         }
         public Integer getWebhookTriggerTimeout() {
             return this.webhookTriggerTimeout;
+        }
+
+    }
+
+    public static class CreateAppAgentTemplateRequestAmbientSoundConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>white_noise</p>
+         */
+        @NameInMap("SoundId")
+        public String soundId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Volume")
+        public Integer volume;
+
+        public static CreateAppAgentTemplateRequestAmbientSoundConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppAgentTemplateRequestAmbientSoundConfig self = new CreateAppAgentTemplateRequestAmbientSoundConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppAgentTemplateRequestAmbientSoundConfig setSoundId(String soundId) {
+            this.soundId = soundId;
+            return this;
+        }
+        public String getSoundId() {
+            return this.soundId;
+        }
+
+        public CreateAppAgentTemplateRequestAmbientSoundConfig setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
         }
 
     }
@@ -345,6 +416,44 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         }
         public java.util.List<CreateAppAgentTemplateRequestAsrConfigWordWeights> getWordWeights() {
             return this.wordWeights;
+        }
+
+    }
+
+    public static class CreateAppAgentTemplateRequestBackChannelConfig extends TeaModel {
+        @NameInMap("UserTurnEnd")
+        public Boolean userTurnEnd;
+
+        public static CreateAppAgentTemplateRequestBackChannelConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppAgentTemplateRequestBackChannelConfig self = new CreateAppAgentTemplateRequestBackChannelConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppAgentTemplateRequestBackChannelConfig setUserTurnEnd(Boolean userTurnEnd) {
+            this.userTurnEnd = userTurnEnd;
+            return this;
+        }
+        public Boolean getUserTurnEnd() {
+            return this.userTurnEnd;
+        }
+
+    }
+
+    public static class CreateAppAgentTemplateRequestInterruptConfig extends TeaModel {
+        @NameInMap("SemanticsInterrupt")
+        public Boolean semanticsInterrupt;
+
+        public static CreateAppAgentTemplateRequestInterruptConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppAgentTemplateRequestInterruptConfig self = new CreateAppAgentTemplateRequestInterruptConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppAgentTemplateRequestInterruptConfig setSemanticsInterrupt(Boolean semanticsInterrupt) {
+            this.semanticsInterrupt = semanticsInterrupt;
+            return this;
+        }
+        public Boolean getSemanticsInterrupt() {
+            return this.semanticsInterrupt;
         }
 
     }

@@ -152,8 +152,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.agentSilenceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentSilenceConfig, "AgentSilenceConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ambientSoundConfig)) {
+            request.ambientSoundConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ambientSoundConfig, "AmbientSoundConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.asrConfig)) {
             request.asrConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.asrConfig, "AsrConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.backChannelConfig)) {
+            request.backChannelConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.backChannelConfig, "BackChannelConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.interruptConfig)) {
+            request.interruptConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.interruptConfig, "InterruptConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.llmConfig)) {
@@ -169,6 +181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentSilenceConfig", request.agentSilenceConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ambientSoundConfigShrink)) {
+            query.put("AmbientSoundConfig", request.ambientSoundConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }
@@ -177,12 +193,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AsrConfig", request.asrConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.backChannelConfigShrink)) {
+            query.put("BackChannelConfig", request.backChannelConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.chatMode)) {
             query.put("ChatMode", request.chatMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.greeting)) {
             query.put("Greeting", request.greeting);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interruptConfigShrink)) {
+            query.put("InterruptConfig", request.interruptConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.interruptMode)) {
@@ -4606,8 +4630,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.agentSilenceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentSilenceConfig, "AgentSilenceConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ambientSoundConfig)) {
+            request.ambientSoundConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ambientSoundConfig, "AmbientSoundConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.asrConfig)) {
             request.asrConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.asrConfig, "AsrConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.backChannelConfig)) {
+            request.backChannelConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.backChannelConfig, "BackChannelConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.interruptConfig)) {
+            request.interruptConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.interruptConfig, "InterruptConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.llmConfig)) {
@@ -4623,12 +4659,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentSilenceConfig", request.agentSilenceConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ambientSoundConfigShrink)) {
+            query.put("AmbientSoundConfig", request.ambientSoundConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.asrConfigShrink)) {
             query.put("AsrConfig", request.asrConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backChannelConfigShrink)) {
+            query.put("BackChannelConfig", request.backChannelConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.chatMode)) {
@@ -4641,6 +4685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interruptConfigShrink)) {
+            query.put("InterruptConfig", request.interruptConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.interruptMode)) {
@@ -5176,15 +5224,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>NotifyAgent</p>
      * 
-     * @param request NotifyAgentRequest
+     * @param tmpReq NotifyAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return NotifyAgentResponse
      */
-    public NotifyAgentResponse notifyAgentWithOptions(NotifyAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public NotifyAgentResponse notifyAgentWithOptions(NotifyAgentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        NotifyAgentShrinkRequest request = new NotifyAgentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.backgroundMusic)) {
+            request.backgroundMusicShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.backgroundMusic, "BackgroundMusic", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backgroundMusicShrink)) {
+            query.put("BackgroundMusic", request.backgroundMusicShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {

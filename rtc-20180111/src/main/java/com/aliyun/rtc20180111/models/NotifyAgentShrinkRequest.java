@@ -3,7 +3,7 @@ package com.aliyun.rtc20180111.models;
 
 import com.aliyun.tea.*;
 
-public class NotifyAgentRequest extends TeaModel {
+public class NotifyAgentShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>aec****</p>
@@ -12,7 +12,7 @@ public class NotifyAgentRequest extends TeaModel {
     public String appId;
 
     @NameInMap("BackgroundMusic")
-    public NotifyAgentRequestBackgroundMusic backgroundMusic;
+    public String backgroundMusicShrink;
 
     /**
      * <strong>example:</strong>
@@ -52,12 +52,12 @@ public class NotifyAgentRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
-    public static NotifyAgentRequest build(java.util.Map<String, ?> map) throws Exception {
-        NotifyAgentRequest self = new NotifyAgentRequest();
+    public static NotifyAgentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        NotifyAgentShrinkRequest self = new NotifyAgentShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public NotifyAgentRequest setAppId(String appId) {
+    public NotifyAgentShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -65,15 +65,15 @@ public class NotifyAgentRequest extends TeaModel {
         return this.appId;
     }
 
-    public NotifyAgentRequest setBackgroundMusic(NotifyAgentRequestBackgroundMusic backgroundMusic) {
-        this.backgroundMusic = backgroundMusic;
+    public NotifyAgentShrinkRequest setBackgroundMusicShrink(String backgroundMusicShrink) {
+        this.backgroundMusicShrink = backgroundMusicShrink;
         return this;
     }
-    public NotifyAgentRequestBackgroundMusic getBackgroundMusic() {
-        return this.backgroundMusic;
+    public String getBackgroundMusicShrink() {
+        return this.backgroundMusicShrink;
     }
 
-    public NotifyAgentRequest setChannelId(String channelId) {
+    public NotifyAgentShrinkRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
@@ -81,7 +81,7 @@ public class NotifyAgentRequest extends TeaModel {
         return this.channelId;
     }
 
-    public NotifyAgentRequest setCustomAttribute(String customAttribute) {
+    public NotifyAgentShrinkRequest setCustomAttribute(String customAttribute) {
         this.customAttribute = customAttribute;
         return this;
     }
@@ -89,7 +89,7 @@ public class NotifyAgentRequest extends TeaModel {
         return this.customAttribute;
     }
 
-    public NotifyAgentRequest setInterruptable(Boolean interruptable) {
+    public NotifyAgentShrinkRequest setInterruptable(Boolean interruptable) {
         this.interruptable = interruptable;
         return this;
     }
@@ -97,7 +97,7 @@ public class NotifyAgentRequest extends TeaModel {
         return this.interruptable;
     }
 
-    public NotifyAgentRequest setMessage(String message) {
+    public NotifyAgentShrinkRequest setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -105,7 +105,7 @@ public class NotifyAgentRequest extends TeaModel {
         return this.message;
     }
 
-    public NotifyAgentRequest setPriority(Integer priority) {
+    public NotifyAgentShrinkRequest setPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
@@ -113,46 +113,12 @@ public class NotifyAgentRequest extends TeaModel {
         return this.priority;
     }
 
-    public NotifyAgentRequest setTaskId(String taskId) {
+    public NotifyAgentShrinkRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public static class NotifyAgentRequestBackgroundMusic extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>wav</p>
-         */
-        @NameInMap("format")
-        public String format;
-
-        @NameInMap("url")
-        public String url;
-
-        public static NotifyAgentRequestBackgroundMusic build(java.util.Map<String, ?> map) throws Exception {
-            NotifyAgentRequestBackgroundMusic self = new NotifyAgentRequestBackgroundMusic();
-            return TeaModel.build(map, self);
-        }
-
-        public NotifyAgentRequestBackgroundMusic setFormat(String format) {
-            this.format = format;
-            return this;
-        }
-        public String getFormat() {
-            return this.format;
-        }
-
-        public NotifyAgentRequestBackgroundMusic setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
     }
 
 }

@@ -7,6 +7,9 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
     @NameInMap("AgentSilenceConfig")
     public String agentSilenceConfigShrink;
 
+    @NameInMap("AmbientSoundConfig")
+    public String ambientSoundConfigShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -18,6 +21,9 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
 
     @NameInMap("AsrConfig")
     public String asrConfigShrink;
+
+    @NameInMap("BackChannelConfig")
+    public String backChannelConfigShrink;
 
     /**
      * <strong>example:</strong>
@@ -37,6 +43,9 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
      */
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("InterruptConfig")
+    public String interruptConfigShrink;
 
     /**
      * <strong>example:</strong>
@@ -80,6 +89,14 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
         return this.agentSilenceConfigShrink;
     }
 
+    public ModifyAppAgentTemplateShrinkRequest setAmbientSoundConfigShrink(String ambientSoundConfigShrink) {
+        this.ambientSoundConfigShrink = ambientSoundConfigShrink;
+        return this;
+    }
+    public String getAmbientSoundConfigShrink() {
+        return this.ambientSoundConfigShrink;
+    }
+
     public ModifyAppAgentTemplateShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
@@ -94,6 +111,14 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
     }
     public String getAsrConfigShrink() {
         return this.asrConfigShrink;
+    }
+
+    public ModifyAppAgentTemplateShrinkRequest setBackChannelConfigShrink(String backChannelConfigShrink) {
+        this.backChannelConfigShrink = backChannelConfigShrink;
+        return this;
+    }
+    public String getBackChannelConfigShrink() {
+        return this.backChannelConfigShrink;
     }
 
     public ModifyAppAgentTemplateShrinkRequest setChatMode(Integer chatMode) {
@@ -118,6 +143,14 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public ModifyAppAgentTemplateShrinkRequest setInterruptConfigShrink(String interruptConfigShrink) {
+        this.interruptConfigShrink = interruptConfigShrink;
+        return this;
+    }
+    public String getInterruptConfigShrink() {
+        return this.interruptConfigShrink;
     }
 
     public ModifyAppAgentTemplateShrinkRequest setInterruptMode(Integer interruptMode) {
