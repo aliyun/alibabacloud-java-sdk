@@ -29,6 +29,9 @@ public class GenericSearchRequest extends TeaModel {
     @NameInMap("returnMarkdownText")
     public Boolean returnMarkdownText;
 
+    @NameInMap("returnRichMainBody")
+    public Boolean returnRichMainBody;
+
     @NameInMap("returnSummary")
     public Boolean returnSummary;
 
@@ -93,6 +96,14 @@ public class GenericSearchRequest extends TeaModel {
     }
     public Boolean getReturnMarkdownText() {
         return this.returnMarkdownText;
+    }
+
+    public GenericSearchRequest setReturnRichMainBody(Boolean returnRichMainBody) {
+        this.returnRichMainBody = returnRichMainBody;
+        return this;
+    }
+    public Boolean getReturnRichMainBody() {
+        return this.returnRichMainBody;
     }
 
     public GenericSearchRequest setReturnSummary(Boolean returnSummary) {

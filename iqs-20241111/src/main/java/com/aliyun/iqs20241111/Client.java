@@ -184,6 +184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("returnMarkdownText", request.returnMarkdownText);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.returnRichMainBody)) {
+            query.put("returnRichMainBody", request.returnRichMainBody);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.returnSummary)) {
             query.put("returnSummary", request.returnSummary);
         }
@@ -335,6 +339,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.globalSearchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>页面读取</p>
+     * 
+     * @param request ReadPageBasicRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReadPageBasicResponse
+     */
+    public ReadPageBasicResponse readPageBasicWithOptions(ReadPageBasicRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReadPageBasic"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v1/iqs/readpage/basic"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReadPageBasicResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>页面读取</p>
+     * 
+     * @param request ReadPageBasicRequest
+     * @return ReadPageBasicResponse
+     */
+    public ReadPageBasicResponse readPageBasic(ReadPageBasicRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.readPageBasicWithOptions(request, headers, runtime);
     }
 
     /**

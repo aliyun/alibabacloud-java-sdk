@@ -13,6 +13,9 @@ public class RequestContents extends TeaModel {
     @NameInMap("rerankScore")
     public Boolean rerankScore;
 
+    @NameInMap("richMainBody")
+    public Boolean richMainBody;
+
     @NameInMap("summary")
     public Boolean summary;
 
@@ -43,6 +46,14 @@ public class RequestContents extends TeaModel {
     }
     public Boolean getRerankScore() {
         return this.rerankScore;
+    }
+
+    public RequestContents setRichMainBody(Boolean richMainBody) {
+        this.richMainBody = richMainBody;
+        return this;
+    }
+    public Boolean getRichMainBody() {
+        return this.richMainBody;
     }
 
     public RequestContents setSummary(Boolean summary) {
