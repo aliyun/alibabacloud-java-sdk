@@ -11,8 +11,17 @@ public class ListProductsRequest extends TeaModel {
     @NameInMap("Offset")
     public Integer offset;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("ProductName")
     public String productName;
+
+    @NameInMap("SearchKeyWord")
+    public String searchKeyWord;
 
     /**
      * <strong>example:</strong>
@@ -41,12 +50,36 @@ public class ListProductsRequest extends TeaModel {
         return this.offset;
     }
 
+    public ListProductsRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListProductsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public ListProductsRequest setProductName(String productName) {
         this.productName = productName;
         return this;
     }
     public String getProductName() {
         return this.productName;
+    }
+
+    public ListProductsRequest setSearchKeyWord(String searchKeyWord) {
+        this.searchKeyWord = searchKeyWord;
+        return this;
+    }
+    public String getSearchKeyWord() {
+        return this.searchKeyWord;
     }
 
     public ListProductsRequest setSimple(Boolean simple) {

@@ -36,9 +36,31 @@ public class QueryProductInfoResponseBody extends TeaModel {
     }
 
     public static class QueryProductInfoResponseBodyProductInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-02T09:50:01Z</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>endpoint for ecs: kangaroo-xuanji-cn-hangzhou-ecs-console-mirror-0(i-bp1fs84ua5zw4aljdlh1)</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>icon图片base64字符串</p>
+         */
         @NameInMap("EncodedIcon")
         public String encodedIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>icon图片名称</p>
+         */
         @NameInMap("IconName")
         public String iconName;
 
@@ -49,8 +71,26 @@ public class QueryProductInfoResponseBody extends TeaModel {
         @NameInMap("IndustryId")
         public Integer industryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>我的项目</p>
+         */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>linux/amd64</p>
+         */
+        @NameInMap("Platforms")
+        public String platforms;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3910360</p>
+         */
+        @NameInMap("ProductId")
+        public Integer productId;
 
         /**
          * <strong>example:</strong>
@@ -62,6 +102,22 @@ public class QueryProductInfoResponseBody extends TeaModel {
         public static QueryProductInfoResponseBodyProductInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryProductInfoResponseBodyProductInfo self = new QueryProductInfoResponseBodyProductInfo();
             return TeaModel.build(map, self);
+        }
+
+        public QueryProductInfoResponseBodyProductInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryProductInfoResponseBodyProductInfo setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public QueryProductInfoResponseBodyProductInfo setEncodedIcon(String encodedIcon) {
@@ -94,6 +150,22 @@ public class QueryProductInfoResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public QueryProductInfoResponseBodyProductInfo setPlatforms(String platforms) {
+            this.platforms = platforms;
+            return this;
+        }
+        public String getPlatforms() {
+            return this.platforms;
+        }
+
+        public QueryProductInfoResponseBodyProductInfo setProductId(Integer productId) {
+            this.productId = productId;
+            return this;
+        }
+        public Integer getProductId() {
+            return this.productId;
         }
 
         public QueryProductInfoResponseBodyProductInfo setReadonly(Boolean readonly) {

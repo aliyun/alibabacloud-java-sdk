@@ -80,6 +80,10 @@ public class ListProductsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>图片 base64</p>
+         */
         @NameInMap("EncodedIcon")
         public String encodedIcon;
 
@@ -90,6 +94,10 @@ public class ListProductsResponseBody extends TeaModel {
         @NameInMap("IndustryId")
         public Integer industryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>我的项目</p>
+         */
         @NameInMap("Name")
         public String name;
 

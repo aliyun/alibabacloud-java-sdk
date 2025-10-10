@@ -75,11 +75,22 @@ public class ListAppsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>mobile-live-service</p>
+         */
+        @NameInMap("AppName")
+        public String appName;
+
+        /**
+         * <strong>example:</strong>
          * <p>com.test.ios</p>
          */
         @NameInMap("BundleId")
         public String bundleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>图片 base64 字符串</p>
+         */
         @NameInMap("EncodedIcon")
         public String encodedIcon;
 
@@ -90,6 +101,10 @@ public class ListAppsResponseBody extends TeaModel {
         @NameInMap("IndustryId")
         public Integer industryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>我的应用</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -125,6 +140,14 @@ public class ListAppsResponseBody extends TeaModel {
         }
         public String getAppKey() {
             return this.appKey;
+        }
+
+        public ListAppsResponseBodyAppInfosAppInfo setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
         }
 
         public ListAppsResponseBodyAppInfosAppInfo setBundleId(String bundleId) {
