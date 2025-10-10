@@ -40,6 +40,9 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    @NameInMap("MachineId")
+    public String machineId;
+
     /**
      * <p>The maximum number of entries per page.</p>
      * <p>Valid values: 1 to 50.</p>
@@ -169,6 +172,14 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public DescribeManagedInstancesRequest setMachineId(String machineId) {
+        this.machineId = machineId;
+        return this;
+    }
+    public String getMachineId() {
+        return this.machineId;
     }
 
     public DescribeManagedInstancesRequest setMaxResults(Integer maxResults) {

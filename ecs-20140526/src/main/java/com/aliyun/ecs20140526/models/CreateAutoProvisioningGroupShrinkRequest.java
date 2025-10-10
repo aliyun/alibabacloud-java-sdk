@@ -1184,6 +1184,36 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     }
 
+    public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions extends TeaModel {
+        @NameInMap("Core")
+        public Integer core;
+
+        @NameInMap("ThreadsPerCore")
+        public Integer threadsPerCore;
+
+        public static CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions self = new CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions setCore(Integer core) {
+            this.core = core;
+            return this;
+        }
+        public Integer getCore() {
+            return this.core;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions setThreadsPerCore(Integer threadsPerCore) {
+            this.threadsPerCore = threadsPerCore;
+            return this;
+        }
+        public Integer getThreadsPerCore() {
+            return this.threadsPerCore;
+        }
+
+    }
+
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions extends TeaModel {
         /**
          * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid value:</p>
@@ -1622,6 +1652,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         @NameInMap("AutoRenewPeriod")
         public Integer autoRenewPeriod;
 
+        @NameInMap("CpuOptions")
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions cpuOptions;
+
         /**
          * <p>The image options.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
@@ -1959,6 +1992,14 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         }
         public Integer getAutoRenewPeriod() {
             return this.autoRenewPeriod;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setCpuOptions(CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions cpuOptions) {
+            this.cpuOptions = cpuOptions;
+            return this;
+        }
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationCpuOptions getCpuOptions() {
+            return this.cpuOptions;
         }
 
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setImageOptions(CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions imageOptions) {

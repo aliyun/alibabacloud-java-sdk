@@ -52,6 +52,9 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * <blockquote>
+     * <p>For paginated queries using MaxResults and NextToken, the TotalCount value in the response is invalid and should be ignored.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>15</p>

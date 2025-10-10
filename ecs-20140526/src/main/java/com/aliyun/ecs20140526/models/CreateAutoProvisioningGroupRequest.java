@@ -1184,6 +1184,36 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
+    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions extends TeaModel {
+        @NameInMap("Core")
+        public Integer core;
+
+        @NameInMap("ThreadsPerCore")
+        public Integer threadsPerCore;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions self = new CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions setCore(Integer core) {
+            this.core = core;
+            return this;
+        }
+        public Integer getCore() {
+            return this.core;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions setThreadsPerCore(Integer threadsPerCore) {
+            this.threadsPerCore = threadsPerCore;
+            return this;
+        }
+        public Integer getThreadsPerCore() {
+            return this.threadsPerCore;
+        }
+
+    }
+
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions extends TeaModel {
         /**
          * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid value:</p>
@@ -1622,6 +1652,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("AutoRenewPeriod")
         public Integer autoRenewPeriod;
 
+        @NameInMap("CpuOptions")
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions cpuOptions;
+
         /**
          * <p>The image options.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
@@ -1959,6 +1992,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public Integer getAutoRenewPeriod() {
             return this.autoRenewPeriod;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setCpuOptions(CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions cpuOptions) {
+            this.cpuOptions = cpuOptions;
+            return this;
+        }
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions getCpuOptions() {
+            return this.cpuOptions;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setImageOptions(CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions imageOptions) {

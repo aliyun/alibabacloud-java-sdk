@@ -603,7 +603,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean useAdditionalService;
 
     /**
-     * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 16 KB.</p>
+     * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.</p>
      * 
      * <strong>example:</strong>
      * <p>ZWNobyBoZWxsbyBlY3Mh</p>
