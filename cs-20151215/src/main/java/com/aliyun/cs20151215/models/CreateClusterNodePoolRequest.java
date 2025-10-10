@@ -1307,6 +1307,40 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     }
 
+    public static class CreateClusterNodePoolRequestScalingGroupResourcePoolOptions extends TeaModel {
+        @NameInMap("private_pool_ids")
+        public java.util.List<String> privatePoolIds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PrivatePoolFirst</p>
+         */
+        @NameInMap("strategy")
+        public String strategy;
+
+        public static CreateClusterNodePoolRequestScalingGroupResourcePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestScalingGroupResourcePoolOptions self = new CreateClusterNodePoolRequestScalingGroupResourcePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions setPrivatePoolIds(java.util.List<String> privatePoolIds) {
+            this.privatePoolIds = privatePoolIds;
+            return this;
+        }
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions setStrategy(String strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+    }
+
     public static class CreateClusterNodePoolRequestScalingGroupSpotPriceLimit extends TeaModel {
         /**
          * <p>The instance type of preemptible instances.</p>
@@ -1692,6 +1726,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          */
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
+
+        @NameInMap("resource_pool_options")
+        public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions resourcePoolOptions;
 
         /**
          * <p>The scaling mode of the scaling group. Valid values:</p>
@@ -2138,6 +2175,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public java.util.List<String> getRdsInstances() {
             return this.rdsInstances;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setResourcePoolOptions(CreateClusterNodePoolRequestScalingGroupResourcePoolOptions resourcePoolOptions) {
+            this.resourcePoolOptions = resourcePoolOptions;
+            return this;
+        }
+        public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions getResourcePoolOptions() {
+            return this.resourcePoolOptions;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setScalingPolicy(String scalingPolicy) {

@@ -1006,12 +1006,34 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig extends TeaModel {
+        @NameInMap("hugepage")
+        public Hugepage hugepage;
+
+        public static DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig self = new DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig setHugepage(Hugepage hugepage) {
+            this.hugepage = hugepage;
+            return this;
+        }
+        public Hugepage getHugepage() {
+            return this.hugepage;
+        }
+
+    }
+
     public static class DescribeClusterNodePoolDetailResponseBodyNodeConfig extends TeaModel {
         /**
          * <p>The configurations of the kubelet.</p>
          */
         @NameInMap("kubelet_configuration")
         public KubeletConfig kubeletConfiguration;
+
+        @NameInMap("node_os_config")
+        public DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig nodeOsConfig;
 
         public static DescribeClusterNodePoolDetailResponseBodyNodeConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodePoolDetailResponseBodyNodeConfig self = new DescribeClusterNodePoolDetailResponseBodyNodeConfig();
@@ -1024,6 +1046,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public KubeletConfig getKubeletConfiguration() {
             return this.kubeletConfiguration;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyNodeConfig setNodeOsConfig(DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig nodeOsConfig) {
+            this.nodeOsConfig = nodeOsConfig;
+            return this;
+        }
+        public DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig getNodeOsConfig() {
+            return this.nodeOsConfig;
         }
 
     }
@@ -1216,6 +1246,40 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public String getMatchCriteria() {
             return this.matchCriteria;
+        }
+
+    }
+
+    public static class DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions extends TeaModel {
+        @NameInMap("private_pool_ids")
+        public java.util.List<String> privatePoolIds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PrivatePoolFirst</p>
+         */
+        @NameInMap("strategy")
+        public String strategy;
+
+        public static DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions self = new DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions setPrivatePoolIds(java.util.List<String> privatePoolIds) {
+            this.privatePoolIds = privatePoolIds;
+            return this;
+        }
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions setStrategy(String strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public String getStrategy() {
+            return this.strategy;
         }
 
     }
@@ -1528,6 +1592,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          */
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
+
+        @NameInMap("resource_pool_options")
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions resourcePoolOptions;
 
         /**
          * <p>The ID of the scaling group.</p>
@@ -1982,6 +2049,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public java.util.List<String> getRdsInstances() {
             return this.rdsInstances;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setResourcePoolOptions(DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions resourcePoolOptions) {
+            this.resourcePoolOptions = resourcePoolOptions;
+            return this;
+        }
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions getResourcePoolOptions() {
+            return this.resourcePoolOptions;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setScalingGroupId(String scalingGroupId) {

@@ -66,6 +66,9 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     }
 
     public static class ModifyNodePoolNodeConfigRequestOsConfig extends TeaModel {
+        @NameInMap("hugepage")
+        public Hugepage hugepage;
+
         /**
          * <p>The sysctl configuration.</p>
          */
@@ -75,6 +78,14 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
         public static ModifyNodePoolNodeConfigRequestOsConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyNodePoolNodeConfigRequestOsConfig self = new ModifyNodePoolNodeConfigRequestOsConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyNodePoolNodeConfigRequestOsConfig setHugepage(Hugepage hugepage) {
+            this.hugepage = hugepage;
+            return this;
+        }
+        public Hugepage getHugepage() {
+            return this.hugepage;
         }
 
         public ModifyNodePoolNodeConfigRequestOsConfig setSysctl(java.util.Map<String, ?> sysctl) {

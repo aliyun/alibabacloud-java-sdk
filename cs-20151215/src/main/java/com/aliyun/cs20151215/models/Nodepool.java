@@ -858,6 +858,40 @@ public class Nodepool extends TeaModel {
 
     }
 
+    public static class NodepoolScalingGroupResourcePoolOptions extends TeaModel {
+        @NameInMap("private_pool_ids")
+        public java.util.List<String> privatePoolIds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PrivatePoolFirst</p>
+         */
+        @NameInMap("strategy")
+        public String strategy;
+
+        public static NodepoolScalingGroupResourcePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            NodepoolScalingGroupResourcePoolOptions self = new NodepoolScalingGroupResourcePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public NodepoolScalingGroupResourcePoolOptions setPrivatePoolIds(java.util.List<String> privatePoolIds) {
+            this.privatePoolIds = privatePoolIds;
+            return this;
+        }
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        public NodepoolScalingGroupResourcePoolOptions setStrategy(String strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+    }
+
     public static class NodepoolScalingGroupSpotPriceLimit extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -1091,6 +1125,9 @@ public class Nodepool extends TeaModel {
 
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
+
+        @NameInMap("resource_pool_options")
+        public NodepoolScalingGroupResourcePoolOptions resourcePoolOptions;
 
         /**
          * <strong>example:</strong>
@@ -1401,6 +1438,14 @@ public class Nodepool extends TeaModel {
         }
         public java.util.List<String> getRdsInstances() {
             return this.rdsInstances;
+        }
+
+        public NodepoolScalingGroup setResourcePoolOptions(NodepoolScalingGroupResourcePoolOptions resourcePoolOptions) {
+            this.resourcePoolOptions = resourcePoolOptions;
+            return this;
+        }
+        public NodepoolScalingGroupResourcePoolOptions getResourcePoolOptions() {
+            return this.resourcePoolOptions;
         }
 
         public NodepoolScalingGroup setScalingPolicy(String scalingPolicy) {
