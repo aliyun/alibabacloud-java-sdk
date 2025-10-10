@@ -35,6 +35,9 @@ public class UnifiedPageItem extends TeaModel {
     @NameInMap("rerankScore")
     public Double rerankScore;
 
+    @NameInMap("richMainBody")
+    public String richMainBody;
+
     @NameInMap("snippet")
     public String snippet;
 
@@ -119,6 +122,14 @@ public class UnifiedPageItem extends TeaModel {
     }
     public Double getRerankScore() {
         return this.rerankScore;
+    }
+
+    public UnifiedPageItem setRichMainBody(String richMainBody) {
+        this.richMainBody = richMainBody;
+        return this;
+    }
+    public String getRichMainBody() {
+        return this.richMainBody;
     }
 
     public UnifiedPageItem setSnippet(String snippet) {
