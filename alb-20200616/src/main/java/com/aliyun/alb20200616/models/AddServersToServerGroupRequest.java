@@ -129,7 +129,6 @@ public class AddServersToServerGroupRequest extends TeaModel {
          * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
          * <li>If the server group is of the <strong>Fc</strong> type, set ServerId to an Alibaba Cloud Resource Name (ARN).</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs-bp67acfmxazb4p****</p>

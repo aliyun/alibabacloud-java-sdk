@@ -186,7 +186,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig extends TeaModel {
         /**
          * <p>The billing method. Valid value:</p>
-         * <p>Only <strong>PostPay</strong> may be returned, which indicates the pay-as-you-go billing method.</p>
+         * <p><strong>PostPay</strong>: You are charged for the ALB instance on a pay-as-you-go basis.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPay</p>

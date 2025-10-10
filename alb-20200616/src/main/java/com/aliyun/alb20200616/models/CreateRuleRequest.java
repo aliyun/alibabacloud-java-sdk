@@ -629,13 +629,11 @@ public class CreateRuleRequest extends TeaModel {
          * <li><strong>HTTPS</strong></li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>HTTPS listeners support only HTTPS redirection.</p>
-         * </li>
-         * <li><p>HTTP listeners support HTTP and HTTPS redirection.</p>
-         * </li>
+         * <li>HTTPS listeners support only HTTPS redirection.</li>
+         * <li>HTTP listeners support HTTP and HTTPS redirection.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
