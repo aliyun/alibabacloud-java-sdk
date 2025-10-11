@@ -4,6 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class GetAICoachScriptResponseBody extends TeaModel {
+    @NameInMap("agentId")
+    public String agentId;
+
     @NameInMap("appendQuestionFlag")
     public Boolean appendQuestionFlag;
 
@@ -195,12 +198,26 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("type")
     public Integer type;
 
+    @NameInMap("voiceId")
+    public String voiceId;
+
+    @NameInMap("voiceLanguage")
+    public String voiceLanguage;
+
     @NameInMap("weights")
     public GetAICoachScriptResponseBodyWeights weights;
 
     public static GetAICoachScriptResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAICoachScriptResponseBody self = new GetAICoachScriptResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAICoachScriptResponseBody setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
     }
 
     public GetAICoachScriptResponseBody setAppendQuestionFlag(Boolean appendQuestionFlag) {
@@ -497,6 +514,22 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
     public Integer getType() {
         return this.type;
+    }
+
+    public GetAICoachScriptResponseBody setVoiceId(String voiceId) {
+        this.voiceId = voiceId;
+        return this;
+    }
+    public String getVoiceId() {
+        return this.voiceId;
+    }
+
+    public GetAICoachScriptResponseBody setVoiceLanguage(String voiceLanguage) {
+        this.voiceLanguage = voiceLanguage;
+        return this;
+    }
+    public String getVoiceLanguage() {
+        return this.voiceLanguage;
     }
 
     public GetAICoachScriptResponseBody setWeights(GetAICoachScriptResponseBodyWeights weights) {
