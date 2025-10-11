@@ -32,6 +32,9 @@ public class Session extends TeaModel {
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    @NameInMap("nasConfig")
+    public NASConfig nasConfig;
+
     /**
      * <strong>example:</strong>
      * <p>AliasName1</p>
@@ -109,6 +112,14 @@ public class Session extends TeaModel {
     }
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
+    }
+
+    public Session setNasConfig(NASConfig nasConfig) {
+        this.nasConfig = nasConfig;
+        return this;
+    }
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
     }
 
     public Session setQualifier(String qualifier) {

@@ -30,7 +30,11 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("disableInjectCredentials")
+    public String disableInjectCredentials;
+
     @NameInMap("disableOndemand")
+    @Deprecated
     public Boolean disableOndemand;
 
     /**
@@ -57,6 +61,10 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("handler")
     public String handler;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("idleTimeout")
     public Integer idleTimeout;
 
@@ -98,6 +106,9 @@ public class UpdateFunctionInput extends TeaModel {
 
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
+
+    @NameInMap("polarFsConfig")
+    public PolarFsConfig polarFsConfig;
 
     /**
      * <strong>example:</strong>
@@ -185,6 +196,15 @@ public class UpdateFunctionInput extends TeaModel {
         return this.description;
     }
 
+    public UpdateFunctionInput setDisableInjectCredentials(String disableInjectCredentials) {
+        this.disableInjectCredentials = disableInjectCredentials;
+        return this;
+    }
+    public String getDisableInjectCredentials() {
+        return this.disableInjectCredentials;
+    }
+
+    @Deprecated
     public UpdateFunctionInput setDisableOndemand(Boolean disableOndemand) {
         this.disableOndemand = disableOndemand;
         return this;
@@ -312,6 +332,14 @@ public class UpdateFunctionInput extends TeaModel {
     }
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    public UpdateFunctionInput setPolarFsConfig(PolarFsConfig polarFsConfig) {
+        this.polarFsConfig = polarFsConfig;
+        return this;
+    }
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
     }
 
     public UpdateFunctionInput setRole(String role) {

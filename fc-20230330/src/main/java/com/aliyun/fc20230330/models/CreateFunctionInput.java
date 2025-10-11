@@ -30,7 +30,11 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("disableInjectCredentials")
+    public String disableInjectCredentials;
+
     @NameInMap("disableOndemand")
+    @Deprecated
     public Boolean disableOndemand;
 
     /**
@@ -68,6 +72,10 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("handler")
     public String handler;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("idleTimeout")
     public Integer idleTimeout;
 
@@ -109,6 +117,9 @@ public class CreateFunctionInput extends TeaModel {
 
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
+
+    @NameInMap("polarFsConfig")
+    public PolarFsConfig polarFsConfig;
 
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
@@ -208,6 +219,15 @@ public class CreateFunctionInput extends TeaModel {
         return this.description;
     }
 
+    public CreateFunctionInput setDisableInjectCredentials(String disableInjectCredentials) {
+        this.disableInjectCredentials = disableInjectCredentials;
+        return this;
+    }
+    public String getDisableInjectCredentials() {
+        return this.disableInjectCredentials;
+    }
+
+    @Deprecated
     public CreateFunctionInput setDisableOndemand(Boolean disableOndemand) {
         this.disableOndemand = disableOndemand;
         return this;
@@ -343,6 +363,14 @@ public class CreateFunctionInput extends TeaModel {
     }
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    public CreateFunctionInput setPolarFsConfig(PolarFsConfig polarFsConfig) {
+        this.polarFsConfig = polarFsConfig;
+        return this;
+    }
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
     }
 
     public CreateFunctionInput setResourceGroupId(String resourceGroupId) {

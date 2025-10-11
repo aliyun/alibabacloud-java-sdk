@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateSessionInput extends TeaModel {
+    @NameInMap("nasConfig")
+    public NASConfig nasConfig;
+
     /**
      * <strong>example:</strong>
      * <p>1800</p>
@@ -21,6 +24,14 @@ public class CreateSessionInput extends TeaModel {
     public static CreateSessionInput build(java.util.Map<String, ?> map) throws Exception {
         CreateSessionInput self = new CreateSessionInput();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSessionInput setNasConfig(NASConfig nasConfig) {
+        this.nasConfig = nasConfig;
+        return this;
+    }
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
     }
 
     public CreateSessionInput setSessionIdleTimeoutInSeconds(Long sessionIdleTimeoutInSeconds) {
