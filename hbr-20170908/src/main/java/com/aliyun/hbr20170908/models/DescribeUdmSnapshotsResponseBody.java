@@ -518,6 +518,15 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         @NameInMap("AdvancedRetentionType")
         public String advancedRetentionType;
 
+        @NameInMap("ArchiveErrorMessage")
+        public String archiveErrorMessage;
+
+        @NameInMap("ArchiveStatus")
+        public String archiveStatus;
+
+        @NameInMap("ArchiveTriggerTime")
+        public Long archiveTriggerTime;
+
         /**
          * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
          * 
@@ -780,6 +789,30 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         }
         public String getAdvancedRetentionType() {
             return this.advancedRetentionType;
+        }
+
+        public DescribeUdmSnapshotsResponseBodySnapshots setArchiveErrorMessage(String archiveErrorMessage) {
+            this.archiveErrorMessage = archiveErrorMessage;
+            return this;
+        }
+        public String getArchiveErrorMessage() {
+            return this.archiveErrorMessage;
+        }
+
+        public DescribeUdmSnapshotsResponseBodySnapshots setArchiveStatus(String archiveStatus) {
+            this.archiveStatus = archiveStatus;
+            return this;
+        }
+        public String getArchiveStatus() {
+            return this.archiveStatus;
+        }
+
+        public DescribeUdmSnapshotsResponseBodySnapshots setArchiveTriggerTime(Long archiveTriggerTime) {
+            this.archiveTriggerTime = archiveTriggerTime;
+            return this;
+        }
+        public Long getArchiveTriggerTime() {
+            return this.archiveTriggerTime;
         }
 
         public DescribeUdmSnapshotsResponseBodySnapshots setBackupType(String backupType) {
