@@ -178,6 +178,9 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
     }
 
     public static class GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery extends TeaModel {
+        @NameInMap("Enabled")
+        public String enabled;
+
         /**
          * <p>The Simple Log Service configurations.</p>
          */
@@ -205,6 +208,14 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         public static GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery build(java.util.Map<String, ?> map) throws Exception {
             GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery self = new GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery();
             return TeaModel.build(map, self);
+        }
+
+        public GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
         }
 
         public GetMultiAccountDeliveryChannelResponseBodyResourceChangeDelivery setSlsProperties(GetMultiAccountDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties slsProperties) {
@@ -277,6 +288,9 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
+        @NameInMap("Enabled")
+        public String enabled;
+
         /**
          * <p>The Simple Log Service configurations.</p>
          */
@@ -320,6 +334,14 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
         public String getDeliveryTime() {
             return this.deliveryTime;
+        }
+
+        public GetMultiAccountDeliveryChannelResponseBodyResourceSnapshotDelivery setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
         }
 
         public GetMultiAccountDeliveryChannelResponseBodyResourceSnapshotDelivery setSlsProperties(GetMultiAccountDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties slsProperties) {

@@ -164,6 +164,9 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
     }
 
     public static class GetDeliveryChannelResponseBodyResourceChangeDelivery extends TeaModel {
+        @NameInMap("Enabled")
+        public String enabled;
+
         /**
          * <p>The Simple Log Service configurations.</p>
          */
@@ -191,6 +194,14 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         public static GetDeliveryChannelResponseBodyResourceChangeDelivery build(java.util.Map<String, ?> map) throws Exception {
             GetDeliveryChannelResponseBodyResourceChangeDelivery self = new GetDeliveryChannelResponseBodyResourceChangeDelivery();
             return TeaModel.build(map, self);
+        }
+
+        public GetDeliveryChannelResponseBodyResourceChangeDelivery setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
         }
 
         public GetDeliveryChannelResponseBodyResourceChangeDelivery setSlsProperties(GetDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties slsProperties) {
@@ -263,6 +274,9 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
+        @NameInMap("Enabled")
+        public String enabled;
+
         /**
          * <p>The Simple Log Service configurations.</p>
          */
@@ -306,6 +320,14 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         }
         public String getDeliveryTime() {
             return this.deliveryTime;
+        }
+
+        public GetDeliveryChannelResponseBodyResourceSnapshotDelivery setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
         }
 
         public GetDeliveryChannelResponseBodyResourceSnapshotDelivery setSlsProperties(GetDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties slsProperties) {
