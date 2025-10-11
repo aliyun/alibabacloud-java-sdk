@@ -37,6 +37,9 @@ public class RunWritingV2ShrinkRequest extends TeaModel {
     @NameInMap("MiniDocs")
     public String miniDocsShrink;
 
+    @NameInMap("OutlineList")
+    public String outlineListShrink;
+
     @NameInMap("Outlines")
     public String outlinesShrink;
 
@@ -59,6 +62,9 @@ public class RunWritingV2ShrinkRequest extends TeaModel {
      */
     @NameInMap("SessionId")
     public String sessionId;
+
+    @NameInMap("SourceTraceMethod")
+    public String sourceTraceMethod;
 
     /**
      * <strong>example:</strong>
@@ -167,6 +173,14 @@ public class RunWritingV2ShrinkRequest extends TeaModel {
         return this.miniDocsShrink;
     }
 
+    public RunWritingV2ShrinkRequest setOutlineListShrink(String outlineListShrink) {
+        this.outlineListShrink = outlineListShrink;
+        return this;
+    }
+    public String getOutlineListShrink() {
+        return this.outlineListShrink;
+    }
+
     public RunWritingV2ShrinkRequest setOutlinesShrink(String outlinesShrink) {
         this.outlinesShrink = outlinesShrink;
         return this;
@@ -205,6 +219,14 @@ public class RunWritingV2ShrinkRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public RunWritingV2ShrinkRequest setSourceTraceMethod(String sourceTraceMethod) {
+        this.sourceTraceMethod = sourceTraceMethod;
+        return this;
+    }
+    public String getSourceTraceMethod() {
+        return this.sourceTraceMethod;
     }
 
     public RunWritingV2ShrinkRequest setStep(String step) {

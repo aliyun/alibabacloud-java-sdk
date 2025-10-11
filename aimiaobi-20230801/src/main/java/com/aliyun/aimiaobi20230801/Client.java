@@ -9364,6 +9364,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.miniDocsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.miniDocs, "MiniDocs", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outlineList)) {
+            request.outlineListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outlineList, "OutlineList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.outlines)) {
             request.outlinesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outlines, "Outlines", "json");
         }
@@ -9409,6 +9413,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MiniDocs", request.miniDocsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outlineListShrink)) {
+            body.put("OutlineList", request.outlineListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outlinesShrink)) {
             body.put("Outlines", request.outlinesShrink);
         }
@@ -9427,6 +9435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTraceMethod)) {
+            body.put("SourceTraceMethod", request.sourceTraceMethod);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.step)) {

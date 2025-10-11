@@ -37,6 +37,9 @@ public class RunWritingV2Request extends TeaModel {
     @NameInMap("MiniDocs")
     public java.util.List<RunWritingV2RequestMiniDocs> miniDocs;
 
+    @NameInMap("OutlineList")
+    public java.util.List<WritingOutline> outlineList;
+
     @NameInMap("Outlines")
     public java.util.List<RunWritingV2RequestOutlines> outlines;
 
@@ -59,6 +62,9 @@ public class RunWritingV2Request extends TeaModel {
      */
     @NameInMap("SessionId")
     public String sessionId;
+
+    @NameInMap("SourceTraceMethod")
+    public String sourceTraceMethod;
 
     /**
      * <strong>example:</strong>
@@ -167,6 +173,14 @@ public class RunWritingV2Request extends TeaModel {
         return this.miniDocs;
     }
 
+    public RunWritingV2Request setOutlineList(java.util.List<WritingOutline> outlineList) {
+        this.outlineList = outlineList;
+        return this;
+    }
+    public java.util.List<WritingOutline> getOutlineList() {
+        return this.outlineList;
+    }
+
     public RunWritingV2Request setOutlines(java.util.List<RunWritingV2RequestOutlines> outlines) {
         this.outlines = outlines;
         return this;
@@ -205,6 +219,14 @@ public class RunWritingV2Request extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public RunWritingV2Request setSourceTraceMethod(String sourceTraceMethod) {
+        this.sourceTraceMethod = sourceTraceMethod;
+        return this;
+    }
+    public String getSourceTraceMethod() {
+        return this.sourceTraceMethod;
     }
 
     public RunWritingV2Request setStep(String step) {

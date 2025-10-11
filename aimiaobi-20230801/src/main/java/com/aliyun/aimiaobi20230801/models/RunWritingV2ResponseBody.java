@@ -351,12 +351,18 @@ public class RunWritingV2ResponseBody extends TeaModel {
         @NameInMap("Articles")
         public java.util.List<RunWritingV2ResponseBodyPayloadOutputArticles> articles;
 
+        @NameInMap("GenerateTraceability")
+        public GenerateTraceability generateTraceability;
+
         /**
          * <strong>example:</strong>
          * <p>文章精排之后的片段</p>
          */
         @NameInMap("MiniDoc")
         public java.util.List<String> miniDoc;
+
+        @NameInMap("Outlines")
+        public java.util.List<WritingOutline> outlines;
 
         /**
          * <strong>example:</strong>
@@ -365,12 +371,18 @@ public class RunWritingV2ResponseBody extends TeaModel {
         @NameInMap("SearchQuery")
         public String searchQuery;
 
+        @NameInMap("SearchResult")
+        public OutlineSearchResult searchResult;
+
         /**
          * <strong>example:</strong>
          * <p>文本生成结果</p>
          */
         @NameInMap("Text")
         public String text;
+
+        @NameInMap("Title")
+        public String title;
 
         public static RunWritingV2ResponseBodyPayloadOutput build(java.util.Map<String, ?> map) throws Exception {
             RunWritingV2ResponseBodyPayloadOutput self = new RunWritingV2ResponseBodyPayloadOutput();
@@ -385,12 +397,28 @@ public class RunWritingV2ResponseBody extends TeaModel {
             return this.articles;
         }
 
+        public RunWritingV2ResponseBodyPayloadOutput setGenerateTraceability(GenerateTraceability generateTraceability) {
+            this.generateTraceability = generateTraceability;
+            return this;
+        }
+        public GenerateTraceability getGenerateTraceability() {
+            return this.generateTraceability;
+        }
+
         public RunWritingV2ResponseBodyPayloadOutput setMiniDoc(java.util.List<String> miniDoc) {
             this.miniDoc = miniDoc;
             return this;
         }
         public java.util.List<String> getMiniDoc() {
             return this.miniDoc;
+        }
+
+        public RunWritingV2ResponseBodyPayloadOutput setOutlines(java.util.List<WritingOutline> outlines) {
+            this.outlines = outlines;
+            return this;
+        }
+        public java.util.List<WritingOutline> getOutlines() {
+            return this.outlines;
         }
 
         public RunWritingV2ResponseBodyPayloadOutput setSearchQuery(String searchQuery) {
@@ -401,12 +429,28 @@ public class RunWritingV2ResponseBody extends TeaModel {
             return this.searchQuery;
         }
 
+        public RunWritingV2ResponseBodyPayloadOutput setSearchResult(OutlineSearchResult searchResult) {
+            this.searchResult = searchResult;
+            return this;
+        }
+        public OutlineSearchResult getSearchResult() {
+            return this.searchResult;
+        }
+
         public RunWritingV2ResponseBodyPayloadOutput setText(String text) {
             this.text = text;
             return this;
         }
         public String getText() {
             return this.text;
+        }
+
+        public RunWritingV2ResponseBodyPayloadOutput setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
     }
