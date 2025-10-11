@@ -1287,6 +1287,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("DBNodeCXLRemoteMemory")
+        public String DBNodeCXLRemoteMemory;
+
         /**
          * <p>Node specification.</p>
          * 
@@ -1553,6 +1556,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setDBNodeCXLRemoteMemory(String DBNodeCXLRemoteMemory) {
+            this.DBNodeCXLRemoteMemory = DBNodeCXLRemoteMemory;
+            return this;
+        }
+        public String getDBNodeCXLRemoteMemory() {
+            return this.DBNodeCXLRemoteMemory;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setDBNodeClass(String DBNodeClass) {

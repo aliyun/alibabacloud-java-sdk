@@ -17,11 +17,23 @@ public class RestartDBNodeRequest extends TeaModel {
     @NameInMap("DBNodeId")
     public String DBNodeId;
 
+    @NameInMap("FromTimeService")
+    public String fromTimeService;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -42,6 +54,14 @@ public class RestartDBNodeRequest extends TeaModel {
         return this.DBNodeId;
     }
 
+    public RestartDBNodeRequest setFromTimeService(String fromTimeService) {
+        this.fromTimeService = fromTimeService;
+        return this;
+    }
+    public String getFromTimeService() {
+        return this.fromTimeService;
+    }
+
     public RestartDBNodeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -56,6 +76,30 @@ public class RestartDBNodeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RestartDBNodeRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public RestartDBNodeRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
+    }
+
+    public RestartDBNodeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RestartDBNodeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

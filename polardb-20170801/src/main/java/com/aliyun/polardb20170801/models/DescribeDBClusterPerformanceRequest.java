@@ -56,6 +56,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("SubGroupName")
+    public String subGroupName;
+
     /**
      * <p>The query type.</p>
      * 
@@ -108,6 +111,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeDBClusterPerformanceRequest setSubGroupName(String subGroupName) {
+        this.subGroupName = subGroupName;
+        return this;
+    }
+    public String getSubGroupName() {
+        return this.subGroupName;
     }
 
     public DescribeDBClusterPerformanceRequest setType(String type) {

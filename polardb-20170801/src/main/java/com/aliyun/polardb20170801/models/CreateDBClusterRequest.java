@@ -616,6 +616,13 @@ public class CreateDBClusterRequest extends TeaModel {
     public String sourceResourceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>1022xxxxxxxx</p>
+     */
+    @NameInMap("SourceUid")
+    public Long sourceUid;
+
+    /**
      * <p>The availability zone where the hot standby cluster is stored. Applicable to the standard edition 3AZ scenario.</p>
      * <blockquote>
      * <p>This parameter takes effect only when multi-zone data strong consistency is enabled.</p>
@@ -1161,6 +1168,14 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getSourceResourceId() {
         return this.sourceResourceId;
+    }
+
+    public CreateDBClusterRequest setSourceUid(Long sourceUid) {
+        this.sourceUid = sourceUid;
+        return this;
+    }
+    public Long getSourceUid() {
+        return this.sourceUid;
     }
 
     public CreateDBClusterRequest setStandbyAZ(String standbyAZ) {
