@@ -25,6 +25,9 @@ public class CreateWuyingServerRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -55,6 +58,9 @@ public class CreateWuyingServerRequest extends TeaModel {
      */
     @NameInMap("ImageId")
     public String imageId;
+
+    @NameInMap("NetworkStrategyType")
+    public String networkStrategyType;
 
     /**
      * <strong>example:</strong>
@@ -161,6 +167,14 @@ public class CreateWuyingServerRequest extends TeaModel {
         return this.autoRenew;
     }
 
+    public CreateWuyingServerRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
     public CreateWuyingServerRequest setBizRegionId(String bizRegionId) {
         this.bizRegionId = bizRegionId;
         return this;
@@ -199,6 +213,14 @@ public class CreateWuyingServerRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public CreateWuyingServerRequest setNetworkStrategyType(String networkStrategyType) {
+        this.networkStrategyType = networkStrategyType;
+        return this;
+    }
+    public String getNetworkStrategyType() {
+        return this.networkStrategyType;
     }
 
     public CreateWuyingServerRequest setOfficeSiteId(String officeSiteId) {
