@@ -359,6 +359,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UserVpc", request.userVpc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("Version", request.version);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -1752,6 +1756,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AvailabilityZone", request.availabilityZone);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cliqueID)) {
+            query.put("CliqueID", request.cliqueID);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filterByQuotaId)) {
             query.put("FilterByQuotaId", request.filterByQuotaId);
         }
@@ -1762,6 +1770,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.GPUType)) {
             query.put("GPUType", request.GPUType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hyperNode)) {
+            query.put("HyperNode", request.hyperNode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hyperZone)) {
@@ -1786,6 +1798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderInstanceIds)) {
+            query.put("OrderInstanceIds", request.orderInstanceIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderStatuses)) {
@@ -2038,6 +2054,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Verbose", request.verbose);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.versions)) {
+            query.put("Versions", request.versions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceIds)) {
             query.put("WorkspaceIds", request.workspaceIds);
         }
@@ -2226,6 +2246,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versions)) {
+            query.put("Versions", request.versions);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

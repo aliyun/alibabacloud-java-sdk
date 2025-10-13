@@ -85,6 +85,13 @@ public class ListQuotasRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1.0</p>
+     */
+    @NameInMap("Versions")
+    public String versions;
+
+    /**
+     * <strong>example:</strong>
      * <p>21345,38727</p>
      */
     @NameInMap("WorkspaceIds")
@@ -200,6 +207,14 @@ public class ListQuotasRequest extends TeaModel {
     }
     public Boolean getVerbose() {
         return this.verbose;
+    }
+
+    public ListQuotasRequest setVersions(String versions) {
+        this.versions = versions;
+        return this;
+    }
+    public String getVersions() {
+        return this.versions;
     }
 
     public ListQuotasRequest setWorkspaceIds(String workspaceIds) {

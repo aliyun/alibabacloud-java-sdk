@@ -14,6 +14,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("AvailabilityZone")
     public String availabilityZone;
 
+    @NameInMap("CliqueID")
+    public String cliqueID;
+
     /**
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -34,6 +37,9 @@ public class ListNodesRequest extends TeaModel {
      */
     @NameInMap("GPUType")
     public String GPUType;
+
+    @NameInMap("HyperNode")
+    public String hyperNode;
 
     @NameInMap("HyperZone")
     public String hyperZone;
@@ -68,6 +74,13 @@ public class ListNodesRequest extends TeaModel {
      */
     @NameInMap("Order")
     public String order;
+
+    /**
+     * <strong>example:</strong>
+     * <p>260590501560397</p>
+     */
+    @NameInMap("OrderInstanceIds")
+    public String orderInstanceIds;
 
     /**
      * <strong>example:</strong>
@@ -145,6 +158,14 @@ public class ListNodesRequest extends TeaModel {
         return this.availabilityZone;
     }
 
+    public ListNodesRequest setCliqueID(String cliqueID) {
+        this.cliqueID = cliqueID;
+        return this;
+    }
+    public String getCliqueID() {
+        return this.cliqueID;
+    }
+
     public ListNodesRequest setFilterByQuotaId(String filterByQuotaId) {
         this.filterByQuotaId = filterByQuotaId;
         return this;
@@ -167,6 +188,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public String getGPUType() {
         return this.GPUType;
+    }
+
+    public ListNodesRequest setHyperNode(String hyperNode) {
+        this.hyperNode = hyperNode;
+        return this;
+    }
+    public String getHyperNode() {
+        return this.hyperNode;
     }
 
     public ListNodesRequest setHyperZone(String hyperZone) {
@@ -215,6 +244,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
+    }
+
+    public ListNodesRequest setOrderInstanceIds(String orderInstanceIds) {
+        this.orderInstanceIds = orderInstanceIds;
+        return this;
+    }
+    public String getOrderInstanceIds() {
+        return this.orderInstanceIds;
     }
 
     public ListNodesRequest setOrderStatuses(String orderStatuses) {

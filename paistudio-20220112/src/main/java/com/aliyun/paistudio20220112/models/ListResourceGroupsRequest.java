@@ -73,6 +73,13 @@ public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
+    @NameInMap("Versions")
+    public String versions;
+
     public static ListResourceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceGroupsRequest self = new ListResourceGroupsRequest();
         return TeaModel.build(map, self);
@@ -164,6 +171,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListResourceGroupsRequest setVersions(String versions) {
+        this.versions = versions;
+        return this;
+    }
+    public String getVersions() {
+        return this.versions;
     }
 
 }

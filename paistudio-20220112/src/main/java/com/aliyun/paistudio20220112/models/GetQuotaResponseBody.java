@@ -39,6 +39,9 @@ public class GetQuotaResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    @NameInMap("HyperZones")
+    public java.util.List<String> hyperZones;
+
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
@@ -129,6 +132,13 @@ public class GetQuotaResponseBody extends TeaModel {
     @NameInMap("SubQuotas")
     public java.util.List<QuotaIdName> subQuotas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
+    @NameInMap("Version")
+    public String version;
+
     @NameInMap("Workspaces")
     public java.util.List<WorkspaceIdName> workspaces;
 
@@ -175,6 +185,14 @@ public class GetQuotaResponseBody extends TeaModel {
     }
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    public GetQuotaResponseBody setHyperZones(java.util.List<String> hyperZones) {
+        this.hyperZones = hyperZones;
+        return this;
+    }
+    public java.util.List<String> getHyperZones() {
+        return this.hyperZones;
     }
 
     public GetQuotaResponseBody setLabels(java.util.List<Label> labels) {
@@ -303,6 +321,14 @@ public class GetQuotaResponseBody extends TeaModel {
     }
     public java.util.List<QuotaIdName> getSubQuotas() {
         return this.subQuotas;
+    }
+
+    public GetQuotaResponseBody setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public GetQuotaResponseBody setWorkspaces(java.util.List<WorkspaceIdName> workspaces) {

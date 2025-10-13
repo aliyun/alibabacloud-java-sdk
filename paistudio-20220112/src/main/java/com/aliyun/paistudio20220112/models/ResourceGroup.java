@@ -33,6 +33,9 @@ public class ResourceGroup extends TeaModel {
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
+    @NameInMap("Version")
+    public String version;
+
     /**
      * <strong>example:</strong>
      * <p>23000</p>
@@ -99,6 +102,14 @@ public class ResourceGroup extends TeaModel {
     }
     public UserVpc getUserVpc() {
         return this.userVpc;
+    }
+
+    public ResourceGroup setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public ResourceGroup setWorkspaceID(String workspaceID) {

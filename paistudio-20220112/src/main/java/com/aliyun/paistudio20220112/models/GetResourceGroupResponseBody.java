@@ -87,6 +87,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
+    @NameInMap("Version")
+    public String version;
+
     /**
      * <strong>example:</strong>
      * <p>35201</p>
@@ -201,6 +204,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
     public UserVpc getUserVpc() {
         return this.userVpc;
+    }
+
+    public GetResourceGroupResponseBody setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public GetResourceGroupResponseBody setWorkspaceID(String workspaceID) {

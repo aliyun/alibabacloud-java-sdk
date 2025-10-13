@@ -38,6 +38,13 @@ public class CreateResourceGroupRequest extends TeaModel {
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
+    @NameInMap("Version")
+    public String version;
+
     public static CreateResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceGroupRequest self = new CreateResourceGroupRequest();
         return TeaModel.build(map, self);
@@ -89,6 +96,14 @@ public class CreateResourceGroupRequest extends TeaModel {
     }
     public UserVpc getUserVpc() {
         return this.userVpc;
+    }
+
+    public CreateResourceGroupRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class CreateResourceGroupRequestTag extends TeaModel {
