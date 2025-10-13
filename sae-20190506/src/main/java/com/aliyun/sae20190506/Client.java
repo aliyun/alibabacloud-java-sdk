@@ -2608,6 +2608,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcrAssumeRoleArn", request.acrAssumeRoleArn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.albIngressReadinessGate)) {
+            query.put("AlbIngressReadinessGate", request.albIngressReadinessGate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }

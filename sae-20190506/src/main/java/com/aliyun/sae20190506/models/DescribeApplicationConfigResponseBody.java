@@ -1078,6 +1078,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AcrInstanceId")
         public String acrInstanceId;
 
+        @NameInMap("AlbIngressReadinessGate")
+        public String albIngressReadinessGate;
+
         /**
          * <p>The description of the application.</p>
          * 
@@ -2085,6 +2088,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getAcrInstanceId() {
             return this.acrInstanceId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setAlbIngressReadinessGate(String albIngressReadinessGate) {
+            this.albIngressReadinessGate = albIngressReadinessGate;
+            return this;
+        }
+        public String getAlbIngressReadinessGate() {
+            return this.albIngressReadinessGate;
         }
 
         public DescribeApplicationConfigResponseBodyData setAppDescription(String appDescription) {

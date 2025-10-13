@@ -22,6 +22,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("AcrInstanceId")
     public String acrInstanceId;
 
+    @NameInMap("AlbIngressReadinessGate")
+    public String albIngressReadinessGate;
+
     /**
      * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
@@ -1021,6 +1024,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getAcrInstanceId() {
         return this.acrInstanceId;
+    }
+
+    public DeployApplicationShrinkRequest setAlbIngressReadinessGate(String albIngressReadinessGate) {
+        this.albIngressReadinessGate = albIngressReadinessGate;
+        return this;
+    }
+    public String getAlbIngressReadinessGate() {
+        return this.albIngressReadinessGate;
     }
 
     public DeployApplicationShrinkRequest setAppId(String appId) {
