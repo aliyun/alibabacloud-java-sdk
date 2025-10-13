@@ -108,6 +108,9 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         @NameInMap("clusterId")
         public String clusterId;
 
+        @NameInMap("disablePolicyShare")
+        public Boolean disablePolicyShare;
+
         /**
          * <strong>example:</strong>
          * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
@@ -141,6 +144,14 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        public CreateIntegrationPolicyRequestEntityGroup setDisablePolicyShare(Boolean disablePolicyShare) {
+            this.disablePolicyShare = disablePolicyShare;
+            return this;
+        }
+        public Boolean getDisablePolicyShare() {
+            return this.disablePolicyShare;
         }
 
         public CreateIntegrationPolicyRequestEntityGroup setEntityGroupId(String entityGroupId) {

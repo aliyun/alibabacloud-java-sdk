@@ -204,6 +204,36 @@ public class AddonMeta extends TeaModel {
 
     }
 
+    public static class AddonMetaEnvironmentsCommonSchemaRefs extends TeaModel {
+        @NameInMap("group")
+        public String group;
+
+        @NameInMap("version")
+        public String version;
+
+        public static AddonMetaEnvironmentsCommonSchemaRefs build(java.util.Map<String, ?> map) throws Exception {
+            AddonMetaEnvironmentsCommonSchemaRefs self = new AddonMetaEnvironmentsCommonSchemaRefs();
+            return TeaModel.build(map, self);
+        }
+
+        public AddonMetaEnvironmentsCommonSchemaRefs setGroup(String group) {
+            this.group = group;
+            return this;
+        }
+        public String getGroup() {
+            return this.group;
+        }
+
+        public AddonMetaEnvironmentsCommonSchemaRefs setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class AddonMetaEnvironmentsDependencies extends TeaModel {
         @NameInMap("clusterTypes")
         public java.util.List<String> clusterTypes;
@@ -476,6 +506,9 @@ public class AddonMeta extends TeaModel {
     }
 
     public static class AddonMetaEnvironments extends TeaModel {
+        @NameInMap("commonSchemaRefs")
+        public java.util.List<AddonMetaEnvironmentsCommonSchemaRefs> commonSchemaRefs;
+
         @NameInMap("dependencies")
         public AddonMetaEnvironmentsDependencies dependencies;
 
@@ -500,6 +533,14 @@ public class AddonMeta extends TeaModel {
         public static AddonMetaEnvironments build(java.util.Map<String, ?> map) throws Exception {
             AddonMetaEnvironments self = new AddonMetaEnvironments();
             return TeaModel.build(map, self);
+        }
+
+        public AddonMetaEnvironments setCommonSchemaRefs(java.util.List<AddonMetaEnvironmentsCommonSchemaRefs> commonSchemaRefs) {
+            this.commonSchemaRefs = commonSchemaRefs;
+            return this;
+        }
+        public java.util.List<AddonMetaEnvironmentsCommonSchemaRefs> getCommonSchemaRefs() {
+            return this.commonSchemaRefs;
         }
 
         public AddonMetaEnvironments setDependencies(AddonMetaEnvironmentsDependencies dependencies) {
