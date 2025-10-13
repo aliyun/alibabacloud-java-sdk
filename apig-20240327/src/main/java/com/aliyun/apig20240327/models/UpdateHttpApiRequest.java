@@ -50,6 +50,9 @@ public class UpdateHttpApiRequest extends TeaModel {
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
+    @NameInMap("firstByteTimeout")
+    public Integer firstByteTimeout;
+
     /**
      * <p>The HTTP Ingress API configurations.</p>
      */
@@ -133,6 +136,14 @@ public class UpdateHttpApiRequest extends TeaModel {
     }
     public Boolean getEnableAuth() {
         return this.enableAuth;
+    }
+
+    public UpdateHttpApiRequest setFirstByteTimeout(Integer firstByteTimeout) {
+        this.firstByteTimeout = firstByteTimeout;
+        return this;
+    }
+    public Integer getFirstByteTimeout() {
+        return this.firstByteTimeout;
     }
 
     public UpdateHttpApiRequest setIngressConfig(UpdateHttpApiRequestIngressConfig ingressConfig) {

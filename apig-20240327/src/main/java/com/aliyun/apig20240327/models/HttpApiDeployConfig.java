@@ -213,21 +213,51 @@ public class HttpApiDeployConfig extends TeaModel {
 
     }
 
+    public static class HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs extends TeaModel {
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        @NameInMap("targetModelName")
+        public String targetModelName;
+
+        public static HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs self = new HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs setTargetModelName(String targetModelName) {
+            this.targetModelName = targetModelName;
+            return this;
+        }
+        public String getTargetModelName() {
+            return this.targetModelName;
+        }
+
+    }
+
     public static class HttpApiDeployConfigPolicyConfigsAiFallbackConfig extends TeaModel {
-        @NameInMap("serviceIds")
-        public java.util.List<String> serviceIds;
+        @NameInMap("serviceConfigs")
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs> serviceConfigs;
 
         public static HttpApiDeployConfigPolicyConfigsAiFallbackConfig build(java.util.Map<String, ?> map) throws Exception {
             HttpApiDeployConfigPolicyConfigsAiFallbackConfig self = new HttpApiDeployConfigPolicyConfigsAiFallbackConfig();
             return TeaModel.build(map, self);
         }
 
-        public HttpApiDeployConfigPolicyConfigsAiFallbackConfig setServiceIds(java.util.List<String> serviceIds) {
-            this.serviceIds = serviceIds;
+        public HttpApiDeployConfigPolicyConfigsAiFallbackConfig setServiceConfigs(java.util.List<HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs> serviceConfigs) {
+            this.serviceConfigs = serviceConfigs;
             return this;
         }
-        public java.util.List<String> getServiceIds() {
-            return this.serviceIds;
+        public java.util.List<HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs> getServiceConfigs() {
+            return this.serviceConfigs;
         }
 
     }

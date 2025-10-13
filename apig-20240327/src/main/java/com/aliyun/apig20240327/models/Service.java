@@ -44,13 +44,16 @@ public class Service extends TeaModel {
     public String healthStatus;
 
     @NameInMap("labelDetails")
-    public LabelDetail labelDetails;
+    public java.util.List<LabelDetail> labelDetails;
 
     @NameInMap("name")
     public String name;
 
     @NameInMap("namespace")
     public String namespace;
+
+    @NameInMap("outlierEndpoints")
+    public java.util.List<String> outlierEndpoints;
 
     @NameInMap("ports")
     public java.util.List<ServicePorts> ports;
@@ -165,11 +168,11 @@ public class Service extends TeaModel {
         return this.healthStatus;
     }
 
-    public Service setLabelDetails(LabelDetail labelDetails) {
+    public Service setLabelDetails(java.util.List<LabelDetail> labelDetails) {
         this.labelDetails = labelDetails;
         return this;
     }
-    public LabelDetail getLabelDetails() {
+    public java.util.List<LabelDetail> getLabelDetails() {
         return this.labelDetails;
     }
 
@@ -187,6 +190,14 @@ public class Service extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public Service setOutlierEndpoints(java.util.List<String> outlierEndpoints) {
+        this.outlierEndpoints = outlierEndpoints;
+        return this;
+    }
+    public java.util.List<String> getOutlierEndpoints() {
+        return this.outlierEndpoints;
     }
 
     public Service setPorts(java.util.List<ServicePorts> ports) {

@@ -14,8 +14,14 @@ public class AiServiceConfig extends TeaModel {
     @NameInMap("apiKeys")
     public java.util.List<String> apiKeys;
 
+    @NameInMap("bedrockServiceConfig")
+    public AiServiceConfigBedrockServiceConfig bedrockServiceConfig;
+
     @NameInMap("enableHealthCheck")
     public Boolean enableHealthCheck;
+
+    @NameInMap("paiEASServiceConfig")
+    public AiServiceConfigPaiEASServiceConfig paiEASServiceConfig;
 
     @NameInMap("protocols")
     public java.util.List<String> protocols;
@@ -48,12 +54,28 @@ public class AiServiceConfig extends TeaModel {
         return this.apiKeys;
     }
 
+    public AiServiceConfig setBedrockServiceConfig(AiServiceConfigBedrockServiceConfig bedrockServiceConfig) {
+        this.bedrockServiceConfig = bedrockServiceConfig;
+        return this;
+    }
+    public AiServiceConfigBedrockServiceConfig getBedrockServiceConfig() {
+        return this.bedrockServiceConfig;
+    }
+
     public AiServiceConfig setEnableHealthCheck(Boolean enableHealthCheck) {
         this.enableHealthCheck = enableHealthCheck;
         return this;
     }
     public Boolean getEnableHealthCheck() {
         return this.enableHealthCheck;
+    }
+
+    public AiServiceConfig setPaiEASServiceConfig(AiServiceConfigPaiEASServiceConfig paiEASServiceConfig) {
+        this.paiEASServiceConfig = paiEASServiceConfig;
+        return this;
+    }
+    public AiServiceConfigPaiEASServiceConfig getPaiEASServiceConfig() {
+        return this.paiEASServiceConfig;
     }
 
     public AiServiceConfig setProtocols(java.util.List<String> protocols) {
@@ -70,6 +92,99 @@ public class AiServiceConfig extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public static class AiServiceConfigBedrockServiceConfig extends TeaModel {
+        @NameInMap("awsAccessKey")
+        public String awsAccessKey;
+
+        @NameInMap("awsRegion")
+        public String awsRegion;
+
+        @NameInMap("awsSecretKey")
+        public String awsSecretKey;
+
+        public static AiServiceConfigBedrockServiceConfig build(java.util.Map<String, ?> map) throws Exception {
+            AiServiceConfigBedrockServiceConfig self = new AiServiceConfigBedrockServiceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AiServiceConfigBedrockServiceConfig setAwsAccessKey(String awsAccessKey) {
+            this.awsAccessKey = awsAccessKey;
+            return this;
+        }
+        public String getAwsAccessKey() {
+            return this.awsAccessKey;
+        }
+
+        public AiServiceConfigBedrockServiceConfig setAwsRegion(String awsRegion) {
+            this.awsRegion = awsRegion;
+            return this;
+        }
+        public String getAwsRegion() {
+            return this.awsRegion;
+        }
+
+        public AiServiceConfigBedrockServiceConfig setAwsSecretKey(String awsSecretKey) {
+            this.awsSecretKey = awsSecretKey;
+            return this;
+        }
+        public String getAwsSecretKey() {
+            return this.awsSecretKey;
+        }
+
+    }
+
+    public static class AiServiceConfigPaiEASServiceConfig extends TeaModel {
+        @NameInMap("endpointType")
+        public String endpointType;
+
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        @NameInMap("serviceName")
+        public String serviceName;
+
+        @NameInMap("workspaceId")
+        public String workspaceId;
+
+        public static AiServiceConfigPaiEASServiceConfig build(java.util.Map<String, ?> map) throws Exception {
+            AiServiceConfigPaiEASServiceConfig self = new AiServiceConfigPaiEASServiceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AiServiceConfigPaiEASServiceConfig setEndpointType(String endpointType) {
+            this.endpointType = endpointType;
+            return this;
+        }
+        public String getEndpointType() {
+            return this.endpointType;
+        }
+
+        public AiServiceConfigPaiEASServiceConfig setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public AiServiceConfigPaiEASServiceConfig setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public AiServiceConfigPaiEASServiceConfig setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
+        }
+
     }
 
 }

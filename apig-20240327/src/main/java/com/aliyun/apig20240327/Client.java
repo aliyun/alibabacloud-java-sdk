@@ -637,6 +637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("chargeType", request.chargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayEdition)) {
+            body.put("gatewayEdition", request.gatewayEdition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
             body.put("gatewayType", request.gatewayType);
         }
@@ -742,6 +746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableAuth)) {
             body.put("enableAuth", request.enableAuth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstByteTimeout)) {
+            body.put("firstByteTimeout", request.firstByteTimeout);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ingressConfig)) {
@@ -927,6 +935,93 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createHttpApiRouteWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建MCP server</p>
+     * 
+     * @param request CreateMcpServerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMcpServerResponse
+     */
+    public CreateMcpServerResponse createMcpServerWithOptions(CreateMcpServerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assembledSources)) {
+            body.put("assembledSources", request.assembledSources);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backendConfig)) {
+            body.put("backendConfig", request.backendConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainIds)) {
+            body.put("domainIds", request.domainIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exposedUriPath)) {
+            body.put("exposedUriPath", request.exposedUriPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.match)) {
+            body.put("match", request.match);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpStatisticsEnable)) {
+            body.put("mcpStatisticsEnable", request.mcpStatisticsEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            body.put("protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMcpServer"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/mcp-servers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建MCP server</p>
+     * 
+     * @param request CreateMcpServerRequest
+     * @return CreateMcpServerResponse
+     */
+    public CreateMcpServerResponse createMcpServer(CreateMcpServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMcpServerWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1540,6 +1635,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除MCP server</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMcpServerResponse
+     */
+    public DeleteMcpServerResponse deleteMcpServerWithOptions(String mcpServerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMcpServer"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除MCP server</p>
+     * @return DeleteMcpServerResponse
+     */
+    public DeleteMcpServerResponse deleteMcpServer(String mcpServerId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMcpServerWithOptions(mcpServerId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除挂载规则API</p>
      * 
      * @param headers map
@@ -1739,6 +1871,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deployHttpApiWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布MCP server</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeployMcpServerResponse
+     */
+    public DeployMcpServerResponse deployMcpServerWithOptions(String mcpServerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeployMcpServer"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + "/deploy"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeployMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布MCP server</p>
+     * @return DeployMcpServerResponse
+     */
+    public DeployMcpServerResponse deployMcpServer(String mcpServerId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deployMcpServerWithOptions(mcpServerId, headers, runtime);
     }
 
     /**
@@ -2193,6 +2362,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取MCP server</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMcpServerResponse
+     */
+    public GetMcpServerResponse getMcpServerWithOptions(String mcpServerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMcpServer"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取MCP server</p>
+     * @return GetMcpServerResponse
+     */
+    public GetMcpServerResponse getMcpServer(String mcpServerId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMcpServerWithOptions(mcpServerId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>GetPluginAttachment。</p>
      * 
      * @param headers map
@@ -2457,6 +2663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("dryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mcpRouteId)) {
             body.put("mcpRouteId", request.mcpRouteId);
         }
@@ -2522,6 +2732,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.importHttpApiWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>InstallPlugin</p>
+     * 
+     * @param request InstallPluginRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallPluginResponse
+     */
+    public InstallPluginResponse installPluginWithOptions(InstallPluginRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayIds)) {
+            body.put("gatewayIds", request.gatewayIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginClassId)) {
+            body.put("pluginClassId", request.pluginClassId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallPlugin"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/plugins/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallPluginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>InstallPlugin</p>
+     * 
+     * @param request InstallPluginRequest
+     * @return InstallPluginResponse
+     */
+    public InstallPluginResponse installPlugin(InstallPluginRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.installPluginWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2830,6 +3091,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("consumerAuthorizationRuleId", request.consumerAuthorizationRuleId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuth)) {
+            query.put("enableAuth", request.enableAuth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.forDeploy)) {
             query.put("forDeploy", request.forDeploy);
         }
@@ -3113,6 +3378,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listHttpApisWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取MCP server列表</p>
+     * 
+     * @param request ListMcpServersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcpServersResponse
+     */
+    public ListMcpServersResponse listMcpServersWithOptions(ListMcpServersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createFromTypes)) {
+            query.put("createFromTypes", request.createFromTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deployStatuses)) {
+            query.put("deployStatuses", request.deployStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nameLike)) {
+            query.put("nameLike", request.nameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcpServers"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/mcp-servers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcpServersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取MCP server列表</p>
+     * 
+     * @param request ListMcpServersRequest
+     * @return ListMcpServersResponse
+     */
+    public ListMcpServersResponse listMcpServers(ListMcpServersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMcpServersWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3745,6 +4081,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>取消发布MCP server</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnDeployMcpServerResponse
+     */
+    public UnDeployMcpServerResponse unDeployMcpServerWithOptions(String mcpServerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnDeployMcpServer"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + "/undeploy"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnDeployMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消发布MCP server</p>
+     * @return UnDeployMcpServerResponse
+     */
+    public UnDeployMcpServerResponse unDeployMcpServer(String mcpServerId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.unDeployMcpServerWithOptions(mcpServerId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Unpublishes an HTTP API.</p>
      * 
      * @param request UndeployHttpApiRequest
@@ -3800,6 +4173,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.undeployHttpApiWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UninstallPlugin</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UninstallPluginResponse
+     */
+    public UninstallPluginResponse uninstallPluginWithOptions(String pluginId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UninstallPlugin"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/plugins/" + com.aliyun.openapiutil.Client.getEncodeParam(pluginId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UninstallPluginResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UninstallPlugin</p>
+     * @return UninstallPluginResponse
+     */
+    public UninstallPluginResponse uninstallPlugin(String pluginId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.uninstallPluginWithOptions(pluginId, headers, runtime);
     }
 
     /**
@@ -4267,6 +4677,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enableAuth", request.enableAuth);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.firstByteTimeout)) {
+            body.put("firstByteTimeout", request.firstByteTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ingressConfig)) {
             body.put("ingressConfig", request.ingressConfig);
         }
@@ -4438,6 +4852,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateHttpApiRouteWithOptions(httpApiId, routeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新MCP server</p>
+     * 
+     * @param request UpdateMcpServerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMcpServerResponse
+     */
+    public UpdateMcpServerResponse updateMcpServerWithOptions(String mcpServerId, UpdateMcpServerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assembledSources)) {
+            body.put("assembledSources", request.assembledSources);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backendConfig)) {
+            body.put("backendConfig", request.backendConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainIds)) {
+            body.put("domainIds", request.domainIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exposedUriPath)) {
+            body.put("exposedUriPath", request.exposedUriPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.match)) {
+            body.put("match", request.match);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpStatisticsEnable)) {
+            body.put("mcpStatisticsEnable", request.mcpStatisticsEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            body.put("protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMcpServer"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/mcp-servers/" + com.aliyun.openapiutil.Client.getEncodeParam(mcpServerId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新MCP server</p>
+     * 
+     * @param request UpdateMcpServerRequest
+     * @return UpdateMcpServerResponse
+     */
+    public UpdateMcpServerResponse updateMcpServer(String mcpServerId, UpdateMcpServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMcpServerWithOptions(mcpServerId, request, headers, runtime);
     }
 
     /**

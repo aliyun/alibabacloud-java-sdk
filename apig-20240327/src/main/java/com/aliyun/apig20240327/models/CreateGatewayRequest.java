@@ -13,6 +13,13 @@ public class CreateGatewayRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>Professional</p>
+     */
+    @NameInMap("gatewayEdition")
+    public String gatewayEdition;
+
+    /**
+     * <strong>example:</strong>
      * <p>API</p>
      */
     @NameInMap("gatewayType")
@@ -69,6 +76,14 @@ public class CreateGatewayRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateGatewayRequest setGatewayEdition(String gatewayEdition) {
+        this.gatewayEdition = gatewayEdition;
+        return this;
+    }
+    public String getGatewayEdition() {
+        return this.gatewayEdition;
     }
 
     public CreateGatewayRequest setGatewayType(String gatewayType) {

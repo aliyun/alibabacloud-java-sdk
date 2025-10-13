@@ -523,6 +523,13 @@ public class ListGatewaysResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
+         * <strong>example:</strong>
+         * <p>Serverless</p>
+         */
+        @NameInMap("gatewayEdition")
+        public String gatewayEdition;
+
+        /**
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -700,6 +707,14 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
         public Long getExpireTimestamp() {
             return this.expireTimestamp;
+        }
+
+        public ListGatewaysResponseBodyDataItems setGatewayEdition(String gatewayEdition) {
+            this.gatewayEdition = gatewayEdition;
+            return this;
+        }
+        public String getGatewayEdition() {
+            return this.gatewayEdition;
         }
 
         public ListGatewaysResponseBodyDataItems setGatewayId(String gatewayId) {

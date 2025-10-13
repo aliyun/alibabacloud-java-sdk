@@ -356,6 +356,44 @@ public class GetGatewayResponseBody extends TeaModel {
 
     }
 
+    public static class GetGatewayResponseBodyDataMaintenancePeriod extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>06:00</p>
+         */
+        @NameInMap("endTime")
+        public String endTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>02:00</p>
+         */
+        @NameInMap("startTime")
+        public String startTime;
+
+        public static GetGatewayResponseBodyDataMaintenancePeriod build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayResponseBodyDataMaintenancePeriod self = new GetGatewayResponseBodyDataMaintenancePeriod();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayResponseBodyDataMaintenancePeriod setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public GetGatewayResponseBodyDataMaintenancePeriod setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class GetGatewayResponseBodyDataSecurityGroup extends TeaModel {
         /**
          * <p>The security group name.</p>
@@ -673,6 +711,13 @@ public class GetGatewayResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
+         * <strong>example:</strong>
+         * <p>Serverless</p>
+         */
+        @NameInMap("gatewayEdition")
+        public String gatewayEdition;
+
+        /**
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -702,6 +747,9 @@ public class GetGatewayResponseBody extends TeaModel {
          */
         @NameInMap("loadBalancers")
         public java.util.List<GetGatewayResponseBodyDataLoadBalancers> loadBalancers;
+
+        @NameInMap("maintenancePeriod")
+        public GetGatewayResponseBodyDataMaintenancePeriod maintenancePeriod;
 
         /**
          * <p>The instance name.</p>
@@ -864,6 +912,14 @@ public class GetGatewayResponseBody extends TeaModel {
             return this.expireTimestamp;
         }
 
+        public GetGatewayResponseBodyData setGatewayEdition(String gatewayEdition) {
+            this.gatewayEdition = gatewayEdition;
+            return this;
+        }
+        public String getGatewayEdition() {
+            return this.gatewayEdition;
+        }
+
         public GetGatewayResponseBodyData setGatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
@@ -894,6 +950,14 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public java.util.List<GetGatewayResponseBodyDataLoadBalancers> getLoadBalancers() {
             return this.loadBalancers;
+        }
+
+        public GetGatewayResponseBodyData setMaintenancePeriod(GetGatewayResponseBodyDataMaintenancePeriod maintenancePeriod) {
+            this.maintenancePeriod = maintenancePeriod;
+            return this;
+        }
+        public GetGatewayResponseBodyDataMaintenancePeriod getMaintenancePeriod() {
+            return this.maintenancePeriod;
         }
 
         public GetGatewayResponseBodyData setName(String name) {

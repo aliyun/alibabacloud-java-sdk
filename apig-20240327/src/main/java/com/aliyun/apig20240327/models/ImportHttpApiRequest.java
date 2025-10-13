@@ -8,7 +8,7 @@ public class ImportHttpApiRequest extends TeaModel {
      * <p>The deployment configuration.</p>
      */
     @NameInMap("deployConfigs")
-    public HttpApiDeployConfig deployConfigs;
+    public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
      * <p>The API description, which cannot exceed 255 bytes in length. If you do not specify a description, a description is extracted from the definition file.</p>
@@ -27,6 +27,9 @@ public class ImportHttpApiRequest extends TeaModel {
      */
     @NameInMap("dryRun")
     public Boolean dryRun;
+
+    @NameInMap("gatewayId")
+    public String gatewayId;
 
     /**
      * <p>The MCP route ID.</p>
@@ -110,11 +113,11 @@ public class ImportHttpApiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ImportHttpApiRequest setDeployConfigs(HttpApiDeployConfig deployConfigs) {
+    public ImportHttpApiRequest setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
         this.deployConfigs = deployConfigs;
         return this;
     }
-    public HttpApiDeployConfig getDeployConfigs() {
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
         return this.deployConfigs;
     }
 
@@ -132,6 +135,14 @@ public class ImportHttpApiRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public ImportHttpApiRequest setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     public ImportHttpApiRequest setMcpRouteId(String mcpRouteId) {

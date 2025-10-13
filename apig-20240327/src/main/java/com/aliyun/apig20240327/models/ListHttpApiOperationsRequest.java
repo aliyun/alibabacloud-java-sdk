@@ -13,6 +13,9 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     @NameInMap("consumerAuthorizationRuleId")
     public String consumerAuthorizationRuleId;
 
+    @NameInMap("enableAuth")
+    public Boolean enableAuth;
+
     @NameInMap("forDeploy")
     public Boolean forDeploy;
 
@@ -111,6 +114,14 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     }
     public String getConsumerAuthorizationRuleId() {
         return this.consumerAuthorizationRuleId;
+    }
+
+    public ListHttpApiOperationsRequest setEnableAuth(Boolean enableAuth) {
+        this.enableAuth = enableAuth;
+        return this;
+    }
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     public ListHttpApiOperationsRequest setForDeploy(Boolean forDeploy) {
