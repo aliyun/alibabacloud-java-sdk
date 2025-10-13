@@ -8,19 +8,8 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
      * <p>Specifies whether to change the network type from AnyTunnel to SingleTunnel. This parameter is invalid for new instances. For new instances, this parameter is set to null by default.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>others/null</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>others/null: The network type is not changed from AnyTunnel to SingleTunnel.</li>
+     * <li>true: The network type is changed from AnyTunnel to SingleTunnel.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +19,14 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String anyTunnelToSingleTunnel;
 
     /**
-     * <p>A list of network types that you want to enable. The list of enabled network types is randomly ordered. For example, the Internet, internal network, and VPCSingleTunnel network types are enabled. If you want to disable the Internet type, set this parameter to Intranet,VPCSingleTunnel.</p>
+     * <p>A list of network types that you want to enable. The network types are randomly ordered in the list. For example, the Internet, Intranet, and VPCSingleTunnel network types are enabled. If you want to disable the Internet type, set this parameter to Intranet,VPCSingleTunnel.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>VPCSingleTunnel: virtual private cloud (VPC).</li>
+     * <li>Intranet: internal network.</li>
+     * <li>VPCAnyTunnel: compatibility requirements. This value is not supported by new instances.</li>
+     * <li>Internet: Internet.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Internet,VPCSingleTunnel</p>
@@ -39,7 +35,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String networkTypes;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2vccsiymtqr9aavew0vo3</p>
@@ -48,7 +44,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC to which the instance belongs.</p>
+     * <p>The ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-t4netc3y5etlondfb5ra7</p>
@@ -57,7 +53,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The owner ID of the VPC, which is the ID of the Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1999365732646672</p>
@@ -66,7 +62,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String vpcOwnerId;
 
     /**
-     * <p>The region ID of the VPC.</p>
+     * <p>The region in which the VPC resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

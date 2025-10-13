@@ -120,6 +120,9 @@ public class RenewInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidChargeType.UnRenewable</p>
          */
         @NameInMap("Message")
         public String message;

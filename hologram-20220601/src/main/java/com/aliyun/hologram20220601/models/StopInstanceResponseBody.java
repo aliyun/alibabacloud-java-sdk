@@ -30,7 +30,7 @@ public class StopInstanceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>404</p>
@@ -39,7 +39,7 @@ public class StopInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>

@@ -242,6 +242,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("storageSize")
     public Long storageSize;
 
+    @NameInMap("storageType")
+    public String storageType;
+
     /**
      * <p>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the Hologres instance resides.</p>
      * <p>This parameter is required.</p>
@@ -403,6 +406,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Long getStorageSize() {
         return this.storageSize;
+    }
+
+    public CreateInstanceRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public CreateInstanceRequest setVSwitchId(String vSwitchId) {

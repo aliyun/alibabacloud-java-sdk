@@ -30,7 +30,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>404</p>
@@ -39,7 +39,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
@@ -69,19 +69,8 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
      * <p>Indicates whether the request was successful.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

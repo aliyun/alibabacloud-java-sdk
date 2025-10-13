@@ -513,6 +513,12 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("EnableHiveAccess")
         public String enableHiveAccess;
 
+        /**
+         * <p>EnableServerless</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableServerless")
         public Boolean enableServerless;
 
@@ -719,6 +725,17 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Disaster recovery instance role. </p>
+         * <ul>
+         * <li>Active: Primary disaster recovery instance.</li>
+         * <li>Passive: Disaster tolerance instance.</li>
+         * <li>PreActive: Primary disaster recovery instance not yet in final state.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("ReplicaRole")
         public String replicaRole;
 
@@ -731,6 +748,16 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The storage type.</p>
+         * <ul>
+         * <li>redundant: 3 copies</li>
+         * <li>local: single copy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>redundant</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 

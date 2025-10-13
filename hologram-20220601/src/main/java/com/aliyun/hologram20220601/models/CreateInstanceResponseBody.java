@@ -112,6 +112,9 @@ public class CreateInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vpc is not available</p>
          */
         @NameInMap("Message")
         public String message;

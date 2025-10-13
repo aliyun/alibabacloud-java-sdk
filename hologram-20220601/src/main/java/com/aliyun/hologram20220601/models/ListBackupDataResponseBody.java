@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListBackupDataResponseBody extends TeaModel {
+    /**
+     * <p>The backups.</p>
+     */
     @NameInMap("BackupDataList")
     public java.util.List<ListBackupDataResponseBodyBackupDataList> backupDataList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4AA0C48F-B5BB-5FF9-A43B-6B91E0715D46</p>
      */
@@ -37,6 +42,8 @@ public class ListBackupDataResponseBody extends TeaModel {
 
     public static class ListBackupDataResponseBodyBackupDataList extends TeaModel {
         /**
+         * <p>The backup type. In general, the following two types are supported: local backup and remote backup. In the local backup type, snapshots reside in the same region as your instance. The following two sub-types are available: full (single backup, single replica) and redundant (zone-redundant storage, multiple replicas). In the remote backup type, snapshots and your instance reside in different regions. Remote backups are the replicas of the backups of the full or redundant type in another region. The values local and remote do not represent specific types, but are used only for data filtering. The value local indicates all local backups, and the value remote indicates all remote backups.</p>
+         * 
          * <strong>example:</strong>
          * <p>redundant</p>
          */
@@ -44,6 +51,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String backupType;
 
         /**
+         * <p>The size of cold data. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>32413521</p>
          */
@@ -51,6 +60,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public Long coldDataSize;
 
         /**
+         * <p>The description of the backup data.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -58,6 +69,12 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String dataDesc;
 
         /**
+         * <p>The backup granularity.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>instance</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>instance</p>
          */
@@ -65,6 +82,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String dataGran;
 
         /**
+         * <p>The size of the backup data. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>76085723136</p>
          */
@@ -72,6 +91,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public Long dataSize;
 
         /**
+         * <p>The snapshot time. The value format of this parameter follows the same standard as that of the StartTime parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-28T12:23:37.000+00:00</p>
          */
@@ -79,6 +100,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String dataTime;
 
         /**
+         * <p>The end time of the backup task. The value format of this parameter follows the same standard as that of the StartTime parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-28T12:27:34.000+00:00</p>
          */
@@ -86,6 +109,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The unique ID of the backup.</p>
+         * 
          * <strong>example:</strong>
          * <p>1780805690994479105</p>
          */
@@ -93,6 +118,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-pe33jdxxxxx</p>
          */
@@ -100,6 +127,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-hologres-dw</p>
          */
@@ -107,6 +136,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The region in which the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -114,6 +145,13 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String instanceRegion;
 
         /**
+         * <p>The type of the instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Warehouse: virtual warehouse instance</li>
+         * <li>Standard: general-purpose instance</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Warehouse</p>
          */
@@ -121,6 +159,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The zone in which the instance resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */
@@ -128,6 +168,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String instanceZoneId;
 
         /**
+         * <p>The region in which the backup data resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -135,6 +177,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String snapshotRegion;
 
         /**
+         * <p>The zone in which the backup data resides. In zone-redundant storage mode, backup data is stored in different zones, including the current zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */
@@ -142,6 +186,8 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String snapshotZoneId;
 
         /**
+         * <p>The start time of the backup task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.SSSTZ format. The time is displayed in UTC (the same below).</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-28T11:19:56.000+00:00</p>
          */
@@ -149,6 +195,14 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the backup task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>processing</li>
+         * <li>completed</li>
+         * <li>failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>completed</p>
          */
@@ -156,6 +210,13 @@ public class ListBackupDataResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The mode in which the backup task is triggered.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>scheduled: periodic backup</li>
+         * <li>manual: manual backup</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>scheduled</p>
          */

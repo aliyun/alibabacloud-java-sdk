@@ -14,7 +14,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The values returned.</p>
+     * <p>The returned values.</p>
      */
     @NameInMap("WarehouseDetail")
     public GetWarehouseDetailResponseBodyWarehouseDetail warehouseDetail;

@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListBackupDataRequest extends TeaModel {
     /**
+     * <p>The backup type. Specific backup data is filtered based on the type. If you leave this parameter empty, all backup data is returned.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>redundant_remote</li>
+     * <li>remote</li>
+     * <li>redundant</li>
+     * <li>full_remote</li>
+     * <li>local</li>
+     * <li>full</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>redundant</p>
      */
@@ -12,6 +23,8 @@ public class ListBackupDataRequest extends TeaModel {
     public String backupType;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hgprecn-cn-wwoxxxxx</p>
      */

@@ -32,7 +32,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The list of queried instances.</p>
+     * <p>The instances.</p>
      */
     @NameInMap("InstanceList")
     public java.util.List<ListInstancesResponseBodyInstanceList> instanceList;
