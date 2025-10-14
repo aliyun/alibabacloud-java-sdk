@@ -204,6 +204,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("SpotSpec")
     public UpdateInstanceRequestSpotSpec spotSpec;
 
+    @NameInMap("StartInstance")
+    public Boolean startInstance;
+
     @NameInMap("UserCommand")
     public UpdateInstanceRequestUserCommand userCommand;
 
@@ -462,6 +465,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public UpdateInstanceRequestSpotSpec getSpotSpec() {
         return this.spotSpec;
+    }
+
+    public UpdateInstanceRequest setStartInstance(Boolean startInstance) {
+        this.startInstance = startInstance;
+        return this;
+    }
+    public Boolean getStartInstance() {
+        return this.startInstance;
     }
 
     public UpdateInstanceRequest setUserCommand(UpdateInstanceRequestUserCommand userCommand) {
