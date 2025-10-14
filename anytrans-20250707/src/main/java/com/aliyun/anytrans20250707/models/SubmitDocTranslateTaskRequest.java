@@ -118,6 +118,25 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class SubmitDocTranslateTaskRequestExtConfig extends TeaModel {
+        @NameInMap("skipImgTrans")
+        public Boolean skipImgTrans;
+
+        public static SubmitDocTranslateTaskRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitDocTranslateTaskRequestExtConfig self = new SubmitDocTranslateTaskRequestExtConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitDocTranslateTaskRequestExtConfig setSkipImgTrans(Boolean skipImgTrans) {
+            this.skipImgTrans = skipImgTrans;
+            return this;
+        }
+        public Boolean getSkipImgTrans() {
+            return this.skipImgTrans;
+        }
+
+    }
+
     public static class SubmitDocTranslateTaskRequestExtTerminologies extends TeaModel {
         @NameInMap("src")
         public String src;
@@ -153,6 +172,9 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitDocTranslateTaskRequestExt extends TeaModel {
+        @NameInMap("config")
+        public SubmitDocTranslateTaskRequestExtConfig config;
+
         /**
          * <strong>example:</strong>
          * <p>This text comes from a rigorous academic paper. Please provide a translation that complies with academic standards.</p>
@@ -166,6 +188,14 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
         public static SubmitDocTranslateTaskRequestExt build(java.util.Map<String, ?> map) throws Exception {
             SubmitDocTranslateTaskRequestExt self = new SubmitDocTranslateTaskRequestExt();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitDocTranslateTaskRequestExt setConfig(SubmitDocTranslateTaskRequestExtConfig config) {
+            this.config = config;
+            return this;
+        }
+        public SubmitDocTranslateTaskRequestExtConfig getConfig() {
+            return this.config;
         }
 
         public SubmitDocTranslateTaskRequestExt setDomainHint(String domainHint) {
