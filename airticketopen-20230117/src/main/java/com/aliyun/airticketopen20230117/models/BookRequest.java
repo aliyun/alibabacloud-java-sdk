@@ -245,7 +245,6 @@ public class BookRequest extends TeaModel {
 
         /**
          * <p>travel document type , only support &quot;1&quot;(1 means passport) currently</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -521,7 +520,6 @@ public class BookRequest extends TeaModel {
 
         /**
          * <p>travel document type , only support &quot;1&quot;(1 means passport) currently.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

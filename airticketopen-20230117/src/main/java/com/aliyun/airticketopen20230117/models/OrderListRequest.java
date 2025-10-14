@@ -9,7 +9,7 @@ public class OrderListRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-02-02 11:20:00</p>
+     * <p>1677229005000</p>
      */
     @NameInMap("book_time_end")
     public Long bookTimeEnd;
@@ -19,16 +19,16 @@ public class OrderListRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-02-01 11:20:00</p>
+     * <p>1677227005000</p>
      */
     @NameInMap("book_time_start")
     public Long bookTimeStart;
 
     /**
-     * <p>pagination query parameters, from which page to start querying</p>
+     * <p>pagination query parameters, from which page to start querying,querying starts with 0</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>0</p>
      */
     @NameInMap("page_index")
     public Integer pageIndex;

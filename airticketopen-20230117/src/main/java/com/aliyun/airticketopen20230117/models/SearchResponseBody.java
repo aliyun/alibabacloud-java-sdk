@@ -669,6 +669,8 @@ public class SearchResponseBody extends TeaModel {
 
     public static class SearchResponseBodyDataSolutionListSolutionAttribute extends TeaModel {
         /**
+         * <p>supply source: 1;2;3</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -787,6 +789,9 @@ public class SearchResponseBody extends TeaModel {
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
+        /**
+         * <p>supply source type</p>
+         */
         @NameInMap("solution_attribute")
         public SearchResponseBodyDataSolutionListSolutionAttribute solutionAttribute;
 

@@ -120,6 +120,13 @@ public class ChangeConfirmResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1756797933000</p>
+         */
+        @NameInMap("pay_time")
+        public Long payTime;
+
+        /**
+         * <strong>example:</strong>
          * <p>hkduendkd-2023-dj0</p>
          */
         @NameInMap("transaction_no")
@@ -136,6 +143,14 @@ public class ChangeConfirmResponseBody extends TeaModel {
         }
         public Double getPayAmount() {
             return this.payAmount;
+        }
+
+        public ChangeConfirmResponseBodyData setPayTime(Long payTime) {
+            this.payTime = payTime;
+            return this;
+        }
+        public Long getPayTime() {
+            return this.payTime;
         }
 
         public ChangeConfirmResponseBodyData setTransactionNo(String transactionNo) {

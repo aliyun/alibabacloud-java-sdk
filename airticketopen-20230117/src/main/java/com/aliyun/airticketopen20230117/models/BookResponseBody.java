@@ -125,7 +125,97 @@ public class BookResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>14.2854</p>
+         */
+        @NameInMap("pay_intended_amount")
+        public String payIntendedAmount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
+        @NameInMap("pay_intended_currency_code")
+        public String payIntendedCurrencyCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>USD</p>
+         */
+        @NameInMap("quotation_currency_code")
+        public String quotationCurrencyCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>7.1427</p>
+         */
+        @NameInMap("to_pay_currency_rate")
+        public String toPayCurrencyRate;
+
+        public static BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo build(java.util.Map<String, ?> map) throws Exception {
+            BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo self = new BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo setPayIntendedAmount(String payIntendedAmount) {
+            this.payIntendedAmount = payIntendedAmount;
+            return this;
+        }
+        public String getPayIntendedAmount() {
+            return this.payIntendedAmount;
+        }
+
+        public BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo setPayIntendedCurrencyCode(String payIntendedCurrencyCode) {
+            this.payIntendedCurrencyCode = payIntendedCurrencyCode;
+            return this;
+        }
+        public String getPayIntendedCurrencyCode() {
+            return this.payIntendedCurrencyCode;
+        }
+
+        public BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo setQuotationCurrencyCode(String quotationCurrencyCode) {
+            this.quotationCurrencyCode = quotationCurrencyCode;
+            return this;
+        }
+        public String getQuotationCurrencyCode() {
+            return this.quotationCurrencyCode;
+        }
+
+        public BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo setToPayCurrencyRate(String toPayCurrencyRate) {
+            this.toPayCurrencyRate = toPayCurrencyRate;
+            return this;
+        }
+        public String getToPayCurrencyRate() {
+            return this.toPayCurrencyRate;
+        }
+
+    }
+
+    public static class BookResponseBodyDataOrderListOrderAttribute extends TeaModel {
+        @NameInMap("aba_pay_lock_rate_info")
+        public BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo abaPayLockRateInfo;
+
+        public static BookResponseBodyDataOrderListOrderAttribute build(java.util.Map<String, ?> map) throws Exception {
+            BookResponseBodyDataOrderListOrderAttribute self = new BookResponseBodyDataOrderListOrderAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public BookResponseBodyDataOrderListOrderAttribute setAbaPayLockRateInfo(BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo abaPayLockRateInfo) {
+            this.abaPayLockRateInfo = abaPayLockRateInfo;
+            return this;
+        }
+        public BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo getAbaPayLockRateInfo() {
+            return this.abaPayLockRateInfo;
+        }
+
+    }
+
     public static class BookResponseBodyDataOrderList extends TeaModel {
+        @NameInMap("order_attribute")
+        public BookResponseBodyDataOrderListOrderAttribute orderAttribute;
+
         /**
          * <p>order number</p>
          * 
@@ -138,6 +228,14 @@ public class BookResponseBody extends TeaModel {
         public static BookResponseBodyDataOrderList build(java.util.Map<String, ?> map) throws Exception {
             BookResponseBodyDataOrderList self = new BookResponseBodyDataOrderList();
             return TeaModel.build(map, self);
+        }
+
+        public BookResponseBodyDataOrderList setOrderAttribute(BookResponseBodyDataOrderListOrderAttribute orderAttribute) {
+            this.orderAttribute = orderAttribute;
+            return this;
+        }
+        public BookResponseBodyDataOrderListOrderAttribute getOrderAttribute() {
+            return this.orderAttribute;
         }
 
         public BookResponseBodyDataOrderList setOrderNum(Long orderNum) {
@@ -172,7 +270,97 @@ public class BookResponseBody extends TeaModel {
 
     }
 
+    public static class BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>14.2854</p>
+         */
+        @NameInMap("pay_intended_amount")
+        public String payIntendedAmount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
+        @NameInMap("pay_intended_currency_code")
+        public String payIntendedCurrencyCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>USD</p>
+         */
+        @NameInMap("quotation_currency_code")
+        public String quotationCurrencyCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>7.1427</p>
+         */
+        @NameInMap("to_pay_currency_rate")
+        public String toPayCurrencyRate;
+
+        public static BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo build(java.util.Map<String, ?> map) throws Exception {
+            BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo self = new BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo setPayIntendedAmount(String payIntendedAmount) {
+            this.payIntendedAmount = payIntendedAmount;
+            return this;
+        }
+        public String getPayIntendedAmount() {
+            return this.payIntendedAmount;
+        }
+
+        public BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo setPayIntendedCurrencyCode(String payIntendedCurrencyCode) {
+            this.payIntendedCurrencyCode = payIntendedCurrencyCode;
+            return this;
+        }
+        public String getPayIntendedCurrencyCode() {
+            return this.payIntendedCurrencyCode;
+        }
+
+        public BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo setQuotationCurrencyCode(String quotationCurrencyCode) {
+            this.quotationCurrencyCode = quotationCurrencyCode;
+            return this;
+        }
+        public String getQuotationCurrencyCode() {
+            return this.quotationCurrencyCode;
+        }
+
+        public BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo setToPayCurrencyRate(String toPayCurrencyRate) {
+            this.toPayCurrencyRate = toPayCurrencyRate;
+            return this;
+        }
+        public String getToPayCurrencyRate() {
+            return this.toPayCurrencyRate;
+        }
+
+    }
+
+    public static class BookResponseBodyErrorDataOrderListOrderAttribute extends TeaModel {
+        @NameInMap("aba_pay_lock_rate_info")
+        public BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo abaPayLockRateInfo;
+
+        public static BookResponseBodyErrorDataOrderListOrderAttribute build(java.util.Map<String, ?> map) throws Exception {
+            BookResponseBodyErrorDataOrderListOrderAttribute self = new BookResponseBodyErrorDataOrderListOrderAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public BookResponseBodyErrorDataOrderListOrderAttribute setAbaPayLockRateInfo(BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo abaPayLockRateInfo) {
+            this.abaPayLockRateInfo = abaPayLockRateInfo;
+            return this;
+        }
+        public BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo getAbaPayLockRateInfo() {
+            return this.abaPayLockRateInfo;
+        }
+
+    }
+
     public static class BookResponseBodyErrorDataOrderList extends TeaModel {
+        @NameInMap("order_attribute")
+        public BookResponseBodyErrorDataOrderListOrderAttribute orderAttribute;
+
         /**
          * <p>order number</p>
          * 
@@ -185,6 +373,14 @@ public class BookResponseBody extends TeaModel {
         public static BookResponseBodyErrorDataOrderList build(java.util.Map<String, ?> map) throws Exception {
             BookResponseBodyErrorDataOrderList self = new BookResponseBodyErrorDataOrderList();
             return TeaModel.build(map, self);
+        }
+
+        public BookResponseBodyErrorDataOrderList setOrderAttribute(BookResponseBodyErrorDataOrderListOrderAttribute orderAttribute) {
+            this.orderAttribute = orderAttribute;
+            return this;
+        }
+        public BookResponseBodyErrorDataOrderListOrderAttribute getOrderAttribute() {
+            return this.orderAttribute;
         }
 
         public BookResponseBodyErrorDataOrderList setOrderNum(Long orderNum) {

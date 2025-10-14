@@ -224,6 +224,8 @@ public class SearchRequest extends TeaModel {
         public java.util.List<String> airlinePreferList;
 
         /**
+         * <p>service quality</p>
+         * 
          * <strong>example:</strong>
          * <p>A1</p>
          */

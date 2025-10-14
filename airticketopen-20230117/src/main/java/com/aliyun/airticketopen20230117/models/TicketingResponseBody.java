@@ -136,6 +136,13 @@ public class TicketingResponseBody extends TeaModel {
         public Long orderNum;
 
         /**
+         * <strong>example:</strong>
+         * <p>1757404878000</p>
+         */
+        @NameInMap("pay_time")
+        public Long payTime;
+
+        /**
          * <p>transaction serial number</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +162,14 @@ public class TicketingResponseBody extends TeaModel {
         }
         public Long getOrderNum() {
             return this.orderNum;
+        }
+
+        public TicketingResponseBodyData setPayTime(Long payTime) {
+            this.payTime = payTime;
+            return this;
+        }
+        public Long getPayTime() {
+            return this.payTime;
         }
 
         public TicketingResponseBodyData setTransactionNo(String transactionNo) {
