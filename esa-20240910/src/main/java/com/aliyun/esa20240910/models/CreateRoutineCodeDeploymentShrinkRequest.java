@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineCodeDeploymentShrinkRequest extends TeaModel {
     /**
+     * <p>The configuration list of phased release version numbers. A maximum of two versions are supported, and the sum of the total proportions is equal to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CodeVersions")
     public String codeVersionsShrink;
 
     /**
+     * <p>The name of the environment. Only supports test environment <code>staging</code> or production environment <code>production</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class CreateRoutineCodeDeploymentShrinkRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The function name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class CreateRoutineCodeDeploymentShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The deployment policy. Valid value: percentage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

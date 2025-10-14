@@ -4,6 +4,9 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListWafTemplateRulesShrinkRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>WAF operation phase, used to filter template rules for a specific phase.</p>
      * 
@@ -34,6 +37,14 @@ public class ListWafTemplateRulesShrinkRequest extends TeaModel {
     public static ListWafTemplateRulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWafTemplateRulesShrinkRequest self = new ListWafTemplateRulesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListWafTemplateRulesShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListWafTemplateRulesShrinkRequest setPhase(String phase) {

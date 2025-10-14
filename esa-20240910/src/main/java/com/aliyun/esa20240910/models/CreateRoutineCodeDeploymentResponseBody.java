@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
+    /**
+     * <p>The configuration list of the phased release version number.</p>
+     */
     @NameInMap("CodeVersions")
     public java.util.List<CreateRoutineCodeDeploymentResponseBodyCodeVersions> codeVersions;
 
     /**
+     * <p>The deployment record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>234</p>
      */
@@ -15,6 +20,8 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
     public String deploymentId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
      */
@@ -22,6 +29,8 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The phased release policy. The constant string is &quot;percentage&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>percentage</p>
      */
@@ -67,6 +76,8 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
 
     public static class CreateRoutineCodeDeploymentResponseBodyCodeVersions extends TeaModel {
         /**
+         * <p>The version of the code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1723599747213377175</p>
          */
@@ -74,6 +85,8 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         public String codeVersion;
 
         /**
+         * <p>The phased release ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

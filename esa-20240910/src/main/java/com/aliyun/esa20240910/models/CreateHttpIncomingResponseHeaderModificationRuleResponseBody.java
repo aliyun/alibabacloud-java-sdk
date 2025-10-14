@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateHttpIncomingResponseHeaderModificationRuleResponseBody extends TeaModel {
     /**
+     * <p>The configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>434497172875264</p>
      */
@@ -12,6 +14,8 @@ public class CreateHttpIncomingResponseHeaderModificationRuleResponseBody extend
     public Long configId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCacheReserveSpecResponseBody extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>esa-cr-9tuv*********</p>
      */
@@ -12,6 +14,8 @@ public class UpdateCacheReserveSpecResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2223332122***</p>
      */
@@ -19,6 +23,8 @@ public class UpdateCacheReserveSpecResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40423A7F-A83D-1E24-B80E-86DD25790759</p>
      */

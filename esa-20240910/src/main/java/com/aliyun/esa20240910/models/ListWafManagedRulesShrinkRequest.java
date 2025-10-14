@@ -28,13 +28,15 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>ID of the WAF rule.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
      */
     @NameInMap("Id")
     public Long id;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     /**
      * <p>Language type, which will be used to return the response. Value range:</p>
@@ -48,6 +50,9 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
      */
     @NameInMap("Language")
     public String language;
+
+    @NameInMap("ManagedRuleset")
+    public String managedRulesetShrink;
 
     /**
      * <p>Query page number.</p>
@@ -78,7 +83,6 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -107,12 +111,28 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
         return this.id;
     }
 
+    public ListWafManagedRulesShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public ListWafManagedRulesShrinkRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public ListWafManagedRulesShrinkRequest setManagedRulesetShrink(String managedRulesetShrink) {
+        this.managedRulesetShrink = managedRulesetShrink;
+        return this;
+    }
+    public String getManagedRulesetShrink() {
+        return this.managedRulesetShrink;
     }
 
     public ListWafManagedRulesShrinkRequest setPageNumber(Integer pageNumber) {

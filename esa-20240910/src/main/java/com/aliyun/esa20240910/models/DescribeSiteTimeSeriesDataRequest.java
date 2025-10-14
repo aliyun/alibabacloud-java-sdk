@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     /**
+     * <p>The end time for obtaining data.</p>
+     * <p>The date format follows ISO8601 notation and uses UTC+0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-09T16:00:00Z</p>
      */
@@ -12,13 +18,16 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The metric to query.</p>
+     * <p>Query metrics.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")
     public java.util.List<DescribeSiteTimeSeriesDataRequestFields> fields;
 
     /**
+     * <p>The time granularity for querying data, in seconds.</p>
+     * <p>Depending on the maximum time span of a single query, this parameter supports values of 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For details, see the <strong>Supported Query Time Granularities</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -26,6 +35,9 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     public String interval;
 
     /**
+     * <p>Site ID. Obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>If this parameter is empty, user-level data will be queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>1150376036*****</p>
      */
@@ -33,6 +45,9 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     public String siteId;
 
     /**
+     * <p>The start time for obtaining data.</p>
+     * <p>The date format follows ISO8601 notation and uses UTC+0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-08T16:00:00Z</p>
      */
@@ -86,15 +101,15 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
 
     public static class DescribeSiteTimeSeriesDataRequestFields extends TeaModel {
         /**
-         * <p>The dimensions at which you want to query the data.</p>
+         * <p>Query dimension.</p>
          */
         @NameInMap("Dimension")
         public java.util.List<String> dimension;
 
         /**
-         * <p>The metric to query.</p>
+         * <p>Query metric value.</p>
          * <blockquote>
-         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/2878520.html">Data analysis field description</a>.</p>
+         * <p>For specific dimensions, see <a href="https://help.aliyun.com/document_detail/2878520.html">Data Analysis Field Description</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

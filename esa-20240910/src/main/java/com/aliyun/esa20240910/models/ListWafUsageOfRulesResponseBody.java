@@ -4,6 +4,12 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListWafUsageOfRulesResponseBody extends TeaModel {
+    @NameInMap("BatchConfigUsage")
+    public Long batchConfigUsage;
+
+    @NameInMap("InstanceUsage")
+    public Long instanceUsage;
+
     /**
      * <p>Request ID.</p>
      * 
@@ -22,6 +28,22 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     public static ListWafUsageOfRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListWafUsageOfRulesResponseBody self = new ListWafUsageOfRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListWafUsageOfRulesResponseBody setBatchConfigUsage(Long batchConfigUsage) {
+        this.batchConfigUsage = batchConfigUsage;
+        return this;
+    }
+    public Long getBatchConfigUsage() {
+        return this.batchConfigUsage;
+    }
+
+    public ListWafUsageOfRulesResponseBody setInstanceUsage(Long instanceUsage) {
+        this.instanceUsage = instanceUsage;
+        return this;
+    }
+    public Long getInstanceUsage() {
+        return this.instanceUsage;
     }
 
     public ListWafUsageOfRulesResponseBody setRequestId(String requestId) {

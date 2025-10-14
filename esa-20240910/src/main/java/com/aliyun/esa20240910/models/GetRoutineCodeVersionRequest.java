@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetRoutineCodeVersionRequest extends TeaModel {
     /**
+     * <p>The code version.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1710120201067203242</p>
      */
     @NameInMap("CodeVersion")
     public String codeVersion;
 
     /**
+     * <p>The routine name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

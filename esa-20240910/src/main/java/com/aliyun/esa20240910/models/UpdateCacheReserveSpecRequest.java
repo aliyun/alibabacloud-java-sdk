@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCacheReserveSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto payment.</p>
+     * <p>Automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,6 +14,12 @@ public class UpdateCacheReserveSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>Billing type. Valid values:</p>
+     * <ul>
+     * <li>PREPAY</li>
+     * <li>POSTPAY</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
      */
@@ -21,6 +27,8 @@ public class UpdateCacheReserveSpecRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>esa-cr-9tuv*********</p>
      */
@@ -28,6 +36,8 @@ public class UpdateCacheReserveSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Cache requested size, in GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

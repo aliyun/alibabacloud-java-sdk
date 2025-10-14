@@ -28,13 +28,15 @@ public class ListWafManagedRulesRequest extends TeaModel {
 
     /**
      * <p>ID of the WAF rule.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
      */
     @NameInMap("Id")
     public Long id;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     /**
      * <p>Language type, which will be used to return the response. Value range:</p>
@@ -48,6 +50,9 @@ public class ListWafManagedRulesRequest extends TeaModel {
      */
     @NameInMap("Language")
     public String language;
+
+    @NameInMap("ManagedRuleset")
+    public ListWafManagedRulesRequestManagedRuleset managedRuleset;
 
     /**
      * <p>Query page number.</p>
@@ -78,7 +83,6 @@ public class ListWafManagedRulesRequest extends TeaModel {
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -107,12 +111,28 @@ public class ListWafManagedRulesRequest extends TeaModel {
         return this.id;
     }
 
+    public ListWafManagedRulesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public ListWafManagedRulesRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public ListWafManagedRulesRequest setManagedRuleset(ListWafManagedRulesRequestManagedRuleset managedRuleset) {
+        this.managedRuleset = managedRuleset;
+        return this;
+    }
+    public ListWafManagedRulesRequestManagedRuleset getManagedRuleset() {
+        return this.managedRuleset;
     }
 
     public ListWafManagedRulesRequest setPageNumber(Integer pageNumber) {
@@ -153,6 +173,99 @@ public class ListWafManagedRulesRequest extends TeaModel {
     }
     public Long getSiteId() {
         return this.siteId;
+    }
+
+    public static class ListWafManagedRulesRequestManagedRulesetManagedRules extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static ListWafManagedRulesRequestManagedRulesetManagedRules build(java.util.Map<String, ?> map) throws Exception {
+            ListWafManagedRulesRequestManagedRulesetManagedRules self = new ListWafManagedRulesRequestManagedRulesetManagedRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWafManagedRulesRequestManagedRulesetManagedRules setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ListWafManagedRulesRequestManagedRulesetManagedRules setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public ListWafManagedRulesRequestManagedRulesetManagedRules setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class ListWafManagedRulesRequestManagedRuleset extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("AttackType")
+        public Integer attackType;
+
+        @NameInMap("ManagedRules")
+        public java.util.List<ListWafManagedRulesRequestManagedRulesetManagedRules> managedRules;
+
+        @NameInMap("ProtectionLevel")
+        public Integer protectionLevel;
+
+        public static ListWafManagedRulesRequestManagedRuleset build(java.util.Map<String, ?> map) throws Exception {
+            ListWafManagedRulesRequestManagedRuleset self = new ListWafManagedRulesRequestManagedRuleset();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWafManagedRulesRequestManagedRuleset setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ListWafManagedRulesRequestManagedRuleset setAttackType(Integer attackType) {
+            this.attackType = attackType;
+            return this;
+        }
+        public Integer getAttackType() {
+            return this.attackType;
+        }
+
+        public ListWafManagedRulesRequestManagedRuleset setManagedRules(java.util.List<ListWafManagedRulesRequestManagedRulesetManagedRules> managedRules) {
+            this.managedRules = managedRules;
+            return this;
+        }
+        public java.util.List<ListWafManagedRulesRequestManagedRulesetManagedRules> getManagedRules() {
+            return this.managedRules;
+        }
+
+        public ListWafManagedRulesRequestManagedRuleset setProtectionLevel(Integer protectionLevel) {
+            this.protectionLevel = protectionLevel;
+            return this;
+        }
+        public Integer getProtectionLevel() {
+            return this.protectionLevel;
+        }
+
     }
 
     public static class ListWafManagedRulesRequestQueryArgs extends TeaModel {

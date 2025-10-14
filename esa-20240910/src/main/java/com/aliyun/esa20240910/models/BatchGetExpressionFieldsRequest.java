@@ -13,6 +13,12 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
     @NameInMap("Expressions")
     public java.util.List<BatchGetExpressionFieldsRequestExpressions> expressions;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Kind")
+    public String kind;
+
     /**
      * <p>WAF Phase</p>
      * 
@@ -21,6 +27,9 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
      */
     @NameInMap("Phase")
     public String phase;
+
+    @NameInMap("PlanNameEn")
+    public String planNameEn;
 
     /**
      * <p>Site ID</p>
@@ -44,12 +53,36 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
         return this.expressions;
     }
 
+    public BatchGetExpressionFieldsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public BatchGetExpressionFieldsRequest setKind(String kind) {
+        this.kind = kind;
+        return this;
+    }
+    public String getKind() {
+        return this.kind;
+    }
+
     public BatchGetExpressionFieldsRequest setPhase(String phase) {
         this.phase = phase;
         return this;
     }
     public String getPhase() {
         return this.phase;
+    }
+
+    public BatchGetExpressionFieldsRequest setPlanNameEn(String planNameEn) {
+        this.planNameEn = planNameEn;
+        return this;
+    }
+    public String getPlanNameEn() {
+        return this.planNameEn;
     }
 
     public BatchGetExpressionFieldsRequest setSiteId(Long siteId) {

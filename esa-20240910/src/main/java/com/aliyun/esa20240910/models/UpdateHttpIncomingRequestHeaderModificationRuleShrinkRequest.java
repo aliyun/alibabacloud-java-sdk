@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest extends TeaModel {
     /**
+     * <p>The configuration ID. You can call the ListHttpIncomingRequestHeaderModificationRules operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,19 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest extend
     @NameInMap("ConfigId")
     public Long configId;
 
+    /**
+     * <p>The configurations of modifying request headers. You can add, delete, or modify a request header.</p>
+     */
     @NameInMap("RequestHeaderModification")
     public String requestHeaderModificationShrink;
 
     /**
+     * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configurations. Use cases:</p>
+     * <ul>
+     * <li>true: Match all incoming requests.</li>
+     * <li>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
      */
@@ -24,6 +34,12 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest extend
     public String rule;
 
     /**
+     * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configurations. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -31,6 +47,8 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest extend
     public String ruleEnable;
 
     /**
+     * <p>The rule name. You do not need to set this parameter when you add global configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -38,6 +56,8 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest extend
     public String ruleName;
 
     /**
+     * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -45,6 +65,7 @@ public class UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest extend
     public Integer sequence;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

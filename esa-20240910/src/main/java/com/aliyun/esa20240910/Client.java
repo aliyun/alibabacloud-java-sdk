@@ -627,6 +627,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planNameEn)) {
+            query.put("PlanNameEn", request.planNameEn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
             query.put("SiteId", request.siteId);
         }
@@ -634,6 +642,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.expressionsShrink)) {
             body.put("Expressions", request.expressionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kind)) {
+            body.put("Kind", request.kind);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
@@ -1854,7 +1866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增HTTP入站请求头规则</p>
+     * <p>Adds the configuration of modifying HTTP request headers for a website.</p>
      * 
      * @param tmpReq CreateHttpIncomingRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1916,7 +1928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增HTTP入站请求头规则</p>
+     * <p>Adds the configuration of modifying HTTP request headers for a website.</p>
      * 
      * @param request CreateHttpIncomingRequestHeaderModificationRuleRequest
      * @return CreateHttpIncomingRequestHeaderModificationRuleResponse
@@ -1928,7 +1940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增HTTP入站响应头规则</p>
+     * <p>Adds the configuration of modifying HTTP response headers for a website.</p>
      * 
      * @param tmpReq CreateHttpIncomingResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1990,7 +2002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增HTTP入站响应头规则</p>
+     * <p>Adds the configuration of modifying HTTP response headers for a website.</p>
      * 
      * @param request CreateHttpIncomingResponseHeaderModificationRuleRequest
      * @return CreateHttpIncomingResponseHeaderModificationRuleResponse
@@ -3357,8 +3369,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li>When you create a version for deployment, you can set the environment name <code>Env</code> parameter only to the test environment <code>staging</code> or the production environment <code>production</code>.</li>
+     * <li><code>CodeVersions</code> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发布Routine某版本代码</p>
+     * <p>Release the version of the function code in proportion to the specified environment.</p>
      * 
      * @param tmpReq CreateRoutineCodeDeploymentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3407,8 +3426,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li>When you create a version for deployment, you can set the environment name <code>Env</code> parameter only to the test environment <code>staging</code> or the production environment <code>production</code>.</li>
+     * <li><code>CodeVersions</code> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发布Routine某版本代码</p>
+     * <p>Release the version of the function code in proportion to the specified environment.</p>
      * 
      * @param request CreateRoutineCodeDeploymentRequest
      * @return CreateRoutineCodeDeploymentResponse
@@ -5262,7 +5288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除HTTP入站请求头规则</p>
+     * <p>Deletes the configuration of modifying incoming HTTP request headers for a website.</p>
      * 
      * @param request DeleteHttpIncomingRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5298,7 +5324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除HTTP入站请求头规则</p>
+     * <p>Deletes the configuration of modifying incoming HTTP request headers for a website.</p>
      * 
      * @param request DeleteHttpIncomingRequestHeaderModificationRuleRequest
      * @return DeleteHttpIncomingRequestHeaderModificationRuleResponse
@@ -5310,7 +5336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除HTTP入站响应头规则</p>
+     * <p>Deletes the configuration of modifying HTTP response headers for a website.</p>
      * 
      * @param request DeleteHttpIncomingResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5346,7 +5372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除HTTP入站响应头规则</p>
+     * <p>Deletes the configuration of modifying HTTP response headers for a website.</p>
      * 
      * @param request DeleteHttpIncomingResponseHeaderModificationRuleRequest
      * @return DeleteHttpIncomingResponseHeaderModificationRuleResponse
@@ -7702,21 +7728,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</p>
      * <ul>
-     * <li>The time interval at which data is returned varies according to the span of StartTime and EndTime.<ul>
-     * <li>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</li>
-     * <li>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</li>
-     * <li>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</li>
-     * <li>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</li>
-     * <li>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the past 24 hours; if you specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the specified time period.</li>
+     * <li>The API returns different time granularities based on the span between <code>StartTime</code> and <code>EndTime</code>.<ul>
+     * <li>For a span of 3 hours or less, it returns 1-minute granularity data.</li>
+     * <li>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</li>
+     * <li>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</li>
+     * <li>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</li>
+     * <li>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</li>
      * </ul>
      * </li>
-     * <li>Data analysis may be sampled due to a large number of visits during the query period.</li>
+     * <li>Due to the high number of accesses during the query period, the data analysis may be sampled.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取时序数据</p>
+     * <p>Query traffic analysis time series data</p>
      * 
      * @param tmpReq DescribeSiteTimeSeriesDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7770,21 +7796,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</p>
      * <ul>
-     * <li>The time interval at which data is returned varies according to the span of StartTime and EndTime.<ul>
-     * <li>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</li>
-     * <li>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</li>
-     * <li>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</li>
-     * <li>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</li>
-     * <li>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</li>
+     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the past 24 hours; if you specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the specified time period.</li>
+     * <li>The API returns different time granularities based on the span between <code>StartTime</code> and <code>EndTime</code>.<ul>
+     * <li>For a span of 3 hours or less, it returns 1-minute granularity data.</li>
+     * <li>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</li>
+     * <li>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</li>
+     * <li>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</li>
+     * <li>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</li>
      * </ul>
      * </li>
-     * <li>Data analysis may be sampled due to a large number of visits during the query period.</li>
+     * <li>Due to the high number of accesses during the query period, the data analysis may be sampled.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>获取时序数据</p>
+     * <p>Query traffic analysis time series data</p>
      * 
      * @param request DescribeSiteTimeSeriesDataRequest
      * @return DescribeSiteTimeSeriesDataResponse
@@ -9068,7 +9094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP入站请求头规则详情</p>
+     * <p>Queries the configuration details of an HTTP request header modification rule for a website.</p>
      * 
      * @param request GetHttpIncomingRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9096,7 +9122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP入站请求头规则详情</p>
+     * <p>Queries the configuration details of an HTTP request header modification rule for a website.</p>
      * 
      * @param request GetHttpIncomingRequestHeaderModificationRuleRequest
      * @return GetHttpIncomingRequestHeaderModificationRuleResponse
@@ -9108,7 +9134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP入站响应头规则</p>
+     * <p>Queries the configuration details of an incoming HTTP response header modification rule for a website.</p>
      * 
      * @param request GetHttpIncomingResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9136,7 +9162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP入站响应头规则</p>
+     * <p>Queries the configuration details of an incoming HTTP response header modification rule for a website.</p>
      * 
      * @param request GetHttpIncomingResponseHeaderModificationRuleRequest
      * @return GetHttpIncomingResponseHeaderModificationRuleResponse
@@ -10200,7 +10226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Routine某版本代码</p>
+     * <p>Queries information about a code version of a routine.</p>
      * 
      * @param request GetRoutineCodeVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10236,7 +10262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Routine某版本代码</p>
+     * <p>Queries information about a code version of a routine.</p>
      * 
      * @param request GetRoutineCodeVersionRequest
      * @return GetRoutineCodeVersionResponse
@@ -12048,7 +12074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP入站请求头规则列表</p>
+     * <p>Queries the configuration details of an incoming HTTP request header modification rule for a website.</p>
      * 
      * @param request ListHttpIncomingRequestHeaderModificationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12076,7 +12102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP入站请求头规则列表</p>
+     * <p>Queries the configuration details of an incoming HTTP request header modification rule for a website.</p>
      * 
      * @param request ListHttpIncomingRequestHeaderModificationRulesRequest
      * @return ListHttpIncomingRequestHeaderModificationRulesResponse
@@ -12088,7 +12114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP入站响应头规则列表</p>
+     * <p>Queries the configurations of an incoming HTTP response header modification rule for a website.</p>
      * 
      * @param request ListHttpIncomingResponseHeaderModificationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12116,7 +12142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP入站响应头规则列表</p>
+     * <p>Queries the configurations of an incoming HTTP response header modification rule for a website.</p>
      * 
      * @param request ListHttpIncomingResponseHeaderModificationRulesRequest
      * @return ListHttpIncomingResponseHeaderModificationRulesResponse
@@ -13950,6 +13976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListWafManagedRulesShrinkRequest request = new ListWafManagedRulesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.managedRuleset)) {
+            request.managedRulesetShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.managedRuleset, "ManagedRuleset", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryArgs)) {
             request.queryArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryArgs, "QueryArgs", "json");
         }
@@ -13963,8 +13993,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Id", request.id);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managedRulesetShrink)) {
+            query.put("ManagedRuleset", request.managedRulesetShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -14225,6 +14263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
             query.put("Phase", request.phase);
         }
@@ -14277,6 +14319,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWafUsageOfRulesResponse listWafUsageOfRulesWithOptions(ListWafUsageOfRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
             query.put("Phase", request.phase);
         }
@@ -15918,7 +15964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>缓存保持变配</p>
+     * <p>Cache Reserve Specification Change</p>
      * 
      * @param request UpdateCacheReserveSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15962,7 +16008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>缓存保持变配</p>
+     * <p>Cache Reserve Specification Change</p>
      * 
      * @param request UpdateCacheReserveSpecRequest
      * @return UpdateCacheReserveSpecResponse
@@ -16580,7 +16626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTP入站请求头规则</p>
+     * <p>Updates the HTTP incoming request header modification rule.</p>
      * 
      * @param tmpReq UpdateHttpIncomingRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16642,7 +16688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTP入站请求头规则</p>
+     * <p>Updates the HTTP incoming request header modification rule.</p>
      * 
      * @param request UpdateHttpIncomingRequestHeaderModificationRuleRequest
      * @return UpdateHttpIncomingRequestHeaderModificationRuleResponse
@@ -16654,7 +16700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTP入站响应头规则</p>
+     * <p>Updates the configuration of modifying HTTP response headers for a website.</p>
      * 
      * @param tmpReq UpdateHttpIncomingResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16716,7 +16762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTP入站响应头规则</p>
+     * <p>Updates the configuration of modifying HTTP response headers for a website.</p>
      * 
      * @param request UpdateHttpIncomingResponseHeaderModificationRuleRequest
      * @return UpdateHttpIncomingResponseHeaderModificationRuleResponse
@@ -18228,7 +18274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Routine描述信息</p>
+     * <p>Modifies the description of a routine.</p>
      * 
      * @param request UpdateRoutineConfigDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18264,7 +18310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Routine描述信息</p>
+     * <p>Modifies the description of a routine.</p>
      * 
      * @param request UpdateRoutineConfigDescriptionRequest
      * @return UpdateRoutineConfigDescriptionResponse

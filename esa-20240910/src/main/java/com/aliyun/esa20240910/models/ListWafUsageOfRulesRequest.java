@@ -4,6 +4,9 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListWafUsageOfRulesRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>Name of the WAF operation phase.</p>
      * 
@@ -25,6 +28,14 @@ public class ListWafUsageOfRulesRequest extends TeaModel {
     public static ListWafUsageOfRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWafUsageOfRulesRequest self = new ListWafUsageOfRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListWafUsageOfRulesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListWafUsageOfRulesRequest setPhase(String phase) {

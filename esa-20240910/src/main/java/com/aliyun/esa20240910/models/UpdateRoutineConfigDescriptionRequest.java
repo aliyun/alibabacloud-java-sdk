@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRoutineConfigDescriptionRequest extends TeaModel {
     /**
+     * <p>The routine description.</p>
+     * 
      * <strong>example:</strong>
      * <p>description of this routine</p>
      */
@@ -12,6 +14,7 @@ public class UpdateRoutineConfigDescriptionRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The routine name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

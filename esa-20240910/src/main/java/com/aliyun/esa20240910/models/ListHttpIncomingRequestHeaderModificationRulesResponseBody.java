@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends TeaModel {
+    /**
+     * <p>The configuration list of the incoming HTTP request header modification.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<ListHttpIncomingRequestHeaderModificationRulesResponseBodyConfigs> configs;
 
     /**
+     * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 500. Valid values: 1 to 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7FB6EBC8-8849-5FC6-890E-3A761A5CD42D</p>
      */
@@ -29,6 +38,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
     public Integer totalCount;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,6 +110,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
 
     public static class ListHttpIncomingRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification extends TeaModel {
         /**
+         * <p>The name of the request header.</p>
+         * 
          * <strong>example:</strong>
          * <p>headerName</p>
          */
@@ -104,6 +119,13 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
         public String name;
 
         /**
+         * <p>The action. Valid values:</p>
+         * <ul>
+         * <li>add: adds a response header.</li>
+         * <li>del: deletes a response header.</li>
+         * <li>modify: modifies a response header.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>add</p>
          */
@@ -111,6 +133,12 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
         public String operation;
 
         /**
+         * <p>The type of the value. Valid values:</p>
+         * <ul>
+         * <li>static</li>
+         * <li>dynamic</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>static</p>
          */
@@ -118,6 +146,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
         public String type;
 
         /**
+         * <p>The value of the request header.</p>
+         * 
          * <strong>example:</strong>
          * <p>headerValue</p>
          */
@@ -165,6 +195,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
 
     public static class ListHttpIncomingRequestHeaderModificationRulesResponseBodyConfigs extends TeaModel {
         /**
+         * <p>The configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>429422870243328</p>
          */
@@ -172,16 +204,31 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
         public Long configId;
 
         /**
+         * <p>The type of the configuration. Valid values:</p>
+         * <ul>
+         * <li>global: global configurations.</li>
+         * <li>rule: rule configurations.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>rule</p>
          */
         @NameInMap("ConfigType")
         public String configType;
 
+        /**
+         * <p>The configurations of modifying request headers. You can add, delete, or modify a request header.</p>
+         */
         @NameInMap("RequestHeaderModification")
         public java.util.List<ListHttpIncomingRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification> requestHeaderModification;
 
         /**
+         * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
+         * <ul>
+         * <li>true: Match all incoming requests.</li>
+         * <li>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
@@ -189,6 +236,12 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
         public String rule;
 
         /**
+         * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -196,6 +249,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
         public String ruleEnable;
 
         /**
+         * <p>The rule name. You do not need to set this parameter when you add global configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule_example</p>
          */
@@ -203,6 +258,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
         public String ruleName;
 
         /**
+         * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -210,6 +267,8 @@ public class ListHttpIncomingRequestHeaderModificationRulesResponseBody extends 
         public Integer sequence;
 
         /**
+         * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

@@ -8,7 +8,11 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. Valid values:</p>
+     * <ul>
+     * <li>China site (aliyun.com): cn-hangzhou</li>
+     * <li>International site (alibabacloud.com): ap-southeast-1</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,14 +22,18 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of resource. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The resource ID. Enter a website ID or DNS record ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type, which can only be <strong>site</strong>.</p>
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>Site: <strong>site</strong></li>
+     * <li>DNS records: <strong>record</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

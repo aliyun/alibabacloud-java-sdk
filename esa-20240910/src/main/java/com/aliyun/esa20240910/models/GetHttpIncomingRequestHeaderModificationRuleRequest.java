@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHttpIncomingRequestHeaderModificationRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the configuration. You can call the ListHttpIncomingRequestHeaderModificationRules operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetHttpIncomingRequestHeaderModificationRuleRequest extends TeaMode
     public Long configId;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
