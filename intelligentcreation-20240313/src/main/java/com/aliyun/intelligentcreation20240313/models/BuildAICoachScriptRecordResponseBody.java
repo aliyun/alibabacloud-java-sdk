@@ -30,6 +30,9 @@ public class BuildAICoachScriptRecordResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("scriptRecordId")
+    public String scriptRecordId;
+
     /**
      * <strong>example:</strong>
      * <p>True</p>
@@ -72,6 +75,14 @@ public class BuildAICoachScriptRecordResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public BuildAICoachScriptRecordResponseBody setScriptRecordId(String scriptRecordId) {
+        this.scriptRecordId = scriptRecordId;
+        return this;
+    }
+    public String getScriptRecordId() {
+        return this.scriptRecordId;
     }
 
     public BuildAICoachScriptRecordResponseBody setSuccess(Boolean success) {
