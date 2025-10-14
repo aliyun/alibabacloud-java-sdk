@@ -93,6 +93,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeAICImagesResponseBodyImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("AndroidVersion")
         public String androidVersion;
 

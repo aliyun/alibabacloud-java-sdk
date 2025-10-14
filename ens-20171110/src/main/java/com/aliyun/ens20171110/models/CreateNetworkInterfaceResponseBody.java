@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkInterfaceResponseBody extends TeaModel {
+    /**
+     * <p>A list of ENI IDs.</p>
+     */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
      */

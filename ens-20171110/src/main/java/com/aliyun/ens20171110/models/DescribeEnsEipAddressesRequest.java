@@ -68,6 +68,9 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
+    @NameInMap("IcmpReplyEnabled")
+    public Boolean icmpReplyEnabled;
+
     /**
      * <p>The page number. Default value: 1.</p>
      * 
@@ -158,6 +161,14 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     }
     public java.util.List<String> getEnsRegionIds() {
         return this.ensRegionIds;
+    }
+
+    public DescribeEnsEipAddressesRequest setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
+        this.icmpReplyEnabled = icmpReplyEnabled;
+        return this;
+    }
+    public Boolean getIcmpReplyEnabled() {
+        return this.icmpReplyEnabled;
     }
 
     public DescribeEnsEipAddressesRequest setPageNumber(Integer pageNumber) {

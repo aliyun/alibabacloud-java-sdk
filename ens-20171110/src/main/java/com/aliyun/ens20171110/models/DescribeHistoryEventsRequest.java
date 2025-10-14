@@ -4,19 +4,28 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsRequest extends TeaModel {
+    /**
+     * <p>The levels of the event-triggered alerts.</p>
+     */
     @NameInMap("EventLevels")
     public java.util.List<String> eventLevels;
 
+    /**
+     * <p>Event status list.</p>
+     */
     @NameInMap("EventStatus")
     public java.util.List<String> eventStatus;
 
     /**
+     * <p>The list of event types.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EventTypes")
     public java.util.List<String> eventTypes;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +33,8 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -188,6 +188,9 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        @NameInMap("IcmpReplyEnabled")
+        public Boolean icmpReplyEnabled;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -269,6 +272,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
         public String getEnsRegionId() {
             return this.ensRegionId;
+        }
+
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
+            this.icmpReplyEnabled = icmpReplyEnabled;
+            return this;
+        }
+        public Boolean getIcmpReplyEnabled() {
+            return this.icmpReplyEnabled;
         }
 
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setInstanceId(String instanceId) {

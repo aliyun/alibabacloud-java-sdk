@@ -14,7 +14,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned instance information. It is an array that consists of InstanceAttributesType data.</p>
+     * <p>The information about the instance is returned in an array of InstanceAttributesType.</p>
      */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;

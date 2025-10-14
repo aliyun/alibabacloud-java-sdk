@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
+     * <p>Description of the ENI.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */
@@ -12,6 +14,8 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>ENI name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
@@ -19,12 +23,15 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Security group ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
     /**
+     * <p>vSwitch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-5****</p>
      */

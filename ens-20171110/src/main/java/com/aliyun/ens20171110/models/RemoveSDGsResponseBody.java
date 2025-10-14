@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RemoveSDGsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public RemoveSDGsResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class RemoveSDGsResponseBody extends TeaModel {
 
     public static class RemoveSDGsResponseBodyDataResultFailedItems extends TeaModel {
         /**
+         * <p>The error message returned if the call failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>sdg not found</p>
          */
@@ -46,6 +51,8 @@ public class RemoveSDGsResponseBody extends TeaModel {
         public String errMessage;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>aic-xxxxx-0</p>
          */
@@ -77,16 +84,23 @@ public class RemoveSDGsResponseBody extends TeaModel {
 
     public static class RemoveSDGsResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The number of failed tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>Details about failed tasks.</p>
+         */
         @NameInMap("FailedItems")
         public java.util.List<RemoveSDGsResponseBodyDataResultFailedItems> failedItems;
 
         /**
+         * <p>The number of successful tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,16 +140,27 @@ public class RemoveSDGsResponseBody extends TeaModel {
 
     public static class RemoveSDGsResponseBodyData extends TeaModel {
         /**
+         * <p>The response message. Success is returned for a successful request.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The execution result of the synchronization request.</p>
+         */
         @NameInMap("Result")
         public RemoveSDGsResponseBodyDataResult result;
 
         /**
+         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: All tasks are successful.</li>
+         * <li><strong>false</strong>: Failed tasks exist.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -3278,7 +3278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建弹性网卡</p>
+     * <p>Create an Elastic Network Interface (ENI).</p>
      * 
      * @param tmpReq CreateNetworkInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3328,7 +3328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建弹性网卡</p>
+     * <p>Create an Elastic Network Interface (ENI).</p>
      * 
      * @param request CreateNetworkInterfaceRequest
      * @return CreateNetworkInterfaceResponse
@@ -3992,7 +3992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用DeleteEip删除后付费的弹性公网EIP实例。</p>
+     * <p>Deletes a pay-as-you-go elastic IP address (EIP).</p>
      * 
      * @param request DeleteEipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4024,7 +4024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用DeleteEip删除后付费的弹性公网EIP实例。</p>
+     * <p>Deletes a pay-as-you-go elastic IP address (EIP).</p>
      * 
      * @param request DeleteEipRequest
      * @return DeleteEipResponse
@@ -6505,6 +6505,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnsRegionIds", request.ensRegionIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.icmpReplyEnabled)) {
+            query.put("IcmpReplyEnabled", request.icmpReplyEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -7756,7 +7760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件列表</p>
+     * <p>Queries instance system events.</p>
      * 
      * @param tmpReq DescribeHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7826,7 +7830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件列表</p>
+     * <p>Queries instance system events.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
@@ -9178,7 +9182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>输出指定用户ID下可用资源对应的nas信息</p>
+     * <p>Queries the specifications of resources that you can purchase when you create a NAS.</p>
      * 
      * @param request DescribeNASAvailableResourceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9202,7 +9206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>输出指定用户ID下可用资源对应的nas信息</p>
+     * <p>Queries the specifications of resources that you can purchase when you create a NAS.</p>
      * @return DescribeNASAvailableResourceInfoResponse
      */
     public DescribeNASAvailableResourceInfoResponse describeNASAvailableResourceInfo() throws Exception {
@@ -14792,7 +14796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>可移除所有版本的sdg，恢复为本地盘挂载</p>
+     * <p>Removes all versions of SDG and restores the mount to the local disk.</p>
      * 
      * @param tmpReq RemoveSDGsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14838,7 +14842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>可移除所有版本的sdg，恢复为本地盘挂载</p>
+     * <p>Removes all versions of SDG and restores the mount to the local disk.</p>
      * 
      * @param request RemoveSDGsRequest
      * @return RemoveSDGsResponse
