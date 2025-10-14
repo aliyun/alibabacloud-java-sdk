@@ -1943,6 +1943,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("retry_delay")
         public Integer retryDelay;
 
+        @NameInMap("safe_link")
+        public Integer safeLink;
+
         /**
          * <p>Indicates whether page screenshot is enabled.</p>
          * 
@@ -2390,6 +2393,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public Integer getRetryDelay() {
             return this.retryDelay;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setSafeLink(Integer safeLink) {
+            this.safeLink = safeLink;
+            return this;
+        }
+        public Integer getSafeLink() {
+            return this.safeLink;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setScreenShot(Boolean screenShot) {
