@@ -1,0 +1,143 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloud_siem20241212.models;
+
+import com.aliyun.tea.*;
+
+public class ListTrafficStatisticsShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh。</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("LogUserIds")
+    public String logUserIdsShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>alibaba_cloud_sas。</p>
+     */
+    @NameInMap("ProductId")
+    public String productId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou。</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1。</p>
+     */
+    @NameInMap("RegionTag")
+    public Integer regionTag;
+
+    /**
+     * <strong>example:</strong>
+     * <p>173326*******。</p>
+     */
+    @NameInMap("RoleFor")
+    public Long roleFor;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30。</p>
+     */
+    @NameInMap("TrafficStatisticPeriod")
+    public String trafficStatisticPeriod;
+
+    /**
+     * <strong>example:</strong>
+     * <p>day。</p>
+     */
+    @NameInMap("TrafficStatisticPeriodType")
+    public String trafficStatisticPeriodType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Region。</p>
+     */
+    @NameInMap("TrafficStatisticType")
+    public String trafficStatisticType;
+
+    public static ListTrafficStatisticsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListTrafficStatisticsShrinkRequest self = new ListTrafficStatisticsShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ListTrafficStatisticsShrinkRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setLogUserIdsShrink(String logUserIdsShrink) {
+        this.logUserIdsShrink = logUserIdsShrink;
+        return this;
+    }
+    public String getLogUserIdsShrink() {
+        return this.logUserIdsShrink;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    public String getProductId() {
+        return this.productId;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setRegionTag(Integer regionTag) {
+        this.regionTag = regionTag;
+        return this;
+    }
+    public Integer getRegionTag() {
+        return this.regionTag;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setRoleFor(Long roleFor) {
+        this.roleFor = roleFor;
+        return this;
+    }
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setTrafficStatisticPeriod(String trafficStatisticPeriod) {
+        this.trafficStatisticPeriod = trafficStatisticPeriod;
+        return this;
+    }
+    public String getTrafficStatisticPeriod() {
+        return this.trafficStatisticPeriod;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setTrafficStatisticPeriodType(String trafficStatisticPeriodType) {
+        this.trafficStatisticPeriodType = trafficStatisticPeriodType;
+        return this;
+    }
+    public String getTrafficStatisticPeriodType() {
+        return this.trafficStatisticPeriodType;
+    }
+
+    public ListTrafficStatisticsShrinkRequest setTrafficStatisticType(String trafficStatisticType) {
+        this.trafficStatisticType = trafficStatisticType;
+        return this;
+    }
+    public String getTrafficStatisticType() {
+        return this.trafficStatisticType;
+    }
+
+}
