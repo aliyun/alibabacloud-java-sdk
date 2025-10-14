@@ -42,6 +42,27 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
     public static class GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
+        @NameInMap("AutoScaleType")
+        public String autoScaleType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("ClusterCount")
+        public String clusterCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
+        @NameInMap("ClusterCpu")
+        public String clusterCpu;
+
+        /**
          * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +78,13 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public Long elasticCpu;
 
         /**
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
+        @NameInMap("ElasticType")
+        public String elasticType;
+
+        /**
          * <p>The ID.</p>
          * 
          * <strong>example:</strong>
@@ -64,6 +92,20 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
          */
         @NameInMap("Id")
         public Long id;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("InitClusterCount")
+        public String initClusterCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("MaxClusterCount")
+        public String maxClusterCount;
 
         /**
          * <p>The memory capacity.</p>
@@ -146,6 +188,30 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setAutoScaleType(String autoScaleType) {
+            this.autoScaleType = autoScaleType;
+            return this;
+        }
+        public String getAutoScaleType() {
+            return this.autoScaleType;
+        }
+
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setClusterCount(String clusterCount) {
+            this.clusterCount = clusterCount;
+            return this;
+        }
+        public String getClusterCount() {
+            return this.clusterCount;
+        }
+
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setClusterCpu(String clusterCpu) {
+            this.clusterCpu = clusterCpu;
+            return this;
+        }
+        public String getClusterCpu() {
+            return this.clusterCpu;
+        }
+
         public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setCpu(Long cpu) {
             this.cpu = cpu;
             return this;
@@ -170,12 +236,36 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             return this.elasticCpu;
         }
 
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setElasticType(String elasticType) {
+            this.elasticType = elasticType;
+            return this;
+        }
+        public String getElasticType() {
+            return this.elasticType;
+        }
+
         public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setInitClusterCount(String initClusterCount) {
+            this.initClusterCount = initClusterCount;
+            return this;
+        }
+        public String getInitClusterCount() {
+            return this.initClusterCount;
+        }
+
+        public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setMaxClusterCount(String maxClusterCount) {
+            this.maxClusterCount = maxClusterCount;
+            return this;
+        }
+        public String getMaxClusterCount() {
+            return this.maxClusterCount;
         }
 
         public GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList setMem(Long mem) {
@@ -221,6 +311,9 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
     }
 
     public static class GetWarehouseDetailResponseBodyWarehouseDetail extends TeaModel {
+        @NameInMap("AutoElasticCpu")
+        public String autoElasticCpu;
+
         /**
          * <p>The remaining unallocated computing resources of the virtual warehouse instance.</p>
          * 
@@ -251,6 +344,14 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public static GetWarehouseDetailResponseBodyWarehouseDetail build(java.util.Map<String, ?> map) throws Exception {
             GetWarehouseDetailResponseBodyWarehouseDetail self = new GetWarehouseDetailResponseBodyWarehouseDetail();
             return TeaModel.build(map, self);
+        }
+
+        public GetWarehouseDetailResponseBodyWarehouseDetail setAutoElasticCpu(String autoElasticCpu) {
+            this.autoElasticCpu = autoElasticCpu;
+            return this;
+        }
+        public String getAutoElasticCpu() {
+            return this.autoElasticCpu;
         }
 
         public GetWarehouseDetailResponseBodyWarehouseDetail setRemainingCpu(String remainingCpu) {

@@ -89,6 +89,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateHoloWarehouseResponse createHoloWarehouseWithOptions(String instanceId, CreateHoloWarehouseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterCount)) {
+            body.put("clusterCount", request.clusterCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
             body.put("cpu", request.cpu);
         }
@@ -1256,6 +1260,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ScaleHoloWarehouseResponse scaleHoloWarehouseWithOptions(String instanceId, ScaleHoloWarehouseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterCount)) {
+            body.put("clusterCount", request.clusterCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
             body.put("cpu", request.cpu);
         }

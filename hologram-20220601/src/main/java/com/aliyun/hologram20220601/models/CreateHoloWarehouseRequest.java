@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateHoloWarehouseRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("clusterCount")
+    public Long clusterCount;
+
+    /**
      * <p>The specifications of the virtual warehouse. The number of vCPUs must be an integer multiple of 16 CPUs. Minimum value: 16.</p>
      * <p>This parameter is required.</p>
      * 
@@ -27,6 +34,14 @@ public class CreateHoloWarehouseRequest extends TeaModel {
     public static CreateHoloWarehouseRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHoloWarehouseRequest self = new CreateHoloWarehouseRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateHoloWarehouseRequest setClusterCount(Long clusterCount) {
+        this.clusterCount = clusterCount;
+        return this;
+    }
+    public Long getClusterCount() {
+        return this.clusterCount;
     }
 
     public CreateHoloWarehouseRequest setCpu(String cpu) {
