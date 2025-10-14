@@ -174,23 +174,19 @@ public class InvokeAssistantResponseBody extends TeaModel {
     }
 
     public static class InvokeAssistantResponseBodyMessagesContentDingNormalCardCardData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("cardParamMap")
-        public java.util.Map<String, ?> cardParamMap;
+        public Object cardParamMap;
 
         public static InvokeAssistantResponseBodyMessagesContentDingNormalCardCardData build(java.util.Map<String, ?> map) throws Exception {
             InvokeAssistantResponseBodyMessagesContentDingNormalCardCardData self = new InvokeAssistantResponseBodyMessagesContentDingNormalCardCardData();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantResponseBodyMessagesContentDingNormalCardCardData setCardParamMap(java.util.Map<String, ?> cardParamMap) {
+        public InvokeAssistantResponseBodyMessagesContentDingNormalCardCardData setCardParamMap(Object cardParamMap) {
             this.cardParamMap = cardParamMap;
             return this;
         }
-        public java.util.Map<String, ?> getCardParamMap() {
+        public Object getCardParamMap() {
             return this.cardParamMap;
         }
 
