@@ -618,6 +618,13 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
     public static class ListIntegrationPoliciesResponseBodyPoliciesManagedInfo extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>eni-12345678</p>
+         */
+        @NameInMap("eniId")
+        public String eniId;
+
+        /**
+         * <strong>example:</strong>
          * <p>sg-xxxxx</p>
          */
         @NameInMap("securityGroupId")
@@ -633,6 +640,14 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public static ListIntegrationPoliciesResponseBodyPoliciesManagedInfo build(java.util.Map<String, ?> map) throws Exception {
             ListIntegrationPoliciesResponseBodyPoliciesManagedInfo self = new ListIntegrationPoliciesResponseBodyPoliciesManagedInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ListIntegrationPoliciesResponseBodyPoliciesManagedInfo setEniId(String eniId) {
+            this.eniId = eniId;
+            return this;
+        }
+        public String getEniId() {
+            return this.eniId;
         }
 
         public ListIntegrationPoliciesResponseBodyPoliciesManagedInfo setSecurityGroupId(String securityGroupId) {
