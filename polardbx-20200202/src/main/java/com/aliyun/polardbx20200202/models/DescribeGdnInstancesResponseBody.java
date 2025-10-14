@@ -94,6 +94,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        @NameInMap("DataSyncStatus")
+        public String dataSyncStatus;
+
         /**
          * <strong>example:</strong>
          * <p>mysql.n4.medium.25</p>
@@ -142,6 +145,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
          */
         @NameInMap("PrimaryZone")
         public String primaryZone;
+
+        @NameInMap("ReadWriteStatus")
+        public String readWriteStatus;
 
         /**
          * <strong>example:</strong>
@@ -233,6 +239,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             return this.commodityCode;
         }
 
+        public DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList setDataSyncStatus(String dataSyncStatus) {
+            this.dataSyncStatus = dataSyncStatus;
+            return this;
+        }
+        public String getDataSyncStatus() {
+            return this.dataSyncStatus;
+        }
+
         public DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList setDnNodeClassCode(String dnNodeClassCode) {
             this.dnNodeClassCode = dnNodeClassCode;
             return this;
@@ -287,6 +301,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
         public String getPrimaryZone() {
             return this.primaryZone;
+        }
+
+        public DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList setReadWriteStatus(String readWriteStatus) {
+            this.readWriteStatus = readWriteStatus;
+            return this;
+        }
+        public String getReadWriteStatus() {
+            return this.readWriteStatus;
         }
 
         public DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList setRegionId(String regionId) {
@@ -370,6 +392,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @NameInMap("GdnInstanceName")
         public String gdnInstanceName;
 
+        @NameInMap("GdnMode")
+        public String gdnMode;
+
         /**
          * <strong>example:</strong>
          * <p>2025-01-02T13:11:10.000+0000</p>
@@ -386,6 +411,15 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
          */
         @NameInMap("MysqlVersion")
         public String mysqlVersion;
+
+        @NameInMap("RplConflictStrategy")
+        public String rplConflictStrategy;
+
+        @NameInMap("RplDmlStrategy")
+        public String rplDmlStrategy;
+
+        @NameInMap("RplSyncDdl")
+        public Boolean rplSyncDdl;
 
         /**
          * <strong>example:</strong>
@@ -422,6 +456,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             return this.gdnInstanceName;
         }
 
+        public DescribeGdnInstancesResponseBodyDataGdnInstanceList setGdnMode(String gdnMode) {
+            this.gdnMode = gdnMode;
+            return this;
+        }
+        public String getGdnMode() {
+            return this.gdnMode;
+        }
+
         public DescribeGdnInstancesResponseBodyDataGdnInstanceList setGmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
             return this;
@@ -444,6 +486,30 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
         public String getMysqlVersion() {
             return this.mysqlVersion;
+        }
+
+        public DescribeGdnInstancesResponseBodyDataGdnInstanceList setRplConflictStrategy(String rplConflictStrategy) {
+            this.rplConflictStrategy = rplConflictStrategy;
+            return this;
+        }
+        public String getRplConflictStrategy() {
+            return this.rplConflictStrategy;
+        }
+
+        public DescribeGdnInstancesResponseBodyDataGdnInstanceList setRplDmlStrategy(String rplDmlStrategy) {
+            this.rplDmlStrategy = rplDmlStrategy;
+            return this;
+        }
+        public String getRplDmlStrategy() {
+            return this.rplDmlStrategy;
+        }
+
+        public DescribeGdnInstancesResponseBodyDataGdnInstanceList setRplSyncDdl(Boolean rplSyncDdl) {
+            this.rplSyncDdl = rplSyncDdl;
+            return this;
+        }
+        public Boolean getRplSyncDdl() {
+            return this.rplSyncDdl;
         }
 
         public DescribeGdnInstancesResponseBodyDataGdnInstanceList setStatus(String status) {
