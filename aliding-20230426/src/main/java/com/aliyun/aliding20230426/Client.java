@@ -6470,6 +6470,166 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除块元素</p>
+     * 
+     * @param tmpReq DocBlocksDeleteRequest
+     * @param tmpHeader DocBlocksDeleteHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DocBlocksDeleteResponse
+     */
+    public DocBlocksDeleteResponse docBlocksDeleteWithOptions(DocBlocksDeleteRequest tmpReq, DocBlocksDeleteHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DocBlocksDeleteShrinkRequest request = new DocBlocksDeleteShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        DocBlocksDeleteShrinkHeaders headers = new DocBlocksDeleteShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.blockId)) {
+            body.put("BlockId", request.blockId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dentryUuid)) {
+            body.put("DentryUuid", request.dentryUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DocBlocksDelete"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/docBlocksDelete"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DocBlocksDeleteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除块元素</p>
+     * 
+     * @param request DocBlocksDeleteRequest
+     * @return DocBlocksDeleteResponse
+     */
+    public DocBlocksDeleteResponse docBlocksDelete(DocBlocksDeleteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DocBlocksDeleteHeaders headers = new DocBlocksDeleteHeaders();
+        return this.docBlocksDeleteWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新块元素</p>
+     * 
+     * @param tmpReq DocBlocksModifyRequest
+     * @param tmpHeader DocBlocksModifyHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DocBlocksModifyResponse
+     */
+    public DocBlocksModifyResponse docBlocksModifyWithOptions(DocBlocksModifyRequest tmpReq, DocBlocksModifyHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DocBlocksModifyShrinkRequest request = new DocBlocksModifyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        DocBlocksModifyShrinkHeaders headers = new DocBlocksModifyShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.element)) {
+            request.elementShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.element, "Element", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.blockId)) {
+            body.put("BlockId", request.blockId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dentryUuid)) {
+            body.put("DentryUuid", request.dentryUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.elementShrink)) {
+            body.put("Element", request.elementShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DocBlocksModify"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/docBlocksModify"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DocBlocksModifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新块元素</p>
+     * 
+     * @param request DocBlocksModifyRequest
+     * @return DocBlocksModifyResponse
+     */
+    public DocBlocksModifyResponse docBlocksModify(DocBlocksModifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DocBlocksModifyHeaders headers = new DocBlocksModifyHeaders();
+        return this.docBlocksModifyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询块元素</p>
      * 
      * @param tmpReq DocBlocksQueryRequest
