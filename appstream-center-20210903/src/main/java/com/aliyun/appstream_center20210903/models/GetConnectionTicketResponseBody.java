@@ -21,6 +21,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
+    @NameInMap("AvatarId")
+    public String avatarId;
+
     @NameInMap("BindQueueInfo")
     public GetConnectionTicketResponseBodyBindQueueInfo bindQueueInfo;
 
@@ -44,6 +51,16 @@ public class GetConnectionTicketResponseBody extends TeaModel {
      */
     @NameInMap("Message")
     public String message;
+
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("NextPollIntervalMs")
+    public Integer nextPollIntervalMs;
 
     /**
      * <strong>example:</strong>
@@ -131,6 +148,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         return this.appInstancePersistentId;
     }
 
+    public GetConnectionTicketResponseBody setAvatarId(String avatarId) {
+        this.avatarId = avatarId;
+        return this;
+    }
+    public String getAvatarId() {
+        return this.avatarId;
+    }
+
     public GetConnectionTicketResponseBody setBindQueueInfo(GetConnectionTicketResponseBodyBindQueueInfo bindQueueInfo) {
         this.bindQueueInfo = bindQueueInfo;
         return this;
@@ -161,6 +186,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public GetConnectionTicketResponseBody setNextPollIntervalMs(Integer nextPollIntervalMs) {
+        this.nextPollIntervalMs = nextPollIntervalMs;
+        return this;
+    }
+    public Integer getNextPollIntervalMs() {
+        return this.nextPollIntervalMs;
     }
 
     public GetConnectionTicketResponseBody setOsType(String osType) {
