@@ -7428,6 +7428,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Memory", request.memory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoEnableApplicationScalingRule)) {
             query.put("autoEnableApplicationScalingRule", request.autoEnableApplicationScalingRule);
         }

@@ -43,6 +43,12 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     @NameInMap("Memory")
     public String memory;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     /**
      * <p>Enable application scale rules automatically.</p>
      * 
@@ -105,6 +111,22 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     }
     public String getMemory() {
         return this.memory;
+    }
+
+    public RescaleApplicationVerticallyRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public RescaleApplicationVerticallyRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
     public RescaleApplicationVerticallyRequest setAutoEnableApplicationScalingRule(Boolean autoEnableApplicationScalingRule) {
