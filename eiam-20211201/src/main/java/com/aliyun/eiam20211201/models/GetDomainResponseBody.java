@@ -64,6 +64,9 @@ public class GetDomainResponseBody extends TeaModel {
     }
 
     public static class GetDomainResponseBodyDomain extends TeaModel {
+        @NameInMap("BrandId")
+        public String brandId;
+
         /**
          * <p>The start time when the change order was created.</p>
          * 
@@ -153,6 +156,14 @@ public class GetDomainResponseBody extends TeaModel {
         public static GetDomainResponseBodyDomain build(java.util.Map<String, ?> map) throws Exception {
             GetDomainResponseBodyDomain self = new GetDomainResponseBodyDomain();
             return TeaModel.build(map, self);
+        }
+
+        public GetDomainResponseBodyDomain setBrandId(String brandId) {
+            this.brandId = brandId;
+            return this;
+        }
+        public String getBrandId() {
+            return this.brandId;
         }
 
         public GetDomainResponseBodyDomain setCreateTime(Long createTime) {

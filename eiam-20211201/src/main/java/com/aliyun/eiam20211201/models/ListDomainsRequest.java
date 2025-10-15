@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
+    @NameInMap("BrandId")
+    public String brandId;
+
     /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
@@ -17,6 +20,14 @@ public class ListDomainsRequest extends TeaModel {
     public static ListDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDomainsRequest self = new ListDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDomainsRequest setBrandId(String brandId) {
+        this.brandId = brandId;
+        return this;
+    }
+    public String getBrandId() {
+        return this.brandId;
     }
 
     public ListDomainsRequest setInstanceId(String instanceId) {

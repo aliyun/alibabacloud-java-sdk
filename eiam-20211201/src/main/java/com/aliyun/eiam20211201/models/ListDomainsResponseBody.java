@@ -66,6 +66,9 @@ public class ListDomainsResponseBody extends TeaModel {
     }
 
     public static class ListDomainsResponseBodyDomains extends TeaModel {
+        @NameInMap("BrandId")
+        public String brandId;
+
         /**
          * <p>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
@@ -155,6 +158,14 @@ public class ListDomainsResponseBody extends TeaModel {
         public static ListDomainsResponseBodyDomains build(java.util.Map<String, ?> map) throws Exception {
             ListDomainsResponseBodyDomains self = new ListDomainsResponseBodyDomains();
             return TeaModel.build(map, self);
+        }
+
+        public ListDomainsResponseBodyDomains setBrandId(String brandId) {
+            this.brandId = brandId;
+            return this;
+        }
+        public String getBrandId() {
+            return this.brandId;
         }
 
         public ListDomainsResponseBodyDomains setCreateTime(Long createTime) {
