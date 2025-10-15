@@ -11,6 +11,9 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     @NameInMap("addonName")
     public String addonName;
 
+    @NameInMap("bindResourceId")
+    public String bindResourceId;
+
     /**
      * <strong>example:</strong>
      * <p>eg-1,eg-2,eg-3</p>
@@ -98,6 +101,14 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     }
     public String getAddonName() {
         return this.addonName;
+    }
+
+    public ListIntegrationPoliciesRequest setBindResourceId(String bindResourceId) {
+        this.bindResourceId = bindResourceId;
+        return this;
+    }
+    public String getBindResourceId() {
+        return this.bindResourceId;
     }
 
     public ListIntegrationPoliciesRequest setEntityGroupIds(String entityGroupIds) {

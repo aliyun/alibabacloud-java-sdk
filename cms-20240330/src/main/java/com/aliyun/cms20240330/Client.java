@@ -1870,6 +1870,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("addonName", request.addonName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bindResourceId)) {
+            query.put("bindResourceId", request.bindResourceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.entityGroupIds)) {
             query.put("entityGroupIds", request.entityGroupIds);
         }

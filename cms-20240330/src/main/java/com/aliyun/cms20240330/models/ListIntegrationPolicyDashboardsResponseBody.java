@@ -56,6 +56,9 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         @NameInMap("folderUid")
         public String folderUid;
 
+        @NameInMap("name")
+        public String name;
+
         @NameInMap("region")
         public String region;
 
@@ -82,6 +85,14 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         }
         public String getFolderUid() {
             return this.folderUid;
+        }
+
+        public ListIntegrationPolicyDashboardsResponseBodyDashboards setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ListIntegrationPolicyDashboardsResponseBodyDashboards setRegion(String region) {
