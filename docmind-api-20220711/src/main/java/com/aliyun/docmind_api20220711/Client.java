@@ -1679,6 +1679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MultimediaParameters", request.multimediaParametersShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.needHeaderFooter)) {
+            query.put("NeedHeaderFooter", request.needHeaderFooter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.option)) {
             query.put("Option", request.option);
         }

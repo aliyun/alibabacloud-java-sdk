@@ -43,6 +43,9 @@ public class SubmitDocParserJobRequest extends TeaModel {
     @NameInMap("MultimediaParameters")
     public SubmitDocParserJobRequestMultimediaParameters multimediaParameters;
 
+    @NameInMap("NeedHeaderFooter")
+    public Boolean needHeaderFooter;
+
     @NameInMap("Option")
     public String option;
 
@@ -133,6 +136,14 @@ public class SubmitDocParserJobRequest extends TeaModel {
     }
     public SubmitDocParserJobRequestMultimediaParameters getMultimediaParameters() {
         return this.multimediaParameters;
+    }
+
+    public SubmitDocParserJobRequest setNeedHeaderFooter(Boolean needHeaderFooter) {
+        this.needHeaderFooter = needHeaderFooter;
+        return this;
+    }
+    public Boolean getNeedHeaderFooter() {
+        return this.needHeaderFooter;
     }
 
     public SubmitDocParserJobRequest setOption(String option) {
