@@ -359,6 +359,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>通过实例创建镜像</p>
+     * 
+     * @param request CreateImageByInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateImageByInstanceResponse
+     */
+    public CreateImageByInstanceResponse createImageByInstanceWithOptions(CreateImageByInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoCleanUserdata)) {
+            body.put("AutoCleanUserdata", request.autoCleanUserdata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskType)) {
+            body.put("DiskType", request.diskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            body.put("ImageName", request.imageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subInstanceId)) {
+            body.put("SubInstanceId", request.subInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateImageByInstance"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImageByInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过实例创建镜像</p>
+     * 
+     * @param request CreateImageByInstanceRequest
+     * @return CreateImageByInstanceResponse
+     */
+    public CreateImageByInstanceResponse createImageByInstance(CreateImageByInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createImageByInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a new image by debugging the delivery group.</p>
      * 
      * @param request CreateImageFromAppInstanceGroupRequest
@@ -1410,6 +1486,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListBindInfoResponse listBindInfo(ListBindInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listBindInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列表显示镜像</p>
+     * 
+     * @param request ListImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListImageResponse
+     */
+    public ListImageResponse listImageWithOptions(ListImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tagList)) {
+            query.put("TagList", request.tagList);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionIdList)) {
+            body.put("BizRegionIdList", request.bizRegionIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizTypeList)) {
+            body.put("BizTypeList", request.bizTypeList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureList)) {
+            body.put("FeatureList", request.featureList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fotaVersion)) {
+            body.put("FotaVersion", request.fotaVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            body.put("ImageName", request.imageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageType)) {
+            body.put("ImageType", request.imageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.languageType)) {
+            body.put("LanguageType", request.languageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
+            body.put("OsType", request.osType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageType)) {
+            body.put("PackageType", request.packageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformName)) {
+            body.put("PlatformName", request.platformName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformNameList)) {
+            body.put("PlatformNameList", request.platformNameList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productTypeList)) {
+            body.put("ProductTypeList", request.productTypeList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocolType)) {
+            body.put("ProtocolType", request.protocolType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceType)) {
+            body.put("ResourceInstanceType", request.resourceInstanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListImage"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列表显示镜像</p>
+     * 
+     * @param request ListImageRequest
+     * @return ListImageResponse
+     */
+    public ListImageResponse listImage(ListImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listImageWithOptions(request, runtime);
     }
 
     /**
