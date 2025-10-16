@@ -590,6 +590,9 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         @Deprecated
         public String srcIPTag;
 
+        @NameInMap("SrcIPTags")
+        public java.util.List<String> srcIPTags;
+
         /**
          * <p>An array that consists of the source private IP addresses in the intrusion event.</p>
          */
@@ -781,6 +784,14 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         }
         public String getSrcIPTag() {
             return this.srcIPTag;
+        }
+
+        public DescribeRiskEventGroupResponseBodyDataList setSrcIPTags(java.util.List<String> srcIPTags) {
+            this.srcIPTags = srcIPTags;
+            return this;
+        }
+        public java.util.List<String> getSrcIPTags() {
+            return this.srcIPTags;
         }
 
         public DescribeRiskEventGroupResponseBodyDataList setSrcPrivateIPList(java.util.List<String> srcPrivateIPList) {

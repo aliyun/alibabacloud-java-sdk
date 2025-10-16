@@ -91,6 +91,44 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAddressBookResponseBodyAclsAckLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>app</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>storage-operator</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAddressBookResponseBodyAclsAckLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAddressBookResponseBodyAclsAckLabels self = new DescribeAddressBookResponseBodyAclsAckLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAddressBookResponseBodyAclsAckLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAddressBookResponseBodyAclsAckLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeAddressBookResponseBodyAclsAddresses extends TeaModel {
         /**
          * <p>Address information in the address book.</p>
@@ -176,6 +214,26 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     }
 
     public static class DescribeAddressBookResponseBodyAcls extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ac-7c1bad6c3cc84c33baab1</p>
+         */
+        @NameInMap("AckClusterConnectorId")
+        public String ackClusterConnectorId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ACK集群连接器</p>
+         */
+        @NameInMap("AckClusterConnectorName")
+        public String ackClusterConnectorName;
+
+        @NameInMap("AckLabels")
+        public java.util.List<DescribeAddressBookResponseBodyAclsAckLabels> ackLabels;
+
+        @NameInMap("AckNamespaces")
+        public java.util.List<String> ackNamespaces;
+
         /**
          * <p>The addresses in the address book.</p>
          */
@@ -264,6 +322,13 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public Integer referenceCount;
 
         /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
+        @NameInMap("RegionNo")
+        public String regionNo;
+
+        /**
          * <p>The details about the ECS tags that can be automatically added to the address book.</p>
          */
         @NameInMap("TagList")
@@ -285,6 +350,38 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         public static DescribeAddressBookResponseBodyAcls build(java.util.Map<String, ?> map) throws Exception {
             DescribeAddressBookResponseBodyAcls self = new DescribeAddressBookResponseBodyAcls();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAddressBookResponseBodyAcls setAckClusterConnectorId(String ackClusterConnectorId) {
+            this.ackClusterConnectorId = ackClusterConnectorId;
+            return this;
+        }
+        public String getAckClusterConnectorId() {
+            return this.ackClusterConnectorId;
+        }
+
+        public DescribeAddressBookResponseBodyAcls setAckClusterConnectorName(String ackClusterConnectorName) {
+            this.ackClusterConnectorName = ackClusterConnectorName;
+            return this;
+        }
+        public String getAckClusterConnectorName() {
+            return this.ackClusterConnectorName;
+        }
+
+        public DescribeAddressBookResponseBodyAcls setAckLabels(java.util.List<DescribeAddressBookResponseBodyAclsAckLabels> ackLabels) {
+            this.ackLabels = ackLabels;
+            return this;
+        }
+        public java.util.List<DescribeAddressBookResponseBodyAclsAckLabels> getAckLabels() {
+            return this.ackLabels;
+        }
+
+        public DescribeAddressBookResponseBodyAcls setAckNamespaces(java.util.List<String> ackNamespaces) {
+            this.ackNamespaces = ackNamespaces;
+            return this;
+        }
+        public java.util.List<String> getAckNamespaces() {
+            return this.ackNamespaces;
         }
 
         public DescribeAddressBookResponseBodyAcls setAddressList(java.util.List<String> addressList) {
@@ -357,6 +454,14 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
         public Integer getReferenceCount() {
             return this.referenceCount;
+        }
+
+        public DescribeAddressBookResponseBodyAcls setRegionNo(String regionNo) {
+            this.regionNo = regionNo;
+            return this;
+        }
+        public String getRegionNo() {
+            return this.regionNo;
         }
 
         public DescribeAddressBookResponseBodyAcls setTagList(java.util.List<DescribeAddressBookResponseBodyAclsTagList> tagList) {

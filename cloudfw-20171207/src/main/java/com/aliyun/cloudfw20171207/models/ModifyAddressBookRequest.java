@@ -4,6 +4,12 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyAddressBookRequest extends TeaModel {
+    @NameInMap("AckLabels")
+    public java.util.List<ModifyAddressBookRequestAckLabels> ackLabels;
+
+    @NameInMap("AckNamespaces")
+    public java.util.List<String> ackNamespaces;
+
     /**
      * <p>The addresses in the address book. Separate multiple addresses with commas (,). If you set GroupType to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>, you must specify this parameter.</p>
      * <ul>
@@ -129,6 +135,22 @@ public class ModifyAddressBookRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyAddressBookRequest setAckLabels(java.util.List<ModifyAddressBookRequestAckLabels> ackLabels) {
+        this.ackLabels = ackLabels;
+        return this;
+    }
+    public java.util.List<ModifyAddressBookRequestAckLabels> getAckLabels() {
+        return this.ackLabels;
+    }
+
+    public ModifyAddressBookRequest setAckNamespaces(java.util.List<String> ackNamespaces) {
+        this.ackNamespaces = ackNamespaces;
+        return this;
+    }
+    public java.util.List<String> getAckNamespaces() {
+        return this.ackNamespaces;
+    }
+
     public ModifyAddressBookRequest setAddressList(String addressList) {
         this.addressList = addressList;
         return this;
@@ -208,6 +230,44 @@ public class ModifyAddressBookRequest extends TeaModel {
     }
     public String getTagRelation() {
         return this.tagRelation;
+    }
+
+    public static class ModifyAddressBookRequestAckLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>app</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>storage-operator</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ModifyAddressBookRequestAckLabels build(java.util.Map<String, ?> map) throws Exception {
+            ModifyAddressBookRequestAckLabels self = new ModifyAddressBookRequestAckLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyAddressBookRequestAckLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ModifyAddressBookRequestAckLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class ModifyAddressBookRequestTagList extends TeaModel {

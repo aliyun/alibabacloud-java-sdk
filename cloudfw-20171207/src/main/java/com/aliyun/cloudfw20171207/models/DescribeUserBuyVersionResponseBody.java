@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUserBuyVersionResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("AckClusterConnectorQuota")
+    public Long ackClusterConnectorQuota;
+
+    /**
      * <p>The ID of the Alibaba Cloud account that is used to purchase Cloud Firewall.</p>
      * 
      * <strong>example:</strong>
@@ -12,6 +19,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
      */
     @NameInMap("AliUid")
     public Long aliUid;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
+    @NameInMap("DefaultBandwidth")
+    public Long defaultBandwidth;
 
     /**
      * <p>The time when Cloud Firewall expires.</p>
@@ -27,6 +41,20 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
      */
     @NameInMap("Expire")
     public Long expire;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
+    @NameInMap("ExtensionBandwidth")
+    public Long extensionBandwidth;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("GeneralInstance")
+    public Long generalInstance;
 
     /**
      * <p>The instance ID of Cloud Firewall.</p>
@@ -103,6 +131,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Long logStorage;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("MajorVersion")
+    public Long majorVersion;
+
+    /**
      * <p>The status of the burstable protected traffic feature. Valid values:</p>
      * <ul>
      * <li><strong>1000000</strong>: enabled.</li>
@@ -128,6 +163,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     public Long natBandwidth;
 
     /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("PrivateDnsConnectorQuota")
+    public Long privateDnsConnectorQuota;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -135,6 +177,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("Sdl")
+    public Long sdl;
 
     /**
      * <p>The time when Cloud Firewall was activated.</p>
@@ -147,6 +196,20 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
+    @NameInMap("TemporaryBandwidth")
+    public Long temporaryBandwidth;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ThreatIntelligence")
+    public Long threatIntelligence;
 
     /**
      * <p>Indicates whether Cloud Firewall is valid. Valid values:</p>
@@ -202,6 +265,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeUserBuyVersionResponseBody setAckClusterConnectorQuota(Long ackClusterConnectorQuota) {
+        this.ackClusterConnectorQuota = ackClusterConnectorQuota;
+        return this;
+    }
+    public Long getAckClusterConnectorQuota() {
+        return this.ackClusterConnectorQuota;
+    }
+
     public DescribeUserBuyVersionResponseBody setAliUid(Long aliUid) {
         this.aliUid = aliUid;
         return this;
@@ -210,12 +281,36 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         return this.aliUid;
     }
 
+    public DescribeUserBuyVersionResponseBody setDefaultBandwidth(Long defaultBandwidth) {
+        this.defaultBandwidth = defaultBandwidth;
+        return this;
+    }
+    public Long getDefaultBandwidth() {
+        return this.defaultBandwidth;
+    }
+
     public DescribeUserBuyVersionResponseBody setExpire(Long expire) {
         this.expire = expire;
         return this;
     }
     public Long getExpire() {
         return this.expire;
+    }
+
+    public DescribeUserBuyVersionResponseBody setExtensionBandwidth(Long extensionBandwidth) {
+        this.extensionBandwidth = extensionBandwidth;
+        return this;
+    }
+    public Long getExtensionBandwidth() {
+        return this.extensionBandwidth;
+    }
+
+    public DescribeUserBuyVersionResponseBody setGeneralInstance(Long generalInstance) {
+        this.generalInstance = generalInstance;
+        return this;
+    }
+    public Long getGeneralInstance() {
+        return this.generalInstance;
     }
 
     public DescribeUserBuyVersionResponseBody setInstanceId(String instanceId) {
@@ -266,6 +361,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         return this.logStorage;
     }
 
+    public DescribeUserBuyVersionResponseBody setMajorVersion(Long majorVersion) {
+        this.majorVersion = majorVersion;
+        return this;
+    }
+    public Long getMajorVersion() {
+        return this.majorVersion;
+    }
+
     public DescribeUserBuyVersionResponseBody setMaxOverflow(Long maxOverflow) {
         this.maxOverflow = maxOverflow;
         return this;
@@ -282,6 +385,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         return this.natBandwidth;
     }
 
+    public DescribeUserBuyVersionResponseBody setPrivateDnsConnectorQuota(Long privateDnsConnectorQuota) {
+        this.privateDnsConnectorQuota = privateDnsConnectorQuota;
+        return this;
+    }
+    public Long getPrivateDnsConnectorQuota() {
+        return this.privateDnsConnectorQuota;
+    }
+
     public DescribeUserBuyVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -290,12 +401,36 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeUserBuyVersionResponseBody setSdl(Long sdl) {
+        this.sdl = sdl;
+        return this;
+    }
+    public Long getSdl() {
+        return this.sdl;
+    }
+
     public DescribeUserBuyVersionResponseBody setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeUserBuyVersionResponseBody setTemporaryBandwidth(Long temporaryBandwidth) {
+        this.temporaryBandwidth = temporaryBandwidth;
+        return this;
+    }
+    public Long getTemporaryBandwidth() {
+        return this.temporaryBandwidth;
+    }
+
+    public DescribeUserBuyVersionResponseBody setThreatIntelligence(Long threatIntelligence) {
+        this.threatIntelligence = threatIntelligence;
+        return this;
+    }
+    public Long getThreatIntelligence() {
+        return this.threatIntelligence;
     }
 
     public DescribeUserBuyVersionResponseBody setUserStatus(Boolean userStatus) {

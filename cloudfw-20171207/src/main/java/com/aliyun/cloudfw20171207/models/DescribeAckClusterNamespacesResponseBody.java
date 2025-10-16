@@ -1,0 +1,38 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudfw20171207.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeAckClusterNamespacesResponseBody extends TeaModel {
+    @NameInMap("AckNamespaces")
+    public java.util.List<String> ackNamespaces;
+
+    /**
+     * <strong>example:</strong>
+     * <p>133173B9-8010-5DF5-8B93-********</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static DescribeAckClusterNamespacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeAckClusterNamespacesResponseBody self = new DescribeAckClusterNamespacesResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeAckClusterNamespacesResponseBody setAckNamespaces(java.util.List<String> ackNamespaces) {
+        this.ackNamespaces = ackNamespaces;
+        return this;
+    }
+    public java.util.List<String> getAckNamespaces() {
+        return this.ackNamespaces;
+    }
+
+    public DescribeAckClusterNamespacesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}

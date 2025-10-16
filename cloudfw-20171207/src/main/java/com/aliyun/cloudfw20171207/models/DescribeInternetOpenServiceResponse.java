@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudfw20171207.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeInternetOpenServiceResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public DescribeInternetOpenServiceResponseBody body;
+
+    public static DescribeInternetOpenServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInternetOpenServiceResponse self = new DescribeInternetOpenServiceResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeInternetOpenServiceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeInternetOpenServiceResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public DescribeInternetOpenServiceResponse setBody(DescribeInternetOpenServiceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeInternetOpenServiceResponseBody getBody() {
+        return this.body;
+    }
+
+}
