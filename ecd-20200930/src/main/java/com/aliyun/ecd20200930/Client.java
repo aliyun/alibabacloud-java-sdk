@@ -3774,6 +3774,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SnapshotPolicyId", request.snapshotPolicyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.subnetId)) {
+            query.put("SubnetId", request.subnetId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -16695,6 +16699,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyResourceCenterPolicyResponse modifyResourceCenterPolicy(ModifyResourceCenterPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyResourceCenterPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改办公网络维度安全组策略</p>
+     * 
+     * @param request ModifySecurityGroupAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySecurityGroupAttributeResponse
+     */
+    public ModifySecurityGroupAttributeResponse modifySecurityGroupAttributeWithOptions(ModifySecurityGroupAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizeEgress)) {
+            query.put("AuthorizeEgress", request.authorizeEgress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizeIngress)) {
+            query.put("AuthorizeIngress", request.authorizeIngress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revokeEgress)) {
+            query.put("RevokeEgress", request.revokeEgress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revokeIngress)) {
+            query.put("RevokeIngress", request.revokeIngress);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySecurityGroupAttribute"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySecurityGroupAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改办公网络维度安全组策略</p>
+     * 
+     * @param request ModifySecurityGroupAttributeRequest
+     * @return ModifySecurityGroupAttributeResponse
+     */
+    public ModifySecurityGroupAttributeResponse modifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySecurityGroupAttributeWithOptions(request, runtime);
     }
 
     /**
