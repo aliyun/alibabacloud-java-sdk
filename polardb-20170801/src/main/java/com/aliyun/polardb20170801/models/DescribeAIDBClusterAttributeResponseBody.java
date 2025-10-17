@@ -385,7 +385,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         return this.zoneIds;
     }
 
-    public static class DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes extends TeaModel {
+    public static class DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>/tmp/CrowdStrike</p>
@@ -421,12 +421,12 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("StorageType")
         public String storageType;
 
-        public static DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes self = new DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes();
+        public static DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes self = new DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes setMountPath(String mountPath) {
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
@@ -434,7 +434,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             return this.mountPath;
         }
 
-        public DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes setName(String name) {
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes setName(String name) {
             this.name = name;
             return this;
         }
@@ -442,7 +442,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes setSizeGB(String sizeGB) {
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes setSizeGB(String sizeGB) {
             this.sizeGB = sizeGB;
             return this;
         }
@@ -450,7 +450,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             return this.sizeGB;
         }
 
-        public DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes setStorageCategory(String storageCategory) {
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes setStorageCategory(String storageCategory) {
             this.storageCategory = storageCategory;
             return this;
         }
@@ -458,7 +458,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             return this.storageCategory;
         }
 
-        public DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes setStorageType(String storageType) {
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes setStorageType(String storageType) {
             this.storageType = storageType;
             return this;
         }
@@ -469,6 +469,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAIDBClusterAttributeResponseBodyDBNodes extends TeaModel {
+        @NameInMap("ChildVolumes")
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes> childVolumes;
+
         /**
          * <strong>example:</strong>
          * <p>2</p>
@@ -546,9 +549,6 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        @NameInMap("Volumes")
-        public java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes> volumes;
-
         /**
          * <strong>example:</strong>
          * <p>cn-hangzhou-d</p>
@@ -559,6 +559,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         public static DescribeAIDBClusterAttributeResponseBodyDBNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeAIDBClusterAttributeResponseBodyDBNodes self = new DescribeAIDBClusterAttributeResponseBodyDBNodes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyDBNodes setChildVolumes(java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes> childVolumes) {
+            this.childVolumes = childVolumes;
+            return this;
+        }
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes> getChildVolumes() {
+            return this.childVolumes;
         }
 
         public DescribeAIDBClusterAttributeResponseBodyDBNodes setCpuCores(String cpuCores) {
@@ -647,14 +655,6 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
-        }
-
-        public DescribeAIDBClusterAttributeResponseBodyDBNodes setVolumes(java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes> volumes) {
-            this.volumes = volumes;
-            return this;
-        }
-        public java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes> getVolumes() {
-            return this.volumes;
         }
 
         public DescribeAIDBClusterAttributeResponseBodyDBNodes setZoneId(String zoneId) {

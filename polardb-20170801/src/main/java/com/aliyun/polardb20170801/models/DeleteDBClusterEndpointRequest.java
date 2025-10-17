@@ -30,6 +30,13 @@ public class DeleteDBClusterEndpointRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pfs-test*****</p>
+     */
+    @NameInMap("PolarFsInstanceId")
+    public String polarFsInstanceId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -71,6 +78,14 @@ public class DeleteDBClusterEndpointRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteDBClusterEndpointRequest setPolarFsInstanceId(String polarFsInstanceId) {
+        this.polarFsInstanceId = polarFsInstanceId;
+        return this;
+    }
+    public String getPolarFsInstanceId() {
+        return this.polarFsInstanceId;
     }
 
     public DeleteDBClusterEndpointRequest setResourceOwnerAccount(String resourceOwnerAccount) {

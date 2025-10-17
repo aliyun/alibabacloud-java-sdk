@@ -593,6 +593,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("SearchStorageUsed")
+        public Long searchStorageUsed;
+
         /**
          * <p>Indicates whether the cluster is a serverless cluster. <strong>AgileServerless</strong> indicates the cluster is a serverless cluster. No value is returned for a common cluster.</p>
          * 
@@ -896,6 +899,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setSearchStorageUsed(Long searchStorageUsed) {
+            this.searchStorageUsed = searchStorageUsed;
+            return this;
+        }
+        public Long getSearchStorageUsed() {
+            return this.searchStorageUsed;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setServerlessType(String serverlessType) {

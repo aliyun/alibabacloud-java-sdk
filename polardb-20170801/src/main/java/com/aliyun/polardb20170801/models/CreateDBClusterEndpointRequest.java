@@ -127,6 +127,13 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <strong>example:</strong>
+     * <p>pfs-test****</p>
+     */
+    @NameInMap("PolarFsInstanceId")
+    public String polarFsInstanceId;
+
+    /**
      * <p>Global consistency timeout strategy. The value range is as follows:</p>
      * <ul>
      * <li><strong>0</strong>: Send the request to the primary node</li>
@@ -256,6 +263,14 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateDBClusterEndpointRequest setPolarFsInstanceId(String polarFsInstanceId) {
+        this.polarFsInstanceId = polarFsInstanceId;
+        return this;
+    }
+    public String getPolarFsInstanceId() {
+        return this.polarFsInstanceId;
     }
 
     public CreateDBClusterEndpointRequest setPolarSccTimeoutAction(String polarSccTimeoutAction) {

@@ -106,6 +106,13 @@ public class CreateDBClusterRequest extends TeaModel {
     public String cloneDataPoint;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENS</p>
+     */
+    @NameInMap("CloudProvider")
+    public String cloudProvider;
+
+    /**
      * <p>Cluster network type, currently only VPC is supported, with a fixed value of <strong>VPC</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -317,6 +324,13 @@ public class CreateDBClusterRequest extends TeaModel {
      */
     @NameInMap("DefaultTimeZone")
     public String defaultTimeZone;
+
+    /**
+     * <strong>example:</strong>
+     * <p>vn-hanoi-3</p>
+     */
+    @NameInMap("EnsRegionId")
+    public String ensRegionId;
 
     /**
      * <p>Global Database Network (GDN) ID.</p>
@@ -890,6 +904,14 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.cloneDataPoint;
     }
 
+    public CreateDBClusterRequest setCloudProvider(String cloudProvider) {
+        this.cloudProvider = cloudProvider;
+        return this;
+    }
+    public String getCloudProvider() {
+        return this.cloudProvider;
+    }
+
     public CreateDBClusterRequest setClusterNetworkType(String clusterNetworkType) {
         this.clusterNetworkType = clusterNetworkType;
         return this;
@@ -968,6 +990,14 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getDefaultTimeZone() {
         return this.defaultTimeZone;
+    }
+
+    public CreateDBClusterRequest setEnsRegionId(String ensRegionId) {
+        this.ensRegionId = ensRegionId;
+        return this;
+    }
+    public String getEnsRegionId() {
+        return this.ensRegionId;
     }
 
     public CreateDBClusterRequest setGDNId(String GDNId) {

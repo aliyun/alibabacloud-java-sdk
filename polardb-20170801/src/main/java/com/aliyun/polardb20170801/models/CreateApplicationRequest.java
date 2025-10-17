@@ -105,6 +105,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     /**
      * <strong>example:</strong>
      * <p>cn-beijing-k</p>
@@ -237,6 +240,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.vSwitchId;
     }
 
+    public CreateApplicationRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public CreateApplicationRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
@@ -273,6 +284,12 @@ public class CreateApplicationRequest extends TeaModel {
          */
         @NameInMap("ComponentType")
         public String componentType;
+
+        @NameInMap("ScaleMax")
+        public String scaleMax;
+
+        @NameInMap("ScaleMin")
+        public String scaleMin;
 
         /**
          * <strong>example:</strong>
@@ -337,6 +354,22 @@ public class CreateApplicationRequest extends TeaModel {
         }
         public String getComponentType() {
             return this.componentType;
+        }
+
+        public CreateApplicationRequestComponents setScaleMax(String scaleMax) {
+            this.scaleMax = scaleMax;
+            return this;
+        }
+        public String getScaleMax() {
+            return this.scaleMax;
+        }
+
+        public CreateApplicationRequestComponents setScaleMin(String scaleMin) {
+            this.scaleMin = scaleMin;
+            return this;
+        }
+        public String getScaleMin() {
+            return this.scaleMin;
         }
 
         public CreateApplicationRequestComponents setSecurityGroups(String securityGroups) {

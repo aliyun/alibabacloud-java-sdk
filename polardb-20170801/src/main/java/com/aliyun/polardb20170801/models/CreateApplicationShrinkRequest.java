@@ -105,6 +105,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     /**
      * <strong>example:</strong>
      * <p>cn-beijing-k</p>
@@ -235,6 +238,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public CreateApplicationShrinkRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public CreateApplicationShrinkRequest setZoneId(String zoneId) {

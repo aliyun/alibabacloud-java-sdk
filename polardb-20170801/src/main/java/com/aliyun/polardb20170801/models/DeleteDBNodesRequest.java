@@ -14,6 +14,13 @@ public class DeleteDBNodesRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENS</p>
+     */
+    @NameInMap("CloudProvider")
+    public String cloudProvider;
+
+    /**
      * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
@@ -79,6 +86,14 @@ public class DeleteDBNodesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DeleteDBNodesRequest setCloudProvider(String cloudProvider) {
+        this.cloudProvider = cloudProvider;
+        return this;
+    }
+    public String getCloudProvider() {
+        return this.cloudProvider;
     }
 
     public DeleteDBNodesRequest setDBClusterId(String DBClusterId) {

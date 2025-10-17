@@ -14,6 +14,13 @@ public class CreateDBNodesRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <strong>example:</strong>
+     * <p>ENS</p>
+     */
+    @NameInMap("CloudProvider")
+    public String cloudProvider;
+
+    /**
      * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
@@ -144,6 +151,14 @@ public class CreateDBNodesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDBNodesRequest setCloudProvider(String cloudProvider) {
+        this.cloudProvider = cloudProvider;
+        return this;
+    }
+    public String getCloudProvider() {
+        return this.cloudProvider;
     }
 
     public CreateDBNodesRequest setDBClusterId(String DBClusterId) {

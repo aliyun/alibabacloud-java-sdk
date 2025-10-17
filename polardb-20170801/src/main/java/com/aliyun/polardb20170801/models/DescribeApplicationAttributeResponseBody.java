@@ -121,6 +121,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @NameInMap("SecurityIPArrays")
     public java.util.List<DescribeApplicationAttributeResponseBodySecurityIPArrays> securityIPArrays;
 
+    @NameInMap("ServerlessType")
+    public String serverlessType;
+
     /**
      * <strong>example:</strong>
      * <p>Activated</p>
@@ -322,6 +325,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
     public java.util.List<DescribeApplicationAttributeResponseBodySecurityIPArrays> getSecurityIPArrays() {
         return this.securityIPArrays;
+    }
+
+    public DescribeApplicationAttributeResponseBody setServerlessType(String serverlessType) {
+        this.serverlessType = serverlessType;
+        return this;
+    }
+    public String getServerlessType() {
+        return this.serverlessType;
     }
 
     public DescribeApplicationAttributeResponseBody setStatus(String status) {

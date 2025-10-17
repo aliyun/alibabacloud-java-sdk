@@ -559,6 +559,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("SQLSize")
     public Long SQLSize;
 
+    @NameInMap("SearchCompressStorageUsed")
+    public Long searchCompressStorageUsed;
+
+    @NameInMap("SearchStorageUsed")
+    public Long searchStorageUsed;
+
     /**
      * <p>Serverless type. Valid values are as follows:</p>
      * <ul>
@@ -1129,6 +1135,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public Long getSQLSize() {
         return this.SQLSize;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setSearchCompressStorageUsed(Long searchCompressStorageUsed) {
+        this.searchCompressStorageUsed = searchCompressStorageUsed;
+        return this;
+    }
+    public Long getSearchCompressStorageUsed() {
+        return this.searchCompressStorageUsed;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setSearchStorageUsed(Long searchStorageUsed) {
+        this.searchStorageUsed = searchStorageUsed;
+        return this;
+    }
+    public Long getSearchStorageUsed() {
+        return this.searchStorageUsed;
     }
 
     public DescribeDBClusterAttributeResponseBody setServerlessType(String serverlessType) {

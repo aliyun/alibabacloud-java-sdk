@@ -668,6 +668,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>检查PolarDB账号名称</p>
+     * 
+     * @param request CheckAccountNameZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckAccountNameZonalResponse
+     */
+    public CheckAccountNameZonalResponse checkAccountNameZonalWithOptions(CheckAccountNameZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckAccountNameZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAccountNameZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查PolarDB账号名称</p>
+     * 
+     * @param request CheckAccountNameZonalRequest
+     * @return CheckAccountNameZonalResponse
+     */
+    public CheckAccountNameZonalResponse checkAccountNameZonal(CheckAccountNameZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkAccountNameZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>检查连接串</p>
      * 
      * @param request CheckConnectionStringRequest
@@ -792,6 +856,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckDBNameResponse checkDBName(CheckDBNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkDBNameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查PolarDB边缘云数据库名</p>
+     * 
+     * @param request CheckDBNameZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckDBNameZonalResponse
+     */
+    public CheckDBNameZonalResponse checkDBNameZonalWithOptions(CheckDBNameZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckDBNameZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckDBNameZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查PolarDB边缘云数据库名</p>
+     * 
+     * @param request CheckDBNameZonalRequest
+     * @return CheckDBNameZonalResponse
+     */
+    public CheckDBNameZonalResponse checkDBNameZonal(CheckDBNameZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkDBNameZonalWithOptions(request, runtime);
     }
 
     /**
@@ -1232,6 +1360,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建边缘云账号</p>
+     * 
+     * @param request CreateAccountZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAccountZonalResponse
+     */
+    public CreateAccountZonalResponse createAccountZonalWithOptions(CreateAccountZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDescription)) {
+            query.put("AccountDescription", request.accountDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountPassword)) {
+            query.put("AccountPassword", request.accountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountPrivilege)) {
+            query.put("AccountPrivilege", request.accountPrivilege);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
+            query.put("AccountType", request.accountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privForAllDB)) {
+            query.put("PrivForAllDB", request.privForAllDB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAccountZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccountZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建边缘云账号</p>
+     * 
+     * @param request CreateAccountZonalRequest
+     * @return CreateAccountZonalResponse
+     */
+    public CreateAccountZonalResponse createAccountZonal(CreateAccountZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAccountZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Generates a lightweight license activation code.</p>
      * 
      * @param request CreateActivationCodeRequest
@@ -1385,6 +1609,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
@@ -1785,6 +2013,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CloneDataPoint", request.cloneDataPoint);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterNetworkType)) {
             query.put("ClusterNetworkType", request.clusterNetworkType);
         }
@@ -1823,6 +2055,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.defaultTimeZone)) {
             query.put("DefaultTimeZone", request.defaultTimeZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
+            query.put("EnsRegionId", request.ensRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.GDNId)) {
@@ -2069,6 +2305,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.polarSccTimeoutAction)) {
             query.put("PolarSccTimeoutAction", request.polarSccTimeoutAction);
         }
@@ -2120,6 +2360,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDBClusterEndpointResponse createDBClusterEndpoint(CreateDBClusterEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDBClusterEndpointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>边缘云创建链接地址接口</p>
+     * 
+     * @param request CreateDBClusterEndpointZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDBClusterEndpointZonalResponse
+     */
+    public CreateDBClusterEndpointZonalResponse createDBClusterEndpointZonalWithOptions(CreateDBClusterEndpointZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoAddNewNodes)) {
+            query.put("AutoAddNewNodes", request.autoAddNewNodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBEndpointDescription)) {
+            query.put("DBEndpointDescription", request.DBEndpointDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointConfig)) {
+            query.put("EndpointConfig", request.endpointConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointType)) {
+            query.put("EndpointType", request.endpointType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodes)) {
+            query.put("Nodes", request.nodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarSccTimeoutAction)) {
+            query.put("PolarSccTimeoutAction", request.polarSccTimeoutAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarSccWaitTimeout)) {
+            query.put("PolarSccWaitTimeout", request.polarSccWaitTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.readWriteMode)) {
+            query.put("ReadWriteMode", request.readWriteMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sccMode)) {
+            query.put("SccMode", request.sccMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDBClusterEndpointZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDBClusterEndpointZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>边缘云创建链接地址接口</p>
+     * 
+     * @param request CreateDBClusterEndpointZonalRequest
+     * @return CreateDBClusterEndpointZonalResponse
+     */
+    public CreateDBClusterEndpointZonalResponse createDBClusterEndpointZonal(CreateDBClusterEndpointZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDBClusterEndpointZonalWithOptions(request, runtime);
     }
 
     /**
@@ -2359,6 +2699,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
@@ -2536,6 +2880,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDatabaseResponse createDatabase(CreateDatabaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDatabaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建PolarDB边缘云数据库</p>
+     * 
+     * @param request CreateDatabaseZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDatabaseZonalResponse
+     */
+    public CreateDatabaseZonalResponse createDatabaseZonalWithOptions(CreateDatabaseZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountPrivilege)) {
+            query.put("AccountPrivilege", request.accountPrivilege);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.characterSetName)) {
+            query.put("CharacterSetName", request.characterSetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.collate)) {
+            query.put("Collate", request.collate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ctype)) {
+            query.put("Ctype", request.ctype);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBDescription)) {
+            query.put("DBDescription", request.DBDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDatabaseZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDatabaseZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建PolarDB边缘云数据库</p>
+     * 
+     * @param request CreateDatabaseZonalRequest
+     * @return CreateDatabaseZonalResponse
+     */
+    public CreateDatabaseZonalResponse createDatabaseZonal(CreateDatabaseZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDatabaseZonalWithOptions(request, runtime);
     }
 
     /**
@@ -3384,6 +3820,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除PolarDB边缘云集群账号</p>
+     * 
+     * @param request DeleteAccountZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAccountZonalResponse
+     */
+    public DeleteAccountZonalResponse deleteAccountZonalWithOptions(DeleteAccountZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAccountZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccountZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PolarDB边缘云集群账号</p>
+     * 
+     * @param request DeleteAccountZonalRequest
+     * @return DeleteAccountZonalResponse
+     */
+    public DeleteAccountZonalResponse deleteAccountZonal(DeleteAccountZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAccountZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除PolarDB应用</p>
      * 
      * @param request DeleteApplicationRequest
@@ -3659,6 +4159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -3694,6 +4198,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDBClusterEndpointResponse deleteDBClusterEndpoint(DeleteDBClusterEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBClusterEndpointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PolarDB 边缘云集群的链接地址</p>
+     * 
+     * @param request DeleteDBClusterEndpointZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDBClusterEndpointZonalResponse
+     */
+    public DeleteDBClusterEndpointZonalResponse deleteDBClusterEndpointZonalWithOptions(DeleteDBClusterEndpointZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBEndpointId)) {
+            query.put("DBEndpointId", request.DBEndpointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDBClusterEndpointZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBClusterEndpointZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PolarDB 边缘云集群的链接地址</p>
+     * 
+     * @param request DeleteDBClusterEndpointZonalRequest
+     * @return DeleteDBClusterEndpointZonalResponse
+     */
+    public DeleteDBClusterEndpointZonalResponse deleteDBClusterEndpointZonal(DeleteDBClusterEndpointZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDBClusterEndpointZonalWithOptions(request, runtime);
     }
 
     /**
@@ -3859,6 +4427,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
@@ -3994,6 +4566,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDatabaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PolarDB边缘云集群数据库</p>
+     * 
+     * @param request DeleteDatabaseZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDatabaseZonalResponse
+     */
+    public DeleteDatabaseZonalResponse deleteDatabaseZonalWithOptions(DeleteDatabaseZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDatabaseZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDatabaseZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PolarDB边缘云集群数据库</p>
+     * 
+     * @param request DeleteDatabaseZonalRequest
+     * @return DeleteDatabaseZonalResponse
+     */
+    public DeleteDatabaseZonalResponse deleteDatabaseZonal(DeleteDatabaseZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDatabaseZonalWithOptions(request, runtime);
     }
 
     /**
@@ -5012,6 +5648,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询PolarDB边缘云集群列表</p>
+     * 
+     * @param request DescribeAccountsZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAccountsZonalResponse
+     */
+    public DescribeAccountsZonalResponse describeAccountsZonalWithOptions(DescribeAccountsZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAccountsZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAccountsZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PolarDB边缘云集群列表</p>
+     * 
+     * @param request DescribeAccountsZonalRequest
+     * @return DescribeAccountsZonalResponse
+     */
+    public DescribeAccountsZonalResponse describeAccountsZonal(DescribeAccountsZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAccountsZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of an activation code.</p>
      * 
      * @param request DescribeActivationCodeDetailsRequest
@@ -5418,6 +6138,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取应用serverless配置</p>
+     * 
+     * @param request DescribeApplicationServerlessConfRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationServerlessConfResponse
+     */
+    public DescribeApplicationServerlessConfResponse describeApplicationServerlessConfWithOptions(DescribeApplicationServerlessConfRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationServerlessConf"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationServerlessConfResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用serverless配置</p>
+     * 
+     * @param request DescribeApplicationServerlessConfRequest
+     * @return DescribeApplicationServerlessConfResponse
+     */
+    public DescribeApplicationServerlessConfResponse describeApplicationServerlessConf(DescribeApplicationServerlessConfRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationServerlessConfWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取当前地域所有PolarDB实例的应用列表</p>
      * 
      * @param request DescribeApplicationsRequest
@@ -5487,6 +6251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAutoRenewAttributeResponse describeAutoRenewAttributeWithOptions(DescribeAutoRenewAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterIds)) {
             query.put("DBClusterIds", request.DBClusterIds);
         }
@@ -6863,6 +7631,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -6898,6 +7670,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDBClusterEndpointsResponse describeDBClusterEndpoints(DescribeDBClusterEndpointsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClusterEndpointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PolarDB边缘集群的链接地址</p>
+     * 
+     * @param request DescribeDBClusterEndpointsZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBClusterEndpointsZonalResponse
+     */
+    public DescribeDBClusterEndpointsZonalResponse describeDBClusterEndpointsZonalWithOptions(DescribeDBClusterEndpointsZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBEndpointId)) {
+            query.put("DBEndpointId", request.DBEndpointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBClusterEndpointsZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterEndpointsZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PolarDB边缘集群的链接地址</p>
+     * 
+     * @param request DescribeDBClusterEndpointsZonalRequest
+     * @return DescribeDBClusterEndpointsZonalResponse
+     */
+    public DescribeDBClusterEndpointsZonalResponse describeDBClusterEndpointsZonal(DescribeDBClusterEndpointsZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBClusterEndpointsZonalWithOptions(request, runtime);
     }
 
     /**
@@ -7570,6 +8410,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>PolarDB边缘集群查询版本</p>
+     * 
+     * @param request DescribeDBClusterVersionZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBClusterVersionZonalResponse
+     */
+    public DescribeDBClusterVersionZonalResponse describeDBClusterVersionZonalWithOptions(DescribeDBClusterVersionZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBClusterVersionZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterVersionZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PolarDB边缘集群查询版本</p>
+     * 
+     * @param request DescribeDBClusterVersionZonalRequest
+     * @return DescribeDBClusterVersionZonalResponse
+     */
+    public DescribeDBClusterVersionZonalResponse describeDBClusterVersionZonal(DescribeDBClusterVersionZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBClusterVersionZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries PolarDB clusters or the clusters that can be accessed by an authorized RAM user.</p>
      * 
      * @param request DescribeDBClustersRequest
@@ -7782,6 +8686,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDBClustersWithBackupsResponse describeDBClustersWithBackups(DescribeDBClustersWithBackupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClustersWithBackupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>MyBase中的PolarDB列表</p>
+     * 
+     * @param request DescribeDBClustersZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBClustersZonalResponse
+     */
+    public DescribeDBClustersZonalResponse describeDBClustersZonalWithOptions(DescribeDBClustersZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionString)) {
+            query.put("ConnectionString", request.connectionString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterDescription)) {
+            query.put("DBClusterDescription", request.DBClusterDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterIds)) {
+            query.put("DBClusterIds", request.DBClusterIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterStatus)) {
+            query.put("DBClusterStatus", request.DBClusterStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeIds)) {
+            query.put("DBNodeIds", request.DBNodeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBType)) {
+            query.put("DBType", request.DBType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBVersion)) {
+            query.put("DBVersion", request.DBVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expired)) {
+            query.put("Expired", request.expired);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recentCreationInterval)) {
+            query.put("RecentCreationInterval", request.recentCreationInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recentExpirationInterval)) {
+            query.put("RecentExpirationInterval", request.recentExpirationInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBClustersZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClustersZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>MyBase中的PolarDB列表</p>
+     * 
+     * @param request DescribeDBClustersZonalRequest
+     * @return DescribeDBClustersZonalResponse
+     */
+    public DescribeDBClustersZonalResponse describeDBClustersZonal(DescribeDBClustersZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBClustersZonalWithOptions(request, runtime);
     }
 
     /**
@@ -8536,6 +9576,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDatabasesResponse describeDatabases(DescribeDatabasesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDatabasesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PolarDB边缘云数据库</p>
+     * 
+     * @param request DescribeDatabasesZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDatabasesZonalResponse
+     */
+    public DescribeDatabasesZonalResponse describeDatabasesZonalWithOptions(DescribeDatabasesZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDatabasesZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDatabasesZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询PolarDB边缘云数据库</p>
+     * 
+     * @param request DescribeDatabasesZonalRequest
+     * @return DescribeDatabasesZonalResponse
+     */
+    public DescribeDatabasesZonalResponse describeDatabasesZonal(DescribeDatabasesZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDatabasesZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PolarDB的MyBase集群</p>
+     * 
+     * @param request DescribeDbClusterAttributeZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDbClusterAttributeZonalResponse
+     */
+    public DescribeDbClusterAttributeZonalResponse describeDbClusterAttributeZonalWithOptions(DescribeDbClusterAttributeZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDbClusterAttributeZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDbClusterAttributeZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PolarDB的MyBase集群</p>
+     * 
+     * @param request DescribeDbClusterAttributeZonalRequest
+     * @return DescribeDbClusterAttributeZonalResponse
+     */
+    public DescribeDbClusterAttributeZonalResponse describeDbClusterAttributeZonal(DescribeDbClusterAttributeZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDbClusterAttributeZonalWithOptions(request, runtime);
     }
 
     /**
@@ -12276,6 +13460,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>角色切换</p>
+     * 
+     * @param request FailoverDBClusterZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FailoverDBClusterZonalResponse
+     */
+    public FailoverDBClusterZonalResponse failoverDBClusterZonalWithOptions(FailoverDBClusterZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rollBackForDisaster)) {
+            query.put("RollBackForDisaster", request.rollBackForDisaster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetDBNodeId)) {
+            query.put("TargetDBNodeId", request.targetDBNodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetZoneType)) {
+            query.put("TargetZoneType", request.targetZoneType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FailoverDBClusterZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FailoverDBClusterZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>角色切换</p>
+     * 
+     * @param request FailoverDBClusterZonalRequest
+     * @return FailoverDBClusterZonalResponse
+     */
+    public FailoverDBClusterZonalResponse failoverDBClusterZonal(FailoverDBClusterZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.failoverDBClusterZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>生成校验报告</p>
      * 
      * @param request GenerateUpgradeReportForSyncCloneRequest
@@ -12454,6 +13714,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GrantAccountPrivilegeResponse grantAccountPrivilege(GrantAccountPrivilegeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.grantAccountPrivilegeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改PolarDB边缘集群的账号权限</p>
+     * 
+     * @param request GrantAccountPrivilegeZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantAccountPrivilegeZonalResponse
+     */
+    public GrantAccountPrivilegeZonalResponse grantAccountPrivilegeZonalWithOptions(GrantAccountPrivilegeZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountPrivilege)) {
+            query.put("AccountPrivilege", request.accountPrivilege);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantAccountPrivilegeZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantAccountPrivilegeZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改PolarDB边缘集群的账号权限</p>
+     * 
+     * @param request GrantAccountPrivilegeZonalRequest
+     * @return GrantAccountPrivilegeZonalResponse
+     */
+    public GrantAccountPrivilegeZonalResponse grantAccountPrivilegeZonal(GrantAccountPrivilegeZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.grantAccountPrivilegeZonalWithOptions(request, runtime);
     }
 
     /**
@@ -12871,6 +14207,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改PolarDB边缘云账号的描述</p>
+     * 
+     * @param request ModifyAccountDescriptionZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAccountDescriptionZonalResponse
+     */
+    public ModifyAccountDescriptionZonalResponse modifyAccountDescriptionZonalWithOptions(ModifyAccountDescriptionZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDescription)) {
+            query.put("AccountDescription", request.accountDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAccountDescriptionZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAccountDescriptionZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改PolarDB边缘云账号的描述</p>
+     * 
+     * @param request ModifyAccountDescriptionZonalRequest
+     * @return ModifyAccountDescriptionZonalResponse
+     */
+    public ModifyAccountDescriptionZonalResponse modifyAccountDescriptionZonal(ModifyAccountDescriptionZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAccountDescriptionZonalWithOptions(request, runtime);
+    }
+
+    /**
      * @param request ModifyAccountLockStateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccountLockStateResponse
@@ -13006,6 +14414,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAccountPasswordResponse modifyAccountPassword(ModifyAccountPasswordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAccountPasswordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改PolarDB边缘的账号密码</p>
+     * 
+     * @param request ModifyAccountPasswordZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAccountPasswordZonalResponse
+     */
+    public ModifyAccountPasswordZonalResponse modifyAccountPasswordZonalWithOptions(ModifyAccountPasswordZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newAccountPassword)) {
+            query.put("NewAccountPassword", request.newAccountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passwordType)) {
+            query.put("PasswordType", request.passwordType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAccountPasswordZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAccountPasswordZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改PolarDB边缘的账号密码</p>
+     * 
+     * @param request ModifyAccountPasswordZonalRequest
+     * @return ModifyAccountPasswordZonalResponse
+     */
+    public ModifyAccountPasswordZonalResponse modifyAccountPasswordZonal(ModifyAccountPasswordZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAccountPasswordZonalWithOptions(request, runtime);
     }
 
     /**
@@ -13288,6 +14772,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改应用serverless配置</p>
+     * 
+     * @param request ModifyApplicationServerlessConfRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyApplicationServerlessConfResponse
+     */
+    public ModifyApplicationServerlessConfResponse modifyApplicationServerlessConfWithOptions(ModifyApplicationServerlessConfRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverlessConfList)) {
+            query.put("ServerlessConfList", request.serverlessConfList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyApplicationServerlessConf"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyApplicationServerlessConfResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改应用serverless配置</p>
+     * 
+     * @param request ModifyApplicationServerlessConfRequest
+     * @return ModifyApplicationServerlessConfResponse
+     */
+    public ModifyApplicationServerlessConfResponse modifyApplicationServerlessConf(ModifyApplicationServerlessConfRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyApplicationServerlessConfWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改应用白名单</p>
      * 
      * @param request ModifyApplicationWhitelistRequest
@@ -13361,6 +14893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAutoRenewAttributeResponse modifyAutoRenewAttributeWithOptions(ModifyAutoRenewAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterIds)) {
             query.put("DBClusterIds", request.DBClusterIds);
         }
@@ -14212,6 +15748,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改集群描述</p>
+     * 
+     * @param request ModifyDBClusterDescriptionZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDBClusterDescriptionZonalResponse
+     */
+    public ModifyDBClusterDescriptionZonalResponse modifyDBClusterDescriptionZonalWithOptions(ModifyDBClusterDescriptionZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterDescription)) {
+            query.put("DBClusterDescription", request.DBClusterDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBClusterDescriptionZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterDescriptionZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改集群描述</p>
+     * 
+     * @param request ModifyDBClusterDescriptionZonalRequest
+     * @return ModifyDBClusterDescriptionZonalResponse
+     */
+    public ModifyDBClusterDescriptionZonalResponse modifyDBClusterDescriptionZonal(ModifyDBClusterDescriptionZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBClusterDescriptionZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the attributes of a specified PolarDB cluster endpoint. For example, you can modify the following attributes for the specified cluster endpoint: read/write mode, consistency level, transaction splitting, primary node accepts read requests, and connection pool. You can also call the operation to specify whether newly added nodes are automatically associated with the specified cluster endpoint.</p>
      * 
      * @param request ModifyDBClusterEndpointRequest
@@ -14304,6 +15908,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBClusterEndpointResponse modifyDBClusterEndpoint(ModifyDBClusterEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterEndpointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PolarDB边缘集群修改链接地址</p>
+     * 
+     * @param request ModifyDBClusterEndpointZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDBClusterEndpointZonalResponse
+     */
+    public ModifyDBClusterEndpointZonalResponse modifyDBClusterEndpointZonalWithOptions(ModifyDBClusterEndpointZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoAddNewNodes)) {
+            query.put("AutoAddNewNodes", request.autoAddNewNodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBEndpointDescription)) {
+            query.put("DBEndpointDescription", request.DBEndpointDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBEndpointId)) {
+            query.put("DBEndpointId", request.DBEndpointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointConfig)) {
+            query.put("EndpointConfig", request.endpointConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodes)) {
+            query.put("Nodes", request.nodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarSccTimeoutAction)) {
+            query.put("PolarSccTimeoutAction", request.polarSccTimeoutAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarSccWaitTimeout)) {
+            query.put("PolarSccWaitTimeout", request.polarSccWaitTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.readWriteMode)) {
+            query.put("ReadWriteMode", request.readWriteMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sccMode)) {
+            query.put("SccMode", request.sccMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBClusterEndpointZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterEndpointZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PolarDB边缘集群修改链接地址</p>
+     * 
+     * @param request ModifyDBClusterEndpointZonalRequest
+     * @return ModifyDBClusterEndpointZonalResponse
+     */
+    public ModifyDBClusterEndpointZonalResponse modifyDBClusterEndpointZonal(ModifyDBClusterEndpointZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBClusterEndpointZonalWithOptions(request, runtime);
     }
 
     /**
@@ -15173,6 +16877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
@@ -15476,6 +17184,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改PolarDB边缘云集群数据库描述</p>
+     * 
+     * @param request ModifyDBDescriptionZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDBDescriptionZonalResponse
+     */
+    public ModifyDBDescriptionZonalResponse modifyDBDescriptionZonalWithOptions(ModifyDBDescriptionZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBDescription)) {
+            query.put("DBDescription", request.DBDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBDescriptionZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBDescriptionZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改PolarDB边缘云集群数据库描述</p>
+     * 
+     * @param request ModifyDBDescriptionZonalRequest
+     * @return ModifyDBDescriptionZonalResponse
+     */
+    public ModifyDBDescriptionZonalResponse modifyDBDescriptionZonal(ModifyDBDescriptionZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBDescriptionZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, custom cluster endpoint, and private domain name.</p>
      * 
      * @param request ModifyDBEndpointAddressRequest
@@ -15571,6 +17351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
@@ -15937,6 +17721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
@@ -17442,6 +19230,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>重置PolarDB边缘集群账号</p>
+     * 
+     * @param request ResetAccountZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetAccountZonalResponse
+     */
+    public ResetAccountZonalResponse resetAccountZonalWithOptions(ResetAccountZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountPassword)) {
+            query.put("AccountPassword", request.accountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetAccountZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetAccountZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重置PolarDB边缘集群账号</p>
+     * 
+     * @param request ResetAccountZonalRequest
+     * @return ResetAccountZonalResponse
+     */
+    public ResetAccountZonalResponse resetAccountZonal(ResetAccountZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetAccountZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Rebuilds a secondary cluster in a Global Database Network (GDN).</p>
      * 
      * @param request ResetGlobalDatabaseNetworkRequest
@@ -17654,6 +19514,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>重启poalrdb边缘云集群节点</p>
+     * 
+     * @param request RestartDBNodeZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartDBNodeZonalResponse
+     */
+    public RestartDBNodeZonalResponse restartDBNodeZonalWithOptions(RestartDBNodeZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeId)) {
+            query.put("DBNodeId", request.DBNodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestartDBNodeZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartDBNodeZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重启poalrdb边缘云集群节点</p>
+     * 
+     * @param request RestartDBNodeZonalRequest
+     * @return RestartDBNodeZonalResponse
+     */
+    public RestartDBNodeZonalResponse restartDBNodeZonal(RestartDBNodeZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restartDBNodeZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Restores PolarDB databases and tables.</p>
      * 
      * @param request RestoreTableRequest
@@ -17794,6 +19722,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RevokeAccountPrivilegeResponse revokeAccountPrivilege(RevokeAccountPrivilegeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeAccountPrivilegeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>撤销账号权限</p>
+     * 
+     * @param request RevokeAccountPrivilegeZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeAccountPrivilegeZonalResponse
+     */
+    public RevokeAccountPrivilegeZonalResponse revokeAccountPrivilegeZonalWithOptions(RevokeAccountPrivilegeZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeAccountPrivilegeZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeAccountPrivilegeZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>撤销账号权限</p>
+     * 
+     * @param request RevokeAccountPrivilegeZonalRequest
+     * @return RevokeAccountPrivilegeZonalResponse
+     */
+    public RevokeAccountPrivilegeZonalResponse revokeAccountPrivilegeZonal(RevokeAccountPrivilegeZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeAccountPrivilegeZonalWithOptions(request, runtime);
     }
 
     /**
@@ -18394,5 +20394,101 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeDBClusterVersionResponse upgradeDBClusterVersion(UpgradeDBClusterVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeDBClusterVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PolarDB边缘云集群小版本升级</p>
+     * 
+     * @param request UpgradeDBClusterVersionZonalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeDBClusterVersionZonalResponse
+     */
+    public UpgradeDBClusterVersionZonalResponse upgradeDBClusterVersionZonalWithOptions(UpgradeDBClusterVersionZonalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromTimeService)) {
+            query.put("FromTimeService", request.fromTimeService);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.plannedEndTime)) {
+            query.put("PlannedEndTime", request.plannedEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.plannedStartTime)) {
+            query.put("PlannedStartTime", request.plannedStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetDBRevisionVersionCode)) {
+            query.put("TargetDBRevisionVersionCode", request.targetDBRevisionVersionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetProxyRevisionVersionCode)) {
+            query.put("TargetProxyRevisionVersionCode", request.targetProxyRevisionVersionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upgradeLabel)) {
+            query.put("UpgradeLabel", request.upgradeLabel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upgradePolicy)) {
+            query.put("UpgradePolicy", request.upgradePolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upgradeType)) {
+            query.put("UpgradeType", request.upgradeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradeDBClusterVersionZonal"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeDBClusterVersionZonalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PolarDB边缘云集群小版本升级</p>
+     * 
+     * @param request UpgradeDBClusterVersionZonalRequest
+     * @return UpgradeDBClusterVersionZonalResponse
+     */
+    public UpgradeDBClusterVersionZonalResponse upgradeDBClusterVersionZonal(UpgradeDBClusterVersionZonalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upgradeDBClusterVersionZonalWithOptions(request, runtime);
     }
 }

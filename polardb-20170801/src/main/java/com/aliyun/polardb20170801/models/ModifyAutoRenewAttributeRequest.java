@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoRenewAttributeRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENS</p>
+     */
+    @NameInMap("CloudProvider")
+    public String cloudProvider;
+
+    /**
      * <p>The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
@@ -98,6 +105,14 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public static ModifyAutoRenewAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAutoRenewAttributeRequest self = new ModifyAutoRenewAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAutoRenewAttributeRequest setCloudProvider(String cloudProvider) {
+        this.cloudProvider = cloudProvider;
+        return this;
+    }
+    public String getCloudProvider() {
+        return this.cloudProvider;
     }
 
     public ModifyAutoRenewAttributeRequest setDBClusterIds(String DBClusterIds) {

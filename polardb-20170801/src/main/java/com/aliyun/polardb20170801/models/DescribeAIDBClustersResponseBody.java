@@ -225,6 +225,13 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>pc-**************</p>
+         */
+        @NameInMap("RelativeDBClusterId")
+        public String relativeDBClusterId;
+
+        /**
+         * <strong>example:</strong>
          * <p>container</p>
          */
         @NameInMap("RunType")
@@ -371,6 +378,14 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeAIDBClustersResponseBodyItemsDBCluster setRelativeDBClusterId(String relativeDBClusterId) {
+            this.relativeDBClusterId = relativeDBClusterId;
+            return this;
+        }
+        public String getRelativeDBClusterId() {
+            return this.relativeDBClusterId;
         }
 
         public DescribeAIDBClustersResponseBodyItemsDBCluster setRunType(String runType) {

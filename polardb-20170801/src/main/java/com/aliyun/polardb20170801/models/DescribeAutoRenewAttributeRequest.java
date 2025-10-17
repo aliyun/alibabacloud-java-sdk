@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoRenewAttributeRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>ENS</p>
+     */
+    @NameInMap("CloudProvider")
+    public String cloudProvider;
+
+    /**
      * <p>The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,14 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     public static DescribeAutoRenewAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoRenewAttributeRequest self = new DescribeAutoRenewAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAutoRenewAttributeRequest setCloudProvider(String cloudProvider) {
+        this.cloudProvider = cloudProvider;
+        return this;
+    }
+    public String getCloudProvider() {
+        return this.cloudProvider;
     }
 
     public DescribeAutoRenewAttributeRequest setDBClusterIds(String DBClusterIds) {
