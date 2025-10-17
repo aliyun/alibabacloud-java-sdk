@@ -267,12 +267,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BusinessKey", request.businessKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataMode)) {
+            body.put("DataMode", request.dataMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
             body.put("DeviceType", request.deviceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
             body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forecastHorizon)) {
+            body.put("ForecastHorizon", request.forecastHorizon);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.freq)) {
@@ -357,12 +365,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BusinessKey", request.businessKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataMode)) {
+            body.put("DataMode", request.dataMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
             body.put("DeviceType", request.deviceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
             body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forecastHorizon)) {
+            body.put("ForecastHorizon", request.forecastHorizon);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.freq)) {
@@ -439,12 +455,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BusinessKey", request.businessKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataMode)) {
+            body.put("DataMode", request.dataMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
             body.put("DeviceType", request.deviceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
             body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forecastHorizon)) {
+            body.put("ForecastHorizon", request.forecastHorizon);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.freq)) {
@@ -537,12 +561,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BusinessKey", request.businessKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataMode)) {
+            body.put("DataMode", request.dataMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
             body.put("DeviceType", request.deviceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
             body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forecastHorizon)) {
+            body.put("ForecastHorizon", request.forecastHorizon);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.freq)) {

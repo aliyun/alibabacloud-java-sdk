@@ -13,6 +13,13 @@ public class CreatePowerForecastByFileUrlJobShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>FULL</p>
+     */
+    @NameInMap("DataMode")
+    public String dataMode;
+
+    /**
+     * <strong>example:</strong>
      * <p>solarInverter</p>
      */
     @NameInMap("DeviceType")
@@ -24,6 +31,13 @@ public class CreatePowerForecastByFileUrlJobShrinkRequest extends TeaModel {
      */
     @NameInMap("Duration")
     public Integer duration;
+
+    /**
+     * <strong>example:</strong>
+     * <p>DAY_AHEAD</p>
+     */
+    @NameInMap("ForecastHorizon")
+    public String forecastHorizon;
 
     /**
      * <strong>example:</strong>
@@ -97,6 +111,14 @@ public class CreatePowerForecastByFileUrlJobShrinkRequest extends TeaModel {
         return this.businessKey;
     }
 
+    public CreatePowerForecastByFileUrlJobShrinkRequest setDataMode(String dataMode) {
+        this.dataMode = dataMode;
+        return this;
+    }
+    public String getDataMode() {
+        return this.dataMode;
+    }
+
     public CreatePowerForecastByFileUrlJobShrinkRequest setDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -111,6 +133,14 @@ public class CreatePowerForecastByFileUrlJobShrinkRequest extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public CreatePowerForecastByFileUrlJobShrinkRequest setForecastHorizon(String forecastHorizon) {
+        this.forecastHorizon = forecastHorizon;
+        return this;
+    }
+    public String getForecastHorizon() {
+        return this.forecastHorizon;
     }
 
     public CreatePowerForecastByFileUrlJobShrinkRequest setFreq(String freq) {

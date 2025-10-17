@@ -13,6 +13,13 @@ public class CreateLoadForecastByFileUrlJobRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>FULL</p>
+     */
+    @NameInMap("DataMode")
+    public String dataMode;
+
+    /**
+     * <strong>example:</strong>
      * <p>electricityMeter</p>
      */
     @NameInMap("DeviceType")
@@ -24,6 +31,13 @@ public class CreateLoadForecastByFileUrlJobRequest extends TeaModel {
      */
     @NameInMap("Duration")
     public Integer duration;
+
+    /**
+     * <strong>example:</strong>
+     * <p>DAY_AHEAD</p>
+     */
+    @NameInMap("ForecastHorizon")
+    public String forecastHorizon;
 
     /**
      * <strong>example:</strong>
@@ -94,6 +108,14 @@ public class CreateLoadForecastByFileUrlJobRequest extends TeaModel {
         return this.businessKey;
     }
 
+    public CreateLoadForecastByFileUrlJobRequest setDataMode(String dataMode) {
+        this.dataMode = dataMode;
+        return this;
+    }
+    public String getDataMode() {
+        return this.dataMode;
+    }
+
     public CreateLoadForecastByFileUrlJobRequest setDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -108,6 +130,14 @@ public class CreateLoadForecastByFileUrlJobRequest extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public CreateLoadForecastByFileUrlJobRequest setForecastHorizon(String forecastHorizon) {
+        this.forecastHorizon = forecastHorizon;
+        return this;
+    }
+    public String getForecastHorizon() {
+        return this.forecastHorizon;
     }
 
     public CreateLoadForecastByFileUrlJobRequest setFreq(String freq) {

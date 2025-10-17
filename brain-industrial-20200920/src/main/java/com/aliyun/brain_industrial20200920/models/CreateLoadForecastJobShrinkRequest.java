@@ -9,6 +9,13 @@ public class CreateLoadForecastJobShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>FULL</p>
+     */
+    @NameInMap("DataMode")
+    public String dataMode;
+
+    /**
+     * <strong>example:</strong>
      * <p>electricityMeter</p>
      */
     @NameInMap("DeviceType")
@@ -20,6 +27,13 @@ public class CreateLoadForecastJobShrinkRequest extends TeaModel {
      */
     @NameInMap("Duration")
     public Integer duration;
+
+    /**
+     * <strong>example:</strong>
+     * <p>DAY_AHEAD</p>
+     */
+    @NameInMap("ForecastHorizon")
+    public String forecastHorizon;
 
     /**
      * <strong>example:</strong>
@@ -72,6 +86,14 @@ public class CreateLoadForecastJobShrinkRequest extends TeaModel {
         return this.businessKey;
     }
 
+    public CreateLoadForecastJobShrinkRequest setDataMode(String dataMode) {
+        this.dataMode = dataMode;
+        return this;
+    }
+    public String getDataMode() {
+        return this.dataMode;
+    }
+
     public CreateLoadForecastJobShrinkRequest setDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -86,6 +108,14 @@ public class CreateLoadForecastJobShrinkRequest extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public CreateLoadForecastJobShrinkRequest setForecastHorizon(String forecastHorizon) {
+        this.forecastHorizon = forecastHorizon;
+        return this;
+    }
+    public String getForecastHorizon() {
+        return this.forecastHorizon;
     }
 
     public CreateLoadForecastJobShrinkRequest setFreq(String freq) {
