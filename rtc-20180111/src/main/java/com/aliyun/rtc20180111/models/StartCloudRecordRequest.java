@@ -1871,6 +1871,10 @@ public class StartCloudRecordRequest extends TeaModel {
         @NameInMap("Audio")
         public StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio audio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aac</p>
+         */
         @NameInMap("Container")
         public String container;
 
@@ -1898,6 +1902,9 @@ public class StartCloudRecordRequest extends TeaModel {
     }
 
     public static class StartCloudRecordRequestSingleStreamingRecord extends TeaModel {
+        @NameInMap("AvMerge")
+        public Boolean avMerge;
+
         /**
          * <p>This parameter is required.</p>
          */
@@ -1910,6 +1917,14 @@ public class StartCloudRecordRequest extends TeaModel {
         public static StartCloudRecordRequestSingleStreamingRecord build(java.util.Map<String, ?> map) throws Exception {
             StartCloudRecordRequestSingleStreamingRecord self = new StartCloudRecordRequestSingleStreamingRecord();
             return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecord setAvMerge(Boolean avMerge) {
+            this.avMerge = avMerge;
+            return this;
+        }
+        public Boolean getAvMerge() {
+            return this.avMerge;
         }
 
         public StartCloudRecordRequestSingleStreamingRecord setSpecifiedStreams(java.util.List<StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams> specifiedStreams) {
