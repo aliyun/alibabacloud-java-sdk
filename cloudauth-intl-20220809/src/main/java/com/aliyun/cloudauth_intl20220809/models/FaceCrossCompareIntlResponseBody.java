@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FaceCrossCompareIntlResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -27,6 +31,9 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("Result")
     public FaceCrossCompareIntlResponseBodyResult result;
 
@@ -69,6 +76,8 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
 
     public static class FaceCrossCompareIntlResponseBodyResult extends TeaModel {
         /**
+         * <p>A to B comparison score, range 0～100.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -76,6 +85,8 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         public Double faceComparisonScoreA2B;
 
         /**
+         * <p>B to C comparison score, range 0～100.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -83,6 +94,8 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         public Double faceComparisonScoreB2C;
 
         /**
+         * <p>C to A comparison score, range 0～100.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -90,6 +103,12 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         public Double faceComparisonScoreC2A;
 
         /**
+         * <p>Final verification result, values:</p>
+         * <ul>
+         * <li>Y: Pass</li>
+         * <li>N: Fail</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -97,6 +116,8 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         public String facePassed;
 
         /**
+         * <p>Unique identifier for the authentication request.</p>
+         * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>
          */

@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class CredentialGetResultIntlRequest extends TeaModel {
     /**
+     * <p>Unique identifier for the authentication request</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>4ab0b***cbde97</p>
+     * <p>4ab0b***abde97</p>
      */
     @NameInMap("TransactionId")
     public String transactionId;

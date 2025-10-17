@@ -575,8 +575,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After obtaining the TransactionId, you can use this interface on the server side to get the corresponding authentication result.</p>
+     * 
      * <b>summary</b> : 
-     * <p>凭证识别查询</p>
+     * <p>Credential Recognition Query</p>
      * 
      * @param request CredentialGetResultIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -607,8 +610,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After obtaining the TransactionId, you can use this interface on the server side to get the corresponding authentication result.</p>
+     * 
      * <b>summary</b> : 
-     * <p>凭证识别查询</p>
+     * <p>Credential Recognition Query</p>
      * 
      * @param request CredentialGetResultIntlRequest
      * @return CredentialGetResultIntlResponse
@@ -691,8 +697,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Initialization interface for credential recognition OCR, through which you can obtain the transactionId.</p>
+     * 
      * <b>summary</b> : 
-     * <p>凭证识别提交</p>
+     * <p>Credential Recognition Submission</p>
      * 
      * @param request CredentialSubmitIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -753,8 +762,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Initialization interface for credential recognition OCR, through which you can obtain the transactionId.</p>
+     * 
      * <b>summary</b> : 
-     * <p>凭证识别提交</p>
+     * <p>Credential Recognition Submission</p>
      * 
      * @param request CredentialSubmitIntlRequest
      * @return CredentialSubmitIntlResponse
@@ -993,8 +1005,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Input a face image and use the algorithm to detect if there is a risk of deepfake. This includes risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and rephotographed faces, and outputs risk labels and confidence scores.</p>
+     * 
      * <b>summary</b> : 
-     * <p>deepfake文件流api</p>
+     * <p>deepfake file stream API</p>
      * 
      * @param request DeepfakeDetectIntlStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1049,8 +1064,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Input a face image and use the algorithm to detect if there is a risk of deepfake. This includes risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and rephotographed faces, and outputs risk labels and confidence scores.</p>
+     * 
      * <b>summary</b> : 
-     * <p>deepfake文件流api</p>
+     * <p>deepfake file stream API</p>
      * 
      * @param request DeepfakeDetectIntlStreamRequest
      * @return DeepfakeDetectIntlStreamResponse
@@ -1384,6 +1402,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DocOcrMaxResponse docOcrMaxWithOptions(DocOcrMaxRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrValueStandard)) {
+            query.put("OcrValueStandard", request.ocrValueStandard);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.docPage)) {
             body.put("DocPage", request.docPage);
@@ -1438,6 +1461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1628,7 +1652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>人脸交叉比对</p>
+     * <p>Face Cross Comparison</p>
      * 
      * @param request FaceCrossCompareIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1700,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>人脸交叉比对</p>
+     * <p>Face Cross Comparison</p>
      * 
      * @param request FaceCrossCompareIntlRequest
      * @return FaceCrossCompareIntlResponse
@@ -2698,7 +2722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询人脸记录</p>
+     * <p>Query Face Records</p>
      * 
      * @param request QueryFaceRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2758,7 +2782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询人脸记录</p>
+     * <p>Query Face Records</p>
      * 
      * @param request QueryFaceRecordRequest
      * @return QueryFaceRecordResponse
@@ -2770,7 +2794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取临时token</p>
+     * <p>Get Temporary Token</p>
      * 
      * @param request TempAccessTokenIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2802,7 +2826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取临时token</p>
+     * <p>Get Temporary Token</p>
      * 
      * @param request TempAccessTokenIntlRequest
      * @return TempAccessTokenIntlResponse
@@ -2814,7 +2838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文件临时地址</p>
+     * <p>Get Temporary File URL</p>
      * 
      * @param request TempOssUrlIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2846,7 +2870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文件临时地址</p>
+     * <p>Get Temporary File URL</p>
      * 
      * @param request TempOssUrlIntlRequest
      * @return TempOssUrlIntlResponse

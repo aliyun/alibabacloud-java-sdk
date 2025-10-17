@@ -108,6 +108,13 @@ public class DocOcrMaxRequest extends TeaModel {
     public String ocrModel;
 
     /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("OcrValueStandard")
+    public String ocrValueStandard;
+
+    /**
      * <p>The product solution to be integrated.</p>
      * <p>Value: ID_OCR_MAX</p>
      * 
@@ -223,6 +230,14 @@ public class DocOcrMaxRequest extends TeaModel {
     }
     public String getOcrModel() {
         return this.ocrModel;
+    }
+
+    public DocOcrMaxRequest setOcrValueStandard(String ocrValueStandard) {
+        this.ocrValueStandard = ocrValueStandard;
+        return this;
+    }
+    public String getOcrValueStandard() {
+        return this.ocrValueStandard;
     }
 
     public DocOcrMaxRequest setProductCode(String productCode) {

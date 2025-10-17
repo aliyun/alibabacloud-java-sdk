@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TempAccessTokenIntlRequest extends TeaModel {
     /**
+     * <p>Type.</p>
+     * 
      * <strong>example:</strong>
      * <p>none</p>
      */

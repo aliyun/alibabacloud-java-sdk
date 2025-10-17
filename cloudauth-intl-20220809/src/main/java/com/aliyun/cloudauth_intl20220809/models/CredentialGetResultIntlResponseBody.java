@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CredentialGetResultIntlResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
@@ -27,6 +31,9 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("Result")
     public CredentialGetResultIntlResponseBodyResult result;
 
@@ -69,6 +76,8 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
 
     public static class CredentialGetResultIntlResponseBodyResult extends TeaModel {
         /**
+         * <p>Identified key information, in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;address&quot;: &quot;&quot;,
@@ -79,6 +88,13 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
+         * <p>Task status:</p>
+         * <ul>
+         * <li>PROCESSING: In progress (please continue polling)</li>
+         * <li>SUCCESS: Execution succeeded</li>
+         * <li>FAILED: Execution failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -86,6 +102,8 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Authentication result description. For more information, see ResultObject.SubCode error codes.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */

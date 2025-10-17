@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CredentialSubmitIntlRequest extends TeaModel {
     /**
+     * <p>Base64 encoding of the image. If you choose to upload the photo this way, please check the photo size and avoid uploading overly large photos.</p>
+     * 
      * <strong>example:</strong>
      * <p>base64</p>
      */
@@ -12,6 +14,8 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String credentialOcrPictureBase64;
 
     /**
+     * <p>Image URL, accessible via HTTP or HTTPS on the public network.</p>
+     * 
      * <strong>example:</strong>
      * <p>https://***</p>
      */
@@ -19,15 +23,24 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String credentialOcrPictureUrl;
 
     /**
+     * <p>Credential type:</p>
+     * <ul>
+     * <li>02: Vehicle registration certificate</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>01</p>
+     * <p>02</p>
      */
     @NameInMap("DocType")
     public String docType;
 
     /**
+     * <p>Whether to enable tampering detection</p>
+     * <ul>
+     * <li>true: Enable</li>
+     * <li>false: Disable</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +50,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String fraudCheck;
 
     /**
+     * <p>A unique business identifier defined on the merchant side, used for troubleshooting issues later. Supports a combination of letters and digits, with a maximum length of 32 characters. Ensure uniqueness.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,15 +60,20 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String merchantBizId;
 
     /**
+     * <p>Extraction type:</p>
+     * <ul>
+     * <li>0201: Thai vehicle registration certificate</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>0101</p>
+     * <p>0201</p>
      */
     @NameInMap("OcrArea")
     public String ocrArea;
 
     /**
+     * <p>The product solution to be integrated. Value: CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +83,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>Your custom authentication scenario ID, used for querying related records by entering this scenario ID in the console later. Supports a combination of 10 characters, digits, or underscores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

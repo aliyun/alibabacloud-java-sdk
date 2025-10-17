@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CredentialSubmitIntlResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
@@ -27,6 +31,9 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("Result")
     public CredentialSubmitIntlResponseBodyResult result;
 
@@ -69,6 +76,8 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
 
     public static class CredentialSubmitIntlResponseBodyResult extends TeaModel {
         /**
+         * <p>Unique identifier of the authentication request.</p>
+         * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>
          */
