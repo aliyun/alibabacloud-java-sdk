@@ -4,6 +4,9 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponseBody extends TeaModel {
+    @NameInMap("P2PToken")
+    public String p2PToken;
+
     /**
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -41,6 +44,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public static GetConnectionTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionTicketResponseBody self = new GetConnectionTicketResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetConnectionTicketResponseBody setP2PToken(String p2PToken) {
+        this.p2PToken = p2PToken;
+        return this;
+    }
+    public String getP2PToken() {
+        return this.p2PToken;
     }
 
     public GetConnectionTicketResponseBody setRequestId(String requestId) {
