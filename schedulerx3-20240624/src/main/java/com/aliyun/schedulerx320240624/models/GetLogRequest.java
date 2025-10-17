@@ -80,10 +80,24 @@ public class GetLogRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>2023-10-01 12:00:00</p>
+     */
+    @NameInMap("ScheduleTime")
+    public Long scheduleTime;
+
+    /**
+     * <strong>example:</strong>
      * <p>1721636220</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.1.100</p>
+     */
+    @NameInMap("WorkerAddr")
+    public String workerAddr;
 
     public static GetLogRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLogRequest self = new GetLogRequest();
@@ -170,12 +184,28 @@ public class GetLogRequest extends TeaModel {
         return this.reverse;
     }
 
+    public GetLogRequest setScheduleTime(Long scheduleTime) {
+        this.scheduleTime = scheduleTime;
+        return this;
+    }
+    public Long getScheduleTime() {
+        return this.scheduleTime;
+    }
+
     public GetLogRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public GetLogRequest setWorkerAddr(String workerAddr) {
+        this.workerAddr = workerAddr;
+        return this;
+    }
+    public String getWorkerAddr() {
+        return this.workerAddr;
     }
 
 }
