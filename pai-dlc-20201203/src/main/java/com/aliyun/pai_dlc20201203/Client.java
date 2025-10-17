@@ -1221,6 +1221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DisplayName", request.displayName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.displayNameSearchMode)) {
+            query.put("DisplayNameSearchMode", request.displayNameSearchMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }

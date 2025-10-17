@@ -44,6 +44,9 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
+    @NameInMap("DisplayNameSearchMode")
+    public String displayNameSearchMode;
+
     /**
      * <p>The end time of the query. Use the job creation time to filter data. The default value is the current time.</p>
      * 
@@ -303,6 +306,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    public ListJobsShrinkRequest setDisplayNameSearchMode(String displayNameSearchMode) {
+        this.displayNameSearchMode = displayNameSearchMode;
+        return this;
+    }
+    public String getDisplayNameSearchMode() {
+        return this.displayNameSearchMode;
     }
 
     public ListJobsShrinkRequest setEndTime(String endTime) {
