@@ -11,12 +11,14 @@ public class BeginSessionRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
-    /**
-     * <strong>example:</strong>
-     * <p>chatbot-cn-mp90s2lrk00050</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("SandBox")
+    public Boolean sandBox;
+
+    @NameInMap("VendorParam")
+    public String vendorParam;
 
     public static BeginSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         BeginSessionRequest self = new BeginSessionRequest();
@@ -37,6 +39,22 @@ public class BeginSessionRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public BeginSessionRequest setSandBox(Boolean sandBox) {
+        this.sandBox = sandBox;
+        return this;
+    }
+    public Boolean getSandBox() {
+        return this.sandBox;
+    }
+
+    public BeginSessionRequest setVendorParam(String vendorParam) {
+        this.vendorParam = vendorParam;
+        return this;
+    }
+    public String getVendorParam() {
+        return this.vendorParam;
     }
 
 }
