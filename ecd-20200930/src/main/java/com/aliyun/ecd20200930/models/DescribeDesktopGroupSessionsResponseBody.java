@@ -144,6 +144,13 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
 
     public static class DescribeDesktopGroupSessionsResponseBodySessions extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
+         */
+        @NameInMap("AccountType")
+        public String accountType;
+
+        /**
          * <p>The IP address of the client.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +203,13 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
          */
         @NameInMap("DesktopId")
         public String desktopId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
+         */
+        @NameInMap("DirectoryType")
+        public String directoryType;
 
         /**
          * <p>The point in time when the end user applies for administrator assistance.</p>
@@ -347,6 +361,14 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDesktopGroupSessionsResponseBodySessions setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
         public DescribeDesktopGroupSessionsResponseBodySessions setClientIp(String clientIp) {
             this.clientIp = clientIp;
             return this;
@@ -393,6 +415,14 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         }
         public String getDesktopId() {
             return this.desktopId;
+        }
+
+        public DescribeDesktopGroupSessionsResponseBodySessions setDirectoryType(String directoryType) {
+            this.directoryType = directoryType;
+            return this;
+        }
+        public String getDirectoryType() {
+            return this.directoryType;
         }
 
         public DescribeDesktopGroupSessionsResponseBodySessions setEndUserApplyCoordinateTime(Long endUserApplyCoordinateTime) {

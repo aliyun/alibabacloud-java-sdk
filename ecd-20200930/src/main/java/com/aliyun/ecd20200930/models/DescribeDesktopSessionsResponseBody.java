@@ -58,9 +58,17 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopSessionsResponseBodySessionsResourceGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rg-8whrmo2gtsb8bxxxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RgTest</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -157,6 +165,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
 
     public static class DescribeDesktopSessionsResponseBodySessions extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
+         */
+        @NameInMap("AccountType")
+        public String accountType;
+
+        /**
          * <p>The IP address of the client.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +215,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
          */
         @NameInMap("DesktopName")
         public String desktopName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
+         */
+        @NameInMap("DirectoryType")
+        public String directoryType;
 
         /**
          * <p>The duration of the remote assistance. Unit: seconds.</p>
@@ -360,6 +382,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDesktopSessionsResponseBodySessions setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
         public DescribeDesktopSessionsResponseBodySessions setClientIp(String clientIp) {
             this.clientIp = clientIp;
             return this;
@@ -398,6 +428,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
         public String getDesktopName() {
             return this.desktopName;
+        }
+
+        public DescribeDesktopSessionsResponseBodySessions setDirectoryType(String directoryType) {
+            this.directoryType = directoryType;
+            return this;
+        }
+        public String getDirectoryType() {
+            return this.directoryType;
         }
 
         public DescribeDesktopSessionsResponseBodySessions setEndUserApplyCoordinateTime(Long endUserApplyCoordinateTime) {
