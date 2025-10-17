@@ -40,25 +40,197 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>lab2.10.0-ray2.43.0</p>
+         */
+        @NameInMap("Image")
+        public String image;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vLLM</p>
+         */
+        @NameInMap("InferenceEngine")
+        public String inferenceEngine;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Deepseek-R1</p>
+         */
+        @NameInMap("LlmModel")
+        public String llmModel;
+
+        public static DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector self = new DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector setInferenceEngine(String inferenceEngine) {
+            this.inferenceEngine = inferenceEngine;
+            return this;
+        }
+        public String getInferenceEngine() {
+            return this.inferenceEngine;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector setLlmModel(String llmModel) {
+            this.llmModel = llmModel;
+            return this;
+        }
+        public String getLlmModel() {
+            return this.llmModel;
+        }
+
+    }
+
+    public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>app01</p>
+         */
+        @NameInMap("AppName")
+        public String appName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>IsaacLab</p>
+         */
+        @NameInMap("AppType")
+        public String appType;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ImageSelector")
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector imageSelector;
+
+        public static DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig self = new DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig setImageSelector(DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector imageSelector) {
+            this.imageSelector = imageSelector;
+            return this;
+        }
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector getImageSelector() {
+            return this.imageSelector;
+        }
+
+    }
+
+    public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/data01</p>
+         */
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("StorageId")
+        public Long storageId;
+
+        public static DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts self = new DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts setStorageId(Long storageId) {
+            this.storageId = storageId;
+            return this;
+        }
+        public Long getStorageId() {
+            return this.storageId;
+        }
+
+    }
+
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AllocateUnit")
         public String allocateUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>g01</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MaxWorkerQuantity")
         public Integer maxWorkerQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinWorkerQuantity")
         public Integer minWorkerQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100G</p>
+         */
         @NameInMap("WorkerDiskCapacity")
         public String workerDiskCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>large</p>
+         */
         @NameInMap("WorkerSpecName")
         public String workerSpecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CPU</p>
+         */
         @NameInMap("WorkerSpecType")
         public String workerSpecType;
 
@@ -126,6 +298,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig extends TeaModel {
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AppConfig")
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig appConfig;
+
         @NameInMap("Category")
         public String category;
 
@@ -148,14 +327,29 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("HeadSpecType")
         public String headSpecType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ray-cluster-address.example.com">http://ray-cluster-address.example.com</a></p>
+         */
         @NameInMap("RayClusterAddress")
         public String rayClusterAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ray-dashboard-address.example.com">http://ray-dashboard-address.example.com</a></p>
+         */
         @NameInMap("RayDashboardAddress")
         public String rayDashboardAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ray-grafana-address.example.com">http://ray-grafana-address.example.com</a></p>
+         */
         @NameInMap("RayGrafanaAddress")
         public String rayGrafanaAddress;
+
+        @NameInMap("StorageMounts")
+        public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts> storageMounts;
 
         @NameInMap("WorkerGroups")
         public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups> workerGroups;
@@ -163,6 +357,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public static DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig self = new DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setAppConfig(DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig appConfig) {
+            this.appConfig = appConfig;
+            return this;
+        }
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig getAppConfig() {
+            return this.appConfig;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setCategory(String category) {
@@ -235,6 +437,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
         public String getRayGrafanaAddress() {
             return this.rayGrafanaAddress;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setStorageMounts(java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts> storageMounts) {
+            this.storageMounts = storageMounts;
+            return this;
+        }
+        public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts> getStorageMounts() {
+            return this.storageMounts;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setWorkerGroups(java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups> workerGroups) {

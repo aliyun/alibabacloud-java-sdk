@@ -338,6 +338,146 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.targetResourceGroupName;
     }
 
+    public static class ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>lab2.10.0-ray2.43.0</p>
+         */
+        @NameInMap("Image")
+        public String image;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vLLM</p>
+         */
+        @NameInMap("InferenceEngine")
+        public String inferenceEngine;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Deepseek-R1</p>
+         */
+        @NameInMap("LlmModel")
+        public String llmModel;
+
+        public static ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector self = new ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector setInferenceEngine(String inferenceEngine) {
+            this.inferenceEngine = inferenceEngine;
+            return this;
+        }
+        public String getInferenceEngine() {
+            return this.inferenceEngine;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector setLlmModel(String llmModel) {
+            this.llmModel = llmModel;
+            return this;
+        }
+        public String getLlmModel() {
+            return this.llmModel;
+        }
+
+    }
+
+    public static class ModifyDBResourceGroupRequestRayConfigAppConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>app01</p>
+         */
+        @NameInMap("AppName")
+        public String appName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>IsaacLab</p>
+         */
+        @NameInMap("AppType")
+        public String appType;
+
+        @NameInMap("ImageSelector")
+        public ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector imageSelector;
+
+        public static ModifyDBResourceGroupRequestRayConfigAppConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBResourceGroupRequestRayConfigAppConfig self = new ModifyDBResourceGroupRequestRayConfigAppConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigAppConfig setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigAppConfig setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigAppConfig setImageSelector(ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector imageSelector) {
+            this.imageSelector = imageSelector;
+            return this;
+        }
+        public ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector getImageSelector() {
+            return this.imageSelector;
+        }
+
+    }
+
+    public static class ModifyDBResourceGroupRequestRayConfigStorageMounts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/data01</p>
+         */
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("StorageId")
+        public Long storageId;
+
+        public static ModifyDBResourceGroupRequestRayConfigStorageMounts build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBResourceGroupRequestRayConfigStorageMounts self = new ModifyDBResourceGroupRequestRayConfigStorageMounts();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigStorageMounts setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigStorageMounts setStorageId(Long storageId) {
+            this.storageId = storageId;
+            return this;
+        }
+        public Long getStorageId() {
+            return this.storageId;
+        }
+
+    }
+
     public static class ModifyDBResourceGroupRequestRayConfigWorkerGroups extends TeaModel {
         @NameInMap("AllocateUnit")
         public String allocateUnit;
@@ -424,6 +564,9 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     }
 
     public static class ModifyDBResourceGroupRequestRayConfig extends TeaModel {
+        @NameInMap("AppConfig")
+        public ModifyDBResourceGroupRequestRayConfigAppConfig appConfig;
+
         @NameInMap("Category")
         public String category;
 
@@ -442,12 +585,23 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         @NameInMap("HeadSpecType")
         public String headSpecType;
 
+        @NameInMap("StorageMounts")
+        public java.util.List<ModifyDBResourceGroupRequestRayConfigStorageMounts> storageMounts;
+
         @NameInMap("WorkerGroups")
         public java.util.List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> workerGroups;
 
         public static ModifyDBResourceGroupRequestRayConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyDBResourceGroupRequestRayConfig self = new ModifyDBResourceGroupRequestRayConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyDBResourceGroupRequestRayConfig setAppConfig(ModifyDBResourceGroupRequestRayConfigAppConfig appConfig) {
+            this.appConfig = appConfig;
+            return this;
+        }
+        public ModifyDBResourceGroupRequestRayConfigAppConfig getAppConfig() {
+            return this.appConfig;
         }
 
         public ModifyDBResourceGroupRequestRayConfig setCategory(String category) {
@@ -496,6 +650,14 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         }
         public String getHeadSpecType() {
             return this.headSpecType;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfig setStorageMounts(java.util.List<ModifyDBResourceGroupRequestRayConfigStorageMounts> storageMounts) {
+            this.storageMounts = storageMounts;
+            return this;
+        }
+        public java.util.List<ModifyDBResourceGroupRequestRayConfigStorageMounts> getStorageMounts() {
+            return this.storageMounts;
         }
 
         public ModifyDBResourceGroupRequestRayConfig setWorkerGroups(java.util.List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> workerGroups) {
