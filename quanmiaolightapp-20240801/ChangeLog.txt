@@ -1,3 +1,8 @@
+2025-10-17 Version: 2.11.1
+- Update API RunVideoAnalysis: add request parameters splitType.
+- Update API SubmitVideoAnalysisTask: add request parameters splitType.
+
+
 2025-09-30 Version: 2.11.0
 - Support API UpdateVideoAnalysisTasks.
 
