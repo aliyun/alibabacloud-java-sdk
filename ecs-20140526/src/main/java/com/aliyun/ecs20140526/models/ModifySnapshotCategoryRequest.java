@@ -29,10 +29,11 @@ public class ModifySnapshotCategoryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of the snapshot. Unit: days. The retention period started at the point in time when the snapshot was created. After the snapshot is archived, the minimum retention period (also called minimum archive period) is 60 days. If you delete the snapshot within 60 days after the snapshot is archived, you are charged archive tier storage fees for the snapshot for 60 days. For more information about the billing of snapshots, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshots</a>.</p>
-     * <p>Valid values: 60 to 65536.</p>
+     * <p>The retention period of the snapshot. Unit: days. The retention period started at the point in time when the snapshot was created. You can archive only standard snapshots that have been retained for at least 14 days.</p>
+     * <p>After the snapshot is archived, the minimum retention period (also called minimum archive period) is 60 days. When you calculate the retention period of archived snapshots, you must deduct the retention period of standard snapshots. If you delete the snapshot within 60 days after the snapshot is archived, you are charged archive tier storage fees for the snapshot for 60 days. For more information about the billing of snapshots, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshots</a>.</p>
+     * <p>Value range [74,65536]</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the snapshot is permanently retained.</p>
+     * <p>If you do not specify this parameter, the snapshot is permanently retained.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

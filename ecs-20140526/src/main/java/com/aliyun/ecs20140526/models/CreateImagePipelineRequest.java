@@ -818,6 +818,9 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
 
     public static class CreateImagePipelineRequestImportImageOptionsFeatures extends TeaModel {
+        @NameInMap("ImdsSupport")
+        public String imdsSupport;
+
         /**
          * <p>Specifies whether the imported source image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
          * <ul>
@@ -837,12 +840,50 @@ public class CreateImagePipelineRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateImagePipelineRequestImportImageOptionsFeatures setImdsSupport(String imdsSupport) {
+            this.imdsSupport = imdsSupport;
+            return this;
+        }
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
         public CreateImagePipelineRequestImportImageOptionsFeatures setNvmeSupport(String nvmeSupport) {
             this.nvmeSupport = nvmeSupport;
             return this;
         }
         public String getNvmeSupport() {
             return this.nvmeSupport;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImportImageOptionsImportImageTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateImagePipelineRequestImportImageOptionsImportImageTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImportImageOptionsImportImageTags self = new CreateImagePipelineRequestImportImageOptionsImportImageTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsImportImageTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateImagePipelineRequestImportImageOptionsImportImageTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -879,6 +920,9 @@ public class CreateImagePipelineRequest extends TeaModel {
         @NameInMap("BootMode")
         public String bootMode;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The information of disks from which the custom images are created.</p>
          * <ul>
@@ -894,6 +938,12 @@ public class CreateImagePipelineRequest extends TeaModel {
          */
         @NameInMap("Features")
         public CreateImagePipelineRequestImportImageOptionsFeatures features;
+
+        @NameInMap("ImageName")
+        public String imageName;
+
+        @NameInMap("ImportImageTags")
+        public java.util.List<CreateImagePipelineRequestImportImageOptionsImportImageTags> importImageTags;
 
         /**
          * <p>The type of the license to use to activate the operating system after the image is imported. Valid values:</p>
@@ -974,6 +1024,12 @@ public class CreateImagePipelineRequest extends TeaModel {
         @NameInMap("RetainImportedImage")
         public Boolean retainImportedImage;
 
+        @NameInMap("RetentionStrategy")
+        public String retentionStrategy;
+
+        @NameInMap("RoleName")
+        public String roleName;
+
         public static CreateImagePipelineRequestImportImageOptions build(java.util.Map<String, ?> map) throws Exception {
             CreateImagePipelineRequestImportImageOptions self = new CreateImagePipelineRequestImportImageOptions();
             return TeaModel.build(map, self);
@@ -995,6 +1051,14 @@ public class CreateImagePipelineRequest extends TeaModel {
             return this.bootMode;
         }
 
+        public CreateImagePipelineRequestImportImageOptions setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public CreateImagePipelineRequestImportImageOptions setDiskDeviceMappings(java.util.List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> diskDeviceMappings) {
             this.diskDeviceMappings = diskDeviceMappings;
             return this;
@@ -1009,6 +1073,22 @@ public class CreateImagePipelineRequest extends TeaModel {
         }
         public CreateImagePipelineRequestImportImageOptionsFeatures getFeatures() {
             return this.features;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setImportImageTags(java.util.List<CreateImagePipelineRequestImportImageOptionsImportImageTags> importImageTags) {
+            this.importImageTags = importImageTags;
+            return this;
+        }
+        public java.util.List<CreateImagePipelineRequestImportImageOptionsImportImageTags> getImportImageTags() {
+            return this.importImageTags;
         }
 
         public CreateImagePipelineRequestImportImageOptions setLicenseType(String licenseType) {
@@ -1041,6 +1121,22 @@ public class CreateImagePipelineRequest extends TeaModel {
         }
         public Boolean getRetainImportedImage() {
             return this.retainImportedImage;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setRetentionStrategy(String retentionStrategy) {
+            this.retentionStrategy = retentionStrategy;
+            return this;
+        }
+        public String getRetentionStrategy() {
+            return this.retentionStrategy;
+        }
+
+        public CreateImagePipelineRequestImportImageOptions setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
     }

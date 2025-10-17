@@ -47,7 +47,10 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of snapshot chains.</p>
+     * <blockquote>
+     * <p>When using the <code>MaxResults</code> and <code>NextToken</code> parameters for a paginated query, the returned <code>TotalCount</code> parameter value is invalid.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>9</p>

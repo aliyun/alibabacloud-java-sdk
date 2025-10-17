@@ -11,7 +11,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
     public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order. This is returned only when the payment method is changed to subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>20413515388****</p>

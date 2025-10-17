@@ -275,9 +275,26 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        /**
+         * <p>The output delivery status of the command execution. Valid values:</p>
+         * <ul>
+         * <li>InProgress: The delivery is in progress.</li>
+         * <li>Finished: The delivery is complete.</li>
+         * <li>Failed: The delivery failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
+         */
         @NameInMap("OssOutputStatus")
         public String ossOutputStatus;
 
+        /**
+         * <p>The command execution Output delivers the object URI to OSS. This field is an empty string when the delivery fails or is in progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://testBucket/testPrefix/output.txt</p>
+         */
         @NameInMap("OssOutputUri")
         public String ossOutputUri;
 
@@ -730,6 +747,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("Launcher")
         public String launcher;
 
+        /**
+         * <p>Command to execute the Output OSS delivery configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://testBucket/testPrefix</p>
+         */
         @NameInMap("OssOutputDelivery")
         public String ossOutputDelivery;
 

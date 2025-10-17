@@ -107,13 +107,13 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The validity period of the elasticity assurance. The unit of the validity period is determined by the value of <code>PeriodUnit</code>. Valid values:</p>
+     * <p>The validity period of the elasticity assurance. The unit of the validity period is determined by the value of <code>PeriodUnit</code>. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
      * <ul>
      * <li>When the value of <code>PeriodUnit</code> is <code>Month</code>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
      * <li>When the value of <code>PeriodUnit</code> is <code>Year</code>, the valid values are 1, 2, 3, 4, and 5.</li>
      * <li>When the value of <code>PeriodUnit</code> is <code>Day</code>, the valid values are 1 to 365.</li>
      * </ul>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -142,7 +142,7 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The assurance schedules of the time-segmented elasticity assurance.</p>
+     * <p>The assurance schedules based on which the capacity reservation takes effect.</p>
      * <blockquote>
      * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
      * </blockquote>
@@ -422,7 +422,7 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
 
     public static class CreateElasticityAssuranceRequestRecurrenceRules extends TeaModel {
         /**
-         * <p>The end time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
+         * <p>The end time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -438,7 +438,7 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
          * <li>Monthly</li>
          * </ul>
          * <blockquote>
-         * <p> If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p> You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -448,14 +448,14 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         public String recurrenceType;
 
         /**
-         * <p>The days of the week or month on which the capacity reservation of the time-segmented elasticity assurance takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
+         * <p>The days of the week or month on which the capacity reservation takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
          * <ul>
          * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</li>
          * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <code>1-5</code>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</li>
+         * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the execution is repeated from the 1st to 5th of each month.</li>
          * </ul>
          * <blockquote>
-         * <p> If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -465,9 +465,9 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         public String recurrenceValue;
 
         /**
-         * <p>The start time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
+         * <p>The start time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</p>
          * <blockquote>
-         * <p> You must specify both <code>StartHour</code> and <code>EndHour</code>. The EndHour value must be at least 4 hours later than the StartHour value.</p>
+         * <p> You must specify both <code>StartHour</code> and <code>EndHour</code>. EndHour must be at least four hours later than StartHour.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

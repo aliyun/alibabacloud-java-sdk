@@ -447,6 +447,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures extends TeaModel {
+        @NameInMap("ImdsSupport")
+        public String imdsSupport;
+
         /**
          * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
          * <ul>
@@ -465,12 +468,69 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures setImdsSupport(String imdsSupport) {
+            this.imdsSupport = imdsSupport;
+            return this;
+        }
+        public String getImdsSupport() {
+            return this.imdsSupport;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures setNvmeSupport(String nvmeSupport) {
             this.nvmeSupport = nvmeSupport;
             return this;
         }
         public String getNvmeSupport() {
             return this.nvmeSupport;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags extends TeaModel {
+        @NameInMap("ImportImageTag")
+        public java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag> importImageTag;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags setImportImageTag(java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag> importImageTag) {
+            this.importImageTag = importImageTag;
+            return this;
+        }
+        public java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag> getImportImageTag() {
+            return this.importImageTag;
         }
 
     }
@@ -502,6 +562,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("BootMode")
         public String bootMode;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The information of disks from which the custom images are created.</p>
          * <ul>
@@ -517,6 +580,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         @NameInMap("Features")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures features;
+
+        @NameInMap("ImageName")
+        public String imageName;
+
+        @NameInMap("ImportImageTags")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags importImageTags;
 
         /**
          * <p>The type of the license to use to activate the operating system after the image is imported. Valid values:</p>
@@ -594,6 +663,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("RetainImportedImage")
         public Boolean retainImportedImage;
 
+        @NameInMap("RetentionStrategy")
+        public String retentionStrategy;
+
+        @NameInMap("RoleName")
+        public String roleName;
+
         public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions();
             return TeaModel.build(map, self);
@@ -615,6 +690,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.bootMode;
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setDiskDeviceMappings(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings diskDeviceMappings) {
             this.diskDeviceMappings = diskDeviceMappings;
             return this;
@@ -629,6 +712,22 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures getFeatures() {
             return this.features;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setImportImageTags(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags importImageTags) {
+            this.importImageTags = importImageTags;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags getImportImageTags() {
+            return this.importImageTags;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setLicenseType(String licenseType) {
@@ -661,6 +760,22 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public Boolean getRetainImportedImage() {
             return this.retainImportedImage;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setRetentionStrategy(String retentionStrategy) {
+            this.retentionStrategy = retentionStrategy;
+            return this;
+        }
+        public String getRetentionStrategy() {
+            return this.retentionStrategy;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
     }

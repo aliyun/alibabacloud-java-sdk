@@ -261,13 +261,12 @@ public class DescribeDisksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether the multi-attach feature is enabled for the disk. Valid values:</p>
+     * <p>Specifies whether to enable the multi-attach feature for the disk. Valid values:</p>
      * <ul>
-     * <li>Disabled: The multi-attach feature is not enabled for the disk.</li>
-     * <li>Enabled: The multi-attach feature is enabled for the disk.</li>
+     * <li>Disabled</li>
+     * <li>Enabled</li>
      * <li>LegacyShared: Shared Block Storage devices are queried.</li>
      * </ul>
-     * <p>The multi-attach feature is available to select users. To use this feature, <a href="https://workorder-intl.console.aliyun.com/console.htm#/ticket/list">submit a ticket</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Disabled</p>

@@ -17,12 +17,12 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Integer cores;
 
     /**
-     * <p>The billing method of ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+     * <p>The billing method of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription</li>
+     * <li>PrePaid: subscription.</li>
      * <li>PostPaid: pay-as-you-go</li>
      * </ul>
-     * <p>Default value: PostPaid.</p>
+     * <p>Default value: PostPaid</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -126,11 +126,11 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The policy that is used to recommend instance types. Valid values:</p>
+     * <p>The policy for recommending instance types. Valid values:</p>
      * <ul>
      * <li>InventoryFirst: recommends instance types in descending order of resource availability.</li>
      * <li>PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</li>
-     * <li>NewProductFirst: recommends the latest instance types.</li>
+     * <li>NewProductFirst: recommends the latest instance types first.</li>
      * </ul>
      * <p>Default value: InventoryFirst.</p>
      * 
@@ -157,7 +157,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scenario in which instance types are recommended. Valid values:</p>
+     * <p>Specifies the scenarios in which instance types are recommended. Valid values:</p>
      * <ul>
      * <li>UPGRADE: instance type upgrade or downgrade</li>
      * <li>CREATE: instance creation</li>
@@ -171,11 +171,11 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String scene;
 
     /**
-     * <p>The bidding policy of spot instances. Valid values:</p>
+     * <p>The bidding policy of the spot instance. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instances are regular pay-as-you-go instances.</li>
-     * <li>SpotWithPriceLimit: The instances are created as spot instances for which you can specify the maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instances are spot instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
      * </ul>
      * <blockquote>
      * <p> If you specify <code>SpotStrategy</code>, you must set <code>InstanceChargeType</code> to <code>PostPaid</code>.</p>
