@@ -133,6 +133,9 @@ public class DescribeClusterResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
     /**
      * <p>The job ID.</p>
      * 
@@ -150,6 +153,9 @@ public class DescribeClusterResponseBody extends TeaModel {
      */
     @NameInMap("UpdateTime")
     public String updateTime;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
@@ -285,6 +291,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeClusterResponseBody setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
     public DescribeClusterResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -299,6 +313,14 @@ public class DescribeClusterResponseBody extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public DescribeClusterResponseBody setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
     public DescribeClusterResponseBody setVpcId(String vpcId) {
