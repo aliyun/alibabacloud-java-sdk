@@ -597,6 +597,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建品牌</p>
+     * 
+     * @param request CreateBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBrandResponse
+     */
+    public CreateBrandResponse createBrandWithOptions(CreateBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandName)) {
+            query.put("BrandName", request.brandName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建品牌</p>
+     * 
+     * @param request CreateBrandRequest
+     * @return CreateBrandResponse
+     */
+    public CreateBrandResponse createBrand(CreateBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBrandWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Create Conditional Access Policy</p>
      * 
@@ -1573,6 +1621,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除品牌</p>
+     * 
+     * @param request DeleteBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBrandResponse
+     */
+    public DeleteBrandResponse deleteBrandWithOptions(DeleteBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除品牌</p>
+     * 
+     * @param request DeleteBrandRequest
+     * @return DeleteBrandResponse
+     */
+    public DeleteBrandResponse deleteBrand(DeleteBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteBrandWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</p>
      * 
@@ -2515,6 +2611,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>禁用品牌</p>
+     * 
+     * @param request DisableBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableBrandResponse
+     */
+    public DisableBrandResponse disableBrandWithOptions(DisableBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用品牌</p>
+     * 
+     * @param request DisableBrandRequest
+     * @return DisableBrandResponse
+     */
+    public DisableBrandResponse disableBrand(DisableBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableBrandWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
      * 
@@ -3205,6 +3349,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>启用品牌</p>
+     * 
+     * @param request EnableBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableBrandResponse
+     */
+    public EnableBrandResponse enableBrandWithOptions(EnableBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用品牌</p>
+     * 
+     * @param request EnableBrandRequest
+     * @return EnableBrandResponse
+     */
+    public EnableBrandResponse enableBrand(EnableBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableBrandWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
      * 
@@ -3883,6 +4075,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取品牌详情</p>
+     * 
+     * @param request GetBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBrandResponse
+     */
+    public GetBrandResponse getBrandWithOptions(GetBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取品牌详情</p>
+     * 
+     * @param request GetBrandRequest
+     * @return GetBrandResponse
+     */
+    public GetBrandResponse getBrand(GetBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBrandWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Query Conditional Access Policy</p>
      * 
@@ -4360,6 +4600,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetInstanceLicenseResponse getInstanceLicense(GetInstanceLicenseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceLicenseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取品牌登录后跳转应用</p>
+     * 
+     * @param request GetLoginRedirectApplicationForBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLoginRedirectApplicationForBrandResponse
+     */
+    public GetLoginRedirectApplicationForBrandResponse getLoginRedirectApplicationForBrandWithOptions(GetLoginRedirectApplicationForBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLoginRedirectApplicationForBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLoginRedirectApplicationForBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取品牌登录后跳转应用</p>
+     * 
+     * @param request GetLoginRedirectApplicationForBrandRequest
+     * @return GetLoginRedirectApplicationForBrandResponse
+     */
+    public GetLoginRedirectApplicationForBrandResponse getLoginRedirectApplicationForBrand(GetLoginRedirectApplicationForBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLoginRedirectApplicationForBrandWithOptions(request, runtime);
     }
 
     /**
@@ -5586,6 +5874,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListApplicationsForUserResponse listApplicationsForUser(ListApplicationsForUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listApplicationsForUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取品牌列表</p>
+     * 
+     * @param request ListBrandsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBrandsResponse
+     */
+    public ListBrandsResponse listBrandsWithOptions(ListBrandsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.previousToken)) {
+            query.put("PreviousToken", request.previousToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBrands"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBrandsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取品牌列表</p>
+     * 
+     * @param request ListBrandsRequest
+     * @return ListBrandsResponse
+     */
+    public ListBrandsResponse listBrands(ListBrandsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBrandsWithOptions(request, runtime);
     }
 
     /**
@@ -8126,6 +8470,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>为品牌设置登录后跳转应用</p>
+     * 
+     * @param request SetLoginRedirectApplicationForBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetLoginRedirectApplicationForBrandResponse
+     */
+    public SetLoginRedirectApplicationForBrandResponse setLoginRedirectApplicationForBrandWithOptions(SetLoginRedirectApplicationForBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetLoginRedirectApplicationForBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetLoginRedirectApplicationForBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为品牌设置登录后跳转应用</p>
+     * 
+     * @param request SetLoginRedirectApplicationForBrandRequest
+     * @return SetLoginRedirectApplicationForBrandResponse
+     */
+    public SetLoginRedirectApplicationForBrandResponse setLoginRedirectApplicationForBrand(SetLoginRedirectApplicationForBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setLoginRedirectApplicationForBrandWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Configures a password complexity policy for an Employee Identity and Access Management (EIAM) instance of Identity as a Service (IDaaS).</p>
      * 
      * @param request SetPasswordComplexityConfigurationRequest
@@ -8861,6 +9257,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改品牌</p>
+     * 
+     * @param request UpdateBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateBrandResponse
+     */
+    public UpdateBrandResponse updateBrandWithOptions(UpdateBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.brandName)) {
+            query.put("BrandName", request.brandName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改品牌</p>
+     * 
+     * @param request UpdateBrandRequest
+     * @return UpdateBrandResponse
+     */
+    public UpdateBrandResponse updateBrand(UpdateBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateBrandWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Update Conditional Access Policy</p>
      * 
@@ -8998,6 +9446,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateConditionalAccessPolicyDescriptionResponse updateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateConditionalAccessPolicyDescriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改域名关联的品牌。</p>
+     * 
+     * @param request UpdateDomainBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDomainBrandResponse
+     */
+    public UpdateDomainBrandResponse updateDomainBrandWithOptions(UpdateDomainBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
+            query.put("DomainId", request.domainId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDomainBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDomainBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改域名关联的品牌。</p>
+     * 
+     * @param request UpdateDomainBrandRequest
+     * @return UpdateDomainBrandResponse
+     */
+    public UpdateDomainBrandResponse updateDomainBrand(UpdateDomainBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDomainBrandWithOptions(request, runtime);
     }
 
     /**

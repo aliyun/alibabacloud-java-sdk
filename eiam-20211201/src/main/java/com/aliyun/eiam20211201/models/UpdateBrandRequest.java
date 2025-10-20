@@ -1,0 +1,66 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.eiam20211201.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateBrandRequest extends TeaModel {
+    /**
+     * <p>品牌化Id</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>brand_xxxx</p>
+     */
+    @NameInMap("BrandId")
+    public String brandId;
+
+    /**
+     * <p>品牌名称</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom Brand</p>
+     */
+    @NameInMap("BrandName")
+    public String brandName;
+
+    /**
+     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    public static UpdateBrandRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateBrandRequest self = new UpdateBrandRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateBrandRequest setBrandId(String brandId) {
+        this.brandId = brandId;
+        return this;
+    }
+    public String getBrandId() {
+        return this.brandId;
+    }
+
+    public UpdateBrandRequest setBrandName(String brandName) {
+        this.brandName = brandName;
+        return this;
+    }
+    public String getBrandName() {
+        return this.brandName;
+    }
+
+    public UpdateBrandRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+}
