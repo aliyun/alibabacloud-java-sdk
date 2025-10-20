@@ -561,6 +561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ServerInstanceType", request.serverInstanceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serverPortRange)) {
+            body.put("ServerPortRange", request.serverPortRange);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemDiskCategory)) {
             body.put("SystemDiskCategory", request.systemDiskCategory);
         }
@@ -732,6 +736,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAppInstancesResponse deleteAppInstances(DeleteAppInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAppInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DeleteImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteImageResponse
+     */
+    public DeleteImageResponse deleteImageWithOptions(DeleteImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteImage"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteImageResponse());
+    }
+
+    /**
+     * @param request DeleteImageRequest
+     * @return DeleteImageResponse
+     */
+    public DeleteImageResponse deleteImage(DeleteImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteImageWithOptions(request, runtime);
     }
 
     /**
@@ -2836,6 +2878,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartWuyingServerResponse restartWuyingServer(RestartWuyingServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restartWuyingServerWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request StartTaskForDistributeImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartTaskForDistributeImageResponse
+     */
+    public StartTaskForDistributeImageResponse startTaskForDistributeImageWithOptions(StartTaskForDistributeImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationRegionList)) {
+            body.put("DestinationRegionList", request.destinationRegionList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryType)) {
+            body.put("RetryType", request.retryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceRegion)) {
+            body.put("SourceRegion", request.sourceRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("VersionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartTaskForDistributeImage"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartTaskForDistributeImageResponse());
+    }
+
+    /**
+     * @param request StartTaskForDistributeImageRequest
+     * @return StartTaskForDistributeImageResponse
+     */
+    public StartTaskForDistributeImageResponse startTaskForDistributeImage(StartTaskForDistributeImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startTaskForDistributeImageWithOptions(request, runtime);
     }
 
     /**

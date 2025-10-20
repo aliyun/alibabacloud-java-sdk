@@ -104,6 +104,9 @@ public class CreateWuyingServerRequest extends TeaModel {
     @NameInMap("ServerInstanceType")
     public String serverInstanceType;
 
+    @NameInMap("ServerPortRange")
+    public String serverPortRange;
+
     /**
      * <strong>example:</strong>
      * <p>cloud_auto</p>
@@ -269,6 +272,14 @@ public class CreateWuyingServerRequest extends TeaModel {
     }
     public String getServerInstanceType() {
         return this.serverInstanceType;
+    }
+
+    public CreateWuyingServerRequest setServerPortRange(String serverPortRange) {
+        this.serverPortRange = serverPortRange;
+        return this;
+    }
+    public String getServerPortRange() {
+        return this.serverPortRange;
     }
 
     public CreateWuyingServerRequest setSystemDiskCategory(String systemDiskCategory) {
