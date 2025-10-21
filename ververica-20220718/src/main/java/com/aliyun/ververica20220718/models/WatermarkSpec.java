@@ -10,6 +10,9 @@ public class WatermarkSpec extends TeaModel {
     @NameInMap("watermarkExpression")
     public String watermarkExpression;
 
+    @NameInMap("watermarkType")
+    public String watermarkType;
+
     public static WatermarkSpec build(java.util.Map<String, ?> map) throws Exception {
         WatermarkSpec self = new WatermarkSpec();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class WatermarkSpec extends TeaModel {
     }
     public String getWatermarkExpression() {
         return this.watermarkExpression;
+    }
+
+    public WatermarkSpec setWatermarkType(String watermarkType) {
+        this.watermarkType = watermarkType;
+        return this;
+    }
+    public String getWatermarkType() {
+        return this.watermarkType;
     }
 
 }

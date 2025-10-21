@@ -7,9 +7,15 @@ public class TableColumn extends TeaModel {
     @NameInMap("expression")
     public String expression;
 
+    @NameInMap("logicalType")
+    public String logicalType;
+
     @NameInMap("metadataInfo")
     public MetadataInfo metadataInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -30,6 +36,14 @@ public class TableColumn extends TeaModel {
     }
     public String getExpression() {
         return this.expression;
+    }
+
+    public TableColumn setLogicalType(String logicalType) {
+        this.logicalType = logicalType;
+        return this;
+    }
+    public String getLogicalType() {
+        return this.logicalType;
     }
 
     public TableColumn setMetadataInfo(MetadataInfo metadataInfo) {

@@ -7,6 +7,12 @@ public class Table extends TeaModel {
     @NameInMap("comment")
     public String comment;
 
+    @NameInMap("metadata")
+    public java.util.Map<String, String> metadata;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -19,6 +25,12 @@ public class Table extends TeaModel {
     @NameInMap("schema")
     public Schema schema;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("tableType")
+    public String tableType;
+
     public static Table build(java.util.Map<String, ?> map) throws Exception {
         Table self = new Table();
         return TeaModel.build(map, self);
@@ -30,6 +42,14 @@ public class Table extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public Table setMetadata(java.util.Map<String, String> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    public java.util.Map<String, String> getMetadata() {
+        return this.metadata;
     }
 
     public Table setName(String name) {
@@ -62,6 +82,14 @@ public class Table extends TeaModel {
     }
     public Schema getSchema() {
         return this.schema;
+    }
+
+    public Table setTableType(String tableType) {
+        this.tableType = tableType;
+        return this;
+    }
+    public String getTableType() {
+        return this.tableType;
     }
 
 }

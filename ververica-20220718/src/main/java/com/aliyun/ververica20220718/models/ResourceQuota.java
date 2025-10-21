@@ -7,6 +7,9 @@ public class ResourceQuota extends TeaModel {
     @NameInMap("limit")
     public ResourceSpec limit;
 
+    @NameInMap("request")
+    public ResourceSpec request;
+
     @NameInMap("used")
     public ResourceSpec used;
 
@@ -21,6 +24,14 @@ public class ResourceQuota extends TeaModel {
     }
     public ResourceSpec getLimit() {
         return this.limit;
+    }
+
+    public ResourceQuota setRequest(ResourceSpec request) {
+        this.request = request;
+        return this;
+    }
+    public ResourceSpec getRequest() {
+        return this.request;
     }
 
     public ResourceQuota setUsed(ResourceSpec used) {
