@@ -4,18 +4,46 @@ package com.aliyun.rai20240701.models;
 import com.aliyun.tea.*;
 
 public class ModelInputContentSyncDetectShrinkRequest extends TeaModel {
+    /**
+     * <p>Request object</p>
+     */
     @NameInMap("BodyData")
     public String bodyDataShrink;
 
+    /**
+     * <p>Policy Identifier</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x1bc5xgs4uhx</p>
+     */
     @NameInMap("PolicyIdentifier")
     public String policyIdentifier;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Scene name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("SceneName")
     public String sceneName;
 
+    /**
+     * <p>Service name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>textDetection
+     * imageDetection</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

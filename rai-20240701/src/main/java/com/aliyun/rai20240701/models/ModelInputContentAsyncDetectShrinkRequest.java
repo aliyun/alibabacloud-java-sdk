@@ -4,10 +4,15 @@ package com.aliyun.rai20240701.models;
 import com.aliyun.tea.*;
 
 public class ModelInputContentAsyncDetectShrinkRequest extends TeaModel {
+    /**
+     * <p>Request object</p>
+     */
     @NameInMap("BodyData")
     public String bodyDataShrink;
 
     /**
+     * <p>Policy ID</p>
+     * 
      * <strong>example:</strong>
      * <p>x1bc5xgs4uhx</p>
      */
@@ -15,6 +20,8 @@ public class ModelInputContentAsyncDetectShrinkRequest extends TeaModel {
     public String policyIdentifier;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -22,6 +29,8 @@ public class ModelInputContentAsyncDetectShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Scene name.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -29,8 +38,11 @@ public class ModelInputContentAsyncDetectShrinkRequest extends TeaModel {
     public String sceneName;
 
     /**
+     * <p>Service name</p>
+     * 
      * <strong>example:</strong>
-     * <p>textDetection</p>
+     * <p>textDetection
+     * imageDetection</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

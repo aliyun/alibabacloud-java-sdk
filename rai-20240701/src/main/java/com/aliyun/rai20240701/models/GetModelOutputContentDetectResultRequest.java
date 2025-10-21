@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetModelOutputContentDetectResultRequest extends TeaModel {
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -12,6 +14,8 @@ public class GetModelOutputContentDetectResultRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
      */

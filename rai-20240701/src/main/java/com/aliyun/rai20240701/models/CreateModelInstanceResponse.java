@@ -3,7 +3,7 @@ package com.aliyun.rai20240701.models;
 
 import com.aliyun.tea.*;
 
-public class ListSensitiveWordResponse extends TeaModel {
+public class CreateModelInstanceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListSensitiveWordResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListSensitiveWordResponseBody body;
+    public CreateModelInstanceResponseBody body;
 
-    public static ListSensitiveWordResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListSensitiveWordResponse self = new ListSensitiveWordResponse();
+    public static CreateModelInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateModelInstanceResponse self = new CreateModelInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListSensitiveWordResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateModelInstanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListSensitiveWordResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListSensitiveWordResponse setStatusCode(Integer statusCode) {
+    public CreateModelInstanceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListSensitiveWordResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListSensitiveWordResponse setBody(ListSensitiveWordResponseBody body) {
+    public CreateModelInstanceResponse setBody(CreateModelInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListSensitiveWordResponseBody getBody() {
+    public CreateModelInstanceResponseBody getBody() {
         return this.body;
     }
 

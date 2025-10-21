@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     /**
+     * <p>Status code, 00000 indicates success; others indicate failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>00000</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of detection result objects</p>
+     */
     @NameInMap("DetectResultList")
     public java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultList> detectResultList;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -29,6 +38,8 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Number of processed items in the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     public Integer processedCount;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -43,6 +56,8 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the operation was successful. true indicates success, false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -50,6 +65,8 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
      */
@@ -57,6 +74,12 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Task processing status:
+     * 0: Queued
+     * 1: Processing
+     * 2: Completed
+     * 3: Failed</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -64,6 +87,8 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     public Integer taskStatus;
 
     /**
+     * <p>Total number of items</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -156,9 +181,21 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     }
 
     public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoBlockWordBlockWordGroupInfoListBlockWordList extends TeaModel {
+        /**
+         * <p>Word</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testWord</p>
+         */
         @NameInMap("Word")
         public String word;
 
+        /**
+         * <p>Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testLabel</p>
+         */
         @NameInMap("WordLabel")
         public String wordLabel;
 
@@ -186,9 +223,18 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     }
 
     public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoBlockWordBlockWordGroupInfoList extends TeaModel {
+        /**
+         * <p>List of keyword detection results</p>
+         */
         @NameInMap("BlockWordList")
         public java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoBlockWordBlockWordGroupInfoListBlockWordList> blockWordList;
 
+        /**
+         * <p>Keyword group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGroup</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -216,10 +262,16 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     }
 
     public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoBlockWord extends TeaModel {
+        /**
+         * <p>List of keyword detection result objects</p>
+         */
         @NameInMap("BlockWordGroupInfoList")
         public java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoBlockWordBlockWordGroupInfoList> blockWordGroupInfoList;
 
         /**
+         * <p>0: No risk
+         * 1: Risk exists</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -249,11 +301,11 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
 
     }
 
-    public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategoriesHarmfulCategoryInfoList extends TeaModel {
-        @NameInMap("CategoryLabel")
-        public String categoryLabel;
-
+    public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList extends TeaModel {
         /**
+         * <p>0: Text
+         * 1: Image</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -261,6 +313,9 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
         public Integer categoryType;
 
         /**
+         * <p>0: No risk
+         * 1: Risk exists</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -268,11 +323,172 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
         public Integer riskResult;
 
         /**
+         * <p>Security level
+         * 0: Low
+         * 1: Medium
+         * 2: High</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("SecurityLevel")
+        public Integer securityLevel;
+
+        /**
+         * <p>Topic name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Buss.</p>
+         */
+        @NameInMap("TopicName")
+        public String topicName;
+
+        public static GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList self = new GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList setCategoryType(Integer categoryType) {
+            this.categoryType = categoryType;
+            return this;
+        }
+        public Integer getCategoryType() {
+            return this.categoryType;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList setRiskResult(Integer riskResult) {
+            this.riskResult = riskResult;
+            return this;
+        }
+        public Integer getRiskResult() {
+            return this.riskResult;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList setSecurityLevel(Integer securityLevel) {
+            this.securityLevel = securityLevel;
+            return this;
+        }
+        public Integer getSecurityLevel() {
+            return this.securityLevel;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList setTopicName(String topicName) {
+            this.topicName = topicName;
+            return this;
+        }
+        public String getTopicName() {
+            return this.topicName;
+        }
+
+    }
+
+    public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics extends TeaModel {
+        /**
+         * <p>Confidence score</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
+        @NameInMap("ConfidenceScore")
+        public Double confidenceScore;
+
+        /**
+         * <p>0: No risk
+         * 1: Risk exists</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("RiskResult")
+        public Integer riskResult;
+
+        /**
+         * <p>List of sensitive topics</p>
+         */
+        @NameInMap("TopicInfoList")
+        public java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList> topicInfoList;
+
+        public static GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics build(java.util.Map<String, ?> map) throws Exception {
+            GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics self = new GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics();
+            return TeaModel.build(map, self);
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics setConfidenceScore(Double confidenceScore) {
+            this.confidenceScore = confidenceScore;
+            return this;
+        }
+        public Double getConfidenceScore() {
+            return this.confidenceScore;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics setRiskResult(Integer riskResult) {
+            this.riskResult = riskResult;
+            return this;
+        }
+        public Integer getRiskResult() {
+            return this.riskResult;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics setTopicInfoList(java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList> topicInfoList) {
+            this.topicInfoList = topicInfoList;
+            return this;
+        }
+        public java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopicsTopicInfoList> getTopicInfoList() {
+            return this.topicInfoList;
+        }
+
+    }
+
+    public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategoriesHarmfulCategoryInfoList extends TeaModel {
+        /**
+         * <p>Category name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Morality</p>
+         */
+        @NameInMap("CategoryLabel")
+        public String categoryLabel;
+
+        /**
+         * <p>0: Text
+         * 1: Image</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("CategoryType")
+        public Integer categoryType;
+
+        /**
+         * <p>0: No risk
+         * 1: Risk exists</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("RiskResult")
+        public Integer riskResult;
+
+        /**
+         * <p>Security level
+         * 0: Low
+         * 1: Medium
+         * 2: High</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("SecurityLevel")
         public Integer securityLevel;
+
+        /**
+         * <p>Sub-category label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>morality_ethics</p>
+         */
+        @NameInMap("SubCategoryLabel")
+        public String subCategoryLabel;
 
         public static GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategoriesHarmfulCategoryInfoList build(java.util.Map<String, ?> map) throws Exception {
             GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategoriesHarmfulCategoryInfoList self = new GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategoriesHarmfulCategoryInfoList();
@@ -311,20 +527,36 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
             return this.securityLevel;
         }
 
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategoriesHarmfulCategoryInfoList setSubCategoryLabel(String subCategoryLabel) {
+            this.subCategoryLabel = subCategoryLabel;
+            return this;
+        }
+        public String getSubCategoryLabel() {
+            return this.subCategoryLabel;
+        }
+
     }
 
     public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategories extends TeaModel {
         /**
+         * <p>Confidence score</p>
+         * 
          * <strong>example:</strong>
-         * <p>0.85</p>
+         * <p>0.0</p>
          */
         @NameInMap("ConfidenceScore")
         public Double confidenceScore;
 
+        /**
+         * <p>List of harmful category objects</p>
+         */
         @NameInMap("HarmfulCategoryInfoList")
         public java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategoriesHarmfulCategoryInfoList> harmfulCategoryInfoList;
 
         /**
+         * <p>0: No risk
+         * 1: Risk exists</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -362,11 +594,116 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList extends TeaModel {
+        /**
+         * <p>Category name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Role Play</p>
+         */
+        @NameInMap("CategoryLabel")
+        public String categoryLabel;
+
+        /**
+         * <p>0: Text
+         * 1: Image</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("CategoryType")
+        public Integer categoryType;
+
+        /**
+         * <p>0: No risk
+         * 1: Risk exists</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RiskResult")
+        public Integer riskResult;
+
+        /**
+         * <p>Security level
+         * 0: Low
+         * 1: Medium
+         * 2: High</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("SecurityLevel")
+        public Integer securityLevel;
+
+        public static GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList self = new GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList setCategoryLabel(String categoryLabel) {
+            this.categoryLabel = categoryLabel;
+            return this;
+        }
+        public String getCategoryLabel() {
+            return this.categoryLabel;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList setCategoryType(Integer categoryType) {
+            this.categoryType = categoryType;
+            return this;
+        }
+        public Integer getCategoryType() {
+            return this.categoryType;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList setRiskResult(Integer riskResult) {
+            this.riskResult = riskResult;
+            return this;
+        }
+        public Integer getRiskResult() {
+            return this.riskResult;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList setSecurityLevel(Integer securityLevel) {
+            this.securityLevel = securityLevel;
+            return this;
+        }
+        public Integer getSecurityLevel() {
+            return this.securityLevel;
+        }
+
+    }
+
     public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttack extends TeaModel {
+        /**
+         * <p>Confidence score</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
+        @NameInMap("ConfidenceScore")
+        public Double confidenceScore;
+
+        /**
+         * <p>Prompt attack detection result object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Role Play</p>
+         */
         @NameInMap("PromptAttackInfo")
         public String promptAttackInfo;
 
         /**
+         * <p>Prompt attack list</p>
+         */
+        @NameInMap("PromptAttackInfoList")
+        public java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList> promptAttackInfoList;
+
+        /**
+         * <p>0: No risk
+         * 1: Risk exists</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -374,6 +711,11 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
         public Integer riskResult;
 
         /**
+         * <p>Security level
+         * 0: Low
+         * 1: Medium
+         * 2: High</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -385,12 +727,28 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttack setConfidenceScore(Double confidenceScore) {
+            this.confidenceScore = confidenceScore;
+            return this;
+        }
+        public Double getConfidenceScore() {
+            return this.confidenceScore;
+        }
+
         public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttack setPromptAttackInfo(String promptAttackInfo) {
             this.promptAttackInfo = promptAttackInfo;
             return this;
         }
         public String getPromptAttackInfo() {
             return this.promptAttackInfo;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttack setPromptAttackInfoList(java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList> promptAttackInfoList) {
+            this.promptAttackInfoList = promptAttackInfoList;
+            return this;
+        }
+        public java.util.List<GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttackPromptAttackInfoList> getPromptAttackInfoList() {
+            return this.promptAttackInfoList;
         }
 
         public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttack setRiskResult(Integer riskResult) {
@@ -412,12 +770,27 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
     }
 
     public static class GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfo extends TeaModel {
+        /**
+         * <p>Detected keywords</p>
+         */
         @NameInMap("BlockWord")
         public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoBlockWord blockWord;
 
+        /**
+         * <p>Sensitive topic object list</p>
+         */
+        @NameInMap("DenyTopics")
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics denyTopics;
+
+        /**
+         * <p>List of harmful category result objects</p>
+         */
         @NameInMap("HarmfulCategories")
         public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategories harmfulCategories;
 
+        /**
+         * <p>PromptAttack</p>
+         */
         @NameInMap("PromptAttack")
         public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoPromptAttack promptAttack;
 
@@ -432,6 +805,14 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
         }
         public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoBlockWord getBlockWord() {
             return this.blockWord;
+        }
+
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfo setDenyTopics(GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics denyTopics) {
+            this.denyTopics = denyTopics;
+            return this;
+        }
+        public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoDenyTopics getDenyTopics() {
+            return this.denyTopics;
         }
 
         public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfo setHarmfulCategories(GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfoHarmfulCategories harmfulCategories) {
@@ -454,6 +835,9 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
 
     public static class GetModelOutputContentDetectResultResponseBodyDetectResultList extends TeaModel {
         /**
+         * <p>0: No risk
+         * 1: Risk exists</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -461,12 +845,20 @@ public class GetModelOutputContentDetectResultResponseBody extends TeaModel {
         public Integer riskResult;
 
         /**
+         * <p>0: Queued
+         * 1: Processing
+         * 2: Completed
+         * 3: Failed</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Inspection results</p>
+         */
         @NameInMap("TraceInfo")
         public GetModelOutputContentDetectResultResponseBodyDetectResultListTraceInfo traceInfo;
 

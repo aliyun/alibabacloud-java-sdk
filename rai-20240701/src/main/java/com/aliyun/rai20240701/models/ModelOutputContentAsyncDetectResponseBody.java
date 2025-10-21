@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
     /**
+     * <p>Status code, 00000 indicates success; others indicate failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>00000</p>
      */
@@ -12,6 +14,8 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -26,6 +32,8 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -33,6 +41,8 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>操作是否成功。true表示成功，false表示失败。</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -40,6 +50,8 @@ public class ModelOutputContentAsyncDetectResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5d85cd38-03b2-49fd-86b2-be85c4b13215</p>
      */

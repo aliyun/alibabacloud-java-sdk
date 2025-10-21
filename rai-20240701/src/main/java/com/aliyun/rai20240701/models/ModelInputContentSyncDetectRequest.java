@@ -4,18 +4,46 @@ package com.aliyun.rai20240701.models;
 import com.aliyun.tea.*;
 
 public class ModelInputContentSyncDetectRequest extends TeaModel {
+    /**
+     * <p>Request object</p>
+     */
     @NameInMap("BodyData")
     public ModelInputContentSyncDetectRequestBodyData bodyData;
 
+    /**
+     * <p>Policy Identifier</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x1bc5xgs4uhx</p>
+     */
     @NameInMap("PolicyIdentifier")
     public String policyIdentifier;
 
+    /**
+     * <p>Region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Scene name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("SceneName")
     public String sceneName;
 
+    /**
+     * <p>Service name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>textDetection
+     * imageDetection</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
@@ -65,6 +93,15 @@ public class ModelInputContentSyncDetectRequest extends TeaModel {
     }
 
     public static class ModelInputContentSyncDetectRequestBodyData extends TeaModel {
+        /**
+         * <ol>
+         * <li>The text content to be checked, with a maximum limit of 10,000 characters (including English and Chinese).</li>
+         * <li>Or the URL address of the image to be checked.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>要检测的内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
