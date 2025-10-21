@@ -524,6 +524,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>智能拆条-获取配置</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoDetectShotConfigResponse
+     */
+    public GetVideoDetectShotConfigResponse getVideoDetectShotConfigWithOptions(String workspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoDetectShotConfig"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/getVideoDetectShotConfig"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoDetectShotConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>智能拆条-获取配置</p>
+     * @return GetVideoDetectShotConfigResponse
+     */
+    public GetVideoDetectShotConfigResponse getVideoDetectShotConfig(String workspaceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVideoDetectShotConfigWithOptions(workspaceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-获取视频拆条异步任务结果</p>
+     * 
+     * @param request GetVideoDetectShotTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoDetectShotTaskResponse
+     */
+    public GetVideoDetectShotTaskResponse getVideoDetectShotTaskWithOptions(String workspaceId, GetVideoDetectShotTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoDetectShotTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/getVideoDetectShotTask"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoDetectShotTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-获取视频拆条异步任务结果</p>
+     * 
+     * @param request GetVideoDetectShotTaskRequest
+     * @return GetVideoDetectShotTaskResponse
+     */
+    public GetVideoDetectShotTaskResponse getVideoDetectShotTask(String workspaceId, GetVideoDetectShotTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVideoDetectShotTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>热点新闻推荐</p>
      * 
      * @param request HotNewsRecommendRequest
@@ -1842,6 +1926,115 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>轻应用-视频拆条</p>
+     * 
+     * @param tmpReq RunVideoDetectShotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunVideoDetectShotResponse
+     */
+    public RunVideoDetectShotResponse runVideoDetectShotWithOptions(String workspaceId, RunVideoDetectShotRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RunVideoDetectShotShrinkRequest request = new RunVideoDetectShotShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.options)) {
+            request.optionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.options, "options", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.recognitionOptions)) {
+            request.recognitionOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recognitionOptions, "recognitionOptions", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.intelliSimpPrompt)) {
+            body.put("intelliSimpPrompt", request.intelliSimpPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intelliSimpPromptTemplateId)) {
+            body.put("intelliSimpPromptTemplateId", request.intelliSimpPromptTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCustomPromptTemplateId)) {
+            body.put("modelCustomPromptTemplateId", request.modelCustomPromptTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVlCustomPromptTemplateId)) {
+            body.put("modelVlCustomPromptTemplateId", request.modelVlCustomPromptTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.optionsShrink)) {
+            body.put("options", request.optionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalSessionId)) {
+            body.put("originalSessionId", request.originalSessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preModelId)) {
+            body.put("preModelId", request.preModelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recognitionOptionsShrink)) {
+            body.put("recognitionOptions", request.recognitionOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
+            body.put("videoUrl", request.videoUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vlPrompt)) {
+            body.put("vlPrompt", request.vlPrompt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunVideoDetectShot"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/runVideoDetectShot"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunVideoDetectShotResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-视频拆条</p>
+     * 
+     * @param request RunVideoDetectShotRequest
+     * @return RunVideoDetectShotResponse
+     */
+    public RunVideoDetectShotResponse runVideoDetectShot(String workspaceId, RunVideoDetectShotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runVideoDetectShotWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>提交企业VOC异步任务</p>
      * 
      * @param tmpReq SubmitEnterpriseVocAnalysisTaskRequest
@@ -2262,6 +2455,119 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>轻应用-提交视频拆条任务</p>
+     * 
+     * @param tmpReq SubmitVideoDetectShotTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoDetectShotTaskResponse
+     */
+    public SubmitVideoDetectShotTaskResponse submitVideoDetectShotTaskWithOptions(String workspaceId, SubmitVideoDetectShotTaskRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitVideoDetectShotTaskShrinkRequest request = new SubmitVideoDetectShotTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.options)) {
+            request.optionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.options, "options", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.recognitionOptions)) {
+            request.recognitionOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recognitionOptions, "recognitionOptions", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deduplicationId)) {
+            body.put("deduplicationId", request.deduplicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intelliSimpPrompt)) {
+            body.put("intelliSimpPrompt", request.intelliSimpPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intelliSimpPromptTemplateId)) {
+            body.put("intelliSimpPromptTemplateId", request.intelliSimpPromptTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCustomPromptTemplateId)) {
+            body.put("modelCustomPromptTemplateId", request.modelCustomPromptTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVlCustomPromptTemplateId)) {
+            body.put("modelVlCustomPromptTemplateId", request.modelVlCustomPromptTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.optionsShrink)) {
+            body.put("options", request.optionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalSessionId)) {
+            body.put("originalSessionId", request.originalSessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preModelId)) {
+            body.put("preModelId", request.preModelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recognitionOptionsShrink)) {
+            body.put("recognitionOptions", request.recognitionOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
+            body.put("videoUrl", request.videoUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vlPrompt)) {
+            body.put("vlPrompt", request.vlPrompt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoDetectShotTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/submitVideoDetectShotTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoDetectShotTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-提交视频拆条任务</p>
+     * 
+     * @param request SubmitVideoDetectShotTaskRequest
+     * @return SubmitVideoDetectShotTaskResponse
+     */
+    public SubmitVideoDetectShotTaskResponse submitVideoDetectShotTask(String workspaceId, SubmitVideoDetectShotTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitVideoDetectShotTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>视频理解-更新配置</p>
      * 
      * @param request UpdateVideoAnalysisConfigRequest
@@ -2413,5 +2719,103 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateVideoAnalysisTasksWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>智能拆条-更新配置</p>
+     * 
+     * @param request UpdateVideoDetectShotConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVideoDetectShotConfigResponse
+     */
+    public UpdateVideoDetectShotConfigResponse updateVideoDetectShotConfigWithOptions(String workspaceId, UpdateVideoDetectShotConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncConcurrency)) {
+            body.put("asyncConcurrency", request.asyncConcurrency);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVideoDetectShotConfig"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/updateVideoDetectShotConfig"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVideoDetectShotConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>智能拆条-更新配置</p>
+     * 
+     * @param request UpdateVideoDetectShotConfigRequest
+     * @return UpdateVideoDetectShotConfigResponse
+     */
+    public UpdateVideoDetectShotConfigResponse updateVideoDetectShotConfig(String workspaceId, UpdateVideoDetectShotConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateVideoDetectShotConfigWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>视频拆条-修改任务状态</p>
+     * 
+     * @param request UpdateVideoDetectShotTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVideoDetectShotTaskResponse
+     */
+    public UpdateVideoDetectShotTaskResponse updateVideoDetectShotTaskWithOptions(String workspaceId, UpdateVideoDetectShotTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskStatus)) {
+            body.put("taskStatus", request.taskStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVideoDetectShotTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/updateVideoDetectShotTask"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVideoDetectShotTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>视频拆条-修改任务状态</p>
+     * 
+     * @param request UpdateVideoDetectShotTaskRequest
+     * @return UpdateVideoDetectShotTaskResponse
+     */
+    public UpdateVideoDetectShotTaskResponse updateVideoDetectShotTask(String workspaceId, UpdateVideoDetectShotTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateVideoDetectShotTaskWithOptions(workspaceId, request, headers, runtime);
     }
 }
