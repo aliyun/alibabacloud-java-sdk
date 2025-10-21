@@ -199,6 +199,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <strong>example:</strong>
+         * <p>activation</p>
+         */
+        @NameInMap("ClickObserveServiceStatus")
+        public String clickObserveServiceStatus;
+
+        /**
          * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
@@ -521,6 +528,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setClickObserveServiceStatus(String clickObserveServiceStatus) {
+            this.clickObserveServiceStatus = clickObserveServiceStatus;
+            return this;
+        }
+        public String getClickObserveServiceStatus() {
+            return this.clickObserveServiceStatus;
         }
 
         public DescribeDBInstanceAttributeResponseBodyData setCreateTime(String createTime) {

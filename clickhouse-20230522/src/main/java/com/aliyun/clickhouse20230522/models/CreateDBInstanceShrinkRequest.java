@@ -66,21 +66,21 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>6</p>
+     * <p>2</p>
      */
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
     /**
      * <strong>example:</strong>
-     * <p>32</p>
+     * <p>4</p>
      */
     @NameInMap("NodeScaleMax")
     public Integer nodeScaleMax;
 
     /**
      * <strong>example:</strong>
-     * <p>4</p>
+     * <p>32</p>
      */
     @NameInMap("NodeScaleMin")
     public Integer nodeScaleMin;
@@ -134,11 +134,11 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>100</p>
      */
     @NameInMap("StorageQuota")
-    public String storageQuota;
+    public Long storageQuota;
 
     /**
      * <strong>example:</strong>
-     * <p>oss</p>
+     * <p>OSS</p>
      */
     @NameInMap("StorageType")
     public String storageType;
@@ -295,11 +295,11 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
         return this.sourceDBInstanceId;
     }
 
-    public CreateDBInstanceShrinkRequest setStorageQuota(String storageQuota) {
+    public CreateDBInstanceShrinkRequest setStorageQuota(Long storageQuota) {
         this.storageQuota = storageQuota;
         return this;
     }
-    public String getStorageQuota() {
+    public Long getStorageQuota() {
         return this.storageQuota;
     }
 

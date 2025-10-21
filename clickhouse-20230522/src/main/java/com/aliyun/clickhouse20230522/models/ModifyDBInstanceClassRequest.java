@@ -67,7 +67,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
      * <p>100</p>
      */
     @NameInMap("StorageQuota")
-    public String storageQuota;
+    public Long storageQuota;
 
     /**
      * <strong>example:</strong>
@@ -137,11 +137,11 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
         return this.scaleMin;
     }
 
-    public ModifyDBInstanceClassRequest setStorageQuota(String storageQuota) {
+    public ModifyDBInstanceClassRequest setStorageQuota(Long storageQuota) {
         this.storageQuota = storageQuota;
         return this;
     }
-    public String getStorageQuota() {
+    public Long getStorageQuota() {
         return this.storageQuota;
     }
 
