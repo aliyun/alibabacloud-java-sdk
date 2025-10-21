@@ -11,6 +11,9 @@ public class UpdateMemoryResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    @NameInMap("data")
+    public UpdateMemoryResponseBodyData data;
+
     /**
      * <p>Id of the request</p>
      * 
@@ -33,12 +36,43 @@ public class UpdateMemoryResponseBody extends TeaModel {
         return this.code;
     }
 
+    public UpdateMemoryResponseBody setData(UpdateMemoryResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateMemoryResponseBodyData getData() {
+        return this.data;
+    }
+
     public UpdateMemoryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class UpdateMemoryResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default_workspace</p>
+         */
+        @NameInMap("cmsWorkspaceName")
+        public String cmsWorkspaceName;
+
+        public static UpdateMemoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMemoryResponseBodyData self = new UpdateMemoryResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateMemoryResponseBodyData setCmsWorkspaceName(String cmsWorkspaceName) {
+            this.cmsWorkspaceName = cmsWorkspaceName;
+            return this;
+        }
+        public String getCmsWorkspaceName() {
+            return this.cmsWorkspaceName;
+        }
+
     }
 
 }

@@ -23,6 +23,13 @@ public class CreateMemoryRequest extends TeaModel {
     public String name;
 
     /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("permanent")
+    public Boolean permanent;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +37,13 @@ public class CreateMemoryRequest extends TeaModel {
      */
     @NameInMap("shortTtl")
     public Integer shortTtl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;Preference&quot;, &quot;Facts&quot;]</p>
+     */
+    @NameInMap("strategy")
+    public java.util.List<String> strategy;
 
     public static CreateMemoryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMemoryRequest self = new CreateMemoryRequest();
@@ -52,12 +66,28 @@ public class CreateMemoryRequest extends TeaModel {
         return this.name;
     }
 
+    public CreateMemoryRequest setPermanent(Boolean permanent) {
+        this.permanent = permanent;
+        return this;
+    }
+    public Boolean getPermanent() {
+        return this.permanent;
+    }
+
     public CreateMemoryRequest setShortTtl(Integer shortTtl) {
         this.shortTtl = shortTtl;
         return this;
     }
     public Integer getShortTtl() {
         return this.shortTtl;
+    }
+
+    public CreateMemoryRequest setStrategy(java.util.List<String> strategy) {
+        this.strategy = strategy;
+        return this;
+    }
+    public java.util.List<String> getStrategy() {
+        return this.strategy;
     }
 
 }

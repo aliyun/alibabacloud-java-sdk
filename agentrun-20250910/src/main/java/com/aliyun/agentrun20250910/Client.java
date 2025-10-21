@@ -238,8 +238,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.permanent)) {
+            body.put("permanent", request.permanent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shortTtl)) {
             body.put("shortTtl", request.shortTtl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            body.put("strategy", request.strategy);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1538,18 +1546,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateMemoryResponse updateMemoryWithOptions(String memoryName, UpdateMemoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.longTtl)) {
-            query.put("longTtl", request.longTtl);
+            body.put("longTtl", request.longTtl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permanent)) {
+            body.put("permanent", request.permanent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.shortTtl)) {
-            query.put("shortTtl", request.shortTtl);
+            body.put("shortTtl", request.shortTtl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            body.put("strategy", request.strategy);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateMemory"),

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateMemoryRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>365</p>
      */
@@ -14,13 +12,21 @@ public class UpdateMemoryRequest extends TeaModel {
     public Integer longTtl;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("permanent")
+    public Boolean permanent;
+
+    /**
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("shortTtl")
     public Integer shortTtl;
+
+    @NameInMap("strategy")
+    public java.util.List<String> strategy;
 
     public static UpdateMemoryRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMemoryRequest self = new UpdateMemoryRequest();
@@ -35,12 +41,28 @@ public class UpdateMemoryRequest extends TeaModel {
         return this.longTtl;
     }
 
+    public UpdateMemoryRequest setPermanent(Boolean permanent) {
+        this.permanent = permanent;
+        return this;
+    }
+    public Boolean getPermanent() {
+        return this.permanent;
+    }
+
     public UpdateMemoryRequest setShortTtl(Integer shortTtl) {
         this.shortTtl = shortTtl;
         return this;
     }
     public Integer getShortTtl() {
         return this.shortTtl;
+    }
+
+    public UpdateMemoryRequest setStrategy(java.util.List<String> strategy) {
+        this.strategy = strategy;
+        return this;
+    }
+    public java.util.List<String> getStrategy() {
+        return this.strategy;
     }
 
 }

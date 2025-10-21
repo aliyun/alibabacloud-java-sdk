@@ -53,6 +53,17 @@ public class GetMemoryResponseBody extends TeaModel {
     }
 
     public static class GetMemoryResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>my-cms-workspace</p>
+         */
+        @NameInMap("cmsWorkspaceName")
+        public String cmsWorkspaceName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1735870116</p>
+         */
         @NameInMap("createTime")
         public Integer createTime;
 
@@ -72,14 +83,32 @@ public class GetMemoryResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("permanent")
+        public Boolean permanent;
+
+        /**
+         * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("shortTtl")
         public Integer shortTtl;
 
+        @NameInMap("strategy")
+        public java.util.List<String> strategy;
+
         public static GetMemoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMemoryResponseBodyData self = new GetMemoryResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMemoryResponseBodyData setCmsWorkspaceName(String cmsWorkspaceName) {
+            this.cmsWorkspaceName = cmsWorkspaceName;
+            return this;
+        }
+        public String getCmsWorkspaceName() {
+            return this.cmsWorkspaceName;
         }
 
         public GetMemoryResponseBodyData setCreateTime(Integer createTime) {
@@ -106,12 +135,28 @@ public class GetMemoryResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetMemoryResponseBodyData setPermanent(Boolean permanent) {
+            this.permanent = permanent;
+            return this;
+        }
+        public Boolean getPermanent() {
+            return this.permanent;
+        }
+
         public GetMemoryResponseBodyData setShortTtl(Integer shortTtl) {
             this.shortTtl = shortTtl;
             return this;
         }
         public Integer getShortTtl() {
             return this.shortTtl;
+        }
+
+        public GetMemoryResponseBodyData setStrategy(java.util.List<String> strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public java.util.List<String> getStrategy() {
+            return this.strategy;
         }
 
     }
