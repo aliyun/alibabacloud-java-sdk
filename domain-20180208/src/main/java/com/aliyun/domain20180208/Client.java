@@ -119,6 +119,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据OutBizId（批量）查看带价PUSH状态，通常用于超时场景补偿</p>
+     * 
+     * @param tmpReq BatchQueryPushStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchQueryPushStatusResponse
+     */
+    public BatchQueryPushStatusResponse batchQueryPushStatusWithOptions(BatchQueryPushStatusRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchQueryPushStatusShrinkRequest request = new BatchQueryPushStatusShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outBizIds)) {
+            request.outBizIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outBizIds, "OutBizIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outBizIdsShrink)) {
+            query.put("OutBizIds", request.outBizIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchQueryPushStatus"),
+            new TeaPair("version", "2018-02-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchQueryPushStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据OutBizId（批量）查看带价PUSH状态，通常用于超时场景补偿</p>
+     * 
+     * @param request BatchQueryPushStatusRequest
+     * @return BatchQueryPushStatusResponse
+     */
+    public BatchQueryPushStatusResponse batchQueryPushStatus(BatchQueryPushStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchQueryPushStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量撤回带价PUSH</p>
+     * 
+     * @param tmpReq BatchRecallPushRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchRecallPushResponse
+     */
+    public BatchRecallPushResponse batchRecallPushWithOptions(BatchRecallPushRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchRecallPushShrinkRequest request = new BatchRecallPushShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outBizIds)) {
+            request.outBizIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outBizIds, "OutBizIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outBizIdsShrink)) {
+            query.put("OutBizIds", request.outBizIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchRecallPush"),
+            new TeaPair("version", "2018-02-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchRecallPushResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量撤回带价PUSH</p>
+     * 
+     * @param request BatchRecallPushRequest
+     * @return BatchRecallPushResponse
+     */
+    public BatchRecallPushResponse batchRecallPush(BatchRecallPushRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchRecallPushWithOptions(request, runtime);
+    }
+
+    /**
      * @param request BidDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BidDomainResponse
@@ -240,6 +356,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckDomainStatusResponse checkDomainStatus(CheckDomainStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkDomainStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验域名带价PUSH接收方可接收</p>
+     * 
+     * @param request CheckPushReceiverRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckPushReceiverResponse
+     */
+    public CheckPushReceiverResponse checkPushReceiverWithOptions(CheckPushReceiverRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverAccount)) {
+            query.put("ReceiverAccount", request.receiverAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckPushReceiver"),
+            new TeaPair("version", "2018-02-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckPushReceiverResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验域名带价PUSH接收方可接收</p>
+     * 
+     * @param request CheckPushReceiverRequest
+     * @return CheckPushReceiverResponse
+     */
+    public CheckPushReceiverResponse checkPushReceiver(CheckPushReceiverRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkPushReceiverWithOptions(request, runtime);
     }
 
     /**
@@ -594,6 +754,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PurchaseIntlDomainResponse purchaseIntlDomain(PurchaseIntlDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.purchaseIntlDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布域名PUSH，目前只支持0元PUSH</p>
+     * 
+     * @param tmpReq PushDomainsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PushDomainsResponse
+     */
+    public PushDomainsResponse pushDomainsWithOptions(PushDomainsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PushDomainsShrinkRequest request = new PushDomainsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.domainList)) {
+            request.domainListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.domainList, "DomainList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainListShrink)) {
+            query.put("DomainList", request.domainListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outBizId)) {
+            query.put("OutBizId", request.outBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishRemark)) {
+            query.put("PublishRemark", request.publishRemark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverAccount)) {
+            query.put("ReceiverAccount", request.receiverAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PushDomains"),
+            new TeaPair("version", "2018-02-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushDomainsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布域名PUSH，目前只支持0元PUSH</p>
+     * 
+     * @param request PushDomainsRequest
+     * @return PushDomainsResponse
+     */
+    public PushDomainsResponse pushDomains(PushDomainsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pushDomainsWithOptions(request, runtime);
     }
 
     /**
