@@ -855,6 +855,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>服务商玄坛呼叫中心操作</p>
+     * 
+     * @param request OperateCallCenterForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OperateCallCenterForPartnerResponse
+     */
+    public OperateCallCenterForPartnerResponse operateCallCenterForPartnerWithOptions(OperateCallCenterForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callAction)) {
+            query.put("CallAction", request.callAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.employeeCode)) {
+            query.put("EmployeeCode", request.employeeCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.request)) {
+            query.put("Request", request.request);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OperateCallCenterForPartner"),
+            new TeaPair("version", "2020-03-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OperateCallCenterForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>服务商玄坛呼叫中心操作</p>
+     * 
+     * @param request OperateCallCenterForPartnerRequest
+     * @return OperateCallCenterForPartnerResponse
+     */
+    public OperateCallCenterForPartnerResponse operateCallCenterForPartner(OperateCallCenterForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.operateCallCenterForPartnerWithOptions(request, runtime);
+    }
+
+    /**
      * @param request OperateProduceForPartnerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OperateProduceForPartnerResponse
@@ -1307,6 +1367,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryUserNeedAuthResponse queryUserNeedAuth() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryUserNeedAuthWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>服务商玄坛外呼呼叫中心事件回传</p>
+     * 
+     * @param request RecordCallCenterEventForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RecordCallCenterEventForPartnerResponse
+     */
+    public RecordCallCenterEventForPartnerResponse recordCallCenterEventForPartnerWithOptions(RecordCallCenterEventForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callAction)) {
+            query.put("CallAction", request.callAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callee)) {
+            query.put("Callee", request.callee);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.caller)) {
+            query.put("Caller", request.caller);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connId)) {
+            query.put("ConnId", request.connId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            query.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedId)) {
+            query.put("RelatedId", request.relatedId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretMobile)) {
+            query.put("SecretMobile", request.secretMobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillType)) {
+            query.put("SkillType", request.skillType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecordCallCenterEventForPartner"),
+            new TeaPair("version", "2020-03-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecordCallCenterEventForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>服务商玄坛外呼呼叫中心事件回传</p>
+     * 
+     * @param request RecordCallCenterEventForPartnerRequest
+     * @return RecordCallCenterEventForPartnerResponse
+     */
+    public RecordCallCenterEventForPartnerResponse recordCallCenterEventForPartner(RecordCallCenterEventForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.recordCallCenterEventForPartnerWithOptions(request, runtime);
     }
 
     /**
