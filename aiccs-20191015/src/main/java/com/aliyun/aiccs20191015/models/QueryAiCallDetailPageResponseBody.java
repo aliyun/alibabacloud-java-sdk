@@ -189,6 +189,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>51</p>
+         */
+        @NameInMap("Status")
+        public Long status;
+
+        /**
+         * <strong>example:</strong>
          * <p>12121211111*****</p>
          */
         @NameInMap("TaskId")
@@ -301,6 +308,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
         public String getRecordingFilePath() {
             return this.recordingFilePath;
+        }
+
+        public QueryAiCallDetailPageResponseBodyDataList setStatus(Long status) {
+            this.status = status;
+            return this;
+        }
+        public Long getStatus() {
+            return this.status;
         }
 
         public QueryAiCallDetailPageResponseBodyDataList setTaskId(String taskId) {

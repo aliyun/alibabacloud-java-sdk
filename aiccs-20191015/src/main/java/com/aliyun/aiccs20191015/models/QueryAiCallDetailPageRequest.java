@@ -60,6 +60,13 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
     @NameInMap("MinConversationDuration")
     public Long minConversationDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("OutId")
+    public String outId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -182,6 +189,14 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
     }
     public Long getMinConversationDuration() {
         return this.minConversationDuration;
+    }
+
+    public QueryAiCallDetailPageRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
     }
 
     public QueryAiCallDetailPageRequest setOwnerId(Long ownerId) {

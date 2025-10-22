@@ -251,8 +251,71 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>示例值示例值</p>
          */
+        @NameInMap("CallId")
+        public String callId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("CallResult")
+        public String callResult;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("CalledPhone")
+        public String calledPhone;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("CallerPhone")
+        public String callerPhone;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("ConversationRecord")
         public String conversationRecord;
+
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
+        @NameInMap("Duration")
+        public Long duration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("FailedReason")
+        public String failedReason;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("HangupDirection")
+        public String hangupDirection;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("MajorIntent")
+        public String majorIntent;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("OutId")
+        public String outId;
 
         @NameInMap("OutputTags")
         public java.util.List<QueryConversationDetailInfoResponseBodyDataOutputTags> outputTags;
@@ -271,6 +334,34 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         @NameInMap("RecordingFileDownloadUrl")
         public String recordingFileDownloadUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>98</p>
+         */
+        @NameInMap("ReleaseTime")
+        public Long releaseTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
+        @NameInMap("StartCallTime")
+        public Long startCallTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("StatusCode")
+        public String statusCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("StatusMsg")
+        public String statusMsg;
+
         @NameInMap("Variables")
         public java.util.List<QueryConversationDetailInfoResponseBodyDataVariables> variables;
 
@@ -279,12 +370,84 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public QueryConversationDetailInfoResponseBodyData setCallId(String callId) {
+            this.callId = callId;
+            return this;
+        }
+        public String getCallId() {
+            return this.callId;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setCallResult(String callResult) {
+            this.callResult = callResult;
+            return this;
+        }
+        public String getCallResult() {
+            return this.callResult;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setCalledPhone(String calledPhone) {
+            this.calledPhone = calledPhone;
+            return this;
+        }
+        public String getCalledPhone() {
+            return this.calledPhone;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setCallerPhone(String callerPhone) {
+            this.callerPhone = callerPhone;
+            return this;
+        }
+        public String getCallerPhone() {
+            return this.callerPhone;
+        }
+
         public QueryConversationDetailInfoResponseBodyData setConversationRecord(String conversationRecord) {
             this.conversationRecord = conversationRecord;
             return this;
         }
         public String getConversationRecord() {
             return this.conversationRecord;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setFailedReason(String failedReason) {
+            this.failedReason = failedReason;
+            return this;
+        }
+        public String getFailedReason() {
+            return this.failedReason;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setHangupDirection(String hangupDirection) {
+            this.hangupDirection = hangupDirection;
+            return this;
+        }
+        public String getHangupDirection() {
+            return this.hangupDirection;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setMajorIntent(String majorIntent) {
+            this.majorIntent = majorIntent;
+            return this;
+        }
+        public String getMajorIntent() {
+            return this.majorIntent;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setOutId(String outId) {
+            this.outId = outId;
+            return this;
+        }
+        public String getOutId() {
+            return this.outId;
         }
 
         public QueryConversationDetailInfoResponseBodyData setOutputTags(java.util.List<QueryConversationDetailInfoResponseBodyDataOutputTags> outputTags) {
@@ -309,6 +472,38 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
         public String getRecordingFileDownloadUrl() {
             return this.recordingFileDownloadUrl;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setReleaseTime(Long releaseTime) {
+            this.releaseTime = releaseTime;
+            return this;
+        }
+        public Long getReleaseTime() {
+            return this.releaseTime;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setStartCallTime(Long startCallTime) {
+            this.startCallTime = startCallTime;
+            return this;
+        }
+        public Long getStartCallTime() {
+            return this.startCallTime;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setStatusCode(String statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+        public String getStatusCode() {
+            return this.statusCode;
+        }
+
+        public QueryConversationDetailInfoResponseBodyData setStatusMsg(String statusMsg) {
+            this.statusMsg = statusMsg;
+            return this;
+        }
+        public String getStatusMsg() {
+            return this.statusMsg;
         }
 
         public QueryConversationDetailInfoResponseBodyData setVariables(java.util.List<QueryConversationDetailInfoResponseBodyDataVariables> variables) {

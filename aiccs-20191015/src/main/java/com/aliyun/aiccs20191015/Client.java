@@ -6757,6 +6757,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MinConversationDuration", request.minConversationDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
