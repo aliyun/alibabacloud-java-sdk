@@ -4911,6 +4911,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSimpleOfficeSiteResponse createSimpleOfficeSiteWithOptions(CreateSimpleOfficeSiteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
+            query.put("AccountType", request.accountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorityHost)) {
+            query.put("AuthorityHost", request.authorityHost);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
             query.put("Bandwidth", request.bandwidth);
         }
@@ -4927,12 +4935,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CidrBlock", request.cidrBlock);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientSecret)) {
+            query.put("ClientSecret", request.clientSecret);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cloudBoxOfficeSite)) {
             query.put("CloudBoxOfficeSite", request.cloudBoxOfficeSite);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopAccessType)) {
             query.put("DesktopAccessType", request.desktopAccessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableAdminAccess)) {
@@ -4953,6 +4973,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
@@ -9187,6 +9211,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeFotaTasksResponse describeFotaTasks(DescribeFotaTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeFotaTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询全局桌面记录</p>
+     * 
+     * @param request DescribeGlobalDesktopRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGlobalDesktopRecordsResponse
+     */
+    public DescribeGlobalDesktopRecordsResponse describeGlobalDesktopRecordsWithOptions(DescribeGlobalDesktopRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopName)) {
+            query.put("DesktopName", request.desktopName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopType)) {
+            query.put("DesktopType", request.desktopType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortType)) {
+            query.put("SortType", request.sortType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subPayType)) {
+            query.put("SubPayType", request.subPayType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGlobalDesktopRecords"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGlobalDesktopRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询全局桌面记录</p>
+     * 
+     * @param request DescribeGlobalDesktopRecordsRequest
+     * @return DescribeGlobalDesktopRecordsResponse
+     */
+    public DescribeGlobalDesktopRecordsResponse describeGlobalDesktopRecords(DescribeGlobalDesktopRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeGlobalDesktopRecordsWithOptions(request, runtime);
     }
 
     /**
@@ -16150,8 +16274,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyOfficeSiteAttributeResponse modifyOfficeSiteAttributeWithOptions(ModifyOfficeSiteAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorityHost)) {
+            query.put("AuthorityHost", request.authorityHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientSecret)) {
+            query.put("ClientSecret", request.clientSecret);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopAccessType)) {
             query.put("DesktopAccessType", request.desktopAccessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableAdminAccess)) {
@@ -16176,6 +16316,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

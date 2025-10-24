@@ -4,6 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteAttributeRequest extends TeaModel {
+    @NameInMap("AuthorityHost")
+    public String authorityHost;
+
+    @NameInMap("ClientId")
+    public String clientId;
+
+    @NameInMap("ClientSecret")
+    public String clientSecret;
+
     /**
      * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
      * <blockquote>
@@ -21,6 +30,9 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
      */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
+
+    @NameInMap("DomainName")
+    public String domainName;
 
     /**
      * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
@@ -84,9 +96,36 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     public static ModifyOfficeSiteAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyOfficeSiteAttributeRequest self = new ModifyOfficeSiteAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyOfficeSiteAttributeRequest setAuthorityHost(String authorityHost) {
+        this.authorityHost = authorityHost;
+        return this;
+    }
+    public String getAuthorityHost() {
+        return this.authorityHost;
+    }
+
+    public ModifyOfficeSiteAttributeRequest setClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    public String getClientId() {
+        return this.clientId;
+    }
+
+    public ModifyOfficeSiteAttributeRequest setClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+        return this;
+    }
+    public String getClientSecret() {
+        return this.clientSecret;
     }
 
     public ModifyOfficeSiteAttributeRequest setDesktopAccessType(String desktopAccessType) {
@@ -95,6 +134,14 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     }
     public String getDesktopAccessType() {
         return this.desktopAccessType;
+    }
+
+    public ModifyOfficeSiteAttributeRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public ModifyOfficeSiteAttributeRequest setEnableAdminAccess(Boolean enableAdminAccess) {
@@ -143,6 +190,14 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyOfficeSiteAttributeRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

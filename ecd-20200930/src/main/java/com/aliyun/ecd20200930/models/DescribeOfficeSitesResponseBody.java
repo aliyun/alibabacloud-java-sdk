@@ -342,6 +342,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        @NameInMap("AccountType")
+        public String accountType;
+
         /**
          * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</p>
          * 
@@ -350,6 +353,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         @NameInMap("AdHostname")
         public String adHostname;
+
+        @NameInMap("AuthorityHost")
+        public String authorityHost;
 
         /**
          * <p>The hostname of the secondary domain controller.</p>
@@ -405,6 +411,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
+
+        @NameInMap("ClientId")
+        public String clientId;
+
+        @NameInMap("ClientSecret")
+        public String clientSecret;
 
         /**
          * <p>Indicates whether the CloudBox-based office network is created.</p>
@@ -819,6 +831,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("SubnetMode")
         public String subnetMode;
 
+        @NameInMap("TenantId")
+        public String tenantId;
+
         /**
          * <p>The total number of cloud computers.</p>
          * 
@@ -908,12 +923,28 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             return this.acceleratorId;
         }
 
+        public DescribeOfficeSitesResponseBodyOfficeSites setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
         public DescribeOfficeSitesResponseBodyOfficeSites setAdHostname(String adHostname) {
             this.adHostname = adHostname;
             return this;
         }
         public String getAdHostname() {
             return this.adHostname;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setAuthorityHost(String authorityHost) {
+            this.authorityHost = authorityHost;
+            return this;
+        }
+        public String getAuthorityHost() {
+            return this.authorityHost;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setBackupDCHostname(String backupDCHostname) {
@@ -962,6 +993,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getCidrBlock() {
             return this.cidrBlock;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setClientId(String clientId) {
+            this.clientId = clientId;
+            return this;
+        }
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setClientSecret(String clientSecret) {
+            this.clientSecret = clientSecret;
+            return this;
+        }
+        public String getClientSecret() {
+            return this.clientSecret;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setCloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
@@ -1298,6 +1345,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getSubnetMode() {
             return this.subnetMode;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setTotalEdsCount(Long totalEdsCount) {

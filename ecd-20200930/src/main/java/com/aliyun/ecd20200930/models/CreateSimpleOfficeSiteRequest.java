@@ -4,6 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateSimpleOfficeSiteRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
+    @NameInMap("AuthorityHost")
+    public String authorityHost;
+
     /**
      * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set <code>EnableInternetAccess</code> to <code>true</code>.</p>
      * 
@@ -52,6 +58,12 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    @NameInMap("ClientId")
+    public String clientId;
+
+    @NameInMap("ClientSecret")
+    public String clientSecret;
+
     /**
      * <p>Specifies whether to create a CloudBox-based office network.</p>
      * <p>Valid values:</p>
@@ -88,6 +100,9 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
      */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
+
+    @NameInMap("DomainName")
+    public String domainName;
 
     /**
      * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
@@ -156,6 +171,9 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     /**
      * <p>The IDs of the vSwitches that you want to specify in VPCs. This parameter is required only when you create CloudBox-based office networks.</p>
      */
@@ -190,6 +208,22 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSimpleOfficeSiteRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    public CreateSimpleOfficeSiteRequest setAuthorityHost(String authorityHost) {
+        this.authorityHost = authorityHost;
+        return this;
+    }
+    public String getAuthorityHost() {
+        return this.authorityHost;
+    }
+
     public CreateSimpleOfficeSiteRequest setBandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -222,6 +256,22 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
         return this.cidrBlock;
     }
 
+    public CreateSimpleOfficeSiteRequest setClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    public String getClientId() {
+        return this.clientId;
+    }
+
+    public CreateSimpleOfficeSiteRequest setClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+        return this;
+    }
+    public String getClientSecret() {
+        return this.clientSecret;
+    }
+
     public CreateSimpleOfficeSiteRequest setCloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
         this.cloudBoxOfficeSite = cloudBoxOfficeSite;
         return this;
@@ -236,6 +286,14 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     }
     public String getDesktopAccessType() {
         return this.desktopAccessType;
+    }
+
+    public CreateSimpleOfficeSiteRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public CreateSimpleOfficeSiteRequest setEnableAdminAccess(Boolean enableAdminAccess) {
@@ -276,6 +334,14 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateSimpleOfficeSiteRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public CreateSimpleOfficeSiteRequest setVSwitchId(java.util.List<String> vSwitchId) {

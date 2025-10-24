@@ -706,6 +706,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsResponseBodyDesktops extends TeaModel {
+        @NameInMap("AccountType")
+        public String accountType;
+
         /**
          * <p>The number of concurrent sessions of each cloud computer in a multi-session cloud computer pool.</p>
          * 
@@ -919,6 +922,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
+
+        @NameInMap("EntraDomainName")
+        public String entraDomainName;
 
         /**
          * <p>The time when a subscription cloud computer expired.</p>
@@ -1337,6 +1343,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDesktopsResponseBodyDesktops setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
         public DescribeDesktopsResponseBodyDesktops setBindAmount(Integer bindAmount) {
             this.bindAmount = bindAmount;
             return this;
@@ -1511,6 +1525,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public java.util.List<String> getEndUserIds() {
             return this.endUserIds;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setEntraDomainName(String entraDomainName) {
+            this.entraDomainName = entraDomainName;
+            return this;
+        }
+        public String getEntraDomainName() {
+            return this.entraDomainName;
         }
 
         public DescribeDesktopsResponseBodyDesktops setExpiredTime(String expiredTime) {

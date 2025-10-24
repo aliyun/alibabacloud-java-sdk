@@ -200,6 +200,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopGroupsResponseBodyDesktopGroups extends TeaModel {
+        @NameInMap("AccountType")
+        public String accountType;
+
         /**
          * <p>The number of concurrent sessions allowed for each cloud computer within the multi-session many-to-many share.</p>
          * 
@@ -337,6 +340,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         @NameInMap("EndUserCount")
         public Integer endUserCount;
+
+        @NameInMap("EntraDomainName")
+        public String entraDomainName;
 
         /**
          * <p>The expiration date of the subscription cloud computer share.</p>
@@ -746,6 +752,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
         public DescribeDesktopGroupsResponseBodyDesktopGroups setBindAmount(Long bindAmount) {
             this.bindAmount = bindAmount;
             return this;
@@ -864,6 +878,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public Integer getEndUserCount() {
             return this.endUserCount;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setEntraDomainName(String entraDomainName) {
+            this.entraDomainName = entraDomainName;
+            return this;
+        }
+        public String getEntraDomainName() {
+            return this.entraDomainName;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setExpiredTime(String expiredTime) {
