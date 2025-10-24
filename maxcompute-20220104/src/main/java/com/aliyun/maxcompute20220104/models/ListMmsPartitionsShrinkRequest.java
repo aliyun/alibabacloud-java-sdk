@@ -54,6 +54,13 @@ public class ListMmsPartitionsShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>20323</p>
+     */
+    @NameInMap("tableId")
+    public Long tableId;
+
+    /**
+     * <strong>example:</strong>
      * <p>t1</p>
      */
     @NameInMap("tableName")
@@ -140,6 +147,14 @@ public class ListMmsPartitionsShrinkRequest extends TeaModel {
     }
     public String getStatusShrink() {
         return this.statusShrink;
+    }
+
+    public ListMmsPartitionsShrinkRequest setTableId(Long tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+    public Long getTableId() {
+        return this.tableId;
     }
 
     public ListMmsPartitionsShrinkRequest setTableName(String tableName) {

@@ -36,11 +36,7 @@ public class GetMmsPartitionResponseBody extends TeaModel {
     }
 
     public static class GetMmsPartitionResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
-        @NameInMap("DbId")
+        @NameInMap("dbId")
         public Long dbId;
 
         /**
@@ -49,6 +45,34 @@ public class GetMmsPartitionResponseBody extends TeaModel {
          */
         @NameInMap("dbName")
         public String dbName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mms_test</p>
+         */
+        @NameInMap("dstProjectName")
+        public String dstProjectName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("dstSchemaName")
+        public String dstSchemaName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("dstTableName")
+        public String dstTableName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>p1=1/p2=abc</p>
+         */
+        @NameInMap("dstValue")
+        public String dstValue;
 
         /**
          * <strong>example:</strong>
@@ -148,6 +172,38 @@ public class GetMmsPartitionResponseBody extends TeaModel {
         }
         public String getDbName() {
             return this.dbName;
+        }
+
+        public GetMmsPartitionResponseBodyData setDstProjectName(String dstProjectName) {
+            this.dstProjectName = dstProjectName;
+            return this;
+        }
+        public String getDstProjectName() {
+            return this.dstProjectName;
+        }
+
+        public GetMmsPartitionResponseBodyData setDstSchemaName(String dstSchemaName) {
+            this.dstSchemaName = dstSchemaName;
+            return this;
+        }
+        public String getDstSchemaName() {
+            return this.dstSchemaName;
+        }
+
+        public GetMmsPartitionResponseBodyData setDstTableName(String dstTableName) {
+            this.dstTableName = dstTableName;
+            return this;
+        }
+        public String getDstTableName() {
+            return this.dstTableName;
+        }
+
+        public GetMmsPartitionResponseBodyData setDstValue(String dstValue) {
+            this.dstValue = dstValue;
+            return this;
+        }
+        public String getDstValue() {
+            return this.dstValue;
         }
 
         public GetMmsPartitionResponseBodyData setId(Long id) {

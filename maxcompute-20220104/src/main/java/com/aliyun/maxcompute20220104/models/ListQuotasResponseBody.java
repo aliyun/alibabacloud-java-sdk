@@ -457,6 +457,9 @@ public class ListQuotasResponseBody extends TeaModel {
     }
 
     public static class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter extends TeaModel {
+        @NameInMap("adhocSlot")
+        public Long adhocSlot;
+
         @NameInMap("elasticReservedCU")
         public Long elasticReservedCU;
 
@@ -484,9 +487,20 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("singleJobCULimit")
         public Long singleJobCULimit;
 
+        @NameInMap("slotNum")
+        public Long slotNum;
+
         public static ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter build(java.util.Map<String, ?> map) throws Exception {
             ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter self = new ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter();
             return TeaModel.build(map, self);
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setAdhocSlot(Long adhocSlot) {
+            this.adhocSlot = adhocSlot;
+            return this;
+        }
+        public Long getAdhocSlot() {
+            return this.adhocSlot;
         }
 
         public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setElasticReservedCU(Long elasticReservedCU) {
@@ -543,6 +557,14 @@ public class ListQuotasResponseBody extends TeaModel {
         }
         public Long getSingleJobCULimit() {
             return this.singleJobCULimit;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setSlotNum(Long slotNum) {
+            this.slotNum = slotNum;
+            return this;
+        }
+        public Long getSlotNum() {
+            return this.slotNum;
         }
 
     }
@@ -1767,6 +1789,9 @@ public class ListQuotasResponseBody extends TeaModel {
     }
 
     public static class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter extends TeaModel {
+        @NameInMap("adhocSlot")
+        public Long adhocSlot;
+
         @NameInMap("elasticReservedCU")
         public Long elasticReservedCU;
 
@@ -1782,11 +1807,17 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("maxCU")
         public Long maxCU;
 
+        @NameInMap("maxGu")
+        public Long maxGu;
+
         /**
          * <p>This parameter is required.</p>
          */
         @NameInMap("minCU")
         public Long minCU;
+
+        @NameInMap("minGu")
+        public Long minGu;
 
         @NameInMap("schedulerType")
         public String schedulerType;
@@ -1794,9 +1825,20 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("singleJobCULimit")
         public Long singleJobCULimit;
 
+        @NameInMap("slotNum")
+        public Long slotNum;
+
         public static ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter build(java.util.Map<String, ?> map) throws Exception {
             ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter self = new ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter();
             return TeaModel.build(map, self);
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setAdhocSlot(Long adhocSlot) {
+            this.adhocSlot = adhocSlot;
+            return this;
+        }
+        public Long getAdhocSlot() {
+            return this.adhocSlot;
         }
 
         public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setElasticReservedCU(Long elasticReservedCU) {
@@ -1831,12 +1873,28 @@ public class ListQuotasResponseBody extends TeaModel {
             return this.maxCU;
         }
 
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setMaxGu(Long maxGu) {
+            this.maxGu = maxGu;
+            return this;
+        }
+        public Long getMaxGu() {
+            return this.maxGu;
+        }
+
         public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setMinCU(Long minCU) {
             this.minCU = minCU;
             return this;
         }
         public Long getMinCU() {
             return this.minCU;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setMinGu(Long minGu) {
+            this.minGu = minGu;
+            return this;
+        }
+        public Long getMinGu() {
+            return this.minGu;
         }
 
         public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setSchedulerType(String schedulerType) {
@@ -1853,6 +1911,14 @@ public class ListQuotasResponseBody extends TeaModel {
         }
         public Long getSingleJobCULimit() {
             return this.singleJobCULimit;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setSlotNum(Long slotNum) {
+            this.slotNum = slotNum;
+            return this;
+        }
+        public Long getSlotNum() {
+            return this.slotNum;
         }
 
     }

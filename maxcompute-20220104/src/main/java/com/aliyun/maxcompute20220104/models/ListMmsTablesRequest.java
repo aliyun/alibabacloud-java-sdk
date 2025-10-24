@@ -23,6 +23,27 @@ public class ListMmsTablesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("dstName")
+    public String dstName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>mms_test</p>
+     */
+    @NameInMap("dstProjectName")
+    public String dstProjectName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("dstSchemaName")
+    public String dstSchemaName;
+
+    /**
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("hasPartitions")
@@ -107,6 +128,30 @@ public class ListMmsTablesRequest extends TeaModel {
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public ListMmsTablesRequest setDstName(String dstName) {
+        this.dstName = dstName;
+        return this;
+    }
+    public String getDstName() {
+        return this.dstName;
+    }
+
+    public ListMmsTablesRequest setDstProjectName(String dstProjectName) {
+        this.dstProjectName = dstProjectName;
+        return this;
+    }
+    public String getDstProjectName() {
+        return this.dstProjectName;
+    }
+
+    public ListMmsTablesRequest setDstSchemaName(String dstSchemaName) {
+        this.dstSchemaName = dstSchemaName;
+        return this;
+    }
+    public String getDstSchemaName() {
+        return this.dstSchemaName;
     }
 
     public ListMmsTablesRequest setHasPartitions(Boolean hasPartitions) {

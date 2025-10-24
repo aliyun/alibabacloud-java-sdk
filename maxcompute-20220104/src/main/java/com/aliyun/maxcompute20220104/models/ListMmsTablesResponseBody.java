@@ -274,6 +274,27 @@ public class ListMmsTablesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("dstName")
+        public String dstName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mms_test</p>
+         */
+        @NameInMap("dstProjectName")
+        public String dstProjectName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("dstSchemaName")
+        public String dstSchemaName;
+
+        /**
+         * <strong>example:</strong>
          * <p>{&quot;mapkey.delim&quot;:&quot;:&quot;,&quot;collection.delim&quot;:&quot;,&quot;,&quot;serialization.format&quot;:&quot;|&quot;,&quot;field.delim&quot;:&quot;|&quot;}</p>
          */
         @NameInMap("extra")
@@ -451,6 +472,30 @@ public class ListMmsTablesResponseBody extends TeaModel {
         }
         public String getDbName() {
             return this.dbName;
+        }
+
+        public ListMmsTablesResponseBodyDataObjectList setDstName(String dstName) {
+            this.dstName = dstName;
+            return this;
+        }
+        public String getDstName() {
+            return this.dstName;
+        }
+
+        public ListMmsTablesResponseBodyDataObjectList setDstProjectName(String dstProjectName) {
+            this.dstProjectName = dstProjectName;
+            return this;
+        }
+        public String getDstProjectName() {
+            return this.dstProjectName;
+        }
+
+        public ListMmsTablesResponseBodyDataObjectList setDstSchemaName(String dstSchemaName) {
+            this.dstSchemaName = dstSchemaName;
+            return this;
+        }
+        public String getDstSchemaName() {
+            return this.dstSchemaName;
         }
 
         public ListMmsTablesResponseBodyDataObjectList setExtra(String extra) {

@@ -59,6 +59,20 @@ public class ListMmsDbsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("dstName")
+        public String dstName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mms_test</p>
+         */
+        @NameInMap("dstProjectName")
+        public String dstProjectName;
+
+        /**
+         * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("extra")
@@ -240,6 +254,22 @@ public class ListMmsDbsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListMmsDbsResponseBodyDataObjectList setDstName(String dstName) {
+            this.dstName = dstName;
+            return this;
+        }
+        public String getDstName() {
+            return this.dstName;
+        }
+
+        public ListMmsDbsResponseBodyDataObjectList setDstProjectName(String dstProjectName) {
+            this.dstProjectName = dstProjectName;
+            return this;
+        }
+        public String getDstProjectName() {
+            return this.dstProjectName;
         }
 
         public ListMmsDbsResponseBodyDataObjectList setExtra(String extra) {

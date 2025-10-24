@@ -208,6 +208,16 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>mms_test</p>
+         */
+        @NameInMap("dstProject")
+        public String dstProject;
+
+        @NameInMap("dstProjects")
+        public java.util.List<String> dstProjects;
+
+        /**
+         * <strong>example:</strong>
          * <p>unexpected exception</p>
          */
         @NameInMap("errMsg")
@@ -367,6 +377,22 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         }
         public Integer getDbNum() {
             return this.dbNum;
+        }
+
+        public ListMmsDataSourcesResponseBodyDataObjectList setDstProject(String dstProject) {
+            this.dstProject = dstProject;
+            return this;
+        }
+        public String getDstProject() {
+            return this.dstProject;
+        }
+
+        public ListMmsDataSourcesResponseBodyDataObjectList setDstProjects(java.util.List<String> dstProjects) {
+            this.dstProjects = dstProjects;
+            return this;
+        }
+        public java.util.List<String> getDstProjects() {
+            return this.dstProjects;
         }
 
         public ListMmsDataSourcesResponseBodyDataObjectList setErrMsg(String errMsg) {

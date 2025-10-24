@@ -54,6 +54,13 @@ public class ListMmsPartitionsRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>20323</p>
+     */
+    @NameInMap("tableId")
+    public Long tableId;
+
+    /**
+     * <strong>example:</strong>
      * <p>t1</p>
      */
     @NameInMap("tableName")
@@ -140,6 +147,14 @@ public class ListMmsPartitionsRequest extends TeaModel {
     }
     public java.util.List<String> getStatus() {
         return this.status;
+    }
+
+    public ListMmsPartitionsRequest setTableId(Long tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+    public Long getTableId() {
+        return this.tableId;
     }
 
     public ListMmsPartitionsRequest setTableName(String tableName) {

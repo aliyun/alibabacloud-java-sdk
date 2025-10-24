@@ -13,6 +13,12 @@ public class CreateMmsJobRequest extends TeaModel {
     @NameInMap("dstSchemaName")
     public String dstSchemaName;
 
+    @NameInMap("enableDataMigration")
+    public Boolean enableDataMigration;
+
+    @NameInMap("enableSchemaMigration")
+    public Boolean enableSchemaMigration;
+
     @NameInMap("enableVerification")
     public Boolean enableVerification;
 
@@ -94,6 +100,22 @@ public class CreateMmsJobRequest extends TeaModel {
     }
     public String getDstSchemaName() {
         return this.dstSchemaName;
+    }
+
+    public CreateMmsJobRequest setEnableDataMigration(Boolean enableDataMigration) {
+        this.enableDataMigration = enableDataMigration;
+        return this;
+    }
+    public Boolean getEnableDataMigration() {
+        return this.enableDataMigration;
+    }
+
+    public CreateMmsJobRequest setEnableSchemaMigration(Boolean enableSchemaMigration) {
+        this.enableSchemaMigration = enableSchemaMigration;
+        return this;
+    }
+    public Boolean getEnableSchemaMigration() {
+        return this.enableSchemaMigration;
     }
 
     public CreateMmsJobRequest setEnableVerification(Boolean enableVerification) {

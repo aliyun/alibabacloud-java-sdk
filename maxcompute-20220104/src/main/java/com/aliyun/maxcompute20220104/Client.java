@@ -306,6 +306,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("dstSchemaName", request.dstSchemaName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDataMigration)) {
+            body.put("enableDataMigration", request.enableDataMigration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSchemaMigration)) {
+            body.put("enableSchemaMigration", request.enableSchemaMigration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableVerification)) {
             body.put("enableVerification", request.enableVerification);
         }
@@ -2910,6 +2918,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("status", request.statusShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tableId)) {
+            query.put("tableId", request.tableId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
             query.put("tableName", request.tableName);
         }
@@ -2981,6 +2993,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("dbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstName)) {
+            query.put("dstName", request.dstName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstProjectName)) {
+            query.put("dstProjectName", request.dstProjectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstSchemaName)) {
+            query.put("dstSchemaName", request.dstSchemaName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hasPartitions)) {
@@ -4053,6 +4077,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryQuotaWithOptions(nickname, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询quota的资源使用信息</p>
+     * 
+     * @param request QueryQuotaMetricRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryQuotaMetricResponse
+     */
+    public QueryQuotaMetricResponse queryQuotaMetricWithOptions(String metric, QueryQuotaMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            query.put("strategy", request.strategy);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            body.put("interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nickname)) {
+            body.put("nickname", request.nickname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subQuotaNickname)) {
+            body.put("subQuotaNickname", request.subQuotaNickname);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryQuotaMetric"),
+            new TeaPair("version", "2022-01-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/observations/quota/" + com.aliyun.openapiutil.Client.getEncodeParam(metric) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryQuotaMetricResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询quota的资源使用信息</p>
+     * 
+     * @param request QueryQuotaMetricRequest
+     * @return QueryQuotaMetricResponse
+     */
+    public QueryQuotaMetricResponse queryQuotaMetric(String metric, QueryQuotaMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryQuotaMetricWithOptions(metric, request, headers, runtime);
     }
 
     /**
