@@ -73,6 +73,9 @@ public class ListSolutionResponseBody extends TeaModel {
         @NameInMap("SolutionId")
         public Long solutionId;
 
+        @NameInMap("TagIdList")
+        public java.util.List<Long> tagIdList;
+
         public static ListSolutionResponseBodySolutions build(java.util.Map<String, ?> map) throws Exception {
             ListSolutionResponseBodySolutions self = new ListSolutionResponseBodySolutions();
             return TeaModel.build(map, self);
@@ -132,6 +135,14 @@ public class ListSolutionResponseBody extends TeaModel {
         }
         public Long getSolutionId() {
             return this.solutionId;
+        }
+
+        public ListSolutionResponseBodySolutions setTagIdList(java.util.List<Long> tagIdList) {
+            this.tagIdList = tagIdList;
+            return this;
+        }
+        public java.util.List<Long> getTagIdList() {
+            return this.tagIdList;
         }
 
     }

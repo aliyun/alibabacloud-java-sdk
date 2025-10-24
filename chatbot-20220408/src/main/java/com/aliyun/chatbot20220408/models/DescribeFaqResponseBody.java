@@ -90,6 +90,9 @@ public class DescribeFaqResponseBody extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("TagIdList")
+    public java.util.List<Long> tagIdList;
+
     @NameInMap("Title")
     public String title;
 
@@ -208,6 +211,14 @@ public class DescribeFaqResponseBody extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public DescribeFaqResponseBody setTagIdList(java.util.List<Long> tagIdList) {
+        this.tagIdList = tagIdList;
+        return this;
+    }
+    public java.util.List<Long> getTagIdList() {
+        return this.tagIdList;
     }
 
     public DescribeFaqResponseBody setTitle(String title) {

@@ -3,7 +3,7 @@ package com.aliyun.chatbot20220408.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSolutionRequest extends TeaModel {
+public class CreateSolutionShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -40,14 +40,14 @@ public class CreateSolutionRequest extends TeaModel {
     public java.util.List<String> perspectiveCodes;
 
     @NameInMap("TagIdList")
-    public java.util.List<Long> tagIdList;
+    public String tagIdListShrink;
 
-    public static CreateSolutionRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateSolutionRequest self = new CreateSolutionRequest();
+    public static CreateSolutionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateSolutionShrinkRequest self = new CreateSolutionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSolutionRequest setAgentKey(String agentKey) {
+    public CreateSolutionShrinkRequest setAgentKey(String agentKey) {
         this.agentKey = agentKey;
         return this;
     }
@@ -55,7 +55,7 @@ public class CreateSolutionRequest extends TeaModel {
         return this.agentKey;
     }
 
-    public CreateSolutionRequest setContent(String content) {
+    public CreateSolutionShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -63,7 +63,7 @@ public class CreateSolutionRequest extends TeaModel {
         return this.content;
     }
 
-    public CreateSolutionRequest setContentType(Integer contentType) {
+    public CreateSolutionShrinkRequest setContentType(Integer contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -71,7 +71,7 @@ public class CreateSolutionRequest extends TeaModel {
         return this.contentType;
     }
 
-    public CreateSolutionRequest setKnowledgeId(Long knowledgeId) {
+    public CreateSolutionShrinkRequest setKnowledgeId(Long knowledgeId) {
         this.knowledgeId = knowledgeId;
         return this;
     }
@@ -79,7 +79,7 @@ public class CreateSolutionRequest extends TeaModel {
         return this.knowledgeId;
     }
 
-    public CreateSolutionRequest setPerspectiveCodes(java.util.List<String> perspectiveCodes) {
+    public CreateSolutionShrinkRequest setPerspectiveCodes(java.util.List<String> perspectiveCodes) {
         this.perspectiveCodes = perspectiveCodes;
         return this;
     }
@@ -87,12 +87,12 @@ public class CreateSolutionRequest extends TeaModel {
         return this.perspectiveCodes;
     }
 
-    public CreateSolutionRequest setTagIdList(java.util.List<Long> tagIdList) {
-        this.tagIdList = tagIdList;
+    public CreateSolutionShrinkRequest setTagIdListShrink(String tagIdListShrink) {
+        this.tagIdListShrink = tagIdListShrink;
         return this;
     }
-    public java.util.List<Long> getTagIdList() {
-        return this.tagIdList;
+    public String getTagIdListShrink() {
+        return this.tagIdListShrink;
     }
 
 }

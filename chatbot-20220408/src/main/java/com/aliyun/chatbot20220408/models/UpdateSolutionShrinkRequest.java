@@ -3,7 +3,7 @@ package com.aliyun.chatbot20220408.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateSolutionRequest extends TeaModel {
+public class UpdateSolutionShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -40,14 +40,14 @@ public class UpdateSolutionRequest extends TeaModel {
     public Long solutionId;
 
     @NameInMap("TagIdList")
-    public java.util.List<Long> tagIdList;
+    public String tagIdListShrink;
 
-    public static UpdateSolutionRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateSolutionRequest self = new UpdateSolutionRequest();
+    public static UpdateSolutionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateSolutionShrinkRequest self = new UpdateSolutionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateSolutionRequest setAgentKey(String agentKey) {
+    public UpdateSolutionShrinkRequest setAgentKey(String agentKey) {
         this.agentKey = agentKey;
         return this;
     }
@@ -55,7 +55,7 @@ public class UpdateSolutionRequest extends TeaModel {
         return this.agentKey;
     }
 
-    public UpdateSolutionRequest setContent(String content) {
+    public UpdateSolutionShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -63,7 +63,7 @@ public class UpdateSolutionRequest extends TeaModel {
         return this.content;
     }
 
-    public UpdateSolutionRequest setContentType(Integer contentType) {
+    public UpdateSolutionShrinkRequest setContentType(Integer contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -71,7 +71,7 @@ public class UpdateSolutionRequest extends TeaModel {
         return this.contentType;
     }
 
-    public UpdateSolutionRequest setPerspectiveCodes(java.util.List<String> perspectiveCodes) {
+    public UpdateSolutionShrinkRequest setPerspectiveCodes(java.util.List<String> perspectiveCodes) {
         this.perspectiveCodes = perspectiveCodes;
         return this;
     }
@@ -79,7 +79,7 @@ public class UpdateSolutionRequest extends TeaModel {
         return this.perspectiveCodes;
     }
 
-    public UpdateSolutionRequest setSolutionId(Long solutionId) {
+    public UpdateSolutionShrinkRequest setSolutionId(Long solutionId) {
         this.solutionId = solutionId;
         return this;
     }
@@ -87,12 +87,12 @@ public class UpdateSolutionRequest extends TeaModel {
         return this.solutionId;
     }
 
-    public UpdateSolutionRequest setTagIdList(java.util.List<Long> tagIdList) {
-        this.tagIdList = tagIdList;
+    public UpdateSolutionShrinkRequest setTagIdListShrink(String tagIdListShrink) {
+        this.tagIdListShrink = tagIdListShrink;
         return this;
     }
-    public java.util.List<Long> getTagIdList() {
-        return this.tagIdList;
+    public String getTagIdListShrink() {
+        return this.tagIdListShrink;
     }
 
 }

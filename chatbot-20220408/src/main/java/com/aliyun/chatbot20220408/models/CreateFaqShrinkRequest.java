@@ -3,7 +3,7 @@ package com.aliyun.chatbot20220408.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateFaqRequest extends TeaModel {
+public class CreateFaqShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -15,7 +15,7 @@ public class UpdateFaqRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>30000049006</p>
+     * <p>1000053274</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;
@@ -27,24 +27,25 @@ public class UpdateFaqRequest extends TeaModel {
     @NameInMap("EndDate")
     public String endDate;
 
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30001905617</p>
-     */
-    @NameInMap("KnowledgeId")
-    public Long knowledgeId;
+    @NameInMap("SolutionContent")
+    public String solutionContent;
 
     /**
      * <strong>example:</strong>
-     * <p>2022-05-27T05:18:20Z</p>
+     * <p>0</p>
+     */
+    @NameInMap("SolutionType")
+    public Integer solutionType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-25T16:28:36Z</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     @NameInMap("TagIdList")
-    public java.util.List<Long> tagIdList;
+    public String tagIdListShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -52,12 +53,12 @@ public class UpdateFaqRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
-    public static UpdateFaqRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateFaqRequest self = new UpdateFaqRequest();
+    public static CreateFaqShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateFaqShrinkRequest self = new CreateFaqShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateFaqRequest setAgentKey(String agentKey) {
+    public CreateFaqShrinkRequest setAgentKey(String agentKey) {
         this.agentKey = agentKey;
         return this;
     }
@@ -65,7 +66,7 @@ public class UpdateFaqRequest extends TeaModel {
         return this.agentKey;
     }
 
-    public UpdateFaqRequest setCategoryId(Long categoryId) {
+    public CreateFaqShrinkRequest setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -73,7 +74,7 @@ public class UpdateFaqRequest extends TeaModel {
         return this.categoryId;
     }
 
-    public UpdateFaqRequest setEndDate(String endDate) {
+    public CreateFaqShrinkRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -81,15 +82,23 @@ public class UpdateFaqRequest extends TeaModel {
         return this.endDate;
     }
 
-    public UpdateFaqRequest setKnowledgeId(Long knowledgeId) {
-        this.knowledgeId = knowledgeId;
+    public CreateFaqShrinkRequest setSolutionContent(String solutionContent) {
+        this.solutionContent = solutionContent;
         return this;
     }
-    public Long getKnowledgeId() {
-        return this.knowledgeId;
+    public String getSolutionContent() {
+        return this.solutionContent;
     }
 
-    public UpdateFaqRequest setStartDate(String startDate) {
+    public CreateFaqShrinkRequest setSolutionType(Integer solutionType) {
+        this.solutionType = solutionType;
+        return this;
+    }
+    public Integer getSolutionType() {
+        return this.solutionType;
+    }
+
+    public CreateFaqShrinkRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -97,15 +106,15 @@ public class UpdateFaqRequest extends TeaModel {
         return this.startDate;
     }
 
-    public UpdateFaqRequest setTagIdList(java.util.List<Long> tagIdList) {
-        this.tagIdList = tagIdList;
+    public CreateFaqShrinkRequest setTagIdListShrink(String tagIdListShrink) {
+        this.tagIdListShrink = tagIdListShrink;
         return this;
     }
-    public java.util.List<Long> getTagIdList() {
-        return this.tagIdList;
+    public String getTagIdListShrink() {
+        return this.tagIdListShrink;
     }
 
-    public UpdateFaqRequest setTitle(String title) {
+    public CreateFaqShrinkRequest setTitle(String title) {
         this.title = title;
         return this;
     }

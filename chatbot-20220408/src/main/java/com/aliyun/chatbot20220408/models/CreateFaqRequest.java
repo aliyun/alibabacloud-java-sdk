@@ -44,6 +44,9 @@ public class CreateFaqRequest extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
+    @NameInMap("TagIdList")
+    public java.util.List<Long> tagIdList;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -101,6 +104,14 @@ public class CreateFaqRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
+    }
+
+    public CreateFaqRequest setTagIdList(java.util.List<Long> tagIdList) {
+        this.tagIdList = tagIdList;
+        return this;
+    }
+    public java.util.List<Long> getTagIdList() {
+        return this.tagIdList;
     }
 
     public CreateFaqRequest setTitle(String title) {

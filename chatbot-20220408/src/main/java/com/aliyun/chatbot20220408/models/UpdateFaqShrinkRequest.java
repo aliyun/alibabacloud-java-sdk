@@ -3,7 +3,7 @@ package com.aliyun.chatbot20220408.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateFaqRequest extends TeaModel {
+public class UpdateFaqShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
@@ -44,7 +44,7 @@ public class UpdateFaqRequest extends TeaModel {
     public String startDate;
 
     @NameInMap("TagIdList")
-    public java.util.List<Long> tagIdList;
+    public String tagIdListShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -52,12 +52,12 @@ public class UpdateFaqRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
-    public static UpdateFaqRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateFaqRequest self = new UpdateFaqRequest();
+    public static UpdateFaqShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateFaqShrinkRequest self = new UpdateFaqShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateFaqRequest setAgentKey(String agentKey) {
+    public UpdateFaqShrinkRequest setAgentKey(String agentKey) {
         this.agentKey = agentKey;
         return this;
     }
@@ -65,7 +65,7 @@ public class UpdateFaqRequest extends TeaModel {
         return this.agentKey;
     }
 
-    public UpdateFaqRequest setCategoryId(Long categoryId) {
+    public UpdateFaqShrinkRequest setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -73,7 +73,7 @@ public class UpdateFaqRequest extends TeaModel {
         return this.categoryId;
     }
 
-    public UpdateFaqRequest setEndDate(String endDate) {
+    public UpdateFaqShrinkRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -81,7 +81,7 @@ public class UpdateFaqRequest extends TeaModel {
         return this.endDate;
     }
 
-    public UpdateFaqRequest setKnowledgeId(Long knowledgeId) {
+    public UpdateFaqShrinkRequest setKnowledgeId(Long knowledgeId) {
         this.knowledgeId = knowledgeId;
         return this;
     }
@@ -89,7 +89,7 @@ public class UpdateFaqRequest extends TeaModel {
         return this.knowledgeId;
     }
 
-    public UpdateFaqRequest setStartDate(String startDate) {
+    public UpdateFaqShrinkRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -97,15 +97,15 @@ public class UpdateFaqRequest extends TeaModel {
         return this.startDate;
     }
 
-    public UpdateFaqRequest setTagIdList(java.util.List<Long> tagIdList) {
-        this.tagIdList = tagIdList;
+    public UpdateFaqShrinkRequest setTagIdListShrink(String tagIdListShrink) {
+        this.tagIdListShrink = tagIdListShrink;
         return this;
     }
-    public java.util.List<Long> getTagIdList() {
-        return this.tagIdList;
+    public String getTagIdListShrink() {
+        return this.tagIdListShrink;
     }
 
-    public UpdateFaqRequest setTitle(String title) {
+    public UpdateFaqShrinkRequest setTitle(String title) {
         this.title = title;
         return this;
     }
