@@ -559,6 +559,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("SQLSize")
     public Long SQLSize;
 
+    @NameInMap("SearchClusterStatus")
+    public String searchClusterStatus;
+
     @NameInMap("SearchCompressStorageUsed")
     public Long searchCompressStorageUsed;
 
@@ -1135,6 +1138,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public Long getSQLSize() {
         return this.SQLSize;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setSearchClusterStatus(String searchClusterStatus) {
+        this.searchClusterStatus = searchClusterStatus;
+        return this;
+    }
+    public String getSearchClusterStatus() {
+        return this.searchClusterStatus;
     }
 
     public DescribeDBClusterAttributeResponseBody setSearchCompressStorageUsed(Long searchCompressStorageUsed) {
