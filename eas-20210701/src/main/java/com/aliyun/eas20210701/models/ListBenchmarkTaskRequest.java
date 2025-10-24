@@ -13,6 +13,12 @@ public class ListBenchmarkTaskRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("ModelId")
+    public String modelId;
+
+    @NameInMap("Order")
+    public String order;
+
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
@@ -31,6 +37,9 @@ public class ListBenchmarkTaskRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("RequestMethod")
+    public String requestMethod;
+
     /**
      * <p>The name of the EAS service that corresponds to the stress testing task. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
      * 
@@ -39,6 +48,12 @@ public class ListBenchmarkTaskRequest extends TeaModel {
      */
     @NameInMap("ServiceName")
     public String serviceName;
+
+    @NameInMap("Sort")
+    public String sort;
+
+    @NameInMap("Status")
+    public String status;
 
     public static ListBenchmarkTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBenchmarkTaskRequest self = new ListBenchmarkTaskRequest();
@@ -51,6 +66,22 @@ public class ListBenchmarkTaskRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public ListBenchmarkTaskRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
+    }
+
+    public ListBenchmarkTaskRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListBenchmarkTaskRequest setPageNumber(String pageNumber) {
@@ -69,12 +100,36 @@ public class ListBenchmarkTaskRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListBenchmarkTaskRequest setRequestMethod(String requestMethod) {
+        this.requestMethod = requestMethod;
+        return this;
+    }
+    public String getRequestMethod() {
+        return this.requestMethod;
+    }
+
     public ListBenchmarkTaskRequest setServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public ListBenchmarkTaskRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
+    }
+
+    public ListBenchmarkTaskRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

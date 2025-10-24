@@ -1,3 +1,14 @@
+2025-10-24 Version: 7.1.7
+- Update API ListBenchmarkTask: add request parameters ModelId.
+- Update API ListBenchmarkTask: add request parameters Order.
+- Update API ListBenchmarkTask: add request parameters RequestMethod.
+- Update API ListBenchmarkTask: add request parameters Sort.
+- Update API ListBenchmarkTask: add request parameters Status.
+- Update API ListGroups: add request parameters Order.
+- Update API ListGroups: add request parameters Sort.
+- Update API ListGroups: add request parameters TrafficMode.
+
+
 2025-09-19 Version: 7.1.6
 - Update API CreateGateway: add request parameters body.GatewayType.
 - Update API DescribeGateway: add response parameters Body.IntranetEnabled.

@@ -13,6 +13,9 @@ public class ListGroupsRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("Order")
+    public String order;
+
     /**
      * <p>The page number. Default value: 1.</p>
      * 
@@ -30,6 +33,12 @@ public class ListGroupsRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public String pageSize;
+
+    @NameInMap("Sort")
+    public String sort;
+
+    @NameInMap("TrafficMode")
+    public String trafficMode;
 
     /**
      * <p>The workspace ID.</p>
@@ -53,6 +62,14 @@ public class ListGroupsRequest extends TeaModel {
         return this.filter;
     }
 
+    public ListGroupsRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public ListGroupsRequest setPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -67,6 +84,22 @@ public class ListGroupsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListGroupsRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
+    }
+
+    public ListGroupsRequest setTrafficMode(String trafficMode) {
+        this.trafficMode = trafficMode;
+        return this;
+    }
+    public String getTrafficMode() {
+        return this.trafficMode;
     }
 
     public ListGroupsRequest setWorkspaceId(String workspaceId) {
