@@ -8,6 +8,16 @@
 - Support API VerifyDomainOwner.
 
 
+2025-10-24 Version: 5.6.0
+- Support API CreateMajorProtectionBlackIpV2.
+- Support API CreatePocFunction.
+- Support API DescribeChargeModule.
+- Support API DescribeChargeResult.
+- Support API DescribePocFunctions.
+- Support API DescribeVerifyContent.
+- Support API VerifyDomainOwner.
+
+
 2025-09-22 Version: 5.5.2
 - Update API DescribeTemplateResourceCount: add response parameters Body.ResourceCount.$.AssetCount.
 - Update API DescribeTemplateResources: add request parameters AssetApi.
