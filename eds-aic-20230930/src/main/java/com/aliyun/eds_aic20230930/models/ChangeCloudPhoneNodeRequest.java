@@ -40,6 +40,12 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("ShareDataVolume")
+    public Integer shareDataVolume;
+
+    @NameInMap("SwapSize")
+    public Integer swapSize;
+
     @NameInMap("UpBandwidthLimit")
     public Integer upBandwidthLimit;
 
@@ -110,6 +116,22 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public ChangeCloudPhoneNodeRequest setShareDataVolume(Integer shareDataVolume) {
+        this.shareDataVolume = shareDataVolume;
+        return this;
+    }
+    public Integer getShareDataVolume() {
+        return this.shareDataVolume;
+    }
+
+    public ChangeCloudPhoneNodeRequest setSwapSize(Integer swapSize) {
+        this.swapSize = swapSize;
+        return this;
+    }
+    public Integer getSwapSize() {
+        return this.swapSize;
     }
 
     public ChangeCloudPhoneNodeRequest setUpBandwidthLimit(Integer upBandwidthLimit) {

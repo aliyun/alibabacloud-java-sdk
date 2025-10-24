@@ -14,6 +14,9 @@ public class DescribeMetricLastRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     /**
      * <strong>example:</strong>
      * <p>1000</p>
@@ -67,6 +70,14 @@ public class DescribeMetricLastRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeMetricLastRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public DescribeMetricLastRequest setLength(String length) {

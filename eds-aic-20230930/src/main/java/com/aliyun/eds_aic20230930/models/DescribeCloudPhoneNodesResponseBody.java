@@ -387,6 +387,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SwapSize")
+        public Integer swapSize;
+
         /**
          * <p>The vSwitch ID.</p>
          * 
@@ -591,6 +594,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setSwapSize(Integer swapSize) {
+            this.swapSize = swapSize;
+            return this;
+        }
+        public Integer getSwapSize() {
+            return this.swapSize;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setVSwitchId(String vSwitchId) {

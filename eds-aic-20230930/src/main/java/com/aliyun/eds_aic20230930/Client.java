@@ -331,6 +331,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PromotionId", request.promotionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shareDataVolume)) {
+            query.put("ShareDataVolume", request.shareDataVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.swapSize)) {
+            query.put("SwapSize", request.swapSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.upBandwidthLimit)) {
             query.put("UpBandwidthLimit", request.upBandwidthLimit);
         }
@@ -831,6 +839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.streamMode)) {
             query.put("StreamMode", request.streamMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.swapSize)) {
+            query.put("SwapSize", request.swapSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -1976,6 +1988,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询bucket信息</p>
+     * 
+     * @param request DescribeBucketsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBucketsResponse
+     */
+    public DescribeBucketsResponse describeBucketsWithOptions(DescribeBucketsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            query.put("FileType", request.fileType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBuckets"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBucketsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询bucket信息</p>
+     * 
+     * @param request DescribeBucketsRequest
+     * @return DescribeBucketsResponse
+     */
+    public DescribeBucketsResponse describeBuckets(DescribeBucketsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeBucketsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a cloud phone matrix.</p>
      * 
      * @param request DescribeCloudPhoneNodesRequest
@@ -2286,6 +2342,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DescribeMetricLastResponse describeMetricLastWithOptions(DescribeMetricLastRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
             body.put("AndroidInstanceIds", request.androidInstanceIds);
@@ -2316,6 +2377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3346,6 +3408,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallMonitorAgentResponse installMonitorAgent(InstallMonitorAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installMonitorAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>实例诊断</p>
+     * 
+     * @param request InstanceHealerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstanceHealerResponse
+     */
+    public InstanceHealerResponse instanceHealerWithOptions(InstanceHealerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
+            query.put("InstanceIdList", request.instanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            query.put("Strategy", request.strategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstanceHealer"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstanceHealerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>实例诊断</p>
+     * 
+     * @param request InstanceHealerRequest
+     * @return InstanceHealerResponse
+     */
+    public InstanceHealerResponse instanceHealer(InstanceHealerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.instanceHealerWithOptions(request, runtime);
     }
 
     /**

@@ -205,6 +205,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("StreamMode")
     public Integer streamMode;
 
+    @NameInMap("SwapSize")
+    public Integer swapSize;
+
     /**
      * <p>The resource tags.</p>
      */
@@ -429,6 +432,14 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     }
     public Integer getStreamMode() {
         return this.streamMode;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setSwapSize(Integer swapSize) {
+        this.swapSize = swapSize;
+        return this;
+    }
+    public Integer getSwapSize() {
+        return this.swapSize;
     }
 
     public CreateCloudPhoneNodeShrinkRequest setTag(java.util.List<CreateCloudPhoneNodeShrinkRequestTag> tag) {
