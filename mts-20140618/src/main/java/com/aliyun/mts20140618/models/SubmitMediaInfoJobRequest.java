@@ -17,6 +17,9 @@ public class SubmitMediaInfoJobRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    @NameInMap("Config")
+    public String config;
+
     /**
      * <p>The information about the input media file. The value is a JSON string. You must perform the following operations to add the OSS bucket in which the input media file is stored as a media bucket: Log on to the <strong>MPS console</strong>, choose <strong>Workflows</strong> &gt; <strong>Media Buckets</strong> in the left-side navigation pane, and then click <strong>Add Bucket</strong>. After you add the OSS bucket as a media bucket, you must perform URL encoding for the OSS object. For example, <code>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;example-location&quot;,&quot;Object&quot;:&quot;example%2Fexample.flv&quot;}</code> indicates the <code>example-bucket.example-location.aliyuncs.com/example/example.flv</code> file.</p>
      * <blockquote>
@@ -75,6 +78,14 @@ public class SubmitMediaInfoJobRequest extends TeaModel {
     }
     public Boolean getAsync() {
         return this.async;
+    }
+
+    public SubmitMediaInfoJobRequest setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
     }
 
     public SubmitMediaInfoJobRequest setInput(String input) {

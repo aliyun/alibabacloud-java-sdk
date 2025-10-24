@@ -405,6 +405,9 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         @NameInMap("Duration")
         public String duration;
 
+        @NameInMap("DurationInaccurate")
+        public String durationInaccurate;
+
         /**
          * <p>The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.</p>
          * 
@@ -543,6 +546,14 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         }
         public String getDuration() {
             return this.duration;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setDurationInaccurate(String durationInaccurate) {
+            this.durationInaccurate = durationInaccurate;
+            return this;
+        }
+        public String getDurationInaccurate() {
+            return this.durationInaccurate;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setIndex(String index) {
@@ -997,6 +1008,9 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         @NameInMap("Duration")
         public String duration;
 
+        @NameInMap("DurationInaccurate")
+        public String durationInaccurate;
+
         /**
          * <p>The frame rate of the media file.</p>
          * 
@@ -1230,6 +1244,14 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.duration;
         }
 
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setDurationInaccurate(String durationInaccurate) {
+            this.durationInaccurate = durationInaccurate;
+            return this;
+        }
+        public String getDurationInaccurate() {
+            return this.durationInaccurate;
+        }
+
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setFps(String fps) {
             this.fps = fps;
             return this;
@@ -1449,6 +1471,9 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         @NameInMap("FileFormat")
         public String fileFormat;
 
+        @NameInMap("FileMd5")
+        public String fileMd5;
+
         /**
          * <p>The size of the image file.</p>
          * 
@@ -1524,6 +1549,14 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         }
         public String getFileFormat() {
             return this.fileFormat;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setFileMd5(String fileMd5) {
+            this.fileMd5 = fileMd5;
+            return this;
+        }
+        public String getFileMd5() {
+            return this.fileMd5;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setFileSize(String fileSize) {

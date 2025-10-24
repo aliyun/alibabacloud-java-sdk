@@ -391,6 +391,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         @NameInMap("Duration")
         public String duration;
 
+        @NameInMap("DurationInaccurate")
+        public String durationInaccurate;
+
         /**
          * <p>The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.</p>
          * 
@@ -529,6 +532,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         }
         public String getDuration() {
             return this.duration;
+        }
+
+        public SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setDurationInaccurate(String durationInaccurate) {
+            this.durationInaccurate = durationInaccurate;
+            return this;
+        }
+        public String getDurationInaccurate() {
+            return this.durationInaccurate;
         }
 
         public SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setIndex(String index) {
@@ -983,6 +994,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         @NameInMap("Duration")
         public String duration;
 
+        @NameInMap("DurationInaccurate")
+        public String durationInaccurate;
+
         /**
          * <p>The frame rate.</p>
          * 
@@ -1214,6 +1228,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         }
         public String getDuration() {
             return this.duration;
+        }
+
+        public SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setDurationInaccurate(String durationInaccurate) {
+            this.durationInaccurate = durationInaccurate;
+            return this;
+        }
+        public String getDurationInaccurate() {
+            return this.durationInaccurate;
         }
 
         public SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setFps(String fps) {
@@ -1468,6 +1490,9 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         @NameInMap("Height")
         public String height;
 
+        @NameInMap("MD5")
+        public String MD5;
+
         /**
          * <p>The media streams that are contained in the input media file.</p>
          */
@@ -1542,6 +1567,14 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         }
         public String getHeight() {
             return this.height;
+        }
+
+        public SubmitMediaInfoJobResponseBodyMediaInfoJobProperties setMD5(String MD5) {
+            this.MD5 = MD5;
+            return this;
+        }
+        public String getMD5() {
+            return this.MD5;
         }
 
         public SubmitMediaInfoJobResponseBodyMediaInfoJobProperties setStreams(SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreams streams) {

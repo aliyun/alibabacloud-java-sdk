@@ -6018,6 +6018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Async", request.async);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.input)) {
             query.put("Input", request.input);
         }
