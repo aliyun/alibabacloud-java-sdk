@@ -667,7 +667,40 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
+    public static class SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo extends TeaModel {
+        @NameInMap("issue_ticket_type")
+        public Integer issueTicketType;
+
+        @NameInMap("issue_time_limit")
+        public Integer issueTimeLimit;
+
+        public static SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo build(java.util.Map<String, ?> map) throws Exception {
+            SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo self = new SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo setIssueTicketType(Integer issueTicketType) {
+            this.issueTicketType = issueTicketType;
+            return this;
+        }
+        public Integer getIssueTicketType() {
+            return this.issueTicketType;
+        }
+
+        public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo setIssueTimeLimit(Integer issueTimeLimit) {
+            this.issueTimeLimit = issueTimeLimit;
+            return this;
+        }
+        public Integer getIssueTimeLimit() {
+            return this.issueTimeLimit;
+        }
+
+    }
+
     public static class SearchResponseBodyDataSolutionListSolutionAttribute extends TeaModel {
+        @NameInMap("issue_time_info")
+        public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo;
+
         /**
          * <p>supply source: 1;2;3</p>
          * 
@@ -680,6 +713,14 @@ public class SearchResponseBody extends TeaModel {
         public static SearchResponseBodyDataSolutionListSolutionAttribute build(java.util.Map<String, ?> map) throws Exception {
             SearchResponseBodyDataSolutionListSolutionAttribute self = new SearchResponseBodyDataSolutionListSolutionAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public SearchResponseBodyDataSolutionListSolutionAttribute setIssueTimeInfo(SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo) {
+            this.issueTimeInfo = issueTimeInfo;
+            return this;
+        }
+        public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo getIssueTimeInfo() {
+            return this.issueTimeInfo;
         }
 
         public SearchResponseBodyDataSolutionListSolutionAttribute setSupplySourceType(String supplySourceType) {
@@ -752,24 +793,6 @@ public class SearchResponseBody extends TeaModel {
          */
         @NameInMap("journey_list")
         public java.util.List<SearchResponseBodyDataSolutionListJourneyList> journeyList;
-
-        /**
-         * <p>product type description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
-        @NameInMap("product_type_description")
-        public String productTypeDescription;
-
-        /**
-         * <p>refund airline coupon description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
-        @NameInMap("refund_ticket_coupon_description")
-        public String refundTicketCouponDescription;
 
         /**
          * <p>through check-in baggage policy</p>
@@ -863,22 +886,6 @@ public class SearchResponseBody extends TeaModel {
         }
         public java.util.List<SearchResponseBodyDataSolutionListJourneyList> getJourneyList() {
             return this.journeyList;
-        }
-
-        public SearchResponseBodyDataSolutionList setProductTypeDescription(String productTypeDescription) {
-            this.productTypeDescription = productTypeDescription;
-            return this;
-        }
-        public String getProductTypeDescription() {
-            return this.productTypeDescription;
-        }
-
-        public SearchResponseBodyDataSolutionList setRefundTicketCouponDescription(String refundTicketCouponDescription) {
-            this.refundTicketCouponDescription = refundTicketCouponDescription;
-            return this;
-        }
-        public String getRefundTicketCouponDescription() {
-            return this.refundTicketCouponDescription;
         }
 
         public SearchResponseBodyDataSolutionList setSegmentBaggageCheckInInfoList(java.util.List<SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {

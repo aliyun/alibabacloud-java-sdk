@@ -118,7 +118,7 @@ public class EnrichRequest extends TeaModel {
 
     public static class EnrichRequestJourneyParamListSegmentParamList extends TeaModel {
         /**
-         * <p>arrival airport code (capitalized)</p>
+         * <p>arrival airport code</p>
          * 
          * <strong>example:</strong>
          * <p>MFM</p>
@@ -127,8 +127,7 @@ public class EnrichRequest extends TeaModel {
         public String arrivalAirport;
 
         /**
-         * <p>arrival city code (capitalized)</p>
-         * <p>This parameter is required.</p>
+         * <p>arrival city code</p>
          * 
          * <strong>example:</strong>
          * <p>MFM</p>
@@ -155,7 +154,7 @@ public class EnrichRequest extends TeaModel {
         public String childCabin;
 
         /**
-         * <p>departure airport code (capitalized)</p>
+         * <p>departure airport code</p>
          * 
          * <strong>example:</strong>
          * <p>PVG</p>
@@ -164,8 +163,7 @@ public class EnrichRequest extends TeaModel {
         public String departureAirport;
 
         /**
-         * <p>departure city code (capitalized)</p>
-         * <p>This parameter is required.</p>
+         * <p>departure city code</p>
          * 
          * <strong>example:</strong>
          * <p>SHA</p>
@@ -266,7 +264,7 @@ public class EnrichRequest extends TeaModel {
 
     public static class EnrichRequestJourneyParamList extends TeaModel {
         /**
-         * <p>arrival city code (capitalized)</p>
+         * <p>arrival city code</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +274,7 @@ public class EnrichRequest extends TeaModel {
         public String arrivalCity;
 
         /**
-         * <p>departure city code (capitalized)</p>
+         * <p>departure city code</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

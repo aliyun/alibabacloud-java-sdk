@@ -126,7 +126,6 @@ public class SearchRequest extends TeaModel {
 
         /**
          * <p>arrival city code</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>MFM</p>
@@ -145,7 +144,6 @@ public class SearchRequest extends TeaModel {
 
         /**
          * <p>departure city code</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SHA</p>
@@ -213,12 +211,18 @@ public class SearchRequest extends TeaModel {
     public static class SearchRequestSearchControlOptions extends TeaModel {
         /**
          * <p>excluded airlines list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C</p>
          */
         @NameInMap("airline_excluded_list")
         public java.util.List<String> airlineExcludedList;
 
         /**
          * <p>preferred airlines list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD</p>
          */
         @NameInMap("airline_prefer_list")
         public java.util.List<String> airlinePreferList;

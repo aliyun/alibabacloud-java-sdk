@@ -127,7 +127,7 @@ public class EnrichResponseBody extends TeaModel {
 
     public static class EnrichResponseBodyDataSolutionListJourneyListSegmentList extends TeaModel {
         /**
-         * <p>arrival airport code (capitalized)</p>
+         * <p>arrival airport code</p>
          * 
          * <strong>example:</strong>
          * <p>MFM</p>
@@ -136,7 +136,7 @@ public class EnrichResponseBody extends TeaModel {
         public String arrivalAirport;
 
         /**
-         * <p>arrival city code (capitalized)</p>
+         * <p>arrival city code</p>
          * 
          * <strong>example:</strong>
          * <p>MFM</p>
@@ -154,7 +154,7 @@ public class EnrichResponseBody extends TeaModel {
         public String arrivalTerminal;
 
         /**
-         * <p>arrival time in string format (yyyy-MM-dd HH:mm:ss)</p>
+         * <p>arrival time (yyyy-MM-dd HH:mm:ss)</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-10 10:40:00</p>
@@ -199,7 +199,7 @@ public class EnrichResponseBody extends TeaModel {
         public Boolean codeShare;
 
         /**
-         * <p>departure airport code (capitalized)</p>
+         * <p>departure airport code</p>
          * 
          * <strong>example:</strong>
          * <p>PVG</p>
@@ -208,7 +208,7 @@ public class EnrichResponseBody extends TeaModel {
         public String departureAirport;
 
         /**
-         * <p>departure city code (capitalized)</p>
+         * <p>departure city code</p>
          * 
          * <strong>example:</strong>
          * <p>SHA</p>
@@ -226,7 +226,7 @@ public class EnrichResponseBody extends TeaModel {
         public String departureTerminal;
 
         /**
-         * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+         * <p>departure time (yyyy-MM-dd HH:mm:ss)</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
@@ -298,7 +298,7 @@ public class EnrichResponseBody extends TeaModel {
         public String operatingFlightNo;
 
         /**
-         * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</p>
+         * <p>segment ID: flight no+departure airport+arrival airport+departure time(MMdd)</p>
          * 
          * <strong>example:</strong>
          * <p>HO1295-PVG-MFM-20230310</p>
@@ -665,8 +665,43 @@ public class EnrichResponseBody extends TeaModel {
 
     }
 
+    public static class EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo extends TeaModel {
+        @NameInMap("issue_ticket_type")
+        public Integer issueTicketType;
+
+        @NameInMap("issue_time_limit")
+        public Integer issueTimeLimit;
+
+        public static EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo build(java.util.Map<String, ?> map) throws Exception {
+            EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo self = new EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo setIssueTicketType(Integer issueTicketType) {
+            this.issueTicketType = issueTicketType;
+            return this;
+        }
+        public Integer getIssueTicketType() {
+            return this.issueTicketType;
+        }
+
+        public EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo setIssueTimeLimit(Integer issueTimeLimit) {
+            this.issueTimeLimit = issueTimeLimit;
+            return this;
+        }
+        public Integer getIssueTimeLimit() {
+            return this.issueTimeLimit;
+        }
+
+    }
+
     public static class EnrichResponseBodyDataSolutionListSolutionAttribute extends TeaModel {
+        @NameInMap("issue_time_info")
+        public EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo;
+
         /**
+         * <p>Supply source type 1:self-operated; 2:agent; 3:flagship store</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -676,6 +711,14 @@ public class EnrichResponseBody extends TeaModel {
         public static EnrichResponseBodyDataSolutionListSolutionAttribute build(java.util.Map<String, ?> map) throws Exception {
             EnrichResponseBodyDataSolutionListSolutionAttribute self = new EnrichResponseBodyDataSolutionListSolutionAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public EnrichResponseBodyDataSolutionListSolutionAttribute setIssueTimeInfo(EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo) {
+            this.issueTimeInfo = issueTimeInfo;
+            return this;
+        }
+        public EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo getIssueTimeInfo() {
+            return this.issueTimeInfo;
         }
 
         public EnrichResponseBodyDataSolutionListSolutionAttribute setSupplySourceType(String supplySourceType) {
@@ -750,24 +793,6 @@ public class EnrichResponseBody extends TeaModel {
         public java.util.List<EnrichResponseBodyDataSolutionListJourneyList> journeyList;
 
         /**
-         * <p>product type description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
-        @NameInMap("product_type_description")
-        public String productTypeDescription;
-
-        /**
-         * <p>refund airline coupon description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
-         */
-        @NameInMap("refund_ticket_coupon_description")
-        public String refundTicketCouponDescription;
-
-        /**
          * <p>through check-in baggage  policy</p>
          */
         @NameInMap("segment_baggage_check_in_info_list")
@@ -785,6 +810,9 @@ public class EnrichResponseBody extends TeaModel {
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<EnrichResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
+        /**
+         * <p>Quotation Attributes</p>
+         */
         @NameInMap("solution_attribute")
         public EnrichResponseBodyDataSolutionListSolutionAttribute solutionAttribute;
 
@@ -856,22 +884,6 @@ public class EnrichResponseBody extends TeaModel {
         }
         public java.util.List<EnrichResponseBodyDataSolutionListJourneyList> getJourneyList() {
             return this.journeyList;
-        }
-
-        public EnrichResponseBodyDataSolutionList setProductTypeDescription(String productTypeDescription) {
-            this.productTypeDescription = productTypeDescription;
-            return this;
-        }
-        public String getProductTypeDescription() {
-            return this.productTypeDescription;
-        }
-
-        public EnrichResponseBodyDataSolutionList setRefundTicketCouponDescription(String refundTicketCouponDescription) {
-            this.refundTicketCouponDescription = refundTicketCouponDescription;
-            return this;
-        }
-        public String getRefundTicketCouponDescription() {
-            return this.refundTicketCouponDescription;
         }
 
         public EnrichResponseBodyDataSolutionList setSegmentBaggageCheckInInfoList(java.util.List<EnrichResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {

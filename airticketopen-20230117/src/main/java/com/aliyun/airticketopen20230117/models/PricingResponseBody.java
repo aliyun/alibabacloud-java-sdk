@@ -883,6 +883,66 @@ public class PricingResponseBody extends TeaModel {
 
     }
 
+    public static class PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo extends TeaModel {
+        @NameInMap("issue_ticket_type")
+        public Integer issueTicketType;
+
+        @NameInMap("issue_time_limit")
+        public Integer issueTimeLimit;
+
+        public static PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo build(java.util.Map<String, ?> map) throws Exception {
+            PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo self = new PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo setIssueTicketType(Integer issueTicketType) {
+            this.issueTicketType = issueTicketType;
+            return this;
+        }
+        public Integer getIssueTicketType() {
+            return this.issueTicketType;
+        }
+
+        public PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo setIssueTimeLimit(Integer issueTimeLimit) {
+            this.issueTimeLimit = issueTimeLimit;
+            return this;
+        }
+        public Integer getIssueTimeLimit() {
+            return this.issueTimeLimit;
+        }
+
+    }
+
+    public static class PricingResponseBodyDataSolutionSolutionAttribute extends TeaModel {
+        @NameInMap("issue_time_info")
+        public PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo issueTimeInfo;
+
+        @NameInMap("supply_source_type")
+        public String supplySourceType;
+
+        public static PricingResponseBodyDataSolutionSolutionAttribute build(java.util.Map<String, ?> map) throws Exception {
+            PricingResponseBodyDataSolutionSolutionAttribute self = new PricingResponseBodyDataSolutionSolutionAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public PricingResponseBodyDataSolutionSolutionAttribute setIssueTimeInfo(PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo issueTimeInfo) {
+            this.issueTimeInfo = issueTimeInfo;
+            return this;
+        }
+        public PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo getIssueTimeInfo() {
+            return this.issueTimeInfo;
+        }
+
+        public PricingResponseBodyDataSolutionSolutionAttribute setSupplySourceType(String supplySourceType) {
+            this.supplySourceType = supplySourceType;
+            return this;
+        }
+        public String getSupplySourceType() {
+            return this.supplySourceType;
+        }
+
+    }
+
     public static class PricingResponseBodyDataSolution extends TeaModel {
         /**
          * <p>adult fare</p>
@@ -979,6 +1039,9 @@ public class PricingResponseBody extends TeaModel {
          */
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<PricingResponseBodyDataSolutionSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
+
+        @NameInMap("solution_attribute")
+        public PricingResponseBodyDataSolutionSolutionAttribute solutionAttribute;
 
         /**
          * <p>solution_id, equals to solution_id in request</p>
@@ -1088,6 +1151,14 @@ public class PricingResponseBody extends TeaModel {
         }
         public java.util.List<PricingResponseBodyDataSolutionSegmentRefundChangeRuleMappingList> getSegmentRefundChangeRuleMappingList() {
             return this.segmentRefundChangeRuleMappingList;
+        }
+
+        public PricingResponseBodyDataSolution setSolutionAttribute(PricingResponseBodyDataSolutionSolutionAttribute solutionAttribute) {
+            this.solutionAttribute = solutionAttribute;
+            return this;
+        }
+        public PricingResponseBodyDataSolutionSolutionAttribute getSolutionAttribute() {
+            return this.solutionAttribute;
         }
 
         public PricingResponseBodyDataSolution setSolutionId(String solutionId) {

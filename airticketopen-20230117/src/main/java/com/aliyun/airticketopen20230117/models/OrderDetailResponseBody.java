@@ -1791,6 +1791,66 @@ public class OrderDetailResponseBody extends TeaModel {
 
     }
 
+    public static class OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo extends TeaModel {
+        @NameInMap("issue_ticket_type")
+        public Integer issueTicketType;
+
+        @NameInMap("issue_time_limit")
+        public Integer issueTimeLimit;
+
+        public static OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo build(java.util.Map<String, ?> map) throws Exception {
+            OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo self = new OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo setIssueTicketType(Integer issueTicketType) {
+            this.issueTicketType = issueTicketType;
+            return this;
+        }
+        public Integer getIssueTicketType() {
+            return this.issueTicketType;
+        }
+
+        public OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo setIssueTimeLimit(Integer issueTimeLimit) {
+            this.issueTimeLimit = issueTimeLimit;
+            return this;
+        }
+        public Integer getIssueTimeLimit() {
+            return this.issueTimeLimit;
+        }
+
+    }
+
+    public static class OrderDetailResponseBodyDataSolutionSolutionAttribute extends TeaModel {
+        @NameInMap("issue_time_info")
+        public OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo issueTimeInfo;
+
+        @NameInMap("supply_source_type")
+        public String supplySourceType;
+
+        public static OrderDetailResponseBodyDataSolutionSolutionAttribute build(java.util.Map<String, ?> map) throws Exception {
+            OrderDetailResponseBodyDataSolutionSolutionAttribute self = new OrderDetailResponseBodyDataSolutionSolutionAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public OrderDetailResponseBodyDataSolutionSolutionAttribute setIssueTimeInfo(OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo issueTimeInfo) {
+            this.issueTimeInfo = issueTimeInfo;
+            return this;
+        }
+        public OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo getIssueTimeInfo() {
+            return this.issueTimeInfo;
+        }
+
+        public OrderDetailResponseBodyDataSolutionSolutionAttribute setSupplySourceType(String supplySourceType) {
+            this.supplySourceType = supplySourceType;
+            return this;
+        }
+        public String getSupplySourceType() {
+            return this.supplySourceType;
+        }
+
+    }
+
     public static class OrderDetailResponseBodyDataSolution extends TeaModel {
         /**
          * <p>adult fare</p>
@@ -1887,6 +1947,9 @@ public class OrderDetailResponseBody extends TeaModel {
          */
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<OrderDetailResponseBodyDataSolutionSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
+
+        @NameInMap("solution_attribute")
+        public OrderDetailResponseBodyDataSolutionSolutionAttribute solutionAttribute;
 
         /**
          * <p>solution_id</p>
@@ -1996,6 +2059,14 @@ public class OrderDetailResponseBody extends TeaModel {
         }
         public java.util.List<OrderDetailResponseBodyDataSolutionSegmentRefundChangeRuleMappingList> getSegmentRefundChangeRuleMappingList() {
             return this.segmentRefundChangeRuleMappingList;
+        }
+
+        public OrderDetailResponseBodyDataSolution setSolutionAttribute(OrderDetailResponseBodyDataSolutionSolutionAttribute solutionAttribute) {
+            this.solutionAttribute = solutionAttribute;
+            return this;
+        }
+        public OrderDetailResponseBodyDataSolutionSolutionAttribute getSolutionAttribute() {
+            return this.solutionAttribute;
         }
 
         public OrderDetailResponseBodyDataSolution setSolutionId(String solutionId) {
