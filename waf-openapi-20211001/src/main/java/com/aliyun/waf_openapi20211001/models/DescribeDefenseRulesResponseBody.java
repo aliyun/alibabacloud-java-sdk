@@ -58,7 +58,12 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseRulesResponseBodyRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;empty&quot;:&quot;test&quot;}</p>
+         */
         @NameInMap("ActionExternal")
+        @Deprecated
         public String actionExternal;
 
         /**
@@ -110,13 +115,28 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         @NameInMap("DefenseType")
         public String defenseType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
+        @Deprecated
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123,456</p>
+         */
         @NameInMap("DetailRuleIds")
+        @Deprecated
         public String detailRuleIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>empty</p>
+         */
         @NameInMap("ExternalInfo")
+        @Deprecated
         public String externalInfo;
 
         @NameInMap("GmtCreate")
@@ -152,7 +172,12 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RuleType")
+        @Deprecated
         public String ruleType;
 
         /**
@@ -182,6 +207,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public DescribeDefenseRulesResponseBodyRules setActionExternal(String actionExternal) {
             this.actionExternal = actionExternal;
             return this;
@@ -222,6 +248,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return this.defenseType;
         }
 
+        @Deprecated
         public DescribeDefenseRulesResponseBodyRules setDescription(String description) {
             this.description = description;
             return this;
@@ -230,6 +257,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return this.description;
         }
 
+        @Deprecated
         public DescribeDefenseRulesResponseBodyRules setDetailRuleIds(String detailRuleIds) {
             this.detailRuleIds = detailRuleIds;
             return this;
@@ -238,6 +266,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return this.detailRuleIds;
         }
 
+        @Deprecated
         public DescribeDefenseRulesResponseBodyRules setExternalInfo(String externalInfo) {
             this.externalInfo = externalInfo;
             return this;
@@ -286,6 +315,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        @Deprecated
         public DescribeDefenseRulesResponseBodyRules setRuleType(String ruleType) {
             this.ruleType = ruleType;
             return this;
