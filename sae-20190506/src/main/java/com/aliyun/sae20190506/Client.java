@@ -1114,6 +1114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableGzip)) {
+            query.put("EnableGzip", request.enableGzip);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedFor)) {
             query.put("EnableXForwardedFor", request.enableXForwardedFor);
         }
@@ -2718,6 +2722,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
             query.put("Liveness", request.liveness);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxSurgeInstanceRatio)) {
+            query.put("MaxSurgeInstanceRatio", request.maxSurgeInstanceRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxSurgeInstances)) {
+            query.put("MaxSurgeInstances", request.maxSurgeInstances);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
@@ -8588,6 +8600,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableGzip)) {
+            query.put("EnableGzip", request.enableGzip);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableXForwardedFor)) {

@@ -521,6 +521,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableGzip")
+        public Boolean enableGzip;
+
         @NameInMap("EnableXForwardedFor")
         public Boolean enableXForwardedFor;
 
@@ -699,6 +702,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeIngressResponseBodyData setEnableGzip(Boolean enableGzip) {
+            this.enableGzip = enableGzip;
+            return this;
+        }
+        public Boolean getEnableGzip() {
+            return this.enableGzip;
         }
 
         public DescribeIngressResponseBodyData setEnableXForwardedFor(Boolean enableXForwardedFor) {

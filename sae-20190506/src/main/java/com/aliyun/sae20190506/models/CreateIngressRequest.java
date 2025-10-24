@@ -61,6 +61,9 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableGzip")
+    public Boolean enableGzip;
+
     @NameInMap("EnableXForwardedFor")
     public Boolean enableXForwardedFor;
 
@@ -239,6 +242,14 @@ public class CreateIngressRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateIngressRequest setEnableGzip(Boolean enableGzip) {
+        this.enableGzip = enableGzip;
+        return this;
+    }
+    public Boolean getEnableGzip() {
+        return this.enableGzip;
     }
 
     public CreateIngressRequest setEnableXForwardedFor(Boolean enableXForwardedFor) {

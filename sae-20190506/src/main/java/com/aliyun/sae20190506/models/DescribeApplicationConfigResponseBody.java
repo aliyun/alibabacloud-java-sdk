@@ -1504,6 +1504,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Liveness")
         public String liveness;
 
+        @NameInMap("MaxSurgeInstanceRatio")
+        public Integer maxSurgeInstanceRatio;
+
+        @NameInMap("MaxSurgeInstances")
+        public Integer maxSurgeInstances;
+
         /**
          * <p>The size of memory required by each instance. Unit: MB. You cannot set this parameter to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
          * <ul>
@@ -2416,6 +2422,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getLiveness() {
             return this.liveness;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setMaxSurgeInstanceRatio(Integer maxSurgeInstanceRatio) {
+            this.maxSurgeInstanceRatio = maxSurgeInstanceRatio;
+            return this;
+        }
+        public Integer getMaxSurgeInstanceRatio() {
+            return this.maxSurgeInstanceRatio;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setMaxSurgeInstances(Integer maxSurgeInstances) {
+            this.maxSurgeInstances = maxSurgeInstances;
+            return this;
+        }
+        public Integer getMaxSurgeInstances() {
+            return this.maxSurgeInstances;
         }
 
         public DescribeApplicationConfigResponseBodyData setMemory(Integer memory) {
