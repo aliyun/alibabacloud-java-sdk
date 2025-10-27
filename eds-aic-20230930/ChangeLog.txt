@@ -1,3 +1,7 @@
+2025-10-27 Version: 3.13.1
+- Update API DescribeImageList: add request parameters SystemType.
+
+
 2025-10-24 Version: 3.13.0
 - Support API DescribeBuckets.
 - Support API InstanceHealer.

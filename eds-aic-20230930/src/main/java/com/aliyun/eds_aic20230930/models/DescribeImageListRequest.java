@@ -90,6 +90,9 @@ public class DescribeImageListRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("SystemType")
+    public String systemType;
+
     public static DescribeImageListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageListRequest self = new DescribeImageListRequest();
         return TeaModel.build(map, self);
@@ -165,6 +168,14 @@ public class DescribeImageListRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeImageListRequest setSystemType(String systemType) {
+        this.systemType = systemType;
+        return this;
+    }
+    public String getSystemType() {
+        return this.systemType;
     }
 
     public static class DescribeImageListRequestImageBizTags extends TeaModel {

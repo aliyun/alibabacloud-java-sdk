@@ -2173,6 +2173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceType", request.instanceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.systemType)) {
+            query.put("SystemType", request.systemType);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             body.put("ImageId", request.imageId);
