@@ -17,6 +17,18 @@ public class DescribeVulNumStatisticsRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>127608589417****</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static DescribeVulNumStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulNumStatisticsRequest self = new DescribeVulNumStatisticsRequest();
         return TeaModel.build(map, self);
@@ -28,6 +40,14 @@ public class DescribeVulNumStatisticsRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public DescribeVulNumStatisticsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

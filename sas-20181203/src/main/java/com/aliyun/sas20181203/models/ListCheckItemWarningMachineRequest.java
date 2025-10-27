@@ -112,16 +112,12 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     /**
      * <p>The status of the check item. Valid values:</p>
      * <ul>
-     * <li><p>1: failed</p>
-     * </li>
-     * <li><p>2: verifying</p>
-     * </li>
-     * <li><p>3: passed</p>
-     * </li>
-     * <li><p>6: ignored</p>
-     * </li>
-     * <li><p>7: fixing</p>
-     * </li>
+     * <li><strong>1</strong>: failed</li>
+     * <li><strong>2</strong>: verifying</li>
+     * <li><strong>3</strong>: passed</li>
+     * <li><strong>6</strong>: ignored</li>
+     * <li><strong>7</strong>: fixing</li>
+     * <li><strong>8</strong>: fixed</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -298,11 +298,12 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         /**
          * <p>The status of the check item. Valid values:</p>
          * <ul>
-         * <li>1: failed</li>
-         * <li>2: verifying</li>
-         * <li>3: passed</li>
-         * <li>6: ignored</li>
-         * <li>7: fixing</li>
+         * <li><strong>1</strong>: failed</li>
+         * <li><strong>2</strong>: verifying</li>
+         * <li><strong>3</strong>: passed</li>
+         * <li><strong>6</strong>: ignored</li>
+         * <li><strong>7</strong>: fixing</li>
+         * <li><strong>8</strong>: fixed</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -135,6 +135,15 @@ public class ListCheckResultRequest extends TeaModel {
     public java.util.List<Long> requirementIds;
 
     /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
      * <p>The risk levels of check items. Separate multiple risk levels with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>HIGH</strong></li>
@@ -297,6 +306,14 @@ public class ListCheckResultRequest extends TeaModel {
     }
     public java.util.List<Long> getRequirementIds() {
         return this.requirementIds;
+    }
+
+    public ListCheckResultRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ListCheckResultRequest setRiskLevels(java.util.List<String> riskLevels) {

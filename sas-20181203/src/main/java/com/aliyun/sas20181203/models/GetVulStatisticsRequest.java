@@ -18,6 +18,18 @@ public class GetVulStatisticsRequest extends TeaModel {
     public String groupIdList;
 
     /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1232428423234****</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
      * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +67,14 @@ public class GetVulStatisticsRequest extends TeaModel {
     }
     public String getGroupIdList() {
         return this.groupIdList;
+    }
+
+    public GetVulStatisticsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public GetVulStatisticsRequest setSourceIp(String sourceIp) {

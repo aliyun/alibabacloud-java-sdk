@@ -171,6 +171,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
          * <li><strong>1</strong>: failed</li>
          * <li><strong>3</strong>: passed</li>
          * <li><strong>6</strong>: whitelisted</li>
+         * <li><strong>8</strong>: fixed</li>
          * </ul>
          * 
          * <strong>example:</strong>
