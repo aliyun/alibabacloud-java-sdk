@@ -678,6 +678,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新版高级推送接口</p>
+     * 
+     * @param tmpReq MassPushV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MassPushV2Response
+     */
+    public MassPushV2Response massPushV2WithOptions(MassPushV2Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MassPushV2ShrinkRequest request = new MassPushV2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.pushTasks)) {
+            request.pushTasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.pushTasks, "PushTasks", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
+            query.put("AppKey", request.appKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotentToken)) {
+            query.put("IdempotentToken", request.idempotentToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pushTasksShrink)) {
+            query.put("PushTasks", request.pushTasksShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MassPushV2"),
+            new TeaPair("version", "2016-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MassPushV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新版高级推送接口</p>
+     * 
+     * @param request MassPushV2Request
+     * @return MassPushV2Response
+     */
+    public MassPushV2Response massPushV2(MassPushV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.massPushV2WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>高级推送接口</p>
      * 
      * @param tmpReq PushRequest
@@ -1452,6 +1510,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PushNoticeToiOSResponse pushNoticeToiOS(PushNoticeToiOSRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pushNoticeToiOSWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新版高级推送接口</p>
+     * 
+     * @param tmpReq PushV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PushV2Response
+     */
+    public PushV2Response pushV2WithOptions(PushV2Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PushV2ShrinkRequest request = new PushV2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.pushTask)) {
+            request.pushTaskShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.pushTask, "PushTask", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
+            query.put("AppKey", request.appKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotentToken)) {
+            query.put("IdempotentToken", request.idempotentToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pushTaskShrink)) {
+            query.put("PushTask", request.pushTaskShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PushV2"),
+            new TeaPair("version", "2016-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新版高级推送接口</p>
+     * 
+     * @param request PushV2Request
+     * @return PushV2Response
+     */
+    public PushV2Response pushV2(PushV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.pushV2WithOptions(request, runtime);
     }
 
     /**

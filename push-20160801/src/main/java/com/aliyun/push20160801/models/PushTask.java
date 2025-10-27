@@ -205,6 +205,9 @@ public class PushTask extends TeaModel {
         @NameInMap("Importance")
         public Integer importance;
 
+        @NameInMap("LiveNotificationPayload")
+        public String liveNotificationPayload;
+
         @NameInMap("ReceiptId")
         public String receiptId;
 
@@ -232,6 +235,14 @@ public class PushTask extends TeaModel {
             return this.importance;
         }
 
+        public PushTaskNotificationAndroidOptionsHuawei setLiveNotificationPayload(String liveNotificationPayload) {
+            this.liveNotificationPayload = liveNotificationPayload;
+            return this;
+        }
+        public String getLiveNotificationPayload() {
+            return this.liveNotificationPayload;
+        }
+
         public PushTaskNotificationAndroidOptionsHuawei setReceiptId(String receiptId) {
             this.receiptId = receiptId;
             return this;
@@ -250,12 +261,40 @@ public class PushTask extends TeaModel {
 
     }
 
+    public static class PushTaskNotificationAndroidOptionsMeizu extends TeaModel {
+        @NameInMap("NoticeMsgType")
+        public Integer noticeMsgType;
+
+        public static PushTaskNotificationAndroidOptionsMeizu build(java.util.Map<String, ?> map) throws Exception {
+            PushTaskNotificationAndroidOptionsMeizu self = new PushTaskNotificationAndroidOptionsMeizu();
+            return TeaModel.build(map, self);
+        }
+
+        public PushTaskNotificationAndroidOptionsMeizu setNoticeMsgType(Integer noticeMsgType) {
+            this.noticeMsgType = noticeMsgType;
+            return this;
+        }
+        public Integer getNoticeMsgType() {
+            return this.noticeMsgType;
+        }
+
+    }
+
     public static class PushTaskNotificationAndroidOptionsOppo extends TeaModel {
         @NameInMap("Category")
         public String category;
 
         @NameInMap("NotifyLevel")
         public Long notifyLevel;
+
+        @NameInMap("PrivateContentParameters")
+        public String privateContentParameters;
+
+        @NameInMap("PrivateMsgTemplateId")
+        public String privateMsgTemplateId;
+
+        @NameInMap("PrivateTitleParameters")
+        public String privateTitleParameters;
 
         public static PushTaskNotificationAndroidOptionsOppo build(java.util.Map<String, ?> map) throws Exception {
             PushTaskNotificationAndroidOptionsOppo self = new PushTaskNotificationAndroidOptionsOppo();
@@ -276,6 +315,30 @@ public class PushTask extends TeaModel {
         }
         public Long getNotifyLevel() {
             return this.notifyLevel;
+        }
+
+        public PushTaskNotificationAndroidOptionsOppo setPrivateContentParameters(String privateContentParameters) {
+            this.privateContentParameters = privateContentParameters;
+            return this;
+        }
+        public String getPrivateContentParameters() {
+            return this.privateContentParameters;
+        }
+
+        public PushTaskNotificationAndroidOptionsOppo setPrivateMsgTemplateId(String privateMsgTemplateId) {
+            this.privateMsgTemplateId = privateMsgTemplateId;
+            return this;
+        }
+        public String getPrivateMsgTemplateId() {
+            return this.privateMsgTemplateId;
+        }
+
+        public PushTaskNotificationAndroidOptionsOppo setPrivateTitleParameters(String privateTitleParameters) {
+            this.privateTitleParameters = privateTitleParameters;
+            return this;
+        }
+        public String getPrivateTitleParameters() {
+            return this.privateTitleParameters;
         }
 
     }
@@ -350,6 +413,9 @@ public class PushTask extends TeaModel {
         @NameInMap("Huawei")
         public PushTaskNotificationAndroidOptionsHuawei huawei;
 
+        @NameInMap("Meizu")
+        public PushTaskNotificationAndroidOptionsMeizu meizu;
+
         @NameInMap("Oppo")
         public PushTaskNotificationAndroidOptionsOppo oppo;
 
@@ -386,6 +452,14 @@ public class PushTask extends TeaModel {
         }
         public PushTaskNotificationAndroidOptionsHuawei getHuawei() {
             return this.huawei;
+        }
+
+        public PushTaskNotificationAndroidOptions setMeizu(PushTaskNotificationAndroidOptionsMeizu meizu) {
+            this.meizu = meizu;
+            return this;
+        }
+        public PushTaskNotificationAndroidOptionsMeizu getMeizu() {
+            return this.meizu;
         }
 
         public PushTaskNotificationAndroidOptions setOppo(PushTaskNotificationAndroidOptionsOppo oppo) {
@@ -615,6 +689,9 @@ public class PushTask extends TeaModel {
         @NameInMap("InboxContent")
         public java.util.List<String> inboxContent;
 
+        @NameInMap("LiveViewPayload")
+        public String liveViewPayload;
+
         @NameInMap("NotifyId")
         public Integer notifyId;
 
@@ -708,6 +785,14 @@ public class PushTask extends TeaModel {
         }
         public java.util.List<String> getInboxContent() {
             return this.inboxContent;
+        }
+
+        public PushTaskNotificationHmos setLiveViewPayload(String liveViewPayload) {
+            this.liveViewPayload = liveViewPayload;
+            return this;
+        }
+        public String getLiveViewPayload() {
+            return this.liveViewPayload;
         }
 
         public PushTaskNotificationHmos setNotifyId(Integer notifyId) {
