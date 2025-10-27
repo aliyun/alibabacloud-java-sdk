@@ -2551,6 +2551,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndUserGroupCoordinate", request.endUserGroupCoordinate);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.externalDrive)) {
+            query.put("ExternalDrive", request.externalDrive);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileMigrate)) {
             query.put("FileMigrate", request.fileMigrate);
         }
@@ -14322,6 +14326,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endUserGroupCoordinate)) {
             query.put("EndUserGroupCoordinate", request.endUserGroupCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalDrive)) {
+            query.put("ExternalDrive", request.externalDrive);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileMigrate)) {

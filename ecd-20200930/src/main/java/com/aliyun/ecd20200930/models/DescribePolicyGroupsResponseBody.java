@@ -1104,6 +1104,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("EndUserGroupCoordinate")
         public String endUserGroupCoordinate;
 
+        @NameInMap("ExternalDrive")
+        public String externalDrive;
+
         @NameInMap("FileMigrate")
         public String fileMigrate;
 
@@ -2257,6 +2260,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getEndUserGroupCoordinate() {
             return this.endUserGroupCoordinate;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setExternalDrive(String externalDrive) {
+            this.externalDrive = externalDrive;
+            return this;
+        }
+        public String getExternalDrive() {
+            return this.externalDrive;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setFileMigrate(String fileMigrate) {

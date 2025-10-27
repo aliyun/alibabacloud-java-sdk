@@ -321,6 +321,9 @@ public class ModifyCenterPolicyRequest extends TeaModel {
     @NameInMap("EndUserGroupCoordinate")
     public String endUserGroupCoordinate;
 
+    @NameInMap("ExternalDrive")
+    public String externalDrive;
+
     /**
      * <p>Specifies whether to enable file transfer.</p>
      * <p>Valid values:</p>
@@ -1502,6 +1505,14 @@ public class ModifyCenterPolicyRequest extends TeaModel {
     }
     public String getEndUserGroupCoordinate() {
         return this.endUserGroupCoordinate;
+    }
+
+    public ModifyCenterPolicyRequest setExternalDrive(String externalDrive) {
+        this.externalDrive = externalDrive;
+        return this;
+    }
+    public String getExternalDrive() {
+        return this.externalDrive;
     }
 
     public ModifyCenterPolicyRequest setFileMigrate(String fileMigrate) {
