@@ -460,6 +460,9 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("adhocSlot")
         public Long adhocSlot;
 
+        @NameInMap("autoScaleCPULimit")
+        public Long autoScaleCPULimit;
+
         @NameInMap("elasticReservedCU")
         public Long elasticReservedCU;
 
@@ -475,11 +478,17 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("maxCU")
         public Long maxCU;
 
+        @NameInMap("maxGu")
+        public Long maxGu;
+
         /**
          * <p>This parameter is required.</p>
          */
         @NameInMap("minCU")
         public Long minCU;
+
+        @NameInMap("minGu")
+        public Long minGu;
 
         @NameInMap("schedulerType")
         public String schedulerType;
@@ -501,6 +510,14 @@ public class ListQuotasResponseBody extends TeaModel {
         }
         public Long getAdhocSlot() {
             return this.adhocSlot;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setAutoScaleCPULimit(Long autoScaleCPULimit) {
+            this.autoScaleCPULimit = autoScaleCPULimit;
+            return this;
+        }
+        public Long getAutoScaleCPULimit() {
+            return this.autoScaleCPULimit;
         }
 
         public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setElasticReservedCU(Long elasticReservedCU) {
@@ -535,12 +552,28 @@ public class ListQuotasResponseBody extends TeaModel {
             return this.maxCU;
         }
 
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setMaxGu(Long maxGu) {
+            this.maxGu = maxGu;
+            return this;
+        }
+        public Long getMaxGu() {
+            return this.maxGu;
+        }
+
         public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setMinCU(Long minCU) {
             this.minCU = minCU;
             return this;
         }
         public Long getMinCU() {
             return this.minCU;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setMinGu(Long minGu) {
+            this.minGu = minGu;
+            return this;
+        }
+        public Long getMinGu() {
+            return this.minGu;
         }
 
         public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setSchedulerType(String schedulerType) {
@@ -1792,6 +1825,9 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("adhocSlot")
         public Long adhocSlot;
 
+        @NameInMap("autoScaleCPULimit")
+        public Long autoScaleCPULimit;
+
         @NameInMap("elasticReservedCU")
         public Long elasticReservedCU;
 
@@ -1839,6 +1875,14 @@ public class ListQuotasResponseBody extends TeaModel {
         }
         public Long getAdhocSlot() {
             return this.adhocSlot;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setAutoScaleCPULimit(Long autoScaleCPULimit) {
+            this.autoScaleCPULimit = autoScaleCPULimit;
+            return this;
+        }
+        public Long getAutoScaleCPULimit() {
+            return this.autoScaleCPULimit;
         }
 
         public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setElasticReservedCU(Long elasticReservedCU) {
