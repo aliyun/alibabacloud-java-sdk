@@ -4,6 +4,9 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

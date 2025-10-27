@@ -6,61 +6,101 @@ import com.aliyun.tea.*;
 public class StopExecutionResponseBody extends TeaModel {
     /**
      * <p>The definition of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n - type: pass\n name: mypass</p>
      */
     @NameInMap("FlowDefinition")
     public String flowDefinition;
 
     /**
      * <p>The name of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow</p>
      */
     @NameInMap("FlowName")
     public String flowName;
 
     /**
      * <p>The input of the execution, which is in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
      * <p>The name of the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The execution result, which is in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Output")
     public String output;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRequestId</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The Alibaba Cloud resource name (ARN) of the role that executed the flow. If the RoleArn in the flow definition is changed during the execution of the flow, the system records and returns a snapshot of the original RoleArn.</p>
+     * <blockquote>
+     * <p> If you do not specify the RoleArn parameter in the request parameters, the response parameters do not contain the RoleArn parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram:${region}:${accountID}:${role}</p>
+     */
+    @NameInMap("RoleArn")
+    public String roleArn;
+
+    /**
      * <p>The time when the execution started.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-01T01:01:01.001Z</p>
      */
     @NameInMap("StartedTime")
     public String startedTime;
 
     /**
      * <p>The execution status. Valid values:</p>
-     * <br>
-     * <p>*   **Starting**</p>
-     * <p>*   **Running**</p>
-     * <p>*   **Stopped**</p>
-     * <p>*   **Succeeded**</p>
-     * <p>*   **Failed**</p>
-     * <p>*   **TimedOut**</p>
+     * <ul>
+     * <li><strong>Starting</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Stopped</strong></li>
+     * <li><strong>Succeeded</strong></li>
+     * <li><strong>Failed</strong></li>
+     * <li><strong>TimedOut</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The time when the execution stopped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-01T01:01:01.001Z</p>
      */
     @NameInMap("StoppedTime")
     public String stoppedTime;
@@ -116,6 +156,14 @@ public class StopExecutionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public StopExecutionResponseBody setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    public String getRoleArn() {
+        return this.roleArn;
     }
 
     public StopExecutionResponseBody setStartedTime(String startedTime) {

@@ -6,61 +6,89 @@ import com.aliyun.tea.*;
 public class StartExecutionResponseBody extends TeaModel {
     /**
      * <p>The definition of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n - type: pass\n name: mypass</p>
      */
     @NameInMap("FlowDefinition")
     public String flowDefinition;
 
     /**
      * <p>The name of the workflow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow</p>
      */
     @NameInMap("FlowName")
     public String flowName;
 
     /**
      * <p>The input of the execution, which is in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
      * <p>The name of the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The execution result, which is in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Output")
     public String output;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRequestId</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The time when the execution started.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-01T01:01:01.001Z</p>
      */
     @NameInMap("StartedTime")
     public String startedTime;
 
     /**
      * <p>The execution status. Valid values:</p>
-     * <br>
-     * <p>*   **Starting**</p>
-     * <p>*   **Running**</p>
-     * <p>*   **Stopped**</p>
-     * <p>*   **Succeeded**</p>
-     * <p>*   **Failed**</p>
-     * <p>*   **TimedOut**</p>
+     * <ul>
+     * <li><strong>Starting</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Stopped</strong></li>
+     * <li><strong>Succeeded</strong></li>
+     * <li><strong>Failed</strong></li>
+     * <li><strong>TimedOut</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The time when the execution stopped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-01T01:01:01.001Z</p>
      */
     @NameInMap("StoppedTime")
     public String stoppedTime;

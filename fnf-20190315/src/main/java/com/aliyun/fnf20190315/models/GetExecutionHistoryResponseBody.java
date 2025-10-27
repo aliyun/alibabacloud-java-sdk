@@ -11,13 +11,19 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
     public java.util.List<GetExecutionHistoryResponseBodyEvents> events;
 
     /**
-     * <p>You do not need to specify this parameter for the first request. The returned value of **ScheduleEventId** is used as the token for the next query. No value is returned for the last query.</p>
+     * <p>You do not need to specify this parameter for the first request. The returned value of <strong>ScheduleEventId</strong> is used as the token for the next query. No value is returned for the last query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRequestId</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,58 +60,77 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
     public static class GetExecutionHistoryResponseBodyEvents extends TeaModel {
         /**
          * <p>The details about the execution step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("EventDetail")
         public String eventDetail;
 
         /**
          * <p>The ID of the execution step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EventId")
         public Long eventId;
 
         /**
          * <p>The ID of the scheduling step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ScheduleEventId")
         public Long scheduleEventId;
 
         /**
          * <p>The name of the execution step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>passStep</p>
          */
         @NameInMap("StepName")
         public String stepName;
 
         /**
          * <p>The time when the event was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The type of the execution step. Valid values:</p>
-         * <br>
-         * <p>*   **StepEntered**</p>
-         * <p>*   **StepStarted**</p>
-         * <p>*   **StepSucceeded**</p>
-         * <p>*   **StepFailed**</p>
-         * <p>*   **StepExited**</p>
-         * <p>*   **BranchEntered**</p>
-         * <p>*   **BranchExited**</p>
-         * <p>*   **IterationEntered**</p>
-         * <p>*   **IterationExited**</p>
-         * <p>*   **TaskScheduled**</p>
-         * <p>*   **TaskStarted**</p>
-         * <p>*   **TaskSubmitted**</p>
-         * <p>*   **TaskSubmitFailed**</p>
-         * <p>*   **TaskSucceeded**</p>
-         * <p>*   **TaskFailed**</p>
-         * <p>*   **TaskTimedOut**</p>
-         * <p>*   **ExecutionStarted**</p>
-         * <p>*   **ExecutionStopped**</p>
-         * <p>*   **ExecutionSucceeded**</p>
-         * <p>*   **ExecutionFailed**</p>
-         * <p>*   **ExecutionTimedOut**</p>
+         * <ul>
+         * <li><strong>StepEntered</strong></li>
+         * <li><strong>StepStarted</strong></li>
+         * <li><strong>StepSucceeded</strong></li>
+         * <li><strong>StepFailed</strong></li>
+         * <li><strong>StepExited</strong></li>
+         * <li><strong>BranchEntered</strong></li>
+         * <li><strong>BranchExited</strong></li>
+         * <li><strong>IterationEntered</strong></li>
+         * <li><strong>IterationExited</strong></li>
+         * <li><strong>TaskScheduled</strong></li>
+         * <li><strong>TaskStarted</strong></li>
+         * <li><strong>TaskSubmitted</strong></li>
+         * <li><strong>TaskSubmitFailed</strong></li>
+         * <li><strong>TaskSucceeded</strong></li>
+         * <li><strong>TaskFailed</strong></li>
+         * <li><strong>TaskTimedOut</strong></li>
+         * <li><strong>ExecutionStarted</strong></li>
+         * <li><strong>ExecutionStopped</strong></li>
+         * <li><strong>ExecutionSucceeded</strong></li>
+         * <li><strong>ExecutionFailed</strong></li>
+         * <li><strong>ExecutionTimedOut</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TaskSucceeded</p>
          */
         @NameInMap("Type")
         public String type;

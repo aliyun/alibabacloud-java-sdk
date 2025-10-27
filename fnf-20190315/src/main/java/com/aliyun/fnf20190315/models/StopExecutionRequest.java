@@ -6,34 +6,38 @@ import com.aliyun.tea.*;
 public class StopExecutionRequest extends TeaModel {
     /**
      * <p>The reason for stopping the execution. The value must be 1 to 4,096 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>for test</p>
      */
     @NameInMap("Cause")
     public String cause;
 
     /**
-     * <p>The error for stopping the execution. The value must be 1 to 128 characters in length.</p>
+     * <p>The error code for stopping the execution. The error code must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nill</p>
      */
     @NameInMap("Error")
     public String error;
 
     /**
-     * <p>The name of the execution that you want to stop. You can call the **ListExecutions** operation to obtain the value of this parameter. The name is unique in a flow. Set this parameter based on the following rules:</p>
-     * <br>
-     * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must start with a letter or an underscore (\_).</p>
-     * <p>*   The name is case-sensitive.</p>
-     * <p>*   The name must be 1 to 128 characters in length.</p>
+     * <p>The name of the execution to be stopped. You can call the <strong>ListExecutions</strong> operation to obtain the value of this parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec</p>
      */
     @NameInMap("ExecutionName")
     public String executionName;
 
     /**
-     * <p>The name of the flow in which that you want to stop the execution. You can call the **ListFlows** operation to obtain the value of this parameter. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:</p>
-     * <br>
-     * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must start with a letter or an underscore (\_).</p>
-     * <p>*   The name is case-sensitive.</p>
-     * <p>*   The name must be 1 to 128 characters in length.</p>
+     * <p>The name of the workflow to be stopped. You can call the <strong>ListFlows</strong> operation to obtain the value of this parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow</p>
      */
     @NameInMap("FlowName")
     public String flowName;

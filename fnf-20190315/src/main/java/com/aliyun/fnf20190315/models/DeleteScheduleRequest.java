@@ -4,9 +4,15 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DeleteScheduleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScheduleName")
     public String scheduleName;
 

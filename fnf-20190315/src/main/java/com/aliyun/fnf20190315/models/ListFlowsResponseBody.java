@@ -12,12 +12,18 @@ public class ListFlowsResponseBody extends TeaModel {
 
     /**
      * <p>The start key for the next query. This parameter is not returned if all results have been returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow_nextxxx</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRequestId</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,57 +57,159 @@ public class ListFlowsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListFlowsResponseBodyFlowsEnvironmentVariables extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListFlowsResponseBodyFlowsEnvironmentVariables build(java.util.Map<String, ?> map) throws Exception {
+            ListFlowsResponseBodyFlowsEnvironmentVariables self = new ListFlowsResponseBodyFlowsEnvironmentVariables();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFlowsResponseBodyFlowsEnvironmentVariables setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListFlowsResponseBodyFlowsEnvironmentVariables setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListFlowsResponseBodyFlowsEnvironmentVariables setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListFlowsResponseBodyFlowsEnvironment extends TeaModel {
+        @NameInMap("Variables")
+        public java.util.List<ListFlowsResponseBodyFlowsEnvironmentVariables> variables;
+
+        public static ListFlowsResponseBodyFlowsEnvironment build(java.util.Map<String, ?> map) throws Exception {
+            ListFlowsResponseBodyFlowsEnvironment self = new ListFlowsResponseBodyFlowsEnvironment();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFlowsResponseBodyFlowsEnvironment setVariables(java.util.List<ListFlowsResponseBodyFlowsEnvironmentVariables> variables) {
+            this.variables = variables;
+            return this;
+        }
+        public java.util.List<ListFlowsResponseBodyFlowsEnvironmentVariables> getVariables() {
+            return this.variables;
+        }
+
+    }
+
     public static class ListFlowsResponseBodyFlows extends TeaModel {
         /**
          * <p>The time when the flow was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n - type: pass\n name: mypass</p>
          */
         @NameInMap("Definition")
         public String definition;
 
         /**
          * <p>The description of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test flow</p>
          */
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Environment")
+        public ListFlowsResponseBodyFlowsEnvironment environment;
+
         /**
          * <p>The execution mode or the enumeration type. Valid values: Express and Standard. A value of Standard indicates an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("ExecutionMode")
         public String executionMode;
 
         /**
          * <p>The unique ID of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e589e092-e2c0-4dee-b306-3574ddf5****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The time when the flow was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
         /**
          * <p>The name of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the flow is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::${accountID}:${role}</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
 
         /**
          * <p>The type of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDL</p>
          */
         @NameInMap("Type")
         public String type;
@@ -133,6 +241,14 @@ public class ListFlowsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListFlowsResponseBodyFlows setEnvironment(ListFlowsResponseBodyFlowsEnvironment environment) {
+            this.environment = environment;
+            return this;
+        }
+        public ListFlowsResponseBodyFlowsEnvironment getEnvironment() {
+            return this.environment;
         }
 
         public ListFlowsResponseBodyFlows setExecutionMode(String executionMode) {

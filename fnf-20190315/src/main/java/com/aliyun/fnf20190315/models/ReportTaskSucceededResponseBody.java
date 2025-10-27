@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ReportTaskSucceededResponseBody extends TeaModel {
     /**
      * <p>The ID of the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EventId")
     public Long eventId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRequestId</p>
      */
     @NameInMap("RequestId")
     public String requestId;

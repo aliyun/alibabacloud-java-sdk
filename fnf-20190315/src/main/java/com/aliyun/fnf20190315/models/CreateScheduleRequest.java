@@ -6,44 +6,67 @@ import com.aliyun.tea.*;
 public class CreateScheduleRequest extends TeaModel {
     /**
      * <p>The CRON expression.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0 * * * * *</p>
      */
     @NameInMap("CronExpression")
     public String cronExpression;
 
     /**
      * <p>The description of the time-based schedule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to enable the time-based schedule. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>The name of the flow that is bound to the time-based schedule.</p>
+     * <p>The name of the workflow that is associated with the time-based schedule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow</p>
      */
     @NameInMap("FlowName")
     public String flowName;
 
     /**
      * <p>The trigger message of the time-based schedule. Specify the value in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
      */
     @NameInMap("Payload")
     public String payload;
 
     /**
-     * <p>The name of the time-based schedule. Configure this parameter based on the following rules:</p>
-     * <br>
-     * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must start with a letter or an underscore (\_).</p>
-     * <p>*   The name is case-sensitive.</p>
-     * <p>*   The name must be 1 to 128 characters in length.</p>
+     * <p>The name of the time-based schedule. The name must meet the following conventions:</p>
+     * <ul>
+     * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>The name must start with a letter or an underscore (_).</li>
+     * <li>It is case-sensitive.</li>
+     * <li>The name must be 1 to 128 characters in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testScheduleName</p>
      */
     @NameInMap("ScheduleName")
     public String scheduleName;

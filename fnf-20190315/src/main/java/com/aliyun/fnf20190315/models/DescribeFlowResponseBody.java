@@ -6,60 +6,93 @@ import com.aliyun.tea.*;
 public class DescribeFlowResponseBody extends TeaModel {
     /**
      * <p>The time when the flow was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-01T01:01:01.001Z</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     /**
-     * <p>The flow definition, which follows the flow definition language (FDL) syntax standard. Considering compatibility, the system supports the two flow definition specifications.</p>
+     * <p>The definition of the workflow. The definition must comply with the flow definition language (FDL) syntax. Considering compatibility, the system supports the flow definition specifications of the old version and new version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n - type: pass\n name: mypass</p>
      */
     @NameInMap("Definition")
     public String definition;
 
     /**
      * <p>The description of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test flow</p>
      */
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Environment")
+    public DescribeFlowResponseBodyEnvironment environment;
+
     /**
      * <p>The execution mode or the enumeration type. Valid values: Express and Standard. A value of Standard indicates an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
     /**
      * <p>The unique ID of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e589e092-e2c0-4dee-b306-3574ddfdddf5****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The time when the flow was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-01T01:01:01.001Z</p>
      */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
     /**
      * <p>The name of the flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRequestId</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::${accountID}:${role}</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
 
     /**
-     * <p>The type of the flow. Valid value: **FDL**.</p>
+     * <p>The type of the workflow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FDL</p>
      */
     @NameInMap("Type")
     public String type;
@@ -91,6 +124,14 @@ public class DescribeFlowResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeFlowResponseBody setEnvironment(DescribeFlowResponseBodyEnvironment environment) {
+        this.environment = environment;
+        return this;
+    }
+    public DescribeFlowResponseBodyEnvironment getEnvironment() {
+        return this.environment;
     }
 
     public DescribeFlowResponseBody setExecutionMode(String executionMode) {
@@ -147,6 +188,78 @@ public class DescribeFlowResponseBody extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class DescribeFlowResponseBodyEnvironmentVariables extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeFlowResponseBodyEnvironmentVariables build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowResponseBodyEnvironmentVariables self = new DescribeFlowResponseBodyEnvironmentVariables();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowResponseBodyEnvironmentVariables setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeFlowResponseBodyEnvironmentVariables setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeFlowResponseBodyEnvironmentVariables setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeFlowResponseBodyEnvironment extends TeaModel {
+        @NameInMap("Variables")
+        public java.util.List<DescribeFlowResponseBodyEnvironmentVariables> variables;
+
+        public static DescribeFlowResponseBodyEnvironment build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowResponseBodyEnvironment self = new DescribeFlowResponseBodyEnvironment();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowResponseBodyEnvironment setVariables(java.util.List<DescribeFlowResponseBodyEnvironmentVariables> variables) {
+            this.variables = variables;
+            return this;
+        }
+        public java.util.List<DescribeFlowResponseBodyEnvironmentVariables> getVariables() {
+            return this.variables;
+        }
+
     }
 
 }

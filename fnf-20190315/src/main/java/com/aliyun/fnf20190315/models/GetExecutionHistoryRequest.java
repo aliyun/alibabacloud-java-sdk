@@ -5,35 +5,39 @@ import com.aliyun.tea.*;
 
 public class GetExecutionHistoryRequest extends TeaModel {
     /**
-     * <p>The name of the execution, which is unique within a flow. The name must meet the following conventions:</p>
-     * <br>
-     * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must start with a letter or an underscore (\_).</p>
-     * <p>*   The name is case-sensitive.</p>
-     * <p>*   The name must be 1 to 128 characters in length.</p>
+     * <p>The name of the execution.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec</p>
      */
     @NameInMap("ExecutionName")
     public String executionName;
 
     /**
-     * <p>The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:</p>
-     * <br>
-     * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must start with a letter or an underscore (\_).</p>
-     * <p>*   The name is case-sensitive.</p>
-     * <p>*   The name must be 1 to 128 characters in length.</p>
+     * <p>The name of the workflow.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow</p>
      */
     @NameInMap("FlowName")
     public String flowName;
 
     /**
-     * <p>The maximum number of steps to be queried. Valid values: 1 to 1000.</p>
+     * <p>The number of workflows that you want to query. Valid values: 1-999. Default value: 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The name of the event to start the query. You can obtain the value from the response data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow_xxx</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

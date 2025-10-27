@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListFlowsRequest extends TeaModel {
     /**
-     * <p>The number of flows to be queried. Valid values: 1 to 1000.</p>
+     * <p>The number of workflows that you want to query. Valid values: 1 - 999. Default value: 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The token to start the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow_nextxxx</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
