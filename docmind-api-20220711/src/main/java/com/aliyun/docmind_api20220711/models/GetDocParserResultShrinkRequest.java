@@ -3,9 +3,9 @@ package com.aliyun.docmind_api20220711.models;
 
 import com.aliyun.tea.*;
 
-public class GetDocParserResultRequest extends TeaModel {
+public class GetDocParserResultShrinkRequest extends TeaModel {
     @NameInMap("ExcludeFields")
-    public java.util.List<String> excludeFields;
+    public String excludeFieldsShrink;
 
     /**
      * <strong>example:</strong>
@@ -20,20 +20,20 @@ public class GetDocParserResultRequest extends TeaModel {
     @NameInMap("LayoutStepSize")
     public Integer layoutStepSize;
 
-    public static GetDocParserResultRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetDocParserResultRequest self = new GetDocParserResultRequest();
+    public static GetDocParserResultShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDocParserResultShrinkRequest self = new GetDocParserResultShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetDocParserResultRequest setExcludeFields(java.util.List<String> excludeFields) {
-        this.excludeFields = excludeFields;
+    public GetDocParserResultShrinkRequest setExcludeFieldsShrink(String excludeFieldsShrink) {
+        this.excludeFieldsShrink = excludeFieldsShrink;
         return this;
     }
-    public java.util.List<String> getExcludeFields() {
-        return this.excludeFields;
+    public String getExcludeFieldsShrink() {
+        return this.excludeFieldsShrink;
     }
 
-    public GetDocParserResultRequest setId(String id) {
+    public GetDocParserResultShrinkRequest setId(String id) {
         this.id = id;
         return this;
     }
@@ -41,7 +41,7 @@ public class GetDocParserResultRequest extends TeaModel {
         return this.id;
     }
 
-    public GetDocParserResultRequest setLayoutNum(Integer layoutNum) {
+    public GetDocParserResultShrinkRequest setLayoutNum(Integer layoutNum) {
         this.layoutNum = layoutNum;
         return this;
     }
@@ -49,7 +49,7 @@ public class GetDocParserResultRequest extends TeaModel {
         return this.layoutNum;
     }
 
-    public GetDocParserResultRequest setLayoutStepSize(Integer layoutStepSize) {
+    public GetDocParserResultShrinkRequest setLayoutStepSize(Integer layoutStepSize) {
         this.layoutStepSize = layoutStepSize;
         return this;
     }

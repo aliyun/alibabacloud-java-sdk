@@ -210,13 +210,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>文档结构化流式接口</p>
      * 
-     * @param request GetDocParserResultRequest
+     * @param tmpReq GetDocParserResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDocParserResultResponse
      */
-    public GetDocParserResultResponse getDocParserResultWithOptions(GetDocParserResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetDocParserResultResponse getDocParserResultWithOptions(GetDocParserResultRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDocParserResultShrinkRequest request = new GetDocParserResultShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeFields)) {
+            request.excludeFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeFields, "ExcludeFields", "simple");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeFieldsShrink)) {
+            query.put("ExcludeFields", request.excludeFieldsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
         }
