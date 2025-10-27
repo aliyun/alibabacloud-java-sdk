@@ -972,6 +972,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建私网DNS终端节点</p>
+     * 
+     * @param request CreatePrivateDnsEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePrivateDnsEndpointResponse
+     */
+    public CreatePrivateDnsEndpointResponse createPrivateDnsEndpointWithOptions(CreatePrivateDnsEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessInstanceName)) {
+            query.put("AccessInstanceName", request.accessInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallType)) {
+            query.put("FirewallType", request.firewallType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipProtocol)) {
+            query.put("IpProtocol", request.ipProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUid)) {
+            query.put("MemberUid", request.memberUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryDns)) {
+            query.put("PrimaryDns", request.primaryDns);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryVSwitchId)) {
+            query.put("PrimaryVSwitchId", request.primaryVSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryVSwitchIp)) {
+            query.put("PrimaryVSwitchIp", request.primaryVSwitchIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateDnsType)) {
+            query.put("PrivateDnsType", request.privateDnsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {
+            query.put("RegionNo", request.regionNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyDns)) {
+            query.put("StandbyDns", request.standbyDns);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyVSwitchId)) {
+            query.put("StandbyVSwitchId", request.standbyVSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyVSwitchIp)) {
+            query.put("StandbyVSwitchIp", request.standbyVSwitchIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePrivateDnsEndpoint"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePrivateDnsEndpointResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建私网DNS终端节点</p>
+     * 
+     * @param request CreatePrivateDnsEndpointRequest
+     * @return CreatePrivateDnsEndpointResponse
+     */
+    public CreatePrivateDnsEndpointResponse createPrivateDnsEndpoint(CreatePrivateDnsEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPrivateDnsEndpointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a NAT firewall.</p>
      * 
      * @param request CreateSecurityProxyRequest
@@ -5319,6 +5415,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memberUid)) {
             query.put("MemberUid", request.memberUid);
         }
@@ -6015,6 +6115,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInstanceId)) {
+            query.put("NetworkInstanceId", request.networkInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.peerNetworkInstanceId)) {
+            query.put("PeerNetworkInstanceId", request.peerNetworkInstanceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7160,6 +7268,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the status of the virtual private cloud (VPC) Firewall feature in Cloud Firewall that uses the pay-as-you-go billing method.</p>
+     * 
+     * @param request DescribePostpayUserVpcStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePostpayUserVpcStatusResponse
+     */
+    public DescribePostpayUserVpcStatusResponse describePostpayUserVpcStatusWithOptions(DescribePostpayUserVpcStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePostpayUserVpcStatus"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePostpayUserVpcStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the virtual private cloud (VPC) Firewall feature in Cloud Firewall that uses the pay-as-you-go billing method.</p>
+     * 
+     * @param request DescribePostpayUserVpcStatusRequest
+     * @return DescribePostpayUserVpcStatusResponse
+     */
+    public DescribePostpayUserVpcStatusResponse describePostpayUserVpcStatus(DescribePostpayUserVpcStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePostpayUserVpcStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries prefix lists.</p>
      * 
      * @param request DescribePrefixListsRequest
@@ -7842,6 +7990,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取正向代理</p>
+     * 
+     * @param request DescribeSecurityProxyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSecurityProxyResponse
+     */
+    public DescribeSecurityProxyResponse describeSecurityProxyWithOptions(DescribeSecurityProxyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUid)) {
+            query.put("MemberUid", request.memberUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyId)) {
+            query.put("ProxyId", request.proxyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyName)) {
+            query.put("ProxyName", request.proxyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {
+            query.put("RegionNo", request.regionNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSecurityProxy"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityProxyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取正向代理</p>
+     * 
+     * @param request DescribeSecurityProxyRequest
+     * @return DescribeSecurityProxyResponse
+     */
+    public DescribeSecurityProxyResponse describeSecurityProxy(DescribeSecurityProxyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSecurityProxyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about signature library versions.</p>
      * 
      * @param request DescribeSignatureLibVersionRequest
@@ -7916,6 +8148,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSlsAnalyzeOpenStatusResponse describeSlsAnalyzeOpenStatus(DescribeSlsAnalyzeOpenStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSlsAnalyzeOpenStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询威胁情报配置的信息</p>
+     * 
+     * @param request DescribeThreatIntelligenceSwitchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeThreatIntelligenceSwitchResponse
+     */
+    public DescribeThreatIntelligenceSwitchResponse describeThreatIntelligenceSwitchWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeThreatIntelligenceSwitch"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeThreatIntelligenceSwitchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询威胁情报配置的信息</p>
+     * @return DescribeThreatIntelligenceSwitchResponse
+     */
+    public DescribeThreatIntelligenceSwitchResponse describeThreatIntelligenceSwitch() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeThreatIntelligenceSwitchWithOptions(runtime);
     }
 
     /**
@@ -9672,6 +9938,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableSdlProtectedAssetResponse enableSdlProtectedAsset(EnableSdlProtectedAssetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableSdlProtectedAssetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下载TLS证书</p>
+     * 
+     * @param request GetTlsInspectCertificateDownloadUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTlsInspectCertificateDownloadUrlResponse
+     */
+    public GetTlsInspectCertificateDownloadUrlResponse getTlsInspectCertificateDownloadUrlWithOptions(GetTlsInspectCertificateDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.caCertId)) {
+            query.put("CaCertId", request.caCertId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTlsInspectCertificateDownloadUrl"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTlsInspectCertificateDownloadUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下载TLS证书</p>
+     * 
+     * @param request GetTlsInspectCertificateDownloadUrlRequest
+     * @return GetTlsInspectCertificateDownloadUrlResponse
+     */
+    public GetTlsInspectCertificateDownloadUrlResponse getTlsInspectCertificateDownloadUrl(GetTlsInspectCertificateDownloadUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTlsInspectCertificateDownloadUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询TLS检查证书</p>
+     * 
+     * @param request ListTlsInspectCACertificatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTlsInspectCACertificatesResponse
+     */
+    public ListTlsInspectCACertificatesResponse listTlsInspectCACertificatesWithOptions(ListTlsInspectCACertificatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.caCertId)) {
+            query.put("CaCertId", request.caCertId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTlsInspectCACertificates"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTlsInspectCACertificatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询TLS检查证书</p>
+     * 
+     * @param request ListTlsInspectCACertificatesRequest
+     * @return ListTlsInspectCACertificatesResponse
+     */
+    public ListTlsInspectCACertificatesResponse listTlsInspectCACertificates(ListTlsInspectCACertificatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTlsInspectCACertificatesWithOptions(request, runtime);
     }
 
     /**
@@ -12614,6 +12976,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePostpayUserInternetStatusResponse updatePostpayUserInternetStatus(UpdatePostpayUserInternetStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePostpayUserInternetStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of the NAT Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</p>
+     * 
+     * @param request UpdatePostpayUserNatStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePostpayUserNatStatusResponse
+     */
+    public UpdatePostpayUserNatStatusResponse updatePostpayUserNatStatusWithOptions(UpdatePostpayUserNatStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operate)) {
+            query.put("Operate", request.operate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePostpayUserNatStatus"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePostpayUserNatStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of the NAT Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</p>
+     * 
+     * @param request UpdatePostpayUserNatStatusRequest
+     * @return UpdatePostpayUserNatStatusResponse
+     */
+    public UpdatePostpayUserNatStatusResponse updatePostpayUserNatStatus(UpdatePostpayUserNatStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePostpayUserNatStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of the virtual private cloud (VPC) Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</p>
+     * 
+     * @param request UpdatePostpayUserVpcStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePostpayUserVpcStatusResponse
+     */
+    public UpdatePostpayUserVpcStatusResponse updatePostpayUserVpcStatusWithOptions(UpdatePostpayUserVpcStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operate)) {
+            query.put("Operate", request.operate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePostpayUserVpcStatus"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePostpayUserVpcStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of the virtual private cloud (VPC) Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</p>
+     * 
+     * @param request UpdatePostpayUserVpcStatusRequest
+     * @return UpdatePostpayUserVpcStatusResponse
+     */
+    public UpdatePostpayUserVpcStatusResponse updatePostpayUserVpcStatus(UpdatePostpayUserVpcStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePostpayUserVpcStatusWithOptions(request, runtime);
     }
 
     /**

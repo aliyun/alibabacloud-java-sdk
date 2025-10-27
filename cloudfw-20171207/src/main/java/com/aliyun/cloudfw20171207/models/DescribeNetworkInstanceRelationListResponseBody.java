@@ -50,7 +50,136 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen extends TeaModel {
+        @NameInMap("AttachmentId")
+        public String attachmentId;
+
+        @NameInMap("AttachmentName")
+        public String attachmentName;
+
+        @NameInMap("CenId")
+        public String cenId;
+
+        @NameInMap("CenName")
+        public String cenName;
+
+        @NameInMap("TransitRouterType")
+        public String transitRouterType;
+
+        public static DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen self = new DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen setAttachmentId(String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+        }
+        public String getAttachmentId() {
+            return this.attachmentId;
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen setAttachmentName(String attachmentName) {
+            this.attachmentName = attachmentName;
+            return this;
+        }
+        public String getAttachmentName() {
+            return this.attachmentName;
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen setCenName(String cenName) {
+            this.cenName = cenName;
+            return this;
+        }
+        public String getCenName() {
+            return this.cenName;
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen setTransitRouterType(String transitRouterType) {
+            this.transitRouterType = transitRouterType;
+            return this;
+        }
+        public String getTransitRouterType() {
+            return this.transitRouterType;
+        }
+
+    }
+
+    public static class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen extends TeaModel {
+        @NameInMap("AttachmentId")
+        public String attachmentId;
+
+        @NameInMap("AttachmentName")
+        public String attachmentName;
+
+        @NameInMap("CenId")
+        public String cenId;
+
+        @NameInMap("CenName")
+        public String cenName;
+
+        @NameInMap("TransitRouterType")
+        public String transitRouterType;
+
+        public static DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen self = new DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen setAttachmentId(String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+        }
+        public String getAttachmentId() {
+            return this.attachmentId;
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen setAttachmentName(String attachmentName) {
+            this.attachmentName = attachmentName;
+            return this;
+        }
+        public String getAttachmentName() {
+            return this.attachmentName;
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen setCenName(String cenName) {
+            this.cenName = cenName;
+            return this;
+        }
+        public String getCenName() {
+            return this.cenName;
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen setTransitRouterType(String transitRouterType) {
+            this.transitRouterType = transitRouterType;
+            return this;
+        }
+        public String getTransitRouterType() {
+            return this.transitRouterType;
+        }
+
+    }
+
     public static class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList extends TeaModel {
+        @NameInMap("AssociatedCen")
+        public java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen> associatedCen;
+
         /**
          * <strong>example:</strong>
          * <p>vpc-dsf232d****</p>
@@ -82,6 +211,14 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         public static DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList self = new DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList setAssociatedCen(java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen> associatedCen) {
+            this.associatedCen = associatedCen;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen> getAssociatedCen() {
+            return this.associatedCen;
         }
 
         public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList setNetworkInstanceId(String networkInstanceId) {
@@ -119,6 +256,9 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList extends TeaModel {
+        @NameInMap("AssociatedCen")
+        public java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen> associatedCen;
+
         /**
          * <strong>example:</strong>
          * <p>cen</p>
@@ -160,6 +300,14 @@ public class DescribeNetworkInstanceRelationListResponseBody extends TeaModel {
         public static DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList self = new DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList setAssociatedCen(java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen> associatedCen) {
+            this.associatedCen = associatedCen;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen> getAssociatedCen() {
+            return this.associatedCen;
         }
 
         public DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList setConnectType(String connectType) {

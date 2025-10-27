@@ -4,24 +4,52 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserIPSWhitelistRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Direction")
     public Long direction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ipv4</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ListType")
     public Long listType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>115.236.36.114/32</p>
+     */
     @NameInMap("ListValue")
     public String listValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>47.100.XX.XX</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("WhiteType")
     public Long whiteType;
 

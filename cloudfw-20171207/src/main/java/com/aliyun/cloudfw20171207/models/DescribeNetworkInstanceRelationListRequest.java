@@ -25,6 +25,12 @@ public class DescribeNetworkInstanceRelationListRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("NetworkInstanceId")
+    public String networkInstanceId;
+
+    @NameInMap("PeerNetworkInstanceId")
+    public String peerNetworkInstanceId;
+
     public static DescribeNetworkInstanceRelationListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInstanceRelationListRequest self = new DescribeNetworkInstanceRelationListRequest();
         return TeaModel.build(map, self);
@@ -52,6 +58,22 @@ public class DescribeNetworkInstanceRelationListRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeNetworkInstanceRelationListRequest setNetworkInstanceId(String networkInstanceId) {
+        this.networkInstanceId = networkInstanceId;
+        return this;
+    }
+    public String getNetworkInstanceId() {
+        return this.networkInstanceId;
+    }
+
+    public DescribeNetworkInstanceRelationListRequest setPeerNetworkInstanceId(String peerNetworkInstanceId) {
+        this.peerNetworkInstanceId = peerNetworkInstanceId;
+        return this;
+    }
+    public String getPeerNetworkInstanceId() {
+        return this.peerNetworkInstanceId;
     }
 
 }

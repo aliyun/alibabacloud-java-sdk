@@ -4,6 +4,10 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserIPSWhitelistResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>36E89955-1E5D-5810-970C-74646F378085</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

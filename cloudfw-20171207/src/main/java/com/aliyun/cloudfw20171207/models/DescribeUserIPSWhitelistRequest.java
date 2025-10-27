@@ -4,9 +4,17 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserIPSWhitelistRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>47.100.XX.XX</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
