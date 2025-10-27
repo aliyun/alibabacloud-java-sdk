@@ -83,6 +83,9 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
     }
 
     public static class VerifyIntelligentCaptchaResponseBodyResult extends TeaModel {
+        @NameInMap("CertifyId")
+        public String certifyId;
+
         @NameInMap("VerifyCode")
         public String verifyCode;
 
@@ -96,6 +99,14 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
         public static VerifyIntelligentCaptchaResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             VerifyIntelligentCaptchaResponseBodyResult self = new VerifyIntelligentCaptchaResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public VerifyIntelligentCaptchaResponseBodyResult setCertifyId(String certifyId) {
+            this.certifyId = certifyId;
+            return this;
+        }
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
         public VerifyIntelligentCaptchaResponseBodyResult setVerifyCode(String verifyCode) {
