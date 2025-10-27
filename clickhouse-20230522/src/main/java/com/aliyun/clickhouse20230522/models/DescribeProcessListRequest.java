@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessListRequest extends TeaModel {
+    @NameInMap("ComputingGroupId")
+    public String computingGroupId;
+
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -94,6 +97,14 @@ public class DescribeProcessListRequest extends TeaModel {
     public static DescribeProcessListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeProcessListRequest self = new DescribeProcessListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeProcessListRequest setComputingGroupId(String computingGroupId) {
+        this.computingGroupId = computingGroupId;
+        return this;
+    }
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     public DescribeProcessListRequest setDBInstanceId(String DBInstanceId) {

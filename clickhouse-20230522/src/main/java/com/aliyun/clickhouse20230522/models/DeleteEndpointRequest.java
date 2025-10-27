@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DeleteEndpointRequest extends TeaModel {
+    @NameInMap("ComputingGroupId")
+    public String computingGroupId;
+
     /**
      * <p>The prefix of the endpoint, which indicates the prefix of the value of the ConnectionString parameter.</p>
      * 
@@ -38,6 +41,14 @@ public class DeleteEndpointRequest extends TeaModel {
     public static DeleteEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEndpointRequest self = new DeleteEndpointRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteEndpointRequest setComputingGroupId(String computingGroupId) {
+        this.computingGroupId = computingGroupId;
+        return this;
+    }
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     public DeleteEndpointRequest setConnectionString(String connectionString) {

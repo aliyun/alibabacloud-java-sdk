@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class KillProcessRequest extends TeaModel {
+    @NameInMap("ComputingGroupId")
+    public String computingGroupId;
+
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -35,6 +38,14 @@ public class KillProcessRequest extends TeaModel {
     public static KillProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         KillProcessRequest self = new KillProcessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public KillProcessRequest setComputingGroupId(String computingGroupId) {
+        this.computingGroupId = computingGroupId;
+        return this;
+    }
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     public KillProcessRequest setDBInstanceId(String DBInstanceId) {

@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassRequest extends TeaModel {
+    @NameInMap("ComputingGroupId")
+    public String computingGroupId;
+
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -79,6 +82,14 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public static ModifyDBInstanceClassRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceClassRequest self = new ModifyDBInstanceClassRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceClassRequest setComputingGroupId(String computingGroupId) {
+        this.computingGroupId = computingGroupId;
+        return this;
+    }
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     public ModifyDBInstanceClassRequest setDBInstanceId(String DBInstanceId) {

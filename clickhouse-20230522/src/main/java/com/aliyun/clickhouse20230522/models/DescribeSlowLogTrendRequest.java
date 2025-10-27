@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendRequest extends TeaModel {
+    @NameInMap("ComputingGroupId")
+    public String computingGroupId;
+
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -62,6 +65,14 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public static DescribeSlowLogTrendRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlowLogTrendRequest self = new DescribeSlowLogTrendRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSlowLogTrendRequest setComputingGroupId(String computingGroupId) {
+        this.computingGroupId = computingGroupId;
+        return this;
+    }
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     public DescribeSlowLogTrendRequest setDBInstanceId(String DBInstanceId) {

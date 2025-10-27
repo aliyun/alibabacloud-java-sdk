@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateEndpointRequest extends TeaModel {
+    @NameInMap("ComputingGroupId")
+    public String computingGroupId;
+
     /**
      * <p>The prefix of the new endpoint. The prefix of the ConnectionString parameter.</p>
      * 
@@ -49,6 +52,14 @@ public class CreateEndpointRequest extends TeaModel {
     public static CreateEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEndpointRequest self = new CreateEndpointRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEndpointRequest setComputingGroupId(String computingGroupId) {
+        this.computingGroupId = computingGroupId;
+        return this;
+    }
+    public String getComputingGroupId() {
+        return this.computingGroupId;
     }
 
     public CreateEndpointRequest setConnectionPrefix(String connectionPrefix) {

@@ -41,6 +41,9 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
     }
 
     public static class ModifyDBInstanceClassResponseBodyData extends TeaModel {
+        @NameInMap("ComputingGroupId")
+        public String computingGroupId;
+
         /**
          * <p>The cluster ID.</p>
          * 
@@ -89,6 +92,14 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         public static ModifyDBInstanceClassResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModifyDBInstanceClassResponseBodyData self = new ModifyDBInstanceClassResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyDBInstanceClassResponseBodyData setComputingGroupId(String computingGroupId) {
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
+        public String getComputingGroupId() {
+            return this.computingGroupId;
         }
 
         public ModifyDBInstanceClassResponseBodyData setDBInstanceID(Long DBInstanceID) {
