@@ -162,6 +162,9 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateFlowLogRequestTag> tag;
 
+    @NameInMap("TargetSlsRegionId")
+    public String targetSlsRegionId;
+
     @NameInMap("Version")
     public String version;
 
@@ -272,6 +275,14 @@ public class CreateFlowLogRequest extends TeaModel {
     }
     public java.util.List<CreateFlowLogRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateFlowLogRequest setTargetSlsRegionId(String targetSlsRegionId) {
+        this.targetSlsRegionId = targetSlsRegionId;
+        return this;
+    }
+    public String getTargetSlsRegionId() {
+        return this.targetSlsRegionId;
     }
 
     public CreateFlowLogRequest setVersion(String version) {

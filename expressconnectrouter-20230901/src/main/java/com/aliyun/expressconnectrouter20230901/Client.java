@@ -455,6 +455,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tag", request.tag);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetSlsRegionId)) {
+            query.put("TargetSlsRegionId", request.targetSlsRegionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.version)) {
             query.put("Version", request.version);
         }
