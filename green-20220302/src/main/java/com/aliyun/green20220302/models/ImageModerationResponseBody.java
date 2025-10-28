@@ -74,6 +74,110 @@ public class ImageModerationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ImageModerationResponseBodyDataExtAigcDataAIGC extends TeaModel {
+        @NameInMap("ContentProducer")
+        public String contentProducer;
+
+        @NameInMap("ContentPropagator")
+        public String contentPropagator;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("ProduceID")
+        public String produceID;
+
+        @NameInMap("PropagateID")
+        public String propagateID;
+
+        @NameInMap("ReservedCode1")
+        public String reservedCode1;
+
+        @NameInMap("ReservedCode2")
+        public String reservedCode2;
+
+        public static ImageModerationResponseBodyDataExtAigcDataAIGC build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtAigcDataAIGC self = new ImageModerationResponseBodyDataExtAigcDataAIGC();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtAigcDataAIGC setContentProducer(String contentProducer) {
+            this.contentProducer = contentProducer;
+            return this;
+        }
+        public String getContentProducer() {
+            return this.contentProducer;
+        }
+
+        public ImageModerationResponseBodyDataExtAigcDataAIGC setContentPropagator(String contentPropagator) {
+            this.contentPropagator = contentPropagator;
+            return this;
+        }
+        public String getContentPropagator() {
+            return this.contentPropagator;
+        }
+
+        public ImageModerationResponseBodyDataExtAigcDataAIGC setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public ImageModerationResponseBodyDataExtAigcDataAIGC setProduceID(String produceID) {
+            this.produceID = produceID;
+            return this;
+        }
+        public String getProduceID() {
+            return this.produceID;
+        }
+
+        public ImageModerationResponseBodyDataExtAigcDataAIGC setPropagateID(String propagateID) {
+            this.propagateID = propagateID;
+            return this;
+        }
+        public String getPropagateID() {
+            return this.propagateID;
+        }
+
+        public ImageModerationResponseBodyDataExtAigcDataAIGC setReservedCode1(String reservedCode1) {
+            this.reservedCode1 = reservedCode1;
+            return this;
+        }
+        public String getReservedCode1() {
+            return this.reservedCode1;
+        }
+
+        public ImageModerationResponseBodyDataExtAigcDataAIGC setReservedCode2(String reservedCode2) {
+            this.reservedCode2 = reservedCode2;
+            return this;
+        }
+        public String getReservedCode2() {
+            return this.reservedCode2;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtAigcData extends TeaModel {
+        @NameInMap("AIGC")
+        public ImageModerationResponseBodyDataExtAigcDataAIGC AIGC;
+
+        public static ImageModerationResponseBodyDataExtAigcData build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtAigcData self = new ImageModerationResponseBodyDataExtAigcData();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtAigcData setAIGC(ImageModerationResponseBodyDataExtAigcDataAIGC AIGC) {
+            this.AIGC = AIGC;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtAigcDataAIGC getAIGC() {
+            return this.AIGC;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataExtCustomImage extends TeaModel {
         /**
          * <p>The image ID.</p>
@@ -1479,6 +1583,9 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExt extends TeaModel {
+        @NameInMap("AigcData")
+        public ImageModerationResponseBodyDataExtAigcData aigcData;
+
         /**
          * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
          */
@@ -1530,6 +1637,14 @@ public class ImageModerationResponseBody extends TeaModel {
         public static ImageModerationResponseBodyDataExt build(java.util.Map<String, ?> map) throws Exception {
             ImageModerationResponseBodyDataExt self = new ImageModerationResponseBodyDataExt();
             return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExt setAigcData(ImageModerationResponseBodyDataExtAigcData aigcData) {
+            this.aigcData = aigcData;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtAigcData getAigcData() {
+            return this.aigcData;
         }
 
         public ImageModerationResponseBodyDataExt setCustomImage(java.util.List<ImageModerationResponseBodyDataExtCustomImage> customImage) {
