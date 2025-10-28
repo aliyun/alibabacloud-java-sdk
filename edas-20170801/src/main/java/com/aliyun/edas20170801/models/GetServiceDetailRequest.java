@@ -6,80 +6,118 @@ import com.aliyun.tea.*;
 public class GetServiceDetailRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>efbda488-7b33-432f-a40d-<strong><strong>0047</strong></strong></p>
      */
     @NameInMap("appId")
     public String appId;
 
     /**
      * <p>The group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DUBBO</p>
      */
     @NameInMap("group")
     public String group;
 
     /**
      * <p>The IP address of the service provider. Fuzzy searches are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.20.x.xx</p>
      */
     @NameInMap("ip")
     public String ip;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou:doc-test</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
     /**
      * <p>The source of the data. Valid values:</p>
-     * <br>
-     * <p>*   agent: Use this value if you use the service query feature of the latest version to pass the query result.</p>
-     * <p>*   registry: Use this value if you use the service query feature of the earlier version to pass the query result.</p>
+     * <ul>
+     * <li>agent: Use this value if you use the service query feature of the latest version to pass the query result.</li>
+     * <li>registry: Use this value if you use the service query feature of the earlier version to pass the query result.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agent</p>
      */
     @NameInMap("origin")
     public String origin;
 
     /**
      * <p>The region ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>The type of the service registry. This parameter is deprecated. You can ignore it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacos</p>
      */
     @NameInMap("registryType")
     public String registryType;
 
     /**
      * <p>The ID of the service. This parameter is deprecated. You can ignore it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.alibabacloud.hipstershop.CartService</p>
      */
     @NameInMap("serviceId")
     public String serviceId;
 
     /**
      * <p>The name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.alibabacloud.hipstershop.CartService</p>
      */
     @NameInMap("serviceName")
     public String serviceName;
 
     /**
      * <p>The type of the service. Valid values:</p>
-     * <br>
-     * <p>*   dubbo</p>
-     * <p>*   springCloud</p>
-     * <p>*   hsf</p>
-     * <p>*   istio</p>
+     * <ul>
+     * <li>dubbo</li>
+     * <li>springCloud</li>
+     * <li>hsf</li>
+     * <li>istio</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>springCloud</p>
      */
     @NameInMap("serviceType")
     public String serviceType;
 
     /**
      * <p>The version of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("serviceVersion")
     public String serviceVersion;
 
     /**
      * <p>The source of the service. Set the value to edas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edas</p>
      */
     @NameInMap("source")
     public String source;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class RollbackChangeOrderRequest extends TeaModel {
     /**
      * <p>The ID of the change process.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc5133d7-773f-4c81-<strong><strong>-e2103dce</strong></strong></p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;

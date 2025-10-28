@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class InsertClusterMemberRequest extends TeaModel {
     /**
      * <p>The ID of the cluster into which you want to import ECS instances.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b3e3f77b-462e-<strong><strong>-</strong></strong>-bec8727a4dc8</p>
      */
     @NameInMap("clusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the ECS instance that you want to import into the cluster. Separate multiple IDs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2ze7s2v0b789k60p****</p>
      */
     @NameInMap("instanceIds")
     public String instanceIds;
 
     /**
      * <p>The logon password of the ECS instance that you want to import into the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YourPassword</p>
      */
     @NameInMap("password")
     public String password;

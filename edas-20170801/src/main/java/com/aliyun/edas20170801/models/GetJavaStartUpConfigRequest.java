@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetJavaStartUpConfigRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5fdf50e8-*</p>
      */
     @NameInMap("AppId")
     public String appId;

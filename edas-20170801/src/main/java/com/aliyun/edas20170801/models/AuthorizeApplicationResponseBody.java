@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class AuthorizeApplicationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E3DA95D3-**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;

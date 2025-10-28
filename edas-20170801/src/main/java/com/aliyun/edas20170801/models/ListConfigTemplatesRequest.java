@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListConfigTemplatesRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from Page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
     /**
      * <p>The ID of the configuration template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3d84efaf-37d9-49fb-a3a8-b38d5c******</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The name of the configuration template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>config-tmpl-1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

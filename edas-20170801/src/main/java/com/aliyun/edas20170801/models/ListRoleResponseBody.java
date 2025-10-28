@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListRoleResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>57609587-DFA2-41EC-<strong><strong>-</strong></strong>*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class ListRoleResponseBody extends TeaModel {
     public static class ListRoleResponseBodyRoleListRoleItemActionListAction extends TeaModel {
         /**
          * <p>The serial number of the permission that is granted to the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The description of the permission to be granted to the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operations in operation records</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the permission group to which the permission that is granted to the role belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the permission to be granted to the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operation records</p>
          */
         @NameInMap("Name")
         public String name;
@@ -151,36 +172,54 @@ public class ListRoleResponseBody extends TeaModel {
     public static class ListRoleResponseBodyRoleListRoleItemRole extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test**@aliyun.com</p>
          */
         @NameInMap("AdminUserId")
         public String adminUserId;
 
         /**
          * <p>The timestamp when the role was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1542717260156</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The ID of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>Indicates whether the role is a default role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Super Admin(All privileges)</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The timestamp when the role was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1542717260156</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

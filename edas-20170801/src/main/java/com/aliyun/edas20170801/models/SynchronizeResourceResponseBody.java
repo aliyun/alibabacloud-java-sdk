@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class SynchronizeResourceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data returned for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PopSyncResource success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8DFGED-K98***************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the resources are synchronized. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The resources are synchronized.</p>
-     * <p>*   **false**: The resources fail to be synchronized.</p>
+     * <ul>
+     * <li><strong>true</strong>: The resources are synchronized.</li>
+     * <li><strong>false</strong>: The resources fail to be synchronized.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

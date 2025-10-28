@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateConfigTemplateResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class CreateConfigTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D16979DC-4D42-****************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,6 +77,9 @@ public class CreateConfigTemplateResponseBody extends TeaModel {
     public static class CreateConfigTemplateResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125122</p>
          */
         @NameInMap("Id")
         public Long id;

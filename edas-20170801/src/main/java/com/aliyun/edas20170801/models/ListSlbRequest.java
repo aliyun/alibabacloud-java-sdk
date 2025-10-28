@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class ListSlbRequest extends TeaModel {
     /**
      * <p>The type of the IP addresses. Valid values:</p>
-     * <br>
-     * <p>*   Internet: Users can connect to the SLB instance over the Internet.</p>
-     * <p>*   Intranet: Users can connect to the SLB instance over the internal network.</p>
+     * <ul>
+     * <li>Internet: Users can connect to the SLB instance over the Internet.</li>
+     * <li>Intranet: Users can connect to the SLB instance over the internal network.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>internet</p>
      */
     @NameInMap("AddressType")
     public String addressType;
 
     /**
      * <p>The type of the SLB instance. Valid values:</p>
-     * <br>
-     * <p>*   clb: Classic Load Balancer (CLB)</p>
-     * <p>*   alb: Application Load Balancer (ALB)</p>
+     * <ul>
+     * <li>clb: Classic Load Balancer (CLB)</li>
+     * <li>alb: Application Load Balancer (ALB)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>clb</p>
      */
     @NameInMap("SlbType")
     public String slbType;
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1f90rfybszjogyw****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

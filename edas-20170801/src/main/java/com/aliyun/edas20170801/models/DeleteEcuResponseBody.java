@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DeleteEcuResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned data that indicates whether the ECU is deleted. A value of `OK` indicates that the ECU is deleted.</p>
+     * <p>The returned data that indicates whether the ECU is deleted. A value of <code>OK</code> indicates that the ECU is deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fb08fd29-b197-40ab-<strong><strong>-</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;

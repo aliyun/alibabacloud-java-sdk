@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateRoleRequest extends TeaModel {
     /**
-     * <p>The set of permissions to be granted to the role. The value is in the format of `Permission group ID 1:Permission serial number 1;...;Permission group ID n:Permission serial number n`. Example: `1:1;1:2;2:1;2:2`. For more information about permission groups and permission serial numbers, see [ListAuthority](https://help.aliyun.com/document_detail/149409.html).</p>
-     * <br>
+     * <p>The set of permissions to be granted to the role. The value is in the format of <code>Permission group ID 1:Permission serial number 1;...;Permission group ID n:Permission serial number n</code>. Example: <code>1:1;1:2;2:1;2:2</code>. For more information about permission groups and permission serial numbers, see <a href="https://help.aliyun.com/document_detail/149409.html">ListAuthority</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15:1</p>
      */
     @NameInMap("ActionData")
     public String actionData;
 
     /**
-     * <p>The ID of the role. You can call the ListRole operation to query the role IDs. For more information, see [ListRole](https://help.aliyun.com/document_detail/149410.html).</p>
-     * <br>
+     * <p>The ID of the role. You can call the ListRole operation to query the role IDs. For more information, see <a href="https://help.aliyun.com/document_detail/149410.html">ListRole</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32371</p>
      */
     @NameInMap("RoleId")
     public Integer roleId;

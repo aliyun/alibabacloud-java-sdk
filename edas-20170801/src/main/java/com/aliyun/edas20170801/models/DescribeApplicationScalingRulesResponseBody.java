@@ -12,18 +12,27 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -262,12 +271,18 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultMetricMetrics extends TeaModel {
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MetricTargetAverageUtilization")
         public Integer metricTargetAverageUtilization;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asd</p>
          */
         @NameInMap("MetricType")
         public String metricType;
@@ -298,6 +313,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultMetric extends TeaModel {
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
@@ -310,6 +328,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
@@ -348,18 +369,27 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultTriggerTriggers extends TeaModel {
         /**
          * <p>The metadata of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dryRun&quot;:true}</p>
          */
         @NameInMap("MetaData")
         public String metaData;
 
         /**
          * <p>The name of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cron-trigger</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the trigger. Valid values: cron and app_metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cron</p>
          */
         @NameInMap("Type")
         public String type;
@@ -398,12 +428,18 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultTrigger extends TeaModel {
         /**
          * <p>The maximum number of replicas. The upper limit is 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
         /**
          * <p>The minimum number of replicas. The lower limit is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
@@ -448,6 +484,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResult extends TeaModel {
         /**
          * <p>The ID of the application to which the auto scaling policy belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78194c76-3dca-418e-a263-cccd1ab4****</p>
          */
         @NameInMap("AppId")
         public String appId;
@@ -457,18 +496,27 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the auto scaling policy was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23212323123</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The time when the auto scaling policy was last disabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23212323123</p>
          */
         @NameInMap("LastDisableTime")
         public Long lastDisableTime;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
@@ -481,27 +529,40 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
         /**
          * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The auto scaling policy is enabled.</p>
-         * <p>*   **false**: The auto scaling policy is disabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: The auto scaling policy is enabled.</li>
+         * <li><strong>false</strong>: The auto scaling policy is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ScaleRuleEnabled")
         public Boolean scaleRuleEnabled;
 
         /**
          * <p>The name of the auto scaling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu-trigger</p>
          */
         @NameInMap("ScaleRuleName")
         public String scaleRuleName;
 
         /**
          * <p>The type of the auto scaling policy. The value is fixed to trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger</p>
          */
         @NameInMap("ScaleRuleType")
         public String scaleRuleType;
@@ -514,6 +575,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the auto scaling policy was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23212323123</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
@@ -624,12 +688,18 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRules extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of auto scaling policies returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -642,6 +712,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of auto scaling policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;

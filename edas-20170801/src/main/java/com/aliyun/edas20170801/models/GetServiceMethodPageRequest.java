@@ -6,109 +6,162 @@ import com.aliyun.tea.*;
 public class GetServiceMethodPageRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>310b18c3-1dbe-4807-<strong><strong>-18d7d637</strong></strong></p>
      */
     @NameInMap("appId")
     public String appId;
 
     /**
      * <p>The group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DUBBO</p>
      */
     @NameInMap("group")
     public String group;
 
     /**
      * <p>The IP address of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
      */
     @NameInMap("ip")
     public String ip;
 
     /**
      * <p>The controller method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliware.edas.DemoController</p>
      */
     @NameInMap("methodController")
     public String methodController;
 
     /**
      * <p>The name of the method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>echo</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou:doc-test</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
     /**
      * <p>The source of the data. Valid values:</p>
-     * <br>
-     * <p>*   agent: Use this value if you use the service query feature of the latest version to pass the query result.</p>
-     * <p>*   registry: Use this value if you use the service query feature of the earlier version to pass the query result.</p>
+     * <ul>
+     * <li>agent: Use this value if you use the service query feature of the latest version to pass the query result.</li>
+     * <li>registry: Use this value if you use the service query feature of the earlier version to pass the query result.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agent</p>
      */
     @NameInMap("origin")
     public String origin;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>The request path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/echo/{str}</p>
      */
     @NameInMap("path")
     public String path;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>The type of the service registry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacos</p>
      */
     @NameInMap("registryType")
     public String registryType;
 
     /**
      * <p>The ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edas.service.consumer</p>
      */
     @NameInMap("serviceId")
     public String serviceId;
 
     /**
      * <p>The name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edas.service.consumer</p>
      */
     @NameInMap("serviceName")
     public String serviceName;
 
     /**
      * <p>The type of the service. Valid values:</p>
-     * <br>
-     * <p>*   dubbo: Dubbo service</p>
-     * <p>*   springCloud: Spring Cloud service</p>
-     * <p>*   hsf: High-speed Service Framework (HSF) service</p>
+     * <ul>
+     * <li>dubbo: Dubbo service</li>
+     * <li>springCloud: Spring Cloud service</li>
+     * <li>hsf: High-speed Service Framework (HSF) service</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>springCloud</p>
      */
     @NameInMap("serviceType")
     public String serviceType;
 
     /**
      * <p>The version of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("serviceVersion")
     public String serviceVersion;
 
     /**
      * <p>The source of the service. Set the value to edas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edas</p>
      */
     @NameInMap("source")
     public String source;

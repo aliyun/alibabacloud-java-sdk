@@ -6,32 +6,42 @@ import com.aliyun.tea.*;
 public class ChangeDeployGroupRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3616cdca-4f92-**********</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The ID of the elastic compute component (ECC) that corresponds to the ECS instance for which you want to change the application instance group. You can call the ListApplicationEcc operation to query the ECC ID. For more information, see [ListApplicationEcc](https://help.aliyun.com/document_detail/199277.html).</p>
-     * <br>
-     * <p>> You can change the application instance group for only one ECS instance at a time.</p>
-     * <br>
+     * <p>The ID of the elastic compute component (ECC) that corresponds to the ECS instance for which you want to change the application instance group. You can call the ListApplicationEcc operation to query the ECC ID. For more information, see <a href="https://help.aliyun.com/document_detail/199277.html">ListApplicationEcc</a>.</p>
+     * <blockquote>
+     * <p>You can change the application instance group for only one ECS instance at a time.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0cf49a6c-95a8-4aa8******</p>
      */
     @NameInMap("EccInfo")
     public String eccInfo;
 
     /**
      * <p>Specifies whether to forcibly change the application instance group if the deployment package version of the ECC is different from that of the application instance group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ForceStatus")
     public Boolean forceStatus;
 
     /**
-     * <p>The name of the application instance group. Examples: group_a and group_b. The parameter value for the default application instance group is `_DEFAULT_GROUP`. The name can be up to 64 characters in length.</p>
-     * <br>
+     * <p>The name of the application instance group. Examples: group_a and group_b. The parameter value for the default application instance group is <code>_DEFAULT_GROUP</code>. The name can be up to 64 characters in length.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("GroupName")
     public String groupName;

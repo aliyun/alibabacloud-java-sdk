@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetWebContainerConfigRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5a166fbd-<strong><strong>-</strong></strong></p>
      */
     @NameInMap("AppId")
     public String appId;

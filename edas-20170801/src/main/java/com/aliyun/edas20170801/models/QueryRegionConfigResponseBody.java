@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class QueryRegionConfigResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,6 +30,9 @@ public class QueryRegionConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-7ca7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class QueryRegionConfigResponseBody extends TeaModel {
     public static class QueryRegionConfigResponseBodyRegionConfigFileServerConfig extends TeaModel {
         /**
          * <p>The Object Storage Service (OSS) bucket of the file server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-bj</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>The internal endpoint of the file server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing-****.aliyuncs.com</p>
          */
         @NameInMap("InternalUrl")
         public String internalUrl;
 
         /**
          * <p>The public endpoint of the file server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing.aliyuncs.com</p>
          */
         @NameInMap("PublicUrl")
         public String publicUrl;
 
         /**
          * <p>The virtual private cloud (VPC) endpoint of the file server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v*****-oss-cn-beijing.aliyuncs.com</p>
          */
         @NameInMap("VpcUrl")
         public String vpcUrl;
@@ -132,12 +153,18 @@ public class QueryRegionConfigResponseBody extends TeaModel {
     public static class QueryRegionConfigResponseBodyRegionConfig extends TeaModel {
         /**
          * <p>The domain name of Address Server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****.edas.aliyun.com</p>
          */
         @NameInMap("AddressServerHost")
         public String addressServerHost;
 
         /**
          * <p>The installation path of the script for EDAS Agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://edas-qd.oss-cn-****-internal.aliyuncs.com/****sh">http://edas-qd.oss-cn-****-internal.aliyuncs.com/****sh</a></p>
          */
         @NameInMap("AgentInstallScript")
         public String agentInstallScript;
@@ -150,36 +177,54 @@ public class QueryRegionConfigResponseBody extends TeaModel {
 
         /**
          * <p>The type of the file server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("FileServerType")
         public String fileServerType;
 
         /**
          * <p>The configured ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of the official image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-2zea4hx8f9zxqah2****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The configured name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Beijing)</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The serial number of the region. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("No")
         public Integer no;
 
         /**
-         * <p>The tag of the region. The value is fixed to `ALIYUN_SHARE`.</p>
+         * <p>The tag of the region. The value is fixed to <code>ALIYUN_SHARE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN_SHARE</p>
          */
         @NameInMap("Tag")
         public String tag;

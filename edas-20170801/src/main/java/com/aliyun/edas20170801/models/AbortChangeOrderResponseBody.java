@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AbortChangeOrderResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,24 +21,36 @@ public class AbortChangeOrderResponseBody extends TeaModel {
 
     /**
      * <p>The error code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>57F146F6-3C94-<strong><strong>-</strong></strong>-A66EF4B9*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the trace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b59000b15947<strong><strong>55688656d</strong></strong></p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -96,6 +111,9 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     public static class AbortChangeOrderResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the change process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f038ddf-b27b-<strong><strong>-</strong></strong>-88e44375****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "edas.ap-northeast-1.aliyuncs.com"),
@@ -71,8 +70,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</p>
+     * 
      * @param request AbortAndRollbackChangeOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -104,8 +104,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</p>
+     * 
      * @param request AbortAndRollbackChangeOrderRequest
      * @return AbortAndRollbackChangeOrderResponse
      */
@@ -116,8 +117,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Terminates a change process.
-     *
+     * <b>summary</b> : 
+     * <p>Terminates a change process.</p>
+     * 
      * @param request AbortChangeOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -149,8 +151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Terminates a change process.
-     *
+     * <b>summary</b> : 
+     * <p>Terminates a change process.</p>
+     * 
      * @param request AbortChangeOrderRequest
      * @return AbortChangeOrderResponse
      */
@@ -161,8 +164,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a log directory to an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a log directory to an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</p>
+     * 
      * @param request AddLogPathRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -198,8 +202,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a log directory to an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a log directory to an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</p>
+     * 
      * @param request AddLogPathRequest
      * @return AddLogPathResponse
      */
@@ -210,8 +215,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants a Resource Access Management (RAM) user the permissions on a specified application.
-     *
+     * <b>summary</b> : 
+     * <p>Grants a Resource Access Management (RAM) user the permissions on a specified application.</p>
+     * 
      * @param request AuthorizeApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -247,8 +253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants a Resource Access Management (RAM) user the permissions on a specified application.
-     *
+     * <b>summary</b> : 
+     * <p>Grants a Resource Access Management (RAM) user the permissions on a specified application.</p>
+     * 
      * @param request AuthorizeApplicationRequest
      * @return AuthorizeApplicationResponse
      */
@@ -259,8 +266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants a Resource Access Management (RAM) user the permissions on a resource group.
-     *
+     * <b>summary</b> : 
+     * <p>Grants a Resource Access Management (RAM) user the permissions on a resource group.</p>
+     * 
      * @param request AuthorizeResourceGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -296,8 +304,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants a Resource Access Management (RAM) user the permissions on a resource group.
-     *
+     * <b>summary</b> : 
+     * <p>Grants a Resource Access Management (RAM) user the permissions on a resource group.</p>
+     * 
      * @param request AuthorizeResourceGroupRequest
      * @return AuthorizeResourceGroupResponse
      */
@@ -308,8 +317,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Assigns one or more roles to a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Assigns one or more roles to a RAM user.</p>
+     * 
      * @param request AuthorizeRoleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -345,8 +355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Assigns one or more roles to a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Assigns one or more roles to a RAM user.</p>
+     * 
      * @param request AuthorizeRoleRequest
      * @return AuthorizeRoleResponse
      */
@@ -357,8 +368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a Server Load Balancer (SLB) instance to an application that is deployed in an Elastic Compute Service (ECS) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Binds a Server Load Balancer (SLB) instance to an application that is deployed in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request BindEcsSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -422,8 +434,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a Server Load Balancer (SLB) instance to an application that is deployed in an Elastic Compute Service (ECS) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Binds a Server Load Balancer (SLB) instance to an application that is deployed in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request BindEcsSlbRequest
      * @return BindEcsSlbResponse
      */
@@ -434,8 +447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request BindK8sSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -503,8 +517,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request BindK8sSlbRequest
      * @return BindK8sSlbResponse
      */
@@ -515,8 +530,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>summary</b> : 
+     * <p>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</p>
+     * 
      * @param request BindSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -568,8 +584,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>summary</b> : 
+     * <p>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</p>
+     * 
      * @param request BindSlbRequest
      * @return BindSlbResponse
      */
@@ -580,8 +597,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</p>
+     * 
      * @param request ChangeDeployGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -625,8 +643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</p>
+     * 
      * @param request ChangeDeployGroupRequest
      * @return ChangeDeployGroupResponse
      */
@@ -637,8 +656,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Manually confirms the release of the next batch.
-     *
+     * <b>summary</b> : 
+     * <p>Manually confirms the release of the next batch.</p>
+     * 
      * @param request ContinuePipelineRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,8 +694,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Manually confirms the release of the next batch.
-     *
+     * <b>summary</b> : 
+     * <p>Manually confirms the release of the next batch.</p>
+     * 
      * @param request ContinuePipelineRequest
      * @return ContinuePipelineResponse
      */
@@ -686,8 +707,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Converts a Deployment into an application.
-     *
+     * <b>summary</b> : 
+     * <p>Converts a Deployment into an application.</p>
+     * 
      * @param request ConvertK8sResourceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -731,8 +753,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Converts a Deployment into an application.
-     *
+     * <b>summary</b> : 
+     * <p>Converts a Deployment into an application.</p>
+     * 
      * @param request ConvertK8sResourceRequest
      * @return ConvertK8sResourceResponse
      */
@@ -743,8 +766,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an auto scaling policy for an application.</p>
+     * 
      * @param request CreateApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -804,8 +828,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an auto scaling policy for an application.</p>
+     * 
      * @param request CreateApplicationScalingRuleRequest
      * @return CreateApplicationScalingRuleResponse
      */
@@ -816,8 +841,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a configuration template.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a configuration template.</p>
+     * 
      * @param request CreateConfigTemplateRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -861,8 +887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a configuration template.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a configuration template.</p>
+     * 
      * @param request CreateConfigTemplateRequest
      * @return CreateConfigTemplateResponse
      */
@@ -873,11 +900,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a command that is used to import instances to a hybrid cloud Elastic Compute Service (ECS) cluster.
-     *
-     * @description ## Description
-     * You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.
-     *
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a command that is used to import instances to a hybrid cloud Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request CreateIDCImportCommandRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -909,11 +938,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates a command that is used to import instances to a hybrid cloud Elastic Compute Service (ECS) cluster.
-     *
-     * @description ## Description
-     * You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.
-     *
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates a command that is used to import instances to a hybrid cloud Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request CreateIDCImportCommandRequest
      * @return CreateIDCImportCommandResponse
      */
@@ -924,8 +955,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Kubernetes ConfigMap.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a Kubernetes ConfigMap.</p>
+     * 
      * @param request CreateK8sConfigMapRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -969,8 +1001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Kubernetes ConfigMap.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a Kubernetes ConfigMap.</p>
+     * 
      * @param request CreateK8sConfigMapRequest
      * @return CreateK8sConfigMapResponse
      */
@@ -981,8 +1014,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an Ingress.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an Ingress.</p>
+     * 
      * @param request CreateK8sIngressRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1034,8 +1068,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an Ingress.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an Ingress.</p>
+     * 
      * @param request CreateK8sIngressRuleRequest
      * @return CreateK8sIngressRuleResponse
      */
@@ -1046,8 +1081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Kubernetes Secret.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a Kubernetes Secret.</p>
+     * 
      * @param request CreateK8sSecretRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1107,8 +1143,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Kubernetes Secret.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a Kubernetes Secret.</p>
+     * 
      * @param request CreateK8sSecretRequest
      * @return CreateK8sSecretResponse
      */
@@ -1119,8 +1156,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application service in a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an application service in a Kubernetes cluster.</p>
+     * 
      * @param request CreateK8sServiceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1168,8 +1206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application service in a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an application service in a Kubernetes cluster.</p>
+     * 
      * @param request CreateK8sServiceRequest
      * @return CreateK8sServiceResponse
      */
@@ -1180,8 +1219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an application.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an application.</p>
+     * 
      * @param request DeleteApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1213,8 +1253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an application.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an application.</p>
+     * 
      * @param request DeleteApplicationRequest
      * @return DeleteApplicationResponse
      */
@@ -1225,8 +1266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an auto scaling policy for an application.</p>
+     * 
      * @param request DeleteApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1262,8 +1304,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an auto scaling policy for an application.</p>
+     * 
      * @param request DeleteApplicationScalingRuleRequest
      * @return DeleteApplicationScalingRuleResponse
      */
@@ -1274,8 +1317,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an Elastic Compute Service (ECS) cluster or cancels the import of a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an Elastic Compute Service (ECS) cluster or cancels the import of a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request DeleteClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1311,8 +1355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an Elastic Compute Service (ECS) cluster or cancels the import of a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an Elastic Compute Service (ECS) cluster or cancels the import of a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request DeleteClusterRequest
      * @return DeleteClusterResponse
      */
@@ -1323,8 +1368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes an Elastic Compute Service (ECS) instance from a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Removes an Elastic Compute Service (ECS) instance from a cluster.</p>
+     * 
      * @param request DeleteClusterMemberRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1360,8 +1406,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes an Elastic Compute Service (ECS) instance from a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Removes an Elastic Compute Service (ECS) instance from a cluster.</p>
+     * 
      * @param request DeleteClusterMemberRequest
      * @return DeleteClusterMemberResponse
      */
@@ -1372,8 +1419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a configuration template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a configuration template.</p>
+     * 
      * @param request DeleteConfigTemplateRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1405,8 +1453,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a configuration template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a configuration template.</p>
+     * 
      * @param request DeleteConfigTemplateRequest
      * @return DeleteConfigTemplateResponse
      */
@@ -1417,8 +1466,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an instance group for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an instance group for an application.</p>
+     * 
      * @param request DeleteDeployGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1454,8 +1504,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an instance group for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an instance group for an application.</p>
+     * 
      * @param request DeleteDeployGroupRequest
      * @return DeleteDeployGroupResponse
      */
@@ -1466,8 +1517,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an Elastic Compute Unit (ECU).
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an Elastic Compute Unit (ECU).</p>
+     * 
      * @param request DeleteEcuRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1499,8 +1551,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an Elastic Compute Unit (ECU).
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an Elastic Compute Unit (ECU).</p>
+     * 
      * @param request DeleteEcuRequest
      * @return DeleteEcuResponse
      */
@@ -1511,8 +1564,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an application from a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an application from a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request DeleteK8sApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1548,8 +1602,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an application from a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an application from a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request DeleteK8sApplicationRequest
      * @return DeleteK8sApplicationResponse
      */
@@ -1560,8 +1615,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Kubernetes ConfigMap.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Kubernetes ConfigMap.</p>
+     * 
      * @param request DeleteK8sConfigMapRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1601,8 +1657,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Kubernetes ConfigMap.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Kubernetes ConfigMap.</p>
+     * 
      * @param request DeleteK8sConfigMapRequest
      * @return DeleteK8sConfigMapResponse
      */
@@ -1613,8 +1670,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an ingress.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an ingress.</p>
+     * 
      * @param request DeleteK8sIngressRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1654,8 +1712,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an ingress.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an ingress.</p>
+     * 
      * @param request DeleteK8sIngressRuleRequest
      * @return DeleteK8sIngressRuleResponse
      */
@@ -1666,8 +1725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Kubernetes Secret.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Kubernetes Secret.</p>
+     * 
      * @param request DeleteK8sSecretRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1707,8 +1767,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Kubernetes Secret.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Kubernetes Secret.</p>
+     * 
      * @param request DeleteK8sSecretRequest
      * @return DeleteK8sSecretResponse
      */
@@ -1719,8 +1780,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an application service from a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an application service from a Kubernetes cluster.</p>
+     * 
      * @param request DeleteK8sServiceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1756,8 +1818,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an application service from a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an application service from a Kubernetes cluster.</p>
+     * 
      * @param request DeleteK8sServiceRequest
      * @return DeleteK8sServiceResponse
      */
@@ -1768,8 +1831,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</p>
+     * 
      * @param request DeleteLogPathRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1805,8 +1869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</p>
+     * 
      * @param request DeleteLogPathRequest
      * @return DeleteLogPathResponse
      */
@@ -1817,8 +1882,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Resource Access Management (RAM) role.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Resource Access Management (RAM) role.</p>
+     * 
      * @param request DeleteRoleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1850,8 +1916,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Resource Access Management (RAM) role.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Resource Access Management (RAM) role.</p>
+     * 
      * @param request DeleteRoleRequest
      * @return DeleteRoleResponse
      */
@@ -1862,8 +1929,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a service group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a service group.</p>
+     * 
      * @param request DeleteServiceGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1895,8 +1963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a service group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a service group.</p>
+     * 
      * @param request DeleteServiceGroupRequest
      * @return DeleteServiceGroupResponse
      */
@@ -1907,8 +1976,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a lane.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a lane.</p>
+     * 
      * @param request DeleteSwimmingLaneRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1940,8 +2010,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a lane.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a lane.</p>
+     * 
      * @param request DeleteSwimmingLaneRequest
      * @return DeleteSwimmingLaneResponse
      */
@@ -1952,8 +2023,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified custom namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a specified custom namespace.</p>
+     * 
      * @param request DeleteUserDefineRegionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1989,8 +2061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified custom namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a specified custom namespace.</p>
+     * 
      * @param request DeleteUserDefineRegionRequest
      * @return DeleteUserDefineRegionResponse
      */
@@ -2001,10 +2074,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys an application in an Elastic Compute Service (ECS) cluster.
-     *
-     * @description > To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see [](~~149420~~)DeployK8sApplication.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see <a href="~~149420~~"></a>DeployK8sApplication.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deploys an application in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request DeployApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2092,10 +2169,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys an application in an Elastic Compute Service (ECS) cluster.
-     *
-     * @description > To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see [](~~149420~~)DeployK8sApplication.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see <a href="~~149420~~"></a>DeployK8sApplication.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deploys an application in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request DeployApplicationRequest
      * @return DeployApplicationResponse
      */
@@ -2106,8 +2187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</p>
+     * 
      * @param request DeployK8sApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2407,8 +2489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</p>
+     * 
      * @param request DeployK8sApplicationRequest
      * @return DeployK8sApplicationResponse
      */
@@ -2419,8 +2502,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Kubernetes application instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Kubernetes application instances.</p>
+     * 
      * @param request DescribeAppInstanceListRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2456,8 +2540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Kubernetes application instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Kubernetes application instances.</p>
+     * 
      * @param request DescribeAppInstanceListRequest
      * @return DescribeAppInstanceListResponse
      */
@@ -2468,8 +2553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the auto scaling policies of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the auto scaling policies of an application.</p>
+     * 
      * @param request DescribeApplicationScalingRulesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2501,8 +2587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the auto scaling policies of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the auto scaling policies of an application.</p>
+     * 
      * @param request DescribeApplicationScalingRulesRequest
      * @return DescribeApplicationScalingRulesResponse
      */
@@ -2513,8 +2600,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Disables an auto scaling policy for an application.</p>
+     * 
      * @param request DisableApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2550,8 +2638,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Disables an auto scaling policy for an application.</p>
+     * 
      * @param request DisableApplicationScalingRuleRequest
      * @return DisableApplicationScalingRuleResponse
      */
@@ -2562,8 +2651,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Enables an auto scaling policy for an application.</p>
+     * 
      * @param request EnableApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2599,8 +2689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Enables an auto scaling policy for an application.</p>
+     * 
      * @param request EnableApplicationScalingRuleRequest
      * @return EnableApplicationScalingRuleResponse
      */
@@ -2611,8 +2702,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the Deployment of a Kubernetes application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the Deployment of a Kubernetes application.</p>
+     * 
      * @param request GetAppDeploymentRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2644,8 +2736,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the Deployment of a Kubernetes application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the Deployment of a Kubernetes application.</p>
+     * 
      * @param request GetAppDeploymentRequest
      * @return GetAppDeploymentResponse
      */
@@ -2656,8 +2749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request GetApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2689,8 +2783,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request GetApplicationRequest
      * @return GetApplicationResponse
      */
@@ -2701,8 +2796,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a change process.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details about a change process.</p>
+     * 
      * @param request GetChangeOrderInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2734,8 +2830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a change process.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details about a change process.</p>
+     * 
      * @param request GetChangeOrderInfoRequest
      * @return GetChangeOrderInfoResponse
      */
@@ -2746,8 +2843,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a specific cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a specific cluster.</p>
+     * 
      * @param request GetClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2779,8 +2877,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a specific cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a specific cluster.</p>
+     * 
      * @param request GetClusterRequest
      * @return GetClusterResponse
      */
@@ -2791,8 +2890,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Tomcat configuration of an application or an instance group in which an application is deployed.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Tomcat configuration of an application or an instance group in which an application is deployed.</p>
+     * 
      * @param request GetContainerConfigurationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2828,8 +2928,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Tomcat configuration of an application or an instance group in which an application is deployed.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Tomcat configuration of an application or an instance group in which an application is deployed.</p>
+     * 
      * @param request GetContainerConfigurationRequest
      * @return GetContainerConfigurationResponse
      */
@@ -2840,8 +2941,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration of Java startup parameters for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configuration of Java startup parameters for an application.</p>
+     * 
      * @param request GetJavaStartUpConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2873,8 +2975,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration of Java startup parameters for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configuration of Java startup parameters for an application.</p>
+     * 
      * @param request GetJavaStartUpConfigRequest
      * @return GetJavaStartUpConfigResponse
      */
@@ -2885,8 +2988,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Java Virtual Machine (JVM) configuration of an application or an instance group in which an application is deployed.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Java Virtual Machine (JVM) configuration of an application or an instance group in which an application is deployed.</p>
+     * 
      * @param request GetJvmConfigurationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2922,8 +3026,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Java Virtual Machine (JVM) configuration of an application or an instance group in which an application is deployed.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Java Virtual Machine (JVM) configuration of an application or an instance group in which an application is deployed.</p>
+     * 
      * @param request GetJvmConfigurationRequest
      * @return GetJvmConfigurationResponse
      */
@@ -2934,8 +3039,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the precheck result of a Kubernetes application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the precheck result of a Kubernetes application.</p>
+     * 
      * @param request GetK8sAppPrecheckResultRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2975,8 +3081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the precheck result of a Kubernetes application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the precheck result of a Kubernetes application.</p>
+     * 
      * @param request GetK8sAppPrecheckResultRequest
      * @return GetK8sAppPrecheckResultResponse
      */
@@ -2987,8 +3094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</p>
+     * 
      * @param request GetK8sApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3024,8 +3132,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</p>
+     * 
      * @param request GetK8sApplicationRequest
      * @return GetK8sApplicationResponse
      */
@@ -3036,8 +3145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</p>
+     * 
      * @param request GetK8sClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3085,8 +3195,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</p>
+     * 
      * @param request GetK8sClusterRequest
      * @return GetK8sClusterResponse
      */
@@ -3097,8 +3208,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries application services that are deployed in a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries application services that are deployed in a Kubernetes cluster.</p>
+     * 
      * @param request GetK8sServicesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3130,8 +3242,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries application services that are deployed in a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries application services that are deployed in a Kubernetes cluster.</p>
+     * 
      * @param request GetK8sServicesRequest
      * @return GetK8sServicesResponse
      */
@@ -3142,8 +3255,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Security Token Service (STS) tokens that are required for temporary storage.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Security Token Service (STS) tokens that are required for temporary storage.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPackageStorageCredentialResponse
@@ -3167,8 +3281,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Security Token Service (STS) tokens that are required for temporary storage.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Security Token Service (STS) tokens that are required for temporary storage.</p>
      * @return GetPackageStorageCredentialResponse
      */
     public GetPackageStorageCredentialResponse getPackageStorageCredential() throws Exception {
@@ -3178,8 +3292,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries scaling rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries scaling rules.</p>
+     * 
      * @param request GetScalingRulesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3219,8 +3334,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries scaling rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries scaling rules.</p>
+     * 
      * @param request GetScalingRulesRequest
      * @return GetScalingRulesResponse
      */
@@ -3231,8 +3347,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the security token information of a namespace. You can call this operation to query information, such as the AccessKey ID, AccessKey secret, tenant ID, and the domain name of Address Server, for the specified namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the security token information of a namespace. You can call this operation to query information, such as the AccessKey ID, AccessKey secret, tenant ID, and the domain name of Address Server, for the specified namespace.</p>
+     * 
      * @param request GetSecureTokenRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3264,8 +3381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the security token information of a namespace. You can call this operation to query information, such as the AccessKey ID, AccessKey secret, tenant ID, and the domain name of Address Server, for the specified namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the security token information of a namespace. You can call this operation to query information, such as the AccessKey ID, AccessKey secret, tenant ID, and the domain name of Address Server, for the specified namespace.</p>
+     * 
      * @param request GetSecureTokenRequest
      * @return GetSecureTokenResponse
      */
@@ -3276,8 +3394,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service consumers.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service consumers.</p>
+     * 
      * @param request GetServiceConsumersPageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3361,8 +3480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service consumers.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service consumers.</p>
+     * 
      * @param request GetServiceConsumersPageRequest
      * @return GetServiceConsumersPageResponse
      */
@@ -3373,8 +3493,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service details.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service details.</p>
+     * 
      * @param request GetServiceDetailRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3450,8 +3571,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service details.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service details.</p>
+     * 
      * @param request GetServiceDetailRequest
      * @return GetServiceDetailResponse
      */
@@ -3462,8 +3584,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries services.
-     *
+     * <b>summary</b> : 
+     * <p>Queries services.</p>
+     * 
      * @param request GetServiceListPageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3527,8 +3650,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries services.
-     *
+     * <b>summary</b> : 
+     * <p>Queries services.</p>
+     * 
      * @param request GetServiceListPageRequest
      * @return GetServiceListPageResponse
      */
@@ -3539,8 +3663,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service methods.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service methods.</p>
+     * 
      * @param request GetServiceMethodPageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3636,8 +3761,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service methods.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service methods.</p>
+     * 
      * @param request GetServiceMethodPageRequest
      * @return GetServiceMethodPageResponse
      */
@@ -3648,8 +3774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service providers.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service providers.</p>
+     * 
      * @param request GetServiceProvidersPageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3733,8 +3860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service providers.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service providers.</p>
+     * 
      * @param request GetServiceProvidersPageRequest
      * @return GetServiceProvidersPageResponse
      */
@@ -3745,10 +3873,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Tomcat configurations of an application.
-     *
-     * @description ***
-     *
+     * <b>description</b> :
+     * <p>**</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Tomcat configurations of an application.</p>
+     * 
      * @param request GetWebContainerConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3780,10 +3910,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Tomcat configurations of an application.
-     *
-     * @description ***
-     *
+     * <b>description</b> :
+     * <p>**</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Tomcat configurations of an application.</p>
+     * 
      * @param request GetWebContainerConfigRequest
      * @return GetWebContainerConfigResponse
      */
@@ -3794,8 +3926,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster to Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>summary</b> : 
+     * <p>Imports a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster to Enterprise Distributed Application Service (EDAS).</p>
+     * 
      * @param request ImportK8sClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3839,8 +3972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster to Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>summary</b> : 
+     * <p>Imports a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster to Enterprise Distributed Application Service (EDAS).</p>
+     * 
      * @param request ImportK8sClusterRequest
      * @return ImportK8sClusterResponse
      */
@@ -3851,10 +3985,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application in an Elastic Compute Service (ECS) cluster.
-     *
-     * @description > To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an application in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request InsertApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3897,10 +4035,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableUrlCheck)) {
             query.put("EnableUrlCheck", request.enableUrlCheck);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckURL)) {
-            query.put("HealthCheckURL", request.healthCheckURL);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckUrl)) {
@@ -3974,10 +4108,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application in an Elastic Compute Service (ECS) cluster.
-     *
-     * @description > To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an application in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request InsertApplicationRequest
      * @return InsertApplicationResponse
      */
@@ -3988,8 +4126,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a cluster.</p>
+     * 
      * @param request InsertClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4045,8 +4184,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a cluster.</p>
+     * 
      * @param request InsertClusterRequest
      * @return InsertClusterResponse
      */
@@ -4057,12 +4197,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports Elastic Compute Service (ECS) instances into an ECS cluster.
-     *
-     * @description ##
-     * If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.
-     * > We recommend that you call the InstallAgent operation instead of this operation. For more information, see [InstallAgent](https://help.aliyun.com/document_detail/127023.html).
-     *
+     * <b>description</b> :
+     * <h2></h2>
+     * <p>If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.</p>
+     * <blockquote>
+     * <p>We recommend that you call the InstallAgent operation instead of this operation. For more information, see <a href="https://help.aliyun.com/document_detail/127023.html">InstallAgent</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports Elastic Compute Service (ECS) instances into an ECS cluster.</p>
+     * 
      * @param request InsertClusterMemberRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4102,12 +4246,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports Elastic Compute Service (ECS) instances into an ECS cluster.
-     *
-     * @description ##
-     * If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.
-     * > We recommend that you call the InstallAgent operation instead of this operation. For more information, see [InstallAgent](https://help.aliyun.com/document_detail/127023.html).
-     *
+     * <b>description</b> :
+     * <h2></h2>
+     * <p>If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.</p>
+     * <blockquote>
+     * <p>We recommend that you call the InstallAgent operation instead of this operation. For more information, see <a href="https://help.aliyun.com/document_detail/127023.html">InstallAgent</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports Elastic Compute Service (ECS) instances into an ECS cluster.</p>
+     * 
      * @param request InsertClusterMemberRequest
      * @return InsertClusterMemberResponse
      */
@@ -4118,8 +4266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an instance group for a specified application.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an instance group for a specified application.</p>
+     * 
      * @param request InsertDeployGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4159,8 +4308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an instance group for a specified application.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an instance group for a specified application.</p>
+     * 
      * @param request InsertDeployGroupRequest
      * @return InsertDeployGroupResponse
      */
@@ -4171,8 +4321,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</p>
+     * 
      * @param request InsertK8sApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4540,8 +4691,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</p>
+     * 
      * @param request InsertK8sApplicationRequest
      * @return InsertK8sApplicationResponse
      */
@@ -4552,8 +4704,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or edits a custom namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Creates or edits a custom namespace.</p>
+     * 
      * @param request InsertOrUpdateRegionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4609,8 +4762,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or edits a custom namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Creates or edits a custom namespace.</p>
+     * 
      * @param request InsertOrUpdateRegionRequest
      * @return InsertOrUpdateRegionResponse
      */
@@ -4621,8 +4775,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a role.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a role.</p>
+     * 
      * @param request InsertRoleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4658,8 +4813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a role.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a role.</p>
+     * 
      * @param request InsertRoleRequest
      * @return InsertRoleResponse
      */
@@ -4670,8 +4826,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a service group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a service group.</p>
+     * 
      * @param request InsertServiceGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4703,8 +4860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a service group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a service group.</p>
+     * 
      * @param request InsertServiceGroupRequest
      * @return InsertServiceGroupResponse
      */
@@ -4715,8 +4873,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a lane.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a lane.</p>
+     * 
      * @param request InsertSwimmingLaneRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4772,8 +4931,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a lane.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a lane.</p>
+     * 
      * @param request InsertSwimmingLaneRequest
      * @return InsertSwimmingLaneResponse
      */
@@ -4784,8 +4944,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a lane group.</p>
+     * 
      * @param request InsertSwimmingLaneGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4829,8 +4990,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a lane group.</p>
+     * 
      * @param request InsertSwimmingLaneGroupRequest
      * @return InsertSwimmingLaneGroupResponse
      */
@@ -4841,10 +5003,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Uses the Cloud Assistant provided by Elastic Compute Service (ECS) to install Enterprise Distributed Application Service (EDAS) Agent and imports ECS instances to EDAS.
-     *
-     * @description If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.
-     *
+     * <b>description</b> :
+     * <p>If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Uses the Cloud Assistant provided by Elastic Compute Service (ECS) to install Enterprise Distributed Application Service (EDAS) Agent and imports ECS instances to EDAS.</p>
+     * 
      * @param request InstallAgentRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4884,10 +5048,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Uses the Cloud Assistant provided by Elastic Compute Service (ECS) to install Enterprise Distributed Application Service (EDAS) Agent and imports ECS instances to EDAS.
-     *
-     * @description If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.
-     *
+     * <b>description</b> :
+     * <p>If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Uses the Cloud Assistant provided by Elastic Compute Service (ECS) to install Enterprise Distributed Application Service (EDAS) Agent and imports ECS instances to EDAS.</p>
+     * 
      * @param request InstallAgentRequest
      * @return InstallAgentResponse
      */
@@ -4898,8 +5064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Alibaba Cloud regions supported by Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries Alibaba Cloud regions supported by Enterprise Distributed Application Service (EDAS).</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAliyunRegionResponse
@@ -4923,8 +5090,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Alibaba Cloud regions supported by Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries Alibaba Cloud regions supported by Enterprise Distributed Application Service (EDAS).</p>
      * @return ListAliyunRegionResponse
      */
     public ListAliyunRegionResponse listAliyunRegion() throws Exception {
@@ -4934,8 +5101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of applications.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of applications.</p>
+     * 
      * @param request ListApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4995,8 +5163,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of applications.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of applications.</p>
+     * 
      * @param request ListApplicationRequest
      * @return ListApplicationResponse
      */
@@ -5007,8 +5176,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries elastic compute units (ECUs).
-     *
+     * <b>summary</b> : 
+     * <p>Queries elastic compute units (ECUs).</p>
+     * 
      * @param request ListApplicationEcuRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5044,8 +5214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries elastic compute units (ECUs).
-     *
+     * <b>summary</b> : 
+     * <p>Queries elastic compute units (ECUs).</p>
+     * 
      * @param request ListApplicationEcuRequest
      * @return ListApplicationEcuResponse
      */
@@ -5056,8 +5227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all permissions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all permissions.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAuthorityResponse
@@ -5081,8 +5253,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all permissions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all permissions.</p>
      * @return ListAuthorityResponse
      */
     public ListAuthorityResponse listAuthority() throws Exception {
@@ -5092,8 +5264,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Enterprise Distributed Application Service (EDAS) Container versions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Enterprise Distributed Application Service (EDAS) Container versions.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListBuildPackResponse
@@ -5117,8 +5290,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Enterprise Distributed Application Service (EDAS) Container versions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Enterprise Distributed Application Service (EDAS) Container versions.</p>
      * @return ListBuildPackResponse
      */
     public ListBuildPackResponse listBuildPack() throws Exception {
@@ -5128,8 +5301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries clusters.</p>
+     * 
      * @param request ListClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5165,8 +5339,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries clusters.</p>
+     * 
      * @param request ListClusterRequest
      * @return ListClusterResponse
      */
@@ -5177,8 +5352,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Elastic Compute Service (ECS) instances in a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Elastic Compute Service (ECS) instances in a cluster.</p>
+     * 
      * @param request ListClusterMembersRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5222,8 +5398,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Elastic Compute Service (ECS) instances in a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Elastic Compute Service (ECS) instances in a cluster.</p>
+     * 
      * @param request ListClusterMembersRequest
      * @return ListClusterMembersResponse
      */
@@ -5234,8 +5411,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the components that are related to applications in Elastic Compute Service (ECS) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the components that are related to applications in Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListComponentsResponse
@@ -5259,8 +5437,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the components that are related to applications in Elastic Compute Service (ECS) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the components that are related to applications in Elastic Compute Service (ECS) clusters.</p>
      * @return ListComponentsResponse
      */
     public ListComponentsResponse listComponents() throws Exception {
@@ -5270,8 +5448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries configuration templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries configuration templates.</p>
+     * 
      * @param request ListConfigTemplatesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5315,8 +5494,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries configuration templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries configuration templates.</p>
+     * 
      * @param request ListConfigTemplatesRequest
      * @return ListConfigTemplatesResponse
      */
@@ -5327,8 +5507,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the services that are consumed by an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the services that are consumed by an application.</p>
+     * 
      * @param request ListConsumedServicesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5360,8 +5541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the services that are consumed by an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the services that are consumed by an application.</p>
+     * 
      * @param request ListConsumedServicesRequest
      * @return ListConsumedServicesResponse
      */
@@ -5372,8 +5554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Elastic Compute Service (ECS) instances that can be imported to a specified cluster. This operation is applicable to ECS clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Elastic Compute Service (ECS) instances that can be imported to a specified cluster. This operation is applicable to ECS clusters.</p>
+     * 
      * @param request ListConvertableEcuRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5405,8 +5588,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Elastic Compute Service (ECS) instances that can be imported to a specified cluster. This operation is applicable to ECS clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Elastic Compute Service (ECS) instances that can be imported to a specified cluster. This operation is applicable to ECS clusters.</p>
+     * 
      * @param request ListConvertableEcuRequest
      * @return ListConvertableEcuResponse
      */
@@ -5417,8 +5601,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the instance groups to which an application is deployed.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the instance groups to which an application is deployed.</p>
+     * 
      * @param request ListDeployGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5450,8 +5635,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the instance groups to which an application is deployed.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the instance groups to which an application is deployed.</p>
+     * 
      * @param request ListDeployGroupRequest
      * @return ListDeployGroupResponse
      */
@@ -5462,8 +5648,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Elastic Compute Service (ECS) instances that have not been imported to clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all Elastic Compute Service (ECS) instances that have not been imported to clusters.</p>
+     * 
      * @param request ListEcsNotInClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5499,8 +5686,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Elastic Compute Service (ECS) instances that have not been imported to clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all Elastic Compute Service (ECS) instances that have not been imported to clusters.</p>
+     * 
      * @param request ListEcsNotInClusterRequest
      * @return ListEcsNotInClusterResponse
      */
@@ -5511,13 +5699,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the available elastic compute units (ECUs) in a specified namespace.
-     *
-     * @description ## Terms
-     * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-     * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-     * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-     *
+     * <b>description</b> :
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</li>
+     * <li><strong>Elastic compute unit (ECU)</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available elastic compute units (ECUs) in a specified namespace.</p>
+     * 
      * @param request ListEcuByRegionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5553,13 +5745,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the available elastic compute units (ECUs) in a specified namespace.
-     *
-     * @description ## Terms
-     * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-     * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-     * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-     *
+     * <b>description</b> :
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</li>
+     * <li><strong>Elastic compute unit (ECU)</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available elastic compute units (ECUs) in a specified namespace.</p>
+     * 
      * @param request ListEcuByRegionRequest
      * @return ListEcuByRegionResponse
      */
@@ -5570,8 +5766,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries historical deployment packages of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries historical deployment packages of an application.</p>
+     * 
      * @param request ListHistoryDeployVersionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5603,8 +5800,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries historical deployment packages of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries historical deployment packages of an application.</p>
+     * 
      * @param request ListHistoryDeployVersionRequest
      * @return ListHistoryDeployVersionResponse
      */
@@ -5615,8 +5813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Kubernetes ConfigMaps.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Kubernetes ConfigMaps.</p>
+     * 
      * @param request ListK8sConfigMapsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5672,8 +5871,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Kubernetes ConfigMaps.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Kubernetes ConfigMaps.</p>
+     * 
      * @param request ListK8sConfigMapsRequest
      * @return ListK8sConfigMapsResponse
      */
@@ -5684,8 +5884,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries ingresses.
-     *
+     * <b>summary</b> : 
+     * <p>Queries ingresses.</p>
+     * 
      * @param request ListK8sIngressRulesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5729,8 +5930,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries ingresses.
-     *
+     * <b>summary</b> : 
+     * <p>Queries ingresses.</p>
+     * 
      * @param request ListK8sIngressRulesRequest
      * @return ListK8sIngressRulesResponse
      */
@@ -5741,8 +5943,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries namespaces for a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries namespaces for a Kubernetes cluster.</p>
+     * 
      * @param request ListK8sNamespacesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5774,8 +5977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries namespaces for a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries namespaces for a Kubernetes cluster.</p>
+     * 
      * @param request ListK8sNamespacesRequest
      * @return ListK8sNamespacesResponse
      */
@@ -5786,8 +5990,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Kubernetes Secrets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Kubernetes Secrets.</p>
+     * 
      * @param request ListK8sSecretsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5843,8 +6048,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Kubernetes Secrets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Kubernetes Secrets.</p>
+     * 
      * @param request ListK8sSecretsRequest
      * @return ListK8sSecretsResponse
      */
@@ -5855,8 +6061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service methods.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service methods.</p>
+     * 
      * @param request ListMethodsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5892,8 +6099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries service methods.
-     *
+     * <b>summary</b> : 
+     * <p>Queries service methods.</p>
+     * 
      * @param request ListMethodsRequest
      * @return ListMethodsResponse
      */
@@ -5904,8 +6112,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the services that are published by an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the services that are published by an application.</p>
+     * 
      * @param request ListPublishedServicesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5937,8 +6146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the services that are published by an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the services that are published by an application.</p>
+     * 
      * @param request ListPublishedServicesRequest
      * @return ListPublishedServicesResponse
      */
@@ -5949,8 +6159,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the change processes of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the change processes of an application.</p>
+     * 
      * @param request ListRecentChangeOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5982,8 +6193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the change processes of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the change processes of an application.</p>
+     * 
      * @param request ListRecentChangeOrderRequest
      * @return ListRecentChangeOrderResponse
      */
@@ -5994,8 +6206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries resource groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries resource groups.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListResourceGroupResponse
@@ -6019,8 +6232,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries resource groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries resource groups.</p>
      * @return ListResourceGroupResponse
      */
     public ListResourceGroupResponse listResourceGroup() throws Exception {
@@ -6030,8 +6243,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries roles.
-     *
+     * <b>summary</b> : 
+     * <p>Queries roles.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRoleResponse
@@ -6055,8 +6269,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries roles.
-     *
+     * <b>summary</b> : 
+     * <p>Queries roles.</p>
      * @return ListRoleResponse
      */
     public ListRoleResponse listRole() throws Exception {
@@ -6066,13 +6280,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries elastic compute units (ECUs) available for scaling out an application in a specified cluster or the cluster where the application is deployed. This operation is applicable to Elastic Compute Service (ECS) clusters.
-     *
-     * @description ## Terms
-     * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-     * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-     * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-     *
+     * <b>description</b> :
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</li>
+     * <li><strong>Elastic compute unit (ECU)</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries elastic compute units (ECUs) available for scaling out an application in a specified cluster or the cluster where the application is deployed. This operation is applicable to Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param request ListScaleOutEcuRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6128,13 +6346,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries elastic compute units (ECUs) available for scaling out an application in a specified cluster or the cluster where the application is deployed. This operation is applicable to Elastic Compute Service (ECS) clusters.
-     *
-     * @description ## Terms
-     * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-     * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-     * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-     *
+     * <b>description</b> :
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</li>
+     * <li><strong>Elastic compute unit (ECU)</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries elastic compute units (ECUs) available for scaling out an application in a specified cluster or the cluster where the application is deployed. This operation is applicable to Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param request ListScaleOutEcuRequest
      * @return ListScaleOutEcuResponse
      */
@@ -6145,8 +6367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the service groups of a High-Speed Service Framework (HSF) application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the service groups of a High-Speed Service Framework (HSF) application.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListServiceGroupsResponse
@@ -6170,8 +6393,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the service groups of a High-Speed Service Framework (HSF) application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the service groups of a High-Speed Service Framework (HSF) application.</p>
      * @return ListServiceGroupsResponse
      */
     public ListServiceGroupsResponse listServiceGroups() throws Exception {
@@ -6181,8 +6404,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Server Load Balancer (SLB) instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Server Load Balancer (SLB) instances.</p>
+     * 
      * @param request ListSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6222,8 +6446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Server Load Balancer (SLB) instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Server Load Balancer (SLB) instances.</p>
+     * 
      * @param request ListSlbRequest
      * @return ListSlbResponse
      */
@@ -6234,8 +6459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Resource Access Management (RAM) users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Resource Access Management (RAM) users.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSubAccountResponse
@@ -6259,8 +6485,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Resource Access Management (RAM) users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Resource Access Management (RAM) users.</p>
      * @return ListSubAccountResponse
      */
     public ListSubAccountResponse listSubAccount() throws Exception {
@@ -6270,8 +6496,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries lanes in a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries lanes in a lane group.</p>
+     * 
      * @param request ListSwimmingLaneRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6303,8 +6530,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries lanes in a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries lanes in a lane group.</p>
+     * 
      * @param request ListSwimmingLaneRequest
      * @return ListSwimmingLaneResponse
      */
@@ -6315,8 +6543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries lane groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries lane groups.</p>
+     * 
      * @param request ListSwimmingLaneGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6352,8 +6581,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries lane groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries lane groups.</p>
+     * 
      * @param request ListSwimmingLaneGroupRequest
      * @return ListSwimmingLaneGroupResponse
      */
@@ -6364,8 +6594,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are added to resources.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to resources.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6409,8 +6640,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are added to resources.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to resources.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -6421,8 +6653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries custom namespaces.
-     *
+     * <b>summary</b> : 
+     * <p>Queries custom namespaces.</p>
+     * 
      * @param request ListUserDefineRegionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6454,8 +6687,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries custom namespaces.
-     *
+     * <b>summary</b> : 
+     * <p>Queries custom namespaces.</p>
+     * 
      * @param request ListUserDefineRegionRequest
      * @return ListUserDefineRegionResponse
      */
@@ -6466,8 +6700,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The HTTP status code returned.
-     *
+     * <b>summary</b> : 
+     * <p>The HTTP status code returned.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListVpcResponse
@@ -6491,8 +6726,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The HTTP status code returned.
-     *
+     * <b>summary</b> : 
+     * <p>The HTTP status code returned.</p>
      * @return ListVpcResponse
      */
     public ListVpcResponse listVpc() throws Exception {
@@ -6502,16 +6737,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.
-     *
-     * @description ## Limits
-     * We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see [TransformClusterMember](https://help.aliyun.com/document_detail/71514.html).
-     * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-     * ## Terms
-     * *   **Namespace**: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.
-     * *   **ECU**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-     * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-     *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+     * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</p>
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</li>
+     * <li><strong>ECU</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</p>
+     * 
      * @param request MigrateEcuRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6547,16 +6786,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.
-     *
-     * @description ## Limits
-     * We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see [TransformClusterMember](https://help.aliyun.com/document_detail/71514.html).
-     * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-     * ## Terms
-     * *   **Namespace**: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.
-     * *   **ECU**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-     * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-     *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+     * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</p>
+     * <h2>Terms</h2>
+     * <ul>
+     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</li>
+     * <li><strong>ECU</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
+     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</p>
+     * 
      * @param request MigrateEcuRequest
      * @return MigrateEcuResponse
      */
@@ -6567,8 +6810,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the scaling rule for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the scaling rule for an application.</p>
+     * 
      * @param request ModifyScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6716,8 +6960,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the scaling rule for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the scaling rule for an application.</p>
+     * 
      * @param request ModifyScalingRuleRequest
      * @return ModifyScalingRuleResponse
      */
@@ -6728,8 +6973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the status of an application.</p>
+     * 
      * @param request QueryApplicationStatusRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6761,8 +7007,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the status of an application.</p>
+     * 
      * @param request QueryApplicationStatusRequest
      * @return QueryApplicationStatusResponse
      */
@@ -6773,8 +7020,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries details about an elastic compute container (ECC). This operation is applicable to Container Service for Kubernetes (ACK) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries details about an elastic compute container (ECC). This operation is applicable to Container Service for Kubernetes (ACK) clusters.</p>
+     * 
      * @param request QueryEccInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6806,8 +7054,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries details about an elastic compute container (ECC). This operation is applicable to Container Service for Kubernetes (ACK) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries details about an elastic compute container (ECC). This operation is applicable to Container Service for Kubernetes (ACK) clusters.</p>
+     * 
      * @param request QueryEccInfoRequest
      * @return QueryEccInfoResponse
      */
@@ -6818,8 +7067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the elastic compute units (ECUs) that can be migrated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the elastic compute units (ECUs) that can be migrated.</p>
+     * 
      * @param request QueryMigrateEcuListRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6851,8 +7101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the elastic compute units (ECUs) that can be migrated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the elastic compute units (ECUs) that can be migrated.</p>
+     * 
      * @param request QueryMigrateEcuListRequest
      * @return QueryMigrateEcuListResponse
      */
@@ -6863,8 +7114,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the namespaces to which an instance can be migrated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the namespaces to which an instance can be migrated.</p>
+     * 
      * @param request QueryMigrateRegionListRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6896,8 +7148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the namespaces to which an instance can be migrated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the namespaces to which an instance can be migrated.</p>
+     * 
      * @param request QueryMigrateRegionListRequest
      * @return QueryMigrateRegionListResponse
      */
@@ -6908,8 +7161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of different regions that are supported by Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configurations of different regions that are supported by Enterprise Distributed Application Service (EDAS).</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryRegionConfigResponse
@@ -6933,8 +7187,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of different regions that are supported by Enterprise Distributed Application Service (EDAS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configurations of different regions that are supported by Enterprise Distributed Application Service (EDAS).</p>
      * @return QueryRegionConfigResponse
      */
     public QueryRegionConfigResponse queryRegionConfig() throws Exception {
@@ -6944,8 +7198,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration details of Log Service for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configuration details of Log Service for an application.</p>
+     * 
      * @param request QuerySlsLogStoreListRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6989,8 +7244,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration details of Log Service for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configuration details of Log Service for an application.</p>
+     * 
      * @param request QuerySlsLogStoreListRequest
      * @return QuerySlsLogStoreListResponse
      */
@@ -7001,8 +7257,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets an application.
-     *
+     * <b>summary</b> : 
+     * <p>Resets an application.</p>
+     * 
      * @param request ResetApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7038,8 +7295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets an application.
-     *
+     * <b>summary</b> : 
+     * <p>Resets an application.</p>
+     * 
      * @param request ResetApplicationRequest
      * @return ResetApplicationResponse
      */
@@ -7050,8 +7308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param request RestartApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7087,8 +7346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param request RestartApplicationRequest
      * @return RestartApplicationResponse
      */
@@ -7099,8 +7359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</p>
+     * 
      * @param request RestartK8sApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7136,8 +7397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</p>
+     * 
      * @param request RestartK8sApplicationRequest
      * @return RestartK8sApplicationResponse
      */
@@ -7148,8 +7410,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Retries a failed process.
-     *
+     * <b>summary</b> : 
+     * <p>Retries a failed process.</p>
+     * 
      * @param request RetryChangeOrderTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7185,8 +7448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Retries a failed process.
-     *
+     * <b>summary</b> : 
+     * <p>Retries a failed process.</p>
+     * 
      * @param request RetryChangeOrderTaskRequest
      * @return RetryChangeOrderTaskResponse
      */
@@ -7197,8 +7461,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rolls back an application.
-     *
+     * <b>summary</b> : 
+     * <p>Rolls back an application.</p>
+     * 
      * @param request RollbackApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7246,8 +7511,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rolls back an application.
-     *
+     * <b>summary</b> : 
+     * <p>Rolls back an application.</p>
+     * 
      * @param request RollbackApplicationRequest
      * @return RollbackApplicationResponse
      */
@@ -7258,8 +7524,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Terminates an application change process and rolls back the application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Terminates an application change process and rolls back the application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param request RollbackChangeOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7291,8 +7558,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Terminates an application change process and rolls back the application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Terminates an application change process and rolls back the application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param request RollbackChangeOrderRequest
      * @return RollbackChangeOrderResponse
      */
@@ -7303,8 +7571,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scales in an application.
-     *
+     * <b>summary</b> : 
+     * <p>Scales in an application.</p>
+     * 
      * @param request ScaleInApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7344,8 +7613,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scales in an application.
-     *
+     * <b>summary</b> : 
+     * <p>Scales in an application.</p>
+     * 
      * @param request ScaleInApplicationRequest
      * @return ScaleInApplicationResponse
      */
@@ -7356,8 +7626,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request ScaleK8sApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7397,8 +7668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request ScaleK8sApplicationRequest
      * @return ScaleK8sApplicationResponse
      */
@@ -7409,8 +7681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scales out an application.
-     *
+     * <b>summary</b> : 
+     * <p>Scales out an application.</p>
+     * 
      * @param request ScaleOutApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7450,8 +7723,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scales out an application.
-     *
+     * <b>summary</b> : 
+     * <p>Scales out an application.</p>
+     * 
      * @param request ScaleOutApplicationRequest
      * @return ScaleOutApplicationResponse
      */
@@ -7462,11 +7736,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Purchases Elastic Compute Service (ECS) instances in the Enterprise Distributed Application Service (EDAS) console and adds the purchased ECS instances to the specified instance group of an application.
-     *
-     * @description ## Limits
-     * Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.
-     *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Purchases Elastic Compute Service (ECS) instances in the Enterprise Distributed Application Service (EDAS) console and adds the purchased ECS instances to the specified instance group of an application.</p>
+     * 
      * @param request ScaleoutApplicationWithNewInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7546,11 +7822,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Purchases Elastic Compute Service (ECS) instances in the Enterprise Distributed Application Service (EDAS) console and adds the purchased ECS instances to the specified instance group of an application.
-     *
-     * @description ## Limits
-     * Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.
-     *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Purchases Elastic Compute Service (ECS) instances in the Enterprise Distributed Application Service (EDAS) console and adds the purchased ECS instances to the specified instance group of an application.</p>
+     * 
      * @param request ScaleoutApplicationWithNewInstancesRequest
      * @return ScaleoutApplicationWithNewInstancesResponse
      */
@@ -7561,8 +7839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts an application.
-     *
+     * <b>summary</b> : 
+     * <p>Starts an application.</p>
+     * 
      * @param request StartApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7598,8 +7877,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts an application.
-     *
+     * <b>summary</b> : 
+     * <p>Starts an application.</p>
+     * 
      * @param request StartApplicationRequest
      * @return StartApplicationResponse
      */
@@ -7610,8 +7890,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts precheck for Kubernetes application changes.
-     *
+     * <b>summary</b> : 
+     * <p>Starts precheck for Kubernetes application changes.</p>
+     * 
      * @param request StartK8sAppPrecheckRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7735,8 +8016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts precheck for Kubernetes application changes.
-     *
+     * <b>summary</b> : 
+     * <p>Starts precheck for Kubernetes application changes.</p>
+     * 
      * @param request StartK8sAppPrecheckRequest
      * @return StartK8sAppPrecheckResponse
      */
@@ -7747,8 +8029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</p>
+     * 
      * @param request StartK8sApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7788,8 +8071,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</p>
+     * 
      * @param request StartK8sApplicationRequest
      * @return StartK8sApplicationResponse
      */
@@ -7800,8 +8084,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an application.
-     *
+     * <b>summary</b> : 
+     * <p>Stops an application.</p>
+     * 
      * @param request StopApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7837,8 +8122,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an application.
-     *
+     * <b>summary</b> : 
+     * <p>Stops an application.</p>
+     * 
      * @param request StopApplicationRequest
      * @return StopApplicationResponse
      */
@@ -7849,8 +8135,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Stops an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes cluster.</p>
+     * 
      * @param request StopK8sApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7886,8 +8173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Stops an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes cluster.</p>
+     * 
      * @param request StopK8sApplicationRequest
      * @return StopK8sApplicationResponse
      */
@@ -7898,10 +8186,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of the advanced application monitoring feature or configures this feature for an application that is deployed in an Elastic Compute Service (ECS) or Kubernetes cluster.
-     *
-     * @description To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.
-     *
+     * <b>description</b> :
+     * <p>To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of the advanced application monitoring feature or configures this feature for an application that is deployed in an Elastic Compute Service (ECS) or Kubernetes cluster.</p>
+     * 
      * @param request SwitchAdvancedMonitoringRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7937,10 +8227,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of the advanced application monitoring feature or configures this feature for an application that is deployed in an Elastic Compute Service (ECS) or Kubernetes cluster.
-     *
-     * @description To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.
-     *
+     * <b>description</b> :
+     * <p>To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of the advanced application monitoring feature or configures this feature for an application that is deployed in an Elastic Compute Service (ECS) or Kubernetes cluster.</p>
+     * 
      * @param request SwitchAdvancedMonitoringRequest
      * @return SwitchAdvancedMonitoringResponse
      */
@@ -7951,10 +8243,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Synchronizes the basic Alibaba Cloud resources that belong to your account to Enterprise Distributed Application Service (EDAS). This operation is applicable to Elastic Compute Service (ECS) clusters.
-     *
-     * @description If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.
-     *
+     * <b>description</b> :
+     * <p>If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronizes the basic Alibaba Cloud resources that belong to your account to Enterprise Distributed Application Service (EDAS). This operation is applicable to Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param request SynchronizeResourceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7990,10 +8284,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Synchronizes the basic Alibaba Cloud resources that belong to your account to Enterprise Distributed Application Service (EDAS). This operation is applicable to Elastic Compute Service (ECS) clusters.
-     *
-     * @description If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.
-     *
+     * <b>description</b> :
+     * <p>If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronizes the basic Alibaba Cloud resources that belong to your account to Enterprise Distributed Application Service (EDAS). This operation is applicable to Elastic Compute Service (ECS) clusters.</p>
+     * 
      * @param request SynchronizeResourceRequest
      * @return SynchronizeResourceResponse
      */
@@ -8004,8 +8300,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates tags and adds the tags to resources at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Creates tags and adds the tags to resources at a time.</p>
+     * 
      * @param request TagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8049,8 +8346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates tags and adds the tags to resources at a time.
-     *
+     * <b>summary</b> : 
+     * <p>Creates tags and adds the tags to resources at a time.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -8061,11 +8359,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.
-     *
-     * @description ## Limits
-     * When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-     *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</p>
+     * 
      * @param request TransformClusterMemberRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8105,11 +8405,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.
-     *
-     * @description ## Limits
-     * When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-     *
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</p>
+     * 
      * @param request TransformClusterMemberRequest
      * @return TransformClusterMemberResponse
      */
@@ -8120,8 +8422,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a Server Load Balancer (SLB) instance from an application that is deployed in a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Unbinds a Server Load Balancer (SLB) instance from an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request UnbindK8sSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8165,8 +8468,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a Server Load Balancer (SLB) instance from an application that is deployed in a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Unbinds a Server Load Balancer (SLB) instance from an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request UnbindK8sSlbRequest
      * @return UnbindK8sSlbResponse
      */
@@ -8177,8 +8481,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a Server Load Balancer (SLB) instance from an application.
-     *
+     * <b>summary</b> : 
+     * <p>Unbinds a Server Load Balancer (SLB) instance from an application.</p>
+     * 
      * @param request UnbindSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8222,8 +8527,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds a Server Load Balancer (SLB) instance from an application.
-     *
+     * <b>summary</b> : 
+     * <p>Unbinds a Server Load Balancer (SLB) instance from an application.</p>
+     * 
      * @param request UnbindSlbRequest
      * @return UnbindSlbResponse
      */
@@ -8234,8 +8540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes one or more tags from one or more resources.
-     *
+     * <b>summary</b> : 
+     * <p>Removes one or more tags from one or more resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8283,8 +8590,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes one or more tags from one or more resources.
-     *
+     * <b>summary</b> : 
+     * <p>Removes one or more tags from one or more resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -8295,8 +8603,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about an account.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about an account.</p>
+     * 
      * @param request UpdateAccountInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8336,8 +8645,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about an account.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about an account.</p>
+     * 
      * @param request UpdateAccountInfoRequest
      * @return UpdateAccountInfoResponse
      */
@@ -8348,8 +8658,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name, description, and owner of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name, description, and owner of an application.</p>
+     * 
      * @param request UpdateApplicationBaseInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8393,8 +8704,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name, description, and owner of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name, description, and owner of an application.</p>
+     * 
      * @param request UpdateApplicationBaseInfoRequest
      * @return UpdateApplicationBaseInfoResponse
      */
@@ -8405,8 +8717,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies an auto scaling policy for an application.</p>
+     * 
      * @param request UpdateApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8466,8 +8779,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies an auto scaling policy for an application.</p>
+     * 
      * @param request UpdateApplicationScalingRuleRequest
      * @return UpdateApplicationScalingRuleResponse
      */
@@ -8478,8 +8792,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a configuration template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a configuration template.</p>
+     * 
      * @param request UpdateConfigTemplateRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8527,8 +8842,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a configuration template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a configuration template.</p>
+     * 
      * @param request UpdateConfigTemplateRequest
      * @return UpdateConfigTemplateResponse
      */
@@ -8539,8 +8855,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the Enterprise Distributed Application Service (EDAS) Container version of a High-Speed Service Framework (HSF) application. EDAS Container includes Ali-Tomcat and Pandora.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the Enterprise Distributed Application Service (EDAS) Container version of a High-Speed Service Framework (HSF) application. EDAS Container includes Ali-Tomcat and Pandora.</p>
+     * 
      * @param request UpdateContainerRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8576,8 +8893,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the Enterprise Distributed Application Service (EDAS) Container version of a High-Speed Service Framework (HSF) application. EDAS Container includes Ali-Tomcat and Pandora.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the Enterprise Distributed Application Service (EDAS) Container version of a High-Speed Service Framework (HSF) application. EDAS Container includes Ali-Tomcat and Pandora.</p>
+     * 
      * @param request UpdateContainerRequest
      * @return UpdateContainerResponse
      */
@@ -8588,8 +8906,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the Tomcat container for an application or application instance group in an Elastic Compute Service (ECS) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Configures the Tomcat container for an application or application instance group in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request UpdateContainerConfigurationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8645,8 +8964,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the Tomcat container for an application or application instance group in an Elastic Compute Service (ECS) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Configures the Tomcat container for an application or application instance group in an Elastic Compute Service (ECS) cluster.</p>
+     * 
      * @param request UpdateContainerConfigurationRequest
      * @return UpdateContainerConfigurationResponse
      */
@@ -8657,8 +8977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the health check URL for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the health check URL for an application.</p>
+     * 
      * @param request UpdateHealthCheckUrlRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8694,8 +9015,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the health check URL for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the health check URL for an application.</p>
+     * 
      * @param request UpdateHealthCheckUrlRequest
      * @return UpdateHealthCheckUrlResponse
      */
@@ -8706,8 +9028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Mounts a script to an application or application instance group.
-     *
+     * <b>summary</b> : 
+     * <p>Mounts a script to an application or application instance group.</p>
+     * 
      * @param request UpdateHookConfigurationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8747,8 +9070,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Mounts a script to an application or application instance group.
-     *
+     * <b>summary</b> : 
+     * <p>Mounts a script to an application or application instance group.</p>
+     * 
      * @param request UpdateHookConfigurationRequest
      * @return UpdateHookConfigurationResponse
      */
@@ -8759,8 +9083,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the Java virtual machine (JVM) parameters for an application or an instance group where the application is deployed.
-     *
+     * <b>summary</b> : 
+     * <p>Configures the Java virtual machine (JVM) parameters for an application or an instance group where the application is deployed.</p>
+     * 
      * @param request UpdateJvmConfigurationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8812,8 +9137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the Java virtual machine (JVM) parameters for an application or an instance group where the application is deployed.
-     *
+     * <b>summary</b> : 
+     * <p>Configures the Java virtual machine (JVM) parameters for an application or an instance group where the application is deployed.</p>
+     * 
      * @param request UpdateJvmConfigurationRequest
      * @return UpdateJvmConfigurationResponse
      */
@@ -8824,8 +9150,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies basic information about an application that is deployed in a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies basic information about an application that is deployed in a Kubernetes cluster.</p>
+     * 
      * @param request UpdateK8sApplicationBaseInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8873,8 +9200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies basic information about an application that is deployed in a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies basic information about an application that is deployed in a Kubernetes cluster.</p>
+     * 
      * @param request UpdateK8sApplicationBaseInfoRequest
      * @return UpdateK8sApplicationBaseInfoResponse
      */
@@ -8885,8 +9213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configuration of an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configuration of an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes cluster.</p>
+     * 
      * @param request UpdateK8sApplicationConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8958,8 +9287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configuration of an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configuration of an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes cluster.</p>
+     * 
      * @param request UpdateK8sApplicationConfigRequest
      * @return UpdateK8sApplicationConfigResponse
      */
@@ -8970,8 +9300,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a Kubernetes ConfigMap.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a Kubernetes ConfigMap.</p>
+     * 
      * @param request UpdateK8sConfigMapRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9015,8 +9346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a Kubernetes ConfigMap.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a Kubernetes ConfigMap.</p>
+     * 
      * @param request UpdateK8sConfigMapRequest
      * @return UpdateK8sConfigMapResponse
      */
@@ -9027,8 +9359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an ingress.
-     *
+     * <b>summary</b> : 
+     * <p>Updates an ingress.</p>
+     * 
      * @param request UpdateK8sIngressRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9080,8 +9413,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an ingress.
-     *
+     * <b>summary</b> : 
+     * <p>Updates an ingress.</p>
+     * 
      * @param request UpdateK8sIngressRuleRequest
      * @return UpdateK8sIngressRuleResponse
      */
@@ -9092,10 +9426,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a specified resource in a Kubernetes cluster.
-     *
-     * @description > You can update only Deployments.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can update only Deployments.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a specified resource in a Kubernetes cluster.</p>
+     * 
      * @param request UpdateK8sResourceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9135,10 +9473,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a specified resource in a Kubernetes cluster.
-     *
-     * @description > You can update only Deployments.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can update only Deployments.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a specified resource in a Kubernetes cluster.</p>
+     * 
      * @param request UpdateK8sResourceRequest
      * @return UpdateK8sResourceResponse
      */
@@ -9149,8 +9491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a Kubernetes Secret.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a Kubernetes Secret.</p>
+     * 
      * @param request UpdateK8sSecretRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9210,8 +9553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a Kubernetes Secret.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a Kubernetes Secret.</p>
+     * 
      * @param request UpdateK8sSecretRequest
      * @return UpdateK8sSecretResponse
      */
@@ -9222,8 +9566,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an application service in a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates an application service in a Kubernetes cluster.</p>
+     * 
      * @param request UpdateK8sServiceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9271,8 +9616,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an application service in a Kubernetes cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates an application service in a Kubernetes cluster.</p>
+     * 
      * @param request UpdateK8sServiceRequest
      * @return UpdateK8sServiceResponse
      */
@@ -9283,8 +9629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request UpdateK8sSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9356,8 +9703,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</p>
+     * 
      * @param request UpdateK8sSlbRequest
      * @return UpdateK8sSlbResponse
      */
@@ -9368,8 +9716,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a role.
-     *
+     * <b>summary</b> : 
+     * <p>更新本地设置</p>
+     * 
+     * @param request UpdateLocalitySettingRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLocalitySettingResponse
+     */
+    public UpdateLocalitySettingResponse updateLocalitySettingWithOptions(UpdateLocalitySettingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
+            query.put("Threshold", request.threshold);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLocalitySetting"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/sp/applications/locality/setting"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLocalitySettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新本地设置</p>
+     * 
+     * @param request UpdateLocalitySettingRequest
+     * @return UpdateLocalitySettingResponse
+     */
+    public UpdateLocalitySettingResponse updateLocalitySetting(UpdateLocalitySettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateLocalitySettingWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a role.</p>
+     * 
      * @param request UpdateRoleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9405,8 +9817,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a role.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a role.</p>
+     * 
      * @param request UpdateRoleRequest
      * @return UpdateRoleResponse
      */
@@ -9417,8 +9830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures a Logstore for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Configures a Logstore for an application.</p>
+     * 
      * @param request UpdateSlsLogStoreRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9454,8 +9868,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures a Logstore for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Configures a Logstore for an application.</p>
+     * 
      * @param request UpdateSlsLogStoreRequest
      * @return UpdateSlsLogStoreResponse
      */
@@ -9466,6 +9881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新泳道</p>
+     * 
      * @param request UpdateSwimmingLaneRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9513,6 +9931,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新泳道</p>
+     * 
      * @param request UpdateSwimmingLaneRequest
      * @return UpdateSwimmingLaneResponse
      */
@@ -9523,8 +9944,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a lane group.</p>
+     * 
      * @param request UpdateSwimmingLaneGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -9568,8 +9990,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a lane group.</p>
+     * 
      * @param request UpdateSwimmingLaneGroupRequest
      * @return UpdateSwimmingLaneGroupResponse
      */

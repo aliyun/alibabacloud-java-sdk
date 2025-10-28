@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListAliyunRegionResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,6 +30,9 @@ public class ListAliyunRegionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-7ca7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ListAliyunRegionResponseBody extends TeaModel {
     public static class ListAliyunRegionResponseBodyRegionEntityListRegionEntity extends TeaModel {
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China East 1 (Hangzhou)</p>
          */
         @NameInMap("Name")
         public String name;

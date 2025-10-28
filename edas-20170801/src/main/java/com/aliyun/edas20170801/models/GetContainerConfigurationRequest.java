@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class GetContainerConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3616cdca-4f92-**************</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the instance group.</p>
-     * <br>
-     * <p>*   If this parameter is specified, this operation queries the Tomcat configuration of the instance group.</p>
-     * <p>*   If this parameter is not specified, this operation queries the Tomcat configuration of the application.</p>
+     * <ul>
+     * <li>If this parameter is specified, this operation queries the Tomcat configuration of the instance group.</li>
+     * <li>If this parameter is not specified, this operation queries the Tomcat configuration of the application.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8123db90-880f-**************</p>
      */
     @NameInMap("GroupId")
     public String groupId;

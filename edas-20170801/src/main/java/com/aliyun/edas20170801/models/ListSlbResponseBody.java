@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSlbResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-7ca7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,93 +77,138 @@ public class ListSlbResponseBody extends TeaModel {
     public static class ListSlbResponseBodySlbListSlbEntity extends TeaModel {
         /**
          * <p>The IP address of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.176.XX.XX</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The type of the IP addresses. Valid values:</p>
-         * <br>
-         * <p>*   internet: Users can connect to the SLB instance over the Internet.</p>
-         * <p>*   intranet: Users can connect to the SLB instance over the internal network.</p>
+         * <ul>
+         * <li>internet: Users can connect to the SLB instance over the Internet.</li>
+         * <li>intranet: Users can connect to the SLB instance over the internal network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         @NameInMap("AddressType")
         public String addressType;
 
         /**
          * <p>Indicates whether the SLB instance has expired. Valid values:</p>
-         * <br>
-         * <p>*   true: The SLB instance has expired.</p>
-         * <p>*   false: The SLB instance has not expired.</p>
+         * <ul>
+         * <li>true: The SLB instance has expired.</li>
+         * <li>false: The SLB instance has not expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Expired")
         public Boolean expired;
 
         /**
          * <p>The ID of the resource group in Enterprise Distributed Application Service (EDAS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("GroupId")
         public Integer groupId;
 
         /**
          * <p>The type of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>classic</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>Indicates whether Kubernetes applications can be reused. Valid values:</p>
-         * <br>
-         * <p>*   true: Kubernetes applications can be reused.</p>
-         * <p>*   false: Kubernetes applications cannot be reused.</p>
+         * <ul>
+         * <li>true: Kubernetes applications can be reused.</li>
+         * <li>false: Kubernetes applications cannot be reused.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Reusable")
         public Boolean reusable;
 
         /**
          * <p>The ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2ze055t3xv7s8****</p>
          */
         @NameInMap("SlbId")
         public String slbId;
 
         /**
          * <p>The name of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adce</p>
          */
         @NameInMap("SlbName")
         public String slbName;
 
         /**
          * <p>The status of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("SlbStatus")
         public String slbStatus;
 
         /**
          * <p>The tag of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey&quot;:&quot;tag&quot;,&quot;tagValue&quot;:&quot;value&quot;}]</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas_****_*<em>st@aliyun-</em>***.com</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1f90rfybszjogyw****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the vSwitch in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp156w1gpbv0o50hs****</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;

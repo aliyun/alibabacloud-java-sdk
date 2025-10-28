@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListUserDefineRegionResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,59 +77,88 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
     public static class ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity extends TeaModel {
         /**
          * <p>The ID of the region to which the namespace belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("BelongRegion")
         public String belongRegion;
 
         /**
          * <p>Indicates whether remote debugging is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DebugEnable")
         public Boolean debugEnable;
 
         /**
          * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>betaappManager</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The unique identifier of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1330</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The type of the registry. Valid values:</p>
-         * <br>
-         * <p>*   default: shared service registry of Enterprise Distributed Application Service (EDAS)</p>
-         * <p>*   exclusive_mse: Microservices Engine (MSE) Nacos registry</p>
+         * <ul>
+         * <li>default: shared service registry of Enterprise Distributed Application Service (EDAS)</li>
+         * <li>exclusive_mse: Microservices Engine (MSE) Nacos registry</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default: EDAS</p>
          */
         @NameInMap("MseInstanceId")
         public String mseInstanceId;
 
         /**
          * <p>The ID of the namespace.</p>
-         * <br>
-         * <p>> The ID cannot be changed after the namespace is created. The ID is in the `Physical region ID:Logical region identifier` format .</p>
+         * <blockquote>
+         * <p>The ID cannot be changed after the namespace is created. The ID is in the <code>Physical region ID:Logical region identifier</code> format .</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen:betaappManager</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>betaappManager</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
          * <p>The ID of the MSE instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-tl32n******</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the namespace belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas_****_test@aliyun-****.com</p>
          */
         @NameInMap("UserId")
         public String userId;

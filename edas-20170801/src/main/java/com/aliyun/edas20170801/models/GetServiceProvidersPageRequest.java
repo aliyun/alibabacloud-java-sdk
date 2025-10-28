@@ -6,91 +6,135 @@ import com.aliyun.tea.*;
 public class GetServiceProvidersPageRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>efbda488-7b33-432f-a40d-<strong><strong>0047</strong></strong></p>
      */
     @NameInMap("appId")
     public String appId;
 
     /**
      * <p>The group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DUBBO</p>
      */
     @NameInMap("group")
     public String group;
 
     /**
      * <p>The IP address of the service provider. Fuzzy searches are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.20.x.xx</p>
      */
     @NameInMap("ip")
     public String ip;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou:doc-test</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
     /**
      * <p>The source of data. Valid values:</p>
-     * <br>
-     * <p>*   agent: Use this value if you use the service query feature of the latest version to pass the query result.</p>
-     * <p>*   registry: Use this value if you use the service query feature of the earlier version to pass the query result.</p>
+     * <ul>
+     * <li>agent: Use this value if you use the service query feature of the latest version to pass the query result.</li>
+     * <li>registry: Use this value if you use the service query feature of the earlier version to pass the query result.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>agent</p>
      */
     @NameInMap("origin")
     public String origin;
 
     /**
      * <p>The number of the page to return. Pages start from Page 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>The type of the service registry. This parameter is deprecated. You can ignore it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacos</p>
      */
     @NameInMap("registryType")
     public String registryType;
 
     /**
      * <p>The ID of the service. This parameter is deprecated. You can ignore it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.alibabacloud.hipstershop.CartService</p>
      */
     @NameInMap("serviceId")
     public String serviceId;
 
     /**
      * <p>The name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.alibabacloud.hipstershop.CartService</p>
      */
     @NameInMap("serviceName")
     public String serviceName;
 
     /**
      * <p>The type of the service. Valid values:</p>
-     * <br>
-     * <p>*   dubbo: Dubbo service</p>
-     * <p>*   springCloud: Spring Cloud service</p>
-     * <p>*   hsf: High-speed Service Framework (HSF) service</p>
+     * <ul>
+     * <li>dubbo: Dubbo service</li>
+     * <li>springCloud: Spring Cloud service</li>
+     * <li>hsf: High-speed Service Framework (HSF) service</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>dubbo</p>
      */
     @NameInMap("serviceType")
     public String serviceType;
 
     /**
      * <p>The version of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("serviceVersion")
     public String serviceVersion;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
      * <p>The source of the service. Set the value to edas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edas</p>
      */
     @NameInMap("source")
     public String source;

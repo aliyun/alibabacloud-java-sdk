@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class InsertRoleRequest extends TeaModel {
     /**
-     * <p>The set of permissions to be granted to the role. The value is in the format of `Permission group ID 1:Permission serial number 1;...;Permission group ID n:Permission serial number n`. Example: `1:1;1:2;2:1;2:2`. For more information about permission groups and permission serial numbers, see [ListAuthority](https://help.aliyun.com/document_detail/149409.html).</p>
-     * <br>
+     * <p>The set of permissions to be granted to the role. The value is in the format of <code>Permission group ID 1:Permission serial number 1;...;Permission group ID n:Permission serial number n</code>. Example: <code>1:1;1:2;2:1;2:2</code>. For more information about permission groups and permission serial numbers, see <a href="https://help.aliyun.com/document_detail/149409.html">ListAuthority</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15:1;14:2</p>
      */
     @NameInMap("ActionData")
     public String actionData;
 
     /**
      * <p>The name of the role.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testrole</p>
      */
     @NameInMap("RoleName")
     public String roleName;

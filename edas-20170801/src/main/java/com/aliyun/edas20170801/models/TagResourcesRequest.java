@@ -6,40 +6,50 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The IDs of the resources. You can specify up to 20 IDs in the format of a JSON array.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;000e5836-xxxx-xxxx-xxxx-0d6ab2ac4877&quot;]</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
      * <p>The region in which the resource resides.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **application**: Enterprise Distributed Application Service (EDAS) application</p>
-     * <p>*   **cluster**: EDAS cluster</p>
-     * <br>
+     * <ul>
+     * <li><strong>application</strong>: Enterprise Distributed Application Service (EDAS) application</li>
+     * <li><strong>cluster</strong>: EDAS cluster</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The key-value pairs. When you set this parameter, take note of the following limits:</p>
-     * <br>
-     * <p>*   You can add up to 20 tags to a resource.</p>
-     * <p>*   The tag key cannot start with **aliyun** or **acs:**. It cannot contain **http://** or **https://**.</p>
-     * <p>*   The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\\*), forward slashes (/), question marks (?), and colons (:).</p>
-     * <p>*   Set this parameter to a JSON array.</p>
-     * <br>
+     * <ul>
+     * <li>You can add up to 20 tags to a resource.</li>
+     * <li>The tag key cannot start with <strong>aliyun</strong> or <strong>acs:</strong>. It cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
+     * <li>The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\*), forward slashes (/), question marks (?), and colons (:).</li>
+     * <li>Set this parameter to a JSON array.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;key1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;key&quot;:&quot;key2&quot;,&quot;value&quot;:&quot;v2&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

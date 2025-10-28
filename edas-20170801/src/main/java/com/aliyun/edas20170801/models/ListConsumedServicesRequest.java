@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListConsumedServicesRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a66c5d1f-<strong><strong>-</strong></strong>-8c2b-6925f781b203</p>
      */
     @NameInMap("AppId")
     public String appId;

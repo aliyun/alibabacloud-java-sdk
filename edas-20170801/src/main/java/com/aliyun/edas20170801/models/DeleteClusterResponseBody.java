@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteClusterResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>Indicates whether the cluster is deleted. Valid values:</p>
-     * <br>
-     * <p>*   true: The cluster is deleted.</p>
-     * <p>*   false: The cluster is not deleted.</p>
+     * <ul>
+     * <li>true: The cluster is deleted.</li>
+     * <li>false: The cluster is not deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>856D4438-<strong><strong>-4EA9-</strong></strong>-894628C0434E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListHistoryDeployVersionResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,6 +30,9 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D16979DC-4D42-************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,30 +77,45 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
     public static class ListHistoryDeployVersionResponseBodyPackageVersionListPackageVersion extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The time when the deployment package was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573627440892</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deploy</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The unique ID of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>441beb18-da42-44dc-<strong><strong>-</strong></strong>********</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The version of the application that was released by using the deployment package. This version can be used to call the RollbackApplication operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("PackageVersion")
         public String packageVersion;
@@ -104,15 +128,22 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
 
         /**
          * <p>The deployment mode of the application. Valid values:</p>
-         * <br>
-         * <p>*   url: The application is deployed by using a JAR or WAR package.</p>
-         * <p>*   image: The application is deployed by using an image.</p>
+         * <ul>
+         * <li>url: The application is deployed by using a JAR or WAR package.</li>
+         * <li>image: The application is deployed by using an image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>url</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The time when the deployment package was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573627440892</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

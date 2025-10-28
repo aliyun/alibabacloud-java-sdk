@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSwimmingLaneResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C2CDBBF9-9C9A-5AA1-9F39-094ADEB3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,30 +77,45 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
     public static class ListSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b615783-01f1-4569-baa3-cb71bdb6****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-app-58846</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>Additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-canary</p>
          */
         @NameInMap("Extra")
         public String extra;
 
         /**
          * <p>The ID of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348</p>
          */
         @NameInMap("LaneId")
         public Long laneId;
 
         /**
          * <p>The association rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Rules")
         public String rules;
@@ -146,42 +170,63 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
     public static class ListSwimmingLaneResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the throttling rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableRules")
         public Boolean enableRules;
 
         /**
          * <p>The conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;condition\&quot;:\&quot;AND\&quot;,\&quot;enable\&quot;:true,\&quot;path\&quot;:\&quot;/\&quot;,\&quot;priority\&quot;:1,\&quot;restItems\&quot;:[{\&quot;cond\&quot;:\&quot;==\&quot;,\&quot;datum\&quot;:\&quot;value\&quot;,\&quot;name\&quot;:\&quot;tags\&quot;,\&quot;operator\&quot;:\&quot;rawvalue\&quot;,\&quot;type\&quot;:\&quot;header\&quot;,\&quot;value\&quot;:\&quot;value\&quot;}]}]</p>
          */
         @NameInMap("EntryRule")
         public String entryRule;
 
         /**
          * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The ID of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the microservices namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:pre2</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The expected tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d0ad1052</p>
          */
         @NameInMap("ScenarioSign")
         public String scenarioSign;
@@ -194,6 +239,9 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
 
         /**
          * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2cb6b8a</p>
          */
         @NameInMap("Tag")
         public String tag;

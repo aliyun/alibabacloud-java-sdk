@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListApplicationEcuRequest extends TeaModel {
     /**
-     * <p>The ID of the application whose ECUs you want to query. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+     * <p>The ID of the application whose ECUs you want to query. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e809****-43d7-4c6b-8e01-b0d9d1db****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the microservices namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou:***wei</p>
      */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;

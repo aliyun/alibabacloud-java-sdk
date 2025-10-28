@@ -6,68 +6,95 @@ import com.aliyun.tea.*;
 public class UpdateJvmConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c627c157-560d-*************</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The ID of the instance group where the application is deployed. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](https://help.aliyun.com/document_detail/62077.html).</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   To configure the JVM parameters for an instance group, set this parameter to a specific ID.</p>
-     * <br>
-     * <p>*   To configure the JVM parameters for an application, leave this parameter empty.</p>
+     * <p>The ID of the instance group where the application is deployed. You can call the ListDeployGroup operation to query the group ID. For more information, see <a href="https://help.aliyun.com/document_detail/62077.html">ListDeployGroup</a>.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>To configure the JVM parameters for an instance group, set this parameter to a specific ID.</p>
+     * </li>
+     * <li><p>To configure the JVM parameters for an application, leave this parameter empty.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0afc726e-077e-4357-98b2-db9f7145****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The maximum size of the heap memory. Unit: MB.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
-     * <br>
-     * <p>*   If this parameter is not specified in the application configuration, the default value is used.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
+     * </li>
+     * <li><p>If this parameter is not specified in the application configuration, the default value is used.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("MaxHeapSize")
     public Integer maxHeapSize;
 
     /**
      * <p>The size of the permanent generation heap memory. Unit: MB.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
-     * <br>
-     * <p>*   If this parameter is not specified in the application configuration, the default value is used.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
+     * </li>
+     * <li><p>If this parameter is not specified in the application configuration, the default value is used.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("MaxPermSize")
     public Integer maxPermSize;
 
     /**
      * <p>The initial size of the heap memory. Unit: MB.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
-     * <br>
-     * <p>*   If this parameter is not specified in the application configuration, the default value is used.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
+     * </li>
+     * <li><p>If this parameter is not specified in the application configuration, the default value is used.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("MinHeapSize")
     public Integer minHeapSize;
 
     /**
      * <p>The custom JVM parameters.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
-     * <br>
-     * <p>*   If this parameter is not specified in the application configuration, the default value is used.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If this parameter is not specified in the group configuration, the value specified in the application configuration is used.</p>
+     * </li>
+     * <li><p>If this parameter is not specified in the application configuration, the default value is used.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>-Dproperty=value</p>
      */
     @NameInMap("Options")
     public String options;

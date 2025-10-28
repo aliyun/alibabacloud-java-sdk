@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteUserDefineRegionResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,6 +30,9 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234-1sda-321d-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,36 +77,54 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
     public static class DeleteUserDefineRegionResponseBodyRegionDefine extends TeaModel {
         /**
          * <p>The ID of the region to which the custom namespace belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("BelongRegion")
         public String belongRegion;
 
         /**
          * <p>The description of the custom namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logic region</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The unique identifier of the custom namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8848</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The ID of the custom namespace. The ID cannot be changed after the custom namespace is created. The format is `region ID:custom namespace ID`.</p>
+         * <p>The ID of the custom namespace. The ID cannot be changed after the custom namespace is created. The format is <code>region ID:custom namespace ID</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the custom namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_region</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the custom namespace belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11727****22398</p>
          */
         @NameInMap("UserId")
         public String userId;

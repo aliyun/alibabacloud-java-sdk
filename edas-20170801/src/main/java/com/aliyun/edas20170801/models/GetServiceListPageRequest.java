@@ -6,73 +6,105 @@ import com.aliyun.tea.*;
 public class GetServiceListPageRequest extends TeaModel {
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou:doc-test</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
     /**
      * <p>The source of the data. Valid values:</p>
-     * <br>
-     * <p>*   `agent`: Use this value if you use the service query feature of the latest version to pass the query result.</p>
-     * <p>*   `registry`: Use this value if you use the service query feature of the earlier version to pass the query result.</p>
+     * <ul>
+     * <li><code>agent</code>: Use this value if you use the service query feature of the latest version to pass the query result.</li>
+     * <li><code>registry</code>: Use this value if you use the service query feature of the earlier version to pass the query result.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Agent</p>
      */
     @NameInMap("origin")
     public String origin;
 
     /**
      * <p>The number of the page to return. Pages start from Page 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
 
     /**
      * <p>The type of the service. Valid values:</p>
-     * <br>
-     * <p>*   `app`: searches by application.</p>
-     * <p>*   `service`: searches by service.</p>
-     * <p>*   `providerIp`: searches by IP address.</p>
+     * <ul>
+     * <li><code>app</code>: searches by application.</li>
+     * <li><code>service</code>: searches by service.</li>
+     * <li><code>providerIp</code>: searches by IP address.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>App</p>
      */
     @NameInMap("searchType")
     public String searchType;
 
     /**
      * <p>The keyword used for the search.</p>
-     * <br>
-     * <p>*   Set this parameter to the ID of the application if you set the searchType parameter to app.``</p>
-     * <p>*   Set this parameter to the name of the service if you set the serachType parameter to service.``</p>
-     * <p>*   Set this parameter to the IP address of the application if you set the searchType parameter to providerIp.</p>
+     * <ul>
+     * <li>Set this parameter to the ID of the application if you set the searchType parameter to app.``</li>
+     * <li>Set this parameter to the name of the service if you set the serachType parameter to service.``</li>
+     * <li>Set this parameter to the IP address of the application if you set the searchType parameter to providerIp.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>com.alibaba.edas.HelloService</p>
      */
     @NameInMap("searchValue")
     public String searchValue;
 
     /**
      * <p>The type of the service. Valid values:</p>
-     * <br>
-     * <p>*   `dubbo`</p>
-     * <p>*   `springCloud`</p>
-     * <p>*   `hsf`</p>
-     * <p>*   `istio`</p>
+     * <ul>
+     * <li><code>dubbo</code></li>
+     * <li><code>springCloud</code></li>
+     * <li><code>hsf</code></li>
+     * <li><code>istio</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SpringCloud</p>
      */
     @NameInMap("serviceType")
     public String serviceType;
 
     /**
      * <p>Specifies the provider side or the consumer side. Valid values:</p>
-     * <br>
-     * <p>*   provider</p>
-     * <p>*   consumer</p>
+     * <ul>
+     * <li>provider</li>
+     * <li>consumer</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>provider</p>
      */
     @NameInMap("side")
     public String side;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;

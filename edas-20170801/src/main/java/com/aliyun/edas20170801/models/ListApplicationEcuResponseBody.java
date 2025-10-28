@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListApplicationEcuResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListApplicationEcuResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-7ca7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,114 +77,170 @@ public class ListApplicationEcuResponseBody extends TeaModel {
     public static class ListApplicationEcuResponseBodyEcuInfoListEcuEntity extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e809****-43d7-4c6b-8e01-b0d9d1db****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The number of available CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AvailableCpu")
         public Integer availableCpu;
 
         /**
          * <p>The size of available memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("AvailableMem")
         public Integer availableMem;
 
         /**
          * <p>The total number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1542692376066</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>Indicates whether Docker is installed. Valid values:</p>
-         * <br>
-         * <p>*   true: Docker is installed.</p>
-         * <p>*   false: Docker is not installed.</p>
+         * <ul>
+         * <li>true: Docker is installed.</li>
+         * <li>false: Docker is not installed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DockerEnv")
         public Boolean dockerEnv;
 
         /**
-         * <p>The unique ID of the ECU. To query the ID, you can run the `dmidecode` command on the ECS instance that corresponds to the ECU.</p>
+         * <p>The unique ID of the ECU. To query the ID, you can run the <code>dmidecode</code> command on the ECS instance that corresponds to the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0de2ebdb-9490-4fc4-be41***************</p>
          */
         @NameInMap("EcuId")
         public String ecuId;
 
         /**
          * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573281040819</p>
          */
         @NameInMap("HeartbeatTime")
         public Long heartbeatTime;
 
         /**
          * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zej4i2jdf*********</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The internal IP address allocated to the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XXX.XXX</p>
          */
         @NameInMap("IpAddr")
         public String ipAddr;
 
         /**
          * <p>The total size of memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Mem")
         public Integer mem;
 
         /**
          * <p>The name of the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the ECU is online. Valid values:</p>
-         * <br>
-         * <p>*   true: The ECU is online.</p>
-         * <p>*   false: The ECU is offline.</p>
+         * <ul>
+         * <li>true: The ECU is online.</li>
+         * <li>false: The ECU is offline.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Online")
         public Boolean online;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1599803995894</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the ECU belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><em>common</em></strong></strong>@aliyun.com</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zef6ob8**********</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

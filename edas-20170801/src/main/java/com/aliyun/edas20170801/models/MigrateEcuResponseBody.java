@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class MigrateEcuResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04B0ABAF-95F2-42B6-A7B1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

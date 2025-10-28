@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ImportK8sClusterResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The ID of the cluster in EDAS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cf96d49a-6be2-4b6d-<strong><strong>-75c7fb86</strong></strong></p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
      */
     @NameInMap("RequestId")
     public String requestId;

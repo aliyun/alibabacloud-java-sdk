@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListScaleOutEcuResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AF860D6C-ACE3-4429-9D54-3BD15A******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,96 +77,143 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
     public static class ListScaleOutEcuResponseBodyEcuInfoListEcuInfo extends TeaModel {
         /**
          * <p>The number of available CPU cores for the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AvailableCpu")
         public Integer availableCpu;
 
         /**
          * <p>The size of available memory for the ECU. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("AvailableMem")
         public Integer availableMem;
 
         /**
          * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573281040819</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>Indicates whether Docker is installed. Valid values:</p>
-         * <br>
-         * <p>*   true: Docker is installed.</p>
-         * <p>*   false: Docker is not installed.</p>
+         * <ul>
+         * <li>true: Docker is installed.</li>
+         * <li>false: Docker is not installed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DockerEnv")
         public Boolean dockerEnv;
 
         /**
-         * <p>The unique ID of the ECU. To query the ID, you can run the `dmidecode` command on the ECS instance that corresponds to the ECU.</p>
+         * <p>The unique ID of the ECU. To query the ID, you can run the <code>dmidecode</code> command on the ECS instance that corresponds to the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0de2ebdb-9490-4fc4-be41***************</p>
          */
         @NameInMap("EcuId")
         public String ecuId;
 
         /**
          * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573281040819</p>
          */
         @NameInMap("HeartbeatTime")
         public Long heartbeatTime;
 
         /**
          * <p>The ID of the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zej4i2jdf*********</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The private IP address of the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IpAddr")
         public String ipAddr;
 
         /**
          * <p>The name of the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the ECU is online. If the ECU is online, its corresponding ECS instance is managed in EDAS. Valid values:</p>
-         * <br>
-         * <p>*   true: The ECU is online.</p>
-         * <p>*   false: The ECU is offline.</p>
+         * <ul>
+         * <li>true: The ECU is online.</li>
+         * <li>false: The ECU is offline.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Online")
         public Boolean online;
 
         /**
          * <p>The ID of the region where the ECU is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The time when the ECU was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573281040827</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the ECU belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1172<strong><strong>6608</strong></strong></p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) where the ECU is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zef6ob8**********</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the zone where the ECU resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

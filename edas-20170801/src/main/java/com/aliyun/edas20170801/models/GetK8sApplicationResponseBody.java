@@ -12,18 +12,27 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1053-08e4-47a5-b2ab-5c0323de7b5a</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,12 +96,18 @@ public class GetK8sApplicationResponseBody extends TeaModel {
     public static class GetK8sApplicationResponseBodyApplcationAppEnvListEnv extends TeaModel {
         /**
          * <p>The name of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CATALINA_OPTS</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-Xmx 1024m -Dhsf.default.tid=false $(EDAS_CATALINA_OPTS)</p>
          */
         @NameInMap("Value")
         public String value;
@@ -142,42 +157,63 @@ public class GetK8sApplicationResponseBody extends TeaModel {
     public static class GetK8sApplicationResponseBodyApplcationApp extends TeaModel {
         /**
          * <p>The annotation of an application pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test-annokey&quot;:&quot;test-annovalue&quot;}</p>
          */
         @NameInMap("Annotations")
         public String annotations;
 
         /**
-         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00ee517d-dd7d-4d4e-<strong><strong>-</strong></strong></p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The type of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>War</p>
          */
         @NameInMap("ApplicationType")
         public String applicationType;
 
         /**
          * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         @NameInMap("BuildpackId")
         public Integer buildpackId;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong></p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The startup command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls</p>
          */
         @NameInMap("Cmd")
         public String cmd;
@@ -190,40 +226,59 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the cluster to which the container belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c383bc813c1974e<strong><strong>451b50c0c8</strong></strong></p>
          */
         @NameInMap("CsClusterId")
         public String csClusterId;
 
         /**
          * <p>The deployment type of the application. Example: Image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Image</p>
          */
         @NameInMap("DeployType")
         public String deployType;
 
         /**
          * <p>The application type. Valid values:</p>
-         * <br>
-         * <p>*   General: native Java application</p>
-         * <p>*   Pandora: Pandora application</p>
-         * <p>*   Multilingual: multilingual application</p>
+         * <ul>
+         * <li>General: native Java application</li>
+         * <li>Pandora: Pandora application</li>
+         * <li>Multilingual: multilingual application</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         @NameInMap("DevelopType")
         public String developType;
 
         /**
          * <p>The version of EDAS Container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.60.0</p>
          */
         @NameInMap("EdasContainerVersion")
         public String edasContainerVersion;
 
         /**
          * <p>Indicates whether the Empty List Protection feature is enabled for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableEmptyPushReject")
         public Boolean enableEmptyPushReject;
 
         /**
          * <p>Indicates whether the Graceful Release feature is enabled for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableLosslessRule")
         public Boolean enableLosslessRule;
@@ -236,125 +291,209 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
         /**
          * <p>The feature annotations. Possible values:</p>
-         * <br>
-         * <p>*   base.combination.edas: enables EDAS integrated management solution.</p>
-         * <p>*   base.combination.arms: enables ARMS monitoring.</p>
-         * <p>*   base.combination.mse: enables MSE microservices governance.</p>
-         * <p>*   base.combination.none: enables lifecycle management.</p>
+         * <ul>
+         * <li>base.combination.edas: enables EDAS integrated management solution.</li>
+         * <li>base.combination.arms: enables ARMS monitoring.</li>
+         * <li>base.combination.mse: enables MSE microservices governance.</li>
+         * <li>base.combination.none: enables lifecycle management.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>base.combination.edas</p>
          */
         @NameInMap("FeatureAnnotations")
         public String featureAnnotations;
 
         /**
          * <p>The number of application instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Instances")
         public Integer instances;
 
         /**
          * <p>The number of application instances before the last auto scaling operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InstancesBeforeScaling")
         public Integer instancesBeforeScaling;
 
         /**
          * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
         /**
          * <p>The label of an application pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test-labelkey&quot;:&quot;test-labelvalue&quot;}</p>
          */
         @NameInMap("Labels")
         public String labels;
 
         /**
          * <p>The maximum number of CPU cores allowed. Unit: millicores. 1,000 millicores equal one CPU core.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("LimitCpuM")
         public Integer limitCpuM;
 
         /**
          * <p>The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("LimitEphemeralStorage")
         public String limitEphemeralStorage;
 
         /**
          * <p>The maximum size of the memory allowed. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("LimitMem")
         public Integer limitMem;
 
         /**
          * <p>Indicates whether the Graceful Rolling Release and Configure Complete Service Registration before Readiness Probing feature is enabled for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("LosslessRuleAligned")
         public Boolean losslessRuleAligned;
 
         /**
          * <p>The delay of service registration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("LosslessRuleDelayTime")
         public Integer losslessRuleDelayTime;
 
         /**
          * <p>The number of prefetching curves.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("LosslessRuleFuncType")
         public Integer losslessRuleFuncType;
 
         /**
          * <p>Indicates whether the Graceful Rolling Release and Configure Complete Service Prefetching before Readiness Probing feature is enabled for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("LosslessRuleRelated")
         public Boolean losslessRuleRelated;
 
         /**
          * <p>The service prefetching duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("LosslessRuleWarmupTime")
         public Integer losslessRuleWarmupTime;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of requested CPU cores. Unit: millicores. 1,000 millicores equal one CPU core.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("RequestCpuM")
         public Integer requestCpuM;
 
         /**
          * <p>The size of space reserved for ephemeral storage resources. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RequestEphemeralStorage")
         public String requestEphemeralStorage;
 
         /**
          * <p>The size of the reserved memory. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("RequestMem")
         public Integer requestMem;
 
         /**
          * <p>The configuration information about the Server Load Balancer (SLB).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *   {
+         *     &quot;addressType&quot;: &quot;intranet&quot;,
+         *     &quot;externalTrafficPolicy&quot;: &quot;Local&quot;,
+         *     &quot;ip&quot;: &quot;192.168.254.<em><strong>&quot;,
+         *     &quot;name&quot;: &quot;intranet-testapp&quot;,
+         *     &quot;portMappings&quot;: [
+         *       {
+         *         &quot;loadBalancerProtocol&quot;: &quot;TCP&quot;,
+         *         &quot;servicePort&quot;: {
+         *           &quot;port&quot;: 8080,
+         *           &quot;protocol&quot;: &quot;TCP&quot;,
+         *           &quot;targetPort&quot;: 18081,
+         *           &quot;vServerGroupName&quot;: &quot;k8s/31414/intranet-testapp/default/cc90e0c9508a44667bdae2e83d3</strong></em><em><strong>&quot;
+         *         }
+         *       }
+         *     ],
+         *     &quot;scheduler&quot;: &quot;rr&quot;,
+         *     &quot;serviceType&quot;: &quot;LoadBalancer&quot;,
+         *     &quot;slbId&quot;: &quot;lb-bp1ikoh3nrpgqsm</strong></em>***&quot;,
+         *     &quot;source&quot;: &quot;create&quot;,
+         *     &quot;specification&quot;: &quot;slb.s3.large&quot;
+         *   }
+         * ]</p>
          */
         @NameInMap("SlbInfo")
         public String slbInfo;
 
         /**
          * <p>The version of Apache Tomcat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.5.55</p>
          */
         @NameInMap("TomcatVersion")
         public String tomcatVersion;
 
         /**
          * <p>The workload type. Valid values: Deployment and StatefulSet. If you do not specify this parameter, Deployment is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployment</p>
          */
         @NameInMap("WorkloadType")
         public String workloadType;
@@ -649,114 +788,170 @@ public class GetK8sApplicationResponseBody extends TeaModel {
     public static class GetK8sApplicationResponseBodyApplcationConf extends TeaModel {
         /**
          * <p>The affinity configuration of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;nodeAffinity\&quot;:{\&quot;requiredDuringSchedulingIgnoredDuringExecution\&quot;:{\&quot;nodeSelectorTerms\&quot;:[{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;beta.kubernetes.io/arch\&quot;,\&quot;operator\&quot;:\&quot;NotIn\&quot;,\&quot;values\&quot;:[\&quot;arm64\&quot;,\&quot;arm32\&quot;]}]}]},\&quot;preferredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;weight\&quot;:5,\&quot;preference\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;kubernetes.io/os\&quot;,\&quot;operator\&quot;:\&quot;In\&quot;,\&quot;values\&quot;:[\&quot;linux\&quot;]}]}}]},\&quot;podAffinity\&quot;:{\&quot;requiredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;labelSelector\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;edas.oam.acname\&quot;,\&quot;operator\&quot;:\&quot;NotIn\&quot;,\&quot;values\&quot;:[\&quot;edas-test-app\&quot;]}]},\&quot;namespaces\&quot;:[\&quot;default\&quot;],\&quot;topologyKey\&quot;:\&quot;kubernetes.io/hostname\&quot;}]},\&quot;podAntiAffinity\&quot;:{\&quot;preferredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;weight\&quot;:15,\&quot;podAffinityTerm\&quot;:{\&quot;labelSelector\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;edas.oam.acname\&quot;,\&quot;operator\&quot;:\&quot;In\&quot;,\&quot;values\&quot;:[\&quot;edas-test-app-2\&quot;]}]},\&quot;namespaces\&quot;:[\&quot;default\&quot;],\&quot;topologyKey\&quot;:\&quot;failure-domain.beta.kubernetes.io/zone\&quot;}}]}}&quot;</p>
          */
         @NameInMap("Affinity")
         public String affinity;
 
         /**
          * <p>Indicates whether the application is connected to Application High Availability Service (AHAS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AhasEnabled")
         public Boolean ahasEnabled;
 
         /**
          * <p>Indicates whether the application instances are deployed across nodes.</p>
-         * <br>
-         * <p>*   Value `true` indicates that the application instances are deployed across nodes.</p>
-         * <p>*   Other values indicate that the application instances are not deployed across nodes.</p>
+         * <ul>
+         * <li>Value <code>true</code> indicates that the application instances are deployed across nodes.</li>
+         * <li>Other values indicate that the application instances are not deployed across nodes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DeployAcrossNodes")
         public String deployAcrossNodes;
 
         /**
          * <p>Indicates whether the application instances are deployed across zones.</p>
-         * <br>
-         * <p>*   Value `true` indicates that the application instances are deployed across zones.</p>
-         * <p>*   Other values indicate that the application instances are not deployed across zones.</p>
+         * <ul>
+         * <li>Value <code>true</code> indicates that the application instances are deployed across zones.</li>
+         * <li>Other values indicate that the application instances are not deployed across zones.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DeployAcrossZones")
         public String deployAcrossZones;
 
         /**
          * <p>The startup parameters for a JAR application. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-lh</p>
          */
         @NameInMap("JarStartArgs")
         public String jarStartArgs;
 
         /**
          * <p>The startup options for a JAR application. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-h</p>
          */
         @NameInMap("JarStartOptions")
         public String jarStartOptions;
 
         /**
          * <p>The startup command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls</p>
          */
         @NameInMap("K8sCmd")
         public String k8sCmd;
 
         /**
          * <p>The parameters of the startup command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-lh</p>
          */
         @NameInMap("K8sCmdArgs")
         public String k8sCmdArgs;
 
         /**
          * <p>The information about the local storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/mnt/&quot;,&quot;mountPath&quot;:&quot;/mnt/&quot;}]</p>
          */
         @NameInMap("K8sLocalvolumeInfo")
         public String k8sLocalvolumeInfo;
 
         /**
-         * <p>The information about the Apsara File Storage NAS (NAS) storage.</p>
+         * <p>The information about the File Storage NAS (NAS) storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;nasPath&quot;:&quot;/mnt/&quot;,&quot;mountPath&quot;:&quot;/mnt/&quot;}]</p>
          */
         @NameInMap("K8sNasInfo")
         public String k8sNasInfo;
 
         /**
          * <p>The information about the storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;hostPaths\&quot;:\&quot;[]\&quot;,\&quot;emptyDirs\&quot;:\&quot;[]\&quot;}&quot;</p>
          */
         @NameInMap("K8sVolumeInfo")
         public String k8sVolumeInfo;
 
         /**
          * <p>The information about the liveness check on the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</p>
          */
         @NameInMap("Liveness")
         public String liveness;
 
         /**
          * <p>The script executed after the container is started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;ls\&quot;,\&quot;/\&quot;]}}&quot;</p>
          */
         @NameInMap("PostStart")
         public String postStart;
 
         /**
          * <p>The script executed before the container is stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;ls\&quot;,\&quot;/\&quot;]}}&quot;</p>
          */
         @NameInMap("PreStop")
         public String preStop;
 
         /**
          * <p>The information about the readiness check on the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}\]}}</p>
          */
         @NameInMap("Readiness")
         public String readiness;
 
         /**
          * <p>The type of the container runtime. This parameter is applicable only to clusters that use sandboxed containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>runc</p>
          */
         @NameInMap("RuntimeClassName")
         public String runtimeClassName;
 
         /**
          * <p>The scheduling tolerance configuration of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[{\&quot;key\&quot;:\&quot;edas-taint-key2\&quot;,\&quot;operator\&quot;:\&quot;Exists\&quot;,\&quot;effect\&quot;:\&quot;NoExecute\&quot;,\&quot;tolerationSeconds\&quot;:50},{\&quot;key\&quot;:\&quot;edas-taint-key\&quot;,\&quot;operator\&quot;:\&quot;Equal\&quot;,\&quot;value\&quot;:\&quot;edas-taint-value\&quot;,\&quot;effect\&quot;:\&quot;PreferNoSchedule\&quot;}]&quot;</p>
          */
         @NameInMap("Tolerations")
         public String tolerations;
 
         /**
          * <p>The URL of the base image. If you use a custom Java Development Kit (JDK) runtime, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openjdk:8u302</p>
          */
         @NameInMap("UserBaseImageUrl")
         public String userBaseImageUrl;
@@ -915,18 +1110,27 @@ public class GetK8sApplicationResponseBody extends TeaModel {
     public static class GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponentsComponents extends TeaModel {
         /**
          * <p>The component ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("ComponentId")
         public String componentId;
 
         /**
          * <p>The keyword that is included in the component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open JDK 8</p>
          */
         @NameInMap("ComponentKey")
         public String componentKey;
 
         /**
          * <p>The component type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JDK</p>
          */
         @NameInMap("Type")
         public String type;
@@ -990,12 +1194,18 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
         /**
          * <p>The environment variable. This parameter is different from the EnvList parameter. This parameter specifies the referenced configuration of the ConfigMap or Secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[&quot;{\&quot;name\&quot;:\&quot;test1\&quot;,\&quot;valueFrom\&quot;:{\&quot;configMapKeyRef\&quot;:{\&quot;name\&quot;:\&quot;edas-demo-configmap\&quot;,\&quot;key\&quot;:\&quot;key1\&quot;}}}&quot;,&quot;{\&quot;name\&quot;:\&quot;k2\&quot;,\&quot;value\&quot;:\&quot;v2\&quot;}&quot;,&quot;{\&quot;name\&quot;:\&quot;s1\&quot;,\&quot;valueFrom\&quot;:{\&quot;secretKeyRef\&quot;:{\&quot;name\&quot;:\&quot;edas-demo-secret\&quot;,\&quot;key\&quot;:\&quot;k1\&quot;}}}&quot;]&quot;</p>
          */
         @NameInMap("Env")
         public String env;
 
         /**
          * <p>The source of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;configMapRef&quot;:{&quot;name&quot;:&quot;test-cm&quot;}}]</p>
          */
         @NameInMap("EnvFrom")
         public String envFrom;
@@ -1059,36 +1269,54 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
         /**
          * <p>The region ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
          * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131****067006888_shared_repo</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-server****-user</p>
          */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         /**
          * <p>The source type of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALI_HUB</p>
          */
         @NameInMap("RepoOriginType")
         public String repoOriginType;
 
         /**
          * <p>The tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a166fbd-9d76-4f98-****-781659d9f54c_1572485443282</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -1159,18 +1387,27 @@ public class GetK8sApplicationResponseBody extends TeaModel {
     public static class GetK8sApplicationResponseBodyApplcationLatestVersion extends TeaModel {
         /**
          * <p>The version of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20200720</p>
          */
         @NameInMap("PackageVersion")
         public String packageVersion;
 
         /**
          * <p>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></p>
          */
         @NameInMap("Url")
         public String url;
 
         /**
          * <p>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></p>
          */
         @NameInMap("WarUrl")
         public String warUrl;
@@ -1214,7 +1451,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         public GetK8sApplicationResponseBodyApplcationApp app;
 
         /**
-         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5281053-<strong><strong>-47a5-b2ab-5c0323de</strong></strong></p>
          */
         @NameInMap("AppId")
         public String appId;

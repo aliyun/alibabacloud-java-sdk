@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class UpdateContainerRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e83acea6-****-47e1-96ae-c0e953772cdc</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The build package number of EDAS Container. You can obtain the build package number in the Build package number column in the EDAS Container release notes table. For more information, see [Release notes for EDAS Container](https://help.aliyun.com/document_detail/92614.html).</p>
-     * <br>
+     * <p>The build package number of EDAS Container. You can obtain the build package number in the Build package number column in the EDAS Container release notes table. For more information, see <a href="https://help.aliyun.com/document_detail/92614.html">Release notes for EDAS Container</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59</p>
      */
     @NameInMap("BuildPackId")
     public Integer buildPackId;

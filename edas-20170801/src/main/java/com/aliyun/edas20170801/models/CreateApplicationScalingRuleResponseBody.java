@@ -12,18 +12,27 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,19 +76,28 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleDownPolicies extends TeaModel {
         /**
-         * <p>检查执行的周期，取值范围[0, 1800]，单位为秒。</p>
+         * <p>The period during which the check is performed. Valid values: 0 to 1800. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("PeriodSeconds")
         public Integer periodSeconds;
 
         /**
-         * <p>策略类型，可为Pods或Percent。</p>
+         * <p>The type of the policy. The value can be Pods or Percent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pods</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>弹性行为的策略值，大于零的整数。若策略类型为Pods，则该值表示Pods数量；若策略类型为Percent，则该值表示百分比，允许超过100%。</p>
+         * <p>The value of the auto scaling policy. The value of this parameter is an integer greater than 0. If the policy type is Pods, the value indicates the number of pods. If the policy type is Percent, the value indicates a percentage. The value is allowed to exceed 100%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Value")
         public String value;
@@ -117,19 +135,21 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleDown extends TeaModel {
         /**
-         * <p>策略配置。</p>
+         * <p>The configurations of the auto scaling policy.</p>
          */
         @NameInMap("Policies")
         public java.util.List<CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleDownPolicies> policies;
 
         /**
-         * <p>弹性缩容步长策略，可选值Max、Min、Disable。</p>
+         * <strong>example:</strong>
+         * <p>Max</p>
          */
         @NameInMap("SelectPolicy")
         public String selectPolicy;
 
         /**
-         * <p>缩容冷却时间。取值范围[0, 3600]，单位为秒。默认为300秒。</p>
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("StabilizationWindowSeconds")
         public Integer stabilizationWindowSeconds;
@@ -167,19 +187,28 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleUpPolicies extends TeaModel {
         /**
-         * <p>检查执行的周期，取值范围[0, 1800]，单位为秒。</p>
+         * <p>The period during which the check is performed. Valid values: 0 to 1800. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("PeriodSeconds")
         public Integer periodSeconds;
 
         /**
-         * <p>策略类型，可为Pods或Percent。</p>
+         * <p>The type of the policy. The value can be Pods or Percent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pods</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>弹性行为的策略值，大于零的整数。若策略类型为Pods，则该值表示Pods数量；若策略类型为Percent，则该值表示百分比，允许超过100%。</p>
+         * <p>The value of the auto scaling policy. The value of this parameter is an integer greater than 0. If the policy type is Pods, the value indicates the number of pods. If the policy type is Percent, the value indicates a percentage. The value is allowed to exceed 100%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Value")
         public String value;
@@ -217,19 +246,21 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleUp extends TeaModel {
         /**
-         * <p>策略配置。</p>
+         * <p>The configurations of the auto scaling policy.</p>
          */
         @NameInMap("Policies")
         public java.util.List<CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleUpPolicies> policies;
 
         /**
-         * <p>弹性扩容步长策略，可选值Max、Min、Disable。</p>
+         * <strong>example:</strong>
+         * <p>Max</p>
          */
         @NameInMap("SelectPolicy")
         public String selectPolicy;
 
         /**
-         * <p>扩容冷却时间。取值范围[0, 3600]，单位为秒。默认为0秒。</p>
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("StabilizationWindowSeconds")
         public Integer stabilizationWindowSeconds;
@@ -267,13 +298,13 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviour extends TeaModel {
         /**
-         * <p>弹性缩容行为配置。</p>
+         * <p>The behavior configurations of the scale-in.</p>
          */
         @NameInMap("ScaleDown")
         public CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleDown scaleDown;
 
         /**
-         * <p>弹性扩容行为配置。</p>
+         * <p>The behavior configurations of the scale-out.</p>
          */
         @NameInMap("ScaleUp")
         public CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviourScaleUp scaleUp;
@@ -304,12 +335,18 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleMetricMetrics extends TeaModel {
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MetricTargetAverageUtilization")
         public Integer metricTargetAverageUtilization;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         @NameInMap("MetricType")
         public String metricType;
@@ -340,6 +377,9 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleMetric extends TeaModel {
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
@@ -352,6 +392,9 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
@@ -390,18 +433,27 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleTriggerTriggers extends TeaModel {
         /**
          * <p>The metadata of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dryRun&quot;:true}</p>
          */
         @NameInMap("MetaData")
         public String metaData;
 
         /**
          * <p>The name of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type of the trigger. Valid values: cron and app_metric.</p>
+         * <p>The type of the trigger. Only cron and app_metric are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cron</p>
          */
         @NameInMap("Type")
         public String type;
@@ -440,18 +492,24 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRuleTrigger extends TeaModel {
         /**
          * <p>The maximum number of replicas. The maximum value is 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
         /**
          * <p>The minimum number of replicas. The minimum value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
         /**
-         * <p>The list of triggers.</p>
+         * <p>The triggers.</p>
          */
         @NameInMap("Triggers")
         public java.util.List<CreateApplicationScalingRuleResponseBodyAppScalingRuleTriggerTriggers> triggers;
@@ -490,27 +548,42 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     public static class CreateApplicationScalingRuleResponseBodyAppScalingRule extends TeaModel {
         /**
          * <p>The ID of the application to which the auto scaling policy belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78194c76-3dca-418e-a263-cccd1ab4****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The scaling behavior.</p>
+         */
         @NameInMap("Behaviour")
         public CreateApplicationScalingRuleResponseBodyAppScalingRuleBehaviour behaviour;
 
         /**
          * <p>The timestamp when the auto scaling policy was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23212323123</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The timestamp when the auto scaling policy was last disabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23212323123</p>
          */
         @NameInMap("LastDisableTime")
         public Long lastDisableTime;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
@@ -523,27 +596,40 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
         /**
          * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The auto scaling policy is enabled.</p>
-         * <p>*   **false**: The auto scaling policy is disabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: The auto scaling policy is enabled.</li>
+         * <li><strong>false</strong>: The auto scaling policy is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ScaleRuleEnabled")
         public Boolean scaleRuleEnabled;
 
         /**
          * <p>The name of the auto scaling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         @NameInMap("ScaleRuleName")
         public String scaleRuleName;
 
         /**
-         * <p>The type of the auto scaling policy. The value is trigger.</p>
+         * <p>The type of the rule. Only trigger is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger</p>
          */
         @NameInMap("ScaleRuleType")
         public String scaleRuleType;
@@ -556,6 +642,9 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the auto scaling policy was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23212323123</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

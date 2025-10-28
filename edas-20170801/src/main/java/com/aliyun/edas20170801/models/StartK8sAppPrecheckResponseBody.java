@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class StartK8sAppPrecheckResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7638276F-<strong><strong>-</strong></strong>-884F-54CC0BC84A8D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,23 +5,28 @@ import com.aliyun.tea.*;
 
 public class AddLogPathRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
-     * <br>
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3616cdca-4f92-4413**********</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The absolute path of the log directory that you want to add. The value must start and end with a forward slash (`/`) and must contain `/log` or `/logs`. The following directories are the default log directories in Enterprise Distributed Application Service (EDAS):</p>
-     * <br>
-     * <p>*   /home/admin/edas-container/logs/</p>
-     * <p>*   /home/admin/taobao-tomcat-7.0.59/logs/</p>
-     * <p>*   /home/admin/taobao-tomcat-production-7.0.59.3/logs/</p>
-     * <p>*   /home/admin/taobao-tomcat-production-7.0.70/logs/</p>
-     * <p>*   /home/admin/edas-agent/logs/</p>
-     * <br>
+     * <p>The absolute path of the log directory that you want to add. The value must start and end with a forward slash (<code>/</code>) and must contain <code>/log</code> or <code>/logs</code>. The following directories are the default log directories in Enterprise Distributed Application Service (EDAS):</p>
+     * <ul>
+     * <li>/home/admin/edas-container/logs/</li>
+     * <li>/home/admin/taobao-tomcat-7.0.59/logs/</li>
+     * <li>/home/admin/taobao-tomcat-production-7.0.59.3/logs/</li>
+     * <li>/home/admin/taobao-tomcat-production-7.0.70/logs/</li>
+     * <li>/home/admin/edas-agent/logs/</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/temp/log/</p>
      */
     @NameInMap("Path")
     public String path;

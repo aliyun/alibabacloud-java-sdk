@@ -6,42 +6,75 @@ import com.aliyun.tea.*;
 public class ListApplicationRequest extends TeaModel {
     /**
      * <p>The application IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *       &quot;5657d271-<strong><strong>-4f03-9bb2-431f942886bb&quot;,
+     *       &quot;5657d271-</strong></strong>-4f03-9bb2-431f942bbddd&quot;
+     * ]</p>
      */
     @NameInMap("AppIds")
     public String appIds;
 
     /**
      * <p>The name of the application. Specify this parameter if you want to filter applications by application name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testapp</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The cluster ID. Specify this parameter if you want to filter applications by cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong>********</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The namespace ID. Specify this parameter if you want to filter applications by namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 
     /**
      * <p>The ID of the namespace that you use in the exact search to filter applications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("LogicalRegionIdFilter")
     public String logicalRegionIdFilter;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group. Specify this parameter if you want to filter applications by resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek24j4s4b*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

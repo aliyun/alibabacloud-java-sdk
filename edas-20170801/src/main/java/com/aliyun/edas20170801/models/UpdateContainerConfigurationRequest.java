@@ -6,62 +6,88 @@ import com.aliyun.tea.*;
 public class UpdateContainerConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c627c157-560d-43ff-************</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The context path of the Tomcat container. The context path can be an empty string, a null WAR package name, a root directory, or other custom non-empty strings. It can contain letters, digits, hyphens (-), and underscores (_). Take note of the following items:</p>
-     * <br>
-     * <p>*   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</p>
-     * <p>*   If this parameter is not specified when you configure the Tomcat container for an application, the root directory `/` is used.</p>
+     * <ul>
+     * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+     * <li>If this parameter is not specified when you configure the Tomcat container for an application, the root directory <code>/</code> is used.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
      */
     @NameInMap("ContextPath")
     public String contextPath;
 
     /**
      * <p>The ID of the application instance group.</p>
-     * <br>
-     * <p>*   If an ID is specified, this operation configures the Tomcat container for the specified application instance group.</p>
-     * <p>*   If you set this parameter to "", this operation configures the Tomcat container for the application.</p>
+     * <ul>
+     * <li>If an ID is specified, this operation configures the Tomcat container for the specified application instance group.</li>
+     * <li>If you set this parameter to &quot;&quot;, this operation configures the Tomcat container for the application.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8123db90-880f-**************</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The application port number for the Tomcat container. Take note of the following items:</p>
-     * <br>
-     * <p>*   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</p>
-     * <p>*   If this parameter is not specified when you configure the application, the default port 8080 is applied.</p>
+     * <ul>
+     * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+     * <li>If this parameter is not specified when you configure the application, the default port 8080 is applied.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("HttpPort")
     public Integer httpPort;
 
     /**
      * <p>The maximum number of threads. Take note of the following items:</p>
-     * <br>
-     * <p>*   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</p>
-     * <p>*   If this parameter is not specified when you configure the application, the default value 250 is applied.</p>
+     * <ul>
+     * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+     * <li>If this parameter is not specified when you configure the application, the default value 250 is applied.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxThreads")
     public Integer maxThreads;
 
     /**
      * <p>The uniform resource identifier (URI) encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8. Take note of the following items:</p>
-     * <br>
-     * <p>*   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</p>
-     * <p>*   If this parameter is not specified when you configure the application, the default URI encoding scheme in the Tomcat container is applied.</p>
+     * <ul>
+     * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+     * <li>If this parameter is not specified when you configure the application, the default URI encoding scheme in the Tomcat container is applied.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ISO-8859-1</p>
      */
     @NameInMap("URIEncoding")
     public String URIEncoding;
 
     /**
      * <p>Specifies whether to use the encoding scheme specified in the request body for URI query parameters. Take note of the following items:</p>
-     * <br>
-     * <p>*   If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</p>
-     * <p>*   If this parameter is not specified when you configure the application, the default value false is applied.</p>
+     * <ul>
+     * <li>If this parameter is not specified when you configure the application instance group, the configuration of the application is applied.</li>
+     * <li>If this parameter is not specified when you configure the application, the default value false is applied.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UseBodyEncoding")
     public Boolean useBodyEncoding;

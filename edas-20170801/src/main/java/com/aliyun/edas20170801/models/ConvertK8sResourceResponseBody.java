@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ConvertK8sResourceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>convert success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA938591-*********-9690-BFD3F4DD7A93</p>
      */
     @NameInMap("RequestId")
     public String requestId;

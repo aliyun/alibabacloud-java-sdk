@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class UpdateK8sApplicationBaseInfoRequest extends TeaModel {
     /**
      * <p>The ID of the application that you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4f038ddf-b27b-<strong><strong>-</strong></strong>-88e44375****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The description of the application. The description can be up to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app for pre-production</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The email address of the application owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:mymail@example.com">mymail@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The owner of the application. The value can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tom</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
      * <p>The phone number of the application owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1361234xxxx</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryEccInfoResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class QueryEccInfoResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,48 +77,72 @@ public class QueryEccInfoResponseBody extends TeaModel {
     public static class QueryEccInfoResponseBodyEccInfo extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e809****-43d7-4c6b-8e01-b0d9d1db****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>ECC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5b9****-40b4-4d7b-9c2a-55d6c1c0****</p>
          */
         @NameInMap("EccId")
         public String eccId;
 
         /**
          * <p>ECU ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d4e****-6d87-401f-ba81-13df9877****</p>
          */
         @NameInMap("EcuId")
         public String ecuId;
 
         /**
          * <p>The ID of the ECC group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57cd****-2d3b-496f-bcce-646d0a4d****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the ECC group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_DEFAULT_GROUP</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The MD5 hash value of the deployment package version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bab6<strong><strong>7a090e41ca9445c9b3cd</strong></strong></p>
          */
         @NameInMap("PackageMd5")
         public String packageMd5;
 
         /**
          * <p>The version of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20210209.153400</p>
          */
         @NameInMap("PackageVersion")
         public String packageVersion;
 
         /**
          * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-23727****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

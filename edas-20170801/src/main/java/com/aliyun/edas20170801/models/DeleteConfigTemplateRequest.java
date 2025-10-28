@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteConfigTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the configuration template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>555</p>
      */
     @NameInMap("Id")
     public Long id;

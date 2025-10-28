@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteK8sApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application that you want to delete. You can call the ListApplication operation to query the application ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbac7e3c-****-49bc-b6de-ffc550018b45</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>Specifies whether to forcibly delete the application and disable application deletion protection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Force")
     public Boolean force;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateJvmConfigurationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D16979DC-4D42-********************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
     public static class UpdateJvmConfigurationResponseBodyJvmConfiguration extends TeaModel {
         /**
          * <p>The maximum size of the heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("MaxHeapSize")
         public Integer maxHeapSize;
 
         /**
          * <p>The size of the permanent generation heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxPermSize")
         public Integer maxPermSize;
 
         /**
          * <p>The initial size of the heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("MinHeapSize")
         public Integer minHeapSize;
 
         /**
          * <p>The optional parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Options")
         public String options;

@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class QueryMigrateEcuListRequest extends TeaModel {
     /**
      * <p>The ID of the namespace.</p>
-     * <br>
-     * <p>*   The ID of a custom namespace is in the `region ID:namespace identifier` format. Example: `cn-beijing:test`.</p>
-     * <p>*   The ID of the default namespace is in the `region ID` format. Example: `cn-beijing`.</p>
+     * <ul>
+     * <li>The ID of a custom namespace is in the <code>region ID:namespace identifier</code> format. Example: <code>cn-beijing:test</code>.</li>
+     * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: <code>cn-beijing</code>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou or cn-hangzhou:test</p>
      */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;

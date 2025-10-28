@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetK8sServicesResponseBody extends TeaModel {
     /**
      * <p>The ID of the change process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4823-bhjf-23u4-eiufh</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class GetK8sServicesResponseBody extends TeaModel {
     public static class GetK8sServicesResponseBodyServicesServicePorts extends TeaModel {
         /**
          * <p>The port of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NodePort")
         public Integer nodePort;
 
         /**
          * <p>The frontend service port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The protocol of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The backend container port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("TargetPort")
         public String targetPort;
@@ -132,12 +153,18 @@ public class GetK8sServicesResponseBody extends TeaModel {
     public static class GetK8sServicesResponseBodyServices extends TeaModel {
         /**
          * <p>The IP address of the service in the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>104.23.xx.xx</p>
          */
         @NameInMap("ClusterIP")
         public String clusterIP;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-http</p>
          */
         @NameInMap("Name")
         public String name;
@@ -150,6 +177,9 @@ public class GetK8sServicesResponseBody extends TeaModel {
 
         /**
          * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClusterIP</p>
          */
         @NameInMap("Type")
         public String type;

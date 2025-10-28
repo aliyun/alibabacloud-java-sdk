@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class ListK8sSecretsRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7a953f9a-2946-4c7a-9d82-9939db******</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The filter conditions. Set this parameter to a JSON string in the format of {"field":"Name", "pattern":"configmap-"}.</p>
+     * <p>The filter conditions. Set this parameter to a JSON string in the format of {&quot;field&quot;:&quot;Name&quot;, &quot;pattern&quot;:&quot;configmap-&quot;}.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;field\&quot;:\&quot;Name\&quot;,\&quot;pattern\&quot;:\&quot;product\&quot;}</p>
      */
     @NameInMap("Condition")
     public String condition;
 
     /**
      * <p>The namespace of the Kubernetes cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The number of the page to return. Pages start from Page 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page. The value 0 indicates that all entries are returned on one page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to return a list of applications that use a Secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ShowRelatedApps")
     public Boolean showRelatedApps;

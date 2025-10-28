@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DeleteApplicationResponseBody extends TeaModel {
     /**
      * <p>The ID of the change process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b8e3c0b-5818-430*************</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34DFE9FDV****************</p>
      */
     @NameInMap("RequestId")
     public String requestId;

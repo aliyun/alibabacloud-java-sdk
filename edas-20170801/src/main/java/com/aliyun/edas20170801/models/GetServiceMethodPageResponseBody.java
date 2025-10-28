@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceMethodPageResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,24 +21,36 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDC0C0FE-D63B-4FC8-<strong><strong>-4081C57E</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,12 +111,18 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     public static class GetServiceMethodPageResponseBodyDataResultReturnDefinition extends TeaModel {
         /**
          * <p>The ID of the return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The data format of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("Type")
         public String type;
@@ -132,54 +153,81 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     public static class GetServiceMethodPageResponseBodyDataResult extends TeaModel {
         /**
          * <p>The method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliware.edas.EchoController</p>
          */
         @NameInMap("MethodController")
         public String methodController;
 
         /**
          * <p>The name of the method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The details of the method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("NameDetail")
         public String nameDetail;
 
         /**
          * <p>The definition of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;description&quot;:&quot;&quot;,&quot;name&quot;:&quot;arg0&quot;,&quot;type&quot;:&quot;java.lang.String&quot;}]</p>
          */
         @NameInMap("ParameterDefinitions")
         public String parameterDefinitions;
 
         /**
          * <p>The details of the parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("ParameterDetails")
         public String parameterDetails;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         @NameInMap("ParameterNames")
         public String parameterNames;
 
         /**
          * <p>The data type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("ParameterTypes")
         public String parameterTypes;
 
         /**
          * <p>The method path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/consumer/alive</p>
          */
         @NameInMap("Paths")
         public String paths;
 
         /**
          * <p>The request method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         @NameInMap("RequestMethods")
         public String requestMethods;
@@ -192,12 +240,18 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
         /**
          * <p>The details of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
         /**
          * <p>The data format of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("ReturnType")
         public String returnType;
@@ -308,12 +362,18 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     public static class GetServiceMethodPageResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -326,6 +386,9 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

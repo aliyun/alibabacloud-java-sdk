@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteClusterMemberRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52984524-<strong><strong>-</strong></strong>-85f2-a34b0e5bb521</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The member ID of the ECS instance that you want to remove from the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2zej4i2jdf3****jigng</p>
      */
     @NameInMap("ClusterMemberId")
     public String clusterMemberId;

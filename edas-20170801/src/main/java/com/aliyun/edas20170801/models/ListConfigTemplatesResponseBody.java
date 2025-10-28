@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListConfigTemplatesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4D9F-DR94-FD****************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,42 +77,63 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
     public static class ListConfigTemplatesResponseBodyDataResult extends TeaModel {
         /**
          * <p>The content of the configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;William&quot;}</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The description of the configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test configuration template</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The data format of the configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>The time when the configuration template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638171689626</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the configuration template was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638171689626</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d84efaf-37d9-49fb-a3a8-b38d5c2b460c</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the configuration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>config-tmpl-1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -174,12 +204,18 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
     public static class ListConfigTemplatesResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -192,6 +228,9 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of configuration templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;

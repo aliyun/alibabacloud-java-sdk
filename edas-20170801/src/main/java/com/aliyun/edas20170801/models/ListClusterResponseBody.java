@@ -12,18 +12,27 @@ public class ListClusterResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1053-08e4-47a5-b2ab-5c0323de****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,123 +77,180 @@ public class ListClusterResponseBody extends TeaModel {
     public static class ListClusterResponseBodyClusterListCluster extends TeaModel {
         /**
          * <p>The ID of the cluster in EDAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b98b5919-c111-4dad-9f74-7233********</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-test</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   0: regular Docker cluster</p>
-         * <p>*   1: Swarm cluster</p>
-         * <p>*   2: Elastic Compute Service (ECS) cluster</p>
-         * <p>*   3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)</p>
-         * <p>*   4: cluster in which Pandora automatically registers applications</p>
-         * <p>*   5: ACK cluster</p>
+         * <ul>
+         * <li>0: regular Docker cluster</li>
+         * <li>1: Swarm cluster</li>
+         * <li>2: Elastic Compute Service (ECS) cluster</li>
+         * <li>3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)</li>
+         * <li>4: cluster in which Pandora automatically registers applications</li>
+         * <li>5: ACK cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ClusterType")
         public Integer clusterType;
 
         /**
          * <p>The total number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The number of used CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CpuUsed")
         public Integer cpuUsed;
 
         /**
          * <p>The timestamp when the cluster was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1502888064561</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The ID of the cluster in Container Service for Kubernetes (ACK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2ce************b9203a9</p>
          */
         @NameInMap("CsClusterId")
         public String csClusterId;
 
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The provider of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         @NameInMap("IaasProvider")
         public String iaasProvider;
 
         /**
          * <p>The total size of memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3072</p>
          */
         @NameInMap("Mem")
         public Integer mem;
 
         /**
          * <p>The size of used memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MemUsed")
         public Integer memUsed;
 
         /**
          * <p>The network type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   1: classic network</p>
-         * <p>*   2: virtual private cloud (VPC)</p>
+         * <ul>
+         * <li>1: classic network</li>
+         * <li>2: virtual private cloud (VPC)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NetworkMode")
         public Integer networkMode;
 
         /**
          * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
         /**
          * <p>The CPU overcommit ratio that is supported by a Docker cluster. Valid values:</p>
-         * <br>
-         * <p>*   1: 1:1, which means that CPU resources are not overcommitted.</p>
-         * <p>*   2: 1:2, which means that CPU resources are overcommitted by 1:2.</p>
-         * <p>*   4: 1:4, which means that CPU resources are overcommitted by 1:4.</p>
-         * <p>*   8: 1:8, which means that CPU resources are overcommitted by 1:8.</p>
+         * <ul>
+         * <li>1: 1:1, which means that CPU resources are not overcommitted.</li>
+         * <li>2: 1:2, which means that CPU resources are overcommitted by 1:2.</li>
+         * <li>4: 1:4, which means that CPU resources are overcommitted by 1:4.</li>
+         * <li>8: 1:8, which means that CPU resources are overcommitted by 1:8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OversoldFactor")
         public Integer oversoldFactor;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>461</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The timestamp when the cluster was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1533820823203</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-23727****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

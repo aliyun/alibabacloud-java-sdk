@@ -5,77 +5,113 @@ import com.aliyun.tea.*;
 
 public class UpdateK8sApplicationConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](https://help.aliyun.com/document_detail/423162.html).</p>
-     * <br>
+     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/423162.html">ListApplication</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23bf94d9-****-4994-9917-616a827aa777</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The ID of the cluster. You can query the cluster ID by calling the ListCluster operation. For more information, see [ListCluster](https://help.aliyun.com/document_detail/411844.html).</p>
+     * <p>The ID of the cluster. You can query the cluster ID by calling the ListCluster operation. For more information, see <a href="https://help.aliyun.com/document_detail/411844.html">ListCluster</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9c28bbb9-****-44b3-b953-54ef8a2d0be2</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The maximum number of CPU cores allowed for each application instance when the application is running. The value 0 indicates that no limit is set on CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CpuLimit")
     public String cpuLimit;
 
     /**
      * <p>The number of CPU cores requested for each application instance when the application is running. Unit: cores. We recommend that you set this parameter. The value 0 indicates that no limit is set on CPU cores.</p>
-     * <br>
-     * <p>> You must set this parameter together with the CpuLimit parameter. Make sure that the value of this parameter does not exceed that of the CpuLimit parameter.</p>
+     * <blockquote>
+     * <p>You must set this parameter together with the CpuLimit parameter. Make sure that the value of this parameter does not exceed that of the CpuLimit parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CpuRequest")
     public String cpuRequest;
 
     /**
      * <p>The maximum size of space required by ephemeral storage. Unit: GB. The value 0 indicates that no limit is set on the ephemeral storage space.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("EphemeralStorageLimit")
     public String ephemeralStorageLimit;
 
     /**
      * <p>The minimum size of space required by ephemeral storage. Unit: GB. The value 0 indicates that no limit is set on the ephemeral storage space.</p>
-     * <br>
-     * <p>> You must set this parameter together with the EphemeralStorageLimit parameter. Make sure that the value of this parameter does not exceed that of the EphemeralStorageLimit parameter.</p>
+     * <blockquote>
+     * <p>You must set this parameter together with the EphemeralStorageLimit parameter. Make sure that the value of this parameter does not exceed that of the EphemeralStorageLimit parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("EphemeralStorageRequest")
     public String ephemeralStorageRequest;
 
     /**
      * <p>The maximum number of CPU cores allowed. The value 0 indicates that no limit is set on CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("McpuLimit")
     public String mcpuLimit;
 
     /**
      * <p>The minimum number of CPU cores required. Unit: cores. The value 0 indicates that no limit is set on CPU cores.</p>
-     * <br>
-     * <p>> You must set this parameter together with the CpuLimit parameter. Make sure that the value of this parameter does not exceed that of the CpuLimit parameter.</p>
+     * <blockquote>
+     * <p>You must set this parameter together with the CpuLimit parameter. Make sure that the value of this parameter does not exceed that of the CpuLimit parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("McpuRequest")
     public String mcpuRequest;
 
     /**
      * <p>The maximum size of memory allowed for each application instance when the application is running. Unit: MB. The value 0 indicates that no limit is set on the memory size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("MemoryLimit")
     public String memoryLimit;
 
     /**
      * <p>The size of memory requested for each application instance when the application is running. Unit: MB. We recommend that you set this parameter. If you do not want to apply for a memory quota, set this parameter to 0.</p>
-     * <br>
-     * <p>> You must set this parameter together with the MemoryLimit parameter. Make sure that the value of this parameter does not exceed that of the MemoryLimit parameter.</p>
+     * <blockquote>
+     * <p>You must set this parameter together with the MemoryLimit parameter. Make sure that the value of this parameter does not exceed that of the MemoryLimit parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("MemoryRequest")
     public String memoryRequest;
 
     /**
      * <p>The timeout period of the change process. Valid values: 1 to 1800. Default value: 600. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;

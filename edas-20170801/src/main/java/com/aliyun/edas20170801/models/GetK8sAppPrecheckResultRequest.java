@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class GetK8sAppPrecheckResultRequest extends TeaModel {
     /**
      * <p>The name of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testapp</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The ID of the cluster in Enterprise Distributed Application Service (EDAS).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong>********</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The namespace of the Kubernetes cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UnbindK8sSlbResponseBody extends TeaModel {
     /**
      * <p>The ID of the change process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b0a8441e-****-4e8e-9874-b56dea02952f</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234-1sda-321d-1234</p>
      */
     @NameInMap("RequestId")
     public String requestId;

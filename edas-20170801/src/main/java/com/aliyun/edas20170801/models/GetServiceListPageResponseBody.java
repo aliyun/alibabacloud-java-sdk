@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceListPageResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetServiceListPageResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -68,48 +77,72 @@ public class GetServiceListPageResponseBody extends TeaModel {
     public static class GetServiceListPageResponseBodyDataContent extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efbda488-7b33-432f-<strong><strong>-36530047</strong></strong></p>
          */
         @NameInMap("EdasAppId")
         public String edasAppId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-lq-cartservice</p>
          */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
         /**
          * <p>The service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DUBBO</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
         /**
          * <p>The type of the service registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         @NameInMap("RegisterType")
         public String registerType;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibabacloud.hipstershop.CartService</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("Version")
         public String version;
@@ -194,18 +227,27 @@ public class GetServiceListPageResponseBody extends TeaModel {
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("TotalElements")
         public Integer totalElements;
 
         /**
          * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalPages")
         public Integer totalPages;

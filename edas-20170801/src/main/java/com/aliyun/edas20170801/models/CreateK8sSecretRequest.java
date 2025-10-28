@@ -6,54 +6,80 @@ import com.aliyun.tea.*;
 public class CreateK8sSecretRequest extends TeaModel {
     /**
      * <p>Specifies whether the data has been encoded in Base64. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Base64Encoded")
     public Boolean base64Encoded;
 
     /**
      * <p>The certificate ID provided by Alibaba Cloud Certificate Management Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6651483</p>
      */
     @NameInMap("CertId")
     public String certId;
 
     /**
      * <p>The region in which the certificate is stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("CertRegionId")
     public String certRegionId;
 
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>712082c3-<strong><strong>-</strong></strong>-9217-a947b5cde6ee</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The data of the Secret. The value must be a JSON array that contains the following information:</p>
-     * <br>
-     * <p>*   Key: Secret key</p>
-     * <p>*   Value: Secret value</p>
+     * <ul>
+     * <li>Key: Secret key</li>
+     * <li>Value: Secret value</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Key&quot;:&quot;name&quot;,&quot;Value&quot;:&quot;william&quot;},{&quot;Key&quot;:&quot;age&quot;,&quot;Value&quot;:&quot;12&quot;}]</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-secret</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace of the Kubernetes cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The Secret type. Valid values:</p>
-     * <br>
-     * <p>*   Opaque: user-defined data</p>
-     * <p>*   kubernetes.io/tls: Transport Layer Security (TLS) certificate</p>
+     * <ul>
+     * <li>Opaque: user-defined data</li>
+     * <li>kubernetes.io/tls: Transport Layer Security (TLS) certificate</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Opaque</p>
      */
     @NameInMap("Type")
     public String type;

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class BindEcsSlbResponseBody extends TeaModel {
     /**
      * <p>The change process ID for this operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd65b247-****-475b-ad4b-7039040d625c</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03FD1520-0FD6-436A-<strong><strong>-265318D7</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;

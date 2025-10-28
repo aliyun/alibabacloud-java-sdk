@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D5268CAC-D356-5C8D-BC7C-FBE0D13B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
     public static class InsertSwimmingLaneGroupResponseBodyDataApplicationListApplication extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bdb251cc-02a6-48dd-891b-2ab21b25****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -123,12 +138,18 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
     public static class InsertSwimmingLaneGroupResponseBodyDataEntryApplication extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bdb251cc-02a6-48dd-891b-2ab21b25c****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -171,18 +192,27 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;

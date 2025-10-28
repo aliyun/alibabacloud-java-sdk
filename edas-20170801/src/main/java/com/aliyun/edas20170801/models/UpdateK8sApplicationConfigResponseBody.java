@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UpdateK8sApplicationConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the change process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8806d1c6-****-48eb-9373-6bdef3007466</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4823-bhjf-23u4-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

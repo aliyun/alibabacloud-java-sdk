@@ -12,18 +12,27 @@ public class ListAuthorityResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>57609587-DFA2-41EC-<strong><strong>-</strong></strong>*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class ListAuthorityResponseBody extends TeaModel {
     public static class ListAuthorityResponseBodyAuthorityListAuthorityActionListAction extends TeaModel {
         /**
          * <p>The code of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The description of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create an application</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create an application</p>
          */
         @NameInMap("Name")
         public String name;
@@ -157,18 +178,27 @@ public class ListAuthorityResponseBody extends TeaModel {
 
         /**
          * <p>The description of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operations on applications</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the permission group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application management</p>
          */
         @NameInMap("Name")
         public String name;

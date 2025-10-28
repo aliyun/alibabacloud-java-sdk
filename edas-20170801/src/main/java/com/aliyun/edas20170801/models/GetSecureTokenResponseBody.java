@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetSecureTokenResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message returned for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D16979DC-4D42-*************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,93 +77,139 @@ public class GetSecureTokenResponseBody extends TeaModel {
     public static class GetSecureTokenResponseBodySecureToken extends TeaModel {
         /**
          * <p>The AccessKey ID used in the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f676f1**************</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
 
         /**
          * <p>The address of Address Server associated with the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>addr-<strong><strong>-</strong></strong>.edas.aliyun.com</p>
          */
         @NameInMap("AddressServerHost")
         public String addressServerHost;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("BelongRegion")
         public String belongRegion;
 
         /**
          * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the Alibaba Cloud account that activated Enterprise Distributed Application Service (EDAS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11727458********</p>
          */
         @NameInMap("EdasId")
         public String edasId;
 
         /**
          * <p>The ID of the security token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7279</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The ID of the MSE instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-tl32p******</p>
          */
         @NameInMap("MseInstanceId")
         public String mseInstanceId;
 
         /**
          * <p>The public endpoint of the MSE registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-aa2******-p.nacos-ans.mse.aliyuncs.com</p>
          */
         @NameInMap("MseInternetAddress")
         public String mseInternetAddress;
 
         /**
          * <p>The private endpoint of the MSE registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-72******-nacos-ans.mse.aliyuncs.com</p>
          */
         @NameInMap("MseIntranetAddress")
         public String mseIntranetAddress;
 
         /**
          * <p>The type of the Microservices Engine (MSE) registry.</p>
-         * <br>
-         * <p>*   default: the shared registry of EDAS</p>
-         * <p>*   exclusive_mse: MSE Nacos registry</p>
+         * <ul>
+         * <li>default: the shared registry of EDAS</li>
+         * <li>exclusive_mse: MSE Nacos registry</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>exclusive_mse</p>
          */
         @NameInMap("MseRegistryType")
         public String mseRegistryType;
 
         /**
          * <p>The ID of the region where the namespace resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen:x*******</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the region where the namespace resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x******</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
          * <p>The AccessKey secret used in the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gOSgbgR2R*************</p>
          */
         @NameInMap("SecretKey")
         public String secretKey;
 
         /**
          * <p>The tenant ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>401b7bc8-9441-4693-<strong><strong>-</strong></strong>********</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
          */
         @NameInMap("UserId")
         public String userId;

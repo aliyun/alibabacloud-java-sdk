@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPackageStorageCredentialResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,60 +77,90 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
     public static class GetPackageStorageCredentialResponseBodyCredential extends TeaModel {
         /**
          * <p>The AccessKey ID of your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <yourAccessKeyId>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>The AccessKey secret of your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <yourAccessKeySecret>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
         /**
          * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-bj</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>The time when the STS credential expires. Example: 2019-11-10T07:20:19Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-10T07:20:19Z</p>
          */
         @NameInMap("Expiration")
         public String expiration;
 
         /**
          * <p>The object key prefix in Object Storage Service (OSS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release-pkg/117274586608****</p>
          */
         @NameInMap("KeyPrefix")
         public String keyPrefix;
 
         /**
          * <p>The private endpoint of OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing-internal.aliyuncs.com</p>
          */
         @NameInMap("OssInternalEndpoint")
         public String ossInternalEndpoint;
 
         /**
          * <p>The public endpoint of OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing.aliyuncs.com</p>
          */
         @NameInMap("OssPublicEndpoint")
         public String ossPublicEndpoint;
 
         /**
          * <p>The VPC endpoint of OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing-internal.aliyuncs.com</p>
          */
         @NameInMap("OssVpcEndpoint")
         public String ossVpcEndpoint;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The security token issued by STS.</p>
+         * 
+         * <strong>example:</strong>
+         * <yourSecurityToken>
          */
         @NameInMap("SecurityToken")
         public String securityToken;

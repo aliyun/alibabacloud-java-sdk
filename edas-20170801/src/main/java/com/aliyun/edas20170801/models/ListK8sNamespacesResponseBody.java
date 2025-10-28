@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListK8sNamespacesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
 
     /**
      * <p>The message returned for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>57F146F6-3C94-<strong><strong>-</strong></strong>-A66EF4B9*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,6 +77,9 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
     public static class ListK8sNamespacesResponseBodyData extends TeaModel {
         /**
          * <p>The namespaces of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>development</p>
          */
         @NameInMap("Namespace")
         public String namespace;

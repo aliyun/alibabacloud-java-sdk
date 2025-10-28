@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListConvertableEcuResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListConvertableEcuResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-7ca7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,90 +77,133 @@ public class ListConvertableEcuResponseBody extends TeaModel {
     public static class ListConvertableEcuResponseBodyInstanceListInstance extends TeaModel {
         /**
          * <p>The number of CPU cores of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The ID of the elastic compute units (ECU).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b197-40ab-9155-7ca7</p>
          */
         @NameInMap("EcuId")
         public String ecuId;
 
         /**
          * <p>The elastic IP address (EIP) associated with the ECS instance. The EIP can be changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13.xx.xxx.xx</p>
          */
         @NameInMap("Eip")
         public String eip;
 
         /**
          * <p>Indicates whether the ECS instance has expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Expired")
         public Boolean expired;
 
         /**
          * <p>The private IP address of the ECS instance. This parameter is valid only when the ECS instance is deployed in a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.13.xx</p>
          */
         @NameInMap("InnerIp")
         public String innerIp;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze7s2v0b***********</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-k8s</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The size of memory for the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096</p>
          */
         @NameInMap("Mem")
         public Integer mem;
 
         /**
          * <p>The private IP address of the ECS instance. This parameter is valid only when the ECS instance is deployed in a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.123</p>
          */
         @NameInMap("PrivateIp")
         public String privateIp;
 
         /**
          * <p>The public IP address of the ECS instance. This IP address can be used only by the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13.xx.xx.xxx</p>
          */
         @NameInMap("PublicIp")
         public String publicIp;
 
         /**
          * <p>The ID of the region where the ECS instance is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The state of the instance. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The instance is being created.</p>
-         * <p>*   Running: The instance is running.</p>
-         * <p>*   Starting: The instance is being started.</p>
-         * <p>*   Stopping: The instance is being stopped.</p>
-         * <p>*   Stopped: The instance is stopped.</p>
+         * <ul>
+         * <li>Pending: The instance is being created.</li>
+         * <li>Running: The instance is running.</li>
+         * <li>Starting: The instance is being started.</li>
+         * <li>Stopping: The instance is being stopped.</li>
+         * <li>Stopped: The instance is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zef6ob8m************</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jianwei-test</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

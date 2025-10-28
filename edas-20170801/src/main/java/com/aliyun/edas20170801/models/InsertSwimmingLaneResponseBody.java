@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InsertSwimmingLaneResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class InsertSwimmingLaneResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75972A87-5682-5277-ADA7-DA2A01BE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class InsertSwimmingLaneResponseBody extends TeaModel {
     public static class InsertSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bd170895-096c-4944-9007-d4582c77****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88</p>
          */
         @NameInMap("LaneId")
         public Long laneId;
 
         /**
          * <p>The association rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dubbo</p>
          */
         @NameInMap("Rules")
         public String rules;
@@ -132,73 +153,87 @@ public class InsertSwimmingLaneResponseBody extends TeaModel {
     public static class InsertSwimmingLaneResponseBodyData extends TeaModel {
         /**
          * <p>The applications that are associated with lanes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;appId&quot;:&quot;9dcba109-ee9f-4e67-8916-41
+         * *******&quot;}]</p>
          */
         @NameInMap("AppInfos")
         public String appInfos;
 
         /**
          * <p>The throttling rule for the lane.</p>
-         * <br>
          * <p>priority: the priority of the throttling rule for the lane. Valid values: 1 to 100.</p>
-         * <br>
          * <p>path: the path that is matched by the throttling rule for the lane.</p>
-         * <br>
          * <p>restItems: conditions to be met.</p>
-         * <br>
          * <p>condition: the relationship among the conditions to be met.</p>
-         * <br>
-         * <p>*   AND: all conditions</p>
-         * <p>*   OR: one of the conditions</p>
-         * <br>
+         * <ul>
+         * <li>AND: all conditions</li>
+         * <li>OR: one of the conditions</li>
+         * </ul>
          * <p>restItems.type: the type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   header: matches by request header.</p>
-         * <p>*   cookie: matches by request cookie.</p>
-         * <p>*   param: matches by request parameters.</p>
-         * <br>
+         * <ul>
+         * <li>header: matches by request header.</li>
+         * <li>cookie: matches by request cookie.</li>
+         * <li>param: matches by request parameters.</li>
+         * </ul>
          * <p>restItems.name: the key that matches the rule.</p>
-         * <br>
          * <p>restItems.value: the value that matches the rule.</p>
-         * <br>
          * <p>restItems.cond: the condition that matches the rule. Valid values:</p>
-         * <br>
-         * <p>*   "==": The parameter value is equal to the value that you enter in the Value field.</p>
-         * <p>*   "!=": The parameter value is not equal to the value that you enter in the Value field.</p>
-         * <p>*   ">": The parameter value is greater than the value that you enter in the Value field.</p>
-         * <p>*   "<": The parameter value is less than the value that you enter in the Value field.</p>
-         * <p>*   ">=": The parameter value is greater than or equal to the value that you enter in the Value field.</p>
-         * <p>*   "<=": The parameter value is less than or equal to the value that you enter in the Value field.</p>
-         * <p>*   "in": The parameter value is within the values that you enter in the Value field.</p>
-         * <br>
+         * <ul>
+         * <li>&quot;==&quot;: The parameter value is equal to the value that you enter in the Value field.</li>
+         * <li>&quot;!=&quot;: The parameter value is not equal to the value that you enter in the Value field.</li>
+         * <li>&quot;&gt;&quot;: The parameter value is greater than the value that you enter in the Value field.</li>
+         * <li>&quot;&lt;&quot;: The parameter value is less than the value that you enter in the Value field.</li>
+         * <li>&quot;&gt;=&quot;: The parameter value is greater than or equal to the value that you enter in the Value field.</li>
+         * <li>&quot;&lt;=&quot;: The parameter value is less than or equal to the value that you enter in the Value field.</li>
+         * <li>&quot;in&quot;: The parameter value is within the values that you enter in the Value field.</li>
+         * </ul>
          * <p>restItems.operator: the type of the value. Valid values:</p>
-         * <br>
-         * <p>*   rawvalue: the initial value</p>
-         * <p>*   mod: the reminder obtained by performing modulo operation</p>
-         * <p>*   list: the value from the list</p>
+         * <ul>
+         * <li>rawvalue: the initial value</li>
+         * <li>mod: the reminder obtained by performing modulo operation</li>
+         * <li>list: the value from the list</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;condition\&quot;:\&quot;AND\&quot;,\&quot;enable\&quot;:false,\&quot;path\&quot;:\&quot;/traffic\&quot;,\&quot;priority\&quot;:1,\&quot;restItems\&quot;:[{\&quot;cond\&quot;:\&quot;==\&quot;,\&quot;datum\&quot;:\&quot;testvalue\&quot;,\&quot;name\&quot;:\&quot;testheader\&quot;,\&quot;operator\&quot;:\&quot;rawvalue\&quot;,\&quot;type\&quot;:\&quot;header\&quot;,\&quot;value\&quot;:\&quot;testvalue\&quot;}]}]</p>
          */
         @NameInMap("EntryRule")
         public String entryRule;
 
         /**
          * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The ID of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -211,6 +246,9 @@ public class InsertSwimmingLaneResponseBody extends TeaModel {
 
         /**
          * <p>The tag of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8202e09</p>
          */
         @NameInMap("Tag")
         public String tag;

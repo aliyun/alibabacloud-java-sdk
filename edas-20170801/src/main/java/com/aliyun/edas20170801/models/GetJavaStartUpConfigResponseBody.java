@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetJavaStartUpConfigResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetJavaStartUpConfigResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4823-bhjf-23u4-eiufh</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class GetJavaStartUpConfigResponseBody extends TeaModel {
     public static class GetJavaStartUpConfigResponseBodyJavaStartUpConfig extends TeaModel {
         /**
          * <p>The displayed startup parameter configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-Xms512m</p>
          */
         @NameInMap("OriginalConfigs")
         public String originalConfigs;
 
         /**
          * <p>The effective startup parameter configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-Xms512m</p>
          */
         @NameInMap("StartUpArgs")
         public String startUpArgs;

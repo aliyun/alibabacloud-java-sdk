@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListConvertableEcuRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](https://help.aliyun.com/document_detail/154995.html).</p>
-     * <br>
+     * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b3e3f77b-462e-<strong><strong>-</strong></strong>-bec8727a****</p>
      */
     @NameInMap("clusterId")
     public String clusterId;

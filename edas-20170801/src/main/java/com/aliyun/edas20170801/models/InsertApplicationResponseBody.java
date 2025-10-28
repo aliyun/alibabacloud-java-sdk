@@ -12,18 +12,27 @@ public class InsertApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The application name test-hsy-C5039-paas-6 had been created successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4264F69C-686C-4107-B493-0599C8xxxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,51 +77,76 @@ public class InsertApplicationResponseBody extends TeaModel {
     public static class InsertApplicationResponseBodyApplicationInfo extends TeaModel {
         /**
          * <p>The ID of the application. The ID is the unique identifier of the application in EDAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c733bcd-6efb-47a1-8226-cf722c******</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello-edas-test-1</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the change process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d0cf569e-dce3-4efb-<strong><strong>-08b70021</strong></strong></p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
         /**
          * <p>Indicates whether the application is a Docker application. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The application is a Docker application.</p>
-         * <p>*   **false**: The application is not a Docker application.</p>
+         * <ul>
+         * <li><strong>true</strong>: The application is a Docker application.</li>
+         * <li><strong>false</strong>: The application is not a Docker application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Dockerize")
         public Boolean dockerize;
 
         /**
          * <p>The owner of the application. The owner is the user who created the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>249763358688********</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The port used by the created application. Default value: 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see [UpdateContainerConfiguration](https://help.aliyun.com/document_detail/149403.html).</p>
+         * <p>The port used by the created application. Default value: 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see <a href="https://help.aliyun.com/document_detail/149403.html">UpdateContainerConfiguration</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
          * <p>The ID of the user who created the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tdy218@1362469756xxxxxx</p>
          */
         @NameInMap("UserId")
         public String userId;

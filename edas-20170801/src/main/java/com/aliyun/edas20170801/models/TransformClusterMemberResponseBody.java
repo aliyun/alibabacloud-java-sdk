@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class TransformClusterMemberResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>`Transform submit success!` is returned if the request is successful.</p>
+     * <p><code>Transform submit success!</code> is returned if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Transform submit success!</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

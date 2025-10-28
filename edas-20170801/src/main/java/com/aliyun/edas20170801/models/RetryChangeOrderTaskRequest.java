@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class RetryChangeOrderTaskRequest extends TeaModel {
     /**
      * <p>The retry status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RetryStatus")
     public Boolean retryStatus;
 
     /**
      * <p>The ID of the process.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>823-bhjf-23u4-eiuf*</p>
      */
     @NameInMap("TaskId")
     public String taskId;

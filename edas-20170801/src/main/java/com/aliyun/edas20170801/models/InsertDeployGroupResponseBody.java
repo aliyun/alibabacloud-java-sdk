@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InsertDeployGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class InsertDeployGroupResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3RD9-D3FRE****************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,64 +77,94 @@ public class InsertDeployGroupResponseBody extends TeaModel {
     public static class InsertDeployGroupResponseBodyDeployGroupEntity extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3616cdca-4f92-4413-***********</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The version of the deployment package for the application.</p>
-         * <br>
-         * <p>*   If the application is deployed, a string of random numbers is returned.</p>
-         * <p>*   If the application is not deployed, the return value is empty.</p>
+         * <ul>
+         * <li>If the application is deployed, a string of random numbers is returned.</li>
+         * <li>If the application is not deployed, the return value is empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>f4c50-16ee-a02b-667</strong></strong>*</p>
          */
         @NameInMap("AppVersionId")
         public String appVersionId;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d247b93-8d62-4e34***********</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The time when the instance group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573627695779</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The name of the instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The type of the instance group. Valid values:</p>
-         * <br>
-         * <p>*   0: the default group.</p>
-         * <p>*   1: a group for which canary traffic management is not enabled.</p>
-         * <p>*   2: a group for which canary traffic management is enabled.</p>
+         * <ul>
+         * <li>0: the default group.</li>
+         * <li>1: a group for which canary traffic management is not enabled.</li>
+         * <li>2: a group for which canary traffic management is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GroupType")
         public Integer groupType;
 
         /**
          * <p>The ID of the instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>577f4c50-16ee-43d8-a02b-667*********</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
-         * <br>
-         * <p>*   If an application is deployed in the instance group, a string of random numbers is returned.</p>
-         * <p>*   If no application is deployed in the instance group, the return value is empty.</p>
+         * <ul>
+         * <li>If an application is deployed in the instance group, a string of random numbers is returned.</li>
+         * <li>If no application is deployed in the instance group, the return value is empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>7b93-8d62-4e34</strong></strong>*******</p>
          */
         @NameInMap("PackageVersionId")
         public String packageVersionId;
 
         /**
          * <p>The time when the instance group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573627695779</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

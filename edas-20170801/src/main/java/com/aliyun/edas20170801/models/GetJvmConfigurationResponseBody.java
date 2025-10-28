@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetJvmConfigurationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetJvmConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F43-F34V-0VCD***********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class GetJvmConfigurationResponseBody extends TeaModel {
     public static class GetJvmConfigurationResponseBodyJvmConfiguration extends TeaModel {
         /**
          * <p>The maximum size of the heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxHeapSize")
         public Integer maxHeapSize;
 
         /**
          * <p>The size of the permanent generation heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxPermSize")
         public Integer maxPermSize;
 
         /**
          * <p>The initial size of the heap memory. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("MinHeapSize")
         public Integer minHeapSize;
 
         /**
          * <p>The custom parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-XX:+UseConcMarkSweepGC -XX:-UseParNewGC</p>
          */
         @NameInMap("Options")
         public String options;

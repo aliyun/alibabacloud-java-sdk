@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ListMethodsRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>be213a4a-c7e4-473b-ab0****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Method</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

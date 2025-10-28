@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class ScaleOutApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the progress of this scale-out. For more information, see [GetChangeOrderInfo](https://help.aliyun.com/document_detail/62072.html).</p>
+     * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the progress of this scale-out. For more information, see <a href="https://help.aliyun.com/document_detail/62072.html">GetChangeOrderInfo</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f4208118-7171-4e20-92************</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D16979DC-4D42-***********************</p>
      */
     @NameInMap("RequestId")
     public String requestId;

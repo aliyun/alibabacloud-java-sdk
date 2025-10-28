@@ -5,30 +5,42 @@ import com.aliyun.tea.*;
 
 public class ImportK8sClusterRequest extends TeaModel {
     /**
-     * <p>The ID of the ACK cluster or serverless Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see [GetK8sCluster](https://help.aliyun.com/document_detail/181437.html).</p>
-     * <br>
+     * <p>The ID of the ACK cluster or serverless Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see <a href="https://help.aliyun.com/document_detail/181437.html">GetK8sCluster</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9c28bbb9-****-44b3-b953-54ef8a2d0be2</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether to enable the integration with Alibaba Cloud Service Mesh (ASM). Valid values:</p>
-     * <br>
-     * <p>*   true: Enables the integration with ASM.</p>
-     * <p>*   false: Disables the integration with ASM.</p>
+     * <ul>
+     * <li>true: Enables the integration with ASM.</li>
+     * <li>false: Disables the integration with ASM.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAsm")
     public Boolean enableAsm;
 
     /**
      * <p>You can ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Mode")
     public Integer mode;
 
     /**
-     * <p>The ID of the namespace. It is in the format of `Region ID:Identifier of the microservices namespace`. Example: `cn-hangzhou:doc`.</p>
+     * <p>The ID of the namespace. It is in the format of <code>Region ID:Identifier of the microservices namespace</code>. Example: <code>cn-hangzhou:doc</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:doc</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class QuerySlsLogStoreListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d6834ee9-5045-*************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
 
     /**
      * <p>The number of log sources configured for the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalSize")
     public Integer totalSize;
@@ -82,12 +94,18 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
     public static class QuerySlsLogStoreListResponseBodyResult extends TeaModel {
         /**
          * <p>The type of the logging service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Log Service</p>
          */
         @NameInMap("ConsumerSide")
         public String consumerSide;
 
         /**
          * <p>The time when the logging service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-18 22:08:46</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -100,21 +118,31 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thisisatestlogstore</p>
          */
         @NameInMap("Logstore")
         public String logstore;
 
         /**
          * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-c846f28edbd1d4c6aa9d78c0e********</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
          * <p>The source of logs. Valid values:</p>
-         * <br>
-         * <p>*   Standard output: stdout.log</p>
-         * <p>*   File log: the directory that stores logs</p>
+         * <ul>
+         * <li>Standard output: stdout.log</li>
+         * <li>File log: the directory that stores logs</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>/var/log/*</p>
          */
         @NameInMap("Source")
         public String source;

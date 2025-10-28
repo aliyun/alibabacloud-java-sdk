@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListComponentsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class ListComponentsResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -54,43 +60,63 @@ public class ListComponentsResponseBody extends TeaModel {
     public static class ListComponentsResponseBodyComponentListComponent extends TeaModel {
         /**
          * <p>The ID of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ComponentId")
         public String componentId;
 
         /**
          * <p>The key of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JDK 7</p>
          */
         @NameInMap("ComponentKey")
         public String componentKey;
 
         /**
          * <p>The description of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JDK 7</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>Indicates whether the component has expired. Valid values:</p>
-         * <br>
-         * <p>*   false: The component has not expired.</p>
-         * <p>*   true: The component has expired.</p>
+         * <ul>
+         * <li>false: The component has not expired.</li>
+         * <li>true: The component has expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Expired")
         public Boolean expired;
 
         /**
          * <p>The type of the component. Valid values:</p>
-         * <br>
-         * <p>*   JDK</p>
-         * <p>*   TOMCAT</p>
-         * <p>*   TENGINE</p>
+         * <ul>
+         * <li>JDK</li>
+         * <li>TOMCAT</li>
+         * <li>TENGINE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>JDK</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oraclejdk7</p>
          */
         @NameInMap("Version")
         public String version;

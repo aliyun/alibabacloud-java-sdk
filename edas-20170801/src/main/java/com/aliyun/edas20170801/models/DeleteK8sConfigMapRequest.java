@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class DeleteK8sConfigMapRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51e37e91-6403-423a-9913-f236aa7a6a50</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the ConfigMap. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-configmap</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace of the Kubernetes cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;

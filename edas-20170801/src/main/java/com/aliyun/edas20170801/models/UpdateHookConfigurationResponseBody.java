@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateHookConfigurationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d498****-1dd8ec229862</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,21 +77,31 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
     public static class UpdateHookConfigurationResponseBodyHooksConfiguration extends TeaModel {
         /**
          * <p>Indicates whether a mount failure is ignored. Valid values:</p>
-         * <br>
-         * <p>*   **true**: A mount failure is ignored.</p>
-         * <p>*   **false**: A mount failure is not ignored.</p>
+         * <ul>
+         * <li><strong>true</strong>: A mount failure is ignored.</li>
+         * <li><strong>false</strong>: A mount failure is not ignored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IgnoreFail")
         public Boolean ignoreFail;
 
         /**
          * <p>The name of the mounted script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postprepareInstanceEnvironmentOnScaleOut</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The content of the mounted script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls</p>
          */
         @NameInMap("Script")
         public String script;

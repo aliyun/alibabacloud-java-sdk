@@ -6,17 +6,21 @@ import com.aliyun.tea.*;
 public class ListSwimmingLaneGroupRequest extends TeaModel {
     /**
      * <p>The ID of the lane group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The ID of the namespace.</p>
-     * <br>
-     * <p>The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.\\</p>
-     * <p>The ID of the default namespace is in the region ID format. Example: cn-beijing.</p>
-     * <br>
+     * <p>The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.\
+     * The ID of the default namespace is in the region ID format. Example: cn-beijing.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen:publish</p>
      */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSwimmingLaneResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6CB46AEA-309C-5041-9EC7-FCF4478F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
     public static class UpdateSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>476d26d9-b54c-40b8-8af9-d898cdc2****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321</p>
          */
         @NameInMap("LaneId")
         public Long laneId;
 
         /**
          * <p>The association rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dubbo</p>
          */
         @NameInMap("Rules")
         public String rules;
@@ -132,30 +153,45 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
     public static class UpdateSwimmingLaneResponseBodyData extends TeaModel {
         /**
          * <p>The rule of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;condition\&quot;:\&quot;AND\&quot;,\&quot;enable\&quot;:true,\&quot;path\&quot;:\&quot;/traffictest\&quot;,\&quot;priority\&quot;:1,\&quot;restItems\&quot;:[{\&quot;cond\&quot;:\&quot;==\&quot;,\&quot;datum\&quot;:\&quot;testheadervalue\&quot;,\&quot;name\&quot;:\&quot;testheader\&quot;,\&quot;operator\&quot;:\&quot;rawvalue\&quot;,\&quot;type\&quot;:\&quot;header\&quot;,\&quot;value\&quot;:\&quot;testheadervalue\&quot;}]}]&quot;</p>
          */
         @NameInMap("EntryRule")
         public String entryRule;
 
         /**
          * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>171</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The ID of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-swimlane</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:qa</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -168,6 +204,9 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
 
         /**
          * <p>The tag of the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2cb6b8a</p>
          */
         @NameInMap("Tag")
         public String tag;

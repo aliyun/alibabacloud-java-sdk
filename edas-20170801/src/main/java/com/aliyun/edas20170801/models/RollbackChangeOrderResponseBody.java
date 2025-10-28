@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RollbackChangeOrderResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,24 +21,36 @@ public class RollbackChangeOrderResponseBody extends TeaModel {
 
     /**
      * <p>The error code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B909AB1F-3763-4963-B1CE-0BDFA192****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the trace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>000000000000000000000000000000</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -96,6 +111,9 @@ public class RollbackChangeOrderResponseBody extends TeaModel {
     public static class RollbackChangeOrderResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the change process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f40e616-cdcd-4250-a018-efd4599c****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

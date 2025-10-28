@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateIDCImportCommandResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The generated import command.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wget -q -O /tmp/install.sh <a href="http://edas-hz.oss-cn-hangzhou-internal.aliyuncs.com/install.sh">http://edas-hz.oss-cn-hangzhou-internal.aliyuncs.com/install.sh</a> &amp;&amp; sh /tmp/install.sh -idcToken xxxx-xxxxx-xxxxx-xxxxxxx -edasId xxxxxxxxxxxxxx</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-7ca7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

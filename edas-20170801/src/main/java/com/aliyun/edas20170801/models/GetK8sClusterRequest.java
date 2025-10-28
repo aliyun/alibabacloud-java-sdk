@@ -6,38 +6,54 @@ import com.aliyun.tea.*;
 public class GetK8sClusterRequest extends TeaModel {
     /**
      * <p>The type of the Kubernetes cluster. Valid values:</p>
-     * <br>
-     * <p>*   5: ACK cluster</p>
-     * <p>*   7: self-managed Kubernetes cluster</p>
+     * <ul>
+     * <li>5: ACK cluster</li>
+     * <li>7: self-managed Kubernetes cluster</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ClusterType")
     public Integer clusterType;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The number of entries to return on each page. Default value: 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionTag")
     public String regionTag;
 
     /**
      * <p>The subtype of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   Ask: Serverless Kubernetes cluster</p>
-     * <p>*   ManagedKubernetes: ACK cluster</p>
+     * <ul>
+     * <li>Ask: Serverless Kubernetes cluster</li>
+     * <li>ManagedKubernetes: ACK cluster</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Ask</p>
      */
     @NameInMap("SubClusterType")
     public String subClusterType;

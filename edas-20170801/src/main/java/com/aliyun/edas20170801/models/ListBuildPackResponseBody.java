@@ -12,18 +12,27 @@ public class ListBuildPackResponseBody extends TeaModel {
 
     /**
      * <p>code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FD4-*************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,18 +77,27 @@ public class ListBuildPackResponseBody extends TeaModel {
     public static class ListBuildPackResponseBodyBuildPackListBuildPack extends TeaModel {
         /**
          * <p>The build package number of EDAS Container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         @NameInMap("ConfigId")
         public Long configId;
 
         /**
          * <p>Indicates whether the EDAS Container version is disabled. A disabled version cannot be configured for use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
          * <p>The features of the EDAS Container version, which are released for public preview.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("Feature")
         public String feature;
@@ -92,96 +110,144 @@ public class ListBuildPackResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether EDAS Container supports multitenancy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MultipleTenant")
         public Boolean multipleTenant;
 
         /**
          * <p>The version of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.5.6</p>
          */
         @NameInMap("PackVersion")
         public String packVersion;
 
         /**
          * <p>The description of the Pandora container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("PandoraDesc")
         public String pandoraDesc;
 
         /**
          * <p>The download URL of the Pandora installer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://edas.oss-cn-hangzhou.aliyuncs.com/edas-plugins/edas.sar.V3.5.6/taobao-hsf.tgz">http://edas.oss-cn-hangzhou.aliyuncs.com/edas-plugins/edas.sar.V3.5.6/taobao-hsf.tgz</a></p>
          */
         @NameInMap("PandoraDownloadUrl")
         public String pandoraDownloadUrl;
 
         /**
          * <p>The version of the Pandora container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas.public.sar.V3.5.6</p>
          */
         @NameInMap("PandoraVersion")
         public String pandoraVersion;
 
         /**
          * <p>The description of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PluginInfo")
         public String pluginInfo;
 
         /**
          * <p>The name of the Shell script that runs EDAS Container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
          * <p>The version of the Shell script that runs EDAS Container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.3</p>
          */
         @NameInMap("ScriptVersion")
         public String scriptVersion;
 
         /**
          * <p>The features supported by EDAS Container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tengine,fatjar,restful,eip_nodeport,dpath</p>
          */
         @NameInMap("SupportFeatures")
         public String supportFeatures;
 
         /**
          * <p>The download URL of the Tengine installer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://edas.oss-cn-hangzhou.aliyuncs.com/components/tengine/3.4.7/tengine.sh">http://edas.oss-cn-hangzhou.aliyuncs.com/components/tengine/3.4.7/tengine.sh</a></p>
          */
         @NameInMap("TengineDownloadUrl")
         public String tengineDownloadUrl;
 
         /**
          * <p>The ID of the Tengine image that corresponds to EDAS Container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.aliyuncs.com/edas/<strong><strong>-</strong></strong><em><strong><strong>-</strong></strong></em>:<em>.</em>.*</p>
          */
         @NameInMap("TengineImageId")
         public String tengineImageId;
 
         /**
          * <p>The description of the Tomcat container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1\. The config-client plug-in is updated. The issue of unread cache in multitenancy scenarios is fixed. 2. The High-Speed Service Framework (HSF) plug-in is updated to fix the issue that the qos command of the Pandora container cannot be executed and the issue that the service address cannot be found if the HSF plug-in subscribes to an excessive number of services. 3. The Fastjson package is updated to the sec06 secure version in all plug-ins that use this package.</p>
          */
         @NameInMap("TomcatDesc")
         public String tomcatDesc;
 
         /**
          * <p>The download URL of the Tomcat installer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://edas.oss-cn-hangzhou.aliyuncs.com/edas-container/7.0.92/taobao-tomcat-production-7.0.92.tar.gz">http://edas.oss-cn-hangzhou.aliyuncs.com/edas-container/7.0.92/taobao-tomcat-production-7.0.92.tar.gz</a></p>
          */
         @NameInMap("TomcatDownloadUrl")
         public String tomcatDownloadUrl;
 
         /**
          * <p>The directory of the Tomcat container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taobao-tomcat-production-7.0.59.3</p>
          */
         @NameInMap("TomcatPath")
         public String tomcatPath;
 
         /**
          * <p>The version of the Tomcat container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.5.63</p>
          */
         @NameInMap("TomcatVersion")
         public String tomcatVersion;
 
         /**
          * <p>Indicates whether EDAS Container supports traffic management.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("WithTengine")
         public Boolean withTengine;

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class InsertRoleResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>57609587-DFA2-41EC-<strong><strong>-</strong></strong>*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33</p>
      */
     @NameInMap("RoleId")
     public Integer roleId;

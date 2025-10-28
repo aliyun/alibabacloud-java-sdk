@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListK8sNamespacesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster in Enterprise Distributed Application Service (EDAS).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5b2b4ab4-efbc-4a81-9c45-xxxxxxxxxxxxx</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

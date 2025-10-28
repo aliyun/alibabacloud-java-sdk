@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class InstallAgentRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b3e3f77b-462e-<strong><strong>-</strong></strong>-bec8727a4dc8</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>This parameter is discontinued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DoAsync")
     public Boolean doAsync;
 
     /**
      * <p>The ID of the ECS instance. Separate multiple IDs with commas (,). Example: instanceId1,instanceId2.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2ze7s2v0b789k60pk1af</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

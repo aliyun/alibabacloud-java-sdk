@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class SwitchAdvancedMonitoringRequest extends TeaModel {
     /**
      * <p>The ID of the application for which you want to query or configure the advanced application monitoring feature.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9e224bc6-a646-4484-<strong><strong>-e617b7e7</strong></strong></p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>Specifies whether to enable the advanced application monitoring feature. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the advanced application monitoring feature.</p>
-     * <p>*   false: disables the advanced application monitoring feature.</p>
-     * <br>
+     * <ul>
+     * <li>true: enables the advanced application monitoring feature.</li>
+     * <li>false: disables the advanced application monitoring feature.</li>
+     * </ul>
      * <p>If you call this operation to query the status of the advanced application monitoring feature, you do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAdvancedMonitoring")
     public Boolean enableAdvancedMonitoring;

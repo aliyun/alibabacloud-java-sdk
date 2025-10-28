@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAppInstanceListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03FD1520-0FD6-436A-<strong><strong>-265318D7</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,51 +77,76 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
     public static class DescribeAppInstanceListResponseBodyInstanceList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93fdd228-*****-ed2ae98de18d</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>Indicates whether the application was released in canary release mode.</p>
-         * <br>
-         * <p>*   `true`: The application was released in canary release mode.</p>
-         * <p>*   `false`: The application was not released in canary release mode</p>
+         * <ul>
+         * <li><code>true</code>: The application was released in canary release mode.</li>
+         * <li><code>false</code>: The application was not released in canary release mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Canary")
         public Boolean canary;
 
         /**
          * <p>The ID of the instance group to which the application is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93fdd228-*****-ed2ae98de18d</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the instance group to which the application is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_DEFAULT_GROUP</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The labels of the node. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;alibabacloud.com/nodepool-id&quot;:&quot;np0<em>5b9377fa907&quot;,&quot;beta.kubernetes.io/arch&quot;:&quot;amd64&quot;,&quot;beta.kubernetes.io/instance-type&quot;:&quot;ecs.</em>&quot;,&quot;beta.kubernetes.io/os&quot;:&quot;linux&quot;,&quot;failure-domain.beta.kubernetes.io/region&quot;:&quot;cn-hangzhou&quot;,&quot;failure-domain.beta.kubernetes.io/zone&quot;:&quot;cn-hangzhou-b&quot;,&quot;kubernetes.io/arch&quot;:&quot;amd64&quot;,&quot;kubernetes.io/hostname&quot;:&quot;cn-hangzhou*&quot;,&quot;kubernetes.io/os&quot;:&quot;linux&quot;,&quot;node.kubernetes.io/instance-type&quot;:&quot;ecs.*&quot;,&quot;topology.diskplugin.csi.alibabacloud.com/zone&quot;:&quot;cn-hangzhou-b&quot;,&quot;topology.kubernetes.io/region&quot;:&quot;cn-hangzhou&quot;,&quot;topology.kubernetes.io/zone&quot;:&quot;cn-hangzhou-b&quot;}</p>
          */
         @NameInMap("NodeLabels")
         public String nodeLabels;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou.192.168.0.*</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The information about the pod. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;metadata&quot;:{&quot;name&quot;:&quot;oambuild-group-1-<em>4xthz&quot;,&quot;generateName&quot;:&quot;oambuild-group-<em>96-&quot;,&quot;namespace&quot;:&quot;default&quot;,&quot;selfLink&quot;:&quot;/api/v1/namespaces/default/pods/oambuild-grou</em>96-4xthz&quot;,&quot;uid&quot;:&quot;7a23399c-<em>fe7ff4018&quot;,&quot;resourceVersion&quot;:&quot;969614830&quot;,&quot;creationTimestamp&quot;:&quot;2021-04-06T11:38:46Z&quot;,&quot;labels&quot;:{&quot;ARMSApmAppId&quot;:&quot;</em>&quot;,&quot;ARMSApmLicenseKey&quot;:&quot;</em>&quot;...</p>
          */
         @NameInMap("PodRaw")
         public String podRaw;
 
         /**
          * <p>The deployment package version of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-06 19:37:42</p>
          */
         @NameInMap("Version")
         public String version;

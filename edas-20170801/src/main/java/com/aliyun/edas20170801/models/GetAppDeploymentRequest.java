@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetAppDeploymentRequest extends TeaModel {
     /**
      * <p>The ID of the application. You can call the ListApplication operation to query the application ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93fdd228-*****-ed2ae98de18d</p>
      */
     @NameInMap("AppId")
     public String appId;

@@ -12,18 +12,27 @@ public class ListClusterMembersResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,53 +77,78 @@ public class ListClusterMembersResponseBody extends TeaModel {
     public static class ListClusterMembersResponseBodyClusterMemberPageClusterMemberListClusterMember extends TeaModel {
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52984524-6d48-4bbd-85f2-a34b0e5b****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The ID of the ECS instance in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb03eeb-3adf-4d7e-afe1-03d1ad45****</p>
          */
         @NameInMap("ClusterMemberId")
         public String clusterMemberId;
 
         /**
          * <p>The timestamp when the ECS instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573281038175</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zej4i2jdf3ntwhj****</p>
          */
         @NameInMap("EcsId")
         public String ecsId;
 
         /**
-         * <p>The unique ID of the elastic compute unit (ECU). You can run the `dmidecode` command on the ECS instance to query the ECU ID.</p>
+         * <p>The unique ID of the elastic compute unit (ECU). You can run the <code>dmidecode</code> command on the ECS instance to query the ECU ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70ed3f59-b476-49aa-be09-9e6c375d****</p>
          */
         @NameInMap("EcuId")
         public String ecuId;
 
         /**
          * <p>The private IP address for the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("PrivateIp")
         public String privateIp;
 
         /**
          * <p>The state of the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   1: The instance is running.</p>
-         * <p>*   0: The instance is being converted.</p>
-         * <p>*   \\-1: The instance fails to be converted.</p>
-         * <p>*   \\-2: The instance is offline.</p>
+         * <ul>
+         * <li>1: The instance is running.</li>
+         * <li>0: The instance is being converted.</li>
+         * <li>\-1: The instance fails to be converted.</li>
+         * <li>\-2: The instance is offline.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The timestamp when the ECS instance was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1573281041113</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
@@ -218,18 +252,27 @@ public class ListClusterMembersResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page. If this parameter is not returned, the first page is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of ECS instances returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of pages returned when all ECS instances are returned based on the specified PageSize parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

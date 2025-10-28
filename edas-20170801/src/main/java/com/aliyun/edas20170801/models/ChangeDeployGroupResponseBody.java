@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ChangeDeployGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the change process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>435f-regfr4********************</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9E4-FDS4-****************</p>
      */
     @NameInMap("RequestId")
     public String requestId;

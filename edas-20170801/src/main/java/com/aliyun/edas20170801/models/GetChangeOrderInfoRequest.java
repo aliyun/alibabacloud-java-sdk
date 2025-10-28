@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetChangeOrderInfoRequest extends TeaModel {
     /**
      * <p>The ID of the change process.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1074f3e2-e974-4a0e-<strong><strong>-</strong></strong>********</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteServiceGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECD1D6FC-4307-4583-BA6F-215F38****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

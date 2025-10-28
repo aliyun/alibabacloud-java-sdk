@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListK8sConfigMapsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D16979DC-4D42-****************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
     public static class ListK8sConfigMapsResponseBodyResultConfigMapsData extends TeaModel {
         /**
          * <p>The user-defined key that is stored in the ConfigMap.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The user-defined value that is stored in the ConfigMap.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>william</p>
          */
         @NameInMap("Value")
         public String value;
@@ -104,12 +119,18 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
     public static class ListK8sConfigMapsResponseBodyResultConfigMapsRelatedApps extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728cbdf2-da10-49b8-b69c-9168a********</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -139,19 +160,28 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
 
     public static class ListK8sConfigMapsResponseBodyResultConfigMaps extends TeaModel {
         /**
-         * <p>The ID of the Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see [GetK8sCluster](https://help.aliyun.com/document_detail/181437.html).</p>
+         * <p>The ID of the Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see <a href="https://help.aliyun.com/document_detail/181437.html">GetK8sCluster</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d73918f4-3b08-4c17-bb07-eaf8********</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-cluster</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The time when the ConfigMaps were created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-31T02:46:14Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -164,12 +194,18 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the ConfigMap.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-config</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -252,6 +288,9 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Total")
         public Integer total;

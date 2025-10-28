@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B909AB1F-3763-4963-B1CE-0BDFA192****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,30 +77,44 @@ public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
     public static class GetK8sAppPrecheckResultResponseBodyDataJobResults extends TeaModel {
         /**
          * <p>Specifies whether the precheck of the item was interrupted:</p>
-         * <br>
-         * <p>*   true: The precheck of the item was interrupted.</p>
-         * <p>*   false: The precheck of the item was not interrupted.</p>
+         * <ul>
+         * <li>true: The precheck of the item was interrupted.</li>
+         * <li>false: The precheck of the item was not interrupted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Interrupted")
         public Boolean interrupted;
 
         /**
          * <p>The name of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster Health Check</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the precheck item passed the precheck:</p>
-         * <br>
-         * <p>*   true: The precheck item passed the precheck.</p>
-         * <p>*   false: The precheck item failed the precheck.</p>
+         * <ul>
+         * <li>true: The precheck item passed the precheck.</li>
+         * <li>false: The precheck item failed the precheck.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Pass")
         public Boolean pass;
 
         /**
          * <p>The reason why the precheck item failed the precheck or the precheck of the item was interrupted. This parameter is left empty when the application passed the precheck.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Kubernetes cluster is disconnected from the EDAS control plane.</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -144,16 +167,23 @@ public class GetK8sAppPrecheckResultResponseBody extends TeaModel {
 
         /**
          * <p>The reason why the application failed the precheck. This parameter is left empty when the application passed the precheck.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Kubernetes cluster is disconnected from the EDAS control plane.</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The precheck state for the application change. Valid values:</p>
-         * <br>
-         * <p>*   checking: The application is being prechecked.</p>
-         * <p>*   pass: The application passed the precheck.</p>
-         * <p>*   failed: The application failed the precheck.</p>
+         * <ul>
+         * <li>checking: The application is being prechecked.</li>
+         * <li>pass: The application passed the precheck.</li>
+         * <li>failed: The application failed the precheck.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>checking</p>
          */
         @NameInMap("Status")
         public String status;

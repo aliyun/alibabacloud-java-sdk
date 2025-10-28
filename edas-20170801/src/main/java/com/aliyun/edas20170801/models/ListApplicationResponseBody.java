@@ -12,18 +12,27 @@ public class ListApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5d6fa0bc-cc3**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,134 +77,197 @@ public class ListApplicationResponseBody extends TeaModel {
     public static class ListApplicationResponseBodyApplicationListApplication extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00ee517d-dd7d-4d4e-<strong><strong>-</strong></strong>********</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The deployment type of the application. Valid values:</p>
-         * <br>
-         * <p>*   War: The application is deployed by using a WAR package.</p>
-         * <p>*   FatJar: The application is deployed by using a JAR package.</p>
-         * <p>*   Image: The application is deployed by using an image.</p>
-         * <p>*   If this parameter is empty, the application is not deployed.</p>
+         * <ul>
+         * <li>War: The application is deployed by using a WAR package.</li>
+         * <li>FatJar: The application is deployed by using a JAR package.</li>
+         * <li>Image: The application is deployed by using an image.</li>
+         * <li>If this parameter is empty, the application is not deployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FatJar</p>
          */
         @NameInMap("ApplicationType")
         public String applicationType;
 
         /**
          * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         @NameInMap("BuildPackageId")
         public Long buildPackageId;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong>********</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The type of the cluster in which the application is deployed. Valid values:</p>
-         * <br>
-         * <p>*   **2**: Elastic Compute Service (ECS) cluster</p>
-         * <p>*   **3**: self-managed Kubernetes cluster in EDAS</p>
-         * <p>*   **5**: Container Service for Kubernetes (ACK) cluster</p>
+         * <ul>
+         * <li><strong>2</strong>: Elastic Compute Service (ECS) cluster</li>
+         * <li><strong>3</strong>: self-managed Kubernetes cluster in EDAS</li>
+         * <li><strong>5</strong>: Container Service for Kubernetes (ACK) cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ClusterType")
         public Integer clusterType;
 
         /**
          * <p>The time when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1664208000000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The IP address of the Internet-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.70.***</p>
          */
         @NameInMap("ExtSlbIp")
         public String extSlbIp;
 
         /**
          * <p>The listener port of the Internet-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("ExtSlbListenerPort")
         public Integer extSlbListenerPort;
 
         /**
          * <p>The number of application instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Instances")
         public Integer instances;
 
         /**
          * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc-test-consumer</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the microservices namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The service port of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The region ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:docTes</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek24j4s4b*****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The number of running application instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RunningInstanceCount")
         public Integer runningInstanceCount;
 
         /**
          * <p>The IP address of the internal-facing Server Load Balancer (SLB) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.***</p>
          */
         @NameInMap("SlbIp")
         public String slbIp;
 
         /**
          * <p>The listener port of the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8088</p>
          */
         @NameInMap("SlbListenerPort")
         public Integer slbListenerPort;
 
         /**
          * <p>The port of the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("SlbPort")
         public Integer slbPort;
 
         /**
          * <p>The state of the application. Valid values:</p>
-         * <br>
-         * <p>*   RUNNING: The application is running.</p>
-         * <p>*   STOPPED: The application is stopped.</p>
-         * <p>*   DEPLOYING: The application is being deployed.</p>
-         * <p>*   DELETING: The application is being deleted.</p>
+         * <ul>
+         * <li>RUNNING: The application is running.</li>
+         * <li>STOPPED: The application is stopped.</li>
+         * <li>DEPLOYING: The application is being deployed.</li>
+         * <li>DELETING: The application is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("State")
         public String state;

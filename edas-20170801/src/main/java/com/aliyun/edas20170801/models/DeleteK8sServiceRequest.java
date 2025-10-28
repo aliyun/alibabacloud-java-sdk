@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteK8sServiceRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5a166fbd***a286-781659d9f54c</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-http</p>
      */
     @NameInMap("Name")
     public String name;

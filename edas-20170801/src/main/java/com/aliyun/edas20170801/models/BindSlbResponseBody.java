@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BindSlbResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class BindSlbResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bind slb success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23DR4FDXXXXXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,54 +77,81 @@ public class BindSlbResponseBody extends TeaModel {
     public static class BindSlbResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Internet-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("ExtSlbId")
         public String extSlbId;
 
         /**
          * <p>The IP address of the Internet-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("ExtSlbIp")
         public String extSlbIp;
 
         /**
          * <p>The name of the Internet-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("ExtSlbName")
         public String extSlbName;
 
         /**
          * <p>The ID of the vServer group for the Internet-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("ExtVServerGroupId")
         public String extVServerGroupId;
 
         /**
          * <p>The ID of the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-wz96ph63r************</p>
          */
         @NameInMap("SlbId")
         public String slbId;
 
         /**
          * <p>The IP address of the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.16*.<em>.</em></p>
          */
         @NameInMap("SlbIp")
         public String slbIp;
 
         /**
          * <p>The name of the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test**********</p>
          */
         @NameInMap("SlbName")
         public String slbName;
 
         /**
          * <p>The listener port for the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("SlbPort")
         public Integer slbPort;
 
         /**
          * <p>The ID of the vServer group for the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;

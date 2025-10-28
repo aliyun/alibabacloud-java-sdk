@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceDetailResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetServiceDetailResponseBody extends TeaModel {
 
     /**
      * <p>The message returned for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -68,12 +77,18 @@ public class GetServiceDetailResponseBody extends TeaModel {
     public static class GetServiceDetailResponseBodyDataMethodsReturnDefinition extends TeaModel {
         /**
          * <p>The ID of the return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The type of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         @NameInMap("Type")
         public String type;
@@ -104,54 +119,81 @@ public class GetServiceDetailResponseBody extends TeaModel {
     public static class GetServiceDetailResponseBodyDataMethods extends TeaModel {
         /**
          * <p>The controllers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliware.edas.DemoController</p>
          */
         @NameInMap("MethodController")
         public String methodController;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feign2</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The specific name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NameDetail")
         public String nameDetail;
 
         /**
          * <p>The parameter definitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;description&quot;:&quot;&quot;,&quot;name&quot;:&quot;arg0&quot;,&quot;type&quot;:&quot;java.lang.String&quot;}]</p>
          */
         @NameInMap("ParameterDefinitions")
         public String parameterDefinitions;
 
         /**
          * <p>The parameter details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("ParameterDetails")
         public String parameterDetails;
 
         /**
          * <p>The parameter names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ParameterNames")
         public String parameterNames;
 
         /**
          * <p>The parameter types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;java.lang.String&quot;]</p>
          */
         @NameInMap("ParameterTypes")
         public String parameterTypes;
 
         /**
          * <p>The method paths.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/consumer-echo/feign/{str}&quot;]</p>
          */
         @NameInMap("Paths")
         public String paths;
 
         /**
          * <p>The request methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         @NameInMap("RequestMethods")
         public String requestMethods;
@@ -164,12 +206,18 @@ public class GetServiceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The response details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
         /**
          * <p>The type of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("ReturnType")
         public String returnType;
@@ -280,24 +328,36 @@ public class GetServiceDetailResponseBody extends TeaModel {
     public static class GetServiceDetailResponseBodyData extends TeaModel {
         /**
          * <p>The name of the Dubbo application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cartservice</p>
          */
         @NameInMap("DubboApplicationName")
         public String dubboApplicationName;
 
         /**
          * <p>The name of the Enterprise Distributed Application Service (EDAS) application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
         /**
          * <p>The group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dubbo</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Metadata")
         public String metadata;
@@ -310,30 +370,45 @@ public class GetServiceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The type of the service registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas.service.consumer</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;
 
         /**
          * <p>The name of the Spring application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas.service.consumer</p>
          */
         @NameInMap("SpringApplicationName")
         public String springApplicationName;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("Version")
         public String version;

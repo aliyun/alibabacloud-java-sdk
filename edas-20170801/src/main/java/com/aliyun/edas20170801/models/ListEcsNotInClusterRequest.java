@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class ListEcsNotInClusterRequest extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
-     * <br>
-     * <p>*   1: classic network</p>
-     * <p>*   2: virtual private cloud (VPC)</p>
-     * <br>
+     * <ul>
+     * <li>1: classic network</li>
+     * <li>2: virtual private cloud (VPC)</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("NetworkMode")
     public Integer networkMode;
 
     /**
      * <p>The ID of the VPC. This parameter is required if the NetworkMode parameter is set to 2.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zef6ob8****v8x3q46kp</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class QueryEccInfoRequest extends TeaModel {
     /**
      * <p>The ID of the ECC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-****</p>
      */
     @NameInMap("EccId")
     public String eccId;

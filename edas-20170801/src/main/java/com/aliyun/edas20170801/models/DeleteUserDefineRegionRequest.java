@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteUserDefineRegionRequest extends TeaModel {
     /**
-     * <p>The unique ID of the custom namespace. You can call the ListUserDefineRegion operation to query the ID. For more information, see [ListUserDefineRegion](https://help.aliyun.com/document_detail/149377.html).</p>
+     * <p>The unique ID of the custom namespace. You can call the ListUserDefineRegion operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2564</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The tag of the custom namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>regiontag</p>
      */
     @NameInMap("RegionTag")
     public String regionTag;

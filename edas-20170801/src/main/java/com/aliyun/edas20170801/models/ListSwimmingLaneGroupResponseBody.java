@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSwimmingLaneGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BF238E37-671A-5045-B49A-0B29C166****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
     public static class ListSwimmingLaneGroupResponseBodyDataApplicationList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>406073bf-afc2-4142-b3d7-629a0308****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -104,18 +119,27 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
     public static class ListSwimmingLaneGroupResponseBodyDataEntryApplication extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>406073bf-afc2-4142-b3d7-629a0308****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The data source. Set the value to EDAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDAS</p>
          */
         @NameInMap("Source")
         public String source;
@@ -166,18 +190,27 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the microservices namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai:daily</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteServiceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the service group that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>789d9cda-74b1-<strong><strong>-</strong></strong>-05e21a0a7661</p>
      */
     @NameInMap("GroupId")
     public String groupId;

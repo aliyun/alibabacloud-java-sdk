@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListServiceGroupsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,18 +77,27 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     public static class ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups extends TeaModel {
         /**
          * <p>The time when the service group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575357165770</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>789d9cda-74b1-<strong><strong>-</strong></strong>-05e21a0a7661</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas-test-group</p>
          */
         @NameInMap("GroupName")
         public String groupName;

@@ -6,71 +6,86 @@ import com.aliyun.tea.*;
 public class CreateK8sIngressRuleRequest extends TeaModel {
     /**
      * <p>The annotations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;alb.ingress.kubernetes.io/rewrite-target\&quot;:\&quot;/consumer-echo/test\&quot;}</p>
      */
     @NameInMap("Annotations")
     public String annotations;
 
     /**
      * <p>The ID of the Kubernetes cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5b2b4ab4-efbc-4a81-9c45-xxxxxxxxxxxxx</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The routing rules of the Ingress. Set this parameter to a JSON string in the following format:</p>
-     * <br>
-     * <p>    {</p>
-     * <p>      "rules": [</p>
-     * <p>        {</p>
-     * <p>          "host": "abc.com",</p>
-     * <p>          "secretName": "tls-secret",</p>
-     * <p>          "paths": [</p>
-     * <p>            {</p>
-     * <p>              "path": "/path",</p>
-     * <p>              "backend": {</p>
-     * <p>                "servicePort": 80,</p>
-     * <p>                "serviceName": "xxx"</p>
-     * <p>              }</p>
-     * <p>            }</p>
-     * <p>          ]</p>
-     * <p>        }</p>
-     * <p>      ]</p>
-     * <p>    }</p>
-     * <br>
+     * <pre><code>{
+     *   &quot;rules&quot;: [
+     *     {
+     *       &quot;host&quot;: &quot;abc.com&quot;,
+     *       &quot;secretName&quot;: &quot;tls-secret&quot;,
+     *       &quot;paths&quot;: [
+     *         {
+     *           &quot;path&quot;: &quot;/path&quot;,
+     *           &quot;backend&quot;: {
+     *             &quot;servicePort&quot;: 80,
+     *             &quot;serviceName&quot;: &quot;xxx&quot;
+     *           }
+     *         }
+     *       ]
+     *     }
+     *   ]
+     * }
+     * </code></pre>
      * <p>Parameter description:</p>
-     * <br>
-     * <p>*   rules: the list of routing rules.</p>
-     * <p>*   host: the domain name to be accessed.</p>
-     * <p>*   secretName: the name of the Secret that stores the information about the Transport Layer Security (TLS) certificate. The certificate is required if you need to use the HTTPS protocol.</p>
-     * <p>*   paths: the list of paths to be accessed.</p>
-     * <p>*   path: the path to be accessed.</p>
-     * <p>*   backend: the configuration of the backend service. You can specify a service that is created in the Enterprise Distributed Application Service (EDAS) console.</p>
-     * <p>*   serviceName: the name of the backend service.</p>
-     * <p>*   servicePort: the port of the backend service.</p>
+     * <ul>
+     * <li>rules: the list of routing rules.</li>
+     * <li>host: the domain name to be accessed.</li>
+     * <li>secretName: the name of the Secret that stores the information about the Transport Layer Security (TLS) certificate. The certificate is required if you need to use the HTTPS protocol.</li>
+     * <li>paths: the list of paths to be accessed.</li>
+     * <li>path: the path to be accessed.</li>
+     * <li>backend: the configuration of the backend service. You can specify a service that is created in the Enterprise Distributed Application Service (EDAS) console.</li>
+     * <li>serviceName: the name of the backend service.</li>
+     * <li>servicePort: the port of the backend service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;rules&quot;:[{&quot;host&quot;:&quot;abc.com&quot;,&quot;secretName&quot;:&quot;tls-secret&quot;,&quot;paths&quot;:[{&quot;path&quot;:&quot;/path&quot;,&quot;backend&quot;:{&quot;servicePort&quot;:80,&quot;serviceName&quot;:&quot;xxx&quot;}}]}]}</p>
      */
     @NameInMap("IngressConf")
     public java.util.Map<String, ?> ingressConf;
 
     /**
      * <p>The labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;test-labels\&quot;:\&quot;test-value\&quot;}</p>
      */
     @NameInMap("Labels")
     public String labels;
 
     /**
      * <p>The name of the Ingress. The name can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter but cannot end with a hyphen (-). The name can be up to 63 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-ingress-rule</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace of the Kubernetes cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;

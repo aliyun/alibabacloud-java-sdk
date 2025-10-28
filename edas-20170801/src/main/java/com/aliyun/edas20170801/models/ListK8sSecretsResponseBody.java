@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListK8sSecretsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b197-40ab-9155-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -74,30 +83,43 @@ public class ListK8sSecretsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the SSL certificate expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-22T02:32:41Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The certificate authority (CA) that issued the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN=GlobalSign Root CA, OU=Root CA, O=GlobalSign nv-sa, C=BE</p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
          * <p>The time when the SSL certificate started to take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02T22:40:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The state of the SSL certificate. Valid values:</p>
-         * <br>
-         * <p>*   normal: The SSL certificate is valid.</p>
-         * <p>*   invalid: The SSL certificate is invalid.</p>
-         * <p>*   expired: The SSL certificate has expired.</p>
-         * <p>*   not_yet_valid: The SSL certificate is currently invalid.</p>
-         * <p>*   about_to_expire: The SSL certificate is about to expire.</p>
+         * <ul>
+         * <li>normal: The SSL certificate is valid.</li>
+         * <li>invalid: The SSL certificate is invalid.</li>
+         * <li>expired: The SSL certificate has expired.</li>
+         * <li>not_yet_valid: The SSL certificate is currently invalid.</li>
+         * <li>about_to_expire: The SSL certificate is about to expire.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Status")
         public String status;
@@ -152,12 +174,18 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     public static class ListK8sSecretsResponseBodyResultSecretsData extends TeaModel {
         /**
          * <p>The user-defined key of the Kubernetes Secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The user-defined value of the Kubernetes Secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>william</p>
          */
         @NameInMap("Value")
         public String value;
@@ -188,12 +216,18 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     public static class ListK8sSecretsResponseBodyResultSecretsRelatedApps extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b08eeb18-8946-410c-a1ea-dbbc********</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -224,12 +258,18 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     public static class ListK8sSecretsResponseBodyResultSecretsRelatedIngressRulesRelatedApps extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6dc74432-5a35-4e68-8aaa-3700********</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the EDAS application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-test</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -260,12 +300,18 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     public static class ListK8sSecretsResponseBodyResultSecretsRelatedIngressRules extends TeaModel {
         /**
          * <p>The name of the rule in the Ingress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrulename</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespaces of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -310,9 +356,13 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     public static class ListK8sSecretsResponseBodyResultSecrets extends TeaModel {
         /**
          * <p>Indicates whether the data is Base64-encoded. Valid values:</p>
-         * <br>
-         * <p>*   true: The data is Base64-encoded.</p>
-         * <p>*   false: The data is not Base64-encoded.</p>
+         * <ul>
+         * <li>true: The data is Base64-encoded.</li>
+         * <li>false: The data is not Base64-encoded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Base64Encoded")
         public Boolean base64Encoded;
@@ -325,30 +375,45 @@ public class ListK8sSecretsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the certificate provided by Alibaba Cloud Certificate Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("CertId")
         public String certId;
 
         /**
          * <p>The region in which the certificate is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("CertRegionId")
         public String certRegionId;
 
         /**
          * <p>The ID of the cluster in Enterprise Distributed Application Service (EDAS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4472a6d3-f01d-4087-85a7-3dc52********</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cluster</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
-         * <p>The time when the Secret was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the Secret was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-26T02:57:02Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -361,12 +426,18 @@ public class ListK8sSecretsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-secret</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -385,9 +456,13 @@ public class ListK8sSecretsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the Secret. Valid values:</p>
-         * <br>
-         * <p>*   Opaque: user-defined data</p>
-         * <p>*   kubernetes.io/tls: Transport Layer Security (TLS) certificate</p>
+         * <ul>
+         * <li>Opaque: user-defined data</li>
+         * <li>kubernetes.io/tls: Transport Layer Security (TLS) certificate</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Opaque</p>
          */
         @NameInMap("Type")
         public String type;
@@ -512,6 +587,9 @@ public class ListK8sSecretsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Total")
         public Integer total;

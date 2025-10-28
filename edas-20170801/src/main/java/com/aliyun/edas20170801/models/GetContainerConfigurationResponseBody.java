@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetContainerConfigurationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The message returned for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34F8-FDG9-*****************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,39 +77,57 @@ public class GetContainerConfigurationResponseBody extends TeaModel {
     public static class GetContainerConfigurationResponseBodyContainerConfiguration extends TeaModel {
         /**
          * <p>The context path of the Tomcat container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         @NameInMap("ContextPath")
         public String contextPath;
 
         /**
          * <p>The application port number for the Tomcat container. The value specified in the application configuration is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("HttpPort")
         public Integer httpPort;
 
         /**
          * <p>The maximum number of threads in the Tomcat container.</p>
-         * <br>
-         * <p>*   If no instance group is specified, the configuration of the application is returned.</p>
-         * <p>*   If no application is specified, the default configuration is returned.</p>
+         * <ul>
+         * <li>If no instance group is specified, the configuration of the application is returned.</li>
+         * <li>If no application is specified, the default configuration is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("MaxThreads")
         public Integer maxThreads;
 
         /**
          * <p>The Uniform Resource Identifier (URI) encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.</p>
-         * <br>
-         * <p>*   If no instance group is specified, the configuration of the application is returned.</p>
-         * <p>*   If no application is specified, the default configuration is returned.</p>
+         * <ul>
+         * <li>If no instance group is specified, the configuration of the application is returned.</li>
+         * <li>If no application is specified, the default configuration is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ISO-8859-1</p>
          */
         @NameInMap("URIEncoding")
         public String URIEncoding;
 
         /**
          * <p>Indicates whether useBodyEncodingForURI is enabled in the Tomcat container.</p>
-         * <br>
-         * <p>*   If no instance group is specified, the configuration of the application is returned.</p>
-         * <p>*   If no application is specified, the default configuration is returned.</p>
+         * <ul>
+         * <li>If no instance group is specified, the configuration of the application is returned.</li>
+         * <li>If no application is specified, the default configuration is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseBodyEncoding")
         public Boolean useBodyEncoding;

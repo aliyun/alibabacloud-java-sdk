@@ -6,47 +6,62 @@ import com.aliyun.tea.*;
 public class BindSlbRequest extends TeaModel {
     /**
      * <p>The ID of the EDAS application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3616cdca-*********</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The listener port for the SLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the SLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-wz96ph63r************</p>
      */
     @NameInMap("SlbId")
     public String slbId;
 
     /**
      * <p>The IP address of the SLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.16*.<em>.</em></p>
      */
     @NameInMap("SlbIp")
     public String slbIp;
 
     /**
      * <p>The type of the SLB instance. Valid values:</p>
-     * <br>
-     * <p>*   internet: Internet-facing SLB instance</p>
-     * <p>*   intranet: internal-facing SLB instance</p>
-     * <br>
+     * <ul>
+     * <li>internet: Internet-facing SLB instance</li>
+     * <li>intranet: internal-facing SLB instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>intranet</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The ID of the vServer group for the internal-facing SLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rsp-cige6******</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

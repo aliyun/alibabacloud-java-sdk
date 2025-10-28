@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class DeleteK8sSecretRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2b3a1013-31c7-433b-8fe7-3895d838b824</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-secret</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace of the Kubernetes cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;

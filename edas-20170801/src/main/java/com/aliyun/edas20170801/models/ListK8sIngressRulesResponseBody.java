@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListK8sIngressRulesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C1C9DE7-88FF-4B56-A47B-3DBBCEB******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     public static class ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend extends TeaModel {
         /**
          * <p>The name of the backend Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http-service</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The port of the backend Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("ServicePort")
         public String servicePort;
@@ -104,12 +119,18 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     public static class ListK8sIngressRulesResponseBodyDataIngressConfsRulesPaths extends TeaModel {
         /**
          * <p>The ID of the EDAS application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43d30ba5-c568-460c-8080-d447ed1a****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the EDAS application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -122,34 +143,48 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
         /**
          * <p>The collection rate that is set based on the trace query feature. You can add a trace ID to a gateway to use the trace query feature of EDAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("CollectRate")
         public Integer collectRate;
 
         /**
          * <p>The path to be accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/foo/bar</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The path type that determines how a path is matched.</p>
-         * <br>
-         * <p>*   ImplementationSpecific (default)</p>
-         * <p>*   Exact</p>
-         * <p>*   Prefix</p>
+         * <ul>
+         * <li>ImplementationSpecific (default)</li>
+         * <li>Exact</li>
+         * <li>Prefix</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ImplementationSpecific</p>
          */
         @NameInMap("PathType")
         public String pathType;
 
         /**
          * <p>The state of the Ingress. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The Ingress works as expected.</p>
-         * <p>*   **ServiceNotFound**: The backend Service does not exist.</p>
-         * <p>*   **InvalidServicePort**: The Service port is invalid.</p>
-         * <p>*   **NotManagedService**: The Service is not managed by EDAS.</p>
-         * <p>*   **Unknown**: An unknown error occurred.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The Ingress works as expected.</li>
+         * <li><strong>ServiceNotFound</strong>: The backend Service does not exist.</li>
+         * <li><strong>InvalidServicePort</strong>: The Service port is invalid.</li>
+         * <li><strong>NotManagedService</strong>: The Service is not managed by EDAS.</li>
+         * <li><strong>Unknown</strong>: An unknown error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
@@ -220,15 +255,22 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     public static class ListK8sIngressRulesResponseBodyDataIngressConfsRules extends TeaModel {
         /**
          * <p>Indicates whether TLS is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableTls")
         public Boolean enableTls;
 
         /**
          * <p>The domain name to be accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Host")
         public String host;
@@ -241,6 +283,9 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the Secret that stores the Transport Layer Security (TLS) certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-secret</p>
          */
         @NameInMap("SecretName")
         public String secretName;
@@ -287,83 +332,122 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     public static class ListK8sIngressRulesResponseBodyDataIngressConfs extends TeaModel {
         /**
          * <p>The ID of the ALB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-5sde0tq62r********</p>
          */
         @NameInMap("AlbId")
         public String albId;
 
         /**
          * <p>The annotations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test-annotation&quot;:&quot;test-annotation-value&quot;}</p>
          */
         @NameInMap("Annotations")
         public String annotations;
 
         /**
          * <p>The time when the Ingress was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-27 20:16:52</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The monitoring URL of the Ingress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://grafana.console.aliyun.com/d/10xxxx/ingress">http://grafana.console.aliyun.com/d/10xxxx/ingress</a></p>
          */
         @NameInMap("DashboardUrl")
         public String dashboardUrl;
 
         /**
          * <p>The IP address of the Ingress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.11x.xx.xx</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The Ingress type. Valid values:</p>
-         * <br>
-         * <p>*   **NginxIngress**: NGINX Ingress controller</p>
-         * <p>*   **AlbIngress**: ALB Ingress controller</p>
-         * <br>
+         * <ul>
+         * <li><strong>NginxIngress</strong>: NGINX Ingress controller</li>
+         * <li><strong>AlbIngress</strong>: ALB Ingress controller</li>
+         * </ul>
          * <p>Default value: NginxIngress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NginxIngress</p>
          */
         @NameInMap("IngressType")
         public String ingressType;
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test-label&quot;: &quot;test-labels&quot;}</p>
          */
         @NameInMap("Labels")
         public String labels;
 
         /**
          * <p>The ID of the MSE gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxxxxxxx</p>
          */
         @NameInMap("MseGatewayId")
         public String mseGatewayId;
 
         /**
          * <p>The name of the MSE gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-test-name</p>
          */
         @NameInMap("MseGatewayName")
         public String mseGatewayName;
 
         /**
          * <p>The Ingress name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-ingress</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The Kubernetes namespace to which the Ingress belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The URL used for basic monitoring of the open source version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://g.console.aliyun.com/d/xxxxxx/nginx-ingress-dashboard-official">https://g.console.aliyun.com/d/xxxxxx/nginx-ingress-dashboard-official</a></p>
          */
         @NameInMap("OfficalBasicUrl")
         public String officalBasicUrl;
 
         /**
          * <p>The URL used for request performance monitoring of the open source version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://g.console.aliyun.com/d/xxxxxx/request-handling-performance-official">https://g.console.aliyun.com/d/xxxxxx/request-handling-performance-official</a></p>
          */
         @NameInMap("OfficalRequestUrl")
         public String officalRequestUrl;
@@ -376,9 +460,13 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether SSL redirection is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SslRedirect")
         public Boolean sslRedirect;
@@ -513,12 +601,18 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     public static class ListK8sIngressRulesResponseBodyData extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b2b4ab4-efbc-4a81-9c45-a5942881****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-dev-cluster</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
@@ -531,6 +625,9 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Alibaba Cloud region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

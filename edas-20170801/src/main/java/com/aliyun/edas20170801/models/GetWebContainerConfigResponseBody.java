@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetWebContainerConfigResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4823-bhjf-23u4-eiufh</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,54 +77,81 @@ public class GetWebContainerConfigResponseBody extends TeaModel {
     public static class GetWebContainerConfigResponseBodyWebContainerConfig extends TeaModel {
         /**
          * <p>The type of the context path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("ContextInputType")
         public String contextInputType;
 
         /**
          * <p>The context path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROOT</p>
          */
         @NameInMap("ContextPath")
         public String contextPath;
 
         /**
          * <p>The HTTP service port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("HttpPort")
         public Integer httpPort;
 
         /**
          * <p>The maximum number of threads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("MaxThreads")
         public Integer maxThreads;
 
         /**
          * <p>The content of the server.xml file customized by using advanced configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&lt;Server port=*****</p>
          */
         @NameInMap("ServerXml")
         public String serverXml;
 
         /**
          * <p>The URI encoding scheme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ISO-8859-1</p>
          */
         @NameInMap("UriEncoding")
         public String uriEncoding;
 
         /**
          * <p>Indicates whether advanced configurations are used to customize the server.xml file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseAdvancedServerXml")
         public Boolean useAdvancedServerXml;
 
         /**
          * <p>Indicates whether the encoding scheme specified in the request body is used for uniform resource identifier (URI) query parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseBodyEncoding")
         public Boolean useBodyEncoding;
 
         /**
          * <p>Indicates whether the default configurations are used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseDefaultConfig")
         public Boolean useDefaultConfig;

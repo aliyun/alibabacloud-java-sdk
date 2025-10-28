@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateAccountInfoRequest extends TeaModel {
     /**
      * <p>The email address of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1321234****@alibaba-inc.com</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The name of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edas-test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The contact information of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1321234****</p>
      */
     @NameInMap("Telephone")
     public String telephone;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationScalingRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](https://help.aliyun.com/document_detail/149390.html).</p>
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78194c76-3dca-418e-a263-cccd1ab4****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the auto scaling policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu-trigger</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;

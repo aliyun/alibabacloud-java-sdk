@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListConsumedServicesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListConsumedServicesResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -106,21 +115,31 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     public static class ListConsumedServicesResponseBodyConsumedServicesListListConsumedServices extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>Indicates whether the application runs in a Docker container. Valid values:</p>
-         * <br>
-         * <p>*   true: The application runs in a Docker container.</p>
-         * <p>*   false: The application does not run in a Docker container.</p>
+         * <ul>
+         * <li>true: The application runs in a Docker container.</li>
+         * <li>false: The application does not run in a Docker container.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DockerApplication")
         public Boolean dockerApplication;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Group2Ip")
         public String group2Ip;
@@ -133,18 +152,27 @@ public class ListConsumedServicesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the consumed service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the consumed service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HSF</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The version of the consumed service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Version")
         public String version;

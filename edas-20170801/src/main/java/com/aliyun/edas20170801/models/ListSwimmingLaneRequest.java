@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListSwimmingLaneRequest extends TeaModel {
     /**
      * <p>The ID of the lane group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

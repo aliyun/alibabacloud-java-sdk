@@ -6,36 +6,47 @@ import com.aliyun.tea.*;
 public class UnbindSlbRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c627c157-560d-********************</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>Specifies whether to remove the configured listeners. Valid values:</p>
-     * <br>
-     * <p>*   true: removes the configured listeners.</p>
-     * <p>*   false: does not remove the configured listeners.</p>
+     * <ul>
+     * <li>true: removes the configured listeners.</li>
+     * <li>false: does not remove the configured listeners.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeleteListener")
     public String deleteListener;
 
     /**
      * <p>The ID of the SLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-wz9vo49****************</p>
      */
     @NameInMap("SlbId")
     public String slbId;
 
     /**
      * <p>The network type of the SLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **internet**: Internet-facing SLB instance</p>
-     * <p>*   **intranet**: internal-facing SLB instance</p>
-     * <br>
+     * <ul>
+     * <li><strong>internet</strong>: Internet-facing SLB instance</li>
+     * <li><strong>intranet</strong>: internal-facing SLB instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>internet</p>
      */
     @NameInMap("Type")
     public String type;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryMigrateRegionListRequest extends TeaModel {
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou:test</p>
      */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;

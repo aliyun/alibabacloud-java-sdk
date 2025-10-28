@@ -5,33 +5,41 @@ import com.aliyun.tea.*;
 
 public class ConvertK8sResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](https://help.aliyun.com/document_detail/154995.html).</p>
-     * <br>
+     * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b07c8192-****-adf4f7447720</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The namespace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The name of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>deployment-to-convert</p>
      */
     @NameInMap("ResourceName")
     public String resourceName;
 
     /**
      * <p>The type of the resource that is used. Set the value to deployment.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>deployment</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListMethodsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The returned message that indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -106,6 +115,9 @@ public class ListMethodsResponseBody extends TeaModel {
     public static class ListMethodsResponseBodyServiceMethodListServiceMethod extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>App</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -115,12 +127,18 @@ public class ListMethodsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the service method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         @NameInMap("MethodName")
         public String methodName;
 
         /**
          * <p>The return type of the service method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.string</p>
          */
         @NameInMap("Output")
         public String output;
@@ -130,6 +148,9 @@ public class ListMethodsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibaba.edas.demo.EchoService</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
