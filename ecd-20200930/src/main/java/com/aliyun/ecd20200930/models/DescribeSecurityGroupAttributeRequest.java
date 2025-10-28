@@ -1,0 +1,40 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ecd20200930.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeSecurityGroupAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    public static DescribeSecurityGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSecurityGroupAttributeRequest self = new DescribeSecurityGroupAttributeRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeSecurityGroupAttributeRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+}
