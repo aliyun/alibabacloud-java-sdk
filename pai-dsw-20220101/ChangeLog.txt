@@ -1,3 +1,7 @@
+2025-10-28 Version: 2.2.0
+- Support API CreateDiagnosis.
+
+
 2025-10-14 Version: 2.1.0
 - Support API DeleteInstances.
 - Support API StopInstances.
