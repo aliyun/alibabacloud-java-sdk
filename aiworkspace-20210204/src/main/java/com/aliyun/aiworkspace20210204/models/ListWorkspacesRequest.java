@@ -105,6 +105,9 @@ public class ListWorkspacesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("UserId")
+    public String userId;
+
     /**
      * <p>Specifies whether to display workspace details. Valid values:</p>
      * <ul>
@@ -211,6 +214,14 @@ public class ListWorkspacesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListWorkspacesRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public ListWorkspacesRequest setVerbose(Boolean verbose) {

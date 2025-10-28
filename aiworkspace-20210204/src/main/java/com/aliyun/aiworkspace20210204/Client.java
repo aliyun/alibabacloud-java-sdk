@@ -5254,6 +5254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.verbose)) {
             query.put("Verbose", request.verbose);
         }
