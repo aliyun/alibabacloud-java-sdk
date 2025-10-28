@@ -5,6 +5,13 @@
 - Update API InsertApplication: delete request parameters HealthCheckURL.
 
 
+2025-10-28 Version: 2.0.0
+- Support API UpdateLocalitySetting.
+- Update API DeleteApplicationScalingRule: add response parameters Body.Code.
+- Update API DeleteApplicationScalingRule: add response parameters Body.Message.
+- Update API InsertApplication: delete request parameters HealthCheckURL.
+
+
 2024-05-17 Version: 1.0.15
 - Update API CreateK8sService: update param ServicePorts.
 - Update API UpdateK8sService: update param ServicePorts.
