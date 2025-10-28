@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteCheckPolicyResponseBody extends TeaModel {
+    /**
+     * <p>List of deleted policy details.</p>
+     */
     @NameInMap("Policys")
     public java.util.List<DeleteCheckPolicyResponseBodyPolicys> policys;
 
     /**
+     * <p>The unique ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
      */
@@ -37,6 +42,8 @@ public class DeleteCheckPolicyResponseBody extends TeaModel {
 
     public static class DeleteCheckPolicyResponseBodyPolicys extends TeaModel {
         /**
+         * <p>Deleted policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000000001</p>
          */
@@ -44,6 +51,8 @@ public class DeleteCheckPolicyResponseBody extends TeaModel {
         public Long policyId;
 
         /**
+         * <p>The name of the custom policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>testPolicyName</p>
          */
@@ -51,6 +60,13 @@ public class DeleteCheckPolicyResponseBody extends TeaModel {
         public String policyShowName;
 
         /**
+         * <p>Policy type for custom check rule:</p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: Standard-level policy</li>
+         * <li><strong>REQUIREMENT</strong>: Requirement-level policy</li>
+         * <li><strong>SECTION</strong>: Section-level policy</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
          */

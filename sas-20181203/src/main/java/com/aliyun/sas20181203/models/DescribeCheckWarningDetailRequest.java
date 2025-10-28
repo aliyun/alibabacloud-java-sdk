@@ -28,6 +28,9 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     @NameInMap("CheckWarningId")
     public Long checkWarningId;
 
+    @NameInMap("ContainerName")
+    public String containerName;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <ul>
@@ -93,6 +96,14 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     }
     public Long getCheckWarningId() {
         return this.checkWarningId;
+    }
+
+    public DescribeCheckWarningDetailRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
     }
 
     public DescribeCheckWarningDetailRequest setLang(String lang) {

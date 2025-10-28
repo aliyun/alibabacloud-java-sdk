@@ -6293,7 +6293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义策略</p>
+     * <p>Delete custom scope directories in Cloud Security Posture Management (CSPM) custom checks. You can remove assigned standards, requirements, or sections.</p>
      * 
      * @param request DeleteCheckPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6329,7 +6329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义策略</p>
+     * <p>Delete custom scope directories in Cloud Security Posture Management (CSPM) custom checks. You can remove assigned standards, requirements, or sections.</p>
      * 
      * @param request DeleteCheckPolicyRequest
      * @return DeleteCheckPolicyResponse
@@ -10752,6 +10752,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.checkWarningId)) {
             query.put("CheckWarningId", request.checkWarningId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containerName)) {
+            query.put("ContainerName", request.containerName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
