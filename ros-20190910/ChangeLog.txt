@@ -1,3 +1,10 @@
+2025-10-28 Version: 2.6.0
+- Support API EnableServiceAccess.
+- Support API EnableServices.
+- Support API GetServiceAccess.
+- Support API ListSummaries.
+
+
 2025-08-20 Version: 2.5.8
 - Update API PreviewStack: add request parameters UsePreviousParameters.
 
