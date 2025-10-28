@@ -47,6 +47,9 @@ public class Instance extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("IsLatest")
+    public Boolean isLatest;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -206,6 +209,14 @@ public class Instance extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public Instance setIsLatest(Boolean isLatest) {
+        this.isLatest = isLatest;
+        return this;
+    }
+    public Boolean getIsLatest() {
+        return this.isLatest;
     }
 
     public Instance setIsSpot(Boolean isSpot) {
