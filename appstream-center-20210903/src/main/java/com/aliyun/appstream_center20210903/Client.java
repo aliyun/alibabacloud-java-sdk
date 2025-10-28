@@ -869,6 +869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AppInstanceId", request.appInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstancePersistentId)) {
+            body.put("AppInstancePersistentId", request.appInstancePersistentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             body.put("ClientId", request.clientId);
         }

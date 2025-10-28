@@ -25,6 +25,13 @@ public class UnbindRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>p-xxxxx</p>
+     */
+    @NameInMap("AppInstancePersistentId")
+    public String appInstancePersistentId;
+
+    /**
+     * <strong>example:</strong>
      * <p>eac19bef-1e45-4190-a03a-4ea74b699ca7</p>
      */
     @NameInMap("ClientId")
@@ -126,6 +133,14 @@ public class UnbindRequest extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public UnbindRequest setAppInstancePersistentId(String appInstancePersistentId) {
+        this.appInstancePersistentId = appInstancePersistentId;
+        return this;
+    }
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     public UnbindRequest setClientId(String clientId) {
