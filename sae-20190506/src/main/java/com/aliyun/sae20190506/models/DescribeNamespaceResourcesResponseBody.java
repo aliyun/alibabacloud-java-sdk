@@ -276,6 +276,9 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("SlsConfigs")
+        public String slsConfigs;
+
         /**
          * <p>The ID of the tenant in the SAE namespace.</p>
          * 
@@ -437,6 +440,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setSlsConfigs(String slsConfigs) {
+            this.slsConfigs = slsConfigs;
+            return this;
+        }
+        public String getSlsConfigs() {
+            return this.slsConfigs;
         }
 
         public DescribeNamespaceResourcesResponseBodyData setTenantId(String tenantId) {
