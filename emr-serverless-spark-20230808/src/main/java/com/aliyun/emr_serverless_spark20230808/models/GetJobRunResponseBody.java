@@ -201,6 +201,13 @@ public class GetJobRunResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <strong>example:</strong>
+         * <p><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></p>
+         */
+        @NameInMap("notebookAccessUrl")
+        public String notebookAccessUrl;
+
+        /**
          * <p>The version of the Spark engine on which the job runs.</p>
          * 
          * <strong>example:</strong>
@@ -366,6 +373,14 @@ public class GetJobRunResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetJobRunResponseBodyJobRun setNotebookAccessUrl(String notebookAccessUrl) {
+            this.notebookAccessUrl = notebookAccessUrl;
+            return this;
+        }
+        public String getNotebookAccessUrl() {
+            return this.notebookAccessUrl;
         }
 
         public GetJobRunResponseBodyJobRun setReleaseVersion(String releaseVersion) {

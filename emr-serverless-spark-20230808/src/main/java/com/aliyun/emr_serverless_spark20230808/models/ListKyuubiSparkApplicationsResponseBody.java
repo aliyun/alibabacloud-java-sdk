@@ -128,9 +128,24 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @NameInMap("endTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Exit Code: 137, Exit Reason: OOMKilled</p>
+         */
         @NameInMap("exitReason")
         public String exitReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kb-2b93ec*******c9440c</p>
+         */
+        @NameInMap("kyuubiServiceId")
+        public String kyuubiServiceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("latestSqlStatementStatus")
         public String latestSqlStatementStatus;
 
@@ -151,6 +166,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("resourceQueueId")
         public String resourceQueueId;
+
+        @NameInMap("runLog")
+        public RunLog runLog;
 
         /**
          * <p>The time when the task started.</p>
@@ -235,6 +253,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             return this.exitReason;
         }
 
+        public ListKyuubiSparkApplicationsResponseBodyApplications setKyuubiServiceId(String kyuubiServiceId) {
+            this.kyuubiServiceId = kyuubiServiceId;
+            return this;
+        }
+        public String getKyuubiServiceId() {
+            return this.kyuubiServiceId;
+        }
+
         public ListKyuubiSparkApplicationsResponseBodyApplications setLatestSqlStatementStatus(String latestSqlStatementStatus) {
             this.latestSqlStatementStatus = latestSqlStatementStatus;
             return this;
@@ -257,6 +283,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
         public String getResourceQueueId() {
             return this.resourceQueueId;
+        }
+
+        public ListKyuubiSparkApplicationsResponseBodyApplications setRunLog(RunLog runLog) {
+            this.runLog = runLog;
+            return this;
+        }
+        public RunLog getRunLog() {
+            return this.runLog;
         }
 
         public ListKyuubiSparkApplicationsResponseBodyApplications setStartTime(String startTime) {

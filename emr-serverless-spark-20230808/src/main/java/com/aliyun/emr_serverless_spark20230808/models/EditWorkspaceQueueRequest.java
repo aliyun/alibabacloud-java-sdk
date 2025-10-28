@@ -84,6 +84,13 @@ public class EditWorkspaceQueueRequest extends TeaModel {
         @NameInMap("cu")
         public Long cu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
+        @NameInMap("maxCu")
+        public Long maxCu;
+
         public static EditWorkspaceQueueRequestResourceSpec build(java.util.Map<String, ?> map) throws Exception {
             EditWorkspaceQueueRequestResourceSpec self = new EditWorkspaceQueueRequestResourceSpec();
             return TeaModel.build(map, self);
@@ -95,6 +102,14 @@ public class EditWorkspaceQueueRequest extends TeaModel {
         }
         public Long getCu() {
             return this.cu;
+        }
+
+        public EditWorkspaceQueueRequestResourceSpec setMaxCu(Long maxCu) {
+            this.maxCu = maxCu;
+            return this;
+        }
+        public Long getMaxCu() {
+            return this.maxCu;
         }
 
     }

@@ -246,6 +246,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @NameInMap("paymentType")
         public String paymentType;
 
+        @NameInMap("preheat")
+        public Boolean preheat;
+
         /**
          * <p>The queue label.</p>
          * 
@@ -381,6 +384,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
         public String getPaymentType() {
             return this.paymentType;
+        }
+
+        public ListWorkspaceQueuesResponseBodyQueues setPreheat(Boolean preheat) {
+            this.preheat = preheat;
+            return this;
+        }
+        public Boolean getPreheat() {
+            return this.preheat;
         }
 
         public ListWorkspaceQueuesResponseBodyQueues setProperties(String properties) {

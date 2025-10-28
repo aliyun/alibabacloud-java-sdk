@@ -277,6 +277,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
+         */
+        @NameInMap("resourceQueueId")
+        public String resourceQueueId;
+
+        /**
          * <p>The job state.</p>
          * 
          * <strong>example:</strong>
@@ -448,6 +455,14 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
         public String getReleaseVersion() {
             return this.releaseVersion;
+        }
+
+        public ListJobRunsResponseBodyJobRuns setResourceQueueId(String resourceQueueId) {
+            this.resourceQueueId = resourceQueueId;
+            return this;
+        }
+        public String getResourceQueueId() {
+            return this.resourceQueueId;
         }
 
         public ListJobRunsResponseBodyJobRuns setState(String state) {
