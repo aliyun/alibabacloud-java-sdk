@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateAgentRuntimeVersionInput extends TeaModel {
     /**
      * <p>版本描述</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Version 1.0.0 release with new features</p>
      */
     @NameInMap("description")
     public String description;

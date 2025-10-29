@@ -4,6 +4,10 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class ProtocolConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("type")
     public String type;
 

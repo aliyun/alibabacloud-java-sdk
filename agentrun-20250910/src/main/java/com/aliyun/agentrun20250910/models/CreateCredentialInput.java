@@ -4,6 +4,12 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateCredentialInput extends TeaModel {
+    /**
+     * <p>凭证的配置参数，以键值对形式存储</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></p>
+     */
     @NameInMap("config")
     public java.util.Map<String, String> config;
 

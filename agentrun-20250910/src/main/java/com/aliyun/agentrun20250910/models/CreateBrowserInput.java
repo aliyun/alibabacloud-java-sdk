@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateBrowserInput extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-browser</p>
      */
     @NameInMap("browserName")
     public String browserName;
@@ -13,22 +16,40 @@ public class CreateBrowserInput extends TeaModel {
     /**
      * <p>CPU资源配置（单位：核）</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0</p>
      */
     @NameInMap("cpu")
     public Float cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cred-1234567890abcdef</p>
+     */
     @NameInMap("credentialId")
     public String credentialId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Web automation browser for testing</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1760720386195983:role/BrowserExecutionRole</p>
+     */
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
     /**
      * <p>内存资源配置（单位：MB）</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
      */
     @NameInMap("memory")
     public Integer memory;
@@ -41,6 +62,9 @@ public class CreateBrowserInput extends TeaModel {
 
     /**
      * <p>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("sessionIdleTimeoutSeconds")
     public Integer sessionIdleTimeoutSeconds;

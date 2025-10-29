@@ -4,9 +4,17 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class BrowserViewPort extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1080</p>
+     */
     @NameInMap("height")
     public Double height;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1920</p>
+     */
     @NameInMap("width")
     public Double width;
 

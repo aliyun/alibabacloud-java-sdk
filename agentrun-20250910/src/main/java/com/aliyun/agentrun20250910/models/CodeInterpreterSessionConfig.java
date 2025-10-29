@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CodeInterpreterSessionConfig extends TeaModel {
     /**
      * <p>代码解释器会话的环境变量配置</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PYTHONPATH=/app,DEBUG=true</p>
      */
     @NameInMap("environment")
     public java.util.Map<String, String> environment;
 
     /**
      * <p>代码解释器会话的超时时间，单位为秒</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("timeout")
     public Integer timeout;
 
     /**
      * <p>代码解释器会话的工作目录路径</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/app</p>
      */
     @NameInMap("workingDirectory")
     public String workingDirectory;

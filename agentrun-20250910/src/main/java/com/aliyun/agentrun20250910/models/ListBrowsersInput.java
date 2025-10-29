@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class ListBrowsersInput extends TeaModel {
     /**
      * <p>按浏览器名称过滤</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-browser</p>
      */
     @NameInMap("browserName")
     public String browserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

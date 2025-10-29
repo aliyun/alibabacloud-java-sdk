@@ -4,9 +4,17 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class BrowserStreams extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("automationStream")
     public BrowserAutomationStream automationStream;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("liveViewStream")
     public BrowserLiveViewStream liveViewStream;
 

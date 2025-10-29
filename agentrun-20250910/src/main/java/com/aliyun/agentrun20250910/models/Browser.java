@@ -4,32 +4,67 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class Browser extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>browser-1234567890abcdef</p>
+     */
     @NameInMap("browserId")
     public String browserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-browser</p>
+     */
     @NameInMap("browserName")
     public String browserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("cpu")
     public Float cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-01-10T10:30:00Z</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cred-1234567890abcdef</p>
+     */
     @NameInMap("credentialId")
     public String credentialId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Web automation browser for testing</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1760720386195983:role/BrowserExecutionRole</p>
+     */
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-01-10T11:45:00Z</p>
+     */
     @NameInMap("lastUpdatedAt")
     public String lastUpdatedAt;
 
     /**
      * <p>内存资源配置（单位：MB）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
      */
     @NameInMap("memory")
     public Integer memory;
@@ -40,15 +75,26 @@ public class Browser extends TeaModel {
     @NameInMap("recording")
     public BrowserRecordingConfiguration recording;
 
+    /**
+     * <strong>example:</strong>
+     * <p>READY</p>
+     */
     @NameInMap("status")
     public String status;
 
     /**
      * <p>当前状态的原因说明（如适用）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Browser is ready for use</p>
      */
     @NameInMap("statusReason")
     public String statusReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tenant-1234567890abcdef</p>
+     */
     @NameInMap("tenantId")
     public String tenantId;
 

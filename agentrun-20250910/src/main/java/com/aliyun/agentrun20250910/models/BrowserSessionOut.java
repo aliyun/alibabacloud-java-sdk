@@ -4,30 +4,56 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class BrowserSessionOut extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>browser-1234567890abcdef</p>
+     */
     @NameInMap("browserId")
     public String browserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-browser-session</p>
+     */
     @NameInMap("browserName")
     public String browserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-01-10T10:30:00Z</p>
+     */
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-01-10T11:45:00Z</p>
+     */
     @NameInMap("lastUpdatedAt")
     public String lastUpdatedAt;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bs-1234567890abcdef</p>
      */
     @NameInMap("sessionId")
     public String sessionId;
 
     /**
      * <p>会话空闲超时时间，单位为秒</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("sessionIdleTimeoutSeconds")
     public Integer sessionIdleTimeoutSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("status")
     public String status;
 

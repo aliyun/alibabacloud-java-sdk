@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class LogConfiguration extends TeaModel {
     /**
      * <p>SLS日志库名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent-runtime-logs</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
      * <p>SLS项目名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent-runtime-logs</p>
      */
     @NameInMap("project")
     public String project;

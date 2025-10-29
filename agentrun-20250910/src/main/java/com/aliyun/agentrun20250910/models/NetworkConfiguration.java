@@ -4,15 +4,31 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class NetworkConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("networkMode")
     public String networkMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-1234567890abcdef0</p>
+     */
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-1234567890abcdef0</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-1234567890abcdef0,vsw-abcdef1234567890</p>
+     */
     @NameInMap("vswitchIds")
     public java.util.List<String> vswitchIds;
 

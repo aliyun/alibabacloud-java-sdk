@@ -4,9 +4,17 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class BrowserAutomationStream extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>wss://browser-automation.cn-hangzhou.agentrun.aliyuncs.com/stream/bs-1234567890abcdef</p>
+     */
     @NameInMap("streamEndpoint")
     public String streamEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
+     */
     @NameInMap("streamStatus")
     public String streamStatus;
 

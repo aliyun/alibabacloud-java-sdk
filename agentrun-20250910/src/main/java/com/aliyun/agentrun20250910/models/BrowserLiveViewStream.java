@@ -4,6 +4,10 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class BrowserLiveViewStream extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>wss://browser-liveview.cn-hangzhou.agentrun.aliyuncs.com/stream/bs-1234567890abcdef</p>
+     */
     @NameInMap("streamEndpoint")
     public String streamEndpoint;
 

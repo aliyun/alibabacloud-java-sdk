@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListAgentRuntimesInput extends TeaModel {
     /**
      * <p>按名称过滤</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent-runtime</p>
      */
     @NameInMap("agentRuntimeName")
     public String agentRuntimeName;
 
     /**
      * <p>页码</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
      * <p>每页记录数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>按状态过滤</p>
+     * 
+     * <strong>example:</strong>
+     * <p>READY,CREATING</p>
      */
     @NameInMap("statuses")
     public java.util.List<String> statuses;

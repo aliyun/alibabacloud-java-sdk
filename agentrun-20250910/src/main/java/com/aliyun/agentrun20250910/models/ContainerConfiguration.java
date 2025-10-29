@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class ContainerConfiguration extends TeaModel {
     /**
      * <p>在容器中运行的命令（例如：[&quot;python3&quot;, &quot;app.py&quot;]）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>python3,app.py</p>
      */
     @NameInMap("command")
     public java.util.List<String> command;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.com/my-namespace/agent-runtime:latest</p>
+     */
     @NameInMap("image")
     public String image;
 
