@@ -2364,6 +2364,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("keyword", request.keyword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.moduleName)) {
+            query.put("moduleName", request.moduleName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }

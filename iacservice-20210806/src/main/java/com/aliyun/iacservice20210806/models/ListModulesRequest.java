@@ -14,6 +14,9 @@ public class ListModulesRequest extends TeaModel {
     @NameInMap("keyword")
     public String keyword;
 
+    @NameInMap("moduleName")
+    public String moduleName;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,6 +56,14 @@ public class ListModulesRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListModulesRequest setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+        return this;
+    }
+    public String getModuleName() {
+        return this.moduleName;
     }
 
     public ListModulesRequest setPageNumber(Integer pageNumber) {

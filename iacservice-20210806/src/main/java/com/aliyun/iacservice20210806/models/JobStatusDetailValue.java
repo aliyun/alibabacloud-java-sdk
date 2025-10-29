@@ -4,15 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class JobStatusDetailValue extends TeaModel {
+    @NameInMap("comment")
+    public String comment;
+
     /**
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("jobResult")
     public String jobResult;
-
-    @NameInMap("comment")
-    public String comment;
 
     /**
      * <strong>example:</strong>
@@ -26,20 +26,20 @@ public class JobStatusDetailValue extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public JobStatusDetailValue setJobResult(String jobResult) {
-        this.jobResult = jobResult;
-        return this;
-    }
-    public String getJobResult() {
-        return this.jobResult;
-    }
-
     public JobStatusDetailValue setComment(String comment) {
         this.comment = comment;
         return this;
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public JobStatusDetailValue setJobResult(String jobResult) {
+        this.jobResult = jobResult;
+        return this;
+    }
+    public String getJobResult() {
+        return this.jobResult;
     }
 
     public JobStatusDetailValue setTimeStamps(String timeStamps) {

@@ -222,12 +222,18 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("jobId")
         public String jobId;
 
+        @NameInMap("logFile")
+        public java.util.Map<String, ?> logFile;
+
         /**
          * <strong>example:</strong>
          * <p>/</p>
          */
         @NameInMap("output")
         public String output;
+
+        @NameInMap("outputJsonPlan")
+        public Object outputJsonPlan;
 
         @NameInMap("parameters")
         public java.util.Map<String, String> parameters;
@@ -332,12 +338,28 @@ public class GetJobResponseBody extends TeaModel {
             return this.jobId;
         }
 
+        public GetJobResponseBodyJob setLogFile(java.util.Map<String, ?> logFile) {
+            this.logFile = logFile;
+            return this;
+        }
+        public java.util.Map<String, ?> getLogFile() {
+            return this.logFile;
+        }
+
         public GetJobResponseBodyJob setOutput(String output) {
             this.output = output;
             return this;
         }
         public String getOutput() {
             return this.output;
+        }
+
+        public GetJobResponseBodyJob setOutputJsonPlan(Object outputJsonPlan) {
+            this.outputJsonPlan = outputJsonPlan;
+            return this;
+        }
+        public Object getOutputJsonPlan() {
+            return this.outputJsonPlan;
         }
 
         public GetJobResponseBodyJob setParameters(java.util.Map<String, String> parameters) {
