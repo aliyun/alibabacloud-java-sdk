@@ -530,6 +530,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>101.101.101.101</p>
+         */
+        @NameInMap("PublicIp")
+        public String publicIp;
+
+        /**
+         * <strong>example:</strong>
          * <p>vn-***************</p>
          */
         @NameInMap("VNodeId")
@@ -631,6 +638,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getMemorySize() {
             return this.memorySize;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyDBNodes setPublicIp(String publicIp) {
+            this.publicIp = publicIp;
+            return this;
+        }
+        public String getPublicIp() {
+            return this.publicIp;
         }
 
         public DescribeAIDBClusterAttributeResponseBodyDBNodes setVNodeId(String VNodeId) {
