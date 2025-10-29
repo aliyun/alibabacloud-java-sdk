@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateHaVipResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the HAVIPs.</p>
+     */
     @NameInMap("HaVipIds")
     public java.util.List<String> haVipIds;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
      */

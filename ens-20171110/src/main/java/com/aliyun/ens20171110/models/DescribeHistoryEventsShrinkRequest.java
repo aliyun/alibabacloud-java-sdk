@@ -41,6 +41,9 @@ public class DescribeHistoryEventsShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of resources.</p>
+     */
     @NameInMap("ResourceIds")
     public String resourceIdsShrink;
 

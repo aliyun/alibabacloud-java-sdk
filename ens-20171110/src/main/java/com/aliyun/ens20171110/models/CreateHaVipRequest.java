@@ -15,6 +15,8 @@ public class CreateHaVipRequest extends TeaModel {
     public Integer amount;
 
     /**
+     * <p>The description of the HAVIP.</p>
+     * 
      * <strong>example:</strong>
      * <p>testDescription</p>
      */
@@ -22,6 +24,8 @@ public class CreateHaVipRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The IP address of the HAVIP.</p>
+     * 
      * <strong>example:</strong>
      * <p>120.24.243.91</p>
      */
@@ -29,6 +33,8 @@ public class CreateHaVipRequest extends TeaModel {
     public String ipAddress;
 
     /**
+     * <p>The name of the HAVIP.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourName</p>
      */
@@ -36,6 +42,8 @@ public class CreateHaVipRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The vSwitch ID of the HAVIP.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-5****</p>
      */

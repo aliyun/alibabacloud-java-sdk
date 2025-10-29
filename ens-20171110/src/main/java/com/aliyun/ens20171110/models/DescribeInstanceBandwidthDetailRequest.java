@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The maximum interval between the beginning time and the end time is 86400 seconds. The interval is left-closed and right-open. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The ID of the ENS node.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-cmcc</p>
      */
@@ -21,6 +24,8 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The plan ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-6ecpqvkicnchxccozrpxxxx</p>
      */
@@ -28,6 +33,8 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The type of the instance, such as vm, eip, single_tenant, and nc. You can leave this parameter empty. The type of the instance, such as vm, eip, single_tenant, and nc.</p>
+     * 
      * <strong>example:</strong>
      * <p>vm</p>
      */
@@ -53,6 +60,8 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The type of the service, such as vm, eip, esk, and meta.</p>
+     * 
      * <strong>example:</strong>
      * <p>vm</p>
      */
@@ -60,6 +69,7 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String serviceType;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

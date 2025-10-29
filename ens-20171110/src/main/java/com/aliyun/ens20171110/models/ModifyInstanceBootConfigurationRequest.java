@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceBootConfigurationRequest extends TeaModel {
     /**
+     * <p>The startup method.</p>
+     * 
      * <strong>example:</strong>
      * <p>legacy</p>
      */
@@ -12,6 +14,7 @@ public class ModifyInstanceBootConfigurationRequest extends TeaModel {
     public String bootSet;
 
     /**
+     * <p>The startup type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ModifyInstanceBootConfigurationRequest extends TeaModel {
     public String bootType;
 
     /**
+     * <p>Specifies whether the startup depends on the disk.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -28,6 +33,7 @@ public class ModifyInstanceBootConfigurationRequest extends TeaModel {
     public String diskSet;
 
     /**
+     * <p>The ID of the instance for which you want to modify the configuration. You can specify only one ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

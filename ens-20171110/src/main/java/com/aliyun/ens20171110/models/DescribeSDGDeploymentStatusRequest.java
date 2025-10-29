@@ -13,6 +13,9 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     @NameInMap("DeploymentType")
     public String deploymentType;
 
+    @NameInMap("DiskIds")
+    public java.util.List<String> diskIds;
+
     /**
      * <p>IDs of Android in Container (AIC) instances.</p>
      */
@@ -73,6 +76,14 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     }
     public String getDeploymentType() {
         return this.deploymentType;
+    }
+
+    public DescribeSDGDeploymentStatusRequest setDiskIds(java.util.List<String> diskIds) {
+        this.diskIds = diskIds;
+        return this;
+    }
+    public java.util.List<String> getDiskIds() {
+        return this.diskIds;
     }
 
     public DescribeSDGDeploymentStatusRequest setInstanceIds(java.util.List<String> instanceIds) {

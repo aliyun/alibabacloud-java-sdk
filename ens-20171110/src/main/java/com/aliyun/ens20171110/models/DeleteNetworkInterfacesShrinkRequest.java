@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNetworkInterfacesShrinkRequest extends TeaModel {
     /**
+     * <p>The IDs of the elastic network interfaces (ENIs).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkInterfaceIds")

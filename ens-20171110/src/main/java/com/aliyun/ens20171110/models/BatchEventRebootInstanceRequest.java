@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class BatchEventRebootInstanceRequest extends TeaModel {
+    /**
+     * <p>The details of events.</p>
+     */
     @NameInMap("EventInfos")
     public java.util.List<BatchEventRebootInstanceRequestEventInfos> eventInfos;
 
@@ -22,6 +25,8 @@ public class BatchEventRebootInstanceRequest extends TeaModel {
 
     public static class BatchEventRebootInstanceRequestEventInfos extends TeaModel {
         /**
+         * <p>The ID of the system event.</p>
+         * 
          * <strong>example:</strong>
          * <p>e-4452cec5a8f8eb9b2879a054207687d6</p>
          */
@@ -29,6 +34,12 @@ public class BatchEventRebootInstanceRequest extends TeaModel {
         public String eventId;
 
         /**
+         * <p>The type of the O\&amp;M task.</p>
+         * <ul>
+         * <li>immediate</li>
+         * <li>scheduled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>immediate</p>
          */
@@ -36,6 +47,8 @@ public class BatchEventRebootInstanceRequest extends TeaModel {
         public String opsType;
 
         /**
+         * <p>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742452232000</p>
          */
@@ -43,6 +56,8 @@ public class BatchEventRebootInstanceRequest extends TeaModel {
         public Long planTime;
 
         /**
+         * <p>A client ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>n-54hi3ffi63zrjt4wzx9mepeyh</p>
          */

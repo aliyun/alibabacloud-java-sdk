@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     /**
+     * <p>The number of available IP addresses in the VSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>253</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public Long availableIpAddressCount;
 
     /**
+     * <p>The IPv4 CIDR block of the network.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.0.0.0/24</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String cidrBlock;
 
     /**
+     * <p>The creation time, in UTC format (yyyy-MM-ddTHH:mm:ssZ).</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-06-01T00:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The description of the VSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is my vswitch.</p>
      */
@@ -33,35 +41,56 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The ENS node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-xian-unicom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>A list of high-availability VIP instance IDs.</p>
+     */
     @NameInMap("HaVipIds")
     public DescribeVSwitchAttributesResponseBodyHaVipIds haVipIds;
 
+    /**
+     * <p>A list of instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public DescribeVSwitchAttributesResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <p>A list of load balancer instance IDs.</p>
+     */
     @NameInMap("LoadBalancerIds")
     public DescribeVSwitchAttributesResponseBodyLoadBalancerIds loadBalancerIds;
 
+    /**
+     * <p>A list of NAT gateway IDs.</p>
+     */
     @NameInMap("NatGatewayIds")
     public DescribeVSwitchAttributesResponseBodyNatGatewayIds natGatewayIds;
 
     /**
+     * <p>The network ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>n-257gqcdfvx6n****</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>A list of elastic network interface IDs.</p>
+     */
     @NameInMap("NetworkInterfaceIds")
     public DescribeVSwitchAttributesResponseBodyNetworkInterfaceIds networkInterfaceIds;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C0003****2A8</p>
      */
@@ -69,6 +98,13 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the VSwitch, as follows:</p>
+     * <ul>
+     * <li>Pending</li>
+     * <li>Available</li>
+     * <li>Releasing</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Available</p>
      */
@@ -76,6 +112,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the VSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-5****</p>
      */
@@ -83,6 +121,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The name of the VSwitch.</p>
+     * 
      * <strong>example:</strong>
      * <p>Test-switch</p>
      */

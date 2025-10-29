@@ -3,22 +3,22 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class EventMigrateInstanceResponseBody extends TeaModel {
+public class DeleteAICPublicKeyResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
+     * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static EventMigrateInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        EventMigrateInstanceResponseBody self = new EventMigrateInstanceResponseBody();
+    public static DeleteAICPublicKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAICPublicKeyResponseBody self = new DeleteAICPublicKeyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public EventMigrateInstanceResponseBody setRequestId(String requestId) {
+    public DeleteAICPublicKeyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

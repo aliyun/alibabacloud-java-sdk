@@ -13,6 +13,9 @@ public class DescribeSDGDeploymentStatusShrinkRequest extends TeaModel {
     @NameInMap("DeploymentType")
     public String deploymentType;
 
+    @NameInMap("DiskIds")
+    public String diskIdsShrink;
+
     /**
      * <p>IDs of Android in Container (AIC) instances.</p>
      */
@@ -73,6 +76,14 @@ public class DescribeSDGDeploymentStatusShrinkRequest extends TeaModel {
     }
     public String getDeploymentType() {
         return this.deploymentType;
+    }
+
+    public DescribeSDGDeploymentStatusShrinkRequest setDiskIdsShrink(String diskIdsShrink) {
+        this.diskIdsShrink = diskIdsShrink;
+        return this;
+    }
+    public String getDiskIdsShrink() {
+        return this.diskIdsShrink;
     }
 
     public DescribeSDGDeploymentStatusShrinkRequest setInstanceIdsShrink(String instanceIdsShrink) {

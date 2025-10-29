@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyEnsRouteEntryRequest extends TeaModel {
     /**
+     * <p>The description of the route entry. The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,7 @@ public class ModifyEnsRouteEntryRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the custom route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,9 @@ public class ModifyEnsRouteEntryRequest extends TeaModel {
     public String routeEntryId;
 
     /**
+     * <p>The name of the route.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

@@ -41,6 +41,9 @@ public class DescribeHistoryEventsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of resources.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 

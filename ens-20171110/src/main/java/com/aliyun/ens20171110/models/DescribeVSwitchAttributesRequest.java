@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchAttributesRequest extends TeaModel {
     /**
+     * <p>The ID of the VSwitch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

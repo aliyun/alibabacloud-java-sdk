@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class RunInstancesRequest extends TeaModel {
     /**
      * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -138,7 +137,6 @@ public class RunInstancesRequest extends TeaModel {
      * <li><strong>PrePaid</strong>: subscription.</li>
      * <li><strong>PostPaid:</strong> pay-as-you-go.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -158,7 +156,6 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <p>The instance type.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ens.sn1.small</p>
@@ -184,7 +181,6 @@ public class RunInstancesRequest extends TeaModel {
 
     /**
      * <p>The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is assigned to the instance.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -221,6 +217,27 @@ public class RunInstancesRequest extends TeaModel {
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>lt-test</p>
+     */
+    @NameInMap("LaunchTemplateId")
+    public String launchTemplateId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>lt-test</p>
+     */
+    @NameInMap("LaunchTemplateName")
+    public String launchTemplateName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("LaunchTemplateVersion")
+    public Integer launchTemplateVersion;
 
     /**
      * <p>The code of the region.</p>
@@ -329,7 +346,6 @@ public class RunInstancesRequest extends TeaModel {
      * <li><strong>Small</strong>: city</li>
      * <li><strong>Region</strong>: node</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Region</p>
@@ -608,6 +624,30 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getKeyPairName() {
         return this.keyPairName;
+    }
+
+    public RunInstancesRequest setLaunchTemplateId(String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+        return this;
+    }
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
+    public RunInstancesRequest setLaunchTemplateName(String launchTemplateName) {
+        this.launchTemplateName = launchTemplateName;
+        return this;
+    }
+    public String getLaunchTemplateName() {
+        return this.launchTemplateName;
+    }
+
+    public RunInstancesRequest setLaunchTemplateVersion(Integer launchTemplateVersion) {
+        this.launchTemplateVersion = launchTemplateVersion;
+        return this;
+    }
+    public Integer getLaunchTemplateVersion() {
+        return this.launchTemplateVersion;
     }
 
     public RunInstancesRequest setNetDistrictCode(String netDistrictCode) {

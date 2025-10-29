@@ -3,9 +3,9 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteNetworkInterfacesResponseBody extends TeaModel {
+public class UploadAICPublicKeyResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
@@ -13,12 +13,12 @@ public class DeleteNetworkInterfacesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteNetworkInterfacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteNetworkInterfacesResponseBody self = new DeleteNetworkInterfacesResponseBody();
+    public static UploadAICPublicKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UploadAICPublicKeyResponseBody self = new UploadAICPublicKeyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteNetworkInterfacesResponseBody setRequestId(String requestId) {
+    public UploadAICPublicKeyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

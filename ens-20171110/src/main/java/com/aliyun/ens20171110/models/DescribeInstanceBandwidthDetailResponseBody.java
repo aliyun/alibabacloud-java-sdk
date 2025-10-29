@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
+    /**
+     * <p>Details about the maximum public bandwidth.</p>
+     */
     @NameInMap("Bandwidths")
     public java.util.List<DescribeInstanceBandwidthDetailResponseBodyBandwidths> bandwidths;
 
     /**
+     * <p>The page number of the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -31,6 +38,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +93,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
 
     public static class DescribeInstanceBandwidthDetailResponseBodyBandwidths extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1972653484384661</p>
          */
@@ -91,6 +102,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The bandwidth service time. The data granularity is 5 minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-11 00:00:00</p>
          */
@@ -98,6 +111,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public String bizTime;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-yichang-2</p>
          */
@@ -105,6 +120,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
+         * <p>The type of the bandwidth. Valid values: 1, which indicates public network bandwidth. 2, which indicates internal network bandwidth.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -112,6 +129,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public Integer flowType;
 
         /**
+         * <p>The plan ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-6ecpqvkicnchxccozrpxxxx</p>
          */
@@ -119,6 +138,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The type of the instance, such as vm, eip, single_tenant, and nc.</p>
+         * 
          * <strong>example:</strong>
          * <p>vm</p>
          */
@@ -126,6 +147,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>null</p>
+         * 
          * <strong>example:</strong>
          * <p>203.107.***</p>
          */
@@ -133,6 +156,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The Internet service provider to which the IP address belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmcc</p>
          */
@@ -140,6 +165,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public String isp;
 
         /**
+         * <p>null</p>
+         * 
          * <strong>example:</strong>
          * <p>43795230</p>
          */
@@ -147,6 +174,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public Long rxBw;
 
         /**
+         * <p>The type of the service, such as vm, eip, esk, and meta.</p>
+         * 
          * <strong>example:</strong>
          * <p>vm</p>
          */
@@ -154,6 +183,8 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         public String serviceType;
 
         /**
+         * <p>null</p>
+         * 
          * <strong>example:</strong>
          * <p>25415638</p>
          */

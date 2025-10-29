@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHaVipsRequest extends TeaModel {
     /**
+     * <p>The IDs of high-availability virtual IP addresses (HAVIPs).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HaVipIds")

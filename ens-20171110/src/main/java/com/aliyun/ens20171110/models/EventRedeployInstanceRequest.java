@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EventRedeployInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the system event.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class EventRedeployInstanceRequest extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The type of the O\&amp;M task. Valid values:</p>
+     * <ul>
+     * <li>immediate</li>
+     * <li>scheduled</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,8 @@ public class EventRedeployInstanceRequest extends TeaModel {
     public String opsType;
 
     /**
+     * <p>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1742452232000</p>
      */
@@ -30,6 +38,7 @@ public class EventRedeployInstanceRequest extends TeaModel {
     public Long planTime;
 
     /**
+     * <p>The ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
