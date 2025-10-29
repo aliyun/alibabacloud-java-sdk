@@ -80,6 +80,13 @@ public class SendTestByTemplateRequest extends TeaModel {
     public Integer templateId;
 
     /**
+     * <strong>example:</strong>
+     * <p>{&quot;age&quot;:&quot;20&quot;,&quot;nickName&quot;:&quot;tom&quot;}</p>
+     */
+    @NameInMap("TemplateParams")
+    public String templateParams;
+
+    /**
      * <p>UserName, with a maximum length of 30 characters</p>
      * 
      * <strong>example:</strong>
@@ -171,6 +178,14 @@ public class SendTestByTemplateRequest extends TeaModel {
     }
     public Integer getTemplateId() {
         return this.templateId;
+    }
+
+    public SendTestByTemplateRequest setTemplateParams(String templateParams) {
+        this.templateParams = templateParams;
+        return this;
+    }
+    public String getTemplateParams() {
+        return this.templateParams;
     }
 
     public SendTestByTemplateRequest setUserName(String userName) {

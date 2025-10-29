@@ -84,6 +84,13 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
+        @NameInMap("ErrMessage")
+        public String errMessage;
+
         public static SaveReceiverDetailResponseBodyDataDetail build(java.util.Map<String, ?> map) throws Exception {
             SaveReceiverDetailResponseBodyDataDetail self = new SaveReceiverDetailResponseBodyDataDetail();
             return TeaModel.build(map, self);
@@ -95,6 +102,14 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public SaveReceiverDetailResponseBodyDataDetail setErrMessage(String errMessage) {
+            this.errMessage = errMessage;
+            return this;
+        }
+        public String getErrMessage() {
+            return this.errMessage;
         }
 
     }

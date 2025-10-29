@@ -64,6 +64,9 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("TagName")
     public String tagName;
 
+    @NameInMap("Template")
+    public SingleSendMailRequestTemplate template;
+
     @NameInMap("TextBody")
     public String textBody;
 
@@ -212,6 +215,14 @@ public class SingleSendMailRequest extends TeaModel {
         return this.tagName;
     }
 
+    public SingleSendMailRequest setTemplate(SingleSendMailRequestTemplate template) {
+        this.template = template;
+        return this;
+    }
+    public SingleSendMailRequestTemplate getTemplate() {
+        return this.template;
+    }
+
     public SingleSendMailRequest setTextBody(String textBody) {
         this.textBody = textBody;
         return this;
@@ -270,6 +281,40 @@ public class SingleSendMailRequest extends TeaModel {
         }
         public String getAttachmentUrl() {
             return this.attachmentUrl;
+        }
+
+    }
+
+    public static class SingleSendMailRequestTemplate extends TeaModel {
+        @NameInMap("TemplateData")
+        public java.util.Map<String, String> templateData;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("TemplateId")
+        public String templateId;
+
+        public static SingleSendMailRequestTemplate build(java.util.Map<String, ?> map) throws Exception {
+            SingleSendMailRequestTemplate self = new SingleSendMailRequestTemplate();
+            return TeaModel.build(map, self);
+        }
+
+        public SingleSendMailRequestTemplate setTemplateData(java.util.Map<String, String> templateData) {
+            this.templateData = templateData;
+            return this;
+        }
+        public java.util.Map<String, String> getTemplateData() {
+            return this.templateData;
+        }
+
+        public SingleSendMailRequestTemplate setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
     }
