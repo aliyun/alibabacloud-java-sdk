@@ -36,6 +36,9 @@ public class ReleaseDedicatedHostRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("TerminateSubscription")
+    public Boolean terminateSubscription;
+
     public static ReleaseDedicatedHostRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseDedicatedHostRequest self = new ReleaseDedicatedHostRequest();
         return TeaModel.build(map, self);
@@ -87,6 +90,14 @@ public class ReleaseDedicatedHostRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ReleaseDedicatedHostRequest setTerminateSubscription(Boolean terminateSubscription) {
+        this.terminateSubscription = terminateSubscription;
+        return this;
+    }
+    public Boolean getTerminateSubscription() {
+        return this.terminateSubscription;
     }
 
 }
