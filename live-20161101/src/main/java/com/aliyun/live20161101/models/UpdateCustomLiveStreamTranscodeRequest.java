@@ -90,6 +90,9 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     @NameInMap("BitrateWithSource")
     public String bitrateWithSource;
 
+    @NameInMap("DeInterlaced")
+    public Boolean deInterlaced;
+
     /**
      * <p>Streamer domain name, unmodifiable.</p>
      * <p>This parameter is required.</p>
@@ -344,6 +347,14 @@ public class UpdateCustomLiveStreamTranscodeRequest extends TeaModel {
     }
     public String getBitrateWithSource() {
         return this.bitrateWithSource;
+    }
+
+    public UpdateCustomLiveStreamTranscodeRequest setDeInterlaced(Boolean deInterlaced) {
+        this.deInterlaced = deInterlaced;
+        return this;
+    }
+    public Boolean getDeInterlaced() {
+        return this.deInterlaced;
     }
 
     public UpdateCustomLiveStreamTranscodeRequest setDomain(String domain) {

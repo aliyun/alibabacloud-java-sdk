@@ -750,6 +750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BitrateWithSource", request.bitrateWithSource);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deInterlaced)) {
+            query.put("DeInterlaced", request.deInterlaced);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
         }
@@ -25462,6 +25466,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口允许用户为一个或多个指定的直播流设置新的录制文件存储期限。</li>
+     * <li><code>Tag</code> 字段必须符合格式 <code>[0-9]+days</code>，表示直播结束后录制内容将被保存的天数。</li>
+     * <li>如果对某个流的存储时间修改失败，错误信息会被记录在返回结果中。对于失败的情况，调用方应重试最多3次；如果超过重试次数仍失败，则视为最终失败。</li>
+     * <li>为了支持未来可能的需求变化（如更长的存储周期），请确保您的系统能够处理不同的时间段值。</li>
+     * <li>成功执行后，供应商会通过异步回调的方式通知调用方所有操作的结果。若回调失败，将按照1小时、2小时、4小时的时间间隔尝试重新发送，直至成功或达到最大重试次数。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于修改指定直播流的录制文件存储时长。</p>
+     * 
+     * @param tmpReq PutRecordStorageLifeCycleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutRecordStorageLifeCycleResponse
+     */
+    public PutRecordStorageLifeCycleResponse putRecordStorageLifeCycleWithOptions(PutRecordStorageLifeCycleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PutRecordStorageLifeCycleShrinkRequest request = new PutRecordStorageLifeCycleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.streamIds)) {
+            request.streamIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.streamIds, "StreamIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.streamIdsShrink)) {
+            body.put("StreamIds", request.streamIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unixTimestamp)) {
+            body.put("UnixTimestamp", request.unixTimestamp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutRecordStorageLifeCycle"),
+            new TeaPair("version", "2016-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutRecordStorageLifeCycleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口允许用户为一个或多个指定的直播流设置新的录制文件存储期限。</li>
+     * <li><code>Tag</code> 字段必须符合格式 <code>[0-9]+days</code>，表示直播结束后录制内容将被保存的天数。</li>
+     * <li>如果对某个流的存储时间修改失败，错误信息会被记录在返回结果中。对于失败的情况，调用方应重试最多3次；如果超过重试次数仍失败，则视为最终失败。</li>
+     * <li>为了支持未来可能的需求变化（如更长的存储周期），请确保您的系统能够处理不同的时间段值。</li>
+     * <li>成功执行后，供应商会通过异步回调的方式通知调用方所有操作的结果。若回调失败，将按照1小时、2小时、4小时的时间间隔尝试重新发送，直至成功或达到最大重试次数。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于修改指定直播流的录制文件存储时长。</p>
+     * 
+     * @param request PutRecordStorageLifeCycleRequest
+     * @return PutRecordStorageLifeCycleResponse
+     */
+    public PutRecordStorageLifeCycleResponse putRecordStorageLifeCycle(PutRecordStorageLifeCycleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.putRecordStorageLifeCycleWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the dual-stream disaster recovery records of online streams.</p>
      * 
@@ -29496,6 +29578,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解绑标签</p>
+     * 
      * @param request UnTagLiveResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnTagLiveResourcesResponse
@@ -29545,6 +29630,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解绑标签</p>
+     * 
      * @param request UnTagLiveResourcesRequest
      * @return UnTagLiveResourcesResponse
      */
@@ -29890,6 +29978,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bitrateWithSource)) {
             query.put("BitrateWithSource", request.bitrateWithSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deInterlaced)) {
+            query.put("DeInterlaced", request.deInterlaced);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {

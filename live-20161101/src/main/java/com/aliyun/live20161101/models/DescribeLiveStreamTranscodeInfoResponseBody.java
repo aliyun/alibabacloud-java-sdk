@@ -117,6 +117,9 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         @NameInMap("BitrateWithSource")
         public java.util.Map<String, ?> bitrateWithSource;
 
+        @NameInMap("DeInterlaced")
+        public Boolean deInterlaced;
+
         /**
          * <p>Other source-based settings.</p>
          * 
@@ -290,6 +293,14 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getBitrateWithSource() {
             return this.bitrateWithSource;
+        }
+
+        public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setDeInterlaced(Boolean deInterlaced) {
+            this.deInterlaced = deInterlaced;
+            return this;
+        }
+        public Boolean getDeInterlaced() {
+            return this.deInterlaced;
         }
 
         public DescribeLiveStreamTranscodeInfoResponseBodyDomainTranscodeListDomainTranscodeInfoCustomTranscodeParameters setExtWithSource(java.util.Map<String, ?> extWithSource) {
