@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFolderRequest extends TeaModel {
     /**
+     * <p>The path of the folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateFolderRequest extends TeaModel {
     public String folderPath;
 
     /**
+     * <p>The ID of the DataWorks workspace. You can obtain the workspace ID from the workspace configuration page in the DataWorks console. Either this parameter or <strong>ProjectIdentifier</strong> must be specified to determine which DataWorks workspace this API call operates on.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -21,6 +24,8 @@ public class CreateFolderRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The name of the DataWorks workspace. You can obtain the workspace name from the workspace configuration page in the DataWorks console. Either this parameter or <strong>ProjectId</strong> must be specified to determine which DataWorks workspace this API call operates on.</p>
+     * 
      * <strong>example:</strong>
      * <p>dw_project</p>
      */

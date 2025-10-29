@@ -588,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建组件</p>
+     * <p>Creates components.</p>
      * 
      * @param request CreateComponentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -628,7 +628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建组件</p>
+     * <p>Creates components.</p>
      * 
      * @param request CreateComponentRequest
      * @return CreateComponentResponse
@@ -5351,8 +5351,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>获取组件信息</p>
+     * <p>Gets component information.</p>
      * 
      * @param request GetComponentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5387,8 +5392,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>获取组件信息</p>
+     * <p>Gets component information.</p>
      * 
      * @param request GetComponentRequest
      * @return GetComponentResponse
@@ -6563,8 +6573,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>This operation supports MaxCompute and HMS (EMR cluster) tables only.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据表的分区详情</p>
+     * <p>Retrieves partition details for a data map table. Currently supports MaxCompute and HMS (EMR cluster) types only.</p>
      * 
      * @param request GetPartitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6591,8 +6607,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>This operation supports MaxCompute and HMS (EMR cluster) tables only.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据表的分区详情</p>
+     * <p>Retrieves partition details for a data map table. Currently supports MaxCompute and HMS (EMR cluster) types only.</p>
      * 
      * @param request GetPartitionRequest
      * @return GetPartitionResponse
@@ -7871,8 +7893,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取组件列表</p>
+     * <p>Retrieves a list of components.</p>
      * 
      * @param request ListComponentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7915,8 +7940,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取组件列表</p>
+     * <p>Retrieves a list of components.</p>
      * 
      * @param request ListComponentsRequest
      * @return ListComponentsResponse
@@ -9048,7 +9076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询发布包列表</p>
+     * <p>Queries a list of deployment packages.</p>
      * 
      * @param request ListDeploymentPackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9116,7 +9144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询发布包列表</p>
+     * <p>Queries a list of deployment packages.</p>
      * 
      * @param request ListDeploymentPackagesRequest
      * @return ListDeploymentPackagesResponse
@@ -9786,7 +9814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过发布流程的ID获取发布内容</p>
+     * <p>Queries the information about deployment objects by deployment process ID.</p>
      * 
      * @param request ListPipelineRunItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9814,7 +9842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过发布流程的ID获取发布内容</p>
+     * <p>Queries the information about deployment objects by deployment process ID.</p>
      * 
      * @param request ListPipelineRunItemsRequest
      * @return ListPipelineRunItemsResponse
@@ -10302,7 +10330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据表列表</p>
+     * <p>Queries a list of tables in Data Map. For data source types that do not support schemas, you can call this API operation to query a list of tables in a specific database. For data source types that support schemas, you can call this API operation to query a list of tables in a specific database, MaxCompute project, or schema. Only the basic information about tables is returned. The information about technical metadata and business metadata is not returned.</p>
      * 
      * @param tmpReq ListTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10336,7 +10364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据表列表</p>
+     * <p>Queries a list of tables in Data Map. For data source types that do not support schemas, you can call this API operation to query a list of tables in a specific database. For data source types that support schemas, you can call this API operation to query a list of tables in a specific database, MaxCompute project, or schema. Only the basic information about tables is returned. The information about technical metadata and business metadata is not returned.</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPartitionRequest extends TeaModel {
     /**
+     * <p>The partition name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class GetPartitionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The table ID. For more details, refer to the response of the ListTables operation and <a href="https://help.aliyun.com/document_detail/2880092.html">description of concepts related to metadata entities.</a></p>
+     * <p>The table ID. You can refer to the result returned by the ListTables operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

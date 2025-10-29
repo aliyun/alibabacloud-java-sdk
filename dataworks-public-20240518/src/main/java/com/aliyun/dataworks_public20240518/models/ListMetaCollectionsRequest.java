@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMetaCollectionsRequest extends TeaModel {
     /**
+     * <p>The administrator ID. Valid only for album types. Default: The current user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -12,16 +14,23 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String administrator;
 
     /**
+     * <p>The creator user ID. Valid only for album types. Default: The current user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
     @NameInMap("CreateUser")
     public String createUser;
 
+    /**
+     * <p>The collection description. Supports fuzzy matching.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The collection name. Supports fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -29,6 +38,12 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>Asc (default): Ascending order</li>
+     * <li>Desc</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -36,6 +51,8 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +60,8 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,7 +69,7 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the collection of an ancestor node.</p>
+     * <p>The ID of the parent collection.</p>
      * 
      * <strong>example:</strong>
      * <p>category.123</p>
@@ -59,6 +78,15 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String parentId;
 
     /**
+     * <p>The sort field. Valid values:</p>
+     * <ul>
+     * <li>Id (default)</li>
+     * <li>Name</li>
+     * <li>CreateUser: Creator ID</li>
+     * <li>CreateTime: Creation time</li>
+     * <li>ModifyTime: Modification time</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Name</p>
      */
@@ -66,11 +94,11 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The type of the collection. Valid values:</p>
+     * <p>The collection type. Valid values:</p>
      * <ul>
      * <li>Category</li>
      * <li>Album</li>
-     * <li>AlbumCategory</li>
+     * <li>AlbumCategory: Album subcategory</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

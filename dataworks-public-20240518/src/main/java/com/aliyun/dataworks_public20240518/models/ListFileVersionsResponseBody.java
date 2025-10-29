@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListFileVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of file versions.</p>
+     */
     @NameInMap("Data")
     public ListFileVersionsResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -15,6 +20,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -22,6 +29,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -36,6 +47,12 @@ public class ListFileVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
 
     public static class ListFileVersionsResponseBodyDataFileVersions extends TeaModel {
         /**
+         * <p>The change type for this file version. Valid values: CREATE, UPDATE, and DELETE.</p>
+         * 
          * <strong>example:</strong>
          * <p>UPDATE</p>
          */
@@ -104,6 +123,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public String changeType;
 
         /**
+         * <p>The description of this file version.</p>
+         * 
          * <strong>example:</strong>
          * <p>Second version submission</p>
          */
@@ -111,6 +132,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The timestamp (in milliseconds) when the file version was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1593881265000</p>
          */
@@ -118,6 +141,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public Long commitTime;
 
         /**
+         * <p>The Alibaba Cloud account ID of the user who created this file version.</p>
+         * 
          * <strong>example:</strong>
          * <p>73842342****</p>
          */
@@ -125,6 +150,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public String commitUser;
 
         /**
+         * <p>The file code for this version.</p>
+         * 
          * <strong>example:</strong>
          * <p>SHOW TABLES;</p>
          */
@@ -132,6 +159,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public String fileContent;
 
         /**
+         * <p>The file name for this file version.</p>
+         * 
          * <strong>example:</strong>
          * <p>ods_user_info_d</p>
          */
@@ -139,6 +168,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The text information for this file version.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</p>
          */
@@ -146,6 +177,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public String filePropertyContent;
 
         /**
+         * <p>The file version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -153,6 +186,12 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public Integer fileVersion;
 
         /**
+         * <p>Indicates whether this file version is the latest version in the production environment.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -160,6 +199,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public Boolean isCurrentProd;
 
         /**
+         * <p>The scheduling configuration for this file version.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</p>
          */
@@ -167,6 +208,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public String nodeContent;
 
         /**
+         * <p>The scheduling task ID associated with this file version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -174,6 +217,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
+         * <p>The current status of the file version. Valid values: COMMITTING (committing), COMMITTED or CHECK_OK (committed), PACKAGED (ready for deployment), DEPLOYING (deploying), DEPLOYED (deployed), and CANCELLED (deployment canceled).</p>
+         * 
          * <strong>example:</strong>
          * <p>COMMITTED</p>
          */
@@ -181,6 +226,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The functional module to which the file belongs. Valid values: NORMAL (Data Studio), MANUAL (manual task), MANUAL_BIZ (manual workflow), SKIP (dry-run scheduling in Data Studio), ADHOCQUERY (ad hoc query), and COMPONENT (component management).</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -299,10 +346,15 @@ public class ListFileVersionsResponseBody extends TeaModel {
     }
 
     public static class ListFileVersionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of file version details.</p>
+         */
         @NameInMap("FileVersions")
         public java.util.List<ListFileVersionsResponseBodyDataFileVersions> fileVersions;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -310,6 +362,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -317,6 +371,8 @@ public class ListFileVersionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */

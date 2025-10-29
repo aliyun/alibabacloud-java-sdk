@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCatalogsShrinkRequest extends TeaModel {
     /**
+     * <p>The comment. Supports token-based matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
@@ -12,6 +14,8 @@ public class ListCatalogsShrinkRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The name. Supports fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -19,6 +23,12 @@ public class ListCatalogsShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The order in which the tables are sorted. Default value: Asc. Valid values:</p>
+     * <ul>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -26,6 +36,8 @@ public class ListCatalogsShrinkRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +45,8 @@ public class ListCatalogsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -41,15 +55,15 @@ public class ListCatalogsShrinkRequest extends TeaModel {
 
     /**
      * <p>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
-     * <p>Only DLF and StarRocks data sources support this parameter.</p>
+     * <p>Currently, only the DLF and StarRocks types are supported.</p>
      * <ul>
-     * <li>For DLF data sources, you can call this API operation to query all catalogs. In this case, you must set the <code>ParentMetaEntityId</code> parameter to <code>dlf</code>.</li>
-     * <li>For StarRocks data sources, you can call this API operation to query the catalogs in a specific instance. In this case, you can configure the <code>ParentMetaEntityId</code> parameter in the <code>starrocks:(instance_id|encoded_jdbc_url)</code> format.</li>
+     * <li>For the DLF type, you can query all catalog lists. The format of <code>ParentMetaEntityId</code> is <code>DLF</code>.</li>
+     * <li>For the StarRocks type, you can query the catalogs of a specific instance. The format of <code>ParentMetaEntityId</code> <code>is StarRocks:(instance_id|encoded_jdbc_url)</code>.</li>
      * </ul>
      * <blockquote>
      * <p>\
-     * <code>instance_id</code>: the ID of an instance. If the related data source is added to DataWorks in Alibaba Cloud instance mode, you must configure this parameter.\
-     * <code>encoded_jdbc_url</code>: the JDBC connection string that is URL-encoded. If the related data source is added to DataWorks in connection string mode, you must configure this parameter.</p>
+     * <code>instance_id</code>: The instance ID. Required if the data source is registered in instance mode.\
+     * <code>encoded_jdbc_url</code>: The JDBC connection string encoded with URL encoding. Required if the data source is registered in connection-string mode.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -61,12 +75,23 @@ public class ListCatalogsShrinkRequest extends TeaModel {
     public String parentMetaEntityId;
 
     /**
+     * <p>The sort field. Default value: CreateTime. Valid values:</p>
+     * <ul>
+     * <li>CreateTime</li>
+     * <li>ModifyTime</li>
+     * <li>Name</li>
+     * <li>Type</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The type. Supports exact match. If left empty, all types are queried.</p>
+     */
     @NameInMap("Types")
     public String typesShrink;
 

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetPartitionResponseBody extends TeaModel {
+    /**
+     * <p>Partition details.</p>
+     */
     @NameInMap("Partition")
     public Partition partition;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D1E2E5BC-xxxx-xxxx-xxxx-xxxxxx</p>
      */
@@ -15,6 +20,8 @@ public class GetPartitionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

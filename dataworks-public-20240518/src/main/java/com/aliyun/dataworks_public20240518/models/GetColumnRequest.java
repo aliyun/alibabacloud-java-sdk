@@ -6,12 +6,12 @@ import com.aliyun.tea.*;
 public class GetColumnRequest extends TeaModel {
     /**
      * <p>The ID. You can refer to the response of the ListColumns operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">description of concepts related to metadata entities.</a></p>
-     * <p>The format: <code>${EntityType}:${Instance ID or escaped URL}:${Catalog name}:${Database name}</code>. Use empty strings as placeholders for levels that do not exist.</p>
+     * <p>The format: <code>${EntityType}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Schema name}:${Table name}:${Column name}</code>. Use empty strings as placeholders for levels that do not exist.</p>
      * <blockquote>
-     * <p> For the MaxCompute and DLF types, the instance ID level must be left empty. For the MaxCompute type, the instance ID level is represented by an empty string. The database name is the name of the MaxCompute project with schema enabled.</p>
+     * <p> For the MaxCompute and DLF types, use an empty string as the placeholder for the instance ID. For MaxCompute, the database name refers to the MaxCompute project name. If the project has schema enabled, you must specify the schema name. Otherwise, use an empty string as the placeholder for the schema name.</p>
      * </blockquote>
      * <blockquote>
-     * <p> The catalog identifier of the StarRocks is the catalog name, and the catalog identifier of the DLF type is the catalog ID. Other types do not support catalog levels and can use empty strings as placeholders.</p>
+     * <p> The catalog identifier of the StarRocks is the catalog name, and the catalog identifier of the DLF type is the catalog ID. Other types do not support catalog levels. Use empty strings as placeholders.</p>
      * </blockquote>
      * <p>Examples of common ID formats</p>
      * <p><code>maxcompute-column:::project_name:[schema_name]:table_name:column_name</code></p>
@@ -22,7 +22,7 @@ public class GetColumnRequest extends TeaModel {
      * <blockquote>
      * <p>\
      * <code>instance_id</code>: the ID of the instance, which is required when the data source is registered in instance mode.\
-     * <code>encoded_jdbc_url</code>: the URL-encoded JDBC connection string, which is required when the data source is registered via a connection string.\
+     * <code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string, which is required when the data source is registered via a connection string.\
      * <code>catalog_id</code>: The DLF catalog ID.\
      * <code>project_name</code>: The MaxCompute project name.\
      * <code>database_name</code>: The database name.\

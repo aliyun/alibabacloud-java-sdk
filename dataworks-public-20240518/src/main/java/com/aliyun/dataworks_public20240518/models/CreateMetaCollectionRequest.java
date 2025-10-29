@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMetaCollectionRequest extends TeaModel {
     /**
+     * <p>The collection description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test comment</p>
      */
@@ -12,6 +14,7 @@ public class CreateMetaCollectionRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the collection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +24,7 @@ public class CreateMetaCollectionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the collection of an ancestor node.</p>
+     * <p>The parent collection ID.</p>
      * 
      * <strong>example:</strong>
      * <p>category.123</p>
@@ -30,6 +33,12 @@ public class CreateMetaCollectionRequest extends TeaModel {
     public String parentId;
 
     /**
+     * <p>The collection name.</p>
+     * <ul>
+     * <li>Category</li>
+     * <li>Album</li>
+     * <li>AlbumCategory: Album subcategory.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

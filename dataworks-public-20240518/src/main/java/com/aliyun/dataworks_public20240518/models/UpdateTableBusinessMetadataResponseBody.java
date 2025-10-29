@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTableBusinessMetadataResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C352CB7-CD88-XXXXXXX</p>
      */
@@ -12,6 +14,8 @@ public class UpdateTableBusinessMetadataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

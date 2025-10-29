@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetSchemaRequest extends TeaModel {
     /**
-     * <p>The schema ID. You can call the ListSchemas operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
-     * <p>The common format of this parameter is <code>${Entity type}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Schema name}</code>. If a level does not exist, specify an empty string as a placeholder.</p>
+     * <p>The ID. You can refer to the ListSchemas operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+     * <p>The format is <code>${EntityType}:${Instance ID or escaped URL}:${Catalog ID}:${Database name}:${Schema name}&lt;/code&gt;</code>. Use empty strings as placeholders for missing levels.</p>
      * <blockquote>
-     * <p> For MaxCompute tables, specify an empty string at the Instance ID level and a MaxCompute project name at the Database name level. Make sure that the three-layer model is enabled for the MaxCompute project.</p>
+     * <p> For the MaxCompute type, use an empty string as the placeholder for the instance ID level. The database name is the MaxCompute project name, and the project must have the three-level model enabled.</p>
      * </blockquote>
-     * <p>You can configure this parameter in one of the following formats based on your data source type:</p>
-     * <p><code>maxcompute-schema:::project_name:schema_name</code> (Three-layer model is enabled for the MaxCompute project.)</p>
+     * <p>Examples:</p>
+     * <p><code>maxcompute-schema:::project_name:schema_name</code> (The three-level model is enabled for the MaxCompute project.)</p>
      * <p><code>holo-schema:instance_id::database_name:schema_name</code></p>
      * <blockquote>
      * <p>\
-     * <code>instance_id</code>: the ID of a Hologres instance\
-     * <code>database_name</code>: the name of a database\
-     * <code>project_name</code>: the name of a MaxCompute project\
-     * <code>schema_name</code>: the name of a schema</p>
+     * <code>instance_id</code>: The Hologres instance ID\
+     * . <code>database_name</code>: The database name\
+     * . <code>database_name</code>: The MaxCompute project name\
+     * . <code>schema_name</code>: The schema name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

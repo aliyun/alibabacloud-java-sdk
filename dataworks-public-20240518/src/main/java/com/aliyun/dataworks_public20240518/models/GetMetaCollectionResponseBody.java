@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMetaCollectionResponseBody extends TeaModel {
     /**
-     * <p>The information about the collection.</p>
+     * <p>The collection details.</p>
      */
     @NameInMap("MetaCollection")
     public GetMetaCollectionResponseBodyMetaCollection metaCollection;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9****</p>
@@ -41,10 +41,15 @@ public class GetMetaCollectionResponseBody extends TeaModel {
     }
 
     public static class GetMetaCollectionResponseBodyMetaCollection extends TeaModel {
+        /**
+         * <p>The list of administrator IDs. Valid only for the album type. The IDs must belong to users in the same tenant. Multiple IDs can be specified.</p>
+         */
         @NameInMap("Administrators")
         public java.util.List<Long> administrators;
 
         /**
+         * <p>The creation time in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1668568601000</p>
          */
@@ -52,12 +57,20 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>456789</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The collection description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -71,6 +84,8 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The last modified time in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1668568601000</p>
          */
@@ -78,6 +93,8 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The collection name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_category</p>
          */
@@ -85,7 +102,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the collection of the ancestor node. This parameter can be left empty.</p>
+         * <p>The parent collection ID. This parameter can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>category.12</p>
@@ -94,6 +111,13 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         public String parentId;
 
         /**
+         * <p>The collection type. Valid values:</p>
+         * <ul>
+         * <li>Category</li>
+         * <li>Album</li>
+         * <li>AlbumCategory: Album subcategory.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Category</p>
          */

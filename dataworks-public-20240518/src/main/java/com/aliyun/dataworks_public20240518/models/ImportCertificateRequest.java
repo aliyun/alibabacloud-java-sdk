@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportCertificateRequest extends TeaModel {
     /**
+     * <p>The certificate file to upload. Upload method: Upload the file by creating an InputStream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +17,8 @@ public class ImportCertificateRequest extends TeaModel {
     public String certificateFile;
 
     /**
+     * <p>The description of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a file</p>
      */
@@ -23,6 +26,7 @@ public class ImportCertificateRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The certificate file name. In a project workspace, certificate file names must be unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +36,7 @@ public class ImportCertificateRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the workspace to which the certificate file belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

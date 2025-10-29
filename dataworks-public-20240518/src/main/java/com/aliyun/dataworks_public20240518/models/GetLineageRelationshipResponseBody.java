@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetLineageRelationshipResponseBody extends TeaModel {
+    /**
+     * <p>The lineage structure.</p>
+     */
     @NameInMap("LineageRelationship")
     public LineageRelationship lineageRelationship;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>58D5334A-B013-430E</p>
      */

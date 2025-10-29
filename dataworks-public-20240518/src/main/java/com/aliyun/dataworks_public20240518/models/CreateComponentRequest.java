@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateComponentRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9****</p>
      */
@@ -12,6 +14,7 @@ public class CreateComponentRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/2852607.html">ListProjects</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateComponentRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The FlowSpec information for this UDF function. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

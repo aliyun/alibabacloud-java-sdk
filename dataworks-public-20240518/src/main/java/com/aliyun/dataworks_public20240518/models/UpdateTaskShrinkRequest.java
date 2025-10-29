@@ -64,7 +64,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String inputsShrink;
 
     /**
-     * <p>The instance generation mode. Valid values:</p>
+     * <p>The instance generation mode.</p>
      * <ul>
      * <li>T+1: the next day</li>
      * <li>Immediately</li>
@@ -101,7 +101,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The rerun interval. Unit: seconds.</p>
+     * <p>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -151,7 +151,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The timeout period of task running. Unit: seconds.</p>
+     * <p>Task execution timeout in seconds. Must be greater than 3600.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>

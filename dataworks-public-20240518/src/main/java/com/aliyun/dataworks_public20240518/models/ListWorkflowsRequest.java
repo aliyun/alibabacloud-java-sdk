@@ -85,7 +85,7 @@ public class ListWorkflowsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The trigger type. Valid values:</p>
+     * <p>The trigger type.</p>
      * <ul>
      * <li>Scheduler</li>
      * <li>Manual</li>

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListFilesResponseBody extends TeaModel {
+    /**
+     * <p>The response details.</p>
+     */
     @NameInMap("Data")
     public ListFilesResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -15,6 +20,8 @@ public class ListFilesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -22,6 +29,8 @@ public class ListFilesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListFilesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-****</p>
      */
@@ -36,6 +47,12 @@ public class ListFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class ListFilesResponseBody extends TeaModel {
 
     public static class ListFilesResponseBodyDataFiles extends TeaModel {
         /**
+         * <p>The path to the folder where the file is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
          */
@@ -104,6 +123,13 @@ public class ListFilesResponseBody extends TeaModel {
         public String absoluteFolderPath;
 
         /**
+         * <p>Specifies whether automatic parsing is enabled for the file. Valid values:</p>
+         * <ul>
+         * <li>true: The file automatically parses code.</li>
+         * <li>false: The file does not automatically parse code.</li>
+         * </ul>
+         * <p>This parameter corresponds to Analyze Code when you set Dependencies to Same Cycle in the scheduling configuration of a Data Studio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -111,6 +137,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Boolean autoParsing;
 
         /**
+         * <p>The ID of the workflow to which the file belongs. This parameter is deprecated. Use the BusinessId parameter instead.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000</p>
          */
@@ -118,6 +146,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Long bizId;
 
         /**
+         * <p>The ID of the workflow to which the file belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000</p>
          */
@@ -125,6 +155,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Long businessId;
 
         /**
+         * <p>The current commit status of the file. Valid values: 0 (the latest code is not committed) and 1 (the latest code is committed).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -132,6 +164,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Integer commitStatus;
 
         /**
+         * <p>The data source name used by the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps_source</p>
          */
@@ -139,6 +173,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String connectionName;
 
         /**
+         * <p>This parameter is deprecated. You can call the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation to query this information.</p>
+         * 
          * <strong>example:</strong>
          * <p>SHOW TABLES;</p>
          */
@@ -146,6 +182,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The timestamp (in milliseconds) when the file was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1593950832000</p>
          */
@@ -153,6 +191,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The Alibaba Cloud account ID of the file creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>382762****</p>
          */
@@ -160,6 +200,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The latest version of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -167,6 +209,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Integer currentVersion;
 
         /**
+         * <p>The description of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>my test datastudio file</p>
          */
@@ -174,6 +218,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String fileDescription;
 
         /**
+         * <p>The ID of the folder where the file is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>2735c2****</p>
          */
@@ -181,6 +227,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String fileFolderId;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000001</p>
          */
@@ -188,6 +236,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ods_user_info_d</p>
          */
@@ -195,6 +245,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file type. Different file types have different code. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node types</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -202,6 +254,9 @@ public class ListFilesResponseBody extends TeaModel {
         public Integer fileType;
 
         /**
+         * <p>If the current file is a MaxCompute resource file, this parameter specifies whether the resource file needs to be uploaded to MaxCompute.</p>
+         * <p>You only need to configure this parameter when the file is a MaxCompute resource file.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -209,6 +264,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Boolean isMaxCompute;
 
         /**
+         * <p>The timestamp (in milliseconds) when the file was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1593950832000</p>
          */
@@ -216,6 +273,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Long lastEditTime;
 
         /**
+         * <p>The Alibaba Cloud account ID of the user who last updated the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>382762****</p>
          */
@@ -223,6 +282,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String lastEditUser;
 
         /**
+         * <p>The ID of the scheduling task generated in the scheduling system after the file is committed.</p>
+         * 
          * <strong>example:</strong>
          * <p>300001</p>
          */
@@ -230,6 +291,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
+         * <p>The Alibaba Cloud account ID of the file owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>3872572****</p>
          */
@@ -237,6 +300,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>If the current file is an internal file of a combined node, this parameter specifies the ID of the corresponding combined node file.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -244,6 +309,16 @@ public class ListFilesResponseBody extends TeaModel {
         public Long parentId;
 
         /**
+         * <p>The functional module to which the file belongs. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: Data Studio</li>
+         * <li>MANUAL: Manually triggered node</li>
+         * <li>MANUAL_BIZ: Manually triggered workflow</li>
+         * <li>SKIP: Dry-run scheduling in Data Studio</li>
+         * <li>ADHOCQUERY: Ad hoc query</li>
+         * <li>COMPONENT: Component management</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -434,10 +509,15 @@ public class ListFilesResponseBody extends TeaModel {
     }
 
     public static class ListFilesResponseBodyData extends TeaModel {
+        /**
+         * <p>The file details.</p>
+         */
         @NameInMap("Files")
         public java.util.List<ListFilesResponseBodyDataFiles> files;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -445,6 +525,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -452,6 +534,8 @@ public class ListFilesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */

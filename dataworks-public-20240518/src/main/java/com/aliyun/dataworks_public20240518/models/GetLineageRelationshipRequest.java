@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLineageRelationshipRequest extends TeaModel {
     /**
-     * <p>The lineage ID. For more information, see the response returned by the ListLineageRelationships operation.</p>
+     * <p>The lineage ID. You can refer to the return result of the ListLineageRelationships operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

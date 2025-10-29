@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetComponentRequest extends TeaModel {
     /**
+     * <p>The component ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetComponentRequest extends TeaModel {
     public String componentId;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */

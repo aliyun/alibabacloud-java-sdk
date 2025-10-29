@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableBusinessMetadataRequest extends TeaModel {
     /**
-     * <p>The data table ID. You can call the ListTables operation to query the ID.</p>
+     * <p>The table ID. You can refer to the format of the table ID returned by the ListTables operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +18,8 @@ public class UpdateTableBusinessMetadataRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The usage notes. The rich text format is supported.</p>
+     * 
      * <strong>example:</strong>
      * <h2>introduction</h2>
      */

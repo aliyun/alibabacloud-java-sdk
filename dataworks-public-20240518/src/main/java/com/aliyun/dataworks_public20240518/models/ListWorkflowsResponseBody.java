@@ -41,9 +41,17 @@ public class ListWorkflowsResponseBody extends TeaModel {
     }
 
     public static class ListWorkflowsResponseBodyPagingInfoWorkflowsTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -285,6 +293,9 @@ public class ListWorkflowsResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The task tag.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListWorkflowsResponseBodyPagingInfoWorkflowsTags> tags;
 

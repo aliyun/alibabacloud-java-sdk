@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetFolderResponseBody extends TeaModel {
+    /**
+     * <p>Details about the folder.</p>
+     */
     @NameInMap("Data")
     public GetFolderResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -15,6 +20,8 @@ public class GetFolderResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -22,6 +29,8 @@ public class GetFolderResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetFolderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID. Used for troubleshooting when errors occur.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -36,6 +47,12 @@ public class GetFolderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class GetFolderResponseBody extends TeaModel {
 
     public static class GetFolderResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>2735****</p>
          */
@@ -104,6 +123,8 @@ public class GetFolderResponseBody extends TeaModel {
         public String folderId;
 
         /**
+         * <p>The path of the folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
          */

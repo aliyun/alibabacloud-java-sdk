@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLineageRelationshipResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>952795279527ab****</p>
      */
@@ -12,6 +14,12 @@ public class DeleteLineageRelationshipResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: success.</li>
+     * <li>false: failure.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

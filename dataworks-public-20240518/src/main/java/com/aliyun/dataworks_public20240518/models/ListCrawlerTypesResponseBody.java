@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListCrawlerTypesResponseBody extends TeaModel {
+    /**
+     * <p>The list of metadata crawler types.</p>
+     */
     @NameInMap("CrawlerTypes")
     public java.util.List<CrawlerType> crawlerTypes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -15,6 +20,8 @@ public class ListCrawlerTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

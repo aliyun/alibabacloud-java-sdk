@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPartitionsRequest extends TeaModel {
     /**
+     * <p>The partition name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds=20250101</p>
      */
@@ -12,6 +14,12 @@ public class ListPartitionsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order. Default: Asc. Valid values:</p>
+     * <ul>
+     * <li>Asc: Ascending order.</li>
+     * <li>Desc: Descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -19,6 +27,8 @@ public class ListPartitionsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +36,8 @@ public class ListPartitionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +45,15 @@ public class ListPartitionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sort field. Default value: CreateTime. Valid values:</p>
+     * <ul>
+     * <li>CreateTime: Creation time. Supported only for MaxCompute tables.</li>
+     * <li>ModifyTime: Modification time. Supported only for MaxCompute tables.</li>
+     * <li>Name: Name. Used for HMS-type tables.</li>
+     * <li>RecordCount: Record count. Supported only for MaxCompute tables.</li>
+     * <li>DataSize: Storage size. Supported only for MaxCompute tables.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
@@ -40,7 +61,7 @@ public class ListPartitionsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ID of the table to which the partitions belong. You can call the ListTables operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+     * <p>The ID of the data table.You can refer to the ListTables API response and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPipelineRunItemsRequest extends TeaModel {
     /**
+     * <p>The page number, for pagination.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListPipelineRunItemsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. The number of entries per page. Default: 10. Maximum: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,7 @@ public class ListPipelineRunItemsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The workflow task ID. To obtain the ID, see <a href="https://help.aliyun.com/document_detail/438042.html">ListPipelineRuns</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ListPipelineRunItemsRequest extends TeaModel {
     public String pipelineRunId;
 
     /**
+     * <p>The ID of the DataWorks workspace. You can obtain the workspace ID from the workspace configuration page in the DataWorks console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

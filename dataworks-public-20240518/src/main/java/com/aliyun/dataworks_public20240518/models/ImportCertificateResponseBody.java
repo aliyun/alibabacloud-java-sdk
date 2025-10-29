@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportCertificateResponseBody extends TeaModel {
     /**
+     * <p>The ID of the certificate file, which is the unique identifier of the certificate file.</p>
+     * 
      * <strong>example:</strong>
      * <p>676303114031776</p>
      */
@@ -12,6 +14,8 @@ public class ImportCertificateResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C352CB7-CD88-50CF-9D0D-E81BDF020E7F</p>
      */

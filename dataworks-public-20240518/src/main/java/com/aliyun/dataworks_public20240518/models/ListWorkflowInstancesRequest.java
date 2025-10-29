@@ -86,11 +86,11 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>Normal</li>
-     * <li>Manual</li>
-     * <li>SmokeTest</li>
-     * <li>SupplementData</li>
-     * <li>ManualWorkflow</li>
+     * <li>Normal: Scheduled execution</li>
+     * <li>Manual: Manually triggered node</li>
+     * <li>SmokeTest: Smoke test</li>
+     * <li>SupplementData: Data backfill</li>
+     * <li>ManualWorkflow: Manually triggered workflow</li>
      * </ul>
      * 
      * <strong>example:</strong>

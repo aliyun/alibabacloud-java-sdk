@@ -14,7 +14,7 @@ public class BatchUpdateTasksShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The tasks.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public String tasksShrink;

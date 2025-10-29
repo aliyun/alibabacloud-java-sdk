@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class GetTableRequest extends TeaModel {
     /**
-     * <p>The table ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
-     * <p>The common format of this parameter is <code>${Entity type}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Schema name}:${Table name}</code>. If a level does not exist, specify an empty string as a placeholder.</p>
+     * <p>The ID. You can refer to the response of the ListTables operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">concepts related to metadata entities.</a></p>
+     * <p>The format: <code>${EntityType}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Table name}</code>. Use empty strings as placeholders for levels that do not exist.</p>
      * <blockquote>
-     * <p> For MaxCompute and DLF data sources, specify an empty string at the Instance ID level.</p>
+     * <p> For the MaxCompute and DLF types, use an empty string as the placeholder for the instance ID.</p>
      * </blockquote>
      * <blockquote>
-     * <p> For StarRocks data sources, specify a catalog name at the Catalog identifier level. For DLF data sources, specify a catalog ID at the Catalog identifier level. Other types of data sources do not support the Catalog identifier level. You can specify an empty string as a placeholder.</p>
+     * <p> The catalog identifier of the StarRocks is the catalog name, and the catalog identifier of the DLF type is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</p>
      * </blockquote>
      * <blockquote>
-     * <p> For MaxCompute data sources, specify a MaxCompute project name at the Database name level. If the three-layer model is enabled for your MaxCompute project, you must specify a schema name at the Schema name level. Otherwise, you can specify an empty string as a placeholder.</p>
+     * <p> For MaxCompute, the database name refers to the MaxCompute project name. If the project has schema enabled, you must specify the schema name. Otherwise, use an empty string as the placeholder for the schema name.</p>
      * </blockquote>
-     * <p>You can configure this parameter in one of the following formats based on your data source type:</p>
+     * <p>Examples of common ID formats</p>
      * <p><code>maxcompute-table:::project_name:[schema_name]:table_name</code></p>
      * <p><code>dlf-table::catalog_id:database_name::table_name</code></p>
      * <p><code>hms-table:instance_id::database_name::table_name</code></p>
@@ -24,13 +24,13 @@ public class GetTableRequest extends TeaModel {
      * <p><code>mysql-table:(instance_id|encoded_jdbc_url)::database_name::table_name</code></p>
      * <blockquote>
      * <p>\
-     * <code>instance_id</code>: the ID of an instance. If the related data source is added to DataWorks in Alibaba Cloud instance mode, you must configure this parameter.\
-     * <code>encoded_jdbc_url</code>: the JDBC connection string that is URL-encoded. If the related data source is added to DataWorks in connection string mode, you must configure this parameter.\
-     * <code>catalog_id</code>: the ID of a DLF catalog.\
-     * <code>project_name</code>: the name of a MaxCompute project.\
-     * <code>database_name</code>: the name of a database.\
-     * <code>schema_name</code>: the name of a schema. For a MaxCompute table, if the three-layer model is enabled for the MaxCompute project to which the table belongs, you must configure this parameter. Otherwise, you can specify an empty string for schema_name as a placeholder.\
-     * <code>table_name</code>: the name of a table.</p>
+     * <code>instance_id</code>: The instance ID, required when the data source is registered in instance mode.\
+     * <code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string, which is required when the data source is registered via a connection string.\
+     * <code>catalog_id</code>: The DLF catalog ID.\
+     * <code>project_name</code>: The MaxCompute project name.\
+     * <code>database_name</code>: The database name.\
+     * <code>schema_name</code>: The schema name. For the MaxCompute type, this is required only if the project has enabled schema. Otherwise, use an empty string as a placeholder.\
+     * <code>table_name</code>: The table name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,6 +44,8 @@ public class GetTableRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Specifies whether to include metadata. Default: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

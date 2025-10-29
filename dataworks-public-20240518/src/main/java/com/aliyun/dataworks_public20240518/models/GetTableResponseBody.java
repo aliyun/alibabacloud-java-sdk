@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTableResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B3435F4-2D91-XXX</p>
      */
@@ -12,12 +14,17 @@ public class GetTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Detailed information about the table.</p>
+     */
     @NameInMap("Table")
     public Table table;
 

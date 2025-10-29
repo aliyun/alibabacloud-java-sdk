@@ -4,10 +4,18 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListEntitiesInMetaCollectionRequest extends TeaModel {
+    /**
+     * <p>The description specified when the entity was added to the collection. Supports fuzzy matching. Valid only for the album type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("EntityDescription")
     public String entityDescription;
 
     /**
+     * <p>The entity name. Supports fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */
@@ -15,6 +23,8 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
     public String entityName;
 
     /**
+     * <p>The entity type.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlf-table</p>
      */
@@ -32,6 +42,12 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>Asc (default): ascending order.</li>
+     * <li>Desc</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -39,6 +55,8 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -46,6 +64,8 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -53,6 +73,12 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sort field. Valid values:</p>
+     * <ul>
+     * <li>Name (default)</li>
+     * <li>CreateTime</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Name</p>
      */

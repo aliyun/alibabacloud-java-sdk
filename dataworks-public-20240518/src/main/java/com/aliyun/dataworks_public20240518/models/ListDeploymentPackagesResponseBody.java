@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentPackagesResponseBody extends TeaModel {
+    /**
+     * <p>The list of deployment packages that meet the query conditions.</p>
+     */
     @NameInMap("Data")
     public ListDeploymentPackagesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>952795279527ab****</p>
      */
@@ -37,6 +42,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
 
     public static class ListDeploymentPackagesResponseBodyDataDeployments extends TeaModel {
         /**
+         * <p>The timestamp when the deployment package was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1593877765000</p>
          */
@@ -44,6 +51,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The Alibaba Cloud account ID of the deployment package creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>2003****</p>
          */
@@ -51,6 +60,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>When the deployment package fails to execute, this parameter is used to record the error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -58,6 +69,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The timestamp when the deployment package was executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1593877765000</p>
          */
@@ -65,6 +78,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public Long executeTime;
 
         /**
+         * <p>The Alibaba Cloud account ID of the deployment package executor.</p>
+         * 
          * <strong>example:</strong>
          * <p>2003****</p>
          */
@@ -72,6 +87,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public String executor;
 
         /**
+         * <p>The ID of the deployment package. You can use this ID to call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to get the deployment package details.</p>
+         * 
          * <strong>example:</strong>
          * <p>11111</p>
          */
@@ -79,6 +96,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the deployment package.</p>
+         * 
          * <strong>example:</strong>
          * <p>auto_created</p>
          */
@@ -86,6 +105,14 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The status of the deployment package. Valid values:</p>
+         * <ul>
+         * <li>0: It is ready.</li>
+         * <li>1: It was successfully deployed.</li>
+         * <li>2: It failed to be deployed.</li>
+         * <li>6: It was rejected.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -164,10 +191,15 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
     }
 
     public static class ListDeploymentPackagesResponseBodyData extends TeaModel {
+        /**
+         * <p>The returned list of deployment packages.</p>
+         */
         @NameInMap("Deployments")
         public java.util.List<ListDeploymentPackagesResponseBodyDataDeployments> deployments;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -175,6 +207,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -182,6 +216,8 @@ public class ListDeploymentPackagesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>The total number of records that meet the conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

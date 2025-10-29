@@ -14,6 +14,8 @@ public class CreateLineageRelationshipResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID. The unique identifier of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</p>
      */
@@ -21,6 +23,8 @@ public class CreateLineageRelationshipResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetComponentResponseBody extends TeaModel {
+    /**
+     * <p>JSON serialization of the component module.</p>
+     */
     @NameInMap("Component")
     public GetComponentResponseBodyComponent component;
 
@@ -39,6 +42,8 @@ public class GetComponentResponseBody extends TeaModel {
 
     public static class GetComponentResponseBodyComponent extends TeaModel {
         /**
+         * <p>The ID of the dataset acceleration component. For information on how to obtain the component ID, see <a href="https://help.aliyun.com/document_detail/2979566.html">ListComponents</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>43cd873b-235c-44f8-be07-e4d4cf7e73b0</p>
          */
@@ -46,6 +51,7 @@ public class GetComponentResponseBody extends TeaModel {
         public String componentId;
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -55,6 +61,8 @@ public class GetComponentResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>None</p>
          */
@@ -62,6 +70,7 @@ public class GetComponentResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The modification time (millisecond-level timestamp).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +80,8 @@ public class GetComponentResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>Parameter</p>
+         * 
          * <strong>example:</strong>
          * <p>dim_whse_epet_warehouse_jz_storage_stock_lot_relation_id</p>
          */
@@ -78,6 +89,8 @@ public class GetComponentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the task owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>207316543660665792</p>
          */
@@ -85,6 +98,8 @@ public class GetComponentResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>64623</p>
          */
@@ -92,6 +107,8 @@ public class GetComponentResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The region ID, such as ap-southeast-1. The region ID is automatically parsed from your endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -99,6 +116,8 @@ public class GetComponentResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The FlowSpec information for this workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;kind&quot;: &quot;Component&quot;,

@@ -29,7 +29,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String defaultRunPropertiesShrink;
 
     /**
-     * <p>The project environment.</p>
+     * <p>The project environment. Valid values:</p>
      * <ul>
      * <li>Prod</li>
      * <li>Dev</li>
@@ -102,9 +102,10 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
      * <li>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</li>
-     * <li>ManualWorkflow: Manual workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</li>
+     * <li>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</li>
      * <li>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</li>
      * <li>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</li>
+     * <li>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -125,7 +126,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>The workflow parameters. This parameter takes effect only when you set the <code>WorkflowId</code> parameter to a value other than 1. If your workflow is an auto triggered workflow, configure this parameter in the key=value format. The parameters that you configure in this parameter have a lower priority than task parameters. If your workflow is a manually triggered workflow, configure this parameter in the JSON format. The parameters that you configure in this parameter have a higher priority than task parameters.</p>
+     * <p>The workflow parameters. This parameter takes effect when a specific workflow is specified (<code>WorkflowId != 1</code>). For scheduled workflows and triggered workflows, the format is key=value, and these parameters have lower priority than task parameters. For manual workflows, the format is JSON, and these parameters have higher priority than task parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{ 

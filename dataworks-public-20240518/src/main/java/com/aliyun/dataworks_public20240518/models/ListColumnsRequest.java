@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListColumnsRequest extends TeaModel {
     /**
+     * <p>The comment. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>test comment</p>
      */
@@ -12,6 +14,8 @@ public class ListColumnsRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The name. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table</p>
      */
@@ -19,6 +23,12 @@ public class ListColumnsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order. Default value: Asc. Valid values:</p>
+     * <ul>
+     * <li>Asc</li>
+     * <li>Desc</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -26,6 +36,8 @@ public class ListColumnsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +45,8 @@ public class ListColumnsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +54,12 @@ public class ListColumnsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sort field. Default value: Position. Valid values:</p>
+     * <ul>
+     * <li>Name</li>
+     * <li>Position</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Position</p>
      */
@@ -47,7 +67,7 @@ public class ListColumnsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ID of the table to which the columns belong. You can call the ListTables operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+     * <p>The table ID. You can refer to the return result of the ListTables operation. and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

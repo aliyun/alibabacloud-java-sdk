@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetColumnResponseBody extends TeaModel {
+    /**
+     * <p>The columns in the table.</p>
+     */
     @NameInMap("Column")
     public Column column;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D1E2E5BC-xxxx-xxxx-xxxx-xxxxxx</p>
      */
@@ -15,6 +20,8 @@ public class GetColumnResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

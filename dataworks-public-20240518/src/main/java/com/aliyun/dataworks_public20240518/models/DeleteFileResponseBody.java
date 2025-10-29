@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteFileResponseBody extends TeaModel {
     /**
+     * <p>If the file has already been submitted, the DeleteFile operation also triggers an asynchronous deletion process in the scheduling system. You must use the DeploymentId returned by the DeleteFile operation to call GetDeployment and poll the status of the triggered asynchronous deletion process.</p>
+     * <p>If this field is empty, the file has been deleted and no further polling is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000001</p>
      */
@@ -12,6 +15,8 @@ public class DeleteFileResponseBody extends TeaModel {
     public Long deploymentId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -19,6 +24,8 @@ public class DeleteFileResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -26,6 +33,8 @@ public class DeleteFileResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +42,8 @@ public class DeleteFileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID. Used for troubleshooting when an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -40,6 +51,12 @@ public class DeleteFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: success.</li>
+     * <li>false: failure.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

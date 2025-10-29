@@ -41,9 +41,17 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
     }
 
     public static class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -154,6 +162,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Owner")
+        public String owner;
+
         /**
          * <p>The workspace ID.</p>
          * 
@@ -191,6 +202,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task tag.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags> tags;
 
@@ -210,8 +224,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @NameInMap("WorkflowId")
         public Long workflowId;
 
+        /**
+         * <p>The workflow parameters.</p>
+         */
         @NameInMap("WorkflowParameters")
         public String workflowParameters;
+
+        @NameInMap("WorkflowTaskInstanceId")
+        public Long workflowTaskInstanceId;
 
         public static ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances build(java.util.Map<String, ?> map) throws Exception {
             ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances self = new ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances();
@@ -290,6 +310,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
         public ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
@@ -344,6 +372,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         }
         public String getWorkflowParameters() {
             return this.workflowParameters;
+        }
+
+        public ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances setWorkflowTaskInstanceId(Long workflowTaskInstanceId) {
+            this.workflowTaskInstanceId = workflowTaskInstanceId;
+            return this;
+        }
+        public Long getWorkflowTaskInstanceId() {
+            return this.workflowTaskInstanceId;
         }
 
     }

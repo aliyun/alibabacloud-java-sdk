@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMetaCollectionsResponseBody extends TeaModel {
     /**
-     * <p>The data.</p>
+     * <p>Pagination information.</p>
      */
     @NameInMap("Data")
     public ListMetaCollectionsResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E25887B7-579C-54A5-9C4F-83A0DE367DDE</p>
@@ -41,11 +41,14 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
     }
 
     public static class ListMetaCollectionsResponseBodyDataMetaCollections extends TeaModel {
+        /**
+         * <p>The list of administrator IDs. Supported only for album types. Administrators must be users within the same tenant. Multiple administrators can be specified.</p>
+         */
         @NameInMap("Administrators")
         public java.util.List<String> administrators;
 
         /**
-         * <p>The time when the collection was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation time in milliseconds (timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1668568601000</p>
@@ -54,17 +57,22 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The creator user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>456789</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The collection description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the collection.</p>
+         * <p>The collection name.</p>
          * 
          * <strong>example:</strong>
          * <p>category.123</p>
@@ -73,7 +81,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The time when the collection was modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The modification time in milliseconds (timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1668568601000</p>
@@ -82,6 +90,8 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The collection name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_category</p>
          */
@@ -89,7 +99,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the collection of the ancestor node. This parameter can be left empty.</p>
+         * <p>The ID of the parent collection. Can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>category.1</p>
@@ -98,6 +108,13 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String parentId;
 
         /**
+         * <p>The collection type. Valid values:</p>
+         * <ul>
+         * <li>Category</li>
+         * <li>Album</li>
+         * <li>AlbumCategory: Album subcategory</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Category</p>
          */
@@ -185,12 +202,14 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
 
     public static class ListMetaCollectionsResponseBodyData extends TeaModel {
         /**
-         * <p>The collections.</p>
+         * <p>The list of collections.</p>
          */
         @NameInMap("MetaCollections")
         public java.util.List<ListMetaCollectionsResponseBodyDataMetaCollections> metaCollections;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -198,6 +217,8 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -205,6 +226,8 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

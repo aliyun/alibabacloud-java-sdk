@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination result.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDatabasesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DD08926-38B9-XXXXXXX</p>
      */
@@ -15,6 +20,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,10 +58,15 @@ public class ListDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListDatabasesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The database list.</p>
+         */
         @NameInMap("Databases")
         public java.util.List<Database> databases;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -62,6 +74,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -69,6 +83,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

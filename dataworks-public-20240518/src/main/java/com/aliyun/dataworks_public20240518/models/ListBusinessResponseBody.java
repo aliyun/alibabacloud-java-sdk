@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListBusinessResponseBody extends TeaModel {
+    /**
+     * <p>Details of workflows.</p>
+     */
     @NameInMap("Data")
     public ListBusinessResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -15,6 +20,8 @@ public class ListBusinessResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -22,6 +29,8 @@ public class ListBusinessResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ListBusinessResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID. Used for troubleshooting when an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -36,6 +47,8 @@ public class ListBusinessResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,19 +110,35 @@ public class ListBusinessResponseBody extends TeaModel {
 
     public static class ListBusinessResponseBodyDataBusiness extends TeaModel {
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3000001</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
+        /**
+         * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("BusinessName")
         public String businessName;
 
+        /**
+         * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The owner of the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>34824327****</p>
          */
@@ -117,6 +146,8 @@ public class ListBusinessResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The ID of the workspace to which the workflow belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -124,6 +155,8 @@ public class ListBusinessResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The module to which the workflow belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (Manually Triggered Workflow).</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -186,10 +219,15 @@ public class ListBusinessResponseBody extends TeaModel {
     }
 
     public static class ListBusinessResponseBodyData extends TeaModel {
+        /**
+         * <p>Information about the workflow list.</p>
+         */
         @NameInMap("Business")
         public java.util.List<ListBusinessResponseBodyDataBusiness> business;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -197,6 +235,8 @@ public class ListBusinessResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of records on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -204,6 +244,8 @@ public class ListBusinessResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records that meet the query conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */

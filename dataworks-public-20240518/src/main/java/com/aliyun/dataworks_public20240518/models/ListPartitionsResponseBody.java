@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListPartitionsResponseBody extends TeaModel {
+    /**
+     * <p>Pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListPartitionsResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D1E2E5BC-xxxx-xxxx-xxxx-xxxxxx</p>
      */
@@ -15,6 +20,8 @@ public class ListPartitionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class ListPartitionsResponseBody extends TeaModel {
 
     public static class ListPartitionsResponseBodyPagingInfo extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,16 +68,23 @@ public class ListPartitionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of table partitions.</p>
+         */
         @NameInMap("PartitionList")
         public java.util.List<Partition> partitionList;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

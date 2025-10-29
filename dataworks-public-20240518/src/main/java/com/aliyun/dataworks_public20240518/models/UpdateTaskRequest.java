@@ -64,7 +64,7 @@ public class UpdateTaskRequest extends TeaModel {
     public UpdateTaskRequestInputs inputs;
 
     /**
-     * <p>The instance generation mode. Valid values:</p>
+     * <p>The instance generation mode.</p>
      * <ul>
      * <li>T+1: the next day</li>
      * <li>Immediately</li>
@@ -101,7 +101,7 @@ public class UpdateTaskRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The rerun interval. Unit: seconds.</p>
+     * <p>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -151,7 +151,7 @@ public class UpdateTaskRequest extends TeaModel {
     public java.util.List<UpdateTaskRequestTags> tags;
 
     /**
-     * <p>The timeout period of task running. Unit: seconds.</p>
+     * <p>Task execution timeout in seconds. Must be greater than 3600.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -426,7 +426,7 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>Constant: constant.</li>
+         * <li>Constant: constant value.</li>
          * <li>PassThrough: node output.</li>
          * <li>System: variable.</li>
          * <li>NodeOutput: script output.</li>
@@ -539,7 +539,7 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li>Constant: constant.</li>
+         * <li>Constant: constant value.</li>
          * <li>PassThrough: node output.</li>
          * <li>System: variable.</li>
          * <li>NodeOutput: script output.</li>
@@ -784,6 +784,16 @@ public class UpdateTaskRequest extends TeaModel {
         @NameInMap("Cron")
         public String cron;
 
+        /**
+         * <p>Cycle type. This parameter takes effect only when Type is set to Scheduler and the cron expression specifies hourly scheduling. Default value: Daily</p>
+         * <ul>
+         * <li>Daily: Schedules jobs on a daily basis.</li>
+         * <li>NotDaily: Schedules jobs on an hourly basis.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
+         */
         @NameInMap("CycleType")
         public String cycleType;
 

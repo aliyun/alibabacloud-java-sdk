@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFileResponseBody extends TeaModel {
     /**
+     * <p>The file ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000001</p>
      */
@@ -12,6 +14,8 @@ public class CreateFileResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -19,6 +23,8 @@ public class CreateFileResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -26,6 +32,8 @@ public class CreateFileResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class CreateFileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG</p>
      */
@@ -40,6 +50,12 @@ public class CreateFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call succeeded. Valid values:</p>
+     * <ul>
+     * <li>true: The call succeeded.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

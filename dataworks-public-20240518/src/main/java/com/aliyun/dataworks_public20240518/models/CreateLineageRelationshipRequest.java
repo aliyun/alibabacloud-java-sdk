@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateLineageRelationshipRequest extends TeaModel {
+    /**
+     * <p>The destination entity.</p>
+     */
     @NameInMap("DstEntity")
     public LineageEntity dstEntity;
 
+    /**
+     * <p>The source entity.</p>
+     */
     @NameInMap("SrcEntity")
     public LineageEntity srcEntity;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateComponentResponseBody extends TeaModel {
     /**
+     * <p>The ID of the dataset acceleration component. To obtain the component ID, see <a href="https://help.aliyun.com/document_detail/2979566.html">ListComponents</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123123123123</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMetaCollectionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the created collection.</p>
+     * <p>The collection ID returned after a successful creation.</p>
      * 
      * <strong>example:</strong>
      * <p>category.123</p>
@@ -14,7 +14,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>

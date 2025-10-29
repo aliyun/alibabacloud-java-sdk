@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSchemaResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A89B5D9D-74EA-XXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The schema information.</p>
+     */
     @NameInMap("Schema")
     public Schema schema;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -70,6 +70,9 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         @NameInMap("WorkflowInstanceIds")
         public java.util.List<Long> workflowInstanceIds;
 
+        @NameInMap("WorkflowTaskInstanceIds")
+        public java.util.List<Long> workflowTaskInstanceIds;
+
         public static GetCreateWorkflowInstancesResultResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetCreateWorkflowInstancesResultResponseBodyResult self = new GetCreateWorkflowInstancesResultResponseBodyResult();
             return TeaModel.build(map, self);
@@ -97,6 +100,14 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         }
         public java.util.List<Long> getWorkflowInstanceIds() {
             return this.workflowInstanceIds;
+        }
+
+        public GetCreateWorkflowInstancesResultResponseBodyResult setWorkflowTaskInstanceIds(java.util.List<Long> workflowTaskInstanceIds) {
+            this.workflowTaskInstanceIds = workflowTaskInstanceIds;
+            return this;
+        }
+        public java.util.List<Long> getWorkflowTaskInstanceIds() {
+            return this.workflowTaskInstanceIds;
         }
 
     }
