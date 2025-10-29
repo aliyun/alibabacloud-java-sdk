@@ -276,6 +276,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新增PolarFs Quota规则</p>
+     * 
+     * @param request AddPolarFsQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddPolarFsQuotaResponse
+     */
+    public AddPolarFsQuotaResponse addPolarFsQuotaWithOptions(AddPolarFsQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotas)) {
+            query.put("Quotas", request.quotas);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddPolarFsQuota"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddPolarFsQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增PolarFs Quota规则</p>
+     * 
+     * @param request AddPolarFsQuotaRequest
+     * @return AddPolarFsQuotaResponse
+     */
+    public AddPolarFsQuotaResponse addPolarFsQuota(AddPolarFsQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addPolarFsQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>添加SQL限流规则</p>
      * 
      * @param request AddSQLRateLimitingRulesRequest
@@ -532,6 +584,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelCronJobPolicyServerlessResponse cancelCronJobPolicyServerless(CancelCronJobPolicyServerlessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelCronJobPolicyServerlessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消目录的配额</p>
+     * 
+     * @param request CancelPolarFsFileQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelPolarFsFileQuotaResponse
+     */
+    public CancelPolarFsFileQuotaResponse cancelPolarFsFileQuotaWithOptions(CancelPolarFsFileQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePathIds)) {
+            query.put("FilePathIds", request.filePathIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelPolarFsFileQuota"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelPolarFsFileQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消目录的配额</p>
+     * 
+     * @param request CancelPolarFsFileQuotaRequest
+     * @return CancelPolarFsFileQuotaResponse
+     */
+    public CancelPolarFsFileQuotaResponse cancelPolarFsFileQuota(CancelPolarFsFileQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelPolarFsFileQuotaWithOptions(request, runtime);
     }
 
     /**
@@ -5252,6 +5356,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteParameterGroupResponse deleteParameterGroup(DeleteParameterGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteParameterGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PolarFs Quota规则</p>
+     * 
+     * @param request DeletePolarFsQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolarFsQuotaResponse
+     */
+    public DeletePolarFsQuotaResponse deletePolarFsQuotaWithOptions(DeletePolarFsQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotas)) {
+            query.put("Quotas", request.quotas);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePolarFsQuota"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolarFsQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除PolarFs Quota规则</p>
+     * 
+     * @param request DeletePolarFsQuotaRequest
+     * @return DeletePolarFsQuotaResponse
+     */
+    public DeletePolarFsQuotaResponse deletePolarFsQuota(DeletePolarFsQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePolarFsQuotaWithOptions(request, runtime);
     }
 
     /**
@@ -11628,6 +11784,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePendingMaintenanceActionsResponse describePendingMaintenanceActions(DescribePendingMaintenanceActionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePendingMaintenanceActionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取PolarFS实例详情</p>
+     * 
+     * @param request DescribePolarFsAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarFsAttributeResponse
+     */
+    public DescribePolarFsAttributeResponse describePolarFsAttributeWithOptions(DescribePolarFsAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryFuseMountInfo)) {
+            query.put("QueryFuseMountInfo", request.queryFuseMountInfo);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarFsAttribute"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarFsAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取PolarFS实例详情</p>
+     * 
+     * @param request DescribePolarFsAttributeRequest
+     * @return DescribePolarFsAttributeResponse
+     */
+    public DescribePolarFsAttributeResponse describePolarFsAttribute(DescribePolarFsAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarFsAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询配额规则</p>
+     * 
+     * @param request DescribePolarFsQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarFsQuotaResponse
+     */
+    public DescribePolarFsQuotaResponse describePolarFsQuotaWithOptions(DescribePolarFsQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarFsQuota"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarFsQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询配额规则</p>
+     * 
+     * @param request DescribePolarFsQuotaRequest
+     * @return DescribePolarFsQuotaResponse
+     */
+    public DescribePolarFsQuotaResponse describePolarFsQuota(DescribePolarFsQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarFsQuotaWithOptions(request, runtime);
     }
 
     /**
@@ -19794,6 +20054,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RevokeAccountPrivilegeZonalResponse revokeAccountPrivilegeZonal(RevokeAccountPrivilegeZonalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeAccountPrivilegeZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为目录应用配额规则</p>
+     * 
+     * @param request SetPolarFsFileQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetPolarFsFileQuotaResponse
+     */
+    public SetPolarFsFileQuotaResponse setPolarFsFileQuotaWithOptions(SetPolarFsFileQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePathQuotas)) {
+            query.put("FilePathQuotas", request.filePathQuotas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetPolarFsFileQuota"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetPolarFsFileQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为目录应用配额规则</p>
+     * 
+     * @param request SetPolarFsFileQuotaRequest
+     * @return SetPolarFsFileQuotaResponse
+     */
+    public SetPolarFsFileQuotaResponse setPolarFsFileQuota(SetPolarFsFileQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setPolarFsFileQuotaWithOptions(request, runtime);
     }
 
     /**
