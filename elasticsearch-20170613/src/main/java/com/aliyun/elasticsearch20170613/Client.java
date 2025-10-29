@@ -7393,6 +7393,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>可用区关机</p>
+     * 
+     * @param request TurnOffZoneRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TurnOffZoneResponse
+     */
+    public TurnOffZoneResponse turnOffZoneWithOptions(String instanceId, TurnOffZoneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
+            query.put("zone", request.zone);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TurnOffZone"),
+            new TeaPair("version", "2017-06-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/actions/turnOff-zone"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TurnOffZoneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>可用区关机</p>
+     * 
+     * @param request TurnOffZoneRequest
+     * @return TurnOffZoneResponse
+     */
+    public TurnOffZoneResponse turnOffZone(String instanceId, TurnOffZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.turnOffZoneWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>可用区开机</p>
+     * 
+     * @param request TurnOnZoneRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TurnOnZoneResponse
+     */
+    public TurnOnZoneResponse turnOnZoneWithOptions(String instanceId, TurnOnZoneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
+            query.put("zone", request.zone);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TurnOnZone"),
+            new TeaPair("version", "2017-06-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/actions/turnOn-zone"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TurnOnZoneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>可用区开机</p>
+     * 
+     * @param request TurnOnZoneRequest
+     * @return TurnOnZoneResponse
+     */
+    public TurnOnZoneResponse turnOnZone(String instanceId, TurnOnZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.turnOnZoneWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Call the UninstallKibanaPlugin to uninstall the Kibana plug-in.</p>
      * 
      * @param request UninstallKibanaPluginRequest
