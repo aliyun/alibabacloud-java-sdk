@@ -152,14 +152,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>通用搜索</p>
      * 
-     * @param request GenericSearchRequest
+     * @param tmpReq GenericSearchRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenericSearchResponse
      */
-    public GenericSearchResponse genericSearchWithOptions(GenericSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GenericSearchResponse genericSearchWithOptions(GenericSearchRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GenericSearchShrinkRequest request = new GenericSearchShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.advancedParams)) {
+            request.advancedParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.advancedParams, "advancedParams", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.advancedParamsShrink)) {
+            query.put("advancedParams", request.advancedParamsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableRerank)) {
             query.put("enableRerank", request.enableRerank);
         }
@@ -381,6 +391,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.readPageBasicWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>动态页面解析</p>
+     * 
+     * @param request ReadPageScrapeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReadPageScrapeResponse
+     */
+    public ReadPageScrapeResponse readPageScrapeWithOptions(ReadPageScrapeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReadPageScrape"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v1/iqs/readpage/scrape"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReadPageScrapeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>动态页面解析</p>
+     * 
+     * @param request ReadPageScrapeRequest
+     * @return ReadPageScrapeResponse
+     */
+    public ReadPageScrapeResponse readPageScrape(ReadPageScrapeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.readPageScrapeWithOptions(request, headers, runtime);
     }
 
     /**

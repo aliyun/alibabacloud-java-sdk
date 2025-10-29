@@ -16,6 +16,9 @@ public class ReadPageItem extends TeaModel {
     @NameInMap("rawHtml")
     public String rawHtml;
 
+    @NameInMap("screenshot")
+    public String screenshot;
+
     @NameInMap("statusCode")
     public Integer statusCode;
 
@@ -57,6 +60,14 @@ public class ReadPageItem extends TeaModel {
     }
     public String getRawHtml() {
         return this.rawHtml;
+    }
+
+    public ReadPageItem setScreenshot(String screenshot) {
+        this.screenshot = screenshot;
+        return this;
+    }
+    public String getScreenshot() {
+        return this.screenshot;
     }
 
     public ReadPageItem setStatusCode(Integer statusCode) {

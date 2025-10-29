@@ -3,9 +3,9 @@ package com.aliyun.iqs20241111.models;
 
 import com.aliyun.tea.*;
 
-public class GenericSearchRequest extends TeaModel {
+public class GenericSearchShrinkRequest extends TeaModel {
     @NameInMap("advancedParams")
-    public java.util.Map<String, ?> advancedParams;
+    public String advancedParamsShrink;
 
     @NameInMap("enableRerank")
     public Boolean enableRerank;
@@ -48,20 +48,20 @@ public class GenericSearchRequest extends TeaModel {
     @NameInMap("timeRange")
     public String timeRange;
 
-    public static GenericSearchRequest build(java.util.Map<String, ?> map) throws Exception {
-        GenericSearchRequest self = new GenericSearchRequest();
+    public static GenericSearchShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GenericSearchShrinkRequest self = new GenericSearchShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GenericSearchRequest setAdvancedParams(java.util.Map<String, ?> advancedParams) {
-        this.advancedParams = advancedParams;
+    public GenericSearchShrinkRequest setAdvancedParamsShrink(String advancedParamsShrink) {
+        this.advancedParamsShrink = advancedParamsShrink;
         return this;
     }
-    public java.util.Map<String, ?> getAdvancedParams() {
-        return this.advancedParams;
+    public String getAdvancedParamsShrink() {
+        return this.advancedParamsShrink;
     }
 
-    public GenericSearchRequest setEnableRerank(Boolean enableRerank) {
+    public GenericSearchShrinkRequest setEnableRerank(Boolean enableRerank) {
         this.enableRerank = enableRerank;
         return this;
     }
@@ -69,7 +69,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.enableRerank;
     }
 
-    public GenericSearchRequest setIndustry(String industry) {
+    public GenericSearchShrinkRequest setIndustry(String industry) {
         this.industry = industry;
         return this;
     }
@@ -77,7 +77,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.industry;
     }
 
-    public GenericSearchRequest setPage(Integer page) {
+    public GenericSearchShrinkRequest setPage(Integer page) {
         this.page = page;
         return this;
     }
@@ -85,7 +85,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.page;
     }
 
-    public GenericSearchRequest setQuery(String query) {
+    public GenericSearchShrinkRequest setQuery(String query) {
         this.query = query;
         return this;
     }
@@ -93,7 +93,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.query;
     }
 
-    public GenericSearchRequest setReturnMainText(Boolean returnMainText) {
+    public GenericSearchShrinkRequest setReturnMainText(Boolean returnMainText) {
         this.returnMainText = returnMainText;
         return this;
     }
@@ -101,7 +101,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.returnMainText;
     }
 
-    public GenericSearchRequest setReturnMarkdownText(Boolean returnMarkdownText) {
+    public GenericSearchShrinkRequest setReturnMarkdownText(Boolean returnMarkdownText) {
         this.returnMarkdownText = returnMarkdownText;
         return this;
     }
@@ -109,7 +109,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.returnMarkdownText;
     }
 
-    public GenericSearchRequest setReturnRichMainBody(Boolean returnRichMainBody) {
+    public GenericSearchShrinkRequest setReturnRichMainBody(Boolean returnRichMainBody) {
         this.returnRichMainBody = returnRichMainBody;
         return this;
     }
@@ -117,7 +117,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.returnRichMainBody;
     }
 
-    public GenericSearchRequest setReturnSummary(Boolean returnSummary) {
+    public GenericSearchShrinkRequest setReturnSummary(Boolean returnSummary) {
         this.returnSummary = returnSummary;
         return this;
     }
@@ -125,7 +125,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.returnSummary;
     }
 
-    public GenericSearchRequest setSessionId(String sessionId) {
+    public GenericSearchShrinkRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
@@ -133,7 +133,7 @@ public class GenericSearchRequest extends TeaModel {
         return this.sessionId;
     }
 
-    public GenericSearchRequest setTimeRange(String timeRange) {
+    public GenericSearchShrinkRequest setTimeRange(String timeRange) {
         this.timeRange = timeRange;
         return this;
     }
