@@ -157,6 +157,9 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         @NameInMap("IsNoticed")
         public String isNoticed;
 
+        @NameInMap("NeedNotice")
+        public Boolean needNotice;
+
         @NameInMap("NeedSwitch")
         public Boolean needSwitch;
 
@@ -201,6 +204,14 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         }
         public String getIsNoticed() {
             return this.isNoticed;
+        }
+
+        public GetSwitchRegionDetailResponseBodyData setNeedNotice(Boolean needNotice) {
+            this.needNotice = needNotice;
+            return this;
+        }
+        public Boolean getNeedNotice() {
+            return this.needNotice;
         }
 
         public GetSwitchRegionDetailResponseBodyData setNeedSwitch(Boolean needSwitch) {

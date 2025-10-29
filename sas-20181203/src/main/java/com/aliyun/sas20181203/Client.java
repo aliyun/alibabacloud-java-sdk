@@ -32552,6 +32552,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsAgree", request.isAgree);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isConfirmed)) {
+            query.put("IsConfirmed", request.isConfirmed);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isImmediate)) {
             query.put("IsImmediate", request.isImmediate);
         }

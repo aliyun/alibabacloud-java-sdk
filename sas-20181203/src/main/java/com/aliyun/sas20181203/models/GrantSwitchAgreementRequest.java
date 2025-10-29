@@ -13,6 +13,9 @@ public class GrantSwitchAgreementRequest extends TeaModel {
     @NameInMap("IsAgree")
     public Boolean isAgree;
 
+    @NameInMap("IsConfirmed")
+    public Boolean isConfirmed;
+
     @NameInMap("IsImmediate")
     public Boolean isImmediate;
 
@@ -52,6 +55,14 @@ public class GrantSwitchAgreementRequest extends TeaModel {
     }
     public Boolean getIsAgree() {
         return this.isAgree;
+    }
+
+    public GrantSwitchAgreementRequest setIsConfirmed(Boolean isConfirmed) {
+        this.isConfirmed = isConfirmed;
+        return this;
+    }
+    public Boolean getIsConfirmed() {
+        return this.isConfirmed;
     }
 
     public GrantSwitchAgreementRequest setIsImmediate(Boolean isImmediate) {
