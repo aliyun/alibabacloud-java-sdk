@@ -224,6 +224,12 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("gatewayDefault")
         public Boolean gatewayDefault;
 
+        @NameInMap("ipv4Addresses")
+        public java.util.List<String> ipv4Addresses;
+
+        @NameInMap("ipv6Addresses")
+        public java.util.List<String> ipv6Addresses;
+
         /**
          * <p>The load balancer ID.</p>
          * 
@@ -312,6 +318,22 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public Boolean getGatewayDefault() {
             return this.gatewayDefault;
+        }
+
+        public GetGatewayResponseBodyDataLoadBalancers setIpv4Addresses(java.util.List<String> ipv4Addresses) {
+            this.ipv4Addresses = ipv4Addresses;
+            return this;
+        }
+        public java.util.List<String> getIpv4Addresses() {
+            return this.ipv4Addresses;
+        }
+
+        public GetGatewayResponseBodyDataLoadBalancers setIpv6Addresses(java.util.List<String> ipv6Addresses) {
+            this.ipv6Addresses = ipv6Addresses;
+            return this;
+        }
+        public java.util.List<String> getIpv6Addresses() {
+            return this.ipv6Addresses;
         }
 
         public GetGatewayResponseBodyDataLoadBalancers setLoadBalancerId(String loadBalancerId) {

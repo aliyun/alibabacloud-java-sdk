@@ -168,6 +168,9 @@ public class ListMcpServersResponseBody extends TeaModel {
     }
 
     public static class ListMcpServersResponseBodyDataItems extends TeaModel {
+        @NameInMap("apiId")
+        public String apiId;
+
         @NameInMap("assembledSources")
         public java.util.List<ListMcpServersResponseBodyDataItemsAssembledSources> assembledSources;
 
@@ -277,6 +280,14 @@ public class ListMcpServersResponseBody extends TeaModel {
         public static ListMcpServersResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListMcpServersResponseBodyDataItems self = new ListMcpServersResponseBodyDataItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListMcpServersResponseBodyDataItems setApiId(String apiId) {
+            this.apiId = apiId;
+            return this;
+        }
+        public String getApiId() {
+            return this.apiId;
         }
 
         public ListMcpServersResponseBodyDataItems setAssembledSources(java.util.List<ListMcpServersResponseBodyDataItemsAssembledSources> assembledSources) {
