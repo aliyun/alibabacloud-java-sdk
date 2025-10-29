@@ -1,3 +1,8 @@
+2025-10-29 Version: 3.4.0
+- Support API GetTableCompaction.
+- Support API ListPartitions.
+
+
 2025-09-18 Version: 3.2.0
 - Support API GetTableToken.
 - Update API ListTableDetails: add request parameters type.

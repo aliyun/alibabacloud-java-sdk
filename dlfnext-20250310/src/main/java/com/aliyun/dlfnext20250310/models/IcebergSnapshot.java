@@ -10,11 +10,17 @@ public class IcebergSnapshot extends TeaModel {
     @NameInMap("id")
     public Long id;
 
+    @NameInMap("idString")
+    public String idString;
+
     @NameInMap("operation")
     public String operation;
 
     @NameInMap("parentId")
     public Long parentId;
+
+    @NameInMap("parentIdString")
+    public String parentIdString;
 
     @NameInMap("schemaId")
     public Long schemaId;
@@ -49,6 +55,14 @@ public class IcebergSnapshot extends TeaModel {
         return this.id;
     }
 
+    public IcebergSnapshot setIdString(String idString) {
+        this.idString = idString;
+        return this;
+    }
+    public String getIdString() {
+        return this.idString;
+    }
+
     public IcebergSnapshot setOperation(String operation) {
         this.operation = operation;
         return this;
@@ -63,6 +77,14 @@ public class IcebergSnapshot extends TeaModel {
     }
     public Long getParentId() {
         return this.parentId;
+    }
+
+    public IcebergSnapshot setParentIdString(String parentIdString) {
+        this.parentIdString = parentIdString;
+        return this;
+    }
+    public String getParentIdString() {
+        return this.parentIdString;
     }
 
     public IcebergSnapshot setSchemaId(Long schemaId) {

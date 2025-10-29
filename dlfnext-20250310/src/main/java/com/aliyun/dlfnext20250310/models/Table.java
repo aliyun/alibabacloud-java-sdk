@@ -10,6 +10,9 @@ public class Table extends TeaModel {
     @NameInMap("createdBy")
     public String createdBy;
 
+    @NameInMap("icebergTableMetadata")
+    public IcebergTableMetadata icebergTableMetadata;
+
     @NameInMap("id")
     public String id;
 
@@ -40,6 +43,9 @@ public class Table extends TeaModel {
     @NameInMap("storageClass")
     public String storageClass;
 
+    @NameInMap("type")
+    public String type;
+
     @NameInMap("updatedAt")
     public Long updatedAt;
 
@@ -65,6 +71,14 @@ public class Table extends TeaModel {
     }
     public String getCreatedBy() {
         return this.createdBy;
+    }
+
+    public Table setIcebergTableMetadata(IcebergTableMetadata icebergTableMetadata) {
+        this.icebergTableMetadata = icebergTableMetadata;
+        return this;
+    }
+    public IcebergTableMetadata getIcebergTableMetadata() {
+        return this.icebergTableMetadata;
     }
 
     public Table setId(String id) {
@@ -145,6 +159,14 @@ public class Table extends TeaModel {
     }
     public String getStorageClass() {
         return this.storageClass;
+    }
+
+    public Table setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public Table setUpdatedAt(Long updatedAt) {

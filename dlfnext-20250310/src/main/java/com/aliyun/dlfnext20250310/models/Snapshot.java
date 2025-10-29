@@ -35,17 +35,29 @@ public class Snapshot extends TeaModel {
     @NameInMap("id")
     public Long id;
 
+    @NameInMap("idString")
+    public String idString;
+
     @NameInMap("indexManifest")
     public String indexManifest;
 
     @NameInMap("logOffsets")
     public java.util.Map<String, Long> logOffsets;
 
+    @NameInMap("parentIdString")
+    public String parentIdString;
+
     @NameInMap("schemaId")
     public Long schemaId;
 
+    @NameInMap("sequenceNumber")
+    public Long sequenceNumber;
+
     @NameInMap("statistics")
     public String statistics;
+
+    @NameInMap("summary")
+    public java.util.Map<String, String> summary;
 
     @NameInMap("timeMillis")
     public Long timeMillis;
@@ -140,6 +152,14 @@ public class Snapshot extends TeaModel {
         return this.id;
     }
 
+    public Snapshot setIdString(String idString) {
+        this.idString = idString;
+        return this;
+    }
+    public String getIdString() {
+        return this.idString;
+    }
+
     public Snapshot setIndexManifest(String indexManifest) {
         this.indexManifest = indexManifest;
         return this;
@@ -156,6 +176,14 @@ public class Snapshot extends TeaModel {
         return this.logOffsets;
     }
 
+    public Snapshot setParentIdString(String parentIdString) {
+        this.parentIdString = parentIdString;
+        return this;
+    }
+    public String getParentIdString() {
+        return this.parentIdString;
+    }
+
     public Snapshot setSchemaId(Long schemaId) {
         this.schemaId = schemaId;
         return this;
@@ -164,12 +192,28 @@ public class Snapshot extends TeaModel {
         return this.schemaId;
     }
 
+    public Snapshot setSequenceNumber(Long sequenceNumber) {
+        this.sequenceNumber = sequenceNumber;
+        return this;
+    }
+    public Long getSequenceNumber() {
+        return this.sequenceNumber;
+    }
+
     public Snapshot setStatistics(String statistics) {
         this.statistics = statistics;
         return this;
     }
     public String getStatistics() {
         return this.statistics;
+    }
+
+    public Snapshot setSummary(java.util.Map<String, String> summary) {
+        this.summary = summary;
+        return this;
+    }
+    public java.util.Map<String, String> getSummary() {
+        return this.summary;
     }
 
     public Snapshot setTimeMillis(Long timeMillis) {
