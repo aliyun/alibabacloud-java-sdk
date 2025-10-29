@@ -81,6 +81,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建背景素材</p>
+     * 
+     * @param request CreateBackgroundPicRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBackgroundPicResponse
+     */
+    public CreateBackgroundPicResponse createBackgroundPicWithOptions(CreateBackgroundPicRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filename)) {
+            query.put("filename", request.filename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossKey)) {
+            query.put("ossKey", request.ossKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBackgroundPic"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/chat/createBackgroundPic"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBackgroundPicResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建背景素材</p>
+     * 
+     * @param request CreateBackgroundPicRequest
+     * @return CreateBackgroundPicResponse
+     */
+    public CreateBackgroundPicResponse createBackgroundPic(CreateBackgroundPicRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createBackgroundPicWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>背景配置</p>
+     * 
+     * @param request CreateChatConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateChatConfigResponse
+     */
+    public CreateChatConfigResponse createChatConfigWithOptions(CreateChatConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.avatarId)) {
+            query.put("avatarId", request.avatarId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backgroundId)) {
+            query.put("backgroundId", request.backgroundId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateChatConfig"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/chat/createChatConfig"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChatConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>背景配置</p>
+     * 
+     * @param request CreateChatConfigRequest
+     * @return CreateChatConfigResponse
+     */
+    public CreateChatConfigResponse createChatConfig(CreateChatConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createChatConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建数字人会话</p>
      * 
      * @param request CreateChatSessionRequest
@@ -132,6 +234,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createChatSessionWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建对话免训照片数字人</p>
+     * 
+     * @param request CreateNoTrainPicAvatarRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNoTrainPicAvatarResponse
+     */
+    public CreateNoTrainPicAvatarResponse createNoTrainPicAvatarWithOptions(CreateNoTrainPicAvatarRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expressiveness)) {
+            query.put("expressiveness", request.expressiveness);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
+            query.put("gender", request.gender);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generateAssets)) {
+            query.put("generateAssets", request.generateAssets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageOssPath)) {
+            query.put("imageOssPath", request.imageOssPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jwtToken)) {
+            query.put("jwtToken", request.jwtToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparent)) {
+            query.put("transparent", request.transparent);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNoTrainPicAvatar"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/chat/createNoTrainPicAvatar"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNoTrainPicAvatarResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建对话免训照片数字人</p>
+     * 
+     * @param request CreateNoTrainPicAvatarRequest
+     * @return CreateNoTrainPicAvatarResponse
+     */
+    public CreateNoTrainPicAvatarResponse createNoTrainPicAvatar(CreateNoTrainPicAvatarRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createNoTrainPicAvatarWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取对话免训图片素材上传凭证</p>
+     * 
+     * @param request GetUploadPolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUploadPolicyResponse
+     */
+    public GetUploadPolicyResponse getUploadPolicyWithOptions(GetUploadPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jwtToken)) {
+            query.put("jwtToken", request.jwtToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUploadPolicy"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/chat/getUploadPolicy"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUploadPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取对话免训图片素材上传凭证</p>
+     * 
+     * @param request GetUploadPolicyRequest
+     * @return GetUploadPolicyResponse
+     */
+    public GetUploadPolicyResponse getUploadPolicy(GetUploadPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getUploadPolicyWithOptions(request, headers, runtime);
     }
 
     /**
