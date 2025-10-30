@@ -351,6 +351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceDescription", request.DBInstanceDescription);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBTimeZone)) {
+            query.put("DBTimeZone", request.DBTimeZone);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deploySchema)) {
             query.put("DeploySchema", request.deploySchema);
         }

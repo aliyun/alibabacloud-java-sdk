@@ -31,6 +31,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    @NameInMap("DBTimeZone")
+    public String DBTimeZone;
+
     /**
      * <p>The deployment status of the cluster.</p>
      * 
@@ -197,6 +200,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceDescription() {
         return this.DBInstanceDescription;
+    }
+
+    public CreateDBInstanceRequest setDBTimeZone(String DBTimeZone) {
+        this.DBTimeZone = DBTimeZone;
+        return this;
+    }
+    public String getDBTimeZone() {
+        return this.DBTimeZone;
     }
 
     public CreateDBInstanceRequest setDeploySchema(String deploySchema) {

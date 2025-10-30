@@ -31,6 +31,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    @NameInMap("DBTimeZone")
+    public String DBTimeZone;
+
     /**
      * <p>The deployment status of the cluster.</p>
      * 
@@ -197,6 +200,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public String getDBInstanceDescription() {
         return this.DBInstanceDescription;
+    }
+
+    public CreateDBInstanceShrinkRequest setDBTimeZone(String DBTimeZone) {
+        this.DBTimeZone = DBTimeZone;
+        return this;
+    }
+    public String getDBTimeZone() {
+        return this.DBTimeZone;
     }
 
     public CreateDBInstanceShrinkRequest setDeploySchema(String deploySchema) {
