@@ -13,6 +13,9 @@ public class Node extends TeaModel {
     @NameInMap("AllocatableMemory")
     public String allocatableMemory;
 
+    @NameInMap("AncestorQuotaWorkloadNum")
+    public Long ancestorQuotaWorkloadNum;
+
     @NameInMap("AvailabilityZone")
     public String availabilityZone;
 
@@ -24,6 +27,9 @@ public class Node extends TeaModel {
 
     @NameInMap("CreatorId")
     public String creatorId;
+
+    @NameInMap("DescendantQuotaWorkloadNum")
+    public Long descendantQuotaWorkloadNum;
 
     @NameInMap("GPU")
     public String GPU;
@@ -100,6 +106,9 @@ public class Node extends TeaModel {
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 
+    @NameInMap("SelfQuotaWorkloadNum")
+    public Long selfQuotaWorkloadNum;
+
     @NameInMap("SystemReservedCPU")
     public String systemReservedCPU;
 
@@ -141,6 +150,14 @@ public class Node extends TeaModel {
         return this.allocatableMemory;
     }
 
+    public Node setAncestorQuotaWorkloadNum(Long ancestorQuotaWorkloadNum) {
+        this.ancestorQuotaWorkloadNum = ancestorQuotaWorkloadNum;
+        return this;
+    }
+    public Long getAncestorQuotaWorkloadNum() {
+        return this.ancestorQuotaWorkloadNum;
+    }
+
     public Node setAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -171,6 +188,14 @@ public class Node extends TeaModel {
     }
     public String getCreatorId() {
         return this.creatorId;
+    }
+
+    public Node setDescendantQuotaWorkloadNum(Long descendantQuotaWorkloadNum) {
+        this.descendantQuotaWorkloadNum = descendantQuotaWorkloadNum;
+        return this;
+    }
+    public Long getDescendantQuotaWorkloadNum() {
+        return this.descendantQuotaWorkloadNum;
     }
 
     public Node setGPU(String GPU) {
@@ -371,6 +396,14 @@ public class Node extends TeaModel {
     }
     public String getResourceGroupName() {
         return this.resourceGroupName;
+    }
+
+    public Node setSelfQuotaWorkloadNum(Long selfQuotaWorkloadNum) {
+        this.selfQuotaWorkloadNum = selfQuotaWorkloadNum;
+        return this;
+    }
+    public Long getSelfQuotaWorkloadNum() {
+        return this.selfQuotaWorkloadNum;
     }
 
     public Node setSystemReservedCPU(String systemReservedCPU) {
