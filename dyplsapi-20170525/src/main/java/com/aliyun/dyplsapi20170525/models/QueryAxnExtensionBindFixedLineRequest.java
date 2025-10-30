@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAxnExtensionBindFixedLineRequest extends TeaModel {
     /**
-     * <p>业务id标识，由阿里云分配给客户侧</p>
+     * <p>号池ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryAxnExtensionBindFixedLineRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>消息请求标识</p>
+     * <p>消息请求唯一标识。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class QueryAxnExtensionBindFixedLineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>查询类型 0：根据绑定id查询 1：根据A号码查询</p>
+     * <p>查询类型。取值： 0：根据绑定ID查询。1：根据X和A/B号码查询</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,16 +44,16 @@ public class QueryAxnExtensionBindFixedLineRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>绑定id，queryType=0时，必传</p>
+     * <p>绑定ID。QueryType参数为0时必传。</p>
      * 
      * <strong>example:</strong>
-     * <p>可参考绑定响应</p>
+     * <p>A203**************</p>
      */
     @NameInMap("SubId")
     public String subId;
 
     /**
-     * <p>A号码，queryType=1时，必传</p>
+     * <p>A号码。QueryType参数为1时必传。</p>
      * 
      * <strong>example:</strong>
      * <p>15500001111</p>

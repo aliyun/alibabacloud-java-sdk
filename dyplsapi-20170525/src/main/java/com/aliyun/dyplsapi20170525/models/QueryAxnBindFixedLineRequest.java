@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAxnBindFixedLineRequest extends TeaModel {
     /**
-     * <p>业务id标识，由阿里云分配给客户侧</p>
+     * <p>号池id。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

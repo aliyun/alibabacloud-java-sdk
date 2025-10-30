@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dyplsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -375,6 +374,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BindAxbResponse bindAxb(BindAxbRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindAxbWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建700绑定关系</p>
+     * 
+     * @param request BindAxb700Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindAxb700Response
+     */
+    public BindAxb700Response bindAxb700WithOptions(BindAxb700Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asrModelId)) {
+            query.put("AsrModelId", request.asrModelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.audio)) {
+            query.put("Audio", request.audio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callRestrict)) {
+            query.put("CallRestrict", request.callRestrict);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callTimeout)) {
+            query.put("CallTimeout", request.callTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfConfig)) {
+            query.put("DtmfConfig", request.dtmfConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.industrialId)) {
+            query.put("IndustrialId", request.industrialId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needAsr)) {
+            query.put("NeedAsr", request.needAsr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needRecord)) {
+            query.put("NeedRecord", request.needRecord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            query.put("OutOrderId", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.poolKey)) {
+            query.put("PoolKey", request.poolKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recType)) {
+            query.put("RecType", request.recType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telB)) {
+            query.put("TelB", request.telB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindAxb700"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindAxb700Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建700绑定关系</p>
+     * 
+     * @param request BindAxb700Request
+     * @return BindAxb700Response
+     */
+    public BindAxb700Response bindAxb700(BindAxb700Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindAxb700WithOptions(request, runtime);
     }
 
     /**
@@ -1167,6 +1286,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BindBatchAxgResponse bindBatchAxg(BindBatchAxgRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindBatchAxgWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建700Gxb绑定关系</p>
+     * 
+     * @param request BindGxb700Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindGxb700Response
+     */
+    public BindGxb700Response bindGxb700WithOptions(BindGxb700Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asrModelId)) {
+            query.put("AsrModelId", request.asrModelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.audio)) {
+            query.put("Audio", request.audio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callRestrict)) {
+            query.put("CallRestrict", request.callRestrict);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callTimeout)) {
+            query.put("CallTimeout", request.callTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultA)) {
+            query.put("DefaultA", request.defaultA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtmfConfig)) {
+            query.put("DtmfConfig", request.dtmfConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.industrialId)) {
+            query.put("IndustrialId", request.industrialId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needAsr)) {
+            query.put("NeedAsr", request.needAsr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needRecord)) {
+            query.put("NeedRecord", request.needRecord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            query.put("OutOrderId", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.poolKey)) {
+            query.put("PoolKey", request.poolKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recType)) {
+            query.put("RecType", request.recType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telB)) {
+            query.put("TelB", request.telB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindGxb700"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindGxb700Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建700Gxb绑定关系</p>
+     * 
+     * @param request BindGxb700Request
+     * @return BindGxb700Response
+     */
+    public BindGxb700Response bindGxb700(BindGxb700Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindGxb700WithOptions(request, runtime);
     }
 
     /**
@@ -4098,6 +4341,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>解除700绑定关系</p>
+     * 
+     * @param request UnbindSubs700Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindSubs700Response
+     */
+    public UnbindSubs700Response unbindSubs700WithOptions(UnbindSubs700Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.poolKey)) {
+            query.put("PoolKey", request.poolKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subsId)) {
+            query.put("SubsId", request.subsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindSubs700"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindSubs700Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解除700绑定关系</p>
+     * 
+     * @param request UnbindSubs700Request
+     * @return UnbindSubs700Response
+     */
+    public UnbindSubs700Response unbindSubs700(UnbindSubs700Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unbindSubs700WithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before releasing a phone number, you must call the UnbindSubscription operation to unbind the phone number.</p>
      * 
@@ -4565,6 +4872,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAxnExtensionBindFixedLineResponse updateAxnExtensionBindFixedLine(UpdateAxnExtensionBindFixedLineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAxnExtensionBindFixedLineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新700绑定关系</p>
+     * 
+     * @param request UpdateSubs700Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSubs700Response
+     */
+    public UpdateSubs700Response updateSubs700WithOptions(UpdateSubs700Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asrModelId)) {
+            query.put("AsrModelId", request.asrModelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.audio)) {
+            query.put("Audio", request.audio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callRestrict)) {
+            query.put("CallRestrict", request.callRestrict);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultA)) {
+            query.put("DefaultA", request.defaultA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.industrialId)) {
+            query.put("IndustrialId", request.industrialId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needAsr)) {
+            query.put("NeedAsr", request.needAsr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needRecord)) {
+            query.put("NeedRecord", request.needRecord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
+            query.put("OperateType", request.operateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.poolKey)) {
+            query.put("PoolKey", request.poolKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subsId)) {
+            query.put("SubsId", request.subsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telB)) {
+            query.put("TelB", request.telB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSubs700"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSubs700Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新700绑定关系</p>
+     * 
+     * @param request UpdateSubs700Request
+     * @return UpdateSubs700Response
+     */
+    public UpdateSubs700Response updateSubs700(UpdateSubs700Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSubs700WithOptions(request, runtime);
     }
 
     /**

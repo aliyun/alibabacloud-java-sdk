@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAxnExtensionBindFixedLineRequest extends TeaModel {
     /**
-     * <p>业务id标识，由阿里云分配给客户侧</p>
+     * <p>号池ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

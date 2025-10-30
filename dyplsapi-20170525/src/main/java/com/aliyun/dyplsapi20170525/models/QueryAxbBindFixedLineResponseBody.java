@@ -173,7 +173,7 @@ public class QueryAxbBindFixedLineResponseBody extends TeaModel {
         public QueryAxbBindFixedLineResponseBodyDataExtra extra;
 
         /**
-         * <p>接入商自有字段，最大100字符长度</p>
+         * <p>接入商自有字段，最大250字符长度</p>
          * 
          * <strong>example:</strong>
          * <p>19394</p>

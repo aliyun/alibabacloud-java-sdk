@@ -23,7 +23,7 @@ public class UpdateAxbBindFixedLineRequest extends TeaModel {
     public String anucodecalled;
 
     /**
-     * <p>应用id，请求和绑定时的appId必须一致</p>
+     * <p>号池ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class UpdateAxbBindFixedLineRequest extends TeaModel {
     public UpdateAxbBindFixedLineRequestExtra extra;
 
     /**
-     * <p>消息请求标识</p>
+     * <p>消息请求唯一标识。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class UpdateAxbBindFixedLineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>接入商自有字段，不能超过100个字符</p>
+     * <p>接入商自有字段，最大250字符长度</p>
      * 
      * <strong>example:</strong>
      * <p>remark</p>
