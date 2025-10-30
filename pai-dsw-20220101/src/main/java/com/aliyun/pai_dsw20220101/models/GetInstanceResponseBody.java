@@ -942,6 +942,47 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyCloudDisksStatus extends TeaModel {
+        @NameInMap("Available")
+        public Long available;
+
+        @NameInMap("Capacity")
+        public Long capacity;
+
+        @NameInMap("Usage")
+        public Long usage;
+
+        public static GetInstanceResponseBodyCloudDisksStatus build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyCloudDisksStatus self = new GetInstanceResponseBodyCloudDisksStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyCloudDisksStatus setAvailable(Long available) {
+            this.available = available;
+            return this;
+        }
+        public Long getAvailable() {
+            return this.available;
+        }
+
+        public GetInstanceResponseBodyCloudDisksStatus setCapacity(Long capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        public GetInstanceResponseBodyCloudDisksStatus setUsage(Long usage) {
+            this.usage = usage;
+            return this;
+        }
+        public Long getUsage() {
+            return this.usage;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyCloudDisks extends TeaModel {
         /**
          * <p>Disk Capacity</p>
@@ -969,6 +1010,9 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("Status")
+        public GetInstanceResponseBodyCloudDisksStatus status;
 
         /**
          * <p>The usage mode of the cloud disk. The value rootfs indicates that the cloud disk is used as the root file system.</p>
@@ -1006,6 +1050,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getPath() {
             return this.path;
+        }
+
+        public GetInstanceResponseBodyCloudDisks setStatus(GetInstanceResponseBodyCloudDisksStatus status) {
+            this.status = status;
+            return this;
+        }
+        public GetInstanceResponseBodyCloudDisksStatus getStatus() {
+            return this.status;
         }
 
         public GetInstanceResponseBodyCloudDisks setSubType(String subType) {

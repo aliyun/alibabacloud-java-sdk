@@ -1,3 +1,7 @@
+2025-10-30 Version: 2.2.1
+- Update API GetInstance: add response parameters Body.CloudDisks.$.Status.
+
+
 2025-10-28 Version: 2.2.0
 - Support API CreateDiagnosis.
 
