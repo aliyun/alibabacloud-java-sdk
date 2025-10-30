@@ -18664,13 +18664,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies the retention policy of the log backups in a PolarDB cluster.</p>
      * 
-     * @param request ModifyLogBackupPolicyRequest
+     * @param tmpReq ModifyLogBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyLogBackupPolicyResponse
      */
-    public ModifyLogBackupPolicyResponse modifyLogBackupPolicyWithOptions(ModifyLogBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyLogBackupPolicyResponse modifyLogBackupPolicyWithOptions(ModifyLogBackupPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyLogBackupPolicyShrinkRequest request = new ModifyLogBackupPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.advancedLogPolicies)) {
+            request.advancedLogPoliciesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.advancedLogPolicies, "AdvancedLogPolicies", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.advancedLogPoliciesShrink)) {
+            query.put("AdvancedLogPolicies", request.advancedLogPoliciesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }

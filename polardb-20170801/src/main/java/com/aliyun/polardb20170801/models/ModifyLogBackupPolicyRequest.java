@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyLogBackupPolicyRequest extends TeaModel {
+    @NameInMap("AdvancedLogPolicies")
+    public java.util.List<ModifyLogBackupPolicyRequestAdvancedLogPolicies> advancedLogPolicies;
+
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
@@ -73,6 +76,14 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyLogBackupPolicyRequest setAdvancedLogPolicies(java.util.List<ModifyLogBackupPolicyRequestAdvancedLogPolicies> advancedLogPolicies) {
+        this.advancedLogPolicies = advancedLogPolicies;
+        return this;
+    }
+    public java.util.List<ModifyLogBackupPolicyRequestAdvancedLogPolicies> getAdvancedLogPolicies() {
+        return this.advancedLogPolicies;
+    }
+
     public ModifyLogBackupPolicyRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
@@ -135,6 +146,113 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public static class ModifyLogBackupPolicyRequestAdvancedLogPolicies extends TeaModel {
+        @NameInMap("ActionType")
+        public String actionType;
+
+        @NameInMap("DestRegion")
+        public String destRegion;
+
+        @NameInMap("DestType")
+        public String destType;
+
+        @NameInMap("EnableLogBackup")
+        public Integer enableLogBackup;
+
+        @NameInMap("LogRetentionType")
+        public String logRetentionType;
+
+        @NameInMap("LogRetentionValue")
+        public String logRetentionValue;
+
+        @NameInMap("PolicyId")
+        public String policyId;
+
+        @NameInMap("SrcRegion")
+        public String srcRegion;
+
+        @NameInMap("SrcType")
+        public String srcType;
+
+        public static ModifyLogBackupPolicyRequestAdvancedLogPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ModifyLogBackupPolicyRequestAdvancedLogPolicies self = new ModifyLogBackupPolicyRequestAdvancedLogPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setActionType(String actionType) {
+            this.actionType = actionType;
+            return this;
+        }
+        public String getActionType() {
+            return this.actionType;
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setDestRegion(String destRegion) {
+            this.destRegion = destRegion;
+            return this;
+        }
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setDestType(String destType) {
+            this.destType = destType;
+            return this;
+        }
+        public String getDestType() {
+            return this.destType;
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setEnableLogBackup(Integer enableLogBackup) {
+            this.enableLogBackup = enableLogBackup;
+            return this;
+        }
+        public Integer getEnableLogBackup() {
+            return this.enableLogBackup;
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setLogRetentionType(String logRetentionType) {
+            this.logRetentionType = logRetentionType;
+            return this;
+        }
+        public String getLogRetentionType() {
+            return this.logRetentionType;
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setLogRetentionValue(String logRetentionValue) {
+            this.logRetentionValue = logRetentionValue;
+            return this;
+        }
+        public String getLogRetentionValue() {
+            return this.logRetentionValue;
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setSrcRegion(String srcRegion) {
+            this.srcRegion = srcRegion;
+            return this;
+        }
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        public ModifyLogBackupPolicyRequestAdvancedLogPolicies setSrcType(String srcType) {
+            this.srcType = srcType;
+            return this;
+        }
+        public String getSrcType() {
+            return this.srcType;
+        }
+
     }
 
 }

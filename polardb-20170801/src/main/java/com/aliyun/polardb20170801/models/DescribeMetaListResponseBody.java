@@ -135,6 +135,9 @@ public class DescribeMetaListResponseBody extends TeaModel {
         @NameInMap("Database")
         public String database;
 
+        @NameInMap("Size")
+        public java.util.List<Long> size;
+
         /**
          * <p>The name of the table that can be restored.</p>
          */
@@ -152,6 +155,14 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
         public String getDatabase() {
             return this.database;
+        }
+
+        public DescribeMetaListResponseBodyItems setSize(java.util.List<Long> size) {
+            this.size = size;
+            return this;
+        }
+        public java.util.List<Long> getSize() {
+            return this.size;
         }
 
         public DescribeMetaListResponseBodyItems setTables(java.util.List<String> tables) {
