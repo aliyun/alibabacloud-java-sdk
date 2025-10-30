@@ -479,6 +479,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long dlpTemplateMaxCount;
 
         /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
+        @NameInMap("ElasticQps")
+        public Integer elasticQps;
+
+        /**
          * <p>Indicates whether exclusive IP addresses are supported. Valid values:</p>
          * <ul>
          * <li><strong>true:</strong> Exclusive IP addresses are supported.</li>
@@ -490,6 +497,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         @NameInMap("ExclusiveIp")
         public Boolean exclusiveIp;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("ExtendQps")
+        public Integer extendQps;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("FreeQps")
+        public Integer freeQps;
 
         /**
          * <p>Indicates whether global server load balancing (GSLB) is supported. Valid values:</p>
@@ -609,6 +630,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         @NameInMap("MajorProtectionTemplateMaxCount")
         public Long majorProtectionTemplateMaxCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
+        @NameInMap("QpsBillingCap")
+        public Integer qpsBillingCap;
 
         /**
          * <p>Indicates whether the website tamper-proofing module is supported. Valid values:</p>
@@ -946,12 +974,36 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.dlpTemplateMaxCount;
         }
 
+        public DescribeInstanceResponseBodyDetails setElasticQps(Integer elasticQps) {
+            this.elasticQps = elasticQps;
+            return this;
+        }
+        public Integer getElasticQps() {
+            return this.elasticQps;
+        }
+
         public DescribeInstanceResponseBodyDetails setExclusiveIp(Boolean exclusiveIp) {
             this.exclusiveIp = exclusiveIp;
             return this;
         }
         public Boolean getExclusiveIp() {
             return this.exclusiveIp;
+        }
+
+        public DescribeInstanceResponseBodyDetails setExtendQps(Integer extendQps) {
+            this.extendQps = extendQps;
+            return this;
+        }
+        public Integer getExtendQps() {
+            return this.extendQps;
+        }
+
+        public DescribeInstanceResponseBodyDetails setFreeQps(Integer freeQps) {
+            this.freeQps = freeQps;
+            return this;
+        }
+        public Integer getFreeQps() {
+            return this.freeQps;
         }
 
         public DescribeInstanceResponseBodyDetails setGslb(Boolean gslb) {
@@ -1040,6 +1092,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Long getMajorProtectionTemplateMaxCount() {
             return this.majorProtectionTemplateMaxCount;
+        }
+
+        public DescribeInstanceResponseBodyDetails setQpsBillingCap(Integer qpsBillingCap) {
+            this.qpsBillingCap = qpsBillingCap;
+            return this;
+        }
+        public Integer getQpsBillingCap() {
+            return this.qpsBillingCap;
         }
 
         public DescribeInstanceResponseBodyDetails setTamperproof(Boolean tamperproof) {

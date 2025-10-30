@@ -1,3 +1,25 @@
+2025-10-30 Version: 5.7.0
+- Support API CreateLogDeliveryConfig.
+- Support API DeleteHybridCloudGroup.
+- Support API DeleteLogDeliveryConfig.
+- Support API DescribeHybridCloudProtectableCount.
+- Support API DescribeLogDeliveryConfig.
+- Support API DescribeLogDeliveryConfigs.
+- Support API DescribeResourceLogDeliveryStatus.
+- Support API DescribeResourceLogFieldConfig.
+- Support API DescribeRoleAuthStatus.
+- Support API InitializeWafOperationRole.
+- Support API ModifyCloudResourceCert.
+- Support API ModifyDomainCert.
+- Support API ModifyLogDeliveryConfig.
+- Support API ModifyResourceLogDeliveryStatus.
+- Support API ModifyResourceLogFieldConfig.
+- Update API DescribeInstance: add response parameters Body.Details.ElasticQps.
+- Update API DescribeInstance: add response parameters Body.Details.ExtendQps.
+- Update API DescribeInstance: add response parameters Body.Details.FreeQps.
+- Update API DescribeInstance: add response parameters Body.Details.QpsBillingCap.
+
+
 2025-10-24 Version: 5.6.0
 - Support API CreateMajorProtectionBlackIpV2.
 - Support API CreatePocFunction.
