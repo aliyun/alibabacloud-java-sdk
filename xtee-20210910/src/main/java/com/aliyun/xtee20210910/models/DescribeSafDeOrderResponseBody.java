@@ -40,6 +40,47 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         return this.resultObject;
     }
 
+    public static class DescribeSafDeOrderResponseBodyResultObjectRegions extends TeaModel {
+        @NameInMap("expirationDate")
+        public Long expirationDate;
+
+        @NameInMap("region")
+        public String region;
+
+        @NameInMap("specification")
+        public Integer specification;
+
+        public static DescribeSafDeOrderResponseBodyResultObjectRegions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSafDeOrderResponseBodyResultObjectRegions self = new DescribeSafDeOrderResponseBodyResultObjectRegions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSafDeOrderResponseBodyResultObjectRegions setExpirationDate(Long expirationDate) {
+            this.expirationDate = expirationDate;
+            return this;
+        }
+        public Long getExpirationDate() {
+            return this.expirationDate;
+        }
+
+        public DescribeSafDeOrderResponseBodyResultObjectRegions setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeSafDeOrderResponseBodyResultObjectRegions setSpecification(Integer specification) {
+            this.specification = specification;
+            return this;
+        }
+        public Integer getSpecification() {
+            return this.specification;
+        }
+
+    }
+
     public static class DescribeSafDeOrderResponseBodyResultObject extends TeaModel {
         /**
          * <p>Expiration time</p>
@@ -63,6 +104,9 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         @NameInMap("openUserType")
         public Integer openUserType;
 
+        @NameInMap("regions")
+        public java.util.List<DescribeSafDeOrderResponseBodyResultObjectRegions> regions;
+
         public static DescribeSafDeOrderResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             DescribeSafDeOrderResponseBodyResultObject self = new DescribeSafDeOrderResponseBodyResultObject();
             return TeaModel.build(map, self);
@@ -82,6 +126,14 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         }
         public Integer getOpenUserType() {
             return this.openUserType;
+        }
+
+        public DescribeSafDeOrderResponseBodyResultObject setRegions(java.util.List<DescribeSafDeOrderResponseBodyResultObjectRegions> regions) {
+            this.regions = regions;
+            return this;
+        }
+        public java.util.List<DescribeSafDeOrderResponseBodyResultObjectRegions> getRegions() {
+            return this.regions;
         }
 
     }
