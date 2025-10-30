@@ -53,6 +53,9 @@ public class RecordCallCenterEventForPartnerRequest extends TeaModel {
     @NameInMap("ContactId")
     public String contactId;
 
+    @NameInMap("EmployeeCode")
+    public String employeeCode;
+
     /**
      * <strong>example:</strong>
      * <p>ufbo502ma94m480</p>
@@ -82,6 +85,9 @@ public class RecordCallCenterEventForPartnerRequest extends TeaModel {
      */
     @NameInMap("SkillType")
     public Integer skillType;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static RecordCallCenterEventForPartnerRequest build(java.util.Map<String, ?> map) throws Exception {
         RecordCallCenterEventForPartnerRequest self = new RecordCallCenterEventForPartnerRequest();
@@ -144,6 +150,14 @@ public class RecordCallCenterEventForPartnerRequest extends TeaModel {
         return this.contactId;
     }
 
+    public RecordCallCenterEventForPartnerRequest setEmployeeCode(String employeeCode) {
+        this.employeeCode = employeeCode;
+        return this;
+    }
+    public String getEmployeeCode() {
+        return this.employeeCode;
+    }
+
     public RecordCallCenterEventForPartnerRequest setJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -174,6 +188,14 @@ public class RecordCallCenterEventForPartnerRequest extends TeaModel {
     }
     public Integer getSkillType() {
         return this.skillType;
+    }
+
+    public RecordCallCenterEventForPartnerRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

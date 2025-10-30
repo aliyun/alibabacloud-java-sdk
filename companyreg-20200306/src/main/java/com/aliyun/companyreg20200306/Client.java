@@ -1408,6 +1408,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ContactId", request.contactId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.employeeCode)) {
+            query.put("EmployeeCode", request.employeeCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             query.put("JobId", request.jobId);
         }
@@ -1422,6 +1426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.skillType)) {
             query.put("SkillType", request.skillType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
