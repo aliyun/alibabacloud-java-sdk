@@ -121,6 +121,12 @@ public class GrantDataServiceApiRequest extends TeaModel {
         @NameInMap("AppId")
         public Integer appId;
 
+        @NameInMap("ApplyDev")
+        public Boolean applyDev;
+
+        @NameInMap("ApplyProd")
+        public Boolean applyProd;
+
         @NameInMap("DevFieldList")
         public java.util.List<GrantDataServiceApiRequestGrantCommandDevFieldList> devFieldList;
 
@@ -164,6 +170,22 @@ public class GrantDataServiceApiRequest extends TeaModel {
         }
         public Integer getAppId() {
             return this.appId;
+        }
+
+        public GrantDataServiceApiRequestGrantCommand setApplyDev(Boolean applyDev) {
+            this.applyDev = applyDev;
+            return this;
+        }
+        public Boolean getApplyDev() {
+            return this.applyDev;
+        }
+
+        public GrantDataServiceApiRequestGrantCommand setApplyProd(Boolean applyProd) {
+            this.applyProd = applyProd;
+            return this;
+        }
+        public Boolean getApplyProd() {
+            return this.applyProd;
         }
 
         public GrantDataServiceApiRequestGrantCommand setDevFieldList(java.util.List<GrantDataServiceApiRequestGrantCommandDevFieldList> devFieldList) {
