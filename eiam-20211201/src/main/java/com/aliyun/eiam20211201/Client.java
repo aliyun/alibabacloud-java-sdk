@@ -84,6 +84,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加条款到品牌</p>
+     * 
+     * @param request AddCustomPrivacyPoliciesToBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddCustomPrivacyPoliciesToBrandResponse
+     */
+    public AddCustomPrivacyPoliciesToBrandResponse addCustomPrivacyPoliciesToBrandWithOptions(AddCustomPrivacyPoliciesToBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyIds)) {
+            query.put("CustomPrivacyPolicyIds", request.customPrivacyPolicyIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddCustomPrivacyPoliciesToBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomPrivacyPoliciesToBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加条款到品牌</p>
+     * 
+     * @param request AddCustomPrivacyPoliciesToBrandRequest
+     * @return AddCustomPrivacyPoliciesToBrandResponse
+     */
+    public AddCustomPrivacyPoliciesToBrandResponse addCustomPrivacyPoliciesToBrand(AddCustomPrivacyPoliciesToBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addCustomPrivacyPoliciesToBrandWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds an Employee Identity and Access Management (EIAM) account to multiple EIAM organizations of Identity as a Service (IDaaS). If the account already exists in the organizational unit, the system directly returns a success response.</p>
      * 
      * @param request AddUserToOrganizationalUnitsRequest
@@ -728,6 +780,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateConditionalAccessPolicyResponse createConditionalAccessPolicy(CreateConditionalAccessPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createConditionalAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义条款</p>
+     * 
+     * @param request CreateCustomPrivacyPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomPrivacyPolicyResponse
+     */
+    public CreateCustomPrivacyPolicyResponse createCustomPrivacyPolicyWithOptions(CreateCustomPrivacyPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyContents)) {
+            query.put("CustomPrivacyPolicyContents", request.customPrivacyPolicyContents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyName)) {
+            query.put("CustomPrivacyPolicyName", request.customPrivacyPolicyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLanguageCode)) {
+            query.put("DefaultLanguageCode", request.defaultLanguageCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userConsentType)) {
+            query.put("UserConsentType", request.userConsentType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomPrivacyPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomPrivacyPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建自定义条款</p>
+     * 
+     * @param request CreateCustomPrivacyPolicyRequest
+     * @return CreateCustomPrivacyPolicyResponse
+     */
+    public CreateCustomPrivacyPolicyResponse createCustomPrivacyPolicy(CreateCustomPrivacyPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCustomPrivacyPolicyWithOptions(request, runtime);
     }
 
     /**
@@ -1724,6 +1844,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除自定义条款</p>
+     * 
+     * @param request DeleteCustomPrivacyPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomPrivacyPolicyResponse
+     */
+    public DeleteCustomPrivacyPolicyResponse deleteCustomPrivacyPolicyWithOptions(DeleteCustomPrivacyPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyId)) {
+            query.put("CustomPrivacyPolicyId", request.customPrivacyPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomPrivacyPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomPrivacyPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义条款</p>
+     * 
+     * @param request DeleteCustomPrivacyPolicyRequest
+     * @return DeleteCustomPrivacyPolicyResponse
+     */
+    public DeleteCustomPrivacyPolicyResponse deleteCustomPrivacyPolicy(DeleteCustomPrivacyPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomPrivacyPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a custom domain name of an Employee Identity and Access Management (EIAM) instance. You cannot delete the initial domain name and default domain name of the instance.</p>
      * 
      * @param request DeleteDomainRequest
@@ -2714,6 +2882,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>禁用自定义条款</p>
+     * 
+     * @param request DisableCustomPrivacyPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableCustomPrivacyPolicyResponse
+     */
+    public DisableCustomPrivacyPolicyResponse disableCustomPrivacyPolicyWithOptions(DisableCustomPrivacyPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyId)) {
+            query.put("CustomPrivacyPolicyId", request.customPrivacyPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableCustomPrivacyPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableCustomPrivacyPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用自定义条款</p>
+     * 
+     * @param request DisableCustomPrivacyPolicyRequest
+     * @return DisableCustomPrivacyPolicyResponse
+     */
+    public DisableCustomPrivacyPolicyResponse disableCustomPrivacyPolicy(DisableCustomPrivacyPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableCustomPrivacyPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Disables a proxy token for a domain name of an Employee Identity and Access Management (EIAM) instance. After the proxy token is disabled, the domain name may not be used as expected.</p>
      * 
      * @param request DisableDomainProxyTokenRequest
@@ -3452,6 +3668,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启用自定义条款</p>
+     * 
+     * @param request EnableCustomPrivacyPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableCustomPrivacyPolicyResponse
+     */
+    public EnableCustomPrivacyPolicyResponse enableCustomPrivacyPolicyWithOptions(EnableCustomPrivacyPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyId)) {
+            query.put("CustomPrivacyPolicyId", request.customPrivacyPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableCustomPrivacyPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableCustomPrivacyPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用自定义条款</p>
+     * 
+     * @param request EnableCustomPrivacyPolicyRequest
+     * @return EnableCustomPrivacyPolicyResponse
+     */
+    public EnableCustomPrivacyPolicyResponse enableCustomPrivacyPolicy(EnableCustomPrivacyPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableCustomPrivacyPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Enables a proxy token for a domain name of an Employee Identity and Access Management (EIAM) instance. The proxy token is used to verify the security of the domain name.</p>
      * 
      * @param request EnableDomainProxyTokenRequest
@@ -4174,6 +4438,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConditionalAccessPolicyResponse getConditionalAccessPolicy(GetConditionalAccessPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getConditionalAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义条款</p>
+     * 
+     * @param request GetCustomPrivacyPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomPrivacyPolicyResponse
+     */
+    public GetCustomPrivacyPolicyResponse getCustomPrivacyPolicyWithOptions(GetCustomPrivacyPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyId)) {
+            query.put("CustomPrivacyPolicyId", request.customPrivacyPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomPrivacyPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomPrivacyPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义条款</p>
+     * 
+     * @param request GetCustomPrivacyPolicyRequest
+     * @return GetCustomPrivacyPolicyResponse
+     */
+    public GetCustomPrivacyPolicyResponse getCustomPrivacyPolicy(GetCustomPrivacyPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomPrivacyPolicyWithOptions(request, runtime);
     }
 
     /**
@@ -6146,6 +6458,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>自定义条款列表查询。</p>
+     * 
+     * @param request ListCustomPrivacyPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomPrivacyPoliciesResponse
+     */
+    public ListCustomPrivacyPoliciesResponse listCustomPrivacyPoliciesWithOptions(ListCustomPrivacyPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyNameStartsWith)) {
+            query.put("CustomPrivacyPolicyNameStartsWith", request.customPrivacyPolicyNameStartsWith);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.previousToken)) {
+            query.put("PreviousToken", request.previousToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomPrivacyPolicies"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomPrivacyPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义条款列表查询。</p>
+     * 
+     * @param request ListCustomPrivacyPoliciesRequest
+     * @return ListCustomPrivacyPoliciesResponse
+     */
+    public ListCustomPrivacyPoliciesResponse listCustomPrivacyPolicies(ListCustomPrivacyPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomPrivacyPoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取品牌关联资源的资源</p>
+     * 
+     * @param request ListCustomPrivacyPoliciesForBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomPrivacyPoliciesForBrandResponse
+     */
+    public ListCustomPrivacyPoliciesForBrandResponse listCustomPrivacyPoliciesForBrandWithOptions(ListCustomPrivacyPoliciesForBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.previousToken)) {
+            query.put("PreviousToken", request.previousToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomPrivacyPoliciesForBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomPrivacyPoliciesForBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取品牌关联资源的资源</p>
+     * 
+     * @param request ListCustomPrivacyPoliciesForBrandRequest
+     * @return ListCustomPrivacyPoliciesForBrandResponse
+     */
+    public ListCustomPrivacyPoliciesForBrandResponse listCustomPrivacyPoliciesForBrand(ListCustomPrivacyPoliciesForBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomPrivacyPoliciesForBrandWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the proxy tokens of a domain name of an Employee Identity and Access Management (EIAM) instance.</p>
      * 
      * @param request ListDomainProxyTokensRequest
@@ -7712,6 +8144,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveApplicationAccountFromUserResponse removeApplicationAccountFromUser(RemoveApplicationAccountFromUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeApplicationAccountFromUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移除品牌关联条款</p>
+     * 
+     * @param request RemoveCustomPrivacyPoliciesFromBrandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveCustomPrivacyPoliciesFromBrandResponse
+     */
+    public RemoveCustomPrivacyPoliciesFromBrandResponse removeCustomPrivacyPoliciesFromBrandWithOptions(RemoveCustomPrivacyPoliciesFromBrandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.brandId)) {
+            query.put("BrandId", request.brandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyIds)) {
+            query.put("CustomPrivacyPolicyIds", request.customPrivacyPolicyIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveCustomPrivacyPoliciesFromBrand"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveCustomPrivacyPoliciesFromBrandResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>移除品牌关联条款</p>
+     * 
+     * @param request RemoveCustomPrivacyPoliciesFromBrandRequest
+     * @return RemoveCustomPrivacyPoliciesFromBrandResponse
+     */
+    public RemoveCustomPrivacyPoliciesFromBrandResponse removeCustomPrivacyPoliciesFromBrand(RemoveCustomPrivacyPoliciesFromBrandRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeCustomPrivacyPoliciesFromBrandWithOptions(request, runtime);
     }
 
     /**
@@ -9446,6 +9930,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateConditionalAccessPolicyDescriptionResponse updateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateConditionalAccessPolicyDescriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义条款</p>
+     * 
+     * @param request UpdateCustomPrivacyPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCustomPrivacyPolicyResponse
+     */
+    public UpdateCustomPrivacyPolicyResponse updateCustomPrivacyPolicyWithOptions(UpdateCustomPrivacyPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyContents)) {
+            query.put("CustomPrivacyPolicyContents", request.customPrivacyPolicyContents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyId)) {
+            query.put("CustomPrivacyPolicyId", request.customPrivacyPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrivacyPolicyName)) {
+            query.put("CustomPrivacyPolicyName", request.customPrivacyPolicyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLanguageCode)) {
+            query.put("DefaultLanguageCode", request.defaultLanguageCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userConsentType)) {
+            query.put("UserConsentType", request.userConsentType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomPrivacyPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomPrivacyPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义条款</p>
+     * 
+     * @param request UpdateCustomPrivacyPolicyRequest
+     * @return UpdateCustomPrivacyPolicyResponse
+     */
+    public UpdateCustomPrivacyPolicyResponse updateCustomPrivacyPolicy(UpdateCustomPrivacyPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCustomPrivacyPolicyWithOptions(request, runtime);
     }
 
     /**
