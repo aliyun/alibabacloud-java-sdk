@@ -117,6 +117,20 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String detectionRuleStatus;
 
     /**
+     * <strong>example:</strong>
+     * <p>cfw-out-ip_aegis-netstat</p>
+     */
+    @NameInMap("DetectionRuleTemplateId")
+    public String detectionRuleTemplateId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>v1.0.0</p>
+     */
+    @NameInMap("DetectionRuleTemplateVersion")
+    public String detectionRuleTemplateVersion;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -350,6 +364,22 @@ public class CreateDetectionRuleRequest extends TeaModel {
     }
     public String getDetectionRuleStatus() {
         return this.detectionRuleStatus;
+    }
+
+    public CreateDetectionRuleRequest setDetectionRuleTemplateId(String detectionRuleTemplateId) {
+        this.detectionRuleTemplateId = detectionRuleTemplateId;
+        return this;
+    }
+    public String getDetectionRuleTemplateId() {
+        return this.detectionRuleTemplateId;
+    }
+
+    public CreateDetectionRuleRequest setDetectionRuleTemplateVersion(String detectionRuleTemplateVersion) {
+        this.detectionRuleTemplateVersion = detectionRuleTemplateVersion;
+        return this;
+    }
+    public String getDetectionRuleTemplateVersion() {
+        return this.detectionRuleTemplateVersion;
     }
 
     public CreateDetectionRuleRequest setDetectionRuleType(String detectionRuleType) {

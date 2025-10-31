@@ -141,6 +141,13 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>[&quot;sys:data_source:siem&quot;,&quot;sys:trigger_type:auto&quot;]</p>
+         */
+        @NameInMap("IncidentTags")
+        public String incidentTags;
+
+        /**
+         * <strong>example:</strong>
          * <p>dbb1d7211c9285c862aa89385098****</p>
          */
         @NameInMap("IncidentUuid")
@@ -209,6 +216,14 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
         public Integer getIncidentStatus() {
             return this.incidentStatus;
+        }
+
+        public ListIncidentsResponseBodyIncidents setIncidentTags(String incidentTags) {
+            this.incidentTags = incidentTags;
+            return this;
+        }
+        public String getIncidentTags() {
+            return this.incidentTags;
         }
 
         public ListIncidentsResponseBodyIncidents setIncidentUuid(String incidentUuid) {

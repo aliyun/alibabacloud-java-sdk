@@ -457,6 +457,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DetectionRuleStatus", request.detectionRuleStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.detectionRuleTemplateId)) {
+            body.put("DetectionRuleTemplateId", request.detectionRuleTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detectionRuleTemplateVersion)) {
+            body.put("DetectionRuleTemplateVersion", request.detectionRuleTemplateVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.detectionRuleType)) {
             body.put("DetectionRuleType", request.detectionRuleType);
         }
