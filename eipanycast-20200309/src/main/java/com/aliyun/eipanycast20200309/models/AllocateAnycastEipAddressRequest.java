@@ -94,6 +94,9 @@ public class AllocateAnycastEipAddressRequest extends TeaModel {
     @NameInMap("ServiceLocation")
     public String serviceLocation;
 
+    @NameInMap("Tag")
+    public java.util.List<AllocateAnycastEipAddressRequestTag> tag;
+
     public static AllocateAnycastEipAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateAnycastEipAddressRequest self = new AllocateAnycastEipAddressRequest();
         return TeaModel.build(map, self);
@@ -161,6 +164,44 @@ public class AllocateAnycastEipAddressRequest extends TeaModel {
     }
     public String getServiceLocation() {
         return this.serviceLocation;
+    }
+
+    public AllocateAnycastEipAddressRequest setTag(java.util.List<AllocateAnycastEipAddressRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<AllocateAnycastEipAddressRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class AllocateAnycastEipAddressRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static AllocateAnycastEipAddressRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            AllocateAnycastEipAddressRequestTag self = new AllocateAnycastEipAddressRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public AllocateAnycastEipAddressRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public AllocateAnycastEipAddressRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
