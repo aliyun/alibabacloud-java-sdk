@@ -42,6 +42,16 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstance extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>GM/T0028_LEVEL_2</p>
+         */
+        @NameInMap("Certification")
+        public String certification;
+
+        @NameInMap("CertificationUrl")
+        public String certificationUrl;
+
+        /**
          * <p>The ID of the cluster to which the HSM belongs.</p>
          * 
          * <strong>example:</strong>
@@ -244,6 +254,22 @@ public class GetInstanceResponseBody extends TeaModel {
         public static GetInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyInstance self = new GetInstanceResponseBodyInstance();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyInstance setCertification(String certification) {
+            this.certification = certification;
+            return this;
+        }
+        public String getCertification() {
+            return this.certification;
+        }
+
+        public GetInstanceResponseBodyInstance setCertificationUrl(String certificationUrl) {
+            this.certificationUrl = certificationUrl;
+            return this;
+        }
+        public String getCertificationUrl() {
+            return this.certificationUrl;
         }
 
         public GetInstanceResponseBodyInstance setClusterId(String clusterId) {

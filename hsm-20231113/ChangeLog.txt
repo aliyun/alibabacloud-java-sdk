@@ -1,3 +1,8 @@
+2025-10-31 Version: 1.2.1
+- Update API GetInstance: add response parameters Body.Instance.Certification.
+- Update API GetInstance: add response parameters Body.Instance.CertificationUrl.
+
+
 2025-09-11 Version: 1.2.0
 - Support API DownloadClusterManagedCert.
 - Support API QuickDeployCluster.
