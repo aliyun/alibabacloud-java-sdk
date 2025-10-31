@@ -70,6 +70,13 @@ public class ListMmsJobsRequest extends TeaModel {
     @NameInMap("stopped")
     public Long stopped;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("timerId")
+    public Long timerId;
+
     public static ListMmsJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMmsJobsRequest self = new ListMmsJobsRequest();
         return TeaModel.build(map, self);
@@ -153,6 +160,14 @@ public class ListMmsJobsRequest extends TeaModel {
     }
     public Long getStopped() {
         return this.stopped;
+    }
+
+    public ListMmsJobsRequest setTimerId(Long timerId) {
+        this.timerId = timerId;
+        return this;
+    }
+    public Long getTimerId() {
+        return this.timerId;
     }
 
     public static class ListMmsJobsRequestSorter extends TeaModel {
