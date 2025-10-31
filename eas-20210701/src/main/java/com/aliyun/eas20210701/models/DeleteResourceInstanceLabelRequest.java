@@ -20,7 +20,11 @@ public class DeleteResourceInstanceLabelRequest extends TeaModel {
      * <p>The keys of the tags that you want to delete.</p>
      */
     @NameInMap("Keys")
+    @Deprecated
     public java.util.List<String> keys;
+
+    @NameInMap("LabelKeys")
+    public java.util.List<String> labelKeys;
 
     public static DeleteResourceInstanceLabelRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteResourceInstanceLabelRequest self = new DeleteResourceInstanceLabelRequest();
@@ -43,12 +47,21 @@ public class DeleteResourceInstanceLabelRequest extends TeaModel {
         return this.instanceIds;
     }
 
+    @Deprecated
     public DeleteResourceInstanceLabelRequest setKeys(java.util.List<String> keys) {
         this.keys = keys;
         return this;
     }
     public java.util.List<String> getKeys() {
         return this.keys;
+    }
+
+    public DeleteResourceInstanceLabelRequest setLabelKeys(java.util.List<String> labelKeys) {
+        this.labelKeys = labelKeys;
+        return this;
+    }
+    public java.util.List<String> getLabelKeys() {
+        return this.labelKeys;
     }
 
 }

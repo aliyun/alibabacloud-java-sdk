@@ -20,7 +20,11 @@ public class DeleteResourceInstanceLabelShrinkRequest extends TeaModel {
      * <p>The keys of the tags that you want to delete.</p>
      */
     @NameInMap("Keys")
+    @Deprecated
     public String keysShrink;
+
+    @NameInMap("LabelKeys")
+    public String labelKeysShrink;
 
     public static DeleteResourceInstanceLabelShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteResourceInstanceLabelShrinkRequest self = new DeleteResourceInstanceLabelShrinkRequest();
@@ -43,12 +47,21 @@ public class DeleteResourceInstanceLabelShrinkRequest extends TeaModel {
         return this.instanceIdsShrink;
     }
 
+    @Deprecated
     public DeleteResourceInstanceLabelShrinkRequest setKeysShrink(String keysShrink) {
         this.keysShrink = keysShrink;
         return this;
     }
     public String getKeysShrink() {
         return this.keysShrink;
+    }
+
+    public DeleteResourceInstanceLabelShrinkRequest setLabelKeysShrink(String labelKeysShrink) {
+        this.labelKeysShrink = labelKeysShrink;
+        return this;
+    }
+    public String getLabelKeysShrink() {
+        return this.labelKeysShrink;
     }
 
 }

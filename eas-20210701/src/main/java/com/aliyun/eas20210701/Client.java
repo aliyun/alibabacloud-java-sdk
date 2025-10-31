@@ -1393,6 +1393,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.keysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.keys, "Keys", "simple");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelKeys)) {
+            request.labelKeysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelKeys, "LabelKeys", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.allInstances)) {
             query.put("AllInstances", request.allInstances);
@@ -1404,6 +1408,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keysShrink)) {
             query.put("Keys", request.keysShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelKeysShrink)) {
+            query.put("LabelKeys", request.labelKeysShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1708,9 +1716,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.keysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.keys, "Keys", "simple");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelKeys)) {
+            request.labelKeysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelKeys, "LabelKeys", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.keysShrink)) {
             query.put("Keys", request.keysShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelKeysShrink)) {
+            query.put("LabelKeys", request.labelKeysShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
