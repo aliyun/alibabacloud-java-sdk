@@ -367,6 +367,59 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceResponseBodyResultEndpoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-xx-cn-hangzhou-h.elasticsearch.aliyuncs.com</p>
+         */
+        @NameInMap("endpoint")
+        public String endpoint;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-xxx</p>
+         */
+        @NameInMap("vswitchId")
+        public String vswitchId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        public static DescribeInstanceResponseBodyResultEndpoints build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyResultEndpoints self = new DescribeInstanceResponseBodyResultEndpoints();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyResultEndpoints setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public DescribeInstanceResponseBodyResultEndpoints setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public DescribeInstanceResponseBodyResultEndpoints setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
     public static class DescribeInstanceResponseBodyResultIkHotDicts extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -1116,6 +1169,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("endTime")
         public Long endTime;
 
+        @NameInMap("endpoints")
+        public java.util.List<DescribeInstanceResponseBodyResultEndpoints> endpoints;
+
         /**
          * <strong>example:</strong>
          * <p>{&quot;http.cors.allow-credentials&quot;:&quot;false&quot;}</p>
@@ -1454,6 +1510,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeInstanceResponseBodyResult setEndpoints(java.util.List<DescribeInstanceResponseBodyResultEndpoints> endpoints) {
+            this.endpoints = endpoints;
+            return this;
+        }
+        public java.util.List<DescribeInstanceResponseBodyResultEndpoints> getEndpoints() {
+            return this.endpoints;
         }
 
         public DescribeInstanceResponseBodyResult setEsConfig(java.util.Map<String, ?> esConfig) {

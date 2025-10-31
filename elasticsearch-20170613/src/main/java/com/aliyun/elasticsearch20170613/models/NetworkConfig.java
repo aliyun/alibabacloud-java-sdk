@@ -8,7 +8,7 @@ public class NetworkConfig extends TeaModel {
     public Integer lbReplica;
 
     @NameInMap("loadBalanceConfig")
-    public NetworkConfigLoadBalanceConfig loadBalanceConfig;
+    public java.util.List<NetworkConfigLoadBalanceConfig> loadBalanceConfig;
 
     /**
      * <strong>example:</strong>
@@ -45,11 +45,11 @@ public class NetworkConfig extends TeaModel {
         return this.lbReplica;
     }
 
-    public NetworkConfig setLoadBalanceConfig(NetworkConfigLoadBalanceConfig loadBalanceConfig) {
+    public NetworkConfig setLoadBalanceConfig(java.util.List<NetworkConfigLoadBalanceConfig> loadBalanceConfig) {
         this.loadBalanceConfig = loadBalanceConfig;
         return this;
     }
-    public NetworkConfigLoadBalanceConfig getLoadBalanceConfig() {
+    public java.util.List<NetworkConfigLoadBalanceConfig> getLoadBalanceConfig() {
         return this.loadBalanceConfig;
     }
 
@@ -105,6 +105,10 @@ public class NetworkConfig extends TeaModel {
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-xxxx</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
