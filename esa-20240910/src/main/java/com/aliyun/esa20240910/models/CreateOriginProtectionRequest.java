@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOriginProtectionRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("AutoConfirmIPList")
+    public String autoConfirmIPList;
+
+    /**
      * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
@@ -17,6 +24,14 @@ public class CreateOriginProtectionRequest extends TeaModel {
     public static CreateOriginProtectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOriginProtectionRequest self = new CreateOriginProtectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateOriginProtectionRequest setAutoConfirmIPList(String autoConfirmIPList) {
+        this.autoConfirmIPList = autoConfirmIPList;
+        return this;
+    }
+    public String getAutoConfirmIPList() {
+        return this.autoConfirmIPList;
     }
 
     public CreateOriginProtectionRequest setSiteId(Long siteId) {

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateOriginProtectionRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("AutoConfirmIPList")
+    public String autoConfirmIPList;
+
+    /**
      * <p>The IP convergence status.</p>
      * <ul>
      * <li>on</li>
@@ -31,6 +38,14 @@ public class UpdateOriginProtectionRequest extends TeaModel {
     public static UpdateOriginProtectionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateOriginProtectionRequest self = new UpdateOriginProtectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateOriginProtectionRequest setAutoConfirmIPList(String autoConfirmIPList) {
+        this.autoConfirmIPList = autoConfirmIPList;
+        return this;
+    }
+    public String getAutoConfirmIPList() {
+        return this.autoConfirmIPList;
     }
 
     public UpdateOriginProtectionRequest setOriginConverge(String originConverge) {

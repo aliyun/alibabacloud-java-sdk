@@ -2845,6 +2845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOriginProtectionResponse createOriginProtectionWithOptions(CreateOriginProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoConfirmIPList)) {
+            query.put("AutoConfirmIPList", request.autoConfirmIPList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
             query.put("SiteId", request.siteId);
         }
@@ -17667,6 +17671,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateOriginProtectionResponse updateOriginProtectionWithOptions(UpdateOriginProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoConfirmIPList)) {
+            query.put("AutoConfirmIPList", request.autoConfirmIPList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.originConverge)) {
             query.put("OriginConverge", request.originConverge);
         }
