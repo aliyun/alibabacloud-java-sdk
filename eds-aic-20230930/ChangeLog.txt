@@ -12,6 +12,13 @@
 - Update API DescribeAndroidInstanceGroups: add response parameters Body.InstanceGroupModel.$.ZoneId.
 
 
+2025-11-03 Version: 3.13.3
+- Update API CreateScreenshot: add request parameters ScreenshotId.
+- Update API CreateScreenshot: add response parameters Body.Tasks.$.ScreenshotId.
+- Update API DescribeAndroidInstanceGroups: add response parameters Body.InstanceGroupModel.$.BindQosRules.
+- Update API DescribeAndroidInstanceGroups: add response parameters Body.InstanceGroupModel.$.ZoneId.
+
+
 2025-10-28 Version: 3.13.2
 - Generated java 2023-09-30 for eds-aic.
 
