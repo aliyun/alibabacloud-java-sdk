@@ -24,6 +24,9 @@ public class TestEventSourceConfigRequest extends TeaModel {
     }
 
     public static class TestEventSourceConfigRequestSourceMySQLParameters extends TeaModel {
+        @NameInMap("AllowedCIDRs")
+        public String allowedCIDRs;
+
         /**
          * <p>The database name.</p>
          * 
@@ -131,6 +134,14 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public static TestEventSourceConfigRequestSourceMySQLParameters build(java.util.Map<String, ?> map) throws Exception {
             TestEventSourceConfigRequestSourceMySQLParameters self = new TestEventSourceConfigRequestSourceMySQLParameters();
             return TeaModel.build(map, self);
+        }
+
+        public TestEventSourceConfigRequestSourceMySQLParameters setAllowedCIDRs(String allowedCIDRs) {
+            this.allowedCIDRs = allowedCIDRs;
+            return this;
+        }
+        public String getAllowedCIDRs() {
+            return this.allowedCIDRs;
         }
 
         public TestEventSourceConfigRequestSourceMySQLParameters setDatabaseName(String databaseName) {

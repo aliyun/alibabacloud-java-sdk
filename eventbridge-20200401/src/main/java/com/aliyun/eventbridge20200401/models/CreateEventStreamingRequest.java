@@ -1261,48 +1261,30 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
-    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters extends TeaModel {
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>TEMPLATE</p>
+         * <p>CONSTANT</p>
          */
         @NameInMap("Form")
         public String form;
 
-        /**
-         * <strong>example:</strong>
-         * <p>[
-         *   {
-         *     &quot;name&quot;: &quot;schema1&quot;,
-         *     &quot;type&quot;: &quot;INT&quot;,
-         *     &quot;value&quot;: &quot;${value1}&quot;
-         *   },
-         *   {
-         *     &quot;name&quot;: &quot;schema2&quot;,
-         *     &quot;type&quot;: &quot;FLOAT&quot;,
-         *     &quot;value&quot;: &quot;${value2}&quot;
-         *   }
-         * ]</p>
-         */
         @NameInMap("Template")
         public String template;
 
         /**
          * <strong>example:</strong>
-         * <p>{
-         *   &quot;value1&quot;:&quot;v1&quot;,
-         *   &quot;value2&quot;:&quot;v2&quot;
-         * }</p>
+         * <p>content</p>
          */
         @NameInMap("Value")
         public String value;
 
-        public static CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters self = new CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters();
+        public static CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName self = new CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName();
             return TeaModel.build(map, self);
         }
 
-        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setForm(String form) {
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName setForm(String form) {
             this.form = form;
             return this;
         }
@@ -1310,7 +1292,7 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.form;
         }
 
-        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setTemplate(String template) {
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName setTemplate(String template) {
             this.template = template;
             return this;
         }
@@ -1318,11 +1300,154 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.template;
         }
 
-        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setValue(String value) {
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName setValue(String value) {
             this.value = value;
             return this;
         }
         public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        /**
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType self = new CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
+        @NameInMap("Form")
+        public String form;
+
+        /**
+         * <strong>example:</strong>
+         * <p>${content}</p>
+         */
+        @NameInMap("Template")
+        public String template;
+
+        /**
+         * <strong>example:</strong>
+         * <p>$.data.content</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue self = new CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters extends TeaModel {
+        @NameInMap("Name")
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName name;
+
+        @NameInMap("Type")
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType type;
+
+        @NameInMap("Value")
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue value;
+
+        public static CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters self = new CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setName(CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName name) {
+            this.name = name;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName getName() {
+            return this.name;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setType(CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType type) {
+            this.type = type;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType getType() {
+            return this.type;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setValue(CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue value) {
+            this.value = value;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue getValue() {
             return this.value;
         }
 
@@ -1336,6 +1461,10 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>${partition}</p>
+         */
         @NameInMap("Template")
         public String template;
 
@@ -1438,6 +1567,10 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>${vector}</p>
+         */
         @NameInMap("Template")
         public String template;
 
@@ -1495,7 +1628,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String collection;
 
         @NameInMap("DashVectorSchemaParameters")
-        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters dashVectorSchemaParameters;
+        public java.util.List<CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters> dashVectorSchemaParameters;
 
         /**
          * <strong>example:</strong>
@@ -1548,11 +1681,11 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.collection;
         }
 
-        public CreateEventStreamingRequestSinkSinkDashVectorParameters setDashVectorSchemaParameters(CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters dashVectorSchemaParameters) {
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setDashVectorSchemaParameters(java.util.List<CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters> dashVectorSchemaParameters) {
             this.dashVectorSchemaParameters = dashVectorSchemaParameters;
             return this;
         }
-        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters getDashVectorSchemaParameters() {
+        public java.util.List<CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters> getDashVectorSchemaParameters() {
             return this.dashVectorSchemaParameters;
         }
 
@@ -7650,6 +7783,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkApacheRocketMQCheckpointParameters")
         public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
 
+        @NameInMap("SinkApiDestinationParameters")
+        public SinkApiDestinationParameters sinkApiDestinationParameters;
+
         @NameInMap("SinkBaiLianParameters")
         public SinkBaiLianParameters sinkBaiLianParameters;
 
@@ -7685,6 +7821,9 @@ public class CreateEventStreamingRequest extends TeaModel {
          */
         @NameInMap("SinkFnfParameters")
         public CreateEventStreamingRequestSinkSinkFnfParameters sinkFnfParameters;
+
+        @NameInMap("SinkHttpsParameters")
+        public SinkHttpsParameters sinkHttpsParameters;
 
         /**
          * <p>The parameters that are configured if you specify ApsaraMQ for Kafka as the event target.</p>
@@ -7747,6 +7886,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters getSinkApacheRocketMQCheckpointParameters() {
             return this.sinkApacheRocketMQCheckpointParameters;
+        }
+
+        public CreateEventStreamingRequestSink setSinkApiDestinationParameters(SinkApiDestinationParameters sinkApiDestinationParameters) {
+            this.sinkApiDestinationParameters = sinkApiDestinationParameters;
+            return this;
+        }
+        public SinkApiDestinationParameters getSinkApiDestinationParameters() {
+            return this.sinkApiDestinationParameters;
         }
 
         public CreateEventStreamingRequestSink setSinkBaiLianParameters(SinkBaiLianParameters sinkBaiLianParameters) {
@@ -7819,6 +7966,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkFnfParameters getSinkFnfParameters() {
             return this.sinkFnfParameters;
+        }
+
+        public CreateEventStreamingRequestSink setSinkHttpsParameters(SinkHttpsParameters sinkHttpsParameters) {
+            this.sinkHttpsParameters = sinkHttpsParameters;
+            return this;
+        }
+        public SinkHttpsParameters getSinkHttpsParameters() {
+            return this.sinkHttpsParameters;
         }
 
         public CreateEventStreamingRequestSink setSinkKafkaParameters(CreateEventStreamingRequestSinkSinkKafkaParameters sinkKafkaParameters) {
@@ -9920,6 +10075,15 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
+        @NameInMap("BaiLianAgentTransformParameters")
+        public BaiLianAgentTransformParameters baiLianAgentTransformParameters;
+
+        @NameInMap("DashScopeTransformParameters")
+        public DashScopeTransformParameters dashScopeTransformParameters;
+
+        @NameInMap("EmbeddingTransformParameters")
+        public EmbeddingTransformParameters embeddingTransformParameters;
+
         public static CreateEventStreamingRequestTransforms build(java.util.Map<String, ?> map) throws Exception {
             CreateEventStreamingRequestTransforms self = new CreateEventStreamingRequestTransforms();
             return TeaModel.build(map, self);
@@ -9931,6 +10095,30 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public CreateEventStreamingRequestTransforms setBaiLianAgentTransformParameters(BaiLianAgentTransformParameters baiLianAgentTransformParameters) {
+            this.baiLianAgentTransformParameters = baiLianAgentTransformParameters;
+            return this;
+        }
+        public BaiLianAgentTransformParameters getBaiLianAgentTransformParameters() {
+            return this.baiLianAgentTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setDashScopeTransformParameters(DashScopeTransformParameters dashScopeTransformParameters) {
+            this.dashScopeTransformParameters = dashScopeTransformParameters;
+            return this;
+        }
+        public DashScopeTransformParameters getDashScopeTransformParameters() {
+            return this.dashScopeTransformParameters;
+        }
+
+        public CreateEventStreamingRequestTransforms setEmbeddingTransformParameters(EmbeddingTransformParameters embeddingTransformParameters) {
+            this.embeddingTransformParameters = embeddingTransformParameters;
+            return this;
+        }
+        public EmbeddingTransformParameters getEmbeddingTransformParameters() {
+            return this.embeddingTransformParameters;
         }
 
     }
