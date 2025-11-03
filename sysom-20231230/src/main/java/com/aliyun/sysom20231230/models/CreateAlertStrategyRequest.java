@@ -13,6 +13,9 @@ public class CreateAlertStrategyRequest extends TeaModel {
     @NameInMap("enabled")
     public Boolean enabled;
 
+    @NameInMap("k8sLabel")
+    public Boolean k8sLabel;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -39,6 +42,14 @@ public class CreateAlertStrategyRequest extends TeaModel {
     }
     public Boolean getEnabled() {
         return this.enabled;
+    }
+
+    public CreateAlertStrategyRequest setK8sLabel(Boolean k8sLabel) {
+        this.k8sLabel = k8sLabel;
+        return this;
+    }
+    public Boolean getK8sLabel() {
+        return this.k8sLabel;
     }
 
     public CreateAlertStrategyRequest setName(String name) {

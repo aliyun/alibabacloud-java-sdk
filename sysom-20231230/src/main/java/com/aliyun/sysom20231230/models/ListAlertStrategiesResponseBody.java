@@ -164,6 +164,9 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         @NameInMap("id")
         public Long id;
 
+        @NameInMap("k8sLabel")
+        public Boolean k8sLabel;
+
         /**
          * <strong>example:</strong>
          * <p>strategy1</p>
@@ -215,6 +218,14 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListAlertStrategiesResponseBodyData setK8sLabel(Boolean k8sLabel) {
+            this.k8sLabel = k8sLabel;
+            return this;
+        }
+        public Boolean getK8sLabel() {
+            return this.k8sLabel;
         }
 
         public ListAlertStrategiesResponseBodyData setName(String name) {

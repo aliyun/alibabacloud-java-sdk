@@ -143,6 +143,9 @@ public class GetAgentTaskResponseBody extends TeaModel {
         @NameInMap("jobs")
         public java.util.List<GetAgentTaskResponseBodyDataJobs> jobs;
 
+        @NameInMap("status")
+        public String status;
+
         @NameInMap("task_id")
         public String taskId;
 
@@ -157,6 +160,14 @@ public class GetAgentTaskResponseBody extends TeaModel {
         }
         public java.util.List<GetAgentTaskResponseBodyDataJobs> getJobs() {
             return this.jobs;
+        }
+
+        public GetAgentTaskResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetAgentTaskResponseBodyData setTaskId(String taskId) {
