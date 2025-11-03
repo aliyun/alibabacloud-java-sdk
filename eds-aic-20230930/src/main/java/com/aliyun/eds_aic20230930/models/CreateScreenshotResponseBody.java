@@ -50,6 +50,9 @@ public class CreateScreenshotResponseBody extends TeaModel {
         @NameInMap("AndroidInstanceId")
         public String androidInstanceId;
 
+        @NameInMap("ScreenshotId")
+        public String screenshotId;
+
         /**
          * <p>The ID of the task. You can use the task ID with the DescribeTasks operation to get the download link for the screenshot.</p>
          * 
@@ -70,6 +73,14 @@ public class CreateScreenshotResponseBody extends TeaModel {
         }
         public String getAndroidInstanceId() {
             return this.androidInstanceId;
+        }
+
+        public CreateScreenshotResponseBodyTasks setScreenshotId(String screenshotId) {
+            this.screenshotId = screenshotId;
+            return this;
+        }
+        public String getScreenshotId() {
+            return this.screenshotId;
         }
 
         public CreateScreenshotResponseBodyTasks setTaskId(String taskId) {

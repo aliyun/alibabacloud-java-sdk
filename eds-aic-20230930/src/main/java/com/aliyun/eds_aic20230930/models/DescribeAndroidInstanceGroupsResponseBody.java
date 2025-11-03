@@ -74,6 +74,66 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("QosRuleId")
+        public String qosRuleId;
+
+        public static DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule self = new DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule setQosRuleId(String qosRuleId) {
+            this.qosRuleId = qosRuleId;
+            return this;
+        }
+        public String getQosRuleId() {
+            return this.qosRuleId;
+        }
+
+    }
+
+    public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules extends TeaModel {
+        @NameInMap("InstanceQosRule")
+        public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule> instanceQosRule;
+
+        @NameInMap("totalCount")
+        public Integer totalCount;
+
+        public static DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules self = new DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules setInstanceQosRule(java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule> instanceQosRule) {
+            this.instanceQosRule = instanceQosRule;
+            return this;
+        }
+        public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule> getInstanceQosRule() {
+            return this.instanceQosRule;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks extends TeaModel {
         /**
          * <p>The size of the disk. Unit: GB.</p>
@@ -185,6 +245,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
         @NameInMap("BandwidthPackageType")
         public String bandwidthPackageType;
+
+        @NameInMap("BindQosRules")
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules bindQosRules;
 
         /**
          * <p>The billing method.</p>
@@ -437,6 +500,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel self = new DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel();
             return TeaModel.build(map, self);
@@ -488,6 +554,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public String getBandwidthPackageType() {
             return this.bandwidthPackageType;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setBindQosRules(DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules bindQosRules) {
+            this.bindQosRules = bindQosRules;
+            return this;
+        }
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules getBindQosRules() {
+            return this.bindQosRules;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setChargeType(String chargeType) {
@@ -728,6 +802,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

@@ -1120,6 +1120,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OssBucketName", request.ossBucketName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.screenshotId)) {
+            query.put("ScreenshotId", request.screenshotId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.skipCheckPolicyConfig)) {
             query.put("SkipCheckPolicyConfig", request.skipCheckPolicyConfig);
         }

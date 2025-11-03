@@ -20,6 +20,9 @@ public class CreateScreenshotRequest extends TeaModel {
     @NameInMap("OssBucketName")
     public String ossBucketName;
 
+    @NameInMap("ScreenshotId")
+    public String screenshotId;
+
     /**
      * <p>Specifies whether to bypass the snapshot policy control. Default value: false.</p>
      * 
@@ -48,6 +51,14 @@ public class CreateScreenshotRequest extends TeaModel {
     }
     public String getOssBucketName() {
         return this.ossBucketName;
+    }
+
+    public CreateScreenshotRequest setScreenshotId(String screenshotId) {
+        this.screenshotId = screenshotId;
+        return this;
+    }
+    public String getScreenshotId() {
+        return this.screenshotId;
     }
 
     public CreateScreenshotRequest setSkipCheckPolicyConfig(String skipCheckPolicyConfig) {
