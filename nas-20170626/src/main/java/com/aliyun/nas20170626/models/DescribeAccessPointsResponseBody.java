@@ -190,6 +190,44 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAccessPointsResponseBodyAccessPointsTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAccessPointsResponseBodyAccessPointsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessPointsResponseBodyAccessPointsTags self = new DescribeAccessPointsResponseBodyAccessPointsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessPointsResponseBodyAccessPointsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAccessPointsResponseBodyAccessPointsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeAccessPointsResponseBodyAccessPoints extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>
@@ -327,6 +365,9 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<DescribeAccessPointsResponseBodyAccessPointsTags> tags;
+
         /**
          * <p>The vSwitch ID.</p>
          * 
@@ -460,6 +501,14 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeAccessPointsResponseBodyAccessPoints setTags(java.util.List<DescribeAccessPointsResponseBodyAccessPointsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeAccessPointsResponseBodyAccessPointsTags> getTags() {
+            return this.tags;
         }
 
         public DescribeAccessPointsResponseBodyAccessPoints setVSwitchId(String vSwitchId) {

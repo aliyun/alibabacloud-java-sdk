@@ -19,7 +19,7 @@ public class CreateRecycleBinRestoreJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the file or directory that you want to restore.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/264192.html">ListRecycleBinJobs</a> operation to query the value of the FileId parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of the deleted data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +40,10 @@ public class CreateRecycleBinRestoreJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the directory to which the file is restored.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories</a> operation to query the TargetFileId for recently deleted directories.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2412163.html">ListDirectoriesAndFiles</a> operation to query the TargetFileId for existing directories.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

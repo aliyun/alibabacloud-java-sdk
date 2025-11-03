@@ -19,7 +19,7 @@ public class CreateRecycleBinDeleteJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the file or directory that you want to permanently delete.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/264193.html">ListRecycledDirectoriesAndFiles</a> operation to query the value of the FileId parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of the deleted data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

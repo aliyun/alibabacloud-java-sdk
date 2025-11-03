@@ -1044,6 +1044,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RootDirectory", request.rootDirectory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
@@ -2616,9 +2620,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Usage notes</h3>
+     * <p>  Only General-purpose NAS file systems support this operation.</p>
      * <ul>
-     * <li>Only General-purpose NAS file systems support this operation.</li>
      * <li>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</li>
      * <li>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</li>
      * <li>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</li>
@@ -2653,9 +2656,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Usage notes</h3>
+     * <p>  Only General-purpose NAS file systems support this operation.</p>
      * <ul>
-     * <li>Only General-purpose NAS file systems support this operation.</li>
      * <li>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</li>
      * <li>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</li>
      * <li>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</li>
@@ -3722,6 +3724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

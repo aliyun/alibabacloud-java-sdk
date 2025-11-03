@@ -43,6 +43,9 @@ public class DescribeAccessPointsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeAccessPointsRequestTag> tag;
+
     public static DescribeAccessPointsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessPointsRequest self = new DescribeAccessPointsRequest();
         return TeaModel.build(map, self);
@@ -78,6 +81,52 @@ public class DescribeAccessPointsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeAccessPointsRequest setTag(java.util.List<DescribeAccessPointsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeAccessPointsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeAccessPointsRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAccessPointsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessPointsRequestTag self = new DescribeAccessPointsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessPointsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAccessPointsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

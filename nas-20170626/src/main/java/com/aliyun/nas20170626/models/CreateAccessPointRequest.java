@@ -117,6 +117,9 @@ public class CreateAccessPointRequest extends TeaModel {
     @NameInMap("RootDirectory")
     public String rootDirectory;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateAccessPointRequestTag> tag;
+
     /**
      * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
@@ -230,6 +233,14 @@ public class CreateAccessPointRequest extends TeaModel {
         return this.rootDirectory;
     }
 
+    public CreateAccessPointRequest setTag(java.util.List<CreateAccessPointRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateAccessPointRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateAccessPointRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -244,6 +255,44 @@ public class CreateAccessPointRequest extends TeaModel {
     }
     public String getVswId() {
         return this.vswId;
+    }
+
+    public static class CreateAccessPointRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAccessPointRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAccessPointRequestTag self = new CreateAccessPointRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAccessPointRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAccessPointRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
