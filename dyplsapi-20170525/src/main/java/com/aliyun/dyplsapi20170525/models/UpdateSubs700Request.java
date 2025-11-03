@@ -43,7 +43,7 @@ public class UpdateSubs700Request extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>10000*****</p>
      */
     @NameInMap("GroupId")
     public String groupId;

@@ -4,6 +4,20 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UnbindSubs700Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>700.100.1/12345678</p>
+     */
+    @NameInMap("IndustrialId")
+    public String industrialId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>12345678</p>
+     */
+    @NameInMap("OrderId")
+    public String orderId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -43,6 +57,22 @@ public class UnbindSubs700Request extends TeaModel {
     public static UnbindSubs700Request build(java.util.Map<String, ?> map) throws Exception {
         UnbindSubs700Request self = new UnbindSubs700Request();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindSubs700Request setIndustrialId(String industrialId) {
+        this.industrialId = industrialId;
+        return this;
+    }
+    public String getIndustrialId() {
+        return this.industrialId;
+    }
+
+    public UnbindSubs700Request setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public UnbindSubs700Request setOwnerId(Long ownerId) {

@@ -4351,6 +4351,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnbindSubs700Response unbindSubs700WithOptions(UnbindSubs700Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.industrialId)) {
+            query.put("IndustrialId", request.industrialId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
