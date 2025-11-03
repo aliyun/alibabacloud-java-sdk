@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetArtifactBuildRuleResponseBody extends TeaModel {
     /**
+     * <p>The type of the artifact. Valid values:</p>
+     * <ul>
+     * <li><code>ACCELERATED_IMAGE</code>: accelerated images.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ACCELERATED_IMAGE</p>
      */
@@ -12,6 +17,8 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String artifactType;
 
     /**
+     * <p>The ID of the artifact building rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>crabr-o2670wqz2n70****</p>
      */
@@ -26,16 +33,27 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>Additional parameters.</p>
+     */
     @NameInMap("Parameters")
     public GetArtifactBuildRuleResponseBodyParameters parameters;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7A3E98F6-296C-54AC-A612-B75E7777D4C1</p>
      */
@@ -43,6 +61,11 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the effective range of the artifact building rule.</p>
+     * <ul>
+     * <li>The parameter value is the ID of the image repository.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>crr-8dz3aedjqlmk****</p>
      */
@@ -50,6 +73,11 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     public String scopeId;
 
     /**
+     * <p>The effective range of the artifact building rule. Valid values:</p>
+     * <ul>
+     * <li><code>REPOSITORY</code>: The artifact building rule is effective in the repository level.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>REPOSITORY</p>
      */
@@ -126,9 +154,21 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     }
 
     public static class GetArtifactBuildRuleResponseBodyParameters extends TeaModel {
+        /**
+         * <p>Indicates whether the index-only mode is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ImageIndexOnly")
         public Boolean imageIndexOnly;
 
+        /**
+         * <p>The list of files that you want to prefetch when you use the image acceleration feature. Each entry contains the Base64-encoded absolute path of a file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L2hvbWUvdGVzdC8=</p>
+         */
         @NameInMap("PriorityFile")
         public String priorityFile;
 

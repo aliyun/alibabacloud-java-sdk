@@ -113,6 +113,9 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     @NameInMap("RuleId")
     public String ruleId;
 
+    @NameInMap("SourceDomain")
+    public String sourceDomain;
+
     /**
      * <p>The name of the source namespace.</p>
      * 
@@ -263,6 +266,14 @@ public class GetArtifactSubscriptionRuleResponseBody extends TeaModel {
     }
     public String getRuleId() {
         return this.ruleId;
+    }
+
+    public GetArtifactSubscriptionRuleResponseBody setSourceDomain(String sourceDomain) {
+        this.sourceDomain = sourceDomain;
+        return this;
+    }
+    public String getSourceDomain() {
+        return this.sourceDomain;
     }
 
     public GetArtifactSubscriptionRuleResponseBody setSourceNamespaceName(String sourceNamespaceName) {

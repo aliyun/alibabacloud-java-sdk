@@ -46,7 +46,7 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The VPCs that are added to the access control list.</p>
+     * <p>List of linked VPCs</p>
      */
     @NameInMap("LinkedVpcs")
     public java.util.List<GetInstanceVpcEndpointResponseBodyLinkedVpcs> linkedVpcs;
@@ -154,6 +154,8 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The error message detected in the linked VPC access control.</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIVATE_ZONE_CONFLICT_AT_{private_zone_id}</p>
          */

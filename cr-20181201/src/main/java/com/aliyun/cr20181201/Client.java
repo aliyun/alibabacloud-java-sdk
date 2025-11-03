@@ -2697,6 +2697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取交付链</p>
+     * 
      * @param request GetChainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetChainResponse
@@ -2730,6 +2733,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取交付链</p>
+     * 
      * @param request GetChainRequest
      * @return GetChainResponse
      */

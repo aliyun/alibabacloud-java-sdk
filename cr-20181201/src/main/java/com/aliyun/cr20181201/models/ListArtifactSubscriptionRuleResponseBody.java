@@ -208,6 +208,9 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         @NameInMap("RuleId")
         public String ruleId;
 
+        @NameInMap("SourceDomain")
+        public String sourceDomain;
+
         /**
          * <p>The source namespace.</p>
          * 
@@ -334,6 +337,14 @@ public class ListArtifactSubscriptionRuleResponseBody extends TeaModel {
         }
         public String getRuleId() {
             return this.ruleId;
+        }
+
+        public ListArtifactSubscriptionRuleResponseBodyRules setSourceDomain(String sourceDomain) {
+            this.sourceDomain = sourceDomain;
+            return this;
+        }
+        public String getSourceDomain() {
+            return this.sourceDomain;
         }
 
         public ListArtifactSubscriptionRuleResponseBodyRules setSourceNamespaceName(String sourceNamespaceName) {
