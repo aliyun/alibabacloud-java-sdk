@@ -11,6 +11,9 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The templates.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeTemplatesResponseBodyData> data;
 
@@ -375,9 +378,17 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyDataSiteConfigList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bwr-5a5371e0*******</p>
+         */
         @NameInMap("AppRuleId")
         public String appRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mainland</p>
+         */
         @NameInMap("SiteId")
         public String siteId;
 

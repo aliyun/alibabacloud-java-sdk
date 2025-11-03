@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TransferTaskApprovalCallbackRequest extends TeaModel {
     /**
+     * <p>The name of the OSS bucket where the file resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>ed****-17337752804***</p>
      */
@@ -12,6 +14,8 @@ public class TransferTaskApprovalCallbackRequest extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>The region where the OSS bucket storing the file resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,13 @@ public class TransferTaskApprovalCallbackRequest extends TeaModel {
     public String ossBucketRegionId;
 
     /**
+     * <p>The approval result.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Approved</li>
+     * <li>Rejected</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Approved</p>
      */
@@ -26,6 +37,8 @@ public class TransferTaskApprovalCallbackRequest extends TeaModel {
     public String result;
 
     /**
+     * <p>The ID of the transmission task.</p>
+     * 
      * <strong>example:</strong>
      * <p>trt-msndfksm18fs****</p>
      */

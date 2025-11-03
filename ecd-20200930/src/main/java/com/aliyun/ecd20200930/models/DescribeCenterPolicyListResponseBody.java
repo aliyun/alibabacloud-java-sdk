@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenterPolicyListResponseBody extends TeaModel {
     /**
-     * <p>The cloud computer policies.</p>
+     * <p>The details about the cloud computer policies.</p>
      */
     @NameInMap("DescribePolicyGroups")
     public java.util.List<DescribeCenterPolicyListResponseBodyDescribePolicyGroups> describePolicyGroups;
@@ -1070,7 +1070,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
-         * <p>The policy type.</p>
+         * <p>The type of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>

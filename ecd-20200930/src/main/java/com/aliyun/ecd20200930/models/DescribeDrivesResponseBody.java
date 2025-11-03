@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDrivesResponseBody extends TeaModel {
     /**
+     * <p>The response code. The value 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class DescribeDrivesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The total number of storage resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The user-level storage resources.</p>
+     */
     @NameInMap("Drives")
     public java.util.List<DescribeDrivesResponseBodyDrives> drives;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAA****</p>
      */
@@ -36,6 +47,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7AA****</p>
      */
@@ -43,6 +56,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
 
     public static class DescribeDrivesResponseBodyDrivesDesktopGroups extends TeaModel {
         /**
+         * <p>The ID of the cloud computer pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>dg-aaaa****</p>
          */
@@ -119,6 +136,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
+         * <p>The name of the cloud computer pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>group01</p>
          */
@@ -150,6 +169,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
 
     public static class DescribeDrivesResponseBodyDrives extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1202****</p>
          */
@@ -157,6 +178,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The introduction to the storage resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>test****</p>
          */
@@ -164,16 +187,29 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The number of associated cloud computer pools.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if ResourceType is set to NAS and Type is set to USER_PROFILE.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("DesktopGroupCount")
         public Integer desktopGroupCount;
 
+        /**
+         * <p>The details of the associated cloud computers.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if ResourceType is set to NAS and Type is set to USER_PROFILE.</p>
+         * </blockquote>
+         */
         @NameInMap("DesktopGroups")
         public java.util.List<DescribeDrivesResponseBodyDrivesDesktopGroups> desktopGroups;
 
         /**
+         * <p>The ID of the storage resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>dom-aaaa****</p>
          */
@@ -181,6 +217,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String domainId;
 
         /**
+         * <p>The ID of the user-level storage resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>dri-aaaa****</p>
          */
@@ -188,6 +226,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String driveId;
 
         /**
+         * <p>Indicates whether the UPM feature is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -195,6 +235,12 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public Boolean enableProfileManagement;
 
         /**
+         * <p>The ID of the external storage resource.</p>
+         * <ul>
+         * <li>If ResourceType is set to NAS, the NAS ID is returned for this parameter.</li>
+         * <li>If ResourceType is set to PDS, the PDS ID is returned for this parameter.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0976****</p>
          */
@@ -202,6 +248,11 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String externalDomainId;
 
         /**
+         * <p>The ID of the storage resource at the external user level.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if ResourceType is set to PDS.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1100****</p>
          */
@@ -209,6 +260,11 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String externalDriveId;
 
         /**
+         * <p>The ID of the external user.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if ResourceType is set to PDS.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:user01@cn-hangzhou.120">user01@cn-hangzhou.120</a>****</p>
          */
@@ -216,6 +272,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String externalUserId;
 
         /**
+         * <p>The time when the storage resource was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-02T08:42:26.000+00:00</p>
          */
@@ -223,6 +281,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the storage resource was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-07T02:46:04.000+00:00</p>
          */
@@ -230,6 +290,11 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The user ID.</p>
+         * <blockquote>
+         * <p> You can ignore this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -237,6 +302,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the storage resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>test****</p>
          */
@@ -244,6 +311,10 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -253,6 +324,17 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public Boolean profileRoaming;
 
         /**
+         * <p>The status of the user-level storage resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INIT: initializing</li>
+         * <li>MAINTAIN: maintaining</li>
+         * <li>DELETING: deleting</li>
+         * <li>INVALID: invalid</li>
+         * <li>NORMAL: normal</li>
+         * <li>FAIL: failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -260,6 +342,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total amount of user-level storage capacity.</p>
+         * 
          * <strong>example:</strong>
          * <p>536870912000</p>
          */
@@ -267,6 +351,13 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
+         * <p>The usage of the storage resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DESKTOP: data disk space</li>
+         * <li>USER_PROFILE: personal data space</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>USER_PROFILE</p>
          */
@@ -274,6 +365,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The amount of user-level storage capacity used.</p>
+         * 
          * <strong>example:</strong>
          * <p>243175936</p>
          */
@@ -281,6 +374,8 @@ public class DescribeDrivesResponseBody extends TeaModel {
         public Long usedSize;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>user01</p>
          */

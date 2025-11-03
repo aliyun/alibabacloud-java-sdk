@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopDesktopsRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
+     * <p>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +14,12 @@ public class StopDesktopsRequest extends TeaModel {
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>Whether to perform a patch update when the update is ready. A value of true indicates that a patch update is performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OsUpdate")
     public Boolean osUpdate;
 

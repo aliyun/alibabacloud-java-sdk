@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeEcdReportTasksResponseBody extends TeaModel {
+    /**
+     * <p>The report export tasks.</p>
+     */
     @NameInMap("ExportTaskList")
     public java.util.List<DescribeEcdReportTasksResponseBodyExportTaskList> exportTaskList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -51,10 +58,15 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeEcdReportTasksResponseBodyExportTaskList extends TeaModel {
+        /**
+         * <p>The download URL of the report file.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
+         * <p>The error code returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -62,6 +74,8 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>No Data.</p>
          */
@@ -69,6 +83,8 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-14T07:46:49.000+00:00</p>
          */
@@ -76,6 +92,8 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the task was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-14T07:46:49.000+00:00</p>
          */
@@ -83,6 +101,8 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The progress of the report export task. Unit: %.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -90,6 +110,8 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public Float progress;
 
         /**
+         * <p>The name of the report file.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestFileName</p>
          */
@@ -97,6 +119,8 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public String reportFileName;
 
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -104,6 +128,12 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The sub-type of the report export task.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>DESKTOP: cloud computer</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DESKTOP</p>
          */
@@ -111,6 +141,8 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public String subType;
 
         /**
+         * <p>The ID of the report export task.</p>
+         * 
          * <strong>example:</strong>
          * <p>ret-asdfkjg*****</p>
          */
@@ -118,6 +150,12 @@ public class DescribeEcdReportTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The type of the report.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>RESOURCE_REPORT</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RESOURCE_REPORT</p>
          */

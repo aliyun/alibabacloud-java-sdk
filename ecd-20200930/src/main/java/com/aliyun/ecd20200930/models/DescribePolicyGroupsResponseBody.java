@@ -8,7 +8,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The cloud computer policies.</p>
+     * <p>The details of the cloud computer policies.</p>
      */
     @NameInMap("DescribePolicyGroups")
     public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroups> describePolicyGroups;
@@ -660,9 +660,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels extends TeaModel {
+        /**
+         * <p>The event severity.</p>
+         */
         @NameInMap("EventLevel")
         public String eventLevel;
 
+        /**
+         * <p>The event type.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
@@ -866,6 +872,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
         /**
+         * <p>The automatic client connection recovery configurations.</p>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
@@ -1287,6 +1295,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String mobileRestart;
 
         /**
+         * <p>Indicates whether the Windows security control is enabled for mobile clients.</p>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
@@ -1311,6 +1321,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String mobileShutdown;
 
         /**
+         * <p>Indicates whether the Cloud Computer Manager is enabled for mobile clients.</p>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
@@ -1318,6 +1330,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String mobileWuyingKeeper;
 
         /**
+         * <p>Indicates whether the Xiaoying AI Assistant is enabled for mobile clients.</p>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
@@ -1478,6 +1492,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RecordEventDuration")
         public Integer recordEventDuration;
 
+        /**
+         * <p>The screen recording file suffix.</p>
+         */
         @NameInMap("RecordEventFileExts")
         public java.util.List<String> recordEventFileExts;
 
@@ -1487,6 +1504,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RecordEventFilePaths")
         public java.util.List<String> recordEventFilePaths;
 
+        /**
+         * <p>Indicates whether the screen recording event severity is enabled.</p>
+         */
         @NameInMap("RecordEventLevels")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels> recordEventLevels;
 

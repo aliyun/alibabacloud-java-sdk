@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupSessionsRequest extends TeaModel {
+    /**
+     * <p>The IDs of shared desktop groups.</p>
+     */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
+     * <p>The name of the shared desktop.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecd-4oyi32wmrctgx****</p>
      */
@@ -24,7 +29,7 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the end user.</p>
+     * <p>The user ID of the terminal that connects to the session.</p>
      * 
      * <strong>example:</strong>
      * <p>xianqiu</p>
@@ -32,10 +37,15 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>Whether to supplement terminal information.</p>
+     */
     @NameInMap("FillTerminalInfo")
     public Boolean fillTerminalInfo;
 
     /**
+     * <p>The language of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -52,7 +62,7 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;asdfdfsdfsdfds&quot;</p>
@@ -75,7 +85,7 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
     public Integer ownType;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

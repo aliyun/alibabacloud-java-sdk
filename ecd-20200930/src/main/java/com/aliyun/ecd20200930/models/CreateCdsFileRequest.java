@@ -139,7 +139,6 @@ public class CreateCdsFileRequest extends TeaModel {
 
     /**
      * <p>The ID of the parent folder.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>637c9163b453b1a384874264ba79f3f9eab9****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFilePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The ID of the enterprise drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListFilePermissionRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the end user who uses the cloud disk.</p>
+     * <p>The ID of the user who uses the drive.</p>
      * 
      * <strong>example:</strong>
      * <p>user01</p>
@@ -24,7 +24,7 @@ public class ListFilePermissionRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The ID of the shared file.</p>
+     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to get the file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,13 +34,16 @@ public class ListFilePermissionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The ID of the team space.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-c3acvkkbsfkte****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The region ID of the cloud disk. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

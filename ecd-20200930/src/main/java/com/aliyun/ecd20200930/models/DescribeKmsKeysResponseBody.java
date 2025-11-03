@@ -6,6 +6,11 @@ import com.aliyun.tea.*;
 public class DescribeKmsKeysResponseBody extends TeaModel {
     /**
      * <p>The authorization status.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>not_authorized</li>
+     * <li>authorized</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>authorized</p>
@@ -14,13 +19,18 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     public String authorizeStatus;
 
     /**
-     * <p>Details about the customer master keys (CMKs).</p>
+     * <p>Customer master key (CMK)</p>
      */
     @NameInMap("Keys")
     public java.util.List<DescribeKmsKeysResponseBodyKeys> keys;
 
     /**
      * <p>Indicates whether KMS is activated.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>disabled</li>
+     * <li>enabled</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>

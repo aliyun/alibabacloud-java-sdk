@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveFilePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     * <p>The ID of the enterprise drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RemoveFilePermissionRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The user ID.</p>
+     * <p>The ID of the end user.</p>
      * 
      * <strong>example:</strong>
      * <p>user01</p>
@@ -24,7 +24,7 @@ public class RemoveFilePermissionRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The file ID. The ID is a unique identifier for the file.</p>
+     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,20 +34,23 @@ public class RemoveFilePermissionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The ID of the team space.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-1fbmvrc7ug5m7****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The users that you want to authorize.</p>
+     * <p>The users that you want to authorize to use the cloud disk.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MemberList")
     public java.util.List<RemoveFilePermissionRequestMemberList> memberList;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,23 +127,8 @@ public class RemoveFilePermissionRequest extends TeaModel {
          * <p>The object type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>IT_Group</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>group</p>
-         * <!-- -->
-         * </li>
-         * <li><p>IT_User</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>user</p>
-         * <!-- --></li>
+         * <li>IT_Group: group.</li>
+         * <li>IT_User: user.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -182,125 +170,22 @@ public class RemoveFilePermissionRequest extends TeaModel {
         public RemoveFilePermissionRequestMemberListCdsIdentity cdsIdentity;
 
         /**
-         * <p>The role ID. You can configure permissions on roles or actions. This parameter is used to specify the permissions on roles, which conflicts with the ActionList parameter. When you configure both the parameters, this parameter shall prevail.</p>
+         * <p>You can set permissions by specifying roles or by customizing operation permissions. This field is used to set permissions by specifying roles. This field is mutually exclusive with <code>ActionList</code>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>SystemFileEditorWithoutShareLink</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to edit files but cannot share files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileUploaderAndDownloaderWithShareLink</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to upload, download, and share files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileDownloader</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to download files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileEditorWithoutDelete</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to edit files but cannot delete files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileOwner</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to collaborate with others</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileDownloaderWithShareLink</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to download and share files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileUploaderAndViewer</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to preview or upload files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileViewer</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to preview files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileEditor</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to edit files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileUploaderWithShareLink</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to upload or share files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileUploader</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permission to upload files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileUploaderAndDownloader</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to upload or download files</p>
-         * <!-- -->
-         * </li>
-         * <li><p>SystemFileMetaViewer</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the role that has the permissions to view files</p>
-         * <!-- --></li>
+         * <li>SystemFileEditorWithoutShareLink: the role that has the permissions to edit files but cannot share files.</li>
+         * <li>SystemFileUploaderAndDownloaderWithShareLink: the role that has the permissions to upload, download, and share files.</li>
+         * <li>SystemFileDownloader: the role that has the permissions to download files.</li>
+         * <li>SystemFileEditorWithoutDelete: the role that has the permissions to edit files but cannot delete files.</li>
+         * <li>SystemFileOwner: the role that has the permissions to collaborate with others.</li>
+         * <li>SystemFileDownloaderWithShareLink: the role that has the permissions to download and share files</li>
+         * <li>SystemFileUploaderAndViewer: the role that has the permissions to preview or upload files.</li>
+         * <li>SystemFileViewer: the role that has the permissions to preview files.</li>
+         * <li>SystemFileEditor: the role that has the permissions to edit files</li>
+         * <li>SystemFileUploaderWithShareLink: the role that has the permissions to upload or share files.</li>
+         * <li>SystemFileUploader: the role that has the permission to upload files.</li>
+         * <li>SystemFileUploaderAndDownloader: the role that has the permissions to upload or download files.</li>
+         * <li>SystemFileMetaViewer: the role that has the permissions to view files</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CompleteCdsFileRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The ID of the enterprise drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CompleteCdsFileRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The name of the end user.</p>
+     * <p>The username. You must specify at least one of <code>EndUserId</code> and <code>GroupId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test0</p>
@@ -24,7 +24,7 @@ public class CompleteCdsFileRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The file ID. An ID is the unique identifier of a file.</p>
+     * <p>The file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,11 +33,17 @@ public class CompleteCdsFileRequest extends TeaModel {
     @NameInMap("FileId")
     public String fileId;
 
+    /**
+     * <p>The ID of the team space. You must specify at least one of <code>EndUserId</code> and <code>GroupId</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-i1ruuudp92qpj****</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +53,7 @@ public class CompleteCdsFileRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the file uploading task.</p>
+     * <p>The ID of the file upload task. Callable interface <a href="https://help.aliyun.com/document_detail/2247619.html">CreateCdsFile</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

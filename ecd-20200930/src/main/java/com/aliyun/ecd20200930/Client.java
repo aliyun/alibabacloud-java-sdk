@@ -203,7 +203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Shares a folder of a cloud disk with other users.</p>
+     * <p>Adds a shared folder to the network disk.</p>
      * 
      * @param tmpReq AddFilePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -264,7 +264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Shares a folder of a cloud disk with other users.</p>
+     * <p>Adds a shared folder to the network disk.</p>
      * 
      * @param request AddFilePermissionRequest
      * @return AddFilePermissionResponse
@@ -1378,7 +1378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Completes a file uploading task.</p>
+     * <p>After you create an object upload task, call this operation to upload the object.</p>
      * 
      * @param request CompleteCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1430,7 +1430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Completes a file uploading task.</p>
+     * <p>After you create an object upload task, call this operation to upload the object.</p>
      * 
      * @param request CompleteCdsFileRequest
      * @return CompleteCdsFileResponse
@@ -3902,7 +3902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网盘</p>
+     * <p>Creates a user-level storage resource.</p>
      * 
      * @param request CreateDriveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3970,7 +3970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网盘</p>
+     * <p>Creates a user-level storage resource.</p>
      * 
      * @param request CreateDriveRequest
      * @return CreateDriveResponse
@@ -3982,7 +3982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建无影数据报表导出任务</p>
+     * <p>Creates a data report export task.</p>
      * 
      * @param request CreateEcdReportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4030,7 +4030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建无影数据报表导出任务</p>
+     * <p>Creates a data report export task.</p>
      * 
      * @param request CreateEcdReportTaskRequest
      * @return CreateEcdReportTaskResponse
@@ -5216,7 +5216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模板</p>
+     * <p>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</p>
      * 
      * @param request CreateTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5337,7 +5337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模板</p>
+     * <p>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</p>
      * 
      * @param request CreateTemplateRequest
      * @return CreateTemplateResponse
@@ -5445,7 +5445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a file from a cloud disk in Cloud Drive Service.</p>
+     * <p>Delete files or folders from the network disk.</p>
      * 
      * @param request DeleteCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5493,7 +5493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a file from a cloud disk in Cloud Drive Service.</p>
+     * <p>Delete files or folders from the network disk.</p>
      * 
      * @param request DeleteCdsFileRequest
      * @return DeleteCdsFileResponse
@@ -5947,7 +5947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网盘</p>
+     * <p>Deletes a drive.</p>
      * 
      * @param request DeleteDriveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5983,7 +5983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网盘</p>
+     * <p>Deletes a drive.</p>
      * 
      * @param request DeleteDriveRequest
      * @return DeleteDriveResponse
@@ -7359,6 +7359,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询云盘团队空间列表</p>
+     * 
+     * @param request DescribeCloudDiskGroupDrivesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudDiskGroupDrivesResponse
+     */
+    public DescribeCloudDiskGroupDrivesResponse describeCloudDiskGroupDrivesWithOptions(DescribeCloudDiskGroupDrivesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cdsId)) {
+            query.put("CdsId", request.cdsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudDiskGroupDrives"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudDiskGroupDrivesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云盘团队空间列表</p>
+     * 
+     * @param request DescribeCloudDiskGroupDrivesRequest
+     * @return DescribeCloudDiskGroupDrivesResponse
+     */
+    public DescribeCloudDiskGroupDrivesResponse describeCloudDiskGroupDrives(DescribeCloudDiskGroupDrivesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudDiskGroupDrivesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云盘团队列表</p>
+     * 
+     * @param request DescribeCloudDiskGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudDiskGroupsResponse
+     */
+    public DescribeCloudDiskGroupsResponse describeCloudDiskGroupsWithOptions(DescribeCloudDiskGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cdsId)) {
+            query.put("CdsId", request.cdsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentOrgId)) {
+            query.put("ParentOrgId", request.parentOrgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudDiskGroups"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudDiskGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云盘团队列表</p>
+     * 
+     * @param request DescribeCloudDiskGroupsRequest
+     * @return DescribeCloudDiskGroupsResponse
+     */
+    public DescribeCloudDiskGroupsResponse describeCloudDiskGroups(DescribeCloudDiskGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudDiskGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of authorized team spaces.</p>
      * 
      * @param request DescribeCloudDriveGroupsRequest
@@ -7677,7 +7797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries sessions in a desktop group.</p>
+     * <p>Queries cloud computer shares.</p>
      * 
      * @param request DescribeDesktopGroupSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7753,7 +7873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries sessions in a desktop group.</p>
+     * <p>Queries cloud computer shares.</p>
      * 
      * @param request DescribeDesktopGroupSessionsRequest
      * @return DescribeDesktopGroupSessionsResponse
@@ -8749,7 +8869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网盘列表</p>
+     * <p>Queries user-level storage resources.</p>
      * 
      * @param request DescribeDrivesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8801,7 +8921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询网盘列表</p>
+     * <p>Queries user-level storage resources.</p>
      * 
      * @param request DescribeDrivesRequest
      * @return DescribeDrivesResponse
@@ -8813,7 +8933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据报表导出任务列表</p>
+     * <p>Queries data report export tasks.</p>
      * 
      * @param request DescribeEcdReportTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8865,7 +8985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据报表导出任务列表</p>
+     * <p>Queries data report export tasks.</p>
      * 
      * @param request DescribeEcdReportTasksRequest
      * @return DescribeEcdReportTasksResponse
@@ -9218,8 +9338,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Domestic site users query site selection Shanghai, international site users choose Singapore.</p>
+     * <ul>
+     * <li>By default, you can query all cloud computers that are deleted or not deleted.</li>
+     * <li>Deleted cloud computers can be queried only if the deletion time is less than three months.</li>
+     * <li>Sort criteria cannot be shared with other criteria.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询全局桌面记录</p>
+     * <p>Queries the basic information of all cloud computers and the corresponding usage duration records.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9306,8 +9434,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Domestic site users query site selection Shanghai, international site users choose Singapore.</p>
+     * <ul>
+     * <li>By default, you can query all cloud computers that are deleted or not deleted.</li>
+     * <li>Deleted cloud computers can be queried only if the deletion time is less than three months.</li>
+     * <li>Sort criteria cannot be shared with other criteria.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询全局桌面记录</p>
+     * <p>Queries the basic information of all cloud computers and the corresponding usage duration records.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @return DescribeGlobalDesktopRecordsResponse
@@ -11289,7 +11425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模板列表</p>
+     * <p>Queries the details of cloud computer templates.</p>
      * 
      * @param request DescribeTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11357,7 +11493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模板列表</p>
+     * <p>Queries the details of cloud computer templates.</p>
      * 
      * @param request DescribeTemplatesRequest
      * @return DescribeTemplatesResponse
@@ -12963,7 +13099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the files in a cloud disk.</p>
+     * <p>Queries the list of files in the network disk and obtain the download link of the file.</p>
      * 
      * @param tmpReq ListCdsFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13037,7 +13173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the files in a cloud disk.</p>
+     * <p>Queries the list of files in the network disk and obtain the download link of the file.</p>
      * 
      * @param request ListCdsFilesRequest
      * @return ListCdsFilesResponse
@@ -13131,7 +13267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about shared files of cloud disks.</p>
+     * <p>Queries the permissions on a shared file on a drive.</p>
      * 
      * @param request ListFilePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13179,7 +13315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about shared files of cloud disks.</p>
+     * <p>Queries the permissions on a shared file on a drive.</p>
      * 
      * @param request ListFilePermissionRequest
      * @return ListFilePermissionResponse
@@ -13187,6 +13323,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFilePermissionResponse listFilePermission(ListFilePermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listFilePermissionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询桌面内安装的应用</p>
+     * 
+     * @param request ListInstalledAppsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstalledAppsResponse
+     */
+    public ListInstalledAppsResponse listInstalledAppsWithOptions(ListInstalledAppsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstalledApps"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstalledAppsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询桌面内安装的应用</p>
+     * 
+     * @param request ListInstalledAppsRequest
+     * @return ListInstalledAppsResponse
+     */
+    public ListInstalledAppsResponse listInstalledApps(ListInstalledAppsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInstalledAppsWithOptions(request, runtime);
     }
 
     /**
@@ -13401,7 +13589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文件下载地址</p>
+     * <p>Queries the file information of a file transmission task.</p>
      * 
      * @param request ListTransferFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13441,7 +13629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文件下载地址</p>
+     * <p>Queries the file information of a file transmission task.</p>
      * 
      * @param request ListTransferFilesRequest
      * @return ListTransferFilesResponse
@@ -14063,7 +14251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the files in a cloud disk.</p>
+     * <p>Modifies the attributes of a disk file or folder, such as the file name.</p>
      * 
      * @param request ModifyCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14119,7 +14307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the files in a cloud disk.</p>
+     * <p>Modifies the attributes of a disk file or folder, such as the file name.</p>
      * 
      * @param request ModifyCdsFileRequest
      * @return ModifyCdsFileResponse
@@ -16461,7 +16649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改工作区DNS信息</p>
+     * <p>Modifies the DNS information of an office network.</p>
      * 
      * @param request ModifyOfficeSiteDnsInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16501,7 +16689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改工作区DNS信息</p>
+     * <p>Modifies the DNS information of an office network.</p>
      * 
      * @param request ModifyOfficeSiteDnsInfoRequest
      * @return ModifyOfficeSiteDnsInfoResponse
@@ -16967,7 +17155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模板全量更新</p>
+     * <p>Modifies a custom cloud computer template.</p>
      * 
      * @param request ModifyTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17084,7 +17272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模板全量更新</p>
+     * <p>Modifies a custom cloud computer template.</p>
      * 
      * @param request ModifyTemplateRequest
      * @return ModifyTemplateResponse
@@ -17096,7 +17284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
+     * <p>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the basic information of a custom cloud computer template, including the template name and template description.</p>
@@ -17139,7 +17327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
+     * <p>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the basic information of a custom cloud computer template, including the template name and template description.</p>
@@ -17590,7 +17778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes the file sharing feature of a folder in a cloud disk.</p>
+     * <p>Unshare a folder on the network disk.</p>
      * 
      * @param tmpReq RemoveFilePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17648,7 +17836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes the file sharing feature of a folder in a cloud disk.</p>
+     * <p>Unshare a folder on the network disk.</p>
      * 
      * @param request RemoveFilePermissionRequest
      * @return RemoveFilePermissionResponse
@@ -18631,8 +18819,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设置桌面维护模式</p>
+     * <p>Set the cloud computer maintenance mode.</p>
      * 
      * @param request SetDesktopMaintenanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18671,8 +18862,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设置桌面维护模式</p>
+     * <p>Set the cloud computer maintenance mode.</p>
      * 
      * @param request SetDesktopMaintenanceRequest
      * @return SetDesktopMaintenanceResponse
@@ -19154,7 +19348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文件传输审批回调</p>
+     * <p>Queries the transmission and approval result for a submitted file.</p>
      * 
      * @param request TransferTaskApprovalCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19198,7 +19392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>文件传输审批回调</p>
+     * <p>Queries the transmission and approval result for a submitted file.</p>
      * 
      * @param request TransferTaskApprovalCallbackRequest
      * @return TransferTaskApprovalCallbackResponse

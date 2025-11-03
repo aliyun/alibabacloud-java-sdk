@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFilePermissionShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk whose folder you want to share.</p>
+     * <p>The ID of the enterprise drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddFilePermissionShrinkRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the end user who uses the cloud disk.</p>
+     * <p>The ID of the user who uses the network disk.</p>
      * 
      * <strong>example:</strong>
      * <p>user01</p>
@@ -24,7 +24,7 @@ public class AddFilePermissionShrinkRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The ID of the file.</p>
+     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class AddFilePermissionShrinkRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The ID of the team that uses cloud disks in Cloud Drive Service.</p>
+     * <p>The ID of the team space.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-i1ruuudp92qpj****</p>
@@ -43,14 +43,14 @@ public class AddFilePermissionShrinkRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The members who are granted the folder permissions.</p>
+     * <p>The users that you want to authorize to use the cloud disk.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MemberList")
     public String memberListShrink;
 
     /**
-     * <p>The region ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

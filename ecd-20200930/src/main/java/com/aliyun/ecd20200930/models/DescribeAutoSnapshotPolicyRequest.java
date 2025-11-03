@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Maximum value: 100</li>
-     * <li>Default value: 20</li>
+     * <li>Maximum value: 50.</li>
+     * <li>Default value: 50.</li>
      * </ul>
      * 
      * <strong>example:</strong>

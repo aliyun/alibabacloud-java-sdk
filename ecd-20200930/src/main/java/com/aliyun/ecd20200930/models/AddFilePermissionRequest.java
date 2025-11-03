@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFilePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk whose folder you want to share.</p>
+     * <p>The ID of the enterprise drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddFilePermissionRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the end user who uses the cloud disk.</p>
+     * <p>The ID of the user who uses the network disk.</p>
      * 
      * <strong>example:</strong>
      * <p>user01</p>
@@ -24,7 +24,7 @@ public class AddFilePermissionRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The ID of the file.</p>
+     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class AddFilePermissionRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The ID of the team that uses cloud disks in Cloud Drive Service.</p>
+     * <p>The ID of the team space.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-i1ruuudp92qpj****</p>
@@ -43,14 +43,14 @@ public class AddFilePermissionRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The members who are granted the folder permissions.</p>
+     * <p>The users that you want to authorize to use the cloud disk.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MemberList")
     public java.util.List<AddFilePermissionRequestMemberList> memberList;
 
     /**
-     * <p>The region ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class AddFilePermissionRequest extends TeaModel {
 
     public static class AddFilePermissionRequestMemberListCdsIdentity extends TeaModel {
         /**
-         * <p>The ID of the user.</p>
+         * <p>The ID of the convenience user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,22 +124,11 @@ public class AddFilePermissionRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The type of the user.</p>
-         * <p>Valid values:</p>
+         * <p>The user type.</p>
+         * <p>Set the value to TENANT_ADMIN.</p>
          * <ul>
-         * <li><!-- -->
-         * 
-         * <p>IT_Group</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><!-- -->
-         * 
-         * <p>IT_User</p>
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>IT_Group: group.</li>
+         * <li>IT_User: user.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -199,22 +188,22 @@ public class AddFilePermissionRequest extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The ID of the role to which you want to attach the folder permissions. To configure the folder permissions: you can specify a role or create custom operation permissions. You can use RoleId to specify a role. RoleId is mutually exclusive with ActionList. If you specify both of them, the value of RoleId takes precedence.</p>
+         * <p>You can set permissions by specifying roles or by customizing operation permissions. This field is used to set permissions by specifying roles. This field is mutually exclusive with <code>ActionList</code>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>SystemFileEditorWithoutShareLink</li>
-         * <li>SystemFileUploaderAndDownloaderWithShareLink</li>
-         * <li>SystemFileDownloader</li>
-         * <li>SystemFileEditorWithoutDelete</li>
-         * <li>SystemFileOwner</li>
-         * <li>SystemFileDownloaderWithShareLink</li>
-         * <li>SystemFileUploaderAndViewer</li>
-         * <li>SystemFileViewer</li>
-         * <li>SystemFileEditor</li>
-         * <li>SystemFileUploaderWithShareLink</li>
-         * <li>SystemFileUploader</li>
-         * <li>SystemFileUploaderAndDownloader</li>
-         * <li>SystemFileMetaViewer</li>
+         * <li>SystemFileEditorWithoutShareLink: The role that can edit but cannot share files.</li>
+         * <li>SystemFileUploaderAndDownloaderWithShareLink: The role that can upload, download, and share files.</li>
+         * <li>SystemFileDownloader: The role that can download files.</li>
+         * <li>SystemFileEditorWithoutDelete: The role that can edit but cannot edit files.</li>
+         * <li>SystemFileOwner: The role that can collaborate with others on files.</li>
+         * <li>SystemFileDownloaderWithShareLink: The role that can download and share files.</li>
+         * <li>SystemFileUploaderAndViewer: The role that can preview and upload files.</li>
+         * <li>SystemFileViewer: The role that can preview files.</li>
+         * <li>SystemFileEditor: The role that can edit files.</li>
+         * <li>SystemFileUploaderWithShareLink: The role that can upload and share files.</li>
+         * <li>SystemFileUploader: The role that can upload files.</li>
+         * <li>SystemFileUploaderAndDownloader: The role that can upload and download files.</li>
+         * <li>SystemFileMetaViewer: The role that can view file list.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

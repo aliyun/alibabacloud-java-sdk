@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCdsFilesRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The ID of the enterprise drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListCdsFilesRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the user to whom the cloud disk is allocated.</p>
+     * <p>The ID of the user to which the network disk is assigned.</p>
      * 
      * <strong>example:</strong>
      * <p>testUser</p>
@@ -29,6 +29,12 @@ public class ListCdsFilesRequest extends TeaModel {
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
+    /**
+     * <p>The ID of the team space.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-i1ruuudp92qpj****</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
@@ -42,7 +48,7 @@ public class ListCdsFilesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used for the next query. If this parameter is empty, all results are returned.</p>
+     * <p>The query token. Set the value to the value of the <code>NextToken</code> parameter returned in the last call to the operation. You do not need to set this parameter when you call the operation for the first time.</p>
      * 
      * <strong>example:</strong>
      * <p>WyI2Mzg4MjAwMzFhNGQwZWVmN2I3MjRkZjZhZjAyMWU4YzY1MmRjZmUyIiwibiIsIm4iLDEsLTEsMTY2OTg2NTQ3NTMxMiwiNjM4ODIwMDNlNTU0YmZiZjFkYTk0MmEyYTZhMjEyZDkxODdjMjAy****</p>
@@ -54,77 +60,14 @@ public class ListCdsFilesRequest extends TeaModel {
      * <p>The sorting method of the files.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>CreateTimeDesc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>sorts files in descending order based on the time when they are created.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>ModifiedTimeAsc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>sorts files in ascending order based on the time when they are modified.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>NameDesc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>sorts files in descending order based on their names.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>SizeAsc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>sorts files in ascending order based on their sizes.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>ModifiedTimeDesc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>sorts files in descending order based on the time when they are modified.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>CreateTimeAsc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>sorts files in ascending order based on the time when they are created.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>SizeDesc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>sorts files in descending order based on their sizes.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>NameAsc</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>sorts files in ascending order based on their names.</p>
-     * <!-- --></li>
+     * <li>CreateTimeDesc: sorts the by creation time in descending order.</li>
+     * <li>ModifiedTimeAsc: sort the by modification time in ascending order.</li>
+     * <li>NameDesc: sorts the by file name in descending order.</li>
+     * <li>SizeAsc: sorts by file size in ascending order.</li>
+     * <li>ModifiedTimeDesc: sort the by modification time in descending order.</li>
+     * <li>CreateTimeAsc: sorts the by creation time in ascending order.</li>
+     * <li>SizeDesc: sorts by file size in descending order.</li>
+     * <li>NameAsc: sorts by file name in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +77,7 @@ public class ListCdsFilesRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The ID of the parent file.</p>
+     * <p>The parent folder ID. You can obtain the value by using the response parameter <code>FileId</code> of this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>63636837e47e5a24a8a940218bef395c210e****</p>
@@ -143,7 +86,7 @@ public class ListCdsFilesRequest extends TeaModel {
     public String parentFileId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the logon region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain the list of regions supported by cloud computers.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -155,23 +98,8 @@ public class ListCdsFilesRequest extends TeaModel {
      * <p>The file status.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>available</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>returns only normal files.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>uploading</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>returns only the files that are being uploaded.</p>
-     * <!-- --></li>
+     * <li>available: returns only normal file.</li>
+     * <li>uploading: returns only the of objects that are being uploaded.</li>
      * </ul>
      * 
      * <strong>example:</strong>

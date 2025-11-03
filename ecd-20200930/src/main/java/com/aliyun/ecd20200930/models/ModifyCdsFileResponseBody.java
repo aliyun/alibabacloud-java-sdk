@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCdsFileResponseBody extends TeaModel {
     /**
-     * <p>The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+     * <p>The execution result of the operation. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -40,7 +40,7 @@ public class ModifyCdsFileResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The returned error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -58,22 +58,11 @@ public class ModifyCdsFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * <p>Valid values:</p>
+     * <p>Indicates whether the operation was successful.</p>
+     * <p>Valid value:</p>
      * <ul>
-     * <li><p>true: The request is successful.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false: The request fails.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

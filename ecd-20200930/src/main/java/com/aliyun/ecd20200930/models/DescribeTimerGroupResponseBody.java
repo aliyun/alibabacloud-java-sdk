@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTimerGroupResponseBody extends TeaModel {
     /**
-     * <p>The information about the scheduled task group.</p>
+     * <p>The configuration group.</p>
      */
     @NameInMap("Data")
     public DescribeTimerGroupResponseBodyData data;
@@ -394,7 +394,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public java.util.Map<String, Integer> bindCountMap;
 
         /**
-         * <p>The scheduled task configurations.</p>
+         * <p>The scheduled tasks.</p>
          */
         @NameInMap("ConfigTimers")
         public java.util.List<DescribeTimerGroupResponseBodyDataConfigTimers> configTimers;

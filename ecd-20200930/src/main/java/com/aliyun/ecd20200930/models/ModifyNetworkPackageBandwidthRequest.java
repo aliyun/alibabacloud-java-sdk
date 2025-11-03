@@ -32,11 +32,11 @@ public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth of the premium bandwidth plan, in Mbit/s. Valid range: The allowed range depends on the billing method:</p>
      * <ul>
-     * <li>Valid values if the premium bandwidth plan is a subscription plan: 2 to 1000.</li>
-     * <li>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by data transfer (PayByTraffic): 2 to 200.</li>
-     * <li>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by fixed bandwidth (PayByBandwidth): 2 to 1000.</li>
+     * <li>Subscription: 2 to 1000</li>
+     * <li>Pay-as-you-go, by data transfer (PayByTraffic): 2 to 200</li>
+     * <li>Pay-as-you-go, by fixed bandwidth (PayByBandwidth): 2 to 1000</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

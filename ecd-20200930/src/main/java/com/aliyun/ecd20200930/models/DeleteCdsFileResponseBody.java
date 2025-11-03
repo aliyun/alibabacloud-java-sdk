@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCdsFileResponseBody extends TeaModel {
     /**
-     * <p>The operation result. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     * <p>The execution result of the operation. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -15,21 +15,10 @@ public class DeleteCdsFileResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the data is returned.</p>
-     * <p>Valid values:</p>
+     * <p>Valid value:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +28,7 @@ public class DeleteCdsFileResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -57,22 +46,11 @@ public class DeleteCdsFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * <p>Valid values:</p>
+     * <p>Indicates whether the operation was successful.</p>
+     * <p>Valid value:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

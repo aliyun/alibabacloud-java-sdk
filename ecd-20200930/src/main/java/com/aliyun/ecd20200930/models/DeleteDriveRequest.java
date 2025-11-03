@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDriveRequest extends TeaModel {
     /**
+     * <p>The ID of the user-level storage resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>dri-aaaa****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDriveRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

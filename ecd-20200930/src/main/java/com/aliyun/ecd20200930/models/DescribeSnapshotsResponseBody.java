@@ -132,9 +132,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("DiskStatus")
         public String diskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Windows</p>
+         */
         @NameInMap("OsType")
         public String osType;
 

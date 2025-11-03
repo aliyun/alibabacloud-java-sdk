@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDriveRequest extends TeaModel {
     /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>1202****</p>
      */
@@ -12,6 +14,8 @@ public class CreateDriveRequest extends TeaModel {
     public Long aliUid;
 
     /**
+     * <p>The description of the user-level storage resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */
@@ -19,6 +23,11 @@ public class CreateDriveRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the storage resource.</p>
+     * <blockquote>
+     * <p> Call the DescribeDrives operation to retrieve the storage resource ID.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>dom-aaaa****</p>
      */
@@ -26,6 +35,8 @@ public class CreateDriveRequest extends TeaModel {
     public String domainId;
 
     /**
+     * <p>The name of the user-level storage resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>test01</p>
      */
@@ -33,6 +44,11 @@ public class CreateDriveRequest extends TeaModel {
     public String driveName;
 
     /**
+     * <p>The ID of the external storage resource.</p>
+     * <blockquote>
+     * <p> Call the DescribeDrives operation to retrieve the external storage resource ID.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1234****</p>
      */
@@ -40,6 +56,10 @@ public class CreateDriveRequest extends TeaModel {
     public String externalDomainId;
 
     /**
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -49,6 +69,8 @@ public class CreateDriveRequest extends TeaModel {
     public Boolean profileRoaming;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -56,6 +78,13 @@ public class CreateDriveRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The type of the storage resource.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>NAS: File Storage NAS</li>
+     * <li>PDS: Drive and Photo Service</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NAS</p>
      */
@@ -63,6 +92,13 @@ public class CreateDriveRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The usage of the storage resource.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DESKTOP: data disk space</li>
+     * <li>USER_PROFILE: space for personal data of the user</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>USER_PROFILE</p>
      */
@@ -70,6 +106,8 @@ public class CreateDriveRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>user01</p>
      */

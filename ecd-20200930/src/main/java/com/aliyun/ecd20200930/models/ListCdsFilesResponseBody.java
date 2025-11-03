@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCdsFilesResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     * <p>The response parameters. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of file list entries.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -29,7 +29,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
     public java.util.List<ListCdsFilesResponseBodyFileModels> fileModels;
 
     /**
-     * <p>The error message returned if the request failed. This parameter is empty if the value of Code is success.</p>
+     * <p>Error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token used for the next query. If this parameter is empty, all results have been returned.</p>
+     * <p>The token used to start the next query. If the <code>NextToken</code> is empty, the next query does not exist.</p>
      * 
      * <strong>example:</strong>
      * <p>WyI2MzhmMjA2ZTFmZGZlZGVjZDk3OTRlNzVhZmIwMDFiZmM5NWQ3YTgwIiwibiIsIm4iLDEsLTEsMTY3MDMyNDMzNTAzMSwiNjM4ZjIwNmZjNDFkMzIwOTZmZWU0NGYxODkwY2I5ZjI0Mjg0NzM2****</p>
@@ -47,7 +47,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID. An ID is the unique identifier of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40D86754-20FD-53DC-A9B8-25F7FECC****</p>
@@ -56,22 +56,11 @@ public class ListCdsFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
-     * <p>Valid values:</p>
+     * <p>Indicates whether the operation was successful.</p>
+     * <p>Valid value:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><!-- -->
-     * 
-     * <p>false</p>
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,7 +132,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
 
     public static class ListCdsFilesResponseBodyFileModels extends TeaModel {
         /**
-         * <p>The file category. PDS categorizes files based on their suffixes and MIME types. The following major categories are included: doc, image, audio, and video.</p>
+         * <p>File type classification. The network disk will classify files according to their suffix and MIME Type. The main categories are <code>doc</code>, <code>image</code>, <code>audio</code> and <code>video</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>
@@ -188,7 +177,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The URL that is used to download the file. The download URL is valid for only 15 minutes. If the URL is expired, you can call the GetFile operation to obtain the file.</p>
+         * <p>The download link. The default validity period is 15 minutes.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
@@ -225,6 +214,11 @@ public class ListCdsFilesResponseBody extends TeaModel {
 
         /**
          * <p>The file type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>file</li>
+         * <li>folder</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>file</p>
@@ -233,7 +227,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The MD5 value of the file.</p>
+         * <p>The MD5 hash of the object.</p>
          * 
          * <strong>example:</strong>
          * <p>63c83ececb4e6926c51448fc5ecb****</p>
@@ -251,7 +245,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The user who modified the file.</p>
+         * <p>Modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>user02</p>
@@ -260,7 +254,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>fvt-appcenterp4qwa</p>
@@ -296,7 +290,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         public String parentId;
 
         /**
-         * <p>The region ID You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain the list of regions supported by cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -305,7 +299,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The SHA 1 file.</p>
+         * <p>The SHA1 hash of the data file.</p>
          * 
          * <strong>example:</strong>
          * <p>EA4942AA8761213890A5C386F88E6464D2C3****</p>
@@ -314,7 +308,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         public String sha1;
 
         /**
-         * <p>The file size. Unit: bits.</p>
+         * <p>The size of the file. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>102400</p>

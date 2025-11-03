@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDriveResponseBody extends TeaModel {
     /**
+     * <p>The response code. The value 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteDriveResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the delete operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class DeleteDriveResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,6 +32,8 @@ public class DeleteDriveResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7AA****</p>
      */
@@ -33,6 +41,8 @@ public class DeleteDriveResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

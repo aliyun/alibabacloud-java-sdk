@@ -4,10 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteDnsInfoRequest extends TeaModel {
+    /**
+     * <p>The IP addresses of the custom DNS servers. Up to 2 IP addresses can be specified.</p>
+     */
     @NameInMap("DnsAddress")
     public java.util.List<String> dnsAddress;
 
     /**
+     * <p>The office network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ModifyOfficeSiteDnsInfoRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

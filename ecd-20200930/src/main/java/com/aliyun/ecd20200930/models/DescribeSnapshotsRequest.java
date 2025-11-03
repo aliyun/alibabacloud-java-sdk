@@ -62,6 +62,10 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Windows</p>
+     */
     @NameInMap("OsType")
     public String osType;
 

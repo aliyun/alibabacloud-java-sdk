@@ -4,10 +4,19 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrivesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the storage resources.</p>
+     */
     @NameInMap("DomainIds")
     public java.util.List<String> domainIds;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li>Maximum value: 500.</li>
+     * <li>Default value: 20.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +24,8 @@ public class DescribeDrivesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAA****</p>
      */
@@ -22,6 +33,8 @@ public class DescribeDrivesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -29,6 +42,13 @@ public class DescribeDrivesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The type of the storage resource.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>NAS: NAS storage</li>
+     * <li>PDS: PDS storage</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NAS</p>
      */
@@ -36,6 +56,8 @@ public class DescribeDrivesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>user01</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateEcdReportTaskResponseBody extends TeaModel {
     /**
+     * <p>The request result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class CreateEcdReportTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message returned if the request failed. This parameter is not returned if the value of Code is success.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class CreateEcdReportTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -26,6 +32,8 @@ public class CreateEcdReportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -33,6 +41,8 @@ public class CreateEcdReportTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the report export task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ret-g67ip******</p>
      */

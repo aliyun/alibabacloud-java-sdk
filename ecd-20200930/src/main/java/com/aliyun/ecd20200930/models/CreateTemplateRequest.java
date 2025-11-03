@@ -343,6 +343,10 @@ public class CreateTemplateRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eds.enterprise_office.8c16g</p>
+         */
         @NameInMap("ResourceInstanceType")
         public String resourceInstanceType;
 
@@ -476,9 +480,17 @@ public class CreateTemplateRequest extends TeaModel {
     }
 
     public static class CreateTemplateRequestSiteConfigList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bwr-5a5371e0db954d********</p>
+         */
         @NameInMap("AppRuleId")
         public String appRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mainland</p>
+         */
         @NameInMap("SiteId")
         public String siteId;
 

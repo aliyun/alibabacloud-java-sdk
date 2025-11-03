@@ -4,10 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTransferFilesResponseBody extends TeaModel {
+    /**
+     * <p>The files.</p>
+     */
     @NameInMap("Files")
     public java.util.List<ListTransferFilesResponseBodyFiles> files;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * <p>Maximum value: 100.</p>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +22,8 @@ public class ListTransferFilesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The returned value of <code>NextToken</code> is a pagination token, which can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
@@ -22,6 +31,8 @@ public class ListTransferFilesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -67,6 +78,16 @@ public class ListTransferFilesResponseBody extends TeaModel {
 
     public static class ListTransferFilesResponseBodyFiles extends TeaModel {
         /**
+         * <p>The URL of the file icon.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>For image file types (.png, .jpg, .jpeg, .gif, .webp, and .svg), the URL of the specific image is returned.</p>
+         * </li>
+         * <li><p>For other file types, the URL of the default image is returned.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://app-center-icon-pre-hangzhou.oss-cn-hangzhou.aliyuncs.com/tenant">https://app-center-icon-pre-hangzhou.oss-cn-hangzhou.aliyuncs.com/tenant</a>****</p>
          */
@@ -74,19 +95,39 @@ public class ListTransferFilesResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>trf-a213msf****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The file name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name of the object stored in OSS.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>A value is returned for this parameter only when the object is stored in a custom OSS bucket.</li>
+         * </ul>
+         */
         @NameInMap("OssFileName")
         public String ossFileName;
 
         /**
+         * <p>The path of the object in the OSS bucket.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>A value is returned for this parameter only when the object is stored in a custom OSS bucket.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>transfer/1244234/****</p>
          */
@@ -94,6 +135,8 @@ public class ListTransferFilesResponseBody extends TeaModel {
         public String ossFilePath;
 
         /**
+         * <p>The file size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10853079</p>
          */
@@ -101,6 +144,14 @@ public class ListTransferFilesResponseBody extends TeaModel {
         public String size;
 
         /**
+         * <p>The file status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DELETING</li>
+         * <li>DELETED</li>
+         * <li>UPLOADED</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DELETED</p>
          */
@@ -108,6 +159,8 @@ public class ListTransferFilesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The file type.</p>
+         * 
          * <strong>example:</strong>
          * <p>txt</p>
          */
