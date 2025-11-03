@@ -241,12 +241,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates an ApsaraMQ for RabbitMQ instance.</p>
      * 
-     * @param request CreateInstanceRequest
+     * @param tmpReq CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateInstanceResponse
      */
-    public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
@@ -338,6 +344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.supportTracing)) {
             query.put("SupportTracing", request.supportTracing);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tracingStorageTime)) {

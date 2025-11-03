@@ -3,7 +3,7 @@ package com.aliyun.amqp_open20191212.models;
 
 import com.aliyun.tea.*;
 
-public class CreateInstanceRequest extends TeaModel {
+public class CreateInstanceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
@@ -275,7 +275,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean supportTracing;
 
     @NameInMap("Tags")
-    public java.util.List<CreateInstanceRequestTags> tags;
+    public String tagsShrink;
 
     /**
      * <p>The retention period of messages. Unit: days. Valid values:</p>
@@ -292,12 +292,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("TracingStorageTime")
     public Integer tracingStorageTime;
 
-    public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateInstanceRequest self = new CreateInstanceRequest();
+    public static CreateInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateInstanceShrinkRequest self = new CreateInstanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceRequest setAutoRenew(Boolean autoRenew) {
+    public CreateInstanceShrinkRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
@@ -305,7 +305,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.autoRenew;
     }
 
-    public CreateInstanceRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
+    public CreateInstanceShrinkRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
         this.autoRenewPeriod = autoRenewPeriod;
         return this;
     }
@@ -313,7 +313,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.autoRenewPeriod;
     }
 
-    public CreateInstanceRequest setClientToken(String clientToken) {
+    public CreateInstanceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -321,7 +321,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateInstanceRequest setEdition(String edition) {
+    public CreateInstanceShrinkRequest setEdition(String edition) {
         this.edition = edition;
         return this;
     }
@@ -329,7 +329,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.edition;
     }
 
-    public CreateInstanceRequest setEncryptedInstance(Boolean encryptedInstance) {
+    public CreateInstanceShrinkRequest setEncryptedInstance(Boolean encryptedInstance) {
         this.encryptedInstance = encryptedInstance;
         return this;
     }
@@ -337,7 +337,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.encryptedInstance;
     }
 
-    public CreateInstanceRequest setInstanceName(String instanceName) {
+    public CreateInstanceShrinkRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -345,7 +345,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public CreateInstanceRequest setInstanceType(String instanceType) {
+    public CreateInstanceShrinkRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -353,7 +353,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public CreateInstanceRequest setKmsKeyId(String kmsKeyId) {
+    public CreateInstanceShrinkRequest setKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
@@ -361,7 +361,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.kmsKeyId;
     }
 
-    public CreateInstanceRequest setMaxConnections(Integer maxConnections) {
+    public CreateInstanceShrinkRequest setMaxConnections(Integer maxConnections) {
         this.maxConnections = maxConnections;
         return this;
     }
@@ -369,7 +369,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.maxConnections;
     }
 
-    public CreateInstanceRequest setMaxEipTps(Long maxEipTps) {
+    public CreateInstanceShrinkRequest setMaxEipTps(Long maxEipTps) {
         this.maxEipTps = maxEipTps;
         return this;
     }
@@ -377,7 +377,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.maxEipTps;
     }
 
-    public CreateInstanceRequest setMaxPrivateTps(Long maxPrivateTps) {
+    public CreateInstanceShrinkRequest setMaxPrivateTps(Long maxPrivateTps) {
         this.maxPrivateTps = maxPrivateTps;
         return this;
     }
@@ -385,7 +385,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.maxPrivateTps;
     }
 
-    public CreateInstanceRequest setPaymentType(String paymentType) {
+    public CreateInstanceShrinkRequest setPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
     }
@@ -393,7 +393,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.paymentType;
     }
 
-    public CreateInstanceRequest setPeriod(Integer period) {
+    public CreateInstanceShrinkRequest setPeriod(Integer period) {
         this.period = period;
         return this;
     }
@@ -401,7 +401,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.period;
     }
 
-    public CreateInstanceRequest setPeriodCycle(String periodCycle) {
+    public CreateInstanceShrinkRequest setPeriodCycle(String periodCycle) {
         this.periodCycle = periodCycle;
         return this;
     }
@@ -409,7 +409,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.periodCycle;
     }
 
-    public CreateInstanceRequest setProvisionedCapacity(Integer provisionedCapacity) {
+    public CreateInstanceShrinkRequest setProvisionedCapacity(Integer provisionedCapacity) {
         this.provisionedCapacity = provisionedCapacity;
         return this;
     }
@@ -417,7 +417,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.provisionedCapacity;
     }
 
-    public CreateInstanceRequest setQueueCapacity(Integer queueCapacity) {
+    public CreateInstanceShrinkRequest setQueueCapacity(Integer queueCapacity) {
         this.queueCapacity = queueCapacity;
         return this;
     }
@@ -425,7 +425,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.queueCapacity;
     }
 
-    public CreateInstanceRequest setRenewStatus(String renewStatus) {
+    public CreateInstanceShrinkRequest setRenewStatus(String renewStatus) {
         this.renewStatus = renewStatus;
         return this;
     }
@@ -433,7 +433,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.renewStatus;
     }
 
-    public CreateInstanceRequest setRenewalDurationUnit(String renewalDurationUnit) {
+    public CreateInstanceShrinkRequest setRenewalDurationUnit(String renewalDurationUnit) {
         this.renewalDurationUnit = renewalDurationUnit;
         return this;
     }
@@ -441,7 +441,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.renewalDurationUnit;
     }
 
-    public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
+    public CreateInstanceShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -449,7 +449,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateInstanceRequest setServerlessChargeType(String serverlessChargeType) {
+    public CreateInstanceShrinkRequest setServerlessChargeType(String serverlessChargeType) {
         this.serverlessChargeType = serverlessChargeType;
         return this;
     }
@@ -457,7 +457,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.serverlessChargeType;
     }
 
-    public CreateInstanceRequest setStorageSize(Integer storageSize) {
+    public CreateInstanceShrinkRequest setStorageSize(Integer storageSize) {
         this.storageSize = storageSize;
         return this;
     }
@@ -465,7 +465,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.storageSize;
     }
 
-    public CreateInstanceRequest setSupportEip(Boolean supportEip) {
+    public CreateInstanceShrinkRequest setSupportEip(Boolean supportEip) {
         this.supportEip = supportEip;
         return this;
     }
@@ -473,7 +473,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.supportEip;
     }
 
-    public CreateInstanceRequest setSupportTracing(Boolean supportTracing) {
+    public CreateInstanceShrinkRequest setSupportTracing(Boolean supportTracing) {
         this.supportTracing = supportTracing;
         return this;
     }
@@ -481,58 +481,20 @@ public class CreateInstanceRequest extends TeaModel {
         return this.supportTracing;
     }
 
-    public CreateInstanceRequest setTags(java.util.List<CreateInstanceRequestTags> tags) {
-        this.tags = tags;
+    public CreateInstanceShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<CreateInstanceRequestTags> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public CreateInstanceRequest setTracingStorageTime(Integer tracingStorageTime) {
+    public CreateInstanceShrinkRequest setTracingStorageTime(Integer tracingStorageTime) {
         this.tracingStorageTime = tracingStorageTime;
         return this;
     }
     public Integer getTracingStorageTime() {
         return this.tracingStorageTime;
-    }
-
-    public static class CreateInstanceRequestTags extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>testKey</p>
-         */
-        @NameInMap("Key")
-        public String key;
-
-        /**
-         * <strong>example:</strong>
-         * <p>testValue</p>
-         */
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateInstanceRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceRequestTags self = new CreateInstanceRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateInstanceRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }

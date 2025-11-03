@@ -1,3 +1,7 @@
+2025-11-03 Version: 1.4.5
+- Update API CreateInstance: add request parameters Tags.
+
+
 2025-09-04 Version: 1.4.4
 - Update API CreateAccount: add request parameters Remark.
 - Update API CreateAccount: add response parameters Body.Data.Remark.
