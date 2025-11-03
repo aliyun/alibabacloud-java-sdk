@@ -4366,6 +4366,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Operator", request.operator);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
@@ -20317,7 +20321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out. You can use the ListCheckInstanceResult operation.</p>
+     * <p>该接口已下线，使用升级接口ListCheckInstanceResult替换。</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the assets that are affected by the risk item detected in configuration assessment based on a specified check item.</p>
@@ -20376,7 +20380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out. You can use the ListCheckInstanceResult operation.</p>
+     * <p>该接口已下线，使用升级接口ListCheckInstanceResult替换。</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the assets that are affected by the risk item detected in configuration assessment based on a specified check item.</p>
@@ -29489,7 +29493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the statistical counts of images across various dimensions.</p>
+     * <p>Queries the risk statistics of Docker Hub images.</p>
      * 
      * @param request GetDockerhubImageRiskStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29521,7 +29525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the statistical counts of images across various dimensions.</p>
+     * <p>Queries the risk statistics of Docker Hub images.</p>
      * 
      * @param request GetDockerhubImageRiskStatisticRequest
      * @return GetDockerhubImageRiskStatisticResponse
@@ -31153,7 +31157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群镜像</p>
+     * <p>Get cluster image information.</p>
      * 
      * @param request GetOpaClusterImageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31197,7 +31201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集群镜像</p>
+     * <p>Get cluster image information.</p>
      * 
      * @param request GetOpaClusterImageListRequest
      * @return GetOpaClusterImageListResponse
@@ -31661,7 +31665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Image Scan Period.</p>
+     * <p>Queries the time range of image scans.</p>
      * 
      * @param request GetRegistryScanDayNumRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31685,7 +31689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Image Scan Period.</p>
+     * <p>Queries the time range of image scans.</p>
      * @return GetRegistryScanDayNumResponse
      */
     public GetRegistryScanDayNumResponse getRegistryScanDayNum() throws Exception {
@@ -36717,7 +36721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询已安装的探针</p>
+     * <p>Query installed probes</p>
      * 
      * @param request ListHoneypotProbeUuidRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36757,7 +36761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询已安装的探针</p>
+     * <p>Query installed probes</p>
      * 
      * @param request ListHoneypotProbeUuidRequest
      * @return ListHoneypotProbeUuidResponse
@@ -36813,7 +36817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Image Registry Extended Information.</p>
+     * <p>Queries the additional configuration information about an image repository.</p>
      * 
      * @param request ListImageRegistryExtraRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36845,7 +36849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Image Registry Extended Information.</p>
+     * <p>Queries the additional configuration information about an image repository.</p>
      * 
      * @param request ListImageRegistryExtraRequest
      * @return ListImageRegistryExtraResponse
@@ -37421,7 +37425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paginate to query the application list.</p>
+     * <p>Queries Serverless App Engine (SAE) applications.</p>
      * 
      * @param request ListMachineAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37481,7 +37485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paginate to query the application list.</p>
+     * <p>Queries Serverless App Engine (SAE) applications.</p>
      * 
      * @param request ListMachineAppsRequest
      * @return ListMachineAppsResponse
@@ -37508,6 +37512,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
             query.put("EventName", request.eventName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idList)) {
+            query.put("IdList", request.idList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
@@ -37562,12 +37570,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListObjectScanEventResponse listObjectScanEventWithOptions(ListObjectScanEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchType)) {
+            query.put("BatchType", request.batchType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
             query.put("BucketName", request.bucketName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
@@ -37600,6 +37616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeEnd)) {
@@ -39027,7 +39047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of instance UUIDs based on the application ID.</p>
+     * <p>Queries the UUIDs of Serverless App Engine (SAE) instances based on an application ID.</p>
      * 
      * @param request ListUuidsByAppIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39079,7 +39099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of instance UUIDs based on the application ID.</p>
+     * <p>Queries the UUIDs of Serverless App Engine (SAE) instances based on an application ID.</p>
      * 
      * @param request ListUuidsByAppIdRequest
      * @return ListUuidsByAppIdResponse
@@ -41327,7 +41347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改代理集群</p>
+     * <p>Modify proxy cluster.</p>
      * 
      * @param request ModifyHybridProxyClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -41363,7 +41383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改代理集群</p>
+     * <p>Modify proxy cluster.</p>
      * 
      * @param request ModifyHybridProxyClusterRequest
      * @return ModifyHybridProxyClusterResponse
@@ -41375,7 +41395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改代理策略</p>
+     * <p>Modify proxy policy.</p>
      * 
      * @param request ModifyHybridProxyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -41411,7 +41431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改代理策略</p>
+     * <p>Modify proxy policy.</p>
      * 
      * @param request ModifyHybridProxyPolicyRequest
      * @return ModifyHybridProxyPolicyResponse
@@ -49240,6 +49260,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Operator", request.operator);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
@@ -49893,7 +49917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Image Service Whitelist.</p>
+     * <p>Updates the IP address whitelist of an image repository.</p>
      * 
      * @param request UpdateWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -49929,7 +49953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Image Service Whitelist.</p>
+     * <p>Updates the IP address whitelist of an image repository.</p>
      * 
      * @param request UpdateWhiteListRequest
      * @return UpdateWhiteListResponse

@@ -16,7 +16,7 @@ public class DescribeRiskCheckItemResultRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <blockquote>
-     * <p>For more information about the IDs and details of the check items that can be used in configuration assessment, see <a href="~~DescribeRiskCheckResult~~">DescribeRiskCheckResult</a>.</p>
+     * <p> For more information about the IDs and details of the check items that can be used in configuration assessment, see <a href="https://help.aliyun.com/document_detail/113520.html">DescribeRiskCheckResult</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class DescribeRiskCheckItemResultRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p> We recommend that you do not leave this parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

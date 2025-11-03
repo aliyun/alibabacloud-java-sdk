@@ -22,6 +22,12 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The source of task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YAO_CHI</p>
+     */
     @NameInMap("TaskSource")
     public String taskSource;
 

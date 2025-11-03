@@ -191,6 +191,15 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         @NameInMap("AuthModules")
         public java.util.List<AddCloudVendorAccountAKResponseBodyDataAuthModules> authModules;
 
+        /**
+         * <p>Account ID. </p>
+         * <blockquote>
+         * <p>The account ID of the cloud provider being integrated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>azure_demo_1</p>
+         */
         @NameInMap("CtdrCloudUserId")
         public String ctdrCloudUserId;
 

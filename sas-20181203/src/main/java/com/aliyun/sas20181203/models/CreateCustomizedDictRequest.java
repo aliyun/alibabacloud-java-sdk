@@ -17,6 +17,12 @@ public class CreateCustomizedDictRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Whether to overwrite. Value range: - true: Overwrite. - false: Do not overwrite.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Override")
     public Boolean override;
 

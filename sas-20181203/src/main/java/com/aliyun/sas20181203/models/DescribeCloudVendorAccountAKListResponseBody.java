@@ -247,9 +247,21 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         @NameInMap("AuthModules")
         public java.util.List<DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKsAuthModules> authModules;
 
+        /**
+         * <p>The Account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>azure_demo_1</p>
+         */
         @NameInMap("CtdrCloudUserId")
         public String ctdrCloudUserId;
 
+        /**
+         * <p>The extended information of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;product\&quot;:\&quot;webFirewall\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;}</p>
+         */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
@@ -323,9 +335,21 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
         @NameInMap("VendorAuthAlias")
         public String vendorAuthAlias;
 
+        /**
+         * <p>Account ID of the multi-cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("VendorUid")
         public String vendorUid;
 
+        /**
+         * <p>Account name of the multi-cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VendorUserName</p>
+         */
         @NameInMap("VendorUserName")
         public String vendorUserName;
 

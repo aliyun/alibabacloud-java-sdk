@@ -11,7 +11,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
     public java.util.List<ListK8sAccessInfoResponseBodyK8sAccessInfos> k8sAccessInfos;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
@@ -96,6 +96,8 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>CPU architecture, divided into ARM and x86 architectures.</p>
+         * 
          * <strong>example:</strong>
          * <p>arm</p>
          */

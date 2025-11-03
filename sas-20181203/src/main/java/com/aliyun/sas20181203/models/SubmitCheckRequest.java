@@ -17,6 +17,12 @@ public class SubmitCheckRequest extends TeaModel {
     @NameInMap("ScanRange")
     public String scanRange;
 
+    /**
+     * <p>The source of task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YAO_CHI</p>
+     */
     @NameInMap("TaskSource")
     public String taskSource;
 

@@ -35,6 +35,9 @@ public class ListCheckStandardRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>List of task sources.</p>
+     */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 

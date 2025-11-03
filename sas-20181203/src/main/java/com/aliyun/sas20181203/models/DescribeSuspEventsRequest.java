@@ -352,6 +352,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("StrictMode")
     public String strictMode;
 
+    /**
+     * <p>告警支持的操作类型列表。</p>
+     */
     @NameInMap("SupportOperateCodeList")
     public java.util.List<String> supportOperateCodeList;
 

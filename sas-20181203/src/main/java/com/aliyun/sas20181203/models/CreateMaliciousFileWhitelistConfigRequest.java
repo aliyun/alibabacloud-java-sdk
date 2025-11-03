@@ -46,6 +46,9 @@ public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     @NameInMap("Operator")
     public String operator;
 
+    @NameInMap("Remark")
+    public String remark;
+
     /**
      * <p>The feature to which this operation belongs.</p>
      * <ul>
@@ -119,6 +122,14 @@ public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     }
     public String getOperator() {
         return this.operator;
+    }
+
+    public CreateMaliciousFileWhitelistConfigRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public CreateMaliciousFileWhitelistConfigRequest setSource(String source) {

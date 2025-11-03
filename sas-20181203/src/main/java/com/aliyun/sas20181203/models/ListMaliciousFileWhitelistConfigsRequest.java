@@ -25,6 +25,9 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     @NameInMap("EventName")
     public String eventName;
 
+    @NameInMap("IdList")
+    public Long idList;
+
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
@@ -75,6 +78,14 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     }
     public String getEventName() {
         return this.eventName;
+    }
+
+    public ListMaliciousFileWhitelistConfigsRequest setIdList(Long idList) {
+        this.idList = idList;
+        return this;
+    }
+    public Long getIdList() {
+        return this.idList;
     }
 
     public ListMaliciousFileWhitelistConfigsRequest setLang(String lang) {

@@ -369,9 +369,21 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         @NameInMap("Vendor")
         public Integer vendor;
 
+        /**
+         * <p>The account ID of the multi-cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxx</p>
+         */
         @NameInMap("VendorUid")
         public String vendorUid;
 
+        /**
+         * <p>The user name of the multi-cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testxxx</p>
+         */
         @NameInMap("VendorUserName")
         public String vendorUserName;
 

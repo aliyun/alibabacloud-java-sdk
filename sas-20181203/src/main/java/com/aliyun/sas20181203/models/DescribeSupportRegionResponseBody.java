@@ -13,6 +13,9 @@ public class DescribeSupportRegionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of supported regions</p>
+     */
     @NameInMap("SupportRegion")
     public java.util.List<String> supportRegion;
 

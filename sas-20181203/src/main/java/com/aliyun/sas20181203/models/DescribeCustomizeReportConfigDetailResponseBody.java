@@ -39,6 +39,19 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
     @NameInMap("IsDefault")
     public Integer isDefault;
 
+    /**
+     * <p>Whether the new account is connected by default. Values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.<blockquote>
+     * <p>Only supported in version 2.0.0.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("MemberAccountSyncFlag")
     public Boolean memberAccountSyncFlag;
 

@@ -52,6 +52,9 @@ public class ListOperationProcessRequest extends TeaModel {
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
+    /**
+     * <p>List of task sources.</p>
+     */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 

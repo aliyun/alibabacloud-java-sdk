@@ -188,6 +188,18 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("ExecStatus")
         public Integer execStatus;
 
+        /**
+         * <p>The triggering method of baseline scanning. Value:</p>
+         * <ul>
+         * <li><p><strong>Schedule</strong> : Periodic configuration of task triggers</p>
+         * </li>
+         * <li><p><strong>Manual</strong> : Manually triggered</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("ExecutionType")
         public String executionType;
 

@@ -7,7 +7,10 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of the check items.</p>
+     * <p> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p> If you specify this parameter, you must also specify the Uuid parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +20,12 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     public String checkId;
 
     /**
-     * <p>The ID of the alert that is triggered by the check item.</p>
+     * <p>The ID of the alert triggered by the check item.</p>
      * <blockquote>
      * <p> To query the details of a check item, you must provide the ID of the alert that is triggered by the check item. You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to query the IDs of alerts.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p> If the Uuid and CheckId parameters are not specified, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,6 +34,12 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     @NameInMap("CheckWarningId")
     public Long checkWarningId;
 
+    /**
+     * <p>Container name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_container</p>
+     */
     @NameInMap("ContainerName")
     public String containerName;
 
@@ -69,6 +81,9 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
      * <p>The UUID of the server.</p>
      * <blockquote>
      * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p> If you specify this parameter, you must also specify the CheckId parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

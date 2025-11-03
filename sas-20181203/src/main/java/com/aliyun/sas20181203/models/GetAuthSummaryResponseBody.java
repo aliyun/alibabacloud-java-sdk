@@ -56,6 +56,18 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @NameInMap("AutoBind")
     public Integer autoBind;
 
+    /**
+     * <p>Cluster node need to check the machine version,  Value:</p>
+     * <ul>
+     * <li><p><strong>0</strong> : Not required</p>
+     * </li>
+     * <li><p><strong>1</strong> : Required</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Required</p>
+     */
     @NameInMap("ClusterNodeCheck")
     public Integer clusterNodeCheck;
 
@@ -105,6 +117,18 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @NameInMap("HighestVersion")
     public Integer highestVersion;
 
+    /**
+     * <p>Binding effective status, value:</p>
+     * <ul>
+     * <li><p><strong>NORMAL</strong> : Effective</p>
+     * </li>
+     * <li><p><strong>INVALID_NODE_VERSION</strong>: Invalid</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Effective</p>
+     */
     @NameInMap("InvalidBindStatus")
     public String invalidBindStatus;
 

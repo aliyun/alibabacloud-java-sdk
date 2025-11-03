@@ -717,6 +717,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String vendorName;
 
         /**
+         * <p>Account ID of the multi-cloud instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -724,6 +726,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String vendorUid;
 
         /**
+         * <p>Account name of the multi-cloud instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>VendorUserName</p>
          */

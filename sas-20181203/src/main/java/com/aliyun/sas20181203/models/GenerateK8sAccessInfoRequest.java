@@ -69,6 +69,8 @@ public class GenerateK8sAccessInfoRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>CPU architectures are divided into ARM architecture and x86 architecture.</p>
+     * 
      * <strong>example:</strong>
      * <p>arm</p>
      */

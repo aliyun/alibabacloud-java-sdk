@@ -157,9 +157,21 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         @NameInMap("IsNoticed")
         public String isNoticed;
 
+        /**
+         * <p>Specifies whether to notify the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedNotice")
         public Boolean needNotice;
 
+        /**
+         * <p>Specifies whether to switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedSwitch")
         public Boolean needSwitch;
 

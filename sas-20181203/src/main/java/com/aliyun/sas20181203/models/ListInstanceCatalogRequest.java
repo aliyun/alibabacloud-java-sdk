@@ -55,6 +55,9 @@ public class ListInstanceCatalogRequest extends TeaModel {
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
 
+    /**
+     * <p>List of task sources.</p>
+     */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 

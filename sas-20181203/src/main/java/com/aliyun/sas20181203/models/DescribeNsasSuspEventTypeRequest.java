@@ -87,6 +87,9 @@ public class DescribeNsasSuspEventTypeRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>List of supported alarm operation types.</p>
+     */
     @NameInMap("SupportOperateCodeList")
     public java.util.List<String> supportOperateCodeList;
 

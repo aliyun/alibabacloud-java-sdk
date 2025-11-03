@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateWhiteListRequest extends TeaModel {
     /**
-     * <p>Image repository ID.</p>
+     * <p>The ID of the image repository.</p>
      * <blockquote>
-     * <p>You can obtain this parameter by calling the <a href="~~PageImageRegistry~~">PageImageRegistry</a> interface.</p>
+     * <p> You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class UpdateWhiteListRequest extends TeaModel {
     public Long registryId;
 
     /**
-     * <p>Whitelist list. If there are multiple whitelisted addresses, separate them with a comma (,).</p>
+     * <p>The IP address whitelist. Separate multiple IP addresses with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

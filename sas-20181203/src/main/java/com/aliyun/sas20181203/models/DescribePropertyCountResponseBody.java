@@ -4,9 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCountResponseBody extends TeaModel {
+    /**
+     * <p>The number of AI services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("AgentlessLlmService")
     public Integer agentlessLlmService;
 
+    /**
+     * <p>The number of AI tools.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("AgentlessScaAiComponent")
     public Integer agentlessScaAiComponent;
 

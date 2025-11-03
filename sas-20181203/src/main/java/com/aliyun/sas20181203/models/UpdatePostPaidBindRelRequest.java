@@ -39,6 +39,12 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     @NameInMap("BindAction")
     public java.util.List<UpdatePostPaidBindRelRequestBindAction> bindAction;
 
+    /**
+     * <p>Whether to force upgrade the version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UpdateIfNecessary")
     public Boolean updateIfNecessary;
 

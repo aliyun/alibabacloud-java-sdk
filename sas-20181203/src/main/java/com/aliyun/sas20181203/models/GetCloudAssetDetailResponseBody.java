@@ -176,6 +176,12 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>Detailed asset information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;owner&quot;:{&quot;displayName&quot;:&quot;123&quot;,&quot;id&quot;:&quot;123&quot;},&quot;intranetEndpoint&quot;:&quot;oss-cn-shanghai-internal.aliyuncs.com&quot;,&quot;extranetEndpoint&quot;:&quot;oss-cn-shanghai.aliyuncs.com&quot;,&quot;storageClass&quot;:&quot;Standard&quot;,&quot;name&quot;:&quot;test&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;creationDate&quot;:1629882579000,&quot;region&quot;:&quot;cn-shanghai&quot;}</p>
+         */
         @NameInMap("OriginalAssetInfo")
         public String originalAssetInfo;
 
@@ -229,9 +235,21 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         @NameInMap("Vendor")
         public Integer vendor;
 
+        /**
+         * <p>Account id for multi-cloud instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("VendorUid")
         public String vendorUid;
 
+        /**
+         * <p>The account name of the multi-cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VendorUserName")
         public String vendorUserName;
 

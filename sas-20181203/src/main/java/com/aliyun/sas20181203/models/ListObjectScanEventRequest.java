@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListObjectScanEventRequest extends TeaModel {
+    @NameInMap("BatchType")
+    public String batchType;
+
     /**
      * <p>The name of the OSS bucket.</p>
      * 
@@ -22,6 +25,9 @@ public class ListObjectScanEventRequest extends TeaModel {
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("EventId")
+    public Long eventId;
 
     /**
      * <p>The name of the alert.</p>
@@ -109,6 +115,9 @@ public class ListObjectScanEventRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("Status")
+    public Integer status;
+
     /**
      * <p>The end of the time range during which the exception is detected.</p>
      * 
@@ -132,6 +141,14 @@ public class ListObjectScanEventRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListObjectScanEventRequest setBatchType(String batchType) {
+        this.batchType = batchType;
+        return this;
+    }
+    public String getBatchType() {
+        return this.batchType;
+    }
+
     public ListObjectScanEventRequest setBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -146,6 +163,14 @@ public class ListObjectScanEventRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListObjectScanEventRequest setEventId(Long eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public Long getEventId() {
+        return this.eventId;
     }
 
     public ListObjectScanEventRequest setEventName(String eventName) {
@@ -210,6 +235,14 @@ public class ListObjectScanEventRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public ListObjectScanEventRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
     public ListObjectScanEventRequest setTimeEnd(Long timeEnd) {

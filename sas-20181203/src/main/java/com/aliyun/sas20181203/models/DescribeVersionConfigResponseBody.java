@@ -29,6 +29,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("AllowPartialBuy")
     public Integer allowPartialBuy;
 
+    /**
+     * <p>防勒索备份容量，单位GB。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>160</p>
+     */
     @NameInMap("AntiRansomwareCapacity")
     public Integer antiRansomwareCapacity;
 
@@ -126,6 +132,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("ImageScanCapacity")
     public Long imageScanCapacity;
 
+    /**
+     * <p>Instance purchase type. Values: - <strong>0</strong>: Self-purchased - <strong>1</strong>: Multi-account allocation</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("InstanceBuyType")
     public Integer instanceBuyType;
 
@@ -242,6 +254,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("MergedVersion")
     public Integer mergedVersion;
 
+    /**
+     * <p>Usage of multiple version numbers and license counts</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("MultiVersion")
     public String multiVersion;
 

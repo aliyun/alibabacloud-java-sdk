@@ -10,6 +10,12 @@ public class VerifyCheckResultRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    /**
+     * <p>The source of task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YAO_CHI</p>
+     */
     @NameInMap("TaskSource")
     public String taskSource;
 

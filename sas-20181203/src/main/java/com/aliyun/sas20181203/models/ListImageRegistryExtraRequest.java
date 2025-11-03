@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListImageRegistryExtraRequest extends TeaModel {
     /**
-     * <p>Image registry ID.</p>
+     * <p>The ID of the image repository.</p>
      * <blockquote>
-     * <p>You can obtain this parameter by calling the <a href="~~PageImageRegistry~~">PageImageRegistry</a> interface.</p>
+     * <p> You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

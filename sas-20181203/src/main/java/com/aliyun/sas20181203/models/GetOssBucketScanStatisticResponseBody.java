@@ -86,6 +86,15 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         @NameInMap("NoScanBucket")
         public Integer noScanBucket;
 
+        @NameInMap("PostPayInvokeCount")
+        public Long postPayInvokeCount;
+
+        @NameInMap("PrePayAuthCount")
+        public Long prePayAuthCount;
+
+        @NameInMap("PrePayInvokeCount")
+        public Long prePayInvokeCount;
+
         /**
          * <p>The remaining quota.</p>
          * 
@@ -174,6 +183,30 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         }
         public Integer getNoScanBucket() {
             return this.noScanBucket;
+        }
+
+        public GetOssBucketScanStatisticResponseBodyData setPostPayInvokeCount(Long postPayInvokeCount) {
+            this.postPayInvokeCount = postPayInvokeCount;
+            return this;
+        }
+        public Long getPostPayInvokeCount() {
+            return this.postPayInvokeCount;
+        }
+
+        public GetOssBucketScanStatisticResponseBodyData setPrePayAuthCount(Long prePayAuthCount) {
+            this.prePayAuthCount = prePayAuthCount;
+            return this;
+        }
+        public Long getPrePayAuthCount() {
+            return this.prePayAuthCount;
+        }
+
+        public GetOssBucketScanStatisticResponseBodyData setPrePayInvokeCount(Long prePayInvokeCount) {
+            this.prePayInvokeCount = prePayInvokeCount;
+            return this;
+        }
+        public Long getPrePayInvokeCount() {
+            return this.prePayInvokeCount;
         }
 
         public GetOssBucketScanStatisticResponseBodyData setRemainAuth(Integer remainAuth) {

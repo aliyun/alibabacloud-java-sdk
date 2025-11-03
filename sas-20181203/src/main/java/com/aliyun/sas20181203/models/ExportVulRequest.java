@@ -137,6 +137,18 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: no.</p>
+     * </li>
+     * <li><p><strong>1</strong>: yes.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RaspDefend")
     public Integer raspDefend;
 

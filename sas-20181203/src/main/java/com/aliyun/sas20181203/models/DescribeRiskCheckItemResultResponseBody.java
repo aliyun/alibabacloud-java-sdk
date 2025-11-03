@@ -75,7 +75,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         public Integer pageCount;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

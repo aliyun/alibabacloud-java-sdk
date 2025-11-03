@@ -212,6 +212,12 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>The version of web application service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.10.0</p>
+         */
         @NameInMap("Version")
         public String version;
 

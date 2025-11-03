@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDockerhubImageRiskStatisticRequest extends TeaModel {
     /**
-     * <p>The types of image risks to be queried.</p>
+     * <p>The risk types that you want to query.</p>
      */
     @NameInMap("Types")
     public java.util.List<String> types;

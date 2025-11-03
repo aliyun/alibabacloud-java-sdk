@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUuidsByAppIdRequest extends TeaModel {
     /**
-     * <p>SAE application ID.</p>
+     * <p>The ID of the SAE application.</p>
      * 
      * <strong>example:</strong>
      * <p>5b41f4bf-349f-4263-89b1-9234c034****</p>
@@ -14,7 +14,7 @@ public class ListUuidsByAppIdRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class ListUuidsByAppIdRequest extends TeaModel {
     public String appRegionId;
 
     /**
-     * <p>The page number to display in a paginated query.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,10 +32,10 @@ public class ListUuidsByAppIdRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language type for request and response, default is <strong>zh</strong>. Values:</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListUuidsByAppIdRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of items to display per page in a paginated query.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +54,7 @@ public class ListUuidsByAppIdRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Resource associated directory UID.</p>
+     * <p>The UID of the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

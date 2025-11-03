@@ -140,9 +140,21 @@ public class ListOperationProcessResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Number of completed subtasks</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("DetailTaskReadyCount")
         public Integer detailTaskReadyCount;
 
+        /**
+         * <p>Total number of subtasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("DetailTaskTotalCount")
         public Integer detailTaskTotalCount;
 
@@ -197,6 +209,15 @@ public class ListOperationProcessResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Task source. Values: </p>
+         * <ul>
+         * <li><strong>YAO_CHI</strong>: YaoChi.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YAO_CHI</p>
+         */
         @NameInMap("TaskSource")
         public String taskSource;
 
