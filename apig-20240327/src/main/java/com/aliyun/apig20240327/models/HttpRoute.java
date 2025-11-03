@@ -7,6 +7,9 @@ public class HttpRoute extends TeaModel {
     @NameInMap("backend")
     public Backend backend;
 
+    @NameInMap("builtin")
+    public String builtin;
+
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
@@ -51,6 +54,14 @@ public class HttpRoute extends TeaModel {
     }
     public Backend getBackend() {
         return this.backend;
+    }
+
+    public HttpRoute setBuiltin(String builtin) {
+        this.builtin = builtin;
+        return this;
+    }
+    public String getBuiltin() {
+        return this.builtin;
     }
 
     public HttpRoute setCreateTimestamp(Long createTimestamp) {

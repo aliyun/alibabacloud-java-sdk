@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class AiServiceConfig extends TeaModel {
+    @NameInMap("ApiKeyGenerateMode")
+    public String apiKeyGenerateMode;
+
     /**
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyun.com">https://dashscope.aliyun.com</a></p>
@@ -36,6 +39,14 @@ public class AiServiceConfig extends TeaModel {
     public static AiServiceConfig build(java.util.Map<String, ?> map) throws Exception {
         AiServiceConfig self = new AiServiceConfig();
         return TeaModel.build(map, self);
+    }
+
+    public AiServiceConfig setApiKeyGenerateMode(String apiKeyGenerateMode) {
+        this.apiKeyGenerateMode = apiKeyGenerateMode;
+        return this;
+    }
+    public String getApiKeyGenerateMode() {
+        return this.apiKeyGenerateMode;
     }
 
     public AiServiceConfig setAddress(String address) {

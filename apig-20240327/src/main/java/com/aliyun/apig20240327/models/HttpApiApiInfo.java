@@ -45,6 +45,9 @@ public class HttpApiApiInfo extends TeaModel {
     @NameInMap("ingressInfo")
     public HttpApiApiInfoIngressInfo ingressInfo;
 
+    @NameInMap("modelCategory")
+    public String modelCategory;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -163,6 +166,14 @@ public class HttpApiApiInfo extends TeaModel {
     }
     public HttpApiApiInfoIngressInfo getIngressInfo() {
         return this.ingressInfo;
+    }
+
+    public HttpApiApiInfo setModelCategory(String modelCategory) {
+        this.modelCategory = modelCategory;
+        return this;
+    }
+    public String getModelCategory() {
+        return this.modelCategory;
     }
 
     public HttpApiApiInfo setName(String name) {
