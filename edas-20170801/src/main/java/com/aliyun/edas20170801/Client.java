@@ -2418,6 +2418,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuntimeClassName", request.runtimeClassName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityContext)) {
+            query.put("SecurityContext", request.securityContext);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sidecars)) {
             query.put("Sidecars", request.sidecars);
         }
@@ -2597,6 +2601,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeApplicationScalingRulesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @param request DescribeLocalitySettingRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLocalitySettingResponse
+     */
+    public DescribeLocalitySettingResponse describeLocalitySettingWithOptions(DescribeLocalitySettingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLocalitySetting"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/sp/applications/locality/setting"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLocalitySettingResponse());
+    }
+
+    /**
+     * @param request DescribeLocalitySettingRequest
+     * @return DescribeLocalitySettingResponse
+     */
+    public DescribeLocalitySettingResponse describeLocalitySetting(DescribeLocalitySettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeLocalitySettingWithOptions(request, headers, runtime);
     }
 
     /**
@@ -4618,6 +4671,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.secretName)) {
             query.put("SecretName", request.secretName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityContext)) {
+            query.put("SecurityContext", request.securityContext);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceConfigs)) {

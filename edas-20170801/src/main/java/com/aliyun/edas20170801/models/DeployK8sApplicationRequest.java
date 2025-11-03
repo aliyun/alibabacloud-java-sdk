@@ -603,6 +603,9 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("RuntimeClassName")
     public String runtimeClassName;
 
+    @NameInMap("SecurityContext")
+    public String securityContext;
+
     /**
      * <strong>example:</strong>
      * <p>[
@@ -1226,6 +1229,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
     }
     public String getRuntimeClassName() {
         return this.runtimeClassName;
+    }
+
+    public DeployK8sApplicationRequest setSecurityContext(String securityContext) {
+        this.securityContext = securityContext;
+        return this;
+    }
+    public String getSecurityContext() {
+        return this.securityContext;
     }
 
     public DeployK8sApplicationRequest setSidecars(String sidecars) {

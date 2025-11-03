@@ -448,6 +448,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         @NameInMap("RequestMem")
         public Integer requestMem;
 
+        @NameInMap("SecurityContext")
+        public String securityContext;
+
         /**
          * <p>The configuration information about the Server Load Balancer (SLB).</p>
          * 
@@ -757,6 +760,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
         public Integer getRequestMem() {
             return this.requestMem;
+        }
+
+        public GetK8sApplicationResponseBodyApplcationApp setSecurityContext(String securityContext) {
+            this.securityContext = securityContext;
+            return this;
+        }
+        public String getSecurityContext() {
+            return this.securityContext;
         }
 
         public GetK8sApplicationResponseBodyApplcationApp setSlbInfo(String slbInfo) {

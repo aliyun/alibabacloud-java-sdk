@@ -1,3 +1,10 @@
+2025-11-03 Version: 2.1.0
+- Support API DescribeLocalitySetting.
+- Update API DeployK8sApplication: add request parameters SecurityContext.
+- Update API GetK8sApplication: add response parameters Body.Applcation.App.SecurityContext.
+- Update API InsertK8sApplication: add request parameters SecurityContext.
+
+
 2025-10-28 Version: 2.0.0
 - Support API UpdateLocalitySetting.
 - Update API DeleteApplicationScalingRule: add response parameters Body.Code.

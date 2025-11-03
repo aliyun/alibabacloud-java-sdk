@@ -738,6 +738,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("SecretName")
     public String secretName;
 
+    @NameInMap("SecurityContext")
+    public String securityContext;
+
     /**
      * <p>The configurations of services in a Kubernetes cluster.</p>
      * 
@@ -1490,6 +1493,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
     }
     public String getSecretName() {
         return this.secretName;
+    }
+
+    public InsertK8sApplicationRequest setSecurityContext(String securityContext) {
+        this.securityContext = securityContext;
+        return this;
+    }
+    public String getSecurityContext() {
+        return this.securityContext;
     }
 
     public InsertK8sApplicationRequest setServiceConfigs(String serviceConfigs) {
