@@ -2195,6 +2195,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NeedStatusNotify", request.needStatusNotify);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyAuthKey)) {
+            query.put("NotifyAuthKey", request.notifyAuthKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyReqAuth)) {
+            query.put("NotifyReqAuth", request.notifyReqAuth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notifyUrl)) {
             query.put("NotifyUrl", request.notifyUrl);
         }
@@ -31406,6 +31414,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.needStatusNotify)) {
             query.put("NeedStatusNotify", request.needStatusNotify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyAuthKey)) {
+            query.put("NotifyAuthKey", request.notifyAuthKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyReqAuth)) {
+            query.put("NotifyReqAuth", request.notifyReqAuth);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyUrl)) {

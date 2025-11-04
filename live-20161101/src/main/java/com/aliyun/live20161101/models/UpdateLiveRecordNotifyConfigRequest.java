@@ -27,6 +27,12 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     @NameInMap("NeedStatusNotify")
     public Boolean needStatusNotify;
 
+    @NameInMap("NotifyAuthKey")
+    public String notifyAuthKey;
+
+    @NameInMap("NotifyReqAuth")
+    public Boolean notifyReqAuth;
+
     /**
      * <p>The callback URL that is used to receive notifications about recording events and status.</p>
      * <blockquote>
@@ -87,6 +93,22 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     }
     public Boolean getNeedStatusNotify() {
         return this.needStatusNotify;
+    }
+
+    public UpdateLiveRecordNotifyConfigRequest setNotifyAuthKey(String notifyAuthKey) {
+        this.notifyAuthKey = notifyAuthKey;
+        return this;
+    }
+    public String getNotifyAuthKey() {
+        return this.notifyAuthKey;
+    }
+
+    public UpdateLiveRecordNotifyConfigRequest setNotifyReqAuth(Boolean notifyReqAuth) {
+        this.notifyReqAuth = notifyReqAuth;
+        return this;
+    }
+    public Boolean getNotifyReqAuth() {
+        return this.notifyReqAuth;
     }
 
     public UpdateLiveRecordNotifyConfigRequest setNotifyUrl(String notifyUrl) {
