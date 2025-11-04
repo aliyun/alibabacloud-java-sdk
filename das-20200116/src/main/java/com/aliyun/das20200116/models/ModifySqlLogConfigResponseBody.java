@@ -241,6 +241,9 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         @NameInMap("SqlLogEnable")
         public Boolean sqlLogEnable;
 
+        @NameInMap("SqlLogSource")
+        public String sqlLogSource;
+
         /**
          * <p>The state of data migration. Valid values:</p>
          * <ul>
@@ -405,6 +408,14 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         }
         public Boolean getSqlLogEnable() {
             return this.sqlLogEnable;
+        }
+
+        public ModifySqlLogConfigResponseBodyData setSqlLogSource(String sqlLogSource) {
+            this.sqlLogSource = sqlLogSource;
+            return this;
+        }
+        public String getSqlLogSource() {
+            return this.sqlLogSource;
         }
 
         public ModifySqlLogConfigResponseBodyData setSqlLogState(String sqlLogState) {

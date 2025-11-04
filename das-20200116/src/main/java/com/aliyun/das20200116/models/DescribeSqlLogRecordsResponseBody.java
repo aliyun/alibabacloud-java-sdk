@@ -337,6 +337,9 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
+        @NameInMap("TableName")
+        public String tableName;
+
         /**
          * <p>The thread ID.</p>
          * 
@@ -615,6 +618,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeSqlLogRecordsResponseBodyDataItemsSQLLogRecord setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
         public DescribeSqlLogRecordsResponseBodyDataItemsSQLLogRecord setThreadId(Long threadId) {

@@ -167,6 +167,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("CPUTimeSeconds")
         public Double CPUTimeSeconds;
 
+        @NameInMap("ClientIp")
+        public String clientIp;
+
+        @NameInMap("Cmd")
+        public String cmd;
+
         /**
          * <strong>example:</strong>
          * <p>SELECT</p>
@@ -180,6 +186,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         @NameInMap("DBName")
         public String DBName;
+
+        @NameInMap("DbId")
+        public String dbId;
 
         /**
          * <strong>example:</strong>
@@ -265,6 +274,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("OriginTime")
+        public String originTime;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -307,6 +322,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("QueryTimeSeconds")
         public Double queryTimeSeconds;
 
+        @NameInMap("RequestSize")
+        public Long requestSize;
+
+        @NameInMap("ResponseSize")
+        public Long responseSize;
+
         /**
          * <strong>example:</strong>
          * <p>test</p>
@@ -348,6 +369,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         @NameInMap("RowsSent")
         public Long rowsSent;
+
+        @NameInMap("Rt")
+        public Long rt;
 
         /**
          * <strong>example:</strong>
@@ -466,6 +490,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             return this.CPUTimeSeconds;
         }
 
+        public DescribeSlowLogRecordsResponseBodyDataLogs setClientIp(String clientIp) {
+            this.clientIp = clientIp;
+            return this;
+        }
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setCmd(String cmd) {
+            this.cmd = cmd;
+            return this;
+        }
+        public String getCmd() {
+            return this.cmd;
+        }
+
         public DescribeSlowLogRecordsResponseBodyDataLogs setCommand(String command) {
             this.command = command;
             return this;
@@ -480,6 +520,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public String getDBName() {
             return this.DBName;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setDbId(String dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public String getDbId() {
+            return this.dbId;
         }
 
         public DescribeSlowLogRecordsResponseBodyDataLogs setDbInstanceName(String dbInstanceName) {
@@ -578,6 +626,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             return this.namespace;
         }
 
+        public DescribeSlowLogRecordsResponseBodyDataLogs setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setOriginTime(String originTime) {
+            this.originTime = originTime;
+            return this;
+        }
+        public String getOriginTime() {
+            return this.originTime;
+        }
+
         public DescribeSlowLogRecordsResponseBodyDataLogs setPhysicalIOReads(Long physicalIOReads) {
             this.physicalIOReads = physicalIOReads;
             return this;
@@ -626,6 +690,22 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             return this.queryTimeSeconds;
         }
 
+        public DescribeSlowLogRecordsResponseBodyDataLogs setRequestSize(Long requestSize) {
+            this.requestSize = requestSize;
+            return this;
+        }
+        public Long getRequestSize() {
+            return this.requestSize;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setResponseSize(Long responseSize) {
+            this.responseSize = responseSize;
+            return this;
+        }
+        public Long getResponseSize() {
+            return this.responseSize;
+        }
+
         public DescribeSlowLogRecordsResponseBodyDataLogs setReturnItemNumbers(String returnItemNumbers) {
             this.returnItemNumbers = returnItemNumbers;
             return this;
@@ -672,6 +752,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public Long getRowsSent() {
             return this.rowsSent;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setRt(Long rt) {
+            this.rt = rt;
+            return this;
+        }
+        public Long getRt() {
+            return this.rt;
         }
 
         public DescribeSlowLogRecordsResponseBodyDataLogs setSQLText(String SQLText) {

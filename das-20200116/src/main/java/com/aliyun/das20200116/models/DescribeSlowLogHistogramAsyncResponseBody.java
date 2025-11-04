@@ -101,6 +101,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @NameInMap("InsRole")
         public String insRole;
 
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static DescribeSlowLogHistogramAsyncResponseBodyDataDataItemInsItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogHistogramAsyncResponseBodyDataDataItemInsItems self = new DescribeSlowLogHistogramAsyncResponseBodyDataDataItemInsItems();
             return TeaModel.build(map, self);
@@ -130,6 +133,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             return this.insRole;
         }
 
+        public DescribeSlowLogHistogramAsyncResponseBodyDataDataItemInsItems setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
     }
 
     public static class DescribeSlowLogHistogramAsyncResponseBodyDataDataItem extends TeaModel {
@@ -139,12 +150,18 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @NameInMap("InsItems")
         public java.util.List<DescribeSlowLogHistogramAsyncResponseBodyDataDataItemInsItems> insItems;
 
+        @NameInMap("InsRole")
+        public String insRole;
+
         /**
          * <strong>example:</strong>
          * <p>r-bp1hi0wg57s3n0i3n8-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static DescribeSlowLogHistogramAsyncResponseBodyDataDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogHistogramAsyncResponseBodyDataDataItem self = new DescribeSlowLogHistogramAsyncResponseBodyDataDataItem();
@@ -167,12 +184,28 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             return this.insItems;
         }
 
+        public DescribeSlowLogHistogramAsyncResponseBodyDataDataItem setInsRole(String insRole) {
+            this.insRole = insRole;
+            return this;
+        }
+        public String getInsRole() {
+            return this.insRole;
+        }
+
         public DescribeSlowLogHistogramAsyncResponseBodyDataDataItem setNodeId(String nodeId) {
             this.nodeId = nodeId;
             return this;
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public DescribeSlowLogHistogramAsyncResponseBodyDataDataItem setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }
@@ -334,6 +367,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
          */
         @NameInMap("Total")
         public Long total;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         @NameInMap("Ts")
         public java.util.List<Long> ts;
@@ -752,6 +788,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
         public Long getTotal() {
             return this.total;
+        }
+
+        public DescribeSlowLogHistogramAsyncResponseBodyDataData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
         public DescribeSlowLogHistogramAsyncResponseBodyDataData setTs(java.util.List<Long> ts) {
