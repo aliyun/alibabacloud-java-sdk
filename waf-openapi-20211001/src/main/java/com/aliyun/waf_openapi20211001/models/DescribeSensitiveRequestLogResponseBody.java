@@ -59,6 +59,13 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
 
     public static class DescribeSensitiveRequestLogResponseBodyData extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        @NameInMap("Account")
+        public String account;
+
+        /**
          * <p>The API.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +160,14 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public static DescribeSensitiveRequestLogResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeSensitiveRequestLogResponseBodyData self = new DescribeSensitiveRequestLogResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSensitiveRequestLogResponseBodyData setAccount(String account) {
+            this.account = account;
+            return this;
+        }
+        public String getAccount() {
+            return this.account;
         }
 
         public DescribeSensitiveRequestLogResponseBodyData setApiFormat(String apiFormat) {

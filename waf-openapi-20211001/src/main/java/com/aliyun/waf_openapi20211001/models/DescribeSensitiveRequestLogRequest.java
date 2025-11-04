@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveRequestLogRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
+    @NameInMap("Account")
+    public String account;
+
+    /**
      * <p>The API.</p>
      * 
      * <strong>example:</strong>
@@ -138,6 +145,14 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public static DescribeSensitiveRequestLogRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSensitiveRequestLogRequest self = new DescribeSensitiveRequestLogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSensitiveRequestLogRequest setAccount(String account) {
+        this.account = account;
+        return this;
+    }
+    public String getAccount() {
+        return this.account;
     }
 
     public DescribeSensitiveRequestLogRequest setApiFormat(String apiFormat) {

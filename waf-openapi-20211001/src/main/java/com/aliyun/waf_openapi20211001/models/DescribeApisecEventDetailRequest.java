@@ -3,18 +3,29 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeUserEventTrendRequest extends TeaModel {
+public class DescribeApisecEventDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
-     * <blockquote>
-     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>428</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>event_info</p>
+     */
+    @NameInMap("DetailType")
+    public String detailType;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18ba94fea9***e66ba0557b7b91</p>
+     */
+    @NameInMap("EventId")
+    public String eventId;
 
     /**
      * <strong>example:</strong>
@@ -24,25 +35,15 @@ public class DescribeUserEventTrendRequest extends TeaModel {
     public String eventScope;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>waf-cn-7mz2797x***</p>
+     * <p>waf_elasticity-cn-0xldbqtm005</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
-     * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -50,20 +51,18 @@ public class DescribeUserEventTrendRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
-     * 
      * <strong>example:</strong>
-     * <p>rg-aekzwwk****cv5i</p>
+     * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    public static DescribeUserEventTrendRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeUserEventTrendRequest self = new DescribeUserEventTrendRequest();
+    public static DescribeApisecEventDetailRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeApisecEventDetailRequest self = new DescribeApisecEventDetailRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUserEventTrendRequest setClusterId(String clusterId) {
+    public DescribeApisecEventDetailRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -71,7 +70,23 @@ public class DescribeUserEventTrendRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public DescribeUserEventTrendRequest setEventScope(String eventScope) {
+    public DescribeApisecEventDetailRequest setDetailType(String detailType) {
+        this.detailType = detailType;
+        return this;
+    }
+    public String getDetailType() {
+        return this.detailType;
+    }
+
+    public DescribeApisecEventDetailRequest setEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public String getEventId() {
+        return this.eventId;
+    }
+
+    public DescribeApisecEventDetailRequest setEventScope(String eventScope) {
         this.eventScope = eventScope;
         return this;
     }
@@ -79,7 +94,7 @@ public class DescribeUserEventTrendRequest extends TeaModel {
         return this.eventScope;
     }
 
-    public DescribeUserEventTrendRequest setInstanceId(String instanceId) {
+    public DescribeApisecEventDetailRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -87,7 +102,7 @@ public class DescribeUserEventTrendRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeUserEventTrendRequest setRegionId(String regionId) {
+    public DescribeApisecEventDetailRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -95,7 +110,7 @@ public class DescribeUserEventTrendRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeUserEventTrendRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public DescribeApisecEventDetailRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }

@@ -42,6 +42,13 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
 
     public static class DescribeApisecStatisticsResponseBodyData extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Account")
+        public Long account;
+
+        /**
          * <p>The number of handled events.</p>
          * 
          * <strong>example:</strong>
@@ -122,9 +129,17 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         @NameInMap("Medium")
         public Long medium;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NotFixed")
         public Long notFixed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SystemFixed")
         public Long systemFixed;
 
@@ -146,6 +161,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         @NameInMap("ToBeFixed")
         public Long toBeFixed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ToBeVerified")
         public Long toBeVerified;
 
@@ -197,6 +216,14 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         public static DescribeApisecStatisticsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeApisecStatisticsResponseBodyData self = new DescribeApisecStatisticsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApisecStatisticsResponseBodyData setAccount(Long account) {
+            this.account = account;
+            return this;
+        }
+        public Long getAccount() {
+            return this.account;
         }
 
         public DescribeApisecStatisticsResponseBodyData setActioned(Long actioned) {

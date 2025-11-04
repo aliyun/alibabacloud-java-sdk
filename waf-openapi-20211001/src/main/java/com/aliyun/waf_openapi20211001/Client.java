@@ -1244,78 +1244,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加重保场景黑IP</p>
-     * 
-     * @param request CreateMajorProtectionBlackIpV2Request
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateMajorProtectionBlackIpV2Response
-     */
-    public CreateMajorProtectionBlackIpV2Response createMajorProtectionBlackIpV2WithOptions(CreateMajorProtectionBlackIpV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            query.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.expiredTime)) {
-            query.put("ExpiredTime", request.expiredTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ipList)) {
-            query.put("IpList", request.ipList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
-            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
-            query.put("RuleId", request.ruleId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
-            query.put("TemplateId", request.templateId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateMajorProtectionBlackIpV2"),
-            new TeaPair("version", "2021-10-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMajorProtectionBlackIpV2Response());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>添加重保场景黑IP</p>
-     * 
-     * @param request CreateMajorProtectionBlackIpV2Request
-     * @return CreateMajorProtectionBlackIpV2Response
-     */
-    public CreateMajorProtectionBlackIpV2Response createMajorProtectionBlackIpV2(CreateMajorProtectionBlackIpV2Request request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createMajorProtectionBlackIpV2WithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</p>
      * 
      * @param request CreateMemberAccountsRequest
@@ -1627,6 +1555,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventIds)) {
             query.put("EventIds", request.eventIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventScope)) {
+            query.put("EventScope", request.eventScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -2944,6 +2876,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询安全事件详情</p>
+     * 
+     * @param request DescribeApisecEventDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApisecEventDetailResponse
+     */
+    public DescribeApisecEventDetailResponse describeApisecEventDetailWithOptions(DescribeApisecEventDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detailType)) {
+            query.put("DetailType", request.detailType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventScope)) {
+            query.put("EventScope", request.eventScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApisecEventDetail"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApisecEventDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询安全事件详情</p>
+     * 
+     * @param request DescribeApisecEventDetailRequest
+     * @return DescribeApisecEventDetailResponse
+     */
+    public DescribeApisecEventDetailResponse describeApisecEventDetail(DescribeApisecEventDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApisecEventDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the statistics on domain names on which security events are detected by the API security module.</p>
      * 
      * @param request DescribeApisecEventDomainStatisticRequest
@@ -3029,6 +3029,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeApisecEventsResponse describeApisecEventsWithOptions(DescribeApisecEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.account)) {
+            query.put("Account", request.account);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.apiFormat)) {
             query.put("ApiFormat", request.apiFormat);
         }
@@ -3059,6 +3063,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventLevel)) {
             query.put("EventLevel", request.eventLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventScope)) {
+            query.put("EventScope", request.eventScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventTag)) {
@@ -9905,6 +9913,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSensitiveRequestLogResponse describeSensitiveRequestLogWithOptions(DescribeSensitiveRequestLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.account)) {
+            query.put("Account", request.account);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.apiFormat)) {
             query.put("ApiFormat", request.apiFormat);
         }
@@ -10705,6 +10717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterId", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.eventScope)) {
+            query.put("EventScope", request.eventScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -10763,6 +10779,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventScope)) {
+            query.put("EventScope", request.eventScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -11591,6 +11611,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventIds)) {
             query.put("EventIds", request.eventIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventScope)) {
+            query.put("EventScope", request.eventScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {

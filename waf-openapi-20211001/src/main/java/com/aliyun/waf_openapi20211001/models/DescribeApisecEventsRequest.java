@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecEventsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>1818743389962696</p>
+     */
+    @NameInMap("Account")
+    public String account;
+
+    /**
      * <p>The API.</p>
      * 
      * <strong>example:</strong>
@@ -86,6 +93,13 @@ public class DescribeApisecEventsRequest extends TeaModel {
      */
     @NameInMap("EventLevel")
     public String eventLevel;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ip</p>
+     */
+    @NameInMap("EventScope")
+    public String eventScope;
 
     /**
      * <p>The type of the event.</p>
@@ -229,6 +243,14 @@ public class DescribeApisecEventsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeApisecEventsRequest setAccount(String account) {
+        this.account = account;
+        return this;
+    }
+    public String getAccount() {
+        return this.account;
+    }
+
     public DescribeApisecEventsRequest setApiFormat(String apiFormat) {
         this.apiFormat = apiFormat;
         return this;
@@ -291,6 +313,14 @@ public class DescribeApisecEventsRequest extends TeaModel {
     }
     public String getEventLevel() {
         return this.eventLevel;
+    }
+
+    public DescribeApisecEventsRequest setEventScope(String eventScope) {
+        this.eventScope = eventScope;
+        return this;
+    }
+    public String getEventScope() {
+        return this.eventScope;
     }
 
     public DescribeApisecEventsRequest setEventTag(String eventTag) {

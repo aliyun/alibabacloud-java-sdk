@@ -16,6 +16,10 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4809859200000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -55,6 +59,10 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1668496310000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

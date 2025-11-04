@@ -148,6 +148,9 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         @NameInMap("AttackIps")
         public java.util.List<String> attackIps;
 
+        @NameInMap("AttackerList")
+        public java.util.List<String> attackerList;
+
         /**
          * <p>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
          * 
@@ -384,6 +387,14 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         }
         public java.util.List<String> getAttackIps() {
             return this.attackIps;
+        }
+
+        public DescribeApisecEventsResponseBodyData setAttackerList(java.util.List<String> attackerList) {
+            this.attackerList = attackerList;
+            return this;
+        }
+        public java.util.List<String> getAttackerList() {
+            return this.attackerList;
         }
 
         public DescribeApisecEventsResponseBodyData setEndTs(Long endTs) {

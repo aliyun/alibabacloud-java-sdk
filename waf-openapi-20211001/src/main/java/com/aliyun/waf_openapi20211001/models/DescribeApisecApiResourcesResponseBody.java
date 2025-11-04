@@ -68,6 +68,13 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Long abnormalNum;
 
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AccountEventNum")
+        public Long accountEventNum;
+
+        /**
          * <p>The total number of calls to this API in the previous 30 days.</p>
          * 
          * <strong>example:</strong>
@@ -319,6 +326,14 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         }
         public Long getAbnormalNum() {
             return this.abnormalNum;
+        }
+
+        public DescribeApisecApiResourcesResponseBodyData setAccountEventNum(Long accountEventNum) {
+            this.accountEventNum = accountEventNum;
+            return this;
+        }
+        public Long getAccountEventNum() {
+            return this.accountEventNum;
         }
 
         public DescribeApisecApiResourcesResponseBodyData setAllCnt(Long allCnt) {

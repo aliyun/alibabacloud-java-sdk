@@ -26,6 +26,13 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>ip</p>
+     */
+    @NameInMap("EventScope")
+    public String eventScope;
+
+    /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
@@ -91,6 +98,14 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeUserEventTypeRequest setEventScope(String eventScope) {
+        this.eventScope = eventScope;
+        return this;
+    }
+    public String getEventScope() {
+        return this.eventScope;
     }
 
     public DescribeUserEventTypeRequest setInstanceId(String instanceId) {

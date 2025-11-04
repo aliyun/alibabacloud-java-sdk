@@ -78,6 +78,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
          * <p>1723435200</p>
          */
         @NameInMap("TimeStamp")
+        @Deprecated
         public Long timeStamp;
 
         /**
@@ -118,6 +119,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
             return this.eventMedium;
         }
 
+        @Deprecated
         public DescribeUserEventTrendResponseBodyTrend setTimeStamp(Long timeStamp) {
             this.timeStamp = timeStamp;
             return this;
