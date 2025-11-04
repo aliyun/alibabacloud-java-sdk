@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetParseSettingsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data fields.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetParseSettingsResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace id is null or invalid.</p>
      */
@@ -22,6 +29,8 @@ public class GetParseSettingsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35A267BF-xxxx-54DB-8394-AA3B0742D833</p>
      */
@@ -29,6 +38,8 @@ public class GetParseSettingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,12 @@ public class GetParseSettingsResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +114,8 @@ public class GetParseSettingsResponseBody extends TeaModel {
 
     public static class GetParseSettingsResponseBodyDataParserConfig extends TeaModel {
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li>qwen-vl-max</li>
@@ -106,6 +125,15 @@ public class GetParseSettingsResponseBody extends TeaModel {
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <p>The prompt used for parsing.</p>
+         * 
+         * <strong>example:</strong>
+         * <h1>Role</h1>
+         * <p>You are a professional image content annotator, skilled in identifying and describing the contents of images.  </p>
+         * <h1>Task Objective</h1>
+         * <p>Based on the input image, provide a detailed description of its contents.</p>
+         */
         @NameInMap("ModelPrompt")
         public String modelPrompt;
 
@@ -134,6 +162,8 @@ public class GetParseSettingsResponseBody extends TeaModel {
 
     public static class GetParseSettingsResponseBodyData extends TeaModel {
         /**
+         * <p>The file type. Valid values are: pdf, docx, doc, etc. All supported file types in the category are listed here.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
@@ -141,15 +171,32 @@ public class GetParseSettingsResponseBody extends TeaModel {
         public String fileType;
 
         /**
+         * <p>The parser used for files of the current type. Valid values:</p>
+         * <ul>
+         * <li>DOCMIND (Intelligent parsing)</li>
+         * <li>DOCMIND_DIGITAL (Digital parsing)</li>
+         * <li>DOCMIND_LLM_VERSION (LLM parsing)</li>
+         * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DOCMIND</p>
          */
         @NameInMap("Parser")
         public String parser;
 
+        /**
+         * <p>The parser configuration. Currently, this is available only for Qwen VL parsing.</p>
+         */
         @NameInMap("ParserConfig")
         public GetParseSettingsResponseBodyDataParserConfig parserConfig;
 
+        /**
+         * <p>The display name of the parsing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Digital parsing</p>
+         */
         @NameInMap("ParserDisplayName")
         public String parserDisplayName;
 

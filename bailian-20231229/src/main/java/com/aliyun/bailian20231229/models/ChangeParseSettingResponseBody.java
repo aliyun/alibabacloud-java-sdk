@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ChangeParseSettingResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data fields.</p>
+     */
     @NameInMap("Data")
     public ChangeParseSettingResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource.</p>
      */
@@ -22,6 +29,8 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BA8ADD9-53D6-53F0-918F-A1E776AD230E</p>
      */
@@ -29,6 +38,8 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,12 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class ChangeParseSettingResponseBody extends TeaModel {
 
     public static class ChangeParseSettingResponseBodyData extends TeaModel {
         /**
+         * <p>The result of the modification.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

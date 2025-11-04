@@ -30,6 +30,10 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -94,45 +98,97 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
     }
 
     public static class ListIndexFileDetailsResponseBodyDataDocuments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DashSplitter</p>
+         */
         @NameInMap("ChunkMode")
         public String chunkMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("ChunkSize")
         public String chunkSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110002</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pdf</p>
+         */
         @NameInMap("DocumentType")
         public String documentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableHeaders")
         public String enableHeaders;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1744856423000</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>doc_c134aa2073204a5d936d870bf960f56axxxxxxxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("OverlapSize")
         public String overlapSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>996764</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cate_21a407a3372c4ba7aedc649709143f0cxxxxxxxx</p>
+         */
         @NameInMap("SourceId")
         public String sourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
+         */
         @NameInMap("separator")
         public String separator;
 
@@ -259,15 +315,31 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         @NameInMap("Documents")
         public java.util.List<ListIndexFileDetailsResponseBodyDataDocuments> documents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>79c0alxxxx</p>
+         */
         @NameInMap("IndexId")
         public String indexId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

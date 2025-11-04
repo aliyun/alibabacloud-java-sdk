@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetParseSettingsRequest extends TeaModel {
     /**
+     * <p>The category ID, which is the <code>CategoryId</code> returned by <strong>AddCategory</strong>. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</p>
+     * 
      * <strong>example:</strong>
      * <p>cate_cdd11b1b79a74e8bbd675c356a91ee35xxxxxxxx</p>
      */

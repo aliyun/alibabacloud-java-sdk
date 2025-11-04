@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFileRequest extends TeaModel {
     /**
+     * <p>The category ID, which is the <code>CategoryId</code> returned by the <a href="~~AddCategory~~">AddCategory</a> operation. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteChunkRequest extends TeaModel {
     /**
+     * <p>The list of text chunks to be deleted. You can specify up to 10 chunk IDs at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChunkIds")
     public java.util.List<String> chunkIds;
 
     /**
+     * <p>The knowledge base ID, which is the <code>Data.Id</code> parameter returned by <strong>CreateIndex</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

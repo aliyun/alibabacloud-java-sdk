@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIndexResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Forbidden</p>
@@ -14,7 +14,7 @@ public class CreateIndexResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned if the request is successful.</p>
      */
     @NameInMap("Data")
     public CreateIndexResponseBodyData data;
@@ -47,7 +47,7 @@ public class CreateIndexResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indications whether the API call is successful. Valid values:</p>
+     * <p>Indications whether the request is successful. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -114,9 +114,9 @@ public class CreateIndexResponseBody extends TeaModel {
 
     public static class CreateIndexResponseBodyData extends TeaModel {
         /**
-         * <p>The primary key ID of the knowledge base, <code>IndexId</code>.</p>
+         * <p>The knowledge base ID, or <code>IndexId</code>, is a unique identifier for the knowledge base created.</p>
          * <blockquote>
-         * <p> We recommend that you store this ID. It is required for all subsequent API operations related to this knowledge base.</p>
+         * <p>Keep this ID. It is required for all subsequent API operations related to this knowledge base.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

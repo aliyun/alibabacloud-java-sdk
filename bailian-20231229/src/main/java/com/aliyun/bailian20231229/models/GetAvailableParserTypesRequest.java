@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAvailableParserTypesRequest extends TeaModel {
     /**
+     * <p>The file type. Valid values: pdf, docx, and doc.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

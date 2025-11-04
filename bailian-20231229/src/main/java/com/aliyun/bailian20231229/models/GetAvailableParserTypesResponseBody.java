@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetAvailableParserTypesResponseBody extends TeaModel {
     /**
+     * <p>The error code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataCenter.Throttling</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetAvailableParserTypesResponseBodyData data;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource</p>
      */
@@ -22,6 +29,8 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17204B98-7734-4F9A-8464-2446XXXXXXX</p>
      */
@@ -29,6 +38,8 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,12 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +113,21 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
     }
 
     public static class GetAvailableParserTypesResponseBodyDataParserList extends TeaModel {
+        /**
+         * <p>The display name of the parsing method.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The parser code. Valid values:</p>
+         * <ul>
+         * <li>DOCMIND (Intelligent parsing)</li>
+         * <li>DOCMIND_DIGITAL (Digital parsing)</li>
+         * <li>DOCMIND_LLM_VERSION (LLM parsing)</li>
+         * <li>DASH_QWEN_VL_PARSER (Qwen VL parsing)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DOCMIND</p>
          */
@@ -131,12 +159,17 @@ public class GetAvailableParserTypesResponseBody extends TeaModel {
 
     public static class GetAvailableParserTypesResponseBodyData extends TeaModel {
         /**
+         * <p>The file type, which is the same as the FileType in the input parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>pdf</p>
          */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The list of supported parsers</p>
+         */
         @NameInMap("ParserList")
         public java.util.List<GetAvailableParserTypesResponseBodyDataParserList> parserList;
 
