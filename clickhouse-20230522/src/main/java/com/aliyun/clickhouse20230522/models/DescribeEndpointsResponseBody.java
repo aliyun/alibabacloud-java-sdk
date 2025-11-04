@@ -94,6 +94,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     public static class DescribeEndpointsResponseBodyDataEndpoints extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>cc-ad321**-clickhouse</p>
+         */
+        @NameInMap("ComputingGroupId")
+        public String computingGroupId;
+
+        /**
          * <p>The endpoint of the cluster.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +176,14 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public static DescribeEndpointsResponseBodyDataEndpoints build(java.util.Map<String, ?> map) throws Exception {
             DescribeEndpointsResponseBodyDataEndpoints self = new DescribeEndpointsResponseBodyDataEndpoints();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEndpointsResponseBodyDataEndpoints setComputingGroupId(String computingGroupId) {
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
+        public String getComputingGroupId() {
+            return this.computingGroupId;
         }
 
         public DescribeEndpointsResponseBodyDataEndpoints setConnectionString(String connectionString) {
