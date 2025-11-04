@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    @NameInMap("EipAddresses")
+    public java.util.List<String> eipAddresses;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -195,6 +198,14 @@ public class DescribeInstancesRequest extends TeaModel {
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstancesRequest setEipAddresses(java.util.List<String> eipAddresses) {
+        this.eipAddresses = eipAddresses;
+        return this;
+    }
+    public java.util.List<String> getEipAddresses() {
+        return this.eipAddresses;
     }
 
     public DescribeInstancesRequest setEnsRegionId(String ensRegionId) {

@@ -8461,6 +8461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeInstancesShrinkRequest request = new DescribeInstancesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eipAddresses)) {
+            request.eipAddressesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eipAddresses, "EipAddresses", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceStatus)) {
             request.serviceStatusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceStatus, "ServiceStatus", "json");
         }
@@ -8470,6 +8474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eipAddressesShrink)) {
+            query.put("EipAddresses", request.eipAddressesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
         }
