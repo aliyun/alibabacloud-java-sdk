@@ -196,6 +196,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         @NameInMap("MaxExecutionTime")
         public Long maxExecutionTime;
 
+        @NameInMap("MaxExecutionTimeMs")
+        public String maxExecutionTimeMs;
+
         /**
          * <p>The longest lock duration that was caused by a specific SQL statement in the query. Unit: seconds.</p>
          * 
@@ -321,6 +324,14 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         }
         public Long getMaxExecutionTime() {
             return this.maxExecutionTime;
+        }
+
+        public DescribeSlowLogsResponseBodyItemsSQLSlowLog setMaxExecutionTimeMs(String maxExecutionTimeMs) {
+            this.maxExecutionTimeMs = maxExecutionTimeMs;
+            return this;
+        }
+        public String getMaxExecutionTimeMs() {
+            return this.maxExecutionTimeMs;
         }
 
         public DescribeSlowLogsResponseBodyItemsSQLSlowLog setMaxLockTime(Long maxLockTime) {
