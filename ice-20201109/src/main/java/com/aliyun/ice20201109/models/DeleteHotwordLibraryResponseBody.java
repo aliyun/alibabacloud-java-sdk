@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHotwordLibraryResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>83B7-7F87-4792-BFE9-63CD2137</strong></strong></p>
@@ -13,6 +13,9 @@ public class DeleteHotwordLibraryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

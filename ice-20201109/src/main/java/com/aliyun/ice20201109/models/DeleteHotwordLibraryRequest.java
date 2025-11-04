@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteHotwordLibraryRequest extends TeaModel {
     /**
+     * <p>The ID of the hotword library that you want to delete.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
      */

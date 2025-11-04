@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStreamToSearchLibRequest extends TeaModel {
     /**
+     * <p>The URL of the live stream to be ingested and analyzed.</p>
+     * 
      * <strong>example:</strong>
      * <p>rtmp://xxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateStreamToSearchLibRequest extends TeaModel {
     public String input;
 
     /**
+     * <p>The namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>name-1</p>
      */
@@ -19,6 +23,8 @@ public class CreateStreamToSearchLibRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The search library.</p>
+     * 
      * <strong>example:</strong>
      * <p>Stream_xxx</p>
      */

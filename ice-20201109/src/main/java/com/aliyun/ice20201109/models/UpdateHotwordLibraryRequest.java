@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateHotwordLibraryRequest extends TeaModel {
     /**
+     * <p>The description of the hotword library. It can be up to 200 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>存放名人的词库</p>
      */
@@ -12,6 +14,7 @@ public class UpdateHotwordLibraryRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the hotword library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,15 @@ public class UpdateHotwordLibraryRequest extends TeaModel {
     @NameInMap("HotwordLibraryId")
     public String hotwordLibraryId;
 
+    /**
+     * <p>The hotword list. You can add up to 300 hotword entries to a single library.</p>
+     */
     @NameInMap("Hotwords")
     public java.util.List<Hotword> hotwords;
 
     /**
+     * <p>The name of the hotword library. It can be up to 100 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_hotwords</p>
      */

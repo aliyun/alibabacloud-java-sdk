@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SetAIAgentVoiceprintRequest extends TeaModel {
+    /**
+     * <p>The input file.</p>
+     */
     @NameInMap("Input")
     public SetAIAgentVoiceprintRequestInput input;
 
     /**
+     * <p>A unique identifier for the voiceprint. Generate this ID based on your own business rules. Requirement: 1 to 127 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>vp_1699123456_8527</p>
      */
@@ -37,6 +42,8 @@ public class SetAIAgentVoiceprintRequest extends TeaModel {
 
     public static class SetAIAgentVoiceprintRequestInput extends TeaModel {
         /**
+         * <p>The media access link.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav">https://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav</a></p>
          */
@@ -44,6 +51,8 @@ public class SetAIAgentVoiceprintRequest extends TeaModel {
         public String data;
 
         /**
+         * <p>The audio file format. Only WAV is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>wav</p>
          */
@@ -51,6 +60,25 @@ public class SetAIAgentVoiceprintRequest extends TeaModel {
         public String format;
 
         /**
+         * <p>Specifies the access type for the audio file. The system will verify file accessibility via HEAD or GET requests. Valid values:</p>
+         * <ul>
+         * <li><p>url: An HTTP(S) link to the audio file.</p>
+         * </li>
+         * <li><p>oss: An OSS object. Supports the following formats:</p>
+         * <ol>
+         * <li><p>OSS URI: oss://bucket-name/object-key</p>
+         * <p>Example: oss://my-bucket/audio/sample.wav</p>
+         * </li>
+         * <li><p>OSS public URL: http(s)://${bucket}.oss-${region}.aliyuncs.com/${object}</p>
+         * <p>Example: <a href="https://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav">https://my-bucket.oss-cn-hangzhou.aliyuncs.com/audio/sample.wav</a></p>
+         * </li>
+         * </ol>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> The OSS bucket must be in the same region as the service. Otherwise, the access fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>url</p>
          */

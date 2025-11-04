@@ -4,10 +4,14 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryVideoCognitionJobShrinkRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to include the full algorithm results in the response.</p>
+     */
     @NameInMap("IncludeResults")
     public String includeResultsShrink;
 
     /**
+     * <p>The ID of the task to query. It is returned when you call the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitSmarttagJob</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class QueryVideoCognitionJobShrinkRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Additional request parameters, provided as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

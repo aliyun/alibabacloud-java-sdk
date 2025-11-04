@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CancelIProductionJobResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public CancelIProductionJobResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -15,6 +20,8 @@ public class CancelIProductionJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -52,6 +59,8 @@ public class CancelIProductionJobResponseBody extends TeaModel {
 
     public static class CancelIProductionJobResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The operation that failed the permission check.</p>
+         * 
          * <strong>example:</strong>
          * <p>ice:CancelIProductionJob</p>
          */
@@ -59,6 +68,13 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The identity. Values:</p>
+         * <ul>
+         * <li>RAM user: a UID</li>
+         * <li>RAM role: RoleName:RoleSessionName</li>
+         * <li>Federated user: ProviderType/ProviderName</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>4522705967</strong></strong></p>
          */
@@ -66,6 +82,8 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The account to which the principal belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>82303720</strong></strong></p>
          */
@@ -73,6 +91,13 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of identity that made the request. Valid values:</p>
+         * <ul>
+         * <li>SubUser: RAM user</li>
+         * <li>AssumedRoleUser: RAM role</li>
+         * <li>Federated: SSO federated user</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -80,6 +105,8 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>AAZ/h8jzNEODc5QUUyLUZCOTAtNUQyQy1BMEFBLUUzODQxODUx</strong></strong></strong>==</p>
          */
@@ -87,6 +114,12 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The type of policy that resulted in the denial. Valid values:</p>
+         * <ul>
+         * <li><strong>ImplicitDeny</strong>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</li>
+         * <li><strong>ExplicitDeny</strong>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -94,6 +127,15 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The type of policy that triggered the permission failure.</p>
+         * <ul>
+         * <li><strong>ControlPolicy</strong>: control policy</li>
+         * <li><strong>SessionPolicy</strong>: an additional policy attached to a temporary token.</li>
+         * <li><strong>AssumeRolePolicy</strong>: the trust policy of a RAM role.</li>
+         * <li><strong>AccountLevelIdentityBasedPolicy</strong>: an identity-based policy at the account level (custom or system).</li>
+         * <li><strong>ResourceGroupLevelIdentityBasedPolicy</strong>: an identity-based policy scoped to a resource group.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AssumeRolePolicy</p>
          */

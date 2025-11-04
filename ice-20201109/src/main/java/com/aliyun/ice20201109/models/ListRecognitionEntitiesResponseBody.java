@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListRecognitionEntitiesResponseBody extends TeaModel {
+    /**
+     * <p>The entities.</p>
+     */
     @NameInMap("Entities")
     public ListRecognitionEntitiesResponseBodyEntities entities;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -29,6 +38,8 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
 
     public static class ListRecognitionEntitiesResponseBodyEntitiesEntity extends TeaModel {
         /**
+         * <p>The ID of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>**<strong><strong><strong><strong><strong><strong>544cb84754</strong></strong></strong></strong></strong></strong></p>
          */
@@ -89,12 +102,17 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
         public String entityId;
 
         /**
+         * <p>The additional information of the entity, in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("EntityInfo")
         public String entityInfo;
 
+        /**
+         * <p>The name of the entity.</p>
+         */
         @NameInMap("EntityName")
         public String entityName;
 

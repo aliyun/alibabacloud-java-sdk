@@ -1515,6 +1515,13 @@ public class SearchMediaResponseBody extends TeaModel {
         public SearchMediaResponseBodyMediaInfoListAiRoughData aiRoughData;
 
         /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("CustomFields")
+        public String customFields;
+
+        /**
          * <p>The information about the files.</p>
          */
         @NameInMap("FileInfoList")
@@ -1557,6 +1564,14 @@ public class SearchMediaResponseBody extends TeaModel {
         }
         public SearchMediaResponseBodyMediaInfoListAiRoughData getAiRoughData() {
             return this.aiRoughData;
+        }
+
+        public SearchMediaResponseBodyMediaInfoList setCustomFields(String customFields) {
+            this.customFields = customFields;
+            return this;
+        }
+        public String getCustomFields() {
+            return this.customFields;
         }
 
         public SearchMediaResponseBodyMediaInfoList setFileInfoList(java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList) {

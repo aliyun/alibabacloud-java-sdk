@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloseStreamToSearchLibRequest extends TeaModel {
     /**
+     * <p>The ID of the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class CloseStreamToSearchLibRequest extends TeaModel {
     public String mediaId;
 
     /**
+     * <p>The namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>name-1</p>
      */
@@ -19,6 +23,8 @@ public class CloseStreamToSearchLibRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The search library.</p>
+     * 
      * <strong>example:</strong>
      * <p>Stream_xxx</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowTasksResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned in this response.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,7 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,16 +24,23 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C0C02296-113C-5838-8FE9-8F3A32998DDC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The media workflow tasks.</p>
+     */
     @NameInMap("TaskList")
     public java.util.List<ListWorkflowTasksResponseBodyTaskList> taskList;
 
     /**
+     * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -84,6 +94,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
 
     public static class ListWorkflowTasksResponseBodyTaskListWorkflow extends TeaModel {
         /**
+         * <p>The creation time of the workflow template.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-21T01:48:49Z</p>
          */
@@ -91,6 +103,12 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The source of the media file. Valid values:</p>
+         * <ul>
+         * <li>OSS: an OSS object.</li>
+         * <li>Media: a media asset.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -98,6 +116,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String mediaType;
 
         /**
+         * <p>The last modification time of the workflow template.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-02-23 10:19:37 +0800</p>
          */
@@ -105,6 +125,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The name of the workflow template.</p>
+         * 
          * <strong>example:</strong>
          * <p>example-workflow-***</p>
          */
@@ -112,6 +134,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The status of the workflow template.</p>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -119,6 +143,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the workflow template.</p>
+         * 
          * <strong>example:</strong>
          * <p>Common</p>
          */
@@ -126,6 +152,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>2491c84dce913da9fe65</strong></strong></strong></p>
          */
@@ -197,6 +225,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
 
     public static class ListWorkflowTasksResponseBodyTaskList extends TeaModel {
         /**
+         * <p>The time the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-15T09:45:48Z</p>
          */
@@ -204,6 +234,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time the task was completed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-07T10:53:45Z</p>
          */
@@ -211,6 +243,16 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String finishTime;
 
         /**
+         * <p>The task state.</p>
+         * <p><strong>Valid values</strong>:</p>
+         * <ul>
+         * <li>Init: Initializing</li>
+         * <li>Failed</li>
+         * <li>Canceled</li>
+         * <li>Processing</li>
+         * <li>Succeed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Succeed</p>
          */
@@ -218,6 +260,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the workflow task.</p>
+         * 
          * <strong>example:</strong>
          * <p><em><strong><strong>4c93d2f404f8345b16a965</strong></strong></em></p>
          */
@@ -225,6 +269,8 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The input data for the workflow task.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Type\&quot;:\&quot;Media\&quot;,\&quot;Media\&quot;:\&quot;<strong><strong>8b40884171efb0d9e7f7f458</strong></strong>\&quot;}</p>
          */
@@ -232,12 +278,17 @@ public class ListWorkflowTasksResponseBody extends TeaModel {
         public String taskInput;
 
         /**
+         * <p>The custom data that was passed when the task was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
          */
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <p>The information about the workflow template.</p>
+         */
         @NameInMap("Workflow")
         public ListWorkflowTasksResponseBodyTaskListWorkflow workflow;
 

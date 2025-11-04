@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendMessageChatTextRequest extends TeaModel {
     /**
+     * <p>The ID of the AI agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class SendMessageChatTextRequest extends TeaModel {
     public String AIAgentId;
 
     /**
+     * <p>The mode of message sending. Valid values:</p>
+     * <ul>
+     * <li>online</li>
+     * <li>offline</li>
+     * </ul>
+     * <p>Default value: offline.</p>
+     * 
      * <strong>example:</strong>
      * <p>online</p>
      */
@@ -21,6 +29,8 @@ public class SendMessageChatTextRequest extends TeaModel {
     public String mode;
 
     /**
+     * <p>Specifies whether to archive chat records. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +38,7 @@ public class SendMessageChatTextRequest extends TeaModel {
     public Boolean needArchiving;
 
     /**
+     * <p>The ID of the user who receives the message. The ID can be up to 64 bytes in length and can contain letters and digits.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,7 @@ public class SendMessageChatTextRequest extends TeaModel {
     public String receiverId;
 
     /**
+     * <p>The ID of the session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,12 +58,21 @@ public class SendMessageChatTextRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The content of the message.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>The type of the message. Valid values:</p>
+     * <ul>
+     * <li>announcement: notification.</li>
+     * <li>custom: custom message.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

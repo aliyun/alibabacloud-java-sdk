@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitCopyrightJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitCopyrightJobResponseBodyData data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -15,7 +20,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FA258E67-09B8-4EAA-8F33-BA567834A2C3</p>
@@ -24,6 +29,8 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -69,6 +76,8 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
 
     public static class SubmitCopyrightJobResponseBodyData extends TeaModel {
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>bfb786c63****f4d80648792021eff90</p>
          */

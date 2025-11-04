@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryCopyrightJobListRequest extends TeaModel {
     /**
+     * <p>The end of the creation time range for the query, in UNIX timestamp format.</p>
+     * 
      * <strong>example:</strong>
      * <p>1627357325</p>
      */
@@ -12,6 +14,8 @@ public class QueryCopyrightJobListRequest extends TeaModel {
     public Long createTimeEnd;
 
     /**
+     * <p>The start of the creation time range for the query, in UNIX timestamp format.</p>
+     * 
      * <strong>example:</strong>
      * <p>1627357322</p>
      */
@@ -19,6 +23,8 @@ public class QueryCopyrightJobListRequest extends TeaModel {
     public Long createTimeStart;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
      */
@@ -26,6 +32,8 @@ public class QueryCopyrightJobListRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The watermark level, indicating the color channel for embedding. 0: U. 1: UV. 2: YUV.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -33,6 +41,8 @@ public class QueryCopyrightJobListRequest extends TeaModel {
     public Long level;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -40,6 +50,8 @@ public class QueryCopyrightJobListRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

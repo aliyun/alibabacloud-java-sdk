@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloseStreamToSearchLibResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
      */
@@ -19,7 +23,7 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -28,6 +32,12 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

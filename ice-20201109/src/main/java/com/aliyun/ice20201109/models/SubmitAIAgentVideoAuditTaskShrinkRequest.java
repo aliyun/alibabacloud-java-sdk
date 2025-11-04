@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitAIAgentVideoAuditTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the AI agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SubmitAIAgentVideoAuditTaskShrinkRequest extends TeaModel {
     public String AIAgentId;
 
     /**
+     * <p>The interval, in milliseconds, at which to submit captured frames to the AI agent. Valid values: 0 to 5000. Default value: 3000. If it is set to 0, all captured frames are sent to the model in a single batch request. Otherwise, frames are sent sequentially with the specified interval between each request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3000</p>
      */
@@ -21,6 +24,8 @@ public class SubmitAIAgentVideoAuditTaskShrinkRequest extends TeaModel {
     public Integer auditInterval;
 
     /**
+     * <p>Callback configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Url&quot;:&quot;<a href="https://yourcallback%22,%22Token%22:%22yourtoken%22%7D">https://yourcallback&quot;,&quot;Token&quot;:&quot;yourtoken&quot;}</a></p>
      */
@@ -28,17 +33,22 @@ public class SubmitAIAgentVideoAuditTaskShrinkRequest extends TeaModel {
     public String callbackConfigShrink;
 
     /**
+     * <p>An array of frame-capturing policies. Each policy defines a set of frames to be analyzed and will generate a separate result from the model.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CapturePolicies")
     public String capturePoliciesShrink;
 
     /**
+     * <p>The details of the input file.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
+    /**
+     * <p>The user-defined data.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

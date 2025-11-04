@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CancelIProductionJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>12e8864746a0a398</strong></strong></p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The ID of the intelligent production job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

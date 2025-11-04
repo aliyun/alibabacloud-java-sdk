@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResumeMediaConnectFlowOutputRequest extends TeaModel {
     /**
+     * <p>The ID of the MediaConnect flow.</p>
+     * 
      * <strong>example:</strong>
      * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
      */
@@ -12,6 +14,8 @@ public class ResumeMediaConnectFlowOutputRequest extends TeaModel {
     public String flowId;
 
     /**
+     * <p>The name of the output.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliTestOutput</p>
      */

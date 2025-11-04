@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetHotwordLibraryResponseBody extends TeaModel {
     /**
+     * <p>The time when the hotword library was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-12-23T13:33:49Z</p>
      */
@@ -12,6 +14,8 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
     public String creationTime;
 
     /**
+     * <p>The description of the hotword library.</p>
+     * 
      * <strong>example:</strong>
      * <p>热词库描述</p>
      */
@@ -19,16 +23,23 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the hotword library.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>05512043f49f697f7425</strong></strong></p>
      */
     @NameInMap("HotwordLibraryId")
     public String hotwordLibraryId;
 
+    /**
+     * <p>The hotword list.</p>
+     */
     @NameInMap("Hotwords")
     public java.util.List<Hotword> hotwords;
 
     /**
+     * <p>The name of the hotword library.</p>
+     * 
      * <strong>example:</strong>
      * <p>热词库名称</p>
      */
@@ -36,7 +47,7 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -45,6 +56,8 @@ public class GetHotwordLibraryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The usage scenario of the hotword library.</p>
+     * 
      * <strong>example:</strong>
      * <p>ASR</p>
      */

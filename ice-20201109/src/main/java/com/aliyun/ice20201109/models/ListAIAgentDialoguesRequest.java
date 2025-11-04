@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentDialoguesRequest extends TeaModel {
     /**
+     * <p>Specify the end of the time range to query using a UNIX timestamp accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The sorting order. Valid values: </p>
+     * <ul>
+     * <li>DESC: descending order (default)</li>
+     * <li>ASC: ascending order</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -21,6 +28,8 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +37,8 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -38,6 +49,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public String roundLimit;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +59,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Specify the start of the time range to query using a UNIX timestamp accurate to milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByMultimodalRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("CustomFilters")
+    public String customFilters;
+
+    /**
      * <p>The type of the media assets.</p>
      * <p>Valid values:</p>
      * <ul>
@@ -54,9 +61,24 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
     @NameInMap("Text")
     public String text;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("UtcCreate")
+    public String utcCreate;
+
     public static SearchMediaByMultimodalRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaByMultimodalRequest self = new SearchMediaByMultimodalRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchMediaByMultimodalRequest setCustomFilters(String customFilters) {
+        this.customFilters = customFilters;
+        return this;
+    }
+    public String getCustomFilters() {
+        return this.customFilters;
     }
 
     public SearchMediaByMultimodalRequest setMediaType(String mediaType) {
@@ -105,6 +127,14 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
     }
     public String getText() {
         return this.text;
+    }
+
+    public SearchMediaByMultimodalRequest setUtcCreate(String utcCreate) {
+        this.utcCreate = utcCreate;
+        return this;
+    }
+    public String getUtcCreate() {
+        return this.utcCreate;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStorageListResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>73-8B78-5D86-A50C-49B96C</strong></strong></strong></p>
@@ -13,6 +13,9 @@ public class GetStorageListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The storage configurations.</p>
+     */
     @NameInMap("StorageInfoList")
     public java.util.List<GetStorageListResponseBodyStorageInfoList> storageInfoList;
 
@@ -39,6 +42,8 @@ public class GetStorageListResponseBody extends TeaModel {
 
     public static class GetStorageListResponseBodyStorageInfoList extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>app-****</p>
          */
@@ -46,6 +51,8 @@ public class GetStorageListResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The time when the configuration was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-06T01:55:07Z</p>
          */
@@ -53,6 +60,8 @@ public class GetStorageListResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>Indicates whether it is the default storage location.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -60,6 +69,8 @@ public class GetStorageListResponseBody extends TeaModel {
         public Boolean defaultStorage;
 
         /**
+         * <p>Indicates whether temporary files created during editing processes are stored in this location.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -67,6 +78,8 @@ public class GetStorageListResponseBody extends TeaModel {
         public Boolean editingTempFileStorage;
 
         /**
+         * <p>The time when the configuration was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-06T03:07:07Z</p>
          */
@@ -74,6 +87,8 @@ public class GetStorageListResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>your-path/</p>
          */
@@ -81,6 +96,8 @@ public class GetStorageListResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The OSS storage status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -88,6 +105,8 @@ public class GetStorageListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>your-bucket</p>
          */
@@ -95,6 +114,8 @@ public class GetStorageListResponseBody extends TeaModel {
         public String storageLocation;
 
         /**
+         * <p>The storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>vod_oss_bucket</p>
          */

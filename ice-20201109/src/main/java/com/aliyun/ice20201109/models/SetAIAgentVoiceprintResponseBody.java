@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetAIAgentVoiceprintResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>550e8400********55440000</p>
      */
@@ -12,6 +14,8 @@ public class SetAIAgentVoiceprintResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the registered voiceprint.</p>
+     * 
      * <strong>example:</strong>
      * <p>vp_1699123456_8527</p>
      */

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class SubmitAvatarVideoJobRequest extends TeaModel {
     /**
+     * <p>The task description. Max length: 128 bytes.</p>
+     * 
      * <strong>example:</strong>
-     * <p>测试描述</p>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The avatar configurations, including the avatar ID, voice, and speech rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;AvatarId&quot;:&quot;yunqiao&quot;}</p>
      */
@@ -19,29 +23,38 @@ public class SubmitAvatarVideoJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
-     * <p>The input configurations of the video rendering job for an avatar. You can specify text, the Object Storage Service (OSS) URL of an audio file, or the ID of a media asset. The audio file must be in the MP3 or WAV format.</p>
+     * <p>The input configurations of the video rendering task for an avatar. You can specify text, the Object Storage Service (OSS) URL of an audio file, or the ID of a media asset. The audio file must be in the MP3 or WAV format.</p>
      * <blockquote>
-     * <p> The text must be at least five words in length.</p>
+     * <p>Notice: The text must be at least five characters in length.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Text&quot;: &quot;To be, or not to be, that is the question.&quot;}</p>
      */
     @NameInMap("InputConfig")
     public String inputConfig;
 
     /**
+     * <p>The output configurations, including the destination URL for the rendered video.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;MediaURL&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22,%22Width%22:1920,%22Height%22:1080%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;,&quot;Width&quot;:1920,&quot;Height&quot;:1080}</a></p>
+     * <p>{&quot;MediaURL&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;}</a></p>
      */
     @NameInMap("OutputConfig")
     public String outputConfig;
 
     /**
+     * <p>The task name. Max length: 128 bytes.</p>
+     * 
      * <strong>example:</strong>
-     * <p>测试标题</p>
+     * <p>test</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
+     * <p>A user-defined JSON string for passing custom business information, such as environment details or task metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;user&quot;:&quot;data&quot;,&quot;env&quot;:&quot;prod&quot;}</p>
      */

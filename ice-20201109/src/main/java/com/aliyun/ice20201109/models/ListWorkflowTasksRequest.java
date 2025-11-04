@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowTasksRequest extends TeaModel {
     /**
+     * <p>The end of the time range for filtering tasks by their creation time. Supports querying data from the last 90 days only.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-07-15T00:00:00Z</p>
      */
     @NameInMap("EndOfCreateTime")
     public String endOfCreateTime;
 
+    /**
+     * <p>A keyword for fuzzy matching against the TaskInput, such as a file name or Media ID. Max length: 32 characters.</p>
+     */
     @NameInMap("KeyText")
     public String keyText;
 
     /**
+     * <p>The maximum number of media workflow instances to return. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * 
      * <strong>example:</strong>
      * <p>****<strong><strong><strong><strong><strong>VRpbWUQARgBIpcBCgkA1bUtaAAAAAAKiQEDhAAAADFTMzg2NTY2NjU2MzM3NjU2NjYyMzkzMTYyMzI2MjYzNjY2</strong></strong></strong></strong></strong></p>
      */
@@ -29,6 +38,8 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The start of the time range for filtering tasks by their creation time. Supports querying data from the last 90 days only.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-07-12T00:00:00Z</p>
      */
@@ -36,6 +47,8 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public String startOfCreateTime;
 
     /**
+     * <p>The ID of the workflow template.<a href="https://ims.console.aliyun.com/settings/workflow/list"></a></p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b4fb044839815d4f2cd8</strong></strong></strong></p>
      */
@@ -43,6 +56,8 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public String workflowId;
 
     /**
+     * <p>The name of the workflow template.</p>
+     * 
      * <strong>example:</strong>
      * <p>example-workflow-****</p>
      */

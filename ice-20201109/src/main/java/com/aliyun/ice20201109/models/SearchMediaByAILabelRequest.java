@@ -4,6 +4,13 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaByAILabelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("CustomFilters")
+    public String customFilters;
+
     @NameInMap("MatchingMode")
     public String matchingMode;
 
@@ -107,9 +114,24 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     @NameInMap("Text")
     public String text;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("UtcCreate")
+    public String utcCreate;
+
     public static SearchMediaByAILabelRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaByAILabelRequest self = new SearchMediaByAILabelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchMediaByAILabelRequest setCustomFilters(String customFilters) {
+        this.customFilters = customFilters;
+        return this;
+    }
+    public String getCustomFilters() {
+        return this.customFilters;
     }
 
     public SearchMediaByAILabelRequest setMatchingMode(String matchingMode) {
@@ -198,6 +220,14 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     }
     public String getText() {
         return this.text;
+    }
+
+    public SearchMediaByAILabelRequest setUtcCreate(String utcCreate) {
+        this.utcCreate = utcCreate;
+        return this;
+    }
+    public String getUtcCreate() {
+        return this.utcCreate;
     }
 
 }

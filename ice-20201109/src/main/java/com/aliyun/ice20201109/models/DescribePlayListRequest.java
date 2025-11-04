@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlayListRequest extends TeaModel {
     /**
+     * <p>The beginning of the time range to query. By default, the system queries data of the current day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribePlayListRequest extends TeaModel {
     public String beginTs;
 
     /**
+     * <p>The end of the time range to query. The time range cannot exceed 24 hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,14 @@ public class DescribePlayListRequest extends TeaModel {
     public String endTs;
 
     /**
+     * <p>The criteria by which the sorting is performed. Valid values:</p>
+     * <ul>
+     * <li>FirstFrameDuration</li>
+     * <li>PlayDuration</li>
+     * <li>VideoDuration</li>
+     * <li>StuckDuration</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FirstFrameDuration</p>
      */
@@ -30,6 +40,12 @@ public class DescribePlayListRequest extends TeaModel {
     public String orderName;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>DESC: descending order.</li>
+     * <li>ASC: ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -37,6 +53,7 @@ public class DescribePlayListRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +63,7 @@ public class DescribePlayListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +73,11 @@ public class DescribePlayListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The playback type. Valid value: </p>
+     * <ul>
+     * <li>vod</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>vod</p>
      */
@@ -62,6 +85,13 @@ public class DescribePlayListRequest extends TeaModel {
     public String playType;
 
     /**
+     * <p>The playback status. Valid values:</p>
+     * <ul>
+     * <li>complete</li>
+     * <li>playing</li>
+     * <li>unusual: A playback error occurs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>complete</p>
      */
@@ -69,6 +99,8 @@ public class DescribePlayListRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The TraceId of the player.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bc5e70516766285805381012d271e</p>
      */

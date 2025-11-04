@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SetAIAgentVoiceprintShrinkRequest extends TeaModel {
+    /**
+     * <p>The input file.</p>
+     */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
+     * <p>A unique identifier for the voiceprint. Generate this ID based on your own business rules. Requirement: 1 to 127 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>vp_1699123456_8527</p>
      */

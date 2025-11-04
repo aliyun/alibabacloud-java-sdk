@@ -5,12 +5,26 @@ import com.aliyun.tea.*;
 
 public class SubmitCopyrightExtractJobShrinkRequest extends TeaModel {
     /**
+     * <p>The source video file from which to extract the watermark.</p>
+     * <blockquote>
+     * <p>The OSS object or media asset must reside in the same region as the IMS service region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
+     * <p>Additional parameters for the watermark job, provided as a JSON string. Supported parameter:</p>
+     * <ul>
+     * <li><p>algoType: The algorithm type. Defaults to v1. The extraction algorithm must match the one used for embedding.</p>
+     * <ul>
+     * <li>v1: Copyright watermark extraction algorithm for long videos.</li>
+     * <li>v2: Copyright watermark extraction algorithm for short videos.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;algoType&quot;:&quot;v2&quot;}</p>
      */
@@ -18,6 +32,8 @@ public class SubmitCopyrightExtractJobShrinkRequest extends TeaModel {
     public String params;
 
     /**
+     * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

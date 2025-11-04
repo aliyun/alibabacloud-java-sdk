@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OpenMediaConnectFlowFailoverResponseBody extends TeaModel {
     /**
+     * <p>The response body.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -12,6 +14,8 @@ public class OpenMediaConnectFlowFailoverResponseBody extends TeaModel {
     public String content;
 
     /**
+     * <p>The call description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class OpenMediaConnectFlowFailoverResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>11357BE8-4C54-58EA-890A-5AB646EDE4B2</p>
      */
@@ -26,6 +32,8 @@ public class OpenMediaConnectFlowFailoverResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

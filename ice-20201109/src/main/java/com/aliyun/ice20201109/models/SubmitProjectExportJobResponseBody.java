@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitProjectExportJobResponseBody extends TeaModel {
     /**
+     * <p>The ID of the project export task.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitProjectExportJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

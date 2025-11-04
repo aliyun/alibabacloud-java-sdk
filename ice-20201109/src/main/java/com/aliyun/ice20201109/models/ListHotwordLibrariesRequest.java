@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListHotwordLibrariesRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-12-26T04:11:10Z</p>
      */
@@ -12,6 +14,9 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The maximum number of entries to return.</p>
+     * <p>Default value: 10. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +24,8 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the hotword library.</p>
+     * 
      * <strong>example:</strong>
      * <p>热词库使用名称</p>
      */
@@ -26,6 +33,8 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>73f33c91-d59383e8280b</strong></strong></p>
      */
@@ -33,6 +42,8 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +51,8 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +60,8 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreationTime:Desc</p>
      */
@@ -54,6 +69,8 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The beginning of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-12-26T04:11:10Z</p>
      */
@@ -61,6 +78,13 @@ public class ListHotwordLibrariesRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The usage scenario of the hotword library. Valid values:</p>
+     * <ul>
+     * <li>ASR: Automatic Speech Recognition</li>
+     * <li>StructuredMediaAssets: structured media analysis</li>
+     * <li>VideoTranslation: Video translation. This field cannot be modified after the hotword library is created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ASR</p>
      */

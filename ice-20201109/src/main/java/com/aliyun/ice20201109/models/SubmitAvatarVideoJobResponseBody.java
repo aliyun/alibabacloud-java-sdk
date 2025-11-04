@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitAvatarVideoJobResponseBody extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitAvatarVideoJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The media asset ID of the output file.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>70dcc471edaf00e6f6f4</strong></strong></strong></p>
      */
@@ -19,7 +23,7 @@ public class SubmitAvatarVideoJobResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryCopyrightExtractJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryCopyrightExtractJobResponseBodyData data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -15,7 +20,7 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
@@ -24,6 +29,8 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -68,6 +75,9 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
     }
 
     public static class QueryCopyrightExtractJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The copyright watermark information.</p>
+         */
         @NameInMap("Message")
         public String message;
 

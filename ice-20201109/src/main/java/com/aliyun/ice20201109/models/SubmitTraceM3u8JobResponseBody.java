@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitTraceM3u8JobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitTraceM3u8JobResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -54,6 +59,8 @@ public class SubmitTraceM3u8JobResponseBody extends TeaModel {
 
     public static class SubmitTraceM3u8JobResponseBodyData extends TeaModel {
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>bfb786c639894f4d8064879202****</p>
          */

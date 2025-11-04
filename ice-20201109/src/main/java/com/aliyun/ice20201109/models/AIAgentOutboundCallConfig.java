@@ -13,6 +13,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     @NameInMap("EnableIntelligentSegment")
     public Boolean enableIntelligentSegment;
 
+    @NameInMap("ExperimentalConfig")
+    public String experimentalConfig;
+
     @NameInMap("Greeting")
     public String greeting;
 
@@ -58,6 +61,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
     public Boolean getEnableIntelligentSegment() {
         return this.enableIntelligentSegment;
+    }
+
+    public AIAgentOutboundCallConfig setExperimentalConfig(String experimentalConfig) {
+        this.experimentalConfig = experimentalConfig;
+        return this;
+    }
+    public String getExperimentalConfig() {
+        return this.experimentalConfig;
     }
 
     public AIAgentOutboundCallConfig setGreeting(String greeting) {

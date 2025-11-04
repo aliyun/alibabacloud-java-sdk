@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProjectExportJobRequest extends TeaModel {
     /**
+     * <p>The ID of the project export task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitTraceAbJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public SubmitTraceAbJobResponseBodyData data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -15,7 +20,7 @@ public class SubmitTraceAbJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></strong></p>
@@ -24,6 +29,8 @@ public class SubmitTraceAbJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -69,6 +76,8 @@ public class SubmitTraceAbJobResponseBody extends TeaModel {
 
     public static class SubmitTraceAbJobResponseBodyData extends TeaModel {
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>bfb786c639894f4d80648792021e****</p>
          */
@@ -76,6 +85,8 @@ public class SubmitTraceAbJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The media ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>bf53333264f4d80648792021e****</p>
          */

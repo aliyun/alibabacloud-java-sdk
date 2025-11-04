@@ -4,10 +4,14 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListMediaConvertJobsResponseBody extends TeaModel {
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Jobs")
     public java.util.List<MediaConvertJobWithoutDetail> jobs;
 
     /**
+     * <p>Indicates the read position returned by the current call. An empty value means all data has been read.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +21,7 @@ public class ListMediaConvertJobsResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

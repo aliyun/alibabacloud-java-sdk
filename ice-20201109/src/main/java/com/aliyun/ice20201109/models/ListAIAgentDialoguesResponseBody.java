@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListAIAgentDialoguesResponseBody extends TeaModel {
+    /**
+     * <p>The dialog records.</p>
+     */
     @NameInMap("Dialogues")
     public java.util.List<ListAIAgentDialoguesResponseBodyDialogues> dialogues;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B117AF5-***************</p>
      */
@@ -103,6 +108,8 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public java.util.List<ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList> attachedFileList;
 
         /**
+         * <p>The unique ID of the dialog.</p>
+         * 
          * <strong>example:</strong>
          * <p>19de81b3b3d94abda22****</p>
          */
@@ -116,35 +123,83 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The speaker. Valid values: </p>
+         * <ul>
+         * <li>user</li>
+         * <li>agent</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
         @NameInMap("Producer")
         public String producer;
 
+        /**
+         * <p>The reasoning trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I\&quot;m thinking</p>
+         */
         @NameInMap("ReasoningText")
         public String reasoningText;
 
         /**
+         * <p>The ID of the conversational turn.</p>
+         * 
          * <strong>example:</strong>
          * <p>f27f9b9be28642a88e18****</p>
          */
         @NameInMap("RoundId")
         public String roundId;
 
+        /**
+         * <p>The source of the message. Valid values:</p>
+         * <p>chat: messaging conversations.</p>
+         * <p>call: voice calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The specific content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
+         */
         @NameInMap("Text")
         public String text;
 
         /**
+         * <p>The UNIX timestamp, measured in milliseconds, which indicates the time when the message was generated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1734511087000</p>
          */
         @NameInMap("Time")
         public Long time;
 
+        /**
+         * <p>The message type. Valid values:</p>
+         * <p>Voice calls:</p>
+         * <ol>
+         * <li>greeting: the welcome message.</li>
+         * <li>normal: the voice response.</li>
+         * <li>speech: the proactive message.</li>
+         * </ol>
+         * <p>Messaging conversations:</p>
+         * <ol>
+         * <li>normal: the text reply.</li>
+         * <li>announcement: the proactive text message.</li>
+         * <li>custom: the custom message.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>announcement</p>
+         */
         @NameInMap("Type")
         public String type;
 

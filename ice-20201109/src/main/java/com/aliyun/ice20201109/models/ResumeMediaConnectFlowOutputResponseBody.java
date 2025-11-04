@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResumeMediaConnectFlowOutputResponseBody extends TeaModel {
     /**
+     * <p>The response body.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -12,6 +14,8 @@ public class ResumeMediaConnectFlowOutputResponseBody extends TeaModel {
     public String content;
 
     /**
+     * <p>The call description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class ResumeMediaConnectFlowOutputResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
      */
@@ -26,6 +32,8 @@ public class ResumeMediaConnectFlowOutputResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

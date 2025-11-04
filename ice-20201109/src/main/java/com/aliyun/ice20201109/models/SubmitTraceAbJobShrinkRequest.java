@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     /**
+     * <p>The key that is encoded by using the Base64 algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>Qh6OdgIMcliQSI1fReOw****</p>
      */
@@ -12,12 +14,18 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public String cipherBase64ed;
 
     /**
+     * <p>The source video file for A/B watermarking.</p>
+     * <blockquote>
+     * <p>OSS object or media asset must reside in the same region as the IMS service region. This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
+     * <p>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -25,12 +33,15 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public Long level;
 
     /**
+     * <p>The output directory path.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
     public String outputShrink;
 
     /**
+     * <p>The start point of watermark embedding. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -38,6 +49,8 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The duration of the watermark embedding. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>360</p>
      */
@@ -45,6 +58,8 @@ public class SubmitTraceAbJobShrinkRequest extends TeaModel {
     public Long totalTime;
 
     /**
+     * <p>The custom data, which can be up to 1,024 bytes in size.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

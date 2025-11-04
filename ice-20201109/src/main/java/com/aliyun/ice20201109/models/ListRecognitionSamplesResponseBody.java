@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecognitionSamplesResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,16 +23,23 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The samples.</p>
+     */
     @NameInMap("Samples")
     public ListRecognitionSamplesResponseBodySamples samples;
 
     /**
+     * <p>The total number of samples.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,6 +93,8 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
 
     public static class ListRecognitionSamplesResponseBodySamplesSample extends TeaModel {
         /**
+         * <p>The URL of the image sample.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/sample.png">https://example.com/sample.png</a></p>
          */
@@ -89,6 +102,8 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>The sample ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxxxxxxxxx</p>
          */

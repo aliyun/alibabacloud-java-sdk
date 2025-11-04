@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHotwordLibraryRequest extends TeaModel {
     /**
+     * <p>The ID of the hotword library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

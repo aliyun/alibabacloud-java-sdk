@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateRecognitionSampleRequest extends TeaModel {
     /**
+     * <p>The type of recognition this sample is for.</p>
+     * <ul>
+     * <li>landmark</li>
+     * <li>object</li>
+     * <li>logo</li>
+     * <li>face</li>
+     * <li>label</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +22,7 @@ public class CreateRecognitionSampleRequest extends TeaModel {
     public String algorithm;
 
     /**
+     * <p>The ID of the specific entity within the library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,16 +32,22 @@ public class CreateRecognitionSampleRequest extends TeaModel {
     public String entityId;
 
     /**
+     * <p>The URL of the sample image.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/sample.png">https://example.com/sample.png</a></p>
      */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>The custom text label.</p>
+     */
     @NameInMap("LabelPrompt")
     public String labelPrompt;
 
     /**
+     * <p>The ID of the recognition library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

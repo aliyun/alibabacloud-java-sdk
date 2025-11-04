@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListRecognitionLibsResponseBody extends TeaModel {
+    /**
+     * <p>The recognition libraries.</p>
+     */
     @NameInMap("Libs")
     public ListRecognitionLibsResponseBodyLibs libs;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -29,6 +38,8 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>180</p>
      */
@@ -81,16 +92,24 @@ public class ListRecognitionLibsResponseBody extends TeaModel {
     }
 
     public static class ListRecognitionLibsResponseBodyLibsLib extends TeaModel {
+        /**
+         * <p>The description of the recognition library.</p>
+         */
         @NameInMap("LibDescription")
         public String libDescription;
 
         /**
+         * <p>The ID of the recognition library.</p>
+         * 
          * <strong>example:</strong>
          * <p><em><strong><strong><strong><strong><strong><strong>24b47865c6</strong></strong></strong></strong></strong></strong></em>*</p>
          */
         @NameInMap("LibId")
         public String libId;
 
+        /**
+         * <p>The name of the recognition library.</p>
+         */
         @NameInMap("LibName")
         public String libName;
 

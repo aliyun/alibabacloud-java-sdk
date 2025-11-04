@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateHotwordLibraryResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><em>3B-0E1A-586A-AC29-742247</em></p>
      */
@@ -12,6 +14,8 @@ public class UpdateHotwordLibraryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the hotword library.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
      */

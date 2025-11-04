@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStorageListRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-****</p>
      */
@@ -12,6 +14,8 @@ public class GetStorageListRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The OSS storage status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -19,6 +23,8 @@ public class GetStorageListRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The storage type.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod_oss_bucket</p>
      */

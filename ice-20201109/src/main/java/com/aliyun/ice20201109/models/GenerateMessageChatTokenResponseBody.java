@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateMessageChatTokenResponseBody extends TeaModel {
     /**
+     * <p>The AppID of the user.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -12,6 +14,8 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application signature.</p>
+     * 
      * <strong>example:</strong>
      * <p>H4sIAAAAAAAE******************</p>
      */
@@ -19,6 +23,8 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
     public String appSign;
 
     /**
+     * <p>The nonce used to generate the token.</p>
+     * 
      * <strong>example:</strong>
      * <p>AK-***********</p>
      */
@@ -26,6 +32,8 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
     public String nonce;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req_1234567890abcdef</p>
      */
@@ -33,6 +41,8 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The role used to generate the token.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -40,6 +50,8 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
     public String role;
 
     /**
+     * <p>The expiration time. Unit: seconds. Expiration time = Current time + Validity period.</p>
+     * 
      * <strong>example:</strong>
      * <p>1700000000</p>
      */
@@ -47,6 +59,8 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
     public Long timeStamp;
 
     /**
+     * <p>The generated token.</p>
+     * 
      * <strong>example:</strong>
      * <p>acet**********</p>
      */
@@ -54,6 +68,8 @@ public class GenerateMessageChatTokenResponseBody extends TeaModel {
     public String token;
 
     /**
+     * <p>The ID of the user for joining the channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>YOURUSERID</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -12,12 +14,17 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of voiceprints that match the query criteria.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The voiceprints.</p>
+     */
     @NameInMap("Voiceprints")
     public java.util.List<ListAIAgentVoiceprintsResponseBodyVoiceprints> voiceprints;
 
@@ -52,6 +59,8 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
 
     public static class ListAIAgentVoiceprintsResponseBodyVoiceprints extends TeaModel {
         /**
+         * <p>The creation time of the voiceprint.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-28T10:03:58.000+00:00</p>
          */
@@ -59,6 +68,8 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time of the voiceprint.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-28T10:03:58.000+00:00</p>
          */
@@ -66,6 +77,8 @@ public class ListAIAgentVoiceprintsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The unique identifier for the voiceprint.</p>
+         * 
          * <strong>example:</strong>
          * <p>vp_1699123456_8527</p>
          */

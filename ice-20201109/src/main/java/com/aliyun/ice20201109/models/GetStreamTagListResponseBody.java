@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStreamTagListResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetStreamTagListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>73f33c91-d59383e8280b</strong></strong></p>
      */
@@ -19,7 +23,7 @@ public class GetStreamTagListResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -27,10 +31,19 @@ public class GetStreamTagListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag information.</p>
+     */
     @NameInMap("StreamTagList")
     public java.util.List<GetStreamTagListResponseBodyStreamTagList> streamTagList;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,6 +51,8 @@ public class GetStreamTagListResponseBody extends TeaModel {
     public String success;
 
     /**
+     * <p>The total number of entries that are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>163</p>
      */
@@ -99,6 +114,8 @@ public class GetStreamTagListResponseBody extends TeaModel {
 
     public static class GetStreamTagListResponseBodyStreamTagList extends TeaModel {
         /**
+         * <p>The end time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-02-25T02:24:00Z</p>
          */
@@ -106,6 +123,8 @@ public class GetStreamTagListResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The start time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-26T16:00:00Z</p>
          */
@@ -113,6 +132,8 @@ public class GetStreamTagListResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The user-defined data.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;result&quot;:&quot;xxx&quot;}</p>
          */

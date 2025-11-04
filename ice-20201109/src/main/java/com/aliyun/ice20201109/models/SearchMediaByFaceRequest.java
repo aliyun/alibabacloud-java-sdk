@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByFaceRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("CustomFilters")
+    public String customFilters;
+
+    /**
      * <p>The ID of the entity.</p>
      * 
      * <strong>example:</strong>
@@ -76,9 +83,24 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("SearchLibName")
     public String searchLibName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("UtcCreate")
+    public String utcCreate;
+
     public static SearchMediaByFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaByFaceRequest self = new SearchMediaByFaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchMediaByFaceRequest setCustomFilters(String customFilters) {
+        this.customFilters = customFilters;
+        return this;
+    }
+    public String getCustomFilters() {
+        return this.customFilters;
     }
 
     public SearchMediaByFaceRequest setEntityId(String entityId) {
@@ -143,6 +165,14 @@ public class SearchMediaByFaceRequest extends TeaModel {
     }
     public String getSearchLibName() {
         return this.searchLibName;
+    }
+
+    public SearchMediaByFaceRequest setUtcCreate(String utcCreate) {
+        this.utcCreate = utcCreate;
+        return this;
+    }
+    public String getUtcCreate() {
+        return this.utcCreate;
     }
 
 }

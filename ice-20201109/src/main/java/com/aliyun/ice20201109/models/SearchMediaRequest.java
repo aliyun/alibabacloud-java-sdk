@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchMediaRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("CustomFilters")
+    public String customFilters;
+
+    /**
      * <p>The ID of the entity.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,14 @@ public class SearchMediaRequest extends TeaModel {
     public static SearchMediaRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaRequest self = new SearchMediaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchMediaRequest setCustomFilters(String customFilters) {
+        this.customFilters = customFilters;
+        return this;
+    }
+    public String getCustomFilters() {
+        return this.customFilters;
     }
 
     public SearchMediaRequest setEntityId(String entityId) {

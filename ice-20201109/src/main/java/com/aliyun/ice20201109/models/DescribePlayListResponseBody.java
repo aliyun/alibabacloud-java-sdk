@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePlayListResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,17 +14,22 @@ public class DescribePlayListResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The playback records.</p>
+     */
     @NameInMap("PlayList")
     public java.util.List<DescribePlayListResponseBodyPlayList> playList;
 
     /**
-     * <p>Id</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B960580D-26FA-5547-8AFC-3CDC812DBF27</p>
@@ -31,6 +38,8 @@ public class DescribePlayListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total playback count.</p>
+     * 
      * <strong>example:</strong>
      * <p>49</p>
      */
@@ -84,6 +93,8 @@ public class DescribePlayListResponseBody extends TeaModel {
 
     public static class DescribePlayListResponseBodyPlayList extends TeaModel {
         /**
+         * <p>Time to first frame.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -91,6 +102,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String firstFrameDuration;
 
         /**
+         * <p>The playback duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -98,6 +111,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String playDuration;
 
         /**
+         * <p>The timestamp when the playback started.</p>
+         * 
          * <strong>example:</strong>
          * <p>1675922209572</p>
          */
@@ -105,6 +120,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String playTs;
 
         /**
+         * <p>The playback type.</p>
+         * 
          * <strong>example:</strong>
          * <p>vod</p>
          */
@@ -112,6 +129,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String playType;
 
         /**
+         * <p>The ID of the player session.</p>
+         * 
          * <strong>example:</strong>
          * <p>91488be2-8381-40c9-8494-e8afe22c4a2d</p>
          */
@@ -119,6 +138,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The playback status.</p>
+         * 
          * <strong>example:</strong>
          * <p>complete</p>
          */
@@ -126,6 +147,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The stuttering duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -133,6 +156,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String stuckDuration;
 
         /**
+         * <p>The TraceId of the player.</p>
+         * 
          * <strong>example:</strong>
          * <p>0b736abf16724820210842673d9543</p>
          */
@@ -140,6 +165,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String traceId;
 
         /**
+         * <p>The duration of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -147,6 +174,8 @@ public class DescribePlayListResponseBody extends TeaModel {
         public String videoDuration;
 
         /**
+         * <p>The ID of the video.</p>
+         * 
          * <strong>example:</strong>
          * <p>250314203f0171eebff17035d0b20102</p>
          */

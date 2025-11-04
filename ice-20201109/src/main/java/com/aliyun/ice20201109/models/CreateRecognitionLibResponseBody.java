@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRecognitionLibResponseBody extends TeaModel {
     /**
+     * <p>The ID of the recognition library created.</p>
+     * 
      * <strong>example:</strong>
      * <p><em><strong><strong><strong><strong><strong><strong>24b47865c6</strong></strong></strong></strong></strong></strong></em>*</p>
      */
@@ -12,6 +14,8 @@ public class CreateRecognitionLibResponseBody extends TeaModel {
     public String libId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

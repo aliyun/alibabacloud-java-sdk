@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitAIAgentVideoAuditTaskResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong><strong><strong>fb04483915d4f2</strong></strong></strong></strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitAIAgentVideoAuditTaskResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>**********-586A-AC29-742247******</p>
      */

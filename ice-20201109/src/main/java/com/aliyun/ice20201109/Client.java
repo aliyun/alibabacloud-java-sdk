@@ -592,7 +592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标流媒资</p>
+     * <p>Adds tags for a specific live stream media asset.</p>
      * 
      * @param request AddStreamTagToSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -636,7 +636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标流媒资</p>
+     * <p>Adds tags for a specific live stream media asset.</p>
      * 
      * @param request AddStreamTagToSearchLibRequest
      * @return AddStreamTagToSearchLibResponse
@@ -1014,7 +1014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消智能生产任务</p>
+     * <p>Cancels an intelligent production job.</p>
      * 
      * @param request CancelIProductionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1050,7 +1050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消智能生产任务</p>
+     * <p>Cancels an intelligent production job.</p>
      * 
      * @param request CancelIProductionJobRequest
      * @return CancelIProductionJobResponse
@@ -1061,8 +1061,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <pre><code>
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>清除声纹ID对应的声纹</p>
+     * <p>Deletes a voiceprint based on its ID.</p>
      * 
      * @param request ClearAIAgentVoiceprintRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1093,8 +1098,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <pre><code>
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>清除声纹ID对应的声纹</p>
+     * <p>Deletes a voiceprint based on its ID.</p>
      * 
      * @param request ClearAIAgentVoiceprintRequest
      * @return ClearAIAgentVoiceprintResponse
@@ -1105,8 +1115,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭MediaConnect实例的双流灾备功能</p>
+     * <p>Disables Source Failover for a MediaConnect flow.</p>
      * 
      * @param request CloseMediaConnectFlowFailoverRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1137,8 +1150,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭MediaConnect实例的双流灾备功能</p>
+     * <p>Disables Source Failover for a MediaConnect flow.</p>
      * 
      * @param request CloseMediaConnectFlowFailoverRequest
      * @return CloseMediaConnectFlowFailoverResponse
@@ -1150,7 +1166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭流媒资</p>
+     * <p>Stops the tagging and analysis process for a live stream media asset.</p>
      * 
      * @param request CloseStreamToSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1190,7 +1206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭流媒资</p>
+     * <p>Stops the tagging and analysis process for a live stream media asset.</p>
      * 
      * @param request CloseStreamToSearchLibRequest
      * @return CloseStreamToSearchLibResponse
@@ -1658,7 +1674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建热词库</p>
+     * <p>Creates a hotword library.</p>
      * 
      * @param tmpReq CreateHotwordLibraryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1708,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建热词库</p>
+     * <p>Creates a hotword library.</p>
      * 
      * @param request CreateHotwordLibraryRequest
      * @return CreateHotwordLibraryResponse
@@ -2557,8 +2573,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义实体</p>
+     * <p>Creates an entity to be recognized in a custom recognition library. The entity can be a landmark, object, logo, or person.</p>
      * 
      * @param request CreateRecognitionEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2617,8 +2639,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义实体</p>
+     * <p>Creates an entity to be recognized in a custom recognition library. The entity can be a landmark, object, logo, or person.</p>
      * 
      * @param request CreateRecognitionEntityRequest
      * @return CreateRecognitionEntityResponse
@@ -2629,8 +2657,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</li>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义库。</p>
+     * <p>Creates a custom library to store the entity information for recognition.</p>
      * 
      * @param request CreateRecognitionLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2685,8 +2720,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</li>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义库。</p>
+     * <p>Creates a custom library to store the entity information for recognition.</p>
      * 
      * @param request CreateRecognitionLibRequest
      * @return CreateRecognitionLibResponse
@@ -2697,8 +2739,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>注册自定义实体照片</p>
+     * <p>Adds a sample image or a text label to a specific entity within a recognition library.</p>
      * 
      * @param request CreateRecognitionSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2761,8 +2809,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>注册自定义实体照片</p>
+     * <p>Adds a sample image or a text label to a specific entity within a recognition library.</p>
      * 
      * @param request CreateRecognitionSampleRequest
      * @return CreateRecognitionSampleResponse
@@ -2992,7 +3046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建流媒资</p>
+     * <p>Registers a live stream as a media asset.</p>
      * 
      * @param request CreateStreamToSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3032,7 +3086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建流媒资</p>
+     * <p>Registers a live stream as a media asset.</p>
      * 
      * @param request CreateStreamToSearchLibRequest
      * @return CreateStreamToSearchLibResponse
@@ -3432,7 +3486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除智能体的对话历史记录。</p>
+     * <p>Deletes dialog records of an AI agent.</p>
      * 
      * @param request DeleteAIAgentDialogueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3472,7 +3526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除智能体的对话历史记录。</p>
+     * <p>Deletes dialog records of an AI agent.</p>
      * 
      * @param request DeleteAIAgentDialogueRequest
      * @return DeleteAIAgentDialogueResponse
@@ -3973,8 +4027,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to delete a specified hotword library.</li>
+     * <li>The delete operation is irreversible.</li>
+     * <li>You can create up to 100 hotword libraries in an account.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除热词词库</p>
+     * <p>Deletes a specified hotword library based on the ID.</p>
      * 
      * @param request DeleteHotwordLibraryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4005,8 +4067,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to delete a specified hotword library.</li>
+     * <li>The delete operation is irreversible.</li>
+     * <li>You can create up to 100 hotword libraries in an account.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除热词词库</p>
+     * <p>Deletes a specified hotword library based on the ID.</p>
      * 
      * @param request DeleteHotwordLibraryRequest
      * @return DeleteHotwordLibraryResponse
@@ -5115,8 +5185,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义库实体</p>
+     * <p>Deletes an entity from the specified custom recognition library.</p>
      * 
      * @param request DeleteRecognitionEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5171,8 +5247,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义库实体</p>
+     * <p>Deletes an entity from the specified custom recognition library.</p>
      * 
      * @param request DeleteRecognitionEntityRequest
      * @return DeleteRecognitionEntityResponse
@@ -5183,8 +5265,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义库</p>
+     * <p>Deletes a custom recognition library, including all entities and samples within it.</p>
      * 
      * @param request DeleteRecognitionLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5235,8 +5323,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义库</p>
+     * <p>Deletes a custom recognition library, including all entities and samples within it.</p>
      * 
      * @param request DeleteRecognitionLibRequest
      * @return DeleteRecognitionLibResponse
@@ -5247,8 +5341,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义实体照片</p>
+     * <p>Deletes a sample for a custom entity.</p>
      * 
      * @param request DeleteRecognitionSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5307,8 +5407,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义实体照片</p>
+     * <p>Deletes a sample for a custom entity.</p>
      * 
      * @param request DeleteRecognitionSampleRequest
      * @return DeleteRecognitionSampleResponse
@@ -6037,6 +6143,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves playback records based on the player\&quot;s TraceId. This API supports pagination.</p>
+     * 
      * @param request DescribePlayListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePlayListResponse
@@ -6098,6 +6207,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves playback records based on the player\&quot;s TraceId. This API supports pagination.</p>
+     * 
      * @param request DescribePlayListRequest
      * @return DescribePlayListResponse
      */
@@ -6296,7 +6408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用某个MediaConnect实例的某个输出</p>
+     * <p>Disables an output of a MediaConnect flow. When disabled, the output retains its configuration, but no live stream is delivered to the destination.</p>
      * 
      * @param request ForbidMediaConnectFlowOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6332,7 +6444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用某个MediaConnect实例的某个输出</p>
+     * <p>Disables an output of a MediaConnect flow. When disabled, the output retains its configuration, but no live stream is delivered to the destination.</p>
      * 
      * @param request ForbidMediaConnectFlowOutputRequest
      * @return ForbidMediaConnectFlowOutputResponse
@@ -6522,7 +6634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成直播互动消息所需的token</p>
+     * <p>Generates the token required for interactive messaging.</p>
      * 
      * @param request GenerateMessageChatTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6566,7 +6678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成直播互动消息所需的token</p>
+     * <p>Generates the token required for interactive messaging.</p>
      * 
      * @param request GenerateMessageChatTokenRequest
      * @return GenerateMessageChatTokenResponse
@@ -6574,6 +6686,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateMessageChatTokenResponse generateMessageChatToken(GenerateMessageChatTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateMessageChatTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a workflow task.</p>
+     * 
+     * @param request GetAIWorkflowTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAIWorkflowTaskResponse
+     */
+    public GetAIWorkflowTaskResponse getAIWorkflowTaskWithOptions(GetAIWorkflowTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAIWorkflowTask"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAIWorkflowTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a workflow task.</p>
+     * 
+     * @param request GetAIWorkflowTaskRequest
+     * @return GetAIWorkflowTaskResponse
+     */
+    public GetAIWorkflowTaskResponse getAIWorkflowTask(GetAIWorkflowTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAIWorkflowTaskWithOptions(request, runtime);
     }
 
     /**
@@ -7349,8 +7505,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询热词词库</p>
+     * <p>Queries the information about a specified hotword library based on the ID.</p>
      * 
      * @param request GetHotwordLibraryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7381,8 +7541,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <p>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询热词词库</p>
+     * <p>Queries the information about a specified hotword library based on the ID.</p>
      * 
      * @param request GetHotwordLibraryRequest
      * @return GetHotwordLibraryResponse
@@ -7908,7 +8072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取MediaConnect可用的区域</p>
+     * <p>Retrieves all regions where MediaConnect is available.</p>
      * 
      * @param request GetMediaConnectAvailableRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7932,7 +8096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取MediaConnect可用的区域</p>
+     * <p>Retrieves all regions where MediaConnect is available.</p>
      * @return GetMediaConnectAvailableRegionResponse
      */
     public GetMediaConnectAvailableRegionResponse getMediaConnectAvailableRegion() throws Exception {
@@ -7998,7 +8162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取某个MediaConnect实例下的所有output的名字</p>
+     * <p>Retrieves the names of all outputs for a MediaConnect flow.</p>
      * 
      * @param request GetMediaConnectFlowAllOutputNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8030,7 +8194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取某个MediaConnect实例下的所有output的名字</p>
+     * <p>Retrieves the names of all outputs for a MediaConnect flow.</p>
      * 
      * @param request GetMediaConnectFlowAllOutputNameRequest
      * @return GetMediaConnectFlowAllOutputNameResponse
@@ -8738,7 +8902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询工程导出任务</p>
+     * <p>Queries the information of a project export task.</p>
      * 
      * @param request GetProjectExportJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8770,7 +8934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询工程导出任务</p>
+     * <p>Queries the information of a project export task.</p>
      * 
      * @param request GetProjectExportJobRequest
      * @return GetProjectExportJobResponse
@@ -9070,7 +9234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取存储地址列表</p>
+     * <p>Obtains storage configurations.</p>
      * 
      * @param request GetStorageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9110,7 +9274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取存储地址列表</p>
+     * <p>Obtains storage configurations.</p>
      * 
      * @param request GetStorageListRequest
      * @return GetStorageListResponse
@@ -9122,7 +9286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询流媒资打标</p>
+     * <p>Retrieves tags of a live stream media asset.</p>
      * 
      * @param request GetStreamTagListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9186,7 +9350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询流媒资打标</p>
+     * <p>Retrieves tags of a live stream media asset.</p>
      * 
      * @param request GetStreamTagListRequest
      * @return GetStreamTagListResponse
@@ -9810,7 +9974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出智能体的对话历史记录。</p>
+     * <p>Lists the dialog records of an AI agent.</p>
      * 
      * @param request ListAIAgentDialoguesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9866,7 +10030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出智能体的对话历史记录。</p>
+     * <p>Lists the dialog records of an AI agent.</p>
      * 
      * @param request ListAIAgentDialoguesRequest
      * @return ListAIAgentDialoguesResponse
@@ -10010,7 +10174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新回调配置</p>
+     * <p>Lists the registered voiceprints.</p>
      * 
      * @param request ListAIAgentVoiceprintsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10050,7 +10214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新回调配置</p>
+     * <p>Lists the registered voiceprints.</p>
      * 
      * @param request ListAIAgentVoiceprintsRequest
      * @return ListAIAgentVoiceprintsResponse
@@ -11015,8 +11179,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to get information about all hotword libraries that you created.</li>
+     * <li>The API supports fuzzy search by <code>Name</code>, filtering by creation time range, and pagination.</li>
+     * <li>By default, the results are sorted by creation time in descending order. You can set <code>SortBy</code> to change the sorting order.</li>
+     * <li>The maximum number of entries returned for each request is 100. Default value: 10.</li>
+     * <li>Use <code>NextToken</code> for pagination.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询所有热词库的列表</p>
+     * <p>Queries hotword libraries that meet specific search conditions.</p>
      * 
      * @param request ListHotwordLibrariesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11079,8 +11253,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to get information about all hotword libraries that you created.</li>
+     * <li>The API supports fuzzy search by <code>Name</code>, filtering by creation time range, and pagination.</li>
+     * <li>By default, the results are sorted by creation time in descending order. You can set <code>SortBy</code> to change the sorting order.</li>
+     * <li>The maximum number of entries returned for each request is 100. Default value: 10.</li>
+     * <li>Use <code>NextToken</code> for pagination.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询所有热词库的列表</p>
+     * <p>Queries hotword libraries that meet specific search conditions.</p>
      * 
      * @param request ListHotwordLibrariesRequest
      * @return ListHotwordLibrariesResponse
@@ -11778,7 +11962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 MediaConvertJob 列表</p>
+     * <p>Retrieves MediaConvert tasks.</p>
      * 
      * @param request ListMediaConvertJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11834,7 +12018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 MediaConvertJob 列表</p>
+     * <p>Retrieves MediaConvert tasks.</p>
      * 
      * @param request ListMediaConvertJobsRequest
      * @return ListMediaConvertJobsResponse
@@ -12493,8 +12677,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取自定义库下实体列表</p>
+     * <p>Retrieves all entities in a specified recognition library. Pagination is supported.</p>
      * 
      * @param request ListRecognitionEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12553,8 +12743,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取自定义库下实体列表</p>
+     * <p>Retrieves all entities in a specified recognition library. Pagination is supported.</p>
      * 
      * @param request ListRecognitionEntitiesRequest
      * @return ListRecognitionEntitiesResponse
@@ -12565,8 +12761,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取自定义库列表</p>
+     * <p>Retrieves all custom recognition libraries. Pagination is supported.</p>
      * 
      * @param request ListRecognitionLibsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12621,8 +12823,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取自定义库列表</p>
+     * <p>Retrieves all custom recognition libraries. Pagination is supported.</p>
      * 
      * @param request ListRecognitionLibsRequest
      * @return ListRecognitionLibsResponse
@@ -12634,7 +12842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义库实体的图片列表</p>
+     * <p>Retrieves all samples of a custom entity. Pagination is supported.</p>
      * 
      * @param request ListRecognitionSamplesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12698,7 +12906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义库实体的图片列表</p>
+     * <p>Retrieves all samples of a custom entity. Pagination is supported.</p>
      * 
      * @param request ListRecognitionSamplesRequest
      * @return ListRecognitionSamplesResponse
@@ -13605,8 +13813,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API only returns data from the last 90 days.</p>
+     * 
      * <b>summary</b> : 
-     * <p>工作流任务实例列表</p>
+     * <p>Retrieves workflow tasks.</p>
      * 
      * @param request ListWorkflowTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13661,8 +13872,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API only returns data from the last 90 days.</p>
+     * 
      * <b>summary</b> : 
-     * <p>工作流任务实例列表</p>
+     * <p>Retrieves workflow tasks.</p>
      * 
      * @param request ListWorkflowTasksRequest
      * @return ListWorkflowTasksResponse
@@ -13673,8 +13887,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before this operation, you must add a source to the flow.</p>
+     * <ul>
+     * <li>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>开启MediaConnect双流灾备</p>
+     * <p>Enables Source Failover for a MediaConnect flow.</p>
      * 
      * @param request OpenMediaConnectFlowFailoverRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13705,8 +13925,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before this operation, you must add a source to the flow.</p>
+     * <ul>
+     * <li>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>开启MediaConnect双流灾备</p>
+     * <p>Enables Source Failover for a MediaConnect flow.</p>
      * 
      * @param request OpenMediaConnectFlowFailoverRequest
      * @return OpenMediaConnectFlowFailoverResponse
@@ -13718,7 +13944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询版权水印提取任务</p>
+     * <p>Queries a job for extracting a copyright watermark.</p>
      * 
      * @param request QueryCopyrightExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13750,7 +13976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询版权水印提取任务</p>
+     * <p>Queries a job for extracting a copyright watermark.</p>
      * 
      * @param request QueryCopyrightExtractJobRequest
      * @return QueryCopyrightExtractJobResponse
@@ -13761,8 +13987,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询视频版权水印任务列表</p>
+     * <p>Queries copyright watermarking jobs.</p>
      * 
      * @param request QueryCopyrightJobListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13813,8 +14042,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询视频版权水印任务列表</p>
+     * <p>Queries copyright watermarking jobs.</p>
      * 
      * @param request QueryCopyrightJobListRequest
      * @return QueryCopyrightJobListResponse
@@ -14285,8 +14517,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询视频溯源水印ab流任务</p>
+     * <p>Queries A/B watermarking jobs.</p>
      * 
      * @param request QueryTraceAbJobListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14337,8 +14572,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询视频溯源水印ab流任务</p>
+     * <p>Queries A/B watermarking jobs.</p>
      * 
      * @param request QueryTraceAbJobListRequest
      * @return QueryTraceAbJobListResponse
@@ -14349,8 +14587,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询溯源水印提取任务</p>
+     * <p>Queries a job for extracting a trace watermark.</p>
      * 
      * @param request QueryTraceExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14381,8 +14622,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询溯源水印提取任务</p>
+     * <p>Queries a job for extracting a trace watermark.</p>
      * 
      * @param request QueryTraceExtractJobRequest
      * @return QueryTraceExtractJobResponse
@@ -14393,8 +14637,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询视频溯源水印m3u8任务</p>
+     * <p>Queries jobs for generating M3U8 files containing specific trace watermark information.</p>
      * 
      * @param request QueryTraceM3u8JobListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14441,8 +14691,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询视频溯源水印m3u8任务</p>
+     * <p>Queries jobs for generating M3U8 files containing specific trace watermark information.</p>
      * 
      * @param request QueryTraceM3u8JobListRequest
      * @return QueryTraceM3u8JobListResponse
@@ -14454,7 +14710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频理解任务结果</p>
+     * <p>Retrieves the results of an AI analysis and processing task.</p>
      * 
      * @param tmpReq QueryVideoCognitionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14500,7 +14756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频理解任务结果</p>
+     * <p>Retrieves the results of an AI analysis and processing task.</p>
      * 
      * @param request QueryVideoCognitionJobRequest
      * @return QueryVideoCognitionJobResponse
@@ -14730,7 +14986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>恢复某个MediaConnect实例的某个输出</p>
+     * <p>Resumes an output of a MediaConnect flow. When resumed, the output can deliver the live stream to the destination.</p>
      * 
      * @param request ResumeMediaConnectFlowOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14766,7 +15022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>恢复某个MediaConnect实例的某个输出</p>
+     * <p>Resumes an output of a MediaConnect flow. When resumed, the output can deliver the live stream to the destination.</p>
      * 
      * @param request ResumeMediaConnectFlowOutputRequest
      * @return ResumeMediaConnectFlowOutputResponse
@@ -14922,6 +15178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaResponse searchMediaWithOptions(SearchMediaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customFilters)) {
+            query.put("CustomFilters", request.customFilters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
             query.put("EntityId", request.entityId);
         }
@@ -14996,6 +15256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaByAILabelResponse searchMediaByAILabelWithOptions(SearchMediaByAILabelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customFilters)) {
+            query.put("CustomFilters", request.customFilters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.matchingMode)) {
             query.put("MatchingMode", request.matchingMode);
         }
@@ -15038,6 +15302,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.text)) {
             query.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.utcCreate)) {
+            query.put("UtcCreate", request.utcCreate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -15086,6 +15354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaByFaceResponse searchMediaByFaceWithOptions(SearchMediaByFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customFilters)) {
+            query.put("CustomFilters", request.customFilters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
             query.put("EntityId", request.entityId);
         }
@@ -15116,6 +15388,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
             query.put("SearchLibName", request.searchLibName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.utcCreate)) {
+            query.put("UtcCreate", request.utcCreate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -15152,7 +15428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</p>
+     * <p>Performs a hybrid search for media assets. This API combines multiple recall strategies, including tag-based text search and large language model (LLM) search. You can locate media assets using natural language descriptions.</p>
      * 
      * @param request SearchMediaByHybridRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15161,6 +15437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaByHybridResponse searchMediaByHybridWithOptions(SearchMediaByHybridRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customFilters)) {
+            query.put("CustomFilters", request.customFilters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
             query.put("MediaId", request.mediaId);
         }
@@ -15189,6 +15469,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Text", request.text);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.utcCreate)) {
+            query.put("UtcCreate", request.utcCreate);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -15208,7 +15492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</p>
+     * <p>Performs a hybrid search for media assets. This API combines multiple recall strategies, including tag-based text search and large language model (LLM) search. You can locate media assets using natural language descriptions.</p>
      * 
      * @param request SearchMediaByHybridRequest
      * @return SearchMediaByHybridResponse
@@ -15232,6 +15516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaByMultimodalResponse searchMediaByMultimodalWithOptions(SearchMediaByMultimodalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customFilters)) {
+            query.put("CustomFilters", request.customFilters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
             query.put("MediaType", request.mediaType);
         }
@@ -15254,6 +15542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.text)) {
             query.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.utcCreate)) {
+            query.put("UtcCreate", request.utcCreate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -15554,7 +15846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>传入消息作为LLM输入。</p>
+     * <p>Sends a message as input to the large language model (LLM).</p>
      * 
      * @param request SendAIAgentTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15590,7 +15882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>传入消息作为LLM输入。</p>
+     * <p>Sends a message as input to the large language model (LLM).</p>
      * 
      * @param request SendAIAgentTextRequest
      * @return SendAIAgentTextResponse
@@ -15698,7 +15990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>向IM客户端发送消息。</p>
+     * <p>Sends a message to the client.</p>
      * 
      * @param request SendMessageChatTextRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15754,7 +16046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>向IM客户端发送消息。</p>
+     * <p>Sends a message to the client.</p>
      * 
      * @param request SendMessageChatTextRequest
      * @return SendMessageChatTextResponse
@@ -15766,7 +16058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置声纹</p>
+     * <p>Registers a voiceprint.</p>
      * 
      * @param tmpReq SetAIAgentVoiceprintRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15808,7 +16100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置声纹</p>
+     * <p>Registers a voiceprint.</p>
      * 
      * @param request SetAIAgentVoiceprintRequest
      * @return SetAIAgentVoiceprintResponse
@@ -16273,6 +16565,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a workflow task for automated media processing based on a workflow template.</p>
+     * 
+     * @param request StartAIWorkflowRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartAIWorkflowResponse
+     */
+    public StartAIWorkflowResponse startAIWorkflowWithOptions(StartAIWorkflowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dispatchTag)) {
+            query.put("DispatchTag", request.dispatchTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputs)) {
+            query.put("Inputs", request.inputs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowId)) {
+            query.put("WorkflowId", request.workflowId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartAIWorkflow"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartAIWorkflowResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a workflow task for automated media processing based on a workflow template.</p>
+     * 
+     * @param request StartAIWorkflowRequest
+     * @return StartAIWorkflowResponse
+     */
+    public StartAIWorkflowResponse startAIWorkflow(StartAIWorkflowRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startAIWorkflowWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Starts a channel.</p>
      * 
@@ -16567,6 +16921,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Manually stops a workflow task.</p>
+     * 
+     * @param request StopAIWorkflowTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopAIWorkflowTaskResponse
+     */
+    public StopAIWorkflowTaskResponse stopAIWorkflowTaskWithOptions(StopAIWorkflowTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopAIWorkflowTask"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopAIWorkflowTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Manually stops a workflow task.</p>
+     * 
+     * @param request StopAIWorkflowTaskRequest
+     * @return StopAIWorkflowTaskResponse
+     */
+    public StopAIWorkflowTaskResponse stopAIWorkflowTask(StopAIWorkflowTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopAIWorkflowTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Stops a MediaWeaver channel.</p>
      * 
@@ -16707,8 +17111,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频送审任务</p>
+     * <p>Submits a video to a specified AI agent for content moderation. This operation supports video input from OSS and delivers the results asynchronously via callbacks. You can define custom frame-capturing policies and moderation prompts.</p>
      * 
      * @param tmpReq SubmitAIAgentVideoAuditTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16773,8 +17180,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频送审任务</p>
+     * <p>Submits a video to a specified AI agent for content moderation. This operation supports video input from OSS and delivers the results asynchronously via callbacks. You can define custom frame-capturing policies and moderation prompts.</p>
      * 
      * @param request SubmitAIAgentVideoAuditTaskRequest
      * @return SubmitAIAgentVideoAuditTaskResponse
@@ -16965,8 +17375,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The input supports only text or a human voice audio file in MP3 or WAV format.</li>
+     * <li>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</li>
+     * <li>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</p>
+     * <p>Submits a task to render a video of an avatar speaking the content of the specified text or a human voice audio file.</p>
      * 
      * @param request SubmitAvatarVideoJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17017,8 +17434,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The input supports only text or a human voice audio file in MP3 or WAV format.</li>
+     * <li>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</li>
+     * <li>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</p>
+     * <p>Submits a task to render a video of an avatar speaking the content of the specified text or a human voice audio file.</p>
      * 
      * @param request SubmitAvatarVideoJobRequest
      * @return SubmitAvatarVideoJobResponse
@@ -17095,8 +17519,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交版权水印提取作业</p>
+     * <p>Submits a job that extracts a copyright watermark.</p>
      * 
      * @param tmpReq SubmitCopyrightExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17141,8 +17568,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交版权水印提取作业</p>
+     * <p>Submits a job that extracts a copyright watermark.</p>
      * 
      * @param request SubmitCopyrightExtractJobRequest
      * @return SubmitCopyrightExtractJobResponse
@@ -17153,8 +17583,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</p>
+     * <ul>
+     * <li>Each API call supports processing only one video.</li>
+     * <li>This API is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交版权水印任务</p>
+     * <p>Submits a job for adding a copyright watermark to a video.</p>
      * 
      * @param tmpReq SubmitCopyrightJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17227,8 +17664,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</p>
+     * <ul>
+     * <li>Each API call supports processing only one video.</li>
+     * <li>This API is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交版权水印任务</p>
+     * <p>Submits a job for adding a copyright watermark to a video.</p>
      * 
      * @param request SubmitCopyrightJobRequest
      * @return SubmitCopyrightJobResponse
@@ -18548,7 +18992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交工程导出任务</p>
+     * <p>Submits a project export task.</p>
      * 
      * @param request SubmitProjectExportJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18598,7 +19042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交工程导出任务</p>
+     * <p>Submits a project export task.</p>
      * 
      * @param request SubmitProjectExportJobRequest
      * @return SubmitProjectExportJobResponse
@@ -18606,6 +19050,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitProjectExportJobResponse submitProjectExportJob(SubmitProjectExportJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitProjectExportJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</p>
+     * <ul>
+     * <li>The feature is in public preview and charges no fees.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Selects suitable clips based on the submitted videos, images, and voiceovers, and returns the selection results. Two scenarios are supported: image-text matching and highlight mashup.</p>
+     * 
+     * @param request SubmitSceneMediaSelectionJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSceneMediaSelectionJobResponse
+     */
+    public SubmitSceneMediaSelectionJobResponse submitSceneMediaSelectionJobWithOptions(SubmitSceneMediaSelectionJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
+            query.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputConfig)) {
+            query.put("OutputConfig", request.outputConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.editingConfig)) {
+            body.put("EditingConfig", request.editingConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputConfig)) {
+            body.put("InputConfig", request.inputConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitSceneMediaSelectionJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSceneMediaSelectionJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</p>
+     * <ul>
+     * <li>The feature is in public preview and charges no fees.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Selects suitable clips based on the submitted videos, images, and voiceovers, and returns the selection results. Two scenarios are supported: image-text matching and highlight mashup.</p>
+     * 
+     * @param request SubmitSceneMediaSelectionJobRequest
+     * @return SubmitSceneMediaSelectionJobResponse
+     */
+    public SubmitSceneMediaSelectionJobResponse submitSceneMediaSelectionJob(SubmitSceneMediaSelectionJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitSceneMediaSelectionJobWithOptions(request, runtime);
     }
 
     /**
@@ -18668,7 +19186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交拆条任务</p>
+     * <p>Splits a long video into multiple video clips and outputs as video files or media assets.</p>
      * 
      * @param request SubmitSegmentationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18718,7 +19236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交拆条任务</p>
+     * <p>Splits a long video into multiple video clips and outputs as video files or media assets.</p>
      * 
      * @param request SubmitSegmentationJobRequest
      * @return SubmitSegmentationJobResponse
@@ -19157,8 +19675,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频溯源水印ab流任务</p>
+     * <p>Submits an A/B watermarking job.</p>
      * 
      * @param tmpReq SubmitTraceAbJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19223,8 +19744,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频溯源水印ab流任务</p>
+     * <p>Submits an A/B watermarking job.</p>
      * 
      * @param request SubmitTraceAbJobRequest
      * @return SubmitTraceAbJobResponse
@@ -19235,8 +19759,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交溯源水印提取任务</p>
+     * <p>Submits a job to extract the trace watermark.</p>
      * 
      * @param tmpReq SubmitTraceExtractJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19281,8 +19811,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</p>
+     * <ul>
+     * <li>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交溯源水印提取任务</p>
+     * <p>Submits a job to extract the trace watermark.</p>
      * 
      * @param request SubmitTraceExtractJobRequest
      * @return SubmitTraceExtractJobResponse
@@ -19293,8 +19829,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</p>
+     * <ul>
+     * <li>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频溯源水印m3u8文件任务</p>
+     * <p>Submits a job that generates an M3U8 file containing specific trace watermark information.</p>
      * 
      * @param tmpReq SubmitTraceM3u8JobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19347,8 +19890,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</p>
+     * <ul>
+     * <li>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</li>
+     * <li>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频溯源水印m3u8文件任务</p>
+     * <p>Submits a job that generates an M3U8 file containing specific trace watermark information.</p>
      * 
      * @param request SubmitTraceM3u8JobRequest
      * @return SubmitTraceM3u8JobResponse
@@ -19438,7 +19988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频理解任务</p>
+     * <p>Submits a video for AI analysis and processing.</p>
      * 
      * @param tmpReq SubmitVideoCognitionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19492,7 +20042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频理解任务</p>
+     * <p>Submits a video for AI analysis and processing.</p>
      * 
      * @param request SubmitVideoCognitionJobRequest
      * @return SubmitVideoCognitionJobResponse
@@ -20159,8 +20709,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to modify a specified hotword library.</li>
+     * <li>The hotword library ID (<code>HotwordLibraryId</code>) is required to identify the library that requires modification.</li>
+     * <li>You can modify its name (<code>Name</code> ), description (<code>Description</code> ), and hotword list (<code>HotWords</code>).</li>
+     * <li>Each hotword in the list can also be modified, including its content (<code>Text</code>), weight (<code>Weight</code>), language (<code>Language</code>), and translation results (<code>TranspositionResultList</code>).</li>
+     * <li>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <code>language</code> and <code>text</code> of an entry must be unique. The combination of <code>TranslatedText</code> and <code>TargetLanguage</code> in <code>TranspositionResultList</code> must also be unique.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新热词库</p>
+     * <p>Modifies a specified hotword library, including its name, description, and hotword list.</p>
      * 
      * @param tmpReq UpdateHotwordLibraryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20209,8 +20769,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a></h2>
+     * <ul>
+     * <li>You can call this operation to modify a specified hotword library.</li>
+     * <li>The hotword library ID (<code>HotwordLibraryId</code>) is required to identify the library that requires modification.</li>
+     * <li>You can modify its name (<code>Name</code> ), description (<code>Description</code> ), and hotword list (<code>HotWords</code>).</li>
+     * <li>Each hotword in the list can also be modified, including its content (<code>Text</code>), weight (<code>Weight</code>), language (<code>Language</code>), and translation results (<code>TranspositionResultList</code>).</li>
+     * <li>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <code>language</code> and <code>text</code> of an entry must be unique. The combination of <code>TranslatedText</code> and <code>TargetLanguage</code> in <code>TranspositionResultList</code> must also be unique.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新热词库</p>
+     * <p>Modifies a specified hotword library, including its name, description, and hotword list.</p>
      * 
      * @param request UpdateHotwordLibraryRequest
      * @return UpdateHotwordLibraryResponse

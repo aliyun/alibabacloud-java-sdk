@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryTraceM3u8JobListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryTraceM3u8JobListResponseBodyData> data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -15,7 +20,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -24,6 +29,8 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -69,6 +76,8 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
 
     public static class QueryTraceM3u8JobListResponseBodyDataOutput extends TeaModel {
         /**
+         * <p>The specific output information.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket/object</p>
          */
@@ -76,6 +85,12 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String media;
 
         /**
+         * <p>The type of the output file. Valid values:</p>
+         * <ul>
+         * <li>OSS: an OSS object.</li>
+         * <li>Media: a media asset.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -107,6 +122,8 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
 
     public static class QueryTraceM3u8JobListResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1627357322</p>
          */
@@ -114,6 +131,8 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The last modification time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1627357322</p>
          */
@@ -121,16 +140,23 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The output video.</p>
+         */
         @NameInMap("Output")
         public QueryTraceM3u8JobListResponseBodyDataOutput output;
 
         /**
+         * <p>The current status of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -138,6 +164,8 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The watermark information.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -145,6 +173,8 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String trace;
 
         /**
+         * <p>The media ID for the trace watermark.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>437bd2b105d07b12a9a82</strong></strong></p>
          */
@@ -152,6 +182,8 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String traceMediaId;
 
         /**
+         * <p>The user-defined data.</p>
+         * 
          * <strong>example:</strong>
          * <p>112</p>
          */
@@ -159,6 +191,8 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String userData;
 
         /**
+         * <p>The ID of the user who initiated the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1346693276****</p>
          */

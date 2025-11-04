@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryCopyrightJobListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryCopyrightJobListResponseBodyData> data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -15,7 +20,7 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></strong></p>
@@ -24,6 +29,8 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -69,6 +76,8 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
 
     public static class QueryCopyrightJobListResponseBodyDataInput extends TeaModel {
         /**
+         * <p>The specific input information.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket/object</p>
          */
@@ -76,6 +85,12 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public String media;
 
         /**
+         * <p>The type of the input file. Valid values:</p>
+         * <ol>
+         * <li>OSS: an Object Storage Service (OSS) object.</li>
+         * <li>Media: a media asset.</li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -107,6 +122,8 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
 
     public static class QueryCopyrightJobListResponseBodyDataOutput extends TeaModel {
         /**
+         * <p>The specific output information.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket/object</p>
          */
@@ -114,6 +131,12 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public String media;
 
         /**
+         * <p>The type of the output file. Valid values:</p>
+         * <ul>
+         * <li>OSS: an OSS object.</li>
+         * <li>Media: a media asset.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -145,6 +168,8 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
 
     public static class QueryCopyrightJobListResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1627357322</p>
          */
@@ -152,16 +177,23 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The last modification time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1627357322</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Information about the input video for watermarking.</p>
+         */
         @NameInMap("Input")
         public QueryCopyrightJobListResponseBodyDataInput input;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>bfb786c639894f4d80648792021****</p>
          */
@@ -169,6 +201,8 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The watermark level.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -176,16 +210,23 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public Long level;
 
         /**
+         * <p>The content of the embedded watermark.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Information about the watermarked output video.</p>
+         */
         @NameInMap("Output")
         public QueryCopyrightJobListResponseBodyDataOutput output;
 
         /**
+         * <p>The job result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;Code&quot;:&quot;success&quot;,&quot;Message&quot;:&quot;ok&quot;}</p>
          */
@@ -193,6 +234,8 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>The status of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -200,6 +243,8 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The user-defined data.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -207,6 +252,8 @@ public class QueryCopyrightJobListResponseBody extends TeaModel {
         public String userData;
 
         /**
+         * <p>The ID of the user who initiated the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1346693***</p>
          */

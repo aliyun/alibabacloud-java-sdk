@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTraceExtractJobRequest extends TeaModel {
     /**
+     * <p>The job ID. You can obtain the value of this parameter from the response of the SubmitTraceExtractJob operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
