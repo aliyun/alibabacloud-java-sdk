@@ -4970,6 +4970,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateServiceInstanceResponse updateServiceInstanceWithOptions(String ClusterId, String ServiceName, String InstanceName, UpdateServiceInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hibernate)) {
+            body.put("Hibernate", request.hibernate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isolate)) {
             body.put("Isolate", request.isolate);
         }

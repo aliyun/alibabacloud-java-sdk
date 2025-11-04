@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceRequest extends TeaModel {
+    @NameInMap("Hibernate")
+    public Boolean hibernate;
+
     /**
      * <p>Specifies whether to isolate the service instance. Valid values:</p>
      * <ul>
@@ -20,6 +23,14 @@ public class UpdateServiceInstanceRequest extends TeaModel {
     public static UpdateServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceInstanceRequest self = new UpdateServiceInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateServiceInstanceRequest setHibernate(Boolean hibernate) {
+        this.hibernate = hibernate;
+        return this;
+    }
+    public Boolean getHibernate() {
+        return this.hibernate;
     }
 
     public UpdateServiceInstanceRequest setIsolate(Boolean isolate) {

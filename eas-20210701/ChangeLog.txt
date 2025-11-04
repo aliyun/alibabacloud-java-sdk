@@ -1,3 +1,7 @@
+2025-11-04 Version: 7.1.10
+- Update API UpdateServiceInstance: add request parameters body.Hibernate.
+
+
 2025-10-31 Version: 7.1.9
 - Update API DeleteResourceInstanceLabel: add request parameters LabelKeys.
 - Update API DeleteServiceLabel: add request parameters LabelKeys.
