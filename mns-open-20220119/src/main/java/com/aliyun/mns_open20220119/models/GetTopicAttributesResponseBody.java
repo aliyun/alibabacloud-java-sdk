@@ -216,6 +216,13 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         public java.util.List<GetTopicAttributesResponseBodyDataTags> tags;
 
         /**
+         * <strong>example:</strong>
+         * <p>http:// 111111111****.mns.us-west-1-internal.aliyuncs.com/topics/testTopic</p>
+         */
+        @NameInMap("TopicInnerUrl")
+        public String topicInnerUrl;
+
+        /**
          * <p>The name of the topic.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +233,13 @@ public class GetTopicAttributesResponseBody extends TeaModel {
 
         @NameInMap("TopicType")
         public String topicType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>http:// 111111111****.mns.us-west-1.aliyuncs.com/topics/testTopic</p>
+         */
+        @NameInMap("TopicUrl")
+        public String topicUrl;
 
         public static GetTopicAttributesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTopicAttributesResponseBodyData self = new GetTopicAttributesResponseBodyData();
@@ -288,6 +302,14 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             return this.tags;
         }
 
+        public GetTopicAttributesResponseBodyData setTopicInnerUrl(String topicInnerUrl) {
+            this.topicInnerUrl = topicInnerUrl;
+            return this;
+        }
+        public String getTopicInnerUrl() {
+            return this.topicInnerUrl;
+        }
+
         public GetTopicAttributesResponseBodyData setTopicName(String topicName) {
             this.topicName = topicName;
             return this;
@@ -302,6 +324,14 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
         public String getTopicType() {
             return this.topicType;
+        }
+
+        public GetTopicAttributesResponseBodyData setTopicUrl(String topicUrl) {
+            this.topicUrl = topicUrl;
+            return this;
+        }
+        public String getTopicUrl() {
+            return this.topicUrl;
         }
 
     }
