@@ -206,6 +206,12 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         @NameInMap("ProxyName")
         public String proxyName;
 
+        @NameInMap("ProxyNetworkInterfaceId")
+        public String proxyNetworkInterfaceId;
+
+        @NameInMap("ProxyRouteTableId")
+        public String proxyRouteTableId;
+
         /**
          * <p>The status of the NAT firewall. Valid values:</p>
          * <ul>
@@ -223,6 +229,9 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
          */
         @NameInMap("ProxyStatus")
         public String proxyStatus;
+
+        @NameInMap("ProxyVSwitchId")
+        public String proxyVSwitchId;
 
         /**
          * <p>The region ID of your Cloud Firewall.</p>
@@ -332,12 +341,36 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             return this.proxyName;
         }
 
+        public DescribeNatFirewallListResponseBodyNatFirewallList setProxyNetworkInterfaceId(String proxyNetworkInterfaceId) {
+            this.proxyNetworkInterfaceId = proxyNetworkInterfaceId;
+            return this;
+        }
+        public String getProxyNetworkInterfaceId() {
+            return this.proxyNetworkInterfaceId;
+        }
+
+        public DescribeNatFirewallListResponseBodyNatFirewallList setProxyRouteTableId(String proxyRouteTableId) {
+            this.proxyRouteTableId = proxyRouteTableId;
+            return this;
+        }
+        public String getProxyRouteTableId() {
+            return this.proxyRouteTableId;
+        }
+
         public DescribeNatFirewallListResponseBodyNatFirewallList setProxyStatus(String proxyStatus) {
             this.proxyStatus = proxyStatus;
             return this;
         }
         public String getProxyStatus() {
             return this.proxyStatus;
+        }
+
+        public DescribeNatFirewallListResponseBodyNatFirewallList setProxyVSwitchId(String proxyVSwitchId) {
+            this.proxyVSwitchId = proxyVSwitchId;
+            return this;
+        }
+        public String getProxyVSwitchId() {
+            return this.proxyVSwitchId;
         }
 
         public DescribeNatFirewallListResponseBodyNatFirewallList setRegionId(String regionId) {
