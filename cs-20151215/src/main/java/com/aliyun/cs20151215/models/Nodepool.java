@@ -39,6 +39,9 @@ public class Nodepool extends TeaModel {
     @NameInMap("max_nodes")
     public Long maxNodes;
 
+    @NameInMap("node_components")
+    public java.util.List<NodepoolNodeComponents> nodeComponents;
+
     @NameInMap("node_config")
     public NodepoolNodeConfig nodeConfig;
 
@@ -112,6 +115,14 @@ public class Nodepool extends TeaModel {
     }
     public Long getMaxNodes() {
         return this.maxNodes;
+    }
+
+    public Nodepool setNodeComponents(java.util.List<NodepoolNodeComponents> nodeComponents) {
+        this.nodeComponents = nodeComponents;
+        return this;
+    }
+    public java.util.List<NodepoolNodeComponents> getNodeComponents() {
+        return this.nodeComponents;
     }
 
     public Nodepool setNodeConfig(NodepoolNodeConfig nodeConfig) {
@@ -750,6 +761,74 @@ public class Nodepool extends TeaModel {
         }
         public NodepoolManagementUpgradeConfig getUpgradeConfig() {
             return this.upgradeConfig;
+        }
+
+    }
+
+    public static class NodepoolNodeComponentsConfig extends TeaModel {
+        @NameInMap("custom_config")
+        public java.util.Map<String, String> customConfig;
+
+        public static NodepoolNodeComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
+            NodepoolNodeComponentsConfig self = new NodepoolNodeComponentsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public NodepoolNodeComponentsConfig setCustomConfig(java.util.Map<String, String> customConfig) {
+            this.customConfig = customConfig;
+            return this;
+        }
+        public java.util.Map<String, String> getCustomConfig() {
+            return this.customConfig;
+        }
+
+    }
+
+    public static class NodepoolNodeComponents extends TeaModel {
+        @NameInMap("config")
+        public NodepoolNodeComponentsConfig config;
+
+        /**
+         * <strong>example:</strong>
+         * <p>kubelet</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.33.3-aliyun.1</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        public static NodepoolNodeComponents build(java.util.Map<String, ?> map) throws Exception {
+            NodepoolNodeComponents self = new NodepoolNodeComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public NodepoolNodeComponents setConfig(NodepoolNodeComponentsConfig config) {
+            this.config = config;
+            return this;
+        }
+        public NodepoolNodeComponentsConfig getConfig() {
+            return this.config;
+        }
+
+        public NodepoolNodeComponents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public NodepoolNodeComponents setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

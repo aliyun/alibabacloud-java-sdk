@@ -1342,6 +1342,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("max_nodes", request.maxNodes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeComponents)) {
+            body.put("node_components", request.nodeComponents);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nodeConfig)) {
             body.put("node_config", request.nodeConfig);
         }
@@ -5202,6 +5206,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listOperationPlansWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取单个地域的自动运维执行计划列表</p>
+     * 
+     * @param request ListOperationPlansForRegionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOperationPlansForRegionResponse
+     */
+    public ListOperationPlansForRegionResponse listOperationPlansForRegionWithOptions(String regionId, ListOperationPlansForRegionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("cluster_id", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("state", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOperationPlansForRegion"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/regions/" + com.aliyun.openapiutil.Client.getEncodeParam(regionId) + "/operation/plans"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOperationPlansForRegionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取单个地域的自动运维执行计划列表</p>
+     * 
+     * @param request ListOperationPlansForRegionRequest
+     * @return ListOperationPlansForRegionResponse
+     */
+    public ListOperationPlansForRegionResponse listOperationPlansForRegion(String regionId, ListOperationPlansForRegionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listOperationPlansForRegionWithOptions(regionId, request, headers, runtime);
     }
 
     /**

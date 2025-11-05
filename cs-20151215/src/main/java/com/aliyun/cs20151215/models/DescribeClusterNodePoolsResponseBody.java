@@ -843,6 +843,74 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponentsConfig extends TeaModel {
+        @NameInMap("custom_config")
+        public java.util.Map<String, String> customConfig;
+
+        public static DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponentsConfig self = new DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponentsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponentsConfig setCustomConfig(java.util.Map<String, String> customConfig) {
+            this.customConfig = customConfig;
+            return this;
+        }
+        public java.util.Map<String, String> getCustomConfig() {
+            return this.customConfig;
+        }
+
+    }
+
+    public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents extends TeaModel {
+        @NameInMap("config")
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponentsConfig config;
+
+        /**
+         * <strong>example:</strong>
+         * <p>kubelet</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.33.3-aliyun.1</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        public static DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents self = new DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents setConfig(DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponentsConfig config) {
+            this.config = config;
+            return this;
+        }
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponentsConfig getConfig() {
+            return this.config;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfigNodeOsConfig extends TeaModel {
         @NameInMap("hugepage")
         public Hugepage hugepage;
@@ -2320,6 +2388,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("max_nodes")
         public Long maxNodes;
 
+        @NameInMap("node_components")
+        public java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents> nodeComponents;
+
         /**
          * <p>The configurations of nodes.</p>
          */
@@ -2409,6 +2480,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public Long getMaxNodes() {
             return this.maxNodes;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepools setNodeComponents(java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents> nodeComponents) {
+            this.nodeComponents = nodeComponents;
+            return this;
+        }
+        public java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsNodeComponents> getNodeComponents() {
+            return this.nodeComponents;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepools setNodeConfig(DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig nodeConfig) {

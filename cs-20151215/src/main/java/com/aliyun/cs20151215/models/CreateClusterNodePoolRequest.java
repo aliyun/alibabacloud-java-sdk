@@ -97,6 +97,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @Deprecated
     public Long maxNodes;
 
+    @NameInMap("node_components")
+    public java.util.List<CreateClusterNodePoolRequestNodeComponents> nodeComponents;
+
     /**
      * <p>The node configurations.</p>
      */
@@ -215,6 +218,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
     public Long getMaxNodes() {
         return this.maxNodes;
+    }
+
+    public CreateClusterNodePoolRequest setNodeComponents(java.util.List<CreateClusterNodePoolRequestNodeComponents> nodeComponents) {
+        this.nodeComponents = nodeComponents;
+        return this;
+    }
+    public java.util.List<CreateClusterNodePoolRequestNodeComponents> getNodeComponents() {
+        return this.nodeComponents;
     }
 
     public CreateClusterNodePoolRequest setNodeConfig(CreateClusterNodePoolRequestNodeConfig nodeConfig) {
@@ -1169,6 +1180,74 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public CreateClusterNodePoolRequestManagementUpgradeConfig getUpgradeConfig() {
             return this.upgradeConfig;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestNodeComponentsConfig extends TeaModel {
+        @NameInMap("custom_config")
+        public java.util.Map<String, String> customConfig;
+
+        public static CreateClusterNodePoolRequestNodeComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestNodeComponentsConfig self = new CreateClusterNodePoolRequestNodeComponentsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestNodeComponentsConfig setCustomConfig(java.util.Map<String, String> customConfig) {
+            this.customConfig = customConfig;
+            return this;
+        }
+        public java.util.Map<String, String> getCustomConfig() {
+            return this.customConfig;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestNodeComponents extends TeaModel {
+        @NameInMap("config")
+        public CreateClusterNodePoolRequestNodeComponentsConfig config;
+
+        /**
+         * <strong>example:</strong>
+         * <p>kubelet</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.33.3-aliyun.1</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        public static CreateClusterNodePoolRequestNodeComponents build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestNodeComponents self = new CreateClusterNodePoolRequestNodeComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestNodeComponents setConfig(CreateClusterNodePoolRequestNodeComponentsConfig config) {
+            this.config = config;
+            return this;
+        }
+        public CreateClusterNodePoolRequestNodeComponentsConfig getConfig() {
+            return this.config;
+        }
+
+        public CreateClusterNodePoolRequestNodeComponents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateClusterNodePoolRequestNodeComponents setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

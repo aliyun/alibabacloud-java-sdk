@@ -74,6 +74,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("max_nodes")
     public Long maxNodes;
 
+    @NameInMap("node_components")
+    public java.util.List<DescribeClusterNodePoolDetailResponseBodyNodeComponents> nodeComponents;
+
     /**
      * <p>The node configurations.</p>
      */
@@ -179,6 +182,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
     public Long getMaxNodes() {
         return this.maxNodes;
+    }
+
+    public DescribeClusterNodePoolDetailResponseBody setNodeComponents(java.util.List<DescribeClusterNodePoolDetailResponseBodyNodeComponents> nodeComponents) {
+        this.nodeComponents = nodeComponents;
+        return this;
+    }
+    public java.util.List<DescribeClusterNodePoolDetailResponseBodyNodeComponents> getNodeComponents() {
+        return this.nodeComponents;
     }
 
     public DescribeClusterNodePoolDetailResponseBody setNodeConfig(DescribeClusterNodePoolDetailResponseBodyNodeConfig nodeConfig) {
@@ -1002,6 +1013,74 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public DescribeClusterNodePoolDetailResponseBodyManagementUpgradeConfig getUpgradeConfig() {
             return this.upgradeConfig;
+        }
+
+    }
+
+    public static class DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig extends TeaModel {
+        @NameInMap("custom_config")
+        public java.util.Map<String, String> customConfig;
+
+        public static DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig self = new DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig setCustomConfig(java.util.Map<String, String> customConfig) {
+            this.customConfig = customConfig;
+            return this;
+        }
+        public java.util.Map<String, String> getCustomConfig() {
+            return this.customConfig;
+        }
+
+    }
+
+    public static class DescribeClusterNodePoolDetailResponseBodyNodeComponents extends TeaModel {
+        @NameInMap("config")
+        public DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig config;
+
+        /**
+         * <strong>example:</strong>
+         * <p>kubelet</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.33.3-aliyun.1</p>
+         */
+        @NameInMap("version")
+        public String version;
+
+        public static DescribeClusterNodePoolDetailResponseBodyNodeComponents build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyNodeComponents self = new DescribeClusterNodePoolDetailResponseBodyNodeComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyNodeComponents setConfig(DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig config) {
+            this.config = config;
+            return this;
+        }
+        public DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig getConfig() {
+            return this.config;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyNodeComponents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyNodeComponents setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
