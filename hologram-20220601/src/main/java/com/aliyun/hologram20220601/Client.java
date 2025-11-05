@@ -733,6 +733,187 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>DB授权</p>
+     * 
+     * @param request GrantDatabasePermissionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantDatabasePermissionResponse
+     */
+    public GrantDatabasePermissionResponse grantDatabasePermissionWithOptions(String instanceId, GrantDatabasePermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            body.put("databaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privileges)) {
+            body.put("privileges", request.privileges);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("userName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantDatabasePermission"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/grantDatabasePermission"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantDatabasePermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DB授权</p>
+     * 
+     * @param request GrantDatabasePermissionRequest
+     * @return GrantDatabasePermissionResponse
+     */
+    public GrantDatabasePermissionResponse grantDatabasePermission(String instanceId, GrantDatabasePermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.grantDatabasePermissionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DB授权</p>
+     * 
+     * @param request GrantSchemaPermissionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantSchemaPermissionResponse
+     */
+    public GrantSchemaPermissionResponse grantSchemaPermissionWithOptions(String instanceId, GrantSchemaPermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            body.put("databaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privileges)) {
+            body.put("privileges", request.privileges);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            body.put("schemaName", request.schemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("userName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantSchemaPermission"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/grantSchemaPermission"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantSchemaPermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DB授权</p>
+     * 
+     * @param request GrantSchemaPermissionRequest
+     * @return GrantSchemaPermissionResponse
+     */
+    public GrantSchemaPermissionResponse grantSchemaPermission(String instanceId, GrantSchemaPermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.grantSchemaPermissionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DB授权</p>
+     * 
+     * @param request GrantTablePermissionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantTablePermissionResponse
+     */
+    public GrantTablePermissionResponse grantTablePermissionWithOptions(String instanceId, GrantTablePermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allTable)) {
+            body.put("allTable", request.allTable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            body.put("databaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privileges)) {
+            body.put("privileges", request.privileges);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            body.put("schemaName", request.schemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            body.put("tableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("userName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantTablePermission"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/grantTablePermission"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantTablePermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DB授权</p>
+     * 
+     * @param request GrantTablePermissionRequest
+     * @return GrantTablePermissionResponse
+     */
+    public GrantTablePermissionResponse grantTablePermission(String instanceId, GrantTablePermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.grantTablePermissionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a list of backups. A backup is a full data snapshot of an instance at the end of the snapshot time. You can purchase another instance to completely restore the original data.</p>
      * 
      * @param request ListBackupDataRequest
@@ -780,6 +961,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listBackupDataWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取DB列表</p>
+     * 
+     * @param request ListDatabasesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDatabasesResponse
+     */
+    public ListDatabasesResponse listDatabasesWithOptions(String instanceId, ListDatabasesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.external)) {
+            query.put("external", request.external);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDatabases"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/listDatabases"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDatabasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取DB列表</p>
+     * 
+     * @param request ListDatabasesRequest
+     * @return ListDatabasesResponse
+     */
+    public ListDatabasesResponse listDatabases(String instanceId, ListDatabasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDatabasesWithOptions(instanceId, request, headers, runtime);
     }
 
     /**
@@ -1246,6 +1474,187 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.resumeInstanceWithOptions(instanceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消DB授权</p>
+     * 
+     * @param request RevokeDatabasePermissionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeDatabasePermissionResponse
+     */
+    public RevokeDatabasePermissionResponse revokeDatabasePermissionWithOptions(String instanceId, RevokeDatabasePermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            body.put("databaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privileges)) {
+            body.put("privileges", request.privileges);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("userName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeDatabasePermission"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/revokeDatabasePermission"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeDatabasePermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消DB授权</p>
+     * 
+     * @param request RevokeDatabasePermissionRequest
+     * @return RevokeDatabasePermissionResponse
+     */
+    public RevokeDatabasePermissionResponse revokeDatabasePermission(String instanceId, RevokeDatabasePermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.revokeDatabasePermissionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消Schema授权</p>
+     * 
+     * @param request RevokeSchemaPermissionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeSchemaPermissionResponse
+     */
+    public RevokeSchemaPermissionResponse revokeSchemaPermissionWithOptions(String instanceId, RevokeSchemaPermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            body.put("databaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privileges)) {
+            body.put("privileges", request.privileges);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            body.put("schemaName", request.schemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("userName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeSchemaPermission"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/revokeSchemaPermission"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeSchemaPermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消Schema授权</p>
+     * 
+     * @param request RevokeSchemaPermissionRequest
+     * @return RevokeSchemaPermissionResponse
+     */
+    public RevokeSchemaPermissionResponse revokeSchemaPermission(String instanceId, RevokeSchemaPermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.revokeSchemaPermissionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消表授权</p>
+     * 
+     * @param request RevokeTablePermissionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeTablePermissionResponse
+     */
+    public RevokeTablePermissionResponse revokeTablePermissionWithOptions(String instanceId, RevokeTablePermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allTable)) {
+            body.put("allTable", request.allTable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            body.put("databaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privileges)) {
+            body.put("privileges", request.privileges);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            body.put("schemaName", request.schemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            body.put("tableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("userName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeTablePermission"),
+            new TeaPair("version", "2022-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/revokeTablePermission"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeTablePermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消表授权</p>
+     * 
+     * @param request RevokeTablePermissionRequest
+     * @return RevokeTablePermissionResponse
+     */
+    public RevokeTablePermissionResponse revokeTablePermission(String instanceId, RevokeTablePermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.revokeTablePermissionWithOptions(instanceId, request, headers, runtime);
     }
 
     /**
