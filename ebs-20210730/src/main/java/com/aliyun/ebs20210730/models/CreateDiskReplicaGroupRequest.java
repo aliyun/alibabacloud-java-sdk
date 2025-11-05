@@ -54,6 +54,12 @@ public class CreateDiskReplicaGroupRequest extends TeaModel {
     @NameInMap("DestinationZoneId")
     public String destinationZoneId;
 
+    /**
+     * <p>Whether to enable replication time control. By default, this parameter is disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableRtc")
     public Boolean enableRtc;
 

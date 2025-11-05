@@ -32,7 +32,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Details about the replication pairs.</p>
+     * <p>Details of the replication pairs.</p>
      */
     @NameInMap("ReplicaPairs")
     public java.util.List<DescribeDiskReplicaPairsResponseBodyReplicaPairs> replicaPairs;
@@ -218,6 +218,12 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @NameInMap("DestinationZoneId")
         public String destinationZoneId;
 
+        /**
+         * <p>Whether the replication time control is enabled. If the replication pair has been added to a replication group, it is consistent with the attributes of the replication group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableRtc")
         public Boolean enableRtc;
 

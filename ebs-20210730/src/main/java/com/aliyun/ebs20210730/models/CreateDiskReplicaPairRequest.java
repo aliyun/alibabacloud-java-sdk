@@ -5,15 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDiskReplicaPairRequest extends TeaModel {
     /**
-     * <p>The bandwidth to use to asynchronously replicate data between the primary disk and secondary disk. Unit: Kbit/s. Valid values:</p>
+     * <p>The bandwidth to use to asynchronously replicate data from the primary disk to the secondary disk. Unit: Kbit/s. Valid values:</p>
      * <ul>
-     * <li>10240 : equal to 10 Mbit/s</li>
-     * <li>20480 : equal to 20 Mbit/s</li>
-     * <li>51200 : equal to 50 Mbit/s</li>
-     * <li>102400 : equal to 100 Mbit/s</li>
+     * <li>10240</li>
+     * <li>20480</li>
+     * <li>51200</li>
+     * <li>102400</li>
      * </ul>
-     * <p>Default value: 10240.</p>
-     * <p>When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.</p>
+     * <p>Default value: 10240. When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -36,7 +35,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -93,11 +92,17 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>Whether to enable replication time control. By default, this parameter is disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableRtc")
     public Boolean enableRtc;
 
     /**
-     * <p>The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the replication pair. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>TestReplicaPair</p>
@@ -106,11 +111,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String pairName;
 
     /**
-     * <p>The subscription duration of the replication pair. This parameter is required when the <code>ChargeType</code> parameter is set to PREPAY. The unit of the subscription duration is specified by the <code>PeriodUnit</code> parameter.</p>
-     * <ul>
-     * <li>Valid values when the <code>PeriodUnit</code> parameter is set to Week: 1, 2, 3, and 4.</li>
-     * <li>Valid values when the <code>PeriodUnit</code> parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
-     * </ul>
+     * <p>The subscription duration of the replication pair. When <code>ChargeType</code> is set to PREPAY, this parameter must be specified. Valid values: 1, 2, 3, 6, 12, 24, 36, and 60. The subscription duration unit is specified by <code>PeriodUnit</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,12 +120,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The unit of the subscription duration of the replication pair. Valid values:</p>
-     * <ul>
-     * <li>Week.</li>
-     * <li>Month</li>
-     * </ul>
-     * <p>Default value: Month.</p>
+     * <p>The unit of the subscription duration of the replication pair. Set the value to Month. Valid value: Month</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -133,7 +129,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.</p>
+     * <p>The recovery point objective (RPO) of the replication pair. Unit: seconds. Valid value: 900.</p>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -152,7 +148,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the replication group.</p>
+     * <p>The ID of the resource group to which the replication pair belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmvs****</p>
@@ -171,7 +167,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     public String sourceZoneId;
 
     /**
-     * <p>The resource tags. You can specify up to 20 tags.</p>
+     * <p>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDiskReplicaPairRequestTag> tag;
@@ -319,7 +315,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
 
     public static class CreateDiskReplicaPairRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -328,7 +324,7 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

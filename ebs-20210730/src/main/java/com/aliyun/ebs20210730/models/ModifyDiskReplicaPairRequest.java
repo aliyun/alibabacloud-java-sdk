@@ -34,6 +34,12 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Whether to enable replication time control.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableRtc")
     public Boolean enableRtc;
 

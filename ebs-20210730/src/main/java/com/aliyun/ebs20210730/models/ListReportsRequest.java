@@ -4,6 +4,12 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ListReportsRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-xxx</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

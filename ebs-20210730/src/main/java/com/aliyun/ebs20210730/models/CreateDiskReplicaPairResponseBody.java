@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiskReplicaPairResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -23,7 +23,7 @@ public class CreateDiskReplicaPairResponseBody extends TeaModel {
     public String replicaPairId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C123F94F-4E38-19AE-942A-A8D6F44F****</p>

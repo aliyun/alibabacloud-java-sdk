@@ -42,14 +42,15 @@ public class DescribeMetricDataRequest extends TeaModel {
     public String aggreOverLineOps;
 
     /**
-     * <p>Dimension map, in JSON format, representing the dimensions being queried. The currently available keys are:</p>
+     * <p>The dimension map, in the JSON format. Valid values:</p>
      * <ul>
-     * <li>DiskId: Cloud disk name, e.g., d-xxx.</li>
-     * <li>DeviceType: Type of cloud disk, system indicates system disk, data indicates data disk.</li>
-     * <li>DeviceCategory: Category of cloud disk, e.g., cloud_essd.</li>
-     * <li>EcsInstanceId: Name of the ECS instance where the disk is located, e.g., i-xxx.</li>
+     * <li>DiskId: the disk name. Example: d-xxx.</li>
+     * <li>DeviceType: the disk type. system indicates the system disk, and data indicates the data disk.</li>
+     * <li>DeviceCategory: the disk category. Example: cloud_essd.</li>
+     * <li>EcsInstanceId: the ECS instance name. Example: i-xxx.</li>
+     * <li>Azone: the zone, such as cn-hangzhou-a.</li>
      * </ul>
-     * <p>The returned results are the intersection of all dimension filter conditions.</p>
+     * <p>The returned result is the intersection of all dimension filtering conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;DiskId&quot;:[&quot;d-bp14xxxx&quot;,&quot;d-bp11xxxx&quot;], &quot;DeviceCategory&quot;: [&quot;cloud_essd&quot;]}</p>
@@ -66,6 +67,9 @@ public class DescribeMetricDataRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The list of fields used for grouping and aggregation.</p>
+     */
     @NameInMap("GroupByLabels")
     public java.util.List<String> groupByLabels;
 
@@ -90,12 +94,14 @@ public class DescribeMetricDataRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The interval for obtaining metric data. Unit: seconds. The default value is 5 seconds. Possible values include:</p>
+     * <p>The granularity at which data is collected for the metric. Unit: seconds. Default value: 5. Valid values:</p>
      * <ul>
-     * <li>5: 5s precision query, can query up to 12 hours of data</li>
-     * <li>10: 10s precision query, can query up to 24 hours of data</li>
-     * <li>60: 60s precision query, can query up to 7 days of data</li>
-     * <li>3600: 3600s precision query, can query up to 30 days of data</li>
+     * <li>5: 5 seconds. The query time range can be up to 12 hours.</li>
+     * <li>10: 10 seconds. The query time range can be up to 24 hours.</li>
+     * <li>60: 60 seconds. The query time range can be up to 7 days.</li>
+     * <li>300: 300 seconds. The query time range can be up to 30 days.</li>
+     * <li>600: 600 seconds. The query time range can be up to 30 days.</li>
+     * <li>3600: 3,600 seconds. The query time range can be up to 30 days.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +120,7 @@ public class DescribeMetricDataRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time point for obtaining metric data. The earliest selectable time is one year before the current moment. When both StartTime and EndTime parameters are empty, it defaults to querying the most recent period\&quot;s monitoring metrics. Represented according to the ISO 8601 standard, using UTC +0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The beginning of the time range to query. You can specify a point in time that is up to 30 days before the current time. If both StartTime and EndTime are left empty, the monitoring metric data of the most recent statistical period is queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-11-21T01:50:00Z</p>

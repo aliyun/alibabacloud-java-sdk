@@ -187,6 +187,12 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("DestinationZoneId")
         public String destinationZoneId;
 
+        /**
+         * <p>Indicates whether to enable replication time control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableRtc")
         public Boolean enableRtc;
 
