@@ -44,6 +44,9 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PlanType")
+    public String planType;
+
     @NameInMap("RemainingExpireDays")
     public Integer remainingExpireDays;
 
@@ -129,6 +132,14 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUserRatePlanInstancesRequest setPlanType(String planType) {
+        this.planType = planType;
+        return this;
+    }
+    public String getPlanType() {
+        return this.planType;
     }
 
     public ListUserRatePlanInstancesRequest setRemainingExpireDays(Integer remainingExpireDays) {
