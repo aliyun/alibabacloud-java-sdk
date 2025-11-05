@@ -3,7 +3,7 @@ package com.aliyun.aiccs20191015.models;
 
 import com.aliyun.tea.*;
 
-public class QueryAiCallDetailPageRequest extends TeaModel {
+public class QueryAiCallDetailPageShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>1212131231****</p>
@@ -26,7 +26,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
     public String calledNumber;
 
     @NameInMap("DetailIds")
-    public java.util.List<Long> detailIds;
+    public String detailIdsShrink;
 
     /**
      * <strong>example:</strong>
@@ -125,12 +125,12 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
-    public static QueryAiCallDetailPageRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryAiCallDetailPageRequest self = new QueryAiCallDetailPageRequest();
+    public static QueryAiCallDetailPageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryAiCallDetailPageShrinkRequest self = new QueryAiCallDetailPageShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryAiCallDetailPageRequest setBatchId(String batchId) {
+    public QueryAiCallDetailPageShrinkRequest setBatchId(String batchId) {
         this.batchId = batchId;
         return this;
     }
@@ -138,7 +138,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.batchId;
     }
 
-    public QueryAiCallDetailPageRequest setCallResult(String callResult) {
+    public QueryAiCallDetailPageShrinkRequest setCallResult(String callResult) {
         this.callResult = callResult;
         return this;
     }
@@ -146,7 +146,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.callResult;
     }
 
-    public QueryAiCallDetailPageRequest setCalledNumber(String calledNumber) {
+    public QueryAiCallDetailPageShrinkRequest setCalledNumber(String calledNumber) {
         this.calledNumber = calledNumber;
         return this;
     }
@@ -154,15 +154,15 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.calledNumber;
     }
 
-    public QueryAiCallDetailPageRequest setDetailIds(java.util.List<Long> detailIds) {
-        this.detailIds = detailIds;
+    public QueryAiCallDetailPageShrinkRequest setDetailIdsShrink(String detailIdsShrink) {
+        this.detailIdsShrink = detailIdsShrink;
         return this;
     }
-    public java.util.List<Long> getDetailIds() {
-        return this.detailIds;
+    public String getDetailIdsShrink() {
+        return this.detailIdsShrink;
     }
 
-    public QueryAiCallDetailPageRequest setEndCallingTime(Long endCallingTime) {
+    public QueryAiCallDetailPageShrinkRequest setEndCallingTime(Long endCallingTime) {
         this.endCallingTime = endCallingTime;
         return this;
     }
@@ -170,7 +170,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.endCallingTime;
     }
 
-    public QueryAiCallDetailPageRequest setEndImportedTime(Long endImportedTime) {
+    public QueryAiCallDetailPageShrinkRequest setEndImportedTime(Long endImportedTime) {
         this.endImportedTime = endImportedTime;
         return this;
     }
@@ -178,7 +178,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.endImportedTime;
     }
 
-    public QueryAiCallDetailPageRequest setMajorIntent(String majorIntent) {
+    public QueryAiCallDetailPageShrinkRequest setMajorIntent(String majorIntent) {
         this.majorIntent = majorIntent;
         return this;
     }
@@ -186,7 +186,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.majorIntent;
     }
 
-    public QueryAiCallDetailPageRequest setMaxConversationDuration(Long maxConversationDuration) {
+    public QueryAiCallDetailPageShrinkRequest setMaxConversationDuration(Long maxConversationDuration) {
         this.maxConversationDuration = maxConversationDuration;
         return this;
     }
@@ -194,7 +194,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.maxConversationDuration;
     }
 
-    public QueryAiCallDetailPageRequest setMinConversationDuration(Long minConversationDuration) {
+    public QueryAiCallDetailPageShrinkRequest setMinConversationDuration(Long minConversationDuration) {
         this.minConversationDuration = minConversationDuration;
         return this;
     }
@@ -202,7 +202,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.minConversationDuration;
     }
 
-    public QueryAiCallDetailPageRequest setOutId(String outId) {
+    public QueryAiCallDetailPageShrinkRequest setOutId(String outId) {
         this.outId = outId;
         return this;
     }
@@ -210,7 +210,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.outId;
     }
 
-    public QueryAiCallDetailPageRequest setOwnerId(Long ownerId) {
+    public QueryAiCallDetailPageShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -218,7 +218,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public QueryAiCallDetailPageRequest setPageNo(Long pageNo) {
+    public QueryAiCallDetailPageShrinkRequest setPageNo(Long pageNo) {
         this.pageNo = pageNo;
         return this;
     }
@@ -226,7 +226,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.pageNo;
     }
 
-    public QueryAiCallDetailPageRequest setPageSize(Long pageSize) {
+    public QueryAiCallDetailPageShrinkRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -234,7 +234,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryAiCallDetailPageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public QueryAiCallDetailPageShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -242,7 +242,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public QueryAiCallDetailPageRequest setResourceOwnerId(Long resourceOwnerId) {
+    public QueryAiCallDetailPageShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -250,7 +250,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public QueryAiCallDetailPageRequest setStartCallingTime(Long startCallingTime) {
+    public QueryAiCallDetailPageShrinkRequest setStartCallingTime(Long startCallingTime) {
         this.startCallingTime = startCallingTime;
         return this;
     }
@@ -258,7 +258,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.startCallingTime;
     }
 
-    public QueryAiCallDetailPageRequest setStartImportedTime(Long startImportedTime) {
+    public QueryAiCallDetailPageShrinkRequest setStartImportedTime(Long startImportedTime) {
         this.startImportedTime = startImportedTime;
         return this;
     }
@@ -266,7 +266,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.startImportedTime;
     }
 
-    public QueryAiCallDetailPageRequest setStatus(Long status) {
+    public QueryAiCallDetailPageShrinkRequest setStatus(Long status) {
         this.status = status;
         return this;
     }
@@ -274,7 +274,7 @@ public class QueryAiCallDetailPageRequest extends TeaModel {
         return this.status;
     }
 
-    public QueryAiCallDetailPageRequest setTaskId(String taskId) {
+    public QueryAiCallDetailPageShrinkRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }

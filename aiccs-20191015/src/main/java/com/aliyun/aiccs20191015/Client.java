@@ -5400,6 +5400,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>语音智能体外呼任务导入单条数据</p>
+     * 
+     * @param tmpReq ImportOneTaskPhoneNumberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportOneTaskPhoneNumberResponse
+     */
+    public ImportOneTaskPhoneNumberResponse importOneTaskPhoneNumberWithOptions(ImportOneTaskPhoneNumberRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ImportOneTaskPhoneNumberShrinkRequest request = new ImportOneTaskPhoneNumberShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.variables)) {
+            request.variablesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.variables, "Variables", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumber)) {
+            query.put("PhoneNumber", request.phoneNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variablesShrink)) {
+            query.put("Variables", request.variablesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportOneTaskPhoneNumber"),
+            new TeaPair("version", "2019-10-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportOneTaskPhoneNumberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>语音智能体外呼任务导入单条数据</p>
+     * 
+     * @param request ImportOneTaskPhoneNumberRequest
+     * @return ImportOneTaskPhoneNumberResponse
+     */
+    public ImportOneTaskPhoneNumberResponse importOneTaskPhoneNumber(ImportOneTaskPhoneNumberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importOneTaskPhoneNumberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>导入任务号码数据</p>
      * 
      * @param tmpReq ImportTaskNumberDatasRequest
@@ -6790,12 +6864,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询明细记录</p>
      * 
-     * @param request QueryAiCallDetailPageRequest
+     * @param tmpReq QueryAiCallDetailPageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryAiCallDetailPageResponse
      */
-    public QueryAiCallDetailPageResponse queryAiCallDetailPageWithOptions(QueryAiCallDetailPageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public QueryAiCallDetailPageResponse queryAiCallDetailPageWithOptions(QueryAiCallDetailPageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryAiCallDetailPageShrinkRequest request = new QueryAiCallDetailPageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.detailIds)) {
+            request.detailIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.detailIds, "DetailIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.batchId)) {
             query.put("BatchId", request.batchId);
@@ -6807,6 +6887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
             query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detailIdsShrink)) {
+            query.put("DetailIds", request.detailIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endCallingTime)) {
@@ -9205,6 +9289,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startType)) {
             query.put("StartType", request.startType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskCps)) {
+            query.put("TaskCps", request.taskCps);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {

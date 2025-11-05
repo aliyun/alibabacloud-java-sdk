@@ -62,6 +62,15 @@ public class UpdateAiCallTaskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
+     * <p>57</p>
+     */
+    @NameInMap("TaskCps")
+    public Long taskCps;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
      * <p>1152311212312***</p>
      */
     @NameInMap("TaskId")
@@ -175,6 +184,14 @@ public class UpdateAiCallTaskRequest extends TeaModel {
     }
     public String getStartType() {
         return this.startType;
+    }
+
+    public UpdateAiCallTaskRequest setTaskCps(Long taskCps) {
+        this.taskCps = taskCps;
+        return this;
+    }
+    public Long getTaskCps() {
+        return this.taskCps;
     }
 
     public UpdateAiCallTaskRequest setTaskId(String taskId) {
