@@ -91,6 +91,7 @@ public class ListWorkflowInstancesRequest extends TeaModel {
      * <li>SmokeTest: Smoke test</li>
      * <li>SupplementData: Data backfill</li>
      * <li>ManualWorkflow: Manually triggered workflow</li>
+     * <li>TriggerWorkflow: Triggered Workflow</li>
      * </ul>
      * 
      * <strong>example:</strong>

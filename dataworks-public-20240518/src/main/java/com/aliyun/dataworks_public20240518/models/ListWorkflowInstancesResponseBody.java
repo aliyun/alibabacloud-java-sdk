@@ -42,6 +42,8 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
 
     public static class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags extends TeaModel {
         /**
+         * <p>The key of a tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -49,6 +51,8 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of a tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -162,6 +166,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
@@ -209,6 +217,16 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public java.util.List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags> tags;
 
         /**
+         * <p>The type of the workflow instance. Valid values:</p>
+         * <ul>
+         * <li>Normal: Scheduled execution</li>
+         * <li>Manual: Manually triggered node</li>
+         * <li>SmokeTest: Smoke test</li>
+         * <li>SupplementData: Data backfill</li>
+         * <li>ManualWorkflow: Manually triggered workflow</li>
+         * <li>TriggerWorkflow: Triggered Workflow</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -230,6 +248,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @NameInMap("WorkflowParameters")
         public String workflowParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("WorkflowTaskInstanceId")
         public Long workflowTaskInstanceId;
 

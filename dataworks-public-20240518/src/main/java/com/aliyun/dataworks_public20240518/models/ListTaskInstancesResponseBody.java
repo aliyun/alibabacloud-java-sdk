@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The pagination details.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListTaskInstancesResponseBodyPagingInfo pagingInfo;
@@ -341,6 +341,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public ListTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource runtimeResource;
 
         /**
+         * <p>The script parameter list.</p>
+         * 
          * <strong>example:</strong>
          * <p>para1=val1 para2=val2</p>
          */
@@ -452,6 +454,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public String triggerType;
 
         /**
+         * <p>The timestamp for when it started waiting for resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -459,6 +463,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Long waitingResourceTime;
 
         /**
+         * <p>The timestamp for when it started waiting for the scheduled time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */

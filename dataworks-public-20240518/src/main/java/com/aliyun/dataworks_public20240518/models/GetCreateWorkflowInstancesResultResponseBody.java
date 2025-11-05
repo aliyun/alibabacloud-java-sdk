@@ -14,7 +14,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of asynchronously creating a workflow instance.</p>
+     * <p>The creation result of the workflow instance.</p>
      */
     @NameInMap("Result")
     public GetCreateWorkflowInstancesResultResponseBodyResult result;
