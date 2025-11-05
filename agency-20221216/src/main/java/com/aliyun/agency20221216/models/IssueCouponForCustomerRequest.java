@@ -20,6 +20,9 @@ public class IssueCouponForCustomerRequest extends TeaModel {
     @NameInMap("CouponTemplateId")
     public Long couponTemplateId;
 
+    @NameInMap("IsUseBenefit")
+    public Boolean isUseBenefit;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -48,6 +51,14 @@ public class IssueCouponForCustomerRequest extends TeaModel {
     }
     public Long getCouponTemplateId() {
         return this.couponTemplateId;
+    }
+
+    public IssueCouponForCustomerRequest setIsUseBenefit(Boolean isUseBenefit) {
+        this.isUseBenefit = isUseBenefit;
+        return this;
+    }
+    public Boolean getIsUseBenefit() {
+        return this.isUseBenefit;
     }
 
     public IssueCouponForCustomerRequest setUidlist(String uidlist) {

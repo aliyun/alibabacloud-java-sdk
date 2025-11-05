@@ -21,7 +21,7 @@ public class GetMonthlyBillRequest extends TeaModel {
      * <ul>
      * <li>MonthlyInvoice</li>
      * <li>MonthRefundInvoice</li>
-     * <li>MonthlySummary</li>
+     * <li>MonthlySummary (Deprecated)</li>
      * <li>MonthlyInstanceAddAdjustBill </li>
      * <li>MonthlyInstanceRefundBill</li>
      * <li>MonthlyAddAdjustInvoce</li>

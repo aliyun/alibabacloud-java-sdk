@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.agency20221216.models;
+
+import com.aliyun.tea.*;
+
+public class ExportReversedDeductionHistoryResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public ExportReversedDeductionHistoryResponseBody body;
+
+    public static ExportReversedDeductionHistoryResponse build(java.util.Map<String, ?> map) throws Exception {
+        ExportReversedDeductionHistoryResponse self = new ExportReversedDeductionHistoryResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ExportReversedDeductionHistoryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ExportReversedDeductionHistoryResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public ExportReversedDeductionHistoryResponse setBody(ExportReversedDeductionHistoryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ExportReversedDeductionHistoryResponseBody getBody() {
+        return this.body;
+    }
+
+}

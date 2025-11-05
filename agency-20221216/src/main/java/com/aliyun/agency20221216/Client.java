@@ -774,6 +774,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>额度冲减明细列表导出接口</p>
+     * 
+     * @param request ExportReversedDeductionHistoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportReversedDeductionHistoryResponse
+     */
+    public ExportReversedDeductionHistoryResponse exportReversedDeductionHistoryWithOptions(ExportReversedDeductionHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportUid)) {
+            query.put("ExportUid", request.exportUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportReversedDeductionHistory"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportReversedDeductionHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>额度冲减明细列表导出接口</p>
+     * 
+     * @param request ExportReversedDeductionHistoryRequest
+     * @return ExportReversedDeductionHistoryResponse
+     */
+    public ExportReversedDeductionHistoryResponse exportReversedDeductionHistory(ExportReversedDeductionHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportReversedDeductionHistoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Return Distribution Customer\&quot;s account information.</p>
      * 
      * @param request GetAccountInfoRequest
@@ -810,6 +866,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAccountInfoResponse getAccountInfo(GetAccountInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAccountInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提供返佣商品API</p>
+     * 
+     * @param tmpReq GetCommissionableProductsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCommissionableProductsResponse
+     */
+    public GetCommissionableProductsResponse getCommissionableProductsWithOptions(GetCommissionableProductsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetCommissionableProductsShrinkRequest request = new GetCommissionableProductsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listShowStatusList)) {
+            request.listShowStatusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listShowStatusList, "ListShowStatusList", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityCodeList)) {
+            query.put("CommodityCodeList", request.commodityCodeList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fiscalYear)) {
+            query.put("FiscalYear", request.fiscalYear);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listShowStatusListShrink)) {
+            query.put("ListShowStatusList", request.listShowStatusListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipCodeList)) {
+            query.put("PipCodeList", request.pipCodeList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realEndMonth)) {
+            query.put("RealEndMonth", request.realEndMonth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realStartMonth)) {
+            query.put("RealStartMonth", request.realStartMonth);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCommissionableProducts"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCommissionableProductsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提供返佣商品API</p>
+     * 
+     * @param request GetCommissionableProductsRequest
+     * @return GetCommissionableProductsResponse
+     */
+    public GetCommissionableProductsResponse getCommissionableProducts(GetCommissionableProductsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCommissionableProductsWithOptions(request, runtime);
     }
 
     /**
@@ -1233,6 +1367,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CouponTemplateId", request.couponTemplateId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isUseBenefit)) {
+            query.put("IsUseBenefit", request.isUseBenefit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uidlist)) {
             query.put("Uidlist", request.uidlist);
         }
@@ -1368,6 +1506,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCouponUsageResponse listCouponUsage(ListCouponUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCouponUsageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通用查询导出任务列表</p>
+     * 
+     * @param request ListExportTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListExportTasksResponse
+     */
+    public ListExportTasksResponse listExportTasksWithOptions(ListExportTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            query.put("SceneCode", request.sceneCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListExportTasks"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListExportTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通用查询导出任务列表</p>
+     * 
+     * @param request ListExportTasksRequest
+     * @return ListExportTasksResponse
+     */
+    public ListExportTasksResponse listExportTasks(ListExportTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listExportTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>额度冲减明细列表</p>
+     * 
+     * @param request QueryReversedDeductionHistoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryReversedDeductionHistoryResponse
+     */
+    public QueryReversedDeductionHistoryResponse queryReversedDeductionHistoryWithOptions(QueryReversedDeductionHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            query.put("Uid", request.uid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryReversedDeductionHistory"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryReversedDeductionHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>额度冲减明细列表</p>
+     * 
+     * @param request QueryReversedDeductionHistoryRequest
+     * @return QueryReversedDeductionHistoryResponse
+     */
+    public QueryReversedDeductionHistoryResponse queryReversedDeductionHistory(QueryReversedDeductionHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryReversedDeductionHistoryWithOptions(request, runtime);
     }
 
     /**
