@@ -18,6 +18,9 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("RagInstanceId")
+    public String ragInstanceId;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -58,6 +61,14 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getFileUrlObject() {
         return this.fileUrlObject;
+    }
+
+    public CreateDocParserJobAdvanceRequest setRagInstanceId(String ragInstanceId) {
+        this.ragInstanceId = ragInstanceId;
+        return this;
+    }
+    public String getRagInstanceId() {
+        return this.ragInstanceId;
     }
 
     public CreateDocParserJobAdvanceRequest setRegionId(String regionId) {

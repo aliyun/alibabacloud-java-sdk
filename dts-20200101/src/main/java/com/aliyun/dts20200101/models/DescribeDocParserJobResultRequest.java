@@ -11,6 +11,9 @@ public class DescribeDocParserJobResultRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("RagInstanceId")
+    public String ragInstanceId;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,6 +39,14 @@ public class DescribeDocParserJobResultRequest extends TeaModel {
     }
     public String getDtsJobId() {
         return this.dtsJobId;
+    }
+
+    public DescribeDocParserJobResultRequest setRagInstanceId(String ragInstanceId) {
+        this.ragInstanceId = ragInstanceId;
+        return this;
+    }
+    public String getRagInstanceId() {
+        return this.ragInstanceId;
     }
 
     public DescribeDocParserJobResultRequest setRegionId(String regionId) {

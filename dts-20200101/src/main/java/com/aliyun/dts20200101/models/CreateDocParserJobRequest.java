@@ -18,6 +18,9 @@ public class CreateDocParserJobRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("RagInstanceId")
+    public String ragInstanceId;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -58,6 +61,14 @@ public class CreateDocParserJobRequest extends TeaModel {
     }
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    public CreateDocParserJobRequest setRagInstanceId(String ragInstanceId) {
+        this.ragInstanceId = ragInstanceId;
+        return this;
+    }
+    public String getRagInstanceId() {
+        return this.ragInstanceId;
     }
 
     public CreateDocParserJobRequest setRegionId(String regionId) {
