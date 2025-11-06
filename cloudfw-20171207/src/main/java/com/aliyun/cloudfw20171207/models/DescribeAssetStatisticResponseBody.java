@@ -85,9 +85,46 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic extends TeaModel {
+        @NameInMap("MemberList")
+        public java.util.List<String> memberList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
+        @NameInMap("RegionNo")
+        public String regionNo;
+
+        public static DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic self = new DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic setMemberList(java.util.List<String> memberList) {
+            this.memberList = memberList;
+            return this;
+        }
+        public java.util.List<String> getMemberList() {
+            return this.memberList;
+        }
+
+        public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic setRegionNo(String regionNo) {
+            this.regionNo = regionNo;
+            return this;
+        }
+        public String getRegionNo() {
+            return this.regionNo;
+        }
+
+    }
+
     public static class DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic extends TeaModel {
         @NameInMap("CfwGeneralInstanceRegionStatistic")
         public java.util.List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwGeneralInstanceRegionStatistic> cfwGeneralInstanceRegionStatistic;
+
+        @NameInMap("CfwTotalGeneralInstanceRegionStatistic")
+        public java.util.List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic> cfwTotalGeneralInstanceRegionStatistic;
 
         /**
          * <strong>example:</strong>
@@ -142,6 +179,14 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwGeneralInstanceRegionStatistic> getCfwGeneralInstanceRegionStatistic() {
             return this.cfwGeneralInstanceRegionStatistic;
+        }
+
+        public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic setCfwTotalGeneralInstanceRegionStatistic(java.util.List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic> cfwTotalGeneralInstanceRegionStatistic) {
+            this.cfwTotalGeneralInstanceRegionStatistic = cfwTotalGeneralInstanceRegionStatistic;
+            return this;
+        }
+        public java.util.List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic> getCfwTotalGeneralInstanceRegionStatistic() {
+            return this.cfwTotalGeneralInstanceRegionStatistic;
         }
 
         public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic setTotalCfwGeneralInstanceCnt(Integer totalCfwGeneralInstanceCnt) {
