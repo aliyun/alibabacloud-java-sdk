@@ -5,36 +5,14 @@ import com.aliyun.tea.*;
 
 public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>en</p>
-     */
-    @NameInMap("Long")
-    public String _long;
-
-    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("TransferOutParamList")
     public java.util.List<SaveBatchTaskForTransferOutByAuthorizationCodeRequestTransferOutParamList> transferOutParamList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>127.0.0.1</p>
-     */
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     public static SaveBatchTaskForTransferOutByAuthorizationCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveBatchTaskForTransferOutByAuthorizationCodeRequest self = new SaveBatchTaskForTransferOutByAuthorizationCodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveBatchTaskForTransferOutByAuthorizationCodeRequest set_long(String _long) {
-        this._long = _long;
-        return this;
-    }
-    public String get_long() {
-        return this._long;
     }
 
     public SaveBatchTaskForTransferOutByAuthorizationCodeRequest setTransferOutParamList(java.util.List<SaveBatchTaskForTransferOutByAuthorizationCodeRequestTransferOutParamList> transferOutParamList) {
@@ -43,14 +21,6 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends TeaMo
     }
     public java.util.List<SaveBatchTaskForTransferOutByAuthorizationCodeRequestTransferOutParamList> getTransferOutParamList() {
         return this.transferOutParamList;
-    }
-
-    public SaveBatchTaskForTransferOutByAuthorizationCodeRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public static class SaveBatchTaskForTransferOutByAuthorizationCodeRequestTransferOutParamList extends TeaModel {

@@ -23,7 +23,7 @@ public class QueryDomainListRequest extends TeaModel {
     public String domainGroupId;
 
     /**
-     * <p>The domain name that you want to search for.</p>
+     * <p>The domain name. You can search for the domain name in the domain name list.</p>
      * 
      * <strong>example:</strong>
      * <p>test.com</p>
@@ -32,7 +32,7 @@ public class QueryDomainListRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+     * <p>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
@@ -142,6 +142,9 @@ public class QueryDomainListRequest extends TeaModel {
     @NameInMap("QueryType")
     public String queryType;
 
+    @NameInMap("Registrar")
+    public String registrar;
+
     /**
      * <p>The ID of the resource group.</p>
      * 
@@ -152,7 +155,7 @@ public class QueryDomainListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</p>
+     * <p>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1522080000000</p>
@@ -283,6 +286,14 @@ public class QueryDomainListRequest extends TeaModel {
     }
     public String getQueryType() {
         return this.queryType;
+    }
+
+    public QueryDomainListRequest setRegistrar(String registrar) {
+        this.registrar = registrar;
+        return this;
+    }
+    public String getRegistrar() {
+        return this.registrar;
     }
 
     public QueryDomainListRequest setResourceGroupId(String resourceGroupId) {

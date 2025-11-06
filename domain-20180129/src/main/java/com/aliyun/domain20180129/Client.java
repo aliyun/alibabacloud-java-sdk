@@ -1749,6 +1749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询操作记录</p>
+     * 
      * @param request QueryChangeLogListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryChangeLogListResponse
@@ -1802,6 +1805,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询操作记录</p>
+     * 
      * @param request QueryChangeLogListRequest
      * @return QueryChangeLogListResponse
      */
@@ -2207,6 +2213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("QueryType", request.queryType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.registrar)) {
+            query.put("Registrar", request.registrar);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -2304,6 +2314,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryDomainRealNameVerificationInfoResponse queryDomainRealNameVerificationInfo(QueryDomainRealNameVerificationInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDomainRealNameVerificationInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>实时查询域名价格</p>
+     * 
+     * @param tmpReq QueryDomainRealTimePriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDomainRealTimePriceResponse
+     */
+    public QueryDomainRealTimePriceResponse queryDomainRealTimePriceWithOptions(QueryDomainRealTimePriceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryDomainRealTimePriceShrinkRequest request = new QueryDomainRealTimePriceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.domainItem)) {
+            request.domainItemShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.domainItem, "DomainItem", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currency)) {
+            query.put("Currency", request.currency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainItemShrink)) {
+            query.put("DomainItem", request.domainItemShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDomainRealTimePrice"),
+            new TeaPair("version", "2018-01-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDomainRealTimePriceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>实时查询域名价格</p>
+     * 
+     * @param request QueryDomainRealTimePriceRequest
+     * @return QueryDomainRealTimePriceResponse
+     */
+    public QueryDomainRealTimePriceResponse queryDomainRealTimePrice(QueryDomainRealTimePriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryDomainRealTimePriceWithOptions(request, runtime);
     }
 
     /**
@@ -3003,6 +3067,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</p>
+     * <ul>
+     * <li>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</li>
+     * <li>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the registrant profiles that belong to your Alibaba Cloud account.</p>
+     * 
      * @param request QueryRegistrantProfilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryRegistrantProfilesResponse
@@ -3080,6 +3154,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</p>
+     * <ul>
+     * <li>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</li>
+     * <li>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the registrant profiles that belong to your Alibaba Cloud account.</p>
+     * 
      * @param request QueryRegistrantProfilesRequest
      * @return QueryRegistrantProfilesResponse
      */
@@ -3201,6 +3285,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific domain name task by page.</p>
+     * 
      * @param request QueryTaskDetailListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTaskDetailListResponse
@@ -3258,6 +3345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a specific domain name task by page.</p>
+     * 
      * @param request QueryTaskDetailListRequest
      * @return QueryTaskDetailListResponse
      */
@@ -3329,6 +3419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询任务列表</p>
+     * 
      * @param request QueryTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTaskListResponse
@@ -3378,6 +3471,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询任务列表</p>
+     * 
      * @param request QueryTaskListRequest
      * @return QueryTaskListResponse
      */
@@ -4257,6 +4353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>提交批量预定删除抢注域名任务</p>
+     * 
      * @param request SaveBatchTaskForReserveDropListDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveBatchTaskForReserveDropListDomainResponse
@@ -4290,6 +4389,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>提交批量预定删除抢注域名任务</p>
+     * 
      * @param request SaveBatchTaskForReserveDropListDomainRequest
      * @return SaveBatchTaskForReserveDropListDomainResponse
      */
@@ -4309,16 +4411,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveBatchTaskForTransferOutByAuthorizationCodeResponse saveBatchTaskForTransferOutByAuthorizationCodeWithOptions(SaveBatchTaskForTransferOutByAuthorizationCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request._long)) {
-            query.put("Long", request._long);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.transferOutParamList)) {
             query.put("TransferOutParamList", request.transferOutParamList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userClientIp)) {
-            query.put("UserClientIp", request.userClientIp);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6431,8 +6525,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The task ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>基于转移码的单个转出任务提交</p>
+     * <p>Submit a single transfer-out task based on the transfer key of domain names.</p>
      * 
      * @param request SaveSingleTaskForTransferOutByAuthorizationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6447,14 +6544,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userClientIp)) {
-            query.put("UserClientIp", request.userClientIp);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6475,8 +6564,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The task ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>基于转移码的单个转出任务提交</p>
+     * <p>Submit a single transfer-out task based on the transfer key of domain names.</p>
      * 
      * @param request SaveSingleTaskForTransferOutByAuthorizationCodeRequest
      * @return SaveSingleTaskForTransferOutByAuthorizationCodeResponse

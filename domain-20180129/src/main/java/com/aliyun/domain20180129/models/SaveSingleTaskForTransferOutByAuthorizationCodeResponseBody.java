@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForTransferOutByAuthorizationCodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C560A803-B975-481D-A66B-A4395EA863A1</p>
      */
@@ -12,6 +14,8 @@ public class SaveSingleTaskForTransferOutByAuthorizationCodeResponseBody extends
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
      */

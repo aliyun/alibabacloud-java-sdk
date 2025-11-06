@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveSingleTaskForTransferOutByAuthorizationCodeRequest extends TeaModel {
     /**
+     * <p>Schema of Response</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SaveSingleTaskForTransferOutByAuthorizationCodeRequest extends TeaM
     public String authorizationCode;
 
     /**
+     * <p>The transfer key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,20 +23,6 @@ public class SaveSingleTaskForTransferOutByAuthorizationCodeRequest extends TeaM
      */
     @NameInMap("DomainName")
     public String domainName;
-
-    /**
-     * <strong>example:</strong>
-     * <p>en</p>
-     */
-    @NameInMap("Lang")
-    public String lang;
-
-    /**
-     * <strong>example:</strong>
-     * <p>127.0.0.1</p>
-     */
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     public static SaveSingleTaskForTransferOutByAuthorizationCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSingleTaskForTransferOutByAuthorizationCodeRequest self = new SaveSingleTaskForTransferOutByAuthorizationCodeRequest();
@@ -55,22 +43,6 @@ public class SaveSingleTaskForTransferOutByAuthorizationCodeRequest extends TeaM
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public SaveSingleTaskForTransferOutByAuthorizationCodeRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public SaveSingleTaskForTransferOutByAuthorizationCodeRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
 }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTaskDetailListRequest extends TeaModel {
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -12,6 +14,8 @@ public class QueryTaskDetailListRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The instance ID of the domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>S20179H1BBI9test</p>
      */
@@ -19,6 +23,13 @@ public class QueryTaskDetailListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The language of the error message to return if the request fails. Valid value:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -26,6 +37,7 @@ public class QueryTaskDetailListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +47,7 @@ public class QueryTaskDetailListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries to return on each page. Maximum value: <strong>1000</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +57,7 @@ public class QueryTaskDetailListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +67,14 @@ public class QueryTaskDetailListRequest extends TeaModel {
     public String taskNo;
 
     /**
+     * <p>The task status. Valid value:</p>
+     * <ul>
+     * <li><strong>0</strong>: waiting for execution</li>
+     * <li><strong>1</strong>: being executed</li>
+     * <li><strong>2</strong>: successful</li>
+     * <li><strong>3</strong>: failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -60,6 +82,8 @@ public class QueryTaskDetailListRequest extends TeaModel {
     public Integer taskStatus;
 
     /**
+     * <p>The IP address of the client. Set the value to <strong>127.0.0.1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.0</p>
      */

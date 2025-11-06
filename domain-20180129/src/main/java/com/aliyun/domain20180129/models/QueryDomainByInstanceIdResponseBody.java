@@ -17,6 +17,9 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     @NameInMap("DomainGroupName")
     public String domainGroupName;
 
+    @NameInMap("DomainLifecycleStatus")
+    public String domainLifecycleStatus;
+
     /**
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -114,6 +117,9 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
      */
     @NameInMap("Premium")
     public Boolean premium;
+
+    @NameInMap("PrivacyServiceStatus")
+    public String privacyServiceStatus;
 
     /**
      * <strong>example:</strong>
@@ -247,6 +253,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         return this.domainGroupName;
     }
 
+    public QueryDomainByInstanceIdResponseBody setDomainLifecycleStatus(String domainLifecycleStatus) {
+        this.domainLifecycleStatus = domainLifecycleStatus;
+        return this;
+    }
+    public String getDomainLifecycleStatus() {
+        return this.domainLifecycleStatus;
+    }
+
     public QueryDomainByInstanceIdResponseBody setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -357,6 +371,14 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     }
     public Boolean getPremium() {
         return this.premium;
+    }
+
+    public QueryDomainByInstanceIdResponseBody setPrivacyServiceStatus(String privacyServiceStatus) {
+        this.privacyServiceStatus = privacyServiceStatus;
+        return this;
+    }
+    public String getPrivacyServiceStatus() {
+        return this.privacyServiceStatus;
     }
 
     public QueryDomainByInstanceIdResponseBody setRealNameStatus(String realNameStatus) {

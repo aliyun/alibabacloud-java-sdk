@@ -169,6 +169,9 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         @NameInMap("OperationIPAddress")
         public String operationIPAddress;
 
+        @NameInMap("Remark")
+        public String remark;
+
         /**
          * <strong>example:</strong>
          * <p>Failed</p>
@@ -218,6 +221,14 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
         public String getOperationIPAddress() {
             return this.operationIPAddress;
+        }
+
+        public QueryChangeLogListResponseBodyDataChangeLog setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public QueryChangeLogListResponseBodyDataChangeLog setResult(String result) {

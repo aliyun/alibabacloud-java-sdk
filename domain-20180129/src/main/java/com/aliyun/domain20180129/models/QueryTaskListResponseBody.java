@@ -140,6 +140,9 @@ public class QueryTaskListResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("TaskBizType")
+        public String taskBizType;
+
         /**
          * <strong>example:</strong>
          * <p>INIT</p>
@@ -168,6 +171,9 @@ public class QueryTaskListResponseBody extends TeaModel {
         @NameInMap("TaskNum")
         public Integer taskNum;
 
+        @NameInMap("TaskResult")
+        public String taskResult;
+
         /**
          * <strong>example:</strong>
          * <p>COMPLETE</p>
@@ -188,6 +194,9 @@ public class QueryTaskListResponseBody extends TeaModel {
          */
         @NameInMap("TaskType")
         public String taskType;
+
+        @NameInMap("TaskTypeCode")
+        public Integer taskTypeCode;
 
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
@@ -211,6 +220,14 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public QueryTaskListResponseBodyDataTaskInfo setTaskBizType(String taskBizType) {
+            this.taskBizType = taskBizType;
+            return this;
+        }
+        public String getTaskBizType() {
+            return this.taskBizType;
         }
 
         public QueryTaskListResponseBodyDataTaskInfo setTaskCancelStatus(String taskCancelStatus) {
@@ -245,6 +262,14 @@ public class QueryTaskListResponseBody extends TeaModel {
             return this.taskNum;
         }
 
+        public QueryTaskListResponseBodyDataTaskInfo setTaskResult(String taskResult) {
+            this.taskResult = taskResult;
+            return this;
+        }
+        public String getTaskResult() {
+            return this.taskResult;
+        }
+
         public QueryTaskListResponseBodyDataTaskInfo setTaskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
             return this;
@@ -267,6 +292,14 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
         public String getTaskType() {
             return this.taskType;
+        }
+
+        public QueryTaskListResponseBodyDataTaskInfo setTaskTypeCode(Integer taskTypeCode) {
+            this.taskTypeCode = taskTypeCode;
+            return this;
+        }
+        public Integer getTaskTypeCode() {
+            return this.taskTypeCode;
         }
 
         public QueryTaskListResponseBodyDataTaskInfo setTaskTypeDescription(String taskTypeDescription) {

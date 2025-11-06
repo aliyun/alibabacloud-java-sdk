@@ -213,6 +213,17 @@ public class QueryDomainListResponseBody extends TeaModel {
         @NameInMap("Ccompany")
         public String ccompany;
 
+        /**
+         * <p>domain transfer status. value:</p>
+         * <ul>
+         * <li>0: domain status normal.</li>
+         * <li>1: domain is pending change holder.</li>
+         * <li>2: change holder failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ChgholderStatus")
         public String chgholderStatus;
 
@@ -244,7 +255,7 @@ public class QueryDomainListResponseBody extends TeaModel {
          * <p>The name of the domain name group.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试分组</p>
+         * <p>test group</p>
          */
         @NameInMap("DomainGroupName")
         public String domainGroupName;
@@ -366,6 +377,9 @@ public class QueryDomainListResponseBody extends TeaModel {
         @NameInMap("RegistrantType")
         public String registrantType;
 
+        @NameInMap("Registrar")
+        public String registrar;
+
         /**
          * <p>The time when the domain name was registered.</p>
          * 
@@ -388,7 +402,7 @@ public class QueryDomainListResponseBody extends TeaModel {
          * <p>The remarks of the domain name.</p>
          * 
          * <strong>example:</strong>
-         * <p>备注</p>
+         * <p>test remark</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -539,6 +553,14 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
         public String getRegistrantType() {
             return this.registrantType;
+        }
+
+        public QueryDomainListResponseBodyDataDomain setRegistrar(String registrar) {
+            this.registrar = registrar;
+            return this;
+        }
+        public String getRegistrar() {
+            return this.registrar;
         }
 
         public QueryDomainListResponseBodyDataDomain setRegistrationDate(String registrationDate) {

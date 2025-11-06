@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryRegistrantProfilesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to query the default profile. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +19,8 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public Boolean defaultRegistrantProfile;
 
     /**
+     * <p>The email address of the domain name registrant.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
@@ -19,6 +28,13 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>The language of the error message to return if the request fails. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -26,6 +42,8 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of the page to return. Default value: <strong>0</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +51,8 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: <strong>0</strong>. Maximum value: <strong>5000</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -40,6 +60,14 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The state of real-name verification for the domain name registrant. Valid values:</p>
+     * <ul>
+     * <li><strong>FAILED</strong>: Real-name verification for the domain name fails.</li>
+     * <li><strong>SUCCEED</strong>: Real-name verification for the domain name is successful.</li>
+     * <li><strong>NONAUDIT</strong>: Real-name verification for the domain name is not performed.</li>
+     * <li><strong>AUDITING</strong>: Real-name verification for the domain name is in progress.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCEED</p>
      */
@@ -47,6 +75,8 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public String realNameStatus;
 
     /**
+     * <p>The name of the domain name registrant.</p>
+     * 
      * <strong>example:</strong>
      * <p>li si</p>
      */
@@ -54,6 +84,8 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public String registrantOrganization;
 
     /**
+     * <p>The ID of the registrant profile that you want to query. The system generates an ID after you create a registrant profile.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567</p>
      */
@@ -61,6 +93,15 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public Long registrantProfileId;
 
     /**
+     * <p>The type of the registrant profile. Valid values:</p>
+     * <ul>
+     * <li><strong>common</strong>: common profile.</li>
+     * <li><strong>cnnic</strong>: China Internet Network Information Center (CNNIC) profile.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Only the Alibaba Cloud international site (alibabacloud.com) supports CNNIC profiles. To register domain names provided by CNNIC such as the .cn and . domain names on the Alibaba Cloud international site, you must use a CNNIC profile. To register other domain names, use a common profile.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>common</p>
      */
@@ -68,22 +109,40 @@ public class QueryRegistrantProfilesRequest extends TeaModel {
     public String registrantProfileType;
 
     /**
+     * <p>The type of the domain name registrant. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: individual.</li>
+     * <li><strong>2</strong>: enterprise.</li>
+     * </ul>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("RegistrantType")
     public String registrantType;
 
+    /**
+     * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test domain name</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
     /**
+     * <p>The IP address of the client. Set the value to 127.0.0.1.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>The Chinese name of the domain name registrant.</p>
+     */
     @NameInMap("ZhRegistrantOrganization")
     public String zhRegistrantOrganization;
 
