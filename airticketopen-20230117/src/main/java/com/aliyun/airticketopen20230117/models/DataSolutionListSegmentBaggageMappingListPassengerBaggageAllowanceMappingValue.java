@@ -76,6 +76,62 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     @NameInMap("is_all_carry_on_weight")
     public Boolean isAllCarryOnWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55</p>
+     */
+    @NameInMap("carry_length")
+    public Integer carryLength;
+
+    /**
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
+    @NameInMap("carry_width")
+    public Integer carryWidth;
+
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("carry_height")
+    public Integer carryHeight;
+
+    /**
+     * <strong>example:</strong>
+     * <p>115</p>
+     */
+    @NameInMap("carry_sum_of_length_width_height")
+    public Integer carrySumOfLengthWidthHeight;
+
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("length")
+    public Integer length;
+
+    /**
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
+    @NameInMap("width")
+    public Integer width;
+
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("height")
+    public Integer height;
+
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
+    @NameInMap("sum_of_length_width_height")
+    public Integer sumOfLengthWidthHeight;
+
     public static DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue build(java.util.Map<String, ?> map) throws Exception {
         DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue self = new DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue();
         return TeaModel.build(map, self);
@@ -143,6 +199,70 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     }
     public Boolean getIsAllCarryOnWeight() {
         return this.isAllCarryOnWeight;
+    }
+
+    public DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue setCarryLength(Integer carryLength) {
+        this.carryLength = carryLength;
+        return this;
+    }
+    public Integer getCarryLength() {
+        return this.carryLength;
+    }
+
+    public DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue setCarryWidth(Integer carryWidth) {
+        this.carryWidth = carryWidth;
+        return this;
+    }
+    public Integer getCarryWidth() {
+        return this.carryWidth;
+    }
+
+    public DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue setCarryHeight(Integer carryHeight) {
+        this.carryHeight = carryHeight;
+        return this;
+    }
+    public Integer getCarryHeight() {
+        return this.carryHeight;
+    }
+
+    public DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue setCarrySumOfLengthWidthHeight(Integer carrySumOfLengthWidthHeight) {
+        this.carrySumOfLengthWidthHeight = carrySumOfLengthWidthHeight;
+        return this;
+    }
+    public Integer getCarrySumOfLengthWidthHeight() {
+        return this.carrySumOfLengthWidthHeight;
+    }
+
+    public DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue setLength(Integer length) {
+        this.length = length;
+        return this;
+    }
+    public Integer getLength() {
+        return this.length;
+    }
+
+    public DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
+    }
+
+    public DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue setHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    public Integer getHeight() {
+        return this.height;
+    }
+
+    public DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue setSumOfLengthWidthHeight(Integer sumOfLengthWidthHeight) {
+        this.sumOfLengthWidthHeight = sumOfLengthWidthHeight;
+        return this;
+    }
+    public Integer getSumOfLengthWidthHeight() {
+        return this.sumOfLengthWidthHeight;
     }
 
 }

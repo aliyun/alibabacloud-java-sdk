@@ -172,8 +172,14 @@ public class EnrichRequest extends TeaModel {
         public String departureCity;
 
         /**
+         * <strong>example:</strong>
+         * <p>2023-03-10</p>
+         */
+        @NameInMap("departure_date")
+        public String departureDate;
+
+        /**
          * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
@@ -242,6 +248,14 @@ public class EnrichRequest extends TeaModel {
         }
         public String getDepartureCity() {
             return this.departureCity;
+        }
+
+        public EnrichRequestJourneyParamListSegmentParamList setDepartureDate(String departureDate) {
+            this.departureDate = departureDate;
+            return this;
+        }
+        public String getDepartureDate() {
+            return this.departureDate;
         }
 
         public EnrichRequestJourneyParamListSegmentParamList setDepartureTime(String departureTime) {
