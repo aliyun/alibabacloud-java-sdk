@@ -288,6 +288,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>DispatchConsoleAPIForPartner</p>
+     * 
+     * @param request DispatchConsoleAPIForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DispatchConsoleAPIForPartnerResponse
+     */
+    public DispatchConsoleAPIForPartnerResponse dispatchConsoleAPIForPartnerWithOptions(DispatchConsoleAPIForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.liveToken)) {
+            query.put("LiveToken", request.liveToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            query.put("Operation", request.operation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            query.put("Params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteHost)) {
+            query.put("SiteHost", request.siteHost);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DispatchConsoleAPIForPartner"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DispatchConsoleAPIForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DispatchConsoleAPIForPartner</p>
+     * 
+     * @param request DispatchConsoleAPIForPartnerRequest
+     * @return DispatchConsoleAPIForPartnerResponse
+     */
+    public DispatchConsoleAPIForPartnerResponse dispatchConsoleAPIForPartner(DispatchConsoleAPIForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dispatchConsoleAPIForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询Logo创建任务</p>
      * 
      * @param request GetCreateLogoTaskRequest
@@ -428,6 +488,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetIcpFilingInfoForPartnerResponse getIcpFilingInfoForPartner(GetIcpFilingInfoForPartnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getIcpFilingInfoForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过授权码得到accessToken</p>
+     * 
+     * @param request GetUserAccessTokenForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserAccessTokenForPartnerResponse
+     */
+    public GetUserAccessTokenForPartnerResponse getUserAccessTokenForPartnerWithOptions(GetUserAccessTokenForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.siteHost)) {
+            query.put("SiteHost", request.siteHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticket)) {
+            query.put("Ticket", request.ticket);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserAccessTokenForPartner"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserAccessTokenForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过授权码得到accessToken</p>
+     * 
+     * @param request GetUserAccessTokenForPartnerRequest
+     * @return GetUserAccessTokenForPartnerResponse
+     */
+    public GetUserAccessTokenForPartnerResponse getUserAccessTokenForPartner(GetUserAccessTokenForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserAccessTokenForPartnerWithOptions(request, runtime);
     }
 
     /**
