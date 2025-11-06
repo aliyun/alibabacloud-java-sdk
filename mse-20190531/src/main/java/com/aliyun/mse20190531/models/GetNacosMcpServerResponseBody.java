@@ -284,6 +284,9 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         @NameInMap("SpecificationType")
         public String specificationType;
 
+        @NameInMap("ToolDecryptStatus")
+        public String toolDecryptStatus;
+
         @NameInMap("Tools")
         public java.util.List<GetNacosMcpServerResponseBodyDataToolSpecTools> tools;
 
@@ -309,6 +312,14 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         }
         public String getSpecificationType() {
             return this.specificationType;
+        }
+
+        public GetNacosMcpServerResponseBodyDataToolSpec setToolDecryptStatus(String toolDecryptStatus) {
+            this.toolDecryptStatus = toolDecryptStatus;
+            return this;
+        }
+        public String getToolDecryptStatus() {
+            return this.toolDecryptStatus;
         }
 
         public GetNacosMcpServerResponseBodyDataToolSpec setTools(java.util.List<GetNacosMcpServerResponseBodyDataToolSpecTools> tools) {
