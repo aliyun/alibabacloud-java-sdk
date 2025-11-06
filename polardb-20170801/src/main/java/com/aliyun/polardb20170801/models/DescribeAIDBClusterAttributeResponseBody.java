@@ -481,6 +481,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>2020-08-14T05:58:42Z</p>
+         */
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        /**
+         * <strong>example:</strong>
          * <p>polar.pg.g8.8xlarge.gu30</p>
          */
         @NameInMap("DBNodeClass")
@@ -582,6 +589,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getCpuCores() {
             return this.cpuCores;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyDBNodes setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeAIDBClusterAttributeResponseBodyDBNodes setDBNodeClass(String DBNodeClass) {

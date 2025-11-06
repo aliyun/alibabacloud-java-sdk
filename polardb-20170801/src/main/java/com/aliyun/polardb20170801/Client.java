@@ -11997,6 +11997,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询vpc</p>
+     * 
      * @param request DescribeRdsVpcsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRdsVpcsResponse
@@ -12054,6 +12057,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询vpc</p>
+     * 
      * @param request DescribeRdsVpcsRequest
      * @return DescribeRdsVpcsResponse
      */
