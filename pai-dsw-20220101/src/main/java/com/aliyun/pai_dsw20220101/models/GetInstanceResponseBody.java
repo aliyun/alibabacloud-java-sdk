@@ -363,6 +363,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    @NameInMap("ServiceConfig")
+    public ServiceConfig serviceConfig;
+
     /**
      * <p>The instance status.</p>
      * <p>Valid values:</p>
@@ -796,6 +799,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getResourceName() {
         return this.resourceName;
+    }
+
+    public GetInstanceResponseBody setServiceConfig(ServiceConfig serviceConfig) {
+        this.serviceConfig = serviceConfig;
+        return this;
+    }
+    public ServiceConfig getServiceConfig() {
+        return this.serviceConfig;
     }
 
     public GetInstanceResponseBody setStatus(String status) {
@@ -2008,6 +2019,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ForwardInfos")
         public java.util.List<ForwardInfoResponse> forwardInfos;
 
+        @NameInMap("Ip")
+        public String ip;
+
         /**
          * <p>The security group ID.</p>
          * 
@@ -2070,6 +2084,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public java.util.List<ForwardInfoResponse> getForwardInfos() {
             return this.forwardInfos;
+        }
+
+        public GetInstanceResponseBodyUserVpc setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
         public GetInstanceResponseBodyUserVpc setSecurityGroupId(String securityGroupId) {

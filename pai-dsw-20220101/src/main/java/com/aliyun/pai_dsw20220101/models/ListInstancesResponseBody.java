@@ -1122,6 +1122,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ForwardInfos")
         public java.util.List<ForwardInfoResponse> forwardInfos;
 
+        @NameInMap("Ip")
+        public String ip;
+
         /**
          * <p>The security group ID.</p>
          * 
@@ -1184,6 +1187,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public java.util.List<ForwardInfoResponse> getForwardInfos() {
             return this.forwardInfos;
+        }
+
+        public ListInstancesResponseBodyInstancesUserVpc setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
         public ListInstancesResponseBodyInstancesUserVpc setSecurityGroupId(String securityGroupId) {
@@ -1513,6 +1524,9 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         @NameInMap("ResourceName")
         public String resourceName;
+
+        @NameInMap("ServiceConfig")
+        public ServiceConfig serviceConfig;
 
         /**
          * <p>The instance status.</p>
@@ -1881,6 +1895,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getResourceName() {
             return this.resourceName;
+        }
+
+        public ListInstancesResponseBodyInstances setServiceConfig(ServiceConfig serviceConfig) {
+            this.serviceConfig = serviceConfig;
+            return this;
+        }
+        public ServiceConfig getServiceConfig() {
+            return this.serviceConfig;
         }
 
         public ListInstancesResponseBodyInstances setStatus(String status) {

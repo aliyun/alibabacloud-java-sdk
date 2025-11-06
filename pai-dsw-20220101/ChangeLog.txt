@@ -1,3 +1,10 @@
+2025-11-06 Version: 2.2.2
+- Update API GetInstance: add response parameters Body.ServiceConfig.
+- Update API GetInstance: add response parameters Body.UserVpc.Ip.
+- Update API ListInstances: add response parameters Body.Instances.$.ServiceConfig.
+- Update API ListInstances: add response parameters Body.Instances.$.UserVpc.Ip.
+
+
 2025-10-30 Version: 2.2.1
 - Update API GetInstance: add response parameters Body.CloudDisks.$.Status.
 
