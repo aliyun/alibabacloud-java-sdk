@@ -4,6 +4,12 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceRequest extends TeaModel {
+    @NameInMap("IsReplica")
+    public Boolean isReplica;
+
+    @NameInMap("Detach")
+    public Boolean detach;
+
     @NameInMap("Hibernate")
     public Boolean hibernate;
 
@@ -23,6 +29,22 @@ public class UpdateServiceInstanceRequest extends TeaModel {
     public static UpdateServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceInstanceRequest self = new UpdateServiceInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateServiceInstanceRequest setIsReplica(Boolean isReplica) {
+        this.isReplica = isReplica;
+        return this;
+    }
+    public Boolean getIsReplica() {
+        return this.isReplica;
+    }
+
+    public UpdateServiceInstanceRequest setDetach(Boolean detach) {
+        this.detach = detach;
+        return this;
+    }
+    public Boolean getDetach() {
+        return this.detach;
     }
 
     public UpdateServiceInstanceRequest setHibernate(Boolean hibernate) {

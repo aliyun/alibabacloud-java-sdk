@@ -15,13 +15,15 @@ public class DeleteServiceInstancesRequest extends TeaModel {
 
     /**
      * <p>The instances that you want to restart. Separate multiple instance names with commas (,). For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>foo-rdsbxxxx,foo-rdsaxxxx</p>
      */
     @NameInMap("InstanceList")
     public String instanceList;
+
+    @NameInMap("IsReplica")
+    public Boolean isReplica;
 
     /**
      * <p>Specifies whether to restart only the container process without recreating the instance. Default value: false. Valid values: true and false.</p>
@@ -51,6 +53,14 @@ public class DeleteServiceInstancesRequest extends TeaModel {
     }
     public String getInstanceList() {
         return this.instanceList;
+    }
+
+    public DeleteServiceInstancesRequest setIsReplica(Boolean isReplica) {
+        this.isReplica = isReplica;
+        return this;
+    }
+    public Boolean getIsReplica() {
+        return this.isReplica;
     }
 
     public DeleteServiceInstancesRequest setSoftRestart(Boolean softRestart) {

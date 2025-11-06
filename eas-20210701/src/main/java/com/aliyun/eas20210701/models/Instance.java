@@ -11,6 +11,9 @@ public class Instance extends TeaModel {
     @NameInMap("CurrentAmount")
     public Float currentAmount;
 
+    @NameInMap("Detached")
+    public Boolean detached;
+
     /**
      * <strong>example:</strong>
      * <p>192.168.1.100</p>
@@ -50,6 +53,9 @@ public class Instance extends TeaModel {
     @NameInMap("IsLatest")
     public Boolean isLatest;
 
+    @NameInMap("IsReplica")
+    public Boolean isReplica;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -82,6 +88,9 @@ public class Instance extends TeaModel {
 
     @NameInMap("Reason")
     public String reason;
+
+    @NameInMap("ReplicaName")
+    public String replicaName;
 
     /**
      * <strong>example:</strong>
@@ -145,6 +154,14 @@ public class Instance extends TeaModel {
     }
     public Float getCurrentAmount() {
         return this.currentAmount;
+    }
+
+    public Instance setDetached(Boolean detached) {
+        this.detached = detached;
+        return this;
+    }
+    public Boolean getDetached() {
+        return this.detached;
     }
 
     public Instance setExternalIP(String externalIP) {
@@ -219,6 +236,14 @@ public class Instance extends TeaModel {
         return this.isLatest;
     }
 
+    public Instance setIsReplica(Boolean isReplica) {
+        this.isReplica = isReplica;
+        return this;
+    }
+    public Boolean getIsReplica() {
+        return this.isReplica;
+    }
+
     public Instance setIsSpot(Boolean isSpot) {
         this.isSpot = isSpot;
         return this;
@@ -273,6 +298,14 @@ public class Instance extends TeaModel {
     }
     public String getReason() {
         return this.reason;
+    }
+
+    public Instance setReplicaName(String replicaName) {
+        this.replicaName = replicaName;
+        return this;
+    }
+    public String getReplicaName() {
+        return this.replicaName;
     }
 
     public Instance setResourceType(String resourceType) {

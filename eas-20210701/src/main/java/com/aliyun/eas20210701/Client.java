@@ -365,6 +365,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建故障注入任务</p>
+     * 
+     * @param request CreateFaultInjectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFaultInjectionResponse
+     */
+    public CreateFaultInjectionResponse createFaultInjectionWithOptions(String ClusterId, String ServiceName, String InstanceName, CreateFaultInjectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faultArgs)) {
+            body.put("FaultArgs", request.faultArgs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faultType)) {
+            body.put("FaultType", request.faultType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFaultInjection"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceName) + "/faults"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFaultInjectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建故障注入任务</p>
+     * 
+     * @param request CreateFaultInjectionRequest
+     * @return CreateFaultInjectionResponse
+     */
+    public CreateFaultInjectionResponse createFaultInjection(String ClusterId, String ServiceName, String InstanceName, CreateFaultInjectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createFaultInjectionWithOptions(ClusterId, ServiceName, InstanceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a gateway.</p>
      * 
      * @param request CreateGatewayRequest
@@ -1155,6 +1206,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除故障注入任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFaultInjectionResponse
+     */
+    public DeleteFaultInjectionResponse deleteFaultInjectionWithOptions(String ClusterId, String ServiceName, String InstanceName, String FaultType, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFaultInjection"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceName) + "/faults/" + com.aliyun.openapiutil.Client.getEncodeParam(FaultType) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFaultInjectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除故障注入任务</p>
+     * @return DeleteFaultInjectionResponse
+     */
+    public DeleteFaultInjectionResponse deleteFaultInjection(String ClusterId, String ServiceName, String InstanceName, String FaultType) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteFaultInjectionWithOptions(ClusterId, ServiceName, InstanceName, FaultType, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a private gateway.</p>
      * 
      * @param headers map
@@ -1662,6 +1750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceList)) {
             query.put("InstanceList", request.instanceList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isReplica)) {
+            query.put("IsReplica", request.isReplica);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.softRestart)) {
@@ -3661,6 +3753,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取故障注入信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServiceInstanceFaultInjectionInfoResponse
+     */
+    public ListServiceInstanceFaultInjectionInfoResponse listServiceInstanceFaultInjectionInfoWithOptions(String ClusterId, String ServiceName, String InstanceName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServiceInstanceFaultInjectionInfo"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/services/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ServiceName) + "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceName) + "/faults"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstanceFaultInjectionInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取故障注入信息</p>
+     * @return ListServiceInstanceFaultInjectionInfoResponse
+     */
+    public ListServiceInstanceFaultInjectionInfoResponse listServiceInstanceFaultInjectionInfo(String ClusterId, String ServiceName, String InstanceName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listServiceInstanceFaultInjectionInfoWithOptions(ClusterId, ServiceName, InstanceName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries instances of a service.</p>
      * 
      * @param request ListServiceInstancesRequest
@@ -3699,6 +3828,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsSpot", request.isSpot);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.listReplica)) {
+            query.put("ListReplica", request.listReplica);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memberType)) {
             query.put("MemberType", request.memberType);
         }
@@ -3713,6 +3846,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replicaName)) {
+            query.put("ReplicaName", request.replicaName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
@@ -4969,7 +5106,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateServiceInstanceResponse updateServiceInstanceWithOptions(String ClusterId, String ServiceName, String InstanceName, UpdateServiceInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isReplica)) {
+            query.put("IsReplica", request.isReplica);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.detach)) {
+            body.put("Detach", request.detach);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hibernate)) {
             body.put("Hibernate", request.hibernate);
         }
@@ -4980,6 +5126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(

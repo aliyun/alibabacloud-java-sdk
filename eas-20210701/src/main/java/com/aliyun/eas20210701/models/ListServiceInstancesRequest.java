@@ -67,6 +67,9 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("IsSpot")
     public Boolean isSpot;
 
+    @NameInMap("ListReplica")
+    public Boolean listReplica;
+
     @NameInMap("MemberType")
     public String memberType;
 
@@ -119,6 +122,9 @@ public class ListServiceInstancesRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ReplicaName")
+    public String replicaName;
 
     /**
      * <p>The type of the resource group to which the instance belongs.</p>
@@ -283,6 +289,14 @@ public class ListServiceInstancesRequest extends TeaModel {
         return this.isSpot;
     }
 
+    public ListServiceInstancesRequest setListReplica(Boolean listReplica) {
+        this.listReplica = listReplica;
+        return this;
+    }
+    public Boolean getListReplica() {
+        return this.listReplica;
+    }
+
     public ListServiceInstancesRequest setMemberType(String memberType) {
         this.memberType = memberType;
         return this;
@@ -313,6 +327,14 @@ public class ListServiceInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListServiceInstancesRequest setReplicaName(String replicaName) {
+        this.replicaName = replicaName;
+        return this;
+    }
+    public String getReplicaName() {
+        return this.replicaName;
     }
 
     public ListServiceInstancesRequest setResourceType(String resourceType) {
