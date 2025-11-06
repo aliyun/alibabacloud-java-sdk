@@ -283,6 +283,13 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
 
     public static class GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AiAssetFlag")
+        public Integer aiAssetFlag;
+
+        /**
          * <p>Node element type.</p>
          * 
          * <strong>example:</strong>
@@ -343,6 +350,14 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
         public static GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList build(java.util.Map<String, ?> map) throws Exception {
             GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList self = new GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList();
             return TeaModel.build(map, self);
+        }
+
+        public GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList setAiAssetFlag(Integer aiAssetFlag) {
+            this.aiAssetFlag = aiAssetFlag;
+            return this;
+        }
+        public Integer getAiAssetFlag() {
+            return this.aiAssetFlag;
         }
 
         public GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList setElementType(String elementType) {

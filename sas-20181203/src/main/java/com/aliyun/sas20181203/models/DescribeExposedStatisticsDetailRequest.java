@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("Criteria")
+    public String criteria;
+
+    /**
      * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
@@ -75,9 +82,24 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     @NameInMap("StatisticsTypeInstanceValue")
     public String statisticsTypeInstanceValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c9107c04-942f-40c1-981a-f1c1***</p>
+     */
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static DescribeExposedStatisticsDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExposedStatisticsDetailRequest self = new DescribeExposedStatisticsDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeExposedStatisticsDetailRequest setCriteria(String criteria) {
+        this.criteria = criteria;
+        return this;
+    }
+    public String getCriteria() {
+        return this.criteria;
     }
 
     public DescribeExposedStatisticsDetailRequest setCurrentPage(Integer currentPage) {
@@ -126,6 +148,14 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     }
     public String getStatisticsTypeInstanceValue() {
         return this.statisticsTypeInstanceValue;
+    }
+
+    public DescribeExposedStatisticsDetailRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

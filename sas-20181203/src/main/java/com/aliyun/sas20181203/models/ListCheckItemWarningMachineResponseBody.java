@@ -143,6 +143,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     }
 
     public static class ListCheckItemWarningMachineResponseBodyList extends TeaModel {
+        @NameInMap("AssetType")
+        public String assetType;
+
         /**
          * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
          * <ul>
@@ -362,6 +365,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         public static ListCheckItemWarningMachineResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
             ListCheckItemWarningMachineResponseBodyList self = new ListCheckItemWarningMachineResponseBodyList();
             return TeaModel.build(map, self);
+        }
+
+        public ListCheckItemWarningMachineResponseBodyList setAssetType(String assetType) {
+            this.assetType = assetType;
+            return this;
+        }
+        public String getAssetType() {
+            return this.assetType;
         }
 
         public ListCheckItemWarningMachineResponseBodyList setAuthVersion(Integer authVersion) {

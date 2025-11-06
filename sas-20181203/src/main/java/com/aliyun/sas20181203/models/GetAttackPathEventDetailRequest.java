@@ -17,6 +17,13 @@ public class GetAttackPathEventDetailRequest extends TeaModel {
     public Long eventId;
 
     /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("EventSource")
+    public String eventSource;
+
+    /**
      * <p>The language type for request and response, default is <strong>zh</strong>. Values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
@@ -40,6 +47,14 @@ public class GetAttackPathEventDetailRequest extends TeaModel {
     }
     public Long getEventId() {
         return this.eventId;
+    }
+
+    public GetAttackPathEventDetailRequest setEventSource(String eventSource) {
+        this.eventSource = eventSource;
+        return this;
+    }
+    public String getEventSource() {
+        return this.eventSource;
     }
 
     public GetAttackPathEventDetailRequest setLang(String lang) {

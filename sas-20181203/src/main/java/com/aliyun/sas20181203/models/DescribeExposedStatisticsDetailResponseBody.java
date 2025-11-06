@@ -207,6 +207,13 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         public String exposureTypeInstanceName;
 
         /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
+        @NameInMap("ForwardPort")
+        public String forwardPort;
+
+        /**
          * <p>The region ID of the asset.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +281,14 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         }
         public String getExposureTypeInstanceName() {
             return this.exposureTypeInstanceName;
+        }
+
+        public DescribeExposedStatisticsDetailResponseBodyStatisticsDetails setForwardPort(String forwardPort) {
+            this.forwardPort = forwardPort;
+            return this;
+        }
+        public String getForwardPort() {
+            return this.forwardPort;
         }
 
         public DescribeExposedStatisticsDetailResponseBodyStatisticsDetails setRegionId(String regionId) {
