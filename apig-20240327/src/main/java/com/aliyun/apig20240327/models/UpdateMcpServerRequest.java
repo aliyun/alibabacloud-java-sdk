@@ -10,6 +10,9 @@ public class UpdateMcpServerRequest extends TeaModel {
     @NameInMap("backendConfig")
     public UpdateMcpServerRequestBackendConfig backendConfig;
 
+    @NameInMap("createFromType")
+    public String createFromType;
+
     @NameInMap("description")
     public String description;
 
@@ -70,6 +73,14 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
     public UpdateMcpServerRequestBackendConfig getBackendConfig() {
         return this.backendConfig;
+    }
+
+    public UpdateMcpServerRequest setCreateFromType(String createFromType) {
+        this.createFromType = createFromType;
+        return this;
+    }
+    public String getCreateFromType() {
+        return this.createFromType;
     }
 
     public UpdateMcpServerRequest setDescription(String description) {

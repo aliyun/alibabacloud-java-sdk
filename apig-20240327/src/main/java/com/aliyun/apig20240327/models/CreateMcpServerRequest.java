@@ -10,6 +10,9 @@ public class CreateMcpServerRequest extends TeaModel {
     @NameInMap("backendConfig")
     public CreateMcpServerRequestBackendConfig backendConfig;
 
+    @NameInMap("createFromType")
+    public String createFromType;
+
     /**
      * <strong>example:</strong>
      * <p>mcp tool fetch time</p>
@@ -90,6 +93,14 @@ public class CreateMcpServerRequest extends TeaModel {
     }
     public CreateMcpServerRequestBackendConfig getBackendConfig() {
         return this.backendConfig;
+    }
+
+    public CreateMcpServerRequest setCreateFromType(String createFromType) {
+        this.createFromType = createFromType;
+        return this;
+    }
+    public String getCreateFromType() {
+        return this.createFromType;
     }
 
     public CreateMcpServerRequest setDescription(String description) {
