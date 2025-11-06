@@ -28,6 +28,9 @@ public class CreateMcubeUpgradePackageRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("HarmonyLabel")
+    public String harmonyLabel;
+
     @NameInMap("IconFileUrl")
     public String iconFileUrl;
 
@@ -39,6 +42,9 @@ public class CreateMcubeUpgradePackageRequest extends TeaModel {
 
     @NameInMap("IsEnterprise")
     public Integer isEnterprise;
+
+    @NameInMap("LargeIconUrl")
+    public String largeIconUrl;
 
     @NameInMap("NeedCheck")
     public Integer needCheck;
@@ -127,6 +133,14 @@ public class CreateMcubeUpgradePackageRequest extends TeaModel {
         return this.fileUrl;
     }
 
+    public CreateMcubeUpgradePackageRequest setHarmonyLabel(String harmonyLabel) {
+        this.harmonyLabel = harmonyLabel;
+        return this;
+    }
+    public String getHarmonyLabel() {
+        return this.harmonyLabel;
+    }
+
     public CreateMcubeUpgradePackageRequest setIconFileUrl(String iconFileUrl) {
         this.iconFileUrl = iconFileUrl;
         return this;
@@ -157,6 +171,14 @@ public class CreateMcubeUpgradePackageRequest extends TeaModel {
     }
     public Integer getIsEnterprise() {
         return this.isEnterprise;
+    }
+
+    public CreateMcubeUpgradePackageRequest setLargeIconUrl(String largeIconUrl) {
+        this.largeIconUrl = largeIconUrl;
+        return this;
+    }
+    public String getLargeIconUrl() {
+        return this.largeIconUrl;
     }
 
     public CreateMcubeUpgradePackageRequest setNeedCheck(Integer needCheck) {

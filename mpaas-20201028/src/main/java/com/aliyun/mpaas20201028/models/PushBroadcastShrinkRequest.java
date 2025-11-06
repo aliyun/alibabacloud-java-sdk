@@ -13,8 +13,14 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("BindEndTime")
+    public Long bindEndTime;
+
     @NameInMap("BindPeriod")
     public Integer bindPeriod;
+
+    @NameInMap("BindStartTime")
+    public Long bindStartTime;
 
     @NameInMap("ChannelId")
     public String channelId;
@@ -45,6 +51,9 @@ public class PushBroadcastShrinkRequest extends TeaModel {
      */
     @NameInMap("Msgkey")
     public String msgkey;
+
+    @NameInMap("NotifyLevel")
+    public String notifyLevelShrink;
 
     @NameInMap("NotifyType")
     public String notifyType;
@@ -82,14 +91,23 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     @NameInMap("ThirdChannelCategory")
     public String thirdChannelCategoryShrink;
 
+    @NameInMap("TimeMode")
+    public Integer timeMode;
+
     @NameInMap("TransparentMessagePayload")
     public Object transparentMessagePayload;
 
     @NameInMap("TransparentMessageUrgency")
     public String transparentMessageUrgency;
 
+    @NameInMap("UnBindEndTime")
+    public Long unBindEndTime;
+
     @NameInMap("UnBindPeriod")
     public Long unBindPeriod;
+
+    @NameInMap("UnBindStartTime")
+    public Long unBindStartTime;
 
     /**
      * <p>This parameter is required.</p>
@@ -118,12 +136,28 @@ public class PushBroadcastShrinkRequest extends TeaModel {
         return this.appId;
     }
 
+    public PushBroadcastShrinkRequest setBindEndTime(Long bindEndTime) {
+        this.bindEndTime = bindEndTime;
+        return this;
+    }
+    public Long getBindEndTime() {
+        return this.bindEndTime;
+    }
+
     public PushBroadcastShrinkRequest setBindPeriod(Integer bindPeriod) {
         this.bindPeriod = bindPeriod;
         return this;
     }
     public Integer getBindPeriod() {
         return this.bindPeriod;
+    }
+
+    public PushBroadcastShrinkRequest setBindStartTime(Long bindStartTime) {
+        this.bindStartTime = bindStartTime;
+        return this;
+    }
+    public Long getBindStartTime() {
+        return this.bindStartTime;
     }
 
     public PushBroadcastShrinkRequest setChannelId(String channelId) {
@@ -180,6 +214,14 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     }
     public String getMsgkey() {
         return this.msgkey;
+    }
+
+    public PushBroadcastShrinkRequest setNotifyLevelShrink(String notifyLevelShrink) {
+        this.notifyLevelShrink = notifyLevelShrink;
+        return this;
+    }
+    public String getNotifyLevelShrink() {
+        return this.notifyLevelShrink;
     }
 
     public PushBroadcastShrinkRequest setNotifyType(String notifyType) {
@@ -270,6 +312,14 @@ public class PushBroadcastShrinkRequest extends TeaModel {
         return this.thirdChannelCategoryShrink;
     }
 
+    public PushBroadcastShrinkRequest setTimeMode(Integer timeMode) {
+        this.timeMode = timeMode;
+        return this;
+    }
+    public Integer getTimeMode() {
+        return this.timeMode;
+    }
+
     public PushBroadcastShrinkRequest setTransparentMessagePayload(Object transparentMessagePayload) {
         this.transparentMessagePayload = transparentMessagePayload;
         return this;
@@ -286,12 +336,28 @@ public class PushBroadcastShrinkRequest extends TeaModel {
         return this.transparentMessageUrgency;
     }
 
+    public PushBroadcastShrinkRequest setUnBindEndTime(Long unBindEndTime) {
+        this.unBindEndTime = unBindEndTime;
+        return this;
+    }
+    public Long getUnBindEndTime() {
+        return this.unBindEndTime;
+    }
+
     public PushBroadcastShrinkRequest setUnBindPeriod(Long unBindPeriod) {
         this.unBindPeriod = unBindPeriod;
         return this;
     }
     public Long getUnBindPeriod() {
         return this.unBindPeriod;
+    }
+
+    public PushBroadcastShrinkRequest setUnBindStartTime(Long unBindStartTime) {
+        this.unBindStartTime = unBindStartTime;
+        return this;
+    }
+    public Long getUnBindStartTime() {
+        return this.unBindStartTime;
     }
 
     public PushBroadcastShrinkRequest setWorkspaceId(String workspaceId) {

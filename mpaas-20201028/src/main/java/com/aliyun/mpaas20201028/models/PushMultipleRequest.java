@@ -43,6 +43,9 @@ public class PushMultipleRequest extends TeaModel {
     @NameInMap("MiChannelId")
     public String miChannelId;
 
+    @NameInMap("NotifyLevel")
+    public java.util.Map<String, ?> notifyLevel;
+
     @NameInMap("NotifyType")
     public String notifyType;
 
@@ -174,6 +177,14 @@ public class PushMultipleRequest extends TeaModel {
     }
     public String getMiChannelId() {
         return this.miChannelId;
+    }
+
+    public PushMultipleRequest setNotifyLevel(java.util.Map<String, ?> notifyLevel) {
+        this.notifyLevel = notifyLevel;
+        return this;
+    }
+    public java.util.Map<String, ?> getNotifyLevel() {
+        return this.notifyLevel;
     }
 
     public PushMultipleRequest setNotifyType(String notifyType) {

@@ -13,8 +13,14 @@ public class PushBroadcastRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("BindEndTime")
+    public Long bindEndTime;
+
     @NameInMap("BindPeriod")
     public Integer bindPeriod;
+
+    @NameInMap("BindStartTime")
+    public Long bindStartTime;
 
     @NameInMap("ChannelId")
     public String channelId;
@@ -45,6 +51,9 @@ public class PushBroadcastRequest extends TeaModel {
      */
     @NameInMap("Msgkey")
     public String msgkey;
+
+    @NameInMap("NotifyLevel")
+    public java.util.Map<String, ?> notifyLevel;
 
     @NameInMap("NotifyType")
     public String notifyType;
@@ -82,14 +91,23 @@ public class PushBroadcastRequest extends TeaModel {
     @NameInMap("ThirdChannelCategory")
     public java.util.Map<String, ?> thirdChannelCategory;
 
+    @NameInMap("TimeMode")
+    public Integer timeMode;
+
     @NameInMap("TransparentMessagePayload")
     public Object transparentMessagePayload;
 
     @NameInMap("TransparentMessageUrgency")
     public String transparentMessageUrgency;
 
+    @NameInMap("UnBindEndTime")
+    public Long unBindEndTime;
+
     @NameInMap("UnBindPeriod")
     public Long unBindPeriod;
+
+    @NameInMap("UnBindStartTime")
+    public Long unBindStartTime;
 
     /**
      * <p>This parameter is required.</p>
@@ -118,12 +136,28 @@ public class PushBroadcastRequest extends TeaModel {
         return this.appId;
     }
 
+    public PushBroadcastRequest setBindEndTime(Long bindEndTime) {
+        this.bindEndTime = bindEndTime;
+        return this;
+    }
+    public Long getBindEndTime() {
+        return this.bindEndTime;
+    }
+
     public PushBroadcastRequest setBindPeriod(Integer bindPeriod) {
         this.bindPeriod = bindPeriod;
         return this;
     }
     public Integer getBindPeriod() {
         return this.bindPeriod;
+    }
+
+    public PushBroadcastRequest setBindStartTime(Long bindStartTime) {
+        this.bindStartTime = bindStartTime;
+        return this;
+    }
+    public Long getBindStartTime() {
+        return this.bindStartTime;
     }
 
     public PushBroadcastRequest setChannelId(String channelId) {
@@ -180,6 +214,14 @@ public class PushBroadcastRequest extends TeaModel {
     }
     public String getMsgkey() {
         return this.msgkey;
+    }
+
+    public PushBroadcastRequest setNotifyLevel(java.util.Map<String, ?> notifyLevel) {
+        this.notifyLevel = notifyLevel;
+        return this;
+    }
+    public java.util.Map<String, ?> getNotifyLevel() {
+        return this.notifyLevel;
     }
 
     public PushBroadcastRequest setNotifyType(String notifyType) {
@@ -270,6 +312,14 @@ public class PushBroadcastRequest extends TeaModel {
         return this.thirdChannelCategory;
     }
 
+    public PushBroadcastRequest setTimeMode(Integer timeMode) {
+        this.timeMode = timeMode;
+        return this;
+    }
+    public Integer getTimeMode() {
+        return this.timeMode;
+    }
+
     public PushBroadcastRequest setTransparentMessagePayload(Object transparentMessagePayload) {
         this.transparentMessagePayload = transparentMessagePayload;
         return this;
@@ -286,12 +336,28 @@ public class PushBroadcastRequest extends TeaModel {
         return this.transparentMessageUrgency;
     }
 
+    public PushBroadcastRequest setUnBindEndTime(Long unBindEndTime) {
+        this.unBindEndTime = unBindEndTime;
+        return this;
+    }
+    public Long getUnBindEndTime() {
+        return this.unBindEndTime;
+    }
+
     public PushBroadcastRequest setUnBindPeriod(Long unBindPeriod) {
         this.unBindPeriod = unBindPeriod;
         return this;
     }
     public Long getUnBindPeriod() {
         return this.unBindPeriod;
+    }
+
+    public PushBroadcastRequest setUnBindStartTime(Long unBindStartTime) {
+        this.unBindStartTime = unBindStartTime;
+        return this;
+    }
+    public Long getUnBindStartTime() {
+        return this.unBindStartTime;
     }
 
     public PushBroadcastRequest setWorkspaceId(String workspaceId) {

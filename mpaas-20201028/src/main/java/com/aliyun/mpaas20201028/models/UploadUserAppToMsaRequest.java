@@ -10,6 +10,9 @@ public class UploadUserAppToMsaRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("FileName")
+    public String fileName;
+
     @NameInMap("FileUrl")
     public String fileUrl;
 
@@ -36,6 +39,14 @@ public class UploadUserAppToMsaRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UploadUserAppToMsaRequest setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
     }
 
     public UploadUserAppToMsaRequest setFileUrl(String fileUrl) {

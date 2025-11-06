@@ -43,6 +43,9 @@ public class PushTemplateRequest extends TeaModel {
     @NameInMap("MiChannelId")
     public String miChannelId;
 
+    @NameInMap("NotifyLevel")
+    public java.util.Map<String, ?> notifyLevel;
+
     @NameInMap("NotifyType")
     public String notifyType;
 
@@ -189,6 +192,14 @@ public class PushTemplateRequest extends TeaModel {
     }
     public String getMiChannelId() {
         return this.miChannelId;
+    }
+
+    public PushTemplateRequest setNotifyLevel(java.util.Map<String, ?> notifyLevel) {
+        this.notifyLevel = notifyLevel;
+        return this;
+    }
+    public java.util.Map<String, ?> getNotifyLevel() {
+        return this.notifyLevel;
     }
 
     public PushTemplateRequest setNotifyType(String notifyType) {

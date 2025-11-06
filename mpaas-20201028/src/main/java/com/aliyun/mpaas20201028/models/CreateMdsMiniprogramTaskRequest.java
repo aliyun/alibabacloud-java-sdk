@@ -16,9 +16,9 @@ public class CreateMdsMiniprogramTaskRequest extends TeaModel {
     @NameInMap("GreyNum")
     public String greyNum;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
+    @NameInMap("H5Id")
+    public String h5Id;
+
     @NameInMap("Id")
     public Long id;
 
@@ -87,6 +87,14 @@ public class CreateMdsMiniprogramTaskRequest extends TeaModel {
     }
     public String getGreyNum() {
         return this.greyNum;
+    }
+
+    public CreateMdsMiniprogramTaskRequest setH5Id(String h5Id) {
+        this.h5Id = h5Id;
+        return this;
+    }
+    public String getH5Id() {
+        return this.h5Id;
     }
 
     public CreateMdsMiniprogramTaskRequest setId(Long id) {

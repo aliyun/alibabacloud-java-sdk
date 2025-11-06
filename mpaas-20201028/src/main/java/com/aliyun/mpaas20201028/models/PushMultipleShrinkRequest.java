@@ -43,6 +43,9 @@ public class PushMultipleShrinkRequest extends TeaModel {
     @NameInMap("MiChannelId")
     public String miChannelId;
 
+    @NameInMap("NotifyLevel")
+    public String notifyLevelShrink;
+
     @NameInMap("NotifyType")
     public String notifyType;
 
@@ -174,6 +177,14 @@ public class PushMultipleShrinkRequest extends TeaModel {
     }
     public String getMiChannelId() {
         return this.miChannelId;
+    }
+
+    public PushMultipleShrinkRequest setNotifyLevelShrink(String notifyLevelShrink) {
+        this.notifyLevelShrink = notifyLevelShrink;
+        return this;
+    }
+    public String getNotifyLevelShrink() {
+        return this.notifyLevelShrink;
     }
 
     public PushMultipleShrinkRequest setNotifyType(String notifyType) {
