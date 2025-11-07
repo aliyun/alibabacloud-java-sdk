@@ -1,0 +1,136 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.oos20190601.models;
+
+import com.aliyun.tea.*;
+
+public class ListGitRepositoriesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("Count")
+    public Integer count;
+
+    @NameInMap("GitRepos")
+    public java.util.List<ListGitRepositoriesResponseBodyGitRepos> gitRepos;
+
+    /**
+     * <strong>example:</strong>
+     * <p>DBA6E6C8-F75D-41DE-AFF5-1FA03F551CA3</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static ListGitRepositoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListGitRepositoriesResponseBody self = new ListGitRepositoriesResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ListGitRepositoriesResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
+    }
+
+    public ListGitRepositoriesResponseBody setGitRepos(java.util.List<ListGitRepositoriesResponseBodyGitRepos> gitRepos) {
+        this.gitRepos = gitRepos;
+        return this;
+    }
+    public java.util.List<ListGitRepositoriesResponseBodyGitRepos> getGitRepos() {
+        return this.gitRepos;
+    }
+
+    public ListGitRepositoriesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class ListGitRepositoriesResponseBodyGitRepos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Test secret parameter for vulnerability testing - 1757298077.453695</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun/repo</p>
+         */
+        @NameInMap("FullName")
+        public String fullName;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://github.com/alibaba/fastjson">https://github.com/alibaba/fastjson</a></p>
+         */
+        @NameInMap("HtmlUrl")
+        public String htmlUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
+        @NameInMap("IsPrivate")
+        public Boolean isPrivate;
+
+        /**
+         * <strong>example:</strong>
+         * <p>22351123</p>
+         */
+        @NameInMap("RepoId")
+        public Long repoId;
+
+        public static ListGitRepositoriesResponseBodyGitRepos build(java.util.Map<String, ?> map) throws Exception {
+            ListGitRepositoriesResponseBodyGitRepos self = new ListGitRepositoriesResponseBodyGitRepos();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGitRepositoriesResponseBodyGitRepos setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListGitRepositoriesResponseBodyGitRepos setFullName(String fullName) {
+            this.fullName = fullName;
+            return this;
+        }
+        public String getFullName() {
+            return this.fullName;
+        }
+
+        public ListGitRepositoriesResponseBodyGitRepos setHtmlUrl(String htmlUrl) {
+            this.htmlUrl = htmlUrl;
+            return this;
+        }
+        public String getHtmlUrl() {
+            return this.htmlUrl;
+        }
+
+        public ListGitRepositoriesResponseBodyGitRepos setIsPrivate(Boolean isPrivate) {
+            this.isPrivate = isPrivate;
+            return this;
+        }
+        public Boolean getIsPrivate() {
+            return this.isPrivate;
+        }
+
+        public ListGitRepositoriesResponseBodyGitRepos setRepoId(Long repoId) {
+            this.repoId = repoId;
+            return this;
+        }
+        public Long getRepoId() {
+            return this.repoId;
+        }
+
+    }
+
+}

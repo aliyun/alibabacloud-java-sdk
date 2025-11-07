@@ -75,6 +75,9 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
     }
 
     public static class ListInstancePackageStatesResponseBodyPackageStates extends TeaModel {
+        @NameInMap("ConfigurationInfo")
+        public String configurationInfo;
+
         /**
          * <p>Description</p>
          * 
@@ -159,6 +162,14 @@ public class ListInstancePackageStatesResponseBody extends TeaModel {
         public static ListInstancePackageStatesResponseBodyPackageStates build(java.util.Map<String, ?> map) throws Exception {
             ListInstancePackageStatesResponseBodyPackageStates self = new ListInstancePackageStatesResponseBodyPackageStates();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstancePackageStatesResponseBodyPackageStates setConfigurationInfo(String configurationInfo) {
+            this.configurationInfo = configurationInfo;
+            return this;
+        }
+        public String getConfigurationInfo() {
+            return this.configurationInfo;
         }
 
         public ListInstancePackageStatesResponseBodyPackageStates setDescription(String description) {

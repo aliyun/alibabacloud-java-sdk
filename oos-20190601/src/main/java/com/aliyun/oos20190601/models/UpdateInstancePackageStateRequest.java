@@ -4,6 +4,9 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstancePackageStateRequest extends TeaModel {
+    @NameInMap("ConfigurationInfo")
+    public String configurationInfo;
+
     /**
      * <p>The operation type.</p>
      * <p>Valid values:</p>
@@ -69,6 +72,14 @@ public class UpdateInstancePackageStateRequest extends TeaModel {
     public static UpdateInstancePackageStateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstancePackageStateRequest self = new UpdateInstancePackageStateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateInstancePackageStateRequest setConfigurationInfo(String configurationInfo) {
+        this.configurationInfo = configurationInfo;
+        return this;
+    }
+    public String getConfigurationInfo() {
+        return this.configurationInfo;
     }
 
     public UpdateInstancePackageStateRequest setConfigureAction(String configureAction) {

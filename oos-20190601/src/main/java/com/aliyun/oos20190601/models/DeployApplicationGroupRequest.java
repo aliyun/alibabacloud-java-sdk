@@ -43,6 +43,9 @@ public class DeployApplicationGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RevisionId")
+    public String revisionId;
+
     public static DeployApplicationGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeployApplicationGroupRequest self = new DeployApplicationGroupRequest();
         return TeaModel.build(map, self);
@@ -78,6 +81,14 @@ public class DeployApplicationGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeployApplicationGroupRequest setRevisionId(String revisionId) {
+        this.revisionId = revisionId;
+        return this;
+    }
+    public String getRevisionId() {
+        return this.revisionId;
     }
 
 }

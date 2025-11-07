@@ -121,6 +121,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("ShareType")
         public String shareType;
 
+        @NameInMap("SharedAccounts")
+        public String sharedAccounts;
+
         /**
          * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
          * 
@@ -261,6 +264,14 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getShareType() {
             return this.shareType;
+        }
+
+        public GetTemplateResponseBodyTemplate setSharedAccounts(String sharedAccounts) {
+            this.sharedAccounts = sharedAccounts;
+            return this;
+        }
+        public String getSharedAccounts() {
+            return this.sharedAccounts;
         }
 
         public GetTemplateResponseBodyTemplate setTags(java.util.Map<String, ?> tags) {

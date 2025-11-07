@@ -140,6 +140,9 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         @NameInMap("ErrorType")
         public String errorType;
 
+        @NameInMap("ExecutionId")
+        public String executionId;
+
         /**
          * <p>The tag key.</p>
          * 
@@ -269,6 +272,14 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
         public String getErrorType() {
             return this.errorType;
+        }
+
+        public ListApplicationGroupsResponseBodyApplicationGroups setExecutionId(String executionId) {
+            this.executionId = executionId;
+            return this;
+        }
+        public String getExecutionId() {
+            return this.executionId;
         }
 
         public ListApplicationGroupsResponseBodyApplicationGroups setImportTagKey(String importTagKey) {
