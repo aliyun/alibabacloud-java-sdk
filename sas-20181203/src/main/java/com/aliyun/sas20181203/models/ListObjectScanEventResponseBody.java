@@ -176,6 +176,12 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("DisplaySandboxResult")
         public String displaySandboxResult;
 
+        /**
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connect timed out</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
@@ -237,6 +243,12 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>Information on whitelisting rule hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong></strong>&amp;nbsp&amp;nbspmd5&amp;nbsp&amp;nbsp contains &amp;nbsp&amp;nbsp23&amp;nbsp&amp;nbsp</p>
+         */
         @NameInMap("MatchedWhiteListRuleI18nStr")
         public String matchedWhiteListRuleI18nStr;
 
@@ -249,6 +261,12 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>Alarm handling result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fail</p>
+         */
         @NameInMap("OperateResult")
         public String operateResult;
 
@@ -261,6 +279,12 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("OssKey")
         public String ossKey;
 
+        /**
+         * <p>Remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
@@ -309,6 +333,19 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Event status. Valid values::</p>
+         * <ul>
+         * <li><strong>0</strong>: Unprocessed </li>
+         * <li><strong>1</strong>: Processed manually </li>
+         * <li><strong>2</strong>: Whitelisted </li>
+         * <li><strong>3</strong>: Ignored </li>
+         * <li><strong>4</strong>: Access denied</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

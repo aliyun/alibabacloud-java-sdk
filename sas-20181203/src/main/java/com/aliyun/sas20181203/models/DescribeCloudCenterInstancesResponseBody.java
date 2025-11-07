@@ -478,6 +478,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("Mem")
         public Integer mem;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         /**
          * <p>The operating system of the asset.</p>
          * 
@@ -1048,6 +1051,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public Integer getMem() {
             return this.mem;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setOs(String os) {

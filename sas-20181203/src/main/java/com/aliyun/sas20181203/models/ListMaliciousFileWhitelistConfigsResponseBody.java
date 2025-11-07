@@ -208,6 +208,12 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>Remark</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     /**
+     * <p>The search condition for components.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -83,6 +85,8 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     public String statisticsTypeInstanceValue;
 
     /**
+     * <p>The UUID of the server.</p>
+     * 
      * <strong>example:</strong>
      * <p>c9107c04-942f-40c1-981a-f1c1***</p>
      */

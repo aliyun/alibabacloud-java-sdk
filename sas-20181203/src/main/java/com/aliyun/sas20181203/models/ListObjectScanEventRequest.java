@@ -4,6 +4,16 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListObjectScanEventRequest extends TeaModel {
+    /**
+     * <p>Batch operation type. Valid values:</p>
+     * <ul>
+     * <li><strong>sha256</strong>: Same file content</li>
+     * <li><strong>eventName</strong>: Same alert type</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sha256</p>
+     */
     @NameInMap("BatchType")
     public String batchType;
 
@@ -26,6 +36,12 @@ public class ListObjectScanEventRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Event ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8925****</p>
+     */
     @NameInMap("EventId")
     public Long eventId;
 
@@ -115,6 +131,19 @@ public class ListObjectScanEventRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>Event status. The values are as follows:</p>
+     * <ul>
+     * <li><strong>0</strong>: Unprocessed </li>
+     * <li><strong>1</strong>: I have processed manually </li>
+     * <li><strong>2</strong>: Whitelisted </li>
+     * <li><strong>3</strong>: Ignored </li>
+     * <li><strong>4</strong>: Access denied</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

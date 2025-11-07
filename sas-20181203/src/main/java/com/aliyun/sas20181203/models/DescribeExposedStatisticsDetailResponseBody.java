@@ -207,6 +207,8 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         public String exposureTypeInstanceName;
 
         /**
+         * <p>The listener port that is used to redirect HTTP requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */

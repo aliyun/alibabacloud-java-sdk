@@ -86,12 +86,30 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         @NameInMap("NoScanBucket")
         public Integer noScanBucket;
 
+        /**
+         * <p>Postpaid usage count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("PostPayInvokeCount")
         public Long postPayInvokeCount;
 
+        /**
+         * <p>Prepaid authorized count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("PrePayAuthCount")
         public Long prePayAuthCount;
 
+        /**
+         * <p>Prepaid usage count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PrePayInvokeCount")
         public Long prePayInvokeCount;
 

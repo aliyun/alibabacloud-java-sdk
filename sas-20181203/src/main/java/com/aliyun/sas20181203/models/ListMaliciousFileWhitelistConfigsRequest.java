@@ -25,7 +25,14 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
     @NameInMap("EventName")
     public String eventName;
 
+    /**
+     * <p>Event ID. <notice>Field is deprecated.</notice></p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("IdList")
+    @Deprecated
     public Long idList;
 
     /**
@@ -80,6 +87,7 @@ public class ListMaliciousFileWhitelistConfigsRequest extends TeaModel {
         return this.eventName;
     }
 
+    @Deprecated
     public ListMaliciousFileWhitelistConfigsRequest setIdList(Long idList) {
         this.idList = idList;
         return this;
