@@ -206,6 +206,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("TenantIsolationType")
         public String tenantIsolationType;
 
+        @NameInMap("TpsEnabled")
+        public Integer tpsEnabled;
+
         /**
          * <p>The ID of the vSwitch that is configured for the HSM.</p>
          * 
@@ -390,6 +393,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getTenantIsolationType() {
             return this.tenantIsolationType;
+        }
+
+        public GetInstanceResponseBodyInstance setTpsEnabled(Integer tpsEnabled) {
+            this.tpsEnabled = tpsEnabled;
+            return this;
+        }
+        public Integer getTpsEnabled() {
+            return this.tpsEnabled;
         }
 
         public GetInstanceResponseBodyInstance setVSwitchId(String vSwitchId) {
