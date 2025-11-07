@@ -145,6 +145,9 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         @NameInMap("NotifyContent")
         public String notifyContent;
 
+        @NameInMap("NotifyHeader")
+        public String notifyHeader;
+
         @NameInMap("NotifyResponse")
         public String notifyResponse;
 
@@ -236,6 +239,14 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         }
         public String getNotifyContent() {
             return this.notifyContent;
+        }
+
+        public DescribeLiveStreamsNotifyRecordsResponseBodyNotifyRecordsInfoLiveStreamNotifyRecordsInfo setNotifyHeader(String notifyHeader) {
+            this.notifyHeader = notifyHeader;
+            return this;
+        }
+        public String getNotifyHeader() {
+            return this.notifyHeader;
         }
 
         public DescribeLiveStreamsNotifyRecordsResponseBodyNotifyRecordsInfoLiveStreamNotifyRecordsInfo setNotifyResponse(String notifyResponse) {
