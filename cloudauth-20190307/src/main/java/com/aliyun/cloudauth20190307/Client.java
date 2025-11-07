@@ -19,43 +19,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpoint = this.getEndpoint("cloudauth", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
-    public java.util.Map<String, ?> _postOSSObject(String bucketName, java.util.Map<String, ?> data) throws Exception {
-        TeaRequest request_ = new TeaRequest();
-        java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
-        String boundary = com.aliyun.fileform.Client.getBoundary();
-        String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
-        request_.protocol = "HTTPS";
-        request_.method = "POST";
-        request_.pathname = "/";
-        request_.headers = TeaConverter.buildMap(
-            new TeaPair("host", host),
-            new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
-            new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(""))
+    public java.util.Map<String, ?> _postOSSObject(String bucketName, java.util.Map<String, ?> data, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, Object> runtime_ = TeaConverter.buildMap(
+            new TeaPair("timeouted", "retry"),
+            new TeaPair("key", com.aliyun.teautil.Common.defaultString(runtime.key, _key)),
+            new TeaPair("cert", com.aliyun.teautil.Common.defaultString(runtime.cert, _cert)),
+            new TeaPair("ca", com.aliyun.teautil.Common.defaultString(runtime.ca, _ca)),
+            new TeaPair("readTimeout", com.aliyun.teautil.Common.defaultNumber(runtime.readTimeout, _readTimeout)),
+            new TeaPair("connectTimeout", com.aliyun.teautil.Common.defaultNumber(runtime.connectTimeout, _connectTimeout)),
+            new TeaPair("httpProxy", com.aliyun.teautil.Common.defaultString(runtime.httpProxy, _httpProxy)),
+            new TeaPair("httpsProxy", com.aliyun.teautil.Common.defaultString(runtime.httpsProxy, _httpsProxy)),
+            new TeaPair("noProxy", com.aliyun.teautil.Common.defaultString(runtime.noProxy, _noProxy)),
+            new TeaPair("socks5Proxy", com.aliyun.teautil.Common.defaultString(runtime.socks5Proxy, _socks5Proxy)),
+            new TeaPair("socks5NetWork", com.aliyun.teautil.Common.defaultString(runtime.socks5NetWork, _socks5NetWork)),
+            new TeaPair("maxIdleConns", com.aliyun.teautil.Common.defaultNumber(runtime.maxIdleConns, _maxIdleConns)),
+            new TeaPair("retry", TeaConverter.buildMap(
+                new TeaPair("retryable", runtime.autoretry),
+                new TeaPair("maxAttempts", com.aliyun.teautil.Common.defaultNumber(runtime.maxAttempts, 3))
+            )),
+            new TeaPair("backoff", TeaConverter.buildMap(
+                new TeaPair("policy", com.aliyun.teautil.Common.defaultString(runtime.backoffPolicy, "no")),
+                new TeaPair("period", com.aliyun.teautil.Common.defaultNumber(runtime.backoffPeriod, 1))
+            )),
+            new TeaPair("ignoreSSL", com.aliyun.teaopenapi.Client.defaultAny(runtime.ignoreSSL, false)),
+            new TeaPair("tlsMinVersion", _tlsMinVersion)
         );
-        request_.headers.put("content-type", "multipart/form-data; boundary=" + boundary + "");
-        request_.body = com.aliyun.fileform.Client.toFileForm(form, boundary);
-        TeaResponse response_ = Tea.doAction(request_, new java.util.HashMap<String, Object>(), interceptorChain);
 
-        java.util.Map<String, Object> respMap = null;
-        String bodyStr = com.aliyun.teautil.Common.readAsString(response_.body);
-        if (com.aliyun.teautil.Common.is4xx(response_.statusCode) || com.aliyun.teautil.Common.is5xx(response_.statusCode)) {
-            respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
-            java.util.Map<String, Object> err = com.aliyun.teautil.Common.assertAsMap(respMap.get("Error"));
-            throw new TeaException(TeaConverter.buildMap(
-                new TeaPair("code", err.get("Code")),
-                new TeaPair("message", err.get("Message")),
-                new TeaPair("data", TeaConverter.buildMap(
-                    new TeaPair("httpCode", response_.statusCode),
-                    new TeaPair("requestId", err.get("RequestId")),
-                    new TeaPair("hostId", err.get("HostId"))
-                ))
-            ));
+        TeaRequest _lastRequest = null;
+        Exception _lastException = null;
+        long _now = System.currentTimeMillis();
+        int _retryTimes = 0;
+        while (Tea.allowRetry((java.util.Map<String, Object>) runtime_.get("retry"), _retryTimes, _now)) {
+            if (_retryTimes > 0) {
+                int backoffTime = Tea.getBackoffTime(runtime_.get("backoff"), _retryTimes);
+                if (backoffTime > 0) {
+                    Tea.sleep(backoffTime);
+                }
+            }
+            _retryTimes = _retryTimes + 1;
+            try {
+                TeaRequest request_ = new TeaRequest();
+                java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
+                String boundary = com.aliyun.fileform.Client.getBoundary();
+                String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                request_.protocol = "HTTPS";
+                request_.method = "POST";
+                request_.pathname = "/";
+                request_.headers = TeaConverter.buildMap(
+                    new TeaPair("host", host),
+                    new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
+                    new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(""))
+                );
+                request_.headers.put("content-type", "multipart/form-data; boundary=" + boundary + "");
+                request_.body = com.aliyun.fileform.Client.toFileForm(form, boundary);
+                _lastRequest = request_;
+                TeaResponse response_ = Tea.doAction(request_, runtime_, interceptorChain);
+
+                java.util.Map<String, Object> respMap = null;
+                String bodyStr = com.aliyun.teautil.Common.readAsString(response_.body);
+                if (com.aliyun.teautil.Common.is4xx(response_.statusCode) || com.aliyun.teautil.Common.is5xx(response_.statusCode)) {
+                    respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
+                    java.util.Map<String, Object> err = com.aliyun.teautil.Common.assertAsMap(respMap.get("Error"));
+                    throw new TeaException(TeaConverter.buildMap(
+                        new TeaPair("code", err.get("Code")),
+                        new TeaPair("message", err.get("Message")),
+                        new TeaPair("data", TeaConverter.buildMap(
+                            new TeaPair("httpCode", response_.statusCode),
+                            new TeaPair("requestId", err.get("RequestId")),
+                            new TeaPair("hostId", err.get("HostId"))
+                        ))
+                    ));
+                }
+
+                respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
+                return TeaConverter.merge(Object.class,
+                    respMap
+                );
+            } catch (Exception e) {
+                if (Tea.isRetryable(e)) {
+                    _lastException = e;
+                    continue;
+                }
+                throw e;
+            }
         }
-
-        respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
-        return TeaConverter.merge(Object.class,
-            respMap
-        );
+        throw new TeaUnretryableException(_lastRequest, _lastException);
     }
 
     public void addRuntimeOptionsInterceptor(RuntimeOptionsInterceptor interceptor) {
@@ -700,12 +748,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             contrastFaceVerifyReq.faceContrastFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
         ContrastFaceVerifyResponse contrastFaceVerifyResp = this.contrastFaceVerifyWithOptions(contrastFaceVerifyReq, runtime);
         return contrastFaceVerifyResp;
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Create a financial-grade authentication scenario</p>
+     * 
+     * @param request CreateAntCloudAuthSceneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAntCloudAuthSceneResponse
+     */
+    public CreateAntCloudAuthSceneResponse createAntCloudAuthSceneWithOptions(CreateAntCloudAuthSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bindMiniProgram)) {
+            query.put("BindMiniProgram", request.bindMiniProgram);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkFileBody)) {
+            query.put("CheckFileBody", request.checkFileBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkFileName)) {
+            query.put("CheckFileName", request.checkFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.miniProgramName)) {
+            query.put("MiniProgramName", request.miniProgramName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneName)) {
+            query.put("SceneName", request.sceneName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storeImage)) {
+            query.put("StoreImage", request.storeImage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAntCloudAuthScene"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAntCloudAuthSceneResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Create a financial-grade authentication scenario</p>
+     * 
+     * @param request CreateAntCloudAuthSceneRequest
+     * @return CreateAntCloudAuthSceneResponse
+     */
+    public CreateAntCloudAuthSceneResponse createAntCloudAuthScene(CreateAntCloudAuthSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAntCloudAuthSceneWithOptions(request, runtime);
     }
 
     /**
@@ -778,6 +906,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Cloud Scene</p>
+     * 
+     * @param request CreateCloudauthstSceneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudauthstSceneResponse
+     */
+    public CreateCloudauthstSceneResponse createCloudauthstSceneWithOptions(CreateCloudauthstSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneName)) {
+            query.put("SceneName", request.sceneName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storeImage)) {
+            query.put("StoreImage", request.storeImage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudauthstScene"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudauthstSceneResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Cloud Scene</p>
+     * 
+     * @param request CreateCloudauthstSceneRequest
+     * @return CreateCloudauthstSceneResponse
+     */
+    public CreateCloudauthstSceneResponse createCloudauthstScene(CreateCloudauthstSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudauthstSceneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST.
+     * Request Address: cloudauth.aliyuncs.com.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Scene Configuration</p>
+     * 
+     * @param request CreateSceneConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSceneConfigResponse
+     */
+    public CreateSceneConfigResponse createSceneConfigWithOptions(CreateSceneConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("sceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSceneConfig"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSceneConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST.
+     * Request Address: cloudauth.aliyuncs.com.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Scene Configuration</p>
+     * 
+     * @param request CreateSceneConfigRequest
+     * @return CreateSceneConfigResponse
+     */
+    public CreateSceneConfigResponse createSceneConfig(CreateSceneConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSceneConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
      * 
      * <b>summary</b> : 
@@ -844,6 +1102,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateVerifySettingResponse createVerifySetting(CreateVerifySettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVerifySettingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Whitelist</p>
+     * 
+     * @param request CreateWhitelistSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWhitelistSettingResponse
+     */
+    public CreateWhitelistSettingResponse createWhitelistSettingWithOptions(CreateWhitelistSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certNo)) {
+            query.put("CertNo", request.certNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
+            query.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validDay)) {
+            query.put("ValidDay", request.validDay);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWhitelistSetting"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWhitelistSettingResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Whitelist</p>
+     * 
+     * @param request CreateWhitelistSettingRequest
+     * @return CreateWhitelistSettingResponse
+     */
+    public CreateWhitelistSettingResponse createWhitelistSetting(CreateWhitelistSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWhitelistSettingWithOptions(request, runtime);
     }
 
     /**
@@ -998,7 +1334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             credentialProductVerifyV2Req.imageFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1304,7 +1640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             credentialVerifyV2Req.imageFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1392,6 +1728,372 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete All Custom Flow Control Strategies</p>
+     * 
+     * @param request DeleteAllCustomizeFlowStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAllCustomizeFlowStrategyResponse
+     */
+    public DeleteAllCustomizeFlowStrategyResponse deleteAllCustomizeFlowStrategyWithOptions(DeleteAllCustomizeFlowStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAllCustomizeFlowStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAllCustomizeFlowStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete All Custom Flow Control Strategies</p>
+     * 
+     * @param request DeleteAllCustomizeFlowStrategyRequest
+     * @return DeleteAllCustomizeFlowStrategyResponse
+     */
+    public DeleteAllCustomizeFlowStrategyResponse deleteAllCustomizeFlowStrategy(DeleteAllCustomizeFlowStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAllCustomizeFlowStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Watermark Scene</p>
+     * 
+     * @param request DeleteAntCloudAuthSceneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAntCloudAuthSceneResponse
+     */
+    public DeleteAntCloudAuthSceneResponse deleteAntCloudAuthSceneWithOptions(DeleteAntCloudAuthSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAntCloudAuthScene"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAntCloudAuthSceneResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Watermark Scene</p>
+     * 
+     * @param request DeleteAntCloudAuthSceneRequest
+     * @return DeleteAntCloudAuthSceneResponse
+     */
+    public DeleteAntCloudAuthSceneResponse deleteAntCloudAuthScene(DeleteAntCloudAuthSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAntCloudAuthSceneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Black and White List Policy</p>
+     * 
+     * @param request DeleteBlackListStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBlackListStrategyResponse
+     */
+    public DeleteBlackListStrategyResponse deleteBlackListStrategyWithOptions(DeleteBlackListStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productName)) {
+            query.put("ProductName", request.productName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBlackListStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBlackListStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Black and White List Policy</p>
+     * 
+     * @param request DeleteBlackListStrategyRequest
+     * @return DeleteBlackListStrategyResponse
+     */
+    public DeleteBlackListStrategyResponse deleteBlackListStrategy(DeleteBlackListStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteBlackListStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Cloud Scene</p>
+     * 
+     * @param request DeleteCloudauthstSceneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudauthstSceneResponse
+     */
+    public DeleteCloudauthstSceneResponse deleteCloudauthstSceneWithOptions(DeleteCloudauthstSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudauthstScene"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudauthstSceneResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Cloud Scene</p>
+     * 
+     * @param request DeleteCloudauthstSceneRequest
+     * @return DeleteCloudauthstSceneResponse
+     */
+    public DeleteCloudauthstSceneResponse deleteCloudauthstScene(DeleteCloudauthstSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudauthstSceneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST.
+     * Request URL: cloudauth.aliyuncs.com.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Security Control Strategy</p>
+     * 
+     * @param request DeleteControlStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteControlStrategyResponse
+     */
+    public DeleteControlStrategyResponse deleteControlStrategyWithOptions(DeleteControlStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiName)) {
+            query.put("ApiName", request.apiName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteControlStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteControlStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST.
+     * Request URL: cloudauth.aliyuncs.com.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Security Control Strategy</p>
+     * 
+     * @param request DeleteControlStrategyRequest
+     * @return DeleteControlStrategyResponse
+     */
+    public DeleteControlStrategyResponse deleteControlStrategy(DeleteControlStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteControlStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Customized Flow Control Strategy</p>
+     * 
+     * @param request DeleteCustomizeFlowStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomizeFlowStrategyResponse
+     */
+    public DeleteCustomizeFlowStrategyResponse deleteCustomizeFlowStrategyWithOptions(DeleteCustomizeFlowStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiName)) {
+            query.put("ApiName", request.apiName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomizeFlowStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomizeFlowStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Customized Flow Control Strategy</p>
+     * 
+     * @param request DeleteCustomizeFlowStrategyRequest
+     * @return DeleteCustomizeFlowStrategyResponse
+     */
+    public DeleteCustomizeFlowStrategyResponse deleteCustomizeFlowStrategy(DeleteCustomizeFlowStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomizeFlowStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Deletes all personal information fields in the request, including name, ID number, phone number, IP, images, videos, and device information, etc.</p>
      * 
      * <b>summary</b> : 
@@ -1446,6 +2148,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Request URL: cloudauth.aliyuncs.com.<blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Scene Configuration</p>
+     * 
+     * @param request DeleteSceneConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSceneConfigResponse
+     */
+    public DeleteSceneConfigResponse deleteSceneConfigWithOptions(DeleteSceneConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneConfigId)) {
+            body.put("sceneConfigId", request.sceneConfigId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSceneConfig"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSceneConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Request URL: cloudauth.aliyuncs.com.<blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Scene Configuration</p>
+     * 
+     * @param request DeleteSceneConfigRequest
+     * @return DeleteSceneConfigResponse
+     */
+    public DeleteSceneConfigResponse deleteSceneConfig(DeleteSceneConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSceneConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Whitelist Configuration</p>
+     * 
+     * @param request DeleteWhitelistSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWhitelistSettingResponse
+     */
+    public DeleteWhitelistSettingResponse deleteWhitelistSettingWithOptions(DeleteWhitelistSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
+            query.put("Ids", request.ids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWhitelistSetting"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWhitelistSettingResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Whitelist Configuration</p>
+     * 
+     * @param request DeleteWhitelistSettingRequest
+     * @return DeleteWhitelistSettingResponse
+     */
+    public DeleteWhitelistSettingResponse deleteWhitelistSetting(DeleteWhitelistSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteWhitelistSettingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the User Status of Ant Blockchain</p>
+     * 
+     * @param request DescribeAntAndCloudAuthUserStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAntAndCloudAuthUserStatusResponse
+     */
+    public DescribeAntAndCloudAuthUserStatusResponse describeAntAndCloudAuthUserStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAntAndCloudAuthUserStatus"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAntAndCloudAuthUserStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the User Status of Ant Blockchain</p>
+     * @return DescribeAntAndCloudAuthUserStatusResponse
+     */
+    public DescribeAntAndCloudAuthUserStatusResponse describeAntAndCloudAuthUserStatus() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAntAndCloudAuthUserStatusWithOptions(runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</p>
      * 
      * <b>summary</b> : 
@@ -1492,6 +2364,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCardVerifyResponse describeCardVerify(DescribeCardVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCardVerifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Dashboard Data</p>
+     * 
+     * @param request DescribeCloudauthstSceneListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudauthstSceneListResponse
+     */
+    public DescribeCloudauthstSceneListResponse describeCloudauthstSceneListWithOptions(DescribeCloudauthstSceneListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudauthstSceneList"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudauthstSceneListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to reacquire it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Dashboard Data</p>
+     * 
+     * @param request DescribeCloudauthstSceneListRequest
+     * @return DescribeCloudauthstSceneListResponse
+     */
+    public DescribeCloudauthstSceneListResponse describeCloudauthstSceneList(DescribeCloudauthstSceneListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudauthstSceneListWithOptions(request, runtime);
     }
 
     /**
@@ -1690,6 +2618,594 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询任务导出记录</p>
+     * 
+     * @param request DescribeInfoCheckExportRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInfoCheckExportRecordResponse
+     */
+    public DescribeInfoCheckExportRecordResponse describeInfoCheckExportRecordWithOptions(DescribeInfoCheckExportRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInfoCheckExportRecord"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInfoCheckExportRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询任务导出记录</p>
+     * 
+     * @param request DescribeInfoCheckExportRecordRequest
+     * @return DescribeInfoCheckExportRecordResponse
+     */
+    public DescribeInfoCheckExportRecordResponse describeInfoCheckExportRecord(DescribeInfoCheckExportRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInfoCheckExportRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the cloud scenario authentication records of a specific region</p>
+     * 
+     * @param request DescribeListAntCloudAuthScenesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeListAntCloudAuthScenesResponse
+     */
+    public DescribeListAntCloudAuthScenesResponse describeListAntCloudAuthScenesWithOptions(DescribeListAntCloudAuthScenesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeListAntCloudAuthScenes"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeListAntCloudAuthScenesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS POST and GET methods.</p>
+     * <blockquote>
+     * <p>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the cloud scenario authentication records of a specific region</p>
+     * 
+     * @param request DescribeListAntCloudAuthScenesRequest
+     * @return DescribeListAntCloudAuthScenesResponse
+     */
+    public DescribeListAntCloudAuthScenesResponse describeListAntCloudAuthScenes(DescribeListAntCloudAuthScenesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeListAntCloudAuthScenesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Face Verification Data</p>
+     * 
+     * @param request DescribeListFaceVerifyDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeListFaceVerifyDataResponse
+     */
+    public DescribeListFaceVerifyDataResponse describeListFaceVerifyDataWithOptions(DescribeListFaceVerifyDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtEnd)) {
+            query.put("GmtEnd", request.gmtEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtStart)) {
+            query.put("GmtStart", request.gmtStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeListFaceVerifyData"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeListFaceVerifyDataResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Face Verification Data</p>
+     * 
+     * @param request DescribeListFaceVerifyDataRequest
+     * @return DescribeListFaceVerifyDataResponse
+     */
+    public DescribeListFaceVerifyDataResponse describeListFaceVerifyData(DescribeListFaceVerifyDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeListFaceVerifyDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Face Verification Information</p>
+     * 
+     * @param request DescribeListFaceVerifyInfosRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeListFaceVerifyInfosResponse
+     */
+    public DescribeListFaceVerifyInfosResponse describeListFaceVerifyInfosWithOptions(DescribeListFaceVerifyInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
+            query.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtEnd)) {
+            query.put("GmtEnd", request.gmtEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gmtStart)) {
+            query.put("GmtStart", request.gmtStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeListFaceVerifyInfos"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeListFaceVerifyInfosResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Face Verification Information</p>
+     * 
+     * @param request DescribeListFaceVerifyInfosRequest
+     * @return DescribeListFaceVerifyInfosResponse
+     */
+    public DescribeListFaceVerifyInfosResponse describeListFaceVerifyInfos(DescribeListFaceVerifyInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeListFaceVerifyInfosWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询页面元数据</p>
+     * 
+     * @param request DescribeMetaSearchPageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetaSearchPageListResponse
+     */
+    public DescribeMetaSearchPageListResponse describeMetaSearchPageListWithOptions(DescribeMetaSearchPageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.api)) {
+            query.put("Api", request.api);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bankCard)) {
+            query.put("BankCard", request.bankCard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizCode)) {
+            query.put("BizCode", request.bizCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            query.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispName)) {
+            query.put("IspName", request.ispName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reqId)) {
+            query.put("ReqId", request.reqId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCode)) {
+            query.put("SubCode", request.subCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vehicleNum)) {
+            query.put("VehicleNum", request.vehicleNum);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetaSearchPageList"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetaSearchPageListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询页面元数据</p>
+     * 
+     * @param request DescribeMetaSearchPageListRequest
+     * @return DescribeMetaSearchPageListResponse
+     */
+    public DescribeMetaSearchPageListResponse describeMetaSearchPageList(DescribeMetaSearchPageListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMetaSearchPageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询认证统计信息</p>
+     * 
+     * @param request DescribeMetaStatisticsListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetaStatisticsListResponse
+     */
+    public DescribeMetaStatisticsListResponse describeMetaStatisticsListWithOptions(DescribeMetaStatisticsListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.api)) {
+            query.put("Api", request.api);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetaStatisticsList"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetaStatisticsListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询认证统计信息</p>
+     * 
+     * @param request DescribeMetaStatisticsListRequest
+     * @return DescribeMetaStatisticsListResponse
+     */
+    public DescribeMetaStatisticsListResponse describeMetaStatisticsList(DescribeMetaStatisticsListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMetaStatisticsListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询认证统计页面</p>
+     * 
+     * @param request DescribeMetaStatisticsPageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetaStatisticsPageListResponse
+     */
+    public DescribeMetaStatisticsPageListResponse describeMetaStatisticsPageListWithOptions(DescribeMetaStatisticsPageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.api)) {
+            query.put("Api", request.api);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetaStatisticsPageList"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetaStatisticsPageListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询认证统计页面</p>
+     * 
+     * @param request DescribeMetaStatisticsPageListRequest
+     * @return DescribeMetaStatisticsPageListResponse
+     */
+    public DescribeMetaStatisticsPageListResponse describeMetaStatisticsPageList(DescribeMetaStatisticsPageListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMetaStatisticsPageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query OSS status</p>
+     * 
+     * @param request DescribeOssStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOssStatusResponse
+     */
+    public DescribeOssStatusResponse describeOssStatusWithOptions(DescribeOssStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOssStatus"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOssStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query OSS status</p>
+     * 
+     * @param request DescribeOssStatusRequest
+     * @return DescribeOssStatusResponse
+     */
+    public DescribeOssStatusResponse describeOssStatus(DescribeOssStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOssStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Get OSS Activation Status</p>
+     * 
+     * @param request DescribeOssStatusV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOssStatusV2Response
+     */
+    public DescribeOssStatusV2Response describeOssStatusV2WithOptions(DescribeOssStatusV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOssStatusV2"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOssStatusV2Response());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Get OSS Activation Status</p>
+     * 
+     * @param request DescribeOssStatusV2Request
+     * @return DescribeOssStatusV2Response
+     */
+    public DescribeOssStatusV2Response describeOssStatusV2(DescribeOssStatusV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOssStatusV2WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</p>
      * 
      * @param request DescribeOssUploadTokenRequest
@@ -1787,6 +3303,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Page Settings</p>
+     * 
+     * @param request DescribePageSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePageSettingResponse
+     */
+    public DescribePageSettingResponse describePageSettingWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePageSetting"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePageSettingResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Page Settings</p>
+     * @return DescribePageSettingResponse
+     */
+    public DescribePageSettingResponse describePageSetting() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePageSettingWithOptions(runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS GET/POST methods.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Product Code</p>
+     * 
+     * @param request DescribeProductCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeProductCodeResponse
+     */
+    public DescribeProductCodeResponse describeProductCodeWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeProductCode"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeProductCodeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Supports sending requests via HTTPS GET/POST methods.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Product Code</p>
+     * @return DescribeProductCodeResponse
+     */
+    public DescribeProductCodeResponse describeProductCode() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeProductCodeWithOptions(runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Enhanced Real Person Authentication Call Statistics Pagination Query Interface</p>
      * 
@@ -1848,6 +3444,430 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSmartStatisticsPageListResponse describeSmartStatisticsPageList(DescribeSmartStatisticsPageListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSmartStatisticsPageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Verification Device Statistics</p>
+     * 
+     * @param request DescribeVerifyDeviceRiskStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifyDeviceRiskStatisticsResponse
+     */
+    public DescribeVerifyDeviceRiskStatisticsResponse describeVerifyDeviceRiskStatisticsWithOptions(DescribeVerifyDeviceRiskStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVerifyDeviceRiskStatistics"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVerifyDeviceRiskStatisticsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Verification Device Statistics</p>
+     * 
+     * @param request DescribeVerifyDeviceRiskStatisticsRequest
+     * @return DescribeVerifyDeviceRiskStatisticsResponse
+     */
+    public DescribeVerifyDeviceRiskStatisticsResponse describeVerifyDeviceRiskStatistics(DescribeVerifyDeviceRiskStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVerifyDeviceRiskStatisticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Overview of authentication request statistics</p>
+     * 
+     * @param request DescribeVerifyFailStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifyFailStatisticsResponse
+     */
+    public DescribeVerifyFailStatisticsResponse describeVerifyFailStatisticsWithOptions(DescribeVerifyFailStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ageGt)) {
+            query.put("AgeGt", request.ageGt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.api)) {
+            query.put("Api", request.api);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
+            query.put("DeviceType", request.deviceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVerifyFailStatistics"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVerifyFailStatisticsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Overview of authentication request statistics</p>
+     * 
+     * @param request DescribeVerifyFailStatisticsRequest
+     * @return DescribeVerifyFailStatisticsResponse
+     */
+    public DescribeVerifyFailStatisticsResponse describeVerifyFailStatistics(DescribeVerifyFailStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVerifyFailStatisticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Statistics on Device Face Comparison</p>
+     * 
+     * @param request DescribeVerifyPersonasDeviceModelStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifyPersonasDeviceModelStatisticsResponse
+     */
+    public DescribeVerifyPersonasDeviceModelStatisticsResponse describeVerifyPersonasDeviceModelStatisticsWithOptions(DescribeVerifyPersonasDeviceModelStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("TimeRange", request.timeRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVerifyPersonasDeviceModelStatistics"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVerifyPersonasDeviceModelStatisticsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Statistics on Device Face Comparison</p>
+     * 
+     * @param request DescribeVerifyPersonasDeviceModelStatisticsRequest
+     * @return DescribeVerifyPersonasDeviceModelStatisticsResponse
+     */
+    public DescribeVerifyPersonasDeviceModelStatisticsResponse describeVerifyPersonasDeviceModelStatistics(DescribeVerifyPersonasDeviceModelStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVerifyPersonasDeviceModelStatisticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Authentication Personnel Statistics</p>
+     * 
+     * @param request DescribeVerifyPersonasOsStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifyPersonasOsStatisticsResponse
+     */
+    public DescribeVerifyPersonasOsStatisticsResponse describeVerifyPersonasOsStatisticsWithOptions(DescribeVerifyPersonasOsStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("TimeRange", request.timeRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVerifyPersonasOsStatistics"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVerifyPersonasOsStatisticsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Authentication Personnel Statistics</p>
+     * 
+     * @param request DescribeVerifyPersonasOsStatisticsRequest
+     * @return DescribeVerifyPersonasOsStatisticsResponse
+     */
+    public DescribeVerifyPersonasOsStatisticsResponse describeVerifyPersonasOsStatistics(DescribeVerifyPersonasOsStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVerifyPersonasOsStatisticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtain statistical information on the location of authenticated individuals</p>
+     * 
+     * @param request DescribeVerifyPersonasProvinceStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifyPersonasProvinceStatisticsResponse
+     */
+    public DescribeVerifyPersonasProvinceStatisticsResponse describeVerifyPersonasProvinceStatisticsWithOptions(DescribeVerifyPersonasProvinceStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("TimeRange", request.timeRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVerifyPersonasProvinceStatistics"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVerifyPersonasProvinceStatisticsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtain statistical information on the location of authenticated individuals</p>
+     * 
+     * @param request DescribeVerifyPersonasProvinceStatisticsRequest
+     * @return DescribeVerifyPersonasProvinceStatisticsResponse
+     */
+    public DescribeVerifyPersonasProvinceStatisticsResponse describeVerifyPersonasProvinceStatistics(DescribeVerifyPersonasProvinceStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVerifyPersonasProvinceStatisticsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query gender statistics of authentication</p>
+     * 
+     * @param request DescribeVerifyPersonasSexStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifyPersonasSexStatisticsResponse
+     */
+    public DescribeVerifyPersonasSexStatisticsResponse describeVerifyPersonasSexStatisticsWithOptions(DescribeVerifyPersonasSexStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("TimeRange", request.timeRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVerifyPersonasSexStatistics"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVerifyPersonasSexStatisticsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query gender statistics of authentication</p>
+     * 
+     * @param request DescribeVerifyPersonasSexStatisticsRequest
+     * @return DescribeVerifyPersonasSexStatisticsResponse
+     */
+    public DescribeVerifyPersonasSexStatisticsResponse describeVerifyPersonasSexStatistics(DescribeVerifyPersonasSexStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVerifyPersonasSexStatisticsWithOptions(request, runtime);
     }
 
     /**
@@ -1966,6 +3986,198 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVerifySDKResponse describeVerifySDK(DescribeVerifySDKRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVerifySDKWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the list of authentication schemes</p>
+     * 
+     * @param request DescribeVerifySearchPageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifySearchPageListResponse
+     */
+    public DescribeVerifySearchPageListResponse describeVerifySearchPageListWithOptions(DescribeVerifySearchPageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certNo)) {
+            query.put("CertNo", request.certNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
+            query.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hasDeviceRisk)) {
+            query.put("HasDeviceRisk", request.hasDeviceRisk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerOrderNo)) {
+            query.put("OuterOrderNo", request.outerOrderNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passed)) {
+            query.put("Passed", request.passed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.root)) {
+            query.put("Root", request.root);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.simulator)) {
+            query.put("Simulator", request.simulator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCode)) {
+            query.put("SubCode", request.subCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCodes)) {
+            query.put("SubCodes", request.subCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualVideo)) {
+            query.put("VirtualVideo", request.virtualVideo);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVerifySearchPageList"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVerifySearchPageListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the list of authentication schemes</p>
+     * 
+     * @param request DescribeVerifySearchPageListRequest
+     * @return DescribeVerifySearchPageListResponse
+     */
+    public DescribeVerifySearchPageListResponse describeVerifySearchPageList(DescribeVerifySearchPageListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVerifySearchPageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests using HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Authentication Statistics</p>
+     * 
+     * @param request DescribeVerifyStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVerifyStatisticsResponse
+     */
+    public DescribeVerifyStatisticsResponse describeVerifyStatisticsWithOptions(DescribeVerifyStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ageGt)) {
+            query.put("AgeGt", request.ageGt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVerifyStatistics"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVerifyStatisticsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests using HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Authentication Statistics</p>
+     * 
+     * @param request DescribeVerifyStatisticsRequest
+     * @return DescribeVerifyStatisticsResponse
+     */
+    public DescribeVerifyStatisticsResponse describeVerifyStatistics(DescribeVerifyStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVerifyStatisticsWithOptions(request, runtime);
     }
 
     /**
@@ -2098,6 +4310,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Whitelist Collection Get Whitelist Collection</p>
+     * 
+     * @param request DescribeWhitelistSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWhitelistSettingResponse
+     */
+    public DescribeWhitelistSettingResponse describeWhitelistSettingWithOptions(DescribeWhitelistSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certNo)) {
+            query.put("CertNo", request.certNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
+            query.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            query.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validEndDate)) {
+            query.put("ValidEndDate", request.validEndDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validStartDate)) {
+            query.put("ValidStartDate", request.validStartDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWhitelistSetting"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWhitelistSettingResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Request Method: Only supports sending requests via HTTPS POST method.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Whitelist Collection Get Whitelist Collection</p>
+     * 
+     * @param request DescribeWhitelistSettingRequest
+     * @return DescribeWhitelistSettingResponse
+     */
+    public DescribeWhitelistSettingResponse describeWhitelistSetting(DescribeWhitelistSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeWhitelistSettingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Request Method: Only supports sending requests via HTTPS POST.
      * Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
      * Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</p>
@@ -2170,6 +4472,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetectFaceAttributesResponse detectFaceAttributes(DetectFaceAttributesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detectFaceAttributesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Obtain the download link for statistical call data files under the product plan based on query conditions.</p>
+     * <ul>
+     * <li>Method: HTTPS POST</li>
+     * <li>Service Address: cloudauth.aliyuncs.com<blockquote>
+     * <p>Real-person authentication products use CertifyId to count call volumes. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Real-person Authentication Record Download</p>
+     * 
+     * @param request DownloadVerifyRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DownloadVerifyRecordsResponse
+     */
+    public DownloadVerifyRecordsResponse downloadVerifyRecordsWithOptions(DownloadVerifyRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizParam)) {
+            query.put("BizParam", request.bizParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DownloadVerifyRecords"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DownloadVerifyRecordsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Obtain the download link for statistical call data files under the product plan based on query conditions.</p>
+     * <ul>
+     * <li>Method: HTTPS POST</li>
+     * <li>Service Address: cloudauth.aliyuncs.com<blockquote>
+     * <p>Real-person authentication products use CertifyId to count call volumes. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Real-person Authentication Record Download</p>
+     * 
+     * @param request DownloadVerifyRecordsRequest
+     * @return DownloadVerifyRecordsResponse
+     */
+    public DownloadVerifyRecordsResponse downloadVerifyRecords(DownloadVerifyRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.downloadVerifyRecordsWithOptions(request, runtime);
     }
 
     /**
@@ -2492,7 +4862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             id2MetaVerifyWithOCRReq.certFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -2516,7 +4886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             id2MetaVerifyWithOCRReq.certNationalFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -2674,12 +5044,186 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             id3MetaVerifyReq.faceFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
         Id3MetaVerifyResponse id3MetaVerifyResp = this.id3MetaVerifyWithOptions(id3MetaVerifyReq, runtime);
         return id3MetaVerifyResp;
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Upload both sides of the ID card to get the verification result of the three identity elements from an authoritative data source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Identity Three Elements Image Verification</p>
+     * 
+     * @param request Id3MetaVerifyWithOCRRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Id3MetaVerifyWithOCRResponse
+     */
+    public Id3MetaVerifyWithOCRResponse id3MetaVerifyWithOCRWithOptions(Id3MetaVerifyWithOCRRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certFile)) {
+            body.put("CertFile", request.certFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certNationalFile)) {
+            body.put("CertNationalFile", request.certNationalFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certNationalUrl)) {
+            body.put("CertNationalUrl", request.certNationalUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certUrl)) {
+            body.put("CertUrl", request.certUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Id3MetaVerifyWithOCR"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Id3MetaVerifyWithOCRResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Upload both sides of the ID card to get the verification result of the three identity elements from an authoritative data source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Identity Three Elements Image Verification</p>
+     * 
+     * @param request Id3MetaVerifyWithOCRRequest
+     * @return Id3MetaVerifyWithOCRResponse
+     */
+    public Id3MetaVerifyWithOCRResponse id3MetaVerifyWithOCR(Id3MetaVerifyWithOCRRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.id3MetaVerifyWithOCRWithOptions(request, runtime);
+    }
+
+    public Id3MetaVerifyWithOCRResponse id3MetaVerifyWithOCRAdvance(Id3MetaVerifyWithOCRAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        com.aliyun.credentials.models.CredentialModel credentialModel = null;
+        if (com.aliyun.teautil.Common.isUnset(_credential)) {
+            throw new TeaException(TeaConverter.buildMap(
+                new TeaPair("code", "InvalidCredentials"),
+                new TeaPair("message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details.")
+            ));
+        }
+
+        credentialModel = _credential.getCredential();
+        String accessKeyId = credentialModel.accessKeyId;
+        String accessKeySecret = credentialModel.accessKeySecret;
+        String securityToken = credentialModel.securityToken;
+        String credentialType = credentialModel.type;
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.teaopenapi.Client authClient = new com.aliyun.teaopenapi.Client(authConfig);
+        java.util.Map<String, String> authRequest = TeaConverter.buildMap(
+            new TeaPair("Product", "Cloudauth"),
+            new TeaPair("RegionId", _regionId)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest authReq = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(authRequest))
+        ));
+        com.aliyun.teaopenapi.models.Params authParams = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeFileUpload"),
+            new TeaPair("version", "2019-12-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        java.util.Map<String, Object> authResponse = new java.util.HashMap<>();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        java.util.Map<String, Object> ossHeader = new java.util.HashMap<>();
+        java.util.Map<String, Object> tmpBody = new java.util.HashMap<>();
+        Boolean useAccelerate = false;
+        java.util.Map<String, String> authResponseBody = new java.util.HashMap<>();
+        Id3MetaVerifyWithOCRRequest id3MetaVerifyWithOCRReq = new Id3MetaVerifyWithOCRRequest();
+        com.aliyun.openapiutil.Client.convert(request, id3MetaVerifyWithOCRReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.certFileObject)) {
+            Object tmpResp0 = authClient.callApi(authParams, authReq, runtime);
+            authResponse = com.aliyun.teautil.Common.assertAsMap(tmpResp0);
+            tmpBody = com.aliyun.teautil.Common.assertAsMap(authResponse.get("body"));
+            useAccelerate = com.aliyun.teautil.Common.assertAsBoolean(tmpBody.get("UseAccelerate"));
+            authResponseBody = com.aliyun.teautil.Common.stringifyMapValue(tmpBody);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponseBody.get("ObjectKey")),
+                new TeaPair("content", request.certFileObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = TeaConverter.buildMap(
+                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
+                new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
+                new TeaPair("Signature", authResponseBody.get("Signature")),
+                new TeaPair("key", authResponseBody.get("ObjectKey")),
+                new TeaPair("file", fileObj),
+                new TeaPair("success_action_status", "201")
+            );
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
+            id3MetaVerifyWithOCRReq.certFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certNationalFileObject)) {
+            Object tmpResp1 = authClient.callApi(authParams, authReq, runtime);
+            authResponse = com.aliyun.teautil.Common.assertAsMap(tmpResp1);
+            tmpBody = com.aliyun.teautil.Common.assertAsMap(authResponse.get("body"));
+            useAccelerate = com.aliyun.teautil.Common.assertAsBoolean(tmpBody.get("UseAccelerate"));
+            authResponseBody = com.aliyun.teautil.Common.stringifyMapValue(tmpBody);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponseBody.get("ObjectKey")),
+                new TeaPair("content", request.certNationalFileObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = TeaConverter.buildMap(
+                new TeaPair("host", "" + authResponseBody.get("Bucket") + "." + com.aliyun.openapiutil.Client.getEndpoint(authResponseBody.get("Endpoint"), useAccelerate, _endpointType) + ""),
+                new TeaPair("OSSAccessKeyId", authResponseBody.get("AccessKeyId")),
+                new TeaPair("policy", authResponseBody.get("EncodedPolicy")),
+                new TeaPair("Signature", authResponseBody.get("Signature")),
+                new TeaPair("key", authResponseBody.get("ObjectKey")),
+                new TeaPair("file", fileObj),
+                new TeaPair("success_action_status", "201")
+            );
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
+            id3MetaVerifyWithOCRReq.certNationalFile = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
+        }
+
+        Id3MetaVerifyWithOCRResponse id3MetaVerifyWithOCRResp = this.id3MetaVerifyWithOCRWithOptions(id3MetaVerifyWithOCRReq, runtime);
+        return id3MetaVerifyWithOCRResp;
     }
 
     /**
@@ -2849,6 +5393,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.faceGuardOutput)) {
             query.put("FaceGuardOutput", request.faceGuardOutput);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.h5DegradeConfirmBtn)) {
+            query.put("H5DegradeConfirmBtn", request.h5DegradeConfirmBtn);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
@@ -3630,6 +6178,210 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Interface Description: Add or modify blacklist rule.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modify Black and White List Policy</p>
+     * 
+     * @param tmpReq ModifyBlackListStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyBlackListStrategyResponse
+     */
+    public ModifyBlackListStrategyResponse modifyBlackListStrategyWithOptions(ModifyBlackListStrategyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyBlackListStrategyShrinkRequest request = new ModifyBlackListStrategyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.blackListStrategy)) {
+            request.blackListStrategyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.blackListStrategy, "BlackListStrategy", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.blackListStrategyShrink)) {
+            query.put("BlackListStrategy", request.blackListStrategyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyBlackListStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBlackListStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Interface Description: Add or modify blacklist rule.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modify Black and White List Policy</p>
+     * 
+     * @param request ModifyBlackListStrategyRequest
+     * @return ModifyBlackListStrategyResponse
+     */
+    public ModifyBlackListStrategyResponse modifyBlackListStrategy(ModifyBlackListStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyBlackListStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST method.</li>
+     * <li>Request Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modify Security Control Strategy</p>
+     * 
+     * @param tmpReq ModifyControlStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyControlStrategyResponse
+     */
+    public ModifyControlStrategyResponse modifyControlStrategyWithOptions(ModifyControlStrategyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyControlStrategyShrinkRequest request = new ModifyControlStrategyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.controlStrategyList)) {
+            request.controlStrategyListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.controlStrategyList, "ControlStrategyList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.controlStrategyListShrink)) {
+            query.put("ControlStrategyList", request.controlStrategyListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyControlStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyControlStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST method.</li>
+     * <li>Request Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modify Security Control Strategy</p>
+     * 
+     * @param request ModifyControlStrategyRequest
+     * @return ModifyControlStrategyResponse
+     */
+    public ModifyControlStrategyResponse modifyControlStrategy(ModifyControlStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyControlStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Information Verification Security Management</p>
+     * 
+     * @param tmpReq ModifyCustomizeFlowStrategyListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCustomizeFlowStrategyListResponse
+     */
+    public ModifyCustomizeFlowStrategyListResponse modifyCustomizeFlowStrategyListWithOptions(ModifyCustomizeFlowStrategyListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyCustomizeFlowStrategyListShrinkRequest request = new ModifyCustomizeFlowStrategyListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.strategyObject)) {
+            request.strategyObjectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.strategyObject, "StrategyObject", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyObjectShrink)) {
+            query.put("StrategyObject", request.strategyObjectShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCustomizeFlowStrategyList"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCustomizeFlowStrategyListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Service Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Information Verification Security Management</p>
+     * 
+     * @param request ModifyCustomizeFlowStrategyListRequest
+     * @return ModifyCustomizeFlowStrategyListResponse
+     */
+    public ModifyCustomizeFlowStrategyListResponse modifyCustomizeFlowStrategyList(ModifyCustomizeFlowStrategyListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCustomizeFlowStrategyListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Request Method: Supports sending requests using HTTPS POST and GET methods.</p>
      * 
      * <b>summary</b> : 
@@ -3771,6 +6523,460 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request URL: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.<blockquote>
+     * <p>Supports setting blacklists for IP, ID number, phone number, bank card number, etc. When a blacklist is hit, the system rejects the request and returns a fixed error code.
+     * Supports setting blacklists for IP, ID number, phone number, bank card number, etc. When a blacklist is hit, the system rejects the request and returns a fixed error code.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Blacklist and Whitelist Policies</p>
+     * 
+     * @param request QueryBlackListStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryBlackListStrategyResponse
+     */
+    public QueryBlackListStrategyResponse queryBlackListStrategyWithOptions(QueryBlackListStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryBlackListStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryBlackListStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request URL: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.<blockquote>
+     * <p>Supports setting blacklists for IP, ID number, phone number, bank card number, etc. When a blacklist is hit, the system rejects the request and returns a fixed error code.
+     * Supports setting blacklists for IP, ID number, phone number, bank card number, etc. When a blacklist is hit, the system rejects the request and returns a fixed error code.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Blacklist and Whitelist Policies</p>
+     * 
+     * @param request QueryBlackListStrategyRequest
+     * @return QueryBlackListStrategyResponse
+     */
+    public QueryBlackListStrategyResponse queryBlackListStrategy(QueryBlackListStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryBlackListStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Request Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Security Control Strategy</p>
+     * 
+     * @param request QueryControlStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryControlStrategyResponse
+     */
+    public QueryControlStrategyResponse queryControlStrategyWithOptions(QueryControlStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryControlStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryControlStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST and GET methods.</li>
+     * <li>Request Address: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Security Control Strategy</p>
+     * 
+     * @param request QueryControlStrategyRequest
+     * @return QueryControlStrategyResponse
+     */
+    public QueryControlStrategyResponse queryControlStrategy(QueryControlStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryControlStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Security Rules: These are rules to ensure system security, such as monitoring for API abuse, account theft, etc. When a threshold is triggered, the system supports alerting.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Custom Flow Control Strategy</p>
+     * 
+     * @param request QueryCustomizeFlowStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCustomizeFlowStrategyResponse
+     */
+    public QueryCustomizeFlowStrategyResponse queryCustomizeFlowStrategyWithOptions(QueryCustomizeFlowStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCustomizeFlowStrategy"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCustomizeFlowStrategyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service Address: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.</li>
+     * <li>Security Rules: These are rules to ensure system security, such as monitoring for API abuse, account theft, etc. When a threshold is triggered, the system supports alerting.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Custom Flow Control Strategy</p>
+     * 
+     * @param request QueryCustomizeFlowStrategyRequest
+     * @return QueryCustomizeFlowStrategyResponse
+     */
+    public QueryCustomizeFlowStrategyResponse queryCustomizeFlowStrategy(QueryCustomizeFlowStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCustomizeFlowStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Scene Configuration</p>
+     * 
+     * @param request QuerySceneConfigsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuerySceneConfigsResponse
+     */
+    public QuerySceneConfigsResponse querySceneConfigsWithOptions(QuerySceneConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySceneConfigs"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySceneConfigsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Scene Configuration</p>
+     * 
+     * @param request QuerySceneConfigsRequest
+     * @return QuerySceneConfigsResponse
+     */
+    public QuerySceneConfigsResponse querySceneConfigs(QuerySceneConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySceneConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Obtain the download link for statistical call data files under the product plan based on query conditions.</p>
+     * <ul>
+     * <li>Method: HTTPS POST</li>
+     * <li>Service Address: cloudauth.aliyuncs.com<blockquote>
+     * <p>The real-person authentication product uses CertifyId to count the number of calls. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Real-Person Download Task</p>
+     * 
+     * @param request QueryVerifyDownloadTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryVerifyDownloadTaskResponse
+     */
+    public QueryVerifyDownloadTaskResponse queryVerifyDownloadTaskWithOptions(QueryVerifyDownloadTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryVerifyDownloadTask"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVerifyDownloadTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Obtain the download link for statistical call data files under the product plan based on query conditions.</p>
+     * <ul>
+     * <li>Method: HTTPS POST</li>
+     * <li>Service Address: cloudauth.aliyuncs.com<blockquote>
+     * <p>The real-person authentication product uses CertifyId to count the number of calls. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Real-Person Download Task</p>
+     * 
+     * @param request QueryVerifyDownloadTaskRequest
+     * @return QueryVerifyDownloadTaskResponse
+     */
+    public QueryVerifyDownloadTaskResponse queryVerifyDownloadTask(QueryVerifyDownloadTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryVerifyDownloadTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Flow Package</p>
+     * 
+     * @param request QueryVerifyFlowPackageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryVerifyFlowPackageResponse
+     */
+    public QueryVerifyFlowPackageResponse queryVerifyFlowPackageWithOptions(QueryVerifyFlowPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryVerifyFlowPackage"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVerifyFlowPackageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com</li>
+     * <li>Request method: HTTPS POST and GET.</li>
+     * <li>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query Flow Package</p>
+     * 
+     * @param request QueryVerifyFlowPackageRequest
+     * @return QueryVerifyFlowPackageResponse
+     */
+    public QueryVerifyFlowPackageResponse queryVerifyFlowPackage(QueryVerifyFlowPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryVerifyFlowPackageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request URL: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.<blockquote>
+     * <p>Real-person authentication products use CertifyId to count call volume. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Call Volume Statistics</p>
+     * 
+     * @param request QueryVerifyInvokeSatisticRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryVerifyInvokeSatisticResponse
+     */
+    public QueryVerifyInvokeSatisticResponse queryVerifyInvokeSatisticWithOptions(QueryVerifyInvokeSatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productProgramList)) {
+            query.put("ProductProgramList", request.productProgramList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneIdList)) {
+            query.put("SceneIdList", request.sceneIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statisticsType)) {
+            query.put("StatisticsType", request.statisticsType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryVerifyInvokeSatistic"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVerifyInvokeSatisticResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request URL: cloudauth.aliyuncs.com</li>
+     * <li>Request Method: HTTPS POST and GET.<blockquote>
+     * <p>Real-person authentication products use CertifyId to count call volume. For ease of reconciliation, please retain the CertifyId field in your system.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Call Volume Statistics</p>
+     * 
+     * @param request QueryVerifyInvokeSatisticRequest
+     * @return QueryVerifyInvokeSatisticResponse
+     */
+    public QueryVerifyInvokeSatisticResponse queryVerifyInvokeSatistic(QueryVerifyInvokeSatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryVerifyInvokeSatisticWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Delete Real Person Whitelist</p>
      * 
@@ -3822,6 +7028,160 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveWhiteListSettingResponse removeWhiteListSetting(RemoveWhiteListSettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeWhiteListSettingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Ant Blockchain Transaction Scenario</p>
+     * 
+     * @param request UpdateAntCloudAuthSceneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAntCloudAuthSceneResponse
+     */
+    public UpdateAntCloudAuthSceneResponse updateAntCloudAuthSceneWithOptions(UpdateAntCloudAuthSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bindMiniProgram)) {
+            query.put("BindMiniProgram", request.bindMiniProgram);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkFileBody)) {
+            query.put("CheckFileBody", request.checkFileBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkFileName)) {
+            query.put("CheckFileName", request.checkFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.miniProgramName)) {
+            query.put("MiniProgramName", request.miniProgramName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneName)) {
+            query.put("SceneName", request.sceneName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storeImage)) {
+            query.put("StoreImage", request.storeImage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAntCloudAuthScene"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAntCloudAuthSceneResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
+     * <ul>
+     * <li>Service address: cloudauth.aliyuncs.com.</li>
+     * <li>Request method: HTTPS POST.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Ant Blockchain Transaction Scenario</p>
+     * 
+     * @param request UpdateAntCloudAuthSceneRequest
+     * @return UpdateAntCloudAuthSceneResponse
+     */
+    public UpdateAntCloudAuthSceneResponse updateAntCloudAuthScene(UpdateAntCloudAuthSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAntCloudAuthSceneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST.</li>
+     * <li>Request URL: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Scene Configuration</p>
+     * 
+     * @param request UpdateSceneConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSceneConfigResponse
+     */
+    public UpdateSceneConfigResponse updateSceneConfigWithOptions(UpdateSceneConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("sceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSceneConfig"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSceneConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Request Method: Supports sending requests via HTTPS POST.</li>
+     * <li>Request URL: cloudauth.aliyuncs.com.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Scene Configuration</p>
+     * 
+     * @param request UpdateSceneConfigRequest
+     * @return UpdateSceneConfigResponse
+     */
+    public UpdateSceneConfigResponse updateSceneConfig(UpdateSceneConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSceneConfigWithOptions(request, runtime);
     }
 
     /**

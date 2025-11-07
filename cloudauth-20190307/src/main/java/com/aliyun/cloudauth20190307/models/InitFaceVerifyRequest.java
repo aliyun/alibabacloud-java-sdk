@@ -226,6 +226,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("FaceGuardOutput")
     public String faceGuardOutput;
 
+    @NameInMap("H5DegradeConfirmBtn")
+    public String h5DegradeConfirmBtn;
+
     /**
      * <p>User\&quot;s IP address.</p>
      * 
@@ -670,6 +673,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getFaceGuardOutput() {
         return this.faceGuardOutput;
+    }
+
+    public InitFaceVerifyRequest setH5DegradeConfirmBtn(String h5DegradeConfirmBtn) {
+        this.h5DegradeConfirmBtn = h5DegradeConfirmBtn;
+        return this;
+    }
+    public String getH5DegradeConfirmBtn() {
+        return this.h5DegradeConfirmBtn;
     }
 
     public InitFaceVerifyRequest setIp(String ip) {
