@@ -73,6 +73,9 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         @NameInMap("Average")
         public Double average;
 
+        @NameInMap("GpuId")
+        public String gpuId;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -105,6 +108,14 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
         public Double getAverage() {
             return this.average;
+        }
+
+        public DescribeMetricLastResponseBodyMetricTotalModelMetricModelListDataPoints setGpuId(String gpuId) {
+            this.gpuId = gpuId;
+            return this;
+        }
+        public String getGpuId() {
+            return this.gpuId;
         }
 
         public DescribeMetricLastResponseBodyMetricTotalModelMetricModelListDataPoints setMaximum(Double maximum) {
