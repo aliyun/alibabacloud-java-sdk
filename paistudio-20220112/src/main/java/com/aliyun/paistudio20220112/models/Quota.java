@@ -37,6 +37,9 @@ public class Quota extends TeaModel {
     @NameInMap("QueueStrategy")
     public String queueStrategy;
 
+    @NameInMap("QuotaCluster")
+    public QuotaCluster quotaCluster;
+
     @NameInMap("QuotaConfig")
     public QuotaConfig quotaConfig;
 
@@ -172,6 +175,14 @@ public class Quota extends TeaModel {
     }
     public String getQueueStrategy() {
         return this.queueStrategy;
+    }
+
+    public Quota setQuotaCluster(QuotaCluster quotaCluster) {
+        this.quotaCluster = quotaCluster;
+        return this;
+    }
+    public QuotaCluster getQuotaCluster() {
+        return this.quotaCluster;
     }
 
     public Quota setQuotaConfig(QuotaConfig quotaConfig) {

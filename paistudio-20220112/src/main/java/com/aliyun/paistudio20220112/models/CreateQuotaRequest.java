@@ -11,6 +11,9 @@ public class CreateQuotaRequest extends TeaModel {
     @NameInMap("AllocateStrategy")
     public String allocateStrategy;
 
+    @NameInMap("ClusterSpec")
+    public ClusterSpec clusterSpec;
+
     /**
      * <strong>example:</strong>
      * <p>this is a test quota</p>
@@ -72,6 +75,14 @@ public class CreateQuotaRequest extends TeaModel {
     }
     public String getAllocateStrategy() {
         return this.allocateStrategy;
+    }
+
+    public CreateQuotaRequest setClusterSpec(ClusterSpec clusterSpec) {
+        this.clusterSpec = clusterSpec;
+        return this;
+    }
+    public ClusterSpec getClusterSpec() {
+        return this.clusterSpec;
     }
 
     public CreateQuotaRequest setDescription(String description) {

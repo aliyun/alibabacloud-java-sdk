@@ -11,7 +11,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-beijing", "pai.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "pai.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "pai.cn-hangzhou.data.aliyun.com"),
             new TeaPair("cn-shanghai", "pai.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "pai.cn-shenzhen.aliyuncs.com"),
             new TeaPair("cn-hongkong", "pai.cn-hongkong.aliyuncs.com"),
@@ -19,12 +19,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("ap-southeast-2", "pai.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "pai.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "pai.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("us-west-1", "pai.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "pai.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "pai.us-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "pai.eu-central-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "pai.me-east-1.aliyuncs.com"),
             new TeaPair("ap-south-1", "pai.ap-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "pai.me-east-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "pai.ap-northeast-1.aliyuncs.com"),
             new TeaPair("cn-qingdao", "pai.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "pai.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "pai.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "pai.cn-zhangjiakou.aliyuncs.com")
         );
         this.checkConfig(config);
@@ -254,6 +257,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.allocateStrategy)) {
             body.put("AllocateStrategy", request.allocateStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterSpec)) {
+            body.put("ClusterSpec", request.clusterSpec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -1840,6 +1847,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Verbose", request.verbose);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -2002,6 +2013,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListQuotasResponse listQuotasWithOptions(ListQuotasRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
+            query.put("ClusterType", request.clusterType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hasResource)) {
             query.put("HasResource", request.hasResource);
         }

@@ -4,6 +4,13 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListQuotasRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>RayCluster</p>
+     */
+    @NameInMap("ClusterType")
+    public String clusterType;
+
     @NameInMap("HasResource")
     public String hasResource;
 
@@ -103,6 +110,14 @@ public class ListQuotasRequest extends TeaModel {
     public static ListQuotasRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQuotasRequest self = new ListQuotasRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListQuotasRequest setClusterType(String clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    public String getClusterType() {
+        return this.clusterType;
     }
 
     public ListQuotasRequest setHasResource(String hasResource) {

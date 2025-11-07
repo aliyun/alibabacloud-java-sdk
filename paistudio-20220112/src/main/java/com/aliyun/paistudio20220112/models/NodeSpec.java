@@ -14,6 +14,9 @@ public class NodeSpec extends TeaModel {
     @NameInMap("Count")
     public Long count;
 
+    @NameInMap("HyperType")
+    public String hyperType;
+
     /**
      * <strong>example:</strong>
      * <p>ecs.g6.4xlarge</p>
@@ -40,6 +43,14 @@ public class NodeSpec extends TeaModel {
     }
     public Long getCount() {
         return this.count;
+    }
+
+    public NodeSpec setHyperType(String hyperType) {
+        this.hyperType = hyperType;
+        return this;
+    }
+    public String getHyperType() {
+        return this.hyperType;
     }
 
     public NodeSpec setType(String type) {

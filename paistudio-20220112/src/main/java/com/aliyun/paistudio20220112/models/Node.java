@@ -31,6 +31,12 @@ public class Node extends TeaModel {
     @NameInMap("DescendantQuotaWorkloadNum")
     public Long descendantQuotaWorkloadNum;
 
+    @NameInMap("DiskCapacity")
+    public Long diskCapacity;
+
+    @NameInMap("DiskPL")
+    public String diskPL;
+
     @NameInMap("GPU")
     public String GPU;
 
@@ -196,6 +202,22 @@ public class Node extends TeaModel {
     }
     public Long getDescendantQuotaWorkloadNum() {
         return this.descendantQuotaWorkloadNum;
+    }
+
+    public Node setDiskCapacity(Long diskCapacity) {
+        this.diskCapacity = diskCapacity;
+        return this;
+    }
+    public Long getDiskCapacity() {
+        return this.diskCapacity;
+    }
+
+    public Node setDiskPL(String diskPL) {
+        this.diskPL = diskPL;
+        return this;
+    }
+    public String getDiskPL() {
+        return this.diskPL;
     }
 
     public Node setGPU(String GPU) {

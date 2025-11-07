@@ -137,6 +137,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("Verbose")
     public Boolean verbose;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ListNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodesRequest self = new ListNodesRequest();
         return TeaModel.build(map, self);
@@ -324,6 +327,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public Boolean getVerbose() {
         return this.verbose;
+    }
+
+    public ListNodesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

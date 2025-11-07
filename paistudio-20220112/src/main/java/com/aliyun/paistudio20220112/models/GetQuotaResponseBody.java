@@ -69,6 +69,9 @@ public class GetQuotaResponseBody extends TeaModel {
     @NameInMap("QueueStrategy")
     public String queueStrategy;
 
+    @NameInMap("QuotaCluster")
+    public QuotaCluster quotaCluster;
+
     @NameInMap("QuotaConfig")
     public QuotaConfig quotaConfig;
 
@@ -233,6 +236,14 @@ public class GetQuotaResponseBody extends TeaModel {
     }
     public String getQueueStrategy() {
         return this.queueStrategy;
+    }
+
+    public GetQuotaResponseBody setQuotaCluster(QuotaCluster quotaCluster) {
+        this.quotaCluster = quotaCluster;
+        return this;
+    }
+    public QuotaCluster getQuotaCluster() {
+        return this.quotaCluster;
     }
 
     public GetQuotaResponseBody setQuotaConfig(QuotaConfig quotaConfig) {
