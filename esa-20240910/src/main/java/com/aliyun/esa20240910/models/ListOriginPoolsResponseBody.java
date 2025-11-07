@@ -258,6 +258,9 @@ public class ListOriginPoolsResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("IpVersionPolicy")
+        public String ipVersionPolicy;
+
         /**
          * <p>Origin name.</p>
          * 
@@ -333,6 +336,14 @@ public class ListOriginPoolsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListOriginPoolsResponseBodyOriginPoolsOrigins setIpVersionPolicy(String ipVersionPolicy) {
+            this.ipVersionPolicy = ipVersionPolicy;
+            return this;
+        }
+        public String getIpVersionPolicy() {
+            return this.ipVersionPolicy;
         }
 
         public ListOriginPoolsResponseBodyOriginPoolsOrigins setName(String name) {

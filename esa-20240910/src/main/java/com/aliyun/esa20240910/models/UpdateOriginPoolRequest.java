@@ -221,6 +221,9 @@ public class UpdateOriginPoolRequest extends TeaModel {
         @NameInMap("Header")
         public Object header;
 
+        @NameInMap("IpVersionPolicy")
+        public String ipVersionPolicy;
+
         /**
          * <p>The name of the origin, which must be unique under one origin pool.</p>
          * 
@@ -288,6 +291,14 @@ public class UpdateOriginPoolRequest extends TeaModel {
         }
         public Object getHeader() {
             return this.header;
+        }
+
+        public UpdateOriginPoolRequestOrigins setIpVersionPolicy(String ipVersionPolicy) {
+            this.ipVersionPolicy = ipVersionPolicy;
+            return this;
+        }
+        public String getIpVersionPolicy() {
+            return this.ipVersionPolicy;
         }
 
         public UpdateOriginPoolRequestOrigins setName(String name) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetApiSchemaUsageResponseBody extends TeaModel {
     /**
+     * <p>The plan ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>esa-site-agknce3n****</p>
      */
@@ -12,6 +14,8 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of files uploaded for schema verification in the plan instance of the website.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -27,6 +31,9 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Usage details for websites.</p>
+     */
     @NameInMap("Usages")
     public java.util.List<GetApiSchemaUsageResponseBodyUsages> usages;
 
@@ -69,6 +76,8 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
 
     public static class GetApiSchemaUsageResponseBodyUsages extends TeaModel {
         /**
+         * <p>The website ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>40000449</p>
          */
@@ -76,6 +85,8 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The website name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -83,6 +94,8 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The number of files uploaded for the website.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

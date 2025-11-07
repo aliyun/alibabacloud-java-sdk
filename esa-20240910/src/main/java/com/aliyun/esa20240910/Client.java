@@ -8208,7 +8208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取架构文件套餐使用情况</p>
+     * <p>Queries the usage of the upload file quota for API security schema verification.</p>
      * 
      * @param request GetApiSchemaUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8244,7 +8244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取架构文件套餐使用情况</p>
+     * <p>Queries the usage of the upload file quota for API security schema verification.</p>
      * 
      * @param request GetApiSchemaUsageRequest
      * @return GetApiSchemaUsageResponse

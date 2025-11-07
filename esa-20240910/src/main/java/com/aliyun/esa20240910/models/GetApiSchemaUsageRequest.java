@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetApiSchemaUsageRequest extends TeaModel {
     /**
+     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1159101787****</p>
      */
@@ -12,6 +14,8 @@ public class GetApiSchemaUsageRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The version of the website.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
