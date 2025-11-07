@@ -818,12 +818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enrich supports two modes:</p>
-     * <ol>
-     * <li>mode1: enter solution_id returned by Search.</li>
-     * <li>mode2: enter journeyParamList.
-     * If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</li>
-     * </ol>
+     * <p>Choose either <code>solution_id</code> or <code>journey_param_list</code> in the parameters, and <code>solution_id</code> needs to be obtained from the Search interface.</p>
      * 
      * <b>summary</b> : 
      * <p>Search-Enrich</p>
@@ -899,12 +894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enrich supports two modes:</p>
-     * <ol>
-     * <li>mode1: enter solution_id returned by Search.</li>
-     * <li>mode2: enter journeyParamList.
-     * If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</li>
-     * </ol>
+     * <p>Choose either <code>solution_id</code> or <code>journey_param_list</code> in the parameters, and <code>solution_id</code> needs to be obtained from the Search interface.</p>
      * 
      * <b>summary</b> : 
      * <p>Search-Enrich</p>

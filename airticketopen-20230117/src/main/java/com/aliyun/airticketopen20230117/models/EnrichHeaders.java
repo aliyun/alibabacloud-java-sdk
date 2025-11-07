@@ -8,7 +8,7 @@ public class EnrichHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>access token</p>
+     * <p>access_token</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class EnrichHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
-     * <p>language code, defaults to the buyer\&quot;s account configuration</p>
+     * <p>Multi-language, default is based on the buyer\&quot;s account configuration</p>
      * 
      * <strong>example:</strong>
      * <p>en_US</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue extends TeaModel {
     /**
-     * <p>checked baggage quantity</p>
+     * <p>Number of checked baggage pieces</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -14,7 +14,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer baggageAmount;
 
     /**
-     * <p>checked baggage weight</p>
+     * <p>Weight of checked baggage</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,16 +23,16 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer baggageWeight;
 
     /**
-     * <p>checked baggage weight unit</p>
+     * <p>Unit of checked baggage weight (KG)</p>
      * 
      * <strong>example:</strong>
-     * <p>kg</p>
+     * <p>KG</p>
      */
     @NameInMap("baggage_weight_unit")
     public String baggageWeightUnit;
 
     /**
-     * <p>Whether the weight is for all baggages</p>
+     * <p>Whether the weight applies to all checked baggage</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Boolean isAllWeight;
 
     /**
-     * <p>carry-on baggage quantity</p>
+     * <p>Number of carry-on baggage pieces</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryOnAmount;
 
     /**
-     * <p>carry-on baggage weight</p>
+     * <p>Weight of carry-on baggage</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -59,16 +59,16 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryOnWeight;
 
     /**
-     * <p>carry-on baggage weight unit</p>
+     * <p>Carry-on luggage weight unit KG</p>
      * 
      * <strong>example:</strong>
-     * <p>kg</p>
+     * <p>KG</p>
      */
     @NameInMap("carry_on_weight_unit")
     public String carryOnWeightUnit;
 
     /**
-     * <p>Whether the weight is for all baggages</p>
+     * <p>Whether it is the total carry-on luggage weight</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,6 +77,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Boolean isAllCarryOnWeight;
 
     /**
+     * <p>Carry-on luggage length (unit: centimeters)</p>
+     * 
      * <strong>example:</strong>
      * <p>55</p>
      */
@@ -84,6 +86,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryLength;
 
     /**
+     * <p>Carry-on luggage width (unit: centimeters)</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -91,6 +95,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryWidth;
 
     /**
+     * <p>Carry-on luggage height (unit: centimeters)</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -98,6 +104,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryHeight;
 
     /**
+     * <p>Sum of three sides of the Carry-on luggage (unit: centimeters)</p>
+     * 
      * <strong>example:</strong>
      * <p>115</p>
      */
@@ -105,6 +113,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carrySumOfLengthWidthHeight;
 
     /**
+     * <p>Check-in luggage length (unit: centimeters)</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -112,6 +122,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer length;
 
     /**
+     * <p>Check-in luggage width (unit: centimeters)</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -119,6 +131,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer width;
 
     /**
+     * <p>Check-in luggage height (unit: centimeters)</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -126,6 +140,8 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer height;
 
     /**
+     * <p>Sum of three sides of the Check-in luggage (unit: centimeters)</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */

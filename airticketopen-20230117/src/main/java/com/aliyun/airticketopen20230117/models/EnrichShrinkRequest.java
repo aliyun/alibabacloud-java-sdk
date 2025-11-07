@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnrichShrinkRequest extends TeaModel {
     /**
-     * <p>adult passenger amount 1-9</p>
+     * <p>Number of adult passengers (1-9)</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,15 +14,7 @@ public class EnrichShrinkRequest extends TeaModel {
     public Integer adults;
 
     /**
-     * <p>cabin class</p>
-     * <ol>
-     * <li><strong>ALL_CABIN</strong> : all cabin class</li>
-     * <li><strong>Y</strong> : economy class</li>
-     * <li><strong>FC</strong> : first class and business class</li>
-     * <li><strong>S</strong> : premium economy class</li>
-     * <li><strong>YS</strong> : economy class and premium economy class</li>
-     * <li><strong>YSC</strong> : economy class, premium economy class and business class</li>
-     * </ol>
+     * <p>Cabin class: ALL_CABIN: All cabin classes; Y: Economy; FC: First Class and Business Class; S: Premium Economy; YS: Economy and Premium Economy; YSC: Economy, Premium Economy, and Business Class;</p>
      * 
      * <strong>example:</strong>
      * <p>ALL_CABIN</p>
@@ -31,7 +23,7 @@ public class EnrichShrinkRequest extends TeaModel {
     public String cabinClass;
 
     /**
-     * <p>child passenger amount 0-9</p>
+     * <p>Number of child passengers (0-9)</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,7 +32,7 @@ public class EnrichShrinkRequest extends TeaModel {
     public Integer children;
 
     /**
-     * <p>infant passenger amount 0-9</p>
+     * <p>Number of infant passengers (0-9)</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,13 +41,13 @@ public class EnrichShrinkRequest extends TeaModel {
     public Integer infants;
 
     /**
-     * <p>journey list</p>
+     * <p>Trip information</p>
      */
     @NameInMap("journey_param_list")
     public String journeyParamListShrink;
 
     /**
-     * <p>solution_id returned by Search</p>
+     * <p>The <code>solution_id</code> returned by the Search interface</p>
      * 
      * <strong>example:</strong>
      * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
