@@ -253,6 +253,13 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_ep_high_availability_check_description</p>
+         */
+        @NameInMap("DescriptionCode")
+        public String descriptionCode;
+
         @NameInMap("RecommendationList")
         public java.util.List<DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList> recommendationList;
 
@@ -306,6 +313,14 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeNisInspectionReportCheckItemsResponseBodyCheckItemList setDescriptionCode(String descriptionCode) {
+            this.descriptionCode = descriptionCode;
+            return this;
+        }
+        public String getDescriptionCode() {
+            return this.descriptionCode;
         }
 
         public DescribeNisInspectionReportCheckItemsResponseBodyCheckItemList setRecommendationList(java.util.List<DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList> recommendationList) {
