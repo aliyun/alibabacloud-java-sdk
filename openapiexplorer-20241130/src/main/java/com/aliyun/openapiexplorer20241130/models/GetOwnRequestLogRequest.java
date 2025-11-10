@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOwnRequestLogRequest extends TeaModel {
     /**
+     * <p>The request ID returned by the API for which you want to query the log. The value is the universally unique identifiers (UUID) of the API request and must be uppercase.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

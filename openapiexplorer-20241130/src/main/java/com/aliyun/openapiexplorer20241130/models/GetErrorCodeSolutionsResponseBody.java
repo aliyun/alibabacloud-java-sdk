@@ -4,9 +4,18 @@ package com.aliyun.openapiexplorer20241130.models;
 import com.aliyun.tea.*;
 
 public class GetErrorCodeSolutionsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A707AFA8-1A4C-5B2A-A165-8436C1EA38DB</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The solutions. Not all error codes have corresponding solutions. You can submit a ticket or use OpenAPI Explorer to contact technical support if necessary.</p>
+     */
     @NameInMap("solutions")
     public java.util.List<GetErrorCodeSolutionsResponseBodySolutions> solutions;
 
@@ -32,26 +41,48 @@ public class GetErrorCodeSolutionsResponseBody extends TeaModel {
     }
 
     public static class GetErrorCodeSolutionsResponseBodySolutions extends TeaModel {
+        /**
+         * <p>The content of the solution, which is in the markdown format.</p>
+         */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>0017-00000502</p>
          */
         @NameInMap("errorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource is not in a valid state for the operation.</p>
+         */
         @NameInMap("errorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The code of the product to which the solution belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
+         */
         @NameInMap("product")
         public String product;
 
+        /**
+         * <p>The name of the product to which the solution belongs.</p>
+         */
         @NameInMap("productName")
         public String productName;
 
         /**
+         * <p>The solution ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0017-00000502</p>
          */

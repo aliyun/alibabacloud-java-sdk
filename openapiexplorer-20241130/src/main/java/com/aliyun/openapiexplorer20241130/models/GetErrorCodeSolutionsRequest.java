@@ -4,10 +4,17 @@ package com.aliyun.openapiexplorer20241130.models;
 import com.aliyun.tea.*;
 
 public class GetErrorCodeSolutionsRequest extends TeaModel {
+    /**
+     * <p>The language of the solution. Valid values: zh-CN and en-US. Not all of the solutions are available in English. If you set this parameter to en-US, but the corresponding solution is actually not available in English, no response is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("acceptLanguage")
     public String acceptLanguage;
 
     /**
+     * <p>The error code based on which you want to query a solution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,8 @@ public class GetErrorCodeSolutionsRequest extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message for which you want to query a solution. This parameter must be configured together with the errorCode parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>An error occurred while processing your request.</p>
      */
@@ -24,6 +33,12 @@ public class GetErrorCodeSolutionsRequest extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The product code. You can use one of the following methods to query a product code:</p>
+     * <ul>
+     * <li>Call the GetRequestLog operation to query a product code from the response.</li>
+     * <li>Query the code of a product in the OpenAPI Explorer URL of the product. For example, the OpenAPI Explorer URL of Short Message Service (SMS) is <a href="https://api.alibabacloud.com/product/Dysmsapi">https://api.alibabacloud.com/product/Dysmsapi</a>. Therefore, the product code of SMS is Dysmsapi.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>oss</p>
      */
