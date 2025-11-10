@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>Specified list of regionIds to filter (comma-separated).</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      * 
@@ -15,6 +17,8 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
+     * <p>Maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      * 
@@ -25,6 +29,8 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Query token.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      * 
@@ -35,6 +41,8 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>List of instance IDs (comma-separated)</p>
+     * 
      * <strong>example:</strong>
      * <p>rw-00001,rw-00002,rw-00003</p>
      * 
@@ -45,6 +53,8 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String prometheusInstanceIds;
 
     /**
+     * <p>Instance name (partial match supported)</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      * 
@@ -55,6 +65,8 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String prometheusInstanceName;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2bhocin5e2na</p>
      */
@@ -62,6 +74,8 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Resource type of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>Prometheus</p>
      * 
@@ -71,10 +85,15 @@ public class ListPrometheusInstancesShrinkRequest extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>List of tags.</p>
+     */
     @NameInMap("tag")
     public String tagShrink;
 
     /**
+     * <p>Instance version: V1 or V2</p>
+     * 
      * <strong>example:</strong>
      * <p>V2</p>
      * 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUmodelRequest extends TeaModel {
     /**
+     * <p>Description.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace test</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListAlertActionsShrinkRequest extends TeaModel {
+    /**
+     * <p>Unique identifier for the action integration.</p>
+     */
     @NameInMap("alertActionIds")
     public String alertActionIdsShrink;
 
     /**
+     * <p>Name of the action integration.</p>
+     * 
      * <strong>example:</strong>
      * <p>testName</p>
      */
@@ -15,6 +20,8 @@ public class ListAlertActionsShrinkRequest extends TeaModel {
     public String alertActionName;
 
     /**
+     * <p>Page number. Default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListAlertActionsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size. Default is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -29,6 +38,8 @@ public class ListAlertActionsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Type of the action integration.</p>
+     * 
      * <strong>example:</strong>
      * <p>FC</p>
      */

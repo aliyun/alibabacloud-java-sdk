@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsShrinkRequest extends TeaModel {
     /**
+     * <p>Filter by RegionID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou,cn-beijing</p>
      */
@@ -12,6 +14,8 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
+     * <p>Maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      * 
@@ -22,6 +26,8 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Query token.</p>
+     * 
      * <strong>example:</strong>
      * <p>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</p>
      * 
@@ -32,6 +38,8 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>List of Prometheus view instance IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>view-xxx</p>
      */
@@ -39,6 +47,8 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String prometheusViewIds;
 
     /**
+     * <p>Prometheus view name.</p>
+     * 
      * <strong>example:</strong>
      * <p>view1</p>
      */
@@ -46,6 +56,8 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String prometheusViewName;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm3gn5i6bigbi</p>
      */
@@ -53,16 +65,23 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>PROMETHEUSVIEW</p>
      */
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>List of tags.</p>
+     */
     @NameInMap("tag")
     public String tagShrink;
 
     /**
+     * <p>Instance version: V1 or V2</p>
+     * 
      * <strong>example:</strong>
      * <p>V2</p>
      */
@@ -70,6 +89,8 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String version;
 
     /**
+     * <p>Workspace name</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */

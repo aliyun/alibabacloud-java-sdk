@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUmodelResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>123-0F43-23423-AC43-34234</p>
      */
@@ -12,6 +14,8 @@ public class CreateUmodelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Workspace name</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusVirtualInstancesRequest extends TeaModel {
     /**
+     * <p>Optional cloud product</p>
+     * 
      * <strong>example:</strong>
      * <p>ack-csi-fuse</p>
      */

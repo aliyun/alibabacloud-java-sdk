@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateIntegrationPolicyResponseBody extends TeaModel {
     /**
+     * <p>Whether it is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("created")
     public Boolean created;
 
+    /**
+     * <p>Uploaded policy.</p>
+     */
     @NameInMap("policy")
     public CreateIntegrationPolicyResponseBodyPolicy policy;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
      */
@@ -52,6 +59,8 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
 
     public static class CreateIntegrationPolicyResponseBodyPolicy extends TeaModel {
         /**
+         * <p>Entity group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
          */
@@ -59,6 +68,8 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String entityGroupId;
 
         /**
+         * <p>Policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>policy-14c8e9a29b0a46da843f8781471062ff</p>
          */
@@ -66,6 +77,8 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>Policy name.</p>
+         * 
          * <strong>example:</strong>
          * <p>metrics-inner-manage</p>
          */
@@ -73,6 +86,8 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String policyName;
 
         /**
+         * <p>Policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CS</p>
          */
@@ -80,6 +95,8 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String policyType;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
          */
@@ -87,12 +104,20 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>u1234567</p>
          */
         @NameInMap("userId")
         public String userId;
 
+        /**
+         * <p>The workspace where the Policy resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prometheus</p>
+         */
         @NameInMap("workspace")
         public String workspace;
 

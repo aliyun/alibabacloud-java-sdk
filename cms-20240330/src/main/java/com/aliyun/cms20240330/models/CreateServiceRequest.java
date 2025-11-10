@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
     /**
+     * <p>Extended attributes.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;language&quot;:&quot;java&quot;}</p>
      */
     @NameInMap("attributes")
     public String attributes;
 
+    /**
+     * <p>Service description, only valid when <code>serviceType=RUM</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mag测试应用</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Display name, only valid when <code>serviceType=RUM</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mag测试应用</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>Application ID, generally not required to be specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>bx3udsi5ie@ed2ba6beebdb6de</p>
      */
@@ -25,6 +41,7 @@ public class CreateServiceRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>Service name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +51,8 @@ public class CreateServiceRequest extends TeaModel {
     public String serviceName;
 
     /**
+     * <p>Service status, not required for service creation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Created</p>
      */
@@ -41,6 +60,7 @@ public class CreateServiceRequest extends TeaModel {
     public String serviceStatus;
 
     /**
+     * <p>Service type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -27,8 +27,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to create a site monitoring task</p>
+     * 
      * <b>summary</b> : 
-     * <p>安装接入组件，代表进行一次接入</p>
+     * <p>Install the access component, representing a single access attempt</p>
      * 
      * @param request CreateAddonReleaseRequest
      * @param headers map
@@ -97,8 +100,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to create a site monitoring task</p>
+     * 
      * <b>summary</b> : 
-     * <p>安装接入组件，代表进行一次接入</p>
+     * <p>Install the access component, representing a single access attempt</p>
      * 
      * @param request CreateAddonReleaseRequest
      * @return CreateAddonReleaseResponse
@@ -111,7 +117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建聚合任务组</p>
+     * <p>Create Aggregation Task Group</p>
      * 
      * @param request CreateAggTaskGroupRequest
      * @param headers map
@@ -211,7 +217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建聚合任务组</p>
+     * <p>Create Aggregation Task Group</p>
      * 
      * @param request CreateAggTaskGroupRequest
      * @return CreateAggTaskGroupResponse
@@ -224,7 +230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建EntityStore相关存储</p>
+     * <p>Create storage related to EntityStore</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -250,7 +256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建EntityStore相关存储</p>
+     * <p>Create storage related to EntityStore</p>
      * @return CreateEntityStoreResponse
      */
     public CreateEntityStoreResponse createEntityStore(String workspaceName) throws Exception {
@@ -260,8 +266,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to support users in creating event integration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建接入中心策略</p>
+     * <p>Create Access Center Policy</p>
      * 
      * @param request CreateIntegrationPolicyRequest
      * @param headers map
@@ -314,8 +323,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is used to support users in creating event integration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建接入中心策略</p>
+     * <p>Create Access Center Policy</p>
      * 
      * @param request CreateIntegrationPolicyRequest
      * @return CreateIntegrationPolicyResponse
@@ -328,7 +340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Prometheus监控实例</p>
+     * <p>Create a Prometheus monitoring instance</p>
      * 
      * @param request CreatePrometheusInstanceRequest
      * @param headers map
@@ -406,7 +418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Prometheus监控实例</p>
+     * <p>Create a Prometheus monitoring instance</p>
      * 
      * @param request CreatePrometheusInstanceRequest
      * @return CreatePrometheusInstanceResponse
@@ -418,8 +430,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to create a site monitoring task</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建prometheus视图</p>
+     * <p>Create Prometheus View</p>
      * 
      * @param request CreatePrometheusViewRequest
      * @param headers map
@@ -488,8 +503,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to create a site monitoring task</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建prometheus视图</p>
+     * <p>Create Prometheus View</p>
      * 
      * @param request CreatePrometheusViewRequest
      * @return CreatePrometheusViewResponse
@@ -501,8 +519,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create a Prometheus monitoring virtual instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Prometheus监控实例</p>
+     * <p>Create Prometheus Monitoring Instance</p>
      * 
      * @param request CreatePrometheusVirtualInstanceRequest
      * @param headers map
@@ -535,8 +556,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create a Prometheus monitoring virtual instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Prometheus监控实例</p>
+     * <p>Create Prometheus Monitoring Instance</p>
      * 
      * @param request CreatePrometheusVirtualInstanceRequest
      * @return CreatePrometheusVirtualInstanceResponse
@@ -549,7 +573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Service</p>
+     * <p>Create Service</p>
      * 
      * @param request CreateServiceRequest
      * @param headers map
@@ -607,7 +631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Service</p>
+     * <p>Create Service</p>
      * 
      * @param request CreateServiceRequest
      * @return CreateServiceResponse
@@ -620,7 +644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建票据</p>
+     * <p>Create Ticket</p>
      * 
      * @param request CreateTicketRequest
      * @param headers map
@@ -658,7 +682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建票据</p>
+     * <p>Create Ticket</p>
      * 
      * @param request CreateTicketRequest
      * @return CreateTicketResponse
@@ -670,8 +694,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create Umodel configuration in the specified workspace</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Umodel配置</p>
+     * <p>Create Umodel configuration</p>
      * 
      * @param request CreateUmodelRequest
      * @param headers map
@@ -704,8 +731,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create Umodel configuration in the specified workspace</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Umodel配置</p>
+     * <p>Create Umodel configuration</p>
      * 
      * @param request CreateUmodelRequest
      * @return CreateUmodelResponse
@@ -718,7 +748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除addon release信息</p>
+     * <p>Delete addon release information</p>
      * 
      * @param request DeleteAddonReleaseRequest
      * @param headers map
@@ -760,7 +790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除addon release信息</p>
+     * <p>Delete addon release information</p>
      * 
      * @param request DeleteAddonReleaseRequest
      * @return DeleteAddonReleaseResponse
@@ -773,7 +803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除聚合任务组</p>
+     * <p>Delete Aggregation Task Group</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -799,7 +829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除聚合任务组</p>
+     * <p>Delete Aggregation Task Group</p>
      * @return DeleteAggTaskGroupResponse
      */
     public DeleteAggTaskGroupResponse deleteAggTaskGroup(String instanceId, String groupId) throws Exception {
@@ -810,7 +840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除EntityStore相关存储</p>
+     * <p>Delete EntityStore related storage</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -836,7 +866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除EntityStore相关存储</p>
+     * <p>Delete EntityStore related storage</p>
      * @return DeleteEntityStoreResponse
      */
     public DeleteEntityStoreResponse deleteEntityStore(String workspaceName) throws Exception {
@@ -847,7 +877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除接入中心策略</p>
+     * <p>Delete Access Center Policy</p>
      * 
      * @param request DeleteIntegrationPolicyRequest
      * @param headers map
@@ -881,7 +911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除接入中心策略</p>
+     * <p>Delete Access Center Policy</p>
      * 
      * @param request DeleteIntegrationPolicyRequest
      * @return DeleteIntegrationPolicyResponse
@@ -893,8 +923,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete a Prometheus instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除prom实例</p>
+     * <p>Delete prom instance</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -919,8 +952,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete a Prometheus instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除prom实例</p>
+     * <p>Delete prom instance</p>
      * @return DeletePrometheusInstanceResponse
      */
     public DeletePrometheusInstanceResponse deletePrometheusInstance(String prometheusInstanceId) throws Exception {
@@ -930,8 +966,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete prometheus view instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除prometheus视图实例</p>
+     * <p>Delete prometheus view instance</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -956,8 +995,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete prometheus view instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除prometheus视图实例</p>
+     * <p>Delete prometheus view instance</p>
      * @return DeletePrometheusViewResponse
      */
     public DeletePrometheusViewResponse deletePrometheusView(String prometheusViewId) throws Exception {
@@ -968,7 +1010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Service</p>
+     * <p>Delete Service</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -994,7 +1036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Service</p>
+     * <p>Delete Service</p>
      * @return DeleteServiceResponse
      */
     public DeleteServiceResponse deleteService(String workspace, String serviceId) throws Exception {
@@ -1004,8 +1046,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete the Umodel under the specified workspace</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Umodel配置信息</p>
+     * <p>Delete Umodel configuration information</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1030,8 +1075,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete the Umodel under the specified workspace</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除Umodel配置信息</p>
+     * <p>Delete Umodel configuration information</p>
      * @return DeleteUmodelResponse
      */
     public DeleteUmodelResponse deleteUmodel(String workspace) throws Exception {
@@ -1042,7 +1090,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Umodel Elements</p>
+     * <p>删除Umodel配置信息</p>
+     * 
+     * @param request DeleteUmodelCommonSchemaRefRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUmodelCommonSchemaRefResponse
+     */
+    public DeleteUmodelCommonSchemaRefResponse deleteUmodelCommonSchemaRefWithOptions(String workspace, DeleteUmodelCommonSchemaRefRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            query.put("group", request.group);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUmodelCommonSchemaRef"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/umodel/common-schema-ref"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUmodelCommonSchemaRefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Umodel配置信息</p>
+     * 
+     * @param request DeleteUmodelCommonSchemaRefRequest
+     * @return DeleteUmodelCommonSchemaRefResponse
+     */
+    public DeleteUmodelCommonSchemaRefResponse deleteUmodelCommonSchemaRef(String workspace, DeleteUmodelCommonSchemaRefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteUmodelCommonSchemaRefWithOptions(workspace, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Delete the Umodel Data under a specified workspace</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Umodel Elements</p>
      * 
      * @param request DeleteUmodelDataRequest
      * @param headers map
@@ -1083,8 +1181,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete the Umodel Data under a specified workspace</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除 Umodel Elements</p>
+     * <p>Delete Umodel Elements</p>
      * 
      * @param request DeleteUmodelDataRequest
      * @return DeleteUmodelDataResponse
@@ -1097,7 +1198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除工作空间</p>
+     * <p>Delete Workspace</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1123,7 +1224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除工作空间</p>
+     * <p>Delete Workspace</p>
      * @return DeleteWorkspaceResponse
      */
     public DeleteWorkspaceResponse deleteWorkspace(String workspaceName) throws Exception {
@@ -1134,7 +1235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看addon release(查看接入状态)</p>
+     * <p>Check addon release (view connection status)</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1160,7 +1261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看addon release(查看接入状态)</p>
+     * <p>Check addon release (view connection status)</p>
      * @return GetAddonReleaseResponse
      */
     public GetAddonReleaseResponse getAddonRelease(String releaseName, String policyId) throws Exception {
@@ -1171,7 +1272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述聚合任务组</p>
+     * <p>Describes the aggregation task group</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1197,7 +1298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>描述聚合任务组</p>
+     * <p>Describes the aggregation task group</p>
      * @return GetAggTaskGroupResponse
      */
     public GetAggTaskGroupResponse getAggTaskGroup(String instanceId, String groupId) throws Exception {
@@ -1208,7 +1309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取EntityStore相关存储信息</p>
+     * <p>Get EntityStore related storage information</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1234,7 +1335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取EntityStore相关存储信息</p>
+     * <p>Get EntityStore related storage information</p>
      * @return GetEntityStoreResponse
      */
     public GetEntityStoreResponse getEntityStore(String workspaceName) throws Exception {
@@ -1245,7 +1346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定Workspace下的实体和关系数据，返回结果显示某时间区间中的实体数据（返回结果压缩后传输）。</p>
+     * <p>Query the entity and relationship data under a specified Workspace, returning the entity data within a certain time range (the returned result is transmitted after compression).</p>
      * 
      * @param request GetEntityStoreDataRequest
      * @param headers GetEntityStoreDataHeaders
@@ -1296,7 +1397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定Workspace下的实体和关系数据，返回结果显示某时间区间中的实体数据（返回结果压缩后传输）。</p>
+     * <p>Query the entity and relationship data under a specified Workspace, returning the entity data within a certain time range (the returned result is transmitted after compression).</p>
      * 
      * @param request GetEntityStoreDataRequest
      * @return GetEntityStoreDataResponse
@@ -1309,7 +1410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询接入中心策略列表信息</p>
+     * <p>Query the list of access center policies</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1335,7 +1436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询接入中心策略列表信息</p>
+     * <p>Query the list of access center policies</p>
      * @return GetIntegrationPolicyResponse
      */
     public GetIntegrationPolicyResponse getIntegrationPolicy(String policyId) throws Exception {
@@ -1345,8 +1446,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve details of a Prometheus instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定环境实例</p>
+     * <p>Query the instance in a specified environment</p>
      * 
      * @param request GetPrometheusInstanceRequest
      * @param headers map
@@ -1383,8 +1487,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve details of a Prometheus instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定环境实例</p>
+     * <p>Query the instance in a specified environment</p>
      * 
      * @param request GetPrometheusInstanceRequest
      * @return GetPrometheusInstanceResponse
@@ -1396,8 +1503,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query a specified Prometheus view instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定Prometheus视图实例</p>
+     * <p>Query a specified Prometheus view instance</p>
      * 
      * @param request GetPrometheusViewRequest
      * @param headers map
@@ -1434,8 +1544,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query a specified Prometheus view instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询指定Prometheus视图实例</p>
+     * <p>Query a specified Prometheus view instance</p>
      * 
      * @param request GetPrometheusViewRequest
      * @return GetPrometheusViewResponse
@@ -1448,7 +1561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 Service</p>
+     * <p>Query Service</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1474,7 +1587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 Service</p>
+     * <p>Query Service</p>
      * @return GetServiceResponse
      */
     public GetServiceResponse getService(String workspace, String serviceId) throws Exception {
@@ -1485,7 +1598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用可观测实例</p>
+     * <p>Get Application Observability Instance</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1511,7 +1624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用可观测实例</p>
+     * <p>Get Application Observability Instance</p>
      * @return GetServiceObservabilityResponse
      */
     public GetServiceObservabilityResponse getServiceObservability(String workspace, String type) throws Exception {
@@ -1521,8 +1634,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get Umodel configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Umodel配置信息</p>
+     * <p>Get Umodel configuration information</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1547,8 +1663,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get Umodel configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Umodel配置信息</p>
+     * <p>Get Umodel configuration information</p>
      * @return GetUmodelResponse
      */
     public GetUmodelResponse getUmodel(String workspace) throws Exception {
@@ -1559,7 +1678,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取相关联的 Umodel 图数据</p>
+     * <p>获取Umodel配置信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUmodelCommonSchemaRefResponse
+     */
+    public GetUmodelCommonSchemaRefResponse getUmodelCommonSchemaRefWithOptions(String workspace, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUmodelCommonSchemaRef"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/umodel/common-schema-ref"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUmodelCommonSchemaRefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Umodel配置信息</p>
+     * @return GetUmodelCommonSchemaRefResponse
+     */
+    public GetUmodelCommonSchemaRefResponse getUmodelCommonSchemaRef(String workspace) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getUmodelCommonSchemaRefWithOptions(workspace, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Find Umodel</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieve associated Umodel graph data</p>
      * 
      * @param request GetUmodelDataRequest
      * @param headers map
@@ -1598,8 +1757,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Find Umodel</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取相关联的 Umodel 图数据</p>
+     * <p>Retrieve associated Umodel graph data</p>
      * 
      * @param request GetUmodelDataRequest
      * @return GetUmodelDataResponse
@@ -1612,7 +1774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作空间</p>
+     * <p>Get Workspace</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1638,7 +1800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作空间</p>
+     * <p>Get Workspace</p>
      * @return GetWorkspaceResponse
      */
     public GetWorkspaceResponse getWorkspace(String workspaceName) throws Exception {
@@ -1648,8 +1810,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of access configurations</p>
+     * 
      * <b>summary</b> : 
-     * <p>addon的release列表</p>
+     * <p>List of addon releases</p>
      * 
      * @param request ListAddonReleasesRequest
      * @param headers map
@@ -1686,8 +1851,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the list of access configurations</p>
+     * 
      * <b>summary</b> : 
-     * <p>addon的release列表</p>
+     * <p>List of addon releases</p>
      * 
      * @param request ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
@@ -1700,7 +1868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举聚合任务组</p>
+     * <p>List Aggregation Task Groups</p>
      * 
      * @param tmpReq ListAggTaskGroupsRequest
      * @param headers map
@@ -1768,7 +1936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举聚合任务组</p>
+     * <p>List Aggregation Task Groups</p>
      * 
      * @param request ListAggTaskGroupsRequest
      * @return ListAggTaskGroupsResponse
@@ -1781,7 +1949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询告警动作</p>
+     * <p>Query Alert Actions</p>
      * 
      * @param tmpReq ListAlertActionsRequest
      * @param headers map
@@ -1837,7 +2005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询告警动作</p>
+     * <p>Query Alert Actions</p>
      * 
      * @param request ListAlertActionsRequest
      * @return ListAlertActionsResponse
@@ -1849,8 +2017,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query integration list</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询接入中心策略列表信息</p>
+     * <p>Query Access Center Policy List Information</p>
      * 
      * @param tmpReq ListIntegrationPoliciesRequest
      * @param headers map
@@ -1941,8 +2112,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query integration list</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询接入中心策略列表信息</p>
+     * <p>Query Access Center Policy List Information</p>
      * 
      * @param request ListIntegrationPoliciesRequest
      * @return ListIntegrationPoliciesResponse
@@ -1955,7 +2129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取接入中心策略的存储要求信息</p>
+     * <p>Get storage requirement information for the access center policy</p>
      * 
      * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
      * @param headers map
@@ -1997,7 +2171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取接入中心策略的存储要求信息</p>
+     * <p>Get storage requirement information for the access center policy</p>
      * 
      * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
      * @return ListIntegrationPolicyCustomScrapeJobRulesResponse
@@ -2009,8 +2183,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>策略大盘列表</p>
+     * <p>Policy Dashboard List</p>
      * 
      * @param request ListIntegrationPolicyDashboardsRequest
      * @param headers map
@@ -2022,6 +2199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.addonName)) {
             query.put("addonName", request.addonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
@@ -2047,8 +2228,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>策略大盘列表</p>
+     * <p>Policy Dashboard List</p>
      * 
      * @param request ListIntegrationPolicyDashboardsRequest
      * @return ListIntegrationPolicyDashboardsResponse
@@ -2060,8 +2244,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取接入中心策略的PodMonitor资源</p>
+     * <p>Get PodMonitor Resources of Access Center Policy</p>
      * 
      * @param request ListIntegrationPolicyPodMonitorsRequest
      * @param headers map
@@ -2102,8 +2289,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取接入中心策略的PodMonitor资源</p>
+     * <p>Get PodMonitor Resources of Access Center Policy</p>
      * 
      * @param request ListIntegrationPolicyPodMonitorsRequest
      * @return ListIntegrationPolicyPodMonitorsResponse
@@ -2115,8 +2305,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>During the effective period of the policy, all alarms within the application group will no longer send notifications.</p>
+     * <p>This article provides an example of creating a pause alarm notification policy <code>PauseNotify</code> for the application group <code>7301****</code>. This application group will pause alarms from <code>1622949300000</code> to <code>1623208500000</code> (Beijing Time <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取接入中心策略的存储要求信息</p>
+     * <p>Get Storage Requirements Information for Access Center Policy</p>
      * 
      * @param request ListIntegrationPolicyStorageRequirementsRequest
      * @param headers map
@@ -2157,8 +2351,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>During the effective period of the policy, all alarms within the application group will no longer send notifications.</p>
+     * <p>This article provides an example of creating a pause alarm notification policy <code>PauseNotify</code> for the application group <code>7301****</code>. This application group will pause alarms from <code>1622949300000</code> to <code>1623208500000</code> (Beijing Time <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取接入中心策略的存储要求信息</p>
+     * <p>Get Storage Requirements Information for Access Center Policy</p>
      * 
      * @param request ListIntegrationPolicyStorageRequirementsRequest
      * @return ListIntegrationPolicyStorageRequirementsResponse
@@ -2170,8 +2368,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of Prometheus instance dashboards.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Prometheus实例大盘列表</p>
+     * <p>Get Prometheus Instance Dashboard List</p>
      * 
      * @param request ListPrometheusDashboardsRequest
      * @param headers map
@@ -2208,8 +2409,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of Prometheus instance dashboards.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Prometheus实例大盘列表</p>
+     * <p>Get Prometheus Instance Dashboard List</p>
      * 
      * @param request ListPrometheusDashboardsRequest
      * @return ListPrometheusDashboardsResponse
@@ -2221,8 +2425,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of Prometheus instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Prometheus实例信息列表</p>
+     * <p>Get the list of Prometheus instance information</p>
      * 
      * @param tmpReq ListPrometheusInstancesRequest
      * @param headers map
@@ -2293,8 +2500,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the list of Prometheus instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Prometheus实例信息列表</p>
+     * <p>Get the list of Prometheus instance information</p>
      * 
      * @param request ListPrometheusInstancesRequest
      * @return ListPrometheusInstancesResponse
@@ -2306,8 +2516,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve a list of Prometheus view instance information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Prometheus视图实例信息列表</p>
+     * <p>Retrieve a list of Prometheus view instance information</p>
      * 
      * @param tmpReq ListPrometheusViewsRequest
      * @param headers map
@@ -2382,8 +2595,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve a list of Prometheus view instance information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Prometheus视图实例信息列表</p>
+     * <p>Retrieve a list of Prometheus view instance information</p>
      * 
      * @param request ListPrometheusViewsRequest
      * @return ListPrometheusViewsResponse
@@ -2395,8 +2611,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used for creating a site monitoring task</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Prometheus虚拟实例</p>
+     * <p>Get Prometheus Virtual Instance</p>
      * 
      * @param request ListPrometheusVirtualInstancesRequest
      * @param headers map
@@ -2429,8 +2648,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used for creating a site monitoring task</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Prometheus虚拟实例</p>
+     * <p>Get Prometheus Virtual Instance</p>
      * 
      * @param request ListPrometheusVirtualInstancesRequest
      * @return ListPrometheusVirtualInstancesResponse
@@ -2443,7 +2665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源Service</p>
+     * <p>List Resource Services</p>
      * 
      * @param request ListServicesRequest
      * @param headers map
@@ -2485,7 +2707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出资源Service</p>
+     * <p>List Resource Services</p>
      * 
      * @param request ListServicesRequest
      * @return ListServicesResponse
@@ -2498,7 +2720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作空间列表</p>
+     * <p>Get Workspace List</p>
      * 
      * @param tmpReq ListWorkspacesRequest
      * @param headers map
@@ -2554,7 +2776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取工作空间列表</p>
+     * <p>Get Workspace List</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -2567,7 +2789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Create Workspace</p>
      * 
      * @param request PutWorkspaceRequest
      * @param headers map
@@ -2609,7 +2831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Create Workspace</p>
      * 
      * @param request PutWorkspaceRequest
      * @return PutWorkspaceResponse
@@ -2622,7 +2844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级接入组件</p>
+     * <p>Upgrade Access Component</p>
      * 
      * @param request UpdateAddonReleaseRequest
      * @param headers map
@@ -2668,7 +2890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级接入组件</p>
+     * <p>Upgrade Access Component</p>
      * 
      * @param request UpdateAddonReleaseRequest
      * @return UpdateAddonReleaseResponse
@@ -2681,7 +2903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用聚合任务组</p>
+     * <p>Apply Aggregation Task Group</p>
      * 
      * @param request UpdateAggTaskGroupRequest
      * @param headers map
@@ -2775,7 +2997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用聚合任务组</p>
+     * <p>Apply Aggregation Task Group</p>
      * 
      * @param request UpdateAggTaskGroupRequest
      * @return UpdateAggTaskGroupResponse
@@ -2788,7 +3010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新聚合任务组状态</p>
+     * <p>Update Aggregation Task Group Status</p>
      * 
      * @param request UpdateAggTaskGroupStatusRequest
      * @param headers map
@@ -2822,7 +3044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新聚合任务组状态</p>
+     * <p>Update Aggregation Task Group Status</p>
      * 
      * @param request UpdateAggTaskGroupStatusRequest
      * @return UpdateAggTaskGroupStatusResponse
@@ -2835,7 +3057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定策略</p>
+     * <p>Update the specified policy</p>
      * 
      * @param request UpdateIntegrationPolicyRequest
      * @param headers map
@@ -2881,7 +3103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定策略</p>
+     * <p>Update the specified policy</p>
      * 
      * @param request UpdateIntegrationPolicyRequest
      * @return UpdateIntegrationPolicyResponse
@@ -2894,7 +3116,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Prom实例信息</p>
+     * <p>更新订阅</p>
+     * 
+     * @param request UpdateNotifyStrategyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNotifyStrategyResponse
+     */
+    public UpdateNotifyStrategyResponse updateNotifyStrategyWithOptions(String notifyStrategyId, UpdateNotifyStrategyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNotifyStrategy"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/notifyStrategies/" + com.aliyun.openapiutil.Client.getEncodeParam(notifyStrategyId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNotifyStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新订阅</p>
+     * 
+     * @param request UpdateNotifyStrategyRequest
+     * @return UpdateNotifyStrategyResponse
+     */
+    public UpdateNotifyStrategyResponse updateNotifyStrategy(String notifyStrategyId, UpdateNotifyStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateNotifyStrategyWithOptions(notifyStrategyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Prometheus instance information.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Prometheus instance information</p>
      * 
      * @param request UpdatePrometheusInstanceRequest
      * @param headers map
@@ -2967,8 +3240,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Update Prometheus instance information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Prom实例信息</p>
+     * <p>Update Prometheus instance information</p>
      * 
      * @param request UpdatePrometheusInstanceRequest
      * @return UpdatePrometheusInstanceResponse
@@ -2980,8 +3256,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Update Prometheus view instance information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Prom视图实例信息</p>
+     * <p>Update Prometheus view instance information</p>
      * 
      * @param request UpdatePrometheusViewRequest
      * @param headers map
@@ -3038,8 +3317,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Update Prometheus view instance information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Prom视图实例信息</p>
+     * <p>Update Prometheus view instance information</p>
      * 
      * @param request UpdatePrometheusViewRequest
      * @return UpdatePrometheusViewResponse
@@ -3052,7 +3334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新UpdateService</p>
+     * <p>Update Service</p>
      * 
      * @param request UpdateServiceRequest
      * @param headers map
@@ -3098,7 +3380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新UpdateService</p>
+     * <p>Update Service</p>
      * 
      * @param request UpdateServiceRequest
      * @return UpdateServiceResponse
@@ -3111,7 +3393,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Umodel配置信息</p>
+     * <p>更新订阅</p>
+     * 
+     * @param request UpdateSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSubscriptionResponse
+     */
+    public UpdateSubscriptionResponse updateSubscriptionWithOptions(String subscriptionId, UpdateSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSubscription"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/subscriptions/" + com.aliyun.openapiutil.Client.getEncodeParam(subscriptionId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新订阅</p>
+     * 
+     * @param request UpdateSubscriptionRequest
+     * @return UpdateSubscriptionResponse
+     */
+    public UpdateSubscriptionResponse updateSubscription(String subscriptionId, UpdateSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Umodel configuration information</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Umodel configuration information</p>
      * 
      * @param request UpdateUmodelRequest
      * @param headers map
@@ -3144,8 +3477,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Update Umodel configuration information</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Umodel配置信息</p>
+     * <p>Update Umodel configuration information</p>
      * 
      * @param request UpdateUmodelRequest
      * @return UpdateUmodelResponse
@@ -3158,7 +3494,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>写入 Umodel Elements</p>
+     * <p>更新Umodel配置信息</p>
+     * 
+     * @param request UpsertUmodelCommonSchemaRefRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpsertUmodelCommonSchemaRefResponse
+     */
+    public UpsertUmodelCommonSchemaRefResponse upsertUmodelCommonSchemaRefWithOptions(String workspace, UpsertUmodelCommonSchemaRefRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            query.put("group", request.group);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpsertUmodelCommonSchemaRef"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/umodel/common-schema-ref"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpsertUmodelCommonSchemaRefResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Umodel配置信息</p>
+     * 
+     * @param request UpsertUmodelCommonSchemaRefRequest
+     * @return UpsertUmodelCommonSchemaRefResponse
+     */
+    public UpsertUmodelCommonSchemaRefResponse upsertUmodelCommonSchemaRef(String workspace, UpsertUmodelCommonSchemaRefRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.upsertUmodelCommonSchemaRefWithOptions(workspace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Write Umodel Elements</p>
      * 
      * @param request UpsertUmodelDataRequest
      * @param headers map
@@ -3198,7 +3585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>写入 Umodel Elements</p>
+     * <p>Write Umodel Elements</p>
      * 
      * @param request UpsertUmodelDataRequest
      * @return UpsertUmodelDataResponse

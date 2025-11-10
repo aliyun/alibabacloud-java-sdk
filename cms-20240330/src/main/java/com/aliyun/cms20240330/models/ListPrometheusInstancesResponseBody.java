@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesResponseBody extends TeaModel {
     /**
+     * <p>Maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      * 
@@ -15,17 +17,22 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>List of Prometheus instances.</p>
+     */
     @NameInMap("prometheusInstances")
     public java.util.List<ListPrometheusInstancesResponseBodyPrometheusInstances> prometheusInstances;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -34,6 +41,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of instances</p>
+     * 
      * <strong>example:</strong>
      * <p>66</p>
      */
@@ -87,6 +96,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
 
     public static class ListPrometheusInstancesResponseBodyPrometheusInstancesTags extends TeaModel {
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -94,6 +105,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */
@@ -125,6 +138,9 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
 
     public static class ListPrometheusInstancesResponseBodyPrometheusInstances extends TeaModel {
         /**
+         * <p>Access type:
+         * readWrite, readOnly, httpReadOnly</p>
+         * 
          * <strong>example:</strong>
          * <p>readWrite</p>
          */
@@ -132,6 +148,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String accessType;
 
         /**
+         * <p>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-10T02:07:53Z</p>
          */
@@ -139,6 +157,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>remote-write</p>
          */
@@ -146,6 +166,11 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>POSTPAY: Postpaid by metric.
+         * POSTPAY_GB: Postpaid by write volume.
+         * PREPAY: Prepaid.
+         * FREE: Free.</p>
+         * 
          * <strong>example:</strong>
          * <p>POSTPAY_GB</p>
          */
@@ -153,6 +178,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String paymentType;
 
         /**
+         * <p>Product to which the prom instance belongs</p>
+         * 
          * <strong>example:</strong>
          * <p>arms</p>
          */
@@ -160,6 +187,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String product;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rw-63549e054ff596a4149927961dff</p>
          */
@@ -167,6 +196,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String prometheusInstanceId;
 
         /**
+         * <p>Instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-prom-name</p>
          */
@@ -174,6 +205,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String prometheusInstanceName;
 
         /**
+         * <p>Region ID</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-nanjing</p>
          */
@@ -181,6 +214,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aek2bhocin5e2na</p>
          */
@@ -188,6 +223,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>Resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
          */
@@ -195,19 +232,29 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>Backend data storage status</p>
+         * 
          * <strong>example:</strong>
          * <p>Pending2Running</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Supported authentication types.</p>
+         */
         @NameInMap("supportAuthTypes")
         public java.util.List<String> supportAuthTypes;
 
+        /**
+         * <p>Tags key.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListPrometheusInstancesResponseBodyPrometheusInstancesTags> tags;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>17073812345</p>
          */
@@ -215,6 +262,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Version</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -224,6 +273,8 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String version;
 
         /**
+         * <p>Workspace to which the Prometheus instance belongs</p>
+         * 
          * <strong>example:</strong>
          * <p>default-cms-115214006-cn-hangzhou</p>
          */

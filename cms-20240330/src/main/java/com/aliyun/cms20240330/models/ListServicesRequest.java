@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListServicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next query, an empty value indicates the last page.</p>
+     * 
      * <strong>example:</strong>
      * <p>7-b81a-4bc9-bbfa-a50cc6988667</p>
      */
@@ -19,6 +23,8 @@ public class ListServicesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Service type</p>
+     * 
      * <strong>example:</strong>
      * <p>apm</p>
      */

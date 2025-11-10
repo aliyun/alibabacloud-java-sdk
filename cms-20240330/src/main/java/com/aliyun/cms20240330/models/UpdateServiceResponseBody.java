@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123-0F43-23423-AC43-34234</p>
      */
@@ -12,6 +14,8 @@ public class UpdateServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>em87vd@c2e25bcfe0e21ce0***</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListAggTaskGroupsResponseBody extends TeaModel {
+    /**
+     * <p>List of aggregation task groups.</p>
+     */
     @NameInMap("aggTaskGroups")
     public java.util.List<ListAggTaskGroupsResponseBodyAggTaskGroups> aggTaskGroups;
 
     /**
+     * <p>The maximum number of records returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -15,6 +20,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>aa9d0e569b880xxx</p>
      */
@@ -22,6 +29,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7BF1F4D6-B9A8-5F0B-8C1D-4347FFCB798E</p>
      */
@@ -29,6 +38,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,6 +93,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
 
     public static class ListAggTaskGroupsResponseBodyAggTaskGroupsTags extends TeaModel {
         /**
+         * <p>Key of the resource group tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -89,6 +102,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Value of the resource group tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -120,6 +135,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
 
     public static class ListAggTaskGroupsResponseBodyAggTaskGroups extends TeaModel {
         /**
+         * <p>Hash of the aggregation task group configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>a54136014xxx</p>
          */
@@ -127,6 +144,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String aggTaskGroupConfigHash;
 
         /**
+         * <p>ID of the aggregation task group.</p>
+         * 
          * <strong>example:</strong>
          * <p>aggTaskGroup-xxxx</p>
          */
@@ -134,6 +153,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String aggTaskGroupId;
 
         /**
+         * <p>Name of the aggregation task group.</p>
+         * 
          * <strong>example:</strong>
          * <p>pipeline-aggtask-group</p>
          */
@@ -141,6 +162,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String aggTaskGroupName;
 
         /**
+         * <p>Cron expression for the aggregation task group when the scheduling mode is set to \&quot;Cron\&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 10 8 1 * ? *</p>
          */
@@ -148,6 +171,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String cronExpr;
 
         /**
+         * <p>Fixed delay time (in seconds) for scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -155,6 +180,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public Integer delay;
 
         /**
+         * <p>Description of the aggregation task group.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace api monitor update test</p>
          */
@@ -162,6 +189,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Start time of the schedule in seconds since epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1757409499000</p>
          */
@@ -169,6 +198,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>Scheduling interval.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-24 00:00:00,2025-04-24 00:00:00</p>
          */
@@ -176,6 +207,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String interval;
 
         /**
+         * <p>Maximum number of retries for the aggregation task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -183,6 +216,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public Integer maxRetries;
 
         /**
+         * <p>Maximum retry time (in seconds) for the aggregation task.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -190,6 +225,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public Integer maxRunTimeInSeconds;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -197,6 +234,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Scheduling mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>FixedRate</p>
          */
@@ -204,6 +243,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String scheduleMode;
 
         /**
+         * <p>Scheduling time expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>@m</p>
          */
@@ -211,6 +252,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String scheduleTimeExpr;
 
         /**
+         * <p>The source Prometheus instance ID of the aggregation task group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rw-xxx</p>
          */
@@ -218,16 +261,23 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String sourcePrometheusId;
 
         /**
+         * <p>Status of the aggregation task group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Resource group tags</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListAggTaskGroupsResponseBodyAggTaskGroupsTags> tags;
 
         /**
+         * <p>The target Prometheus instance ID of the aggregation task group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rw-xxx</p>
          */
@@ -235,6 +285,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String targetPrometheusId;
 
         /**
+         * <p>The second-level timestamp corresponding to the end time of scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -242,6 +294,8 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public Long toTime;
 
         /**
+         * <p>Update time of the aggregation task group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1757409499000</p>
          */

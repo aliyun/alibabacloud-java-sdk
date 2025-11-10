@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutWorkspaceRequest extends TeaModel {
     /**
-     * <p>工作空间描述</p>
+     * <p>Description of the workspace</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -14,6 +14,8 @@ public class PutWorkspaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Display name of the workspace</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */
@@ -21,7 +23,7 @@ public class PutWorkspaceRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>工作空间绑定的日志服务项目名称</p>
+     * <p>Name of the Log Service project</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

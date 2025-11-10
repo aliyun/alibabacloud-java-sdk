@@ -4,19 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetEntityStoreDataResponseBody extends TeaModel {
+    /**
+     * <p>Total list of returned data</p>
+     */
     @NameInMap("data")
     public java.util.List<java.util.List<String>> data;
 
+    /**
+     * <p>List of request headers</p>
+     */
     @NameInMap("header")
     public java.util.List<String> header;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Result status</p>
+     */
     @NameInMap("responseStatus")
     public GetEntityStoreDataResponseBodyResponseStatus responseStatus;
 
@@ -58,15 +69,39 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
     }
 
     public static class GetEntityStoreDataResponseBodyResponseStatusStatusItem extends TeaModel {
+        /**
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success,ExecuteTimeout,UModelNotExist</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Status level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Info,Warn,Error</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>Calculation execution information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Query execution timeout after 30 seconds</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <p>Suggestions when an error occurs during execution</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Try to reduce the query scope or increase timeout limit, then retry</p>
+         */
         @NameInMap("suggestion")
         public String suggestion;
 
@@ -110,18 +145,45 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
     }
 
     public static class GetEntityStoreDataResponseBodyResponseStatus extends TeaModel {
+        /**
+         * <p>Information during the execution process</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("executionStates")
         public String executionStates;
 
+        /**
+         * <p>Status level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Info,Warn,Error</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>Execution result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success,PartialSuccess,Error</p>
+         */
         @NameInMap("result")
         public String result;
 
+        /**
+         * <p>Retry policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None,Once,Continuous</p>
+         */
         @NameInMap("retryPolicy")
         public String retryPolicy;
 
+        /**
+         * <p>Detailed status information list</p>
+         */
         @NameInMap("statusItem")
         public java.util.List<GetEntityStoreDataResponseBodyResponseStatusStatusItem> statusItem;
 

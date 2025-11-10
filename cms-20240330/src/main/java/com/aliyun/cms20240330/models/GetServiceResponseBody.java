@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetServiceResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>264C3E89-BE6E-5F82-A484-CE9C2196C7DC</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Service object.</p>
+     */
     @NameInMap("service")
     public GetServiceResponseBodyService service;
 
@@ -37,6 +42,8 @@ public class GetServiceResponseBody extends TeaModel {
 
     public static class GetServiceResponseBodyService extends TeaModel {
         /**
+         * <p>Extended information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;language&quot;:&quot;java&quot;}</p>
          */
@@ -44,6 +51,8 @@ public class GetServiceResponseBody extends TeaModel {
         public String attributes;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-13T03:32:55Z</p>
          */
@@ -51,16 +60,26 @@ public class GetServiceResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Description, only valid when serviceType=RUM.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display name, only valid when serviceType=RUM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo应用</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>Legacy ARMS application ID</p>
+         * 
          * <strong>example:</strong>
          * <p>by6rjzro2j@0fe8dfa799e5906</p>
          */
@@ -68,6 +87,8 @@ public class GetServiceResponseBody extends TeaModel {
         public String pid;
 
         /**
+         * <p>Region ID</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
          */
@@ -75,6 +96,8 @@ public class GetServiceResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cwzxvuc6uo@4bc6b15ad81f166174ffb</p>
          */
@@ -82,6 +105,8 @@ public class GetServiceResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>Service name</p>
+         * 
          * <strong>example:</strong>
          * <p>demo-app</p>
          */
@@ -89,6 +114,8 @@ public class GetServiceResponseBody extends TeaModel {
         public String serviceName;
 
         /**
+         * <p>Service status, only valid when serviceType=RUM.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -96,6 +123,8 @@ public class GetServiceResponseBody extends TeaModel {
         public String serviceStatus;
 
         /**
+         * <p>Service type.</p>
+         * 
          * <strong>example:</strong>
          * <p>TRACE</p>
          */
@@ -103,6 +132,8 @@ public class GetServiceResponseBody extends TeaModel {
         public String serviceType;
 
         /**
+         * <p>Workspace name</p>
+         * 
          * <strong>example:</strong>
          * <p>default-cms-1106439496876715-cn-hangzhou</p>
          */

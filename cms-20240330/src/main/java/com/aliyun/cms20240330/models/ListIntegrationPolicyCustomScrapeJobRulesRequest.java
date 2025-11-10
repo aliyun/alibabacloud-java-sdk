@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends TeaModel {
     /**
+     * <p>Addon Release name.</p>
+     * 
      * <strong>example:</strong>
      * <p>release12345678</p>
      */
@@ -12,12 +14,20 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends TeaModel {
     public String addonReleaseName;
 
     /**
+     * <p>Whether to encrypt Yaml.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("encryptYaml")
     public Boolean encryptYaml;
 
+    /**
+     * <p>Namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms-prom</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 

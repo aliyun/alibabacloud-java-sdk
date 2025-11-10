@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateServiceResponseBody extends TeaModel {
     /**
+     * <p>Historical compatible ARMS application ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cwzxvuc6uo@d60088ad4797d26</p>
      */
@@ -12,6 +14,8 @@ public class CreateServiceResponseBody extends TeaModel {
     public String pid;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3A2FA9E9-9CF1-5CB1-A808-52828F14310D</p>
      */
@@ -19,6 +23,8 @@ public class CreateServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Service ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cwzxvuc6uo@4bc6b15ad81f166174ffb</p>
      */

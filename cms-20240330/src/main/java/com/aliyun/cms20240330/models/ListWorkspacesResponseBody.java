@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
     /**
+     * <p>Page size
+     * Default value:
+     *     50
+     * Maximum value:
+     *     50</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +18,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Pagination Token</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      */
@@ -19,6 +27,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
      */
@@ -26,12 +36,17 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("total")
     public Integer total;
 
+    /**
+     * <p>List of workspaces</p>
+     */
     @NameInMap("workspaces")
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
 
@@ -82,6 +97,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
         /**
+         * <p>Creation time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -91,7 +107,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>工作空间描述</p>
+         * <p>Workspace description</p>
          * 
          * <strong>example:</strong>
          * <p>workspace test</p>
@@ -100,6 +116,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Workspace display name</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
          */
@@ -107,6 +125,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>Last modified time</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +135,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String lastModifyTime;
 
         /**
-         * <p>地域ID</p>
+         * <p>Region ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -125,7 +144,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>工作空间绑定的日志服务项目名称</p>
+         * <p>Log Service project name</p>
          * 
          * <strong>example:</strong>
          * <p>sls-project-test-001</p>
@@ -134,7 +153,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String slsProject;
 
         /**
-         * <p>工作空间名称</p>
+         * <p>Workspace name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

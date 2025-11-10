@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPoliciesRequest extends TeaModel {
     /**
+     * <p>Addon name.</p>
+     * 
      * <strong>example:</strong>
      * <p>cs-default</p>
      */
     @NameInMap("addonName")
     public String addonName;
 
+    /**
+     * <p>Bound resource ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>622d27c2e87d49debceeebc7c642610e</p>
+     */
     @NameInMap("bindResourceId")
     public String bindResourceId;
 
     /**
+     * <p>Filter for entity IDs, separated by commas</p>
+     * 
      * <strong>example:</strong>
      * <p>eg-1,eg-2,eg-3</p>
      */
@@ -22,6 +32,8 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String entityGroupIds;
 
     /**
+     * <p>Used for Region query, separated by commas</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing,cn-hangzhou</p>
      */
@@ -29,6 +41,8 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
+     * <p>Maximum number of results to return. Default is 30, with a maximum of 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -36,6 +50,8 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Used to return more results. This parameter is not required for the first query. For subsequent queries, use the Token obtained from the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>mvnX6zqg3P</p>
      */
@@ -43,6 +59,8 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>policy-93817a401f78435596d745a97d2e85a1</p>
      */
@@ -50,6 +68,8 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String policyId;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>prod-database</p>
      */
@@ -57,16 +77,26 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String policyName;
 
     /**
+     * <p>Policy type</p>
+     * 
      * <strong>example:</strong>
      * <p>CS</p>
      */
     @NameInMap("policyType")
     public String policyType;
 
+    /**
+     * <p>Instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cmee-622d27c2e87d49debceeebc7c642610e</p>
+     */
     @NameInMap("prometheusInstanceId")
     public String prometheusInstanceId;
 
     /**
+     * <p>Used for general queries</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -74,16 +104,23 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Tag list.</p>
+     */
     @NameInMap("tag")
     public java.util.List<ListIntegrationPoliciesRequestTag> tag;
 
     /**
+     * <p>Workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo</p>
      */
@@ -209,6 +246,8 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
 
     public static class ListIntegrationPoliciesRequestTag extends TeaModel {
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -216,6 +255,8 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag value</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */

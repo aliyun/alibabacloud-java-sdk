@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusInstanceRequest extends TeaModel {
     /**
+     * <p>The number of days to automatically archive and save after the storage expires, 0 means no archiving. The range of archiving days:
+     * V1: 1<del>365 days. Only supported for metric write volume.
+     * V2: 1</del>3650 days (3650 indicates permanent storage).</p>
+     * 
      * <strong>example:</strong>
      * <p>365</p>
      * 
@@ -15,20 +19,44 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Integer archiveDuration;
 
     /**
+     * <p>Password-free read policy (supports IP segments and VpcId).</p>
+     * 
      * <strong>example:</strong>
-     * <p>0.0.0.0/0</p>
+     * <p>{
+     *   &quot;SourceIp&quot;: [
+     *     &quot;192.168.1.0/24&quot;,
+     *     &quot;172.168.2.22&quot;
+     *   ],
+     *   &quot;SourceVpc&quot;: [
+     *     &quot;vpc-xx1&quot;,
+     *     &quot;vpc-xx2&quot;
+     *   ]
+     * }</p>
      */
     @NameInMap("authFreeReadPolicy")
     public String authFreeReadPolicy;
 
     /**
+     * <p>Password-free write policy (supports IP segments and VpcId).</p>
+     * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>{
+     *   &quot;SourceIp&quot;: [
+     *     &quot;192.168.1.0/24&quot;,
+     *     &quot;172.168.2.22&quot;
+     *   ],
+     *   &quot;SourceVpc&quot;: [
+     *     &quot;vpc-xx1&quot;,
+     *     &quot;vpc-xx2&quot;
+     *   ]
+     * }</p>
      */
     @NameInMap("authFreeWritePolicy")
     public String authFreeWritePolicy;
 
     /**
+     * <p>Whether to enable password-free read.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +64,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeRead;
 
     /**
+     * <p>Whether to enable password-free write.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +73,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeWrite;
 
     /**
+     * <p>Whether to enable access token authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +82,10 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
+     * <p>Billing method (can only be modified once during the instance\&quot;s lifecycle):
+     * POSTPAY: Postpaid by metric reporting volume.
+     * POSTPAY_GB: Postpaid by metric write volume.</p>
+     * 
      * <strong>example:</strong>
      * <p>POSTPAY_GB</p>
      */
@@ -57,6 +93,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>Instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-prom-name</p>
      */
@@ -64,6 +102,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String prometheusInstanceName;
 
     /**
+     * <p>Instance storage DB status (only supports RUNNING). If empty, the storage DB status will not be changed.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
@@ -71,6 +111,10 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>Storage duration (days):
+     * By write volume: 90, 180.
+     * By metric reporting volume: 15, 30, 60, 90, 180.</p>
+     * 
      * <strong>example:</strong>
      * <p>90</p>
      */
@@ -78,6 +122,8 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Integer storageDuration;
 
     /**
+     * <p>Belonging workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-cms-1500199863951574-cn-shanghai</p>
      */

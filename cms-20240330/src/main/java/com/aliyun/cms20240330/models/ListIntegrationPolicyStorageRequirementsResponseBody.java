@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -13,6 +13,9 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>List of storage requirements</p>
+     */
     @NameInMap("storageRequirements")
     public java.util.List<ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirements> storageRequirements;
 
@@ -38,13 +41,21 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
     }
 
     public static class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsMetadata extends TeaModel {
+        /**
+         * <p>Annotations</p>
+         */
         @NameInMap("annotations")
         public java.util.Map<String, String> annotations;
 
+        /**
+         * <p>Resource labels</p>
+         */
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
 
         /**
+         * <p>Resource name</p>
+         * 
          * <strong>example:</strong>
          * <p>pod-1234567</p>
          */
@@ -52,6 +63,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String name;
 
         /**
+         * <p>Namespace</p>
+         * 
          * <strong>example:</strong>
          * <p>arms-prom</p>
          */
@@ -99,6 +112,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
 
     public static class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsSpec extends TeaModel {
         /**
+         * <p>Instance ID, which can be specified if you need to pinpoint to the instance level. It depends on the data in EntityStore.</p>
+         * 
          * <strong>example:</strong>
          * <p>es-xxxxx</p>
          */
@@ -106,6 +121,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String entityId;
 
         /**
+         * <p>Prom Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp122p85gthbniw8rsu9</p>
          */
@@ -113,6 +130,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String instance;
 
         /**
+         * <p>Prom instance name</p>
+         * 
          * <strong>example:</strong>
          * <p>category_predict</p>
          */
@@ -120,6 +139,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String instanceName;
 
         /**
+         * <p>Optional parameter, determined based on the current environment type</p>
+         * 
          * <strong>example:</strong>
          * <p>datagrid_cdm</p>
          */
@@ -127,6 +148,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String project;
 
         /**
+         * <p>Region</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -134,6 +157,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String region;
 
         /**
+         * <p>Storage sharing scope: Environment | Region | Workspace | Custom</p>
+         * 
          * <strong>example:</strong>
          * <p>Region</p>
          */
@@ -141,19 +166,29 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String shareScope;
 
         /**
+         * <p>Instance storage type</p>
+         * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
          */
         @NameInMap("storageType")
         public String storageType;
 
+        /**
+         * <p>Tags to be applied to the target storage (injected as system tags)</p>
+         */
         @NameInMap("systemTags")
         public java.util.Map<String, String> systemTags;
 
+        /**
+         * <p>Tags to be applied to the target storage (injected as regular tags)</p>
+         */
         @NameInMap("tags")
         public java.util.Map<String, String> tags;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12345678</p>
          */
@@ -161,6 +196,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String userId;
 
         /**
+         * <p>Workspace</p>
+         * 
          * <strong>example:</strong>
          * <p>test-api</p>
          */
@@ -264,6 +301,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
 
     public static class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsStatus extends TeaModel {
         /**
+         * <p>Instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>rmq-cn-uqm3ket1t0u</p>
          */
@@ -271,6 +310,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String instanceId;
 
         /**
+         * <p>Internal URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://192.168.xxxxxx">http://192.168.xxxxxx</a></p>
          */
@@ -278,6 +319,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String interUrl;
 
         /**
+         * <p>External URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://100.100.xxxxxx">http://100.100.xxxxxx</a></p>
          */
@@ -285,6 +328,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String intraUrl;
 
         /**
+         * <p>存储需求名称</p>
+         * 
          * <strong>example:</strong>
          * <p>sr-xxxx</p>
          */
@@ -292,6 +337,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String name;
 
         /**
+         * <p>存储需求项目</p>
+         * 
          * <strong>example:</strong>
          * <p>jiuwu_algo</p>
          */
@@ -299,6 +346,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String project;
 
         /**
+         * <p>Prom\&quot;s metric center</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -306,6 +355,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String promMetricStore;
 
         /**
+         * <p>Region</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -313,6 +364,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String region;
 
         /**
+         * <p>Instance storage type</p>
+         * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
          */
@@ -320,6 +373,8 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String storageType;
 
         /**
+         * <p>Workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -406,10 +461,15 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
     }
 
     public static class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirements extends TeaModel {
+        /**
+         * <p>Collection of AddonReleases.</p>
+         */
         @NameInMap("addonReleaseNames")
         public java.util.List<String> addonReleaseNames;
 
         /**
+         * <p>API Version</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -417,18 +477,29 @@ public class ListIntegrationPolicyStorageRequirementsResponseBody extends TeaMod
         public String apiVersion;
 
         /**
+         * <p>Resource kind</p>
+         * 
          * <strong>example:</strong>
          * <p>Pod</p>
          */
         @NameInMap("kind")
         public String kind;
 
+        /**
+         * <p>Metadata</p>
+         */
         @NameInMap("metadata")
         public ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsMetadata metadata;
 
+        /**
+         * <p>Resource spec</p>
+         */
         @NameInMap("spec")
         public ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsSpec spec;
 
+        /**
+         * <p>Storage requirement status</p>
+         */
         @NameInMap("status")
         public ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsStatus status;
 

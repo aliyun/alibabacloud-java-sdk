@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusViewResponseBody extends TeaModel {
     /**
+     * <p>Prometheus view instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rw-xxxxxx</p>
      */
@@ -12,7 +14,7 @@ public class UpdatePrometheusViewResponseBody extends TeaModel {
     public String prometheusViewId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>64D964F5-76C7-19A2-9399-457744AB3619</p>

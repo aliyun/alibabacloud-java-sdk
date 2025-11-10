@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteUmodelDataRequest extends TeaModel {
     /**
+     * <p>Can specify the name of a specific Umodel data, leaving it blank means all</p>
+     * 
      * <strong>example:</strong>
      * <p>apm</p>
      */
@@ -12,6 +14,8 @@ public class DeleteUmodelDataRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>Can specify the kind of a specific Umodel data, leaving it blank means all</p>
+     * 
      * <strong>example:</strong>
      * <p>metric_set</p>
      */
@@ -19,6 +23,8 @@ public class DeleteUmodelDataRequest extends TeaModel {
     public String kind;
 
     /**
+     * <p>Can specify the name of a specific Umodel data, leaving it blank means all</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

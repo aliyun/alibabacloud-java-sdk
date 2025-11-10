@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaModel {
     /**
+     * <p>Cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>et15prod-et15storage</p>
      */
     @NameInMap("clusterId")
     public String clusterId;
 
+    /**
+     * <p>Custom scraping job rules</p>
+     */
     @NameInMap("customScrapeJobRules")
     public java.util.List<ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules> customScrapeJobRules;
 
     /**
+     * <p>Policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>policy-15abcc24c06f4797832b5954198e1ed1</p>
      */
@@ -22,7 +29,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
     public String policyId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -69,6 +76,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
 
     public static class ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRulesScrapeConfigs extends TeaModel {
         /**
+         * <p>Scraping job name</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql-exporter</p>
          */
@@ -76,6 +85,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String jobName;
 
         /**
+         * <p>Detailed information.</p>
+         * 
          * <strong>example:</strong>
          * <p>successful</p>
          */
@@ -83,6 +94,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String message;
 
         /**
+         * <p>Metrics path</p>
+         * 
          * <strong>example:</strong>
          * <p>/metrics</p>
          */
@@ -90,6 +103,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String metricsPath;
 
         /**
+         * <p>Call method.</p>
+         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -97,6 +112,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String scheme;
 
         /**
+         * <p>Scrape interval</p>
+         * 
          * <strong>example:</strong>
          * <p>30s</p>
          */
@@ -104,12 +121,17 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String scrapeInterval;
 
         /**
+         * <p>Scrape timeout</p>
+         * 
          * <strong>example:</strong>
          * <p>60s</p>
          */
         @NameInMap("scrapeTimeout")
         public String scrapeTimeout;
 
+        /**
+         * <p>Service discovery configuration</p>
+         */
         @NameInMap("serviceDiscoveryConfigs")
         public java.util.List<String> serviceDiscoveryConfigs;
 
@@ -178,6 +200,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
 
     public static class ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules extends TeaModel {
         /**
+         * <p>Addon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud-ecs</p>
          */
@@ -185,6 +209,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonName;
 
         /**
+         * <p>Addon Release name</p>
+         * 
          * <strong>example:</strong>
          * <p>release-12345678</p>
          */
@@ -192,6 +218,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonReleaseName;
 
         /**
+         * <p>Addon version</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
          */
@@ -199,6 +227,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonVersion;
 
         /**
+         * <p>Configuration yaml</p>
+         * 
          * <strong>example:</strong>
          * <p>scrape_cofnigs:</p>
          * <ul>
@@ -209,6 +239,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String configYaml;
 
         /**
+         * <p>Enable status</p>
+         * 
          * <strong>example:</strong>
          * <p>mini</p>
          */
@@ -216,6 +248,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String enableStatus;
 
         /**
+         * <p>Encrypt yaml</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -223,6 +257,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public Boolean encryptYaml;
 
         /**
+         * <p>Matched pod count</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -230,6 +266,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public Long matchedPodCount;
 
         /**
+         * <p>Detailed information.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -237,6 +275,8 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String message;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dlab1</p>
          */
@@ -244,12 +284,17 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String name;
 
         /**
+         * <p>Namespace</p>
+         * 
          * <strong>example:</strong>
          * <p>prod-data</p>
          */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>Custom configurations</p>
+         */
         @NameInMap("scrapeConfigs")
         public java.util.List<ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRulesScrapeConfigs> scrapeConfigs;
 

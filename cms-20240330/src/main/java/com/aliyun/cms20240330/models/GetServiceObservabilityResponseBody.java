@@ -4,16 +4,30 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class GetServiceObservabilityResponseBody extends TeaModel {
+    /**
+     * <p>Endpoint and Authentication Information</p>
+     */
     @NameInMap("entryPointInfo")
     public GetServiceObservabilityResponseBodyEntryPointInfo entryPointInfo;
 
+    /**
+     * <p>Billing Type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms=serverless;xtrace=serverless</p>
+     */
     @NameInMap("feeType")
     public String feeType;
 
+    /**
+     * <p>Quota Configuration</p>
+     */
     @NameInMap("quotas")
     public java.util.Map<String, String> quotas;
 
     /**
+     * <p>Region</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -21,16 +35,23 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>4852B9B5-345C-5CBC-A15F-786D83ECCBBA</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>System Configuration</p>
+     */
     @NameInMap("settings")
     public java.util.Map<String, String> settings;
 
     /**
+     * <p>Resource Initialization Status</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -38,12 +59,20 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Application Observability Type</p>
+     * 
      * <strong>example:</strong>
      * <p>apm</p>
      */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>Workspace Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-cms-1654218***343050-cn-hangzhou</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
@@ -125,9 +154,21 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
     }
 
     public static class GetServiceObservabilityResponseBodyEntryPointInfo extends TeaModel {
+        /**
+         * <p>Authentication Token for Data Reporting</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gaddp****@de20f2<em><strong>1ce</strong></em></p>
+         */
         @NameInMap("authToken")
         public String authToken;
 
+        /**
+         * <p>Private Network Access Address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou-intranet.log.aliyuncs.com</p>
+         */
         @NameInMap("privateDomain")
         public String privateDomain;
 
@@ -140,6 +181,12 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>Public Network Access Address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou.log.aliyuncs.com</p>
+         */
         @NameInMap("publicDomain")
         public String publicDomain;
 

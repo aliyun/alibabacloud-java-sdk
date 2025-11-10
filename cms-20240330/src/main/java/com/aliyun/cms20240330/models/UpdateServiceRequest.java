@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceRequest extends TeaModel {
     /**
+     * <p>Extended attributes.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;language&quot;:&quot;java&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateServiceRequest extends TeaModel {
     public String attributes;
 
     /**
+     * <p>Service description, only valid when serviceType=RUM.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class UpdateServiceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Display name, only valid when serviceType=RUM.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-monitor-test</p>
      */
@@ -26,6 +32,8 @@ public class UpdateServiceRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Service status, only valid when serviceType=RUM.</p>
+     * 
      * <strong>example:</strong>
      * <p>Stopped</p>
      */

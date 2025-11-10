@@ -262,6 +262,12 @@ public class AlertRuleCondition extends TeaModel {
         @NameInMap("aggregate")
         public String aggregate;
 
+        @NameInMap("baseUnit")
+        public String baseUnit;
+
+        @NameInMap("displayUnit")
+        public String displayUnit;
+
         @NameInMap("oper")
         public String oper;
 
@@ -288,6 +294,22 @@ public class AlertRuleCondition extends TeaModel {
         }
         public String getAggregate() {
             return this.aggregate;
+        }
+
+        public AlertRuleConditionCompareList setBaseUnit(String baseUnit) {
+            this.baseUnit = baseUnit;
+            return this;
+        }
+        public String getBaseUnit() {
+            return this.baseUnit;
+        }
+
+        public AlertRuleConditionCompareList setDisplayUnit(String displayUnit) {
+            this.displayUnit = displayUnit;
+            return this;
+        }
+        public String getDisplayUnit() {
+            return this.displayUnit;
         }
 
         public AlertRuleConditionCompareList setOper(String oper) {

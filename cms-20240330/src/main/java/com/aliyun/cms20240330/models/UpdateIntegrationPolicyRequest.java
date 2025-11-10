@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateIntegrationPolicyRequest extends TeaModel {
     /**
+     * <p>Fee package type, CS_Pro/CS_Basic/empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>CS_Pro</p>
      */
@@ -12,6 +14,8 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
     public String feePackage;
 
     /**
+     * <p>Rule name, minimum 3 characters, maximum 63 characters, must start with a letter.</p>
+     * 
      * <strong>example:</strong>
      * <p>metrics-inner-manage</p>
      */
@@ -19,12 +23,17 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
+     * <p>Resource group ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekzoiafjtr7zyq</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Resource tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<UpdateIntegrationPolicyRequestTags> tags;
 
@@ -67,6 +76,8 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
 
     public static class UpdateIntegrationPolicyRequestTags extends TeaModel {
         /**
+         * <p>Tag <code>key</code> value.</p>
+         * 
          * <strong>example:</strong>
          * <p>algo_bhv_expose_in_airec_exposure</p>
          */
@@ -74,6 +85,8 @@ public class UpdateIntegrationPolicyRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag <code>value</code> value.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;Id\&quot;: \&quot;kgqie6hm\&quot;, \&quot;Name\&quot;: \&quot;Sheet1\&quot;}]</p>
          */

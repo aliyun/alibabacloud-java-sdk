@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusViewRequest extends TeaModel {
     /**
+     * <p>Language environment, default is Chinese zh | en</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class GetPrometheusViewRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2bhocin5e2na</p>
      */

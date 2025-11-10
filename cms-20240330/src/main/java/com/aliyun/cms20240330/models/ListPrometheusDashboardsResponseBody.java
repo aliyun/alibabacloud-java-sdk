@@ -4,11 +4,14 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusDashboardsResponseBody extends TeaModel {
+    /**
+     * <p>List of Prometheus instance dashboards.</p>
+     */
     @NameInMap("prometheusDashboards")
     public java.util.List<ListPrometheusDashboardsResponseBodyPrometheusDashboards> prometheusDashboards;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -17,6 +20,8 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of instances</p>
+     * 
      * <strong>example:</strong>
      * <p>66</p>
      */
@@ -54,6 +59,8 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
 
     public static class ListPrometheusDashboardsResponseBodyPrometheusDashboards extends TeaModel {
         /**
+         * <p>Dashboard ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -61,16 +68,23 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Dashboard name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pod</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<String> tags;
 
         /**
+         * <p>Dashboard title.</p>
+         * 
          * <strong>example:</strong>
          * <p>ceshi</p>
          */
@@ -78,6 +92,8 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Dashboard UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1987395500251724</p>
          */
@@ -85,6 +101,8 @@ public class ListPrometheusDashboardsResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>Dashboard URL address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application">https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application</a></p>
          */

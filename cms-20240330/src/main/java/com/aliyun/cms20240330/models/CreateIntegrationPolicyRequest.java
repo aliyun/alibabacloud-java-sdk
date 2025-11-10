@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CreateIntegrationPolicyRequest extends TeaModel {
+    /**
+     * <p>Entity group for creating the policy. Policies can be quickly created using the entity group, and <code>clusterId</code> and <code>vpcId</code> are independent of each other.</p>
+     */
     @NameInMap("entityGroup")
     public CreateIntegrationPolicyRequestEntityGroup entityGroup;
 
     /**
+     * <p>Policy name</p>
+     * 
      * <strong>example:</strong>
      * <p>prod-database</p>
      */
@@ -15,6 +20,7 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
     public String policyName;
 
     /**
+     * <p>Policy type: CS/ECS/Cloud</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +30,23 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
     public String policyType;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekz2km4kmhtbii</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Resource tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<CreateIntegrationPolicyRequestTags> tags;
 
     /**
+     * <p>Workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>prometheus</p>
      */
@@ -95,6 +108,8 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
 
     public static class CreateIntegrationPolicyRequestEntityGroup extends TeaModel {
         /**
+         * <p>Cluster entity type, such as acs.ack.cluster/acs.one.cluster/acs.asi.cluster or others.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs.ack.cluster</p>
          */
@@ -102,16 +117,26 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public String clusterEntityType;
 
         /**
+         * <p>Cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>na61prod3-na61cloudhdfsssd</p>
          */
         @NameInMap("clusterId")
         public String clusterId;
 
+        /**
+         * <p>Whether to disable the unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ture</p>
+         */
         @NameInMap("disablePolicyShare")
         public Boolean disablePolicyShare;
 
         /**
+         * <p>Entity group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
          */
@@ -119,6 +144,17 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public String entityGroupId;
 
         /**
+         * <p>User ID to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12xxxx</p>
+         */
+        @NameInMap("entityUserId")
+        public String entityUserId;
+
+        /**
+         * <p>VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp18fgg3ffxa9czna40xt</p>
          */
@@ -162,6 +198,14 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
             return this.entityGroupId;
         }
 
+        public CreateIntegrationPolicyRequestEntityGroup setEntityUserId(String entityUserId) {
+            this.entityUserId = entityUserId;
+            return this;
+        }
+        public String getEntityUserId() {
+            return this.entityUserId;
+        }
+
         public CreateIntegrationPolicyRequestEntityGroup setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
@@ -174,6 +218,8 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
 
     public static class CreateIntegrationPolicyRequestTags extends TeaModel {
         /**
+         * <p>Tag <code>key</code> value.</p>
+         * 
          * <strong>example:</strong>
          * <p>use</p>
          */
@@ -181,6 +227,8 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag <code>value</code> value.</p>
+         * 
          * <strong>example:</strong>
          * <p>database</p>
          */

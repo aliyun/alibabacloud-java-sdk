@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTicketResponseBody extends TeaModel {
     /**
+     * <p>免登录票据。</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJ***************.eyJ******************.KUT****************</p>
      */

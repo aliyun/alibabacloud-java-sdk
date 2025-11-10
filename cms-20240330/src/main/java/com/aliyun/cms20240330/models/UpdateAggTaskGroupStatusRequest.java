@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAggTaskGroupStatusRequest extends TeaModel {
     /**
+     * <p>Status of the aggregation task group, either “Running” or “Stopped”. Default is Running.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

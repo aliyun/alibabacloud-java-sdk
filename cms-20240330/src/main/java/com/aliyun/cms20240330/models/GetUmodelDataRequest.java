@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUmodelDataRequest extends TeaModel {
     /**
+     * <p>Query conditions</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;filter&quot;: {
@@ -18,6 +20,7 @@ public class GetUmodelDataRequest extends TeaModel {
     public Object content;
 
     /**
+     * <p>Method</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

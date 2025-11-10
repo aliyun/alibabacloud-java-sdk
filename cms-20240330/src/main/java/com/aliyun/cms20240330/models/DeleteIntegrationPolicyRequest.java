@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteIntegrationPolicyRequest extends TeaModel {
     /**
+     * <p>Whether to forcibly delete the cloud-native all-in-one machine,
+     * default value: <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

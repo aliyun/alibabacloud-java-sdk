@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEntityStoreResponseBody extends TeaModel {
     /**
+     * <p>Region ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-heyuan</p>
      */
@@ -12,6 +14,8 @@ public class GetEntityStoreResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
      */
@@ -19,6 +23,8 @@ public class GetEntityStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Workspace name</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
      */

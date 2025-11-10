@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAddonReleaseRequest extends TeaModel {
     /**
+     * <p>Addon name. When AddonName is provided, it will ignore the ReleaseName parameter and batch uninstall all AddonReleases belonging to the same Addon.</p>
+     * 
      * <strong>example:</strong>
      * <p>cs-gpu</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAddonReleaseRequest extends TeaModel {
     public String addonName;
 
     /**
+     * <p>Whether to force deletion, default is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,8 @@ public class DeleteAddonReleaseRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <p>The name of the AddonRelease.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-gpu-integration-name</p>
      */

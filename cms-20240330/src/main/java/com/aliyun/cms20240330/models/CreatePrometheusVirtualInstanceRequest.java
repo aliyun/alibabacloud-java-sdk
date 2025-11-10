@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusVirtualInstanceRequest extends TeaModel {
     /**
+     * <p>Each cloud product can only create one virtual instance in each region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsResponseBody extends TeaModel {
     /**
+     * <p>Maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      * 
@@ -15,17 +17,22 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>List of Prometheus view instances.</p>
+     */
     @NameInMap("prometheusViews")
     public java.util.List<ListPrometheusViewsResponseBodyPrometheusViews> prometheusViews;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -34,6 +41,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of instances</p>
+     * 
      * <strong>example:</strong>
      * <p>66</p>
      */
@@ -87,6 +96,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
 
     public static class ListPrometheusViewsResponseBodyPrometheusViewsTags extends TeaModel {
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -94,6 +105,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Match value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -125,6 +138,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
 
     public static class ListPrometheusViewsResponseBodyPrometheusViews extends TeaModel {
         /**
+         * <p>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-12T02:18:36Z</p>
          */
@@ -132,6 +147,10 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Instance type:
+         * prom-view: new version aggregated view
+         * global-view: old version aggregated view</p>
+         * 
          * <strong>example:</strong>
          * <p>prom-view</p>
          */
@@ -139,6 +158,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>Payment type. Currently, the fixed value is FREE (free).</p>
+         * 
          * <strong>example:</strong>
          * <p>FREE</p>
          */
@@ -146,6 +167,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String paymentType;
 
         /**
+         * <p>Product that the prom instance belongs to (arms or cms).</p>
+         * 
          * <strong>example:</strong>
          * <p>cms</p>
          */
@@ -153,6 +176,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String product;
 
         /**
+         * <p>Number of Prometheus instances in the view.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -160,6 +185,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public Integer prometheusInstanceCount;
 
         /**
+         * <p>Prometheus view ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>view-xxx</p>
          */
@@ -167,6 +194,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String prometheusViewId;
 
         /**
+         * <p>Prometheus view name.</p>
+         * 
          * <strong>example:</strong>
          * <p>view1</p>
          */
@@ -174,6 +203,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String prometheusViewName;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -181,6 +212,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfm3gn5i6bigbi</p>
          */
@@ -188,6 +221,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>Fixed value: PrometheusView.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrometheusView</p>
          */
@@ -195,16 +230,23 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>Backend data storage status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Tag values.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListPrometheusViewsResponseBodyPrometheusViewsTags> tags;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123xxx</p>
          */
@@ -212,6 +254,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Version.</p>
+         * 
          * <strong>example:</strong>
          * <p>V2</p>
          */
@@ -219,6 +263,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String version;
 
         /**
+         * <p>Workspace that the prom instance belongs to.</p>
+         * 
          * <strong>example:</strong>
          * <p>default-cms-1490404746278495-cn-hangzhou</p>
          */

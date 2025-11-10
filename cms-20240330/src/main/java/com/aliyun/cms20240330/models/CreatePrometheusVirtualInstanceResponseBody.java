@@ -4,11 +4,14 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
+    /**
+     * <p>Instance ID</p>
+     */
     @NameInMap("instance")
     public CreatePrometheusVirtualInstanceResponseBodyInstance instance;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
@@ -39,6 +42,8 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
 
     public static class CreatePrometheusVirtualInstanceResponseBodyInstance extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1751520976660</p>
          */
@@ -46,6 +51,8 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>HTTP API query address</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
          */
@@ -53,6 +60,8 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         public String httpApiUrl;
 
         /**
+         * <p>Region ID</p>
+         * 
          * <strong>example:</strong>
          * <p>rw-e815960b4c9ebc5c3d89790c7e82</p>
          */
@@ -60,6 +69,8 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Cloud product</p>
+         * 
          * <strong>example:</strong>
          * <p>ack-csi-fuse</p>
          */
@@ -67,6 +78,8 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhengzhou-jva</p>
          */
@@ -74,6 +87,8 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>167212345678</p>
          */

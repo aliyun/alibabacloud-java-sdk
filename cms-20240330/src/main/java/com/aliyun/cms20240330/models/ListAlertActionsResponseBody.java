@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListAlertActionsResponseBody extends TeaModel {
+    /**
+     * <p>List of alert action configurations.</p>
+     */
     @NameInMap("alertActions")
     public java.util.List<ListAlertActionsResponseBodyAlertActions> alertActions;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -22,6 +29,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
@@ -29,6 +38,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -82,6 +93,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsEbParam extends TeaModel {
         /**
+         * <p>Event source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -89,6 +102,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String ebSource;
 
         /**
+         * <p>Event bus name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -96,6 +111,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String eventBusName;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
          */
@@ -103,6 +120,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Subject.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -150,6 +169,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsEssParam extends TeaModel {
         /**
+         * <p>Elastic scaling group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -157,6 +178,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String essGroupId;
 
         /**
+         * <p>Elastic scaling rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -164,6 +187,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String essRuleId;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -203,6 +228,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsFc3Param extends TeaModel {
         /**
+         * <p>Function name of the Function Compute service.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -210,6 +237,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String function;
 
         /**
+         * <p>Version or alias of the function.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -217,6 +246,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String qualifier;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -256,6 +287,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsFcParam extends TeaModel {
         /**
+         * <p>Function name in the Function Compute service.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -263,6 +296,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String function;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -270,6 +305,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Function Compute service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -309,6 +346,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsMnsParam extends TeaModel {
         /**
+         * <p>Resource type of the Lightweight Message Queue (formerly MNS).</p>
+         * 
          * <strong>example:</strong>
          * <p>queue</p>
          */
@@ -316,6 +355,12 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String mnsType;
 
         /**
+         * <p>Resource name.</p>
+         * <ul>
+         * <li>If the resource type is queue, the resource name is the queue name.</li>
+         * <li>If the resource type is topic, the resource name is the topic name.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -323,6 +368,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -362,6 +409,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsPagerDutyParam extends TeaModel {
         /**
+         * <p>Integration key for PagerDuty.</p>
+         * 
          * <strong>example:</strong>
          * <p>fsfer4543t5t65g4t4</p>
          */
@@ -369,6 +418,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>Integration webhook for PagerDuty. Supports V1 and V2 versions.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
          */
@@ -400,6 +451,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsSlsParam extends TeaModel {
         /**
+         * <p>Logstore name of the Log Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -407,6 +460,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String logstore;
 
         /**
+         * <p>Log Service project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -414,6 +469,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -453,16 +510,23 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsWebhookParam extends TeaModel {
         /**
+         * <p>Data format, effective when the request method is POST.</p>
+         * 
          * <strong>example:</strong>
          * <p>JSON</p>
          */
         @NameInMap("contentType")
         public String contentType;
 
+        /**
+         * <p>Request headers.</p>
+         */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
         /**
+         * <p>Webhook request method.</p>
+         * 
          * <strong>example:</strong>
          * <p>GET</p>
          */
@@ -470,6 +534,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>The URL address for the alarm callback.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.test.com">http://www.test.com</a></p>
          */
@@ -517,6 +583,8 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActions extends TeaModel {
         /**
+         * <p>Unique identifier for the action integration.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -524,40 +592,68 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String alertActionId;
 
         /**
+         * <p>Alert action name.</p>
+         * 
          * <strong>example:</strong>
          * <p>testName</p>
          */
         @NameInMap("alertActionName")
         public String alertActionName;
 
+        /**
+         * <p>Event Bridge parameters.</p>
+         */
         @NameInMap("ebParam")
         public ListAlertActionsResponseBodyAlertActionsEbParam ebParam;
 
+        /**
+         * <p>Elastic scaling parameters.</p>
+         */
         @NameInMap("essParam")
         public ListAlertActionsResponseBodyAlertActionsEssParam essParam;
 
+        /**
+         * <p>Function Compute 3.0 parameters.</p>
+         */
         @NameInMap("fc3Param")
         public ListAlertActionsResponseBodyAlertActionsFc3Param fc3Param;
 
+        /**
+         * <p>Function Compute parameters.</p>
+         */
         @NameInMap("fcParam")
         public ListAlertActionsResponseBodyAlertActionsFcParam fcParam;
 
+        /**
+         * <p>Lightweight Message Queue (formerly MNS) parameters.</p>
+         */
         @NameInMap("mnsParam")
         public ListAlertActionsResponseBodyAlertActionsMnsParam mnsParam;
 
+        /**
+         * <p>PagerDuty parameters</p>
+         */
         @NameInMap("pagerDutyParam")
         public ListAlertActionsResponseBodyAlertActionsPagerDutyParam pagerDutyParam;
 
+        /**
+         * <p>Log Service parameters.</p>
+         */
         @NameInMap("slsParam")
         public ListAlertActionsResponseBodyAlertActionsSlsParam slsParam;
 
         /**
+         * <p>Action integration type.</p>
+         * 
          * <strong>example:</strong>
          * <p>FC</p>
          */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Webhook parameters</p>
+         */
         @NameInMap("webhookParam")
         public ListAlertActionsResponseBodyAlertActionsWebhookParam webhookParam;
 

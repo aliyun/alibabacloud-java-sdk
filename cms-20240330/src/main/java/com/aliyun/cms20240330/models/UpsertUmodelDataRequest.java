@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class UpsertUmodelDataRequest extends TeaModel {
+    /**
+     * <p>Element content</p>
+     */
     @NameInMap("elements")
     public java.util.List<?> elements;
 
     /**
+     * <p>Method</p>
+     * 
      * <strong>example:</strong>
      * <p>Upsert</p>
      */

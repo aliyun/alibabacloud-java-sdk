@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAggTaskGroupsRequest extends TeaModel {
     /**
+     * <p>List of IDs for the aggregation task groups, which must be JSON parseable.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;aggTaskGroup-xxx&quot;]</p>
      */
@@ -12,6 +14,8 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String filterAggTaskGroupIds;
 
     /**
+     * <p>List of names for the aggregation task groups, which must be JSON parseable.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;apiserver_request_total&quot;]</p>
      */
@@ -19,6 +23,8 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String filterAggTaskGroupNames;
 
     /**
+     * <p>Maximum number of records to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Query token.</p>
+     * 
      * <strong>example:</strong>
      * <p>28036394xxx</p>
      */
@@ -33,6 +41,8 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Name search, supports fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -40,16 +50,23 @@ public class ListAggTaskGroupsRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Status of the aggregation task group, either \&quot;Running\&quot; or \&quot;Stopped\&quot;. Default is Running.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>Resource group tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<ListAggTaskGroupsRequestTags> tags;
 
     /**
+     * <p>The target Prometheus instance ID for the aggregation task group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rw-pq4apob9jm</p>
      */
@@ -127,6 +144,8 @@ public class ListAggTaskGroupsRequest extends TeaModel {
 
     public static class ListAggTaskGroupsRequestTags extends TeaModel {
         /**
+         * <p>Key of the resource group tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -134,6 +153,8 @@ public class ListAggTaskGroupsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Value of the resource group tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
