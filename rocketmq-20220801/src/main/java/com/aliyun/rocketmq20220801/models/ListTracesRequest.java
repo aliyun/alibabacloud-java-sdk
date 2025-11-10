@@ -15,6 +15,13 @@ public class ListTracesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
+    @NameInMap("liteTopicName")
+    public String liteTopicName;
+
+    /**
      * <p>The message ID.</p>
      * <p>This parameter is required if you set queryType to MESSAGE_ID.</p>
      * 
@@ -91,6 +98,14 @@ public class ListTracesRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListTracesRequest setLiteTopicName(String liteTopicName) {
+        this.liteTopicName = liteTopicName;
+        return this;
+    }
+    public String getLiteTopicName() {
+        return this.liteTopicName;
     }
 
     public ListTracesRequest setMessageId(String messageId) {

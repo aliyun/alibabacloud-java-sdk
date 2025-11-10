@@ -36,6 +36,13 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public Long maxReceiveTps;
 
     /**
+     * <strong>example:</strong>
+     * <p>CLUSTERING</p>
+     */
+    @NameInMap("messageModel")
+    public String messageModel;
+
+    /**
      * <p>The description of the consumer group.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +50,13 @@ public class CreateConsumerGroupRequest extends TeaModel {
      */
     @NameInMap("remark")
     public String remark;
+
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
+    @NameInMap("topicName")
+    public String topicName;
 
     public static CreateConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupRequest self = new CreateConsumerGroupRequest();
@@ -73,12 +87,28 @@ public class CreateConsumerGroupRequest extends TeaModel {
         return this.maxReceiveTps;
     }
 
+    public CreateConsumerGroupRequest setMessageModel(String messageModel) {
+        this.messageModel = messageModel;
+        return this;
+    }
+    public String getMessageModel() {
+        return this.messageModel;
+    }
+
     public CreateConsumerGroupRequest setRemark(String remark) {
         this.remark = remark;
         return this;
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public CreateConsumerGroupRequest setTopicName(String topicName) {
+        this.topicName = topicName;
+        return this;
+    }
+    public String getTopicName() {
+        return this.topicName;
     }
 
     public static class CreateConsumerGroupRequestConsumeRetryPolicy extends TeaModel {

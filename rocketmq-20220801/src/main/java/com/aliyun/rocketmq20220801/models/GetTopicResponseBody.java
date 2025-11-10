@@ -162,6 +162,13 @@ public class GetTopicResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("liteTopicExpiration")
+        public Long liteTopicExpiration;
+
+        /**
          * <p>The maximum TPS for message sending.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +269,14 @@ public class GetTopicResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetTopicResponseBodyData setLiteTopicExpiration(Long liteTopicExpiration) {
+            this.liteTopicExpiration = liteTopicExpiration;
+            return this;
+        }
+        public Long getLiteTopicExpiration() {
+            return this.liteTopicExpiration;
         }
 
         public GetTopicResponseBodyData setMaxSendTps(Long maxSendTps) {

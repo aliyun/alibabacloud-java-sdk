@@ -189,6 +189,13 @@ public class ListMessagesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("liteTopicName")
+        public String liteTopicName;
+
+        /**
          * <p>The message group. This parameter is returned only for ordered messages.</p>
          * 
          * <strong>example:</strong>
@@ -315,6 +322,14 @@ public class ListMessagesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListMessagesResponseBodyDataList setLiteTopicName(String liteTopicName) {
+            this.liteTopicName = liteTopicName;
+            return this;
+        }
+        public String getLiteTopicName() {
+            return this.liteTopicName;
         }
 
         public ListMessagesResponseBodyDataList setMessageGroup(String messageGroup) {

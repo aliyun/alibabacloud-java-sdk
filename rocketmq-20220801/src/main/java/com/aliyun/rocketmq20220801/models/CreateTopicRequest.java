@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("liteTopicExpiration")
+    public Long liteTopicExpiration;
+
+    /**
      * <p>The maximum TPS for message sending.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +52,14 @@ public class CreateTopicRequest extends TeaModel {
     public static CreateTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTopicRequest self = new CreateTopicRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTopicRequest setLiteTopicExpiration(Long liteTopicExpiration) {
+        this.liteTopicExpiration = liteTopicExpiration;
+        return this;
+    }
+    public Long getLiteTopicExpiration() {
+        return this.liteTopicExpiration;
     }
 
     public CreateTopicRequest setMaxSendTps(Long maxSendTps) {

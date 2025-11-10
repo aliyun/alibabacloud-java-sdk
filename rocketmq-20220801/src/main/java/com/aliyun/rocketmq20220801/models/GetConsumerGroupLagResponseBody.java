@@ -237,6 +237,9 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        @NameInMap("liteTopicLagMap")
+        public java.util.Map<String, DataLiteTopicLagMapValue> liteTopicLagMap;
+
         /**
          * <p>Region ID</p>
          * 
@@ -251,6 +254,13 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
          */
         @NameInMap("topicLagMap")
         public java.util.Map<String, DataTopicLagMapValue> topicLagMap;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
+        @NameInMap("topicName")
+        public String topicName;
 
         /**
          * <p>Total lag count</p>
@@ -279,6 +289,14 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public GetConsumerGroupLagResponseBodyData setLiteTopicLagMap(java.util.Map<String, DataLiteTopicLagMapValue> liteTopicLagMap) {
+            this.liteTopicLagMap = liteTopicLagMap;
+            return this;
+        }
+        public java.util.Map<String, DataLiteTopicLagMapValue> getLiteTopicLagMap() {
+            return this.liteTopicLagMap;
+        }
+
         public GetConsumerGroupLagResponseBodyData setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -293,6 +311,14 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
         public java.util.Map<String, DataTopicLagMapValue> getTopicLagMap() {
             return this.topicLagMap;
+        }
+
+        public GetConsumerGroupLagResponseBodyData setTopicName(String topicName) {
+            this.topicName = topicName;
+            return this;
+        }
+        public String getTopicName() {
+            return this.topicName;
         }
 
         public GetConsumerGroupLagResponseBodyData setTotalLag(GetConsumerGroupLagResponseBodyDataTotalLag totalLag) {

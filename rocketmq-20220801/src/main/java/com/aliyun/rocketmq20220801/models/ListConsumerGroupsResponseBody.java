@@ -180,6 +180,13 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public Long maxReceiveTps;
 
         /**
+         * <strong>example:</strong>
+         * <p>LITE_SELECTIVE</p>
+         */
+        @NameInMap("messageModel")
+        public String messageModel;
+
+        /**
          * <p>The region ID to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
@@ -205,6 +212,13 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
+        @NameInMap("topicName")
+        public String topicName;
 
         /**
          * <p>Last update time of the consumer group.</p>
@@ -252,6 +266,14 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             return this.maxReceiveTps;
         }
 
+        public ListConsumerGroupsResponseBodyDataList setMessageModel(String messageModel) {
+            this.messageModel = messageModel;
+            return this;
+        }
+        public String getMessageModel() {
+            return this.messageModel;
+        }
+
         public ListConsumerGroupsResponseBodyDataList setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -274,6 +296,14 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListConsumerGroupsResponseBodyDataList setTopicName(String topicName) {
+            this.topicName = topicName;
+            return this;
+        }
+        public String getTopicName() {
+            return this.topicName;
         }
 
         public ListConsumerGroupsResponseBodyDataList setUpdateTime(String updateTime) {

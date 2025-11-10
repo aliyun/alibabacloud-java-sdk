@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class VerifySendMessageRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
+    @NameInMap("liteTopicName")
+    public String liteTopicName;
+
+    /**
      * <p>The message body.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +41,14 @@ public class VerifySendMessageRequest extends TeaModel {
     public static VerifySendMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifySendMessageRequest self = new VerifySendMessageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public VerifySendMessageRequest setLiteTopicName(String liteTopicName) {
+        this.liteTopicName = liteTopicName;
+        return this;
+    }
+    public String getLiteTopicName() {
+        return this.liteTopicName;
     }
 
     public VerifySendMessageRequest setMessage(String message) {

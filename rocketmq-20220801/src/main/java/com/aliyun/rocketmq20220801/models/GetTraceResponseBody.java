@@ -624,6 +624,13 @@ public class GetTraceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("liteTopicName")
+        public String liteTopicName;
+
+        /**
          * <p>Message grpup.</p>
          * 
          * <strong>example:</strong>
@@ -751,6 +758,14 @@ public class GetTraceResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetTraceResponseBodyDataMessageInfo setLiteTopicName(String liteTopicName) {
+            this.liteTopicName = liteTopicName;
+            return this;
+        }
+        public String getLiteTopicName() {
+            return this.liteTopicName;
         }
 
         public GetTraceResponseBodyDataMessageInfo setMessageGroup(String messageGroup) {

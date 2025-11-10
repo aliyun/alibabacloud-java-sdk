@@ -189,6 +189,13 @@ public class GetMessageDetailResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
+        @NameInMap("liteTopicName")
+        public String liteTopicName;
+
+        /**
          * <p>The sharding key. This parameter is returned only for ordered messages.</p>
          * 
          * <strong>example:</strong>
@@ -321,6 +328,14 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetMessageDetailResponseBodyData setLiteTopicName(String liteTopicName) {
+            this.liteTopicName = liteTopicName;
+            return this;
+        }
+        public String getLiteTopicName() {
+            return this.liteTopicName;
         }
 
         public GetMessageDetailResponseBodyData setMessageGroup(String messageGroup) {

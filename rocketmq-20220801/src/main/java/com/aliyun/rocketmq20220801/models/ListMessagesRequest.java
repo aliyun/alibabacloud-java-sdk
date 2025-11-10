@@ -14,6 +14,13 @@ public class ListMessagesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
+    @NameInMap("liteTopicName")
+    public String liteTopicName;
+
+    /**
      * <p>Message Id.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +86,14 @@ public class ListMessagesRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListMessagesRequest setLiteTopicName(String liteTopicName) {
+        this.liteTopicName = liteTopicName;
+        return this;
+    }
+    public String getLiteTopicName() {
+        return this.liteTopicName;
     }
 
     public ListMessagesRequest setMessageId(String messageId) {
