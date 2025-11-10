@@ -17130,6 +17130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RepoNamespace", request.repoNamespace);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.selected)) {
+            query.put("Selected", request.selected);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
             query.put("TargetType", request.targetType);
         }

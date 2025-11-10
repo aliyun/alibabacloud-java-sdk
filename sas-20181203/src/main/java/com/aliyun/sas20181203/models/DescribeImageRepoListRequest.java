@@ -84,6 +84,9 @@ public class DescribeImageRepoListRequest extends TeaModel {
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
+    @NameInMap("Selected")
+    public Integer selected;
+
     /**
      * <p>The condition by which the feature is applied. Valid values:</p>
      * <ul>
@@ -169,6 +172,14 @@ public class DescribeImageRepoListRequest extends TeaModel {
     }
     public String getRepoNamespace() {
         return this.repoNamespace;
+    }
+
+    public DescribeImageRepoListRequest setSelected(Integer selected) {
+        this.selected = selected;
+        return this;
+    }
+    public Integer getSelected() {
+        return this.selected;
     }
 
     public DescribeImageRepoListRequest setTargetType(String targetType) {

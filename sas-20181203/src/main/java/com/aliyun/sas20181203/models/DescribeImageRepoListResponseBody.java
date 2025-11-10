@@ -119,6 +119,9 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         @NameInMap("Flag")
         public String flag;
 
+        @NameInMap("ImageCount")
+        public Integer imageCount;
+
         /**
          * <p>The name of the image repository.</p>
          * 
@@ -148,6 +151,14 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
         public String getFlag() {
             return this.flag;
+        }
+
+        public DescribeImageRepoListResponseBodyImageRepoList setImageCount(Integer imageCount) {
+            this.imageCount = imageCount;
+            return this;
+        }
+        public Integer getImageCount() {
+            return this.imageCount;
         }
 
         public DescribeImageRepoListResponseBodyImageRepoList setRepoName(String repoName) {
