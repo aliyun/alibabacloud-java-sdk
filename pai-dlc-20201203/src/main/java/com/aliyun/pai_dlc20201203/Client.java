@@ -412,8 +412,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取 Dashboard 链接</p>
+     * <p>Gets the DLC task\&quot;s Dashboard URL, if one exists.</p>
      * 
      * @param request GetDashboardRequest
      * @param headers map
@@ -450,8 +453,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取 Dashboard 链接</p>
+     * <p>Gets the DLC task\&quot;s Dashboard URL, if one exists.</p>
      * 
      * @param request GetDashboardRequest
      * @return GetDashboardResponse
@@ -1608,6 +1614,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
             body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobSpecs)) {
+            body.put("JobSpecs", request.jobSpecs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.priority)) {

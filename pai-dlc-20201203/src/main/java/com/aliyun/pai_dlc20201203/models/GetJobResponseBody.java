@@ -155,6 +155,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("JobReplicaStatuses")
+    public java.util.List<JobReplicaStatus> jobReplicaStatuses;
+
     /**
      * <p>The node configuration of the job, which is <strong>JobSpecs</strong> in the CreateJob operation.</p>
      */
@@ -509,6 +512,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public GetJobResponseBody setJobReplicaStatuses(java.util.List<JobReplicaStatus> jobReplicaStatuses) {
+        this.jobReplicaStatuses = jobReplicaStatuses;
+        return this;
+    }
+    public java.util.List<JobReplicaStatus> getJobReplicaStatuses() {
+        return this.jobReplicaStatuses;
     }
 
     public GetJobResponseBody setJobSpecs(java.util.List<JobSpec> jobSpecs) {

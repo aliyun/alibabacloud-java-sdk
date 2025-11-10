@@ -17,6 +17,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("JobSpecs")
+    public java.util.List<JobSpec> jobSpecs;
+
     /**
      * <p>The job priority. Valid values: 1 to 9.</p>
      * <ul>
@@ -41,6 +44,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public UpdateJobRequest setJobSpecs(java.util.List<JobSpec> jobSpecs) {
+        this.jobSpecs = jobSpecs;
+        return this;
+    }
+    public java.util.List<JobSpec> getJobSpecs() {
+        return this.jobSpecs;
     }
 
     public UpdateJobRequest setPriority(Integer priority) {

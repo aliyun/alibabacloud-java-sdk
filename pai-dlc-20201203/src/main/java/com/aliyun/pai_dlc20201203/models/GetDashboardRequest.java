@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDashboardRequest extends TeaModel {
     /**
+     * <p>Specifies whether the link is a sharing link. If yes, a token is required.</p>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +19,8 @@ public class GetDashboardRequest extends TeaModel {
     public Boolean isShared;
 
     /**
+     * <p>The token obtained from GetToken</p>
+     * 
      * <strong>example:</strong>
      * <p>some_token_value</p>
      */
