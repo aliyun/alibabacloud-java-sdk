@@ -25,6 +25,9 @@ public class CancelServiceUsageRequest extends TeaModel {
     @NameInMap("NeedDelete")
     public Boolean needDelete;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The service ID.</p>
      * <p>This parameter is required.</p>
@@ -54,6 +57,14 @@ public class CancelServiceUsageRequest extends TeaModel {
     }
     public Boolean getNeedDelete() {
         return this.needDelete;
+    }
+
+    public CancelServiceUsageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CancelServiceUsageRequest setServiceId(String serviceId) {

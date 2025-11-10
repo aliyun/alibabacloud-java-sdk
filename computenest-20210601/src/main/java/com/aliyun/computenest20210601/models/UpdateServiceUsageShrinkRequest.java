@@ -13,6 +13,9 @@ public class UpdateServiceUsageShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The service ID.</p>
      * <p>This parameter is required.</p>
@@ -40,6 +43,14 @@ public class UpdateServiceUsageShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateServiceUsageShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateServiceUsageShrinkRequest setServiceId(String serviceId) {

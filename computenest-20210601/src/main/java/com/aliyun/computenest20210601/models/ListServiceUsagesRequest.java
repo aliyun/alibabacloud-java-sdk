@@ -28,6 +28,9 @@ public class ListServiceUsagesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListServiceUsagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServiceUsagesRequest self = new ListServiceUsagesRequest();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class ListServiceUsagesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListServiceUsagesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static class ListServiceUsagesRequestFilter extends TeaModel {

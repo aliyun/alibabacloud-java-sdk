@@ -91,6 +91,36 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListServiceInstancesResponseBodyServiceInstancesGrantedPermission extends TeaModel {
+        @NameInMap("OperationEndTime")
+        public String operationEndTime;
+
+        @NameInMap("PolicyNames")
+        public String policyNames;
+
+        public static ListServiceInstancesResponseBodyServiceInstancesGrantedPermission build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceInstancesResponseBodyServiceInstancesGrantedPermission self = new ListServiceInstancesResponseBodyServiceInstancesGrantedPermission();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstancesGrantedPermission setOperationEndTime(String operationEndTime) {
+            this.operationEndTime = operationEndTime;
+            return this;
+        }
+        public String getOperationEndTime() {
+            return this.operationEndTime;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstancesGrantedPermission setPolicyNames(String policyNames) {
+            this.policyNames = policyNames;
+            return this;
+        }
+        public String getPolicyNames() {
+            return this.policyNames;
+        }
+
+    }
+
     public static class ListServiceInstancesResponseBodyServiceInstancesServiceCommodity extends TeaModel {
         /**
          * <p>The configuration metadata related to SaaS Boost.</p>
@@ -504,6 +534,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("GrantedPermission")
+        public ListServiceInstancesResponseBodyServiceInstancesGrantedPermission grantedPermission;
+
         /**
          * <p>The ID of the Alibaba Cloud Marketplace instance.</p>
          * 
@@ -590,6 +623,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
          */
         @NameInMap("PayType")
         public String payType;
+
+        @NameInMap("PolicyNames")
+        public String policyNames;
 
         /**
          * <p>The deployment progress of the service instance, in percentage.</p>
@@ -755,6 +791,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public ListServiceInstancesResponseBodyServiceInstances setGrantedPermission(ListServiceInstancesResponseBodyServiceInstancesGrantedPermission grantedPermission) {
+            this.grantedPermission = grantedPermission;
+            return this;
+        }
+        public ListServiceInstancesResponseBodyServiceInstancesGrantedPermission getGrantedPermission() {
+            return this.grantedPermission;
+        }
+
         public ListServiceInstancesResponseBodyServiceInstances setMarketInstanceId(String marketInstanceId) {
             this.marketInstanceId = marketInstanceId;
             return this;
@@ -825,6 +869,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setPolicyNames(String policyNames) {
+            this.policyNames = policyNames;
+            return this;
+        }
+        public String getPolicyNames() {
+            return this.policyNames;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setProgress(Long progress) {

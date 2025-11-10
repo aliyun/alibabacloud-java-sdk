@@ -13,6 +13,9 @@ public class UpdateServiceInstanceAttributesRequest extends TeaModel {
     @NameInMap("EnableOperation")
     public Boolean enableOperation;
 
+    @NameInMap("GrantedPermission")
+    public UpdateServiceInstanceAttributesRequestGrantedPermission grantedPermission;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -47,6 +50,14 @@ public class UpdateServiceInstanceAttributesRequest extends TeaModel {
         return this.enableOperation;
     }
 
+    public UpdateServiceInstanceAttributesRequest setGrantedPermission(UpdateServiceInstanceAttributesRequestGrantedPermission grantedPermission) {
+        this.grantedPermission = grantedPermission;
+        return this;
+    }
+    public UpdateServiceInstanceAttributesRequestGrantedPermission getGrantedPermission() {
+        return this.grantedPermission;
+    }
+
     public UpdateServiceInstanceAttributesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -61,6 +72,36 @@ public class UpdateServiceInstanceAttributesRequest extends TeaModel {
     }
     public String getServiceInstanceId() {
         return this.serviceInstanceId;
+    }
+
+    public static class UpdateServiceInstanceAttributesRequestGrantedPermission extends TeaModel {
+        @NameInMap("OperationEndTime")
+        public String operationEndTime;
+
+        @NameInMap("PolicyNames")
+        public String policyNames;
+
+        public static UpdateServiceInstanceAttributesRequestGrantedPermission build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceInstanceAttributesRequestGrantedPermission self = new UpdateServiceInstanceAttributesRequestGrantedPermission();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceInstanceAttributesRequestGrantedPermission setOperationEndTime(String operationEndTime) {
+            this.operationEndTime = operationEndTime;
+            return this;
+        }
+        public String getOperationEndTime() {
+            return this.operationEndTime;
+        }
+
+        public UpdateServiceInstanceAttributesRequestGrantedPermission setPolicyNames(String policyNames) {
+            this.policyNames = policyNames;
+            return this;
+        }
+        public String getPolicyNames() {
+            return this.policyNames;
+        }
+
     }
 
 }

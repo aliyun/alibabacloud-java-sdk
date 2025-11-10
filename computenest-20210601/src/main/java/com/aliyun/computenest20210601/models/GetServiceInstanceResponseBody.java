@@ -77,6 +77,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("GrafanaDashBoardUrl")
     public String grafanaDashBoardUrl;
 
+    @NameInMap("GrantedPermission")
+    public GetServiceInstanceResponseBodyGrantedPermission grantedPermission;
+
     /**
      * <p>Indicates whether the hosted O\&amp;M feature is enabled for the service instance. Valid values:</p>
      * <ul>
@@ -189,6 +192,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     @NameInMap("PayType")
     public String payType;
+
+    @NameInMap("PolicyNames")
+    public String policyNames;
 
     /**
      * <p>The package name.</p>
@@ -415,6 +421,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.grafanaDashBoardUrl;
     }
 
+    public GetServiceInstanceResponseBody setGrantedPermission(GetServiceInstanceResponseBodyGrantedPermission grantedPermission) {
+        this.grantedPermission = grantedPermission;
+        return this;
+    }
+    public GetServiceInstanceResponseBodyGrantedPermission getGrantedPermission() {
+        return this.grantedPermission;
+    }
+
     public GetServiceInstanceResponseBody setIsOperated(Boolean isOperated) {
         this.isOperated = isOperated;
         return this;
@@ -501,6 +515,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public GetServiceInstanceResponseBody setPolicyNames(String policyNames) {
+        this.policyNames = policyNames;
+        return this;
+    }
+    public String getPolicyNames() {
+        return this.policyNames;
     }
 
     public GetServiceInstanceResponseBody setPredefinedParameterName(String predefinedParameterName) {
@@ -637,6 +659,36 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public Long getUserId() {
         return this.userId;
+    }
+
+    public static class GetServiceInstanceResponseBodyGrantedPermission extends TeaModel {
+        @NameInMap("OperationEndTime")
+        public String operationEndTime;
+
+        @NameInMap("PolicyNames")
+        public String policyNames;
+
+        public static GetServiceInstanceResponseBodyGrantedPermission build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceInstanceResponseBodyGrantedPermission self = new GetServiceInstanceResponseBodyGrantedPermission();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyGrantedPermission setOperationEndTime(String operationEndTime) {
+            this.operationEndTime = operationEndTime;
+            return this;
+        }
+        public String getOperationEndTime() {
+            return this.operationEndTime;
+        }
+
+        public GetServiceInstanceResponseBodyGrantedPermission setPolicyNames(String policyNames) {
+            this.policyNames = policyNames;
+            return this;
+        }
+        public String getPolicyNames() {
+            return this.policyNames;
+        }
+
     }
 
     public static class GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs extends TeaModel {

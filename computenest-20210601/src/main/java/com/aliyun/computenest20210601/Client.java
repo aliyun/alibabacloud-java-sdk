@@ -45,6 +45,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NeedDelete", request.needDelete);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
             query.put("ServiceId", request.serviceId);
         }
@@ -529,6 +533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
@@ -1985,6 +1993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2661,6 +2673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableOperation", request.enableOperation);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.grantedPermission)) {
+            query.put("GrantedPermission", request.grantedPermission);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -2803,6 +2819,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
