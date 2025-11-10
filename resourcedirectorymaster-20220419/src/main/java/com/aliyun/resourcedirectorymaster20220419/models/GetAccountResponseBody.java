@@ -208,6 +208,9 @@ public class GetAccountResponseBody extends TeaModel {
         @NameInMap("ResourceDirectoryPath")
         public String resourceDirectoryPath;
 
+        @NameInMap("SecureMobilePhone")
+        public String secureMobilePhone;
+
         /**
          * <p>The status of the member. Valid values:</p>
          * <ul>
@@ -352,6 +355,14 @@ public class GetAccountResponseBody extends TeaModel {
         }
         public String getResourceDirectoryPath() {
             return this.resourceDirectoryPath;
+        }
+
+        public GetAccountResponseBodyAccount setSecureMobilePhone(String secureMobilePhone) {
+            this.secureMobilePhone = secureMobilePhone;
+            return this;
+        }
+        public String getSecureMobilePhone() {
+            return this.secureMobilePhone;
         }
 
         public GetAccountResponseBodyAccount setStatus(String status) {
