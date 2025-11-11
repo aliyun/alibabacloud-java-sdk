@@ -395,6 +395,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>绑定三方登录账户</p>
+     * 
+     * @param request BindUserAuthnSourceMappingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindUserAuthnSourceMappingResponse
+     */
+    public BindUserAuthnSourceMappingResponse bindUserAuthnSourceMappingWithOptions(BindUserAuthnSourceMappingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userExternalId)) {
+            query.put("UserExternalId", request.userExternalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindUserAuthnSourceMapping"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindUserAuthnSourceMappingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>绑定三方登录账户</p>
+     * 
+     * @param request BindUserAuthnSourceMappingRequest
+     * @return BindUserAuthnSourceMappingResponse
+     */
+    public BindUserAuthnSourceMappingResponse bindUserAuthnSourceMapping(BindUserAuthnSourceMappingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindUserAuthnSourceMappingWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.</p>
      * 
@@ -7720,6 +7776,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询三方登录账户绑定关系</p>
+     * 
+     * @param request ListUserAuthnSourceMappingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserAuthnSourceMappingsResponse
+     */
+    public ListUserAuthnSourceMappingsResponse listUserAuthnSourceMappingsWithOptions(ListUserAuthnSourceMappingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.previousToken)) {
+            query.put("PreviousToken", request.previousToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userExternalId)) {
+            query.put("UserExternalId", request.userExternalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserAuthnSourceMappings"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserAuthnSourceMappingsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询三方登录账户绑定关系</p>
+     * 
+     * @param request ListUserAuthnSourceMappingsRequest
+     * @return ListUserAuthnSourceMappingsResponse
+     */
+    public ListUserAuthnSourceMappingsResponse listUserAuthnSourceMappings(ListUserAuthnSourceMappingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserAuthnSourceMappingsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of accounts in Identity as a Service (IDaaS) Employee IAM (EIAM) by page.</p>
      * 
      * @param request ListUsersRequest
@@ -9294,6 +9418,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetUserPrimaryOrganizationalUnitResponse setUserPrimaryOrganizationalUnit(SetUserPrimaryOrganizationalUnitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setUserPrimaryOrganizationalUnitWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑三方登录账户</p>
+     * 
+     * @param request UnbindUserAuthnSourceMappingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindUserAuthnSourceMappingResponse
+     */
+    public UnbindUserAuthnSourceMappingResponse unbindUserAuthnSourceMappingWithOptions(UnbindUserAuthnSourceMappingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identityProviderId)) {
+            query.put("IdentityProviderId", request.identityProviderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userExternalId)) {
+            query.put("UserExternalId", request.userExternalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindUserAuthnSourceMapping"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindUserAuthnSourceMappingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑三方登录账户</p>
+     * 
+     * @param request UnbindUserAuthnSourceMappingRequest
+     * @return UnbindUserAuthnSourceMappingResponse
+     */
+    public UnbindUserAuthnSourceMappingResponse unbindUserAuthnSourceMapping(UnbindUserAuthnSourceMappingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unbindUserAuthnSourceMappingWithOptions(request, runtime);
     }
 
     /**
