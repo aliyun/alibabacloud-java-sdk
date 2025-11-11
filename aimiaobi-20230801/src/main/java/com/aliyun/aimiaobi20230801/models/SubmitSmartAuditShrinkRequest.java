@@ -7,8 +7,14 @@ public class SubmitSmartAuditShrinkRequest extends TeaModel {
     @NameInMap("ImageUrlList")
     public String imageUrlListShrink;
 
+    @NameInMap("NoteId")
+    public String noteId;
+
     @NameInMap("SubCodes")
     public String subCodesShrink;
+
+    @NameInMap("TermsName")
+    public String termsName;
 
     @NameInMap("Text")
     public String text;
@@ -36,12 +42,28 @@ public class SubmitSmartAuditShrinkRequest extends TeaModel {
         return this.imageUrlListShrink;
     }
 
+    public SubmitSmartAuditShrinkRequest setNoteId(String noteId) {
+        this.noteId = noteId;
+        return this;
+    }
+    public String getNoteId() {
+        return this.noteId;
+    }
+
     public SubmitSmartAuditShrinkRequest setSubCodesShrink(String subCodesShrink) {
         this.subCodesShrink = subCodesShrink;
         return this;
     }
     public String getSubCodesShrink() {
         return this.subCodesShrink;
+    }
+
+    public SubmitSmartAuditShrinkRequest setTermsName(String termsName) {
+        this.termsName = termsName;
+        return this;
+    }
+    public String getTermsName() {
+        return this.termsName;
     }
 
     public SubmitSmartAuditShrinkRequest setText(String text) {

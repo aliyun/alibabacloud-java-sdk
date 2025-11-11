@@ -59,6 +59,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TermsDesc", request.termsDesc);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.termsName)) {
+            body.put("TermsName", request.termsName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -1007,6 +1011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAuditNoteResponse deleteAuditNoteWithOptions(DeleteAuditNoteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.noteId)) {
+            body.put("NoteId", request.noteId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -1729,6 +1737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DownloadAuditNoteResponse downloadAuditNoteWithOptions(DownloadAuditNoteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.noteId)) {
+            body.put("NoteId", request.noteId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
         }
@@ -2995,6 +3007,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAvailableAuditNotesResponse getAvailableAuditNotesWithOptions(GetAvailableAuditNotesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.noteId)) {
+            body.put("NoteId", request.noteId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -5031,6 +5047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.termsName)) {
+            body.put("TermsName", request.termsName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -10027,6 +10047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FileKey", request.fileKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.noteId)) {
+            body.put("NoteId", request.noteId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -10573,6 +10597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitExportTermsTaskResponse submitExportTermsTaskWithOptions(SubmitExportTermsTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.termsName)) {
+            body.put("TermsName", request.termsName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -10669,6 +10697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FileKey", request.fileKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.termsName)) {
+            body.put("TermsName", request.termsName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -10731,8 +10763,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ImageUrlList", request.imageUrlListShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.noteId)) {
+            body.put("NoteId", request.noteId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.subCodesShrink)) {
             body.put("SubCodes", request.subCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.termsName)) {
+            body.put("TermsName", request.termsName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.text)) {

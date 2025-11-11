@@ -174,6 +174,9 @@ public class ListAuditTermsResponseBody extends TeaModel {
         @NameInMap("TermsDesc")
         public String termsDesc;
 
+        @NameInMap("TermsName")
+        public String termsName;
+
         public static ListAuditTermsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAuditTermsResponseBodyData self = new ListAuditTermsResponseBodyData();
             return TeaModel.build(map, self);
@@ -217,6 +220,14 @@ public class ListAuditTermsResponseBody extends TeaModel {
         }
         public String getTermsDesc() {
             return this.termsDesc;
+        }
+
+        public ListAuditTermsResponseBodyData setTermsName(String termsName) {
+            this.termsName = termsName;
+            return this;
+        }
+        public String getTermsName() {
+            return this.termsName;
         }
 
     }

@@ -13,6 +13,9 @@ public class SubmitImportTermsTaskRequest extends TeaModel {
     @NameInMap("FileKey")
     public String fileKey;
 
+    @NameInMap("TermsName")
+    public String termsName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class SubmitImportTermsTaskRequest extends TeaModel {
     }
     public String getFileKey() {
         return this.fileKey;
+    }
+
+    public SubmitImportTermsTaskRequest setTermsName(String termsName) {
+        this.termsName = termsName;
+        return this;
+    }
+    public String getTermsName() {
+        return this.termsName;
     }
 
     public SubmitImportTermsTaskRequest setWorkspaceId(String workspaceId) {

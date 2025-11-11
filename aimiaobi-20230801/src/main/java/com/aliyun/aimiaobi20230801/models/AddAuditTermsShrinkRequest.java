@@ -28,6 +28,9 @@ public class AddAuditTermsShrinkRequest extends TeaModel {
     @NameInMap("TermsDesc")
     public String termsDesc;
 
+    @NameInMap("TermsName")
+    public String termsName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -72,6 +75,14 @@ public class AddAuditTermsShrinkRequest extends TeaModel {
     }
     public String getTermsDesc() {
         return this.termsDesc;
+    }
+
+    public AddAuditTermsShrinkRequest setTermsName(String termsName) {
+        this.termsName = termsName;
+        return this;
+    }
+    public String getTermsName() {
+        return this.termsName;
     }
 
     public AddAuditTermsShrinkRequest setWorkspaceId(String workspaceId) {

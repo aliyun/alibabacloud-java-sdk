@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class DownloadAuditNoteRequest extends TeaModel {
+    @NameInMap("NoteId")
+    public String noteId;
+
     /**
      * <strong>example:</strong>
      * <p>xxx_Default_1241541251241</p>
@@ -23,6 +26,14 @@ public class DownloadAuditNoteRequest extends TeaModel {
     public static DownloadAuditNoteRequest build(java.util.Map<String, ?> map) throws Exception {
         DownloadAuditNoteRequest self = new DownloadAuditNoteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DownloadAuditNoteRequest setNoteId(String noteId) {
+        this.noteId = noteId;
+        return this;
+    }
+    public String getNoteId() {
+        return this.noteId;
     }
 
     public DownloadAuditNoteRequest setTaskId(String taskId) {

@@ -18,6 +18,9 @@ public class ListAuditTermsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("TermsName")
+    public String termsName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -46,6 +49,14 @@ public class ListAuditTermsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListAuditTermsRequest setTermsName(String termsName) {
+        this.termsName = termsName;
+        return this;
+    }
+    public String getTermsName() {
+        return this.termsName;
     }
 
     public ListAuditTermsRequest setWorkspaceId(String workspaceId) {

@@ -7,8 +7,14 @@ public class SubmitSmartAuditRequest extends TeaModel {
     @NameInMap("ImageUrlList")
     public java.util.List<SubmitSmartAuditRequestImageUrlList> imageUrlList;
 
+    @NameInMap("NoteId")
+    public String noteId;
+
     @NameInMap("SubCodes")
     public java.util.List<String> subCodes;
+
+    @NameInMap("TermsName")
+    public String termsName;
 
     @NameInMap("Text")
     public String text;
@@ -36,12 +42,28 @@ public class SubmitSmartAuditRequest extends TeaModel {
         return this.imageUrlList;
     }
 
+    public SubmitSmartAuditRequest setNoteId(String noteId) {
+        this.noteId = noteId;
+        return this;
+    }
+    public String getNoteId() {
+        return this.noteId;
+    }
+
     public SubmitSmartAuditRequest setSubCodes(java.util.List<String> subCodes) {
         this.subCodes = subCodes;
         return this;
     }
     public java.util.List<String> getSubCodes() {
         return this.subCodes;
+    }
+
+    public SubmitSmartAuditRequest setTermsName(String termsName) {
+        this.termsName = termsName;
+        return this;
+    }
+    public String getTermsName() {
+        return this.termsName;
     }
 
     public SubmitSmartAuditRequest setText(String text) {

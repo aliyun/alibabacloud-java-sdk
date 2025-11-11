@@ -13,6 +13,9 @@ public class SubmitAuditNoteRequest extends TeaModel {
     @NameInMap("FileKey")
     public String fileKey;
 
+    @NameInMap("NoteId")
+    public String noteId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class SubmitAuditNoteRequest extends TeaModel {
     }
     public String getFileKey() {
         return this.fileKey;
+    }
+
+    public SubmitAuditNoteRequest setNoteId(String noteId) {
+        this.noteId = noteId;
+        return this;
+    }
+    public String getNoteId() {
+        return this.noteId;
     }
 
     public SubmitAuditNoteRequest setWorkspaceId(String workspaceId) {
