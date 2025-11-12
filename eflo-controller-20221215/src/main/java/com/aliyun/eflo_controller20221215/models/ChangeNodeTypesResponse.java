@@ -3,7 +3,7 @@ package com.aliyun.eflo_controller20221215.models;
 
 import com.aliyun.tea.*;
 
-public class GetHyperNodeResponse extends TeaModel {
+public class ChangeNodeTypesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetHyperNodeResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetHyperNodeResponseBody body;
+    public ChangeNodeTypesResponseBody body;
 
-    public static GetHyperNodeResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetHyperNodeResponse self = new GetHyperNodeResponse();
+    public static ChangeNodeTypesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ChangeNodeTypesResponse self = new ChangeNodeTypesResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetHyperNodeResponse setHeaders(java.util.Map<String, String> headers) {
+    public ChangeNodeTypesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetHyperNodeResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetHyperNodeResponse setStatusCode(Integer statusCode) {
+    public ChangeNodeTypesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetHyperNodeResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetHyperNodeResponse setBody(GetHyperNodeResponseBody body) {
+    public ChangeNodeTypesResponse setBody(ChangeNodeTypesResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetHyperNodeResponseBody getBody() {
+    public ChangeNodeTypesResponseBody getBody() {
         return this.body;
     }
 

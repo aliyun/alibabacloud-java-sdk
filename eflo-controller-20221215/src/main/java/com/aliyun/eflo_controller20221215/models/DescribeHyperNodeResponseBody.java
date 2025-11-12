@@ -3,10 +3,10 @@ package com.aliyun.eflo_controller20221215.models;
 
 import com.aliyun.tea.*;
 
-public class GetHyperNodeResponseBody extends TeaModel {
+public class DescribeHyperNodeResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>i112138561737531371671</p>
+     * <p>i119982311660892626523</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -27,7 +27,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2026-05-14T00:00:00</p>
+     * <p>2125-06-24T16:52:44.318000</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
@@ -62,7 +62,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>efg2.C48cNHmcn</p>
+     * <p>efg1.nvga1</p>
      */
     @NameInMap("MachineType")
     public String machineType;
@@ -76,33 +76,41 @@ public class GetHyperNodeResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>emr-default</p>
+     * <p>lisan-nodegroup</p>
      */
     @NameInMap("NodeGroupName")
     public String nodeGroupName;
 
     @NameInMap("Nodes")
-    public java.util.List<GetHyperNodeResponseBodyNodes> nodes;
+    public java.util.List<DescribeHyperNodeResponseBodyNodes> nodes;
 
     /**
      * <strong>example:</strong>
-     * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>
+     * <p>Using</p>
+     */
+    @NameInMap("OperatingState")
+    public String operatingState;
+
+    /**
+     * <strong>example:</strong>
+     * <p>D6058705-1C45-35C9-9461-02504897D4D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <strong>example:</strong>
-     * <p>rg-acfmwfm33rlt6zi</p>
+     * <p>rg-acfmxno4vh5****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <strong>example:</strong>
-     * <p>Using</p>
+     * <p>Operating</p>
      */
     @NameInMap("Status")
+    @Deprecated
     public String status;
 
     /**
@@ -112,12 +120,12 @@ public class GetHyperNodeResponseBody extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    public static GetHyperNodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetHyperNodeResponseBody self = new GetHyperNodeResponseBody();
+    public static DescribeHyperNodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeHyperNodeResponseBody self = new DescribeHyperNodeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetHyperNodeResponseBody setClusterId(String clusterId) {
+    public DescribeHyperNodeResponseBody setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -125,7 +133,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.clusterId;
     }
 
-    public GetHyperNodeResponseBody setClusterName(String clusterName) {
+    public DescribeHyperNodeResponseBody setClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
     }
@@ -133,7 +141,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.clusterName;
     }
 
-    public GetHyperNodeResponseBody setCreateTime(String createTime) {
+    public DescribeHyperNodeResponseBody setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
@@ -141,7 +149,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetHyperNodeResponseBody setExpireTime(String expireTime) {
+    public DescribeHyperNodeResponseBody setExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
@@ -149,7 +157,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.expireTime;
     }
 
-    public GetHyperNodeResponseBody setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+    public DescribeHyperNodeResponseBody setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
         this.fileSystemMountEnabled = fileSystemMountEnabled;
         return this;
     }
@@ -157,7 +165,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.fileSystemMountEnabled;
     }
 
-    public GetHyperNodeResponseBody setHostname(String hostname) {
+    public DescribeHyperNodeResponseBody setHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
@@ -165,7 +173,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.hostname;
     }
 
-    public GetHyperNodeResponseBody setHpnZone(String hpnZone) {
+    public DescribeHyperNodeResponseBody setHpnZone(String hpnZone) {
         this.hpnZone = hpnZone;
         return this;
     }
@@ -173,7 +181,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.hpnZone;
     }
 
-    public GetHyperNodeResponseBody setHyperNodeId(String hyperNodeId) {
+    public DescribeHyperNodeResponseBody setHyperNodeId(String hyperNodeId) {
         this.hyperNodeId = hyperNodeId;
         return this;
     }
@@ -181,7 +189,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.hyperNodeId;
     }
 
-    public GetHyperNodeResponseBody setMachineType(String machineType) {
+    public DescribeHyperNodeResponseBody setMachineType(String machineType) {
         this.machineType = machineType;
         return this;
     }
@@ -189,7 +197,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.machineType;
     }
 
-    public GetHyperNodeResponseBody setNodeGroupId(String nodeGroupId) {
+    public DescribeHyperNodeResponseBody setNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
     }
@@ -197,7 +205,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.nodeGroupId;
     }
 
-    public GetHyperNodeResponseBody setNodeGroupName(String nodeGroupName) {
+    public DescribeHyperNodeResponseBody setNodeGroupName(String nodeGroupName) {
         this.nodeGroupName = nodeGroupName;
         return this;
     }
@@ -205,15 +213,23 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.nodeGroupName;
     }
 
-    public GetHyperNodeResponseBody setNodes(java.util.List<GetHyperNodeResponseBodyNodes> nodes) {
+    public DescribeHyperNodeResponseBody setNodes(java.util.List<DescribeHyperNodeResponseBodyNodes> nodes) {
         this.nodes = nodes;
         return this;
     }
-    public java.util.List<GetHyperNodeResponseBodyNodes> getNodes() {
+    public java.util.List<DescribeHyperNodeResponseBodyNodes> getNodes() {
         return this.nodes;
     }
 
-    public GetHyperNodeResponseBody setRequestId(String requestId) {
+    public DescribeHyperNodeResponseBody setOperatingState(String operatingState) {
+        this.operatingState = operatingState;
+        return this;
+    }
+    public String getOperatingState() {
+        return this.operatingState;
+    }
+
+    public DescribeHyperNodeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -221,7 +237,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetHyperNodeResponseBody setResourceGroupId(String resourceGroupId) {
+    public DescribeHyperNodeResponseBody setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -229,7 +245,8 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public GetHyperNodeResponseBody setStatus(String status) {
+    @Deprecated
+    public DescribeHyperNodeResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -237,7 +254,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.status;
     }
 
-    public GetHyperNodeResponseBody setZoneId(String zoneId) {
+    public DescribeHyperNodeResponseBody setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
@@ -245,7 +262,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
         return this.zoneId;
     }
 
-    public static class GetHyperNodeResponseBodyNodesDisks extends TeaModel {
+    public static class DescribeHyperNodeResponseBodyNodesDisks extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>DOWNLINK_PACKET</p>
@@ -281,12 +298,12 @@ public class GetHyperNodeResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static GetHyperNodeResponseBodyNodesDisks build(java.util.Map<String, ?> map) throws Exception {
-            GetHyperNodeResponseBodyNodesDisks self = new GetHyperNodeResponseBodyNodesDisks();
+        public static DescribeHyperNodeResponseBodyNodesDisks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHyperNodeResponseBodyNodesDisks self = new DescribeHyperNodeResponseBodyNodesDisks();
             return TeaModel.build(map, self);
         }
 
-        public GetHyperNodeResponseBodyNodesDisks setCategory(String category) {
+        public DescribeHyperNodeResponseBodyNodesDisks setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -294,7 +311,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.category;
         }
 
-        public GetHyperNodeResponseBodyNodesDisks setDiskId(String diskId) {
+        public DescribeHyperNodeResponseBodyNodesDisks setDiskId(String diskId) {
             this.diskId = diskId;
             return this;
         }
@@ -302,7 +319,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.diskId;
         }
 
-        public GetHyperNodeResponseBodyNodesDisks setPerformanceLevel(String performanceLevel) {
+        public DescribeHyperNodeResponseBodyNodesDisks setPerformanceLevel(String performanceLevel) {
             this.performanceLevel = performanceLevel;
             return this;
         }
@@ -310,7 +327,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.performanceLevel;
         }
 
-        public GetHyperNodeResponseBodyNodesDisks setSize(Integer size) {
+        public DescribeHyperNodeResponseBodyNodesDisks setSize(Integer size) {
             this.size = size;
             return this;
         }
@@ -318,7 +335,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.size;
         }
 
-        public GetHyperNodeResponseBodyNodesDisks setType(String type) {
+        public DescribeHyperNodeResponseBodyNodesDisks setType(String type) {
             this.type = type;
             return this;
         }
@@ -328,7 +345,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
 
     }
 
-    public static class GetHyperNodeResponseBodyNodesNetworks extends TeaModel {
+    public static class DescribeHyperNodeResponseBodyNodesNetworks extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>bond0</p>
@@ -338,17 +355,17 @@ public class GetHyperNodeResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>172.17.231.113</p>
+         * <p>192.168.22.2</p>
          */
         @NameInMap("Ip")
         public String ip;
 
-        public static GetHyperNodeResponseBodyNodesNetworks build(java.util.Map<String, ?> map) throws Exception {
-            GetHyperNodeResponseBodyNodesNetworks self = new GetHyperNodeResponseBodyNodesNetworks();
+        public static DescribeHyperNodeResponseBodyNodesNetworks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHyperNodeResponseBodyNodesNetworks self = new DescribeHyperNodeResponseBodyNodesNetworks();
             return TeaModel.build(map, self);
         }
 
-        public GetHyperNodeResponseBodyNodesNetworks setBondName(String bondName) {
+        public DescribeHyperNodeResponseBodyNodesNetworks setBondName(String bondName) {
             this.bondName = bondName;
             return this;
         }
@@ -356,7 +373,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.bondName;
         }
 
-        public GetHyperNodeResponseBodyNodesNetworks setIp(String ip) {
+        public DescribeHyperNodeResponseBodyNodesNetworks setIp(String ip) {
             this.ip = ip;
             return this;
         }
@@ -366,13 +383,13 @@ public class GetHyperNodeResponseBody extends TeaModel {
 
     }
 
-    public static class GetHyperNodeResponseBodyNodes extends TeaModel {
+    public static class DescribeHyperNodeResponseBodyNodes extends TeaModel {
         @NameInMap("Disks")
-        public java.util.List<GetHyperNodeResponseBodyNodesDisks> disks;
+        public java.util.List<DescribeHyperNodeResponseBodyNodesDisks> disks;
 
         /**
          * <strong>example:</strong>
-         * <p>alywlcb-lingjun-gpu-0025</p>
+         * <p>457db5ca-241d-11ed-9fd7-acde48001122</p>
          */
         @NameInMap("Hostname")
         public String hostname;
@@ -386,13 +403,13 @@ public class GetHyperNodeResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>Alinux3_x86_5.10.134-16.3_NV_RunC_D3_E3C7_570.133.20_V1.0_250428</p>
+         * <p>Alinux3_x86_gu8xf_P_Host_D3_C7E3_550.127_Legacy_N_241230</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         @NameInMap("Networks")
-        public GetHyperNodeResponseBodyNodesNetworks networks;
+        public DescribeHyperNodeResponseBodyNodesNetworks networks;
 
         /**
          * <strong>example:</strong>
@@ -403,34 +420,42 @@ public class GetHyperNodeResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>Using</p>
+         */
+        @NameInMap("OperatingState")
+        public String operatingState;
+
+        /**
+         * <strong>example:</strong>
          * <p>InProgress</p>
          */
         @NameInMap("Status")
+        @Deprecated
         public String status;
 
         /**
          * <strong>example:</strong>
          * <p>#!/bin/bash
          * uptime
-         * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
+         * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttttest.sh</p>
          */
         @NameInMap("UserData")
         public String userData;
 
-        public static GetHyperNodeResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
-            GetHyperNodeResponseBodyNodes self = new GetHyperNodeResponseBodyNodes();
+        public static DescribeHyperNodeResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHyperNodeResponseBodyNodes self = new DescribeHyperNodeResponseBodyNodes();
             return TeaModel.build(map, self);
         }
 
-        public GetHyperNodeResponseBodyNodes setDisks(java.util.List<GetHyperNodeResponseBodyNodesDisks> disks) {
+        public DescribeHyperNodeResponseBodyNodes setDisks(java.util.List<DescribeHyperNodeResponseBodyNodesDisks> disks) {
             this.disks = disks;
             return this;
         }
-        public java.util.List<GetHyperNodeResponseBodyNodesDisks> getDisks() {
+        public java.util.List<DescribeHyperNodeResponseBodyNodesDisks> getDisks() {
             return this.disks;
         }
 
-        public GetHyperNodeResponseBodyNodes setHostname(String hostname) {
+        public DescribeHyperNodeResponseBodyNodes setHostname(String hostname) {
             this.hostname = hostname;
             return this;
         }
@@ -438,7 +463,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.hostname;
         }
 
-        public GetHyperNodeResponseBodyNodes setImageId(String imageId) {
+        public DescribeHyperNodeResponseBodyNodes setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -446,7 +471,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public GetHyperNodeResponseBodyNodes setImageName(String imageName) {
+        public DescribeHyperNodeResponseBodyNodes setImageName(String imageName) {
             this.imageName = imageName;
             return this;
         }
@@ -454,15 +479,15 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.imageName;
         }
 
-        public GetHyperNodeResponseBodyNodes setNetworks(GetHyperNodeResponseBodyNodesNetworks networks) {
+        public DescribeHyperNodeResponseBodyNodes setNetworks(DescribeHyperNodeResponseBodyNodesNetworks networks) {
             this.networks = networks;
             return this;
         }
-        public GetHyperNodeResponseBodyNodesNetworks getNetworks() {
+        public DescribeHyperNodeResponseBodyNodesNetworks getNetworks() {
             return this.networks;
         }
 
-        public GetHyperNodeResponseBodyNodes setNodeId(String nodeId) {
+        public DescribeHyperNodeResponseBodyNodes setNodeId(String nodeId) {
             this.nodeId = nodeId;
             return this;
         }
@@ -470,7 +495,16 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.nodeId;
         }
 
-        public GetHyperNodeResponseBodyNodes setStatus(String status) {
+        public DescribeHyperNodeResponseBodyNodes setOperatingState(String operatingState) {
+            this.operatingState = operatingState;
+            return this;
+        }
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
+        @Deprecated
+        public DescribeHyperNodeResponseBodyNodes setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -478,7 +512,7 @@ public class GetHyperNodeResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetHyperNodeResponseBodyNodes setUserData(String userData) {
+        public DescribeHyperNodeResponseBodyNodes setUserData(String userData) {
             this.userData = userData;
             return this;
         }

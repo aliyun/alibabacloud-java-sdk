@@ -1,3 +1,16 @@
+2025-11-12 Version: 3.0.0
+- Support API ChangeNodeTypes.
+- Support API DeleteHyperNode.
+- Support API DescribeHyperNode.
+- Support API DescribeNodeGroup.
+- Support API ListSyslogs.
+- Delete API GetHyperNode.
+- Update API DescribeNodeType: add response parameters Body.DiskQuantity.
+- Update API ListClusterHyperNodes: add response parameters Body.HyperNodes.$.OperatingState.
+- Update API ListFreeHyperNodes: add response parameters Body.HyperNodes.$.OperatingState.
+- Update API ListHyperNodes: add response parameters Body.HyperNodes.$.OperatingState.
+
+
 2025-10-24 Version: 2.7.0
 - Support API ChangeNodeGroup.
 - Support API GetHyperNode.

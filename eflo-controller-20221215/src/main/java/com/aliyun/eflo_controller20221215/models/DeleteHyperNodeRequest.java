@@ -3,7 +3,7 @@ package com.aliyun.eflo_controller20221215.models;
 
 import com.aliyun.tea.*;
 
-public class GetHyperNodeRequest extends TeaModel {
+public class DeleteHyperNodeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -13,12 +13,12 @@ public class GetHyperNodeRequest extends TeaModel {
     @NameInMap("HyperNodeId")
     public String hyperNodeId;
 
-    public static GetHyperNodeRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetHyperNodeRequest self = new GetHyperNodeRequest();
+    public static DeleteHyperNodeRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteHyperNodeRequest self = new DeleteHyperNodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetHyperNodeRequest setHyperNodeId(String hyperNodeId) {
+    public DeleteHyperNodeRequest setHyperNodeId(String hyperNodeId) {
         this.hyperNodeId = hyperNodeId;
         return this;
     }

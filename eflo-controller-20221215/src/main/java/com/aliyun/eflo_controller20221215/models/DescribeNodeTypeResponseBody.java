@@ -4,6 +4,9 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeTypeResponseBody extends TeaModel {
+    @NameInMap("DiskQuantity")
+    public Integer diskQuantity;
+
     /**
      * <strong>example:</strong>
      * <p>63</p>
@@ -42,6 +45,14 @@ public class DescribeNodeTypeResponseBody extends TeaModel {
     public static DescribeNodeTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNodeTypeResponseBody self = new DescribeNodeTypeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNodeTypeResponseBody setDiskQuantity(Integer diskQuantity) {
+        this.diskQuantity = diskQuantity;
+        return this;
+    }
+    public Integer getDiskQuantity() {
+        return this.diskQuantity;
     }
 
     public DescribeNodeTypeResponseBody setEniHighDenseQuantity(Integer eniHighDenseQuantity) {

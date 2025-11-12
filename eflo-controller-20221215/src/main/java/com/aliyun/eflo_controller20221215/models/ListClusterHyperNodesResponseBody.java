@@ -163,9 +163,17 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>Using</p>
+         */
+        @NameInMap("OperatingState")
+        public String operatingState;
+
+        /**
+         * <strong>example:</strong>
          * <p>Extending</p>
          */
         @NameInMap("Status")
+        @Deprecated
         public String status;
 
         @NameInMap("Tags")
@@ -284,6 +292,15 @@ public class ListClusterHyperNodesResponseBody extends TeaModel {
             return this.nodeGroupName;
         }
 
+        public ListClusterHyperNodesResponseBodyHyperNodes setOperatingState(String operatingState) {
+            this.operatingState = operatingState;
+            return this;
+        }
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
+        @Deprecated
         public ListClusterHyperNodesResponseBodyHyperNodes setStatus(String status) {
             this.status = status;
             return this;

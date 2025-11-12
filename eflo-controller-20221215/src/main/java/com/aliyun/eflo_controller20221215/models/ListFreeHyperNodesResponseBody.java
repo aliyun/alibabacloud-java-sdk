@@ -155,6 +155,13 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>Using</p>
+         */
+        @NameInMap("OperatingState")
+        public String operatingState;
+
+        /**
+         * <strong>example:</strong>
          * <p>rg-acfmwaateahzoii</p>
          */
         @NameInMap("ResourceGroupId")
@@ -165,6 +172,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
          * <p>Using</p>
          */
         @NameInMap("Status")
+        @Deprecated
         public String status;
 
         @NameInMap("Tags")
@@ -238,6 +246,14 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             return this.machineType;
         }
 
+        public ListFreeHyperNodesResponseBodyHyperNodes setOperatingState(String operatingState) {
+            this.operatingState = operatingState;
+            return this;
+        }
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
         public ListFreeHyperNodesResponseBodyHyperNodes setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -246,6 +262,7 @@ public class ListFreeHyperNodesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        @Deprecated
         public ListFreeHyperNodesResponseBodyHyperNodes setStatus(String status) {
             this.status = status;
             return this;

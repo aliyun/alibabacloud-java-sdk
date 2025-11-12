@@ -136,6 +136,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>节点规格变配</p>
+     * 
+     * @param tmpReq ChangeNodeTypesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeNodeTypesResponse
+     */
+    public ChangeNodeTypesResponse changeNodeTypesWithOptions(ChangeNodeTypesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ChangeNodeTypesShrinkRequest request = new ChangeNodeTypesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeIds)) {
+            request.nodeIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeIds, "NodeIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIdsShrink)) {
+            body.put("NodeIds", request.nodeIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            body.put("NodeType", request.nodeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeNodeTypes"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeNodeTypesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>节点规格变配</p>
+     * 
+     * @param request ChangeNodeTypesRequest
+     * @return ChangeNodeTypesResponse
+     */
+    public ChangeNodeTypesResponse changeNodeTypes(ChangeNodeTypesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeNodeTypesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Moves a resource from one resource group to another.</p>
      * 
      * @param request ChangeResourceGroupRequest
@@ -736,6 +790,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除一个未使用超节点</p>
+     * 
+     * @param request DeleteHyperNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHyperNodeResponse
+     */
+    public DeleteHyperNodeResponse deleteHyperNodeWithOptions(DeleteHyperNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hyperNodeId)) {
+            body.put("HyperNodeId", request.hyperNodeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteHyperNode"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHyperNodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除一个未使用超节点</p>
+     * 
+     * @param request DeleteHyperNodeRequest
+     * @return DeleteHyperNodeResponse
+     */
+    public DeleteHyperNodeResponse deleteHyperNode(DeleteHyperNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteHyperNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除一个未使用节点</p>
      * 
      * @param request DeleteNodeRequest
@@ -972,6 +1070,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询节点列表</p>
+     * 
+     * @param request DescribeHyperNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHyperNodeResponse
+     */
+    public DescribeHyperNodeResponse describeHyperNodeWithOptions(DescribeHyperNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hyperNodeId)) {
+            body.put("HyperNodeId", request.hyperNodeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHyperNode"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHyperNodeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点列表</p>
+     * 
+     * @param request DescribeHyperNodeRequest
+     * @return DescribeHyperNodeResponse
+     */
+    public DescribeHyperNodeResponse describeHyperNode(DescribeHyperNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHyperNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the execution list and status of O\&amp;M Assistant commands.</p>
      * 
      * @param request DescribeInvocationsRequest
@@ -1112,6 +1254,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeNodeResponse describeNode(DescribeNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点分组</p>
+     * 
+     * @param request DescribeNodeGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNodeGroupResponse
+     */
+    public DescribeNodeGroupResponse describeNodeGroupWithOptions(DescribeNodeGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            body.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNodeGroup"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNodeGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询节点分组</p>
+     * 
+     * @param request DescribeNodeGroupRequest
+     * @return DescribeNodeGroupResponse
+     */
+    public DescribeNodeGroupResponse describeNodeGroup(DescribeNodeGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNodeGroupWithOptions(request, runtime);
     }
 
     /**
@@ -1458,50 +1644,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExtendClusterResponse extendCluster(ExtendClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.extendClusterWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询节点列表</p>
-     * 
-     * @param request GetHyperNodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetHyperNodeResponse
-     */
-    public GetHyperNodeResponse getHyperNodeWithOptions(GetHyperNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.hyperNodeId)) {
-            body.put("HyperNodeId", request.hyperNodeId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetHyperNode"),
-            new TeaPair("version", "2022-12-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHyperNodeResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询节点列表</p>
-     * 
-     * @param request GetHyperNodeRequest
-     * @return GetHyperNodeResponse
-     */
-    public GetHyperNodeResponse getHyperNode(GetHyperNodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getHyperNodeWithOptions(request, runtime);
     }
 
     /**
@@ -2234,6 +2376,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNodeGroupsResponse listNodeGroups(ListNodeGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNodeGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询系统日志</p>
+     * 
+     * @param request ListSyslogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSyslogsResponse
+     */
+    public ListSyslogsResponse listSyslogsWithOptions(ListSyslogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fromTime)) {
+            body.put("FromTime", request.fromTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reverse)) {
+            body.put("Reverse", request.reverse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toTime)) {
+            body.put("ToTime", request.toTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSyslogs"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSyslogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询系统日志</p>
+     * 
+     * @param request ListSyslogsRequest
+     * @return ListSyslogsResponse
+     */
+    public ListSyslogsResponse listSyslogs(ListSyslogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSyslogsWithOptions(request, runtime);
     }
 
     /**
