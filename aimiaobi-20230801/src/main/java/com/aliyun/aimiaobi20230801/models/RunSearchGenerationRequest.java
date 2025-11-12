@@ -625,8 +625,36 @@ public class RunSearchGenerationRequest extends TeaModel {
         @NameInMap("MultimodalSearchTypes")
         public java.util.List<String> multimodalSearchTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
+        @NameInMap("SearchAudioMinScore")
+        public Double searchAudioMinScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
+        @NameInMap("SearchImageMinScore")
+        public Double searchImageMinScore;
+
         @NameInMap("SearchSources")
         public java.util.List<RunSearchGenerationRequestChatConfigSearchParamSearchSources> searchSources;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
+        @NameInMap("SearchTextMinScore")
+        public Double searchTextMinScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
+        @NameInMap("SearchVideoMinScore")
+        public Double searchVideoMinScore;
 
         /**
          * <strong>example:</strong>
@@ -656,12 +684,44 @@ public class RunSearchGenerationRequest extends TeaModel {
             return this.multimodalSearchTypes;
         }
 
+        public RunSearchGenerationRequestChatConfigSearchParam setSearchAudioMinScore(Double searchAudioMinScore) {
+            this.searchAudioMinScore = searchAudioMinScore;
+            return this;
+        }
+        public Double getSearchAudioMinScore() {
+            return this.searchAudioMinScore;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setSearchImageMinScore(Double searchImageMinScore) {
+            this.searchImageMinScore = searchImageMinScore;
+            return this;
+        }
+        public Double getSearchImageMinScore() {
+            return this.searchImageMinScore;
+        }
+
         public RunSearchGenerationRequestChatConfigSearchParam setSearchSources(java.util.List<RunSearchGenerationRequestChatConfigSearchParamSearchSources> searchSources) {
             this.searchSources = searchSources;
             return this;
         }
         public java.util.List<RunSearchGenerationRequestChatConfigSearchParamSearchSources> getSearchSources() {
             return this.searchSources;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setSearchTextMinScore(Double searchTextMinScore) {
+            this.searchTextMinScore = searchTextMinScore;
+            return this;
+        }
+        public Double getSearchTextMinScore() {
+            return this.searchTextMinScore;
+        }
+
+        public RunSearchGenerationRequestChatConfigSearchParam setSearchVideoMinScore(Double searchVideoMinScore) {
+            this.searchVideoMinScore = searchVideoMinScore;
+            return this;
+        }
+        public Double getSearchVideoMinScore() {
+            return this.searchVideoMinScore;
         }
 
         public RunSearchGenerationRequestChatConfigSearchParam setStartTime(Long startTime) {
@@ -694,6 +754,20 @@ public class RunSearchGenerationRequest extends TeaModel {
          */
         @NameInMap("GenerateTechnology")
         public String generateTechnology;
+
+        /**
+         * <strong>example:</strong>
+         * <h1>角色 你是一个专业的文章检索和问答机器人，擅长文章检索和回答用户问题。  # 任务目标 请你根据检索到的相关文章，回答或表述用户问题“{query}”。  # 任务限制 - 如果用户问题中提到具体日期，请考虑知识日期做筛选。 - 生成内容结构条理。 - 生成内容尽量精简。 - 控制在30字以内 - 不要使用其他数据，不要杜撰。 - 如果不能回答用户问题，请输出对应语言的拒识文案:   - 中文：&quot;根据已知信息无法回答。&quot;   - 英文：&quot;Unable to answer based on the known information.&quot;  # 输入数据 ## 检索到的相关文章 {content}</h1>
+         */
+        @NameInMap("ModelCustomPromptTemplate")
+        public String modelCustomPromptTemplate;
+
+        /**
+         * <strong>example:</strong>
+         * <h1>角色 你是一个专业的文章检索和问答机器人，擅长文章检索和回答用户问题。   # 任务目标 请你根据检索到的相关文章和图片，回答或表述用户问题“{query}”。  # 任务限制  - 如果用户问题中提到具体日期，请考虑知识日期做筛选。  - 生成内容结构条理。  - 生成内容尽量精简。  - 控制在30字以内。 - 如果图片内容可以回答，可以忽略文章内容。 - 不要使用其他数据，不要杜撰。  - 如果不能回答用户问题，请输出对应语言的拒识文案:    	- 中文：&quot;根据已知信息无法回答。&quot;    	- 英文：&quot;Unable to answer based on the known information.&quot;    # 输入数据  ## 检索到的相关文章  {content}</h1>
+         */
+        @NameInMap("ModelCustomVlPromptTemplate")
+        public String modelCustomVlPromptTemplate;
 
         @NameInMap("SearchModels")
         public java.util.List<String> searchModels;
@@ -736,6 +810,22 @@ public class RunSearchGenerationRequest extends TeaModel {
         }
         public String getGenerateTechnology() {
             return this.generateTechnology;
+        }
+
+        public RunSearchGenerationRequestChatConfig setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
+            this.modelCustomPromptTemplate = modelCustomPromptTemplate;
+            return this;
+        }
+        public String getModelCustomPromptTemplate() {
+            return this.modelCustomPromptTemplate;
+        }
+
+        public RunSearchGenerationRequestChatConfig setModelCustomVlPromptTemplate(String modelCustomVlPromptTemplate) {
+            this.modelCustomVlPromptTemplate = modelCustomVlPromptTemplate;
+            return this;
+        }
+        public String getModelCustomVlPromptTemplate() {
+            return this.modelCustomVlPromptTemplate;
         }
 
         public RunSearchGenerationRequestChatConfig setSearchModels(java.util.List<String> searchModels) {
