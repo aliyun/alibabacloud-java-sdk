@@ -1,3 +1,7 @@
+2025-11-12 Version: 2.1.11
+- Update API GetQuota: add request parameters WithNodeMeta.
+
+
 2025-11-07 Version: 2.1.10
 - Generated java 2022-01-12 for PaiStudio.
 

@@ -1056,6 +1056,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Verbose", request.verbose);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.withNodeMeta)) {
+            query.put("WithNodeMeta", request.withNodeMeta);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
