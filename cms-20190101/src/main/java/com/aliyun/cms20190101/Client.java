@@ -3340,7 +3340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries alert groups.</p>
+     * <p>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</p>
      * 
      * @param request DescribeContactGroupListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3376,7 +3376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries alert groups.</p>
+     * <p>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</p>
      * 
      * @param request DescribeContactGroupListRequest
      * @return DescribeContactGroupListResponse

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeContactGroupListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>Page number.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>Number of records per page.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

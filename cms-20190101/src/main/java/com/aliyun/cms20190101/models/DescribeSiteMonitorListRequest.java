@@ -4,6 +4,20 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListRequest extends TeaModel {
+    /**
+     * <p>Task network type. Valid values:</p>
+     * <ul>
+     * <li><p>PC: Cable Network</p>
+     * </li>
+     * <li><p>MOBILE: Mobile Cellular Network</p>
+     * </li>
+     * <li><p>FC: Alibaba Cloud VPC Network</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PC</p>
+     */
     @NameInMap("AgentGroup")
     public String agentGroup;
 

@@ -917,6 +917,9 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the site monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>域名检测_example.com.cn</p>
          */
         @NameInMap("TaskName")
         public String taskName;

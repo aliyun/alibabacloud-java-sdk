@@ -135,6 +135,9 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("LoongCollectorStatus")
+        public String loongCollectorStatus;
+
         /**
          * <p>Indicates whether the SysAK monitoring feature is enabled.`` Valid values:</p>
          * <ul>
@@ -249,6 +252,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setLoongCollectorStatus(String loongCollectorStatus) {
+            this.loongCollectorStatus = loongCollectorStatus;
+            return this;
+        }
+        public String getLoongCollectorStatus() {
+            return this.loongCollectorStatus;
         }
 
         public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setOsMonitorConfig(String osMonitorConfig) {
