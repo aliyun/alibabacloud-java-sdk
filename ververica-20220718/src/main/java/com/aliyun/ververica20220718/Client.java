@@ -2430,6 +2430,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取上传文件URL</p>
+     * 
+     * @param request GetPreSignedUrlForPutObjectRequest
+     * @param headers GetPreSignedUrlForPutObjectHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPreSignedUrlForPutObjectResponse
+     */
+    public GetPreSignedUrlForPutObjectResponse getPreSignedUrlForPutObjectWithOptions(String namespace, GetPreSignedUrlForPutObjectRequest request, GetPreSignedUrlForPutObjectHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPreSignedUrlForPutObject"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/artifacts/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/getPreSignedUrlForPutObject"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPreSignedUrlForPutObjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取上传文件URL</p>
+     * 
+     * @param request GetPreSignedUrlForPutObjectRequest
+     * @return GetPreSignedUrlForPutObjectResponse
+     */
+    public GetPreSignedUrlForPutObjectResponse getPreSignedUrlForPutObject(String namespace, GetPreSignedUrlForPutObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetPreSignedUrlForPutObjectHeaders headers = new GetPreSignedUrlForPutObjectHeaders();
+        return this.getPreSignedUrlForPutObjectWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries details of a savepoint and checkpoint.</p>
      * 
      * @param headers GetSavepointHeaders
