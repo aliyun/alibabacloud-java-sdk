@@ -94,6 +94,9 @@ public class CreateTextFileResponseBody extends TeaModel {
     }
 
     public static class CreateTextFileResponseBodyData extends TeaModel {
+        @NameInMap("ContractId")
+        public String contractId;
+
         /**
          * <strong>example:</strong>
          * <p>36d6447d277c4a1c9fd0def1d16341f1</p>
@@ -110,6 +113,14 @@ public class CreateTextFileResponseBody extends TeaModel {
         public static CreateTextFileResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateTextFileResponseBodyData self = new CreateTextFileResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTextFileResponseBodyData setContractId(String contractId) {
+            this.contractId = contractId;
+            return this;
+        }
+        public String getContractId() {
+            return this.contractId;
         }
 
         public CreateTextFileResponseBodyData setTextFileId(String textFileId) {

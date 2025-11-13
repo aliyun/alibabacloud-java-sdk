@@ -11,6 +11,9 @@ public class CreateTextFileRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ContractId")
+    public String contractId;
+
     /**
      * <strong>example:</strong>
      * <p>1714476549</p>
@@ -35,6 +38,14 @@ public class CreateTextFileRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateTextFileRequest setContractId(String contractId) {
+        this.contractId = contractId;
+        return this;
+    }
+    public String getContractId() {
+        return this.contractId;
     }
 
     public CreateTextFileRequest setCreateTime(String createTime) {

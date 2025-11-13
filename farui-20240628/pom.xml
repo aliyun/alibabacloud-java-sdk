@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>farui20240628</artifactId>
-  <version>1.2.2</version>
+  <version>1.2.3</version>
   <packaging>jar</packaging>
   <name>farui20240628</name>
   <description>Alibaba Cloud FaRui (20240628) SDK for Java
@@ -45,28 +45,13 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>oss-client</artifactId>
-      <version>3.0.4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>openplatform20191219</artifactId>
-      <version>5.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>oss-util</artifactId>
-      <version>1.0.2</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>tea-fileform</artifactId>
       <version>0.0.3</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.8</version>
+      <version>0.3.10</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -203,12 +188,11 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.8.0</version>
+        <version>0.9.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>
           <autoPublish>true</autoPublish>
-          <waitUntil>published</waitUntil>
         </configuration>
       </plugin>
     </plugins>

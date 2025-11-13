@@ -125,6 +125,9 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         @NameInMap("riskExplain")
         public String riskExplain;
 
+        @NameInMap("standardOriginalContent")
+        public String standardOriginalContent;
+
         public static RunContractResultGenerationResponseBodyOutputResultSubRisks build(java.util.Map<String, ?> map) throws Exception {
             RunContractResultGenerationResponseBodyOutputResultSubRisks self = new RunContractResultGenerationResponseBodyOutputResultSubRisks();
             return TeaModel.build(map, self);
@@ -176,6 +179,14 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         }
         public String getRiskExplain() {
             return this.riskExplain;
+        }
+
+        public RunContractResultGenerationResponseBodyOutputResultSubRisks setStandardOriginalContent(String standardOriginalContent) {
+            this.standardOriginalContent = standardOriginalContent;
+            return this;
+        }
+        public String getStandardOriginalContent() {
+            return this.standardOriginalContent;
         }
 
     }
