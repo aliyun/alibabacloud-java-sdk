@@ -45,6 +45,20 @@ public class CreateCampaignShrinkRequest extends TeaModel {
     public Boolean executingUntilTimeout;
 
     /**
+     * <strong>example:</strong>
+     * <p>{&quot;applicationId&quot;:&quot;08e6b63a-<strong><strong>-</strong></strong>-****-689a288cdbb5&quot;,&quot;templateId&quot;:&quot;325&quot;}</p>
+     */
+    @NameInMap("FlashSmsParameters")
+    public String flashSmsParameters;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0d368091-2c70-4d26-979a-6997ddc9c34f</p>
+     */
+    @NameInMap("InstGroupId")
+    public String instGroupId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +93,9 @@ public class CreateCampaignShrinkRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NumberList")
+    public String numberListShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -175,6 +192,22 @@ public class CreateCampaignShrinkRequest extends TeaModel {
         return this.executingUntilTimeout;
     }
 
+    public CreateCampaignShrinkRequest setFlashSmsParameters(String flashSmsParameters) {
+        this.flashSmsParameters = flashSmsParameters;
+        return this;
+    }
+    public String getFlashSmsParameters() {
+        return this.flashSmsParameters;
+    }
+
+    public CreateCampaignShrinkRequest setInstGroupId(String instGroupId) {
+        this.instGroupId = instGroupId;
+        return this;
+    }
+    public String getInstGroupId() {
+        return this.instGroupId;
+    }
+
     public CreateCampaignShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -205,6 +238,14 @@ public class CreateCampaignShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCampaignShrinkRequest setNumberListShrink(String numberListShrink) {
+        this.numberListShrink = numberListShrink;
+        return this;
+    }
+    public String getNumberListShrink() {
+        return this.numberListShrink;
     }
 
     public CreateCampaignShrinkRequest setQueueId(String queueId) {

@@ -11,6 +11,9 @@ public class AppendCasesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<AppendCasesResponseBodyData> data;
+
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,6 +44,14 @@ public class AppendCasesResponseBody extends TeaModel {
         return this.code;
     }
 
+    public AppendCasesResponseBody setData(java.util.List<AppendCasesResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<AppendCasesResponseBodyData> getData() {
+        return this.data;
+    }
+
     public AppendCasesResponseBody setHttpStatusCode(String httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
@@ -63,6 +74,47 @@ public class AppendCasesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class AppendCasesResponseBodyData extends TeaModel {
+        @NameInMap("CustomVariables")
+        public String customVariables;
+
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        @NameInMap("ReferenceId")
+        public String referenceId;
+
+        public static AppendCasesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            AppendCasesResponseBodyData self = new AppendCasesResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public AppendCasesResponseBodyData setCustomVariables(String customVariables) {
+            this.customVariables = customVariables;
+            return this;
+        }
+        public String getCustomVariables() {
+            return this.customVariables;
+        }
+
+        public AppendCasesResponseBodyData setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public AppendCasesResponseBodyData setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
+        }
+
     }
 
 }

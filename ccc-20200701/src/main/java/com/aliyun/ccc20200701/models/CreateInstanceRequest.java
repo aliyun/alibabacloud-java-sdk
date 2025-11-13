@@ -32,8 +32,6 @@ public class CreateInstanceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>[&quot;0830011xxxx&quot;, &quot;0830312xxxx&quot;]</p>
      */

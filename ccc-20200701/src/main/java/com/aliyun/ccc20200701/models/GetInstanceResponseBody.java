@@ -230,6 +230,36 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyDataChatbotBusinessUnit extends TeaModel {
+        @NameInMap("UnitId")
+        public Long unitId;
+
+        @NameInMap("UnitKey")
+        public String unitKey;
+
+        public static GetInstanceResponseBodyDataChatbotBusinessUnit build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyDataChatbotBusinessUnit self = new GetInstanceResponseBodyDataChatbotBusinessUnit();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataChatbotBusinessUnit setUnitId(Long unitId) {
+            this.unitId = unitId;
+            return this;
+        }
+        public Long getUnitId() {
+            return this.unitId;
+        }
+
+        public GetInstanceResponseBodyDataChatbotBusinessUnit setUnitKey(String unitKey) {
+            this.unitKey = unitKey;
+            return this;
+        }
+        public String getUnitKey() {
+            return this.unitKey;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyDataNumberListSkillGroups extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -470,12 +500,18 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("AdminList")
         public java.util.List<GetInstanceResponseBodyDataAdminList> adminList;
 
+        @NameInMap("AgentType")
+        public String agentType;
+
         /**
          * <strong>example:</strong>
          * <p>157123456789****</p>
          */
         @NameInMap("AliyunUid")
         public String aliyunUid;
+
+        @NameInMap("ChatbotBusinessUnit")
+        public GetInstanceResponseBodyDataChatbotBusinessUnit chatbotBusinessUnit;
 
         /**
          * <strong>example:</strong>
@@ -527,12 +563,28 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.adminList;
         }
 
+        public GetInstanceResponseBodyData setAgentType(String agentType) {
+            this.agentType = agentType;
+            return this;
+        }
+        public String getAgentType() {
+            return this.agentType;
+        }
+
         public GetInstanceResponseBodyData setAliyunUid(String aliyunUid) {
             this.aliyunUid = aliyunUid;
             return this;
         }
         public String getAliyunUid() {
             return this.aliyunUid;
+        }
+
+        public GetInstanceResponseBodyData setChatbotBusinessUnit(GetInstanceResponseBodyDataChatbotBusinessUnit chatbotBusinessUnit) {
+            this.chatbotBusinessUnit = chatbotBusinessUnit;
+            return this;
+        }
+        public GetInstanceResponseBodyDataChatbotBusinessUnit getChatbotBusinessUnit() {
+            return this.chatbotBusinessUnit;
         }
 
         public GetInstanceResponseBodyData setConsoleUrl(String consoleUrl) {

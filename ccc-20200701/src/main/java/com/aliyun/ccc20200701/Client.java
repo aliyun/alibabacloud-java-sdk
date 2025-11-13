@@ -1688,6 +1688,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.caseListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.caseList, "CaseList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.numberList)) {
+            request.numberListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.numberList, "NumberList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callableTime)) {
             query.put("CallableTime", request.callableTime);
@@ -1713,6 +1717,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExecutingUntilTimeout", request.executingUntilTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.flashSmsParameters)) {
+            query.put("FlashSmsParameters", request.flashSmsParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instGroupId)) {
+            query.put("InstGroupId", request.instGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -1727,6 +1739,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numberListShrink)) {
+            query.put("NumberList", request.numberListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.queueId)) {
@@ -1939,6 +1955,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建实例</p>
+     * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateInstanceResponse
@@ -1984,6 +2003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建实例</p>
+     * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
      */
@@ -4103,6 +4125,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取实例信息</p>
+     * 
      * @param request GetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceResponse
@@ -4132,6 +4157,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取实例信息</p>
+     * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
      */
@@ -7535,6 +7563,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>技能组汇总报表</p>
+     * 
      * @param request ListHistoricalSkillGroupReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListHistoricalSkillGroupReportResponse
@@ -7590,6 +7621,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>技能组汇总报表</p>
+     * 
      * @param request ListHistoricalSkillGroupReportRequest
      * @return ListHistoricalSkillGroupReportResponse
      */

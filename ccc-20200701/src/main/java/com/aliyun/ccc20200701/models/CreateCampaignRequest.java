@@ -45,6 +45,20 @@ public class CreateCampaignRequest extends TeaModel {
     public Boolean executingUntilTimeout;
 
     /**
+     * <strong>example:</strong>
+     * <p>{&quot;applicationId&quot;:&quot;08e6b63a-<strong><strong>-</strong></strong>-****-689a288cdbb5&quot;,&quot;templateId&quot;:&quot;325&quot;}</p>
+     */
+    @NameInMap("FlashSmsParameters")
+    public String flashSmsParameters;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0d368091-2c70-4d26-979a-6997ddc9c34f</p>
+     */
+    @NameInMap("InstGroupId")
+    public String instGroupId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +93,9 @@ public class CreateCampaignRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NumberList")
+    public java.util.List<String> numberList;
 
     /**
      * <p>This parameter is required.</p>
@@ -175,6 +192,22 @@ public class CreateCampaignRequest extends TeaModel {
         return this.executingUntilTimeout;
     }
 
+    public CreateCampaignRequest setFlashSmsParameters(String flashSmsParameters) {
+        this.flashSmsParameters = flashSmsParameters;
+        return this;
+    }
+    public String getFlashSmsParameters() {
+        return this.flashSmsParameters;
+    }
+
+    public CreateCampaignRequest setInstGroupId(String instGroupId) {
+        this.instGroupId = instGroupId;
+        return this;
+    }
+    public String getInstGroupId() {
+        return this.instGroupId;
+    }
+
     public CreateCampaignRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -205,6 +238,14 @@ public class CreateCampaignRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCampaignRequest setNumberList(java.util.List<String> numberList) {
+        this.numberList = numberList;
+        return this;
+    }
+    public java.util.List<String> getNumberList() {
+        return this.numberList;
     }
 
     public CreateCampaignRequest setQueueId(String queueId) {
