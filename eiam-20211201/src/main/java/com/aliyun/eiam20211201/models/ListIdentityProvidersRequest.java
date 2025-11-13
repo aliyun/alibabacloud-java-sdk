@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListIdentityProvidersRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>pull</p>
+     */
+    @NameInMap("Direction")
+    public String direction;
+
+    /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -35,6 +42,14 @@ public class ListIdentityProvidersRequest extends TeaModel {
     public static ListIdentityProvidersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIdentityProvidersRequest self = new ListIdentityProvidersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListIdentityProvidersRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public ListIdentityProvidersRequest setInstanceId(String instanceId) {

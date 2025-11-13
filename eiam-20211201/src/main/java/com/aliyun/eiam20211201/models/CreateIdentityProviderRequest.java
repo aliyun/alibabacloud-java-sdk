@@ -875,6 +875,20 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String organizationUnitObjectClass;
 
         /**
+         * <strong>example:</strong>
+         * <p>ou</p>
+         */
+        @NameInMap("OrganizationalUnitRdn")
+        public String organizationalUnitRdn;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("PasswordSyncStatus")
+        public String passwordSyncStatus;
+
+        /**
          * <p>Whether startTLS is enabled. Value range:</p>
          * <ul>
          * <li><p>Disabled: disabled</p>
@@ -915,6 +929,13 @@ public class CreateIdentityProviderRequest extends TeaModel {
          */
         @NameInMap("UserObjectClassCustomFilter")
         public String userObjectClassCustomFilter;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn</p>
+         */
+        @NameInMap("UserRdn")
+        public String userRdn;
 
         public static CreateIdentityProviderRequestLdapConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateIdentityProviderRequestLdapConfig self = new CreateIdentityProviderRequestLdapConfig();
@@ -1009,6 +1030,22 @@ public class CreateIdentityProviderRequest extends TeaModel {
             return this.organizationUnitObjectClass;
         }
 
+        public CreateIdentityProviderRequestLdapConfig setOrganizationalUnitRdn(String organizationalUnitRdn) {
+            this.organizationalUnitRdn = organizationalUnitRdn;
+            return this;
+        }
+        public String getOrganizationalUnitRdn() {
+            return this.organizationalUnitRdn;
+        }
+
+        public CreateIdentityProviderRequestLdapConfig setPasswordSyncStatus(String passwordSyncStatus) {
+            this.passwordSyncStatus = passwordSyncStatus;
+            return this;
+        }
+        public String getPasswordSyncStatus() {
+            return this.passwordSyncStatus;
+        }
+
         public CreateIdentityProviderRequestLdapConfig setStartTlsStatus(String startTlsStatus) {
             this.startTlsStatus = startTlsStatus;
             return this;
@@ -1039,6 +1076,14 @@ public class CreateIdentityProviderRequest extends TeaModel {
         }
         public String getUserObjectClassCustomFilter() {
             return this.userObjectClassCustomFilter;
+        }
+
+        public CreateIdentityProviderRequestLdapConfig setUserRdn(String userRdn) {
+            this.userRdn = userRdn;
+            return this;
+        }
+        public String getUserRdn() {
+            return this.userRdn;
         }
 
     }
@@ -1511,6 +1556,55 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     }
 
+    public static class CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0 45 1 * * ?</p>
+         */
+        @NameInMap("PeriodicSyncCron")
+        public String periodicSyncCron;
+
+        @NameInMap("PeriodicSyncTimes")
+        public java.util.List<Integer> periodicSyncTimes;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cron</p>
+         */
+        @NameInMap("PeriodicSyncType")
+        public String periodicSyncType;
+
+        public static CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig self = new CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig setPeriodicSyncCron(String periodicSyncCron) {
+            this.periodicSyncCron = periodicSyncCron;
+            return this;
+        }
+        public String getPeriodicSyncCron() {
+            return this.periodicSyncCron;
+        }
+
+        public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig setPeriodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
+            this.periodicSyncTimes = periodicSyncTimes;
+            return this;
+        }
+        public java.util.List<Integer> getPeriodicSyncTimes() {
+            return this.periodicSyncTimes;
+        }
+
+        public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig setPeriodicSyncType(String periodicSyncType) {
+            this.periodicSyncType = periodicSyncType;
+            return this;
+        }
+        public String getPeriodicSyncType() {
+            return this.periodicSyncType;
+        }
+
+    }
+
     public static class CreateIdentityProviderRequestUdPushConfigUdSyncScopeConfigs extends TeaModel {
         /**
          * <p>List of source nodes for synchronization.</p>
@@ -1560,6 +1654,9 @@ public class CreateIdentityProviderRequest extends TeaModel {
         @NameInMap("IncrementalCallbackStatus")
         public String incrementalCallbackStatus;
 
+        @NameInMap("PeriodicSyncConfig")
+        public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig periodicSyncConfig;
+
         /**
          * <p>Periodic check status. This field is currently not in use, please ignore it.</p>
          * 
@@ -1586,6 +1683,14 @@ public class CreateIdentityProviderRequest extends TeaModel {
         }
         public String getIncrementalCallbackStatus() {
             return this.incrementalCallbackStatus;
+        }
+
+        public CreateIdentityProviderRequestUdPushConfig setPeriodicSyncConfig(CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig periodicSyncConfig) {
+            this.periodicSyncConfig = periodicSyncConfig;
+            return this;
+        }
+        public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig getPeriodicSyncConfig() {
+            return this.periodicSyncConfig;
         }
 
         public CreateIdentityProviderRequestUdPushConfig setPeriodicSyncStatus(String periodicSyncStatus) {
