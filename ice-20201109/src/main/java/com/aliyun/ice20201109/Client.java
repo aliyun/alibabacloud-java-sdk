@@ -86,6 +86,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>激活AI实时互动授权信息</p>
+     * 
+     * @param request ActiveAiRtcLicenseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ActiveAiRtcLicenseResponse
+     */
+    public ActiveAiRtcLicenseResponse activeAiRtcLicenseWithOptions(ActiveAiRtcLicenseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authCode)) {
+            query.put("AuthCode", request.authCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseItemId)) {
+            query.put("LicenseItemId", request.licenseItemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ActiveAiRtcLicense"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ActiveAiRtcLicenseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>激活AI实时互动授权信息</p>
+     * 
+     * @param request ActiveAiRtcLicenseRequest
+     * @return ActiveAiRtcLicenseResponse
+     */
+    public ActiveAiRtcLicenseResponse activeAiRtcLicense(ActiveAiRtcLicenseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.activeAiRtcLicenseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds an ad insertion configuration.</p>
      * 
      * @param request AddAdInsertionRequest
@@ -6469,8 +6521,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CalledNumber", request.calledNumber);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.errorPrompt)) {
+            query.put("ErrorPrompt", request.errorPrompt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferPrompt)) {
+            query.put("TransferPrompt", request.transferPrompt);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6774,6 +6834,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAdInsertionResponse getAdInsertion(GetAdInsertionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAdInsertionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取AI实时互动授权码列表</p>
+     * 
+     * @param request GetAiRtcAuthCodeListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAiRtcAuthCodeListResponse
+     */
+    public GetAiRtcAuthCodeListResponse getAiRtcAuthCodeListWithOptions(GetAiRtcAuthCodeListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseItemId)) {
+            query.put("LicenseItemId", request.licenseItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needTotalCount)) {
+            query.put("NeedTotalCount", request.needTotalCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAiRtcAuthCodeList"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiRtcAuthCodeListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取AI实时互动授权码列表</p>
+     * 
+     * @param request GetAiRtcAuthCodeListRequest
+     * @return GetAiRtcAuthCodeListResponse
+     */
+    public GetAiRtcAuthCodeListResponse getAiRtcAuthCodeList(GetAiRtcAuthCodeListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAiRtcAuthCodeListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取AI实时互动授权批次列表</p>
+     * 
+     * @param request GetAiRtcLicenseInfoListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAiRtcLicenseInfoListResponse
+     */
+    public GetAiRtcLicenseInfoListResponse getAiRtcLicenseInfoListWithOptions(GetAiRtcLicenseInfoListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseItemId)) {
+            query.put("LicenseItemId", request.licenseItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needTotalCount)) {
+            query.put("NeedTotalCount", request.needTotalCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAiRtcLicenseInfoList"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiRtcLicenseInfoListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取AI实时互动授权批次列表</p>
+     * 
+     * @param request GetAiRtcLicenseInfoListRequest
+     * @return GetAiRtcLicenseInfoListResponse
+     */
+    public GetAiRtcLicenseInfoListResponse getAiRtcLicenseInfoList(GetAiRtcLicenseInfoListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAiRtcLicenseInfoListWithOptions(request, runtime);
     }
 
     /**
@@ -19053,6 +19241,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>提交场景化批量合成任务</p>
+     * 
+     * @param request SubmitSceneBatchEditingJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSceneBatchEditingJobResponse
+     */
+    public SubmitSceneBatchEditingJobResponse submitSceneBatchEditingJobWithOptions(SubmitSceneBatchEditingJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outputConfig)) {
+            query.put("OutputConfig", request.outputConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectIds)) {
+            query.put("ProjectIds", request.projectIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitSceneBatchEditingJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSceneBatchEditingJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交场景化批量合成任务</p>
+     * 
+     * @param request SubmitSceneBatchEditingJobRequest
+     * @return SubmitSceneBatchEditingJobResponse
+     */
+    public SubmitSceneBatchEditingJobResponse submitSceneBatchEditingJob(SubmitSceneBatchEditingJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitSceneBatchEditingJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</p>
      * <ul>
@@ -19124,6 +19364,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitSceneMediaSelectionJobResponse submitSceneMediaSelectionJob(SubmitSceneMediaSelectionJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitSceneMediaSelectionJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交场景化时间线编排任务</p>
+     * 
+     * @param request SubmitSceneTimelineOrganizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSceneTimelineOrganizationJobResponse
+     */
+    public SubmitSceneTimelineOrganizationJobResponse submitSceneTimelineOrganizationJobWithOptions(SubmitSceneTimelineOrganizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
+            query.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaSelectResult)) {
+            query.put("MediaSelectResult", request.mediaSelectResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputConfig)) {
+            query.put("OutputConfig", request.outputConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.editingConfig)) {
+            body.put("EditingConfig", request.editingConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputConfig)) {
+            body.put("InputConfig", request.inputConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitSceneTimelineOrganizationJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSceneTimelineOrganizationJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交场景化时间线编排任务</p>
+     * 
+     * @param request SubmitSceneTimelineOrganizationJobRequest
+     * @return SubmitSceneTimelineOrganizationJobResponse
+     */
+    public SubmitSceneTimelineOrganizationJobResponse submitSceneTimelineOrganizationJob(SubmitSceneTimelineOrganizationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitSceneTimelineOrganizationJobWithOptions(request, runtime);
     }
 
     /**
