@@ -258,6 +258,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VirtualClusterList")
+    public java.util.List<DescribeDBInstanceAttributeResponseBodyVirtualClusterList> virtualClusterList;
+
     /**
      * <p>The VPC ID.</p>
      * 
@@ -511,6 +514,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setVirtualClusterList(java.util.List<DescribeDBInstanceAttributeResponseBodyVirtualClusterList> virtualClusterList) {
+        this.virtualClusterList = virtualClusterList;
+        return this;
+    }
+    public java.util.List<DescribeDBInstanceAttributeResponseBodyVirtualClusterList> getVirtualClusterList() {
+        return this.virtualClusterList;
     }
 
     public DescribeDBInstanceAttributeResponseBody setVpcId(String vpcId) {
@@ -1025,6 +1036,102 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyVirtualClusterList extends TeaModel {
+        @NameInMap("ActiveClusterId")
+        public String activeClusterId;
+
+        @NameInMap("ActiveClusterName")
+        public String activeClusterName;
+
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        @NameInMap("DbClusterId")
+        public String dbClusterId;
+
+        @NameInMap("DbClusterName")
+        public String dbClusterName;
+
+        @NameInMap("StandbyClusterId")
+        public String standbyClusterId;
+
+        @NameInMap("StandbyClusterName")
+        public String standbyClusterName;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDBInstanceAttributeResponseBodyVirtualClusterList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyVirtualClusterList self = new DescribeDBInstanceAttributeResponseBodyVirtualClusterList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyVirtualClusterList setActiveClusterId(String activeClusterId) {
+            this.activeClusterId = activeClusterId;
+            return this;
+        }
+        public String getActiveClusterId() {
+            return this.activeClusterId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyVirtualClusterList setActiveClusterName(String activeClusterName) {
+            this.activeClusterName = activeClusterName;
+            return this;
+        }
+        public String getActiveClusterName() {
+            return this.activeClusterName;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyVirtualClusterList setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyVirtualClusterList setDbClusterId(String dbClusterId) {
+            this.dbClusterId = dbClusterId;
+            return this;
+        }
+        public String getDbClusterId() {
+            return this.dbClusterId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyVirtualClusterList setDbClusterName(String dbClusterName) {
+            this.dbClusterName = dbClusterName;
+            return this;
+        }
+        public String getDbClusterName() {
+            return this.dbClusterName;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyVirtualClusterList setStandbyClusterId(String standbyClusterId) {
+            this.standbyClusterId = standbyClusterId;
+            return this;
+        }
+        public String getStandbyClusterId() {
+            return this.standbyClusterId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyVirtualClusterList setStandbyClusterName(String standbyClusterName) {
+            this.standbyClusterName = standbyClusterName;
+            return this;
+        }
+        public String getStandbyClusterName() {
+            return this.standbyClusterName;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyVirtualClusterList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
