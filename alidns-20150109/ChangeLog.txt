@@ -1,3 +1,36 @@
+2025-11-13 Version: 3.6.0
+- Support API AddRecursionRecord.
+- Support API AddRecursionZone.
+- Support API DeleteRecursionRecord.
+- Support API DeleteRecursionZone.
+- Support API DescribeRecursionRecord.
+- Support API DescribeRecursionZone.
+- Support API ListRecursionRecords.
+- Support API ListRecursionZones.
+- Support API SearchRecursionRecords.
+- Support API SearchRecursionZones.
+- Support API UpdateRecursionRecord.
+- Support API UpdateRecursionRecordEnableStatus.
+- Support API UpdateRecursionRecordRemark.
+- Support API UpdateRecursionRecordWeight.
+- Support API UpdateRecursionRecordWeightEnableStatus.
+- Support API UpdateRecursionZoneEffectiveScope.
+- Support API UpdateRecursionZoneProxyPattern.
+- Support API UpdateRecursionZoneRemark.
+- Support API UpdateRspDomainServerHoldStatusOte.
+- Support API UpdateRspDomainStatusOte.
+- Update API CreateCloudGtmInstanceConfig: add request parameters ChargeType.
+- Update API CreateCloudGtmInstanceConfig: add response parameters Body.InstanceId.
+- Update API DescribeDomainRecords: add response parameters Body.DomainRecords.$.LbaStatus.
+- Update API DescribeDomains: add response parameters Body.Domains.$.SlaveDnsStatus.
+- Update API DescribeInternetDnsLogs: add request parameters RecursionProtocolType.
+- Update API DescribePdnsOperateLogs: add request parameters ResourceType.
+- Update API ListCloudGtmInstances: add request parameters ChargeType.
+- Update API ListCloudGtmInstances: add response parameters Body.Instances.$.ChargeType.
+- Update API SearchCloudGtmInstances: add request parameters ChargeType.
+- Update API SearchCloudGtmInstances: add response parameters Body.Instances.$.ChargeType.
+
+
 2025-04-23 Version: 3.4.7
 - Update API DescribeCustomLines: add response parameters Body.CustomLines.$.IpSegmentList.
 

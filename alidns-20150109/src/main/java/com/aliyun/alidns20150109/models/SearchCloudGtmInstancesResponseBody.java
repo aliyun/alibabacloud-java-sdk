@@ -110,6 +110,13 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
 
     public static class SearchCloudGtmInstancesResponseBodyInstancesInstance extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>postpay / prepay</p>
+         */
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        /**
          * <p>The commodity code. Valid values:</p>
          * <ul>
          * <li>dns_gtm_public_cn: commodity code on the China site (aliyun.com)</li>
@@ -264,6 +271,14 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
         public static SearchCloudGtmInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             SearchCloudGtmInstancesResponseBodyInstancesInstance self = new SearchCloudGtmInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
+        }
+
+        public SearchCloudGtmInstancesResponseBodyInstancesInstance setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public SearchCloudGtmInstancesResponseBodyInstancesInstance setCommodityCode(String commodityCode) {

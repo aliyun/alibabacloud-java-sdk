@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmAddressEnableStatusRequest extends TeaModel {
     /**
-     * <p>返回结果显示的语言。取值：</p>
+     * <p>The language of the returned results. Valid values:</p>
      * <ul>
-     * <li><p>zh-CN：中文</p>
+     * <li><p>zh-CN: Chinese</p>
      * </li>
-     * <li><p>en-US：英文</p>
+     * <li><p>en-US: English</p>
      * </li>
      * </ul>
      * 

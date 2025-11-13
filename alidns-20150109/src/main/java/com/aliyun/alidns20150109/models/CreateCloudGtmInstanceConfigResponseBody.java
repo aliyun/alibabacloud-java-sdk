@@ -14,6 +14,13 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
     public Boolean configId;
 
     /**
+     * <strong>example:</strong>
+     * <p>gtm-cn-xxxxx</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,14 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
     }
     public Boolean getConfigId() {
         return this.configId;
+    }
+
+    public CreateCloudGtmInstanceConfigResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateCloudGtmInstanceConfigResponseBody setRequestId(String requestId) {

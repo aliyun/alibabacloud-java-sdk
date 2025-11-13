@@ -18,6 +18,13 @@ public class ListCloudGtmInstancesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <strong>example:</strong>
+     * <p>postpay/prepay</p>
+     */
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +80,14 @@ public class ListCloudGtmInstancesRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ListCloudGtmInstancesRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public ListCloudGtmInstancesRequest setClientToken(String clientToken) {

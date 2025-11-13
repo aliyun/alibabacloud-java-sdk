@@ -93,6 +93,9 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     @NameInMap("QueryCondition")
     public String queryCondition;
 
+    @NameInMap("RecursionProtocolType")
+    public String recursionProtocolType;
+
     /**
      * <p>The start time of the query (timestamp, unit: milliseconds).</p>
      * 
@@ -169,6 +172,14 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     }
     public String getQueryCondition() {
         return this.queryCondition;
+    }
+
+    public DescribeInternetDnsLogsRequest setRecursionProtocolType(String recursionProtocolType) {
+        this.recursionProtocolType = recursionProtocolType;
+        return this;
+    }
+    public String getRecursionProtocolType() {
+        return this.recursionProtocolType;
     }
 
     public DescribeInternetDnsLogsRequest setStartTimestamp(Long startTimestamp) {

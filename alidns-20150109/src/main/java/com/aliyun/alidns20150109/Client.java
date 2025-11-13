@@ -963,6 +963,138 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>新增递归解析内置权威解析记录</p>
+     * 
+     * @param request AddRecursionRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddRecursionRecordResponse
+     */
+    public AddRecursionRecordResponse addRecursionRecordWithOptions(AddRecursionRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestSource)) {
+            query.put("RequestSource", request.requestSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rr)) {
+            query.put("Rr", request.rr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            query.put("Ttl", request.ttl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userClientIp)) {
+            query.put("UserClientIp", request.userClientIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.value)) {
+            query.put("Value", request.value);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
+            query.put("Weight", request.weight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddRecursionRecord"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddRecursionRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增递归解析内置权威解析记录</p>
+     * 
+     * @param request AddRecursionRecordRequest
+     * @return AddRecursionRecordResponse
+     */
+    public AddRecursionRecordResponse addRecursionRecord(AddRecursionRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addRecursionRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增递归解析内置权威域名zone</p>
+     * 
+     * @param request AddRecursionZoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddRecursionZoneResponse
+     */
+    public AddRecursionZoneResponse addRecursionZoneWithOptions(AddRecursionZoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyPattern)) {
+            query.put("ProxyPattern", request.proxyPattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
+            query.put("ZoneName", request.zoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddRecursionZone"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddRecursionZoneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增递归解析内置权威域名zone</p>
+     * 
+     * @param request AddRecursionZoneRequest
+     * @return AddRecursionZoneResponse
+     */
+    public AddRecursionZoneResponse addRecursionZone(AddRecursionZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addRecursionZoneWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.</p>
@@ -1371,6 +1503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建gtm实例配置</p>
+     * 
      * @param request CreateCloudGtmInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCloudGtmInstanceConfigResponse
@@ -1380,6 +1515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -1436,6 +1575,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建gtm实例配置</p>
+     * 
      * @param request CreateCloudGtmInstanceConfigRequest
      * @return CreateCloudGtmInstanceConfigResponse
      */
@@ -2315,6 +2457,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除递归解析内置权威解析记录</p>
+     * 
+     * @param request DeleteRecursionRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRecursionRecordResponse
+     */
+    public DeleteRecursionRecordResponse deleteRecursionRecordWithOptions(DeleteRecursionRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRecursionRecord"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRecursionRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除递归解析内置权威解析记录</p>
+     * 
+     * @param request DeleteRecursionRecordRequest
+     * @return DeleteRecursionRecordResponse
+     */
+    public DeleteRecursionRecordResponse deleteRecursionRecord(DeleteRecursionRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRecursionRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除递归解析内置权威域名zone</p>
+     * 
+     * @param request DeleteRecursionZoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRecursionZoneResponse
+     */
+    public DeleteRecursionZoneResponse deleteRecursionZoneWithOptions(DeleteRecursionZoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRecursionZone"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRecursionZoneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除递归解析内置权威域名zone</p>
+     * 
+     * @param request DeleteRecursionZoneRequest
+     * @return DeleteRecursionZoneResponse
+     */
+    public DeleteRecursionZoneResponse deleteRecursionZone(DeleteRecursionZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRecursionZoneWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>If the DNS records to be deleted contain locked DNS records, the locked DNS records will not be deleted.</p>
      * 
@@ -3142,6 +3380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询代理域名</p>
+     * 
      * @param request DescribeDnsCacheDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDnsCacheDomainsResponse
@@ -3183,6 +3424,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询代理域名</p>
+     * 
      * @param request DescribeDnsCacheDomainsRequest
      * @return DescribeDnsCacheDomainsResponse
      */
@@ -4138,6 +4382,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询DOH域名请求量数据</p>
+     * 
      * @param request DescribeDohDomainStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDohDomainStatisticsResponse
@@ -4179,6 +4426,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询DOH域名请求量数据</p>
+     * 
      * @param request DescribeDohDomainStatisticsRequest
      * @return DescribeDohDomainStatisticsResponse
      */
@@ -6044,6 +6294,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询解析日志</p>
+     * 
      * @param request DescribeInternetDnsLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInternetDnsLogsResponse
@@ -6083,6 +6336,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("QueryCondition", request.queryCondition);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recursionProtocolType)) {
+            query.put("RecursionProtocolType", request.recursionProtocolType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
             query.put("StartTimestamp", request.startTimestamp);
         }
@@ -6105,6 +6362,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询解析日志</p>
+     * 
      * @param request DescribeInternetDnsLogsRequest
      * @return DescribeInternetDnsLogsResponse
      */
@@ -6530,6 +6790,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
@@ -6979,7 +7243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS用户信息</p>
+     * <p>Queries the information about users in Alibaba Cloud Public DNS.</p>
      * 
      * @param request DescribePdnsUserInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7011,7 +7275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS用户信息</p>
+     * <p>Queries the information about users in Alibaba Cloud Public DNS.</p>
      * 
      * @param request DescribePdnsUserInfoRequest
      * @return DescribePdnsUserInfoResponse
@@ -7329,6 +7593,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询递归解析内置权威解析记录详情</p>
+     * 
+     * @param request DescribeRecursionRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRecursionRecordResponse
+     */
+    public DescribeRecursionRecordResponse describeRecursionRecordWithOptions(DescribeRecursionRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRecursionRecord"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRecursionRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询递归解析内置权威解析记录详情</p>
+     * 
+     * @param request DescribeRecursionRecordRequest
+     * @return DescribeRecursionRecordResponse
+     */
+    public DescribeRecursionRecordResponse describeRecursionRecord(DescribeRecursionRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRecursionRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询递归解析内置权威域名zone详情</p>
+     * 
+     * @param request DescribeRecursionZoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRecursionZoneResponse
+     */
+    public DescribeRecursionZoneResponse describeRecursionZoneWithOptions(DescribeRecursionZoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRecursionZone"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRecursionZoneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询递归解析内置权威域名zone详情</p>
+     * 
+     * @param request DescribeRecursionZoneRequest
+     * @return DescribeRecursionZoneResponse
+     */
+    public DescribeRecursionZoneResponse describeRecursionZone(DescribeRecursionZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRecursionZoneWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries all Domain Name System (DNS) records of a subdomain name based on the specified parameters.</p>
      * 
      * @param request DescribeSubDomainRecordsRequest
@@ -7400,6 +7752,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询支持的所有线路</p>
+     * 
      * @param request DescribeSupportLinesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSupportLinesResponse
@@ -7437,6 +7792,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询支持的所有线路</p>
+     * 
      * @param request DescribeSupportLinesRequest
      * @return DescribeSupportLinesResponse
      */
@@ -8076,6 +8434,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -8231,6 +8593,158 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCloudGtmMonitorTemplatesResponse listCloudGtmMonitorTemplates(ListCloudGtmMonitorTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCloudGtmMonitorTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询递归解析内置权威解析记录</p>
+     * 
+     * @param request ListRecursionRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRecursionRecordsResponse
+     */
+    public ListRecursionRecordsResponse listRecursionRecordsWithOptions(ListRecursionRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestSource)) {
+            query.put("RequestSource", request.requestSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rr)) {
+            query.put("Rr", request.rr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            query.put("Ttl", request.ttl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
+            query.put("Weight", request.weight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRecursionRecords"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRecursionRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询递归解析内置权威解析记录</p>
+     * 
+     * @param request ListRecursionRecordsRequest
+     * @return ListRecursionRecordsResponse
+     */
+    public ListRecursionRecordsResponse listRecursionRecords(ListRecursionRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRecursionRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询递归解析内置权威域名zone</p>
+     * 
+     * @param request ListRecursionZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRecursionZonesResponse
+     */
+    public ListRecursionZonesResponse listRecursionZonesWithOptions(ListRecursionZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
+            query.put("ZoneName", request.zoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRecursionZones"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRecursionZonesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询递归解析内置权威域名zone</p>
+     * 
+     * @param request ListRecursionZonesRequest
+     * @return ListRecursionZonesResponse
+     */
+    public ListRecursionZonesResponse listRecursionZones(ListRecursionZonesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRecursionZonesWithOptions(request, runtime);
     }
 
     /**
@@ -9282,6 +9796,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -9393,6 +9911,188 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchCloudGtmMonitorTemplatesResponse searchCloudGtmMonitorTemplates(SearchCloudGtmMonitorTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchCloudGtmMonitorTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索递归解析内置权威解析记录</p>
+     * 
+     * @param request SearchRecursionRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchRecursionRecordsResponse
+     */
+    public SearchRecursionRecordsResponse searchRecursionRecordsWithOptions(SearchRecursionRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestSource)) {
+            query.put("RequestSource", request.requestSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rr)) {
+            query.put("Rr", request.rr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            query.put("Ttl", request.ttl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.value)) {
+            query.put("Value", request.value);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
+            query.put("Weight", request.weight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchRecursionRecords"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchRecursionRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索递归解析内置权威解析记录</p>
+     * 
+     * @param request SearchRecursionRecordsRequest
+     * @return SearchRecursionRecordsResponse
+     */
+    public SearchRecursionRecordsResponse searchRecursionRecords(SearchRecursionRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchRecursionRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索递归解析内置权威域名zone</p>
+     * 
+     * @param tmpReq SearchRecursionZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchRecursionZonesResponse
+     */
+    public SearchRecursionZonesResponse searchRecursionZonesWithOptions(SearchRecursionZonesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SearchRecursionZonesShrinkRequest request = new SearchRecursionZonesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.effectiveScopes)) {
+            request.effectiveScopesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.effectiveScopes, "EffectiveScopes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveScopesShrink)) {
+            query.put("EffectiveScopes", request.effectiveScopesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
+            query.put("ZoneName", request.zoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchRecursionZones"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchRecursionZonesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索递归解析内置权威域名zone</p>
+     * 
+     * @param request SearchRecursionZonesRequest
+     * @return SearchRecursionZonesResponse
+     */
+    public SearchRecursionZonesResponse searchRecursionZones(SearchRecursionZonesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchRecursionZonesWithOptions(request, runtime);
     }
 
     /**
@@ -12447,6 +13147,632 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIspFlushCacheInstanceConfigResponse updateIspFlushCacheInstanceConfig(UpdateIspFlushCacheInstanceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateIspFlushCacheInstanceConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威解析记录</p>
+     * 
+     * @param request UpdateRecursionRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecursionRecordResponse
+     */
+    public UpdateRecursionRecordResponse updateRecursionRecordWithOptions(UpdateRecursionRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestSource)) {
+            query.put("RequestSource", request.requestSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rr)) {
+            query.put("Rr", request.rr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            query.put("Ttl", request.ttl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.value)) {
+            query.put("Value", request.value);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
+            query.put("Weight", request.weight);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecursionRecord"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecursionRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威解析记录</p>
+     * 
+     * @param request UpdateRecursionRecordRequest
+     * @return UpdateRecursionRecordResponse
+     */
+    public UpdateRecursionRecordResponse updateRecursionRecord(UpdateRecursionRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRecursionRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改内置权威解析记录启用状态</p>
+     * 
+     * @param request UpdateRecursionRecordEnableStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecursionRecordEnableStatusResponse
+     */
+    public UpdateRecursionRecordEnableStatusResponse updateRecursionRecordEnableStatusWithOptions(UpdateRecursionRecordEnableStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecursionRecordEnableStatus"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecursionRecordEnableStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改内置权威解析记录启用状态</p>
+     * 
+     * @param request UpdateRecursionRecordEnableStatusRequest
+     * @return UpdateRecursionRecordEnableStatusResponse
+     */
+    public UpdateRecursionRecordEnableStatusResponse updateRecursionRecordEnableStatus(UpdateRecursionRecordEnableStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRecursionRecordEnableStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威解析记录备注</p>
+     * 
+     * @param request UpdateRecursionRecordRemarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecursionRecordRemarkResponse
+     */
+    public UpdateRecursionRecordRemarkResponse updateRecursionRecordRemarkWithOptions(UpdateRecursionRecordRemarkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecursionRecordRemark"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecursionRecordRemarkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威解析记录备注</p>
+     * 
+     * @param request UpdateRecursionRecordRemarkRequest
+     * @return UpdateRecursionRecordRemarkResponse
+     */
+    public UpdateRecursionRecordRemarkResponse updateRecursionRecordRemark(UpdateRecursionRecordRemarkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRecursionRecordRemarkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威解析记录权重</p>
+     * 
+     * @param request UpdateRecursionRecordWeightRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecursionRecordWeightResponse
+     */
+    public UpdateRecursionRecordWeightResponse updateRecursionRecordWeightWithOptions(UpdateRecursionRecordWeightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
+            query.put("Weight", request.weight);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecursionRecordWeight"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecursionRecordWeightResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威解析记录权重</p>
+     * 
+     * @param request UpdateRecursionRecordWeightRequest
+     * @return UpdateRecursionRecordWeightResponse
+     */
+    public UpdateRecursionRecordWeightResponse updateRecursionRecordWeight(UpdateRecursionRecordWeightRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRecursionRecordWeightWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威解析记录权重算法启用状态</p>
+     * 
+     * @param request UpdateRecursionRecordWeightEnableStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecursionRecordWeightEnableStatusResponse
+     */
+    public UpdateRecursionRecordWeightEnableStatusResponse updateRecursionRecordWeightEnableStatusWithOptions(UpdateRecursionRecordWeightEnableStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestSource)) {
+            query.put("RequestSource", request.requestSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rr)) {
+            query.put("Rr", request.rr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecursionRecordWeightEnableStatus"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecursionRecordWeightEnableStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威解析记录权重算法启用状态</p>
+     * 
+     * @param request UpdateRecursionRecordWeightEnableStatusRequest
+     * @return UpdateRecursionRecordWeightEnableStatusResponse
+     */
+    public UpdateRecursionRecordWeightEnableStatusResponse updateRecursionRecordWeightEnableStatus(UpdateRecursionRecordWeightEnableStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRecursionRecordWeightEnableStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威域名zone生效范围</p>
+     * 
+     * @param tmpReq UpdateRecursionZoneEffectiveScopeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecursionZoneEffectiveScopeResponse
+     */
+    public UpdateRecursionZoneEffectiveScopeResponse updateRecursionZoneEffectiveScopeWithOptions(UpdateRecursionZoneEffectiveScopeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateRecursionZoneEffectiveScopeShrinkRequest request = new UpdateRecursionZoneEffectiveScopeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.effectiveScopes)) {
+            request.effectiveScopesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.effectiveScopes, "EffectiveScopes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveScopesShrink)) {
+            query.put("EffectiveScopes", request.effectiveScopesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecursionZoneEffectiveScope"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecursionZoneEffectiveScopeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威域名zone生效范围</p>
+     * 
+     * @param request UpdateRecursionZoneEffectiveScopeRequest
+     * @return UpdateRecursionZoneEffectiveScopeResponse
+     */
+    public UpdateRecursionZoneEffectiveScopeResponse updateRecursionZoneEffectiveScope(UpdateRecursionZoneEffectiveScopeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRecursionZoneEffectiveScopeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威域名zone递归代理模式</p>
+     * 
+     * @param request UpdateRecursionZoneProxyPatternRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecursionZoneProxyPatternResponse
+     */
+    public UpdateRecursionZoneProxyPatternResponse updateRecursionZoneProxyPatternWithOptions(UpdateRecursionZoneProxyPatternRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyPattern)) {
+            query.put("ProxyPattern", request.proxyPattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecursionZoneProxyPattern"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecursionZoneProxyPatternResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威域名zone递归代理模式</p>
+     * 
+     * @param request UpdateRecursionZoneProxyPatternRequest
+     * @return UpdateRecursionZoneProxyPatternResponse
+     */
+    public UpdateRecursionZoneProxyPatternResponse updateRecursionZoneProxyPattern(UpdateRecursionZoneProxyPatternRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRecursionZoneProxyPatternWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威域名zone备注</p>
+     * 
+     * @param request UpdateRecursionZoneRemarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRecursionZoneRemarkResponse
+     */
+    public UpdateRecursionZoneRemarkResponse updateRecursionZoneRemarkWithOptions(UpdateRecursionZoneRemarkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRecursionZoneRemark"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRecursionZoneRemarkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改递归解析内置权威域名zone备注</p>
+     * 
+     * @param request UpdateRecursionZoneRemarkRequest
+     * @return UpdateRecursionZoneRemarkResponse
+     */
+    public UpdateRecursionZoneRemarkResponse updateRecursionZoneRemark(UpdateRecursionZoneRemarkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRecursionZoneRemarkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于更新域名的状态属性</p>
+     * 
+     * @param request UpdateRspDomainServerHoldStatusOteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRspDomainServerHoldStatusOteResponse
+     */
+    public UpdateRspDomainServerHoldStatusOteResponse updateRspDomainServerHoldStatusOteWithOptions(UpdateRspDomainServerHoldStatusOteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorId)) {
+            query.put("OperatorId", request.operatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorType)) {
+            query.put("OperatorType", request.operatorType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverHoldStatus)) {
+            query.put("ServerHoldStatus", request.serverHoldStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusMsg)) {
+            query.put("StatusMsg", request.statusMsg);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRspDomainServerHoldStatusOte"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRspDomainServerHoldStatusOteResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于更新域名的状态属性</p>
+     * 
+     * @param request UpdateRspDomainServerHoldStatusOteRequest
+     * @return UpdateRspDomainServerHoldStatusOteResponse
+     */
+    public UpdateRspDomainServerHoldStatusOteResponse updateRspDomainServerHoldStatusOte(UpdateRspDomainServerHoldStatusOteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRspDomainServerHoldStatusOteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于更新域名的状态属性</p>
+     * 
+     * @param request UpdateRspDomainStatusOteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRspDomainStatusOteResponse
+     */
+    public UpdateRspDomainStatusOteResponse updateRspDomainStatusOteWithOptions(UpdateRspDomainStatusOteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addStatusList)) {
+            query.put("AddStatusList", request.addStatusList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteStatusList)) {
+            query.put("DeleteStatusList", request.deleteStatusList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorId)) {
+            query.put("OperatorId", request.operatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorType)) {
+            query.put("OperatorType", request.operatorType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRspDomainStatusOte"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRspDomainStatusOteResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于更新域名的状态属性</p>
+     * 
+     * @param request UpdateRspDomainStatusOteRequest
+     * @return UpdateRspDomainStatusOteResponse
+     */
+    public UpdateRspDomainStatusOteResponse updateRspDomainStatusOte(UpdateRspDomainStatusOteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRspDomainStatusOteWithOptions(request, runtime);
     }
 
     /**

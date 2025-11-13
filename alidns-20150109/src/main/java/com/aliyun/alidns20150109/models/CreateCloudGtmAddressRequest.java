@@ -31,7 +31,7 @@ public class CreateCloudGtmAddressRequest extends TeaModel {
      * <p>Address ownership information.</p>
      * 
      * <strong>example:</strong>
-     * <p>当前版本不支持传入此参数，请不要传入参数。</p>
+     * <p>This parameter is not supported in the version. Do not enter this parameter</p>
      */
     @NameInMap("AttributeInfo")
     public String attributeInfo;

@@ -320,6 +320,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("SlaveDnsStatus")
+        public String slaveDnsStatus;
+
         /**
          * <p>Indicates whether the domain name was added to favorites.</p>
          * 
@@ -489,6 +492,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDomainsResponseBodyDomainsDomain setSlaveDnsStatus(String slaveDnsStatus) {
+            this.slaveDnsStatus = slaveDnsStatus;
+            return this;
+        }
+        public String getSlaveDnsStatus() {
+            return this.slaveDnsStatus;
         }
 
         public DescribeDomainsResponseBodyDomainsDomain setStarmark(Boolean starmark) {

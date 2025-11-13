@@ -110,6 +110,9 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("LbaStatus")
+        public Boolean lbaStatus;
+
         /**
          * <p>The resolution line.</p>
          * 
@@ -237,6 +240,14 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeDomainRecordsResponseBodyDomainRecordsRecord setLbaStatus(Boolean lbaStatus) {
+            this.lbaStatus = lbaStatus;
+            return this;
+        }
+        public Boolean getLbaStatus() {
+            return this.lbaStatus;
         }
 
         public DescribeDomainRecordsResponseBodyDomainRecordsRecord setLine(String line) {

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribePdnsUserInfoResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>FD552816-FCC8-4832-B4A2-2DA0C2BA1688</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the user.</p>
+     */
     @NameInMap("UserInfo")
     public DescribePdnsUserInfoResponseBodyUserInfo userInfo;
 
@@ -37,6 +42,8 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
 
     public static class DescribePdnsUserInfoResponseBodyUserInfo extends TeaModel {
         /**
+         * <p>The enabled access security types.</p>
+         * 
          * <strong>example:</strong>
          * <p>SECURE</p>
          */
@@ -44,6 +51,8 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         public String availableAccessSecurityType;
 
         /**
+         * <p>The enabled public recursive DNS service.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP,HTTPS</p>
          */
@@ -51,6 +60,8 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         public String availableService;
 
         /**
+         * <p>The configuration ID of the users in public recursive DNS.</p>
+         * 
          * <strong>example:</strong>
          * <p>10001</p>
          */
@@ -58,6 +69,8 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         public Long pdnsId;
 
         /**
+         * <p>The SecretKey configured for a UDP-based CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>1c092d715b7a48de</p>
          */
@@ -65,6 +78,8 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         public String secretKey;
 
         /**
+         * <p>The type of the public recursive DNS service.</p>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
@@ -72,6 +87,8 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         public String serviceType;
 
         /**
+         * <p>The status of the public recursive DNS service.</p>
+         * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
          */
@@ -79,12 +96,17 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The status of the traffic analysis switch for the user in public recursive DNS service.</p>
+         * 
          * <strong>example:</strong>
          * <p>CLOSED</p>
          */
         @NameInMap("StatisticSwitchStatus")
         public String statisticSwitchStatus;
 
+        /**
+         * <p>The disabled public recursive DNS service.</p>
+         */
         @NameInMap("StoppedService")
         public String stoppedService;
 

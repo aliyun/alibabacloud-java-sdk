@@ -22,6 +22,9 @@ public class DescribePdnsOperateLogsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     @NameInMap("StartDate")
     public String startDate;
 
@@ -76,6 +79,14 @@ public class DescribePdnsOperateLogsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribePdnsOperateLogsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public DescribePdnsOperateLogsRequest setStartDate(String startDate) {
