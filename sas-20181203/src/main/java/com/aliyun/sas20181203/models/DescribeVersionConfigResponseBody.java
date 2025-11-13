@@ -85,6 +85,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("AssetLevel")
     public Integer assetLevel;
 
+    @NameInMap("CanTryPostPaidPackage")
+    public Integer canTryPostPaidPackage;
+
     /**
      * <p>The purchased quota for configuration assessment. Unit: times/month.</p>
      * 
@@ -562,6 +565,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getAssetLevel() {
         return this.assetLevel;
+    }
+
+    public DescribeVersionConfigResponseBody setCanTryPostPaidPackage(Integer canTryPostPaidPackage) {
+        this.canTryPostPaidPackage = canTryPostPaidPackage;
+        return this;
+    }
+    public Integer getCanTryPostPaidPackage() {
+        return this.canTryPostPaidPackage;
     }
 
     public DescribeVersionConfigResponseBody setCspmCapacity(Long cspmCapacity) {

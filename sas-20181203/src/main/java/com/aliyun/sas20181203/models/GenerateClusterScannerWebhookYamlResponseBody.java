@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sas20181203.models;
+
+import com.aliyun.tea.*;
+
+public class GenerateClusterScannerWebhookYamlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c471f0f61b9c04f8380556e922cf1****</p>
+     */
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>131231</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
+    /**
+     * <strong>example:</strong>
+     * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("WebhookOpen")
+    public Integer webhookOpen;
+
+    public static GenerateClusterScannerWebhookYamlResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GenerateClusterScannerWebhookYamlResponseBody self = new GenerateClusterScannerWebhookYamlResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public GenerateClusterScannerWebhookYamlResponseBody setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    public GenerateClusterScannerWebhookYamlResponseBody setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
+    public GenerateClusterScannerWebhookYamlResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GenerateClusterScannerWebhookYamlResponseBody setWebhookOpen(Integer webhookOpen) {
+        this.webhookOpen = webhookOpen;
+        return this;
+    }
+    public Integer getWebhookOpen() {
+        return this.webhookOpen;
+    }
+
+}

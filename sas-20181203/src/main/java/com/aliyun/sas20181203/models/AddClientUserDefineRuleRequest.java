@@ -169,6 +169,9 @@ public class AddClientUserDefineRuleRequest extends TeaModel {
      * <li><strong>5</strong>: Operation on Registry</li>
      * <li><strong>6</strong>: Dynamic-link Library Loading</li>
      * <li><strong>7</strong>: File Renaming</li>
+     * <li><strong>8</strong>: Network domain name</li>
+     * <li><strong>9</strong>: Network ip</li>
+     * <li><strong>10</strong>: File Path</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -478,6 +478,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crm-test</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 

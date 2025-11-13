@@ -119,6 +119,12 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         @NameInMap("Flag")
         public String flag;
 
+        /**
+         * <p>Number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ImageCount")
         public Integer imageCount;
 

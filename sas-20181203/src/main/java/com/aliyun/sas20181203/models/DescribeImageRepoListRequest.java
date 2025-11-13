@@ -84,6 +84,16 @@ public class DescribeImageRepoListRequest extends TeaModel {
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
+    /**
+     * <p>Whether it is selected. Values:</p>
+     * <ul>
+     * <li><strong>0</strong>: NO</li>
+     * <li><strong>1</strong>: YES</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Selected")
     public Integer selected;
 
