@@ -9828,6 +9828,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改活动外呼号码</p>
+     * 
+     * @param tmpReq ModifyCampaignNumbersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCampaignNumbersResponse
+     */
+    public ModifyCampaignNumbersResponse modifyCampaignNumbersWithOptions(ModifyCampaignNumbersRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyCampaignNumbersShrinkRequest request = new ModifyCampaignNumbersShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.numberList)) {
+            request.numberListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.numberList, "NumberList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.campaignId)) {
+            query.put("CampaignId", request.campaignId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instGroupId)) {
+            query.put("InstGroupId", request.instGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numberListShrink)) {
+            query.put("NumberList", request.numberListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCampaignNumbers"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCampaignNumbersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改活动外呼号码</p>
+     * 
+     * @param request ModifyCampaignNumbersRequest
+     * @return ModifyCampaignNumbersResponse
+     */
+    public ModifyCampaignNumbersResponse modifyCampaignNumbers(ModifyCampaignNumbersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCampaignNumbersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>编辑呼入控制号码</p>
      * 
      * @param request ModifyCustomCallTaggingRequest
