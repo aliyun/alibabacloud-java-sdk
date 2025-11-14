@@ -776,6 +776,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
+        @NameInMap("PortDescription")
+        public String portDescription;
+
         public static DescribeApplicationAttributeResponseBodyEndpoints build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationAttributeResponseBodyEndpoints self = new DescribeApplicationAttributeResponseBodyEndpoints();
             return TeaModel.build(map, self);
@@ -819,6 +822,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
         public String getPort() {
             return this.port;
+        }
+
+        public DescribeApplicationAttributeResponseBodyEndpoints setPortDescription(String portDescription) {
+            this.portDescription = portDescription;
+            return this;
+        }
+        public String getPortDescription() {
+            return this.portDescription;
         }
 
     }
