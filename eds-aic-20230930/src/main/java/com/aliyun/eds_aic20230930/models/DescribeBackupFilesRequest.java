@@ -108,6 +108,9 @@ public class DescribeBackupFilesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("SaleMode")
+    public String saleMode;
+
     /**
      * <p>The beginning of the period for querying generated backup files.</p>
      * 
@@ -214,6 +217,14 @@ public class DescribeBackupFilesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeBackupFilesRequest setSaleMode(String saleMode) {
+        this.saleMode = saleMode;
+        return this;
+    }
+    public String getSaleMode() {
+        return this.saleMode;
     }
 
     public DescribeBackupFilesRequest setStartTime(String startTime) {

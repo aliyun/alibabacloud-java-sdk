@@ -1950,6 +1950,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
+            query.put("SaleMode", request.saleMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }

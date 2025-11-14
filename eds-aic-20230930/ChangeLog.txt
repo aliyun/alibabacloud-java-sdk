@@ -1,3 +1,7 @@
+2025-11-14 Version: 3.13.6
+- Update API DescribeBackupFiles: add request parameters SaleMode.
+
+
 2025-11-07 Version: 3.13.5
 - Update API DescribeMetricLast: add response parameters Body.MetricTotalModel.$.MetricModelList.$.DataPoints.$.GpuId.
 
