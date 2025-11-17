@@ -48,6 +48,9 @@ public class PodItem extends TeaModel {
     @NameInMap("PodIp")
     public String podIp;
 
+    @NameInMap("PodIps")
+    public java.util.List<PodNetworkInterface> podIps;
+
     /**
      * <strong>example:</strong>
      * <p>fe846462-af2c-4521-bd6f-96787a57591d</p>
@@ -139,6 +142,14 @@ public class PodItem extends TeaModel {
     }
     public String getPodIp() {
         return this.podIp;
+    }
+
+    public PodItem setPodIps(java.util.List<PodNetworkInterface> podIps) {
+        this.podIps = podIps;
+        return this;
+    }
+    public java.util.List<PodNetworkInterface> getPodIps() {
+        return this.podIps;
     }
 
     public PodItem setPodUid(String podUid) {
