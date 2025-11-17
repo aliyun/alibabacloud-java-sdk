@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetDataLevelPermissionExtraConfigResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B70E1FBD-E533-52F2-A7A1-E02B92F78DDF</p>
      */
@@ -12,6 +14,12 @@ public class SetDataLevelPermissionExtraConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Result of the API execution. Possible values:</p>
+     * <ul>
+     * <li>true: Request succeeded</li>
+     * <li>false: Request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,12 @@ public class SetDataLevelPermissionExtraConfigResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: Request succeeded</li>
+     * <li>false: Request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

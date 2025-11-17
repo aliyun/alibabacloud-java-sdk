@@ -674,7 +674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量添加飞书用户。</p>
+     * <p>Batch add Feishu users.</p>
      * 
      * @deprecated OpenAPI BatchAddFeishuUsers is deprecated
      * 
@@ -726,7 +726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量添加飞书用户。</p>
+     * <p>Batch add Feishu users.</p>
      * 
      * @deprecated OpenAPI BatchAddFeishuUsers is deprecated
      * 
@@ -1408,6 +1408,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateUserGroupResponse createUserGroup(CreateUserGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createUserGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建工作空间</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspaceWithOptions(CreateWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowPublish)) {
+            query.put("AllowPublish", request.allowPublish);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowShare)) {
+            query.put("AllowShare", request.allowShare);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowViewAll)) {
+            query.put("AllowViewAll", request.allowViewAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultShareToAll)) {
+            query.put("DefaultShareToAll", request.defaultShareToAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyAdminCreateDatasource)) {
+            query.put("OnlyAdminCreateDatasource", request.onlyAdminCreateDatasource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useComment)) {
+            query.put("UseComment", request.useComment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceDescription)) {
+            query.put("WorkspaceDescription", request.workspaceDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkspace"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建工作空间</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspace(CreateWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWorkspaceWithOptions(request, runtime);
     }
 
     /**
@@ -2239,6 +2311,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取空间下加速引擎管控页任务信息。</p>
+     * 
+     * @param request ListAccelerationOfWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAccelerationOfWorkspaceResponse
+     */
+    public ListAccelerationOfWorkspaceResponse listAccelerationOfWorkspaceWithOptions(ListAccelerationOfWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.creatorId)) {
+            query.put("CreatorId", request.creatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cubeName)) {
+            query.put("CubeName", request.cubeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAccelerationOfWorkspace"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccelerationOfWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取空间下加速引擎管控页任务信息。</p>
+     * 
+     * @param request ListAccelerationOfWorkspaceRequest
+     * @return ListAccelerationOfWorkspaceResponse
+     */
+    public ListAccelerationOfWorkspaceResponse listAccelerationOfWorkspace(ListAccelerationOfWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAccelerationOfWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/409330.html">Create an API data source</a>.</p>
      * 
@@ -2346,7 +2478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the work.</p>
+     * <p>Retrieve the list of works that a user has favorited.</p>
      * 
      * @param request ListCollectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2378,7 +2510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the work.</p>
+     * <p>Retrieve the list of works that a user has favorited.</p>
      * 
      * @param request ListCollectionsRequest
      * @return ListCollectionsResponse
@@ -3262,6 +3394,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量编辑仪表板的小Q问数状态</p>
+     * 
+     * @param request ModifyDashboardNl2sqlStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDashboardNl2sqlStatusResponse
+     */
+    public ModifyDashboardNl2sqlStatusResponse modifyDashboardNl2sqlStatusWithOptions(ModifyDashboardNl2sqlStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dashboardIds)) {
+            query.put("DashboardIds", request.dashboardIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDashboardNl2sqlStatus"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDashboardNl2sqlStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量编辑仪表板的小Q问数状态</p>
+     * 
+     * @param request ModifyDashboardNl2sqlStatusRequest
+     * @return ModifyDashboardNl2sqlStatusResponse
+     */
+    public ModifyDashboardNl2sqlStatusResponse modifyDashboardNl2sqlStatus(ModifyDashboardNl2sqlStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDashboardNl2sqlStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定数据集的加速任务运行日志</p>
+     * 
+     * @param request QueryAccelerationLogByCubeIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAccelerationLogByCubeIdResponse
+     */
+    public QueryAccelerationLogByCubeIdResponse queryAccelerationLogByCubeIdWithOptions(QueryAccelerationLogByCubeIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cubeId)) {
+            query.put("CubeId", request.cubeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAccelerationLogByCubeId"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAccelerationLogByCubeIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定数据集的加速任务运行日志</p>
+     * 
+     * @param request QueryAccelerationLogByCubeIdRequest
+     * @return QueryAccelerationLogByCubeIdResponse
+     */
+    public QueryAccelerationLogByCubeIdResponse queryAccelerationLogByCubeId(QueryAccelerationLogByCubeIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAccelerationLogByCubeIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Get approval flow information based on the approver.</p>
      * 
      * @param request QueryApprovalInfoRequest
@@ -3614,7 +3854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询仪表板的问数资源信息</p>
+     * <p>Query Dashboard\&quot;s Question Resource Information</p>
      * 
      * @param request QueryDashboardNl2sqlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3650,7 +3890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询仪表板的问数资源信息</p>
+     * <p>Query Dashboard\&quot;s Question Resource Information</p>
      * 
      * @param request QueryDashboardNl2sqlRequest
      * @return QueryDashboardNl2sqlResponse
@@ -4127,8 +4367,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定数据集的行级权限开关状态。</p>
+     * <p>Get the row-level permission switch status for a specified dataset.</p>
      * 
      * @param request QueryDatasetSwitchInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4159,8 +4404,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定数据集的行级权限开关状态。</p>
+     * <p>Get the row-level permission switch status for a specified dataset.</p>
      * 
      * @param request QueryDatasetSwitchInfoRequest
      * @return QueryDatasetSwitchInfoResponse
@@ -4250,7 +4500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过数据集ID查询最近一次加速任务</p>
+     * <p>Query the Most Recent Acceleration Task by Dataset ID</p>
      * 
      * @param request QueryLastAccelerationEngineJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4282,7 +4532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过数据集ID查询最近一次加速任务</p>
+     * <p>Query the Most Recent Acceleration Task by Dataset ID</p>
      * 
      * @param request QueryLastAccelerationEngineJobRequest
      * @return QueryLastAccelerationEngineJobResponse
@@ -5547,8 +5797,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new version of Quick BI\&quot;s row and column permission model. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. The steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>设置行列权限的额外配置</p>
+     * <p>Set extra configuration for row and column permissions.</p>
      * 
      * @param request SetDataLevelPermissionExtraConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5587,8 +5842,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new version of Quick BI\&quot;s row and column permission model. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. The steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>设置行列权限的额外配置</p>
+     * <p>Set extra configuration for row and column permissions.</p>
      * 
      * @param request SetDataLevelPermissionExtraConfigRequest
      * @return SetDataLevelPermissionExtraConfigResponse
@@ -5599,8 +5859,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. Steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>设置单条数据集行列权限配置信息（新增和更新）</p>
+     * <p>Set single dataset row and column permission configuration information (addition and update)</p>
      * 
      * @param request SetDataLevelPermissionRuleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5631,8 +5896,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. Steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>设置单条数据集行列权限配置信息（新增和更新）</p>
+     * <p>Set single dataset row and column permission configuration information (addition and update)</p>
      * 
      * @param request SetDataLevelPermissionRuleConfigRequest
      * @return SetDataLevelPermissionRuleConfigResponse
@@ -5832,6 +6102,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CubeId", request.cubeId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.multipleCubeIds)) {
+            query.put("MultipleCubeIds", request.multipleCubeIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             query.put("UserId", request.userId);
         }
@@ -6008,7 +6282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改数据源配置</p>
+     * <p>Modify Data Source Configuration</p>
      * 
      * @param request UpdateDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6040,7 +6314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改数据源配置</p>
+     * <p>Modify Data Source Configuration</p>
      * 
      * @param request UpdateDataSourceRequest
      * @return UpdateDataSourceResponse

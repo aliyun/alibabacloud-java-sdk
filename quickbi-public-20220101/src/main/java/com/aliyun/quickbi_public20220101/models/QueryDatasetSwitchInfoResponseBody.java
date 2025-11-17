@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FAECEFA8-09BB-58AB-BC58-C8ACEFE4D232</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the dataset\&quot;s row and column permission switches.</p>
+     */
     @NameInMap("Result")
     public QueryDatasetSwitchInfoResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
 
     public static class QueryDatasetSwitchInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>Dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7c7223ae-****-3c744528014b</p>
          */
@@ -59,6 +72,12 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         public String cubeId;
 
         /**
+         * <p>Status of the column-level field permission switch. Possible values:</p>
+         * <ul>
+         * <li>1: Enabled</li>
+         * <li>0: Disabled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -66,6 +85,12 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
         public Integer isOpenColumnLevelPermission;
 
         /**
+         * <p>Status of the row-level permission switch.</p>
+         * <ul>
+         * <li>1: Enabled</li>
+         * <li>0: Disabled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

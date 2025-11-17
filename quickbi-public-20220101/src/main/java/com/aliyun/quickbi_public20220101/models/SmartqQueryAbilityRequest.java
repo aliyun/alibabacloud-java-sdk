@@ -6,13 +6,19 @@ import com.aliyun.tea.*;
 public class SmartqQueryAbilityRequest extends TeaModel {
     /**
      * <p>Dataset ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>7c7223ae-****-3c744528014b</p>
      */
     @NameInMap("CubeId")
     public String cubeId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>123124</p>
+     */
+    @NameInMap("MultipleCubeIds")
+    public String multipleCubeIds;
 
     /**
      * <p>User ID.</p>
@@ -47,6 +53,14 @@ public class SmartqQueryAbilityRequest extends TeaModel {
     }
     public String getCubeId() {
         return this.cubeId;
+    }
+
+    public SmartqQueryAbilityRequest setMultipleCubeIds(String multipleCubeIds) {
+        this.multipleCubeIds = multipleCubeIds;
+        return this;
+    }
+    public String getMultipleCubeIds() {
+        return this.multipleCubeIds;
     }
 
     public SmartqQueryAbilityRequest setUserId(String userId) {

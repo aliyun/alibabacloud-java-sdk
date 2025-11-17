@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46e53*********92704c8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The entity of the most recent acceleration task.</p>
+     */
     @NameInMap("Result")
     public QueryLastAccelerationEngineJobResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
 
     public static class QueryLastAccelerationEngineJobResponseBodyResult extends TeaModel {
         /**
+         * <p>Execution time, in the format yyyy-MM-dd hh:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-18 17:07:43</p>
          */
@@ -59,6 +72,8 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Completion time, in the format yyyy-MM-dd hh:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-18 17:08:26</p>
          */
@@ -66,6 +81,8 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Acceleration task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>46e53********5464564</p>
          */
@@ -73,6 +90,16 @@ public class QueryLastAccelerationEngineJobResponseBody extends TeaModel {
         public String jobHistoryId;
 
         /**
+         * <p>Task status. Possible values:</p>
+         * <ul>
+         * <li>TODO -- To be run</li>
+         * <li>RUNNING -- Running</li>
+         * <li>SUCCESS -- Successfully completed</li>
+         * <li>FAILURE -- Abnormally terminated</li>
+         * <li>CANCELED -- Canceled</li>
+         * <li>CHECK_DEPENDENCY -- Checking dependencies</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */

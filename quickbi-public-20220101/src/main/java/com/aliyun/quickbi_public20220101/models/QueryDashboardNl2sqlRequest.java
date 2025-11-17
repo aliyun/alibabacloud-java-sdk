@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDashboardNl2sqlRequest extends TeaModel {
     /**
+     * <p>User ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryDashboardNl2sqlRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>Workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

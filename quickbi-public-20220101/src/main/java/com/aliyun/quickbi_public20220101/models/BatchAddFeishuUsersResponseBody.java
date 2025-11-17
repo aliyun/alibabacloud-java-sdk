@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchAddFeishuUsersResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
      */
@@ -12,6 +14,12 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Result of adding members to the user group. Possible values:</p>
+     * <ul>
+     * <li>true: Addition successful</li>
+     * <li>false: Addition failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -19,6 +27,12 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
     public BatchAddFeishuUsersResponseBodyResult result;
 
     /**
+     * <p>Whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: Request successful</li>
+     * <li>false: Request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -56,16 +70,26 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
     public static class BatchAddFeishuUsersResponseBodyResultFailResultsFailInfos extends TeaModel {
         /**
+         * <p>Error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACCOUNT_EXIST</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Description of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST</p>
+         */
         @NameInMap("CodeDesc")
         public String codeDesc;
 
         /**
+         * <p>Incorrect input value.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -104,6 +128,9 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
     }
 
     public static class BatchAddFeishuUsersResponseBodyResultFailResults extends TeaModel {
+        /**
+         * <p>Reasons for errors.</p>
+         */
         @NameInMap("FailInfos")
         public java.util.List<BatchAddFeishuUsersResponseBodyResultFailResultsFailInfos> failInfos;
 
@@ -124,16 +151,23 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
     public static class BatchAddFeishuUsersResponseBodyResult extends TeaModel {
         /**
+         * <p>Number of failed validations.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
 
+        /**
+         * <p>Details of the failures.</p>
+         */
         @NameInMap("FailResults")
         public java.util.List<BatchAddFeishuUsersResponseBodyResultFailResults> failResults;
 
         /**
+         * <p>Count of successes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

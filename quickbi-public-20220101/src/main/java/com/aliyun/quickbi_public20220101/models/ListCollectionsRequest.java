@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCollectionsRequest extends TeaModel {
     /**
-     * <p>The ID of the user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+     * <p>User ID. This refers to the UserID in Quick BI, not the Alibaba Cloud UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

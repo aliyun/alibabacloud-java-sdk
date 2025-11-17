@@ -162,6 +162,9 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         @NameInMap("ConclusionText")
         public String conclusionText;
 
+        @NameInMap("DataList")
+        public java.util.List<String> dataList;
+
         /**
          * <p>Visualized logical SQL.</p>
          * 
@@ -202,6 +205,14 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
         public String getConclusionText() {
             return this.conclusionText;
+        }
+
+        public SmartqQueryAbilityResponseBodyResult setDataList(java.util.List<String> dataList) {
+            this.dataList = dataList;
+            return this;
+        }
+        public java.util.List<String> getDataList() {
+            return this.dataList;
         }
 
         public SmartqQueryAbilityResponseBodyResult setLogicSql(String logicSql) {
