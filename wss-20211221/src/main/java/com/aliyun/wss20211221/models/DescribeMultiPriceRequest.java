@@ -148,6 +148,9 @@ public class DescribeMultiPriceRequest extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("SavingPlanPeriod")
+        public String savingPlanPeriod;
+
         public static DescribeMultiPriceRequestOrderItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeMultiPriceRequestOrderItems self = new DescribeMultiPriceRequestOrderItems();
             return TeaModel.build(map, self);
@@ -215,6 +218,14 @@ public class DescribeMultiPriceRequest extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public DescribeMultiPriceRequestOrderItems setSavingPlanPeriod(String savingPlanPeriod) {
+            this.savingPlanPeriod = savingPlanPeriod;
+            return this;
+        }
+        public String getSavingPlanPeriod() {
+            return this.savingPlanPeriod;
         }
 
     }

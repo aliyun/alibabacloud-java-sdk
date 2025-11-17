@@ -67,6 +67,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        @NameInMap("SavingPlanDiscountPrice")
+        public Float savingPlanDiscountPrice;
+
         /**
          * <strong>example:</strong>
          * <p>292.2</p>
@@ -119,6 +122,14 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             return this.originalPrice;
         }
 
+        public DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsModuleDetails setSavingPlanDiscountPrice(Float savingPlanDiscountPrice) {
+            this.savingPlanDiscountPrice = savingPlanDiscountPrice;
+            return this;
+        }
+        public Float getSavingPlanDiscountPrice() {
+            return this.savingPlanDiscountPrice;
+        }
+
         public DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsModuleDetails setTradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;
             return this;
@@ -150,6 +161,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
          */
         @NameInMap("ResourceType")
         public String resourceType;
+
+        @NameInMap("SavingPlanRecommendPrice")
+        public Float savingPlanRecommendPrice;
 
         /**
          * <strong>example:</strong>
@@ -185,6 +199,14 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsPriceDetail setSavingPlanRecommendPrice(Float savingPlanRecommendPrice) {
+            this.savingPlanRecommendPrice = savingPlanRecommendPrice;
+            return this;
+        }
+        public Float getSavingPlanRecommendPrice() {
+            return this.savingPlanRecommendPrice;
         }
 
         public DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsPriceDetail setTradePrice(Float tradePrice) {
