@@ -92,6 +92,9 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
     }
 
     public static class ListRecognitionSamplesResponseBodySamplesSample extends TeaModel {
+        @NameInMap("EntityId")
+        public String entityId;
+
         /**
          * <p>The URL of the image sample.</p>
          * 
@@ -100,6 +103,9 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
          */
         @NameInMap("ImageUrl")
         public String imageUrl;
+
+        @NameInMap("LibId")
+        public String libId;
 
         /**
          * <p>The sample ID.</p>
@@ -115,12 +121,28 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListRecognitionSamplesResponseBodySamplesSample setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
         public ListRecognitionSamplesResponseBodySamplesSample setImageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
         public String getImageUrl() {
             return this.imageUrl;
+        }
+
+        public ListRecognitionSamplesResponseBodySamplesSample setLibId(String libId) {
+            this.libId = libId;
+            return this;
+        }
+        public String getLibId() {
+            return this.libId;
         }
 
         public ListRecognitionSamplesResponseBodySamplesSample setSampleId(String sampleId) {

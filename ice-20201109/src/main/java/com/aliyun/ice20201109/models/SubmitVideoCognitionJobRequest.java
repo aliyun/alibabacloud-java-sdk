@@ -31,6 +31,9 @@ public class SubmitVideoCognitionJobRequest extends TeaModel {
     @NameInMap("Params")
     public String params;
 
+    @NameInMap("TemplateConfig")
+    public String templateConfig;
+
     /**
      * <p>The ID of the template that specifies the analysis algorithms to be used. For details, see <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-createcustomtemplate?spm=a2c4g.11186623.help-menu-193643.d_5_0_3_3_0_0.17b66afamjKySv">CreateCustomTemplate</a> and <a href="https://help.aliyun.com/zh/ims/user-guide/smart-tagging-template?spm=a2c4g.11186623.0.i15">smart tagging template</a>.</p>
      * 
@@ -77,6 +80,14 @@ public class SubmitVideoCognitionJobRequest extends TeaModel {
     }
     public String getParams() {
         return this.params;
+    }
+
+    public SubmitVideoCognitionJobRequest setTemplateConfig(String templateConfig) {
+        this.templateConfig = templateConfig;
+        return this;
+    }
+    public String getTemplateConfig() {
+        return this.templateConfig;
     }
 
     public SubmitVideoCognitionJobRequest setTemplateId(String templateId) {

@@ -21,6 +21,9 @@ public class ListRecognitionLibsRequest extends TeaModel {
     @NameInMap("Algorithm")
     public String algorithm;
 
+    @NameInMap("LibId")
+    public String libId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -64,6 +67,14 @@ public class ListRecognitionLibsRequest extends TeaModel {
     }
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    public ListRecognitionLibsRequest setLibId(String libId) {
+        this.libId = libId;
+        return this;
+    }
+    public String getLibId() {
+        return this.libId;
     }
 
     public ListRecognitionLibsRequest setOwnerAccount(String ownerAccount) {

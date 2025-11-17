@@ -67,6 +67,9 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     @NameInMap("ScheduleConfig")
     public SubmitSmarttagJobRequestScheduleConfig scheduleConfig;
 
+    @NameInMap("TemplateConfig")
+    public String templateConfig;
+
     /**
      * <p>The ID of the template that specifies the analysis algorithms. For more information about template operations, see <a href="https://help.aliyun.com/document_detail/445702.html">Configure templates</a>.</p>
      * 
@@ -153,6 +156,14 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     }
     public SubmitSmarttagJobRequestScheduleConfig getScheduleConfig() {
         return this.scheduleConfig;
+    }
+
+    public SubmitSmarttagJobRequest setTemplateConfig(String templateConfig) {
+        this.templateConfig = templateConfig;
+        return this;
+    }
+    public String getTemplateConfig() {
+        return this.templateConfig;
     }
 
     public SubmitSmarttagJobRequest setTemplateId(String templateId) {

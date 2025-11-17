@@ -30,6 +30,9 @@ public class ListRecognitionSamplesRequest extends TeaModel {
     @NameInMap("EntityId")
     public String entityId;
 
+    @NameInMap("EntityName")
+    public String entityName;
+
     /**
      * <p>The ID of the recognition library.</p>
      * <p>This parameter is required.</p>
@@ -91,6 +94,14 @@ public class ListRecognitionSamplesRequest extends TeaModel {
     }
     public String getEntityId() {
         return this.entityId;
+    }
+
+    public ListRecognitionSamplesRequest setEntityName(String entityName) {
+        this.entityName = entityName;
+        return this;
+    }
+    public String getEntityName() {
+        return this.entityName;
     }
 
     public ListRecognitionSamplesRequest setLibId(String libId) {
