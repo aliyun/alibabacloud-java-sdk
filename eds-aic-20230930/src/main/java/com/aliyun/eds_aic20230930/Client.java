@@ -2420,6 +2420,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询指定监控项的监控数据</p>
+     * 
+     * @param request DescribeMetricListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetricListResponse
+     */
+    public DescribeMetricListResponse describeMetricListWithOptions(DescribeMetricListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            body.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            body.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
+            body.put("Length", request.length);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricNames)) {
+            body.put("MetricNames", request.metricNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            body.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processInfos)) {
+            body.put("ProcessInfos", request.processInfos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetricList"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetricListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定监控项的监控数据</p>
+     * 
+     * @param request DescribeMetricListRequest
+     * @return DescribeMetricListResponse
+     */
+    public DescribeMetricListResponse describeMetricList(DescribeMetricListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMetricListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定监控项的最新监控数据</p>
+     * 
+     * @param request DescribeMetricTopRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetricTopResponse
+     */
+    public DescribeMetricTopResponse describeMetricTopWithOptions(DescribeMetricTopRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            body.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            body.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
+            body.put("Length", request.length);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricNames)) {
+            body.put("MetricNames", request.metricNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            body.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetricTop"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetricTopResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定监控项的最新监控数据</p>
+     * 
+     * @param request DescribeMetricTopRequest
+     * @return DescribeMetricTopResponse
+     */
+    public DescribeMetricTopResponse describeMetricTop(DescribeMetricTopRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMetricTopWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query available regions.</p>
      * 
      * @param request DescribeRegionsRequest
@@ -3472,6 +3620,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstanceHealerResponse instanceHealer(InstanceHealerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.instanceHealerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询ADB端口连接信息</p>
+     * 
+     * @param request ListInstanceAdbAttributesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceAdbAttributesResponse
+     */
+    public ListInstanceAdbAttributesResponse listInstanceAdbAttributesWithOptions(ListInstanceAdbAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalIp)) {
+            query.put("ExternalIp", request.externalIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internalIp)) {
+            query.put("InternalIp", request.internalIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internalPort)) {
+            query.put("InternalPort", request.internalPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipProtocol)) {
+            query.put("IpProtocol", request.ipProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceAdbAttributes"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceAdbAttributesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询ADB端口连接信息</p>
+     * 
+     * @param request ListInstanceAdbAttributesRequest
+     * @return ListInstanceAdbAttributesResponse
+     */
+    public ListInstanceAdbAttributesResponse listInstanceAdbAttributes(ListInstanceAdbAttributesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInstanceAdbAttributesWithOptions(request, runtime);
     }
 
     /**
@@ -4815,6 +5031,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>开启实例ADB端口并创建端口转发条目</p>
+     * 
+     * @param request StartInstanceAdbRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartInstanceAdbResponse
+     */
+    public StartInstanceAdbResponse startInstanceAdbWithOptions(StartInstanceAdbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartInstanceAdb"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartInstanceAdbResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启实例ADB端口并创建端口转发条目</p>
+     * 
+     * @param request StartInstanceAdbRequest
+     * @return StartInstanceAdbResponse
+     */
+    public StartInstanceAdbResponse startInstanceAdb(StartInstanceAdbRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startInstanceAdbWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you stop a cloud phone instance, make sure it is in one of the following states: <strong>Available, Backup failure, and Restoration failure</strong>.</p>
      * 
@@ -4870,6 +5130,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopAndroidInstanceResponse stopAndroidInstance(StopAndroidInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopAndroidInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止实例ADB端口并删除端口转发条目</p>
+     * 
+     * @param request StopInstanceAdbRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopInstanceAdbResponse
+     */
+    public StopInstanceAdbResponse stopInstanceAdbWithOptions(StopInstanceAdbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopInstanceAdb"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopInstanceAdbResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止实例ADB端口并删除端口转发条目</p>
+     * 
+     * @param request StopInstanceAdbRequest
+     * @return StopInstanceAdbResponse
+     */
+    public StopInstanceAdbResponse stopInstanceAdb(StopInstanceAdbRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopInstanceAdbWithOptions(request, runtime);
     }
 
     /**

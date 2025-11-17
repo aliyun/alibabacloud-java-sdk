@@ -1,3 +1,11 @@
+2025-11-17 Version: 3.14.0
+- Support API DescribeMetricList.
+- Support API DescribeMetricTop.
+- Support API ListInstanceAdbAttributes.
+- Support API StartInstanceAdb.
+- Support API StopInstanceAdb.
+
+
 2025-11-14 Version: 3.13.6
 - Update API DescribeBackupFiles: add request parameters SaleMode.
 
