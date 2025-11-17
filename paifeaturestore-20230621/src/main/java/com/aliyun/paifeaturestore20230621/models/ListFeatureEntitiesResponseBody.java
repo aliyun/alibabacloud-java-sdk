@@ -88,6 +88,27 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("ParentFeatureEntityId")
+        public String parentFeatureEntityId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
+        @NameInMap("ParentFeatureEntityName")
+        public String parentFeatureEntityName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>user_id</p>
+         */
+        @NameInMap("ParentJoinId")
+        public String parentJoinId;
+
+        /**
+         * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("ProjectId")
@@ -143,6 +164,30 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
         }
         public String getOwner() {
             return this.owner;
+        }
+
+        public ListFeatureEntitiesResponseBodyFeatureEntities setParentFeatureEntityId(String parentFeatureEntityId) {
+            this.parentFeatureEntityId = parentFeatureEntityId;
+            return this;
+        }
+        public String getParentFeatureEntityId() {
+            return this.parentFeatureEntityId;
+        }
+
+        public ListFeatureEntitiesResponseBodyFeatureEntities setParentFeatureEntityName(String parentFeatureEntityName) {
+            this.parentFeatureEntityName = parentFeatureEntityName;
+            return this;
+        }
+        public String getParentFeatureEntityName() {
+            return this.parentFeatureEntityName;
+        }
+
+        public ListFeatureEntitiesResponseBodyFeatureEntities setParentJoinId(String parentJoinId) {
+            this.parentJoinId = parentJoinId;
+            return this;
+        }
+        public String getParentJoinId() {
+            return this.parentJoinId;
         }
 
         public ListFeatureEntitiesResponseBodyFeatureEntities setProjectId(String projectId) {

@@ -112,10 +112,24 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>item_id</p>
+         */
+        @NameInMap("JoinId")
+        public String joinId;
+
+        /**
+         * <strong>example:</strong>
          * <p>feature_view1</p>
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
+        @NameInMap("ParentJoinId")
+        public String parentJoinId;
 
         @NameInMap("Type")
         public String type;
@@ -141,12 +155,28 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
             return this.features;
         }
 
+        public ListProjectFeatureViewsResponseBodyFeatureViews setJoinId(String joinId) {
+            this.joinId = joinId;
+            return this;
+        }
+        public String getJoinId() {
+            return this.joinId;
+        }
+
         public ListProjectFeatureViewsResponseBodyFeatureViews setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListProjectFeatureViewsResponseBodyFeatureViews setParentJoinId(String parentJoinId) {
+            this.parentJoinId = parentJoinId;
+            return this;
+        }
+        public String getParentJoinId() {
+            return this.parentJoinId;
         }
 
         public ListProjectFeatureViewsResponseBodyFeatureViews setType(String type) {

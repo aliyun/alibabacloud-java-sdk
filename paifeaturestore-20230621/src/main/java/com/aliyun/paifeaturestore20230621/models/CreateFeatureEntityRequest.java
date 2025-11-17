@@ -23,6 +23,13 @@ public class CreateFeatureEntityRequest extends TeaModel {
     public String name;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ParentFeatureEntityId")
+    public String parentFeatureEntityId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +57,14 @@ public class CreateFeatureEntityRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateFeatureEntityRequest setParentFeatureEntityId(String parentFeatureEntityId) {
+        this.parentFeatureEntityId = parentFeatureEntityId;
+        return this;
+    }
+    public String getParentFeatureEntityId() {
+        return this.parentFeatureEntityId;
     }
 
     public CreateFeatureEntityRequest setProjectId(String projectId) {

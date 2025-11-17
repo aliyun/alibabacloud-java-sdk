@@ -201,6 +201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parentFeatureEntityId)) {
+            body.put("ParentFeatureEntityId", request.parentFeatureEntityId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             body.put("ProjectId", request.projectId);
         }
@@ -1790,6 +1794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentFeatureEntityId)) {
+            query.put("ParentFeatureEntityId", request.parentFeatureEntityId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {

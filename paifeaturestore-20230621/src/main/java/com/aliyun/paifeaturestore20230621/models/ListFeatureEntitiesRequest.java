@@ -44,6 +44,13 @@ public class ListFeatureEntitiesRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ParentFeatureEntityId")
+    public String parentFeatureEntityId;
+
+    /**
+     * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("ProjectId")
@@ -107,6 +114,14 @@ public class ListFeatureEntitiesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListFeatureEntitiesRequest setParentFeatureEntityId(String parentFeatureEntityId) {
+        this.parentFeatureEntityId = parentFeatureEntityId;
+        return this;
+    }
+    public String getParentFeatureEntityId() {
+        return this.parentFeatureEntityId;
     }
 
     public ListFeatureEntitiesRequest setProjectId(String projectId) {
