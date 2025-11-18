@@ -90,7 +90,7 @@ public class AddImageRequest extends TeaModel {
      * <p>2</p>
      */
     @NameInMap("Size")
-    public Integer size;
+    public Long size;
 
     @NameInMap("SourceId")
     public String sourceId;
@@ -160,11 +160,11 @@ public class AddImageRequest extends TeaModel {
         return this.name;
     }
 
-    public AddImageRequest setSize(Integer size) {
+    public AddImageRequest setSize(Long size) {
         this.size = size;
         return this;
     }
-    public Integer getSize() {
+    public Long getSize() {
         return this.size;
     }
 

@@ -90,7 +90,7 @@ public class GetImageResponseBody extends TeaModel {
      * <p>10</p>
      */
     @NameInMap("Size")
-    public Integer size;
+    public Long size;
 
     /**
      * <p>镜像来源 ID</p>
@@ -199,11 +199,11 @@ public class GetImageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetImageResponseBody setSize(Integer size) {
+    public GetImageResponseBody setSize(Long size) {
         this.size = size;
         return this;
     }
-    public Integer getSize() {
+    public Long getSize() {
         return this.size;
     }
 

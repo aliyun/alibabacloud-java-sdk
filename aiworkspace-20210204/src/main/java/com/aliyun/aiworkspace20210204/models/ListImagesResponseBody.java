@@ -186,7 +186,7 @@ public class ListImagesResponseBody extends TeaModel {
          * <p>2</p>
          */
         @NameInMap("Size")
-        public Integer size;
+        public Long size;
 
         /**
          * <p>镜像来源 ID</p>
@@ -295,11 +295,11 @@ public class ListImagesResponseBody extends TeaModel {
             return this.parentUserId;
         }
 
-        public ListImagesResponseBodyImages setSize(Integer size) {
+        public ListImagesResponseBodyImages setSize(Long size) {
             this.size = size;
             return this;
         }
-        public Integer getSize() {
+        public Long getSize() {
             return this.size;
         }
 
