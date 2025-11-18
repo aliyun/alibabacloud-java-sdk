@@ -3,12 +3,12 @@ package com.aliyun.airticketopen20230117.models;
 
 import com.aliyun.tea.*;
 
-public class RefundDetailListHeaders extends TeaModel {
+public class StandardSearchHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>Access token</p>
+     * <p>access_token</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,20 +18,18 @@ public class RefundDetailListHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
-     * <p>Multi-language, default to buyer account configuration</p>
-     * 
      * <strong>example:</strong>
      * <p>en_US</p>
      */
     @NameInMap("x-acs-airticket-language")
     public String xAcsAirticketLanguage;
 
-    public static RefundDetailListHeaders build(java.util.Map<String, ?> map) throws Exception {
-        RefundDetailListHeaders self = new RefundDetailListHeaders();
+    public static StandardSearchHeaders build(java.util.Map<String, ?> map) throws Exception {
+        StandardSearchHeaders self = new StandardSearchHeaders();
         return TeaModel.build(map, self);
     }
 
-    public RefundDetailListHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public StandardSearchHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -39,7 +37,7 @@ public class RefundDetailListHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public RefundDetailListHeaders setXAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
+    public StandardSearchHeaders setXAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
         this.xAcsAirticketAccessToken = xAcsAirticketAccessToken;
         return this;
     }
@@ -47,7 +45,7 @@ public class RefundDetailListHeaders extends TeaModel {
         return this.xAcsAirticketAccessToken;
     }
 
-    public RefundDetailListHeaders setXAcsAirticketLanguage(String xAcsAirticketLanguage) {
+    public StandardSearchHeaders setXAcsAirticketLanguage(String xAcsAirticketLanguage) {
         this.xAcsAirticketLanguage = xAcsAirticketLanguage;
         return this;
     }

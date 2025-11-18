@@ -47,7 +47,7 @@ public class OrderDetailResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>http reqeust has been processed successfully，status code is 200</p>
+     * <p>http request has been processed successfully，status code is 200</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -127,6 +127,8 @@ public class OrderDetailResponseBody extends TeaModel {
 
     public static class OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary extends TeaModel {
         /**
+         * <p>Number of luggage pieces. Values can be: 3, 2, 1, 0, -2. -2 indicates weight-based calculation.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -134,6 +136,8 @@ public class OrderDetailResponseBody extends TeaModel {
         public Integer baggageAmount;
 
         /**
+         * <p>Luggage weight, 0-50. When isAllWeght=true, it indicates the total weight of all items.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -141,16 +145,23 @@ public class OrderDetailResponseBody extends TeaModel {
         public Integer baggageWeight;
 
         /**
+         * <p>Unit of luggage weight</p>
+         * 
          * <strong>example:</strong>
          * <p>KG</p>
          */
         @NameInMap("baggage_weight_unit")
         public String baggageWeightUnit;
 
+        /**
+         * <p>whether all luggage weight</p>
+         */
         @NameInMap("is_all_weight")
         public Boolean isAllWeight;
 
         /**
+         * <p>Total Price</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0</p>
          */
@@ -223,6 +234,9 @@ public class OrderDetailResponseBody extends TeaModel {
         @NameInMap("ancillary_type")
         public Integer ancillaryType;
 
+        /**
+         * <p>Ancillary Service Details</p>
+         */
         @NameInMap("baggage_ancillary")
         public OrderDetailResponseBodyDataAncillaryItemDetailListAncillaryBaggageAncillary baggageAncillary;
 
@@ -1792,9 +1806,15 @@ public class OrderDetailResponseBody extends TeaModel {
     }
 
     public static class OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo extends TeaModel {
+        /**
+         * <p>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</p>
+         */
         @NameInMap("issue_ticket_type")
         public Integer issueTicketType;
 
+        /**
+         * <p>Estimated issue ticket time, unit: minutes</p>
+         */
         @NameInMap("issue_time_limit")
         public Integer issueTimeLimit;
 
@@ -1822,9 +1842,15 @@ public class OrderDetailResponseBody extends TeaModel {
     }
 
     public static class OrderDetailResponseBodyDataSolutionSolutionAttribute extends TeaModel {
+        /**
+         * <p>Issue ticket time related</p>
+         */
         @NameInMap("issue_time_info")
         public OrderDetailResponseBodyDataSolutionSolutionAttributeIssueTimeInfo issueTimeInfo;
 
+        /**
+         * <p>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</p>
+         */
         @NameInMap("supply_source_type")
         public String supplySourceType;
 
@@ -1913,24 +1939,6 @@ public class OrderDetailResponseBody extends TeaModel {
         public java.util.List<OrderDetailResponseBodyDataSolutionJourneyList> journeyList;
 
         /**
-         * <p>product type description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>description</p>
-         */
-        @NameInMap("product_type_description")
-        public String productTypeDescription;
-
-        /**
-         * <p>refund coupon description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>description</p>
-         */
-        @NameInMap("refund_ticket_coupon_description")
-        public String refundTicketCouponDescription;
-
-        /**
          * <p>through check-in baggage policy</p>
          */
         @NameInMap("segment_baggage_check_in_info_list")
@@ -1948,6 +1956,9 @@ public class OrderDetailResponseBody extends TeaModel {
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<OrderDetailResponseBodyDataSolutionSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
+        /**
+         * <p>Quotation Attributes</p>
+         */
         @NameInMap("solution_attribute")
         public OrderDetailResponseBodyDataSolutionSolutionAttribute solutionAttribute;
 
@@ -2019,22 +2030,6 @@ public class OrderDetailResponseBody extends TeaModel {
         }
         public java.util.List<OrderDetailResponseBodyDataSolutionJourneyList> getJourneyList() {
             return this.journeyList;
-        }
-
-        public OrderDetailResponseBodyDataSolution setProductTypeDescription(String productTypeDescription) {
-            this.productTypeDescription = productTypeDescription;
-            return this;
-        }
-        public String getProductTypeDescription() {
-            return this.productTypeDescription;
-        }
-
-        public OrderDetailResponseBodyDataSolution setRefundTicketCouponDescription(String refundTicketCouponDescription) {
-            this.refundTicketCouponDescription = refundTicketCouponDescription;
-            return this;
-        }
-        public String getRefundTicketCouponDescription() {
-            return this.refundTicketCouponDescription;
         }
 
         public OrderDetailResponseBodyDataSolution setSegmentBaggageCheckInInfoList(java.util.List<OrderDetailResponseBodyDataSolutionSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {

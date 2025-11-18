@@ -3,52 +3,39 @@ package com.aliyun.airticketopen20230117.models;
 
 import com.aliyun.tea.*;
 
-public class SearchResponseBody extends TeaModel {
+public class StandardSearchResponseBody extends TeaModel {
     /**
-     * <p>request ID</p>
-     * 
      * <strong>example:</strong>
-     * <p>2236993B-7BE7-5F92-B179-21FF08570165</p>
+     * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>data</p>
-     */
     @NameInMap("data")
-    public SearchResponseBodyData data;
+    public StandardSearchResponseBodyData data;
 
     /**
-     * <p>error code</p>
-     * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>null</p>
      */
     @NameInMap("error_code")
     public String errorCode;
 
     /**
-     * <p>error data</p>
-     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>null</p>
      */
     @NameInMap("error_data")
     public Object errorData;
 
     /**
-     * <p>error message</p>
-     * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>null</p>
      */
     @NameInMap("error_msg")
     public String errorMsg;
 
     /**
-     * <p>http request has been processed successfully，status code is 200</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -56,20 +43,18 @@ public class SearchResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>true represents success, false represents failure</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
 
-    public static SearchResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SearchResponseBody self = new SearchResponseBody();
+    public static StandardSearchResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StandardSearchResponseBody self = new StandardSearchResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SearchResponseBody setRequestId(String requestId) {
+    public StandardSearchResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -77,15 +62,15 @@ public class SearchResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SearchResponseBody setData(SearchResponseBodyData data) {
+    public StandardSearchResponseBody setData(StandardSearchResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public SearchResponseBodyData getData() {
+    public StandardSearchResponseBodyData getData() {
         return this.data;
     }
 
-    public SearchResponseBody setErrorCode(String errorCode) {
+    public StandardSearchResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -93,7 +78,7 @@ public class SearchResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public SearchResponseBody setErrorData(Object errorData) {
+    public StandardSearchResponseBody setErrorData(Object errorData) {
         this.errorData = errorData;
         return this;
     }
@@ -101,7 +86,7 @@ public class SearchResponseBody extends TeaModel {
         return this.errorData;
     }
 
-    public SearchResponseBody setErrorMsg(String errorMsg) {
+    public StandardSearchResponseBody setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         return this;
     }
@@ -109,7 +94,7 @@ public class SearchResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public SearchResponseBody setStatus(Integer status) {
+    public StandardSearchResponseBody setStatus(Integer status) {
         this.status = status;
         return this;
     }
@@ -117,7 +102,7 @@ public class SearchResponseBody extends TeaModel {
         return this.status;
     }
 
-    public SearchResponseBody setSuccess(Boolean success) {
+    public StandardSearchResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -125,10 +110,8 @@ public class SearchResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class SearchResponseBodyDataSolutionListJourneyListSegmentList extends TeaModel {
+    public static class StandardSearchResponseBodyDataSolutionListJourneyListSegmentList extends TeaModel {
         /**
-         * <p>arrival airport code (capitalized)</p>
-         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -136,8 +119,6 @@ public class SearchResponseBody extends TeaModel {
         public String arrivalAirport;
 
         /**
-         * <p>arrival city code (capitalized)</p>
-         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -145,8 +126,6 @@ public class SearchResponseBody extends TeaModel {
         public String arrivalCity;
 
         /**
-         * <p>arrival terminal</p>
-         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -154,8 +133,6 @@ public class SearchResponseBody extends TeaModel {
         public String arrivalTerminal;
 
         /**
-         * <p>arrival time in string format (yyyy-MM-dd HH:mm:ss)</p>
-         * 
          * <strong>example:</strong>
          * <p>2023-03-10 10:40:00</p>
          */
@@ -163,8 +140,6 @@ public class SearchResponseBody extends TeaModel {
         public String arrivalTime;
 
         /**
-         * <p>available seats (for reference only)</p>
-         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -172,8 +147,6 @@ public class SearchResponseBody extends TeaModel {
         public String availability;
 
         /**
-         * <p>RBD</p>
-         * 
          * <strong>example:</strong>
          * <p>V</p>
          */
@@ -181,8 +154,6 @@ public class SearchResponseBody extends TeaModel {
         public String cabin;
 
         /**
-         * <p>cabin class</p>
-         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -190,8 +161,6 @@ public class SearchResponseBody extends TeaModel {
         public String cabinClass;
 
         /**
-         * <p>code share or not</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -199,8 +168,6 @@ public class SearchResponseBody extends TeaModel {
         public Boolean codeShare;
 
         /**
-         * <p>departure airport code (capitalized)</p>
-         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -208,8 +175,6 @@ public class SearchResponseBody extends TeaModel {
         public String departureAirport;
 
         /**
-         * <p>departure city code (capitalized)</p>
-         * 
          * <strong>example:</strong>
          * <p>SHA</p>
          */
@@ -217,8 +182,6 @@ public class SearchResponseBody extends TeaModel {
         public String departureCity;
 
         /**
-         * <p>departure terminal</p>
-         * 
          * <strong>example:</strong>
          * <p>T2</p>
          */
@@ -226,8 +189,6 @@ public class SearchResponseBody extends TeaModel {
         public String departureTerminal;
 
         /**
-         * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
-         * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
          */
@@ -235,8 +196,6 @@ public class SearchResponseBody extends TeaModel {
         public String departureTime;
 
         /**
-         * <p>equipment type</p>
-         * 
          * <strong>example:</strong>
          * <p>32Q</p>
          */
@@ -244,8 +203,6 @@ public class SearchResponseBody extends TeaModel {
         public String equipType;
 
         /**
-         * <p>flight time, unit: minute</p>
-         * 
          * <strong>example:</strong>
          * <p>165</p>
          */
@@ -253,8 +210,6 @@ public class SearchResponseBody extends TeaModel {
         public Integer flightDuration;
 
         /**
-         * <p>marketing airline code (ex.: KA)</p>
-         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -262,8 +217,6 @@ public class SearchResponseBody extends TeaModel {
         public String marketingAirline;
 
         /**
-         * <p>marketing airline flight no. (ex.: KA5809)</p>
-         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -271,17 +224,13 @@ public class SearchResponseBody extends TeaModel {
         public String marketingFlightNo;
 
         /**
-         * <p>marketing airline integer flight no. (ex.: 5809)</p>
-         * 
          * <strong>example:</strong>
-         * <p>1259</p>
+         * <p>1295</p>
          */
         @NameInMap("marketing_flight_no_int")
         public Integer marketingFlightNoInt;
 
         /**
-         * <p>operating airline code (ex.: CX)</p>
-         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -289,8 +238,6 @@ public class SearchResponseBody extends TeaModel {
         public String operatingAirline;
 
         /**
-         * <p>operating airline flight no. (ex.: CX601)</p>
-         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -298,8 +245,6 @@ public class SearchResponseBody extends TeaModel {
         public String operatingFlightNo;
 
         /**
-         * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</p>
-         * 
          * <strong>example:</strong>
          * <p>HO1295-PVG-MFM-20230310</p>
          */
@@ -307,30 +252,25 @@ public class SearchResponseBody extends TeaModel {
         public String segmentId;
 
         /**
-         * <p>stop city list
-         * when stop_quantity &gt; 1, use “,” for seperation</p>
-         * 
          * <strong>example:</strong>
-         * <p>MFM,PVG</p>
+         * <p>SEL,HKG</p>
          */
         @NameInMap("stop_city_list")
         public String stopCityList;
 
         /**
-         * <p>number of stops</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("stop_quantity")
         public Integer stopQuantity;
 
-        public static SearchResponseBodyDataSolutionListJourneyListSegmentList build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyDataSolutionListJourneyListSegmentList self = new SearchResponseBodyDataSolutionListJourneyListSegmentList();
+        public static StandardSearchResponseBodyDataSolutionListJourneyListSegmentList build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyDataSolutionListJourneyListSegmentList self = new StandardSearchResponseBodyDataSolutionListJourneyListSegmentList();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setArrivalAirport(String arrivalAirport) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setArrivalAirport(String arrivalAirport) {
             this.arrivalAirport = arrivalAirport;
             return this;
         }
@@ -338,7 +278,7 @@ public class SearchResponseBody extends TeaModel {
             return this.arrivalAirport;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setArrivalCity(String arrivalCity) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setArrivalCity(String arrivalCity) {
             this.arrivalCity = arrivalCity;
             return this;
         }
@@ -346,7 +286,7 @@ public class SearchResponseBody extends TeaModel {
             return this.arrivalCity;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setArrivalTerminal(String arrivalTerminal) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setArrivalTerminal(String arrivalTerminal) {
             this.arrivalTerminal = arrivalTerminal;
             return this;
         }
@@ -354,7 +294,7 @@ public class SearchResponseBody extends TeaModel {
             return this.arrivalTerminal;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setArrivalTime(String arrivalTime) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setArrivalTime(String arrivalTime) {
             this.arrivalTime = arrivalTime;
             return this;
         }
@@ -362,7 +302,7 @@ public class SearchResponseBody extends TeaModel {
             return this.arrivalTime;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setAvailability(String availability) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setAvailability(String availability) {
             this.availability = availability;
             return this;
         }
@@ -370,7 +310,7 @@ public class SearchResponseBody extends TeaModel {
             return this.availability;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setCabin(String cabin) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setCabin(String cabin) {
             this.cabin = cabin;
             return this;
         }
@@ -378,7 +318,7 @@ public class SearchResponseBody extends TeaModel {
             return this.cabin;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setCabinClass(String cabinClass) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setCabinClass(String cabinClass) {
             this.cabinClass = cabinClass;
             return this;
         }
@@ -386,7 +326,7 @@ public class SearchResponseBody extends TeaModel {
             return this.cabinClass;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setCodeShare(Boolean codeShare) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setCodeShare(Boolean codeShare) {
             this.codeShare = codeShare;
             return this;
         }
@@ -394,7 +334,7 @@ public class SearchResponseBody extends TeaModel {
             return this.codeShare;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setDepartureAirport(String departureAirport) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setDepartureAirport(String departureAirport) {
             this.departureAirport = departureAirport;
             return this;
         }
@@ -402,7 +342,7 @@ public class SearchResponseBody extends TeaModel {
             return this.departureAirport;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setDepartureCity(String departureCity) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setDepartureCity(String departureCity) {
             this.departureCity = departureCity;
             return this;
         }
@@ -410,7 +350,7 @@ public class SearchResponseBody extends TeaModel {
             return this.departureCity;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setDepartureTerminal(String departureTerminal) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setDepartureTerminal(String departureTerminal) {
             this.departureTerminal = departureTerminal;
             return this;
         }
@@ -418,7 +358,7 @@ public class SearchResponseBody extends TeaModel {
             return this.departureTerminal;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setDepartureTime(String departureTime) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setDepartureTime(String departureTime) {
             this.departureTime = departureTime;
             return this;
         }
@@ -426,7 +366,7 @@ public class SearchResponseBody extends TeaModel {
             return this.departureTime;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setEquipType(String equipType) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setEquipType(String equipType) {
             this.equipType = equipType;
             return this;
         }
@@ -434,7 +374,7 @@ public class SearchResponseBody extends TeaModel {
             return this.equipType;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setFlightDuration(Integer flightDuration) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setFlightDuration(Integer flightDuration) {
             this.flightDuration = flightDuration;
             return this;
         }
@@ -442,7 +382,7 @@ public class SearchResponseBody extends TeaModel {
             return this.flightDuration;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setMarketingAirline(String marketingAirline) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setMarketingAirline(String marketingAirline) {
             this.marketingAirline = marketingAirline;
             return this;
         }
@@ -450,7 +390,7 @@ public class SearchResponseBody extends TeaModel {
             return this.marketingAirline;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setMarketingFlightNo(String marketingFlightNo) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setMarketingFlightNo(String marketingFlightNo) {
             this.marketingFlightNo = marketingFlightNo;
             return this;
         }
@@ -458,7 +398,7 @@ public class SearchResponseBody extends TeaModel {
             return this.marketingFlightNo;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setMarketingFlightNoInt(Integer marketingFlightNoInt) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setMarketingFlightNoInt(Integer marketingFlightNoInt) {
             this.marketingFlightNoInt = marketingFlightNoInt;
             return this;
         }
@@ -466,7 +406,7 @@ public class SearchResponseBody extends TeaModel {
             return this.marketingFlightNoInt;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setOperatingAirline(String operatingAirline) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setOperatingAirline(String operatingAirline) {
             this.operatingAirline = operatingAirline;
             return this;
         }
@@ -474,7 +414,7 @@ public class SearchResponseBody extends TeaModel {
             return this.operatingAirline;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setOperatingFlightNo(String operatingFlightNo) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setOperatingFlightNo(String operatingFlightNo) {
             this.operatingFlightNo = operatingFlightNo;
             return this;
         }
@@ -482,7 +422,7 @@ public class SearchResponseBody extends TeaModel {
             return this.operatingFlightNo;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setSegmentId(String segmentId) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setSegmentId(String segmentId) {
             this.segmentId = segmentId;
             return this;
         }
@@ -490,7 +430,7 @@ public class SearchResponseBody extends TeaModel {
             return this.segmentId;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setStopCityList(String stopCityList) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setStopCityList(String stopCityList) {
             this.stopCityList = stopCityList;
             return this;
         }
@@ -498,7 +438,7 @@ public class SearchResponseBody extends TeaModel {
             return this.stopCityList;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyListSegmentList setStopQuantity(Integer stopQuantity) {
+        public StandardSearchResponseBodyDataSolutionListJourneyListSegmentList setStopQuantity(Integer stopQuantity) {
             this.stopQuantity = stopQuantity;
             return this;
         }
@@ -508,36 +448,31 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
-    public static class SearchResponseBodyDataSolutionListJourneyList extends TeaModel {
-        /**
-         * <p>segment Info</p>
-         */
+    public static class StandardSearchResponseBodyDataSolutionListJourneyList extends TeaModel {
         @NameInMap("segment_list")
-        public java.util.List<SearchResponseBodyDataSolutionListJourneyListSegmentList> segmentList;
+        public java.util.List<StandardSearchResponseBodyDataSolutionListJourneyListSegmentList> segmentList;
 
         /**
-         * <p>number of transfers</p>
-         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("transfer_count")
         public Integer transferCount;
 
-        public static SearchResponseBodyDataSolutionListJourneyList build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyDataSolutionListJourneyList self = new SearchResponseBodyDataSolutionListJourneyList();
+        public static StandardSearchResponseBodyDataSolutionListJourneyList build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyDataSolutionListJourneyList self = new StandardSearchResponseBodyDataSolutionListJourneyList();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyDataSolutionListJourneyList setSegmentList(java.util.List<SearchResponseBodyDataSolutionListJourneyListSegmentList> segmentList) {
+        public StandardSearchResponseBodyDataSolutionListJourneyList setSegmentList(java.util.List<StandardSearchResponseBodyDataSolutionListJourneyListSegmentList> segmentList) {
             this.segmentList = segmentList;
             return this;
         }
-        public java.util.List<SearchResponseBodyDataSolutionListJourneyListSegmentList> getSegmentList() {
+        public java.util.List<StandardSearchResponseBodyDataSolutionListJourneyListSegmentList> getSegmentList() {
             return this.segmentList;
         }
 
-        public SearchResponseBodyDataSolutionListJourneyList setTransferCount(Integer transferCount) {
+        public StandardSearchResponseBodyDataSolutionListJourneyList setTransferCount(Integer transferCount) {
             this.transferCount = transferCount;
             return this;
         }
@@ -547,35 +482,23 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
-    public static class SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList extends TeaModel {
+    public static class StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList extends TeaModel {
         /**
-         * <p>through check-in baggage policy type</p>
-         * <ol>
-         * <li>baggage through check-in between segments</li>
-         * <li>baggage re-check-in needed between segments</li>
-         * <li>baggage through check-in at stop city ( applies for stop flight )</li>
-         * <li>baggage re-checkin needed at stop city ( applies for stop flight )</li>
-         * </ol>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("luggage_direct_info_type")
         public Integer luggageDirectInfoType;
 
-        /**
-         * <p>segment id list. 
-         * all the listed segment ids share the same baggage through check-in  policy</p>
-         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
-        public static SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList self = new SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList();
+        public static StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList self = new StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList setLuggageDirectInfoType(Integer luggageDirectInfoType) {
+        public StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList setLuggageDirectInfoType(Integer luggageDirectInfoType) {
             this.luggageDirectInfoType = luggageDirectInfoType;
             return this;
         }
@@ -583,7 +506,7 @@ public class SearchResponseBody extends TeaModel {
             return this.luggageDirectInfoType;
         }
 
-        public SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList setSegmentIdList(java.util.List<String> segmentIdList) {
+        public StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList setSegmentIdList(java.util.List<String> segmentIdList) {
             this.segmentIdList = segmentIdList;
             return this;
         }
@@ -593,26 +516,19 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
-    public static class SearchResponseBodyDataSolutionListSegmentBaggageMappingList extends TeaModel {
-        /**
-         * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
-         */
+    public static class StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList extends TeaModel {
         @NameInMap("passenger_baggage_allowance_mapping")
         public java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping;
 
-        /**
-         * <p>segment id list. 
-         * all the listed segment id share the same baggage rule</p>
-         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
-        public static SearchResponseBodyDataSolutionListSegmentBaggageMappingList build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyDataSolutionListSegmentBaggageMappingList self = new SearchResponseBodyDataSolutionListSegmentBaggageMappingList();
+        public static StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList self = new StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyDataSolutionListSegmentBaggageMappingList setPassengerBaggageAllowanceMapping(java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping) {
+        public StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList setPassengerBaggageAllowanceMapping(java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping) {
             this.passengerBaggageAllowanceMapping = passengerBaggageAllowanceMapping;
             return this;
         }
@@ -620,7 +536,7 @@ public class SearchResponseBody extends TeaModel {
             return this.passengerBaggageAllowanceMapping;
         }
 
-        public SearchResponseBodyDataSolutionListSegmentBaggageMappingList setSegmentIdList(java.util.List<String> segmentIdList) {
+        public StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList setSegmentIdList(java.util.List<String> segmentIdList) {
             this.segmentIdList = segmentIdList;
             return this;
         }
@@ -630,26 +546,19 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
-    public static class SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList extends TeaModel {
-        /**
-         * <p>change and refund policy mapping, key is passenger type, value is change and refund policy details</p>
-         */
+    public static class StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList extends TeaModel {
         @NameInMap("refund_change_rule_map")
         public java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap;
 
-        /**
-         * <p>segment id list. 
-         * all the listed segment ids share the same change and refund policy</p>
-         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
-        public static SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList self = new SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList();
+        public static StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList self = new StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList setRefundChangeRuleMap(java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap) {
+        public StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList setRefundChangeRuleMap(java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap) {
             this.refundChangeRuleMap = refundChangeRuleMap;
             return this;
         }
@@ -657,7 +566,7 @@ public class SearchResponseBody extends TeaModel {
             return this.refundChangeRuleMap;
         }
 
-        public SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList setSegmentIdList(java.util.List<String> segmentIdList) {
+        public StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList setSegmentIdList(java.util.List<String> segmentIdList) {
             this.segmentIdList = segmentIdList;
             return this;
         }
@@ -667,25 +576,19 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
-    public static class SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo extends TeaModel {
-        /**
-         * <p>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</p>
-         */
+    public static class StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo extends TeaModel {
         @NameInMap("issue_ticket_type")
         public Integer issueTicketType;
 
-        /**
-         * <p>Estimated issue ticket time, unit: minutes</p>
-         */
         @NameInMap("issue_time_limit")
         public Integer issueTimeLimit;
 
-        public static SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo self = new SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo();
+        public static StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo self = new StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo setIssueTicketType(Integer issueTicketType) {
+        public StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo setIssueTicketType(Integer issueTicketType) {
             this.issueTicketType = issueTicketType;
             return this;
         }
@@ -693,7 +596,7 @@ public class SearchResponseBody extends TeaModel {
             return this.issueTicketType;
         }
 
-        public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo setIssueTimeLimit(Integer issueTimeLimit) {
+        public StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo setIssueTimeLimit(Integer issueTimeLimit) {
             this.issueTimeLimit = issueTimeLimit;
             return this;
         }
@@ -703,36 +606,31 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
-    public static class SearchResponseBodyDataSolutionListSolutionAttribute extends TeaModel {
-        /**
-         * <p>Issue ticket time related</p>
-         */
+    public static class StandardSearchResponseBodyDataSolutionListSolutionAttribute extends TeaModel {
         @NameInMap("issue_time_info")
-        public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo;
+        public StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo;
 
         /**
-         * <p>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("supply_source_type")
         public String supplySourceType;
 
-        public static SearchResponseBodyDataSolutionListSolutionAttribute build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyDataSolutionListSolutionAttribute self = new SearchResponseBodyDataSolutionListSolutionAttribute();
+        public static StandardSearchResponseBodyDataSolutionListSolutionAttribute build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyDataSolutionListSolutionAttribute self = new StandardSearchResponseBodyDataSolutionListSolutionAttribute();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyDataSolutionListSolutionAttribute setIssueTimeInfo(SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo) {
+        public StandardSearchResponseBodyDataSolutionListSolutionAttribute setIssueTimeInfo(StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo) {
             this.issueTimeInfo = issueTimeInfo;
             return this;
         }
-        public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo getIssueTimeInfo() {
+        public StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo getIssueTimeInfo() {
             return this.issueTimeInfo;
         }
 
-        public SearchResponseBodyDataSolutionListSolutionAttribute setSupplySourceType(String supplySourceType) {
+        public StandardSearchResponseBodyDataSolutionListSolutionAttribute setSupplySourceType(String supplySourceType) {
             this.supplySourceType = supplySourceType;
             return this;
         }
@@ -742,106 +640,79 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
-    public static class SearchResponseBodyDataSolutionList extends TeaModel {
+    public static class StandardSearchResponseBodyDataSolutionList extends TeaModel {
         /**
-         * <p>adult fare</p>
-         * 
          * <strong>example:</strong>
-         * <p>600</p>
+         * <p>300</p>
          */
         @NameInMap("adult_price")
         public Double adultPrice;
 
         /**
-         * <p>adult tax</p>
-         * 
          * <strong>example:</strong>
-         * <p>11</p>
+         * <p>30</p>
          */
         @NameInMap("adult_tax")
         public Double adultTax;
 
         /**
-         * <p>child fare</p>
-         * 
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>200</p>
          */
         @NameInMap("child_price")
         public Double childPrice;
 
         /**
-         * <p>child tax</p>
-         * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>20</p>
          */
         @NameInMap("child_tax")
         public Double childTax;
 
         /**
-         * <p>infant fare</p>
-         * 
          * <strong>example:</strong>
-         * <p>400</p>
+         * <p>100</p>
          */
         @NameInMap("infant_price")
         public Double infantPrice;
 
         /**
-         * <p>infant tax</p>
-         * 
          * <strong>example:</strong>
-         * <p>9</p>
+         * <p>10</p>
          */
         @NameInMap("infant_tax")
         public Double infantTax;
 
-        /**
-         * <p>segment list</p>
-         */
         @NameInMap("journey_list")
-        public java.util.List<SearchResponseBodyDataSolutionListJourneyList> journeyList;
+        public java.util.List<StandardSearchResponseBodyDataSolutionListJourneyList> journeyList;
 
-        /**
-         * <p>through check-in baggage policy</p>
-         */
         @NameInMap("segment_baggage_check_in_info_list")
-        public java.util.List<SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList;
+        public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList;
 
-        /**
-         * <p>baggage rule</p>
-         */
         @NameInMap("segment_baggage_mapping_list")
-        public java.util.List<SearchResponseBodyDataSolutionListSegmentBaggageMappingList> segmentBaggageMappingList;
+        public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList> segmentBaggageMappingList;
 
-        /**
-         * <p>change and refund policy</p>
-         */
         @NameInMap("segment_refund_change_rule_mapping_list")
-        public java.util.List<SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
+        public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
-        /**
-         * <p>Quotation attributes</p>
-         */
         @NameInMap("solution_attribute")
-        public SearchResponseBodyDataSolutionListSolutionAttribute solutionAttribute;
+        public StandardSearchResponseBodyDataSolutionListSolutionAttribute solutionAttribute;
 
         /**
-         * <p>solution ID</p>
+         * <p>solution_id</p>
          * 
          * <strong>example:</strong>
-         * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>
+         * <p>eJwz8DeySEo0NjQ01TU3TUxxx</p>
          */
         @NameInMap("solution_id")
         public String solutionId;
 
-        public static SearchResponseBodyDataSolutionList build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyDataSolutionList self = new SearchResponseBodyDataSolutionList();
+        public static StandardSearchResponseBodyDataSolutionList build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyDataSolutionList self = new StandardSearchResponseBodyDataSolutionList();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyDataSolutionList setAdultPrice(Double adultPrice) {
+        public StandardSearchResponseBodyDataSolutionList setAdultPrice(Double adultPrice) {
             this.adultPrice = adultPrice;
             return this;
         }
@@ -849,7 +720,7 @@ public class SearchResponseBody extends TeaModel {
             return this.adultPrice;
         }
 
-        public SearchResponseBodyDataSolutionList setAdultTax(Double adultTax) {
+        public StandardSearchResponseBodyDataSolutionList setAdultTax(Double adultTax) {
             this.adultTax = adultTax;
             return this;
         }
@@ -857,7 +728,7 @@ public class SearchResponseBody extends TeaModel {
             return this.adultTax;
         }
 
-        public SearchResponseBodyDataSolutionList setChildPrice(Double childPrice) {
+        public StandardSearchResponseBodyDataSolutionList setChildPrice(Double childPrice) {
             this.childPrice = childPrice;
             return this;
         }
@@ -865,7 +736,7 @@ public class SearchResponseBody extends TeaModel {
             return this.childPrice;
         }
 
-        public SearchResponseBodyDataSolutionList setChildTax(Double childTax) {
+        public StandardSearchResponseBodyDataSolutionList setChildTax(Double childTax) {
             this.childTax = childTax;
             return this;
         }
@@ -873,7 +744,7 @@ public class SearchResponseBody extends TeaModel {
             return this.childTax;
         }
 
-        public SearchResponseBodyDataSolutionList setInfantPrice(Double infantPrice) {
+        public StandardSearchResponseBodyDataSolutionList setInfantPrice(Double infantPrice) {
             this.infantPrice = infantPrice;
             return this;
         }
@@ -881,7 +752,7 @@ public class SearchResponseBody extends TeaModel {
             return this.infantPrice;
         }
 
-        public SearchResponseBodyDataSolutionList setInfantTax(Double infantTax) {
+        public StandardSearchResponseBodyDataSolutionList setInfantTax(Double infantTax) {
             this.infantTax = infantTax;
             return this;
         }
@@ -889,47 +760,47 @@ public class SearchResponseBody extends TeaModel {
             return this.infantTax;
         }
 
-        public SearchResponseBodyDataSolutionList setJourneyList(java.util.List<SearchResponseBodyDataSolutionListJourneyList> journeyList) {
+        public StandardSearchResponseBodyDataSolutionList setJourneyList(java.util.List<StandardSearchResponseBodyDataSolutionListJourneyList> journeyList) {
             this.journeyList = journeyList;
             return this;
         }
-        public java.util.List<SearchResponseBodyDataSolutionListJourneyList> getJourneyList() {
+        public java.util.List<StandardSearchResponseBodyDataSolutionListJourneyList> getJourneyList() {
             return this.journeyList;
         }
 
-        public SearchResponseBodyDataSolutionList setSegmentBaggageCheckInInfoList(java.util.List<SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
+        public StandardSearchResponseBodyDataSolutionList setSegmentBaggageCheckInInfoList(java.util.List<StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
             this.segmentBaggageCheckInInfoList = segmentBaggageCheckInInfoList;
             return this;
         }
-        public java.util.List<SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> getSegmentBaggageCheckInInfoList() {
+        public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> getSegmentBaggageCheckInInfoList() {
             return this.segmentBaggageCheckInInfoList;
         }
 
-        public SearchResponseBodyDataSolutionList setSegmentBaggageMappingList(java.util.List<SearchResponseBodyDataSolutionListSegmentBaggageMappingList> segmentBaggageMappingList) {
+        public StandardSearchResponseBodyDataSolutionList setSegmentBaggageMappingList(java.util.List<StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList> segmentBaggageMappingList) {
             this.segmentBaggageMappingList = segmentBaggageMappingList;
             return this;
         }
-        public java.util.List<SearchResponseBodyDataSolutionListSegmentBaggageMappingList> getSegmentBaggageMappingList() {
+        public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList> getSegmentBaggageMappingList() {
             return this.segmentBaggageMappingList;
         }
 
-        public SearchResponseBodyDataSolutionList setSegmentRefundChangeRuleMappingList(java.util.List<SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList) {
+        public StandardSearchResponseBodyDataSolutionList setSegmentRefundChangeRuleMappingList(java.util.List<StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList) {
             this.segmentRefundChangeRuleMappingList = segmentRefundChangeRuleMappingList;
             return this;
         }
-        public java.util.List<SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> getSegmentRefundChangeRuleMappingList() {
+        public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> getSegmentRefundChangeRuleMappingList() {
             return this.segmentRefundChangeRuleMappingList;
         }
 
-        public SearchResponseBodyDataSolutionList setSolutionAttribute(SearchResponseBodyDataSolutionListSolutionAttribute solutionAttribute) {
+        public StandardSearchResponseBodyDataSolutionList setSolutionAttribute(StandardSearchResponseBodyDataSolutionListSolutionAttribute solutionAttribute) {
             this.solutionAttribute = solutionAttribute;
             return this;
         }
-        public SearchResponseBodyDataSolutionListSolutionAttribute getSolutionAttribute() {
+        public StandardSearchResponseBodyDataSolutionListSolutionAttribute getSolutionAttribute() {
             return this.solutionAttribute;
         }
 
-        public SearchResponseBodyDataSolutionList setSolutionId(String solutionId) {
+        public StandardSearchResponseBodyDataSolutionList setSolutionId(String solutionId) {
             this.solutionId = solutionId;
             return this;
         }
@@ -939,23 +810,20 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
-    public static class SearchResponseBodyData extends TeaModel {
-        /**
-         * <p>solution list</p>
-         */
+    public static class StandardSearchResponseBodyData extends TeaModel {
         @NameInMap("solution_list")
-        public java.util.List<SearchResponseBodyDataSolutionList> solutionList;
+        public java.util.List<StandardSearchResponseBodyDataSolutionList> solutionList;
 
-        public static SearchResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            SearchResponseBodyData self = new SearchResponseBodyData();
+        public static StandardSearchResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            StandardSearchResponseBodyData self = new StandardSearchResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public SearchResponseBodyData setSolutionList(java.util.List<SearchResponseBodyDataSolutionList> solutionList) {
+        public StandardSearchResponseBodyData setSolutionList(java.util.List<StandardSearchResponseBodyDataSolutionList> solutionList) {
             this.solutionList = solutionList;
             return this;
         }
-        public java.util.List<SearchResponseBodyDataSolutionList> getSolutionList() {
+        public java.util.List<StandardSearchResponseBodyDataSolutionList> getSolutionList() {
             return this.solutionList;
         }
 

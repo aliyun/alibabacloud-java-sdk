@@ -47,7 +47,7 @@ public class PricingResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>http reqeust has been processed successfully，status code is 200</p>
+     * <p>http request has been processed successfully，status code is 200</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -884,9 +884,15 @@ public class PricingResponseBody extends TeaModel {
     }
 
     public static class PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo extends TeaModel {
+        /**
+         * <p>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</p>
+         */
         @NameInMap("issue_ticket_type")
         public Integer issueTicketType;
 
+        /**
+         * <p>Estimated issue ticket time, unit: minutes</p>
+         */
         @NameInMap("issue_time_limit")
         public Integer issueTimeLimit;
 
@@ -914,9 +920,15 @@ public class PricingResponseBody extends TeaModel {
     }
 
     public static class PricingResponseBodyDataSolutionSolutionAttribute extends TeaModel {
+        /**
+         * <p>Issue ticket time related</p>
+         */
         @NameInMap("issue_time_info")
         public PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo issueTimeInfo;
 
+        /**
+         * <p>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</p>
+         */
         @NameInMap("supply_source_type")
         public String supplySourceType;
 
@@ -1005,24 +1017,6 @@ public class PricingResponseBody extends TeaModel {
         public java.util.List<PricingResponseBodyDataSolutionJourneyList> journeyList;
 
         /**
-         * <p>product type description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>description</p>
-         */
-        @NameInMap("product_type_description")
-        public String productTypeDescription;
-
-        /**
-         * <p>refund coupon description</p>
-         * 
-         * <strong>example:</strong>
-         * <p>description</p>
-         */
-        @NameInMap("refund_ticket_coupon_description")
-        public String refundTicketCouponDescription;
-
-        /**
          * <p>through check-in baggage policy</p>
          */
         @NameInMap("segment_baggage_check_in_info_list")
@@ -1040,6 +1034,9 @@ public class PricingResponseBody extends TeaModel {
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<PricingResponseBodyDataSolutionSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
+        /**
+         * <p>Quotation attributes</p>
+         */
         @NameInMap("solution_attribute")
         public PricingResponseBodyDataSolutionSolutionAttribute solutionAttribute;
 
@@ -1111,22 +1108,6 @@ public class PricingResponseBody extends TeaModel {
         }
         public java.util.List<PricingResponseBodyDataSolutionJourneyList> getJourneyList() {
             return this.journeyList;
-        }
-
-        public PricingResponseBodyDataSolution setProductTypeDescription(String productTypeDescription) {
-            this.productTypeDescription = productTypeDescription;
-            return this;
-        }
-        public String getProductTypeDescription() {
-            return this.productTypeDescription;
-        }
-
-        public PricingResponseBodyDataSolution setRefundTicketCouponDescription(String refundTicketCouponDescription) {
-            this.refundTicketCouponDescription = refundTicketCouponDescription;
-            return this;
-        }
-        public String getRefundTicketCouponDescription() {
-            return this.refundTicketCouponDescription;
         }
 
         public PricingResponseBodyDataSolution setSegmentBaggageCheckInInfoList(java.util.List<PricingResponseBodyDataSolutionSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {

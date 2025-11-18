@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundDetailListResponseBody extends TeaModel {
     /**
-     * <p>request ID</p>
+     * <p>Request RequestId</p>
      * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -14,7 +14,7 @@ public class RefundDetailListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>data</p>
+     * <p>Properly processed return data</p>
      */
     @NameInMap("data")
     public RefundDetailListResponseBodyData data;
@@ -29,7 +29,7 @@ public class RefundDetailListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>error data</p>
+     * <p>Data carried in error handling</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class RefundDetailListResponseBody extends TeaModel {
     public Object errorData;
 
     /**
-     * <p>error message</p>
+     * <p>Error message</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -47,7 +47,7 @@ public class RefundDetailListResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>http reqeust has been processed successfully，status code is 200</p>
+     * <p>HTTP request successful, status value is 200</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -56,7 +56,7 @@ public class RefundDetailListResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>true represents success, false represents failure</p>
+     * <p>Whether the operation was successful</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +127,7 @@ public class RefundDetailListResponseBody extends TeaModel {
 
     public static class RefundDetailListResponseBodyDataList extends TeaModel {
         /**
-         * <p>whether it is a supplementary refund order (if the refund amount is not enough, you can use RefundApply to create a supplementary refund order)</p>
+         * <p>Whether it is a supplementary refund</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -136,7 +136,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public Boolean isMultiRefund;
 
         /**
-         * <p>order number that returned by Book</p>
+         * <p>Order number （ Ticketing Order Number）</p>
          * 
          * <strong>example:</strong>
          * <p>49884*****2345</p>
@@ -145,7 +145,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public Long orderNum;
 
         /**
-         * <p>refund order number that returned by RefundApply</p>
+         * <p>Refund order number</p>
          * 
          * <strong>example:</strong>
          * <p>49884*****950</p>
@@ -154,11 +154,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public Long refundOrderNum;
 
         /**
-         * <p>refund order status </p>
-         * <p>0: refund application</p>
-         * <p>1: refund in progress</p>
-         * <p>2: refund failed</p>
-         * <p>3: refund succeeded</p>
+         * <p>Refund order status: 0: Refund application; 1: Refund in progress; 2: Refund failed; 3: Refund succeeded</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +163,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public Integer refundOrderStatus;
 
         /**
-         * <p>the original refund order number associated with this supplementary refund order, only avaliable when is_multi_refund=true</p>
+         * <p>The original refund order number associated with this supplementary refund. Only present for supplementary refunds, indicating the ID of the original refund order.</p>
          * 
          * <strong>example:</strong>
          * <p>49884*****2387</p>
@@ -176,7 +172,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public String relatedRefundOrderNum;
 
         /**
-         * <p>transaction number</p>
+         * <p>Transaction serial number</p>
          * 
          * <strong>example:</strong>
          * <p>49884**tde-95za</p>
@@ -185,7 +181,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public String transactionNo;
 
         /**
-         * <p>refund time(timestamp)</p>
+         * <p>Creation time, UTC timestamp</p>
          * 
          * <strong>example:</strong>
          * <p>1677229002000</p>
@@ -258,7 +254,7 @@ public class RefundDetailListResponseBody extends TeaModel {
 
     public static class RefundDetailListResponseBodyDataPagination extends TeaModel {
         /**
-         * <p>current page index</p>
+         * <p>Current page number</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,7 +263,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>page size</p>
+         * <p>Number of items per page</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -276,7 +272,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>the number of total refund orders</p>
+         * <p>Total count</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -285,7 +281,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>the number of total pages</p>
+         * <p>Total pages</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -334,13 +330,13 @@ public class RefundDetailListResponseBody extends TeaModel {
 
     public static class RefundDetailListResponseBodyData extends TeaModel {
         /**
-         * <p>refund order list</p>
+         * <p>Data list</p>
          */
         @NameInMap("list")
         public java.util.List<RefundDetailListResponseBodyDataList> list;
 
         /**
-         * <p>information of pagination</p>
+         * <p>Pagination information</p>
          */
         @NameInMap("pagination")
         public RefundDetailListResponseBodyDataPagination pagination;

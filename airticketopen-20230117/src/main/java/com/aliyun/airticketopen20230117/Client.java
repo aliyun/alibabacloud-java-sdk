@@ -552,7 +552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签-Detail</p>
+     * <p>Change-Detail</p>
      * 
      * @param request ChangeDetailRequest
      * @param headers ChangeDetailHeaders
@@ -599,7 +599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签-Detail</p>
+     * <p>Change-Detail</p>
      * 
      * @param request ChangeDetailRequest
      * @return ChangeDetailResponse
@@ -1306,7 +1306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</p>
      * 
      * <b>summary</b> : 
-     * <p>Trade - Seat and Price Verification</p>
+     * <p>Transaction - Seat and Price Verification</p>
      * 
      * @param request PricingRequest
      * @param headers PricingHeaders
@@ -1356,7 +1356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</p>
      * 
      * <b>summary</b> : 
-     * <p>Trade - Seat and Price Verification</p>
+     * <p>Transaction - Seat and Price Verification</p>
      * 
      * @param request PricingRequest
      * @return PricingResponse
@@ -1368,11 +1368,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Apply for a refund and generate a refund order.</p>
-     * 
      * <b>summary</b> : 
-     * <p>退票-申请</p>
+     * <p>Ticket Refund - Application</p>
      * 
      * @param tmpReq RefundApplyRequest
      * @param headers RefundApplyHeaders
@@ -1444,11 +1441,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Apply for a refund and generate a refund order.</p>
-     * 
      * <b>summary</b> : 
-     * <p>退票-申请</p>
+     * <p>Ticket Refund - Application</p>
      * 
      * @param request RefundApplyRequest
      * @return RefundApplyResponse
@@ -1460,9 +1454,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Query refund order detail.</p>
-     * 
      * <b>summary</b> : 
      * <p>Refund - Detail</p>
      * 
@@ -1510,9 +1501,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Query refund order detail.</p>
-     * 
      * <b>summary</b> : 
      * <p>Refund - Detail</p>
      * 
@@ -1526,9 +1514,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Query refund order detail.</p>
-     * 
      * <b>summary</b> : 
      * <p>Refund - Detail List</p>
      * 
@@ -1592,9 +1577,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Query refund order detail.</p>
-     * 
      * <b>summary</b> : 
      * <p>Refund - Detail List</p>
      * 
@@ -1612,7 +1594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</p>
      * 
      * <b>summary</b> : 
-     * <p>search</p>
+     * <p>Search</p>
      * 
      * @param tmpReq SearchRequest
      * @param headers SearchHeaders
@@ -1692,7 +1674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</p>
      * 
      * <b>summary</b> : 
-     * <p>search</p>
+     * <p>Search</p>
      * 
      * @param request SearchRequest
      * @return SearchResponse
@@ -1701,6 +1683,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         SearchHeaders headers = new SearchHeaders();
         return this.searchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>标准搜索</p>
+     * 
+     * @param tmpReq StandardSearchRequest
+     * @param headers StandardSearchHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StandardSearchResponse
+     */
+    public StandardSearchResponse standardSearchWithOptions(StandardSearchRequest tmpReq, StandardSearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StandardSearchShrinkRequest request = new StandardSearchShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.airLegs)) {
+            request.airLegsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.airLegs, "air_legs", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.searchControlOptions)) {
+            request.searchControlOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.searchControlOptions, "search_control_options", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adults)) {
+            body.put("adults", request.adults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.airLegsShrink)) {
+            body.put("air_legs", request.airLegsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cabinClass)) {
+            body.put("cabin_class", request.cabinClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.children)) {
+            body.put("children", request.children);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.infants)) {
+            body.put("infants", request.infants);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchControlOptionsShrink)) {
+            body.put("search_control_options", request.searchControlOptionsShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketAccessToken)) {
+            realHeaders.put("x-acs-airticket-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketLanguage)) {
+            realHeaders.put("x-acs-airticket-language", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketLanguage));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StandardSearch"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/airticket/v1/trade/action-standardsearch"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StandardSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>标准搜索</p>
+     * 
+     * @param request StandardSearchRequest
+     * @return StandardSearchResponse
+     */
+    public StandardSearchResponse standardSearch(StandardSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        StandardSearchHeaders headers = new StandardSearchHeaders();
+        return this.standardSearchWithOptions(request, headers, runtime);
     }
 
     /**
