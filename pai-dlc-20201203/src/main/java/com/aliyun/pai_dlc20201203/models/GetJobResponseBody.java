@@ -850,6 +850,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyPodsHistoryPods extends TeaModel {
+        @NameInMap("Duration")
+        public Double duration;
+
         /**
          * <p>The time when the node was created (UTC).</p>
          * 
@@ -886,6 +889,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        @NameInMap("NodeName")
+        public String nodeName;
+
         /**
          * <p>The ID of the node.</p>
          * 
@@ -894,6 +900,9 @@ public class GetJobResponseBody extends TeaModel {
          */
         @NameInMap("PodId")
         public String podId;
+
+        @NameInMap("PodIps")
+        public java.util.List<PodNetworkInterface> podIps;
 
         /**
          * <p>The UID of the node.</p>
@@ -949,6 +958,14 @@ public class GetJobResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetJobResponseBodyPodsHistoryPods setDuration(Double duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Double getDuration() {
+            return this.duration;
+        }
+
         public GetJobResponseBodyPodsHistoryPods setGmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
             return this;
@@ -981,12 +998,28 @@ public class GetJobResponseBody extends TeaModel {
             return this.ip;
         }
 
+        public GetJobResponseBodyPodsHistoryPods setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
         public GetJobResponseBodyPodsHistoryPods setPodId(String podId) {
             this.podId = podId;
             return this;
         }
         public String getPodId() {
             return this.podId;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setPodIps(java.util.List<PodNetworkInterface> podIps) {
+            this.podIps = podIps;
+            return this;
+        }
+        public java.util.List<PodNetworkInterface> getPodIps() {
+            return this.podIps;
         }
 
         public GetJobResponseBodyPodsHistoryPods setPodUid(String podUid) {
@@ -1032,6 +1065,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyPods extends TeaModel {
+        @NameInMap("Duration")
+        public Double duration;
+
         /**
          * <p>The time when the node was created (UTC).</p>
          * 
@@ -1074,6 +1110,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        @NameInMap("NodeName")
+        public String nodeName;
+
         /**
          * <p>The node ID. It can be used in the GetPodLogs and GetPodEvents operations to obtain the detailed logs and events of the node.</p>
          * 
@@ -1082,6 +1121,9 @@ public class GetJobResponseBody extends TeaModel {
          */
         @NameInMap("PodId")
         public String podId;
+
+        @NameInMap("PodIps")
+        public java.util.List<PodNetworkInterface> podIps;
 
         /**
          * <p>The UID of the node.</p>
@@ -1144,6 +1186,14 @@ public class GetJobResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetJobResponseBodyPods setDuration(Double duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Double getDuration() {
+            return this.duration;
+        }
+
         public GetJobResponseBodyPods setGmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
             return this;
@@ -1184,12 +1234,28 @@ public class GetJobResponseBody extends TeaModel {
             return this.ip;
         }
 
+        public GetJobResponseBodyPods setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
         public GetJobResponseBodyPods setPodId(String podId) {
             this.podId = podId;
             return this;
         }
         public String getPodId() {
             return this.podId;
+        }
+
+        public GetJobResponseBodyPods setPodIps(java.util.List<PodNetworkInterface> podIps) {
+            this.podIps = podIps;
+            return this;
+        }
+        public java.util.List<PodNetworkInterface> getPodIps() {
+            return this.podIps;
         }
 
         public GetJobResponseBodyPods setPodUid(String podUid) {
