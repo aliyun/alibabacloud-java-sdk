@@ -25,6 +25,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("EipStatus")
+    public String eipStatus;
+
     /**
      * <strong>example:</strong>
      * <p>rdsai.supabase.basic</p>
@@ -45,6 +48,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      */
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("NatStatus")
+    public String natStatus;
 
     /**
      * <strong>example:</strong>
@@ -124,6 +130,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         return this.DBInstanceName;
     }
 
+    public DescribeAppInstanceAttributeResponseBody setEipStatus(String eipStatus) {
+        this.eipStatus = eipStatus;
+        return this;
+    }
+    public String getEipStatus() {
+        return this.eipStatus;
+    }
+
     public DescribeAppInstanceAttributeResponseBody setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
         return this;
@@ -146,6 +160,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setNatStatus(String natStatus) {
+        this.natStatus = natStatus;
+        return this;
+    }
+    public String getNatStatus() {
+        return this.natStatus;
     }
 
     public DescribeAppInstanceAttributeResponseBody setPublicConnectionString(String publicConnectionString) {
