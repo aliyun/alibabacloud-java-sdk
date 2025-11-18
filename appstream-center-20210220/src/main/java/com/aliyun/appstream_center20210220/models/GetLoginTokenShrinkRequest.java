@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210220.models;
 import com.aliyun.tea.*;
 
 public class GetLoginTokenShrinkRequest extends TeaModel {
+    @NameInMap("AreaSite")
+    public String areaSite;
+
     /**
      * <strong>example:</strong>
      * <p>182901</p>
@@ -248,6 +251,14 @@ public class GetLoginTokenShrinkRequest extends TeaModel {
     public static GetLoginTokenShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLoginTokenShrinkRequest self = new GetLoginTokenShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetLoginTokenShrinkRequest setAreaSite(String areaSite) {
+        this.areaSite = areaSite;
+        return this;
+    }
+    public String getAreaSite() {
+        return this.areaSite;
     }
 
     public GetLoginTokenShrinkRequest setAuthenticationCode(String authenticationCode) {

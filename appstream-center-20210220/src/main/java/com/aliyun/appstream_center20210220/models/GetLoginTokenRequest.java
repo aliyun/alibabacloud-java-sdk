@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210220.models;
 import com.aliyun.tea.*;
 
 public class GetLoginTokenRequest extends TeaModel {
+    @NameInMap("AreaSite")
+    public String areaSite;
+
     /**
      * <strong>example:</strong>
      * <p>182901</p>
@@ -248,6 +251,14 @@ public class GetLoginTokenRequest extends TeaModel {
     public static GetLoginTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLoginTokenRequest self = new GetLoginTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetLoginTokenRequest setAreaSite(String areaSite) {
+        this.areaSite = areaSite;
+        return this;
+    }
+    public String getAreaSite() {
+        return this.areaSite;
     }
 
     public GetLoginTokenRequest setAuthenticationCode(String authenticationCode) {
