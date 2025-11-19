@@ -43,6 +43,9 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     @NameInMap("NativeHook")
     public Integer nativeHook;
 
+    @NameInMap("NewShieldConfig")
+    public String newShieldConfig;
+
     @NameInMap("PackageTampered")
     public Integer packageTampered;
 
@@ -69,6 +72,9 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
 
     @NameInMap("UseAShield")
     public Boolean useAShield;
+
+    @NameInMap("UseYShield")
+    public Boolean useYShield;
 
     /**
      * <p>This parameter is required.</p>
@@ -169,6 +175,14 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
         return this.nativeHook;
     }
 
+    public StartUserAppAsyncEnhanceInMsaRequest setNewShieldConfig(String newShieldConfig) {
+        this.newShieldConfig = newShieldConfig;
+        return this;
+    }
+    public String getNewShieldConfig() {
+        return this.newShieldConfig;
+    }
+
     public StartUserAppAsyncEnhanceInMsaRequest setPackageTampered(Integer packageTampered) {
         this.packageTampered = packageTampered;
         return this;
@@ -231,6 +245,14 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     }
     public Boolean getUseAShield() {
         return this.useAShield;
+    }
+
+    public StartUserAppAsyncEnhanceInMsaRequest setUseYShield(Boolean useYShield) {
+        this.useYShield = useYShield;
+        return this;
+    }
+    public Boolean getUseYShield() {
+        return this.useYShield;
     }
 
     public StartUserAppAsyncEnhanceInMsaRequest setWorkspaceId(String workspaceId) {

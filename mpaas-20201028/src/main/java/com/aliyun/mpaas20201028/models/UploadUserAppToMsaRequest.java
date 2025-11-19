@@ -22,6 +22,9 @@ public class UploadUserAppToMsaRequest extends TeaModel {
     @NameInMap("TenantId")
     public String tenantId;
 
+    @NameInMap("UseYShield")
+    public Boolean useYShield;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -63,6 +66,14 @@ public class UploadUserAppToMsaRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public UploadUserAppToMsaRequest setUseYShield(Boolean useYShield) {
+        this.useYShield = useYShield;
+        return this;
+    }
+    public Boolean getUseYShield() {
+        return this.useYShield;
     }
 
     public UploadUserAppToMsaRequest setWorkspaceId(String workspaceId) {
