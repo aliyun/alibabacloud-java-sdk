@@ -297,6 +297,9 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("NodeType")
+        public String nodeType;
+
         /**
          * <p>The node status.</p>
          * <p>Valid values:</p>
@@ -488,6 +491,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public ListClusterNodesResponseBodyNodes setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         public ListClusterNodesResponseBodyNodes setOperatingState(String operatingState) {
