@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyCloudResourceRequest extends TeaModel {
+    @NameInMap("CloudResourceId")
+    public String cloudResourceId;
+
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
@@ -56,6 +59,14 @@ public class ModifyCloudResourceRequest extends TeaModel {
     public static ModifyCloudResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCloudResourceRequest self = new ModifyCloudResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCloudResourceRequest setCloudResourceId(String cloudResourceId) {
+        this.cloudResourceId = cloudResourceId;
+        return this;
+    }
+    public String getCloudResourceId() {
+        return this.cloudResourceId;
     }
 
     public ModifyCloudResourceRequest setInstanceId(String instanceId) {
@@ -202,12 +213,12 @@ public class ModifyCloudResourceRequest extends TeaModel {
 
         /**
          * <p>The port of the cloud service instance that is added to WAF.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
          */
         @NameInMap("Port")
+        @Deprecated
         public Integer port;
 
         /**
@@ -226,12 +237,12 @@ public class ModifyCloudResourceRequest extends TeaModel {
 
         /**
          * <p>The ID of the cloud service instance that is added to WAF.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-***</p>
          */
         @NameInMap("ResourceInstanceId")
+        @Deprecated
         public String resourceInstanceId;
 
         /**
@@ -242,12 +253,12 @@ public class ModifyCloudResourceRequest extends TeaModel {
          * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
          * <li><strong>nlb</strong>: Network Load Balancer (NLB).</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>clb7</p>
          */
         @NameInMap("ResourceProduct")
+        @Deprecated
         public String resourceProduct;
 
         /**
@@ -309,6 +320,7 @@ public class ModifyCloudResourceRequest extends TeaModel {
             return this.http2Enabled;
         }
 
+        @Deprecated
         public ModifyCloudResourceRequestListen setPort(Integer port) {
             this.port = port;
             return this;
@@ -325,6 +337,7 @@ public class ModifyCloudResourceRequest extends TeaModel {
             return this.protocol;
         }
 
+        @Deprecated
         public ModifyCloudResourceRequestListen setResourceInstanceId(String resourceInstanceId) {
             this.resourceInstanceId = resourceInstanceId;
             return this;
@@ -333,6 +346,7 @@ public class ModifyCloudResourceRequest extends TeaModel {
             return this.resourceInstanceId;
         }
 
+        @Deprecated
         public ModifyCloudResourceRequestListen setResourceProduct(String resourceProduct) {
             this.resourceProduct = resourceProduct;
             return this;

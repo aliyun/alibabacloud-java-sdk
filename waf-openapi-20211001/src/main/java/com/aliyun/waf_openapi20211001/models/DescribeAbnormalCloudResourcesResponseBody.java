@@ -166,6 +166,9 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResources extends TeaModel {
+        @NameInMap("CloudResourceId")
+        public String cloudResourceId;
+
         @NameInMap("Details")
         public java.util.List<DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResourcesDetails> details;
 
@@ -207,6 +210,14 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
         public static DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResources build(java.util.Map<String, ?> map) throws Exception {
             DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResources self = new DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResources();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResources setCloudResourceId(String cloudResourceId) {
+            this.cloudResourceId = cloudResourceId;
+            return this;
+        }
+        public String getCloudResourceId() {
+            return this.cloudResourceId;
         }
 
         public DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResources setDetails(java.util.List<DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResourcesDetails> details) {

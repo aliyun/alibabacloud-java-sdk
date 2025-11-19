@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DeleteCloudResourceRequest extends TeaModel {
+    @NameInMap("CloudResourceId")
+    public String cloudResourceId;
+
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
@@ -19,12 +22,12 @@ public class DeleteCloudResourceRequest extends TeaModel {
 
     /**
      * <p>The port of the resource that is added to WAF.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>443</p>
      */
     @NameInMap("Port")
+    @Deprecated
     public Integer port;
 
     /**
@@ -43,12 +46,12 @@ public class DeleteCloudResourceRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-bp1*****jqnnqk5uj2p</p>
      */
     @NameInMap("ResourceInstanceId")
+    @Deprecated
     public String resourceInstanceId;
 
     /**
@@ -67,17 +70,25 @@ public class DeleteCloudResourceRequest extends TeaModel {
      * <li><strong>clb7</strong>: Layer 7 CLB.</li>
      * <li><strong>ecs</strong>: ECS.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>clb7</p>
      */
     @NameInMap("ResourceProduct")
+    @Deprecated
     public String resourceProduct;
 
     public static DeleteCloudResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCloudResourceRequest self = new DeleteCloudResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteCloudResourceRequest setCloudResourceId(String cloudResourceId) {
+        this.cloudResourceId = cloudResourceId;
+        return this;
+    }
+    public String getCloudResourceId() {
+        return this.cloudResourceId;
     }
 
     public DeleteCloudResourceRequest setInstanceId(String instanceId) {
@@ -88,6 +99,7 @@ public class DeleteCloudResourceRequest extends TeaModel {
         return this.instanceId;
     }
 
+    @Deprecated
     public DeleteCloudResourceRequest setPort(Integer port) {
         this.port = port;
         return this;
@@ -104,6 +116,7 @@ public class DeleteCloudResourceRequest extends TeaModel {
         return this.regionId;
     }
 
+    @Deprecated
     public DeleteCloudResourceRequest setResourceInstanceId(String resourceInstanceId) {
         this.resourceInstanceId = resourceInstanceId;
         return this;
@@ -120,6 +133,7 @@ public class DeleteCloudResourceRequest extends TeaModel {
         return this.resourceManagerResourceGroupId;
     }
 
+    @Deprecated
     public DeleteCloudResourceRequest setResourceProduct(String resourceProduct) {
         this.resourceProduct = resourceProduct;
         return this;

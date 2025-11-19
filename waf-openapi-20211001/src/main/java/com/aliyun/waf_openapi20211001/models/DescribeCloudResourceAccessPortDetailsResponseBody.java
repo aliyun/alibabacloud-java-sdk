@@ -290,6 +290,9 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         @NameInMap("CipherSuite")
         public Integer cipherSuite;
 
+        @NameInMap("CloudResourceId")
+        public String cloudResourceId;
+
         /**
          * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
          */
@@ -507,6 +510,14 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         }
         public Integer getCipherSuite() {
             return this.cipherSuite;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails setCloudResourceId(String cloudResourceId) {
+            this.cloudResourceId = cloudResourceId;
+            return this;
+        }
+        public String getCloudResourceId() {
+            return this.cloudResourceId;
         }
 
         public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails setCustomCiphers(java.util.List<String> customCiphers) {

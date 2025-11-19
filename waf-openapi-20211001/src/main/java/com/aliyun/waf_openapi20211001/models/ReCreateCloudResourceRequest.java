@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ReCreateCloudResourceRequest extends TeaModel {
+    @NameInMap("CloudResourceId")
+    public String cloudResourceId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -14,12 +17,11 @@ public class ReCreateCloudResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>443</p>
      */
     @NameInMap("Port")
+    @Deprecated
     public Integer port;
 
     /**
@@ -30,12 +32,11 @@ public class ReCreateCloudResourceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>lb-bp1*****jqnnqk5uj2p</p>
      */
     @NameInMap("ResourceInstanceId")
+    @Deprecated
     public String resourceInstanceId;
 
     /**
@@ -46,17 +47,24 @@ public class ReCreateCloudResourceRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>clb7</p>
      */
     @NameInMap("ResourceProduct")
+    @Deprecated
     public String resourceProduct;
 
     public static ReCreateCloudResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         ReCreateCloudResourceRequest self = new ReCreateCloudResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReCreateCloudResourceRequest setCloudResourceId(String cloudResourceId) {
+        this.cloudResourceId = cloudResourceId;
+        return this;
+    }
+    public String getCloudResourceId() {
+        return this.cloudResourceId;
     }
 
     public ReCreateCloudResourceRequest setInstanceId(String instanceId) {
@@ -67,6 +75,7 @@ public class ReCreateCloudResourceRequest extends TeaModel {
         return this.instanceId;
     }
 
+    @Deprecated
     public ReCreateCloudResourceRequest setPort(Integer port) {
         this.port = port;
         return this;
@@ -83,6 +92,7 @@ public class ReCreateCloudResourceRequest extends TeaModel {
         return this.regionId;
     }
 
+    @Deprecated
     public ReCreateCloudResourceRequest setResourceInstanceId(String resourceInstanceId) {
         this.resourceInstanceId = resourceInstanceId;
         return this;
@@ -99,6 +109,7 @@ public class ReCreateCloudResourceRequest extends TeaModel {
         return this.resourceManagerResourceGroupId;
     }
 
+    @Deprecated
     public ReCreateCloudResourceRequest setResourceProduct(String resourceProduct) {
         this.resourceProduct = resourceProduct;
         return this;

@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyCloudResourceShrinkRequest extends TeaModel {
+    @NameInMap("CloudResourceId")
+    public String cloudResourceId;
+
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
@@ -56,6 +59,14 @@ public class ModifyCloudResourceShrinkRequest extends TeaModel {
     public static ModifyCloudResourceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCloudResourceShrinkRequest self = new ModifyCloudResourceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCloudResourceShrinkRequest setCloudResourceId(String cloudResourceId) {
+        this.cloudResourceId = cloudResourceId;
+        return this;
+    }
+    public String getCloudResourceId() {
+        return this.cloudResourceId;
     }
 
     public ModifyCloudResourceShrinkRequest setInstanceId(String instanceId) {

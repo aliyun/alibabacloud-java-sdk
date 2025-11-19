@@ -1613,6 +1613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCloudResourceResponse deleteCloudResourceWithOptions(DeleteCloudResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudResourceId)) {
+            query.put("CloudResourceId", request.cloudResourceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -11947,6 +11951,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudResourceId)) {
+            query.put("CloudResourceId", request.cloudResourceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -12009,6 +12017,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.certificates)) {
             query.put("Certificates", request.certificates);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudResourceId)) {
+            query.put("CloudResourceId", request.cloudResourceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -14107,6 +14119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReCreateCloudResourceResponse reCreateCloudResourceWithOptions(ReCreateCloudResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudResourceId)) {
+            query.put("CloudResourceId", request.cloudResourceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
