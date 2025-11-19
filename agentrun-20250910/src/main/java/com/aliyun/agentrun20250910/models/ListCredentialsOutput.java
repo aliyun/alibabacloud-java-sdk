@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListCredentialsOutput extends TeaModel {
     @NameInMap("items")
-    public CredentialListItem items;
+    public java.util.List<CredentialListItem> items;
 
-    @NameInMap("pageNum")
-    public String pageNum;
+    @NameInMap("pageNumber")
+    public String pageNumber;
 
     @NameInMap("pageSize")
     public String pageSize;
@@ -21,20 +21,20 @@ public class ListCredentialsOutput extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListCredentialsOutput setItems(CredentialListItem items) {
+    public ListCredentialsOutput setItems(java.util.List<CredentialListItem> items) {
         this.items = items;
         return this;
     }
-    public CredentialListItem getItems() {
+    public java.util.List<CredentialListItem> getItems() {
         return this.items;
     }
 
-    public ListCredentialsOutput setPageNum(String pageNum) {
-        this.pageNum = pageNum;
+    public ListCredentialsOutput setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNum() {
-        return this.pageNum;
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListCredentialsOutput setPageSize(String pageSize) {

@@ -5,37 +5,78 @@ import com.aliyun.tea.*;
 
 public class CreateCredentialInput extends TeaModel {
     /**
-     * <p>凭证的配置参数，以键值对形式存储</p>
-     * 
-     * <strong>example:</strong>
-     * <p>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></p>
+     * <p>This parameter is required.</p>
      */
-    @NameInMap("config")
-    public java.util.Map<String, String> config;
+    @NameInMap("credentialAuthType")
+    public String credentialAuthType;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("credentialName")
+    public String credentialName;
+
+    @NameInMap("credentialPublicConfig")
+    public CredentialPublicConfig credentialPublicConfig;
+
+    @NameInMap("credentialSecret")
+    public String credentialSecret;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("credentialSourceType")
+    public String credentialSourceType;
 
     @NameInMap("description")
     public String description;
 
-    @NameInMap("name")
-    public String name;
-
-    @NameInMap("secret")
-    public String secret;
-
-    @NameInMap("type")
-    public String type;
+    @NameInMap("enabled")
+    public Boolean enabled;
 
     public static CreateCredentialInput build(java.util.Map<String, ?> map) throws Exception {
         CreateCredentialInput self = new CreateCredentialInput();
         return TeaModel.build(map, self);
     }
 
-    public CreateCredentialInput setConfig(java.util.Map<String, String> config) {
-        this.config = config;
+    public CreateCredentialInput setCredentialAuthType(String credentialAuthType) {
+        this.credentialAuthType = credentialAuthType;
         return this;
     }
-    public java.util.Map<String, String> getConfig() {
-        return this.config;
+    public String getCredentialAuthType() {
+        return this.credentialAuthType;
+    }
+
+    public CreateCredentialInput setCredentialName(String credentialName) {
+        this.credentialName = credentialName;
+        return this;
+    }
+    public String getCredentialName() {
+        return this.credentialName;
+    }
+
+    public CreateCredentialInput setCredentialPublicConfig(CredentialPublicConfig credentialPublicConfig) {
+        this.credentialPublicConfig = credentialPublicConfig;
+        return this;
+    }
+    public CredentialPublicConfig getCredentialPublicConfig() {
+        return this.credentialPublicConfig;
+    }
+
+    public CreateCredentialInput setCredentialSecret(String credentialSecret) {
+        this.credentialSecret = credentialSecret;
+        return this;
+    }
+    public String getCredentialSecret() {
+        return this.credentialSecret;
+    }
+
+    public CreateCredentialInput setCredentialSourceType(String credentialSourceType) {
+        this.credentialSourceType = credentialSourceType;
+        return this;
+    }
+    public String getCredentialSourceType() {
+        return this.credentialSourceType;
     }
 
     public CreateCredentialInput setDescription(String description) {
@@ -46,28 +87,12 @@ public class CreateCredentialInput extends TeaModel {
         return this.description;
     }
 
-    public CreateCredentialInput setName(String name) {
-        this.name = name;
+    public CreateCredentialInput setEnabled(Boolean enabled) {
+        this.enabled = enabled;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateCredentialInput setSecret(String secret) {
-        this.secret = secret;
-        return this;
-    }
-    public String getSecret() {
-        return this.secret;
-    }
-
-    public CreateCredentialInput setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
 }

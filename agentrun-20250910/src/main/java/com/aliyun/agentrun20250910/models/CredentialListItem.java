@@ -7,17 +7,23 @@ public class CredentialListItem extends TeaModel {
     @NameInMap("createdAt")
     public String createdAt;
 
-    @NameInMap("id")
-    public String id;
+    @NameInMap("credentialAuthType")
+    public String credentialAuthType;
 
-    @NameInMap("name")
-    public String name;
+    @NameInMap("credentialId")
+    public String credentialId;
 
-    @NameInMap("relatedWorloads")
-    public java.util.List<RelatedWorkload> relatedWorloads;
+    @NameInMap("credentialName")
+    public String credentialName;
 
-    @NameInMap("type")
-    public String type;
+    @NameInMap("credentialSourceType")
+    public String credentialSourceType;
+
+    @NameInMap("enabled")
+    public Boolean enabled;
+
+    @NameInMap("relatedResourceCount")
+    public Integer relatedResourceCount;
 
     @NameInMap("updatedAt")
     public String updatedAt;
@@ -35,36 +41,52 @@ public class CredentialListItem extends TeaModel {
         return this.createdAt;
     }
 
-    public CredentialListItem setId(String id) {
-        this.id = id;
+    public CredentialListItem setCredentialAuthType(String credentialAuthType) {
+        this.credentialAuthType = credentialAuthType;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public String getCredentialAuthType() {
+        return this.credentialAuthType;
     }
 
-    public CredentialListItem setName(String name) {
-        this.name = name;
+    public CredentialListItem setCredentialId(String credentialId) {
+        this.credentialId = credentialId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getCredentialId() {
+        return this.credentialId;
     }
 
-    public CredentialListItem setRelatedWorloads(java.util.List<RelatedWorkload> relatedWorloads) {
-        this.relatedWorloads = relatedWorloads;
+    public CredentialListItem setCredentialName(String credentialName) {
+        this.credentialName = credentialName;
         return this;
     }
-    public java.util.List<RelatedWorkload> getRelatedWorloads() {
-        return this.relatedWorloads;
+    public String getCredentialName() {
+        return this.credentialName;
     }
 
-    public CredentialListItem setType(String type) {
-        this.type = type;
+    public CredentialListItem setCredentialSourceType(String credentialSourceType) {
+        this.credentialSourceType = credentialSourceType;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getCredentialSourceType() {
+        return this.credentialSourceType;
+    }
+
+    public CredentialListItem setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    public CredentialListItem setRelatedResourceCount(Integer relatedResourceCount) {
+        this.relatedResourceCount = relatedResourceCount;
+        return this;
+    }
+    public Integer getRelatedResourceCount() {
+        return this.relatedResourceCount;
     }
 
     public CredentialListItem setUpdatedAt(String updatedAt) {

@@ -5,13 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListMemoryRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>test</p>
-     */
-    @NameInMap("namePrefix")
-    public String namePrefix;
-
-    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,17 +22,16 @@ public class ListMemoryRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("pattern")
+    public String pattern;
+
     public static ListMemoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMemoryRequest self = new ListMemoryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListMemoryRequest setNamePrefix(String namePrefix) {
-        this.namePrefix = namePrefix;
-        return this;
-    }
-    public String getNamePrefix() {
-        return this.namePrefix;
     }
 
     public ListMemoryRequest setPageNumber(Integer pageNumber) {
@@ -56,6 +48,14 @@ public class ListMemoryRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListMemoryRequest setPattern(String pattern) {
+        this.pattern = pattern;
+        return this;
+    }
+    public String getPattern() {
+        return this.pattern;
     }
 
 }

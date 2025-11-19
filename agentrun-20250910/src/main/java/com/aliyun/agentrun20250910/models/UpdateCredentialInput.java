@@ -4,38 +4,37 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateCredentialInput extends TeaModel {
-    /**
-     * <p>凭证的配置参数，以键值对形式存储</p>
-     * 
-     * <strong>example:</strong>
-     * <p>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></p>
-     */
-    @NameInMap("config")
-    public java.util.Map<String, String> config;
+    @NameInMap("credentialPublicConfig")
+    public CredentialPublicConfig credentialPublicConfig;
+
+    @NameInMap("credentialSecret")
+    public String credentialSecret;
 
     @NameInMap("description")
     public String description;
 
-    @NameInMap("name")
-    public String name;
-
-    @NameInMap("secret")
-    public String secret;
-
-    @NameInMap("type")
-    public String type;
+    @NameInMap("enabled")
+    public Boolean enabled;
 
     public static UpdateCredentialInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateCredentialInput self = new UpdateCredentialInput();
         return TeaModel.build(map, self);
     }
 
-    public UpdateCredentialInput setConfig(java.util.Map<String, String> config) {
-        this.config = config;
+    public UpdateCredentialInput setCredentialPublicConfig(CredentialPublicConfig credentialPublicConfig) {
+        this.credentialPublicConfig = credentialPublicConfig;
         return this;
     }
-    public java.util.Map<String, String> getConfig() {
-        return this.config;
+    public CredentialPublicConfig getCredentialPublicConfig() {
+        return this.credentialPublicConfig;
+    }
+
+    public UpdateCredentialInput setCredentialSecret(String credentialSecret) {
+        this.credentialSecret = credentialSecret;
+        return this;
+    }
+    public String getCredentialSecret() {
+        return this.credentialSecret;
     }
 
     public UpdateCredentialInput setDescription(String description) {
@@ -46,28 +45,12 @@ public class UpdateCredentialInput extends TeaModel {
         return this.description;
     }
 
-    public UpdateCredentialInput setName(String name) {
-        this.name = name;
+    public UpdateCredentialInput setEnabled(Boolean enabled) {
+        this.enabled = enabled;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public UpdateCredentialInput setSecret(String secret) {
-        this.secret = secret;
-        return this;
-    }
-    public String getSecret() {
-        return this.secret;
-    }
-
-    public UpdateCredentialInput setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
 }

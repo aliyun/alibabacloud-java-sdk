@@ -46,6 +46,15 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     public Float cpu;
 
     /**
+     * <p>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-credential</p>
+     */
+    @NameInMap("credentialName")
+    public String credentialName;
+
+    /**
      * <strong>example:</strong>
      * <p>更新后的智能体运行时描述</p>
      */
@@ -181,6 +190,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     }
     public Float getCpu() {
         return this.cpu;
+    }
+
+    public UpdateAgentRuntimeInput setCredentialName(String credentialName) {
+        this.credentialName = credentialName;
+        return this;
+    }
+    public String getCredentialName() {
+        return this.credentialName;
     }
 
     public UpdateAgentRuntimeInput setDescription(String description) {

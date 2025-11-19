@@ -4,42 +4,42 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class RelatedWorkload extends TeaModel {
-    @NameInMap("workloadId")
-    public String workloadId;
+    @NameInMap("resourceId")
+    public String resourceId;
 
-    @NameInMap("workloadName")
-    public String workloadName;
+    @NameInMap("resourceName")
+    public String resourceName;
 
-    @NameInMap("workloadType")
-    public String workloadType;
+    @NameInMap("resourceType")
+    public String resourceType;
 
     public static RelatedWorkload build(java.util.Map<String, ?> map) throws Exception {
         RelatedWorkload self = new RelatedWorkload();
         return TeaModel.build(map, self);
     }
 
-    public RelatedWorkload setWorkloadId(String workloadId) {
-        this.workloadId = workloadId;
+    public RelatedWorkload setResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public String getWorkloadId() {
-        return this.workloadId;
+    public String getResourceId() {
+        return this.resourceId;
     }
 
-    public RelatedWorkload setWorkloadName(String workloadName) {
-        this.workloadName = workloadName;
+    public RelatedWorkload setResourceName(String resourceName) {
+        this.resourceName = resourceName;
         return this;
     }
-    public String getWorkloadName() {
-        return this.workloadName;
+    public String getResourceName() {
+        return this.resourceName;
     }
 
-    public RelatedWorkload setWorkloadType(String workloadType) {
-        this.workloadType = workloadType;
+    public RelatedWorkload setResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
-    public String getWorkloadType() {
-        return this.workloadType;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

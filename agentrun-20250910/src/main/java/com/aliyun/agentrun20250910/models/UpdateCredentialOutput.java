@@ -4,14 +4,35 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class UpdateCredentialOutput extends TeaModel {
-    @NameInMap("id")
-    public String id;
+    @NameInMap("createdAt")
+    public String createdAt;
 
-    @NameInMap("name")
-    public String name;
+    @NameInMap("credentialAuthType")
+    public String credentialAuthType;
 
-    @NameInMap("type")
-    public String type;
+    @NameInMap("credentialId")
+    public String credentialId;
+
+    @NameInMap("credentialName")
+    public String credentialName;
+
+    @NameInMap("credentialPublicConfig")
+    public java.util.Map<String, String> credentialPublicConfig;
+
+    @NameInMap("credentialSecret")
+    public String credentialSecret;
+
+    @NameInMap("credentialSourceType")
+    public String credentialSourceType;
+
+    @NameInMap("description")
+    public String description;
+
+    @NameInMap("enabled")
+    public Boolean enabled;
+
+    @NameInMap("relatedResources")
+    public java.util.List<RelatedResource> relatedResources;
 
     @NameInMap("updatedAt")
     public String updatedAt;
@@ -21,28 +42,84 @@ public class UpdateCredentialOutput extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateCredentialOutput setId(String id) {
-        this.id = id;
+    public UpdateCredentialOutput setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public String getCreatedAt() {
+        return this.createdAt;
     }
 
-    public UpdateCredentialOutput setName(String name) {
-        this.name = name;
+    public UpdateCredentialOutput setCredentialAuthType(String credentialAuthType) {
+        this.credentialAuthType = credentialAuthType;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getCredentialAuthType() {
+        return this.credentialAuthType;
     }
 
-    public UpdateCredentialOutput setType(String type) {
-        this.type = type;
+    public UpdateCredentialOutput setCredentialId(String credentialId) {
+        this.credentialId = credentialId;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getCredentialId() {
+        return this.credentialId;
+    }
+
+    public UpdateCredentialOutput setCredentialName(String credentialName) {
+        this.credentialName = credentialName;
+        return this;
+    }
+    public String getCredentialName() {
+        return this.credentialName;
+    }
+
+    public UpdateCredentialOutput setCredentialPublicConfig(java.util.Map<String, String> credentialPublicConfig) {
+        this.credentialPublicConfig = credentialPublicConfig;
+        return this;
+    }
+    public java.util.Map<String, String> getCredentialPublicConfig() {
+        return this.credentialPublicConfig;
+    }
+
+    public UpdateCredentialOutput setCredentialSecret(String credentialSecret) {
+        this.credentialSecret = credentialSecret;
+        return this;
+    }
+    public String getCredentialSecret() {
+        return this.credentialSecret;
+    }
+
+    public UpdateCredentialOutput setCredentialSourceType(String credentialSourceType) {
+        this.credentialSourceType = credentialSourceType;
+        return this;
+    }
+    public String getCredentialSourceType() {
+        return this.credentialSourceType;
+    }
+
+    public UpdateCredentialOutput setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateCredentialOutput setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    public UpdateCredentialOutput setRelatedResources(java.util.List<RelatedResource> relatedResources) {
+        this.relatedResources = relatedResources;
+        return this;
+    }
+    public java.util.List<RelatedResource> getRelatedResources() {
+        return this.relatedResources;
     }
 
     public UpdateCredentialOutput setUpdatedAt(String updatedAt) {

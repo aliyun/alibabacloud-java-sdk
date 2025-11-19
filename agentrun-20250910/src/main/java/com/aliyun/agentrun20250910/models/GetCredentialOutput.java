@@ -4,32 +4,35 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class GetCredentialOutput extends TeaModel {
-    /**
-     * <p>凭证的配置参数，以键值对形式存储</p>
-     * 
-     * <strong>example:</strong>
-     * <p>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></p>
-     */
-    @NameInMap("config")
-    public java.util.Map<String, String> config;
-
     @NameInMap("createdAt")
     public String createdAt;
+
+    @NameInMap("credentialAuthType")
+    public String credentialAuthType;
+
+    @NameInMap("credentialId")
+    public String credentialId;
+
+    @NameInMap("credentialName")
+    public String credentialName;
+
+    @NameInMap("credentialPublicConfig")
+    public java.util.Map<String, String> credentialPublicConfig;
+
+    @NameInMap("credentialSecret")
+    public String credentialSecret;
+
+    @NameInMap("credentialSourceType")
+    public String credentialSourceType;
 
     @NameInMap("description")
     public String description;
 
-    @NameInMap("id")
-    public String id;
+    @NameInMap("enabled")
+    public Boolean enabled;
 
-    @NameInMap("name")
-    public String name;
-
-    @NameInMap("secret")
-    public String secret;
-
-    @NameInMap("type")
-    public String type;
+    @NameInMap("relatedResources")
+    public java.util.List<RelatedResource> relatedResources;
 
     @NameInMap("updatedAt")
     public String updatedAt;
@@ -37,14 +40,6 @@ public class GetCredentialOutput extends TeaModel {
     public static GetCredentialOutput build(java.util.Map<String, ?> map) throws Exception {
         GetCredentialOutput self = new GetCredentialOutput();
         return TeaModel.build(map, self);
-    }
-
-    public GetCredentialOutput setConfig(java.util.Map<String, String> config) {
-        this.config = config;
-        return this;
-    }
-    public java.util.Map<String, String> getConfig() {
-        return this.config;
     }
 
     public GetCredentialOutput setCreatedAt(String createdAt) {
@@ -55,6 +50,54 @@ public class GetCredentialOutput extends TeaModel {
         return this.createdAt;
     }
 
+    public GetCredentialOutput setCredentialAuthType(String credentialAuthType) {
+        this.credentialAuthType = credentialAuthType;
+        return this;
+    }
+    public String getCredentialAuthType() {
+        return this.credentialAuthType;
+    }
+
+    public GetCredentialOutput setCredentialId(String credentialId) {
+        this.credentialId = credentialId;
+        return this;
+    }
+    public String getCredentialId() {
+        return this.credentialId;
+    }
+
+    public GetCredentialOutput setCredentialName(String credentialName) {
+        this.credentialName = credentialName;
+        return this;
+    }
+    public String getCredentialName() {
+        return this.credentialName;
+    }
+
+    public GetCredentialOutput setCredentialPublicConfig(java.util.Map<String, String> credentialPublicConfig) {
+        this.credentialPublicConfig = credentialPublicConfig;
+        return this;
+    }
+    public java.util.Map<String, String> getCredentialPublicConfig() {
+        return this.credentialPublicConfig;
+    }
+
+    public GetCredentialOutput setCredentialSecret(String credentialSecret) {
+        this.credentialSecret = credentialSecret;
+        return this;
+    }
+    public String getCredentialSecret() {
+        return this.credentialSecret;
+    }
+
+    public GetCredentialOutput setCredentialSourceType(String credentialSourceType) {
+        this.credentialSourceType = credentialSourceType;
+        return this;
+    }
+    public String getCredentialSourceType() {
+        return this.credentialSourceType;
+    }
+
     public GetCredentialOutput setDescription(String description) {
         this.description = description;
         return this;
@@ -63,36 +106,20 @@ public class GetCredentialOutput extends TeaModel {
         return this.description;
     }
 
-    public GetCredentialOutput setId(String id) {
-        this.id = id;
+    public GetCredentialOutput setEnabled(Boolean enabled) {
+        this.enabled = enabled;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
-    public GetCredentialOutput setName(String name) {
-        this.name = name;
+    public GetCredentialOutput setRelatedResources(java.util.List<RelatedResource> relatedResources) {
+        this.relatedResources = relatedResources;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public GetCredentialOutput setSecret(String secret) {
-        this.secret = secret;
-        return this;
-    }
-    public String getSecret() {
-        return this.secret;
-    }
-
-    public GetCredentialOutput setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
+    public java.util.List<RelatedResource> getRelatedResources() {
+        return this.relatedResources;
     }
 
     public GetCredentialOutput setUpdatedAt(String updatedAt) {

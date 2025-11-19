@@ -238,10 +238,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("name", request.name);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.permanent)) {
-            body.put("permanent", request.permanent);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.shortTtl)) {
             body.put("shortTtl", request.shortTtl);
         }
@@ -883,6 +879,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.searchMode)) {
+            query.put("searchMode", request.searchMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -993,6 +993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchMode)) {
+            query.put("searchMode", request.searchMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1167,16 +1171,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMemoryResponse listMemoryWithOptions(ListMemoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.namePrefix)) {
-            query.put("namePrefix", request.namePrefix);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pattern)) {
+            query.put("pattern", request.pattern);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1549,10 +1553,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.longTtl)) {
             body.put("longTtl", request.longTtl);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.permanent)) {
-            body.put("permanent", request.permanent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.shortTtl)) {

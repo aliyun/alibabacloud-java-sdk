@@ -83,13 +83,6 @@ public class GetMemoryResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("permanent")
-        public Boolean permanent;
-
-        /**
-         * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("shortTtl")
@@ -133,14 +126,6 @@ public class GetMemoryResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public GetMemoryResponseBodyData setPermanent(Boolean permanent) {
-            this.permanent = permanent;
-            return this;
-        }
-        public Boolean getPermanent() {
-            return this.permanent;
         }
 
         public GetMemoryResponseBodyData setShortTtl(Integer shortTtl) {

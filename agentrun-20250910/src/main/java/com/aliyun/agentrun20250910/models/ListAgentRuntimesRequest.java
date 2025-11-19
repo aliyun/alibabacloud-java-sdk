@@ -31,6 +31,15 @@ public class ListAgentRuntimesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>查询模式，支持精确查询和模糊查询</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fuzzy</p>
+     */
+    @NameInMap("searchMode")
+    public String searchMode;
+
     public static ListAgentRuntimesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentRuntimesRequest self = new ListAgentRuntimesRequest();
         return TeaModel.build(map, self);
@@ -58,6 +67,14 @@ public class ListAgentRuntimesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAgentRuntimesRequest setSearchMode(String searchMode) {
+        this.searchMode = searchMode;
+        return this;
+    }
+    public String getSearchMode() {
+        return this.searchMode;
     }
 
 }

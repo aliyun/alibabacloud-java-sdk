@@ -1,0 +1,41 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.agentrun20250910.models;
+
+import com.aliyun.tea.*;
+
+public class CreateSandboxInput extends TeaModel {
+    /**
+     * <p>沙箱空闲超时时间（秒）</p>
+     */
+    @NameInMap("sandboxIdleTimeoutSeconds")
+    public Integer sandboxIdleTimeoutSeconds;
+
+    /**
+     * <p>模板名称（系统内部通过 templateName 查询 template_id）</p>
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("templateName")
+    public String templateName;
+
+    public static CreateSandboxInput build(java.util.Map<String, ?> map) throws Exception {
+        CreateSandboxInput self = new CreateSandboxInput();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateSandboxInput setSandboxIdleTimeoutSeconds(Integer sandboxIdleTimeoutSeconds) {
+        this.sandboxIdleTimeoutSeconds = sandboxIdleTimeoutSeconds;
+        return this;
+    }
+    public Integer getSandboxIdleTimeoutSeconds() {
+        return this.sandboxIdleTimeoutSeconds;
+    }
+
+    public CreateSandboxInput setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+}

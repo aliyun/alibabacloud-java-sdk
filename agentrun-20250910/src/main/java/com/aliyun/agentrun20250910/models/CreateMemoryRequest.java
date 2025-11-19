@@ -23,13 +23,6 @@ public class CreateMemoryRequest extends TeaModel {
     public String name;
 
     /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
-    @NameInMap("permanent")
-    public Boolean permanent;
-
-    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,14 +57,6 @@ public class CreateMemoryRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateMemoryRequest setPermanent(Boolean permanent) {
-        this.permanent = permanent;
-        return this;
-    }
-    public Boolean getPermanent() {
-        return this.permanent;
     }
 
     public CreateMemoryRequest setShortTtl(Integer shortTtl) {
