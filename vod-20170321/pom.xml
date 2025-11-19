@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>vod20170321</artifactId>
-  <version>3.8.0</version>
+  <version>3.8.1</version>
   <packaging>jar</packaging>
   <name>vod20170321</name>
   <description>Alibaba Cloud ApsaraVideo for VOD (20170321) SDK for Java
@@ -208,12 +208,11 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.8.0</version>
+        <version>0.9.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>
           <autoPublish>true</autoPublish>
-          <waitUntil>published</waitUntil>
         </configuration>
       </plugin>
     </plugins>

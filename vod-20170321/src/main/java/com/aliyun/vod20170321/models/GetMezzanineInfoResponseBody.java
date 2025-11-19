@@ -774,6 +774,9 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         @NameInMap("Duration")
         public String duration;
 
+        @NameInMap("FileMD5")
+        public String fileMD5;
+
         /**
          * <p>The name of the file.</p>
          * 
@@ -961,6 +964,14 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         }
         public String getDuration() {
             return this.duration;
+        }
+
+        public GetMezzanineInfoResponseBodyMezzanine setFileMD5(String fileMD5) {
+            this.fileMD5 = fileMD5;
+            return this;
+        }
+        public String getFileMD5() {
+            return this.fileMD5;
         }
 
         public GetMezzanineInfoResponseBodyMezzanine setFileName(String fileName) {
