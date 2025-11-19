@@ -5983,6 +5983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SipUserPassword", request.sipUserPassword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
             query.put("Uid", request.uid);
         }

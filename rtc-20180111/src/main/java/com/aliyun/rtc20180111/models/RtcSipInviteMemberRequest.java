@@ -110,6 +110,13 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     public String sipUserPassword;
 
     /**
+     * <strong>example:</strong>
+     * <p>taskId</p>
+     */
+    @NameInMap("TaskId")
+    public String taskId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -225,6 +232,14 @@ public class RtcSipInviteMemberRequest extends TeaModel {
     }
     public String getSipUserPassword() {
         return this.sipUserPassword;
+    }
+
+    public RtcSipInviteMemberRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public RtcSipInviteMemberRequest setUid(String uid) {
