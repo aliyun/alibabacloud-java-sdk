@@ -828,6 +828,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建用户跨产品白名单模板</p>
+     * 
+     * @param request CreateSecurityIPGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSecurityIPGroupResponse
+     */
+    public CreateSecurityIPGroupResponse createSecurityIPGroupWithOptions(CreateSecurityIPGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.GIpList)) {
+            query.put("GIpList", request.GIpList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.globalIgName)) {
+            query.put("GlobalIgName", request.globalIgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionName)) {
+            query.put("RegionName", request.regionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSecurityIPGroup"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSecurityIPGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建用户跨产品白名单模板</p>
+     * 
+     * @param request CreateSecurityIPGroupRequest
+     * @return CreateSecurityIPGroupResponse
+     */
+    public CreateSecurityIPGroupResponse createSecurityIPGroup(CreateSecurityIPGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSecurityIPGroupWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -1037,6 +1089,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCloudBenchTaskResponse deleteCloudBenchTask(DeleteCloudBenchTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCloudBenchTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除用户跨产品白名单模板</p>
+     * 
+     * @param request DeleteSecurityIPGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSecurityIPGroupResponse
+     */
+    public DeleteSecurityIPGroupResponse deleteSecurityIPGroupWithOptions(DeleteSecurityIPGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.globalSecurityGroupId)) {
+            query.put("GlobalSecurityGroupId", request.globalSecurityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionName)) {
+            query.put("RegionName", request.regionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSecurityIPGroup"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSecurityIPGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除用户跨产品白名单模板</p>
+     * 
+     * @param request DeleteSecurityIPGroupRequest
+     * @return DeleteSecurityIPGroupResponse
+     */
+    public DeleteSecurityIPGroupResponse deleteSecurityIPGroup(DeleteSecurityIPGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSecurityIPGroupWithOptions(request, runtime);
     }
 
     /**
@@ -1961,6 +2061,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeQueryExplainResponse describeQueryExplain(DescribeQueryExplainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeQueryExplainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>展示用户跨产品白名单模板具体信息</p>
+     * 
+     * @param request DescribeSecurityIPGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSecurityIPGroupResponse
+     */
+    public DescribeSecurityIPGroupResponse describeSecurityIPGroupWithOptions(DescribeSecurityIPGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionName)) {
+            query.put("RegionName", request.regionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSecurityIPGroup"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityIPGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>展示用户跨产品白名单模板具体信息</p>
+     * 
+     * @param request DescribeSecurityIPGroupRequest
+     * @return DescribeSecurityIPGroupResponse
+     */
+    public DescribeSecurityIPGroupResponse describeSecurityIPGroup(DescribeSecurityIPGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSecurityIPGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>展示用户跨产品白名单模板与实例绑定信息</p>
+     * 
+     * @param request DescribeSecurityIPGroupRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSecurityIPGroupRelationResponse
+     */
+    public DescribeSecurityIPGroupRelationResponse describeSecurityIPGroupRelationWithOptions(DescribeSecurityIPGroupRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionName)) {
+            query.put("RegionName", request.regionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSecurityIPGroupRelation"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityIPGroupRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>展示用户跨产品白名单模板与实例绑定信息</p>
+     * 
+     * @param request DescribeSecurityIPGroupRelationRequest
+     * @return DescribeSecurityIPGroupRelationResponse
+     */
+    public DescribeSecurityIPGroupRelationResponse describeSecurityIPGroupRelation(DescribeSecurityIPGroupRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSecurityIPGroupRelationWithOptions(request, runtime);
     }
 
     /**
@@ -7511,6 +7703,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAutoScalingConfigResponse modifyAutoScalingConfig(ModifyAutoScalingConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAutoScalingConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改用户跨产品白名单模板</p>
+     * 
+     * @param request ModifySecurityIPGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySecurityIPGroupResponse
+     */
+    public ModifySecurityIPGroupResponse modifySecurityIPGroupWithOptions(ModifySecurityIPGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.GIpList)) {
+            query.put("GIpList", request.GIpList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.globalIgName)) {
+            query.put("GlobalIgName", request.globalIgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.globalSecurityGroupId)) {
+            query.put("GlobalSecurityGroupId", request.globalSecurityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionName)) {
+            query.put("RegionName", request.regionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySecurityIPGroup"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySecurityIPGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改用户跨产品白名单模板</p>
+     * 
+     * @param request ModifySecurityIPGroupRequest
+     * @return ModifySecurityIPGroupResponse
+     */
+    public ModifySecurityIPGroupResponse modifySecurityIPGroup(ModifySecurityIPGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySecurityIPGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>绑定/解绑用户跨产品白名单模板</p>
+     * 
+     * @param request ModifySecurityIPGroupRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySecurityIPGroupRelationResponse
+     */
+    public ModifySecurityIPGroupRelationResponse modifySecurityIPGroupRelationWithOptions(ModifySecurityIPGroupRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.globalSecurityGroupId)) {
+            query.put("GlobalSecurityGroupId", request.globalSecurityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionName)) {
+            query.put("RegionName", request.regionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySecurityIPGroupRelation"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySecurityIPGroupRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>绑定/解绑用户跨产品白名单模板</p>
+     * 
+     * @param request ModifySecurityIPGroupRelationRequest
+     * @return ModifySecurityIPGroupRelationResponse
+     */
+    public ModifySecurityIPGroupRelationResponse modifySecurityIPGroupRelation(ModifySecurityIPGroupRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySecurityIPGroupRelationWithOptions(request, runtime);
     }
 
     /**
