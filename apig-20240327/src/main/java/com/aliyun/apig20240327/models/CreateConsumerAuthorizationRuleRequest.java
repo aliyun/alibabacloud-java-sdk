@@ -4,10 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerAuthorizationRuleRequest extends TeaModel {
+    /**
+     * <p>The list of resource authorization information.</p>
+     */
     @NameInMap("authorizationResourceInfos")
     public java.util.List<AuthorizationResourceInfo> authorizationResourceInfos;
 
     /**
+     * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+     * 
      * <strong>example:</strong>
      * <p>LongTerm</p>
      */
@@ -15,6 +20,8 @@ public class CreateConsumerAuthorizationRuleRequest extends TeaModel {
     public String expireMode;
 
     /**
+     * <p>The expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1750852089975</p>
      */
@@ -22,6 +29,8 @@ public class CreateConsumerAuthorizationRuleRequest extends TeaModel {
     public Long expireTimestamp;
 
     /**
+     * <p>The type of the parent resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */
@@ -29,6 +38,8 @@ public class CreateConsumerAuthorizationRuleRequest extends TeaModel {
     public String parentResourceType;
 
     /**
+     * <p>The resource type,</p>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */

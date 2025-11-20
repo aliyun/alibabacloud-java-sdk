@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeployMcpServerResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class DeployMcpServerResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class DeployMcpServerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetMcpServerResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public GetMcpServerResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -22,7 +29,7 @@ public class GetMcpServerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2A6E90D5-A711-54F4-A489-E33C2021EDDF</p>
@@ -69,7 +76,7 @@ public class GetMcpServerResponseBody extends TeaModel {
 
     public static class GetMcpServerResponseBodyDataAssembledSources extends TeaModel {
         /**
-         * <p>MCP Server ID</p>
+         * <p>The ID of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-xdafeafzz</p>
@@ -78,12 +85,17 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String mcpServerId;
 
         /**
+         * <p>The name of the MCP server.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-mcp</p>
          */
         @NameInMap("mcpServerName")
         public String mcpServerName;
 
+        /**
+         * <p>The list of the MCP tools.</p>
+         */
         @NameInMap("tools")
         public java.util.List<String> tools;
 
@@ -120,6 +132,8 @@ public class GetMcpServerResponseBody extends TeaModel {
 
     public static class GetMcpServerResponseBodyDataDomainInfos extends TeaModel {
         /**
+         * <p>The domain name ID.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.abc.com">www.abc.com</a></p>
          */
@@ -127,6 +141,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String domainId;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>verifyicket</p>
          */
@@ -134,8 +150,10 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The protocol. Valid values: HTTP and HTTPS.</p>
+         * 
          * <strong>example:</strong>
-         * <p>HTTP,HTTPS</p>
+         * <p>HTTP</p>
          */
         @NameInMap("protocol")
         public String protocol;
@@ -173,6 +191,8 @@ public class GetMcpServerResponseBody extends TeaModel {
 
     public static class GetMcpServerResponseBodyDataNacosMcpSyncInfo extends TeaModel {
         /**
+         * <p>The Nacos instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>mse-xxxxx</p>
          */
@@ -180,6 +200,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String importInstanceId;
 
         /**
+         * <p>The synchronized MCP server ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-mcp</p>
          */
@@ -187,6 +209,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String importMcpServerId;
 
         /**
+         * <p>The Nacos namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-ns</p>
          */
@@ -225,13 +249,26 @@ public class GetMcpServerResponseBody extends TeaModel {
     }
 
     public static class GetMcpServerResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</p>
+         */
         @NameInMap("assembledSources")
         public java.util.List<GetMcpServerResponseBodyDataAssembledSources> assembledSources;
 
+        /**
+         * <p>The backend service of the route.</p>
+         */
         @NameInMap("backend")
         public Backend backend;
 
         /**
+         * <p>Indicates the type of source for MCP server creation. Valid values: </p>
+         * <p>ApiGatewayHttpToMCP 
+         * ApiGatewayMcpHosting 
+         * ApiGatewayAssembly 
+         * NacosHttpToMCP 
+         * NacosMcpHosting</p>
+         * 
          * <strong>example:</strong>
          * <p>ApiGatewayHttpToMCP</p>
          */
@@ -239,22 +276,35 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String createFromType;
 
         /**
+         * <p>The publishing status of the API in the current environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>Deployed</p>
          */
         @NameInMap("deployStatus")
         public String deployStatus;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The domain name IDs.</p>
+         */
         @NameInMap("domainIds")
         public java.util.List<String> domainIds;
 
+        /**
+         * <p>The list of domain information.</p>
+         */
         @NameInMap("domainInfos")
         public java.util.List<GetMcpServerResponseBodyDataDomainInfos> domainInfos;
 
         /**
+         * <p>The environment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>env-cq7l5s5lhtgi6qasrdc0</p>
          */
@@ -262,6 +312,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String environmentId;
 
         /**
+         * <p>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP, and the type parameter is set to RealMCP.</p>
+         * 
          * <strong>example:</strong>
          * <p>/sse</p>
          */
@@ -269,6 +321,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String exposedUriPath;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-cq2vundlhtg***</p>
          */
@@ -276,16 +330,23 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The route match rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;product_code\&quot;:\&quot;apigw\&quot;}</p>
          */
         @NameInMap("match")
         public HttpRouteMatch match;
 
+        /**
+         * <p>The HTTP-to-MCP configurations.</p>
+         */
         @NameInMap("mcpServerConfig")
         public String mcpServerConfig;
 
         /**
+         * <p>The attachment ID for the MCP server plug-in configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-adfaefwaef</p>
          */
@@ -293,7 +354,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String mcpServerConfigPluginAttachmentId;
 
         /**
-         * <p>MCP Server ID</p>
+         * <p>The ID of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-adfefz24afg</p>
@@ -302,6 +363,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String mcpServerId;
 
         /**
+         * <p>The MCP server access path provided by the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mcp-servers/test-mcp</p>
          */
@@ -309,16 +372,23 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String mcpServerPath;
 
         /**
+         * <p>Indicates whether MCP observability is enabled. Default value: false.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("mcpStatisticsEnable")
         public Boolean mcpStatisticsEnable;
 
+        /**
+         * <p>The MCP information managed and synchronized by Nacos.</p>
+         */
         @NameInMap("nacosMcpSyncInfo")
         public GetMcpServerResponseBodyDataNacosMcpSyncInfo nacosMcpSyncInfo;
 
         /**
+         * <p>The name of the MCP server.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-mcp</p>
          */
@@ -326,6 +396,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The service protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -333,6 +405,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The route ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgrlej***</p>
          */
@@ -340,6 +414,8 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String routeId;
 
         /**
+         * <p>The type of the MCP server.</p>
+         * 
          * <strong>example:</strong>
          * <p>RealMCP</p>
          */

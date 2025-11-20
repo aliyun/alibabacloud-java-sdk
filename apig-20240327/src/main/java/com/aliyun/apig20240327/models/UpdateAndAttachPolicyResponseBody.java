@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAndAttachPolicyResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAndAttachPolicyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAndAttachPolicyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, which is used to trace the call link.</p>
+     * 
      * <strong>example:</strong>
      * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
      */

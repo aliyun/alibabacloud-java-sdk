@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListConsumersResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public ListConsumersResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class ListConsumersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9BDD6A7C-CBA7-504F-B8C5-51B9F16590F7</p>
@@ -69,6 +76,8 @@ public class ListConsumersResponseBody extends TeaModel {
 
     public static class ListConsumersResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The consumer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cs-csheiftlhtgmp0j0hp4g</p>
          */
@@ -76,6 +85,8 @@ public class ListConsumersResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>The creation timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1721097861050</p>
          */
@@ -83,16 +94,26 @@ public class ListConsumersResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>The deployment status of the API in the current environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("deployStatus")
         public String deployStatus;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the description.</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>Indicates if enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -100,6 +121,8 @@ public class ListConsumersResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The consumer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user-service</p>
          */
@@ -107,6 +130,8 @@ public class ListConsumersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The last update timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1721123855214</p>
          */
@@ -177,10 +202,15 @@ public class ListConsumersResponseBody extends TeaModel {
     }
 
     public static class ListConsumersResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of consumer information.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListConsumersResponseBodyDataItems> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -188,6 +218,8 @@ public class ListConsumersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -195,6 +227,8 @@ public class ListConsumersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */

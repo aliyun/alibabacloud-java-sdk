@@ -4,10 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class InstallPluginRequest extends TeaModel {
+    /**
+     * <p>The list of gateway IDs.</p>
+     */
     @NameInMap("gatewayIds")
     public java.util.List<String> gatewayIds;
 
     /**
+     * <p>The plug-in type ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pls-csqmjndlhtguk0loef21</p>
      */

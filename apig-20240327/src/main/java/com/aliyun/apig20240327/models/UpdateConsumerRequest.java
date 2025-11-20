@@ -4,22 +4,39 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateConsumerRequest extends TeaModel {
+    /**
+     * <p>The list of AK/SK authentication configurations.</p>
+     */
     @NameInMap("akSkIdentityConfigs")
     public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
+    /**
+     * <p>The API key authentication configurations.</p>
+     */
     @NameInMap("apikeyIdentityConfig")
     public ApiKeyIdentityConfig apikeyIdentityConfig;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is the description.</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Specifies the enablement status.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>The JWT authentication configuration.</p>
+     */
     @NameInMap("jwtIdentityConfig")
     public JwtIdentityConfig jwtIdentityConfig;
 

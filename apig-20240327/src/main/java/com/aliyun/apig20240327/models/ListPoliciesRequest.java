@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesRequest extends TeaModel {
     /**
+     * <p>The attachment point ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-cq7l5s5lhtgi6qasrdc0</p>
      */
@@ -12,6 +14,17 @@ public class ListPoliciesRequest extends TeaModel {
     public String attachResourceId;
 
     /**
+     * <p>The types of attachment points supported by the policy. Valid values: </p>
+     * <ul>
+     * <li>HttpApi</li>
+     * <li>Operation</li>
+     * <li>GatewayRoute</li>
+     * <li>GatewayService</li>
+     * <li>GatewayServicePort</li>
+     * <li>Domain</li>
+     * <li>Gateway</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HttpApi</p>
      */
@@ -19,6 +32,8 @@ public class ListPoliciesRequest extends TeaModel {
     public String attachResourceType;
 
     /**
+     * <p>The environment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-cq7l5s5lhtgi6qasrdc0</p>
      */
@@ -26,6 +41,8 @@ public class ListPoliciesRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-cq2fm65lhtgm9nrrl7ag</p>
      */
@@ -33,12 +50,20 @@ public class ListPoliciesRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>Specifies whether to return attachment information.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("withAttachments")
     public Boolean withAttachments;
 
+    /**
+     * <p>Specifies whether it is a system policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("withSystemPolicy")
     public Boolean withSystemPolicy;
 

@@ -4,10 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
+    /**
+     * <p>The API information.</p>
+     */
     @NameInMap("apiInfo")
     public HttpApiApiInfo apiInfo;
 
     /**
+     * <p>Filters the list of operations by a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>car-ctgdn8em1hko5krqq03g</p>
      */
@@ -15,6 +20,8 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String consumerAuthorizationRuleId;
 
     /**
+     * <p>The consumer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cs-ctgdn2um1hkossul8gvg</p>
      */
@@ -22,6 +29,8 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>The creation timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1750852089975</p>
      */
@@ -29,16 +38,23 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
+     * <p>The publishing status of the API in the current environment.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("deployStatus")
     public String deployStatus;
 
+    /**
+     * <p>The environment information.</p>
+     */
     @NameInMap("environmentInfo")
     public EnvironmentInfo environmentInfo;
 
     /**
+     * <p>The expiry mode. Valid values: LongTerm and ShortTerm.</p>
+     * 
      * <strong>example:</strong>
      * <p>LongTerm</p>
      */
@@ -46,6 +62,8 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String expireMode;
 
     /**
+     * <p>The rule status.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -53,17 +71,22 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String expireStatus;
 
     /**
+     * <p>The expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1750852089975</p>
      */
     @NameInMap("expireTimestamp")
     public Long expireTimestamp;
 
+    /**
+     * <p>The gateway information.</p>
+     */
     @NameInMap("gatewayInfo")
     public GatewayInfo gatewayInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>53102737-1E4E-5A8B-8E0A-4184B0959B84</p>
@@ -72,6 +95,8 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */
@@ -79,6 +104,8 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The update timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1750852089975</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreatePluginAttachmentRequest extends TeaModel {
+    /**
+     * <p>The attachment IDs.</p>
+     */
     @NameInMap("attachResourceIds")
     public java.util.List<String> attachResourceIds;
 
     /**
+     * <p>The type of the resource to which the plug-in is attached. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>HttpApi</p>
      */
@@ -15,6 +20,8 @@ public class CreatePluginAttachmentRequest extends TeaModel {
     public String attachResourceType;
 
     /**
+     * <p>Specifies whether to enable the plug-in. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +29,8 @@ public class CreatePluginAttachmentRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The environment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-xxx</p>
      */
@@ -29,6 +38,8 @@ public class CreatePluginAttachmentRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtg***</p>
      */
@@ -36,6 +47,8 @@ public class CreatePluginAttachmentRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The Base64-encoded configurations of the plug-in.</p>
+     * 
      * <strong>example:</strong>
      * <p>cHJlcGVuZDoKLSByb2xlOiBzeXN0ZW0KICBjb250ZW50OiDor7fkvb/nlKjoi7Hor63lm57nrZTpl67popgKYXBwZW5kOgotIHJvbGU6IHVzZXIKICBjb250ZW50OiDmr4/mrKHlm57nrZTlrozpl67popjvvIzlsJ3or5Xov5vooYzlj43pl64K</p>
      */
@@ -43,6 +56,8 @@ public class CreatePluginAttachmentRequest extends TeaModel {
     public String pluginConfig;
 
     /**
+     * <p>The plug-in ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pl-cvo8udem1hkob1qd67i0</p>
      */

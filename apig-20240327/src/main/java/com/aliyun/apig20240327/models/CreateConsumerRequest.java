@@ -4,13 +4,21 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerRequest extends TeaModel {
+    /**
+     * <p>The list of AK/SK identity configurations.</p>
+     */
     @NameInMap("akSkIdentityConfigs")
     public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
+    /**
+     * <p>The configuration for the API key authentication method.</p>
+     */
     @NameInMap("apikeyIdentityConfig")
     public ApiKeyIdentityConfig apikeyIdentityConfig;
 
     /**
+     * <p>The description of the consumer.</p>
+     * 
      * <strong>example:</strong>
      * <p>consumer for test</p>
      */
@@ -18,6 +26,8 @@ public class CreateConsumerRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Indicates if enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -25,16 +35,23 @@ public class CreateConsumerRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The type of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */
     @NameInMap("gatewayType")
     public String gatewayType;
 
+    /**
+     * <p>The configuration of the JWT identity.</p>
+     */
     @NameInMap("jwtIdentityConfig")
     public JwtIdentityConfig jwtIdentityConfig;
 
     /**
+     * <p>The name of the consumer.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

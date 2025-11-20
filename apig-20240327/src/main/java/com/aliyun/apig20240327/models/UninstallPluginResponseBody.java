@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UninstallPluginResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class UninstallPluginResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class UninstallPluginResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F61D96E8-4E6D-5896-86E7-F1202AC31280</p>

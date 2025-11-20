@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetConsumerResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public GetConsumerResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class GetConsumerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>880C61B3-7B90-5570-A3F7-D6D92C0E2D36</p>
@@ -68,13 +75,21 @@ public class GetConsumerResponseBody extends TeaModel {
     }
 
     public static class GetConsumerResponseBodyData extends TeaModel {
+        /**
+         * <p>The AK/SK authentication configurations.</p>
+         */
         @NameInMap("akSkIdentityConfigs")
         public AkSkIdentityConfig akSkIdentityConfigs;
 
+        /**
+         * <p>The API key authentication configurations.</p>
+         */
         @NameInMap("apiKeyIdentityConfig")
         public ApiKeyIdentityConfig apiKeyIdentityConfig;
 
         /**
+         * <p>The consumer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cs-cvgbtk6m1hkji5sb8dr0</p>
          */
@@ -82,6 +97,8 @@ public class GetConsumerResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>The creation timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */
@@ -89,26 +106,41 @@ public class GetConsumerResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>The publishing status of the API in the current environment.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
         @NameInMap("deployStatus")
         public String deployStatus;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the description.</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>Indicates if enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The JWT authentication configurations.</p>
+         */
         @NameInMap("jwtIdentityConfig")
         public JwtIdentityConfig jwtIdentityConfig;
 
         /**
+         * <p>The consumer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>consumer-1</p>
          */
@@ -116,6 +148,8 @@ public class GetConsumerResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The last update timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */

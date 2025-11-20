@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateAndAttachPolicyResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public CreateAndAttachPolicyResponseBodyData data;
 
     /**
+     * <p>The response message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, which is used to trace the call link.</p>
+     * 
      * <strong>example:</strong>
      * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
      */
@@ -66,10 +75,15 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateAndAttachPolicyResponseBodyData extends TeaModel {
+        /**
+         * <p>The association information of the policy.</p>
+         */
         @NameInMap("attachment")
         public Attachment attachment;
 
         /**
+         * <p>The policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-cq7l5s5lhtgi6qasrdc0</p>
          */

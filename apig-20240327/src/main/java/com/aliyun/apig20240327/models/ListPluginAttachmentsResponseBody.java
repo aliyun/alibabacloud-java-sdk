@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPluginAttachmentsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public ListPluginAttachmentsResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9640D776-794A-5077-9184-A247CA4B45C1</p>
@@ -69,6 +76,15 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
 
     public static class ListPluginAttachmentsResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The types of resource attachments.</p>
+         * <ul>
+         * <li>HttpApi</li>
+         * <li>Operation</li>
+         * <li>GatewayRoute</li>
+         * <li>GatewayDomain</li>
+         * <li>Gateway</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
          */
@@ -76,29 +92,44 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String attachResourceType;
 
         /**
+         * <p>Indicates if enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The environment metadata.</p>
+         */
         @NameInMap("environmentInfo")
         public EnvironmentInfo environmentInfo;
 
+        /**
+         * <p>The parent resource metadata.</p>
+         */
         @NameInMap("parentResourceInfo")
         public ParentResourceInfo parentResourceInfo;
 
         /**
+         * <p>The ID of the resource attachment.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-d0j9t5em1hkncrlo51mg</p>
          */
         @NameInMap("pluginAttachmentId")
         public String pluginAttachmentId;
 
+        /**
+         * <p>The plug-in type metadata.</p>
+         */
         @NameInMap("pluginClassInfo")
         public PluginClassInfo pluginClassInfo;
 
         /**
+         * <p>The plug-in configurations (Base64-encoded).</p>
+         * 
          * <strong>example:</strong>
          * <p>bGltaXRfYnlfaGVhZGVyOiB4LWFwaS1rZXkKbGltaXRfa2V5czoKLSBrZXk6IGV4YW1wbGUta2V5LWEKICBxdWVyeV9wZXJfc2Vjb25kOiAxMAotIGtleTogZXhhbXBsZS1rZXktYgogIHF1ZXJ5X3Blcl9zZWNvbmQ6IDEK</p>
          */
@@ -106,12 +137,17 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
+         * <p>The plug-in ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pl-cvu6r4um1hko3b3ti0a0</p>
          */
         @NameInMap("pluginId")
         public String pluginId;
 
+        /**
+         * <p>The information of resource attachments.</p>
+         */
         @NameInMap("resourceInfos")
         public java.util.List<ResourceInfo> resourceInfos;
 
@@ -195,10 +231,15 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListPluginAttachmentsResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of resource attachments.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListPluginAttachmentsResponseBodyDataItems> items;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -206,6 +247,8 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -213,6 +256,8 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

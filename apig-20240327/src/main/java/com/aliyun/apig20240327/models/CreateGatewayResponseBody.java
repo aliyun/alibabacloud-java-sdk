@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public CreateGatewayResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class CreateGatewayResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9CDE3E69-69C2-5402-83AD-ACA80B1AF35B</p>
@@ -69,6 +76,8 @@ public class CreateGatewayResponseBody extends TeaModel {
 
     public static class CreateGatewayResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-cq2vundlhtg***</p>
          */

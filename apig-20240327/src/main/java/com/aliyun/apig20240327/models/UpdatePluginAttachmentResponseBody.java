@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePluginAttachmentResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class UpdatePluginAttachmentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class UpdatePluginAttachmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F330090D-80F8-557B-8610-7EC7E386B4A4</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPluginAttachmentsRequest extends TeaModel {
     /**
+     * <p>The resource attachment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hr-cv2h58em1hkg7c6vt43g</p>
      */
@@ -12,6 +14,8 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String attachResourceId;
 
     /**
+     * <p>The resource attachment type (not yet in use).</p>
+     * 
      * <strong>example:</strong>
      * <p>GatewayRoute</p>
      */
@@ -19,6 +23,8 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String attachResourceType;
 
     /**
+     * <p>The resource attachment types, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>GatewayRoute</p>
      */
@@ -26,6 +32,8 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String attachResourceTypes;
 
     /**
+     * <p>The environment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-crlnqhtlhtgqflkqislg</p>
      */
@@ -33,6 +41,8 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>The gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-cr79f75lhtgme744084g</p>
      */
@@ -40,6 +50,8 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +68,8 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The plug-in ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pl-ct8181um1hkiqns9f6e0</p>
      */
@@ -61,6 +77,8 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String pluginId;
 
     /**
+     * <p>Specifies whether to return parent resource attachments.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

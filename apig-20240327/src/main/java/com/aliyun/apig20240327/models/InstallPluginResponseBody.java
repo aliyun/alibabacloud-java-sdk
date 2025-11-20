@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InstallPluginResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public InstallPluginResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -22,7 +29,7 @@ public class InstallPluginResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>201CFCA0-3AF5-52D0-A0F3-FBA697AF55CB</p>
@@ -69,6 +76,8 @@ public class InstallPluginResponseBody extends TeaModel {
 
     public static class InstallPluginResponseBodyDataInstallPluginResults extends TeaModel {
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-d28mjcmm1hkub84mdbi0</p>
          */
@@ -76,6 +85,8 @@ public class InstallPluginResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The plug-in ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pl-cvs7gbum1hkhs6us6vbg</p>
          */
@@ -106,6 +117,9 @@ public class InstallPluginResponseBody extends TeaModel {
     }
 
     public static class InstallPluginResponseBodyData extends TeaModel {
+        /**
+         * <p>The installation result.</p>
+         */
         @NameInMap("installPluginResults")
         public java.util.List<InstallPluginResponseBodyDataInstallPluginResults> installPluginResults;
 

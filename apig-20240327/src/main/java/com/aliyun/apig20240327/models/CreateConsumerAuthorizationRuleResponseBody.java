@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public CreateConsumerAuthorizationRuleResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CC83C32-3B5A-57EE-9AFE-D0D51822C7BA</p>
      */
@@ -67,6 +76,8 @@ public class CreateConsumerAuthorizationRuleResponseBody extends TeaModel {
 
     public static class CreateConsumerAuthorizationRuleResponseBodyData extends TeaModel {
         /**
+         * <p>Filters the list of operations based on a specific consumer authorization rule ID. Only authorized operations are returned in the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>car-d06p196m1hkg9ukum5pg</p>
          */

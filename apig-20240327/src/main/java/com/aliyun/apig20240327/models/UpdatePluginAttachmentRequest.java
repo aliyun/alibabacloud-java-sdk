@@ -4,10 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdatePluginAttachmentRequest extends TeaModel {
+    /**
+     * <p>The IDs of the resources to which the plug-in is attached.</p>
+     */
     @NameInMap("attachResourceIds")
     public java.util.List<String> attachResourceIds;
 
     /**
+     * <p>Specifies whether to enable the plug-in.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -15,6 +20,8 @@ public class UpdatePluginAttachmentRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The Base64-encoded configurations of the plug-in.</p>
+     * 
      * <strong>example:</strong>
      * <p>cHJlcGVuZDoKLSByb2xlOiBzeXN0ZW0KICBjb250ZW50OiDor7fkvb/nlKjoi7Hor63lm57nrZTpl67popgKYXBwZW5kOgotIHJvbGU6IHVzZXIKICBjb250ZW50OiDmr4/mrKHlm57nrZTlrozpl67popjvvIzlsJ3or5Xov5vooYzlj43pl64K</p>
      */

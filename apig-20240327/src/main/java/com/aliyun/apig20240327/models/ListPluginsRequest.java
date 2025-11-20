@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPluginsRequest extends TeaModel {
     /**
+     * <p>The resource attachment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-cuip2pum1hksng6oni3g</p>
      */
@@ -12,6 +14,17 @@ public class ListPluginsRequest extends TeaModel {
     public String attachResourceId;
 
     /**
+     * <p>The resource attachment type.</p>
+     * <ul>
+     * <li>HttpApi: HttpApi.</li>
+     * <li>Operation: Operation of HttpApi.</li>
+     * <li>GatewayRoute: Gateway route.</li>
+     * <li>GatewayService: Gateway service.</li>
+     * <li>GatewayServicePort: Gateway service port.</li>
+     * <li>Domain: Gateway domain.</li>
+     * <li>Gateway: Gateway.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HttpApi</p>
      */
@@ -19,6 +32,8 @@ public class ListPluginsRequest extends TeaModel {
     public String attachResourceType;
 
     /**
+     * <p>The gateway instance ID for filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-csrhgn6m1hkt65qbxxgg</p>
      */
@@ -26,16 +41,26 @@ public class ListPluginsRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The instance type. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>AI</p>
      */
     @NameInMap("gatewayType")
     public String gatewayType;
 
+    /**
+     * <p>Specifies whether to include built-in AI plug-ins in the returned results. Default: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("includeBuiltinAiGateway")
     public Boolean includeBuiltinAiGateway;
 
     /**
+     * <p>The page number to return. Pages start from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +68,8 @@ public class ListPluginsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +77,8 @@ public class ListPluginsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The plug-in type ID for filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>pls-dn82a9djd8z****</p>
      */
@@ -57,6 +86,8 @@ public class ListPluginsRequest extends TeaModel {
     public String pluginClassId;
 
     /**
+     * <p>The plug-in type name for filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>key-auth</p>
      */
@@ -64,6 +95,8 @@ public class ListPluginsRequest extends TeaModel {
     public String pluginClassName;
 
     /**
+     * <p>Specifies whether the returned results should include plug-in attachment information corresponding to the attachResourceId.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

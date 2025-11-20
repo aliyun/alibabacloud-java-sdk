@@ -4,32 +4,54 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateMcpServerRequest extends TeaModel {
+    /**
+     * <p>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</p>
+     */
     @NameInMap("assembledSources")
     public java.util.List<UpdateMcpServerRequestAssembledSources> assembledSources;
 
+    /**
+     * <p>The backend service configurations for the route.</p>
+     */
     @NameInMap("backendConfig")
     public UpdateMcpServerRequestBackendConfig backendConfig;
 
+    /**
+     * <p>Specifies the type of source for MCP server creation.</p>
+     */
     @NameInMap("createFromType")
     public String createFromType;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The domain IDs.</p>
+     */
     @NameInMap("domainIds")
     public java.util.List<String> domainIds;
 
     /**
+     * <p>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP and the type parameter is set to RealMCP.</p>
+     * 
      * <strong>example:</strong>
      * <p>/sse</p>
      */
     @NameInMap("exposedUriPath")
     public String exposedUriPath;
 
+    /**
+     * <p>The route match rule.</p>
+     */
     @NameInMap("match")
     public HttpRouteMatch match;
 
     /**
+     * <p>Specifies if MCP observability is enabled. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -37,6 +59,7 @@ public class UpdateMcpServerRequest extends TeaModel {
     public Boolean mcpStatisticsEnable;
 
     /**
+     * <p>The service protocol. Valid values: HTTP, HTTPS, SSE, and StreamableHTTP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +69,7 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The MCP server type. Valid values: RealMCP and AssemblyMCP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -141,7 +165,7 @@ public class UpdateMcpServerRequest extends TeaModel {
 
     public static class UpdateMcpServerRequestAssembledSources extends TeaModel {
         /**
-         * <p>MCP Server ID</p>
+         * <p>The MCP server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-afaefaefaf</p>
@@ -150,12 +174,17 @@ public class UpdateMcpServerRequest extends TeaModel {
         public String mcpServerId;
 
         /**
+         * <p>The name of the MCP server.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-mcp</p>
          */
         @NameInMap("mcpServerName")
         public String mcpServerName;
 
+        /**
+         * <p>The MCP tools.</p>
+         */
         @NameInMap("tools")
         public java.util.List<String> tools;
 
@@ -192,6 +221,8 @@ public class UpdateMcpServerRequest extends TeaModel {
 
     public static class UpdateMcpServerRequestBackendConfigServices extends TeaModel {
         /**
+         * <p>The service port (omit for dynamic ports).</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -199,6 +230,13 @@ public class UpdateMcpServerRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The service protocol. Valid values:</p>
+         * <ul>
+         * <li>TCP</li>
+         * <li>HTTP</li>
+         * <li>DUBBO</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -206,6 +244,8 @@ public class UpdateMcpServerRequest extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>svc-cr6pk4tlhtgm58e***</p>
          */
@@ -213,6 +253,8 @@ public class UpdateMcpServerRequest extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The service version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -220,6 +262,8 @@ public class UpdateMcpServerRequest extends TeaModel {
         public String version;
 
         /**
+         * <p>The traffic weight percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>49</p>
          */
@@ -275,12 +319,17 @@ public class UpdateMcpServerRequest extends TeaModel {
 
     public static class UpdateMcpServerRequestBackendConfig extends TeaModel {
         /**
+         * <p>The backend service scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>SingleService</p>
          */
         @NameInMap("scene")
         public String scene;
 
+        /**
+         * <p>The backend services.</p>
+         */
         @NameInMap("services")
         public java.util.List<UpdateMcpServerRequestBackendConfigServices> services;
 

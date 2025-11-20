@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePluginAttachmentResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class DeletePluginAttachmentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class DeletePluginAttachmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>76BDFFC7-0764-5168-B047-92EE0BC7FDDE</p>

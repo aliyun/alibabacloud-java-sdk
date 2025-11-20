@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMcpServersRequest extends TeaModel {
     /**
+     * <p>The type of source to create from.</p>
+     * 
      * <strong>example:</strong>
      * <p>ApiGatewayHttpToMCP</p>
      */
@@ -12,6 +14,8 @@ public class ListMcpServersRequest extends TeaModel {
     public String createFromTypes;
 
     /**
+     * <p>The deployment status of the MCP server.</p>
+     * 
      * <strong>example:</strong>
      * <p>Deployed</p>
      */
@@ -19,6 +23,7 @@ public class ListMcpServersRequest extends TeaModel {
     public String deployStatuses;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class ListMcpServersRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The name to perform a fuzzy search on the MCP server.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -35,6 +42,7 @@ public class ListMcpServersRequest extends TeaModel {
     public String nameLike;
 
     /**
+     * <p>The page number to return. Pages start from 1. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,7 @@ public class ListMcpServersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,8 @@ public class ListMcpServersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The type of the MCP server.</p>
+     * 
      * <strong>example:</strong>
      * <p>RealMCP</p>
      */

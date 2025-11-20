@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPluginAttachmentResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload.</p>
+     */
     @NameInMap("data")
     public GetPluginAttachmentResponseBodyData data;
 
     /**
+     * <p>The status message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C61E30D3-579A-5B43-994E-31E02EDC9129</p>
@@ -69,32 +76,50 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
 
     public static class GetPluginAttachmentResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the plug-in is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The environment information.</p>
+         */
         @NameInMap("environmentInfo")
         public EnvironmentInfo environmentInfo;
 
+        /**
+         * <p>The instance information.</p>
+         */
         @NameInMap("gatewayInfo")
         public GatewayInfo gatewayInfo;
 
+        /**
+         * <p>The information about the parent resource to which the plug-in is attached.</p>
+         */
         @NameInMap("parentResourceInfo")
         public ParentResourceInfo parentResourceInfo;
 
         /**
+         * <p>The attachment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-d05f1tmm1hku195dd8j0</p>
          */
         @NameInMap("pluginAttachmentId")
         public String pluginAttachmentId;
 
+        /**
+         * <p>The plug-in type information.</p>
+         */
         @NameInMap("pluginClassInfo")
         public PluginClassInfo pluginClassInfo;
 
         /**
+         * <p>The Base64-encoded configurations of the plug-in.</p>
+         * 
          * <strong>example:</strong>
          * <p>cHJlcGVuZDoKLSByb2xlOiBzeXN0ZW0KICBjb250ZW50OiDor7fkvb/nlKjoi7Hor63lm57nrZTpl67popgKYXBwZW5kOgotIHJvbGU6IHVzZXIKICBjb250ZW50OiDmr4/mrKHlm57nrZTlrozpl67popjvvIzlsJ3or5Xov5vooYzlj43pl64K</p>
          */
@@ -102,12 +127,17 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
+         * <p>The plug-in ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pl-cvo8ub6m1hkvgv03r3k0</p>
          */
         @NameInMap("pluginId")
         public String pluginId;
 
+        /**
+         * <p>The resource details.</p>
+         */
         @NameInMap("resourceInfos")
         public java.util.List<ResourceInfo> resourceInfos;
 
