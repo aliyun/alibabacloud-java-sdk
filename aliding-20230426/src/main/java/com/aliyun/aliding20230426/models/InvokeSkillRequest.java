@@ -23,6 +23,9 @@ public class InvokeSkillRequest extends TeaModel {
     @NameInMap("Stream")
     public Boolean stream;
 
+    @NameInMap("sourceIdOfAssistantId")
+    public String sourceIdOfAssistantId;
+
     public static InvokeSkillRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeSkillRequest self = new InvokeSkillRequest();
         return TeaModel.build(map, self);
@@ -50,6 +53,14 @@ public class InvokeSkillRequest extends TeaModel {
     }
     public Boolean getStream() {
         return this.stream;
+    }
+
+    public InvokeSkillRequest setSourceIdOfAssistantId(String sourceIdOfAssistantId) {
+        this.sourceIdOfAssistantId = sourceIdOfAssistantId;
+        return this;
+    }
+    public String getSourceIdOfAssistantId() {
+        return this.sourceIdOfAssistantId;
     }
 
 }

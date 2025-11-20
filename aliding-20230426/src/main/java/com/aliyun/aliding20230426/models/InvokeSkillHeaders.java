@@ -41,6 +41,9 @@ public class InvokeSkillHeaders extends TeaModel {
         @NameInMap("accountId")
         public String accountId;
 
+        @NameInMap("ssoTicket")
+        public String ssoTicket;
+
         public static InvokeSkillHeadersAccountContext build(java.util.Map<String, ?> map) throws Exception {
             InvokeSkillHeadersAccountContext self = new InvokeSkillHeadersAccountContext();
             return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class InvokeSkillHeaders extends TeaModel {
         }
         public String getAccountId() {
             return this.accountId;
+        }
+
+        public InvokeSkillHeadersAccountContext setSsoTicket(String ssoTicket) {
+            this.ssoTicket = ssoTicket;
+            return this;
+        }
+        public String getSsoTicket() {
+            return this.ssoTicket;
         }
 
     }
