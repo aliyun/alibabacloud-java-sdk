@@ -4,12 +4,18 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class Sandbox extends TeaModel {
+    @NameInMap("SandboxIdleTTLInSeconds")
+    public Integer sandboxIdleTTLInSeconds;
+
     /**
      * <p>沙箱创建时间</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("createdAt")
     public String createdAt;
+
+    @NameInMap("endedAt")
+    public String endedAt;
 
     /**
      * <p>最后更新时间</p>
@@ -55,12 +61,28 @@ public class Sandbox extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public Sandbox setSandboxIdleTTLInSeconds(Integer sandboxIdleTTLInSeconds) {
+        this.sandboxIdleTTLInSeconds = sandboxIdleTTLInSeconds;
+        return this;
+    }
+    public Integer getSandboxIdleTTLInSeconds() {
+        return this.sandboxIdleTTLInSeconds;
+    }
+
     public Sandbox setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     public String getCreatedAt() {
         return this.createdAt;
+    }
+
+    public Sandbox setEndedAt(String endedAt) {
+        this.endedAt = endedAt;
+        return this;
+    }
+    public String getEndedAt() {
+        return this.endedAt;
     }
 
     public Sandbox setLastUpdatedAt(String lastUpdatedAt) {
