@@ -635,6 +635,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateWuyingServerSceneUrlResponse generateWuyingServerSceneUrlWithOptions(GenerateWuyingServerSceneUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            body.put("ApiKey", request.apiKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             body.put("ClientId", request.clientId);
         }

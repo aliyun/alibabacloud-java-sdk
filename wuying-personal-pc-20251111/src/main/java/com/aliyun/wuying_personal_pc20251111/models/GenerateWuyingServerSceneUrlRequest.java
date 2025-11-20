@@ -4,6 +4,12 @@ package com.aliyun.wuying_personal_pc20251111.models;
 import com.aliyun.tea.*;
 
 public class GenerateWuyingServerSceneUrlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("ApiKey")
+    public String apiKey;
+
     @NameInMap("ClientId")
     public String clientId;
 
@@ -25,9 +31,6 @@ public class GenerateWuyingServerSceneUrlRequest extends TeaModel {
     @NameInMap("LoginRegionId")
     public String loginRegionId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("LoginToken")
     public String loginToken;
 
@@ -43,9 +46,6 @@ public class GenerateWuyingServerSceneUrlRequest extends TeaModel {
     @NameInMap("Scene")
     public String scene;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -61,6 +61,14 @@ public class GenerateWuyingServerSceneUrlRequest extends TeaModel {
     public static GenerateWuyingServerSceneUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateWuyingServerSceneUrlRequest self = new GenerateWuyingServerSceneUrlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateWuyingServerSceneUrlRequest setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public GenerateWuyingServerSceneUrlRequest setClientId(String clientId) {
