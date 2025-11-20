@@ -4,6 +4,10 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DeleteValidateFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx-xxxx-xxxx-xxxx</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 

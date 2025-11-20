@@ -4,6 +4,9 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ValidateEmailRequest extends TeaModel {
+    @NameInMap("CheckGraylist")
+    public Boolean checkGraylist;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -23,6 +26,14 @@ public class ValidateEmailRequest extends TeaModel {
     public static ValidateEmailRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateEmailRequest self = new ValidateEmailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ValidateEmailRequest setCheckGraylist(Boolean checkGraylist) {
+        this.checkGraylist = checkGraylist;
+        return this;
+    }
+    public Boolean getCheckGraylist() {
+        return this.checkGraylist;
     }
 
     public ValidateEmailRequest setEmail(String email) {
