@@ -4488,6 +4488,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询已保护的资源列表</p>
+     * 
+     * @param request ListProtectedResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProtectedResourcesResponse
+     */
+    public ListProtectedResourcesResponse listProtectedResourcesWithOptions(ListProtectedResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createdByProduct)) {
+            query.put("CreatedByProduct", request.createdByProduct);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            query.put("Skip", request.skip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProtectedResources"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProtectedResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询已保护的资源列表</p>
+     * 
+     * @param request ListProtectedResourcesRequest
+     * @return ListProtectedResourcesResponse
+     */
+    public ListProtectedResourcesResponse listProtectedResources(ListProtectedResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProtectedResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Activates Cloud Backup.</p>
      * 
      * @param request OpenHbrServiceRequest
