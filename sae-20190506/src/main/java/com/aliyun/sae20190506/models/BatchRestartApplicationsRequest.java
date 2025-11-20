@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchRestartApplicationsRequest extends TeaModel {
     /**
+     * <p>The application IDs. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BatchRestartApplicationsRequest extends TeaModel {
     public String appIds;
 
     /**
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

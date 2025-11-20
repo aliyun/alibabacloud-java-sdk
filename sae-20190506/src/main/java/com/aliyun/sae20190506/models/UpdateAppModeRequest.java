@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppModeRequest extends TeaModel {
     /**
+     * <p>The app ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
      */
@@ -15,6 +17,13 @@ public class UpdateAppModeRequest extends TeaModel {
     public String appIds;
 
     /**
+     * <p>Enable Idle Mode?</p>
+     * <p>Enumeration value:</p>
+     * <ul>
+     * <li>true: enables.</li>
+     * <li>false: disables.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

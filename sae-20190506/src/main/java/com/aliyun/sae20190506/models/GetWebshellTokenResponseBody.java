@@ -5,19 +5,46 @@ import com.aliyun.tea.*;
 
 public class GetWebshellTokenResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public GetWebshellTokenResponseBodyData data;
 
+    /**
+     * <p>The error code returned if the call failed. Value values:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> section in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>The returned message. Value description:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.</li>
+     * <li>An error code is returned if the request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,6 +52,8 @@ public class GetWebshellTokenResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
@@ -32,6 +61,8 @@ public class GetWebshellTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +70,8 @@ public class GetWebshellTokenResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the trace.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */
@@ -108,6 +141,8 @@ public class GetWebshellTokenResponseBody extends TeaModel {
 
     public static class GetWebshellTokenResponseBodyData extends TeaModel {
         /**
+         * <p>Webshell page address</p>
+         * 
          * <strong>example:</strong>
          * <p>HttpUrl :  &quot;<a href="https://saenext.console.aliyun.com/cn-shenzhen/app-list/app1/micro-app/shell/pod1?tokenId=xxx">https://saenext.console.aliyun.com/cn-shenzhen/app-list/app1/micro-app/shell/pod1?tokenId=xxx</a></p>
          */
@@ -115,6 +150,8 @@ public class GetWebshellTokenResponseBody extends TeaModel {
         public String httpUrl;
 
         /**
+         * <p>The information about the token.</p>
+         * 
          * <strong>example:</strong>
          * <p>zWWpvRj_5pzof4hfo7-hGynM8oGMmO_7</p>
          */
@@ -122,6 +159,8 @@ public class GetWebshellTokenResponseBody extends TeaModel {
         public String token;
 
         /**
+         * <p>The WebSocket address.</p>
+         * 
          * <strong>example:</strong>
          * <p>wss://sae-webshell.console.aliyun.com/websocket/eamWebshell?tokenId=xxx&amp;region=cn-shenzhen</p>
          */

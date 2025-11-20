@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationMseServiceRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeApplicationMseServiceRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Specifies whether to enable traffic limiting and degradation. Set to true to check traffic limiting and degradation permissions when accessing related APIs; set to false otherwise.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

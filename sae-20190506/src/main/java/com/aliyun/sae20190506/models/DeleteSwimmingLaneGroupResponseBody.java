@@ -5,16 +5,37 @@ import com.aliyun.tea.*;
 
 public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The status code. Value values:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>null null</p>
+     * <ul>
+     * <li>null****</li>
+     * <li>null</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +43,8 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>null</p>
+     * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
@@ -29,6 +52,12 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The policy was deleted.</li>
+     * <li><strong>false</strong>: Delete failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +65,8 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>null</p>
+     * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622920113732501e****</p>
      */

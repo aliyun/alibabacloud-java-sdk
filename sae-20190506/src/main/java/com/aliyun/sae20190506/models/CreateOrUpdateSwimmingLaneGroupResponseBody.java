@@ -5,19 +5,43 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The application information.</p>
+     */
     @NameInMap("Data")
     public CreateOrUpdateSwimmingLaneGroupResponseBodyData data;
 
+    /**
+     * <p>The status code. Value values:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>Additional information. Valid values:</p>
+     * <ul>
+     * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
+     * <li>If the request is abnormal, the specific exception error code is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,6 +49,8 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
@@ -32,6 +58,12 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the lane group is created. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Created successfully.</li>
+     * <li><strong>false</strong>: The ConfigMap failed to be created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +71,8 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */
@@ -108,6 +142,8 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the lane group.</p>
+         * 
          * <strong>example:</strong>
          * <p>2074</p>
          */

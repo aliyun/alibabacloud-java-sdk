@@ -141,6 +141,9 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceResourcesResponseBodyData extends TeaModel {
+        @NameInMap("ApmJavaAgentVersion")
+        public String apmJavaAgentVersion;
+
         /**
          * <p>The number of applications.</p>
          * 
@@ -336,6 +339,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public static DescribeNamespaceResourcesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespaceResourcesResponseBodyData self = new DescribeNamespaceResourcesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setApmJavaAgentVersion(String apmJavaAgentVersion) {
+            this.apmJavaAgentVersion = apmJavaAgentVersion;
+            return this;
+        }
+        public String getApmJavaAgentVersion() {
+            return this.apmJavaAgentVersion;
         }
 
         public DescribeNamespaceResourcesResponseBodyData setAppCount(Long appCount) {

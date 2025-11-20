@@ -5,19 +5,42 @@ import com.aliyun.tea.*;
 
 public class CreateSecretResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public CreateSecretResponseBodyData data;
 
+    /**
+     * <p>The status code. Value values:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>The message returned for the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,6 +48,8 @@ public class CreateSecretResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
@@ -32,6 +57,12 @@ public class CreateSecretResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the Secret was created. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The ConfigMap was created.</li>
+     * <li><strong>false</strong>: The ConfigMap failed to be created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +70,8 @@ public class CreateSecretResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */
@@ -108,6 +141,8 @@ public class CreateSecretResponseBody extends TeaModel {
 
     public static class CreateSecretResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the created Secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */

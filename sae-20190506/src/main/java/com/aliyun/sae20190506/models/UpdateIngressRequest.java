@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateIngressRequest extends TeaModel {
     /**
-     * <p>The ID of the certificate that is associated with the Classic Load Balancer (<strong>CLB</strong>) instance.</p>
+     * <p>The ID of the <strong>CLB</strong> certificate. Valid values:</p>
      * <ul>
-     * <li>If you set <strong>LoadBalanceType</strong> to <strong>clb</strong>, you can use CertId to configure a certificate for the HTTPS listener.</li>
+     * <li>If the <strong>LoadBalanceType</strong> is <strong>clb</strong>, use this field to configure the HTTPS listener certificate.</li>
      * </ul>
-     * <p>For more information about how to manage the SSL certificate IDs that are used by CLB instances, see <a href="https://help.aliyun.com/document_detail/90792.html">Overview</a>.</p>
+     * <p>For more information about how to use SSL certificate IDs for CLB, see <a href="https://help.aliyun.com/document_detail/90792.html">Manage certificates (CLB)</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>188077086902****_176993d****_181437****_108724****</p>
@@ -18,10 +18,10 @@ public class UpdateIngressRequest extends TeaModel {
     public String certId;
 
     /**
-     * <p>The IDs of the certificates that are associated with the Application Load Balancer (<strong>ALB</strong>) instance.</p>
+     * <p>The ID of the multi-certificate <strong>ALB</strong>. Valid values:</p>
      * <ul>
-     * <li>If you set <strong>LoadBalanceType</strong> to <strong>alb</strong>, you can use CertIds to configure multiple certificates for the HTTPS listener. Separate multiple certificate IDs with commas (,).</li>
-     * <li>The ID of the SSL certificate that is used by an ALB instance can be obtained from Certificate Management Service. For example, if you specify <code>756***-cn-hangzhou</code>, <code>756***</code> is the certificate ID that is obtained from the service page, and <code>-cn-hangzhou</code> is the fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
+     * <li>If the <strong>LoadBalanceType</strong> is <strong>alb</strong>, use this field to configure multiple certificates for HTTPS listeners. Separate multiple certificate IDs with commas (,).</li>
+     * <li>The ID of the SSL certificate used by ALB must be obtained from the digital certificate product. For example, in the configuration <code>756***-cn-hangzhou</code>, the <code>756***</code> is the certificate ID obtained from the product page, and the <code>-cn-hangzhou</code> is a fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateIngressRequest extends TeaModel {
     public String corsConfig;
 
     /**
-     * <p>The default forwarding rule. You can specify a port and an application in the default forwarding rule to forward traffic based on the IP address. The following list describes the involved parameters:</p>
+     * <p>The default forwarding rule. Forwards traffic to a specified application through a specified port based on the IP address. The following table describes the parameters.</p>
      * <ul>
      * <li><strong>appId</strong>: the ID of the application.</li>
      * <li><strong>containerPort</strong>: the container port of the application.</li>
@@ -99,7 +99,7 @@ public class UpdateIngressRequest extends TeaModel {
     public Long ingressId;
 
     /**
-     * <p>The port specified for the Server Load Balancer (SLB) listener. You must specify a vacant port.</p>
+     * <p>The SLB listening port. This port cannot be occupied.</p>
      * 
      * <strong>example:</strong>
      * <p>443</p>
@@ -110,7 +110,7 @@ public class UpdateIngressRequest extends TeaModel {
     /**
      * <p>The protocol that is used to forward requests. Valid values:</p>
      * <ul>
-     * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify the transmitted data.</li>
+     * <li><strong>HTTP</strong>: HTTP is suitable for applications that need to identify transmitted data.</li>
      * <li><strong>HTTPS</strong>: HTTPS is suitable for applications that require encrypted data transmission.</li>
      * </ul>
      * 
@@ -121,7 +121,7 @@ public class UpdateIngressRequest extends TeaModel {
     public String listenerProtocol;
 
     /**
-     * <p>This parameter is discontinued.</p>
+     * <p>The parameter is deprecated and cannot be updated.</p>
      * 
      * <strong>example:</strong>
      * <p>clb</p>
@@ -139,10 +139,10 @@ public class UpdateIngressRequest extends TeaModel {
     public Integer requestTimeout;
 
     /**
-     * <p>The forwarding rules. You can specify a port and an application in a forwarding rule to forward traffic based on the specified domain name and request path. The following list describes the involved parameters:</p>
+     * <p>The forwarding rule. Forwards traffic to a specified application through a specified port based on the domain name and request path. The following table describes the parameters.</p>
      * <ul>
      * <li><strong>appId</strong>: the ID of the application.</li>
-     * <li><strong>containerPort</strong>: the container port of the application.</li>
+     * <li><strong>containerPort</strong>: The port of the application instance.</li>
      * <li><strong>domain</strong>: the domain name.</li>
      * <li><strong>path</strong>: the request path.</li>
      * </ul>

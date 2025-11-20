@@ -5,19 +5,40 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     /**
+     * <p>The API status or POP error code. Valid values: 2xx: The request was successful. 3xx: The request was redirected. 4xx: The request was invalid. 5xx: A server error occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The application information.</p>
+     */
     @NameInMap("Data")
     public DescribeApplicationMseServiceResponseBodyData data;
 
+    /**
+     * <p>The error code. Value description:</p>
+     * <ul>
+     * <li>If the request succeeds, this field is not returned.</li>
+     * <li>For more information, see the <strong>Error codes</strong> section of this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>The additional information. Value description:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>success</strong> is returned.</li>
+     * <li>If the request failed, an error code is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,6 +46,8 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
      */
@@ -32,6 +55,12 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the application instance groups were obtained successfully. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +68,8 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the trace, which is used to query the exact call information.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */
@@ -107,15 +138,46 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationMseServiceResponseBodyData extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-hvm47******</p>
+         */
         @NameInMap("MseAppId")
         public String mseAppId;
 
+        /**
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("MseAppName")
         public String mseAppName;
 
+        /**
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-ent</p>
+         */
         @NameInMap("MseAppNameSpace")
         public String mseAppNameSpace;
 
+        /**
+         * <p>The application status. Valid values:</p>
+         * <ul>
+         * <li>EXPIRED</li>
+         * <li>REBOOTING</li>
+         * <li>WAITING</li>
+         * <li>FAIL</li>
+         * <li>NULL/SUCCESS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 

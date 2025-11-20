@@ -23,6 +23,9 @@ public class DescribeInstanceLogRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Previous")
+    public String previous;
+
     public static DescribeInstanceLogRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceLogRequest self = new DescribeInstanceLogRequest();
         return TeaModel.build(map, self);
@@ -42,6 +45,14 @@ public class DescribeInstanceLogRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInstanceLogRequest setPrevious(String previous) {
+        this.previous = previous;
+        return this;
+    }
+    public String getPrevious() {
+        return this.previous;
     }
 
 }

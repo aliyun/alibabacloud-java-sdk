@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class BatchRestartApplicationsResponseBody extends TeaModel {
     /**
+     * <p>The API status or POP error code. Value description:</p>
+     * <p>2xx: The request was successful. 3xx: The request was redirected. 4xx: The request was invalid. 5xx: A server error occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response.</p>
+     */
     @NameInMap("Data")
     public BatchRestartApplicationsResponseBodyData data;
 
+    /**
+     * <p>The error code. Value description:</p>
+     * <p>If the request succeeds, this field is not returned. It is returned only if the request fails. For more information, see the &quot;Error codes&quot; section in this topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>The additional information. Value description:</p>
+     * <p>If the request succeeds, a success message is returned. If the request fails, an error code is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,6 +41,8 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
@@ -32,6 +50,9 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the applications were started. Valid values:</p>
+     * <p>true and false</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +60,8 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the trace, which is used to query the exact call information.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */
@@ -108,6 +131,8 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
 
     public static class BatchRestartApplicationsResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the change process.</p>
+         * 
          * <strong>example:</strong>
          * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
          */

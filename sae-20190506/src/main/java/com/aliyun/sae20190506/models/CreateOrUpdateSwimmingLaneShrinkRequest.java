@@ -4,10 +4,22 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
+    /**
+     * <p>The route configuration of the gateway.</p>
+     * <blockquote>
+     * <p> This parameter is required if the gateway entry of the lane group is Java.</p>
+     * </blockquote>
+     */
     @NameInMap("AppEntryRule")
     public String appEntryRuleShrink;
 
     /**
+     * <p>Full-link Grayscale Mode:</p>
+     * <ul>
+     * <li>0: The request is routed based on the content of the request.</li>
+     * <li>1: routing based on percentages</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +27,12 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Integer canaryModel;
 
     /**
+     * <p>Lane Status</p>
+     * <ul>
+     * <li>true: enabled</li>
+     * <li>false: disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +40,8 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The ID of the lane group to which the lane belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>b2a8a925-477a-eswa-b823-d5e22500****</p>
      */
@@ -29,6 +49,8 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Long groupId;
 
     /**
+     * <p>The ID of the lane.</p>
+     * 
      * <strong>example:</strong>
      * <p>13857</p>
      */
@@ -36,6 +58,8 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Long laneId;
 
     /**
+     * <p>The name of the lane.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -43,16 +67,26 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public String laneName;
 
     /**
+     * <p>The tag of the lane.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
      */
     @NameInMap("LaneTag")
     public String laneTag;
 
+    /**
+     * <p>The route configuration of the MSE gateway.</p>
+     * <blockquote>
+     * <p> If the <strong>EntryAppType</strong> is set to <strong>apig</strong> or <strong>mse-gw</strong>, it is required.</p>
+     * </blockquote>
+     */
     @NameInMap("MseGatewayEntryRule")
     public String mseGatewayEntryRuleShrink;
 
     /**
+     * <p>The namespace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
      */

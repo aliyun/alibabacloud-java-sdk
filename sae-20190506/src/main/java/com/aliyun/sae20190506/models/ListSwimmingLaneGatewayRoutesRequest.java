@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSwimmingLaneGatewayRoutesRequest extends TeaModel {
     /**
+     * <p>The unique ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-277c0727535f4aae917e48de0f******</p>
      */
@@ -12,6 +14,8 @@ public class ListSwimmingLaneGatewayRoutesRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The ID of the namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
      */

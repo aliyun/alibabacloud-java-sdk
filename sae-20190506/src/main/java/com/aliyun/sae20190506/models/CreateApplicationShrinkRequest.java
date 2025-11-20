@@ -22,6 +22,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("AcrInstanceId")
     public String acrInstanceId;
 
+    @NameInMap("AgentVersion")
+    public String agentVersion;
+
     /**
      * <p>The description of the template. The description cannot exceed 1,024 characters in length.</p>
      * 
@@ -256,6 +259,12 @@ public class CreateApplicationShrinkRequest extends TeaModel {
      */
     @NameInMap("EnableEbpf")
     public String enableEbpf;
+
+    @NameInMap("EnableNamespaceAgentVersion")
+    public Boolean enableNamespaceAgentVersion;
+
+    @NameInMap("EnableNamespaceSlsConfig")
+    public Boolean enableNamespaceSlsConfig;
 
     /**
      * <p>Indicates whether to enable the new ARMS feature:</p>
@@ -987,6 +996,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
         return this.acrInstanceId;
     }
 
+    public CreateApplicationShrinkRequest setAgentVersion(String agentVersion) {
+        this.agentVersion = agentVersion;
+        return this;
+    }
+    public String getAgentVersion() {
+        return this.agentVersion;
+    }
+
     public CreateApplicationShrinkRequest setAppDescription(String appDescription) {
         this.appDescription = appDescription;
         return this;
@@ -1137,6 +1154,22 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getEnableEbpf() {
         return this.enableEbpf;
+    }
+
+    public CreateApplicationShrinkRequest setEnableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
+        this.enableNamespaceAgentVersion = enableNamespaceAgentVersion;
+        return this;
+    }
+    public Boolean getEnableNamespaceAgentVersion() {
+        return this.enableNamespaceAgentVersion;
+    }
+
+    public CreateApplicationShrinkRequest setEnableNamespaceSlsConfig(Boolean enableNamespaceSlsConfig) {
+        this.enableNamespaceSlsConfig = enableNamespaceSlsConfig;
+        return this;
+    }
+    public Boolean getEnableNamespaceSlsConfig() {
+        return this.enableNamespaceSlsConfig;
     }
 
     public CreateApplicationShrinkRequest setEnableNewArms(Boolean enableNewArms) {

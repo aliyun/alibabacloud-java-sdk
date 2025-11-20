@@ -5,19 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of applications.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListApplicationsForSwimmingLaneResponseBodyData> data;
 
+    /**
+     * <p>The status code. Value values:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> section in this topic.</li>
+     * </ul>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>The message returned. The following limits are imposed on the ID:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>success</strong> is returned.</li>
+     * <li>An error code is returned when a request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,6 +49,8 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */
@@ -32,6 +58,12 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the list of application instances was queried. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The instance groups were obtained.</li>
+     * <li><strong>false</strong>: The instance groups failed to be obtained.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +125,8 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
 
     public static class ListApplicationsForSwimmingLaneResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
          */
@@ -100,6 +134,8 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo-app</p>
          */
@@ -107,6 +143,8 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The ID of the baseline application.</p>
+         * 
          * <strong>example:</strong>
          * <p>8c573618-8d72-4407-baf4-f7b64b******</p>
          */
@@ -114,6 +152,8 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         public String baseAppId;
 
         /**
+         * <p>The name of the baseline application.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -121,6 +161,8 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         public String baseAppName;
 
         /**
+         * <p>The ID of the MSE instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>mse-cn-hvm47******</p>
          */
@@ -128,6 +170,8 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         public String mseAppId;
 
         /**
+         * <p>MSE Instance Name</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -135,12 +179,17 @@ public class ListApplicationsForSwimmingLaneResponseBody extends TeaModel {
         public String mseAppName;
 
         /**
+         * <p>The ID of the namespace to which the MSE instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>sae-test</p>
          */
         @NameInMap("MseNamespaceId")
         public String mseNamespaceId;
 
+        /**
+         * <p>The canary tag configured for the application.</p>
+         */
         @NameInMap("ServiceTags")
         public java.util.Map<String, String> serviceTags;
 

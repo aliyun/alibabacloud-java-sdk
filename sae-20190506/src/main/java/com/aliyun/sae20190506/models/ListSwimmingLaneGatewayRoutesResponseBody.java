@@ -5,19 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Responses.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSwimmingLaneGatewayRoutesResponseBodyData> data;
 
+    /**
+     * <p>The status code. Value values:</p>
+     * <ul>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>Additional information. Valid values:</p>
+     * <ul>
+     * <li>The error message returned because the request is normal and <strong>success</strong> is returned.</li>
+     * <li>If the request is abnormal, the specific exception error code is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,6 +49,8 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
@@ -32,6 +58,12 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The configurations were obtained.</li>
+     * <li><strong>false</strong>: The configurations failed to be queried.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +71,8 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
      */
@@ -108,6 +142,8 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
 
     public static class ListSwimmingLaneGatewayRoutesResponseBodyDataRoutePredicatePathPredicate extends TeaModel {
         /**
+         * <p>The route URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>/Path</p>
          */
@@ -115,6 +151,8 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The type of the protection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>Header</p>
          */
@@ -145,6 +183,9 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     }
 
     public static class ListSwimmingLaneGatewayRoutesResponseBodyDataRoutePredicate extends TeaModel {
+        /**
+         * <p>The path matching rule.</p>
+         */
         @NameInMap("PathPredicate")
         public ListSwimmingLaneGatewayRoutesResponseBodyDataRoutePredicatePathPredicate pathPredicate;
 
@@ -165,6 +206,8 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
 
     public static class ListSwimmingLaneGatewayRoutesResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>16933</p>
          */
@@ -172,12 +215,17 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The name of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-route</p>
          */
         @NameInMap("RouteName")
         public String routeName;
 
+        /**
+         * <p>The routing rule.</p>
+         */
         @NameInMap("RoutePredicate")
         public ListSwimmingLaneGatewayRoutesResponseBodyDataRoutePredicate routePredicate;
 

@@ -126,7 +126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量重启应用</p>
+     * <p>Restarts applications in batches.</p>
      * 
      * @param request BatchRestartApplicationsRequest
      * @param headers map
@@ -164,7 +164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量重启应用</p>
+     * <p>Restarts applications in batches.</p>
      * 
      * @param request BatchRestartApplicationsRequest
      * @return BatchRestartApplicationsResponse
@@ -490,6 +490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcrAssumeRoleArn", request.acrAssumeRoleArn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appDescription)) {
             query.put("AppDescription", request.appDescription);
         }
@@ -548,6 +552,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableEbpf)) {
             query.put("EnableEbpf", request.enableEbpf);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNamespaceAgentVersion)) {
+            query.put("EnableNamespaceAgentVersion", request.enableNamespaceAgentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNamespaceSlsConfig)) {
+            query.put("EnableNamespaceSlsConfig", request.enableNamespaceSlsConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableNewArms)) {
@@ -845,16 +857,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <h2><a href="#"></a>Precautions</h2>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li>You can create up to five auto scaling policies for one application.</li>
+     * <li>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</li>
+     * <li>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</li>
+     * <li>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</li>
+     * <li>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Null</p>
+     * <p>Creates an auto scaling policy for an application.</p>
      * 
      * @param request CreateApplicationScalingRuleRequest
      * @param headers map
@@ -920,16 +933,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <h2><a href="#"></a>Precautions</h2>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li>You can create up to five auto scaling policies for one application.</li>
+     * <li>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</li>
+     * <li>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</li>
+     * <li>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</li>
+     * <li>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Null</p>
+     * <p>Creates an auto scaling policy for an application.</p>
      * 
      * @param request CreateApplicationScalingRuleRequest
      * @return CreateApplicationScalingRuleResponse
@@ -1549,7 +1563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或者更新泳道</p>
+     * <p>Creates or updates a lane.</p>
      * 
      * @param tmpReq CreateOrUpdateSwimmingLaneRequest
      * @param headers map
@@ -1625,7 +1639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或者更新泳道</p>
+     * <p>Creates or updates a lane.</p>
      * 
      * @param request CreateOrUpdateSwimmingLaneRequest
      * @return CreateOrUpdateSwimmingLaneResponse
@@ -1638,7 +1652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或者更新泳道组</p>
+     * <p>Creates or updates a lane group.</p>
      * 
      * @param tmpReq CreateOrUpdateSwimmingLaneGroupRequest
      * @param headers map
@@ -1702,7 +1716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或者更新泳道组</p>
+     * <p>Creates or updates a lane group.</p>
      * 
      * @param request CreateOrUpdateSwimmingLaneGroupRequest
      * @return CreateOrUpdateSwimmingLaneGroupResponse
@@ -2178,7 +2192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes an application instance.</p>
      * 
      * @param request DeleteInstancesRequest
      * @param headers map
@@ -2216,7 +2230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes an application instance.</p>
      * 
      * @param request DeleteInstancesRequest
      * @return DeleteInstancesResponse
@@ -2378,7 +2392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除泳道组</p>
+     * <p>Deletes a lane group.</p>
      * 
      * @param request DeleteSwimmingLaneGroupRequest
      * @param headers map
@@ -2416,7 +2430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除泳道组</p>
+     * <p>Deletes a lane group.</p>
      * 
      * @param request DeleteSwimmingLaneGroupRequest
      * @return DeleteSwimmingLaneGroupResponse
@@ -2612,6 +2626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcrAssumeRoleArn", request.acrAssumeRoleArn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.albIngressReadinessGate)) {
             query.put("AlbIngressReadinessGate", request.albIngressReadinessGate);
         }
@@ -2674,6 +2692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableGreyTagRoute)) {
             query.put("EnableGreyTagRoute", request.enableGreyTagRoute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNamespaceAgentVersion)) {
+            query.put("EnableNamespaceAgentVersion", request.enableNamespaceAgentVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableNewArms)) {
@@ -3261,6 +3283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information of the associated MSE microservice governance application.</p>
+     * 
      * @param request DescribeApplicationMseServiceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3296,6 +3321,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information of the associated MSE microservice governance application.</p>
+     * 
      * @param request DescribeApplicationMseServiceRequest
      * @return DescribeApplicationMseServiceResponse
      */
@@ -3907,6 +3935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.previous)) {
+            query.put("Previous", request.previous);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -4477,7 +4509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询泳道详情</p>
+     * <p>Queries details about swimlanes.</p>
      * 
      * @param request DescribeSwimmingLaneRequest
      * @param headers map
@@ -4519,7 +4551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询泳道详情</p>
+     * <p>Queries details about swimlanes.</p>
      * 
      * @param request DescribeSwimmingLaneRequest
      * @return DescribeSwimmingLaneResponse
@@ -4960,7 +4992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the advanced monitoring feature of Application Real-Time Monitoring Service (ARMS).</p>
+     * <p>Disable ARMS Advanced Edition monitoring.</p>
      * 
      * @param request DowngradeApplicationApmServiceRequest
      * @param headers map
@@ -4994,7 +5026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the advanced monitoring feature of Application Real-Time Monitoring Service (ARMS).</p>
+     * <p>Disable ARMS Advanced Edition monitoring.</p>
      * 
      * @param request DowngradeApplicationApmServiceRequest
      * @return DowngradeApplicationApmServiceResponse
@@ -5576,7 +5608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有泳道组</p>
+     * <p>Queries all lane groups.</p>
      * 
      * @param request ListAllSwimmingLaneGroupsRequest
      * @param headers map
@@ -5610,7 +5642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有泳道组</p>
+     * <p>Queries all lane groups.</p>
      * 
      * @param request ListAllSwimmingLaneGroupsRequest
      * @return ListAllSwimmingLaneGroupsResponse
@@ -5623,7 +5655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有泳道</p>
+     * <p>Queries all swimlanes.</p>
      * 
      * @param request ListAllSwimmingLanesRequest
      * @param headers map
@@ -5661,7 +5693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有泳道</p>
+     * <p>Queries all swimlanes.</p>
      * 
      * @param request ListAllSwimmingLanesRequest
      * @return ListAllSwimmingLanesResponse
@@ -6021,7 +6053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用列表，供全链路灰度拉取应用列表</p>
+     * <p>Obtains the application list for the end-to-end grayscale pull application list.</p>
      * 
      * @param request ListApplicationsForSwimmingLaneRequest
      * @param headers map
@@ -6063,7 +6095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用列表，供全链路灰度拉取应用列表</p>
+     * <p>Obtains the application list for the end-to-end grayscale pull application list.</p>
      * 
      * @param request ListApplicationsForSwimmingLaneRequest
      * @return ListApplicationsForSwimmingLaneResponse
@@ -6660,7 +6692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询泳道可选的网关路由</p>
+     * <p>Query the gateway routes that are available for a lane</p>
      * 
      * @param request ListSwimmingLaneGatewayRoutesRequest
      * @param headers map
@@ -6698,7 +6730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询泳道可选的网关路由</p>
+     * <p>Query the gateway routes that are available for a lane</p>
      * 
      * @param request ListSwimmingLaneGatewayRoutesRequest
      * @return ListSwimmingLaneGatewayRoutesResponse
@@ -6711,7 +6743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有泳道标签列表</p>
+     * <p>Queries all lane tags.</p>
      * 
      * @param request ListSwimmingLaneGroupTagsRequest
      * @param headers map
@@ -6749,7 +6781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有泳道标签列表</p>
+     * <p>Queries all lane tags.</p>
      * 
      * @param request ListSwimmingLaneGroupTagsRequest
      * @return ListSwimmingLaneGroupTagsResponse
@@ -7211,6 +7243,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries whether ARMS monitoring is enabled for a specified application.</p>
+     * 
      * @param request QueryArmsEnableRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7242,6 +7277,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries whether ARMS monitoring is enabled for a specified application.</p>
+     * 
      * @param request QueryArmsEnableRequest
      * @return QueryArmsEnableResponse
      */
@@ -8161,7 +8199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用闲置模式更新</p>
+     * <p>Application Idle Mode Update</p>
      * 
      * @param request UpdateAppModeRequest
      * @param headers map
@@ -8207,7 +8245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用闲置模式更新</p>
+     * <p>Application Idle Mode Update</p>
      * 
      * @param request UpdateAppModeRequest
      * @return UpdateAppModeResponse
@@ -8989,6 +9027,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新命名空间级别sls配置</p>
+     * 
+     * @param request UpdateNamespaceSlsConfigsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNamespaceSlsConfigsResponse
+     */
+    public UpdateNamespaceSlsConfigsResponse updateNamespaceSlsConfigsWithOptions(UpdateNamespaceSlsConfigsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
+            query.put("NameSpaceShortId", request.nameSpaceShortId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
+            query.put("SlsConfigs", request.slsConfigs);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNamespaceSlsConfigs"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/cas/namespace/updateNamespaceSlsConfigs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNamespaceSlsConfigsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新命名空间级别sls配置</p>
+     * 
+     * @param request UpdateNamespaceSlsConfigsRequest
+     * @return UpdateNamespaceSlsConfigsResponse
+     */
+    public UpdateNamespaceSlsConfigsResponse updateNamespaceSlsConfigs(UpdateNamespaceSlsConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateNamespaceSlsConfigsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>cn-beijing:test</p>
      * 
      * @param request UpdateNamespaceVpcRequest
@@ -9117,7 +9210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新泳道的启用属性</p>
+     * <p>Update the enabled property of the swimlane.</p>
      * 
      * @param request UpdateSwimmingLaneEnableAttributeRequest
      * @param headers map
@@ -9163,7 +9256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新泳道的启用属性</p>
+     * <p>Update the enabled property of the swimlane.</p>
      * 
      * @param request UpdateSwimmingLaneEnableAttributeRequest
      * @return UpdateSwimmingLaneEnableAttributeResponse
@@ -9392,7 +9485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</p>
+     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://www.alibabacloud.com/help/zh/arms/application-monitoring/product-overview/billing-overview-1">Billing overview</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables the advanced monitoring feature of Application Real-Time Monitoring Service (ARMS).</p>
@@ -9429,7 +9522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</p>
+     * <p>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://www.alibabacloud.com/help/zh/arms/application-monitoring/product-overview/billing-overview-1">Billing overview</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables the advanced monitoring feature of Application Real-Time Monitoring Service (ARMS).</p>

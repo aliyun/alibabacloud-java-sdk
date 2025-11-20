@@ -5,19 +5,38 @@ import com.aliyun.tea.*;
 
 public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DowngradeApplicationApmServiceResponseBodyData data;
 
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
+     * <p>The message that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -25,16 +44,27 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether ARMS advanced monitoring is disabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
      */
@@ -104,6 +134,12 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
 
     public static class DowngradeApplicationApmServiceResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether ARMS advanced monitoring is disabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

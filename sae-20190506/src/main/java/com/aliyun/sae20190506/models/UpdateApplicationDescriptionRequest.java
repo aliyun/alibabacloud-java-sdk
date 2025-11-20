@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationDescriptionRequest extends TeaModel {
     /**
+     * <p>The new description of the application. The description can be up to 1,024 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateApplicationDescriptionRequest extends TeaModel {
     public String appDescription;
 
     /**
+     * <p>The ID of the application that you want to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

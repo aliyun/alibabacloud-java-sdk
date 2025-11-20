@@ -1078,6 +1078,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AcrInstanceId")
         public String acrInstanceId;
 
+        @NameInMap("AgentVersion")
+        public String agentVersion;
+
         @NameInMap("AlbIngressReadinessGate")
         public String albIngressReadinessGate;
 
@@ -1340,6 +1343,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("EnableIdle")
         public Boolean enableIdle;
+
+        @NameInMap("EnableNamespaceAgentVersion")
+        public Boolean enableNamespaceAgentVersion;
 
         /**
          * <p>Enable new ARMS feature.</p>
@@ -2096,6 +2102,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.acrInstanceId;
         }
 
+        public DescribeApplicationConfigResponseBodyData setAgentVersion(String agentVersion) {
+            this.agentVersion = agentVersion;
+            return this;
+        }
+        public String getAgentVersion() {
+            return this.agentVersion;
+        }
+
         public DescribeApplicationConfigResponseBodyData setAlbIngressReadinessGate(String albIngressReadinessGate) {
             this.albIngressReadinessGate = albIngressReadinessGate;
             return this;
@@ -2294,6 +2308,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public Boolean getEnableIdle() {
             return this.enableIdle;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setEnableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
+            this.enableNamespaceAgentVersion = enableNamespaceAgentVersion;
+            return this;
+        }
+        public Boolean getEnableNamespaceAgentVersion() {
+            return this.enableNamespaceAgentVersion;
         }
 
         public DescribeApplicationConfigResponseBodyData setEnableNewArms(Boolean enableNewArms) {

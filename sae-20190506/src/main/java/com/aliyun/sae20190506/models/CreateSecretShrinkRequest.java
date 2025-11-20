@@ -22,6 +22,7 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String secretDataShrink;
 
     /**
+     * <p>The Secret name. The name can contain digits, letters, and underscores (_). The name must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +32,16 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String secretName;
 
     /**
+     * <p>The supported Secret type. Valid values:</p>
+     * <ul>
+     * <li><strong>kubernetes.io/dockerconfigjson</strong>: the Secret for the username and password of the image repository. The Secret is used for authentication when images are pulled during application deployment.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Opaque</li>
+     * <li>kubernetes.io/dockerconfigjson</li>
+     * <li>kubernetes.io/tls</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

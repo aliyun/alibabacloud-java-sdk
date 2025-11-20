@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryArmsEnableRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForSwimmingLaneRequest extends TeaModel {
     /**
+     * <p>The ID of the application group. You can call the <a href="https://help.aliyun.com/document_detail/126249.html">DescribeApplicationGroups</a> operation to obtain the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>b2a8a925-477a-eswa-b823-d5e22500****</p>
      */
@@ -12,6 +14,7 @@ public class ListApplicationsForSwimmingLaneRequest extends TeaModel {
     public Long groupId;
 
     /**
+     * <p>The ID of a namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListApplicationsForSwimmingLaneRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The canary tag</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;alicloud.service.tag&quot;:&quot;gray&quot;}</p>
      */

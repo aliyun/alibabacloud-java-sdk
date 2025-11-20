@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAllSwimmingLaneGroupsRequest extends TeaModel {
     /**
+     * <p>The ID of a namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
      */

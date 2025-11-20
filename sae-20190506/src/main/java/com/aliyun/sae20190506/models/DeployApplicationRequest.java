@@ -22,6 +22,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("AcrInstanceId")
     public String acrInstanceId;
 
+    @NameInMap("AgentVersion")
+    public String agentVersion;
+
     @NameInMap("AlbIngressReadinessGate")
     public String albIngressReadinessGate;
 
@@ -249,6 +252,9 @@ public class DeployApplicationRequest extends TeaModel {
      */
     @NameInMap("EnableGreyTagRoute")
     public Boolean enableGreyTagRoute;
+
+    @NameInMap("EnableNamespaceAgentVersion")
+    public Boolean enableNamespaceAgentVersion;
 
     /**
      * <p>Enable new ARMS features.</p>
@@ -1032,6 +1038,14 @@ public class DeployApplicationRequest extends TeaModel {
         return this.acrInstanceId;
     }
 
+    public DeployApplicationRequest setAgentVersion(String agentVersion) {
+        this.agentVersion = agentVersion;
+        return this;
+    }
+    public String getAgentVersion() {
+        return this.agentVersion;
+    }
+
     public DeployApplicationRequest setAlbIngressReadinessGate(String albIngressReadinessGate) {
         this.albIngressReadinessGate = albIngressReadinessGate;
         return this;
@@ -1182,6 +1196,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public Boolean getEnableGreyTagRoute() {
         return this.enableGreyTagRoute;
+    }
+
+    public DeployApplicationRequest setEnableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
+        this.enableNamespaceAgentVersion = enableNamespaceAgentVersion;
+        return this;
+    }
+    public Boolean getEnableNamespaceAgentVersion() {
+        return this.enableNamespaceAgentVersion;
     }
 
     public DeployApplicationRequest setEnableNewArms(Boolean enableNewArms) {

@@ -22,6 +22,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AcrInstanceId")
     public String acrInstanceId;
 
+    @NameInMap("AgentVersion")
+    public String agentVersion;
+
     /**
      * <p>The description of the template. The description cannot exceed 1,024 characters in length.</p>
      * 
@@ -256,6 +259,12 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("EnableEbpf")
     public String enableEbpf;
+
+    @NameInMap("EnableNamespaceAgentVersion")
+    public Boolean enableNamespaceAgentVersion;
+
+    @NameInMap("EnableNamespaceSlsConfig")
+    public Boolean enableNamespaceSlsConfig;
 
     /**
      * <p>Indicates whether to enable the new ARMS feature:</p>
@@ -987,6 +996,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.acrInstanceId;
     }
 
+    public CreateApplicationRequest setAgentVersion(String agentVersion) {
+        this.agentVersion = agentVersion;
+        return this;
+    }
+    public String getAgentVersion() {
+        return this.agentVersion;
+    }
+
     public CreateApplicationRequest setAppDescription(String appDescription) {
         this.appDescription = appDescription;
         return this;
@@ -1137,6 +1154,22 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getEnableEbpf() {
         return this.enableEbpf;
+    }
+
+    public CreateApplicationRequest setEnableNamespaceAgentVersion(Boolean enableNamespaceAgentVersion) {
+        this.enableNamespaceAgentVersion = enableNamespaceAgentVersion;
+        return this;
+    }
+    public Boolean getEnableNamespaceAgentVersion() {
+        return this.enableNamespaceAgentVersion;
+    }
+
+    public CreateApplicationRequest setEnableNamespaceSlsConfig(Boolean enableNamespaceSlsConfig) {
+        this.enableNamespaceSlsConfig = enableNamespaceSlsConfig;
+        return this;
+    }
+    public Boolean getEnableNamespaceSlsConfig() {
+        return this.enableNamespaceSlsConfig;
     }
 
     public CreateApplicationRequest setEnableNewArms(Boolean enableNewArms) {

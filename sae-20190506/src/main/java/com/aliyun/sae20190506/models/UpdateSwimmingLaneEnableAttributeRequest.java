@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSwimmingLaneEnableAttributeRequest extends TeaModel {
     /**
+     * <p>Lane status:</p>
+     * <ul>
+     * <li>true: enabled</li>
+     * <li>false: disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The ID of the lane group.</p>
+     * 
      * <strong>example:</strong>
      * <p>2074</p>
      */
@@ -19,6 +27,8 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends TeaModel {
     public Long groupId;
 
     /**
+     * <p>The ID of the lane.</p>
+     * 
      * <strong>example:</strong>
      * <p>9637</p>
      */
@@ -26,6 +36,8 @@ public class UpdateSwimmingLaneEnableAttributeRequest extends TeaModel {
     public Long laneId;
 
     /**
+     * <p>The ID of a namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
      */
