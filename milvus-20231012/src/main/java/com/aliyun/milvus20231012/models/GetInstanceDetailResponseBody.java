@@ -595,6 +595,36 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceDetailResponseBodyDataVSwitches extends TeaModel {
+        @NameInMap("VswId")
+        public String vswId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static GetInstanceDetailResponseBodyDataVSwitches build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceDetailResponseBodyDataVSwitches self = new GetInstanceDetailResponseBodyDataVSwitches();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceDetailResponseBodyDataVSwitches setVswId(String vswId) {
+            this.vswId = vswId;
+            return this;
+        }
+        public String getVswId() {
+            return this.vswId;
+        }
+
+        public GetInstanceDetailResponseBodyDataVSwitches setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
     public static class GetInstanceDetailResponseBodyData extends TeaModel {
         /**
          * <p>AclId for Public Network Access Control.</p>
@@ -654,6 +684,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("EnableHa")
         public Boolean enableHa;
 
+        @NameInMap("Encrypted")
+        public String encrypted;
+
         /**
          * <p>The expiration time.</p>
          * 
@@ -689,8 +722,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        @NameInMap("KmsKeyId")
+        public String kmsKeyId;
+
         @NameInMap("MeasureConfig")
         public GetInstanceDetailResponseBodyDataMeasureConfig measureConfig;
+
+        @NameInMap("MultiZoneMode")
+        public String multiZoneMode;
 
         /**
          * <strong>example:</strong>
@@ -800,6 +839,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("UserConfig")
         public String userConfig;
 
+        @NameInMap("VSwitches")
+        public java.util.List<GetInstanceDetailResponseBodyDataVSwitches> vSwitches;
+
         /**
          * <p>The kernel version.</p>
          * 
@@ -897,6 +939,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             return this.enableHa;
         }
 
+        public GetInstanceDetailResponseBodyData setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
         public GetInstanceDetailResponseBodyData setExpireTime(Long expireTime) {
             this.expireTime = expireTime;
             return this;
@@ -921,12 +971,28 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             return this.instanceStatus;
         }
 
+        public GetInstanceDetailResponseBodyData setKmsKeyId(String kmsKeyId) {
+            this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
+        }
+
         public GetInstanceDetailResponseBodyData setMeasureConfig(GetInstanceDetailResponseBodyDataMeasureConfig measureConfig) {
             this.measureConfig = measureConfig;
             return this;
         }
         public GetInstanceDetailResponseBodyDataMeasureConfig getMeasureConfig() {
             return this.measureConfig;
+        }
+
+        public GetInstanceDetailResponseBodyData setMultiZoneMode(String multiZoneMode) {
+            this.multiZoneMode = multiZoneMode;
+            return this;
+        }
+        public String getMultiZoneMode() {
+            return this.multiZoneMode;
         }
 
         public GetInstanceDetailResponseBodyData setNodeType(String nodeType) {
@@ -1023,6 +1089,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public String getUserConfig() {
             return this.userConfig;
+        }
+
+        public GetInstanceDetailResponseBodyData setVSwitches(java.util.List<GetInstanceDetailResponseBodyDataVSwitches> vSwitches) {
+            this.vSwitches = vSwitches;
+            return this;
+        }
+        public java.util.List<GetInstanceDetailResponseBodyDataVSwitches> getVSwitches() {
+            return this.vSwitches;
         }
 
         public GetInstanceDetailResponseBodyData setVersion(String version) {
