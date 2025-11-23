@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAbacPoliciesResponseBody extends TeaModel {
     /**
+     * <p>The error code that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,16 +14,23 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The details of the permission policies.</p>
+     */
     @NameInMap("PolicyList")
     public java.util.List<ListAbacPoliciesResponseBodyPolicyList> policyList;
 
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
@@ -29,6 +38,12 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +51,8 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */
@@ -43,6 +60,8 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The total number of policies.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -112,6 +131,8 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
 
     public static class ListAbacPoliciesResponseBodyPolicyList extends TeaModel {
         /**
+         * <p>The content of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;Statement&quot;: [
@@ -135,6 +156,8 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         public String abacPolicyContent;
 
         /**
+         * <p>The description of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -142,6 +165,8 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         public String abacPolicyDesc;
 
         /**
+         * <p>The ID of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>12****</p>
          */
@@ -149,6 +174,8 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         public Long abacPolicyId;
 
         /**
+         * <p>The name of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>policy_test</p>
          */
@@ -156,6 +183,8 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         public String abacPolicyName;
 
         /**
+         * <p>The source of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>USER_DEFINE</p>
          */
@@ -163,6 +192,8 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         public String abacPolicySource;
 
         /**
+         * <p>The ID of the user who created the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>51****</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
+    /**
+     * <p>The dataset.</p>
+     */
     @NameInMap("Data")
     public ListWorkspacesResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UserNotExist</p>
      */
@@ -15,6 +20,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The total number of workspaces that meet the condition, which is the same as the TotalCount parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>NextToken does not take effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
      */
@@ -36,6 +47,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE214ECD-4330-503A-82F0-FFB03975****</p>
      */
@@ -43,6 +56,12 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request succeeded.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +69,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of workspaces that meet the conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -127,6 +148,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyDataBaseWorkspaces extends TeaModel {
         /**
+         * <p>Whether the current user has joined the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,6 +157,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Boolean alreadyJoined;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -141,6 +166,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long creatorId;
 
         /**
+         * <p>The nickname of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>work*****</p>
          */
@@ -148,6 +175,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String creatorNickName;
 
         /**
+         * <p>The Alibaba Cloud account UID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1344****</p>
          */
@@ -155,6 +184,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String creatorUid;
 
         /**
+         * <p>The description of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test</p>
          */
@@ -162,6 +193,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01 00:00:00</p>
          */
@@ -169,6 +202,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01 00:00:00</p>
          */
@@ -176,6 +211,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace-xxxx</p>
          */
@@ -183,6 +220,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123****</p>
          */
@@ -190,6 +229,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long ownerId;
 
         /**
+         * <p>The nickname of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>hel****</p>
          */
@@ -197,6 +238,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String ownerNickName;
 
         /**
+         * <p>The Alibaba Cloud UID of the owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>15608564799****</p>
          */
@@ -204,6 +247,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String ownerUid;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -211,6 +256,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The ID of the service account.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -218,6 +265,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long serviceAccountId;
 
         /**
+         * <p>The nickname of the service account.</p>
+         * 
          * <strong>example:</strong>
          * <p>testname</p>
          */
@@ -225,6 +274,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String serviceAccountNickName;
 
         /**
+         * <p>The Alibaba Cloud account UID of the service account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1422****</p>
          */
@@ -232,6 +283,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String serviceAccountUid;
 
         /**
+         * <p>The ID of the tenant to which the workspace belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>23456</p>
          */
@@ -239,6 +292,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-25fl3qjqb****</p>
          */
@@ -246,6 +301,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8652340494****</p>
          */
@@ -253,6 +310,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Long workspaceId;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-workspace</p>
          */

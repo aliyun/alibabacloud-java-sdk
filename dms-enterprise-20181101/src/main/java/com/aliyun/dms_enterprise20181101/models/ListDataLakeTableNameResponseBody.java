@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeTableNameResponseBody extends TeaModel {
     /**
+     * <p>The error code that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class ListDataLakeTableNameResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class ListDataLakeTableNameResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ListDataLakeTableNameResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The information about the token.</p>
+     * 
      * <strong>example:</strong>
      * <p>NesLoKLEdIZrKhDT7I2gS****</p>
      */
@@ -33,6 +41,8 @@ public class ListDataLakeTableNameResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>C5B8E84B-42B6-4374-AD5A-6264E1753378</p>
      */
@@ -40,12 +50,21 @@ public class ListDataLakeTableNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The table names.</p>
+     */
     @NameInMap("TableNameList")
     public java.util.List<String> tableNameList;
 

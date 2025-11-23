@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PreviewWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
@@ -26,12 +32,21 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The details of the workflow.</p>
+     */
     @NameInMap("WorkflowDetail")
     public PreviewWorkflowResponseBodyWorkflowDetail workflowDetail;
 
@@ -82,6 +97,8 @@ public class PreviewWorkflowResponseBody extends TeaModel {
 
     public static class PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNodeAuditUserListAuditUser extends TeaModel {
         /**
+         * <p>The nickname of the approver.</p>
+         * 
          * <strong>example:</strong>
          * <p>Owner</p>
          */
@@ -89,6 +106,8 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         public String nickName;
 
         /**
+         * <p>The name of the approver.</p>
+         * 
          * <strong>example:</strong>
          * <p>db_test</p>
          */
@@ -96,6 +115,8 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         public String realName;
 
         /**
+         * <p>The ID of the approver.</p>
+         * 
          * <strong>example:</strong>
          * <p>16***</p>
          */
@@ -153,13 +174,21 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     }
 
     public static class PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNode extends TeaModel {
+        /**
+         * <p>The approvers.</p>
+         */
         @NameInMap("AuditUserList")
         public PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNodeAuditUserList auditUserList;
 
+        /**
+         * <p>The remarks of the approval node.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>The name of the approval node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Owner</p>
          */
@@ -167,6 +196,14 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The type of the approval node.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>USER_LIST: The approval node is created by a user.</li>
+         * <li>UNKNOWN: The source of the approval node is unknown.</li>
+         * <li>SYS: The approval node is predefined by the system.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SYS</p>
          */
@@ -232,12 +269,21 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     }
 
     public static class PreviewWorkflowResponseBodyWorkflowDetail extends TeaModel {
+        /**
+         * <p>The remarks of the approval template.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The name of the approval template.</p>
+         */
         @NameInMap("WfCateName")
         public String wfCateName;
 
+        /**
+         * <p>The approval nodes.</p>
+         */
         @NameInMap("WorkflowNodeList")
         public PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeList workflowNodeList;
 

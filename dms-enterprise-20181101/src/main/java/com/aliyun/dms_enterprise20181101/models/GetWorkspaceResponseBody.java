@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetWorkspaceResponseBodyData data;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF****</p>
      */
@@ -22,6 +29,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,6 +80,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyData extends TeaModel {
         /**
+         * <p>The description of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test</p>
          */
@@ -74,6 +89,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The owner ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345****</p>
          */
@@ -81,6 +98,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String ownerId;
 
         /**
+         * <p>The ID of the region to which the workspace belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -88,6 +107,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the service account.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345****</p>
          */
@@ -95,6 +116,11 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String serviceAccountId;
 
         /**
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>3322****</p>
          */
@@ -102,6 +128,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Long tid;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxxx</p>
          */
@@ -109,6 +137,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>863020290155****</p>
          */
@@ -116,6 +146,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Long workspaceId;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace_xxx</p>
          */

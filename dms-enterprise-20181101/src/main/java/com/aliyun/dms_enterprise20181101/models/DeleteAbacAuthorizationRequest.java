@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAbacAuthorizationRequest extends TeaModel {
     /**
+     * <p>The authorization ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class DeleteAbacAuthorizationRequest extends TeaModel {
     public Long authorizationId;
 
     /**
+     * <p>The type of object to which you want to attach the policy.********</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>USER</li>
+     * <li>ROLE</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +30,11 @@ public class DeleteAbacAuthorizationRequest extends TeaModel {
     public String identityType;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */

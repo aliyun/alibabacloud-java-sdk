@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -12,6 +14,8 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>Specified parameter Rows is not valid.</p>
      */
@@ -19,6 +23,8 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B43AD641-49C2-5299-9E06-1B37EC1B****</p>
      */
@@ -26,16 +32,27 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of tables in the data lake.</p>
+     */
     @NameInMap("TablebaseInfoList")
     public java.util.List<DLTablebaseInfo> tablebaseInfoList;
 
     /**
+     * <p>The number of tables that meet the conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

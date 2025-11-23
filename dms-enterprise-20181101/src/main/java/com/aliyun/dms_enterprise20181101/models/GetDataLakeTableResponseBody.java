@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataLakeTableResponseBody extends TeaModel {
     /**
+     * <p>The error code that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -12,6 +14,8 @@ public class GetDataLakeTableResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>Unknown server error</p>
      */
@@ -19,6 +23,8 @@ public class GetDataLakeTableResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
      */
@@ -26,12 +32,21 @@ public class GetDataLakeTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The information of the table.</p>
+     */
     @NameInMap("Table")
     public DLTable table;
 

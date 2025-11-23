@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
+    /**
+     * <p>The names of the databases on which the user has permissions.</p>
+     */
     @NameInMap("Databases")
     public java.util.List<ListAuthorizedDatabasesForUserResponseBodyDatabases> databases;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>012AE0B5-4B52-532F-BD7C-1EE9F182089B</p>
      */
@@ -37,6 +42,8 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
 
     public static class ListAuthorizedDatabasesForUserResponseBodyDatabasesPermissionDetail extends TeaModel {
         /**
+         * <p>The type of object on which the operation is performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATABASE</p>
          */
@@ -44,16 +51,28 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         public String dsType;
 
         /**
+         * <p>The time when the permissions expire.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-06 10:00:00</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <p>If the permission source is a permission policy, the value of this parameter includes the policy name and the operations that are allowed for the user.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>The type of the permission. Valid values:</p>
+         * <ul>
+         * <li><strong>QUERY</strong>: the query permission</li>
+         * <li><strong>EXPORT</strong>: the data export permission</li>
+         * <li><strong>CORRECT</strong>: the data change permission</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CORRECT</p>
          */
@@ -101,6 +120,8 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
 
     public static class ListAuthorizedDatabasesForUserResponseBodyDatabases extends TeaModel {
         /**
+         * <p>The database ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>254****</p>
          */
@@ -108,6 +129,8 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         public String dbId;
 
         /**
+         * <p>The engine of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>MYSQL</p>
          */
@@ -115,6 +138,8 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         public String dbType;
 
         /**
+         * <p>The type of the environment in which the database instance is deployed.</p>
+         * 
          * <strong>example:</strong>
          * <p>product</p>
          */
@@ -122,6 +147,8 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>235****</p>
          */
@@ -129,16 +156,27 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li><strong>true.</strong>: The database is a logical database</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The details of permissions. The format of the permission details varies with the permission source. For example, if the permission source is a normal permission, the following parameters are returned.</p>
+         */
         @NameInMap("PermissionDetail")
         public ListAuthorizedDatabasesForUserResponseBodyDatabasesPermissionDetail permissionDetail;
 
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>poc_testdb</p>
          */
@@ -146,6 +184,8 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         public String schemaName;
 
         /**
+         * <p>The name that is used to search for the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>poc</p>
          */
@@ -153,6 +193,8 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
         public String searchName;
 
         /**
+         * <p>The user IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>51****</p>
          */

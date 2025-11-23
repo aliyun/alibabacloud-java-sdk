@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataLakeCatalogRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class GetDataLakeCatalogRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The region where the data lake resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,12 +31,20 @@ public class GetDataLakeCatalogRequest extends TeaModel {
     public String dataRegion;
 
     /**
+     * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12****</p>
+     */
     @NameInMap("WorkspaceId")
     public Long workspaceId;
 

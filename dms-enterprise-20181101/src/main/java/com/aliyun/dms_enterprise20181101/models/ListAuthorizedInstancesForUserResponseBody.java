@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
+    /**
+     * <p>The list of instances on which the user has permissions.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListAuthorizedInstancesForUserResponseBodyInstances> instances;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>B7DB89CC-017D-5503-8953-38FFE241A618</p>
      */
@@ -37,6 +42,8 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
 
     public static class ListAuthorizedInstancesForUserResponseBodyInstancesPermissionDetail extends TeaModel {
         /**
+         * <p>The type of object on which the operation is performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATABASE</p>
          */
@@ -44,16 +51,28 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         public String dsType;
 
         /**
+         * <p>The time when the permission expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-06 10:00:00</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <p>If the permission source is a permission policy, the value of this parameter includes the policy name and the operations that are allowed for the user.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>The type of the permission. Valid values:</p>
+         * <ul>
+         * <li><strong>QUERY</strong>: the query permission</li>
+         * <li><strong>EXPORT</strong>: the data export permission</li>
+         * <li><strong>CORRECT</strong>: the data change permission</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CORRECT</p>
          */
@@ -101,6 +120,8 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
 
     public static class ListAuthorizedInstancesForUserResponseBodyInstances extends TeaModel {
         /**
+         * <p>The database engine that the instance runs.</p>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -108,6 +129,8 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         public String dbType;
 
         /**
+         * <p>The type of the environment to which the database instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>product</p>
          */
@@ -115,6 +138,8 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         public String envType;
 
         /**
+         * <p>The endpoint that is used to connect to the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-2zex9lrc0gz0****.mysql.rds.aliyuncs.com</p>
          */
@@ -122,6 +147,8 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The alias of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>DMS_TEST</p>
          */
@@ -129,16 +156,23 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         public String instanceAlias;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>21****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The details of permissions. The format of the permission details varies with the permission source. For example, if the permission source is a normal permission, the following parameters are returned.</p>
+         */
         @NameInMap("PermissionDetail")
         public ListAuthorizedInstancesForUserResponseBodyInstancesPermissionDetail permissionDetail;
 
         /**
+         * <p>The port number that is used to connect to the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>3306</p>
          */
@@ -146,6 +180,8 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         public String port;
 
         /**
+         * <p>The user IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>51****</p>
          */
@@ -153,6 +189,8 @@ public class ListAuthorizedInstancesForUserResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The user name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_test</p>
          */

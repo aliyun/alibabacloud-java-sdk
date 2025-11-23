@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the workspace is deleted successfully.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +23,8 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is called successfully.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

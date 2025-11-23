@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>C51420E3-144A-4A94-B473-8662FCF4****</p>
      */
@@ -19,6 +23,12 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

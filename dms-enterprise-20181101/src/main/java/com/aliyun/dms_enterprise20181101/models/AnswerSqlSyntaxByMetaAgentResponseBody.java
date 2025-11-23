@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class AnswerSqlSyntaxByMetaAgentResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public AnswerSqlSyntaxByMetaAgentResponseBodyData data;
 
     /**
+     * <p>The error code that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class AnswerSqlSyntaxByMetaAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -31,6 +38,12 @@ public class AnswerSqlSyntaxByMetaAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +97,8 @@ public class AnswerSqlSyntaxByMetaAgentResponseBody extends TeaModel {
 
     public static class AnswerSqlSyntaxByMetaAgentResponseBodyData extends TeaModel {
         /**
+         * <p>The answer to the question.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql数据库类型下...</p>
          */
@@ -91,6 +106,8 @@ public class AnswerSqlSyntaxByMetaAgentResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f63a6eed-0e3c-4564-8533-b1295db8d6ff</p>
          */

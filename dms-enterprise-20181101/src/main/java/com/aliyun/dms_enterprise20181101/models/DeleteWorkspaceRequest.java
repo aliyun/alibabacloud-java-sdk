@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceRequest extends TeaModel {
     /**
+     * <p>The ID of the DMS workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

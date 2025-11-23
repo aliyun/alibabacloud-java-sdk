@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EditMetaKnowledgeAssetRequest extends TeaModel {
     /**
+     * <p>Business knowledge content edited by users.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class EditMetaKnowledgeAssetRequest extends TeaModel {
     public String assetDescription;
 
     /**
+     * <p>The name of the field. This parameter is used when the edited content is a field.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_column</p>
      */
@@ -21,6 +24,7 @@ public class EditMetaKnowledgeAssetRequest extends TeaModel {
     public String columnName;
 
     /**
+     * <p>The ID of the physical database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class EditMetaKnowledgeAssetRequest extends TeaModel {
     public Integer dbId;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class EditMetaKnowledgeAssetRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The schema name of the table, which is required only for SQL Server instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>dbo</p>
      */

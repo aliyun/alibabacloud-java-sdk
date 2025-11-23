@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDbExportDownloadURLResponseBody extends TeaModel {
+    /**
+     * <p>The download URL of the exported file.</p>
+     */
     @NameInMap("DownloadURLResult")
     public GetDbExportDownloadURLResponseBodyDownloadURLResult downloadURLResult;
 
     /**
+     * <p>The error code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
@@ -29,6 +38,12 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request succeeded.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,12 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
 
     public static class GetDbExportDownloadURLResponseBodyDownloadURLResult extends TeaModel {
         /**
+         * <p>Indicates whether export results are available for download. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Export results are available for download.</li>
+         * <li><strong>false</strong>: No export results are available for download.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +110,8 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         public Boolean hasResult;
 
         /**
+         * <p>The message that indicates an exception.</p>
+         * 
          * <strong>example:</strong>
          * <p>tip message</p>
          */
@@ -96,6 +119,8 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
         public String tipMessage;
 
         /**
+         * <p>The download URL of the exported file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip">https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip</a></p>
          */

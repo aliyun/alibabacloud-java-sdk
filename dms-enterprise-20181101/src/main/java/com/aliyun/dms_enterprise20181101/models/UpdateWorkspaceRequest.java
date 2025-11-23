@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
      */
@@ -12,6 +14,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The new description of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public Long workspaceId;
 
     /**
+     * <p>The new name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace_xxx</p>
      */

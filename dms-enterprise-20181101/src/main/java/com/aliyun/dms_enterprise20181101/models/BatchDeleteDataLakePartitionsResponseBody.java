@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteDataLakePartitionsResponseBody extends TeaModel {
     /**
+     * <p>The error code that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,16 +14,23 @@ public class BatchDeleteDataLakePartitionsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The error messages.</p>
+     */
     @NameInMap("PartitionErrors")
     public java.util.List<PartitionError> partitionErrors;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>5B96E35F-A58E-5399-9041-09CF9A1E46EA</p>
      */
@@ -29,6 +38,12 @@ public class BatchDeleteDataLakePartitionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

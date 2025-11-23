@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDataLakeCatalogResponseBody extends TeaModel {
+    /**
+     * <p>The list of catalogs.</p>
+     */
     @NameInMap("CataLogList")
     public java.util.List<DLCatalog> cataLogList;
 
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -15,6 +20,8 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The ID of the request. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>E76DD2E7-EBAC-5724-B163-19AAC233F8F2</p>
      */
@@ -29,6 +38,12 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

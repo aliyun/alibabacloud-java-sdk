@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddAuthorityTemplateItemsShrinkRequest extends TeaModel {
     /**
+     * <p>The resources that you want to add to the permission template.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Items")
     public String itemsShrink;
 
     /**
+     * <p>The ID of the permission template. You can call the <a href="https://help.aliyun.com/document_detail/600705.html">CreateAuthorityTemplate</a> operation to obtain the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,11 @@ public class AddAuthorityTemplateItemsShrinkRequest extends TeaModel {
     public Long templateId;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */

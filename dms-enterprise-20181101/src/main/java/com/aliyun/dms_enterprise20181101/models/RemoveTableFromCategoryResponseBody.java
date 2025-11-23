@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveTableFromCategoryResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class RemoveTableFromCategoryResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class RemoveTableFromCategoryResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>19DA51A9-AC3E-5C36-8351-07EBCD2B89A1</p>
      */
@@ -26,6 +32,12 @@ public class RemoveTableFromCategoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

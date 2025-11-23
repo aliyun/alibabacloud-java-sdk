@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTableColumnsResponseBody extends TeaModel {
+    /**
+     * <p>The details about fields in the table.</p>
+     */
     @NameInMap("ColumnList")
     public ListTableColumnsResponseBodyColumnList columnList;
 
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
@@ -29,6 +38,12 @@ public class ListTableColumnsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,12 @@ public class ListTableColumnsResponseBody extends TeaModel {
 
     public static class ListTableColumnsResponseBodyColumnListColumn extends TeaModel {
         /**
+         * <p>Indicates whether the field is an auto-increment field. Valid values:</p>
+         * <ul>
+         * <li>true: The field is an auto-increment field.</li>
+         * <li>false: The field is not an auto-increment field.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -89,6 +110,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public Boolean autoIncrement;
 
         /**
+         * <p>The ID of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -96,6 +119,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public String columnId;
 
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>c1</p>
          */
@@ -103,6 +128,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public String columnName;
 
         /**
+         * <p>The data type of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>varchar</p>
          */
@@ -110,6 +137,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public String columnType;
 
         /**
+         * <p>The length of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -117,6 +146,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public Long dataLength;
 
         /**
+         * <p>The number of valid digits for the column.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -124,6 +155,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public Integer dataPrecision;
 
         /**
+         * <p>The number of decimal places of the field data.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -131,6 +164,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public Integer dataScale;
 
         /**
+         * <p>The default value of the column.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaa</p>
          */
@@ -138,6 +173,8 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The description of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>column desc</p>
          */
@@ -145,6 +182,14 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The type of the masking algorithm that is used for the field. Valid values:</p>
+         * <ul>
+         * <li>null: No masking algorithm is used.</li>
+         * <li>DEFAULT: A full masking algorithm is used.</li>
+         * <li>FIX_POS: The fixed position is masked.</li>
+         * <li>FIX_CHAR: The fixed characters are replaced.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NULL</p>
          */
@@ -152,6 +197,12 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public String functionType;
 
         /**
+         * <p>Indicates whether the field can be empty. Valid values:</p>
+         * <ul>
+         * <li>true: The field can be empty.</li>
+         * <li>false: The field cannot be empty.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -159,6 +210,13 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public Boolean nullable;
 
         /**
+         * <p>The security level of the field. Valid values:</p>
+         * <ul>
+         * <li>INNER: The field is an internal field but not sensitive.</li>
+         * <li>SENSITIVE: The field is sensitive.</li>
+         * <li>CONFIDENTIAL: The field is a confidential column.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INNER</p>
          */
@@ -166,6 +224,12 @@ public class ListTableColumnsResponseBody extends TeaModel {
         public String securityLevel;
 
         /**
+         * <p>Indicates whether the field is a sensitive column. Valid values:</p>
+         * <ul>
+         * <li>true: The field is a sensitive field.</li>
+         * <li>false: The field is not a sensitive field.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

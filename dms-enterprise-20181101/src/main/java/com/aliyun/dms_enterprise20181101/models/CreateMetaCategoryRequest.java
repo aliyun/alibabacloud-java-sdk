@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMetaCategoryRequest extends TeaModel {
     /**
+     * <p>The name of the category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateMetaCategoryRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the parent category. The new category is created under this parent category. If this value is left empty, the new category is of the first level.</p>
+     * 
      * <strong>example:</strong>
      * <p>30000322682</p>
      */
@@ -21,6 +24,8 @@ public class CreateMetaCategoryRequest extends TeaModel {
     public Long parentCategoryId;
 
     /**
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */

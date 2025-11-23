@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListAbacAuthorizationsResponseBody extends TeaModel {
+    /**
+     * <p>The list of users to which the specified policy is attached.</p>
+     */
     @NameInMap("AuthorizationList")
     public java.util.List<ListAbacAuthorizationsResponseBodyAuthorizationList> authorizationList;
 
     /**
+     * <p>The error code that is returned when the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned when the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
      */
@@ -29,6 +38,12 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +51,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The number of objects to which the policy is attached.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -97,6 +114,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
 
     public static class ListAbacAuthorizationsResponseBodyAuthorizationList extends TeaModel {
         /**
+         * <p>The authorization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>32****</p>
          */
@@ -104,6 +123,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         public Long authorizationId;
 
         /**
+         * <p>The ID of the object to which the policy is attached.</p>
+         * 
          * <strong>example:</strong>
          * <p>51****</p>
          */
@@ -111,6 +132,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         public Long identityId;
 
         /**
+         * <p>The name of the object to which the policy is attached.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_user</p>
          */
@@ -118,6 +141,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         public String identityName;
 
         /**
+         * <p>The type of the object to which the policy is attached.</p>
+         * 
          * <strong>example:</strong>
          * <p>USER</p>
          */
@@ -125,6 +150,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         public String identityType;
 
         /**
+         * <p>The ID of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>12****</p>
          */
@@ -132,6 +159,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         public Long policyId;
 
         /**
+         * <p>The name of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>policy_test</p>
          */
@@ -139,6 +168,8 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         public String policyName;
 
         /**
+         * <p>The source of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>USER_DEFINE</p>
          */

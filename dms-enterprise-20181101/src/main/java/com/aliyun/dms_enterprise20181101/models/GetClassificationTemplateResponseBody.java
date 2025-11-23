@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetClassificationTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The information about the classification template that is associated to the instance.</p>
+     */
     @NameInMap("ClassificationResourceTemplateMap")
     public GetClassificationTemplateResponseBodyClassificationResourceTemplateMap classificationResourceTemplateMap;
 
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
      */
@@ -29,6 +38,12 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
 
     public static class GetClassificationTemplateResponseBodyClassificationResourceTemplateMap extends TeaModel {
         /**
+         * <p>The ID of the resource. The supported resource type is INSTANCE. The resource ID corresponds to the value of InstanceId. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> operation to obtain the value of InstanceId.</p>
+         * 
          * <strong>example:</strong>
          * <p>24****</p>
          */
@@ -89,6 +106,8 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
         public Long resourceId;
 
         /**
+         * <p>The resource type. The value is fixed as <strong>INSTANCE</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
          */
@@ -96,6 +115,8 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The ID of the classification and grading template.</p>
+         * 
          * <strong>example:</strong>
          * <p>3***</p>
          */
@@ -103,6 +124,12 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
         public Long templateId;
 
         /**
+         * <p>The type of the classification and grading template. Valid values:</p>
+         * <ul>
+         * <li><strong>INNER</strong>: a built-in template.</li>
+         * <li><strong>USER_DEFINE</strong>: a custom template.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INNER</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     /**
+     * <p>The catalog name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The region where the data lake resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public String dataRegion;
 
     /**
+     * <p>The name of the database that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,12 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>Specifies whether to ignore this exception if the name of the new partition is the same as that of an existing partition. Valid values:</p>
+     * <ul>
+     * <li>true: Ignore the exception.</li>
+     * <li>false: Do not ignore the exception.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +48,8 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public Boolean ifNotExists;
 
     /**
+     * <p>Specifies whether to return partition information. If the value is true, Partitions is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -46,12 +57,14 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public Boolean needResult;
 
     /**
+     * <p>The information about the new partitions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PartitionInputs")
     public String partitionInputsShrink;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,12 +74,23 @@ public class BatchCreateDataLakePartitionsShrinkRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12****</p>
+     */
     @NameInMap("WorkspaceId")
     public Long workspaceId;
 

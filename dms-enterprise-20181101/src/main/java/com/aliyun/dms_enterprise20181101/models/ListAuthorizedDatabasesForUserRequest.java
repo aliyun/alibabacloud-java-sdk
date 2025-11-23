@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedDatabasesForUserRequest extends TeaModel {
     /**
+     * <p>The type of databases. Valid values:</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>DRDS</strong></li>
+     * <li><strong>OceanBase</strong></li>
+     * <li><strong>Mongo</strong></li>
+     * <li><strong>Redis</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
@@ -12,6 +24,18 @@ public class ListAuthorizedDatabasesForUserRequest extends TeaModel {
     public String dbType;
 
     /**
+     * <p>The type of the environment in which the database instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>product</strong>: production environment.</li>
+     * <li><strong>dev</strong>: development environment.</li>
+     * <li><strong>pre</strong>: pre-release environment.</li>
+     * <li><strong>test</strong>: test environment.</li>
+     * <li><strong>sit</strong>: system integration testing (SIT) environment.</li>
+     * <li><strong>uat</strong>: user acceptance testing (UAT) environment.</li>
+     * <li><strong>pet</strong>: stress testing environment.</li>
+     * <li><strong>stag</strong>: staging environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>product</p>
      */
@@ -19,6 +43,12 @@ public class ListAuthorizedDatabasesForUserRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>Specifies whether the database is a logical database. Valid values:</p>
+     * <ul>
+     * <li><strong>true.</strong>: The database is a logical database</li>
+     * <li><strong>false</strong>: The database is a physical database.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +56,8 @@ public class ListAuthorizedDatabasesForUserRequest extends TeaModel {
     public Boolean logic;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +65,8 @@ public class ListAuthorizedDatabasesForUserRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,6 +74,8 @@ public class ListAuthorizedDatabasesForUserRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>policy_test</p>
      */
@@ -47,6 +83,8 @@ public class ListAuthorizedDatabasesForUserRequest extends TeaModel {
     public String searchKey;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */
@@ -54,6 +92,7 @@ public class ListAuthorizedDatabasesForUserRequest extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The ID of the user. You can call the <a href="https://help.aliyun.com/document_detail/465816.html">GetUser</a> operation to query the user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

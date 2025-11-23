@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorityTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The permission templates.</p>
+     */
     @NameInMap("AuthorityTemplateViewList")
     public ListAuthorityTemplateResponseBodyAuthorityTemplateViewList authorityTemplateViewList;
 
     /**
+     * <p>The error code that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>31853A2B-DC9D-5B39-8492-D2AC8BCF550E</p>
      */
@@ -29,6 +38,12 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +51,8 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */
@@ -43,6 +60,8 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     public Long tid;
 
     /**
+     * <p>The total number of permission templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -112,6 +131,8 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
 
     public static class ListAuthorityTemplateResponseBodyAuthorityTemplateViewListAuthorityTemplateView extends TeaModel {
         /**
+         * <p>The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-10-26 11:37:47</p>
          */
@@ -119,19 +140,29 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the user who created the permission template.</p>
+         * 
          * <strong>example:</strong>
          * <p>522****</p>
          */
         @NameInMap("CreatorId")
         public Long creatorId;
 
+        /**
+         * <p>The description of the permission template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the permission template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The ID of the permission template.</p>
+         * 
          * <strong>example:</strong>
          * <p>2592</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAuthorityTemplateRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,28 @@ public class ListAuthorityTemplateRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li>5</li>
+     * <li>10</li>
+     * <li>20</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The keyword that is used to search for permission templates.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
+     * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */

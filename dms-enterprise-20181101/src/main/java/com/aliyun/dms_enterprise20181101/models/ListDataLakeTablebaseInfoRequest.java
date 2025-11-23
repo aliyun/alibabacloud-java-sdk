@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     /**
+     * <p>The name of the data catalog to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The region where the data lake resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public String dataRegion;
 
     /**
+     * <p>The name of the database to which the table belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,6 +44,8 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -46,6 +53,8 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public Integer rows;
 
     /**
+     * <p>The keyword that is used to search for tables.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -53,12 +62,20 @@ public class ListDataLakeTablebaseInfoRequest extends TeaModel {
     public String searchKey;
 
     /**
+     * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12****</p>
+     */
     @NameInMap("WorkspaceId")
     public Long workspaceId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
      */
@@ -12,6 +14,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The region to which the workspace belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The name of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

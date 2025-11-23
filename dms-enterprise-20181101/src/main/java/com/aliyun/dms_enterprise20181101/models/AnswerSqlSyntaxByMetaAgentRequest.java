@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AnswerSqlSyntaxByMetaAgentRequest extends TeaModel {
     /**
+     * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AnswerSqlSyntaxByMetaAgentRequest extends TeaModel {
     public String dbId;
 
     /**
+     * <p>The name of the selected model. You can use only Qwen series models.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -21,6 +24,8 @@ public class AnswerSqlSyntaxByMetaAgentRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The syntax question.</p>
+     * 
      * <strong>example:</strong>
      * <p>怎么获取当前时间的字符串</p>
      */

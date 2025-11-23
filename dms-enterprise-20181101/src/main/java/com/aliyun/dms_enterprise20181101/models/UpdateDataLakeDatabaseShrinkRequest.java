@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataLakeDatabaseShrinkRequest extends TeaModel {
     /**
+     * <p>The catalog name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDataLakeDatabaseShrinkRequest extends TeaModel {
     public String catalogName;
 
     /**
+     * <p>The region where the data lake resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateDataLakeDatabaseShrinkRequest extends TeaModel {
     public String dataRegion;
 
     /**
+     * <p>The name of the database that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class UpdateDataLakeDatabaseShrinkRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The description of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -39,6 +44,7 @@ public class UpdateDataLakeDatabaseShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The storage path of the database. Supports the OSS, S3, and S3A protocols.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,16 +53,30 @@ public class UpdateDataLakeDatabaseShrinkRequest extends TeaModel {
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>The key-value pairs of the database attributes.</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12****</p>
+     */
     @NameInMap("WorkspaceId")
     public Long workspaceId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStandardGroupResponseBody extends TeaModel {
     /**
+     * <p>The error code that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class GetStandardGroupResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,16 +23,27 @@ public class GetStandardGroupResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>BF7E9543-F431-566A-991A-B5C493EA36C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the security rule set.</p>
+     */
     @NameInMap("StandardGroup")
     public GetStandardGroupResponseBodyStandardGroup standardGroup;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,16 +97,23 @@ public class GetStandardGroupResponseBody extends TeaModel {
 
     public static class GetStandardGroupResponseBodyStandardGroup extends TeaModel {
         /**
+         * <p>The engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The description of the security rule set.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the security rule set.</p>
+         * 
          * <strong>example:</strong>
          * <p>41****</p>
          */
@@ -99,6 +121,13 @@ public class GetStandardGroupResponseBody extends TeaModel {
         public Long groupId;
 
         /**
+         * <p>The control mode. Valid values:</p>
+         * <ul>
+         * <li><strong>NONE_CONTROL</strong>: Flexible Management</li>
+         * <li><strong>STABLE</strong>: Stable Change</li>
+         * <li><strong>COMMON</strong>: Security Collaboration</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>COMMON</p>
          */
@@ -106,6 +135,8 @@ public class GetStandardGroupResponseBody extends TeaModel {
         public String groupMode;
 
         /**
+         * <p>The name of the security rule set.</p>
+         * 
          * <strong>example:</strong>
          * <p>poc_test</p>
          */
@@ -113,6 +144,8 @@ public class GetStandardGroupResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The ID of the user who last modified the security rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>51****</p>
          */

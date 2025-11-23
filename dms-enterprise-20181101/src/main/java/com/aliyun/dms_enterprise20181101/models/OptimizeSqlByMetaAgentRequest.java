@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OptimizeSqlByMetaAgentRequest extends TeaModel {
     /**
+     * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class OptimizeSqlByMetaAgentRequest extends TeaModel {
     public String dbId;
 
     /**
+     * <p>The name of the selected model. You can use only Qwen series models.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -21,6 +24,8 @@ public class OptimizeSqlByMetaAgentRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>是否为慢SQL</p>
      */
@@ -28,6 +33,7 @@ public class OptimizeSqlByMetaAgentRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The SQL statement that you want to analyze.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

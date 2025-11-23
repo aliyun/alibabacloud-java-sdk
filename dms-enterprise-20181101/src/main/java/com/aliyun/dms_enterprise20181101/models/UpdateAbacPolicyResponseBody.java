@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAbacPolicyResponseBody extends TeaModel {
     /**
+     * <p>The error code that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE43759B-5A72-560A-BF3D-862F38B36B9E</p>
      */
@@ -26,6 +32,12 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +45,8 @@ public class UpdateAbacPolicyResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Indicates whether the policy is updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

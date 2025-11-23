@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of users that have permissions on the specified instance.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListAuthorizedUsersForInstanceResponseBodyUsers> users;
 
@@ -37,6 +42,8 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
 
     public static class ListAuthorizedUsersForInstanceResponseBodyUsers extends TeaModel {
         /**
+         * <p>The UID of the user\&quot;s Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>164882191****</p>
          */
@@ -44,6 +51,8 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>The ID of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>51***</p>
          */
@@ -51,6 +60,8 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The nickname of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_test</p>
          */
@@ -58,6 +69,8 @@ public class ListAuthorizedUsersForInstanceResponseBody extends TeaModel {
         public String userNickName;
 
         /**
+         * <p>The real name of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>user01</p>
          */

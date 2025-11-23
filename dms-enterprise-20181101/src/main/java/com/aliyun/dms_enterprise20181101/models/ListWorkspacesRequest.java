@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
+     * <p>Specifies whether the current user has joined the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +17,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +35,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region in which the bucket is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -36,6 +44,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The search keyword. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>poc_test</p>
      */
@@ -43,6 +53,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String searchKey;
 
     /**
+     * <p>The service account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -50,6 +62,11 @@ public class ListWorkspacesRequest extends TeaModel {
     public Long serviceAccountId;
 
     /**
+     * <p>The virtual private cloud (VPC) ID.</p>
+     * <blockquote>
+     * <p>This parameter cannot be used as a filter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp10wnlcmor****</p>
      */
@@ -57,6 +74,8 @@ public class ListWorkspacesRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */

@@ -1,0 +1,283 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dms_enterprise20181101.models;
+
+import com.aliyun.tea.*;
+
+public class ChatWithDesensitizeResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ChatWithDesensitizeResponseBodyData data;
+
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static ChatWithDesensitizeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ChatWithDesensitizeResponseBody self = new ChatWithDesensitizeResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ChatWithDesensitizeResponseBody setData(ChatWithDesensitizeResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ChatWithDesensitizeResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ChatWithDesensitizeResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ChatWithDesensitizeResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ChatWithDesensitizeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ChatWithDesensitizeResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class ChatWithDesensitizeResponseBodyDataChoicesMessage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>你好呀！</p>
+         */
+        @NameInMap("Content")
+        public String content;
+
+        /**
+         * <strong>example:</strong>
+         * <p>嗯，用户发了个“你好”，看起来是想打招呼...</p>
+         */
+        @NameInMap("ReasoningContent")
+        public String reasoningContent;
+
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
+        @NameInMap("Role")
+        public String role;
+
+        public static ChatWithDesensitizeResponseBodyDataChoicesMessage build(java.util.Map<String, ?> map) throws Exception {
+            ChatWithDesensitizeResponseBodyDataChoicesMessage self = new ChatWithDesensitizeResponseBodyDataChoicesMessage();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatWithDesensitizeResponseBodyDataChoicesMessage setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public ChatWithDesensitizeResponseBodyDataChoicesMessage setReasoningContent(String reasoningContent) {
+            this.reasoningContent = reasoningContent;
+            return this;
+        }
+        public String getReasoningContent() {
+            return this.reasoningContent;
+        }
+
+        public ChatWithDesensitizeResponseBodyDataChoicesMessage setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+    }
+
+    public static class ChatWithDesensitizeResponseBodyDataChoices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>stop</p>
+         */
+        @NameInMap("FinishReason")
+        public String finishReason;
+
+        @NameInMap("Message")
+        public ChatWithDesensitizeResponseBodyDataChoicesMessage message;
+
+        public static ChatWithDesensitizeResponseBodyDataChoices build(java.util.Map<String, ?> map) throws Exception {
+            ChatWithDesensitizeResponseBodyDataChoices self = new ChatWithDesensitizeResponseBodyDataChoices();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatWithDesensitizeResponseBodyDataChoices setFinishReason(String finishReason) {
+            this.finishReason = finishReason;
+            return this;
+        }
+        public String getFinishReason() {
+            return this.finishReason;
+        }
+
+        public ChatWithDesensitizeResponseBodyDataChoices setMessage(ChatWithDesensitizeResponseBodyDataChoicesMessage message) {
+            this.message = message;
+            return this;
+        }
+        public ChatWithDesensitizeResponseBodyDataChoicesMessage getMessage() {
+            return this.message;
+        }
+
+    }
+
+    public static class ChatWithDesensitizeResponseBodyDataUsage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("CompletionTokens")
+        public String completionTokens;
+
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
+        @NameInMap("PromptTokens")
+        public String promptTokens;
+
+        /**
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
+        @NameInMap("TotalTokens")
+        public String totalTokens;
+
+        public static ChatWithDesensitizeResponseBodyDataUsage build(java.util.Map<String, ?> map) throws Exception {
+            ChatWithDesensitizeResponseBodyDataUsage self = new ChatWithDesensitizeResponseBodyDataUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatWithDesensitizeResponseBodyDataUsage setCompletionTokens(String completionTokens) {
+            this.completionTokens = completionTokens;
+            return this;
+        }
+        public String getCompletionTokens() {
+            return this.completionTokens;
+        }
+
+        public ChatWithDesensitizeResponseBodyDataUsage setPromptTokens(String promptTokens) {
+            this.promptTokens = promptTokens;
+            return this;
+        }
+        public String getPromptTokens() {
+            return this.promptTokens;
+        }
+
+        public ChatWithDesensitizeResponseBodyDataUsage setTotalTokens(String totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public String getTotalTokens() {
+            return this.totalTokens;
+        }
+
+    }
+
+    public static class ChatWithDesensitizeResponseBodyData extends TeaModel {
+        @NameInMap("Choices")
+        public java.util.List<ChatWithDesensitizeResponseBodyDataChoices> choices;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1763710100</p>
+         */
+        @NameInMap("Created")
+        public String created;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("Usage")
+        public ChatWithDesensitizeResponseBodyDataUsage usage;
+
+        public static ChatWithDesensitizeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ChatWithDesensitizeResponseBodyData self = new ChatWithDesensitizeResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatWithDesensitizeResponseBodyData setChoices(java.util.List<ChatWithDesensitizeResponseBodyDataChoices> choices) {
+            this.choices = choices;
+            return this;
+        }
+        public java.util.List<ChatWithDesensitizeResponseBodyDataChoices> getChoices() {
+            return this.choices;
+        }
+
+        public ChatWithDesensitizeResponseBodyData setCreated(String created) {
+            this.created = created;
+            return this;
+        }
+        public String getCreated() {
+            return this.created;
+        }
+
+        public ChatWithDesensitizeResponseBodyData setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public ChatWithDesensitizeResponseBodyData setUsage(ChatWithDesensitizeResponseBodyDataUsage usage) {
+            this.usage = usage;
+            return this;
+        }
+        public ChatWithDesensitizeResponseBodyDataUsage getUsage() {
+            return this.usage;
+        }
+
+    }
+
+}

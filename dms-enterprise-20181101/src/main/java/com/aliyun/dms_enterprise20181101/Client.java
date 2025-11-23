@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加权限模板资源</p>
+     * <p>Adds instances, databases, and tables to the specified permission template.</p>
      * 
      * @param tmpReq AddAuthorityTemplateItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -74,7 +74,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加权限模板资源</p>
+     * <p>Adds instances, databases, and tables to the specified permission template.</p>
      * 
      * @param request AddAuthorityTemplateItemsRequest
      * @return AddAuthorityTemplateItemsResponse
@@ -156,8 +156,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a DMS administrator. For more information, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加实例</p>
+     * <p>Adds a database instance to Data Management (DMS) and enable security hosting for the instance.</p>
      * 
      * @param request AddInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -300,8 +303,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a DMS administrator. For more information, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加实例</p>
+     * <p>Adds a database instance to Data Management (DMS) and enable security hosting for the instance.</p>
      * 
      * @param request AddInstanceRequest
      * @return AddInstanceResponse
@@ -449,7 +455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加表到资产类目</p>
+     * <p>Add a table to an asset category.</p>
      * 
      * @param request AddTableToCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -497,7 +503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加表到资产类目</p>
+     * <p>Add a table to an asset category.</p>
      * 
      * @param request AddTableToCategoryRequest
      * @return AddTableToCategoryResponse
@@ -647,10 +653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * <p>You can call this operation to answer the syntax questions of the corresponding engine according to the specified database ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * <p>Answers the syntax questions of the corresponding engine according to the specified database ID.</p>
      * 
      * @param request AnswerSqlSyntaxByMetaAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -690,10 +696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * <p>You can call this operation to answer the syntax questions of the corresponding engine according to the specified database ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据用户提供的数据库ID，回答对应引擎的语法问题</p>
+     * <p>Answers the syntax questions of the corresponding engine according to the specified database ID.</p>
      * 
      * @param request AnswerSqlSyntaxByMetaAgentRequest
      * @return AnswerSqlSyntaxByMetaAgentResponse
@@ -885,7 +891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量新建湖仓表分区</p>
+     * <p>Creates multiple partitions for a table in a data lakehouse at a time.</p>
      * 
      * @param tmpReq BatchCreateDataLakePartitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -957,7 +963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量新建湖仓表分区</p>
+     * <p>Creates multiple partitions for a table in a data lakehouse at a time.</p>
      * 
      * @param request BatchCreateDataLakePartitionsRequest
      * @return BatchCreateDataLakePartitionsResponse
@@ -969,7 +975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除湖仓表分区</p>
+     * <p>Deletes multiple partitions of a table in a data lakehouse at a time.</p>
      * 
      * @param request BatchDeleteDataLakePartitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1029,7 +1035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量删除湖仓表分区</p>
+     * <p>Deletes multiple partitions of a table in a data lakehouse at a time.</p>
      * 
      * @param request BatchDeleteDataLakePartitionsRequest
      * @return BatchDeleteDataLakePartitionsResponse
@@ -1041,7 +1047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新湖仓表分区</p>
+     * <p>Updates multiple partitions of a table in a data lakehouse at a time.</p>
      * 
      * @param tmpReq BatchUpdateDataLakePartitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1105,7 +1111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新湖仓表分区</p>
+     * <p>Updates multiple partitions of a table in a data lakehouse at a time.</p>
      * 
      * @param request BatchUpdateDataLakePartitionsRequest
      * @return BatchUpdateDataLakePartitionsResponse
@@ -1241,7 +1247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改字段敏感序列</p>
+     * <p>Changes the security level of a column.</p>
      * 
      * @param request ChangeColumnSecurityLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1297,7 +1303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改字段敏感序列</p>
+     * <p>Changes the security level of a column.</p>
      * 
      * @param request ChangeColumnSecurityLevelRequest
      * @return ChangeColumnSecurityLevelResponse
@@ -1374,6 +1380,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * 
+     * <b>summary</b> : 
+     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * 
+     * @param tmpReq ChatWithDesensitizeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChatWithDesensitizeResponse
+     */
+    public ChatWithDesensitizeResponse chatWithDesensitizeWithOptions(ChatWithDesensitizeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ChatWithDesensitizeShrinkRequest request = new ChatWithDesensitizeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.messages)) {
+            request.messagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.messages, "Messages", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stop)) {
+            request.stopShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stop, "Stop", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desensitizationRule)) {
+            query.put("DesensitizationRule", request.desensitizationRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableThinking)) {
+            query.put("EnableThinking", request.enableThinking);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxTokens)) {
+            query.put("MaxTokens", request.maxTokens);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needDesensitization)) {
+            query.put("NeedDesensitization", request.needDesensitization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.presencePenalty)) {
+            query.put("PresencePenalty", request.presencePenalty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseFormat)) {
+            query.put("ResponseFormat", request.responseFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seed)) {
+            query.put("Seed", request.seed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopShrink)) {
+            query.put("Stop", request.stopShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.temperature)) {
+            query.put("Temperature", request.temperature);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thinkingBudget)) {
+            query.put("ThinkingBudget", request.thinkingBudget);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
+            query.put("TopK", request.topK);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topLogprobs)) {
+            query.put("TopLogprobs", request.topLogprobs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topP)) {
+            query.put("TopP", request.topP);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.messagesShrink)) {
+            body.put("Messages", request.messagesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChatWithDesensitize"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChatWithDesensitizeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * 
+     * <b>summary</b> : 
+     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * 
+     * @param request ChatWithDesensitizeRequest
+     * @return ChatWithDesensitizeResponse
+     */
+    public ChatWithDesensitizeResponse chatWithDesensitize(ChatWithDesensitizeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.chatWithDesensitizeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Closes a ticket.</p>
      * 
@@ -1427,7 +1555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建权限策略授权</p>
+     * <p>Attaches a system policy or custom policy to a DMS user or custom role.</p>
      * 
      * @param request CreateAbacAuthorizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1475,7 +1603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建权限策略授权</p>
+     * <p>Attaches a system policy or custom policy to a DMS user or custom role.</p>
      * 
      * @param request CreateAbacAuthorizationRequest
      * @return CreateAbacAuthorizationResponse
@@ -1486,8 +1614,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, this feature is in the phased release phase. Only users who have phased out can use this feature and related APIs. For more information about the policy feature, see <a href="https://help.aliyun.com/document_detail/2848565.html">Manage policies</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建权限策略</p>
+     * <p>Creates a policy to manage the permissions on DMS features and data resources managed in DMS in a fine-grained manner.</p>
      * 
      * @param request CreateAbacPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1530,8 +1661,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, this feature is in the phased release phase. Only users who have phased out can use this feature and related APIs. For more information about the policy feature, see <a href="https://help.aliyun.com/document_detail/2848565.html">Manage policies</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建权限策略</p>
+     * <p>Creates a policy to manage the permissions on DMS features and data resources managed in DMS in a fine-grained manner.</p>
      * 
      * @param request CreateAbacPolicyRequest
      * @return CreateAbacPolicyResponse
@@ -1997,7 +2131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建湖仓数据库</p>
+     * <p>Creates a database in a data lakehouse.</p>
      * 
      * @param tmpReq CreateDataLakeDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2063,7 +2197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建湖仓数据库</p>
+     * <p>Creates a database in a data lakehouse.</p>
      * 
      * @param request CreateDataLakeDatabaseRequest
      * @return CreateDataLakeDatabaseResponse
@@ -2075,7 +2209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建湖仓自定义函数</p>
+     * <p>Creates a custom function in a data lakehouse.</p>
      * 
      * @param tmpReq CreateDataLakeFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2135,7 +2269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建湖仓自定义函数</p>
+     * <p>Creates a custom function in a data lakehouse.</p>
      * 
      * @param request CreateDataLakeFunctionRequest
      * @return CreateDataLakeFunctionResponse
@@ -2147,7 +2281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建湖仓表分区</p>
+     * <p>Creates a partition for a table in a data lakehouse.</p>
      * 
      * @param tmpReq CreateDataLakePartitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2219,7 +2353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建湖仓表分区</p>
+     * <p>Creates a partition for a table in a data lakehouse.</p>
      * 
      * @param request CreateDataLakePartitionRequest
      * @return CreateDataLakePartitionResponse
@@ -2231,7 +2365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建湖仓表</p>
+     * <p>Creates a table in a data lakehouse.</p>
      * 
      * @param tmpReq CreateDataLakeTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2291,7 +2425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建湖仓表</p>
+     * <p>Creates a table in a data lakehouse.</p>
      * 
      * @param request CreateDataLakeTableRequest
      * @return CreateDataLakeTableResponse
@@ -2969,7 +3103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资产类目</p>
+     * <p>Create Asset Category</p>
      * 
      * @param request CreateMetaCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3009,7 +3143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资产类目</p>
+     * <p>Create Asset Category</p>
      * 
      * @param request CreateMetaCategoryRequest
      * @return CreateMetaCategoryResponse
@@ -3110,8 +3244,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this API operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建可编程对象变更工单</p>
+     * <p>Creates a programmable object ticket.</p>
      * 
      * @param tmpReq CreateProcCorrectOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3168,8 +3305,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this API operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建可编程对象变更工单</p>
+     * <p>Creates a programmable object ticket.</p>
      * 
      * @param request CreateProcCorrectOrderRequest
      * @return CreateProcCorrectOrderResponse
@@ -3884,8 +4024,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Prerequisites</h2>
+     * <ul>
+     * <li>A virtual private cloud (VPC) is created.</li>
+     * <li>Log on to the DMS console by using an Alibaba Cloud account or a RAM user that has high permissions, and grant DMS the permissions to access cloud resources (AliyunDMSProcessingDataRolePolicy).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3934,8 +4081,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Prerequisites</h2>
+     * <ul>
+     * <li>A virtual private cloud (VPC) is created.</li>
+     * <li>Log on to the DMS console by using an Alibaba Cloud account or a RAM user that has high permissions, and grant DMS the permissions to access cloud resources (AliyunDMSProcessingDataRolePolicy).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
@@ -3947,7 +4101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除权限策略授权</p>
+     * <p>Detaches a policy from a user or role.</p>
      * 
      * @param request DeleteAbacAuthorizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3987,7 +4141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除权限策略授权</p>
+     * <p>Detaches a policy from a user or role.</p>
      * 
      * @param request DeleteAbacAuthorizationRequest
      * @return DeleteAbacAuthorizationResponse
@@ -3999,7 +4153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除权限策略</p>
+     * <p>Deletes a created permission policy.</p>
      * 
      * @param request DeleteAbacPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4035,7 +4189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除权限策略</p>
+     * <p>Deletes a created permission policy.</p>
      * 
      * @param request DeleteAbacPolicyRequest
      * @return DeleteAbacPolicyResponse
@@ -4047,7 +4201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除权限模版</p>
+     * <p>Deletes a permission template.</p>
      * 
      * @param request DeleteAuthorityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4083,7 +4237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除权限模版</p>
+     * <p>Deletes a permission template.</p>
      * 
      * @param request DeleteAuthorityTemplateRequest
      * @return DeleteAuthorityTemplateResponse
@@ -4095,7 +4249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除湖仓数据库</p>
+     * <p>Deletes a database from a data lakehouse.</p>
      * 
      * @param request DeleteDataLakeDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4143,7 +4297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除湖仓数据库</p>
+     * <p>Deletes a database from a data lakehouse.</p>
      * 
      * @param request DeleteDataLakeDatabaseRequest
      * @return DeleteDataLakeDatabaseResponse
@@ -4155,7 +4309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除湖仓自定义函数</p>
+     * <p>Deletes a user-defined function in a data lakehouse.</p>
      * 
      * @param request DeleteDataLakeFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4207,7 +4361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除湖仓自定义函数</p>
+     * <p>Deletes a user-defined function in a data lakehouse.</p>
      * 
      * @param request DeleteDataLakeFunctionRequest
      * @return DeleteDataLakeFunctionResponse
@@ -4219,7 +4373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除湖仓表分区</p>
+     * <p>Deletes a partition from a table in a data lakehouse.</p>
      * 
      * @param tmpReq DeleteDataLakePartitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4285,7 +4439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除湖仓表分区</p>
+     * <p>Deletes a partition from a table in a data lakehouse.</p>
      * 
      * @param request DeleteDataLakePartitionRequest
      * @return DeleteDataLakePartitionResponse
@@ -4297,7 +4451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除湖仓表</p>
+     * <p>Deletes a table from a data lakehouse.</p>
      * 
      * @param request DeleteDataLakeTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4349,7 +4503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除湖仓表</p>
+     * <p>Deletes a table from a data lakehouse.</p>
      * 
      * @param request DeleteDataLakeTableRequest
      * @return DeleteDataLakeTableResponse
@@ -4641,7 +4795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资产类目</p>
+     * <p>Deletes an asset category.</p>
      * 
      * @param request DeleteMetaCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4677,7 +4831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资产类目</p>
+     * <p>Deletes an asset category.</p>
      * 
      * @param request DeleteMetaCategoryRequest
      * @return DeleteMetaCategoryResponse
@@ -4844,8 +4998,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API operation, make sure that the security rule set is not associated with an instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除安全规则</p>
+     * <p>Deletes a security rule set.</p>
      * 
      * @param request DeleteStandardGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4880,8 +5037,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API operation, make sure that the security rule set is not associated with an instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除安全规则</p>
+     * <p>Deletes a security rule set.</p>
      * 
      * @param request DeleteStandardGroupRequest
      * @return DeleteStandardGroupResponse
@@ -5115,7 +5275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除工作空间</p>
+     * <p>Deletes a workspace.</p>
      * 
      * @param request DeleteWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5147,7 +5307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除工作空间</p>
+     * <p>Deletes a workspace.</p>
      * 
      * @param request DeleteWorkspaceRequest
      * @return DeleteWorkspaceResponse
@@ -5674,8 +5834,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Edits the business knowledge of the metadata represented by the specified GUID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>编辑指定guid的元数据业务知识</p>
+     * <p>Edits the metadata business knowledge for specified GUIDs.</p>
      * 
      * @param request EditMetaKnowledgeAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5722,8 +5885,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Edits the business knowledge of the metadata represented by the specified GUID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>编辑指定guid的元数据业务知识</p>
+     * <p>Edits the metadata business knowledge for specified GUIDs.</p>
      * 
      * @param request EditMetaKnowledgeAssetRequest
      * @return EditMetaKnowledgeAssetResponse
@@ -6045,10 +6211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * <p>You can call this operation to analyze and fix SQL errors based on the specified SQL statement, error message, and database ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * <p>Uses the specified SQL statement, error message, and database ID to analyze and fix the SQL error.</p>
      * 
      * @param request FixSqlByMetaAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6096,10 +6262,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * <p>You can call this operation to analyze and fix SQL errors based on the specified SQL statement, error message, and database ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</p>
+     * <p>Uses the specified SQL statement, error message, and database ID to analyze and fix the SQL error.</p>
      * 
      * @param request FixSqlByMetaAgentRequest
      * @return FixSqlByMetaAgentResponse
@@ -6249,7 +6415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取策略详情</p>
+     * <p>Queries the details of a policy, including the name, content, and the user who created the policy.</p>
      * 
      * @param request GetAbacPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6289,7 +6455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取策略详情</p>
+     * <p>Queries the details of a policy, including the name, content, and the user who created the policy.</p>
      * 
      * @param request GetAbacPolicyRequest
      * @return GetAbacPolicyResponse
@@ -6457,7 +6623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例绑定的分类分级模板</p>
+     * <p>Queries the information about the classification and grading template associated with an instance.</p>
      * 
      * @param request GetClassificationTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6493,7 +6659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例绑定的分类分级模板</p>
+     * <p>Queries the information about the classification and grading template associated with an instance.</p>
      * 
      * @param request GetClassificationTemplateRequest
      * @return GetClassificationTemplateResponse
@@ -7273,7 +7439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取uc的数据库目录</p>
+     * <p>Queries the data catalog of the data lake.</p>
      * 
      * @param request GetDataLakeCatalogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7317,7 +7483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取uc的数据库目录</p>
+     * <p>Queries the data catalog of the data lake.</p>
      * 
      * @param request GetDataLakeCatalogRequest
      * @return GetDataLakeCatalogResponse
@@ -7329,7 +7495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取UC的数据库</p>
+     * <p>Queries the information about the database in the data lake.</p>
      * 
      * @param request GetDataLakeDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7377,7 +7543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取UC的数据库</p>
+     * <p>Queries the information about the database in the data lake.</p>
      * 
      * @param request GetDataLakeDatabaseRequest
      * @return GetDataLakeDatabaseResponse
@@ -7389,7 +7555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取湖仓自定义函数详细信息</p>
+     * <p>Obtains the details about a user-defined function in a data lakehouse.</p>
      * 
      * @param request GetDataLakeFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7441,7 +7607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取湖仓自定义函数详细信息</p>
+     * <p>Obtains the details about a user-defined function in a data lakehouse.</p>
      * 
      * @param request GetDataLakeFunctionRequest
      * @return GetDataLakeFunctionResponse
@@ -7453,7 +7619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取湖仓表分区详情</p>
+     * <p>Queries the information about a partition of a table in a data lakehouse.</p>
      * 
      * @param tmpReq GetDataLakePartitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7515,7 +7681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取湖仓表分区详情</p>
+     * <p>Queries the information about a partition of a table in a data lakehouse.</p>
      * 
      * @param request GetDataLakePartitionRequest
      * @return GetDataLakePartitionResponse
@@ -7527,7 +7693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表信息</p>
+     * <p>Queries basic information about tables in the data lake.</p>
      * 
      * @param request GetDataLakeTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7579,7 +7745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表信息</p>
+     * <p>Queries basic information about tables in the data lake.</p>
      * 
      * @param request GetDataLakeTableRequest
      * @return GetDataLakeTableResponse
@@ -7849,7 +8015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据库导出下载地址</p>
+     * <p>Queries the download URL of the results of a database export ticket.</p>
      * 
      * @param request GetDbExportDownloadURLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7885,7 +8051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据库导出下载地址</p>
+     * <p>Queries the download URL of the results of a database export ticket.</p>
      * 
      * @param request GetDbExportDownloadURLRequest
      * @return GetDbExportDownloadURLResponse
@@ -8495,7 +8661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据归档工单任务实例</p>
+     * <p>Queries the task information about a ticket.</p>
      * 
      * @param request GetPagedInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8523,7 +8689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据归档工单任务实例</p>
+     * <p>Queries the task information about a ticket.</p>
      * 
      * @param request GetPagedInstanceRequest
      * @return GetPagedInstanceResponse
@@ -8889,7 +9055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全规则</p>
+     * <p>Queries the information about security rule sets of a tenant. The information includes the name and description of security rules, and instances associated with security rules.</p>
      * 
      * @param request GetStandardGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8925,7 +9091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取安全规则</p>
+     * <p>Queries the information about security rule sets of a tenant. The information includes the name and description of security rules, and instances associated with security rules.</p>
      * 
      * @param request GetStandardGroupRequest
      * @return GetStandardGroupResponse
@@ -9292,8 +9458,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API can be called only for database instances that are enabled for security hosting.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定guid的元数据知识</p>
+     * <p>Gets metadata knowledge for a specified GUID.</p>
      * 
      * @param request GetTableKnowledgeInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9332,8 +9501,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API can be called only for database instances that are enabled for security hosting.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定guid的元数据知识</p>
+     * <p>Gets metadata knowledge for a specified GUID.</p>
      * 
      * @param request GetTableKnowledgeInfoRequest
      * @return GetTableKnowledgeInfoResponse
@@ -9733,7 +9905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取空间描述</p>
+     * <p>Queries the details of a workspace.</p>
      * 
      * @param request GetWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9765,7 +9937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取空间描述</p>
+     * <p>Queries the details of a workspace.</p>
      * 
      * @param request GetWorkspaceRequest
      * @return GetWorkspaceResponse
@@ -9971,7 +10143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取权限策略授权列表</p>
+     * <p>Queries a list of users to which the specified policy is attached and the number of the users.</p>
      * 
      * @param request ListAbacAuthorizationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10019,7 +10191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取权限策略授权列表</p>
+     * <p>Queries a list of users to which the specified policy is attached and the number of the users.</p>
      * 
      * @param request ListAbacAuthorizationsRequest
      * @return ListAbacAuthorizationsResponse
@@ -10031,7 +10203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取权限策略列表</p>
+     * <p>Queries a list of policies that are created by a user.</p>
      * 
      * @param request ListAbacPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10075,7 +10247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取权限策略列表</p>
+     * <p>Queries a list of policies that are created by a user.</p>
      * 
      * @param request ListAbacPoliciesRequest
      * @return ListAbacPoliciesResponse
@@ -10087,7 +10259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取权限模版列表</p>
+     * <p>Queries the information about permission templates, including the template creator, template name, and total number of templates.</p>
      * 
      * @param request ListAuthorityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10131,7 +10303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取权限模版列表</p>
+     * <p>Queries the information about permission templates, including the template creator, template name, and total number of templates.</p>
      * 
      * @param request ListAuthorityTemplateRequest
      * @return ListAuthorityTemplateResponse
@@ -10143,7 +10315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户有权限的数据库</p>
+     * <p>Queries the databases on which the specified user has permissions.</p>
      * 
      * @param request ListAuthorizedDatabasesForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10203,7 +10375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户有权限的数据库</p>
+     * <p>Queries the databases on which the specified user has permissions.</p>
      * 
      * @param request ListAuthorizedDatabasesForUserRequest
      * @return ListAuthorizedDatabasesForUserResponse
@@ -10215,7 +10387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户有权限的实例</p>
+     * <p>Queries the instances on which the specified user has permissions.</p>
      * 
      * @param request ListAuthorizedInstancesForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10271,7 +10443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户有权限的实例</p>
+     * <p>Queries the instances on which the specified user has permissions.</p>
      * 
      * @param request ListAuthorizedInstancesForUserRequest
      * @return ListAuthorizedInstancesForUserResponse
@@ -10283,7 +10455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询有数据库权限的用户</p>
+     * <p>Queries a list of users that have permissions on the specified database.</p>
      * 
      * @param request ListAuthorizedUsersForDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10335,7 +10507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询有数据库权限的用户</p>
+     * <p>Queries a list of users that have permissions on the specified database.</p>
      * 
      * @param request ListAuthorizedUsersForDatabaseRequest
      * @return ListAuthorizedUsersForDatabaseResponse
@@ -10347,7 +10519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询有实例权限的用户</p>
+     * <p>Queries a list of users that have permissions on the specified instance.</p>
      * 
      * @param request ListAuthorizedUsersForInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10395,7 +10567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询有实例权限的用户</p>
+     * <p>Queries a list of users that have permissions on the specified instance.</p>
      * 
      * @param request ListAuthorizedUsersForInstanceRequest
      * @return ListAuthorizedUsersForInstanceResponse
@@ -10977,7 +11149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取uc的数据库目录列表</p>
+     * <p>Queries a list of data catalogs in a data lake.</p>
      * 
      * @param request ListDataLakeCatalogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11021,7 +11193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取uc的数据库目录列表</p>
+     * <p>Queries a list of data catalogs in a data lake.</p>
      * 
      * @param request ListDataLakeCatalogRequest
      * @return ListDataLakeCatalogResponse
@@ -11033,7 +11205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据库列表</p>
+     * <p>Queries the list of databases in the data lake.</p>
      * 
      * @param request ListDataLakeDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11089,7 +11261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据库列表</p>
+     * <p>Queries the list of databases in the data lake.</p>
      * 
      * @param request ListDataLakeDatabaseRequest
      * @return ListDataLakeDatabaseResponse
@@ -11101,7 +11273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖函数列表</p>
+     * <p>Queries a list of functions in a data lake.</p>
      * 
      * @param request ListDataLakeFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11161,7 +11333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖函数列表</p>
+     * <p>Queries a list of functions in a data lake.</p>
      * 
      * @param request ListDataLakeFunctionRequest
      * @return ListDataLakeFunctionResponse
@@ -11173,7 +11345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖函数名列表</p>
+     * <p>Gets a list of data lake function names.</p>
      * 
      * @param request ListDataLakeFunctionNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11233,7 +11405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖函数名列表</p>
+     * <p>Gets a list of data lake function names.</p>
      * 
      * @param request ListDataLakeFunctionNameRequest
      * @return ListDataLakeFunctionNameResponse
@@ -11245,7 +11417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表分区列表</p>
+     * <p>Queries a list of partitions of a table in a data lake.</p>
      * 
      * @param tmpReq ListDataLakePartitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11317,7 +11489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表分区列表</p>
+     * <p>Queries a list of partitions of a table in a data lake.</p>
      * 
      * @param request ListDataLakePartitionRequest
      * @return ListDataLakePartitionResponse
@@ -11329,7 +11501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据筛选条件获取数据湖表分区列表</p>
+     * <p>Queries a list of partitions of a table in a data lake based on filter conditions.</p>
      * 
      * @param request ListDataLakePartitionByFilterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11395,7 +11567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据筛选条件获取数据湖表分区列表</p>
+     * <p>Queries a list of partitions of a table in a data lake based on filter conditions.</p>
      * 
      * @param request ListDataLakePartitionByFilterRequest
      * @return ListDataLakePartitionByFilterResponse
@@ -11407,7 +11579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表分区名列表</p>
+     * <p>Queries a list of partition names of a table in a data lake.</p>
      * 
      * @param request ListDataLakePartitionNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11467,7 +11639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表分区名列表</p>
+     * <p>Queries a list of partition names of a table in a data lake.</p>
      * 
      * @param request ListDataLakePartitionNameRequest
      * @return ListDataLakePartitionNameResponse
@@ -11479,7 +11651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表列表</p>
+     * <p>Queries a list of tables in a data lake.</p>
      * 
      * @param request ListDataLakeTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11543,7 +11715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表列表</p>
+     * <p>Queries a list of tables in a data lake.</p>
      * 
      * @param request ListDataLakeTableRequest
      * @return ListDataLakeTableResponse
@@ -11555,7 +11727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表名列表</p>
+     * <p>Queries a list of names of tables in a data lake.</p>
      * 
      * @param request ListDataLakeTableNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11619,7 +11791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据湖表名列表</p>
+     * <p>Queries a list of names of tables in a data lake.</p>
      * 
      * @param request ListDataLakeTableNameRequest
      * @return ListDataLakeTableNameResponse
@@ -11631,7 +11803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表信息</p>
+     * <p>Queries basic information about tables in the data lake.</p>
      * 
      * @param request ListDataLakeTablebaseInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11691,7 +11863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表信息</p>
+     * <p>Queries basic information about tables in the data lake.</p>
      * 
      * @param request ListDataLakeTablebaseInfoRequest
      * @return ListDataLakeTablebaseInfoResponse
@@ -12559,7 +12731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资产类目列表</p>
+     * <p>Queries a list of categories</p>
      * 
      * @param request ListMetaCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12603,7 +12775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资产类目列表</p>
+     * <p>Queries a list of categories</p>
      * 
      * @param request ListMetaCategoryRequest
      * @return ListMetaCategoryResponse
@@ -13095,7 +13267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取敏感字段信息</p>
+     * <p>Queries the information about a sensitive field. The information includes the masking algorithm ID, masking algorithm name, and field security level.</p>
      * 
      * @param request ListSensitiveColumnInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13151,7 +13323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取敏感字段信息</p>
+     * <p>Queries the information about a sensitive field. The information includes the masking algorithm ID, masking algorithm name, and field security level.</p>
      * 
      * @param request ListSensitiveColumnInfoRequest
      * @return ListSensitiveColumnInfoResponse
@@ -13467,7 +13639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表字段信息</p>
+     * <p>Queries the details about fields in a table.</p>
      * 
      * @param request ListTableColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13511,7 +13683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表字段信息</p>
+     * <p>Queries the details about fields in a table.</p>
      * 
      * @param request ListTableColumnsRequest
      * @return ListTableColumnsResponse
@@ -13597,7 +13769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取类目下的表列表</p>
+     * <p>Obtains the list of tables in a category.</p>
      * 
      * @param request ListTablesInCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13641,7 +13813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取类目下的表列表</p>
+     * <p>Obtains the list of tables in a category.</p>
      * 
      * @param request ListTablesInCategoryRequest
      * @return ListTablesInCategoryResponse
@@ -14101,6 +14273,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Obtains</p>
+     * 
+     * @param request ListUserOwnedResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserOwnedResourcesResponse
+     */
+    public ListUserOwnedResourcesResponse listUserOwnedResourcesWithOptions(ListUserOwnedResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            query.put("DatabaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            query.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logic)) {
+            query.put("Logic", request.logic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerType)) {
+            query.put("OwnerType", request.ownerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserOwnedResources"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserOwnedResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains</p>
+     * 
+     * @param request ListUserOwnedResourcesRequest
+     * @return ListUserOwnedResourcesResponse
+     */
+    public ListUserOwnedResourcesResponse listUserOwnedResources(ListUserOwnedResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserOwnedResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the permissions of a specific user on a database or a table.</p>
      * 
      * @param request ListUserPermissionsRequest
@@ -14385,7 +14633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索工作空间列表</p>
+     * <p>Queries a list of workspaces of the tenant.</p>
      * 
      * @param request ListWorkspacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14449,7 +14697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索工作空间列表</p>
+     * <p>Queries a list of workspaces of the tenant.</p>
      * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -14645,7 +14893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例信息，同时检查该实例连通性</p>
+     * <p>Modifies the basic and advanced information about a database instance in Data Management (DMS). The basic information includes the hosting mode of the instance, the instance account username and password, and features that are enabled for the instance. The advanced information includes the environment type, the instance name in DMS, and the timeout period for querying and exporting data.</p>
      * 
      * @param request ModifyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14793,7 +15041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例信息，同时检查该实例连通性</p>
+     * <p>Modifies the basic and advanced information about a database instance in Data Management (DMS). The basic information includes the hosting mode of the instance, the instance account username and password, and features that are enabled for the instance. The advanced information includes the environment type, the instance name in DMS, and the timeout period for querying and exporting data.</p>
      * 
      * @param request ModifyInstanceRequest
      * @return ModifyInstanceResponse
@@ -14905,10 +15153,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * <p>You can call this operation to analyze and optimize the SQL statements in the specified database.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * <p>Analyzes and optimizes the SQL statements in the specified database.</p>
      * 
      * @param request OptimizeSqlByMetaAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14952,10 +15200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * <p>You can call this operation to analyze and optimize the SQL statements in the specified database.</p>
      * 
      * <b>summary</b> : 
-     * <p>根据用户提供的SQL数据库ID，分析SQL性能并优化</p>
+     * <p>Analyzes and optimizes the SQL statements in the specified database.</p>
      * 
      * @param request OptimizeSqlByMetaAgentRequest
      * @return OptimizeSqlByMetaAgentResponse
@@ -15029,7 +15277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>终止数据导出任务</p>
+     * <p>Terminates a SQL result set export task.</p>
      * 
      * @param request PauseDataExportJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15069,7 +15317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>终止数据导出任务</p>
+     * <p>Terminates a SQL result set export task.</p>
      * 
      * @param request PauseDataExportJobRequest
      * @return PauseDataExportJobResponse
@@ -15081,7 +15329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工单审批流</p>
+     * <p>Previews the approval process of a ticket before the ticket is submitted.</p>
      * 
      * @param request PreviewWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15117,7 +15365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工单审批流</p>
+     * <p>Previews the approval process of a ticket before the ticket is submitted.</p>
      * 
      * @param request PreviewWorkflowRequest
      * @return PreviewWorkflowResponse
@@ -15693,7 +15941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据导出任务</p>
+     * <p>Deletes a data export task.</p>
      * 
      * @param request RemoveDataExportJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15733,7 +15981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据导出任务</p>
+     * <p>Deletes a data export task.</p>
      * 
      * @param request RemoveDataExportJobRequest
      * @return RemoveDataExportJobResponse
@@ -15745,7 +15993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从资产类目移除表</p>
+     * <p>Removes table from the asset category.</p>
      * 
      * @param request RemoveTableFromCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15793,7 +16041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从资产类目移除表</p>
+     * <p>Removes table from the asset category.</p>
      * 
      * @param request RemoveTableFromCategoryRequest
      * @return RemoveTableFromCategoryResponse
@@ -15865,7 +16113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重启数据导出任务</p>
+     * <p>Restarts a SQL result set export task.</p>
      * 
      * @param request RestartDataExportJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15905,7 +16153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重启数据导出任务</p>
+     * <p>Restarts a SQL result set export task.</p>
      * 
      * @param request RestartDataExportJobRequest
      * @return RestartDataExportJobResponse
@@ -16465,7 +16713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改审批流额外信息</p>
+     * <p>Configures whether the operation buttons, such as Agree, Revoke, and Sign, are displayed in the ticket approval section of the DMS console.</p>
      * 
      * @param request SetWorkflowExtraInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16529,7 +16777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改审批流额外信息</p>
+     * <p>Configures whether the operation buttons, such as Agree, Revoke, and Sign, are displayed in the ticket approval section of the DMS console.</p>
      * 
      * @param request SetWorkflowExtraInfoRequest
      * @return SetWorkflowExtraInfoResponse
@@ -16817,7 +17065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中断数据导出任务</p>
+     * <p>Suspends an ongoing or scheduled SQL result set export task.</p>
      * 
      * @param request SuspendDataExportJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16857,7 +17105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中断数据导出任务</p>
+     * <p>Suspends an ongoing or scheduled SQL result set export task.</p>
      * 
      * @param request SuspendDataExportJobRequest
      * @return SuspendDataExportJobResponse
@@ -17030,8 +17278,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>An edge can be created only when the following conditions are met:</p>
+     * <ol>
+     * <li>The start and end nodes of the edge exist in the directed acyclic graph (DAG) of the task flow specified by DagId.</li>
+     * <li>After the edge is created, the DAG does not contain loops.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>任务编排试运行</p>
+     * <p>Tests the task flow of task orchestration.</p>
      * 
      * @param request TryRunTaskFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17062,8 +17318,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>An edge can be created only when the following conditions are met:</p>
+     * <ol>
+     * <li>The start and end nodes of the edge exist in the directed acyclic graph (DAG) of the task flow specified by DagId.</li>
+     * <li>After the edge is created, the DAG does not contain loops.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>任务编排试运行</p>
+     * <p>Tests the task flow of task orchestration.</p>
      * 
      * @param request TryRunTaskFlowRequest
      * @return TryRunTaskFlowResponse
@@ -17075,7 +17339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新权限策略</p>
+     * <p>Updates the name, description, or content of a policy.</p>
      * 
      * @param request UpdateAbacPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17123,7 +17387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新权限策略</p>
+     * <p>Updates the name, description, or content of a policy.</p>
      * 
      * @param request UpdateAbacPolicyRequest
      * @return UpdateAbacPolicyResponse
@@ -17197,7 +17461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新湖仓数据库</p>
+     * <p>Updates the information about a database in a data lakehouse.</p>
      * 
      * @param tmpReq UpdateDataLakeDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17263,7 +17527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新湖仓数据库</p>
+     * <p>Updates the information about a database in a data lakehouse.</p>
      * 
      * @param request UpdateDataLakeDatabaseRequest
      * @return UpdateDataLakeDatabaseResponse
@@ -17275,7 +17539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新湖仓自定义函数</p>
+     * <p>Updates a user-defined function in a data lakehouse.</p>
      * 
      * @param tmpReq UpdateDataLakeFunctionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17339,7 +17603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新湖仓自定义函数</p>
+     * <p>Updates a user-defined function in a data lakehouse.</p>
      * 
      * @param request UpdateDataLakeFunctionRequest
      * @return UpdateDataLakeFunctionResponse
@@ -17351,7 +17615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新湖仓表分区</p>
+     * <p>Updates the partition information of a table in a data lakehouse.</p>
      * 
      * @param tmpReq UpdateDataLakePartitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17415,7 +17679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新湖仓表分区</p>
+     * <p>Updates the partition information of a table in a data lakehouse.</p>
      * 
      * @param request UpdateDataLakePartitionRequest
      * @return UpdateDataLakePartitionResponse
@@ -17427,7 +17691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新湖仓表信息</p>
+     * <p>Updates the information about a table in a data lakehouse.</p>
      * 
      * @param tmpReq UpdateDataLakeTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17491,7 +17755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新湖仓表信息</p>
+     * <p>Updates the information about a table in a data lakehouse.</p>
      * 
      * @param request UpdateDataLakeTableRequest
      * @return UpdateDataLakeTableResponse
@@ -17649,7 +17913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资产类目信息</p>
+     * <p>Updates asset category information.</p>
      * 
      * @param request UpdateMetaCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17689,7 +17953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资产类目信息</p>
+     * <p>Updates asset category information.</p>
      * 
      * @param request UpdateMetaCategoryRequest
      * @return UpdateMetaCategoryResponse
@@ -17992,8 +18256,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to modify node configurations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>大sql更新节点专用</p>
+     * <p>Updates the node content in large SQL files.</p>
      * 
      * @param request UpdateTaskContentV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -18030,8 +18297,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to modify node configurations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>大sql更新节点专用</p>
+     * <p>Updates the node content in large SQL files.</p>
      * 
      * @param request UpdateTaskContentV2Request
      * @return UpdateTaskContentV2Response
@@ -18847,7 +19117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改工作空间</p>
+     * <p>Updates the information about a workspace.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18893,7 +19163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改工作空间</p>
+     * <p>Updates the information about a workspace.</p>
      * 
      * @param request UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse

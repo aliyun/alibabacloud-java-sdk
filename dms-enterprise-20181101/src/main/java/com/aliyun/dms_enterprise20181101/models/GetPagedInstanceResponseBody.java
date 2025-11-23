@@ -4,10 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetPagedInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetPagedInstanceResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -15,6 +20,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message that is returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -22,6 +29,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     public Long pageIndex;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
      */
@@ -43,6 +56,12 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +69,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -57,7 +78,7 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     public Long total;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The trace ID, which is used to track the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a06e1e316757357507896067d3780</p>
@@ -144,6 +165,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
 
     public static class GetPagedInstanceResponseBodyDataInstance extends TeaModel {
         /**
+         * <p>The data timestamp of the task node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-14 16:00:57</p>
          */
@@ -151,6 +174,15 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public String businessTime;
 
         /**
+         * <p>The state of archived data verification. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The verification was successful.</li>
+         * <li><strong>1</strong>: Inconsistent data was detected.</li>
+         * <li><strong>2</strong>: The verification was not performed.</li>
+         * <li><strong>3</strong>: The verification is in progress.</li>
+         * <li><strong>4</strong>: The verification was interrupted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -158,6 +190,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public Long checkStatus;
 
         /**
+         * <p>The unique ID of the task flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>33753</p>
          */
@@ -165,6 +199,12 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public Long dagId;
 
         /**
+         * <p>Indicates whether the source data is deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: deletes the jobs in the application group.</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -172,6 +212,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public String delete;
 
         /**
+         * <p>The time when the task ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-23 10:23:20</p>
          */
@@ -179,6 +221,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The time when the task flow was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-28 10:50:45</p>
          */
@@ -186,6 +230,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the task flow was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-18 15:28:16</p>
          */
@@ -193,6 +239,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the historical task flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>6851</p>
          */
@@ -200,6 +248,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public Long historyDagId;
 
         /**
+         * <p>The task flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>24271</p>
          */
@@ -207,16 +257,30 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The context of the last execution of the task flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>{”nodes&quot;:[11694,11695]&quot;}</p>
          */
         @NameInMap("LastRunningContext")
         public String lastRunningContext;
 
+        /**
+         * <p>The details of the current task execution.</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
         /**
+         * <p>The state of the archiving task.</p>
+         * <ul>
+         * <li><strong>0</strong>: Pending.</li>
+         * <li><strong>1</strong>: Running.</li>
+         * <li><strong>2</strong>: Paused.</li>
+         * <li><strong>3</strong>: Failed.</li>
+         * <li><strong>4</strong>: Succeeded.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -224,6 +288,13 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public Long status;
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: data archiving</li>
+         * <li><strong>2</strong>: archived data restoration</li>
+         * <li><strong>3</strong>: archived data verification</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -231,6 +302,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public Long taskType;
 
         /**
+         * <p>The ID of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>3406</p>
          */
@@ -238,6 +311,12 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The mode in which the task flow is triggered. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The task flow was triggered based on a schedule.</li>
+         * <li><strong>1</strong>: The task flow was manually triggered.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -245,6 +324,8 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         public Long triggerType;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -387,6 +468,9 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     }
 
     public static class GetPagedInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the task.</p>
+         */
         @NameInMap("Instance")
         public java.util.List<GetPagedInstanceResponseBodyDataInstance> instance;
 

@@ -118,6 +118,15 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         @NameInMap("AppUuid")
         public String appUuid;
 
+        @NameInMap("BillingInstanceId")
+        public String billingInstanceId;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        @NameInMap("ExpireTime")
+        public Long expireTime;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -145,6 +154,9 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("StorageType")
+        public String storageType;
 
         /**
          * <strong>example:</strong>
@@ -187,6 +199,30 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
             return this.appUuid;
         }
 
+        public DescribeDifyAttributeResponseBodyRoot setBillingInstanceId(String billingInstanceId) {
+            this.billingInstanceId = billingInstanceId;
+            return this;
+        }
+        public String getBillingInstanceId() {
+            return this.billingInstanceId;
+        }
+
+        public DescribeDifyAttributeResponseBodyRoot setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public DescribeDifyAttributeResponseBodyRoot setExpireTime(Long expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public Long getExpireTime() {
+            return this.expireTime;
+        }
+
         public DescribeDifyAttributeResponseBodyRoot setReplicas(String replicas) {
             this.replicas = replicas;
             return this;
@@ -217,6 +253,14 @@ public class DescribeDifyAttributeResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDifyAttributeResponseBodyRoot setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public DescribeDifyAttributeResponseBodyRoot setVSwitchId(String vSwitchId) {

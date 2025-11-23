@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTablesInCategoryRequest extends TeaModel {
     /**
+     * <p>The category ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListTablesInCategoryRequest extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListTablesInCategoryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class ListTablesInCategoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */

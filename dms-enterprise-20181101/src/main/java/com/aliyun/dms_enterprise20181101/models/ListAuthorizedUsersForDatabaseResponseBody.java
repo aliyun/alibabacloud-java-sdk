@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
     /**
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF9A04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of users that have permissions on the specified instance.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListAuthorizedUsersForDatabaseResponseBodyUsers> users;
 
@@ -37,6 +42,8 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
 
     public static class ListAuthorizedUsersForDatabaseResponseBodyUsers extends TeaModel {
         /**
+         * <p>The UID of the user\&quot;s Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>164882191****</p>
          */
@@ -44,6 +51,8 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>The user IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>51****</p>
          */
@@ -51,6 +60,8 @@ public class ListAuthorizedUsersForDatabaseResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The nickname of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_test</p>
          */

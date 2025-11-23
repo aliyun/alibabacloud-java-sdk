@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPagedInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of data archiving ticket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class GetPagedInstanceRequest extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */

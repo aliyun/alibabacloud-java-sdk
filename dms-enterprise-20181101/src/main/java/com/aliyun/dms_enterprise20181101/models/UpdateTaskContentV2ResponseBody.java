@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskContentV2ResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class UpdateTaskContentV2ResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,7 +23,7 @@ public class UpdateTaskContentV2ResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Id of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B5FD0BC8-2D90-4478-B8EC-A0E92E0B1773</p>
@@ -28,6 +32,12 @@ public class UpdateTaskContentV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

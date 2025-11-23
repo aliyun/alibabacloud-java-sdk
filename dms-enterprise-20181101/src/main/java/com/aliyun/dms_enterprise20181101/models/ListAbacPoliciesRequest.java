@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAbacPoliciesRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAbacPoliciesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListAbacPoliciesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The search keyword. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>policy_test</p>
      */
@@ -26,6 +32,11 @@ public class ListAbacPoliciesRequest extends TeaModel {
     public String searchKey;
 
     /**
+     * <p>The ID of the tenant.</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3***</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTableKnowledgeInfoResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
@@ -26,6 +32,12 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +45,8 @@ public class GetTableKnowledgeInfoResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The information about the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>bill_orders</p>
      */

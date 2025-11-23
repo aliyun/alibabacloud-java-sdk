@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataLakePartitionByFilterResponseBody extends TeaModel {
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -12,6 +14,8 @@ public class ListDataLakePartitionByFilterResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
      */
@@ -19,6 +23,8 @@ public class ListDataLakePartitionByFilterResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,16 +32,23 @@ public class ListDataLakePartitionByFilterResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The information about the token.</p>
+     * 
      * <strong>example:</strong>
      * <p>NesLoKLEdIZrKhDT7I2gS****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The queried partitions.</p>
+     */
     @NameInMap("PartitionList")
     public java.util.List<DLPartition> partitionList;
 
     /**
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
      */
@@ -43,6 +56,12 @@ public class ListDataLakePartitionByFilterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request succeeded.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
