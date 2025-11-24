@@ -138,6 +138,9 @@ public class ScorePageItem extends TeaModel {
     @NameInMap("title")
     public String title;
 
+    @NameInMap("websiteAuthorityScore")
+    public Integer websiteAuthorityScore;
+
     public static ScorePageItem build(java.util.Map<String, ?> map) throws Exception {
         ScorePageItem self = new ScorePageItem();
         return TeaModel.build(map, self);
@@ -301,6 +304,14 @@ public class ScorePageItem extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public ScorePageItem setWebsiteAuthorityScore(Integer websiteAuthorityScore) {
+        this.websiteAuthorityScore = websiteAuthorityScore;
+        return this;
+    }
+    public Integer getWebsiteAuthorityScore() {
+        return this.websiteAuthorityScore;
     }
 
 }

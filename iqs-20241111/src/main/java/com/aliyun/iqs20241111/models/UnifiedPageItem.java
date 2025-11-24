@@ -47,6 +47,9 @@ public class UnifiedPageItem extends TeaModel {
     @NameInMap("title")
     public String title;
 
+    @NameInMap("websiteAuthorityScore")
+    public Integer websiteAuthorityScore;
+
     public static UnifiedPageItem build(java.util.Map<String, ?> map) throws Exception {
         UnifiedPageItem self = new UnifiedPageItem();
         return TeaModel.build(map, self);
@@ -154,6 +157,14 @@ public class UnifiedPageItem extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public UnifiedPageItem setWebsiteAuthorityScore(Integer websiteAuthorityScore) {
+        this.websiteAuthorityScore = websiteAuthorityScore;
+        return this;
+    }
+    public Integer getWebsiteAuthorityScore() {
+        return this.websiteAuthorityScore;
     }
 
 }
