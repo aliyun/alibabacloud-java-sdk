@@ -4,9 +4,6 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class Sandbox extends TeaModel {
-    @NameInMap("SandboxIdleTTLInSeconds")
-    public Integer sandboxIdleTTLInSeconds;
-
     /**
      * <p>沙箱创建时间</p>
      * <p>This parameter is required.</p>
@@ -35,6 +32,9 @@ public class Sandbox extends TeaModel {
     @NameInMap("sandboxId")
     public String sandboxId;
 
+    @NameInMap("sandboxIdleTTLInSeconds")
+    public Integer sandboxIdleTTLInSeconds;
+
     /**
      * <p>沙箱空闲超时时间（秒）</p>
      */
@@ -59,14 +59,6 @@ public class Sandbox extends TeaModel {
     public static Sandbox build(java.util.Map<String, ?> map) throws Exception {
         Sandbox self = new Sandbox();
         return TeaModel.build(map, self);
-    }
-
-    public Sandbox setSandboxIdleTTLInSeconds(Integer sandboxIdleTTLInSeconds) {
-        this.sandboxIdleTTLInSeconds = sandboxIdleTTLInSeconds;
-        return this;
-    }
-    public Integer getSandboxIdleTTLInSeconds() {
-        return this.sandboxIdleTTLInSeconds;
     }
 
     public Sandbox setCreatedAt(String createdAt) {
@@ -115,6 +107,14 @@ public class Sandbox extends TeaModel {
     }
     public String getSandboxId() {
         return this.sandboxId;
+    }
+
+    public Sandbox setSandboxIdleTTLInSeconds(Integer sandboxIdleTTLInSeconds) {
+        this.sandboxIdleTTLInSeconds = sandboxIdleTTLInSeconds;
+        return this;
+    }
+    public Integer getSandboxIdleTTLInSeconds() {
+        return this.sandboxIdleTTLInSeconds;
     }
 
     public Sandbox setSandboxIdleTimeoutSeconds(Integer sandboxIdleTimeoutSeconds) {

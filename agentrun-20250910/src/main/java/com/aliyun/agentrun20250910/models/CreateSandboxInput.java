@@ -4,6 +4,9 @@ package com.aliyun.agentrun20250910.models;
 import com.aliyun.tea.*;
 
 public class CreateSandboxInput extends TeaModel {
+    @NameInMap("sandboxId")
+    public String sandboxId;
+
     /**
      * <p>沙箱空闲超时时间（秒）</p>
      */
@@ -20,6 +23,14 @@ public class CreateSandboxInput extends TeaModel {
     public static CreateSandboxInput build(java.util.Map<String, ?> map) throws Exception {
         CreateSandboxInput self = new CreateSandboxInput();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSandboxInput setSandboxId(String sandboxId) {
+        this.sandboxId = sandboxId;
+        return this;
+    }
+    public String getSandboxId() {
+        return this.sandboxId;
     }
 
     public CreateSandboxInput setSandboxIdleTimeoutSeconds(Integer sandboxIdleTimeoutSeconds) {

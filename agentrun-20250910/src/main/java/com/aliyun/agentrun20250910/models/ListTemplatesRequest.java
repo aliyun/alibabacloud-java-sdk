@@ -23,6 +23,20 @@ public class ListTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <strong>example:</strong>
+     * <p>READY</p>
+     */
+    @NameInMap("status")
+    public String status;
+
+    /**
+     * <strong>example:</strong>
+     * <p>temp-abc</p>
+     */
+    @NameInMap("templateName")
+    public String templateName;
+
+    /**
      * <p>按模板类型过滤</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +64,22 @@ public class ListTemplatesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTemplatesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ListTemplatesRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public ListTemplatesRequest setTemplateType(String templateType) {

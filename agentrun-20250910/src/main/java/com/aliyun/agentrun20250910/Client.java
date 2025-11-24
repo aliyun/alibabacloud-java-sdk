@@ -912,6 +912,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除Sandbox</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSandboxResponse
+     */
+    public DeleteSandboxResponse deleteSandboxWithOptions(String sandboxId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSandbox"),
+            new TeaPair("version", "2025-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2025-09-10/sandboxes/" + com.aliyun.openapiutil.Client.getEncodeParam(sandboxId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSandboxResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Sandbox</p>
+     * @return DeleteSandboxResponse
+     */
+    public DeleteSandboxResponse deleteSandbox(String sandboxId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSandboxWithOptions(sandboxId, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</p>
      * 
@@ -2365,6 +2402,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("templateName", request.templateName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
             query.put("templateType", request.templateType);
         }
@@ -2519,7 +2564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
      * 
      * <b>summary</b> : 
-     * <p>停止沙箱</p>
+     * <p>删除沙箱</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2533,8 +2578,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "StopSandbox"),
             new TeaPair("version", "2025-09-10"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2025-09-10/sandboxes/" + com.aliyun.openapiutil.Client.getEncodeParam(sandboxId) + ""),
-            new TeaPair("method", "DELETE"),
+            new TeaPair("pathname", "/2025-09-10/sandboxes/" + com.aliyun.openapiutil.Client.getEncodeParam(sandboxId) + "/stop"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
@@ -2548,7 +2593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
      * 
      * <b>summary</b> : 
-     * <p>停止沙箱</p>
+     * <p>删除沙箱</p>
      * @return StopSandboxResponse
      */
     public StopSandboxResponse stopSandbox(String sandboxId) throws Exception {

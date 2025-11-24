@@ -3,7 +3,7 @@ package com.aliyun.agentrun20250910.models;
 
 import com.aliyun.tea.*;
 
-public class StopSandboxResponse extends TeaModel {
+public class DeleteSandboxResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class StopSandboxResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public StopSandboxResult body;
+    public DeleteSandboxResult body;
 
-    public static StopSandboxResponse build(java.util.Map<String, ?> map) throws Exception {
-        StopSandboxResponse self = new StopSandboxResponse();
+    public static DeleteSandboxResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSandboxResponse self = new DeleteSandboxResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopSandboxResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteSandboxResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class StopSandboxResponse extends TeaModel {
         return this.headers;
     }
 
-    public StopSandboxResponse setStatusCode(Integer statusCode) {
+    public DeleteSandboxResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class StopSandboxResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public StopSandboxResponse setBody(StopSandboxResult body) {
+    public DeleteSandboxResponse setBody(DeleteSandboxResult body) {
         this.body = body;
         return this;
     }
-    public StopSandboxResult getBody() {
+    public DeleteSandboxResult getBody() {
         return this.body;
     }
 
