@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeServiceMeshVMsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4b2c0fe0-6705-4614-8521-6b9d289163c8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,72 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
     public static class DescribeServiceMeshVMsResponseBodyVMs extends TeaModel {
         /**
          * <p>Indicates whether the ECS instance has labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasTag")
         public Boolean hasTag;
 
         /**
          * <p>The host name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iZ2ze45cgxkx4q12eh****</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze0kub9scdguom****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The IP address of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.2.241</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The security group to which the ECS instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2zeaqy08amco9osl****</p>
          */
         @NameInMap("SecurityGroupIds")
         public String securityGroupIds;
 
         /**
          * <p>The ASM instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccb37ff104caf419fbf48fb38e6f3****</p>
          */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;
 
         /**
          * <p>The state of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;

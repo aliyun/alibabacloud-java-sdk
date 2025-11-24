@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetVmMetaResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9522f7c9-63a1-4603-b850-37d12a****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetVmMetaResponseBody extends TeaModel {
     public static class GetVmMetaResponseBodyVmMetaInfo extends TeaModel {
         /**
          * <p>The content of the EnvoyEnv file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>....</p>
          */
         @NameInMap("EnvoyEnvContent")
         public String envoyEnvContent;
 
         /**
          * <p>The content of the hosts file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>....</p>
          */
         @NameInMap("HostsContent")
         public String hostsContent;
 
         /**
          * <p>The content of the Token file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>....</p>
          */
         @NameInMap("TokenContent")
         public String tokenContent;

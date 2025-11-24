@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeVpcsResponseBody extends TeaModel {
     /**
      * <p>The maximum number of entries returned on a single page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the end of the current returned page. If this parameter is empty, it indicates that you have retrieved all the data.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,30 +95,44 @@ public class DescribeVpcsResponseBody extends TeaModel {
     public static class DescribeVpcsResponseBodyVpcs extends TeaModel {
         /**
          * <p>Indicates whether the VPC is the default VPC in the specified region. Valid values:</p>
-         * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <ul>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>The status of the VPC. Valid values:</p>
-         * <br>
-         * <p>*   `Pending`: The VPC is being configured.</p>
-         * <p>*   `Available`: The VPC is available for use.</p>
+         * <ul>
+         * <li><code>Pending</code>: The VPC is being configured.</li>
+         * <li><code>Available</code>: The VPC is available for use.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1qkf2o3xmqc2519****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

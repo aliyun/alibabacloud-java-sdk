@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterGrafanaResponseBody extends TeaModel {
     /**
-     * <p>The information of Grafana dashboards.</p>
+     * <p>The information about Grafana dashboards.</p>
      */
     @NameInMap("Dashboards")
     public java.util.List<DescribeClusterGrafanaResponseBodyDashboards> dashboards;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
     public static class DescribeClusterGrafanaResponseBodyDashboards extends TeaModel {
         /**
          * <p>The title of the Grafana dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The endpoint of a Grafana dashboard.</p>
+         * <p>The endpoint of the Grafana dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("Url")
         public String url;

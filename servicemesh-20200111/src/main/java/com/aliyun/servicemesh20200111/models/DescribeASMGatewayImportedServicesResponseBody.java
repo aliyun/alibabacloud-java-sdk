@@ -12,6 +12,9 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11fd0027-c27e-41bb-a565-75583054****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
     public static class DescribeASMGatewayImportedServicesResponseBodyImportedServices extends TeaModel {
         /**
          * <p>The name of a service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>productpage</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The namespace in which the service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("ServiceNamespace")
         public String serviceNamespace;

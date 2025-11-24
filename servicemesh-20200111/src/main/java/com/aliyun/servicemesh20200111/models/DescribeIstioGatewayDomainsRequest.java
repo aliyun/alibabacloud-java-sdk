@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeIstioGatewayDomainsRequest extends TeaModel {
     /**
      * <p>The name of the ASM gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ingressgateway</p>
      */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
     /**
      * <p>The maximum number of Istio gateways to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Limit")
     public String limit;
 
     /**
      * <p>The namespace in which the ASM gateway resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

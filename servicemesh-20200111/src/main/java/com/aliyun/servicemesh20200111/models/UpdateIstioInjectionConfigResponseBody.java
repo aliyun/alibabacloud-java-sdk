@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateIstioInjectionConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98B268E6-9381-5A98-8012-6E7E82******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

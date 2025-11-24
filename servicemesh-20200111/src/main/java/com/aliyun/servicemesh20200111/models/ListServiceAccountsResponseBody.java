@@ -4,9 +4,18 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class ListServiceAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8349374D-0F22-5CAB-9DE3-8CCE8EFA71FF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of service accounts.</p>
+     */
     @NameInMap("ServiceAccounts")
     public java.util.List<ListServiceAccountsResponseBodyServiceAccounts> serviceAccounts;
 
@@ -32,9 +41,21 @@ public class ListServiceAccountsResponseBody extends TeaModel {
     }
 
     public static class ListServiceAccountsResponseBodyServiceAccounts extends TeaModel {
+        /**
+         * <p>The name of the service account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bookinfo-reviews</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace where the service account resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 

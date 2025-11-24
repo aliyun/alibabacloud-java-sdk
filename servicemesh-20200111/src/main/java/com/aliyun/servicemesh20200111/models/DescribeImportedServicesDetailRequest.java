@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeImportedServicesDetailRequest extends TeaModel {
     /**
      * <p>The name of the ASM gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ingressgateway</p>
      */
     @NameInMap("ASMGatewayName")
     public String ASMGatewayName;
 
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cb8963379255149cb98c8686f274x****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
      * <p>The namespace in which the services reside.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("ServiceNamespace")
     public String serviceNamespace;

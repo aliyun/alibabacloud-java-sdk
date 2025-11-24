@@ -4,17 +4,26 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class ListWaypointsResponseBody extends TeaModel {
+    /**
+     * <p>Base64 encoded string. If it is empty, it means that all waypoints have been obtained; if it is not empty, this value should be included in the next list, and you can continue to obtain it from the offset that ends this time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MjY4Njc5Miwic3RhcnQiOiJkZWZhdWx0L2Jvb2tpbmZvLXByb2R1Y3RwYWdlXHUwMDAwIn0</p>
+     */
     @NameInMap("Continue")
     public String _continue;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of waypoint proxy configurations.</p>
+     * <p>The configurations of waypoint proxies.</p>
      */
     @NameInMap("Waypoints")
     public java.util.List<ListWaypointsResponseBodyWaypoints> waypoints;
@@ -51,84 +60,126 @@ public class ListWaypointsResponseBody extends TeaModel {
     public static class ListWaypointsResponseBodyWaypoints extends TeaModel {
         /**
          * <p>Indicates whether Horizontal Pod Autoscaling (HPA) is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HPAEnabled")
         public String HPAEnabled;
 
         /**
          * <p>The maximum number of waypoint proxy pods when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("HPAMaxReplicas")
         public String HPAMaxReplicas;
 
         /**
          * <p>The minimum number of waypoint proxy pods when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("HPAMinReplicas")
         public String HPAMinReplicas;
 
         /**
          * <p>The expected CPU utilization when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93</p>
          */
         @NameInMap("HPATargetCPU")
         public String HPATargetCPU;
 
         /**
          * <p>The expected memory usage when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91</p>
          */
         @NameInMap("HPATargetMemory")
         public String HPATargetMemory;
 
         /**
-         * <p>The maximum number of CPU cores that are available to the waypoint proxy pods.</p>
+         * <p>The maximum amount of CPU resources that are available to the waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000m</p>
          */
         @NameInMap("LimitCPU")
         public String limitCPU;
 
         /**
-         * <p>The maximum size of the memory that is available to the waypoint proxy pods.</p>
+         * <p>The maximum amount of memory resources that are available to the waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         @NameInMap("LimitMemory")
         public String limitMemory;
 
         /**
-         * <p>The name of the gateway resource corresponding to the waypoint proxy. If the waypoint proxy takes effect on a service account, the name is the service account name. If the waypoint proxy takes effect for the entire namespace, the name is "namespace".</p>
+         * <p>The name of the gateway resource for the waypoint proxy. If the waypoint proxy applies to a service account, the name is the service account name. If the waypoint proxy applies to the entire namespace, the name is <code>namespace</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>Indicates whether waypoint proxy pods are deployed based on Elastic Container Instance (ECI).</p>
+         * <p>Indicates whether waypoint proxy pods are preferentially scheduled to elastic container instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("PreferECI")
         public String preferECI;
 
         /**
          * <p>The number of waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Replicas")
         public String replicas;
 
         /**
-         * <p>The number of CPU cores requested by the waypoint proxy pods.</p>
+         * <p>The amount of CPU resources requested by the waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100m</p>
          */
         @NameInMap("RequestCPU")
         public String requestCPU;
 
         /**
-         * <p>The size of the memory requested by the waypoint proxy pods.</p>
+         * <p>The amount of memory resources requested by the waypoint proxy pods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128Mi</p>
          */
         @NameInMap("RequestMemory")
         public String requestMemory;
 
         /**
-         * <p>The service account on which the waypoint proxy takes effect. If this parameter is not specified, the waypoint proxy takes effect for the entire namespace.</p>
+         * <p>The service account to which the waypoint proxy applies. If no value is returned for this parameter, the waypoint proxy applies to the entire namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bookinfo-productpage</p>
          */
         @NameInMap("ServiceAccount")
         public String serviceAccount;

@@ -12,6 +12,9 @@ public class GetRegisteredServiceNamespacesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetCaCertRequest extends TeaModel {
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c7894c929677643a5bfe1a732d778a****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

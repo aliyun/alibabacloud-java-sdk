@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ModifyServiceMeshNameRequest extends TeaModel {
     /**
      * <p>The new name of the ASM instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-mesh</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cdd30a90a7cea480ebcc7ff****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

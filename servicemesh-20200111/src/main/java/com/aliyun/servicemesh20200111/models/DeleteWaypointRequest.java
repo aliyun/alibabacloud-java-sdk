@@ -6,24 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteWaypointRequest extends TeaModel {
     /**
      * <p>The ID of the cluster on the data plane.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce3c25e247da24f3aab9b7edfae83****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>Waypoint名称。</p>
+     * <p>Waypoint name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bookinfo-reviews</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The Service Mesh (ASM) instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cb8963379255149cb98c8686f274x****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

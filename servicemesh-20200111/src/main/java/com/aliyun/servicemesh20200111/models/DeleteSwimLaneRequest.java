@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class DeleteSwimLaneRequest extends TeaModel {
     /**
      * <p>The name of the lane group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the Service Mesh (ASM) instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
      * <p>The name of the lane.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s1</p>
      */
     @NameInMap("SwimLaneName")
     public String swimLaneName;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateIstioGatewayRoutesShrinkRequest extends TeaModel {
     /**
      * <p>The description of the routing rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo route</p>
      */
     @NameInMap("Description")
     public String description;
@@ -18,28 +21,42 @@ public class UpdateIstioGatewayRoutesShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the ASM gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ingressgateway</p>
      */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
     /**
      * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
      * <p>The status of the routing rule. Valid values:</p>
-     * <br>
-     * <p>*   `0`: The routing rule is valid.</p>
-     * <p>*   `1`: The routing rule is invalid.</p>
-     * <p>*   `2`: An error occurs during the creation or update of the routing rule.</p>
+     * <ul>
+     * <li><code>0</code>: The routing rule is valid.</li>
+     * <li><code>1</code>: The routing rule is invalid.</li>
+     * <li><code>2</code>: An error occurs during the creation or update of the routing rule.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

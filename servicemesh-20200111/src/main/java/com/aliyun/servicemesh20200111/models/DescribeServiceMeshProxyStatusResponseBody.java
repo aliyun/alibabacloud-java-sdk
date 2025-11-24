@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
     /**
      * <p>The status code. Valid values:</p>
-     * <br>
-     * <p>`200`: The operation is successful.</p>
-     * <br>
-     * <p>*   `403`: You are not authorized to perform this operation.</p>
-     * <p>*   `503`: A backend server error occurs.</p>
+     * <p><code>200</code>: The operation is successful.</p>
+     * <ul>
+     * <li><code>403</code>: You are not authorized to perform this operation.</li>
+     * <li><code>503</code>: A backend server error occurs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -29,12 +35,18 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,68 +99,96 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
     public static class DescribeServiceMeshProxyStatusResponseBodyProxyStatus extends TeaModel {
         /**
          * <p>The update status of the proxy. Valid values:</p>
-         * <br>
-         * <p>*   `SYNCED`: The status of the proxy is updated.</p>
-         * <p>*   `NOT SENT`: The status of the proxy is not updated.</p>
-         * <p>*   `STALE (Never Acknowledged)`: Istiod has sent multiple requests to the Envoy proxy to update the status of the proxy but receives no response.</p>
-         * <p>*   `STALE`: Istiod has sent a request to the Envoy proxy to update the status of the proxy but receives no response.</p>
+         * <ul>
+         * <li><code>SYNCED</code>: The status of the proxy is updated.</li>
+         * <li><code>NOT SENT</code>: The status of the proxy is not updated.</li>
+         * <li><code>STALE (Never Acknowledged)</code>: Istiod has sent multiple requests to the Envoy proxy to update the status of the proxy but receives no response.</li>
+         * <li><code>STALE</code>: Istiod has sent a request to the Envoy proxy to update the status of the proxy but receives no response.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNCED</p>
          */
         @NameInMap("ClusterSynced")
         public String clusterSynced;
 
         /**
          * <p>The percentage of the updated endpoints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EndpointPercent")
         public String endpointPercent;
 
         /**
          * <p>The update status of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   `SYNCED`: The status of the endpoint is updated.</p>
-         * <p>*   `NOT SENT`: The status of the endpoint is not updated.</p>
-         * <p>*   `STALE (Never Acknowledged)`: Istiod has sent multiple requests to the Envoy proxy to update the status of the endpoint but receives no response.</p>
-         * <p>*   `STALE`: Istiod has sent a request to the Envoy proxy to update the status of the endpoint but receives no response.</p>
+         * <ul>
+         * <li><code>SYNCED</code>: The status of the endpoint is updated.</li>
+         * <li><code>NOT SENT</code>: The status of the endpoint is not updated.</li>
+         * <li><code>STALE (Never Acknowledged)</code>: Istiod has sent multiple requests to the Envoy proxy to update the status of the endpoint but receives no response.</li>
+         * <li><code>STALE</code>: Istiod has sent a request to the Envoy proxy to update the status of the endpoint but receives no response.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNCED</p>
          */
         @NameInMap("EndpointSynced")
         public String endpointSynced;
 
         /**
          * <p>The version of Istiod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.9.7</p>
          */
         @NameInMap("IstioVersion")
         public String istioVersion;
 
         /**
          * <p>The update status of the listener. Valid values:</p>
-         * <br>
-         * <p>*   `SYNCED`: The status of the listener is updated.</p>
-         * <p>*   `NOT SENT`: The status of the listener is not updated.</p>
-         * <p>*   `STALE (Never Acknowledged)`: Istiod has sent multiple requests to the Envoy proxy to update the status of the listener but receives no response.</p>
-         * <p>*   `STALE`: Istiod has sent a request to the Envoy proxy to update the status of the listener but receives no response.</p>
+         * <ul>
+         * <li><code>SYNCED</code>: The status of the listener is updated.</li>
+         * <li><code>NOT SENT</code>: The status of the listener is not updated.</li>
+         * <li><code>STALE (Never Acknowledged)</code>: Istiod has sent multiple requests to the Envoy proxy to update the status of the listener but receives no response.</li>
+         * <li><code>STALE</code>: Istiod has sent a request to the Envoy proxy to update the status of the listener but receives no response.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNCED</p>
          */
         @NameInMap("ListenerSynced")
         public String listenerSynced;
 
         /**
          * <p>The ID of the proxy on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>119q****</p>
          */
         @NameInMap("ProxyId")
         public String proxyId;
 
         /**
          * <p>The version number of a proxy on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.9.7</p>
          */
         @NameInMap("ProxyVersion")
         public String proxyVersion;
 
         /**
          * <p>The update status of the route. Valid values:</p>
-         * <br>
-         * <p>*   `SYNCED`: The status of the route is updated.</p>
-         * <p>*   `NOT SENT`: The status of the route is not updated.</p>
-         * <p>*   `STALE (Never Acknowledged)`: Istiod has sent multiple requests to the Envoy proxy to update the status of the route but receives no response.</p>
-         * <p>*   `STALE`: Istiod has sent a request to the Envoy proxy to update the status of the route but receives no response.</p>
+         * <ul>
+         * <li><code>SYNCED</code>: The status of the route is updated.</li>
+         * <li><code>NOT SENT</code>: The status of the route is not updated.</li>
+         * <li><code>STALE (Never Acknowledged)</code>: Istiod has sent multiple requests to the Envoy proxy to update the status of the route but receives no response.</li>
+         * <li><code>STALE</code>: Istiod has sent a request to the Envoy proxy to update the status of the route but receives no response.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNCED</p>
          */
         @NameInMap("RouteSynced")
         public String routeSynced;

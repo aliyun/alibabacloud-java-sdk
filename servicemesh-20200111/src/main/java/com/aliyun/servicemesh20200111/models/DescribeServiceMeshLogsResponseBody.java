@@ -12,6 +12,9 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
     public static class DescribeServiceMeshLogsResponseBodyLogs extends TeaModel {
         /**
          * <p>The point in time when the logs were generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-19T15:21:53+08:00</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The content of the logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[RequestID: 31d3a0f0-07ed-4f6e-9004-1804498c****, UID-110982038403****] c096d641835af4658827a4c66c234**** | Start to add cluster c186a6d9641a24098b5499d4d8313****</p>
          */
         @NameInMap("Log")
         public String log;
 
         /**
          * <p>The ASM instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca04bc38979214bf2882be79d39b4****</p>
          */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;

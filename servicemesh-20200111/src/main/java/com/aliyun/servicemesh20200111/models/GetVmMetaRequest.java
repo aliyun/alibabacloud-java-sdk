@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class GetVmMetaRequest extends TeaModel {
     /**
      * <p>The name of the namespace. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hello</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The service account. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>http-sa</p>
      */
     @NameInMap("ServiceAccount")
     public String serviceAccount;
 
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce51a7de4a5144db88a864ed91****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
      * <p>The trusted domain. Default value: cluster.local. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster.local</p>
      */
     @NameInMap("TrustDomain")
     public String trustDomain;

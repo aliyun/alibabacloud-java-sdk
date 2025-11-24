@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeClusterPrometheusResponseBody extends TeaModel {
     /**
      * <p>The public endpoint of the Prometheus service that is used to monitor a cluster in the ASM instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p.com</p>
      */
     @NameInMap("Prometheus")
     public String prometheus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

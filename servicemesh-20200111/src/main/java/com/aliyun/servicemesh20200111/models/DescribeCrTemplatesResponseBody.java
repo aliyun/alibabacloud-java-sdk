@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCrTemplatesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74E97AE2-2900-55C1-A069-C3C1EA*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,12 +49,18 @@ public class DescribeCrTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The English name of the YAML template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP basic routing</p>
          */
         @NameInMap("EnglishName")
         public String englishName;
 
         /**
          * <p>The content in the YAML template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: networking.istio.io/v1beta1\nkind: VirtualService\nmetadata:\n  name: reviews-route # Name for this VirtualService.\nspec:\n  hosts:\n  - reviews.prod.svc.cluster.local # Service that this VirtualSerivce belongs to. \n  http:\n  - name: \&quot;reviews-route\&quot; # Name for the route.\n    route:\n    - destination: # Uniquely identifies the instances of a service to which all traffic should be forwarded to.\n        host: reviews.prod.svc.cluster.local # The name of a service from the service registry or ServiceEntry.\n        port:\n          number: 8080&quot;</p>
          */
         @NameInMap("Yaml")
         public String yaml;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeUserPermissionsRequest extends TeaModel {
     /**
      * <p>The ID of a RAM user or RAM role.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27852573609480****</p>
      */
     @NameInMap("SubAccountUserId")
     public String subAccountUserId;

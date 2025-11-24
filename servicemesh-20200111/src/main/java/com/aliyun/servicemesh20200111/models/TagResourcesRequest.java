@@ -6,24 +6,34 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the Service Mesh (ASM) instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the ASM instances.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to `servicemesh`.</p>
+     * <p>The resource type. Set the value to <code>servicemesh</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>servicemesh</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -68,27 +78,35 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag keys.</p>
-         * <br>
          * <p>The following limits apply:</p>
-         * <br>
-         * <p>*   The key of tag N cannot be an empty string.</p>
-         * <p>*   Valid values of N: 1 to 20.</p>
-         * <p>*   The tag key can be up to 128 characters in length.</p>
-         * <p>*   The tag key cannot start with `aliyun` or `acs:`.</p>
-         * <p>*   The tag key cannot contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>The key of tag N cannot be an empty string.</li>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>The tag key can be up to 128 characters in length.</li>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag values.</p>
-         * <br>
          * <p>The following limits apply:</p>
-         * <br>
-         * <p>*   The value of tag N cannot be an empty string.</p>
-         * <p>*   Valid values of N: 1 to 20.</p>
-         * <p>*   The tag value can be up to 128 characters in length.</p>
-         * <p>*   The tag value cannot contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>The value of tag N cannot be an empty string.</li>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yahaha</p>
          */
         @NameInMap("Value")
         public String value;

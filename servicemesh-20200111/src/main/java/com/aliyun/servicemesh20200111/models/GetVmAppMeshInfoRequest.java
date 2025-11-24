@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetVmAppMeshInfoRequest extends TeaModel {
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce51a7de4a5144db88a864****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

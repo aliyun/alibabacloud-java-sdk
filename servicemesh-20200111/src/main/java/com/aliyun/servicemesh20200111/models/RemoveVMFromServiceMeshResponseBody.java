@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveVMFromServiceMeshResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4b2c0fe0-6705-4614-8521-6b9d289163c8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

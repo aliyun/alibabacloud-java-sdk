@@ -12,6 +12,9 @@ public class DescribeGuestClusterPodsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EDDC0D86-2FC3-56FB-9213-96EB0A3523F1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

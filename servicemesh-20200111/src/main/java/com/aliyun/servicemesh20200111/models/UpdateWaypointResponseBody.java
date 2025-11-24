@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateWaypointResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>71680038-8009-5073-B43E-C057E9******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

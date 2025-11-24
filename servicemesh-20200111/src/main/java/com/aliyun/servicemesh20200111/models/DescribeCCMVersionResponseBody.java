@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeCCMVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The versions of the CCM component in all clusters on the data plane.</p>
      */
     @NameInMap("CCMVersions")
     public java.util.Map<String, CCMVersionsValue> CCMVersions;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

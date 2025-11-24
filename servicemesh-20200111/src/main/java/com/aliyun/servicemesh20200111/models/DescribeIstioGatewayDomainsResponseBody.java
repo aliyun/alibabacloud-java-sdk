@@ -12,6 +12,9 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
     public static class DescribeIstioGatewayDomainsResponseBodyGatewaySecretDetails extends TeaModel {
         /**
          * <p>The name of the secret that contains the Transport Layer Security (TLS) certificate and certificate authority (CA) certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bookinfo-secret</p>
          */
         @NameInMap("CredentialName")
         public String credentialName;
 
         /**
          * <p>The details of the domain name in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;servers&quot;: [     {       &quot;port&quot;: {         &quot;number&quot;: 27018,         &quot;name&quot;: &quot;mongo&quot;,         &quot;protocol&quot;: &quot;MONGO&quot;       },       &quot;hosts&quot;: [         &quot;*&quot;       ]     }   ] }</p>
          */
         @NameInMap("Detail")
         public String detail;
@@ -58,24 +67,36 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the Istio gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         @NameInMap("GatewayCRName")
         public String gatewayCRName;
 
         /**
          * <p>The namespace in which the ASM gateway resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The port name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https-demo</p>
          */
         @NameInMap("PortName")
         public String portName;
 
         /**
-         * <p>The type of the protocol. Valid values: `HTTP`, `HTTPS`, `GRPC`, `HTTP2`, `MONGO`, `TCP`, and `TLS`.</p>
+         * <p>The type of the protocol. Valid values: <code>HTTP</code>, <code>HTTPS</code>, <code>GRPC</code>, <code>HTTP2</code>, <code>MONGO</code>, <code>TCP</code>, and <code>TLS</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         @NameInMap("Protocol")
         public String protocol;

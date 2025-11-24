@@ -12,6 +12,9 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRoutesResponseBodyManagementRoutes extends TeaModel {
         /**
          * <p>The name of the ASM gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         @NameInMap("ASMGatewayName")
         public String ASMGatewayName;
 
         /**
          * <p>The description of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo route</p>
          */
         @NameInMap("Description")
         public String description;
@@ -64,34 +73,50 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>istio-demo</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The name of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http-route</p>
          */
         @NameInMap("RouteName")
         public String routeName;
 
         /**
          * <p>The path that is used to match request URLs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/reviews/v1</p>
          */
         @NameInMap("RoutePath")
         public String routePath;
 
         /**
          * <p>The status of the routing rule. Valid values:</p>
-         * <br>
-         * <p>*   `0`: The routing rule is valid.</p>
-         * <p>*   `1`: The routing rule is invalid.</p>
-         * <p>*   `2`: An error occurs during the creation or update of the routing rule.</p>
+         * <ul>
+         * <li><code>0</code>: The routing rule is valid.</li>
+         * <li><code>1</code>: The routing rule is invalid.</li>
+         * <li><code>2</code>: An error occurs during the creation or update of the routing rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

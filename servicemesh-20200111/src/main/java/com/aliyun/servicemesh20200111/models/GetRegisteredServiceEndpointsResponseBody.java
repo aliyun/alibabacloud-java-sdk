@@ -10,6 +10,10 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
     @NameInMap("EndPointSlice")
     public GetRegisteredServiceEndpointsResponseBodyEndPointSlice endPointSlice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,18 +55,27 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
     public static class GetRegisteredServiceEndpointsResponseBodyEndPointSliceEndpointsDetails extends TeaModel {
         /**
          * <p>The port of the registered service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>127.2.**.**</code></p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The ID of the region in which the registered service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.demo.com">www.demo.com</a></p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
          * <p>The IP address of the registered service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>provider-v1-8c86b6898-h***</p>
          */
         @NameInMap("PodName")
         public String podName;
@@ -75,15 +88,22 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether sidecar proxies are injected. Valid values:</p>
-         * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <ul>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SidecarInjected")
         public Boolean sidecarInjected;
@@ -152,21 +172,31 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
 
         /**
          * <p>The details of the endpoint of the registered service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MESH_INTERNAL</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The location of the registered service. Valid values:</p>
-         * <br>
-         * <p>*   `MESH_INTERNAL`: The service is deployed inside the ASM instance.</p>
-         * <p>*   `MESH_EXTERNAL`: The service is deployed outside the ASM instance.</p>
+         * <ul>
+         * <li><code>MESH_INTERNAL</code>: The service is deployed inside the ASM instance.</li>
+         * <li><code>MESH_EXTERNAL</code>: The service is deployed outside the ASM instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reviews</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -213,12 +243,18 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
     public static class GetRegisteredServiceEndpointsResponseBodyServiceEndpoints extends TeaModel {
         /**
          * <p>The ID of the cluster on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.25.153</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The details of the endpoints of the registered service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c80f45444b3da447da60a911390c2****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;

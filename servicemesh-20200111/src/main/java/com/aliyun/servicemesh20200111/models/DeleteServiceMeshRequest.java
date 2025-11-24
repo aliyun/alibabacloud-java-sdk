@@ -6,23 +6,33 @@ import com.aliyun.tea.*;
 public class DeleteServiceMeshRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly delete the ASM instance. Valid values:</p>
-     * <br>
-     * <p>*   `true`: forcibly deletes the ASM instance.</p>
-     * <p>*   `false`: does not forcibly delete the ASM instance.</p>
-     * <br>
+     * <ul>
+     * <li><code>true</code>: forcibly deletes the ASM instance.</li>
+     * <li><code>false</code>: does not forcibly delete the ASM instance.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>A JSON string that can be parsed into a string array. You can use this JSON string to specify the IDs of the resource instances that need to be retained when the ASM instance is deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot; lb-bp1fxvl3q8akbj6m*****&quot;, &quot;lb-bp1hoxkolggdw0y3*****&quot;]</p>
      */
     @NameInMap("RetainResources")
     public String retainResources;
 
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

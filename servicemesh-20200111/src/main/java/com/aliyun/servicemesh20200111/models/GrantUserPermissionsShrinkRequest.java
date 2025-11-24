@@ -6,17 +6,24 @@ import com.aliyun.tea.*;
 public class GrantUserPermissionsShrinkRequest extends TeaModel {
     /**
      * <p>The permissions that are granted to an entity. The content is a string that consists of JSON arrays. You must specify all permissions that you want to grant to an entity. You can add or remove permissions by modifying the content. Field definition of the sample code:</p>
-     * <br>
-     * <p>*   `IsCustom`: a parameter that is required by the system. Set the value to `true`.</p>
-     * <p>*   `Cluster`: the ID of the Service Mesh (ASM) instance.</p>
-     * <p>*   `RoleName`: the name of the permissions. Valid values: `istio-admin`, `istio-ops`, and `istio-readonly`. A value of istio-admin indicates the permissions of ASM administrators. A value of istio-ops indicates the permissions of ASM restricted users. A value of istio-readonly indicates the read-only permissions.</p>
-     * <p>*   `IsRamRole`: the entity to which you want to grant the permissions. To grant the permissions to a RAM role, set the value to `true`. Otherwise, set the value to `false`.</p>
+     * <ul>
+     * <li><code>IsCustom</code>: a parameter that is required by the system. Set the value to <code>true</code>.</li>
+     * <li><code>Cluster</code>: the ID of the Service Mesh (ASM) instance.</li>
+     * <li><code>RoleName</code>: the name of the permissions. Valid values: <code>istio-admin</code>, <code>istio-ops</code>, and <code>istio-readonly</code>. A value of istio-admin indicates the permissions of ASM administrators. A value of istio-ops indicates the permissions of ASM restricted users. A value of istio-readonly indicates the read-only permissions.</li>
+     * <li><code>IsRamRole</code>: the entity to which you want to grant the permissions. To grant the permissions to a RAM role, set the value to <code>true</code>. Otherwise, set the value to <code>false</code>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;IsCustom&quot;:true,&quot;RoleName&quot;:&quot;istio-ops&quot;,&quot;Cluster&quot;:&quot;c57b848115458460583a4260cb713****&quot;,&quot;RoleType&quot;:&quot;custom&quot;,&quot;IsRamRole&quot;:false},{&quot;IsCustom&quot;:true,&quot;RoleName&quot;:&quot;istio-ops&quot;,&quot;Cluster&quot;:&quot;c4ec191f4e12145c09286ea3e2b8f****&quot;,&quot;RoleType&quot;:&quot;custom&quot;,&quot;IsRamRole&quot;:false}]</p>
      */
     @NameInMap("Permissions")
     public String permissions;
 
     /**
      * <p>The ID of the RAM user or RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27852573609480****</p>
      */
     @NameInMap("SubAccountUserId")
     public String subAccountUserId;

@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11fd0027-c27e-41bb-a565-75583054****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of the ASM instance.</p>
+     * <p>The information about the ASM instance.</p>
      */
     @NameInMap("ServiceMesh")
     public DescribeServiceMeshDetailResponseBodyServiceMesh serviceMesh;
@@ -40,24 +43,54 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints extends TeaModel {
         /**
          * <p>The endpoint that is used to access the API server from the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<code>192.168.**.**</code>:6443</p>
          */
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
 
         /**
+         * <p>The endpoint that is used to access Istio Pilot from the internal network (Intranet) during canary release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>192.168.**.**</code>:15011</p>
+         */
+        @NameInMap("IntranetCanaryPilotEndpoint")
+        public String intranetCanaryPilotEndpoint;
+
+        /**
          * <p>The endpoint that is used to access Istio Pilot from the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>192.168.**.**</code>:15011</p>
          */
         @NameInMap("IntranetPilotEndpoint")
         public String intranetPilotEndpoint;
 
         /**
          * <p>The endpoint that is used to access the API server over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<code>123.56.**.**</code>:6443</p>
          */
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
 
         /**
+         * <p>The endpoint that is used to expose Istio Pilot to the public network (Internet) during canary release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>182.92.**.**</code>:15011</p>
+         */
+        @NameInMap("PublicCanaryPilotEndpoint")
+        public String publicCanaryPilotEndpoint;
+
+        /**
          * <p>The endpoint that is used to expose Istio Pilot to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>182.92.**.**</code>:15011</p>
          */
         @NameInMap("PublicPilotEndpoint")
         public String publicPilotEndpoint;
@@ -73,6 +106,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public String getIntranetApiServerEndpoint() {
             return this.intranetApiServerEndpoint;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints setIntranetCanaryPilotEndpoint(String intranetCanaryPilotEndpoint) {
+            this.intranetCanaryPilotEndpoint = intranetCanaryPilotEndpoint;
+            return this;
+        }
+        public String getIntranetCanaryPilotEndpoint() {
+            return this.intranetCanaryPilotEndpoint;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints setIntranetPilotEndpoint(String intranetPilotEndpoint) {
@@ -91,6 +132,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.publicApiServerEndpoint;
         }
 
+        public DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints setPublicCanaryPilotEndpoint(String publicCanaryPilotEndpoint) {
+            this.publicCanaryPilotEndpoint = publicCanaryPilotEndpoint;
+            return this;
+        }
+        public String getPublicCanaryPilotEndpoint() {
+            return this.publicCanaryPilotEndpoint;
+        }
+
         public DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints setPublicPilotEndpoint(String publicPilotEndpoint) {
             this.publicPilotEndpoint = publicPilotEndpoint;
             return this;
@@ -104,57 +153,85 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshServiceMeshInfo extends TeaModel {
         /**
          * <p>The time when the ASM instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-21T09:42:20+08:00</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The name of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The edition of the ASM instance. Valid values:</p>
-         * <br>
-         * <p>*   `Default`: Standard Edition</p>
-         * <p>*   `Pro`: Enterprise Edition and Ultimate Edition</p>
+         * <ul>
+         * <li><code>Default</code>: Standard Edition</li>
+         * <li><code>Pro</code>: Enterprise Edition and Ultimate Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
          * <p>The ID of the region in which the ASM instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ASM instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
          */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;
 
         /**
          * <p>The state of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The time when the ASM instance was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-03T14:48:54+08:00</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The version of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.7.4.0-gfb34ba99-aliyun</p>
          */
         @NameInMap("Version")
         public String version;
@@ -241,30 +318,80 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer extends TeaModel {
         /**
          * <p>The ID of the CLB instance that is used when the API server is exposed to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2zekaak10uxds44vx****</p>
          */
         @NameInMap("ApiServerLoadbalancerId")
         public String apiServerLoadbalancerId;
 
         /**
          * <p>Indicates whether the API server is exposed to the Internet. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ApiServerPublicEip")
         public Boolean apiServerPublicEip;
 
         /**
+         * <p>The ID of the endpoint that is used to expose API server to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9gtwau6b2aklgjk****</p>
+         */
+        @NameInMap("ApiServerPublicEipId")
+        public String apiServerPublicEipId;
+
+        /**
+         * <p>The ID of the Classic Load Balancer (CLB) instance that is used during the canary release of Istio Pilot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2zesa8qs8kbkj9jkl****</p>
+         */
+        @NameInMap("CanaryPilotLoadBalancerId")
+        public String canaryPilotLoadBalancerId;
+
+        /**
+         * <p>The ID of the endpoint that is used to expose Istio Pilot to the Internet during canary release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9gtwau6b2aklgjk****</p>
+         */
+        @NameInMap("CanaryPilotPublicEipId")
+        public String canaryPilotPublicEipId;
+
+        /**
          * <p>Indicates whether Istio Pilot is exposed to the Internet. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PilotPublicEip")
         public Boolean pilotPublicEip;
 
         /**
+         * <p>The ID of the endpoint that is used to expose Istio Pilot to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9gtwau6b2aklgjk****</p>
+         */
+        @NameInMap("PilotPublicEipId")
+        public String pilotPublicEipId;
+
+        /**
          * <p>The ID of the Classic Load Balancer (CLB) instance that is used when Istio Pilot is exposed to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2zesa8qs8kbkj9jkl****</p>
          */
         @NameInMap("PilotPublicLoadbalancerId")
         public String pilotPublicLoadbalancerId;
@@ -290,12 +417,44 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.apiServerPublicEip;
         }
 
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer setApiServerPublicEipId(String apiServerPublicEipId) {
+            this.apiServerPublicEipId = apiServerPublicEipId;
+            return this;
+        }
+        public String getApiServerPublicEipId() {
+            return this.apiServerPublicEipId;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer setCanaryPilotLoadBalancerId(String canaryPilotLoadBalancerId) {
+            this.canaryPilotLoadBalancerId = canaryPilotLoadBalancerId;
+            return this;
+        }
+        public String getCanaryPilotLoadBalancerId() {
+            return this.canaryPilotLoadBalancerId;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer setCanaryPilotPublicEipId(String canaryPilotPublicEipId) {
+            this.canaryPilotPublicEipId = canaryPilotPublicEipId;
+            return this;
+        }
+        public String getCanaryPilotPublicEipId() {
+            return this.canaryPilotPublicEipId;
+        }
+
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer setPilotPublicEip(Boolean pilotPublicEip) {
             this.pilotPublicEip = pilotPublicEip;
             return this;
         }
         public Boolean getPilotPublicEip() {
             return this.pilotPublicEip;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer setPilotPublicEipId(String pilotPublicEipId) {
+            this.pilotPublicEipId = pilotPublicEipId;
+            return this;
+        }
+        public String getPilotPublicEipId() {
+            return this.pilotPublicEipId;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer setPilotPublicLoadbalancerId(String pilotPublicLoadbalancerId) {
@@ -311,15 +470,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAccessLog extends TeaModel {
         /**
          * <p>Indicates whether access log collection is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The name of the Simple Log Service project that stores access logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-b7b05d08670e41ca8c8fc0b7718f*****</p>
          */
         @NameInMap("Project")
         public String project;
@@ -350,24 +516,35 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAudit extends TeaModel {
         /**
          * <p>Indicates whether an audit project exists in the ASM instance. Valid values:</p>
-         * <br>
-         * <p>*   `audit_project_exist`: An audit project exists.</p>
-         * <p>*   `audit_project_not_exist`: No audit project exists.</p>
+         * <ul>
+         * <li><code>audit_project_exist</code>: An audit project exists.</li>
+         * <li><code>audit_project_not_exist</code>: No audit project exists.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>audit_project_not_exist</p>
          */
         @NameInMap("AuditProjectStatus")
         public String auditProjectStatus;
 
         /**
          * <p>Indicates whether mesh audit is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The name of the Simple Log Service project that is used for mesh audit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit-project</p>
          */
         @NameInMap("Project")
         public String project;
@@ -406,18 +583,31 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo extends TeaModel {
         /**
          * <p>Indicates whether the collection of control plane logs is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The time to live (TTL) of the collected control-plane logs. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("LogTTL")
         public Integer logTTL;
 
         /**
          * <p>The name of the Simple Log Service project that stores control plane logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh-log-cbeb85a09161b4a26ab73e0ac****</p>
          */
         @NameInMap("Project")
         public String project;
@@ -456,18 +646,27 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigEdition extends TeaModel {
         /**
          * <p>The version of the Istiod image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.9.7.1-3-gb3f1ab3c9c-pro-aliyun</p>
          */
         @NameInMap("IstiodImageTag")
         public String istiodImageTag;
 
         /**
          * <p>The name of the edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pro</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version of the Istio Proxy image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.9.7.1-3-gb3f1ab3c9c-pro-aliyun</p>
          */
         @NameInMap("ProxyImageTag")
         public String proxyImageTag;
@@ -504,20 +703,38 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf extends TeaModel {
+        /**
+         * <p>Indicates whether gateway log collection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("GatewayEnabled")
         public Boolean gatewayEnabled;
 
         /**
          * <p>The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("GatewayLifecycle")
         public Integer gatewayLifecycle;
 
+        /**
+         * <p>Indicates whether sidecar log collection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SidecarEnabled")
         public Boolean sidecarEnabled;
 
         /**
          * <p>The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("SidecarLifecycle")
         public Integer sidecarLifecycle;
@@ -564,6 +781,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAdaptiveXdsConfigurationEgressHpaCpu extends TeaModel {
         /**
          * <p>The expected CPU utilization when HPA is enabled. Valid values: 1 to 100. If the CPU utilization exceeds this value, the number of pod replicas increases. If the CPU utilization is less than this value, the number of pod replicas decreases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("TargetAverageUtilization")
         public Integer targetAverageUtilization;
@@ -586,6 +806,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAdaptiveXdsConfigurationEgressHpaMemory extends TeaModel {
         /**
          * <p>The expected memory usage when HPA is enabled. Valid values: 1 to 100. If the memory usage exceeds this value, the number of pod replicas increases. If the memory usage is less than this value, the number of pod replicas decreases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("TargetAverageUtilization")
         public Integer targetAverageUtilization;
@@ -608,12 +831,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAdaptiveXdsConfigurationEgressResources extends TeaModel {
         /**
          * <p>The resources that are available to the egress gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpu&quot;:&quot;200m&quot;, &quot;memory&quot;: &quot;512Mi&quot;}</p>
          */
         @NameInMap("Limits")
         public java.util.Map<String, ?> limits;
 
         /**
          * <p>The resources that are requested by the egress gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpu&quot;:&quot;100m&quot;, &quot;memory&quot;: &quot;256Mi&quot;}</p>
          */
         @NameInMap("Requests")
         public java.util.Map<String, ?> requests;
@@ -644,6 +873,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAdaptiveXdsConfiguration extends TeaModel {
         /**
          * <p>Indicates whether Horizontal Pod Autoscaling (HPA) is enabled for the egress gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EgressAutoscaleEnabled")
         public Boolean egressAutoscaleEnabled;
@@ -662,18 +894,27 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of egress gateway pod replicas when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EgressMaxReplica")
         public Integer egressMaxReplica;
 
         /**
          * <p>The minimum number of egress gateway pod replicas when HPA is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EgressMinReplica")
         public Integer egressMinReplica;
 
         /**
          * <p>The number of the egress gateway pod replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EgressReplicaCount")
         public Integer egressReplicaCount;
@@ -686,6 +927,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether adaptive xDS optimization is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -764,6 +1008,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis extends TeaModel {
         /**
          * <p>Indicates whether automatic diagnostics is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed 5 minutes after you modify an Istio resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoDiagnosisEnabled")
         public Boolean autoDiagnosisEnabled;
@@ -786,6 +1033,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration extends TeaModel {
         /**
          * <p>Indicates whether Istio resources can be accessed by using the Kubernetes API on the data plane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -808,9 +1058,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstioCRHistory extends TeaModel {
         /**
          * <p>Indicates whether the rollback feature for Istio resources is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableHistory")
         public Boolean enableHistory;
@@ -826,6 +1080,46 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public Boolean getEnableHistory() {
             return this.enableHistory;
+        }
+
+    }
+
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration extends TeaModel {
+        /**
+         * <p>The labels for isolated workloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name=xx,region=xx</p>
+         */
+        @NameInMap("LabelsForOffloadedWorkloads")
+        public String labelsForOffloadedWorkloads;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("PilotEnableQuicListeners")
+        public Boolean pilotEnableQuicListeners;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration setLabelsForOffloadedWorkloads(String labelsForOffloadedWorkloads) {
+            this.labelsForOffloadedWorkloads = labelsForOffloadedWorkloads;
+            return this;
+        }
+        public String getLabelsForOffloadedWorkloads() {
+            return this.labelsForOffloadedWorkloads;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration setPilotEnableQuicListeners(Boolean pilotEnableQuicListeners) {
+            this.pilotEnableQuicListeners = pilotEnableQuicListeners;
+            return this;
+        }
+        public Boolean getPilotEnableQuicListeners() {
+            return this.pilotEnableQuicListeners;
         }
 
     }
@@ -855,12 +1149,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders extends TeaModel {
         /**
          * <p>The name of the HTTP request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The value of the HTTP request header field.</p>
+         * <p>The value of the HTTP request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("value")
         public String value;
@@ -891,6 +1191,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet extends TeaModel {
         /**
          * <p>The URL of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.xx.xx.1</p>
          */
         @NameInMap("host")
         public String host;
@@ -903,12 +1206,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The port number of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("port")
         public String port;
 
         /**
-         * <p>The request method. Valid values: `http` and `https`.</p>
+         * <p>The request method. Valid values: <code>http</code> and <code>https</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("scheme")
         public String scheme;
@@ -955,12 +1264,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket extends TeaModel {
         /**
          * <p>The URL of the TCP socket request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.xx.xx.1</p>
          */
         @NameInMap("host")
         public String host;
 
         /**
          * <p>The port number of the TCP socket request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>888</p>
          */
         @NameInMap("port")
         public String port;
@@ -1063,12 +1378,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders extends TeaModel {
         /**
          * <p>The name of the HTTP request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The value of the HTTP request header field.</p>
+         * <p>The value of the HTTP request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("value")
         public String value;
@@ -1099,6 +1420,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet extends TeaModel {
         /**
          * <p>The URL of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.xx.xx.1</p>
          */
         @NameInMap("host")
         public String host;
@@ -1111,12 +1435,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The port number of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("port")
         public String port;
 
         /**
-         * <p>The request method. Valid values: `http` and `https`.</p>
+         * <p>The request method. Valid values: <code>http</code> and <code>https</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("scheme")
         public String scheme;
@@ -1163,12 +1493,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket extends TeaModel {
         /**
          * <p>The URL of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.xx.xx.1</p>
          */
         @NameInMap("host")
         public String host;
 
         /**
          * <p>The port number of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>888</p>
          */
         @NameInMap("port")
         public String port;
@@ -1284,16 +1620,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer extends TeaModel {
         /**
-         * <p>Indicates whether MulitiBuffer-based TLS acceleration is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <p>Indicates whether MultiBuffer-based TLS acceleration is enabled. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The pull-request latency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02s</p>
          */
         @NameInMap("PollDelay")
         public String pollDelay;
@@ -1324,12 +1667,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration extends TeaModel {
         /**
          * <p>Indicates whether NFD is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>Indicates whether feature labels on nodes are cleared when NFD is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NFDLabelPruned")
         public Boolean NFDLabelPruned;
@@ -1360,9 +1709,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection extends TeaModel {
         /**
          * <p>Indicates whether the feature of controlling the OPA injection scope is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("OPAScopeInjected")
         public Boolean OPAScopeInjected;
@@ -1382,15 +1735,40 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationPlayground extends TeaModel {
+        @NameInMap("Scene")
+        public String scene;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationPlayground build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationPlayground self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationPlayground();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationPlayground setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceLimit extends TeaModel {
         /**
          * <p>The maximum number of CPU cores that are available to the istio-init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000m</p>
          */
         @NameInMap("ResourceCPULimit")
         public String resourceCPULimit;
 
         /**
          * <p>The maximum size of the memory that is available to the istio-init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         @NameInMap("ResourceMemoryLimit")
         public String resourceMemoryLimit;
@@ -1421,12 +1799,18 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceRequest extends TeaModel {
         /**
          * <p>The number of CPU cores that are requested by the istio-init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10m</p>
          */
         @NameInMap("ResourceCPURequest")
         public String resourceCPURequest;
 
         /**
          * <p>The size of the memory that is requested by the istio-init container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10Mi</p>
          */
         @NameInMap("ResourceMemoryRequest")
         public String resourceMemoryRequest;
@@ -1481,9 +1865,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the Kubernetes API of clusters on the data plane can be used to access Istio resources. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CRAggregationEnabled")
         public Boolean CRAggregationEnabled;
@@ -1501,13 +1889,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstioCRHistory istioCRHistory;
 
         /**
+         * <p>Additional configurations for Istiod.</p>
+         */
+        @NameInMap("IstiodExtraConfiguration")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration istiodExtraConfiguration;
+
+        /**
          * <p>The lifecycle of Istio Proxy.</p>
          */
         @NameInMap("Lifecycle")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecycle lifecycle;
 
         /**
-         * <p>The information about Transport Layer Security (TLS) acceleration based on MulitiBuffer.</p>
+         * <p>The information about Transport Layer Security (TLS) acceleration based on MultiBuffer.</p>
          */
         @NameInMap("MultiBuffer")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer multiBuffer;
@@ -1524,6 +1918,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("OPAScopeInjection")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection OPAScopeInjection;
 
+        @NameInMap("Playground")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationPlayground playground;
+
         /**
          * <p>The resource limits on the istio-init container.</p>
          */
@@ -1538,6 +1935,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The maximum period of time that Istio Proxy waits for a request to end.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5s</p>
          */
         @NameInMap("TerminationDrainDuration")
         public String terminationDrainDuration;
@@ -1603,6 +2003,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.istioCRHistory;
         }
 
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setIstiodExtraConfiguration(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration istiodExtraConfiguration) {
+            this.istiodExtraConfiguration = istiodExtraConfiguration;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstiodExtraConfiguration getIstiodExtraConfiguration() {
+            return this.istiodExtraConfiguration;
+        }
+
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setLifecycle(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecycle lifecycle) {
             this.lifecycle = lifecycle;
             return this;
@@ -1635,6 +2043,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.OPAScopeInjection;
         }
 
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setPlayground(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationPlayground playground) {
+            this.playground = playground;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationPlayground getPlayground() {
+            return this.playground;
+        }
+
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setSidecarProxyInitResourceLimit(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit) {
             this.sidecarProxyInitResourceLimit = sidecarProxyInitResourceLimit;
             return this;
@@ -1664,9 +2080,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport extends TeaModel {
         /**
          * <p>Indicates whether Gateway API is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("GatewayAPIEnabled")
         public Boolean gatewayAPIEnabled;
@@ -1688,16 +2108,23 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigKiali extends TeaModel {
         /**
-         * <p>Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to `false`.`` Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <p>Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to <code>false</code>.`` Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The endpoint of the mesh topology service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://<code>1.2.**.**</code>:20001</p>
          */
         @NameInMap("Url")
         public String url;
@@ -1728,28 +2155,43 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigLocalityLB extends TeaModel {
         /**
          * <p>The configurations of cross-region traffic distribution.</p>
-         * <br>
-         * <p>>  Either `Failover` or Distribute can be set. If you set `Distribute`, you cannot set Failover.</p>
+         * <blockquote>
+         * <p> Either <code>Failover</code> or Distribute can be set. If you set <code>Distribute</code>, you cannot set Failover.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;from&quot;:&quot;cn-shanghai&quot;,&quot;to&quot;:{&quot;cn-hangzhou/<em>&quot;:50,&quot;cn-shanghai/</em>&quot;:25,&quot;cn-zhangjiakou/<em>&quot;:25}},{&quot;from&quot;:&quot;cn-hangzhou&quot;,&quot;to&quot;:{&quot;cn-hangzhou/</em>&quot;:50,&quot;cn-shanghai/<em>&quot;:25,&quot;cn-zhangjiakou/</em>&quot;:25}}]</p>
          */
         @NameInMap("Distribute")
         public java.util.Map<String, ?> distribute;
 
         /**
          * <p>Indicates whether cross-region load balancing is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The configurations of cross-region failover.</p>
-         * <br>
-         * <p>>  Either Failover or `Distribute` can be set. If you set `Failover`, you cannot set `Distribute`.</p>
+         * <blockquote>
+         * <p> Either Failover or <code>Distribute</code> can be set. If you set <code>Failover</code>, you cannot set <code>Distribute</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;failover&quot;:[{&quot;from&quot;:&quot;cn-hangzhou&quot;,&quot;to&quot;:&quot;cn-shanghai&quot;}]}</p>
          */
         @NameInMap("Failover")
         public java.util.Map<String, ?> failover;
+
+        @NameInMap("FailoverPriority")
+        public java.util.Map<String, ?> failoverPriority;
 
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigLocalityLB build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigLocalityLB self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigLocalityLB();
@@ -1780,14 +2222,26 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.failover;
         }
 
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigLocalityLB setFailoverPriority(java.util.Map<String, ?> failoverPriority) {
+            this.failoverPriority = failoverPriority;
+            return this;
+        }
+        public java.util.Map<String, ?> getFailoverPriority() {
+            return this.failoverPriority;
+        }
+
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigMSE extends TeaModel {
         /**
          * <p>Indicates whether MSE is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -1810,39 +2264,58 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigOPA extends TeaModel {
         /**
          * <p>Indicates whether the OPA plug-in is installed. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The maximum number of CPU cores that are available to the OPA proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LimitCPU")
         public String limitCPU;
 
         /**
          * <p>The maximum size of the memory that is available to the OPA proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512Mi</p>
          */
         @NameInMap("LimitMemory")
         public String limitMemory;
 
         /**
          * <p>The level of the logs to be generated for OPA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         @NameInMap("LogLevel")
         public String logLevel;
 
         /**
          * <p>The number of CPU cores that are requested by the OPA proxy container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RequestCPU")
         public String requestCPU;
 
         /**
          * <p>The size of the memory that is requested by OPA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         @NameInMap("RequestMemory")
         public String requestMemory;
@@ -1905,15 +2378,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotConfigSource extends TeaModel {
         /**
          * <p>Indicates whether communication is allowed between external services and services in the mesh. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The ID of the Nacos instance that provides external service information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-tl326******</p>
          */
         @NameInMap("NacosID")
         public String nacosID;
@@ -1944,18 +2424,26 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature extends TeaModel {
         /**
          * <p>Indicates whether Secret Discovery Service (SDS) is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableSDSServer")
         public Boolean enableSDSServer;
 
         /**
          * <p>Indicates whether gateway configuration filtering is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("FilterGatewayClusterConfig")
         public Boolean filterGatewayClusterConfig;
@@ -1998,15 +2486,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether HTTP/1.0 is supported. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Http10Enabled")
         public Boolean http10Enabled;
 
         /**
          * <p>The sampling percentage of tracing analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TraceSampling")
         public Float traceSampling;
@@ -2053,15 +2548,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPrometheus extends TeaModel {
         /**
          * <p>The endpoint of Prometheus monitoring. If you use a custom Prometheus instance, this parameter is populated by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://prometheus:9090">http://prometheus:9090</a></p>
          */
         @NameInMap("ExternalUrl")
         public String externalUrl;
 
         /**
          * <p>Indicates whether a custom Prometheus instance is used. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UseExternal")
         public Boolean useExternal;
@@ -2092,36 +2594,52 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport extends TeaModel {
         /**
          * <p>Indicates whether Dubbo Filter is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DubboFilterEnabled")
         public Boolean dubboFilterEnabled;
 
         /**
          * <p>Indicates whether MySQL Filter is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("MysqlFilterEnabled")
         public Boolean mysqlFilterEnabled;
 
         /**
          * <p>Indicates whether Redis Filter is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("RedisFilterEnabled")
         public Boolean redisFilterEnabled;
 
         /**
          * <p>Indicates whether Thrift Filter is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ThriftFilterEnabled")
         public Boolean thriftFilterEnabled;
@@ -2168,72 +2686,107 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy extends TeaModel {
         /**
          * <p>The path to the file that stores the access logs of sidecar proxies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/dev/stdout</p>
          */
         @NameInMap("AccessLogFile")
         public String accessLogFile;
 
         /**
          * <p>The format of the access logs of sidecar proxies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;authority_for&quot;:&quot;%REQ(:AUTHORITY)%&quot;,&quot;bytes_received&quot;:&quot;%BYTES_RECEIVED%&quot;,&quot;bytes_sent&quot;:&quot;%BYTES_SENT%&quot;,&quot;downstream_local_address&quot;:&quot;%DOWNSTREAM_LOCAL_ADDRESS%&quot;,&quot;downstream_remote_address&quot;:&quot;%DOWNSTREAM_REMOTE_ADDRESS%&quot;,&quot;duration&quot;:&quot;%DURATION%&quot;,&quot;istio_policy_status&quot;:&quot;%DYNAMIC_METADATA(istio.mixer:status)%&quot;,&quot;method&quot;:&quot;%REQ(:METHOD)%&quot;,&quot;path&quot;:&quot;%REQ(X-ENVOY-ORIGINAL-PATH?:PATH)%&quot;,&quot;protocol&quot;:&quot;%PROTOCOL%&quot;,&quot;request_id&quot;:&quot;%REQ(X-REQUEST-ID)%&quot;,&quot;requested_server_name&quot;:&quot;%REQUESTED_SERVER_NAME%&quot;,&quot;response_code&quot;:&quot;%RESPONSE_CODE%&quot;,&quot;response_flags&quot;:&quot;%RESPONSE_FLAGS%&quot;,&quot;route_name&quot;:&quot;%ROUTE_NAME%&quot;,&quot;start_time&quot;:&quot;%START_TIME%&quot;,&quot;trace_id&quot;:&quot;%REQ(X-B3-TRACEID)%&quot;,&quot;upstream_cluster&quot;:&quot;%UPSTREAM_CLUSTER%&quot;,&quot;upstream_host&quot;:&quot;%UPSTREAM_HOST%&quot;,&quot;upstream_local_address&quot;:&quot;%UPSTREAM_LOCAL_ADDRESS%&quot;,&quot;upstream_service_time&quot;:&quot;%RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)%&quot;,&quot;upstream_transport_failure_reason&quot;:&quot;%UPSTREAM_TRANSPORT_FAILURE_REASON%&quot;,&quot;user_agent&quot;:&quot;%REQ(USER-AGENT)%&quot;,&quot;x_forwarded_for&quot;:&quot;%REQ(X-FORWARDED-FOR)%&quot;}</p>
          */
         @NameInMap("AccessLogFormat")
         public String accessLogFormat;
 
         /**
          * <p>Indicates whether gRPC Access Log Service (ALS) for Envoy is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AccessLogServiceEnabled")
         public Boolean accessLogServiceEnabled;
 
         /**
          * <p>The endpoint of gRPC ALS for Envoy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0</p>
          */
         @NameInMap("AccessLogServiceHost")
         public String accessLogServiceHost;
 
         /**
          * <p>The port of gRPC ALS for Envoy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999</p>
          */
         @NameInMap("AccessLogServicePort")
         public Integer accessLogServicePort;
 
         /**
          * <p>The trusted domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster.domain</p>
          */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
         /**
          * <p>Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableDNSProxying")
         public Boolean enableDNSProxying;
 
         /**
          * <p>The maximum number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000m</p>
          */
         @NameInMap("LimitCPU")
         public String limitCPU;
 
         /**
          * <p>The maximum size of the memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mi</p>
          */
         @NameInMap("LimitMemory")
         public String limitMemory;
 
         /**
          * <p>The number of CPU cores that are requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100m</p>
          */
         @NameInMap("RequestCPU")
         public String requestCPU;
 
         /**
          * <p>The size of the memory that is requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128Mi</p>
          */
         @NameInMap("RequestMemory")
         public String requestMemory;
@@ -2336,15 +2889,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration extends TeaModel {
         /**
          * <p>Indicates whether the CNI plug-in is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The namespaces to exclude. The CNI plug-in ignores pods in the excluded namespaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system,istio-system</p>
          */
         @NameInMap("ExcludeNamespaces")
         public String excludeNamespaces;
@@ -2375,18 +2935,26 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector extends TeaModel {
         /**
          * <p>Indicates whether automatic sidecar proxy injection can be enabled by using pod annotations. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoInjectionPolicyEnabled")
         public Boolean autoInjectionPolicyEnabled;
 
         /**
          * <p>Indicates whether automatic sidecar proxy injection is enabled for all namespaces. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableNamespacesByDefault")
         public Boolean enableNamespacesByDefault;
@@ -2399,36 +2967,54 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of CPU cores that are available to the pod where the sidecar injector resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4000m</p>
          */
         @NameInMap("LimitCPU")
         public String limitCPU;
 
         /**
          * <p>The maximum size of the memory that is available to the pod where the sidecar injector resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048Mi</p>
          */
         @NameInMap("LimitMemory")
         public String limitMemory;
 
         /**
          * <p>The number of CPU cores that are requested by the pod where the sidecar injector resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000m</p>
          */
         @NameInMap("RequestCPU")
         public String requestCPU;
 
         /**
          * <p>The size of the memory that is requested by the pod where the sidecar injector resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512Mi</p>
          */
         @NameInMap("RequestMemory")
         public String requestMemory;
 
         /**
-         * <p>The number of component replicas that are used for sidecar proxy injection. Default value: `1`.</p>
+         * <p>The number of component replicas that are used for sidecar proxy injection. Default value: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SidecarInjectorNum")
         public Integer sidecarInjectorNum;
 
         /**
-         * <p>Other configurations of automatic sidecar proxy injection, in the YAML format. For more information, see [Enable automatic sidecar proxy injection](~~186136~~).</p>
+         * <p>Other configurations of automatic sidecar proxy injection, in the YAML format. For more information, see <a href="https://help.aliyun.com/document_detail/186136.html">Enable automatic sidecar proxy injection</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;injectedAnnotations&quot;:{&quot;test/istio-init&quot;:&quot;runtime/default2&quot;,&quot;test/istio-proxy&quot;:&quot;runtime/default&quot;},&quot;replicaCount&quot;:2,&quot;nodeSelector&quot;:{&quot;beta.kubernetes.io/os&quot;:&quot;linux&quot;}}</p>
          */
         @NameInMap("SidecarInjectorWebhookAsYaml")
         public String sidecarInjectorWebhookAsYaml;
@@ -2515,9 +3101,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigWebAssemblyFilterDeployment extends TeaModel {
         /**
          * <p>Indicates whether WebAssembly Filter is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -2551,16 +3141,20 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAudit audit;
 
         /**
-         * <p>The configurations of control plane log collection.</p>
+         * <p>The configurations of control-plane log collection.</p>
          */
         @NameInMap("ControlPlaneLogInfo")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo controlPlaneLogInfo;
 
         /**
          * <p>Indicates whether a custom Zipkin system is used. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CustomizedZipkin")
         public Boolean customizedZipkin;
@@ -2573,27 +3167,40 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the feature that routes traffic to the nearest instance is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableLocalityLB")
         public Boolean enableLocalityLB;
 
         /**
          * <p>The IP ranges in CIDR form to be excluded from redirection to sidecar proxies in the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0</p>
          */
         @NameInMap("ExcludeIPRanges")
         public String excludeIPRanges;
 
         /**
          * <p>The inbound ports to be excluded from redirection to sidecar proxies in the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80,81</p>
          */
         @NameInMap("ExcludeInboundPorts")
         public String excludeInboundPorts;
 
         /**
          * <p>The outbound ports to be excluded from redirection to sidecar proxies in the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80,81</p>
          */
         @NameInMap("ExcludeOutboundPorts")
         public String excludeOutboundPorts;
@@ -2606,6 +3213,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The IP ranges in CIDR form to redirect to the sidecar proxies in the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         @NameInMap("IncludeIPRanges")
         public String includeIPRanges;
@@ -2642,9 +3252,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The outbound traffic policy. Valid values:</p>
-         * <br>
-         * <p>*   `ALLOW_ANY`: Outbound traffic to all external services is allowed.</p>
-         * <p>*   `REGISTRY_ONLY`: Outbound traffic is allowed to only external services that are defined in the service registry of the ASM instance.</p>
+         * <ul>
+         * <li><code>ALLOW_ANY</code>: Outbound traffic to all external services is allowed.</li>
+         * <li><code>REGISTRY_ONLY</code>: Outbound traffic is allowed to only external services that are defined in the service registry of the ASM instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW_ANY</p>
          */
         @NameInMap("OutboundTrafficPolicy")
         public String outboundTrafficPolicy;
@@ -2680,19 +3294,27 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector sidecarInjector;
 
         /**
-         * <p>Indicates whether Prometheus monitoring is enabled. We recommend that you use [Managed Service for Prometheus](https://arms.console.aliyun.com/). Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <p>Indicates whether Prometheus monitoring is enabled. We recommend that you use <a href="https://arms.console.aliyun.com/">Managed Service for Prometheus</a>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Telemetry")
         public Boolean telemetry;
 
         /**
-         * <p>Indicates whether tracing analysis is enabled. This feature can be enabled only after [Managed Service for OpenTelemetry](https://tracing-analysis.console.aliyun.com/) is activated. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <p>Indicates whether tracing analysis is enabled. This feature can be enabled only after <a href="https://tracing-analysis.console.aliyun.com/">Managed Service for OpenTelemetry</a> is activated. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Tracing")
         public Boolean tracing;
@@ -2913,6 +3535,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecNetwork extends TeaModel {
         /**
          * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2ze384sxttxbctnj****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -2925,6 +3550,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zew0rajjkmxy2369****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -2962,7 +3590,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpec extends TeaModel {
         /**
-         * <p>The information about load balancing.</p>
+         * <p>The information about the load balancer.</p>
          */
         @NameInMap("LoadBalancer")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer loadBalancer;
@@ -3013,10 +3641,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     public static class DescribeServiceMeshDetailResponseBodyServiceMesh extends TeaModel {
         /**
          * <p>The specification of the ASM instance. Valid values:</p>
-         * <br>
-         * <p>*   `standard`: Standard Edition</p>
-         * <p>*   `enterprise`: Enterprise Edition</p>
-         * <p>*   `ultimate`: Ultimate Edition</p>
+         * <ul>
+         * <li><code>standard</code>: Standard Edition</li>
+         * <li><code>enterprise</code>: Enterprise Edition</li>
+         * <li><code>ultimate</code>: Ultimate Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
@@ -3035,15 +3667,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Alibaba Cloud service instance for which the ASM instance is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc3e96f249d124eb38b72718ec5*****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The Alibaba Cloud service for which the ASM instance is created. Valid values:</p>
-         * <br>
-         * <p>*   `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
-         * <p>*   An empty value indicates that the ASM instance is created by the user.</p>
+         * <ul>
+         * <li><code>ackone</code>: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).</li>
+         * <li>An empty value indicates that the ASM instance is created by the user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ackone</p>
          */
         @NameInMap("OwnerType")
         public String ownerType;

@@ -18,6 +18,9 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,37 +57,50 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
     public static class DescribeEipResourcesResponseBodyEipList extends TeaModel {
         /**
          * <p>The ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7ujxscd****</p>
          */
         @NameInMap("AllocationId")
         public String allocationId;
 
         /**
          * <p>The type of the resource that is associated with the EIP. Valid values:</p>
-         * <br>
-         * <p>*   `EcsInstance`: an ECS instance in a VPC</p>
-         * <p>*   `SlbInstance`: a Server Load Balancer (SLB) instance in a VPC</p>
-         * <p>*   `Nat`: a NAT gateway</p>
-         * <p>*   `HaVip`: a high-availability virtual IP address (HAVIP)</p>
-         * <p>*   `NetworkInterface`: a secondary elastic network interface (ENI)</p>
-         * <br>
-         * <p>Default value: `EcsInstance`.</p>
+         * <ul>
+         * <li><code>EcsInstance</code>: an ECS instance in a VPC</li>
+         * <li><code>SlbInstance</code>: a Server Load Balancer (SLB) instance in a VPC</li>
+         * <li><code>Nat</code>: a NAT gateway</li>
+         * <li><code>HaVip</code>: a high-availability virtual IP address (HAVIP)</li>
+         * <li><code>NetworkInterface</code>: a secondary elastic network interface (ENI)</li>
+         * </ul>
+         * <p>Default value: <code>EcsInstance</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SlbInstance</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The IP address of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.xx.xx.112</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The status of the EIP. Valid values:</p>
-         * <br>
-         * <p>*   `Associating`: The EIP is being associated with a resource.</p>
-         * <p>*   `Unassociating`: The EIP is being disassociated from a resource.</p>
-         * <p>*   `InUse`: The EIP is associated with a resource.</p>
-         * <p>*   `Available`: The EIP is available.</p>
+         * <ul>
+         * <li><code>Associating</code>: The EIP is being associated with a resource.</li>
+         * <li><code>Unassociating</code>: The EIP is being disassociated from a resource.</li>
+         * <li><code>InUse</code>: The EIP is associated with a resource.</li>
+         * <li><code>Available</code>: The EIP is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InUse</p>
          */
         @NameInMap("Status")
         public String status;
@@ -131,18 +147,27 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
     public static class DescribeEipResourcesResponseBodyPageResult extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

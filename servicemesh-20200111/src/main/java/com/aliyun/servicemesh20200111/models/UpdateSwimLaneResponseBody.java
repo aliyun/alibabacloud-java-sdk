@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSwimLaneResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yyy</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class GetSwimLaneGroupListResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yyyy</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the lane groups.</p>
+     * <p>The information about the lane group.</p>
      */
     @NameInMap("SwimLaneGroupList")
     public java.util.List<GetSwimLaneGroupListResponseBodySwimLaneGroupList> swimLaneGroupList;
@@ -38,44 +41,111 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
     }
 
     public static class GetSwimLaneGroupListResponseBodySwimLaneGroupList extends TeaModel {
+        /**
+         * <p>The name of the baseline lane of the lane group in permissive mode. This parameter is valid only for a lane group in permissive mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s1</p>
+         */
         @NameInMap("FallbackTarget")
         public String fallbackTarget;
 
         /**
          * <p>The name of a lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The name of the ingress gateway.</p>
+         * <p>The name of the ASM ingress gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingressgateway</p>
          */
         @NameInMap("IngressGatewayName")
         public String ingressGatewayName;
 
         /**
-         * <p>The ingress type. Traffic routing rules can be configured only in an ingress gateway.</p>
+         * <p>The policy used to route requests among multiple lanes in a lane group. Valid values:</p>
+         * <ul>
+         * <li>weighted: a weight-based request routing policy. Requests are matched based on uniform rules and then routed to different lanes in a lane group at a specified ratio.</li>
+         * <li>rule-based: a rule-based request routing policy. Each lane is configured with request routing rules. Only requests that match the request routing rules of a specific lane are routed to the lane.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>weighted</p>
+         */
+        @NameInMap("IngressRoutingStrategy")
+        public String ingressRoutingStrategy;
+
+        /**
+         * <p>The type of gateways in which you can configure request routing rules. You can configure request routing rules only in ASM gateways.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASM</p>
          */
         @NameInMap("IngressType")
         public String ingressType;
 
+        /**
+         * <p>Indicates whether the lane group is in permissive mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsPermissive")
         public Boolean isPermissive;
 
+        /**
+         * <p>The request routing header of the lane group. It is valid only for a lane group in permissive mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x-asm-prefer-tag</p>
+         */
         @NameInMap("RouteHeader")
         public String routeHeader;
 
+        @NameInMap("ServiceLevelFallbackTarget")
+        public String serviceLevelFallbackTarget;
+
         /**
-         * <p>A list of services associated with the lane group.</p>
+         * <p>The Services associated with the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mocka&quot;,&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mockb&quot;,&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mockc&quot;]</p>
          */
         @NameInMap("ServiceList")
         public String serviceList;
 
+        /**
+         * <p>A serialized JSON string. The keys of the JSON object are the keys of the labels owned by all services in the lane group, and the values of the JSON object are arrays of all possible label values of the services in the lane group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ASM_TRAFFIC_TAG&quot;:[&quot;v2&quot;,&quot;v3&quot;,&quot;v1&quot;],&quot;version&quot;:[&quot;v3&quot;,&quot;v1&quot;,&quot;v2&quot;]}</p>
+         */
         @NameInMap("SwimLaneLabels")
         public String swimLaneLabels;
 
+        /**
+         * <p>The end-to-end (E2E) pass-through request header of the lane group. It is valid only for a lane group in permissive mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-request-id</p>
+         */
         @NameInMap("TraceHeader")
         public String traceHeader;
+
+        /**
+         * <p>The weight-based request routing rules for a lane group. This parameter is returned only when the IngressRoutingStrategy parameter is set to weighted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Domains&quot;:[&quot;*&quot;],&quot;MatchRequests&quot;:[{&quot;URI&quot;:{&quot;MatchingMode&quot;:&quot;exact&quot;,&quot;MatchingContent&quot;:&quot;/mock&quot;},&quot;Headers&quot;:[{&quot;Name&quot;:&quot;test&quot;,&quot;MatchingMode&quot;:&quot;exact&quot;,&quot;MatchingContent&quot;:&quot;yes&quot;}]}]}</p>
+         */
+        @NameInMap("WeightedIngressRule")
+        public String weightedIngressRule;
 
         public static GetSwimLaneGroupListResponseBodySwimLaneGroupList build(java.util.Map<String, ?> map) throws Exception {
             GetSwimLaneGroupListResponseBodySwimLaneGroupList self = new GetSwimLaneGroupListResponseBodySwimLaneGroupList();
@@ -106,6 +176,14 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
             return this.ingressGatewayName;
         }
 
+        public GetSwimLaneGroupListResponseBodySwimLaneGroupList setIngressRoutingStrategy(String ingressRoutingStrategy) {
+            this.ingressRoutingStrategy = ingressRoutingStrategy;
+            return this;
+        }
+        public String getIngressRoutingStrategy() {
+            return this.ingressRoutingStrategy;
+        }
+
         public GetSwimLaneGroupListResponseBodySwimLaneGroupList setIngressType(String ingressType) {
             this.ingressType = ingressType;
             return this;
@@ -130,6 +208,14 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
             return this.routeHeader;
         }
 
+        public GetSwimLaneGroupListResponseBodySwimLaneGroupList setServiceLevelFallbackTarget(String serviceLevelFallbackTarget) {
+            this.serviceLevelFallbackTarget = serviceLevelFallbackTarget;
+            return this;
+        }
+        public String getServiceLevelFallbackTarget() {
+            return this.serviceLevelFallbackTarget;
+        }
+
         public GetSwimLaneGroupListResponseBodySwimLaneGroupList setServiceList(String serviceList) {
             this.serviceList = serviceList;
             return this;
@@ -152,6 +238,14 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
         }
         public String getTraceHeader() {
             return this.traceHeader;
+        }
+
+        public GetSwimLaneGroupListResponseBodySwimLaneGroupList setWeightedIngressRule(String weightedIngressRule) {
+            this.weightedIngressRule = weightedIngressRule;
+            return this;
+        }
+        public String getWeightedIngressRule() {
+            return this.weightedIngressRule;
         }
 
     }

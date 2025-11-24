@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDeploymentBySelectorShrinkRequest extends TeaModel {
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbe80a56d07ed45818b4d39273e23****</p>
      */
     @NameInMap("GuestCluster")
     public String guestCluster;
@@ -18,24 +21,37 @@ public class GetDeploymentBySelectorShrinkRequest extends TeaModel {
 
     /**
      * <p>The maximum number of returned data entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Limit")
     public Long limit;
 
     /**
      * <p>The marker of data queried last time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6NzgxODk3MCwic3RhcnQiOiJuZ2lueDQ1N1x1MDAw****</p>
      */
     @NameInMap("Mark")
     public String mark;
 
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("NameSpace")
     public String nameSpace;
 
     /**
      * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce9fc65def2aa4c918747b9360fbd****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

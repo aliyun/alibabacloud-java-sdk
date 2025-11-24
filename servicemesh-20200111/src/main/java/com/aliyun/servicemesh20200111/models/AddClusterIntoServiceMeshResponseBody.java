@@ -4,12 +4,30 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class AddClusterIntoServiceMeshResponseBody extends TeaModel {
+    /**
+     * <p>The returned status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

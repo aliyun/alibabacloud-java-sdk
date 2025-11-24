@@ -6,39 +6,60 @@ import com.aliyun.tea.*;
 public class UpdateIstioInjectionConfigRequest extends TeaModel {
     /**
      * <p>The data plane mode of the namespace. This parameter is valid only when the Ambient Mesh mode is enabled for the current Service Mesh (ASM) instance. Valid values:</p>
-     * <br>
-     * <p>*   ambient: sets the data plane mode of the namespace to the Ambient Mesh mode.</p>
-     * <p>*   sidecar: sets the data plane mode of the namespace to the Sidecar mode.</p>
+     * <ul>
+     * <li>ambient: sets the data plane mode of the namespace to the Ambient Mesh mode.</li>
+     * <li>sidecar: sets the data plane mode of the namespace to the Sidecar mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ambient</p>
      */
     @NameInMap("DataPlaneMode")
     public String dataPlaneMode;
 
     /**
      * <p>Specifies whether to enable Istio automatic sidecar injection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableIstioInjection")
     public Boolean enableIstioInjection;
 
     /**
      * <p>Specifies whether to enable automatic sidecar injection by using SidecarSet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableSidecarSetInjection")
     public Boolean enableSidecarSetInjection;
 
     /**
      * <p>Specifies the version to be injected into the namespace. This parameter is valid only when the ASM instance performs a canary release. When IstioRev is not empty, you must not specify EnableIstioInjection and EnableSidecarSetInjection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>canary</p>
      */
     @NameInMap("IstioRev")
     public String istioRev;
 
     /**
      * <p>The namespace for which you want to modify the sidecar injection setting.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The ID of the ASM instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce2cdbb9d013f447180cf5ca8bb******</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeGuestClusterAccessLogDashboardsRequest extends TeaModel {
     /**
      * <p>The ID of the cluster on the data plane.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce3c25e247da24f3aab9b7edfae83****</p>
      */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;

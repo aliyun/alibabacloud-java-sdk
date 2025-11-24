@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeCrTemplatesRequest extends TeaModel {
     /**
-     * <p>The Istio version used in ASM.</p>
+     * <p>The version of Istio used by the ASM instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.9.7.31-g24cdcb43-aliyun</p>
      */
     @NameInMap("IstioVersion")
     public String istioVersion;
 
     /**
      * <p>The type of Istio resource whose common YAML templates you want to query. Valid values:</p>
-     * <br>
-     * <p>*   AuthorizationPolicy</p>
-     * <p>*   RequestAuthentication</p>
-     * <p>*   PeerAuthentication</p>
-     * <p>*   WorkloadGroup</p>
-     * <p>*   WorkloadEntry</p>
-     * <p>*   Sidecar</p>
-     * <p>*   EnvoyFilter</p>
-     * <p>*   ServiceEntry</p>
-     * <p>*   Gateway</p>
-     * <p>*   DestinationRule</p>
-     * <p>*   VirtualService</p>
+     * <ul>
+     * <li>AuthorizationPolicy</li>
+     * <li>RequestAuthentication</li>
+     * <li>PeerAuthentication</li>
+     * <li>WorkloadGroup</li>
+     * <li>WorkloadEntry</li>
+     * <li>Sidecar</li>
+     * <li>EnvoyFilter</li>
+     * <li>ServiceEntry</li>
+     * <li>Gateway</li>
+     * <li>DestinationRule</li>
+     * <li>VirtualService</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VirtualService</p>
      */
     @NameInMap("Kind")
     public String kind;

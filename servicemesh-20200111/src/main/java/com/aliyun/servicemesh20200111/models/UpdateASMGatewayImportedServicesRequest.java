@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class UpdateASMGatewayImportedServicesRequest extends TeaModel {
     /**
      * <p>The name of the ASM gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ingressgateway</p>
      */
     @NameInMap("ASMGatewayName")
     public String ASMGatewayName;
 
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
      * <p>The names of the services. Separate multiple service names with commas (,). Example: reviews,sleep.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>reviews,sleep</p>
      */
     @NameInMap("ServiceNames")
     public String serviceNames;
 
     /**
      * <p>The namespace in which the service resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("ServiceNamespace")
     public String serviceNamespace;

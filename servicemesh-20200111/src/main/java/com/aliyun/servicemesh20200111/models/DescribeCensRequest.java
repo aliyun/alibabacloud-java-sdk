@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCensRequest extends TeaModel {
     /**
-     * <p>The ASM instance ID.</p>
+     * <p>The ID of the ASM instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce134b0727aa2492db69f6c3880e1****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

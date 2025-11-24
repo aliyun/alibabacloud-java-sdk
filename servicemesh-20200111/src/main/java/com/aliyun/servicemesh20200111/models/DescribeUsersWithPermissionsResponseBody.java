@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUsersWithPermissionsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12B94024-C241-13CD-BA44-6106DF1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

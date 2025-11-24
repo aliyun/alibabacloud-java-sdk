@@ -4,12 +4,32 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class ListServiceAccountsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster on the data plane.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce3c25e247da24f3aab9b7edfae83****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The ID of the Service Mesh (ASM) instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce134b0727aa2492db69f6c3880e1****</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

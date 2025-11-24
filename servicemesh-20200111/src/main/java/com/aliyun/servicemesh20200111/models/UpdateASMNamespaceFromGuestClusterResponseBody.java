@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateASMNamespaceFromGuestClusterResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DEC6122-ACEC-183D-8451-8E0A1A******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

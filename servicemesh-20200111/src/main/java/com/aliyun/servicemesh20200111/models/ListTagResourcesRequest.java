@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID of the ASM instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +30,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to `servicemesh`.</p>
+     * <p>The resource type. Set the value to <code>servicemesh</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>servicemesh</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -82,18 +93,21 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>A tag key can be up to 128 characters in length. The tag key cannot contain `http://` or `https://` and cannot start with `aliyun` or `acs:`.</p>
+         * <p>A tag key can be up to 128 characters in length. The tag key cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the resource.</p>
-         * <br>
          * <p>The tag value can be left empty or a string of up to 128 characters. The tag value cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
-         * <br>
          * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yahaha</p>
          */
         @NameInMap("Value")
         public String value;

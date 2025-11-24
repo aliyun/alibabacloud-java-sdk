@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeClusterPrometheusRequest extends TeaModel {
     /**
      * <p>The ID of the cluster on the data plane.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce3c25e247da24f3aab9b7edfae83****</p>
      */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 
     /**
      * <p>The ID of the region where the cluster on the data plane resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("K8sClusterRegionId")
     public String k8sClusterRegionId;
 
     /**
      * <p>The ASM instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cb8963379255149cb98c8686f274x****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

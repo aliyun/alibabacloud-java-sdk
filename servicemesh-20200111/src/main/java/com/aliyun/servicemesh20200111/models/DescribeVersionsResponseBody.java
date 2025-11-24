@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVersionsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class DescribeVersionsResponseBody extends TeaModel {
     public static class DescribeVersionsResponseBodyVersionInfo extends TeaModel {
         /**
          * <p>The edition of the ASM instance. Valid values:</p>
-         * <br>
-         * <p>*   `Default`: Standard Edition</p>
-         * <p>*   `Pro`: Professional Edition that is commercially released</p>
+         * <ul>
+         * <li><code>Default</code>: Standard Edition</li>
+         * <li><code>Pro</code>: Professional Edition that is commercially released</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("Edition")
         public String edition;

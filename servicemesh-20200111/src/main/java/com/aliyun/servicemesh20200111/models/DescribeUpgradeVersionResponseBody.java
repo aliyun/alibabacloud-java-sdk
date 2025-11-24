@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUpgradeVersionResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11fd0027-c27e-41bb-a565-75583054****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
     public static class DescribeUpgradeVersionResponseBodyVersion extends TeaModel {
         /**
          * <p>The version of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.17.2.42-gf7619883-aliyun</p>
          */
         @NameInMap("IstioOperatorVersion")
         public String istioOperatorVersion;
 
         /**
          * <p>The Istio version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.17.2</p>
          */
         @NameInMap("IstioVersion")
         public String istioVersion;
 
         /**
          * <p>The Kubernetes version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.24.6-aliyun.1</p>
          */
         @NameInMap("KubernetesVersion")
         public String kubernetesVersion;

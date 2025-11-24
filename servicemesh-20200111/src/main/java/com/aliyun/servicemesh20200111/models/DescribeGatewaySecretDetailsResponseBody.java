@@ -12,6 +12,9 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,46 +43,70 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
     public static class DescribeGatewaySecretDetailsResponseBodyGatewaySecretDetails extends TeaModel {
         /**
          * <p>The time when the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-03 07:45</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The name of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bookinfo-gateway</p>
          */
         @NameInMap("GatewayName")
         public String gatewayName;
 
         /**
          * <p>The time when the certificate was issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-03 07:45</p>
          */
         @NameInMap("IssueTime")
         public String issueTime;
 
         /**
-         * <p>*   An error message is returned if the status of the gateway is abnormal. Examples: `tls.crt not exist`, `tls.key not exist`, and `secret type must be kubernetes.io/tls`.</p>
-         * <p>*   An empty value is returned if the status of the gateway is normal.</p>
+         * <ul>
+         * <li>An error message is returned if the status of the gateway is abnormal. Examples: <code>tls.crt not exist</code>, <code>tls.key not exist</code>, and <code>secret type must be kubernetes.io/tls</code>.</li>
+         * <li>An empty value is returned if the status of the gateway is normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tls.crt not exist</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The Server Name Indication (SNI) value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.com</p>
          */
         @NameInMap("SNI")
         public String SNI;
 
         /**
          * <p>The name of the secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-secret</p>
          */
         @NameInMap("SecretName")
         public String secretName;
 
         /**
          * <p>The status of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   `normal`</p>
-         * <p>*   `abnormal`</p>
+         * <ul>
+         * <li><code>normal</code></li>
+         * <li><code>abnormal</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("State")
         public String state;

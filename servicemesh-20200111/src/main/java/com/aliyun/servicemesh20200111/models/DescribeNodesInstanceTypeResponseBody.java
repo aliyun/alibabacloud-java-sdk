@@ -12,6 +12,9 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,24 +41,43 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeNodesInstanceTypeResponseBodyInstanceTypes extends TeaModel {
+        /**
+         * <p>The label keys of nodes which have MultiBuffer optimization supported. (Enable optimization only if pod being scheduled to node which have a label key specified by this field and its value equals with the value field)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature.node.kubernetes.io/mb-feature-enable</p>
+         */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>Indicates whether the instance type supports Multi-Buffer acceleration. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MultiBufferEnabled")
         public Boolean multiBufferEnabled;
 
         /**
          * <p>The instance type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g7.xlarge</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <p>The label keys of nodes which have MultiBuffer optimization supported. (Enable optimization only if pod being scheduled to node which have a label key specified by the key field and its value equals with this field)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Value")
         public String value;
 

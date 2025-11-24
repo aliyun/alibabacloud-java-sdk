@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeCCMVersionRequest extends TeaModel {
     /**
-     * <p>The versions of the CCM component in all clusters on the data plane.</p>
+     * <p>The ID of the Service Mesh (ASM) instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

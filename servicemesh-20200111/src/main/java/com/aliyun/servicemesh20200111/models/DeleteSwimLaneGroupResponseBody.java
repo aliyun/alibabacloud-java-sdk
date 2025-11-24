@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteSwimLaneGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;

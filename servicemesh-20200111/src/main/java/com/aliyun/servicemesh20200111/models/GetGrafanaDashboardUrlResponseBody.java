@@ -12,6 +12,9 @@ public class GetGrafanaDashboardUrlResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76DBB8A0-5AA6-5A56-9A8A-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetGrafanaDashboardUrlResponseBody extends TeaModel {
     public static class GetGrafanaDashboardUrlResponseBodyDashboards extends TeaModel {
         /**
          * <p>The name of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud ASM Istio Http Gateway</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The URL of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://g.console.aliyun.com/d/181863583797****-14651340-200-2/alibaba-cloud-mesh-service?orgId=32****&refresh=60s">https://g.console.aliyun.com/d/181863583797****-14651340-200-2/alibaba-cloud-mesh-service?orgId=32****&amp;refresh=60s</a></p>
          */
         @NameInMap("Url")
         public String url;

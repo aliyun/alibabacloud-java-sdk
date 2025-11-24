@@ -6,33 +6,50 @@ import com.aliyun.tea.*;
 public class GetRegisteredServiceEndpointsRequest extends TeaModel {
     /**
      * <p>The name of the registered service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c8b054ee8c3914d079b5ce9733328****,c58faedb8a78640d3aeb0372e4c02****</p>
      */
     @NameInMap("ClusterIds")
     public String clusterIds;
 
     /**
      * <p>The type of the registered service. Valid values:</p>
-     * <br>
-     * <p>*   `ServiceEntry`: indicates that the service is registered by creating a service entry.</p>
-     * <p>*   `Kubernetes`: indicates that the service is registered on a Kubernetes cluster on the data plane.</p>
+     * <ul>
+     * <li><code>ServiceEntry</code>: indicates that the service is registered by creating a service entry.</li>
+     * <li><code>Kubernetes</code>: indicates that the service is registered on a Kubernetes cluster on the data plane.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>reviews</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The IDs of clusters in the ASM instance. Separate multiple cluster IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08ba3fd1e6484b0f8cc1ad8fe10d****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
      * <p>The endpoints of the registered service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Kubernetes</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;

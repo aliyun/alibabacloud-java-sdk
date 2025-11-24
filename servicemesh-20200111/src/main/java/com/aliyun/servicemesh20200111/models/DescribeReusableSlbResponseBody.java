@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeReusableSlbResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EDDC0D86-2FC3-56FB-9213-96EB0A3523F1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeReusableSlbResponseBody extends TeaModel {
     public static class DescribeReusableSlbResponseBodyReusableSlbList extends TeaModel {
         /**
          * <p>The ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp17xygzsxth0bwlz****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
          * <p>The name of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad6044b015ac54484a20c47241175bb3</p>
          */
         @NameInMap("LoadBalancerName")
         public String loadBalancerName;

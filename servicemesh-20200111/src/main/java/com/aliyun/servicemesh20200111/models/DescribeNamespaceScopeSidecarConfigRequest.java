@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeNamespaceScopeSidecarConfigRequest extends TeaModel {
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The ID of the ASM instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c7120e75a202d4fd8acb028a86b6a****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

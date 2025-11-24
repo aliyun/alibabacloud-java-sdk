@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     /**
      * <p>The description of the routing rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo route</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,10 +48,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     /**
      * <p>The status of the routing rule. Valid values:</p>
-     * <br>
-     * <p>*   `0`: The routing rule is valid.</p>
-     * <p>*   `1`: The routing rule is invalid.</p>
-     * <p>*   `2`: An error occurs during the creation or update of the routing rule.</p>
+     * <ul>
+     * <li><code>0</code>: The routing rule is valid.</li>
+     * <li><code>1</code>: The routing rule is invalid.</li>
+     * <li><code>2</code>: An error occurs during the creation or update of the routing rule.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
@@ -100,12 +116,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsDelegate extends TeaModel {
         /**
          * <p>The name of the virtual service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reviews</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace to which the virtual service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -136,6 +158,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultAbortPercentage extends TeaModel {
         /**
          * <p>The percentage of requests that are mirrored to another destination except for the original destination, which is expressed as a decimal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -158,6 +183,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultAbort extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("HttpStatus")
         public Integer httpStatus;
@@ -194,6 +222,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultDelayPercentage extends TeaModel {
         /**
          * <p>The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -216,12 +247,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultDelay extends TeaModel {
         /**
          * <p>The duration for request delay is expressed as 2 raised to the power of x. You must specify the value of x.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ExponentialDelay")
         public String exponentialDelay;
 
         /**
          * <p>The fixed duration for request delay.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5s</p>
          */
         @NameInMap("FixedDelay")
         public String fixedDelay;
@@ -302,18 +339,27 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsHTTPRedirect extends TeaModel {
         /**
          * <p>The value to be used to overwrite the value of the Authority or Host header during redirection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newratings.default.svc.cluster.local</p>
          */
         @NameInMap("Authority")
         public String authority;
 
         /**
          * <p>The HTTP status code to be used to indicate URL redirection. Default value: 301.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
          */
         @NameInMap("RedirectCode")
         public Integer redirectCode;
 
         /**
          * <p>The value to be used to overwrite the URL path during redirection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/v1/getProductRatings</p>
          */
         @NameInMap("Uri")
         public String uri;
@@ -352,12 +398,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsMirror extends TeaModel {
         /**
          * <p>The name of the service defined in the service registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reviews.default.svc.cluster.local</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The name of the service subset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Subset")
         public String subset;
@@ -388,6 +440,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsMirrorPercentage extends TeaModel {
         /**
          * <p>The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -410,11 +465,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRetriesRetryRemoteLocalities extends TeaModel {
         /**
          * <p>Specifies whether to allow retries to other localities. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
-         * <br>
-         * <p>Default value: `false`.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Value")
         public Boolean value;
@@ -437,18 +495,27 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRetries extends TeaModel {
         /**
          * <p>The number of retries that are allowed for a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Attempts")
         public Integer attempts;
 
         /**
          * <p>The timeout period for each retry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2s</p>
          */
         @NameInMap("PerTryTimeout")
         public String perTryTimeout;
 
         /**
-         * <p>The condition for retries. Example: `connect-failure,refused-stream,503`.</p>
+         * <p>The condition for retries. Example: <code>connect-failure,refused-stream,503</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connect-failure,refused-stream,503</p>
          */
         @NameInMap("RetryOn")
         public String retryOn;
@@ -501,12 +568,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRewrite extends TeaModel {
         /**
          * <p>The value to be used to overwrite the value of the Authority or Host header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newratings.default.svc.cluster.local</p>
          */
         @NameInMap("Authority")
         public String authority;
 
         /**
          * <p>The value to be used to overwrite the path or prefix of the URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/v1/getProductRatings</p>
          */
         @NameInMap("Uri")
         public String uri;
@@ -579,6 +652,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period for requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5s</p>
          */
         @NameInMap("Timeout")
         public String timeout;
@@ -657,22 +733,32 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequestHeaders extends TeaModel {
         /**
          * <p>The header value to be matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("MatchingContent")
         public String matchingContent;
 
         /**
          * <p>The matching mode for the header value. Valid values:</p>
-         * <br>
-         * <p>*   `exact`: exact match</p>
-         * <p>*   `prefix`: match by prefix</p>
-         * <p>*   `regex`: match by regular expression</p>
+         * <ul>
+         * <li><code>exact</code>: exact match</li>
+         * <li><code>prefix</code>: match by prefix</li>
+         * <li><code>regex</code>: match by regular expression</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         @NameInMap("MatchingMode")
         public String matchingMode;
 
         /**
          * <p>The header key to be matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x-request-id</p>
          */
         @NameInMap("Name")
         public String name;
@@ -717,6 +803,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
         /**
          * <p>The TLS port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("TLSPort")
         public Integer TLSPort;
@@ -747,16 +836,23 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequestURI extends TeaModel {
         /**
          * <p>The content to be matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/ratings/v2/</p>
          */
         @NameInMap("MatchingContent")
         public String matchingContent;
 
         /**
          * <p>The matching mode. Valid values:</p>
-         * <br>
-         * <p>*   `exact`: exact match</p>
-         * <p>*   `prefix`: match by prefix</p>
-         * <p>*   `regex`: match by regular expression</p>
+         * <ul>
+         * <li><code>exact</code>: exact match</li>
+         * <li><code>prefix</code>: match by prefix</li>
+         * <li><code>regex</code>: match by regular expression</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>prefix</p>
          */
         @NameInMap("MatchingMode")
         public String matchingMode;
@@ -851,6 +947,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestinationPort extends TeaModel {
         /**
          * <p>The ports of the specified hosts to which the traffic is routed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("Number")
         public Integer number;
@@ -873,6 +972,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestination extends TeaModel {
         /**
          * <p>The name of the service defined in the service registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reviews</p>
          */
         @NameInMap("Host")
         public String host;
@@ -885,6 +987,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the service subset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Subset")
         public String subset;
@@ -923,6 +1028,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeadersRequest extends TeaModel {
         /**
          * <p>The values to be added to the header key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Add")
         public java.util.Map<String, ?> add;
@@ -973,6 +1081,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeadersResponse extends TeaModel {
         /**
          * <p>The values to be added to the header key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Add")
         public java.util.Map<String, ?> add;
@@ -985,6 +1096,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
         /**
          * <p>The header key to be used to overwrite the original header key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Set")
         public java.util.Map<String, ?> set;
@@ -1071,6 +1185,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
         /**
          * <p>The traffic weight. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -1107,6 +1224,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetail extends TeaModel {
+        /**
+         * <p>Domain list.</p>
+         */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
@@ -1118,6 +1238,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
         /**
          * <p>If the value is true, the original YAML file contains features that are not supported on the current interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasUnsafeFeatures")
         public Boolean hasUnsafeFeatures;
@@ -1130,6 +1253,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
         /**
          * <p>The original YAML file of the virtual service that is serialized into a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("RawVSRoute")
         public String rawVSRoute;
@@ -1142,12 +1268,18 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-route</p>
          */
         @NameInMap("RouteName")
         public String routeName;
 
         /**
-         * <p>The type of the traffic to be routed. Valid values: `HTTP`, `TLS`, and `TCP`.</p>
+         * <p>The type of the traffic to be routed. Valid values: <code>HTTP</code>, <code>TLS</code>, and <code>TCP</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("RouteType")
         public String routeType;

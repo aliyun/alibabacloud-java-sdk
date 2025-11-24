@@ -12,6 +12,9 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
     public static class DescribeClustersInServiceMeshResponseBodyClustersAccessLogDashboards extends TeaModel {
         /**
          * <p>The name of the dashboard for access logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh-access-log_details_cn</p>
          */
         @NameInMap("Title")
         public String title;
@@ -73,6 +79,44 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfigSMC extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfigSMC build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfigSMC self = new DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfigSMC();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfigSMC setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfig extends TeaModel {
+        @NameInMap("SMC")
+        public DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfigSMC SMC;
+
+        public static DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfig self = new DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfig setSMC(DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfigSMC SMC) {
+            this.SMC = SMC;
+            return this;
+        }
+        public DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfigSMC getSMC() {
+            return this.SMC;
+        }
+
+    }
+
     public static class DescribeClustersInServiceMeshResponseBodyClusters extends TeaModel {
         /**
          * <p>The configurations of access log collection.</p>
@@ -82,84 +126,127 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
 
         /**
          * <p>The domain name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c80f45444b3da447da60a911390c2****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ask</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-12T15:38:16+08:00</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>,</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        @NameInMap("GuestClusterConfig")
+        public DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfig guestClusterConfig;
+
         /**
          * <p>Indicates whether the Logtail component is installed in the cluster. Valid values:</p>
-         * <br>
-         * <p>*   `logtail_installed`: The Logtail component is installed.</p>
-         * <br>
-         * <p>\-`logtail_uninstalled`: The Logtail component is not installed.</p>
-         * <br>
-         * <p>*   `logtail_state_get_error`: The Logtail component failed to be installed.</p>
+         * <ul>
+         * <li><code>logtail_installed</code>: The Logtail component is installed.</li>
+         * </ul>
+         * <p>\-<code>logtail_uninstalled</code>: The Logtail component is not installed.</p>
+         * <ul>
+         * <li><code>logtail_state_get_error</code>: The Logtail component failed to be installed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>logtail_installed</p>
          */
         @NameInMap("LogtailInstalledState")
         public String logtailInstalledState;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ask1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the region in which the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp197668l6iupljy****</p>
          */
         @NameInMap("SgId")
         public String sgId;
 
         /**
          * <p>The status of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The time when the cluster was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-12T15:38:16+08:00</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The version number of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.16.6-aliyun.1</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zew0rajjkmxy2369****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -215,6 +302,14 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public DescribeClustersInServiceMeshResponseBodyClusters setGuestClusterConfig(DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfig guestClusterConfig) {
+            this.guestClusterConfig = guestClusterConfig;
+            return this;
+        }
+        public DescribeClustersInServiceMeshResponseBodyClustersGuestClusterConfig getGuestClusterConfig() {
+            return this.guestClusterConfig;
         }
 
         public DescribeClustersInServiceMeshResponseBodyClusters setLogtailInstalledState(String logtailInstalledState) {

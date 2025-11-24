@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetSwimLaneGroupListRequest extends TeaModel {
     /**
      * <p>The ASM instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

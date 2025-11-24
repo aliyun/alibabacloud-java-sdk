@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeMetadataResponseBody extends TeaModel {
     /**
-     * <p>The metadata of ASM, which contains basic information about ASM.</p>
+     * <p>The ASM metadata, including the basic information about ASM.</p>
      */
     @NameInMap("MetaData")
     public DescribeMetadataResponseBodyMetaData metaData;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F93DDAD7-6E04-5AC3-86F4-852708******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,9 +40,76 @@ public class DescribeMetadataResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeMetadataResponseBodyMetaDataPlaygroundScene extends TeaModel {
+        /**
+         * <p>The observability scenarios.</p>
+         */
+        @NameInMap("observability")
+        public java.util.List<String> observability;
+
+        /**
+         * <p>Other scenarios.</p>
+         */
+        @NameInMap("other")
+        public java.util.List<String> other;
+
+        /**
+         * <p>The security scenarios.</p>
+         */
+        @NameInMap("security")
+        public java.util.List<String> security;
+
+        /**
+         * <p>The traffic management scenarios.</p>
+         */
+        @NameInMap("trafficManagement")
+        public java.util.List<String> trafficManagement;
+
+        public static DescribeMetadataResponseBodyMetaDataPlaygroundScene build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetadataResponseBodyMetaDataPlaygroundScene self = new DescribeMetadataResponseBodyMetaDataPlaygroundScene();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetadataResponseBodyMetaDataPlaygroundScene setObservability(java.util.List<String> observability) {
+            this.observability = observability;
+            return this;
+        }
+        public java.util.List<String> getObservability() {
+            return this.observability;
+        }
+
+        public DescribeMetadataResponseBodyMetaDataPlaygroundScene setOther(java.util.List<String> other) {
+            this.other = other;
+            return this;
+        }
+        public java.util.List<String> getOther() {
+            return this.other;
+        }
+
+        public DescribeMetadataResponseBodyMetaDataPlaygroundScene setSecurity(java.util.List<String> security) {
+            this.security = security;
+            return this;
+        }
+        public java.util.List<String> getSecurity() {
+            return this.security;
+        }
+
+        public DescribeMetadataResponseBodyMetaDataPlaygroundScene setTrafficManagement(java.util.List<String> trafficManagement) {
+            this.trafficManagement = trafficManagement;
+            return this;
+        }
+        public java.util.List<String> getTrafficManagement() {
+            return this.trafficManagement;
+        }
+
+    }
+
     public static class DescribeMetadataResponseBodyMetaDataProEdition extends TeaModel {
         /**
          * <p>The current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.14.3.87-g96cf7305-aliyun</p>
          */
         @NameInMap("CurrentVersion")
         public String currentVersion;
@@ -103,10 +173,25 @@ public class DescribeMetadataResponseBody extends TeaModel {
 
     public static class DescribeMetadataResponseBodyMetaData extends TeaModel {
         /**
+         * <p>The Kubernetes versions compatible with ASM.</p>
+         */
+        @NameInMap("CompatibilityInfoList")
+        public java.util.List<java.util.Map<String, ?>> compatibilityInfoList;
+
+        /**
          * <p>The current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.14.3.87-g96cf7305-aliyun</p>
          */
         @NameInMap("CurrentVersion")
         public String currentVersion;
+
+        /**
+         * <p>The data of the ASM Playground.</p>
+         */
+        @NameInMap("PlaygroundScene")
+        public DescribeMetadataResponseBodyMetaDataPlaygroundScene playgroundScene;
 
         /**
          * <p>The version information about ASM of a commercial edition.</p>
@@ -143,12 +228,28 @@ public class DescribeMetadataResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeMetadataResponseBodyMetaData setCompatibilityInfoList(java.util.List<java.util.Map<String, ?>> compatibilityInfoList) {
+            this.compatibilityInfoList = compatibilityInfoList;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getCompatibilityInfoList() {
+            return this.compatibilityInfoList;
+        }
+
         public DescribeMetadataResponseBodyMetaData setCurrentVersion(String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
         public String getCurrentVersion() {
             return this.currentVersion;
+        }
+
+        public DescribeMetadataResponseBodyMetaData setPlaygroundScene(DescribeMetadataResponseBodyMetaDataPlaygroundScene playgroundScene) {
+            this.playgroundScene = playgroundScene;
+            return this;
+        }
+        public DescribeMetadataResponseBodyMetaDataPlaygroundScene getPlaygroundScene() {
+            return this.playgroundScene;
         }
 
         public DescribeMetadataResponseBodyMetaData setProEdition(DescribeMetadataResponseBodyMetaDataProEdition proEdition) {

@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshesRequest extends TeaModel {
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeServiceMeshesRequestTag> tag;
 
@@ -21,9 +24,21 @@ public class DescribeServiceMeshesRequest extends TeaModel {
     }
 
     public static class DescribeServiceMeshesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yahaha</p>
+         */
         @NameInMap("Value")
         public String value;
 

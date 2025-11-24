@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteIstioGatewayDomainsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31d3a0f0-07ed-4f6e-9004-1804498c****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,6 +12,9 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E0496204-7586-5B4C-B364-2361CC0EDxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
     public static class DescribeImportedServicesDetailResponseBodyDetailsPorts extends TeaModel {
         /**
          * <p>The name of a port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http-0</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The node port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("NodePort")
         public Integer nodePort;
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The protocol of the port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The container port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;
@@ -130,6 +148,9 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
 
         /**
          * <p>The namespace in which the service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -142,12 +163,18 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of a service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>productpage</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Kubernetes</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;

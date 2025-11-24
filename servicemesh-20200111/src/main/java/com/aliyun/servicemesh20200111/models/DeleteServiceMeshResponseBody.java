@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteServiceMeshResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11fd0027-c27e-41bb-a565-75583054****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

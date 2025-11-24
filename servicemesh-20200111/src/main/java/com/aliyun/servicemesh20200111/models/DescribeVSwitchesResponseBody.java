@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>“”</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of vSwitches that are deployed in the VPC in the region. This parameter is optional and is not returned by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,42 +95,62 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public static class DescribeVSwitchesResponseBodyVSwitches extends TeaModel {
         /**
          * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>The state of the vSwitch. Valid values:</p>
-         * <br>
-         * <p>*   `Pending`: The vSwitch is being configured.</p>
-         * <p>*   `Available`: The vSwitch is available.</p>
+         * <ul>
+         * <li><code>Pending</code>: The vSwitch is being configured.</li>
+         * <li><code>Available</code>: The vSwitch is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1g24p9no0iqir46****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-test</p>
          */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
         /**
          * <p>The ID of the VPC to which the vSwitch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp17gig441u0msmd6****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The zone to which the switch belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

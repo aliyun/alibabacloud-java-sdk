@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class SecretCreateRecordValue extends TeaModel {
     /**
      * <p>The result of creating the secret. Valid values:</p>
-     * <br>
-     * <p>*   `success`: The secret was created.</p>
-     * <p>*   `fail`: The secret failed to be created.</p>
+     * <ul>
+     * <li><code>success</code>: The secret was created.</li>
+     * <li><code>fail</code>: The secret failed to be created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The ID of the cluster on the data plane.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c08ba3fd1e6484b0f8cc1ad8xe10d****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The error message returned when exceptions occur. Otherwise, an empty value is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>timeout</p>
      */
     @NameInMap("Message")
     public String message;

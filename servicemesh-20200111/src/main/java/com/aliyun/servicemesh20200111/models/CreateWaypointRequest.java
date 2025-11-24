@@ -6,90 +6,138 @@ import com.aliyun.tea.*;
 public class CreateWaypointRequest extends TeaModel {
     /**
      * <p>The ID of the cluster on the data plane.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cb8963379255149cb98c8686f274x****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether to enable Horizontal Pod Autoscaling (HPA).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("HPAEnabled")
     public Boolean HPAEnabled;
 
     /**
      * <p>The maximum number of waypoint proxy pods when HPA is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("HPAMaxReplicas")
     public Integer HPAMaxReplicas;
 
     /**
      * <p>The minimum number of waypoint proxy pods when HPA is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("HPAMinReplicas")
     public Integer HPAMinReplicas;
 
     /**
      * <p>The expected CPU utilization when HPA is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93</p>
      */
     @NameInMap("HPATargetCPU")
     public Integer HPATargetCPU;
 
     /**
      * <p>The expected memory usage when HPA is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91</p>
      */
     @NameInMap("HPATargetMemory")
     public Integer HPATargetMemory;
 
     /**
      * <p>The maximum number of CPU cores that are available to the waypoint proxy pods.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000m</p>
      */
     @NameInMap("LimitCPU")
     public String limitCPU;
 
     /**
      * <p>The maximum size of the memory that is available to the waypoint proxy pods.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024Mi</p>
      */
     @NameInMap("LimitMemory")
     public String limitMemory;
 
     /**
      * <p>The namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>Specifies whether to deploy waypoint proxy pods based on Elastic Container Instance (ECI).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PreferECI")
     public Boolean preferECI;
 
     /**
      * <p>The number of waypoint proxy pods.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Replicas")
     public Integer replicas;
 
     /**
      * <p>The number of CPU cores requested by the waypoint proxy pods.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100m</p>
      */
     @NameInMap("RequestCPU")
     public String requestCPU;
 
     /**
      * <p>The size of the memory requested by the waypoint proxy pods.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>128Mi</p>
      */
     @NameInMap("RequestMemory")
     public String requestMemory;
 
     /**
      * <p>The service account on which the waypoint proxy takes effect. If you do not specify this parameter, the waypoint proxy takes effect for the entire namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bookinfo-productpage</p>
      */
     @NameInMap("ServiceAccount")
     public String serviceAccount;
 
     /**
      * <p>The Service Mesh (ASM) instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce134b0727aa2492db69f6c3880e****</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

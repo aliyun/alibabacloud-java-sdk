@@ -12,6 +12,9 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A7C9E37-C171-584F-9A99-869B48C4196D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,41 +42,60 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
 
     public static class DescribeUserPermissionsResponseBodyPermissions extends TeaModel {
         /**
-         * <p>The entity to which the permissions are granted. A value of `true` indicates that the permissions are granted to a RAM user. A value of `false` indicates that the permissions are granted to a RAM role.</p>
+         * <p>The entity to which the permissions are granted. A value of <code>true</code> indicates that the permissions are granted to a RAM user. A value of <code>false</code> indicates that the permissions are granted to a RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsRamRole")
         public String isRamRole;
 
         /**
-         * <p>The value is fixed as `0`.</p>
+         * <p>The value is fixed as <code>0</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParentId")
         public String parentId;
 
         /**
          * <p>The ID of the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c57b848115458460583a4260cb713****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The value is fixed as `cluster`.</p>
+         * <p>The value is fixed as <code>cluster</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The name of the permissions. Valid values:</p>
-         * <br>
-         * <p>*   `istio-admin`: the permissions of ASM administrators.</p>
-         * <p>*   `istio-ops`: the permissions of ASM restricted users.</p>
-         * <p>*   `istio-readonly`: the read-only permissions.</p>
+         * <ul>
+         * <li><code>istio-admin</code>: the permissions of ASM administrators.</li>
+         * <li><code>istio-ops</code>: the permissions of ASM restricted users.</li>
+         * <li><code>istio-readonly</code>: the read-only permissions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>istio-admin</p>
          */
         @NameInMap("RoleName")
         public String roleName;
 
         /**
-         * <p>The value is fixed as `custom`.</p>
+         * <p>The value is fixed as <code>custom</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("RoleType")
         public String roleType;

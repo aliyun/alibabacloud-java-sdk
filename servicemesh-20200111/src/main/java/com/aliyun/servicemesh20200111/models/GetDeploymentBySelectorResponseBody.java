@@ -12,12 +12,18 @@ public class GetDeploymentBySelectorResponseBody extends TeaModel {
 
     /**
      * <p>The end-of-data marker.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6NTgyMDUzMzk5MCwic3RhcnQiOiJwbXMtYWRhcHRlci1kZGxsXHUwMDA****</p>
      */
     @NameInMap("Mark")
     public String mark;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>946690C2-41D3-55A0-A501-E2FFAB5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

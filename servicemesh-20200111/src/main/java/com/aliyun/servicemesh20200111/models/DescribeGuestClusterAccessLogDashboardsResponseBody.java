@@ -12,12 +12,18 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
 
     /**
      * <p>The ID of the cluster on the data plane.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ce3c25e247da24f3aab9b7edfae83****</p>
      */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +60,18 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
     public static class DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards extends TeaModel {
         /**
          * <p>The title of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The URL of a dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("Url")
         public String url;

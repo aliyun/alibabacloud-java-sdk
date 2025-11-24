@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11fd0027-c27e-41bb-a565-75583054****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
     public static class DescribeServiceMeshUpgradeStatusResponseBodyUpgradeDetail extends TeaModel {
         /**
          * <p>The number of ingress gateways that are upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FinishedGatewaysNum")
         public Long finishedGatewaysNum;
@@ -52,16 +58,23 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
 
         /**
          * <p>The status of the ASM instance. Valid values:</p>
-         * <br>
-         * <p>*   running: The instance is running.</p>
-         * <p>*   `upgrading`: The instance is being upgraded.</p>
-         * <p>*   `upgrading_failed`: The upgrade of the instance fails.</p>
+         * <ul>
+         * <li>running: The instance is running.</li>
+         * <li><code>upgrading</code>: The instance is being upgraded.</li>
+         * <li><code>upgrading_failed</code>: The upgrade of the instance fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("MeshStatus")
         public String meshStatus;
 
         /**
          * <p>The total number of ingress gateways in the ASM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalGatewaysNum")
         public Long totalGatewaysNum;

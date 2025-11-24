@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class SecretDeleteRecordValue extends TeaModel {
     /**
      * <p>The result of deleting the secret. Valid values:</p>
-     * <br>
-     * <p>*   `success`: The secret was deleted.</p>
-     * <p>*   `fail`: The secret failed to be deleted.</p>
+     * <ul>
+     * <li><code>success</code>: The secret was deleted.</li>
+     * <li><code>fail</code>: The secret failed to be deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD65C0AD-D3C6-48D3-8D93-38D2015C****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The error message returned when exceptions occur. Otherwise, an empty value is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>timeout</p>
      */
     @NameInMap("Message")
     public String message;
