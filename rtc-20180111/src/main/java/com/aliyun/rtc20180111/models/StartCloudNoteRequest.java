@@ -369,6 +369,9 @@ public class StartCloudNoteRequest extends TeaModel {
     }
 
     public static class StartCloudNoteRequestRealtimeSubtitle extends TeaModel {
+        @NameInMap("AsrCallback")
+        public Boolean asrCallback;
+
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -378,6 +381,14 @@ public class StartCloudNoteRequest extends TeaModel {
         public static StartCloudNoteRequestRealtimeSubtitle build(java.util.Map<String, ?> map) throws Exception {
             StartCloudNoteRequestRealtimeSubtitle self = new StartCloudNoteRequestRealtimeSubtitle();
             return TeaModel.build(map, self);
+        }
+
+        public StartCloudNoteRequestRealtimeSubtitle setAsrCallback(Boolean asrCallback) {
+            this.asrCallback = asrCallback;
+            return this;
+        }
+        public Boolean getAsrCallback() {
+            return this.asrCallback;
         }
 
         public StartCloudNoteRequestRealtimeSubtitle setEnabled(Boolean enabled) {
