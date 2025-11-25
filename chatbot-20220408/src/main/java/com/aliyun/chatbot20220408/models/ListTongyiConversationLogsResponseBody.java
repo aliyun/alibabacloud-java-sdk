@@ -21,6 +21,13 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("SessionFlowDebugInfo")
+    public ListTongyiConversationLogsResponseBodySessionFlowDebugInfo sessionFlowDebugInfo;
+
     public static ListTongyiConversationLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTongyiConversationLogsResponseBody self = new ListTongyiConversationLogsResponseBody();
         return TeaModel.build(map, self);
@@ -48,6 +55,44 @@ public class ListTongyiConversationLogsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListTongyiConversationLogsResponseBody setSessionFlowDebugInfo(ListTongyiConversationLogsResponseBodySessionFlowDebugInfo sessionFlowDebugInfo) {
+        this.sessionFlowDebugInfo = sessionFlowDebugInfo;
+        return this;
+    }
+    public ListTongyiConversationLogsResponseBodySessionFlowDebugInfo getSessionFlowDebugInfo() {
+        return this.sessionFlowDebugInfo;
+    }
+
+    public static class ListTongyiConversationLogsResponseBodySessionFlowDebugInfo extends TeaModel {
+        @NameInMap("ApiParams")
+        public java.util.Map<String, ?> apiParams;
+
+        @NameInMap("SlotParams")
+        public java.util.Map<String, ?> slotParams;
+
+        public static ListTongyiConversationLogsResponseBodySessionFlowDebugInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListTongyiConversationLogsResponseBodySessionFlowDebugInfo self = new ListTongyiConversationLogsResponseBodySessionFlowDebugInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTongyiConversationLogsResponseBodySessionFlowDebugInfo setApiParams(java.util.Map<String, ?> apiParams) {
+            this.apiParams = apiParams;
+            return this;
+        }
+        public java.util.Map<String, ?> getApiParams() {
+            return this.apiParams;
+        }
+
+        public ListTongyiConversationLogsResponseBodySessionFlowDebugInfo setSlotParams(java.util.Map<String, ?> slotParams) {
+            this.slotParams = slotParams;
+            return this;
+        }
+        public java.util.Map<String, ?> getSlotParams() {
+            return this.slotParams;
+        }
+
     }
 
 }
