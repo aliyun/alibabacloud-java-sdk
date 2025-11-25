@@ -2430,6 +2430,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("extNodeIdList", request.extNodeIdList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extNodeNameList)) {
+            body.put("extNodeNameList", request.extNodeNameList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             body.put("from", request.from);
         }
@@ -2472,6 +2476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.statusList)) {
             body.put("statusList", request.statusList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskNameList)) {
+            body.put("taskNameList", request.taskNameList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.to)) {

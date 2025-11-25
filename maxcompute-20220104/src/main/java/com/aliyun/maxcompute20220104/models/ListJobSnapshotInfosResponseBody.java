@@ -153,6 +153,9 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         @NameInMap("extPlantFrom")
         public String extPlantFrom;
 
+        @NameInMap("extPlatformId")
+        public String extPlatformId;
+
         /**
          * <p>The instance ID.</p>
          * 
@@ -426,6 +429,14 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         }
         public String getExtPlantFrom() {
             return this.extPlantFrom;
+        }
+
+        public ListJobSnapshotInfosResponseBodyDataJobInfoList setExtPlatformId(String extPlatformId) {
+            this.extPlatformId = extPlatformId;
+            return this;
+        }
+        public String getExtPlatformId() {
+            return this.extPlatformId;
         }
 
         public ListJobSnapshotInfosResponseBodyDataJobInfoList setInstanceId(String instanceId) {

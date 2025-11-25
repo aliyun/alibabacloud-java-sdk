@@ -19,6 +19,9 @@ public class ListJobInfosRequest extends TeaModel {
     @NameInMap("extNodeIdList")
     public java.util.List<String> extNodeIdList;
 
+    @NameInMap("extNodeNameList")
+    public java.util.List<String> extNodeNameList;
+
     /**
      * <p>The start timestamp.</p>
      * <p>This parameter is required.</p>
@@ -91,6 +94,9 @@ public class ListJobInfosRequest extends TeaModel {
      */
     @NameInMap("statusList")
     public java.util.List<String> statusList;
+
+    @NameInMap("taskNameList")
+    public java.util.List<String> taskNameList;
 
     /**
      * <p>The end timestamp.</p>
@@ -172,6 +178,14 @@ public class ListJobInfosRequest extends TeaModel {
     }
     public java.util.List<String> getExtNodeIdList() {
         return this.extNodeIdList;
+    }
+
+    public ListJobInfosRequest setExtNodeNameList(java.util.List<String> extNodeNameList) {
+        this.extNodeNameList = extNodeNameList;
+        return this;
+    }
+    public java.util.List<String> getExtNodeNameList() {
+        return this.extNodeNameList;
     }
 
     public ListJobInfosRequest setFrom(Long from) {
@@ -260,6 +274,14 @@ public class ListJobInfosRequest extends TeaModel {
     }
     public java.util.List<String> getStatusList() {
         return this.statusList;
+    }
+
+    public ListJobInfosRequest setTaskNameList(java.util.List<String> taskNameList) {
+        this.taskNameList = taskNameList;
+        return this;
+    }
+    public java.util.List<String> getTaskNameList() {
+        return this.taskNameList;
     }
 
     public ListJobInfosRequest setTo(Long to) {

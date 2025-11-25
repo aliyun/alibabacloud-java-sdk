@@ -210,6 +210,9 @@ public class ListJobInfosResponseBody extends TeaModel {
         @NameInMap("extNodeId")
         public String extNodeId;
 
+        @NameInMap("extNodeName")
+        public String extNodeName;
+
         /**
          * <p>The account of the node owner.</p>
          * 
@@ -227,6 +230,9 @@ public class ListJobInfosResponseBody extends TeaModel {
          */
         @NameInMap("extPlantFrom")
         public String extPlantFrom;
+
+        @NameInMap("extPlatformId")
+        public String extPlatformId;
 
         /**
          * <p>The amount of scanned data for the job. Unit: byte.</p>
@@ -396,6 +402,9 @@ public class ListJobInfosResponseBody extends TeaModel {
         @NameInMap("tags")
         public String tags;
 
+        @NameInMap("taskName")
+        public String taskName;
+
         /**
          * <p>The tenant ID.</p>
          * 
@@ -468,6 +477,14 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.extNodeId;
         }
 
+        public ListJobInfosResponseBodyDataJobInfoList setExtNodeName(String extNodeName) {
+            this.extNodeName = extNodeName;
+            return this;
+        }
+        public String getExtNodeName() {
+            return this.extNodeName;
+        }
+
         public ListJobInfosResponseBodyDataJobInfoList setExtNodeOnDuty(String extNodeOnDuty) {
             this.extNodeOnDuty = extNodeOnDuty;
             return this;
@@ -482,6 +499,14 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
         public String getExtPlantFrom() {
             return this.extPlantFrom;
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoList setExtPlatformId(String extPlatformId) {
+            this.extPlatformId = extPlatformId;
+            return this;
+        }
+        public String getExtPlatformId() {
+            return this.extPlatformId;
         }
 
         public ListJobInfosResponseBodyDataJobInfoList setInputBytes(Double inputBytes) {
@@ -634,6 +659,14 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
         public String getTags() {
             return this.tags;
+        }
+
+        public ListJobInfosResponseBodyDataJobInfoList setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
         }
 
         public ListJobInfosResponseBodyDataJobInfoList setTenantId(String tenantId) {
