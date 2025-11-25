@@ -75,6 +75,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>pkv-xxxxx</p>
+     */
+    @NameInMap("KVCacheInstanceId")
+    public String KVCacheInstanceId;
+
+    /**
+     * <strong>example:</strong>
      * <p>xxxxxxxxxxxxxxxxxxxxxxx</p>
      */
     @NameInMap("KubeClusterId")
@@ -263,6 +270,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getInternalIp() {
         return this.internalIp;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setKVCacheInstanceId(String KVCacheInstanceId) {
+        this.KVCacheInstanceId = KVCacheInstanceId;
+        return this;
+    }
+    public String getKVCacheInstanceId() {
+        return this.KVCacheInstanceId;
     }
 
     public DescribeAIDBClusterAttributeResponseBody setKubeClusterId(String kubeClusterId) {

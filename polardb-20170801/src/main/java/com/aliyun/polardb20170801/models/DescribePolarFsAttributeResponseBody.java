@@ -32,6 +32,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("BandwidthBaseLine")
     public Double bandwidthBaseLine;
 
+    @NameInMap("BucketId")
+    public String bucketId;
+
     /**
      * <strong>example:</strong>
      * <p>high_performance</p>
@@ -69,6 +72,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     @NameInMap("Expired")
     public String expired;
+
+    @NameInMap("FileSystemId")
+    public String fileSystemId;
 
     /**
      * <strong>example:</strong>
@@ -141,6 +147,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     @NameInMap("RelativeDbClusterId")
     public String relativeDbClusterId;
+
+    @NameInMap("RelativePfsClusterId")
+    public String relativePfsClusterId;
 
     /**
      * <p>Id of the request</p>
@@ -237,6 +246,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         return this.bandwidthBaseLine;
     }
 
+    public DescribePolarFsAttributeResponseBody setBucketId(String bucketId) {
+        this.bucketId = bucketId;
+        return this;
+    }
+    public String getBucketId() {
+        return this.bucketId;
+    }
+
     public DescribePolarFsAttributeResponseBody setCategory(String category) {
         this.category = category;
         return this;
@@ -283,6 +300,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
     public String getExpired() {
         return this.expired;
+    }
+
+    public DescribePolarFsAttributeResponseBody setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     public DescribePolarFsAttributeResponseBody setLockMode(String lockMode) {
@@ -379,6 +404,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
     public String getRelativeDbClusterId() {
         return this.relativeDbClusterId;
+    }
+
+    public DescribePolarFsAttributeResponseBody setRelativePfsClusterId(String relativePfsClusterId) {
+        this.relativePfsClusterId = relativePfsClusterId;
+        return this;
+    }
+    public String getRelativePfsClusterId() {
+        return this.relativePfsClusterId;
     }
 
     public DescribePolarFsAttributeResponseBody setRequestId(String requestId) {
