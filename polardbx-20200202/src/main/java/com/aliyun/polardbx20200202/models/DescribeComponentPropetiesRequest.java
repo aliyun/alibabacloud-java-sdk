@@ -31,6 +31,9 @@ public class DescribeComponentPropetiesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     public static DescribeComponentPropetiesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeComponentPropetiesRequest self = new DescribeComponentPropetiesRequest();
         return TeaModel.build(map, self);
@@ -58,6 +61,14 @@ public class DescribeComponentPropetiesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeComponentPropetiesRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }
