@@ -35,6 +35,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("AlgorithmVersion")
     public String algorithmVersion;
 
+    @NameInMap("AssignNodeSpec")
+    public AssignNodeSpec assignNodeSpec;
+
     @NameInMap("ComputeResource")
     public GetTrainingJobResponseBodyComputeResource computeResource;
 
@@ -230,6 +233,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public String getAlgorithmVersion() {
         return this.algorithmVersion;
+    }
+
+    public GetTrainingJobResponseBody setAssignNodeSpec(AssignNodeSpec assignNodeSpec) {
+        this.assignNodeSpec = assignNodeSpec;
+        return this;
+    }
+    public AssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
     }
 
     public GetTrainingJobResponseBody setComputeResource(GetTrainingJobResponseBodyComputeResource computeResource) {

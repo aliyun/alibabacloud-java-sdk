@@ -429,6 +429,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlgorithmVersion", request.algorithmVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.assignNodeSpec)) {
+            body.put("AssignNodeSpec", request.assignNodeSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.codeDir)) {
             body.put("CodeDir", request.codeDir);
         }

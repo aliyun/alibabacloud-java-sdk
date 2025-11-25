@@ -28,6 +28,9 @@ public class CreateTrainingJobRequest extends TeaModel {
     @NameInMap("AlgorithmVersion")
     public String algorithmVersion;
 
+    @NameInMap("AssignNodeSpec")
+    public AssignNodeSpec assignNodeSpec;
+
     @NameInMap("CodeDir")
     public Location codeDir;
 
@@ -134,6 +137,14 @@ public class CreateTrainingJobRequest extends TeaModel {
     }
     public String getAlgorithmVersion() {
         return this.algorithmVersion;
+    }
+
+    public CreateTrainingJobRequest setAssignNodeSpec(AssignNodeSpec assignNodeSpec) {
+        this.assignNodeSpec = assignNodeSpec;
+        return this;
+    }
+    public AssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
     }
 
     public CreateTrainingJobRequest setCodeDir(Location codeDir) {
