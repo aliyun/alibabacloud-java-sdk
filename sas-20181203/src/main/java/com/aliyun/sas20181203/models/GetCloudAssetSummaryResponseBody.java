@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetCloudAssetSummaryResponseBody extends TeaModel {
     /**
-     * <p>The summary of cloud services.</p>
+     * <p>Summary information of cloud assets.</p>
      */
     @NameInMap("GroupedFields")
     public GetCloudAssetSummaryResponseBodyGroupedFields groupedFields;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。</p>
      * 
      * <strong>example:</strong>
      * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
@@ -42,7 +42,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
 
     public static class GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas extends TeaModel {
         /**
-         * <p>The subtype of the cloud service.</p>
+         * <p>Subtype of the cloud product</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,33 +51,33 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         public Integer assetSubType;
 
         /**
-         * <p>The type of the cloud service. Valid values:</p>
+         * <p>云产品的类型。取值：</p>
          * <ul>
-         * <li><strong>0</strong>: Elastic Compute Service (ECS)</li>
-         * <li><strong>1</strong>: Server Load Balancer (SLB)</li>
-         * <li><strong>3</strong>: ApsaraDB RDS</li>
-         * <li><strong>4</strong>: ApsaraDB for MongoDB (MongoDB)</li>
-         * <li><strong>5</strong>: ApsaraDB for Redis (Redis)</li>
-         * <li><strong>6</strong>: Container Registry</li>
-         * <li><strong>8</strong>: Container Service for Kubernetes (ACK)</li>
-         * <li><strong>9</strong>: Virtual Private Cloud (VPC)</li>
-         * <li><strong>11</strong>: ActionTrail</li>
-         * <li><strong>12</strong>: Alibaba Cloud CDN (CDN)</li>
-         * <li><strong>13</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
-         * <li><strong>14</strong>: Apsara Devops</li>
-         * <li><strong>15</strong>: Resource Access Management (RAM)</li>
-         * <li><strong>16</strong>: Anti-DDoS</li>
-         * <li><strong>17</strong>: Web Application Firewall (WAF)</li>
-         * <li><strong>18</strong>: Object Storage Service (OSS)</li>
-         * <li><strong>19</strong>: PolarDB</li>
-         * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
-         * <li><strong>21</strong>: Microservices Engine (MSE)</li>
-         * <li><strong>22</strong>: File Storage NAS (NAS)</li>
-         * <li><strong>23</strong>: Data Security Center (DSC)</li>
-         * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
-         * <li><strong>25</strong>: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)</li>
-         * <li><strong>26</strong>: PolarDB for Xscale (PolarDB-X)</li>
-         * <li><strong>27</strong>: Elasticsearch</li>
+         * <li><strong>0</strong>：云服务器 ECS</li>
+         * <li><strong>1</strong>：负载均衡</li>
+         * <li><strong>3</strong>：云数据库 RDS</li>
+         * <li><strong>4</strong>：云数据库 MongoDB 版</li>
+         * <li><strong>5</strong>：云数据库 Tair（兼容 Redis）</li>
+         * <li><strong>6</strong>：容器镜像服务</li>
+         * <li><strong>8</strong>：容器服务Kubernetes版</li>
+         * <li><strong>9</strong>：专有网络VPC</li>
+         * <li><strong>11</strong>：操作审计</li>
+         * <li><strong>12</strong>：CDN</li>
+         * <li><strong>13</strong>：数字证书管理服务（原SSL证书）</li>
+         * <li><strong>14</strong>：云效</li>
+         * <li><strong>15</strong>：访问控制</li>
+         * <li><strong>16</strong>：DDoS防护</li>
+         * <li><strong>17</strong>：Web应用防火墙</li>
+         * <li><strong>18</strong>：对象存储</li>
+         * <li><strong>19</strong>：云原生关系型数据库 PolarDB</li>
+         * <li><strong>20</strong>：云数据库 PostgreSQL 版</li>
+         * <li><strong>21</strong>：微服务引擎</li>
+         * <li><strong>22</strong>：文件存储NAS</li>
+         * <li><strong>23</strong>：数据安全中心</li>
+         * <li><strong>24</strong>：弹性公网IP</li>
+         * <li><strong>25</strong>：云身份服务-EIAM</li>
+         * <li><strong>26</strong>：PolarDB-X</li>
+         * <li><strong>27</strong>：Elasticsearch</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         public Integer assetType;
 
         /**
-         * <p>The total number of cloud service instances of this type.</p>
+         * <p>Total number of this type of cloud product instances.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -96,7 +96,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         public Integer instanceCount;
 
         /**
-         * <p>The total number of cloud service instances that are at risk of this type.</p>
+         * <p>Total number of risky instances for this type of cloud product.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -105,13 +105,13 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         public Integer instanceRiskCount;
 
         /**
-         * <p>The server type. Valid values:</p>
+         * <p>服务器厂商。取值：</p>
          * <ul>
-         * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
-         * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
-         * <li><strong>2</strong>: an asset in a data center</li>
-         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset provided by a third-party service provider</li>
-         * <li><strong>8</strong>: a lightweight asset</li>
+         * <li><strong>0</strong>：阿里云资产</li>
+         * <li><strong>1</strong>：云外资产</li>
+         * <li><strong>2</strong>：IDC资产</li>
+         * <li><strong>3</strong>、<strong>4</strong>、<strong>5</strong>、<strong>7</strong>：其它云资产</li>
+         * <li><strong>8</strong>：轻量级资产</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,13 +169,13 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
 
     public static class GetCloudAssetSummaryResponseBodyGroupedFields extends TeaModel {
         /**
-         * <p>The statistics of cloud services.</p>
+         * <p>List of cloud product statistics</p>
          */
         @NameInMap("CloudAssetSummaryMetas")
         public java.util.List<GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas> cloudAssetSummaryMetas;
 
         /**
-         * <p>The total number of cloud service instances.</p>
+         * <p>Total number of cloud product instances.</p>
          * 
          * <strong>example:</strong>
          * <p>919</p>
@@ -184,7 +184,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         public Integer instanceCountTotal;
 
         /**
-         * <p>The total number of cloud service instances that are at risk.</p>
+         * <p>Total number of cloud product instances at risk</p>
          * 
          * <strong>example:</strong>
          * <p>544</p>

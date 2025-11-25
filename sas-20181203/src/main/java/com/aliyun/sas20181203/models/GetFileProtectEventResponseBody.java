@@ -218,9 +218,21 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>User ID of the user who started the current process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username that started the current process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

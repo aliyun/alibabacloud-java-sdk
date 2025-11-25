@@ -50,13 +50,39 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>This parameter is deprecated and should be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BuySas")
         @Deprecated
         public Integer buySas;
 
+        /**
+         * <p>Whether a yearly or monthly subscription of Cloud Security Center is purchased. Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes</li>
+         * <li><strong>false</strong>: No</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BuySasNew")
         public Boolean buySasNew;
 
+        /**
+         * <p>Subscription type. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Prepaid</li>
+         * <li><strong>1</strong>: Pay-As-You-Go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ChargeType")
         public Integer chargeType;
 
@@ -78,6 +104,16 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>Instance purchase type. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Self-purchased</li>
+         * <li><strong>1</strong>: Multi-account allocation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InstanceBuyType")
         public Integer instanceBuyType;
 
@@ -142,12 +178,49 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("IsSiemDaAccount")
         public String isSiemDaAccount;
 
+        /**
+         * <p>Post-paid module switch. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Off</li>
+         * <li><strong>1</strong>: On</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PostBasicService")
         public Integer postBasicService;
 
+        /**
+         * <p>The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:</p>
+         * <ul>
+         * <li><p>Key:</p>
+         * <ul>
+         * <li><strong>VUL</strong>: vulnerability fixing module</li>
+         * <li><strong>CSPM</strong>: cloud service configuration check module</li>
+         * <li><strong>AGENTLESS</strong>: agentless detection module</li>
+         * <li><strong>SERVERLESS</strong>: serverless asset module</li>
+         * </ul>
+         * </li>
+         * <li><p>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify a value for a module, the original value of the module is retained.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;VUL\&quot;:0}</p>
+         */
         @NameInMap("PostPayModuleSwitch")
         public String postPayModuleSwitch;
 
+        /**
+         * <p>Cloud Security Center Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postpay-sas-x5x3hy1ly***</p>
+         */
         @NameInMap("SaleInstance")
         public String saleInstance;
 

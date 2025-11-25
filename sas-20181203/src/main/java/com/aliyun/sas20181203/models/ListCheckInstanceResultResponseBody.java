@@ -276,6 +276,12 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <p>The multi-cloud provider account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VendorUserName")
         public String vendorUserName;
 

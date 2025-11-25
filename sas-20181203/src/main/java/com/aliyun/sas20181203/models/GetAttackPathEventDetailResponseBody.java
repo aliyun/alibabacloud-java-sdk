@@ -283,6 +283,12 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
 
     public static class GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList extends TeaModel {
         /**
+         * <p>AI资产标识。取值：</p>
+         * <ul>
+         * <li><strong>0</strong>：非AI资产。</li>
+         * <li><strong>1</strong>：AI资产。</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

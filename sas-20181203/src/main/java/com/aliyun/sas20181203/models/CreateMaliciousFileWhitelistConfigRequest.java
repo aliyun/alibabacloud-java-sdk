@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     /**
-     * <p>The name of the alert.</p>
+     * <p>Alert name:</p>
      * <ul>
-     * <li>Set the value to ALL, which indicates all alert types.</li>
+     * <li>ALL: All alerts</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The field that you want to use in the whitelist rule.</p>
+     * <p>Field used for whitelist in sensitive file alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>fileMd5</p>
@@ -26,7 +26,7 @@ public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String field;
 
     /**
-     * <p>The value of the field that you want to use in the whitelist rule.</p>
+     * <p>Expected value of the field to be whitelisted.</p>
      * 
      * <strong>example:</strong>
      * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
@@ -35,9 +35,9 @@ public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>The logical operator that you want to use in the whitelist rule.</p>
+     * <p>Rule judgment operator:</p>
      * <ul>
-     * <li>Set the value to strEqual, which indicates the equality operator (=).</li>
+     * <li>strEqual: String equals</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,13 +46,19 @@ public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <p>Remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>whitelist</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The feature to which this operation belongs.</p>
+     * <p>Business source:</p>
      * <ul>
-     * <li>Set the value to agentless, which indicates the agentless detection feature.</li>
+     * <li>agentless: Agentless detection</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,10 +68,10 @@ public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The type of the assets on which you want the whitelist rule to take effect. Valid values:</p>
+     * <p>Effective target type:</p>
      * <ul>
-     * <li>ALL: all assets</li>
-     * <li>SELECTION_KEY: selected assets</li>
+     * <li>ALL: All assets</li>
+     * <li>SELECTION_KEY: Assets selected via the asset selection component</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,10 +81,10 @@ public class CreateMaliciousFileWhitelistConfigRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The assets on which you want the whitelist rule to take effect. Valid values:</p>
+     * <p>Target effective scope:</p>
      * <ul>
-     * <li>ALL: all assets</li>
-     * <li>Others: selected assets</li>
+     * <li>ALL: All assets</li>
+     * <li>Other: Key of the asset range selected by the asset selection component</li>
      * </ul>
      * 
      * <strong>example:</strong>

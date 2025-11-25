@@ -19,6 +19,9 @@ public class GetCheckCountStatisticRequest extends TeaModel {
     @NameInMap("StatisticType")
     public String statisticType;
 
+    /**
+     * <p>Task source.</p>
+     */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 

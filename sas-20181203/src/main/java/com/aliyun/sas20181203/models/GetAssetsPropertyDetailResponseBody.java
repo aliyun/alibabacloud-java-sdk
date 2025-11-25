@@ -161,9 +161,21 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>LLM service endpoint</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dashscope.aliyuncs.com</p>
+         */
         @NameInMap("EndPoint")
         public String endPoint;
 
+        /**
+         * <p>File path for requesting the LLM service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/llm.py</p>
+         */
         @NameInMap("File")
         public String file;
 
@@ -188,6 +200,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>AI tool installation path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/pip3/env/vllm</p>
+         */
         @NameInMap("InstallationPath")
         public String installationPath;
 
@@ -248,12 +266,30 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @NameInMap("ListenProtocol")
         public String listenProtocol;
 
+        /**
+         * <p>AI tool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vllm</p>
+         */
         @NameInMap("MiddlewareName")
         public String middlewareName;
 
+        /**
+         * <p>AI tool version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.1</p>
+         */
         @NameInMap("MiddlewareVersion")
         public String middlewareVersion;
 
+        /**
+         * <p>Name of the LLM vendor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAI</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 

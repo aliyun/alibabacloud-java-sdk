@@ -85,6 +85,16 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("AssetLevel")
     public Integer assetLevel;
 
+    /**
+     * <p>Whether it supports the activation of a postpaid trial package. Values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Not supported </li>
+     * <li><strong>1</strong>: Supported</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CanTryPostPaidPackage")
     public Integer canTryPostPaidPackage;
 

@@ -25,6 +25,10 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
      * <li><strong>CSPM</strong>: cloud service configuration check module</li>
      * <li><strong>AGENTLESS</strong>: agentless detection module</li>
      * <li><strong>SERVERLESS</strong>: serverless asset module</li>
+     * <li><strong>CTDR</strong>: Threat Analysis and Response Module</li>
+     * <li><strong>POST_HOST</strong>: Host and Container Security Module</li>
+     * <li><strong>SDK</strong>: Malicious File Detection SDK Module</li>
+     * <li><strong>RASP</strong>: Application Protection Module</li>
      * </ul>
      * </li>
      * <li><p>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</p>

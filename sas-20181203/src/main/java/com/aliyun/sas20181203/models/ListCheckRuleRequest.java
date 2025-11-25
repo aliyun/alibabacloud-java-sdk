@@ -81,6 +81,9 @@ public class ListCheckRuleRequest extends TeaModel {
     @NameInMap("ScopeType")
     public String scopeType;
 
+    /**
+     * <p>List of task sources.</p>
+     */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 

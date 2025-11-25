@@ -109,6 +109,15 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeWarningMachinesResponseBodyWarningMachines extends TeaModel {
+        /**
+         * <p>The type of cloud product assets.</p>
+         * <blockquote>
+         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the types of cloud product assets.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AssetType")
         public String assetType;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetClusterScannerYamlResponseBody extends TeaModel {
     /**
+     * <p>Base64 encoded CA certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,8 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     public String caCertBase64;
 
     /**
+     * <p>Cluster environment information.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -19,6 +23,8 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     public String clusterEnvInfo;
 
     /**
+     * <p>The ID of the cluster that you want to scan.</p>
+     * 
      * <strong>example:</strong>
      * <p>c7c190a82d9a048be9038d352840f****</p>
      */
@@ -26,6 +32,8 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The name of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-registry.cn-shanghai.cr.aliyuncs.com/default/scanner:v1</p>
      */
@@ -33,6 +41,8 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     public String image;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
      */
@@ -40,6 +50,8 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Base64 encoded webhook certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -47,6 +59,8 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     public String tlsCertBase64;
 
     /**
+     * <p>Base64 encoded webhook private key.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -54,6 +68,12 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     public String tlsKeyBase64;
 
     /**
+     * <p>Indicates whether the incremental scan switch is enabled. Values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Not enabled</li>
+     * <li><strong>1</strong>: Enabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

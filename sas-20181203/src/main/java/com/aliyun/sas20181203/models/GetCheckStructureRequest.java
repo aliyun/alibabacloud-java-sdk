@@ -48,6 +48,9 @@ public class GetCheckStructureRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>List of task sources.</p>
+     */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 

@@ -143,6 +143,12 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     }
 
     public static class ListCheckItemWarningMachineResponseBodyList extends TeaModel {
+        /**
+         * <p>云产品资产的类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AssetType")
         public String assetType;
 

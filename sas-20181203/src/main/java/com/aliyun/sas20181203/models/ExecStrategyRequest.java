@@ -4,6 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExecStrategyRequest extends TeaModel {
+    /**
+     * <p>Set the action for this execution, default is <strong>exec</strong>. Values:</p>
+     * <ul>
+     * <li><strong>exec</strong>: Execute. - <strong>terminate</strong>: Terminate.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>terminate</p>
+     */
     @NameInMap("ExecAction")
     public String execAction;
 

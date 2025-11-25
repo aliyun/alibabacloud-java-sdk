@@ -42,6 +42,9 @@ public class GetCheckSummaryRequest extends TeaModel {
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;
 
+    /**
+     * <p>List of task sources.</p>
+     */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 

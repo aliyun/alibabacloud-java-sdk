@@ -22,6 +22,12 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("ExposureIp")
+    public String exposureIp;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
@@ -112,6 +118,22 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeExposedStatisticsDetailRequest setExposureIp(String exposureIp) {
+        this.exposureIp = exposureIp;
+        return this;
+    }
+    public String getExposureIp() {
+        return this.exposureIp;
+    }
+
+    public DescribeExposedStatisticsDetailRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeExposedStatisticsDetailRequest setPageSize(Integer pageSize) {

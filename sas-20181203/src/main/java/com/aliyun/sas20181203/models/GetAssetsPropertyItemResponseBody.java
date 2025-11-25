@@ -152,9 +152,21 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>AI tool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vllm</p>
+         */
         @NameInMap("MiddlewareName")
         public String middlewareName;
 
+        /**
+         * <p>Name of the LLM service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deepseek</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 

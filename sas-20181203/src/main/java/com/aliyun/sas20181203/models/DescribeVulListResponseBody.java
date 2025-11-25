@@ -778,7 +778,7 @@ public class DescribeVulListResponseBody extends TeaModel {
          * <p>281801</p>
          */
         @NameInMap("GroupId")
-        public Integer groupId;
+        public Long groupId;
 
         /**
          * <p>The name of the image.</p>
@@ -1192,11 +1192,11 @@ public class DescribeVulListResponseBody extends TeaModel {
             return this.firstTs;
         }
 
-        public DescribeVulListResponseBodyVulRecords setGroupId(Integer groupId) {
+        public DescribeVulListResponseBodyVulRecords setGroupId(Long groupId) {
             this.groupId = groupId;
             return this;
         }
-        public Integer getGroupId() {
+        public Long getGroupId() {
             return this.groupId;
         }
 
