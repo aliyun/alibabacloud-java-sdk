@@ -857,12 +857,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NodeGroupId", request.nodeGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parallelism)) {
+            query.put("Parallelism", request.parallelism);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.promotionOptionNo)) {
             query.put("PromotionOptionNo", request.promotionOptionNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {
             query.put("Target", request.target);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terminationGracePeriodSeconds)) {
+            query.put("TerminationGracePeriodSeconds", request.terminationGracePeriodSeconds);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

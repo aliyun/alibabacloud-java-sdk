@@ -24,6 +24,9 @@ public class ModifyNodeNumberRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    @NameInMap("Parallelism")
+    public Integer parallelism;
+
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
@@ -36,6 +39,9 @@ public class ModifyNodeNumberRequest extends TeaModel {
      */
     @NameInMap("Target")
     public Integer target;
+
+    @NameInMap("TerminationGracePeriodSeconds")
+    public Integer terminationGracePeriodSeconds;
 
     public static ModifyNodeNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNodeNumberRequest self = new ModifyNodeNumberRequest();
@@ -58,6 +64,14 @@ public class ModifyNodeNumberRequest extends TeaModel {
         return this.nodeGroupId;
     }
 
+    public ModifyNodeNumberRequest setParallelism(Integer parallelism) {
+        this.parallelism = parallelism;
+        return this;
+    }
+    public Integer getParallelism() {
+        return this.parallelism;
+    }
+
     public ModifyNodeNumberRequest setPromotionOptionNo(String promotionOptionNo) {
         this.promotionOptionNo = promotionOptionNo;
         return this;
@@ -72,6 +86,14 @@ public class ModifyNodeNumberRequest extends TeaModel {
     }
     public Integer getTarget() {
         return this.target;
+    }
+
+    public ModifyNodeNumberRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
+        this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
+        return this;
+    }
+    public Integer getTerminationGracePeriodSeconds() {
+        return this.terminationGracePeriodSeconds;
     }
 
 }
