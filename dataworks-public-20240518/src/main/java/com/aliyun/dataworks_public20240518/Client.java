@@ -10860,6 +10860,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Bizdate", request.bizdate);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            body.put("Filter", request.filter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("Id", request.id);
         }
@@ -10922,6 +10926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.triggerType)) {
             body.put("TriggerType", request.triggerType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unifiedWorkflowInstanceId)) {
+            body.put("UnifiedWorkflowInstanceId", request.unifiedWorkflowInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workflowId)) {
@@ -11259,9 +11267,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bizDate)) {
             body.put("BizDate", request.bizDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            body.put("Filter", request.filter);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
@@ -11292,8 +11308,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SortBy", request.sortBy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            body.put("Tags", request.tagsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unifiedWorkflowInstanceId)) {
+            body.put("UnifiedWorkflowInstanceId", request.unifiedWorkflowInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workflowId)) {
@@ -11351,6 +11375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
             body.put("EnvType", request.envType);
@@ -11382,6 +11410,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
             body.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            body.put("Tags", request.tagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.triggerType)) {

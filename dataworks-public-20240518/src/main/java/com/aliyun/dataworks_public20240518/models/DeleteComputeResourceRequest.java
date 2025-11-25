@@ -14,6 +14,8 @@ public class DeleteComputeResourceRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

@@ -84,6 +84,9 @@ public class ListWorkflowsRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("Tags")
+    public java.util.List<String> tags;
+
     /**
      * <p>The trigger type.</p>
      * <ul>
@@ -164,6 +167,14 @@ public class ListWorkflowsRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public ListWorkflowsRequest setTags(java.util.List<String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<String> getTags() {
+        return this.tags;
     }
 
     public ListWorkflowsRequest setTriggerType(String triggerType) {

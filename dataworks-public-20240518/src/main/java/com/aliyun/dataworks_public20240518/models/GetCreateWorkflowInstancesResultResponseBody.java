@@ -64,6 +64,9 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("UnifiedWorkflowInstanceIds")
+        public java.util.List<Long> unifiedWorkflowInstanceIds;
+
         /**
          * <p>The workflow instance IDs. This parameter is returned only if the creation is successful.</p>
          */
@@ -92,6 +95,14 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetCreateWorkflowInstancesResultResponseBodyResult setUnifiedWorkflowInstanceIds(java.util.List<Long> unifiedWorkflowInstanceIds) {
+            this.unifiedWorkflowInstanceIds = unifiedWorkflowInstanceIds;
+            return this;
+        }
+        public java.util.List<Long> getUnifiedWorkflowInstanceIds() {
+            return this.unifiedWorkflowInstanceIds;
         }
 
         public GetCreateWorkflowInstancesResultResponseBodyResult setWorkflowInstanceIds(java.util.List<Long> workflowInstanceIds) {

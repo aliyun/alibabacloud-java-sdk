@@ -14,6 +14,9 @@ public class ListTaskInstancesRequest extends TeaModel {
     @NameInMap("Bizdate")
     public Long bizdate;
 
+    @NameInMap("Filter")
+    public String filter;
+
     /**
      * <p>The ID of the instance. The instance may be rerun. If the instance is rerun and you configure this parameter, the system returns the historical information of the instance, including the rerun information. You can use the RunNumber parameter to distinguish each entry in the historical information.</p>
      * 
@@ -187,6 +190,9 @@ public class ListTaskInstancesRequest extends TeaModel {
     @NameInMap("TriggerType")
     public String triggerType;
 
+    @NameInMap("UnifiedWorkflowInstanceId")
+    public Long unifiedWorkflowInstanceId;
+
     /**
      * <p>The ID of the workflow to which the instance belongs.</p>
      * 
@@ -232,6 +238,14 @@ public class ListTaskInstancesRequest extends TeaModel {
     }
     public Long getBizdate() {
         return this.bizdate;
+    }
+
+    public ListTaskInstancesRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
     }
 
     public ListTaskInstancesRequest setId(Long id) {
@@ -360,6 +374,14 @@ public class ListTaskInstancesRequest extends TeaModel {
     }
     public String getTriggerType() {
         return this.triggerType;
+    }
+
+    public ListTaskInstancesRequest setUnifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+        this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
+        return this;
+    }
+    public Long getUnifiedWorkflowInstanceId() {
+        return this.unifiedWorkflowInstanceId;
     }
 
     public ListTaskInstancesRequest setWorkflowId(Long workflowId) {

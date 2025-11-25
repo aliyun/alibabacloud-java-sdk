@@ -235,6 +235,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("UnifiedWorkflowInstanceId")
+        public Long unifiedWorkflowInstanceId;
+
         /**
          * <p>The ID of the workflow to which the instance belongs.</p>
          * 
@@ -380,6 +383,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public GetWorkflowInstanceResponseBodyWorkflowInstance setUnifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+            this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
+            return this;
+        }
+        public Long getUnifiedWorkflowInstanceId() {
+            return this.unifiedWorkflowInstanceId;
         }
 
         public GetWorkflowInstanceResponseBodyWorkflowInstance setWorkflowId(Long workflowId) {

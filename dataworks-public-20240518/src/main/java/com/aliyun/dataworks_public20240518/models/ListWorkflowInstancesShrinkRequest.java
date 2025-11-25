@@ -14,6 +14,9 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     @NameInMap("BizDate")
     public Long bizDate;
 
+    @NameInMap("Filter")
+    public String filter;
+
     /**
      * <p>The IDs of the workflow instances. You can query multiple instances at a time by instance ID.</p>
      */
@@ -83,6 +86,9 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("Tags")
+    public String tagsShrink;
+
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
@@ -99,6 +105,9 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
      */
     @NameInMap("Type")
     public String type;
+
+    @NameInMap("UnifiedWorkflowInstanceId")
+    public Long unifiedWorkflowInstanceId;
 
     /**
      * <p>The ID of the workflow to which the instance belongs.</p>
@@ -120,6 +129,14 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     }
     public Long getBizDate() {
         return this.bizDate;
+    }
+
+    public ListWorkflowInstancesShrinkRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
     }
 
     public ListWorkflowInstancesShrinkRequest setIdsShrink(String idsShrink) {
@@ -178,12 +195,28 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
         return this.sortBy;
     }
 
+    public ListWorkflowInstancesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
+    }
+
     public ListWorkflowInstancesShrinkRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public ListWorkflowInstancesShrinkRequest setUnifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+        this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
+        return this;
+    }
+    public Long getUnifiedWorkflowInstanceId() {
+        return this.unifiedWorkflowInstanceId;
     }
 
     public ListWorkflowInstancesShrinkRequest setWorkflowId(Long workflowId) {

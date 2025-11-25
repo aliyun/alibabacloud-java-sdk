@@ -84,6 +84,9 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("Tags")
+    public String tagsShrink;
+
     /**
      * <p>The trigger type.</p>
      * <ul>
@@ -164,6 +167,14 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public ListWorkflowsShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
     public ListWorkflowsShrinkRequest setTriggerType(String triggerType) {

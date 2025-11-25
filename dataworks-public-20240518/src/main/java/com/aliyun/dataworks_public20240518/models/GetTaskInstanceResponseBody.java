@@ -760,6 +760,9 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         public String triggerType;
 
+        @NameInMap("UnifiedWorkflowInstanceId")
+        public Long unifiedWorkflowInstanceId;
+
         /**
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -1077,6 +1080,14 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
         public String getTriggerType() {
             return this.triggerType;
+        }
+
+        public GetTaskInstanceResponseBodyTaskInstance setUnifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+            this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
+            return this;
+        }
+        public Long getUnifiedWorkflowInstanceId() {
+            return this.unifiedWorkflowInstanceId;
         }
 
         public GetTaskInstanceResponseBodyTaskInstance setWaitingResourceTime(Long waitingResourceTime) {

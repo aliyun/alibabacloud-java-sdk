@@ -453,6 +453,9 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         public String triggerType;
 
+        @NameInMap("UnifiedWorkflowInstanceId")
+        public Long unifiedWorkflowInstanceId;
+
         /**
          * <p>The timestamp for when it started waiting for resources.</p>
          * 
@@ -751,6 +754,14 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         }
         public String getTriggerType() {
             return this.triggerType;
+        }
+
+        public ListTaskInstancesResponseBodyPagingInfoTaskInstances setUnifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+            this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
+            return this;
+        }
+        public Long getUnifiedWorkflowInstanceId() {
+            return this.unifiedWorkflowInstanceId;
         }
 
         public ListTaskInstancesResponseBodyPagingInfoTaskInstances setWaitingResourceTime(Long waitingResourceTime) {

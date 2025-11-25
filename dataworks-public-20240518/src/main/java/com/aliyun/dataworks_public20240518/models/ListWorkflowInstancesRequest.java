@@ -14,6 +14,9 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     @NameInMap("BizDate")
     public Long bizDate;
 
+    @NameInMap("Filter")
+    public String filter;
+
     /**
      * <p>The IDs of the workflow instances. You can query multiple instances at a time by instance ID.</p>
      */
@@ -83,6 +86,9 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("Tags")
+    public java.util.List<String> tags;
+
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
@@ -99,6 +105,9 @@ public class ListWorkflowInstancesRequest extends TeaModel {
      */
     @NameInMap("Type")
     public String type;
+
+    @NameInMap("UnifiedWorkflowInstanceId")
+    public Long unifiedWorkflowInstanceId;
 
     /**
      * <p>The ID of the workflow to which the instance belongs.</p>
@@ -120,6 +129,14 @@ public class ListWorkflowInstancesRequest extends TeaModel {
     }
     public Long getBizDate() {
         return this.bizDate;
+    }
+
+    public ListWorkflowInstancesRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
     }
 
     public ListWorkflowInstancesRequest setIds(java.util.List<Long> ids) {
@@ -178,12 +195,28 @@ public class ListWorkflowInstancesRequest extends TeaModel {
         return this.sortBy;
     }
 
+    public ListWorkflowInstancesRequest setTags(java.util.List<String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<String> getTags() {
+        return this.tags;
+    }
+
     public ListWorkflowInstancesRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public ListWorkflowInstancesRequest setUnifiedWorkflowInstanceId(Long unifiedWorkflowInstanceId) {
+        this.unifiedWorkflowInstanceId = unifiedWorkflowInstanceId;
+        return this;
+    }
+    public Long getUnifiedWorkflowInstanceId() {
+        return this.unifiedWorkflowInstanceId;
     }
 
     public ListWorkflowInstancesRequest setWorkflowId(Long workflowId) {
