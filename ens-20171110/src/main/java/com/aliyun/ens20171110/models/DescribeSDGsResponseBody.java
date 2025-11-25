@@ -218,6 +218,13 @@ public class DescribeSDGsResponseBody extends TeaModel {
         @NameInMap("BillingCycle")
         public String billingCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Open</p>
+         */
+        @NameInMap("BillingType")
+        public String billingType;
+
         @NameInMap("CreationDiskType")
         public String creationDiskType;
 
@@ -340,6 +347,14 @@ public class DescribeSDGsResponseBody extends TeaModel {
         }
         public String getBillingCycle() {
             return this.billingCycle;
+        }
+
+        public DescribeSDGsResponseBodySDGs setBillingType(String billingType) {
+            this.billingType = billingType;
+            return this;
+        }
+        public String getBillingType() {
+            return this.billingType;
         }
 
         public DescribeSDGsResponseBodySDGs setCreationDiskType(String creationDiskType) {
