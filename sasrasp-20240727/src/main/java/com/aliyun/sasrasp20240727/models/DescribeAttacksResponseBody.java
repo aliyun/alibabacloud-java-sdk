@@ -176,6 +176,20 @@ public class DescribeAttacksResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("HandleStatus")
+        public Integer handleStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1758607200</p>
+         */
+        @NameInMap("HandleTimestamp")
+        public Long handleTimestamp;
+
+        /**
+         * <strong>example:</strong>
          * <p>{\&quot;X-Total-Count\&quot;: 1}</p>
          */
         @NameInMap("Headers")
@@ -474,6 +488,22 @@ public class DescribeAttacksResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
+        }
+
+        public DescribeAttacksResponseBodyAttacks setHandleStatus(Integer handleStatus) {
+            this.handleStatus = handleStatus;
+            return this;
+        }
+        public Integer getHandleStatus() {
+            return this.handleStatus;
+        }
+
+        public DescribeAttacksResponseBodyAttacks setHandleTimestamp(Long handleTimestamp) {
+            this.handleTimestamp = handleTimestamp;
+            return this;
+        }
+        public Long getHandleTimestamp() {
+            return this.handleTimestamp;
         }
 
         public DescribeAttacksResponseBodyAttacks setHeaders(String headers) {
