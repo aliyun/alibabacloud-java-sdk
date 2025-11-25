@@ -3,9 +3,16 @@ package com.aliyun.anytrans20250707.models;
 
 import com.aliyun.tea.*;
 
-public class TextTranslateRequest extends TeaModel {
+public class BatchTranslateForHtmlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>baidufanyi</p>
+     */
+    @NameInMap("appName")
+    public String appName;
+
     @NameInMap("ext")
-    public TextTranslateRequestExt ext;
+    public BatchTranslateForHtmlRequestExt ext;
 
     /**
      * <strong>example:</strong>
@@ -43,7 +50,7 @@ public class TextTranslateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      */
     @NameInMap("text")
-    public String text;
+    public java.util.Map<String, ?> text;
 
     /**
      * <p>This parameter is required.</p>
@@ -54,20 +61,28 @@ public class TextTranslateRequest extends TeaModel {
     @NameInMap("workspaceId")
     public String workspaceId;
 
-    public static TextTranslateRequest build(java.util.Map<String, ?> map) throws Exception {
-        TextTranslateRequest self = new TextTranslateRequest();
+    public static BatchTranslateForHtmlRequest build(java.util.Map<String, ?> map) throws Exception {
+        BatchTranslateForHtmlRequest self = new BatchTranslateForHtmlRequest();
         return TeaModel.build(map, self);
     }
 
-    public TextTranslateRequest setExt(TextTranslateRequestExt ext) {
+    public BatchTranslateForHtmlRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public BatchTranslateForHtmlRequest setExt(BatchTranslateForHtmlRequestExt ext) {
         this.ext = ext;
         return this;
     }
-    public TextTranslateRequestExt getExt() {
+    public BatchTranslateForHtmlRequestExt getExt() {
         return this.ext;
     }
 
-    public TextTranslateRequest setFormat(String format) {
+    public BatchTranslateForHtmlRequest setFormat(String format) {
         this.format = format;
         return this;
     }
@@ -75,7 +90,7 @@ public class TextTranslateRequest extends TeaModel {
         return this.format;
     }
 
-    public TextTranslateRequest setScene(String scene) {
+    public BatchTranslateForHtmlRequest setScene(String scene) {
         this.scene = scene;
         return this;
     }
@@ -83,7 +98,7 @@ public class TextTranslateRequest extends TeaModel {
         return this.scene;
     }
 
-    public TextTranslateRequest setSourceLanguage(String sourceLanguage) {
+    public BatchTranslateForHtmlRequest setSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
     }
@@ -91,7 +106,7 @@ public class TextTranslateRequest extends TeaModel {
         return this.sourceLanguage;
     }
 
-    public TextTranslateRequest setTargetLanguage(String targetLanguage) {
+    public BatchTranslateForHtmlRequest setTargetLanguage(String targetLanguage) {
         this.targetLanguage = targetLanguage;
         return this;
     }
@@ -99,15 +114,15 @@ public class TextTranslateRequest extends TeaModel {
         return this.targetLanguage;
     }
 
-    public TextTranslateRequest setText(String text) {
+    public BatchTranslateForHtmlRequest setText(java.util.Map<String, ?> text) {
         this.text = text;
         return this;
     }
-    public String getText() {
+    public java.util.Map<String, ?> getText() {
         return this.text;
     }
 
-    public TextTranslateRequest setWorkspaceId(String workspaceId) {
+    public BatchTranslateForHtmlRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
@@ -115,16 +130,20 @@ public class TextTranslateRequest extends TeaModel {
         return this.workspaceId;
     }
 
-    public static class TextTranslateRequestExtConfig extends TeaModel {
+    public static class BatchTranslateForHtmlRequestExtConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>fasle</p>
+         */
         @NameInMap("skipCsiCheck")
         public Boolean skipCsiCheck;
 
-        public static TextTranslateRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
-            TextTranslateRequestExtConfig self = new TextTranslateRequestExtConfig();
+        public static BatchTranslateForHtmlRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
+            BatchTranslateForHtmlRequestExtConfig self = new BatchTranslateForHtmlRequestExtConfig();
             return TeaModel.build(map, self);
         }
 
-        public TextTranslateRequestExtConfig setSkipCsiCheck(Boolean skipCsiCheck) {
+        public BatchTranslateForHtmlRequestExtConfig setSkipCsiCheck(Boolean skipCsiCheck) {
             this.skipCsiCheck = skipCsiCheck;
             return this;
         }
@@ -134,7 +153,7 @@ public class TextTranslateRequest extends TeaModel {
 
     }
 
-    public static class TextTranslateRequestExtExamples extends TeaModel {
+    public static class BatchTranslateForHtmlRequestExtExamples extends TeaModel {
         @NameInMap("src")
         public String src;
 
@@ -145,12 +164,12 @@ public class TextTranslateRequest extends TeaModel {
         @NameInMap("tgt")
         public String tgt;
 
-        public static TextTranslateRequestExtExamples build(java.util.Map<String, ?> map) throws Exception {
-            TextTranslateRequestExtExamples self = new TextTranslateRequestExtExamples();
+        public static BatchTranslateForHtmlRequestExtExamples build(java.util.Map<String, ?> map) throws Exception {
+            BatchTranslateForHtmlRequestExtExamples self = new BatchTranslateForHtmlRequestExtExamples();
             return TeaModel.build(map, self);
         }
 
-        public TextTranslateRequestExtExamples setSrc(String src) {
+        public BatchTranslateForHtmlRequestExtExamples setSrc(String src) {
             this.src = src;
             return this;
         }
@@ -158,7 +177,7 @@ public class TextTranslateRequest extends TeaModel {
             return this.src;
         }
 
-        public TextTranslateRequestExtExamples setTgt(String tgt) {
+        public BatchTranslateForHtmlRequestExtExamples setTgt(String tgt) {
             this.tgt = tgt;
             return this;
         }
@@ -168,23 +187,23 @@ public class TextTranslateRequest extends TeaModel {
 
     }
 
-    public static class TextTranslateRequestExtTerminologies extends TeaModel {
+    public static class BatchTranslateForHtmlRequestExtTerminologies extends TeaModel {
         @NameInMap("src")
         public String src;
 
         /**
          * <strong>example:</strong>
-         * <p>ML</p>
+         * <p>API</p>
          */
         @NameInMap("tgt")
         public String tgt;
 
-        public static TextTranslateRequestExtTerminologies build(java.util.Map<String, ?> map) throws Exception {
-            TextTranslateRequestExtTerminologies self = new TextTranslateRequestExtTerminologies();
+        public static BatchTranslateForHtmlRequestExtTerminologies build(java.util.Map<String, ?> map) throws Exception {
+            BatchTranslateForHtmlRequestExtTerminologies self = new BatchTranslateForHtmlRequestExtTerminologies();
             return TeaModel.build(map, self);
         }
 
-        public TextTranslateRequestExtTerminologies setSrc(String src) {
+        public BatchTranslateForHtmlRequestExtTerminologies setSrc(String src) {
             this.src = src;
             return this;
         }
@@ -192,7 +211,7 @@ public class TextTranslateRequest extends TeaModel {
             return this.src;
         }
 
-        public TextTranslateRequestExtTerminologies setTgt(String tgt) {
+        public BatchTranslateForHtmlRequestExtTerminologies setTgt(String tgt) {
             this.tgt = tgt;
             return this;
         }
@@ -202,7 +221,7 @@ public class TextTranslateRequest extends TeaModel {
 
     }
 
-    public static class TextTranslateRequestExtTextTransform extends TeaModel {
+    public static class BatchTranslateForHtmlRequestExtTextTransform extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>false</p>
@@ -224,12 +243,12 @@ public class TextTranslateRequest extends TeaModel {
         @NameInMap("toUpper")
         public Boolean toUpper;
 
-        public static TextTranslateRequestExtTextTransform build(java.util.Map<String, ?> map) throws Exception {
-            TextTranslateRequestExtTextTransform self = new TextTranslateRequestExtTextTransform();
+        public static BatchTranslateForHtmlRequestExtTextTransform build(java.util.Map<String, ?> map) throws Exception {
+            BatchTranslateForHtmlRequestExtTextTransform self = new BatchTranslateForHtmlRequestExtTextTransform();
             return TeaModel.build(map, self);
         }
 
-        public TextTranslateRequestExtTextTransform setToLower(Boolean toLower) {
+        public BatchTranslateForHtmlRequestExtTextTransform setToLower(Boolean toLower) {
             this.toLower = toLower;
             return this;
         }
@@ -237,7 +256,7 @@ public class TextTranslateRequest extends TeaModel {
             return this.toLower;
         }
 
-        public TextTranslateRequestExtTextTransform setToTitle(Boolean toTitle) {
+        public BatchTranslateForHtmlRequestExtTextTransform setToTitle(Boolean toTitle) {
             this.toTitle = toTitle;
             return this;
         }
@@ -245,7 +264,7 @@ public class TextTranslateRequest extends TeaModel {
             return this.toTitle;
         }
 
-        public TextTranslateRequestExtTextTransform setToUpper(Boolean toUpper) {
+        public BatchTranslateForHtmlRequestExtTextTransform setToUpper(Boolean toUpper) {
             this.toUpper = toUpper;
             return this;
         }
@@ -255,54 +274,43 @@ public class TextTranslateRequest extends TeaModel {
 
     }
 
-    public static class TextTranslateRequestExt extends TeaModel {
-        @NameInMap("agent")
-        public String agent;
-
+    public static class BatchTranslateForHtmlRequestExt extends TeaModel {
         @NameInMap("config")
-        public TextTranslateRequestExtConfig config;
+        public BatchTranslateForHtmlRequestExtConfig config;
 
         /**
          * <strong>example:</strong>
-         * <p>technology</p>
+         * <p>this sentence from an e-commerce product image, please provide a translation that is both highly concise and no more than 1.2 times the length of the original.</p>
          */
         @NameInMap("domainHint")
         public String domainHint;
 
         @NameInMap("examples")
-        public java.util.List<TextTranslateRequestExtExamples> examples;
+        public java.util.List<BatchTranslateForHtmlRequestExtExamples> examples;
 
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
         @NameInMap("terminologies")
-        public java.util.List<TextTranslateRequestExtTerminologies> terminologies;
+        public java.util.List<BatchTranslateForHtmlRequestExtTerminologies> terminologies;
 
         @NameInMap("textTransform")
-        public TextTranslateRequestExtTextTransform textTransform;
+        public BatchTranslateForHtmlRequestExtTextTransform textTransform;
 
-        public static TextTranslateRequestExt build(java.util.Map<String, ?> map) throws Exception {
-            TextTranslateRequestExt self = new TextTranslateRequestExt();
+        public static BatchTranslateForHtmlRequestExt build(java.util.Map<String, ?> map) throws Exception {
+            BatchTranslateForHtmlRequestExt self = new BatchTranslateForHtmlRequestExt();
             return TeaModel.build(map, self);
         }
 
-        public TextTranslateRequestExt setAgent(String agent) {
-            this.agent = agent;
-            return this;
-        }
-        public String getAgent() {
-            return this.agent;
-        }
-
-        public TextTranslateRequestExt setConfig(TextTranslateRequestExtConfig config) {
+        public BatchTranslateForHtmlRequestExt setConfig(BatchTranslateForHtmlRequestExtConfig config) {
             this.config = config;
             return this;
         }
-        public TextTranslateRequestExtConfig getConfig() {
+        public BatchTranslateForHtmlRequestExtConfig getConfig() {
             return this.config;
         }
 
-        public TextTranslateRequestExt setDomainHint(String domainHint) {
+        public BatchTranslateForHtmlRequestExt setDomainHint(String domainHint) {
             this.domainHint = domainHint;
             return this;
         }
@@ -310,15 +318,15 @@ public class TextTranslateRequest extends TeaModel {
             return this.domainHint;
         }
 
-        public TextTranslateRequestExt setExamples(java.util.List<TextTranslateRequestExtExamples> examples) {
+        public BatchTranslateForHtmlRequestExt setExamples(java.util.List<BatchTranslateForHtmlRequestExtExamples> examples) {
             this.examples = examples;
             return this;
         }
-        public java.util.List<TextTranslateRequestExtExamples> getExamples() {
+        public java.util.List<BatchTranslateForHtmlRequestExtExamples> getExamples() {
             return this.examples;
         }
 
-        public TextTranslateRequestExt setSensitives(java.util.List<String> sensitives) {
+        public BatchTranslateForHtmlRequestExt setSensitives(java.util.List<String> sensitives) {
             this.sensitives = sensitives;
             return this;
         }
@@ -326,19 +334,19 @@ public class TextTranslateRequest extends TeaModel {
             return this.sensitives;
         }
 
-        public TextTranslateRequestExt setTerminologies(java.util.List<TextTranslateRequestExtTerminologies> terminologies) {
+        public BatchTranslateForHtmlRequestExt setTerminologies(java.util.List<BatchTranslateForHtmlRequestExtTerminologies> terminologies) {
             this.terminologies = terminologies;
             return this;
         }
-        public java.util.List<TextTranslateRequestExtTerminologies> getTerminologies() {
+        public java.util.List<BatchTranslateForHtmlRequestExtTerminologies> getTerminologies() {
             return this.terminologies;
         }
 
-        public TextTranslateRequestExt setTextTransform(TextTranslateRequestExtTextTransform textTransform) {
+        public BatchTranslateForHtmlRequestExt setTextTransform(BatchTranslateForHtmlRequestExtTextTransform textTransform) {
             this.textTransform = textTransform;
             return this;
         }
-        public TextTranslateRequestExtTextTransform getTextTransform() {
+        public BatchTranslateForHtmlRequestExtTextTransform getTextTransform() {
             return this.textTransform;
         }
 

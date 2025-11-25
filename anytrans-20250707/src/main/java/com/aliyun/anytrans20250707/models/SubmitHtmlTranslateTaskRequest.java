@@ -109,12 +109,23 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitHtmlTranslateTaskRequestExtConfig extends TeaModel {
+        @NameInMap("callbackUrl")
+        public String callbackUrl;
+
         @NameInMap("skipCsiCheck")
         public Boolean skipCsiCheck;
 
         public static SubmitHtmlTranslateTaskRequestExtConfig build(java.util.Map<String, ?> map) throws Exception {
             SubmitHtmlTranslateTaskRequestExtConfig self = new SubmitHtmlTranslateTaskRequestExtConfig();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitHtmlTranslateTaskRequestExtConfig setCallbackUrl(String callbackUrl) {
+            this.callbackUrl = callbackUrl;
+            return this;
+        }
+        public String getCallbackUrl() {
+            return this.callbackUrl;
         }
 
         public SubmitHtmlTranslateTaskRequestExtConfig setSkipCsiCheck(Boolean skipCsiCheck) {

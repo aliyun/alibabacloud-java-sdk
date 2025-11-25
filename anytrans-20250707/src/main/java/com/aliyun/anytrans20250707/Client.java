@@ -113,6 +113,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>通义多模态翻译批量翻译(供js sdk使用)</p>
+     * 
+     * @param tmpReq BatchTranslateForHtmlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchTranslateForHtmlResponse
+     */
+    public BatchTranslateForHtmlResponse batchTranslateForHtmlWithOptions(BatchTranslateForHtmlRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchTranslateForHtmlShrinkRequest request = new BatchTranslateForHtmlShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ext)) {
+            request.extShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ext, "ext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.text)) {
+            request.textShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.text, "text", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("appName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extShrink)) {
+            body.put("ext", request.extShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.format)) {
+            body.put("format", request.format);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("sourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("targetLanguage", request.targetLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textShrink)) {
+            body.put("text", request.textShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("workspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchTranslateForHtml"),
+            new TeaPair("version", "2025-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/anytrans/translate/batchForHtml"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchTranslateForHtmlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通义多模态翻译批量翻译(供js sdk使用)</p>
+     * 
+     * @param request BatchTranslateForHtmlRequest
+     * @return BatchTranslateForHtmlResponse
+     */
+    public BatchTranslateForHtmlResponse batchTranslateForHtml(BatchTranslateForHtmlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchTranslateForHtmlWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>通义多模态翻译获文档翻译任务</p>
      * 
      * @param request GetDocTranslateTaskRequest
