@@ -1745,6 +1745,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
+        @NameInMap("system_disk_snapshot_policy_id")
+        public String systemDiskSnapshotPolicyId;
+
         /**
          * <p>The label to be added to the ECS instances.</p>
          */
@@ -2137,6 +2140,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public Long getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSystemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+            this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+            return this;
+        }
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setTags(java.util.List<Tag> tags) {

@@ -2016,6 +2016,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
+        @NameInMap("system_disk_snapshot_policy_id")
+        public String systemDiskSnapshotPolicyId;
+
         /**
          * <p>The tags that you want to add only to ECS instances.</p>
          * <p>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
@@ -2407,6 +2410,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public Long getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSystemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+            this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+            return this;
+        }
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setTags(java.util.List<CreateClusterNodePoolRequestScalingGroupTags> tags) {

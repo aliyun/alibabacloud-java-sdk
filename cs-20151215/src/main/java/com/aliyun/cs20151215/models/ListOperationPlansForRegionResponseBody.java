@@ -20,6 +20,36 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
         return this.plans;
     }
 
+    public static class ListOperationPlansForRegionResponseBodyPlansStateReason extends TeaModel {
+        @NameInMap("code")
+        public String code;
+
+        @NameInMap("message")
+        public String message;
+
+        public static ListOperationPlansForRegionResponseBodyPlansStateReason build(java.util.Map<String, ?> map) throws Exception {
+            ListOperationPlansForRegionResponseBodyPlansStateReason self = new ListOperationPlansForRegionResponseBodyPlansStateReason();
+            return TeaModel.build(map, self);
+        }
+
+        public ListOperationPlansForRegionResponseBodyPlansStateReason setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public ListOperationPlansForRegionResponseBodyPlansStateReason setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+    }
+
     public static class ListOperationPlansForRegionResponseBodyPlans extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -62,6 +92,9 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
          */
         @NameInMap("state")
         public String state;
+
+        @NameInMap("state_reason")
+        public ListOperationPlansForRegionResponseBodyPlansStateReason stateReason;
 
         /**
          * <strong>example:</strong>
@@ -142,6 +175,14 @@ public class ListOperationPlansForRegionResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public ListOperationPlansForRegionResponseBodyPlans setStateReason(ListOperationPlansForRegionResponseBodyPlansStateReason stateReason) {
+            this.stateReason = stateReason;
+            return this;
+        }
+        public ListOperationPlansForRegionResponseBodyPlansStateReason getStateReason() {
+            return this.stateReason;
         }
 
         public ListOperationPlansForRegionResponseBodyPlans setTargetId(String targetId) {

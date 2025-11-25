@@ -1884,6 +1884,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
+        @NameInMap("system_disk_snapshot_policy_id")
+        public String systemDiskSnapshotPolicyId;
+
         /**
          * <p>The labels that you want to add only to ECS instances.</p>
          * <p>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
@@ -2290,6 +2293,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.systemDiskSize;
         }
 
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+            this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+            return this;
+        }
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
+        }
+
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setTags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
@@ -2308,7 +2319,73 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClusterNodePoolDetailResponseBodyStatusConditions extends TeaModel {
+        @NameInMap("last_transition_time")
+        public String lastTransitionTime;
+
+        @NameInMap("message")
+        public String message;
+
+        @NameInMap("reason")
+        public String reason;
+
+        @NameInMap("status")
+        public String status;
+
+        @NameInMap("type")
+        public String type;
+
+        public static DescribeClusterNodePoolDetailResponseBodyStatusConditions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyStatusConditions self = new DescribeClusterNodePoolDetailResponseBodyStatusConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyStatusConditions setLastTransitionTime(String lastTransitionTime) {
+            this.lastTransitionTime = lastTransitionTime;
+            return this;
+        }
+        public String getLastTransitionTime() {
+            return this.lastTransitionTime;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyStatusConditions setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyStatusConditions setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyStatusConditions setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyStatusConditions setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeClusterNodePoolDetailResponseBodyStatus extends TeaModel {
+        @NameInMap("conditions")
+        public java.util.List<DescribeClusterNodePoolDetailResponseBodyStatusConditions> conditions;
+
         /**
          * <p>The number of failed nodes.</p>
          * 
@@ -2391,6 +2468,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public static DescribeClusterNodePoolDetailResponseBodyStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodePoolDetailResponseBodyStatus self = new DescribeClusterNodePoolDetailResponseBodyStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyStatus setConditions(java.util.List<DescribeClusterNodePoolDetailResponseBodyStatusConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<DescribeClusterNodePoolDetailResponseBodyStatusConditions> getConditions() {
+            return this.conditions;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyStatus setFailedNodes(Long failedNodes) {
