@@ -197,6 +197,15 @@ public class PushShrinkRequest extends TeaModel {
     @NameInMap("AndroidOpenUrl")
     public String androidOpenUrl;
 
+    @NameInMap("AndroidOppoDeleteIntentData")
+    public String androidOppoDeleteIntentData;
+
+    @NameInMap("AndroidOppoIntelligentIntent")
+    public String androidOppoIntelligentIntent;
+
+    @NameInMap("AndroidOppoIntentEnv")
+    public Integer androidOppoIntentEnv;
+
     @NameInMap("AndroidOppoPrivateContentParameters")
     public String androidOppoPrivateContentParametersShrink;
 
@@ -878,6 +887,30 @@ public class PushShrinkRequest extends TeaModel {
     }
     public String getAndroidOpenUrl() {
         return this.androidOpenUrl;
+    }
+
+    public PushShrinkRequest setAndroidOppoDeleteIntentData(String androidOppoDeleteIntentData) {
+        this.androidOppoDeleteIntentData = androidOppoDeleteIntentData;
+        return this;
+    }
+    public String getAndroidOppoDeleteIntentData() {
+        return this.androidOppoDeleteIntentData;
+    }
+
+    public PushShrinkRequest setAndroidOppoIntelligentIntent(String androidOppoIntelligentIntent) {
+        this.androidOppoIntelligentIntent = androidOppoIntelligentIntent;
+        return this;
+    }
+    public String getAndroidOppoIntelligentIntent() {
+        return this.androidOppoIntelligentIntent;
+    }
+
+    public PushShrinkRequest setAndroidOppoIntentEnv(Integer androidOppoIntentEnv) {
+        this.androidOppoIntentEnv = androidOppoIntentEnv;
+        return this;
+    }
+    public Integer getAndroidOppoIntentEnv() {
+        return this.androidOppoIntentEnv;
     }
 
     public PushShrinkRequest setAndroidOppoPrivateContentParametersShrink(String androidOppoPrivateContentParametersShrink) {

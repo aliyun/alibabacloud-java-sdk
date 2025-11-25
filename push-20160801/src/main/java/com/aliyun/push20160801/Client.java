@@ -891,6 +891,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidOpenUrl", request.androidOpenUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoDeleteIntentData)) {
+            query.put("AndroidOppoDeleteIntentData", request.androidOppoDeleteIntentData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoIntelligentIntent)) {
+            query.put("AndroidOppoIntelligentIntent", request.androidOppoIntelligentIntent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidOppoIntentEnv)) {
+            query.put("AndroidOppoIntentEnv", request.androidOppoIntentEnv);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidOppoPrivateContentParametersShrink)) {
             query.put("AndroidOppoPrivateContentParameters", request.androidOppoPrivateContentParametersShrink);
         }

@@ -284,6 +284,12 @@ public class PushTask extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("DeleteIntentData")
+        public String deleteIntentData;
+
+        @NameInMap("IntelligentIntent")
+        public String intelligentIntent;
+
         @NameInMap("NotifyLevel")
         public Long notifyLevel;
 
@@ -307,6 +313,22 @@ public class PushTask extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public PushTaskNotificationAndroidOptionsOppo setDeleteIntentData(String deleteIntentData) {
+            this.deleteIntentData = deleteIntentData;
+            return this;
+        }
+        public String getDeleteIntentData() {
+            return this.deleteIntentData;
+        }
+
+        public PushTaskNotificationAndroidOptionsOppo setIntelligentIntent(String intelligentIntent) {
+            this.intelligentIntent = intelligentIntent;
+            return this;
+        }
+        public String getIntelligentIntent() {
+            return this.intelligentIntent;
         }
 
         public PushTaskNotificationAndroidOptionsOppo setNotifyLevel(Long notifyLevel) {
