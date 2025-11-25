@@ -79,6 +79,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceClass", request.instanceClass);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.publicEndpointEnabled)) {
+            query.put("PublicEndpointEnabled", request.publicEndpointEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.publicNetworkAccessEnabled)) {
             query.put("PublicNetworkAccessEnabled", request.publicNetworkAccessEnabled);
         }
@@ -959,6 +963,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dashboardPassword)) {
             query.put("DashboardPassword", request.dashboardPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databasePassword)) {
+            query.put("DatabasePassword", request.databasePassword);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {

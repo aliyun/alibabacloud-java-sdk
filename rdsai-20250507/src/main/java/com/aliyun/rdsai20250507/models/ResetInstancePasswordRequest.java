@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class ResetInstancePasswordRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>test_Password</p>
      */
     @NameInMap("DashboardPassword")
     public String dashboardPassword;
+
+    @NameInMap("DatabasePassword")
+    public String databasePassword;
 
     /**
      * <p>This parameter is required.</p>
@@ -40,6 +41,14 @@ public class ResetInstancePasswordRequest extends TeaModel {
     }
     public String getDashboardPassword() {
         return this.dashboardPassword;
+    }
+
+    public ResetInstancePasswordRequest setDatabasePassword(String databasePassword) {
+        this.databasePassword = databasePassword;
+        return this;
+    }
+    public String getDatabasePassword() {
+        return this.databasePassword;
     }
 
     public ResetInstancePasswordRequest setInstanceName(String instanceName) {

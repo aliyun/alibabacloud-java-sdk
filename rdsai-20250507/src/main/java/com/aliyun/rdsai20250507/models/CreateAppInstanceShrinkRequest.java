@@ -63,6 +63,9 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     @NameInMap("InstanceClass")
     public String instanceClass;
 
+    @NameInMap("PublicEndpointEnabled")
+    public Boolean publicEndpointEnabled;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -162,6 +165,14 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     }
     public String getInstanceClass() {
         return this.instanceClass;
+    }
+
+    public CreateAppInstanceShrinkRequest setPublicEndpointEnabled(Boolean publicEndpointEnabled) {
+        this.publicEndpointEnabled = publicEndpointEnabled;
+        return this;
+    }
+    public Boolean getPublicEndpointEnabled() {
+        return this.publicEndpointEnabled;
     }
 
     public CreateAppInstanceShrinkRequest setPublicNetworkAccessEnabled(Boolean publicNetworkAccessEnabled) {
