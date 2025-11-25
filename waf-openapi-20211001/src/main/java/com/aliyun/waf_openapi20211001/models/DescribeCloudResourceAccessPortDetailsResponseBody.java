@@ -372,6 +372,13 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsLogHeaders> logHeaders;
 
         /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("MaxBodySize")
+        public Integer maxBodySize;
+
+        /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
@@ -574,6 +581,14 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         }
         public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsLogHeaders> getLogHeaders() {
             return this.logHeaders;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails setMaxBodySize(Integer maxBodySize) {
+            this.maxBodySize = maxBodySize;
+            return this;
+        }
+        public Integer getMaxBodySize() {
+            return this.maxBodySize;
         }
 
         public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails setOwnerUserId(String ownerUserId) {

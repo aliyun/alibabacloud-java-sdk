@@ -652,6 +652,13 @@ public class ModifyDomainRequest extends TeaModel {
         public String loadbalance;
 
         /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("MaxBodySize")
+        public Integer maxBodySize;
+
+        /**
          * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
@@ -860,6 +867,14 @@ public class ModifyDomainRequest extends TeaModel {
         }
         public String getLoadbalance() {
             return this.loadbalance;
+        }
+
+        public ModifyDomainRequestRedirect setMaxBodySize(Integer maxBodySize) {
+            this.maxBodySize = maxBodySize;
+            return this;
+        }
+        public Integer getMaxBodySize() {
+            return this.maxBodySize;
         }
 
         public ModifyDomainRequestRedirect setReadTimeout(Integer readTimeout) {

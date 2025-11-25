@@ -841,6 +841,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public String loadbalance;
 
         /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("MaxBodySize")
+        public Integer maxBodySize;
+
+        /**
          * <p>The read timeout period. Unit: seconds. Valid values: 5 to 1800.</p>
          * 
          * <strong>example:</strong>
@@ -1017,6 +1024,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public String getLoadbalance() {
             return this.loadbalance;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setMaxBodySize(Integer maxBodySize) {
+            this.maxBodySize = maxBodySize;
+            return this;
+        }
+        public Integer getMaxBodySize() {
+            return this.maxBodySize;
         }
 
         public DescribeDomainDetailResponseBodyRedirect setReadTimeout(Integer readTimeout) {

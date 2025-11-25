@@ -446,6 +446,13 @@ public class ModifyCloudResourceRequest extends TeaModel {
         public Integer keepaliveTimeout;
 
         /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("MaxBodySize")
+        public Integer maxBodySize;
+
+        /**
          * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
@@ -532,6 +539,14 @@ public class ModifyCloudResourceRequest extends TeaModel {
         }
         public Integer getKeepaliveTimeout() {
             return this.keepaliveTimeout;
+        }
+
+        public ModifyCloudResourceRequestRedirect setMaxBodySize(Integer maxBodySize) {
+            this.maxBodySize = maxBodySize;
+            return this;
+        }
+        public Integer getMaxBodySize() {
+            return this.maxBodySize;
         }
 
         public ModifyCloudResourceRequestRedirect setReadTimeout(Integer readTimeout) {
