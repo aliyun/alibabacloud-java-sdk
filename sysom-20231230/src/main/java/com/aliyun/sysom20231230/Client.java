@@ -240,6 +240,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询指标</p>
+     * 
+     * @param request DescribeMetricListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetricListResponse
+     */
+    public DescribeMetricListResponse describeMetricListWithOptions(DescribeMetricListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instance)) {
+            query.put("instance", request.instance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
+            query.put("metricName", request.metricName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetricList"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/openapi/proxy/get/describeMetricList"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetricListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指标</p>
+     * 
+     * @param request DescribeMetricListRequest
+     * @return DescribeMetricListResponse
+     */
+    public DescribeMetricListResponse describeMetricList(DescribeMetricListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeMetricListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取copilot服务的返回结果</p>
      * 
      * @param request GenerateCopilotResponseRequest
