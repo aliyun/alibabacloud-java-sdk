@@ -1,3 +1,14 @@
+2025-11-25 Version: 2.9.0
+- Support API CancelKyuubiSparkApplication.
+- Support API CreateKyuubiService.
+- Support API DeleteKyuubiService.
+- Support API GenerateTaskCodes.
+- Support API GetKyuubiService.
+- Support API StartKyuubiService.
+- Support API StopKyuubiService.
+- Support API UpdateKyuubiService.
+
+
 2025-10-28 Version: 2.8.1
 - Update API EditWorkspaceQueue: add request parameters body.resourceSpec.maxCu.
 - Update API GetJobRun: add response parameters Body.jobRun.notebookAccessUrl.
