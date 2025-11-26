@@ -364,6 +364,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("EnableHiveAccess")
         public String enableHiveAccess;
 
+        @NameInMap("EnableSSL")
+        public String enableSSL;
+
         /**
          * <p>The list of endpoints.</p>
          */
@@ -590,6 +593,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getEnableHiveAccess() {
             return this.enableHiveAccess;
+        }
+
+        public ListInstancesResponseBodyInstanceList setEnableSSL(String enableSSL) {
+            this.enableSSL = enableSSL;
+            return this;
+        }
+        public String getEnableSSL() {
+            return this.enableSSL;
         }
 
         public ListInstancesResponseBodyInstanceList setEndpoints(java.util.List<ListInstancesResponseBodyInstanceListEndpoints> endpoints) {

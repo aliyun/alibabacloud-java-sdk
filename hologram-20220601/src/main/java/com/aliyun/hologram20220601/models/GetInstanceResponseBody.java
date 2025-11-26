@@ -513,6 +513,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("EnableHiveAccess")
         public String enableHiveAccess;
 
+        @NameInMap("EnableSSL")
+        public Boolean enableSSL;
+
         /**
          * <p>EnableServerless</p>
          * 
@@ -897,6 +900,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getEnableHiveAccess() {
             return this.enableHiveAccess;
+        }
+
+        public GetInstanceResponseBodyInstance setEnableSSL(Boolean enableSSL) {
+            this.enableSSL = enableSSL;
+            return this;
+        }
+        public Boolean getEnableSSL() {
+            return this.enableSSL;
         }
 
         public GetInstanceResponseBodyInstance setEnableServerless(Boolean enableServerless) {
