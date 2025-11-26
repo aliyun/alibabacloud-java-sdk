@@ -22,15 +22,34 @@ public class DescribeExtensionsRequest extends TeaModel {
     @NameInMap("DBName")
     public String DBName;
 
+    @NameInMap("ExtensionName")
+    public String extensionName;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -53,6 +72,14 @@ public class DescribeExtensionsRequest extends TeaModel {
     }
     public String getDBName() {
         return this.DBName;
+    }
+
+    public DescribeExtensionsRequest setExtensionName(String extensionName) {
+        this.extensionName = extensionName;
+        return this;
+    }
+    public String getExtensionName() {
+        return this.extensionName;
     }
 
     public DescribeExtensionsRequest setOwnerAccount(String ownerAccount) {

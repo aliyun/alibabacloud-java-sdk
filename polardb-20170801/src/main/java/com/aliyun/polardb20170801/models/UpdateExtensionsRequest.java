@@ -38,9 +38,17 @@ public class UpdateExtensionsRequest extends TeaModel {
     @NameInMap("Extensions")
     public String extensions;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -58,9 +66,17 @@ public class UpdateExtensionsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

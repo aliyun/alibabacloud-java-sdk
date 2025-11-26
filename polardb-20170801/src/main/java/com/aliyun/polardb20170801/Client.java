@@ -10109,6 +10109,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBName", request.DBName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extensionName)) {
+            query.put("ExtensionName", request.extensionName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }

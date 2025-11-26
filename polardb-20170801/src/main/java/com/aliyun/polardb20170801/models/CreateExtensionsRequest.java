@@ -6,46 +6,91 @@ import com.aliyun.tea.*;
 public class CreateExtensionsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testuser</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb1,testdb2</p>
      */
     @NameInMap("DBNames")
     public String DBNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pg_stat_statements,pg_trgm</p>
+     */
     @NameInMap("Extensions")
     public String extensions;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sourcedb</p>
+     */
     @NameInMap("SourceDBName")
     public String sourceDBName;
 
@@ -56,6 +101,10 @@ public class CreateExtensionsRequest extends TeaModel {
     @NameInMap("Version")
     public String version;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-****************</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
