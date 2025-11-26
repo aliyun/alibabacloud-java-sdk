@@ -13,6 +13,9 @@ public class Permission extends TeaModel {
     @NameInMap("database")
     public String database;
 
+    @NameInMap("expireTime")
+    public String expireTime;
+
     @NameInMap("function")
     public String function;
 
@@ -55,6 +58,14 @@ public class Permission extends TeaModel {
     }
     public String getDatabase() {
         return this.database;
+    }
+
+    public Permission setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public String getExpireTime() {
+        return this.expireTime;
     }
 
     public Permission setFunction(String function) {

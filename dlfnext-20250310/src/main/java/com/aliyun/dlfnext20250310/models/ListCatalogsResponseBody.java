@@ -14,6 +14,9 @@ public class ListCatalogsResponseBody extends TeaModel {
     @NameInMap("nextPageToken")
     public String nextPageToken;
 
+    @NameInMap("prepayResource")
+    public java.util.List<PrepayResource> prepayResource;
+
     public static ListCatalogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCatalogsResponseBody self = new ListCatalogsResponseBody();
         return TeaModel.build(map, self);
@@ -33,6 +36,14 @@ public class ListCatalogsResponseBody extends TeaModel {
     }
     public String getNextPageToken() {
         return this.nextPageToken;
+    }
+
+    public ListCatalogsResponseBody setPrepayResource(java.util.List<PrepayResource> prepayResource) {
+        this.prepayResource = prepayResource;
+        return this;
+    }
+    public java.util.List<PrepayResource> getPrepayResource() {
+        return this.prepayResource;
     }
 
 }
