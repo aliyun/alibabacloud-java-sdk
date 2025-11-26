@@ -75,6 +75,9 @@ public class SearchTaskRequest extends TeaModel {
     @NameInMap("JobStatusStringList")
     public String jobStatusStringList;
 
+    @NameInMap("LabelsJson")
+    public java.util.List<String> labelsJson;
+
     /**
      * <strong>example:</strong>
      * <p>AVD-2021-39685</p>
@@ -253,6 +256,14 @@ public class SearchTaskRequest extends TeaModel {
     }
     public String getJobStatusStringList() {
         return this.jobStatusStringList;
+    }
+
+    public SearchTaskRequest setLabelsJson(java.util.List<String> labelsJson) {
+        this.labelsJson = labelsJson;
+        return this;
+    }
+    public java.util.List<String> getLabelsJson() {
+        return this.labelsJson;
     }
 
     public SearchTaskRequest setOtherId(String otherId) {

@@ -28,50 +28,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生效号码库解析结果</p>
-     * 
-     * @param request ApplyNumberDistrictInfoParsingResultRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ApplyNumberDistrictInfoParsingResultResponse
-     */
-    public ApplyNumberDistrictInfoParsingResultResponse applyNumberDistrictInfoParsingResultWithOptions(ApplyNumberDistrictInfoParsingResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
-            query.put("VersionId", request.versionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ApplyNumberDistrictInfoParsingResult"),
-            new TeaPair("version", "2019-12-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyNumberDistrictInfoParsingResultResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>生效号码库解析结果</p>
-     * 
-     * @param request ApplyNumberDistrictInfoParsingResultRequest
-     * @return ApplyNumberDistrictInfoParsingResultResponse
-     */
-    public ApplyNumberDistrictInfoParsingResultResponse applyNumberDistrictInfoParsingResult(ApplyNumberDistrictInfoParsingResultRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.applyNumberDistrictInfoParsingResultWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>创建外呼任务</p>
      * 
      * @param request AssignJobsRequest
@@ -403,6 +359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建标注任务</p>
+     * 
      * @param tmpReq CreateAnnotationMissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAnnotationMissionResponse
@@ -506,6 +465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建标注任务</p>
+     * 
      * @param request CreateAnnotationMissionRequest
      * @return CreateAnnotationMissionResponse
      */
@@ -515,6 +477,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建任务</p>
+     * 
      * @param request CreateBatchJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBatchJobsResponse
@@ -576,6 +541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建任务</p>
+     * 
      * @param request CreateBatchJobsRequest
      * @return CreateBatchJobsResponse
      */
@@ -1203,6 +1171,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建任务组</p>
+     * 
      * @param request CreateJobGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateJobGroupResponse
@@ -1280,6 +1251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建任务组</p>
+     * 
      * @param request CreateJobGroupRequest
      * @return CreateJobGroupResponse
      */
@@ -1289,6 +1263,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建任务组到处任务</p>
+     * 
      * @param request CreateJobGroupExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateJobGroupExportTaskResponse
@@ -1326,160 +1303,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建任务组到处任务</p>
+     * 
      * @param request CreateJobGroupExportTaskRequest
      * @return CreateJobGroupExportTaskResponse
      */
     public CreateJobGroupExportTaskResponse createJobGroupExportTask(CreateJobGroupExportTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createJobGroupExportTaskWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>创建号码库下载链接</p>
-     * 
-     * @param request CreateNumberDistrictInfoDownloadUrlRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateNumberDistrictInfoDownloadUrlResponse
-     */
-    public CreateNumberDistrictInfoDownloadUrlResponse createNumberDistrictInfoDownloadUrlWithOptions(CreateNumberDistrictInfoDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
-            query.put("VersionId", request.versionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateNumberDistrictInfoDownloadUrl"),
-            new TeaPair("version", "2019-12-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNumberDistrictInfoDownloadUrlResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>创建号码库下载链接</p>
-     * 
-     * @param request CreateNumberDistrictInfoDownloadUrlRequest
-     * @return CreateNumberDistrictInfoDownloadUrlResponse
-     */
-    public CreateNumberDistrictInfoDownloadUrlResponse createNumberDistrictInfoDownloadUrl(CreateNumberDistrictInfoDownloadUrlRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createNumberDistrictInfoDownloadUrlWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>创建号码库解析任务</p>
-     * 
-     * @param request CreateNumberDistrictInfoParsingTaskRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateNumberDistrictInfoParsingTaskResponse
-     */
-    public CreateNumberDistrictInfoParsingTaskResponse createNumberDistrictInfoParsingTaskWithOptions(CreateNumberDistrictInfoParsingTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
-            query.put("FilePath", request.filePath);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fileSize)) {
-            query.put("FileSize", request.fileSize);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateNumberDistrictInfoParsingTask"),
-            new TeaPair("version", "2019-12-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNumberDistrictInfoParsingTaskResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>创建号码库解析任务</p>
-     * 
-     * @param request CreateNumberDistrictInfoParsingTaskRequest
-     * @return CreateNumberDistrictInfoParsingTaskResponse
-     */
-    public CreateNumberDistrictInfoParsingTaskResponse createNumberDistrictInfoParsingTask(CreateNumberDistrictInfoParsingTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createNumberDistrictInfoParsingTaskWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>CreateOutboundCallNumber</p>
-     * 
-     * @param request CreateOutboundCallNumberRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateOutboundCallNumberResponse
-     */
-    public CreateOutboundCallNumberResponse createOutboundCallNumberWithOptions(CreateOutboundCallNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.number)) {
-            query.put("Number", request.number);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.rateLimitCount)) {
-            query.put("RateLimitCount", request.rateLimitCount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.rateLimitPeriod)) {
-            query.put("RateLimitPeriod", request.rateLimitPeriod);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateOutboundCallNumber"),
-            new TeaPair("version", "2019-12-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOutboundCallNumberResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>CreateOutboundCallNumber</p>
-     * 
-     * @param request CreateOutboundCallNumberRequest
-     * @return CreateOutboundCallNumberResponse
-     */
-    public CreateOutboundCallNumberResponse createOutboundCallNumber(CreateOutboundCallNumberRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createOutboundCallNumberWithOptions(request, runtime);
     }
 
     /**
@@ -2809,6 +2641,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeIntentStatistics</p>
+     * 
      * @param request DescribeIntentStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeIntentStatisticsResponse
@@ -2846,6 +2681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeIntentStatistics</p>
+     * 
      * @param request DescribeIntentStatisticsRequest
      * @return DescribeIntentStatisticsResponse
      */
@@ -3040,40 +2878,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeJobGroupExportTaskProgressResponse describeJobGroupExportTaskProgress(DescribeJobGroupExportTaskProgressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeJobGroupExportTaskProgressWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询号码库状态</p>
-     * 
-     * @param request DescribeNumberDistrictInfoStatusRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeNumberDistrictInfoStatusResponse
-     */
-    public DescribeNumberDistrictInfoStatusResponse describeNumberDistrictInfoStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeNumberDistrictInfoStatus"),
-            new TeaPair("version", "2019-12-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNumberDistrictInfoStatusResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查询号码库状态</p>
-     * @return DescribeNumberDistrictInfoStatusResponse
-     */
-    public DescribeNumberDistrictInfoStatusResponse describeNumberDistrictInfoStatus() throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeNumberDistrictInfoStatusWithOptions(runtime);
     }
 
     /**
@@ -3460,50 +3264,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DialogueResponse dialogue(DialogueRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dialogueWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>取消号码库解析结果</p>
-     * 
-     * @param request DismissNumberDistrictInfoParsingResultRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DismissNumberDistrictInfoParsingResultResponse
-     */
-    public DismissNumberDistrictInfoParsingResultResponse dismissNumberDistrictInfoParsingResultWithOptions(DismissNumberDistrictInfoParsingResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
-            query.put("VersionId", request.versionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DismissNumberDistrictInfoParsingResult"),
-            new TeaPair("version", "2019-12-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DismissNumberDistrictInfoParsingResultResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>取消号码库解析结果</p>
-     * 
-     * @param request DismissNumberDistrictInfoParsingResultRequest
-     * @return DismissNumberDistrictInfoParsingResultResponse
-     */
-    public DismissNumberDistrictInfoParsingResultResponse dismissNumberDistrictInfoParsingResult(DismissNumberDistrictInfoParsingResultRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.dismissNumberDistrictInfoParsingResultWithOptions(request, runtime);
     }
 
     /**
@@ -4262,48 +4022,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request GetEffectiveDaysRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetEffectiveDaysResponse
-     */
-    public GetEffectiveDaysResponse getEffectiveDaysWithOptions(GetEffectiveDaysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.entryId)) {
-            query.put("EntryId", request.entryId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.strategyLevel)) {
-            query.put("StrategyLevel", request.strategyLevel);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetEffectiveDays"),
-            new TeaPair("version", "2019-12-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEffectiveDaysResponse());
-    }
-
-    /**
-     * @param request GetEffectiveDaysRequest
-     * @return GetEffectiveDaysResponse
-     */
-    public GetEffectiveDaysResponse getEffectiveDays(GetEffectiveDaysRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getEffectiveDaysWithOptions(request, runtime);
-    }
-
-    /**
      * <b>summary</b> : 
      * <p>GetEmptyNumberNoMoreCallsInfo</p>
      * 
@@ -4578,6 +4296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据TaskId获取Task信息</p>
+     * 
      * @param request GetTaskByUuidRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskByUuidResponse
@@ -4603,6 +4324,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>根据TaskId获取Task信息</p>
+     * 
      * @param request GetTaskByUuidRequest
      * @return GetTaskByUuidResponse
      */
@@ -4824,6 +4548,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>标注中心</p>
+     * 
      * @param request ListAnnotationMissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAnnotationMissionResponse
@@ -4885,6 +4612,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>标注中心</p>
+     * 
      * @param request ListAnnotationMissionRequest
      * @return ListAnnotationMissionResponse
      */
@@ -4894,6 +4624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListAnnotationMissionSession</p>
+     * 
      * @param request ListAnnotationMissionSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAnnotationMissionSessionResponse
@@ -4943,6 +4676,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListAnnotationMissionSession</p>
+     * 
      * @param request ListAnnotationMissionSessionRequest
      * @return ListAnnotationMissionSessionResponse
      */
@@ -5879,44 +5615,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListResourceTagsResponse listResourceTags(ListResourceTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listResourceTagsWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request ListSchedulerInstancesRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListSchedulerInstancesResponse
-     */
-    public ListSchedulerInstancesResponse listSchedulerInstancesWithOptions(ListSchedulerInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceOwnerId)) {
-            query.put("InstanceOwnerId", request.instanceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListSchedulerInstances"),
-            new TeaPair("version", "2019-12-26"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSchedulerInstancesResponse());
-    }
-
-    /**
-     * @param request ListSchedulerInstancesRequest
-     * @return ListSchedulerInstancesResponse
-     */
-    public ListSchedulerInstancesResponse listSchedulerInstances(ListSchedulerInstancesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listSchedulerInstancesWithOptions(request, runtime);
     }
 
     /**
@@ -6926,6 +6624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改任务组</p>
+     * 
      * @param request ModifyJobGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyJobGroupResponse
@@ -7011,6 +6712,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改任务组</p>
+     * 
      * @param request ModifyJobGroupRequest
      * @return ModifyJobGroupResponse
      */
@@ -7596,6 +7300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobStatusFilter", request.jobStatusFilter);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.labelsJson)) {
+            query.put("LabelsJson", request.labelsJson);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -7912,6 +7620,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>保存接听后延迟播报时间</p>
+     * 
      * @param request SaveAfterAnswerDelayPlaybackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveAfterAnswerDelayPlaybackResponse
@@ -7949,6 +7660,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>保存接听后延迟播报时间</p>
+     * 
      * @param request SaveAfterAnswerDelayPlaybackRequest
      * @return SaveAfterAnswerDelayPlaybackResponse
      */
@@ -8070,6 +7784,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>编辑基础策略有效时间窗口</p>
+     * 
      * @param request SaveBaseStrategyPeriodRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveBaseStrategyPeriodResponse
@@ -8119,6 +7836,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>编辑基础策略有效时间窗口</p>
+     * 
      * @param request SaveBaseStrategyPeriodRequest
      * @return SaveBaseStrategyPeriodResponse
      */
@@ -8128,6 +7848,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>保存外呼黑名单列表</p>
+     * 
      * @param request SaveContactBlockListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveContactBlockListResponse
@@ -8165,6 +7888,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>保存外呼黑名单列表</p>
+     * 
      * @param request SaveContactBlockListRequest
      * @return SaveContactBlockListResponse
      */
@@ -8174,6 +7900,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>保存外呼白名单</p>
+     * 
      * @param request SaveContactWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveContactWhiteListResponse
@@ -8211,6 +7940,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>保存外呼白名单</p>
+     * 
      * @param request SaveContactWhiteListRequest
      * @return SaveContactWhiteListResponse
      */
@@ -8266,6 +7998,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>保存每日最大外呼量</p>
+     * 
      * @param request SaveMaxAttemptsPerDayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveMaxAttemptsPerDayResponse
@@ -8303,6 +8038,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>保存每日最大外呼量</p>
+     * 
      * @param request SaveMaxAttemptsPerDayRequest
      * @return SaveMaxAttemptsPerDayResponse
      */
@@ -8352,6 +8090,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>开启一个任务</p>
+     * 
      * @param request StartJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartJobResponse
@@ -8401,6 +8142,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>开启一个任务</p>
+     * 
      * @param request StartJobRequest
      * @return StartJobResponse
      */
@@ -8552,6 +8296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>止呼</p>
+     * 
      * @param request SuspendCallRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SuspendCallResponse
@@ -8589,6 +8336,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>止呼</p>
+     * 
      * @param request SuspendCallRequest
      * @return SuspendCallResponse
      */
@@ -8598,6 +8348,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>SuspendCallWithFile</p>
+     * 
      * @param request SuspendCallWithFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SuspendCallWithFileResponse
@@ -8635,6 +8388,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>SuspendCallWithFile</p>
+     * 
      * @param request SuspendCallWithFileRequest
      * @return SuspendCallWithFileResponse
      */

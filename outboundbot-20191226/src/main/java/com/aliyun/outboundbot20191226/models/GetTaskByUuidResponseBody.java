@@ -183,7 +183,7 @@ public class GetTaskByUuidResponseBody extends TeaModel {
          * <p>1640090211434</p>
          */
         @NameInMap("EndReason")
-        public Integer endReason;
+        public String endReason;
 
         /**
          * <strong>example:</strong>
@@ -272,11 +272,11 @@ public class GetTaskByUuidResponseBody extends TeaModel {
             return this.conversations;
         }
 
-        public GetTaskByUuidResponseBodyTask setEndReason(Integer endReason) {
+        public GetTaskByUuidResponseBodyTask setEndReason(String endReason) {
             this.endReason = endReason;
             return this;
         }
-        public Integer getEndReason() {
+        public String getEndReason() {
             return this.endReason;
         }
 

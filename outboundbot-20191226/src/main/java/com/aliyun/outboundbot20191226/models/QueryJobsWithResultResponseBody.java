@@ -23,6 +23,9 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     @NameInMap("Jobs")
     public QueryJobsWithResultResponseBodyJobs jobs;
 
+    @NameInMap("Labels")
+    public java.util.List<QueryJobsWithResultResponseBodyLabels> labels;
+
     /**
      * <strong>example:</strong>
      * <p>Success</p>
@@ -74,6 +77,14 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     }
     public QueryJobsWithResultResponseBodyJobs getJobs() {
         return this.jobs;
+    }
+
+    public QueryJobsWithResultResponseBody setLabels(java.util.List<QueryJobsWithResultResponseBodyLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<QueryJobsWithResultResponseBodyLabels> getLabels() {
+        return this.labels;
     }
 
     public QueryJobsWithResultResponseBody setMessage(String message) {
@@ -698,6 +709,36 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         }
         public Integer getRowCount() {
             return this.rowCount;
+        }
+
+    }
+
+    public static class QueryJobsWithResultResponseBodyLabels extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ValueList")
+        public java.util.List<String> valueList;
+
+        public static QueryJobsWithResultResponseBodyLabels build(java.util.Map<String, ?> map) throws Exception {
+            QueryJobsWithResultResponseBodyLabels self = new QueryJobsWithResultResponseBodyLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryJobsWithResultResponseBodyLabels setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryJobsWithResultResponseBodyLabels setValueList(java.util.List<String> valueList) {
+            this.valueList = valueList;
+            return this;
+        }
+        public java.util.List<String> getValueList() {
+            return this.valueList;
         }
 
     }

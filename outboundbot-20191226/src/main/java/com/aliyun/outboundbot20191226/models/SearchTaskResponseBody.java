@@ -18,6 +18,9 @@ public class SearchTaskResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("Labels")
+    public java.util.List<SearchTaskResponseBodyLabels> labels;
+
     /**
      * <strong>example:</strong>
      * <p>Success</p>
@@ -67,6 +70,9 @@ public class SearchTaskResponseBody extends TeaModel {
     @NameInMap("Total")
     public Long total;
 
+    @NameInMap("VariableNames")
+    public java.util.List<String> variableNames;
+
     public static SearchTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchTaskResponseBody self = new SearchTaskResponseBody();
         return TeaModel.build(map, self);
@@ -86,6 +92,14 @@ public class SearchTaskResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public SearchTaskResponseBody setLabels(java.util.List<SearchTaskResponseBodyLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<SearchTaskResponseBodyLabels> getLabels() {
+        return this.labels;
     }
 
     public SearchTaskResponseBody setMessage(String message) {
@@ -142,6 +156,74 @@ public class SearchTaskResponseBody extends TeaModel {
     }
     public Long getTotal() {
         return this.total;
+    }
+
+    public SearchTaskResponseBody setVariableNames(java.util.List<String> variableNames) {
+        this.variableNames = variableNames;
+        return this;
+    }
+    public java.util.List<String> getVariableNames() {
+        return this.variableNames;
+    }
+
+    public static class SearchTaskResponseBodyLabels extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ValueList")
+        public java.util.List<String> valueList;
+
+        public static SearchTaskResponseBodyLabels build(java.util.Map<String, ?> map) throws Exception {
+            SearchTaskResponseBodyLabels self = new SearchTaskResponseBodyLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchTaskResponseBodyLabels setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public SearchTaskResponseBodyLabels setValueList(java.util.List<String> valueList) {
+            this.valueList = valueList;
+            return this;
+        }
+        public java.util.List<String> getValueList() {
+            return this.valueList;
+        }
+
+    }
+
+    public static class SearchTaskResponseBodySearchTaskInfoListLabels extends TeaModel {
+        @NameInMap("K")
+        public String k;
+
+        @NameInMap("V")
+        public String v;
+
+        public static SearchTaskResponseBodySearchTaskInfoListLabels build(java.util.Map<String, ?> map) throws Exception {
+            SearchTaskResponseBodySearchTaskInfoListLabels self = new SearchTaskResponseBodySearchTaskInfoListLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchTaskResponseBodySearchTaskInfoListLabels setK(String k) {
+            this.k = k;
+            return this;
+        }
+        public String getK() {
+            return this.k;
+        }
+
+        public SearchTaskResponseBodySearchTaskInfoListLabels setV(String v) {
+            this.v = v;
+            return this;
+        }
+        public String getV() {
+            return this.v;
+        }
+
     }
 
     public static class SearchTaskResponseBodySearchTaskInfoList extends TeaModel {
@@ -265,6 +347,9 @@ public class SearchTaskResponseBody extends TeaModel {
          */
         @NameInMap("JobStatusString")
         public String jobStatusString;
+
+        @NameInMap("Labels")
+        public java.util.List<SearchTaskResponseBodySearchTaskInfoListLabels> labels;
 
         /**
          * <strong>example:</strong>
@@ -487,6 +572,14 @@ public class SearchTaskResponseBody extends TeaModel {
         }
         public String getJobStatusString() {
             return this.jobStatusString;
+        }
+
+        public SearchTaskResponseBodySearchTaskInfoList setLabels(java.util.List<SearchTaskResponseBodySearchTaskInfoListLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<SearchTaskResponseBodySearchTaskInfoListLabels> getLabels() {
+            return this.labels;
         }
 
         public SearchTaskResponseBodySearchTaskInfoList setRecordingDuration(Integer recordingDuration) {

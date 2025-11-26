@@ -60,6 +60,9 @@ public class QueryJobsWithResultRequest extends TeaModel {
     @NameInMap("JobStatusFilter")
     public String jobStatusFilter;
 
+    @NameInMap("LabelsJson")
+    public java.util.List<String> labelsJson;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -158,6 +161,14 @@ public class QueryJobsWithResultRequest extends TeaModel {
     }
     public String getJobStatusFilter() {
         return this.jobStatusFilter;
+    }
+
+    public QueryJobsWithResultRequest setLabelsJson(java.util.List<String> labelsJson) {
+        this.labelsJson = labelsJson;
+        return this;
+    }
+    public java.util.List<String> getLabelsJson() {
+        return this.labelsJson;
     }
 
     public QueryJobsWithResultRequest setPageNumber(Integer pageNumber) {
