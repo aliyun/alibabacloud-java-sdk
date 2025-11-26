@@ -14,6 +14,9 @@ public class UpdateApplicationVswitchesRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Deploy")
+    public Boolean deploy;
+
     /**
      * <p>The ID of the vSwitch.</p>
      * <p>This parameter is required.</p>
@@ -35,6 +38,14 @@ public class UpdateApplicationVswitchesRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UpdateApplicationVswitchesRequest setDeploy(Boolean deploy) {
+        this.deploy = deploy;
+        return this;
+    }
+    public Boolean getDeploy() {
+        return this.deploy;
     }
 
     public UpdateApplicationVswitchesRequest setVSwitchId(String vSwitchId) {

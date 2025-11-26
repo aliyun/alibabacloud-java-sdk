@@ -24,6 +24,9 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     @NameInMap("Cpu")
     public String cpu;
 
+    @NameInMap("Deploy")
+    public Boolean deploy;
+
     /**
      * <p>The disk size. Unit: GB.</p>
      * 
@@ -95,6 +98,14 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     }
     public String getCpu() {
         return this.cpu;
+    }
+
+    public RescaleApplicationVerticallyRequest setDeploy(Boolean deploy) {
+        this.deploy = deploy;
+        return this;
+    }
+    public Boolean getDeploy() {
+        return this.deploy;
     }
 
     public RescaleApplicationVerticallyRequest setDiskSize(String diskSize) {

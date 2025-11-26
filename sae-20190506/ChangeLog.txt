@@ -1,3 +1,8 @@
+2025-11-26 Version: 2.10.1
+- Update API RescaleApplicationVertically: add request parameters Deploy.
+- Update API UpdateApplicationVswitches: add request parameters Deploy.
+
+
 2025-11-20 Version: 2.10.0
 - Support API UpdateNamespaceSlsConfigs.
 - Update API CreateApplication: add request parameters AgentVersion.

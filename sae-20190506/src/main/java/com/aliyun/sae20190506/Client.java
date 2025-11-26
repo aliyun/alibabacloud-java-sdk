@@ -7470,6 +7470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Cpu", request.cpu);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deploy)) {
+            query.put("Deploy", request.deploy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.diskSize)) {
             query.put("DiskSize", request.diskSize);
         }
@@ -8451,6 +8455,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deploy)) {
+            query.put("Deploy", request.deploy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
