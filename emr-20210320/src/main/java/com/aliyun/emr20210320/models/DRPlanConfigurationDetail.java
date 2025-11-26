@@ -82,6 +82,9 @@ public class DRPlanConfigurationDetail extends TeaModel {
     @NameInMap("ScalingPolicies")
     public java.util.List<ScalingPolicy> scalingPolicies;
 
+    @NameInMap("ScalingTimeZone")
+    public String scalingTimeZone;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -241,6 +244,14 @@ public class DRPlanConfigurationDetail extends TeaModel {
     }
     public java.util.List<ScalingPolicy> getScalingPolicies() {
         return this.scalingPolicies;
+    }
+
+    public DRPlanConfigurationDetail setScalingTimeZone(String scalingTimeZone) {
+        this.scalingTimeZone = scalingTimeZone;
+        return this;
+    }
+    public String getScalingTimeZone() {
+        return this.scalingTimeZone;
     }
 
     public DRPlanConfigurationDetail setSecurityMode(String securityMode) {

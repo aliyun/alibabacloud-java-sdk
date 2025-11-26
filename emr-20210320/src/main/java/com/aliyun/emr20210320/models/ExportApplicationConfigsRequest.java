@@ -20,6 +20,9 @@ public class ExportApplicationConfigsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ConfigScope")
+    public String configScope;
+
     /**
      * <strong>example:</strong>
      * <p>MODIFICATION</p>
@@ -35,6 +38,12 @@ public class ExportApplicationConfigsRequest extends TeaModel {
      */
     @NameInMap("FileFormat")
     public String fileFormat;
+
+    @NameInMap("NodeGroupIds")
+    public java.util.List<String> nodeGroupIds;
+
+    @NameInMap("NodeIds")
+    public java.util.List<String> nodeIds;
 
     /**
      * <p>区域ID。</p>
@@ -67,6 +76,14 @@ public class ExportApplicationConfigsRequest extends TeaModel {
         return this.clusterId;
     }
 
+    public ExportApplicationConfigsRequest setConfigScope(String configScope) {
+        this.configScope = configScope;
+        return this;
+    }
+    public String getConfigScope() {
+        return this.configScope;
+    }
+
     public ExportApplicationConfigsRequest setExportMode(String exportMode) {
         this.exportMode = exportMode;
         return this;
@@ -81,6 +98,22 @@ public class ExportApplicationConfigsRequest extends TeaModel {
     }
     public String getFileFormat() {
         return this.fileFormat;
+    }
+
+    public ExportApplicationConfigsRequest setNodeGroupIds(java.util.List<String> nodeGroupIds) {
+        this.nodeGroupIds = nodeGroupIds;
+        return this;
+    }
+    public java.util.List<String> getNodeGroupIds() {
+        return this.nodeGroupIds;
+    }
+
+    public ExportApplicationConfigsRequest setNodeIds(java.util.List<String> nodeIds) {
+        this.nodeIds = nodeIds;
+        return this;
+    }
+    public java.util.List<String> getNodeIds() {
+        return this.nodeIds;
     }
 
     public ExportApplicationConfigsRequest setRegionId(String regionId) {

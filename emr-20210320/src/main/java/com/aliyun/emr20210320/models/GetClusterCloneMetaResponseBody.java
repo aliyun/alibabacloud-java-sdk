@@ -402,6 +402,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @NameInMap("ClusterType")
         public String clusterType;
 
+        @NameInMap("CollationTimeZone")
+        public CollationTimeZone collationTimeZone;
+
         /**
          * <p>Indicates whether release protection is enabled for the cluster. Valid values:</p>
          * <ul>
@@ -593,6 +596,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
         public String getClusterType() {
             return this.clusterType;
+        }
+
+        public ClusterCloneMeta setCollationTimeZone(CollationTimeZone collationTimeZone) {
+            this.collationTimeZone = collationTimeZone;
+            return this;
+        }
+        public CollationTimeZone getCollationTimeZone() {
+            return this.collationTimeZone;
         }
 
         public ClusterCloneMeta setDeletionProtection(Boolean deletionProtection) {

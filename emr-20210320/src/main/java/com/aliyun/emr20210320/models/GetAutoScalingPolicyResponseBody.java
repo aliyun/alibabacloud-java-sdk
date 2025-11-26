@@ -114,6 +114,9 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         @NameInMap("AdjustmentValue")
         public Integer adjustmentValue;
 
+        @NameInMap("CollationTimeZone")
+        public CollationTimeZone collationTimeZone;
+
         /**
          * <p>The description of load-based scaling.</p>
          */
@@ -175,6 +178,14 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         }
         public Integer getAdjustmentValue() {
             return this.adjustmentValue;
+        }
+
+        public ScalingRules setCollationTimeZone(CollationTimeZone collationTimeZone) {
+            this.collationTimeZone = collationTimeZone;
+            return this;
+        }
+        public CollationTimeZone getCollationTimeZone() {
+            return this.collationTimeZone;
         }
 
         public ScalingRules setMetricsTrigger(MetricsTrigger metricsTrigger) {

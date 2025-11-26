@@ -34,7 +34,6 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The list of resource IDs. Number of array elements N Valid values: 1 to 1</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>

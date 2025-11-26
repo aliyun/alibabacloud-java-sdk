@@ -707,6 +707,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导出应用服务配置</p>
+     * 
      * @param request ExportApplicationConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportApplicationConfigsResponse
@@ -722,12 +725,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterId", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.configScope)) {
+            query.put("ConfigScope", request.configScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.exportMode)) {
             query.put("ExportMode", request.exportMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileFormat)) {
             query.put("FileFormat", request.fileFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupIds)) {
+            query.put("NodeGroupIds", request.nodeGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIds)) {
+            query.put("NodeIds", request.nodeIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -752,6 +767,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导出应用服务配置</p>
+     * 
      * @param request ExportApplicationConfigsRequest
      * @return ExportApplicationConfigsResponse
      */
@@ -4837,6 +4855,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateClusterAttributeResponse updateClusterAttribute(UpdateClusterAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateClusterAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateClusterAutoRenewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateClusterAutoRenewResponse
+     */
+    public UpdateClusterAutoRenewResponse updateClusterAutoRenewWithOptions(UpdateClusterAutoRenewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewInstances)) {
+            query.put("AutoRenewInstances", request.autoRenewInstances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterAutoRenew)) {
+            query.put("ClusterAutoRenew", request.clusterAutoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterAutoRenewDuration)) {
+            query.put("ClusterAutoRenewDuration", request.clusterAutoRenewDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterAutoRenewDurationUnit)) {
+            query.put("ClusterAutoRenewDurationUnit", request.clusterAutoRenewDurationUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renewAllInstances)) {
+            query.put("RenewAllInstances", request.renewAllInstances);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateClusterAutoRenew"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateClusterAutoRenewResponse());
+    }
+
+    /**
+     * @param request UpdateClusterAutoRenewRequest
+     * @return UpdateClusterAutoRenewResponse
+     */
+    public UpdateClusterAutoRenewResponse updateClusterAutoRenew(UpdateClusterAutoRenewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateClusterAutoRenewWithOptions(request, runtime);
     }
 
     /**
