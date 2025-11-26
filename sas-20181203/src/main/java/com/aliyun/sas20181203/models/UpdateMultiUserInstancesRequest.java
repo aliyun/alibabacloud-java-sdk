@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateMultiUserInstancesRequest extends TeaModel {
+    /**
+     * <p>Member instances.</p>
+     */
     @NameInMap("MemberInstances")
     public java.util.List<UpdateMultiUserInstancesRequestMemberInstances> memberInstances;
 
@@ -22,6 +25,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
 
     public static class UpdateMultiUserInstancesRequestMemberInstancesVersionSummary extends TeaModel {
         /**
+         * <p>Number of cores authorized for the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -29,6 +34,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long coreCount;
 
         /**
+         * <p>Number of authorizations allocated to the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -36,6 +43,17 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long ecsCount;
 
         /**
+         * <p>Version of the Cloud Security Center for the member account. Values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Free Edition </li>
+         * <li><strong>3</strong>: Enterprise Edition</li>
+         * <li><strong>5</strong>: Advanced Edition</li>
+         * <li><strong>6</strong>: Antivirus Edition    </li>
+         * <li><strong>7</strong>: Flagship Edition   </li>
+         * <li><strong>8</strong>: Multiple Versions   </li>
+         * <li><strong>10</strong>: Only Purchase Value-Added Services</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -75,6 +93,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
 
     public static class UpdateMultiUserInstancesRequestMemberInstances extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account UID of the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>1766185894104675</p>
          */
@@ -82,6 +102,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>Anti-ransomware capacity allocated to the member, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -89,6 +111,12 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long antiRansomwareCapacity;
 
         /**
+         * <p>Charge type, values:</p>
+         * <ul>
+         * <li><strong>PREPAID</strong>: Prepaid.</li>
+         * <li><strong>POSTPAID</strong> (default): Postpaid.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PREPAID</p>
          */
@@ -96,6 +124,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>Cloud platform configuration check scan count allocated to the member. Unit: times per month.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -103,6 +133,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long cspmCapacity;
 
         /**
+         * <p>Honeypot authorization count allocated to the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -110,6 +142,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long honeypotCapacity;
 
         /**
+         * <p>Image scan authorization count allocated to the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +151,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long imageScanCapacity;
 
         /**
+         * <p>The Cloud Security Center instance ID purchased by the member account.</p>
+         * 
          * <strong>example:</strong>
          * <p>sas-p0anpb26my69</p>
          */
@@ -124,6 +160,13 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Operation type. Values:  </p>
+         * <ul>
+         * <li><strong>ADD</strong>: Add </li>
+         * <li><strong>CHANGE</strong>: Change</li>
+         * <li><strong>DEL</strong>: Delete</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CHANGE</p>
          */
@@ -131,6 +174,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public String optType;
 
         /**
+         * <p>Application protection count allocated to the member. Unit: per month.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -138,6 +183,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long raspCapacity;
 
         /**
+         * <p>Malicious file detection SDK authorization count allocated to the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -145,6 +192,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long sdkCapacity;
 
         /**
+         * <p>Log storage capacity allocated to the member, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -152,6 +201,12 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long slsCapacity;
 
         /**
+         * <p>Status of the member account instance. Values: </p>
+         * <ul>
+         * <li><strong>1</strong>: Valid. </li>
+         * <li><strong>2</strong>: Invalid.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,6 +214,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Threat analysis capacity allocated to the member. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -166,6 +223,8 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long threatAnalysisCapacity;
 
         /**
+         * <p>Threat analysis and response log access traffic allocated to the member. Unit: GB/day.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -173,16 +232,30 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
         public Long threatAnalysisFlow;
 
         /**
+         * <p>The version of Cloud Security Center protection to be bound. Values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Free Edition </li>
+         * <li><strong>3</strong>: Enterprise Edition</li>
+         * <li><strong>5</strong>: Advanced Edition</li>
+         * <li><strong>6</strong>: Antivirus Edition    </li>
+         * <li><strong>7</strong>: Flagship Edition</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>Member account authorization usage information.</p>
+         */
         @NameInMap("VersionSummary")
         public java.util.List<UpdateMultiUserInstancesRequestMemberInstancesVersionSummary> versionSummary;
 
         /**
+         * <p>Web tamper-proof authorization count allocated to the member.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

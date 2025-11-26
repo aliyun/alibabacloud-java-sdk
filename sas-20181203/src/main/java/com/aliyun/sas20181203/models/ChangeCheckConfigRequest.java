@@ -112,6 +112,18 @@ public class ChangeCheckConfigRequest extends TeaModel {
     public java.util.List<ChangeCheckConfigRequestRemovedCheck> removedCheck;
 
     /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1232428423234****</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
      * <p>An array that consists of the information about the check item.</p>
      */
     @NameInMap("StandardIds")
@@ -228,6 +240,14 @@ public class ChangeCheckConfigRequest extends TeaModel {
     }
     public java.util.List<ChangeCheckConfigRequestRemovedCheck> getRemovedCheck() {
         return this.removedCheck;
+    }
+
+    public ChangeCheckConfigRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ChangeCheckConfigRequest setStandardIds(java.util.List<Long> standardIds) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMultiUserInstancesRequest extends TeaModel {
     /**
+     * <p>Number of items per page in a paginated query. The maximum value is 100. Range: 10 - 100, default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,6 +14,8 @@ public class ListMultiUserInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Used for paginated queries. Leave it empty for the first request, and fill in the NextToken value returned from the previous response for subsequent requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAB4SwmEAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM0NzY3YTZjNjI3NjZmNmU3MjcxNjk3NDY5MzY3MjY4****</p>
      */

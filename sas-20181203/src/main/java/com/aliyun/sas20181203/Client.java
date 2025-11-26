@@ -1946,6 +1946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RemovedCheck", request.removedCheck);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.standardIds)) {
             query.put("StandardIds", request.standardIds);
         }
@@ -31011,7 +31015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例授权取值范围</p>
+     * <p>Get Instance Authorization Value Range</p>
      * 
      * @param request GetInstanceAuthRangeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31035,7 +31039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例授权取值范围</p>
+     * <p>Get Instance Authorization Value Range</p>
      * @return GetInstanceAuthRangeResponse
      */
     public GetInstanceAuthRangeResponse getInstanceAuthRange() throws Exception {
@@ -38312,8 +38316,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询多账号授权分配列表</p>
+     * <p>Query Multi-Account Authorization Allocation List</p>
      * 
      * @param request ListMultiUserInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -38348,8 +38355,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询多账号授权分配列表</p>
+     * <p>Query Multi-Account Authorization Allocation List</p>
      * 
      * @param request ListMultiUserInstancesRequest
      * @return ListMultiUserInstancesResponse
@@ -50333,7 +50343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改多账号实例配置</p>
+     * <p>Modify Multi-Account Instance Configuration</p>
      * 
      * @param request UpdateMultiUserInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -50365,7 +50375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改多账号实例配置</p>
+     * <p>Modify Multi-Account Instance Configuration</p>
      * 
      * @param request UpdateMultiUserInstancesRequest
      * @return UpdateMultiUserInstancesResponse
