@@ -6555,6 +6555,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SinkMNSParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkOSSParameters")
+        public SinkOSSParameters sinkOSSParameters;
+
         @NameInMap("SinkOpenSourceRabbitMQParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
 
@@ -6686,6 +6689,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkMNSParameters getSinkMNSParameters() {
             return this.sinkMNSParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkOSSParameters(SinkOSSParameters sinkOSSParameters) {
+            this.sinkOSSParameters = sinkOSSParameters;
+            return this;
+        }
+        public SinkOSSParameters getSinkOSSParameters() {
+            return this.sinkOSSParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkOpenSourceRabbitMQParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters) {
@@ -8502,6 +8513,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SourceOpenSourceRabbitMQParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters;
 
+        @NameInMap("SourcePostgreSQLParameters")
+        public SourcePostgreSQLParameters sourcePostgreSQLParameters;
+
         @NameInMap("SourcePrometheusParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters sourcePrometheusParameters;
 
@@ -8617,6 +8631,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceOpenSourceRabbitMQParameters getSourceOpenSourceRabbitMQParameters() {
             return this.sourceOpenSourceRabbitMQParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourcePostgreSQLParameters(SourcePostgreSQLParameters sourcePostgreSQLParameters) {
+            this.sourcePostgreSQLParameters = sourcePostgreSQLParameters;
+            return this;
+        }
+        public SourcePostgreSQLParameters getSourcePostgreSQLParameters() {
+            return this.sourcePostgreSQLParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourcePrometheusParameters(ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters sourcePrometheusParameters) {

@@ -7209,6 +7209,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SinkMNSParameters")
         public GetEventStreamingResponseBodyDataSinkSinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkOSSParameters")
+        public SinkOSSParameters sinkOSSParameters;
+
         /**
          * <p>Sink Open Source RabbitMQ Parameters</p>
          */
@@ -7362,6 +7365,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSinkSinkMNSParameters getSinkMNSParameters() {
             return this.sinkMNSParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSink setSinkOSSParameters(SinkOSSParameters sinkOSSParameters) {
+            this.sinkOSSParameters = sinkOSSParameters;
+            return this;
+        }
+        public SinkOSSParameters getSinkOSSParameters() {
+            return this.sinkOSSParameters;
         }
 
         public GetEventStreamingResponseBodyDataSink setSinkOpenSourceRabbitMQParameters(GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters) {
@@ -9327,6 +9338,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SourceOpenSourceRabbitMQParameters")
         public GetEventStreamingResponseBodyDataSourceSourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters;
 
+        @NameInMap("SourcePostgreSQLParameters")
+        public SourcePostgreSQLParameters sourcePostgreSQLParameters;
+
         @NameInMap("SourcePrometheusParameters")
         public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters sourcePrometheusParameters;
 
@@ -9450,6 +9464,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSourceSourceOpenSourceRabbitMQParameters getSourceOpenSourceRabbitMQParameters() {
             return this.sourceOpenSourceRabbitMQParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSource setSourcePostgreSQLParameters(SourcePostgreSQLParameters sourcePostgreSQLParameters) {
+            this.sourcePostgreSQLParameters = sourcePostgreSQLParameters;
+            return this;
+        }
+        public SourcePostgreSQLParameters getSourcePostgreSQLParameters() {
+            return this.sourcePostgreSQLParameters;
         }
 
         public GetEventStreamingResponseBodyDataSource setSourcePrometheusParameters(GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters sourcePrometheusParameters) {

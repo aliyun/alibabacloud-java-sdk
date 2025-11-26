@@ -8543,6 +8543,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkMNSParameters")
         public UpdateEventStreamingRequestSinkSinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkOSSParameters")
+        public SinkOSSParameters sinkOSSParameters;
+
         /**
          * <p>The parameters that are configured if you specify open source RabbitMQ as the event target.</p>
          */
@@ -8702,6 +8705,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public UpdateEventStreamingRequestSinkSinkMNSParameters getSinkMNSParameters() {
             return this.sinkMNSParameters;
+        }
+
+        public UpdateEventStreamingRequestSink setSinkOSSParameters(SinkOSSParameters sinkOSSParameters) {
+            this.sinkOSSParameters = sinkOSSParameters;
+            return this;
+        }
+        public SinkOSSParameters getSinkOSSParameters() {
+            return this.sinkOSSParameters;
         }
 
         public UpdateEventStreamingRequestSink setSinkOpenSourceRabbitMQParameters(UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters) {
@@ -10623,6 +10634,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("SourceOpenSourceRabbitMQParameters")
         public UpdateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters;
 
+        @NameInMap("SourcePostgreSQLParameters")
+        public SourcePostgreSQLParameters sourcePostgreSQLParameters;
+
         /**
          * <p>The parameters that are configured if you specify Managed Service for Prometheus as the event source.</p>
          */
@@ -10749,6 +10763,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public UpdateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters getSourceOpenSourceRabbitMQParameters() {
             return this.sourceOpenSourceRabbitMQParameters;
+        }
+
+        public UpdateEventStreamingRequestSource setSourcePostgreSQLParameters(SourcePostgreSQLParameters sourcePostgreSQLParameters) {
+            this.sourcePostgreSQLParameters = sourcePostgreSQLParameters;
+            return this;
+        }
+        public SourcePostgreSQLParameters getSourcePostgreSQLParameters() {
+            return this.sourcePostgreSQLParameters;
         }
 
         public UpdateEventStreamingRequestSource setSourcePrometheusParameters(UpdateEventStreamingRequestSourceSourcePrometheusParameters sourcePrometheusParameters) {
