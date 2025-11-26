@@ -31,6 +31,9 @@ public class SubscriptionForView extends TeaModel {
     @NameInMap("subscriptionName")
     public String subscriptionName;
 
+    @NameInMap("syncFromType")
+    public String syncFromType;
+
     @NameInMap("updateTime")
     public String updateTime;
 
@@ -107,6 +110,14 @@ public class SubscriptionForView extends TeaModel {
     }
     public String getSubscriptionName() {
         return this.subscriptionName;
+    }
+
+    public SubscriptionForView setSyncFromType(String syncFromType) {
+        this.syncFromType = syncFromType;
+        return this;
+    }
+    public String getSyncFromType() {
+        return this.syncFromType;
     }
 
     public SubscriptionForView setUpdateTime(String updateTime) {

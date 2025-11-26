@@ -10,6 +10,9 @@ public class AlertRuleSend extends TeaModel {
     @NameInMap("notification")
     public AlertRuleNotification notification;
 
+    @NameInMap("notifyStrategies")
+    public java.util.List<String> notifyStrategies;
+
     @NameInMap("sendToArms")
     public Boolean sendToArms;
 
@@ -32,6 +35,14 @@ public class AlertRuleSend extends TeaModel {
     }
     public AlertRuleNotification getNotification() {
         return this.notification;
+    }
+
+    public AlertRuleSend setNotifyStrategies(java.util.List<String> notifyStrategies) {
+        this.notifyStrategies = notifyStrategies;
+        return this;
+    }
+    public java.util.List<String> getNotifyStrategies() {
+        return this.notifyStrategies;
     }
 
     public AlertRuleSend setSendToArms(Boolean sendToArms) {

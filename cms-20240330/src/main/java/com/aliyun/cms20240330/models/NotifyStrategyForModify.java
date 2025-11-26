@@ -4,11 +4,23 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class NotifyStrategyForModify extends TeaModel {
+    @NameInMap("autoRecoverSeconds")
+    public Integer autoRecoverSeconds;
+
     @NameInMap("customTemplateEntries")
     public java.util.List<NotifyStrategyForModifyCustomTemplateEntries> customTemplateEntries;
 
     @NameInMap("description")
     public String description;
+
+    @NameInMap("enableIncidentManagement")
+    public Boolean enableIncidentManagement;
+
+    @NameInMap("escalationId")
+    public java.util.List<String> escalationId;
+
+    @NameInMap("filterSetting")
+    public FilterSetting filterSetting;
 
     /**
      * <p>This parameter is required.</p>
@@ -25,15 +37,32 @@ public class NotifyStrategyForModify extends TeaModel {
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
 
+    @NameInMap("pushingSetting")
+    public NotifyStrategyForModifyPushingSetting pushingSetting;
+
+    @NameInMap("repeatNotifySetting")
+    public NotifyStrategyForModifyRepeatNotifySetting repeatNotifySetting;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("routes")
     public java.util.List<NotifyStrategyForModifyRoutes> routes;
 
+    @NameInMap("workspaceFilterSetting")
+    public WorkspaceFilterSetting workspaceFilterSetting;
+
     public static NotifyStrategyForModify build(java.util.Map<String, ?> map) throws Exception {
         NotifyStrategyForModify self = new NotifyStrategyForModify();
         return TeaModel.build(map, self);
+    }
+
+    public NotifyStrategyForModify setAutoRecoverSeconds(Integer autoRecoverSeconds) {
+        this.autoRecoverSeconds = autoRecoverSeconds;
+        return this;
+    }
+    public Integer getAutoRecoverSeconds() {
+        return this.autoRecoverSeconds;
     }
 
     public NotifyStrategyForModify setCustomTemplateEntries(java.util.List<NotifyStrategyForModifyCustomTemplateEntries> customTemplateEntries) {
@@ -50,6 +79,30 @@ public class NotifyStrategyForModify extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public NotifyStrategyForModify setEnableIncidentManagement(Boolean enableIncidentManagement) {
+        this.enableIncidentManagement = enableIncidentManagement;
+        return this;
+    }
+    public Boolean getEnableIncidentManagement() {
+        return this.enableIncidentManagement;
+    }
+
+    public NotifyStrategyForModify setEscalationId(java.util.List<String> escalationId) {
+        this.escalationId = escalationId;
+        return this;
+    }
+    public java.util.List<String> getEscalationId() {
+        return this.escalationId;
+    }
+
+    public NotifyStrategyForModify setFilterSetting(FilterSetting filterSetting) {
+        this.filterSetting = filterSetting;
+        return this;
+    }
+    public FilterSetting getFilterSetting() {
+        return this.filterSetting;
     }
 
     public NotifyStrategyForModify setGroupingSetting(NotifyStrategyForModifyGroupingSetting groupingSetting) {
@@ -76,12 +129,36 @@ public class NotifyStrategyForModify extends TeaModel {
         return this.notifyStrategyName;
     }
 
+    public NotifyStrategyForModify setPushingSetting(NotifyStrategyForModifyPushingSetting pushingSetting) {
+        this.pushingSetting = pushingSetting;
+        return this;
+    }
+    public NotifyStrategyForModifyPushingSetting getPushingSetting() {
+        return this.pushingSetting;
+    }
+
+    public NotifyStrategyForModify setRepeatNotifySetting(NotifyStrategyForModifyRepeatNotifySetting repeatNotifySetting) {
+        this.repeatNotifySetting = repeatNotifySetting;
+        return this;
+    }
+    public NotifyStrategyForModifyRepeatNotifySetting getRepeatNotifySetting() {
+        return this.repeatNotifySetting;
+    }
+
     public NotifyStrategyForModify setRoutes(java.util.List<NotifyStrategyForModifyRoutes> routes) {
         this.routes = routes;
         return this;
     }
     public java.util.List<NotifyStrategyForModifyRoutes> getRoutes() {
         return this.routes;
+    }
+
+    public NotifyStrategyForModify setWorkspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
+        this.workspaceFilterSetting = workspaceFilterSetting;
+        return this;
+    }
+    public WorkspaceFilterSetting getWorkspaceFilterSetting() {
+        return this.workspaceFilterSetting;
     }
 
     public static class NotifyStrategyForModifyCustomTemplateEntries extends TeaModel {
@@ -168,6 +245,77 @@ public class NotifyStrategyForModify extends TeaModel {
         }
         public Integer getTimes() {
             return this.times;
+        }
+
+    }
+
+    public static class NotifyStrategyForModifyPushingSetting extends TeaModel {
+        @NameInMap("alertActionIds")
+        public java.util.List<String> alertActionIds;
+
+        @NameInMap("restoreActionIds")
+        public java.util.List<String> restoreActionIds;
+
+        @NameInMap("templateUuid")
+        public String templateUuid;
+
+        public static NotifyStrategyForModifyPushingSetting build(java.util.Map<String, ?> map) throws Exception {
+            NotifyStrategyForModifyPushingSetting self = new NotifyStrategyForModifyPushingSetting();
+            return TeaModel.build(map, self);
+        }
+
+        public NotifyStrategyForModifyPushingSetting setAlertActionIds(java.util.List<String> alertActionIds) {
+            this.alertActionIds = alertActionIds;
+            return this;
+        }
+        public java.util.List<String> getAlertActionIds() {
+            return this.alertActionIds;
+        }
+
+        public NotifyStrategyForModifyPushingSetting setRestoreActionIds(java.util.List<String> restoreActionIds) {
+            this.restoreActionIds = restoreActionIds;
+            return this;
+        }
+        public java.util.List<String> getRestoreActionIds() {
+            return this.restoreActionIds;
+        }
+
+        public NotifyStrategyForModifyPushingSetting setTemplateUuid(String templateUuid) {
+            this.templateUuid = templateUuid;
+            return this;
+        }
+        public String getTemplateUuid() {
+            return this.templateUuid;
+        }
+
+    }
+
+    public static class NotifyStrategyForModifyRepeatNotifySetting extends TeaModel {
+        @NameInMap("endIncidentState")
+        public String endIncidentState;
+
+        @NameInMap("repeatInterval")
+        public Integer repeatInterval;
+
+        public static NotifyStrategyForModifyRepeatNotifySetting build(java.util.Map<String, ?> map) throws Exception {
+            NotifyStrategyForModifyRepeatNotifySetting self = new NotifyStrategyForModifyRepeatNotifySetting();
+            return TeaModel.build(map, self);
+        }
+
+        public NotifyStrategyForModifyRepeatNotifySetting setEndIncidentState(String endIncidentState) {
+            this.endIncidentState = endIncidentState;
+            return this;
+        }
+        public String getEndIncidentState() {
+            return this.endIncidentState;
+        }
+
+        public NotifyStrategyForModifyRepeatNotifySetting setRepeatInterval(Integer repeatInterval) {
+            this.repeatInterval = repeatInterval;
+            return this;
+        }
+        public Integer getRepeatInterval() {
+            return this.repeatInterval;
         }
 
     }
