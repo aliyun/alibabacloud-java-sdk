@@ -16,6 +16,9 @@ public class AlertRuleQuery extends TeaModel {
     @NameInMap("duration")
     public Long duration;
 
+    @NameInMap("entityFields")
+    public java.util.List<AlertRuleQueryEntityFields> entityFields;
+
     @NameInMap("entityFilter")
     public AlertRuleQueryEntityFilter entityFilter;
 
@@ -33,6 +36,9 @@ public class AlertRuleQuery extends TeaModel {
 
     @NameInMap("groupType")
     public String groupType;
+
+    @NameInMap("labelFilters")
+    public java.util.List<AlertRuleQueryLabelFilters> labelFilters;
 
     @NameInMap("metric")
     public String metric;
@@ -99,6 +105,14 @@ public class AlertRuleQuery extends TeaModel {
         return this.duration;
     }
 
+    public AlertRuleQuery setEntityFields(java.util.List<AlertRuleQueryEntityFields> entityFields) {
+        this.entityFields = entityFields;
+        return this;
+    }
+    public java.util.List<AlertRuleQueryEntityFields> getEntityFields() {
+        return this.entityFields;
+    }
+
     public AlertRuleQuery setEntityFilter(AlertRuleQueryEntityFilter entityFilter) {
         this.entityFilter = entityFilter;
         return this;
@@ -145,6 +159,14 @@ public class AlertRuleQuery extends TeaModel {
     }
     public String getGroupType() {
         return this.groupType;
+    }
+
+    public AlertRuleQuery setLabelFilters(java.util.List<AlertRuleQueryLabelFilters> labelFilters) {
+        this.labelFilters = labelFilters;
+        return this;
+    }
+    public java.util.List<AlertRuleQueryLabelFilters> getLabelFilters() {
+        return this.labelFilters;
     }
 
     public AlertRuleQuery setMetric(String metric) {
@@ -209,6 +231,36 @@ public class AlertRuleQuery extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class AlertRuleQueryEntityFields extends TeaModel {
+        @NameInMap("field")
+        public String field;
+
+        @NameInMap("value")
+        public String value;
+
+        public static AlertRuleQueryEntityFields build(java.util.Map<String, ?> map) throws Exception {
+            AlertRuleQueryEntityFields self = new AlertRuleQueryEntityFields();
+            return TeaModel.build(map, self);
+        }
+
+        public AlertRuleQueryEntityFields setField(String field) {
+            this.field = field;
+            return this;
+        }
+        public String getField() {
+            return this.field;
+        }
+
+        public AlertRuleQueryEntityFields setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class AlertRuleQueryEntityFilterFilters extends TeaModel {
@@ -289,6 +341,47 @@ public class AlertRuleQuery extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class AlertRuleQueryLabelFilters extends TeaModel {
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("value")
+        public String value;
+
+        public static AlertRuleQueryLabelFilters build(java.util.Map<String, ?> map) throws Exception {
+            AlertRuleQueryLabelFilters self = new AlertRuleQueryLabelFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public AlertRuleQueryLabelFilters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public AlertRuleQueryLabelFilters setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public AlertRuleQueryLabelFilters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

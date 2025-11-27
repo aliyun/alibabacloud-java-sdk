@@ -4,27 +4,59 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class BizTraceConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</p>
+     */
     @NameInMap("advancedConfig")
     public String advancedConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>label_env</p>
+     */
     @NameInMap("bizTraceCode")
     public String bizTraceCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e339260ed64c95d</p>
+     */
     @NameInMap("bizTraceId")
     public String bizTraceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>just test</p>
+     */
     @NameInMap("bizTraceName")
     public String bizTraceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-12-12 00:00:00</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;entrancePid&quot;:&quot;xxxxx@b57c44xx6e86&quot;,&quot;rpcMatcher&quot;:{&quot;matchType&quot;:&quot;EQUALS&quot;,&quot;pattern&quot;:&quot;/createApp&quot;},&quot;characteristics&quot;:{&quot;operation&quot;:&quot;AND&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;CUSTOM_EXTRACT&quot;,&quot;matcher&quot;:{&quot;matchType&quot;:&quot;CONTAINS&quot;,&quot;pattern&quot;:[]}}]}}]</p>
+     */
     @NameInMap("ruleConfig")
     public String ruleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default-cms-xxxxxxx-cn-hangzhou</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
