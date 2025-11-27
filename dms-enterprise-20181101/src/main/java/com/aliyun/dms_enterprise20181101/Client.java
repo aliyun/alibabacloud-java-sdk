@@ -1542,6 +1542,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * 
+     * <b>summary</b> : 
+     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * 
+     * @param tmpReq ChatWithDesensitizeSSERequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChatWithDesensitizeSSEResponse
+     */
+    public ChatWithDesensitizeSSEResponse chatWithDesensitizeSSEWithOptions(ChatWithDesensitizeSSERequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ChatWithDesensitizeSSEShrinkRequest request = new ChatWithDesensitizeSSEShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.messages)) {
+            request.messagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.messages, "Messages", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modalitiesList)) {
+            request.modalitiesListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modalitiesList, "ModalitiesList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.searchOptions)) {
+            request.searchOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.searchOptions, "SearchOptions", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stop)) {
+            request.stopShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stop, "Stop", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioJson)) {
+            query.put("AudioJson", request.audioJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desensitizationRule)) {
+            query.put("DesensitizationRule", request.desensitizationRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCodeInterpreter)) {
+            query.put("EnableCodeInterpreter", request.enableCodeInterpreter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSearch)) {
+            query.put("EnableSearch", request.enableSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableThinking)) {
+            query.put("EnableThinking", request.enableThinking);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeUsage)) {
+            query.put("IncludeUsage", request.includeUsage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logprobs)) {
+            query.put("Logprobs", request.logprobs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxTokens)) {
+            query.put("MaxTokens", request.maxTokens);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modalitiesListShrink)) {
+            query.put("ModalitiesList", request.modalitiesListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needDesensitization)) {
+            query.put("NeedDesensitization", request.needDesensitization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.presencePenalty)) {
+            query.put("PresencePenalty", request.presencePenalty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseFormat)) {
+            query.put("ResponseFormat", request.responseFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchOptionsShrink)) {
+            query.put("SearchOptions", request.searchOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seed)) {
+            query.put("Seed", request.seed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopShrink)) {
+            query.put("Stop", request.stopShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
+            query.put("Stream", request.stream);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.temperature)) {
+            query.put("Temperature", request.temperature);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thinkingBudget)) {
+            query.put("ThinkingBudget", request.thinkingBudget);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
+            query.put("TopK", request.topK);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topLogprobs)) {
+            query.put("TopLogprobs", request.topLogprobs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topP)) {
+            query.put("TopP", request.topP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vlHighResolutionImages)) {
+            query.put("VlHighResolutionImages", request.vlHighResolutionImages);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.XDashScopeDataInspection)) {
+            query.put("XDashScopeDataInspection", request.XDashScopeDataInspection);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.messagesShrink)) {
+            body.put("Messages", request.messagesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChatWithDesensitizeSSE"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChatWithDesensitizeSSEResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * 
+     * <b>summary</b> : 
+     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * 
+     * @param request ChatWithDesensitizeSSERequest
+     * @return ChatWithDesensitizeSSEResponse
+     */
+    public ChatWithDesensitizeSSEResponse chatWithDesensitizeSSE(ChatWithDesensitizeSSERequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.chatWithDesensitizeSSEWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>批量校验是否有表访问权限</p>
      * 
