@@ -4,16 +4,33 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ContextualAnswerResponseBody extends TeaModel {
+    /**
+     * <p>Content of the response from the large model.</p>
+     */
     @NameInMap("Answer")
     public Answer answer;
 
+    /**
+     * <p>Error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified resource project is not found.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID of the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>22F081FB-90D7-525A-BFE4-D28DC906A28F</p>
      */

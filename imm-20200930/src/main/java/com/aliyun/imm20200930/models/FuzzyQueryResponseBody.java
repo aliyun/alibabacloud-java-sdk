@@ -33,6 +33,9 @@ public class FuzzyQueryResponseBody extends TeaModel {
 
     /**
      * <p>The number of hits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalHits")
     public Long totalHits;

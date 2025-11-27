@@ -5,14 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateFileUncompressionTaskShrinkRequest extends TeaModel {
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
      * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <blockquote>
+     * <p> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</p>
+     * </blockquote>
      */
     @NameInMap("Notification")
     public String notificationShrink;

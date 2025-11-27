@@ -516,6 +516,9 @@ public class TargetVideo extends TeaModel {
         @NameInMap("ScaleType")
         public String scaleType;
 
+        @NameInMap("VideoSlim")
+        public Integer videoSlim;
+
         public static TargetVideoTranscodeVideo build(java.util.Map<String, ?> map) throws Exception {
             TargetVideoTranscodeVideo self = new TargetVideoTranscodeVideo();
             return TeaModel.build(map, self);
@@ -655,6 +658,14 @@ public class TargetVideo extends TeaModel {
         }
         public String getScaleType() {
             return this.scaleType;
+        }
+
+        public TargetVideoTranscodeVideo setVideoSlim(Integer videoSlim) {
+            this.videoSlim = videoSlim;
+            return this;
+        }
+        public Integer getVideoSlim() {
+            return this.videoSlim;
         }
 
     }

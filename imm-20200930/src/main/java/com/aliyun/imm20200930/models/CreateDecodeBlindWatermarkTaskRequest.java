@@ -66,7 +66,12 @@ public class CreateDecodeBlindWatermarkTaskRequest extends TeaModel {
     public String sourceURI;
 
     /**
-     * <p>The watermark strength level. The higher the strength level, the more resistant the watermarked image is to attacks, but the more the image is distorted. Valid values: low, medium, and high. Default value: low.</p>
+     * <p>The level of watermark extraction. A higher level indicates a longer time and a higher quality. Valid values:</p>
+     * <ul>
+     * <li>low</li>
+     * <li>medium</li>
+     * <li>high</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>low</p>

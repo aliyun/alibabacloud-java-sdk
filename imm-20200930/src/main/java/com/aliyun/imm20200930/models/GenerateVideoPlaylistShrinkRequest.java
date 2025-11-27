@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     /**
-     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
+     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
      * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
@@ -25,7 +25,7 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String masterURI;
 
     /**
-     * <p>The notification settings. To view details, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
@@ -115,9 +115,9 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The live transcoding playlists. Up to 6 playlists are supported. Each output corresponds to at most one video media playlist and one or more subtitle media playlists.</p>
+     * <p>The array of live transcoding playlists. The maximum length of the array is 6. Each element corresponds to at most one video media playlist and one or more subtitle media playlists.</p>
      * <blockquote>
-     * <p> If more than one output is configured, the <strong>MasterURI</strong> parameter is required.</p>
+     * <p> If the array contains more than one element, the <strong>MasterURI</strong> parameter cannot be left empty.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */

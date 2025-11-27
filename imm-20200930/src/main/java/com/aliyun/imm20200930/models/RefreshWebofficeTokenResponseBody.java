@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefreshWebofficeTokenResponseBody extends TeaModel {
     /**
+     * <p>Weboffice access token.</p>
+     * 
      * <strong>example:</strong>
      * <p>4996466c690a4902846ce00f96********</p>
      */
@@ -12,6 +14,8 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
     public String accessToken;
 
     /**
+     * <p>Expiration time of the access token. The expiration period is 30 minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-08-31T13:07:28.950065359Z</p>
      */
@@ -19,6 +23,8 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
     public String accessTokenExpiredTime;
 
     /**
+     * <p>Weboffice refresh token.</p>
+     * 
      * <strong>example:</strong>
      * <p>72a52ab3702a4123ab5594671a********</p>
      */
@@ -26,6 +32,8 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
     public String refreshToken;
 
     /**
+     * <p>Expiration time of the refresh token. The expiration period is 1 day.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-01T12:37:28.950065359Z</p>
      */
@@ -33,6 +41,8 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
     public String refreshTokenExpiredTime;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>501339F9-4B70-0CE2-AB8C-866C********</p>
      */

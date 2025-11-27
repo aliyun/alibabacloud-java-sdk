@@ -5,43 +5,46 @@ import com.aliyun.tea.*;
 
 public class CreateMediaConvertTaskRequest extends TeaModel {
     /**
-     * <p>The sequence number of the main media file in the concatenation list of media files. The main media file provides the default transcoding settings, such as the resolution and the frame rate, for videos and audios. Default value: <code>0</code>. A value of <code>0</code> specifies that the main media file is aligned with the first media file in the concatenation list.</p>
+     * <p>When performing media concatenation, the index of the primary media file (which provides the default transcoding parameters for <code>Video</code> and <code>Audio</code>, including resolution, frame rate, etc.) in the concatenation list. The default value is 0 (aligning with the first media file in the concatenation list).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AlignmentIndex")
     public Integer alignmentIndex;
 
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If there are no special requirements, please leave this blank.</strong></p>
+     * <p>Chain authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Using Chain Authorization to Access Other Entity Resources</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
     /**
-     * <p>The notification settings. For more information, see &quot;Notification&quot;. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification format</a>.</p>
+     * <p>Notification configuration. For details, click Notification. The format of asynchronous notification messages can be found in <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous Notification Message Format</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
 
     /**
-     * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+     * <p>The name of the project. For how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Creating a Project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The source media files. If multiple files exist at the same time, the Concat feature is enabled. The video files are concatenated in the order of their URI inputs.</p>
+     * <p>A list of media files. If the list contains more than one element, it indicates that the Concat (concatenation) function is enabled. The Concat order follows the sequence of the input video file URIs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Sources")
     public java.util.List<CreateMediaConvertTaskRequestSources> sources;
 
     /**
-     * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+     * <p>Custom tags used for searching and filtering asynchronous tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
@@ -50,17 +53,17 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The media processing tasks. You can specify multiple values for this parameter.</p>
+     * <p>List of media processing tasks, supporting multiple task configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")
     public java.util.List<CreateMediaConvertTaskRequestTargets> targets;
 
     /**
-     * <p>The custom information, which is returned as asynchronous notifications to facilitate notification management in your system. The maximum information length is 2,048 bytes.</p>
+     * <p>User-defined information that will be returned in asynchronous message notifications, used for convenient association and processing within your system. The maximum length is 2048 bytes.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -136,7 +139,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
     public static class CreateMediaConvertTaskRequestSourcesSubtitles extends TeaModel {
         /**
-         * <p>The subtitle language. If you specify this parameter, comply with the ISO 639-2 standard. This parameter is left empty by default.</p>
+         * <p>The language of the subtitle, referenced by ISO 639-2, with a default value of empty.</p>
          * 
          * <strong>example:</strong>
          * <p>eng</p>
@@ -145,7 +148,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String language;
 
         /**
-         * <p>The time offset of the subtitle. Unit: seconds. Default value: 0.</p>
+         * <p>The subtitle delay time, in seconds, with a default value of 0.</p>
          * 
          * <strong>example:</strong>
          * <p>10.5</p>
@@ -154,10 +157,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public Double timeOffset;
 
         /**
-         * <p>The URI of the Object Storage Service (OSS) bucket. Specify the value in the <code>oss://${Bucket}/${Object}</code> format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the complete path to the file whose name contains an extension. The following subtitle formats are supported: srt, vtt, mov_text, ass, dvd_sub, and pgs.</p>
+         * <p>The OSS address rule is <code>oss://${Bucket}/${Object}</code>, where <code>${Bucket}</code> is the name of the OSS Bucket in the same region (Region) as the current project, and <code>${Object}</code> is the complete path of the file including the file extension.
+         * Supported subtitle formats include: srt, vtt, mov_text, ass, dvd_sub, pgs.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://test-bucket/subtitles</p>
+         * <p>oss://test-bucket/test-object</p>
          */
         @NameInMap("URI")
         public String URI;
@@ -194,20 +198,67 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
 
     public static class CreateMediaConvertTaskRequestSources extends TeaModel {
+        /**
+         * <p>The alignment strategy for adding audio and video streams, with the following value range:</p>
+         * <ul>
+         * <li>false (default): No alignment.</li>
+         * <li>loop: Loop the audio and video content to align.</li>
+         * <li>pad: Align by padding silent frames and black video frames.<blockquote>
+         * <ul>
+         * <li>Only valid when the Attached parameter is true.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AlignMode")
         public String alignMode;
 
+        /**
+         * <p>Add the current source media file as a synchronized audio or video stream to the output media file, with a default value of false.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The AlignmentIndex parameter pointing to the Attached parameter of the Source cannot be true.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Attached")
         public Boolean attached;
 
+        /**
+         * <p>Whether to disable the audio in the source media file. The value range is as follows:</p>
+         * <ul>
+         * <li>true: Disable.</li>
+         * <li>false (default): Do not disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DisableAudio")
         public Boolean disableAudio;
 
+        /**
+         * <p>Whether to disable the video in the source media file. The value range is as follows:</p>
+         * <ul>
+         * <li>true: Disable.</li>
+         * <li>false (default): Do not disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DisableVideo")
         public Boolean disableVideo;
 
         /**
-         * <p>The transcoding duration of the media. Unit: seconds. Default value: 0. A value of 0 specifies that the transcoding duration lasts until the end of the video.</p>
+         * <p>The duration of media transcoding, in seconds. The default value is 0, indicating until the end of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -216,10 +267,10 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public Double duration;
 
         /**
-         * <p>The start time of the media transcoding task. Unit: seconds. Valid values:</p>
+         * <p>The start time for media transcoding, in seconds. The value range is as follows:</p>
          * <ul>
-         * <li>0 (default): starts transcoding when the media starts playing.</li>
-         * <li>n: starts transcoding n seconds after the media starts playing. n must be greater than 0.</li>
+         * <li>0 (default): Start transcoding from the beginning of the media.</li>
+         * <li>n (greater than 0): Start transcoding n seconds after the beginning of the media.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,13 +280,13 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public Double startTime;
 
         /**
-         * <p>The subtitles. By default, this parameter is left empty.</p>
+         * <p>A list of subtitles to add, which is empty by default.</p>
          */
         @NameInMap("Subtitles")
         public java.util.List<CreateMediaConvertTaskRequestSourcesSubtitles> subtitles;
 
         /**
-         * <p>The URI of the Object Storage Service (OSS) bucket. Specify the value in the <code>oss://${Bucket}/${Object}</code> format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the complete path to the file whose name contains an extension.</p>
+         * <p>The OSS address rule is <code>oss://${Bucket}/${Object}</code>, where <code>${Bucket}</code> is the name of the OSS Bucket in the same region (Region) as the current project, and <code>${Object}</code> is the complete path of the file including the file extension.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/test-object</p>
@@ -316,7 +367,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
     public static class CreateMediaConvertTaskRequestTargetsSegment extends TeaModel {
         /**
-         * <p>The duration of the segment. Unit: seconds.</p>
+         * <p>Segment length. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -325,7 +376,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public Double duration;
 
         /**
-         * <p>The media segmentation mode. Valid values:</p>
+         * <p>Media slicing method. The value range is as follows:</p>
          * <ul>
          * <li>hls</li>
          * <li>dash</li>
@@ -338,7 +389,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The start sequence number. You can specify this parameter only if you set Format to hls. Default value: 0.</p>
+         * <p>Starting sequence number, supported only for hls, default is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -379,22 +430,21 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
     public static class CreateMediaConvertTaskRequestTargets extends TeaModel {
         /**
-         * <p>The audio processing settings.</p>
+         * <p>Audio processing parameter configuration.</p>
          * <blockquote>
-         * <p> If you leave Audio empty and the first audio stream exists, the first audio stream is directly copied to the output file.</p>
+         * <p>Notice: If Audio is null, the first audio stream (if present) will be directly copied to the output file.</notice></p>
          * </blockquote>
          */
         @NameInMap("Audio")
         public TargetAudio audio;
 
         /**
-         * <p>The type of the media container.</p>
+         * <p>Media container type. Available container types are as follows:</p>
          * <ul>
-         * <li><p>Valid values for audio and video containers: mp4, mkv, mov, asf, avi, mxf, ts, and flv.</p>
-         * </li>
-         * <li><p>Valid values only for audio containers: mp3, aac, flac, oga, ac3, and opus.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong> Specify Container and URI at the same time. If you want to extract subtitles, capture frames, capture image sprites, or rotate media images, set Container and URI to null. In this case, Segment, Video, Audio, and Speed do not take effect.</p>
+         * <li>Audio and video containers: mp4, mkv, mov, asf, avi, mxf, ts, flv</li>
+         * <li>Audio containers: mp3, aac, flac, oga, ac3, opus<blockquote>
+         * <p>Notice: Both Container and URI parameters need to be set. If only subtitle extraction, frame capture, sprite image capture, or media-to-gif conversion is performed, both Container and URI should be set to null, making the Segment, Video, Audio, and Speed parameters meaningless.</notice></p>
+         * </blockquote>
          * </li>
          * </ul>
          * 
@@ -405,21 +455,21 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String container;
 
         /**
-         * <p>The frame capturing, sprite capturing, and media rotation settings.</p>
+         * <p>Configuration for frame capture, sprite image capture, and media to animated image conversion.</p>
          */
         @NameInMap("Image")
         public TargetImage image;
 
         /**
-         * <p>The media segmentation settings. By default, no segmentation is performed.</p>
+         * <p>Media segment settings, no segmentation by default.</p>
          */
         @NameInMap("Segment")
         public CreateMediaConvertTaskRequestTargetsSegment segment;
 
         /**
-         * <p>The playback speed of the media. Valid values: 0.5 to 2. Default value: 1.0.</p>
+         * <p>Media playback speed setting, with a value range of [0.5,1.0], default is 1.0.</p>
          * <blockquote>
-         * <p> This parameter specifies the ratio of the non-regular playback speed of the transcoded media file to the default playback speed of the source media file.</p>
+         * <p>The ratio of the playback speed of the transcoded media file to the original media file, not a speed-up transcoding.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -429,44 +479,42 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public Float speed;
 
         /**
-         * <p>Specifies whether to remove the metadata, such as <code>title</code> and <code>album</code>, from the media file. Default value: false.</p>
+         * <p>Removes metadata from the media file, such as <code>title</code>, <code>album</code>, etc. The default value is false.</p>
          */
         @NameInMap("StripMetadata")
         public Boolean stripMetadata;
 
         /**
-         * <p>The subtitle processing settings.</p>
+         * <p>Subtitle processing parameter configuration.</p>
          * <blockquote>
-         * <p> If you leave Subtitle empty and the first subtitle stream exists, the first subtitle stream is directly copied to the output file.</p>
+         * <p>Notice: If Subtitle is null, the first subtitle stream (if present) will be directly copied to the output file.</notice></p>
          * </blockquote>
          */
         @NameInMap("Subtitle")
         public TargetSubtitle subtitle;
 
         /**
-         * <p>The URI of the OSS bucket in which you want to store the media transcoding output file.</p>
-         * <p>Specify the value in the <code>oss://${Bucket}/${Object}</code> format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the complete path to the file whose name contains an extension.</p>
+         * <p>OSS address for the output file of media transcoding.</p>
+         * <p>The OSS address rule is <code>oss://${Bucket}/${Object}</code>, where <code>${Bucket}</code> is the name of the OSS Bucket in the same region (Region) as the current project, and <code>${Object}</code> is the complete path of the file including the file extension.</p>
          * <ul>
-         * <li><p>If the value of <strong>URI</strong> contains an extension, the endpoint of the OSS bucket matches the URI. If multiple media transcoding output files exist, the endpoints of the correspodning OSS buckets may be overwritten.****</p>
-         * </li>
-         * <li><p>If the value of <strong>URI</strong> does not contain an extension, the endpoint of the OSS bucket consists of the following parameters: <strong>URI</strong>, <strong>Container</strong>, and <strong>Segment</strong>. In the following examples, the value of <strong>URI</strong> is <code>oss://examplebucket/outputVideo</code>.</p>
-         * <ul>
-         * <li>If the value of <strong>Container</strong> is <code>mp4</code> and the value of <strong>Segment</strong> is null, the endpoint of the OSS bucket is <code>oss://examplebucket/outputVideo.mp4</code>.</li>
-         * <li>If the value of <strong>Container</strong> is <code>ts</code> and the value of <strong>Format</strong> in <strong>Segment</strong> is <code>hls</code>, the endpoint of the OSS bucket is <code>oss://examplebucket/outputVideo.m3u8</code>. In addition, multiple ts files prefixed with <code>oss://examplebucket/outputVideo</code> are generated.</li>
+         * <li>When <strong>URI</strong> has an extension, the OSS address for the transcoded media file will be <strong>URI</strong>. If there are multiple output files, they may overwrite each other.</li>
+         * <li>When <strong>URI</strong> does not have an extension, the OSS address for the transcoded media file is determined by the <strong>URI</strong>, <strong>Container</strong>, and <strong>Segment</strong> parameters. For example, if <strong>URI</strong> is <code>oss://examplebucket/outputVideo</code>:<ul>
+         * <li>When <strong>Container</strong> is <code>mp4</code> and <strong>Segment</strong> is empty, the generated media file\&quot;s OSS address will be <code>oss://examplebucket/outputVideo.mp4</code>.</li>
+         * <li>When <strong>Container</strong> is <code>ts</code> and <strong>Segment</strong>\&quot;s <strong>Format</strong> is <code>hls</code>, it will generate an m3u8 file with the OSS address <code>oss://examplebucket/outputVideo.m3u8</code> and multiple ts files with the prefix <code>oss://examplebucket/outputVideo</code>.</li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>oss://test-bucket/targets</p>
+         * <p>oss://test-bucket/test-target-object.mp4</p>
          */
         @NameInMap("URI")
         public String URI;
 
         /**
-         * <p>The video processing settings.</p>
+         * <p>Video processing parameter configuration.</p>
          * <blockquote>
-         * <p> If you leave Video empty and the first video stream exists, the first video stream is directly copied to the output file.</p>
+         * <p>Notice: If Video is null, the first video stream (if present) will be directly copied to the output file.</notice></p>
          * </blockquote>
          */
         @NameInMap("Video")

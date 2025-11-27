@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefreshWebofficeTokenShrinkRequest extends TeaModel {
     /**
+     * <p>Weboffice access token. Obtain it through the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> interfaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,22 +15,24 @@ public class RefreshWebofficeTokenShrinkRequest extends TeaModel {
     public String accessToken;
 
     /**
-     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If there are no special requirements, leave it blank.</strong></p>
+     * <p>Chained authorization configuration, optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Access Other Entity Resources Using Chained Authorization</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
+     * <p>Project name. For more information on how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>immtest</p>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
+     * <p>Weboffice refresh token. Obtain it through the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> interfaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

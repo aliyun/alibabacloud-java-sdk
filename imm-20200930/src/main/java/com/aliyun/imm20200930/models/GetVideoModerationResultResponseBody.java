@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetVideoModerationResultResponseBody extends TeaModel {
     /**
+     * <p>The error code of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ResourceNotFound</p>
      */
@@ -12,6 +14,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The end time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-03T10:20:56.87Z</p>
      */
@@ -19,6 +23,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The event ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>05C-1XBQvsG2Tn5kBx2dUWo43******</p>
      */
@@ -26,16 +32,23 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The error message of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified resource TaskId is not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The result of the image compliance detection task.</p>
+     */
     @NameInMap("ModerationResult")
     public GetVideoModerationResultResponseBodyModerationResult moderationResult;
 
     /**
+     * <p>The project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-project</p>
      */
@@ -43,6 +56,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>VideoModeration-d0f0df1d-531d-4ab4-b353-e7f475******</p>
      */
@@ -50,6 +65,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-03T10:20:41.432Z</p>
      */
@@ -57,6 +74,13 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li>Running: The task is running.</li>
+     * <li>Succeeded: The task is successful.</li>
+     * <li>Failed: The task failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -64,6 +88,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>VideoModeration-d0f0df1d-531d-4ab4-b353-e7f4750******</p>
      */
@@ -71,12 +97,23 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The type of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>VideoModeration</p>
      */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <p>The user-defined data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;id&quot;: &quot;test-id&quot;,
+     *       &quot;name&quot;: &quot;test-name&quot;
+     * }</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -183,6 +220,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
 
     public static class GetVideoModerationResultResponseBodyModerationResultFramesBlockFrames extends TeaModel {
         /**
+         * <p>The label of the violation.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;teat&quot;:&quot;val&quot;}</p>
          */
@@ -190,6 +229,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>The offset of the frame.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -197,6 +238,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         public Integer offset;
 
         /**
+         * <p>The confidence level of the violation.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -235,10 +278,15 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class GetVideoModerationResultResponseBodyModerationResultFrames extends TeaModel {
+        /**
+         * <p>The information about violated frames.</p>
+         */
         @NameInMap("BlockFrames")
         public java.util.List<GetVideoModerationResultResponseBodyModerationResultFramesBlockFrames> blockFrames;
 
         /**
+         * <p>The total number of detected frames.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -269,13 +317,26 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class GetVideoModerationResultResponseBodyModerationResult extends TeaModel {
+        /**
+         * <p>The category list.</p>
+         */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <p>The information about video and motion detection frames.</p>
+         */
         @NameInMap("Frames")
         public GetVideoModerationResultResponseBodyModerationResultFrames frames;
 
         /**
+         * <p>The recommended operation. Valid values:</p>
+         * <ul>
+         * <li>pass: The image has passed the check. No action is required.</li>
+         * <li>review: The image contains suspected violations and requires human review.</li>
+         * <li>block: The image contains violations. Further actions, such as deleting or blocking the image, are recommended.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
@@ -283,6 +344,8 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
+         * <p>The OSS URI of the file. The URI follows the oss://${bucketname}/${objectname} format. bucketname indicates the name of an OSS bucket that is in the same region as the current project, and objectname is the file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/test-object</p>
          */

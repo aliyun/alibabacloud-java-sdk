@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The authorization chain. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
@@ -29,7 +29,7 @@ public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     public Long maxFrames;
 
     /**
-     * <p>The notification settings. For more information, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification format</a>.</p>
+     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;

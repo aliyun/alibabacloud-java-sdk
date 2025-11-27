@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The format of the package. Default value: zip.</p>
+     * <p>The format of the output file.</p>
      * <blockquote>
-     * <p> Only the ZIP format is supported.</p>
+     * <p>Only the ZIP format is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

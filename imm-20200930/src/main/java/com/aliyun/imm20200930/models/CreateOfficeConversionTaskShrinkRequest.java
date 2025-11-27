@@ -225,9 +225,9 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     public Long quality;
 
     /**
-     * <p>The percentage scale relative to the source document. Valid values: 20 to 200. The default value is 100, which indicates that the document is not scaled.</p>
+     * <p>The percentage scale relative to the source document. Valid values: 20 to 199. The default value is 100, which indicates that the document is not scaled.</p>
      * <blockquote>
-     * <p> A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</p>
+     * <p>A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -292,6 +292,12 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <p>The list of images. The sequence of image URIs in the list determines the order in which they are converted. (<strong>This parameter is not officially available and is not recommended.</strong>)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://imm-test/test.pptx</p>
+     */
     @NameInMap("Sources")
     public String sourcesShrink;
 

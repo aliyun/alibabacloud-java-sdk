@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBindingResponseBody extends TeaModel {
     /**
-     * <p>The binding relationship.</p>
+     * <p>The information about the binding.</p>
      */
     @NameInMap("Binding")
     public Binding binding;

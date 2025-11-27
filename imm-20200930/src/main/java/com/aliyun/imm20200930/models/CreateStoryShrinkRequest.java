@@ -7,7 +7,7 @@ public class CreateStoryShrinkRequest extends TeaModel {
     /**
      * <p>The address of the story. IMM filters candidate photos to generate a story based on the value of this parameter. This parameter takes effect only if you set StoryType to TravelMemory.</p>
      * <blockquote>
-     * <p> If you are located in Hong Kong (China), Macao (China), Taiwan (China), or overseas, you cannot specify an address in the Chinese mainland by using this parameter.</p>
+     * <p> If the caller of the operation is located in Hong Kong (China), Macao (China), Taiwan (China), or another region outside the Chinese mainland, the system cannot convert the GPS information in the Chinese mainland into the textual address version.</p>
      * </blockquote>
      */
     @NameInMap("Address")

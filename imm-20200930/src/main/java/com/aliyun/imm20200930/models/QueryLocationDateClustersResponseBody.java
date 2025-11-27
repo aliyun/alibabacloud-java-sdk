@@ -11,7 +11,7 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
     public java.util.List<LocationDateCluster> locationDateClusters;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>MzQNjmY2MzYxNhNjk2ZNjEu****</p>

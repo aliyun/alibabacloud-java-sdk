@@ -22,7 +22,7 @@ public class IndexFileMetaRequest extends TeaModel {
     public InputFile file;
 
     /**
-     * <p>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
+     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;
@@ -37,6 +37,12 @@ public class IndexFileMetaRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The custom user information, which is returned in an asynchronous notification. The maximum length of a notification is 2048 bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

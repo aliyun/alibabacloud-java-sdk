@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoModerationResultRequest extends TeaModel {
     /**
+     * <p>The project name.<a href="~~478153~~"></a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetVideoModerationResultRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetVideoModerationResultRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The task type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

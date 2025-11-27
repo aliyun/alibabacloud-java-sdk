@@ -15,7 +15,26 @@ public class GetTaskRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>Specifies whether to return the initial request parameters that are used to create the task. Default value: False.</p>
+     * <p>Specifies whether to return original request parameters specified to create the task.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * <p>This parameter applies only to the following tasks:</p>
+     * <ul>
+     * <li>MediaConvert</li>
+     * <li>VideoLabelClassification</li>
+     * <li>FaceClustering</li>
+     * <li>FileCompression</li>
+     * <li>ArchiveFileInspection</li>
+     * <li>FileUncompression</li>
+     * <li>PointCloudCompress</li>
+     * <li>ImageToPDF</li>
+     * <li>StoryCreation</li>
+     * <li>LocationDateClustering</li>
+     * <li>ImageSplicing</li>
+     * <li>FacesSearching</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>

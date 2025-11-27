@@ -225,9 +225,9 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     public Long quality;
 
     /**
-     * <p>The percentage scale relative to the source document. Valid values: 20 to 200. The default value is 100, which indicates that the document is not scaled.</p>
+     * <p>The percentage scale relative to the source document. Valid values: 20 to 199. The default value is 100, which indicates that the document is not scaled.</p>
      * <blockquote>
-     * <p> A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</p>
+     * <p>A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -292,6 +292,12 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <p>The list of images. The sequence of image URIs in the list determines the order in which they are converted. (<strong>This parameter is not officially available and is not recommended.</strong>)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://imm-test/test.pptx</p>
+     */
     @NameInMap("Sources")
     public java.util.List<CreateOfficeConversionTaskRequestSources> sources;
 
@@ -640,9 +646,29 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     }
 
     public static class CreateOfficeConversionTaskRequestSources extends TeaModel {
+        /**
+         * <p>The rotation angle. Valid values:</p>
+         * <ul>
+         * <li>0 (default)</li>
+         * <li>90</li>
+         * <li>180</li>
+         * <li>270</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("Rotate")
         public Long rotate;
 
+        /**
+         * <p>The OSS URI of the input image.</p>
+         * <p>The URI must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</p>
+         * <p>The operation supports the following image formats: JPG, JP2, PNG, TIFF, WebP, BMP, and SVG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/sampleobject.jpg</p>
+         */
         @NameInMap("URI")
         public String URI;
 
