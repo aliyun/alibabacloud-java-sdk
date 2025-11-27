@@ -882,6 +882,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("SaslEndPoint")
         public String saslEndPoint;
 
+        @NameInMap("ScheduledRetirement")
+        public Boolean scheduledRetirement;
+
         /**
          * <p>The security group to which the instance belongs.</p>
          * <ul>
@@ -1366,6 +1369,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getSaslEndPoint() {
             return this.saslEndPoint;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setScheduledRetirement(Boolean scheduledRetirement) {
+            this.scheduledRetirement = scheduledRetirement;
+            return this;
+        }
+        public Boolean getScheduledRetirement() {
+            return this.scheduledRetirement;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setSecurityGroup(String securityGroup) {

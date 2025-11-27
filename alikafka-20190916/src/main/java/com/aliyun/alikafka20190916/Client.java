@@ -1484,6 +1484,190 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>降配后付费实例</p>
+     * 
+     * @param tmpReq DowngradePostPayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DowngradePostPayOrderResponse
+     */
+    public DowngradePostPayOrderResponse downgradePostPayOrderWithOptions(DowngradePostPayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DowngradePostPayOrderShrinkRequest request = new DowngradePostPayOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serverlessConfig)) {
+            request.serverlessConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serverlessConfig, "ServerlessConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.diskSize)) {
+            query.put("DiskSize", request.diskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eipMax)) {
+            query.put("EipMax", request.eipMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eipModel)) {
+            query.put("EipModel", request.eipModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioMax)) {
+            query.put("IoMax", request.ioMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioMaxSpec)) {
+            query.put("IoMaxSpec", request.ioMaxSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionNum)) {
+            query.put("PartitionNum", request.partitionNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverlessConfigShrink)) {
+            query.put("ServerlessConfig", request.serverlessConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specType)) {
+            query.put("SpecType", request.specType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicQuota)) {
+            query.put("TopicQuota", request.topicQuota);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DowngradePostPayOrder"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DowngradePostPayOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>降配后付费实例</p>
+     * 
+     * @param request DowngradePostPayOrderRequest
+     * @return DowngradePostPayOrderResponse
+     */
+    public DowngradePostPayOrderResponse downgradePostPayOrder(DowngradePostPayOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.downgradePostPayOrderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>降配预付费实例</p>
+     * 
+     * @param tmpReq DowngradePrePayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DowngradePrePayOrderResponse
+     */
+    public DowngradePrePayOrderResponse downgradePrePayOrderWithOptions(DowngradePrePayOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DowngradePrePayOrderShrinkRequest request = new DowngradePrePayOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.confluentConfig)) {
+            request.confluentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.confluentConfig, "ConfluentConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.confluentConfigShrink)) {
+            query.put("ConfluentConfig", request.confluentConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskSize)) {
+            query.put("DiskSize", request.diskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eipMax)) {
+            query.put("EipMax", request.eipMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eipModel)) {
+            query.put("EipModel", request.eipModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioMax)) {
+            query.put("IoMax", request.ioMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioMaxSpec)) {
+            query.put("IoMaxSpec", request.ioMaxSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paidType)) {
+            query.put("PaidType", request.paidType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionNum)) {
+            query.put("PartitionNum", request.partitionNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specType)) {
+            query.put("SpecType", request.specType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicQuota)) {
+            query.put("TopicQuota", request.topicQuota);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DowngradePrePayOrder"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DowngradePrePayOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>降配预付费实例</p>
+     * 
+     * @param request DowngradePrePayOrderRequest
+     * @return DowngradePrePayOrderResponse
+     */
+    public DowngradePrePayOrderResponse downgradePrePayOrder(DowngradePrePayOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.downgradePrePayOrderWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Enables and disables the flexible group creation feature.</p>
      * 
      * @param request EnableAutoGroupCreationRequest
