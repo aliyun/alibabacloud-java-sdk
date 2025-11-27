@@ -1398,13 +1398,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.messagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.messages, "Messages", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modalitiesList)) {
+            request.modalitiesListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modalitiesList, "ModalitiesList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.searchOptions)) {
+            request.searchOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.searchOptions, "SearchOptions", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.stop)) {
             request.stopShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stop, "Stop", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioJson)) {
+            query.put("AudioJson", request.audioJson);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desensitizationRule)) {
             query.put("DesensitizationRule", request.desensitizationRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCodeInterpreter)) {
+            query.put("EnableCodeInterpreter", request.enableCodeInterpreter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSearch)) {
+            query.put("EnableSearch", request.enableSearch);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableThinking)) {
@@ -1415,8 +1435,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logprobs)) {
+            query.put("Logprobs", request.logprobs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxTokens)) {
             query.put("MaxTokens", request.maxTokens);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modalitiesListShrink)) {
+            query.put("ModalitiesList", request.modalitiesListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.model)) {
@@ -1433,6 +1461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.responseFormat)) {
             query.put("ResponseFormat", request.responseFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchOptionsShrink)) {
+            query.put("SearchOptions", request.searchOptionsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.seed)) {
@@ -1461,6 +1493,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.topP)) {
             query.put("TopP", request.topP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vlHighResolutionImages)) {
+            query.put("VlHighResolutionImages", request.vlHighResolutionImages);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.XDashScopeDataInspection)) {
+            query.put("XDashScopeDataInspection", request.XDashScopeDataInspection);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1499,6 +1539,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatWithDesensitizeResponse chatWithDesensitize(ChatWithDesensitizeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.chatWithDesensitizeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量校验是否有表访问权限</p>
+     * 
+     * @param tmpReq CheckBatchTableAccessPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckBatchTableAccessPermissionResponse
+     */
+    public CheckBatchTableAccessPermissionResponse checkBatchTableAccessPermissionWithOptions(CheckBatchTableAccessPermissionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CheckBatchTableAccessPermissionShrinkRequest request = new CheckBatchTableAccessPermissionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tableNameList)) {
+            request.tableNameListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tableNameList, "TableNameList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logic)) {
+            query.put("Logic", request.logic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permissionType)) {
+            query.put("PermissionType", request.permissionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableNameListShrink)) {
+            query.put("TableNameList", request.tableNameListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckBatchTableAccessPermission"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckBatchTableAccessPermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量校验是否有表访问权限</p>
+     * 
+     * @param request CheckBatchTableAccessPermissionRequest
+     * @return CheckBatchTableAccessPermissionResponse
+     */
+    public CheckBatchTableAccessPermissionResponse checkBatchTableAccessPermission(CheckBatchTableAccessPermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkBatchTableAccessPermissionWithOptions(request, runtime);
     }
 
     /**

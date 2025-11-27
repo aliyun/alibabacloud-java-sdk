@@ -6,10 +6,31 @@ import com.aliyun.tea.*;
 public class ChatWithDesensitizeShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("AudioJson")
+    public String audioJson;
+
+    /**
+     * <strong>example:</strong>
      * <p>UserInfo</p>
      */
     @NameInMap("DesensitizationRule")
     public String desensitizationRule;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("EnableCodeInterpreter")
+    public Boolean enableCodeInterpreter;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("EnableSearch")
+    public Boolean enableSearch;
 
     /**
      * <strong>example:</strong>
@@ -29,14 +50,19 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("Logprobs")
+    public Boolean logprobs;
+
+    /**
+     * <strong>example:</strong>
      * <p>256</p>
      */
     @NameInMap("MaxTokens")
     public Integer maxTokens;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>[
      *     {
@@ -47,6 +73,13 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
      */
     @NameInMap("Messages")
     public String messagesShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;text&quot;,&quot;audio&quot;]</p>
+     */
+    @NameInMap("ModalitiesList")
+    public String modalitiesListShrink;
 
     /**
      * <strong>example:</strong>
@@ -67,7 +100,7 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
      * <p>0.0</p>
      */
     @NameInMap("PresencePenalty")
-    public Float presencePenalty;
+    public String presencePenalty;
 
     /**
      * <strong>example:</strong>
@@ -75,6 +108,13 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
      */
     @NameInMap("ResponseFormat")
     public String responseFormat;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("SearchOptions")
+    public String searchOptionsShrink;
 
     /**
      * <strong>example:</strong>
@@ -91,7 +131,7 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("Temperature")
-    public Float temperature;
+    public String temperature;
 
     /**
      * <strong>example:</strong>
@@ -119,11 +159,33 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
      * <p>0.5</p>
      */
     @NameInMap("TopP")
-    public Float topP;
+    public String topP;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("VlHighResolutionImages")
+    public Boolean vlHighResolutionImages;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("XDashScopeDataInspection")
+    public String XDashScopeDataInspection;
 
     public static ChatWithDesensitizeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatWithDesensitizeShrinkRequest self = new ChatWithDesensitizeShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChatWithDesensitizeShrinkRequest setAudioJson(String audioJson) {
+        this.audioJson = audioJson;
+        return this;
+    }
+    public String getAudioJson() {
+        return this.audioJson;
     }
 
     public ChatWithDesensitizeShrinkRequest setDesensitizationRule(String desensitizationRule) {
@@ -132,6 +194,22 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
     }
     public String getDesensitizationRule() {
         return this.desensitizationRule;
+    }
+
+    public ChatWithDesensitizeShrinkRequest setEnableCodeInterpreter(Boolean enableCodeInterpreter) {
+        this.enableCodeInterpreter = enableCodeInterpreter;
+        return this;
+    }
+    public Boolean getEnableCodeInterpreter() {
+        return this.enableCodeInterpreter;
+    }
+
+    public ChatWithDesensitizeShrinkRequest setEnableSearch(Boolean enableSearch) {
+        this.enableSearch = enableSearch;
+        return this;
+    }
+    public Boolean getEnableSearch() {
+        return this.enableSearch;
     }
 
     public ChatWithDesensitizeShrinkRequest setEnableThinking(Boolean enableThinking) {
@@ -150,6 +228,14 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ChatWithDesensitizeShrinkRequest setLogprobs(Boolean logprobs) {
+        this.logprobs = logprobs;
+        return this;
+    }
+    public Boolean getLogprobs() {
+        return this.logprobs;
+    }
+
     public ChatWithDesensitizeShrinkRequest setMaxTokens(Integer maxTokens) {
         this.maxTokens = maxTokens;
         return this;
@@ -164,6 +250,14 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
     }
     public String getMessagesShrink() {
         return this.messagesShrink;
+    }
+
+    public ChatWithDesensitizeShrinkRequest setModalitiesListShrink(String modalitiesListShrink) {
+        this.modalitiesListShrink = modalitiesListShrink;
+        return this;
+    }
+    public String getModalitiesListShrink() {
+        return this.modalitiesListShrink;
     }
 
     public ChatWithDesensitizeShrinkRequest setModel(String model) {
@@ -182,11 +276,11 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
         return this.needDesensitization;
     }
 
-    public ChatWithDesensitizeShrinkRequest setPresencePenalty(Float presencePenalty) {
+    public ChatWithDesensitizeShrinkRequest setPresencePenalty(String presencePenalty) {
         this.presencePenalty = presencePenalty;
         return this;
     }
-    public Float getPresencePenalty() {
+    public String getPresencePenalty() {
         return this.presencePenalty;
     }
 
@@ -196,6 +290,14 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
     }
     public String getResponseFormat() {
         return this.responseFormat;
+    }
+
+    public ChatWithDesensitizeShrinkRequest setSearchOptionsShrink(String searchOptionsShrink) {
+        this.searchOptionsShrink = searchOptionsShrink;
+        return this;
+    }
+    public String getSearchOptionsShrink() {
+        return this.searchOptionsShrink;
     }
 
     public ChatWithDesensitizeShrinkRequest setSeed(Integer seed) {
@@ -214,11 +316,11 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
         return this.stopShrink;
     }
 
-    public ChatWithDesensitizeShrinkRequest setTemperature(Float temperature) {
+    public ChatWithDesensitizeShrinkRequest setTemperature(String temperature) {
         this.temperature = temperature;
         return this;
     }
-    public Float getTemperature() {
+    public String getTemperature() {
         return this.temperature;
     }
 
@@ -246,12 +348,28 @@ public class ChatWithDesensitizeShrinkRequest extends TeaModel {
         return this.topLogprobs;
     }
 
-    public ChatWithDesensitizeShrinkRequest setTopP(Float topP) {
+    public ChatWithDesensitizeShrinkRequest setTopP(String topP) {
         this.topP = topP;
         return this;
     }
-    public Float getTopP() {
+    public String getTopP() {
         return this.topP;
+    }
+
+    public ChatWithDesensitizeShrinkRequest setVlHighResolutionImages(Boolean vlHighResolutionImages) {
+        this.vlHighResolutionImages = vlHighResolutionImages;
+        return this;
+    }
+    public Boolean getVlHighResolutionImages() {
+        return this.vlHighResolutionImages;
+    }
+
+    public ChatWithDesensitizeShrinkRequest setXDashScopeDataInspection(String XDashScopeDataInspection) {
+        this.XDashScopeDataInspection = XDashScopeDataInspection;
+        return this;
+    }
+    public String getXDashScopeDataInspection() {
+        return this.XDashScopeDataInspection;
     }
 
 }
