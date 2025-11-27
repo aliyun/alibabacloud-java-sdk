@@ -40,6 +40,15 @@ public class ListAgentRuntimesRequest extends TeaModel {
     @NameInMap("searchMode")
     public String searchMode;
 
+    /**
+     * <p>根据状态进行过滤，多个状态用逗号分隔，支持精确匹配</p>
+     * 
+     * <strong>example:</strong>
+     * <p>READY,CREATING</p>
+     */
+    @NameInMap("status")
+    public String status;
+
     public static ListAgentRuntimesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentRuntimesRequest self = new ListAgentRuntimesRequest();
         return TeaModel.build(map, self);
@@ -75,6 +84,14 @@ public class ListAgentRuntimesRequest extends TeaModel {
     }
     public String getSearchMode() {
         return this.searchMode;
+    }
+
+    public ListAgentRuntimesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

@@ -19,6 +19,9 @@ public class Template extends TeaModel {
     @NameInMap("credentialConfiguration")
     public CredentialConfiguration credentialConfiguration;
 
+    @NameInMap("description")
+    public String description;
+
     @NameInMap("diskSize")
     public Integer diskSize;
 
@@ -126,6 +129,14 @@ public class Template extends TeaModel {
     }
     public CredentialConfiguration getCredentialConfiguration() {
         return this.credentialConfiguration;
+    }
+
+    public Template setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public Template setDiskSize(Integer diskSize) {

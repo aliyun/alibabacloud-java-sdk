@@ -25,6 +25,13 @@ public class OssConfiguration extends TeaModel {
     @NameInMap("prefix")
     public String prefix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ch-hangzhou</p>
+     */
+    @NameInMap("region")
+    public String region;
+
     public static OssConfiguration build(java.util.Map<String, ?> map) throws Exception {
         OssConfiguration self = new OssConfiguration();
         return TeaModel.build(map, self);
@@ -60,6 +67,14 @@ public class OssConfiguration extends TeaModel {
     }
     public String getPrefix() {
         return this.prefix;
+    }
+
+    public OssConfiguration setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
 }
