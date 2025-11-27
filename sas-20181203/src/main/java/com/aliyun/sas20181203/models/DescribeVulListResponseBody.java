@@ -756,6 +756,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("Bind")
         public Boolean bind;
 
+        @NameInMap("ContainerId")
+        public String containerId;
+
         /**
          * <p>The extended information about the vulnerability.</p>
          */
@@ -1174,6 +1177,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public Boolean getBind() {
             return this.bind;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
         }
 
         public DescribeVulListResponseBodyVulRecords setExtendContentJson(DescribeVulListResponseBodyVulRecordsExtendContentJson extendContentJson) {
