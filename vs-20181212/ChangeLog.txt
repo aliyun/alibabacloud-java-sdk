@@ -1,3 +1,7 @@
+2025-11-27 Version: 3.5.1
+- Update API DescribeRenderingInstance: add response parameters Body.ResourceAttributes.
+
+
 2025-09-11 Version: 3.5.0
 - Support API ListCloudAppPatches.
 - Support API ModifyRenderingInstanceAttribute.

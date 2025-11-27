@@ -56,6 +56,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceAttributes")
+    public DescribeRenderingInstanceResponseBodyResourceAttributes resourceAttributes;
+
     @NameInMap("StorageSize")
     public Integer storageSize;
 
@@ -161,6 +164,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeRenderingInstanceResponseBody setResourceAttributes(DescribeRenderingInstanceResponseBodyResourceAttributes resourceAttributes) {
+        this.resourceAttributes = resourceAttributes;
+        return this;
+    }
+    public DescribeRenderingInstanceResponseBodyResourceAttributes getResourceAttributes() {
+        return this.resourceAttributes;
     }
 
     public DescribeRenderingInstanceResponseBody setStorageSize(Integer storageSize) {
@@ -503,6 +514,74 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class DescribeRenderingInstanceResponseBodyResourceAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ON</p>
+         */
+        @NameInMap("EdgeMediaService")
+        public String edgeMediaService;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ON</p>
+         */
+        @NameInMap("InAccess")
+        public String inAccess;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ON</p>
+         */
+        @NameInMap("OutAccess")
+        public String outAccess;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Public</p>
+         */
+        @NameInMap("Zone")
+        public String zone;
+
+        public static DescribeRenderingInstanceResponseBodyResourceAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenderingInstanceResponseBodyResourceAttributes self = new DescribeRenderingInstanceResponseBodyResourceAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRenderingInstanceResponseBodyResourceAttributes setEdgeMediaService(String edgeMediaService) {
+            this.edgeMediaService = edgeMediaService;
+            return this;
+        }
+        public String getEdgeMediaService() {
+            return this.edgeMediaService;
+        }
+
+        public DescribeRenderingInstanceResponseBodyResourceAttributes setInAccess(String inAccess) {
+            this.inAccess = inAccess;
+            return this;
+        }
+        public String getInAccess() {
+            return this.inAccess;
+        }
+
+        public DescribeRenderingInstanceResponseBodyResourceAttributes setOutAccess(String outAccess) {
+            this.outAccess = outAccess;
+            return this;
+        }
+        public String getOutAccess() {
+            return this.outAccess;
+        }
+
+        public DescribeRenderingInstanceResponseBodyResourceAttributes setZone(String zone) {
+            this.zone = zone;
+            return this;
+        }
+        public String getZone() {
+            return this.zone;
         }
 
     }
