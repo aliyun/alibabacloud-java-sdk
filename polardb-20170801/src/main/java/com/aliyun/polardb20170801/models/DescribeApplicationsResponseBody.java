@@ -176,6 +176,13 @@ public class DescribeApplicationsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>pc-xxxxxx</p>
+         */
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
+        /**
+         * <strong>example:</strong>
          * <p>myapp</p>
          */
         @NameInMap("Description")
@@ -267,6 +274,14 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeApplicationsResponseBodyItemsApplications setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
         public DescribeApplicationsResponseBodyItemsApplications setDescription(String description) {
