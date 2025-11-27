@@ -4,10 +4,15 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeOrgByLayerRequest extends TeaModel {
+    /**
+     * <p>The name of the organization.</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
     /**
+     * <p>The ID of the parent organization.</p>
+     * 
      * <strong>example:</strong>
      * <p>org-11fs****</p>
      */

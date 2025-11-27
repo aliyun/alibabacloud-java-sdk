@@ -4,19 +4,35 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupUserResponseBody extends TeaModel {
+    /**
+     * <blockquote>
+     * <p> This field is deprecated.</p>
+     * </blockquote>
+     */
     @NameInMap("Groups")
     public java.util.List<DescribeGroupUserResponseBodyGroups> groups;
 
+    /**
+     * <p>The token for the next query. If NextToken is empty, all results have been queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AA8D67CB-345D-5CDA-986E-FFAC7D0****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The members.</p>
+     */
     @NameInMap("Users")
     public java.util.List<DescribeGroupUserResponseBodyUsers> users;
 
@@ -59,16 +75,23 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
     public static class DescribeGroupUserResponseBodyGroups extends TeaModel {
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ug-91mvbosdjsdfh****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the user group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
+         * <p>The number of members in the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -108,6 +131,10 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
     public static class DescribeGroupUserResponseBodyUsers extends TeaModel {
         /**
+         * <blockquote>
+         * <p> This field is deprecated.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>xx-xx-xx</p>
          */
@@ -115,6 +142,10 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <blockquote>
+         * <p> This field is deprecated.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://avatar.****.com">https://avatar.****.com</a></p>
          */
@@ -122,6 +153,8 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         public String avatar;
 
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>alex****@aliyun.com</p>
          */
@@ -129,6 +162,8 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The user name.</p>
+         * 
          * <strong>example:</strong>
          * <p>alex****</p>
          */
@@ -136,6 +171,8 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         public String endUserId;
 
         /**
+         * <p>The time when the user was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-26T02:59:22.000+00:00</p>
          */
@@ -143,6 +180,8 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the user was added to the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-26T02:59:22.000+00:00</p>
          */
@@ -150,6 +189,10 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         public String gmtJoinGroup;
 
         /**
+         * <blockquote>
+         * <p> This field is deprecated.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -157,6 +200,8 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         public String jobNumber;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>alex</p>
          */
@@ -164,12 +209,20 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         public String nickName;
 
         /**
+         * <p>The mobile number.</p>
+         * 
          * <strong>example:</strong>
          * <p>188888****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The remarks on the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
+         */
         @NameInMap("Remark")
         public String remark;
 

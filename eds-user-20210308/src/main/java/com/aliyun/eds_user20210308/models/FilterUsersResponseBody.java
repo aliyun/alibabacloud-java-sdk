@@ -23,7 +23,7 @@ public class FilterUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The convenience accounts.</p>
+     * <p>The information about the convenience accounts.</p>
      */
     @NameInMap("Users")
     public java.util.List<FilterUsersResponseBodyUsers> users;
@@ -99,13 +99,52 @@ public class FilterUsersResponseBody extends TeaModel {
 
     }
 
+    public static class FilterUsersResponseBodyUsersGroups extends TeaModel {
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        public static FilterUsersResponseBodyUsersGroups build(java.util.Map<String, ?> map) throws Exception {
+            FilterUsersResponseBodyUsersGroups self = new FilterUsersResponseBodyUsersGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public FilterUsersResponseBodyUsersGroups setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public FilterUsersResponseBodyUsersGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+    }
+
     public static class FilterUsersResponseBodyUsersOrgList extends TeaModel {
+        /**
+         * <p>The organization ID.</p>
+         */
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>The organization name.</p>
+         */
         @NameInMap("OrgName")
         public String orgName;
 
+        /**
+         * <p>The organization name path.</p>
+         */
         @NameInMap("OrgNamePath")
         public String orgNamePath;
 
@@ -141,9 +180,15 @@ public class FilterUsersResponseBody extends TeaModel {
     }
 
     public static class FilterUsersResponseBodyUsersSupportLoginIdps extends TeaModel {
+        /**
+         * <p>The enterprise identity provider ID.</p>
+         */
         @NameInMap("IdpId")
         public String idpId;
 
+        /**
+         * <p>The enterprise identity provider name.</p>
+         */
         @NameInMap("IdpName")
         public String idpName;
 
@@ -396,6 +441,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("ExternalInfo")
         public FilterUsersResponseBodyUsersExternalInfo externalInfo;
 
+        @NameInMap("Groups")
+        public java.util.List<FilterUsersResponseBodyUsersGroups> groups;
+
         /**
          * <p>The ID of the convenience user.</p>
          * 
@@ -430,6 +478,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
+        /**
+         * <p>The organizations to which the user belongs.</p>
+         */
         @NameInMap("OrgList")
         public java.util.List<FilterUsersResponseBodyUsersOrgList> orgList;
 
@@ -509,6 +560,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The supported identity provider logon methods.</p>
+         */
         @NameInMap("SupportLoginIdps")
         public java.util.List<FilterUsersResponseBodyUsersSupportLoginIdps> supportLoginIdps;
 
@@ -577,6 +631,14 @@ public class FilterUsersResponseBody extends TeaModel {
         }
         public FilterUsersResponseBodyUsersExternalInfo getExternalInfo() {
             return this.externalInfo;
+        }
+
+        public FilterUsersResponseBodyUsers setGroups(java.util.List<FilterUsersResponseBodyUsersGroups> groups) {
+            this.groups = groups;
+            return this;
+        }
+        public java.util.List<FilterUsersResponseBodyUsersGroups> getGroups() {
+            return this.groups;
         }
 
         public FilterUsersResponseBodyUsers setId(Long id) {

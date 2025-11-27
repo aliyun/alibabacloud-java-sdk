@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesRequest extends TeaModel {
     /**
-     * <p>The domain of the Active Directory (AD) workspace.</p>
+     * <p>The address of the AD office network.</p>
      * 
      * <strong>example:</strong>
      * <p>cn.misumi.pri</p>
@@ -14,7 +14,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String adDomain;
 
     /**
-     * <p>The usernames of the convenience users.</p>
+     * <p>The usernames of the convenience accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

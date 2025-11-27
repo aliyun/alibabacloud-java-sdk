@@ -4,10 +4,17 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class ModifyGroupRequest extends TeaModel {
+    /**
+     * <p>The new description of the user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestGroup</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the user group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class ModifyGroupRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The name of the new user group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NewGroupName")

@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceGroupsRequest extends TeaModel {
     /**
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +16,8 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public Long needContainResourceGroupWithOfficeSite;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +25,8 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,15 +34,28 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <blockquote>
+     * <p> Set the value to AliyunConsole.</p>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter is not publicly available on other platforms.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AliyunConsole</p>
      */
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>The IDs of the resource groups that you want to query.</p>
+     */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 
+    /**
+     * <p>The name of the resource group.</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 

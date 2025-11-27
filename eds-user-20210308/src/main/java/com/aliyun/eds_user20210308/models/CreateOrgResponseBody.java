@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOrgResponseBody extends TeaModel {
     /**
+     * <p>The organization ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>org-evk12ozjvmlxl****</p>
      */
@@ -12,6 +14,8 @@ public class CreateOrgResponseBody extends TeaModel {
     public String orgId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7A2C3803-C975-5871-A232-80A91009****</p>
      */

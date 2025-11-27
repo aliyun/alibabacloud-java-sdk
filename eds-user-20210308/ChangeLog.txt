@@ -1,3 +1,11 @@
+2025-11-27 Version: 1.6.5
+- Update API CreateUsers: add request parameters Users.$.GroupIdList.
+- Update API DescribeGroups: add request parameters IdpId.
+- Update API DescribeUsers: add response parameters Body.Users.$.PasswordExpireDays.
+- Update API DescribeUsers: add response parameters Body.Users.$.PasswordExpireRestDays.
+- Update API FilterUsers: add response parameters Body.Users.$.Groups.
+
+
 2025-09-11 Version: 1.6.4
 - Update API DescribeGroups: add request parameters ExcludeAttachedLoginPolicyGroups.
 - Update API DescribeGroups: add request parameters LoginPolicyId.

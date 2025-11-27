@@ -11,6 +11,12 @@ public class CreateGroupRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>The description of the user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestGroup</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -18,6 +24,10 @@ public class CreateGroupRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <blockquote>
+     * <p>This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>root</p>
      */
@@ -25,6 +35,10 @@ public class CreateGroupRequest extends TeaModel {
     public String parentGroupId;
 
     /**
+     * <blockquote>
+     * <p>This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>co-0esnf80jab***</p>
      */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class RemoveGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the user group to be deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>ug-12341234****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The IDs of the user groups to be deleted.</p>
+     */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;
 

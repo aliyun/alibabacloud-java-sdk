@@ -4,9 +4,18 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The number of the entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The user groups.</p>
+     */
     @NameInMap("Groups")
     public java.util.List<DescribeGroupsResponseBodyGroups> groups;
 
@@ -80,12 +89,27 @@ public class DescribeGroupsResponseBody extends TeaModel {
         @NameInMap("AttachedLoginPolicy")
         public DescribeGroupsResponseBodyGroupsAttachedLoginPolicy attachedLoginPolicy;
 
+        /**
+         * <p>The type of the resource assigned to the user group.</p>
+         */
         @NameInMap("AuthedResources")
         public java.util.Map<String, String> authedResources;
 
+        /**
+         * <p>The time when the user group is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-07T13:40:40+08:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A test group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -96,12 +120,30 @@ public class DescribeGroupsResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>Indicates whether the file approval feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("TransferFileNeedApproval")
         public Boolean transferFileNeedApproval;
 
+        /**
+         * <p>The number of users in the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("UserCount")
         public Integer userCount;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveOrgRequest extends TeaModel {
     /**
+     * <p>The ID of the parent organization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class MoveOrgRequest extends TeaModel {
     public String newParentOrgId;
 
     /**
+     * <p>The ID of the organization that you want to move.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

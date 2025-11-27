@@ -23,7 +23,7 @@ public class DescribeUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The convenience accounts.</p>
+     * <p>The information about the convenience accounts.</p>
      */
     @NameInMap("Users")
     public java.util.List<DescribeUsersResponseBodyUsers> users;
@@ -172,9 +172,17 @@ public class DescribeUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersResponseBodyUsersProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Role</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Student</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -229,6 +237,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>Enables the administrator permissions.</p>
+         */
         @NameInMap("EnableAdminAccess")
         public Boolean enableAdminAccess;
 
@@ -339,6 +350,12 @@ public class DescribeUsersResponseBody extends TeaModel {
          */
         @NameInMap("OwnerType")
         public String ownerType;
+
+        @NameInMap("PasswordExpireDays")
+        public Integer passwordExpireDays;
+
+        @NameInMap("PasswordExpireRestDays")
+        public Integer passwordExpireRestDays;
 
         /**
          * <p>The mobile number of the convenience user. If you leave this parameter empty, the value of this parameter is not returned.</p>
@@ -521,6 +538,22 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public String getOwnerType() {
             return this.ownerType;
+        }
+
+        public DescribeUsersResponseBodyUsers setPasswordExpireDays(Integer passwordExpireDays) {
+            this.passwordExpireDays = passwordExpireDays;
+            return this;
+        }
+        public Integer getPasswordExpireDays() {
+            return this.passwordExpireDays;
+        }
+
+        public DescribeUsersResponseBodyUsers setPasswordExpireRestDays(Integer passwordExpireRestDays) {
+            this.passwordExpireRestDays = passwordExpireRestDays;
+            return this;
+        }
+        public Integer getPasswordExpireRestDays() {
+            return this.passwordExpireRestDays;
         }
 
         public DescribeUsersResponseBodyUsers setPhone(String phone) {

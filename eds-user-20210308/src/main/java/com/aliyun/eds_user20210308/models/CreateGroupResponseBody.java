@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the user group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ug-12341234****</p>
      */

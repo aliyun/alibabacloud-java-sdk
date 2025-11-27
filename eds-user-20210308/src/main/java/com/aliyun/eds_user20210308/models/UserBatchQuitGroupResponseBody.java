@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UserBatchQuitGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>890JNJNF-SADASSDFS-SDFSDF****</p>
      */

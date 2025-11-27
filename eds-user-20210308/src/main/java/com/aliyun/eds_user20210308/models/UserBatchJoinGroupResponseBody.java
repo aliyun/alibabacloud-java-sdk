@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UserBatchJoinGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7A2C3803-C975-5871-A232-80A91009****</p>
      */

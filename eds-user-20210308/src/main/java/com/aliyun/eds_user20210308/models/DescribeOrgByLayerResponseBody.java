@@ -4,10 +4,15 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeOrgByLayerResponseBody extends TeaModel {
+    /**
+     * <p>The organizations.</p>
+     */
     @NameInMap("Orgs")
     public java.util.List<DescribeOrgByLayerResponseBodyOrgs> orgs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,16 +42,23 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
 
     public static class DescribeOrgByLayerResponseBodyOrgs extends TeaModel {
         /**
+         * <p>The ID of the organization.</p>
+         * 
          * <strong>example:</strong>
          * <p>org-1mox****</p>
          */
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>The name of the organization.</p>
+         */
         @NameInMap("OrgName")
         public String orgName;
 
         /**
+         * <p>The ID of the parent organization.</p>
+         * 
          * <strong>example:</strong>
          * <p>org-ezqr****</p>
          */

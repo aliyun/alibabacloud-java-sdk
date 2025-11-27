@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceGroupsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68BA1DF7-8814-5AED-B844-F8F7F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource groups.</p>
+     */
     @NameInMap("ResourceGroup")
     public java.util.List<DescribeResourceGroupsResponseBodyResourceGroup> resourceGroup;
 
     /**
+     * <p>The total number of resource groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -93,6 +100,8 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
     public static class DescribeResourceGroupsResponseBodyResourceGroupPolicies extends TeaModel {
         /**
+         * <p>The policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pl-a8jnatl8kjasb***</p>
          */
@@ -100,12 +109,17 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Specifies whether to use the default policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The policy name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -145,12 +159,17 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String bindStatus;
 
         /**
+         * <p>The ID of the scheduled task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-asdzx0mbjhg***</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the scheduled task.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -201,6 +220,8 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> appRules;
 
         /**
+         * <p>The number of administrators that are authorized to access the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -208,16 +229,31 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String authCount;
 
         /**
+         * <p>The time when the resource group was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-29T17:25:40.000000000Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <blockquote>
+         * <p> The policy that is associated with the resource group.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>The policy applies to cloud computers in the resource group. If multiple policies exist, they are enforced in order of priority.</p>
+         * </li>
+         * <li><p>If any of these cloud computers are already associated with other policies, the resource group\&quot;s policy takes precedence.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("Policies")
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupPolicies> policies;
 
         /**
+         * <p>The number of resources in the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>119</p>
          */
@@ -225,15 +261,28 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String resourceCount;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-cyo0il2pzge1***</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
+        /**
+         * <blockquote>
+         * <p> The associated scheduled task.</p>
+         * </blockquote>
+         * <ul>
+         * <li>The scheduled task applies to all cloud computers in the resource group. If any of these cloud computers are already associated with other scheduled tasks, the resource group\&quot;s scheduled task takes precedence.</li>
+         * </ul>
+         */
         @NameInMap("Timers")
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupTimers> timers;
 

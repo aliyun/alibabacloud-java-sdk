@@ -103,6 +103,9 @@ public class CreateUsersRequest extends TeaModel {
         @NameInMap("EndUserId")
         public String endUserId;
 
+        @NameInMap("GroupIdList")
+        public java.util.List<String> groupIdList;
+
         /**
          * <p>The organization to which the convenience user belongs.</p>
          * 
@@ -184,6 +187,14 @@ public class CreateUsersRequest extends TeaModel {
         }
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        public CreateUsersRequestUsers setGroupIdList(java.util.List<String> groupIdList) {
+            this.groupIdList = groupIdList;
+            return this;
+        }
+        public java.util.List<String> getGroupIdList() {
+            return this.groupIdList;
         }
 
         public CreateUsersRequestUsers setOrgId(String orgId) {

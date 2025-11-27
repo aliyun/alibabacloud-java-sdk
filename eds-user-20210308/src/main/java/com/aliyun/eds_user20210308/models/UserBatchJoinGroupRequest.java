@@ -4,10 +4,14 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class UserBatchJoinGroupRequest extends TeaModel {
+    /**
+     * <p>The list of user IDs.</p>
+     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
+     * <p>The ID of the user group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

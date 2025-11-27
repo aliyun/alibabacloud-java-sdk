@@ -4,6 +4,10 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
@@ -46,6 +50,10 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsQueryAllSubOrgs")
     public Boolean isQueryAllSubOrgs;
 
@@ -84,9 +92,16 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("ShowExtras")
     public java.util.Map<String, ?> showExtras;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("SolutionId")
     public String solutionId;
 
+    /**
+     * <p>The status.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

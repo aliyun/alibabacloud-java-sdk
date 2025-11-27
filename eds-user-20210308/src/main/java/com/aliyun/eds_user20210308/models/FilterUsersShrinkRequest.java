@@ -69,12 +69,21 @@ public class FilterUsersShrinkRequest extends TeaModel {
     @NameInMap("IncludeDesktopGroupCount")
     public Boolean includeDesktopGroupCount;
 
+    /**
+     * <p>Specifies whether to return the organization information.</p>
+     */
     @NameInMap("IncludeOrgInfo")
     public Boolean includeOrgInfo;
 
+    /**
+     * <p>Specifies whether to return the supported logon types.</p>
+     */
     @NameInMap("IncludeSupportIdps")
     public Boolean includeSupportIdps;
 
+    /**
+     * <p>Specifies whether to query all sub-organizations.</p>
+     */
     @NameInMap("IsQueryAllSubOrgs")
     public Boolean isQueryAllSubOrgs;
 
@@ -137,6 +146,12 @@ public class FilterUsersShrinkRequest extends TeaModel {
     @NameInMap("PropertyKeyValueFilterParam")
     public java.util.List<FilterUsersShrinkRequestPropertyKeyValueFilterParam> propertyKeyValueFilterParam;
 
+    /**
+     * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

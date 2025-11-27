@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveOrgRequest extends TeaModel {
     /**
+     * <p>The organization ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

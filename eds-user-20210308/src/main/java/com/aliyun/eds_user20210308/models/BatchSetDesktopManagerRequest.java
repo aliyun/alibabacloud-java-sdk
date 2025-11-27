@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchSetDesktopManagerRequest extends TeaModel {
     /**
+     * <p>Whether the convenience account has the local administrator permissions on cloud computers.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>0: no</li>
+     * <li>1 (default): yes</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +19,7 @@ public class BatchSetDesktopManagerRequest extends TeaModel {
     public String isDesktopManager;
 
     /**
+     * <p>The convenience accounts.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")

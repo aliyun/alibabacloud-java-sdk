@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
     /**
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,12 +16,22 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Long isResourceGroupWithOfficeSite;
 
     /**
+     * <blockquote>
+     * <p> Set the value to AliyunConsole.</p>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter is not publicly available in other platforms.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AliyunConsole</p>
      */
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>The name of the resource group.</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 

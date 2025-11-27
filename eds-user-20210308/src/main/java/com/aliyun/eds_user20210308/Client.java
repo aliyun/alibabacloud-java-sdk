@@ -27,8 +27,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Convenience accounts with the local administrator permissions on cloud computers can install software and modify system settings on cloud computers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量设置桌面管理员</p>
+     * <p>Grants or revokes the local administrator permissions on cloud computers for convenience accounts.</p>
      * 
      * @param request BatchSetDesktopManagerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -63,8 +66,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Convenience accounts with the local administrator permissions on cloud computers can install software and modify system settings on cloud computers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量设置桌面管理员</p>
+     * <p>Grants or revokes the local administrator permissions on cloud computers for convenience accounts.</p>
      * 
      * @param request BatchSetDesktopManagerRequest
      * @return BatchSetDesktopManagerResponse
@@ -222,7 +228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建角色.</p>
+     * <p>Creates a user group.</p>
      * 
      * @param request CreateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -270,7 +276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建角色.</p>
+     * <p>Creates a user group.</p>
      * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
@@ -282,7 +288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建组织</p>
+     * <p>Creates an organization.</p>
      * 
      * @param request CreateOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -318,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建组织</p>
+     * <p>Creates an organization.</p>
      * 
      * @param request CreateOrgRequest
      * @return CreateOrgResponse
@@ -378,7 +384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资源组</p>
+     * <p>Creates a resource group.</p>
      * 
      * @param request CreateResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -418,7 +424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资源组</p>
+     * <p>Creates a resource group.</p>
      * 
      * @param request CreateResourceGroupRequest
      * @return CreateResourceGroupResponse
@@ -604,7 +610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>全量同步初始化</p>
+     * <p>Queries the members of a user group.</p>
      * 
      * @param request DescribeGroupUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -656,7 +662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>全量同步初始化</p>
+     * <p>Queries the members of a user group.</p>
      * 
      * @param request DescribeGroupUserRequest
      * @return DescribeGroupUserResponse
@@ -668,7 +674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>全量同步初始化.</p>
+     * <p>Queries user groups.</p>
      * 
      * @param request DescribeGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -691,6 +697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
             query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idpId)) {
+            query.put("IdpId", request.idpId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.loginPolicyId)) {
@@ -732,7 +742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>全量同步初始化.</p>
+     * <p>Queries user groups.</p>
      * 
      * @param request DescribeGroupsRequest
      * @return DescribeGroupsResponse
@@ -744,7 +754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</p>
+     * <p>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience accounts.</p>
      * 
      * @param request DescribeMfaDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -796,7 +806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</p>
+     * <p>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience accounts.</p>
      * 
      * @param request DescribeMfaDevicesRequest
      * @return DescribeMfaDevicesResponse
@@ -808,7 +818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查找下级组织</p>
+     * <p>Queries subordinate organizations.</p>
      * 
      * @param request DescribeOrgByLayerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -844,7 +854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查找下级组织</p>
+     * <p>Queries subordinate organizations.</p>
      * 
      * @param request DescribeOrgByLayerRequest
      * @return DescribeOrgByLayerResponse
@@ -928,7 +938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看资源组</p>
+     * <p>Queries resource groups.</p>
      * 
      * @param request DescribeResourceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -980,7 +990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看资源组</p>
+     * <p>Queries resource groups.</p>
      * 
      * @param request DescribeResourceGroupsRequest
      * @return DescribeResourceGroupsResponse
@@ -1258,7 +1268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>初始化TenantAlias</p>
+     * <p>Initializes an organization ID.</p>
      * 
      * @param request InitTenantAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1282,7 +1292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>初始化TenantAlias</p>
+     * <p>Initializes an organization ID.</p>
      * @return InitTenantAliasResponse
      */
     public InitTenantAliasResponse initTenantAlias() throws Exception {
@@ -1474,7 +1484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改角色.</p>
+     * <p>Modifies the name and description of a user group.</p>
      * 
      * @param request ModifyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1514,7 +1524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改角色.</p>
+     * <p>Modifies the name and description of a user group.</p>
      * 
      * @param request ModifyGroupRequest
      * @return ModifyGroupResponse
@@ -1526,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改组织</p>
+     * <p>Modifies an organization.</p>
      * 
      * @param request ModifyOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1562,7 +1572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改组织</p>
+     * <p>Modifies an organization.</p>
      * 
      * @param request ModifyOrgRequest
      * @return ModifyOrgResponse
@@ -1626,7 +1636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动组织</p>
+     * <p>Moves an organization.</p>
      * 
      * @param request MoveOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1662,7 +1672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动组织</p>
+     * <p>Moves an organization.</p>
      * 
      * @param request MoveOrgRequest
      * @return MoveOrgResponse
@@ -1674,7 +1684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动用户组织</p>
+     * <p>Moves users to a specific organization.</p>
      * 
      * @param request MoveUserOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1710,7 +1720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移动用户组织</p>
+     * <p>Moves users to a specific organization.</p>
      * 
      * @param request MoveUserOrgRequest
      * @return MoveUserOrgResponse
@@ -1756,7 +1766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除角色.</p>
+     * <p>Deletes a single user group or multiple user groups at a time.</p>
      * 
      * @param request RemoveGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1792,7 +1802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除角色.</p>
+     * <p>Deletes a single user group or multiple user groups at a time.</p>
      * 
      * @param request RemoveGroupRequest
      * @return RemoveGroupResponse
@@ -1804,10 +1814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</p>
+     * <p>If you remove a virtual MFA device that is bound to a convenience account, the convenience account can no longer use the virtual MFA device to log on to cloud computers. Before the convenience account can log on to Alibaba Cloud Workspace terminals again, a new virtual MFA device must be bound to the convenience account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</p>
+     * <p>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience account.</p>
      * 
      * @param request RemoveMfaDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1843,10 +1853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</p>
+     * <p>If you remove a virtual MFA device that is bound to a convenience account, the convenience account can no longer use the virtual MFA device to log on to cloud computers. Before the convenience account can log on to Alibaba Cloud Workspace terminals again, a new virtual MFA device must be bound to the convenience account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</p>
+     * <p>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience account.</p>
      * 
      * @param request RemoveMfaDeviceRequest
      * @return RemoveMfaDeviceResponse
@@ -1858,7 +1868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除组织</p>
+     * <p>Removes an organization.</p>
      * 
      * @param request RemoveOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1890,7 +1900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除组织</p>
+     * <p>Removes an organization.</p>
      * 
      * @param request RemoveOrgRequest
      * @return RemoveOrgResponse
@@ -2278,7 +2288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户批量分配角色</p>
+     * <p>Add multiple users to a user group at a time.</p>
      * 
      * @param request UserBatchJoinGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2314,7 +2324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户批量分配角色</p>
+     * <p>Add multiple users to a user group at a time.</p>
      * 
      * @param request UserBatchJoinGroupRequest
      * @return UserBatchJoinGroupResponse
@@ -2326,7 +2336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户批量移出角色</p>
+     * <p>Removes multiple users from a user group at a time.</p>
      * 
      * @param request UserBatchQuitGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2362,7 +2372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户批量移出角色</p>
+     * <p>Removes multiple users from a user group at a time.</p>
      * 
      * @param request UserBatchQuitGroupRequest
      * @return UserBatchQuitGroupResponse
