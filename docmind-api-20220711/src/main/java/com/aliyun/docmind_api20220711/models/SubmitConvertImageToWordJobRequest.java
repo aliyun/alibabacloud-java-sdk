@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitConvertImageToWordJobRequest extends TeaModel {
+    @NameInMap("EnableEventCallback")
+    public Boolean enableEventCallback;
+
     /**
      * <strong>example:</strong>
      * <p>jpg</p>
@@ -26,6 +29,14 @@ public class SubmitConvertImageToWordJobRequest extends TeaModel {
     public static SubmitConvertImageToWordJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertImageToWordJobRequest self = new SubmitConvertImageToWordJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitConvertImageToWordJobRequest setEnableEventCallback(Boolean enableEventCallback) {
+        this.enableEventCallback = enableEventCallback;
+        return this;
+    }
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     public SubmitConvertImageToWordJobRequest setImageNameExtension(String imageNameExtension) {

@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitConvertImageToPdfJobRequest extends TeaModel {
+    @NameInMap("EnableEventCallback")
+    public Boolean enableEventCallback;
+
     /**
      * <strong>example:</strong>
      * <p>JPG</p>
@@ -26,6 +29,14 @@ public class SubmitConvertImageToPdfJobRequest extends TeaModel {
     public static SubmitConvertImageToPdfJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertImageToPdfJobRequest self = new SubmitConvertImageToPdfJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitConvertImageToPdfJobRequest setEnableEventCallback(Boolean enableEventCallback) {
+        this.enableEventCallback = enableEventCallback;
+        return this;
+    }
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     public SubmitConvertImageToPdfJobRequest setImageNameExtension(String imageNameExtension) {

@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitConvertPdfToExcelJobAdvanceRequest extends TeaModel {
+    @NameInMap("EnableEventCallback")
+    public Boolean enableEventCallback;
+
     /**
      * <strong>example:</strong>
      * <p>convertPdfToExcel.pdf</p>
@@ -33,6 +36,14 @@ public class SubmitConvertPdfToExcelJobAdvanceRequest extends TeaModel {
     public static SubmitConvertPdfToExcelJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertPdfToExcelJobAdvanceRequest self = new SubmitConvertPdfToExcelJobAdvanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitConvertPdfToExcelJobAdvanceRequest setEnableEventCallback(Boolean enableEventCallback) {
+        this.enableEventCallback = enableEventCallback;
+        return this;
+    }
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     public SubmitConvertPdfToExcelJobAdvanceRequest setFileName(String fileName) {

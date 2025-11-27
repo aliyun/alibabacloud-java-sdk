@@ -7,6 +7,9 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
     @NameInMap("AllowPptFormat")
     public Boolean allowPptFormat;
 
+    @NameInMap("EnableEventCallback")
+    public Boolean enableEventCallback;
+
     /**
      * <strong>example:</strong>
      * <p>docStructure.pdf</p>
@@ -54,6 +57,14 @@ public class SubmitDocStructureJobAdvanceRequest extends TeaModel {
     }
     public Boolean getAllowPptFormat() {
         return this.allowPptFormat;
+    }
+
+    public SubmitDocStructureJobAdvanceRequest setEnableEventCallback(Boolean enableEventCallback) {
+        this.enableEventCallback = enableEventCallback;
+        return this;
+    }
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     public SubmitDocStructureJobAdvanceRequest setFileName(String fileName) {

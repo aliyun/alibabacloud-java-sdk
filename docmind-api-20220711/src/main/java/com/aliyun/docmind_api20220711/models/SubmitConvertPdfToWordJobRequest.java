@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitConvertPdfToWordJobRequest extends TeaModel {
+    @NameInMap("EnableEventCallback")
+    public Boolean enableEventCallback;
+
     /**
      * <strong>example:</strong>
      * <p>covertPdfToWord.pdf</p>
@@ -36,6 +39,14 @@ public class SubmitConvertPdfToWordJobRequest extends TeaModel {
     public static SubmitConvertPdfToWordJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertPdfToWordJobRequest self = new SubmitConvertPdfToWordJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitConvertPdfToWordJobRequest setEnableEventCallback(Boolean enableEventCallback) {
+        this.enableEventCallback = enableEventCallback;
+        return this;
+    }
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     public SubmitConvertPdfToWordJobRequest setFileName(String fileName) {

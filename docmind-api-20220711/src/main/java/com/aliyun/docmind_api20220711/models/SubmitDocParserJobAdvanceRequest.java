@@ -7,6 +7,9 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
     @NameInMap("CustomOssConfig")
     public SubmitDocParserJobAdvanceRequestCustomOssConfig customOssConfig;
 
+    @NameInMap("EnableEventCallback")
+    public Boolean enableEventCallback;
+
     @NameInMap("EnhancementMode")
     public String enhancementMode;
 
@@ -72,6 +75,14 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
     }
     public SubmitDocParserJobAdvanceRequestCustomOssConfig getCustomOssConfig() {
         return this.customOssConfig;
+    }
+
+    public SubmitDocParserJobAdvanceRequest setEnableEventCallback(Boolean enableEventCallback) {
+        this.enableEventCallback = enableEventCallback;
+        return this;
+    }
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     public SubmitDocParserJobAdvanceRequest setEnhancementMode(String enhancementMode) {

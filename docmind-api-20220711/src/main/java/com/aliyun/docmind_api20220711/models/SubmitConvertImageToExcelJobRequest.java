@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitConvertImageToExcelJobRequest extends TeaModel {
+    @NameInMap("EnableEventCallback")
+    public Boolean enableEventCallback;
+
     @NameInMap("ForceMergeExcel")
     public Boolean forceMergeExcel;
 
@@ -29,6 +32,14 @@ public class SubmitConvertImageToExcelJobRequest extends TeaModel {
     public static SubmitConvertImageToExcelJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertImageToExcelJobRequest self = new SubmitConvertImageToExcelJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitConvertImageToExcelJobRequest setEnableEventCallback(Boolean enableEventCallback) {
+        this.enableEventCallback = enableEventCallback;
+        return this;
+    }
+    public Boolean getEnableEventCallback() {
+        return this.enableEventCallback;
     }
 
     public SubmitConvertImageToExcelJobRequest setForceMergeExcel(Boolean forceMergeExcel) {
