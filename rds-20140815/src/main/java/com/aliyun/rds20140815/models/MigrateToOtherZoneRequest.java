@@ -20,6 +20,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    @NameInMap("CustomExtraInfo")
+    public String customExtraInfo;
+
     /**
      * <p>The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set <strong>IsModifySpec</strong> to <strong>true</strong>, you must specify at least one of DBInstanceClass and <strong>DBInstanceStorage</strong>.</p>
      * <p>For more information about instance types, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</p>
@@ -212,6 +215,14 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public MigrateToOtherZoneRequest setCustomExtraInfo(String customExtraInfo) {
+        this.customExtraInfo = customExtraInfo;
+        return this;
+    }
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
     }
 
     public MigrateToOtherZoneRequest setDBInstanceClass(String DBInstanceClass) {

@@ -538,6 +538,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("IoAccelerationEnabled")
         public String ioAccelerationEnabled;
 
+        @NameInMap("IsAnalyticIns")
+        public String isAnalyticIns;
+
+        @NameInMap("IsAnalyticReadOnlyIns")
+        public Boolean isAnalyticReadOnlyIns;
+
         /**
          * <p>The lock mode of the instance. Valid values:</p>
          * <ul>
@@ -1038,6 +1044,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getIoAccelerationEnabled() {
             return this.ioAccelerationEnabled;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setIsAnalyticIns(String isAnalyticIns) {
+            this.isAnalyticIns = isAnalyticIns;
+            return this;
+        }
+        public String getIsAnalyticIns() {
+            return this.isAnalyticIns;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setIsAnalyticReadOnlyIns(Boolean isAnalyticReadOnlyIns) {
+            this.isAnalyticReadOnlyIns = isAnalyticReadOnlyIns;
+            return this;
+        }
+        public Boolean getIsAnalyticReadOnlyIns() {
+            return this.isAnalyticReadOnlyIns;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setLockMode(String lockMode) {

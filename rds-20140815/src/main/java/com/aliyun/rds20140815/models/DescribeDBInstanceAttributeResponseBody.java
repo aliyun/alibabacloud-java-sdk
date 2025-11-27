@@ -124,6 +124,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public String cpu;
 
+        @NameInMap("DisasterRecoveryNode")
+        public Boolean disasterRecoveryNode;
+
         /**
          * <p>The memory capacity of the node. Unit: MB.</p>
          * 
@@ -216,6 +219,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setDisasterRecoveryNode(Boolean disasterRecoveryNode) {
+            this.disasterRecoveryNode = disasterRecoveryNode;
+            return this;
+        }
+        public Boolean getDisasterRecoveryNode() {
+            return this.disasterRecoveryNode;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setMemory(String memory) {
@@ -1090,6 +1101,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("IoAccelerationEnabled")
         public String ioAccelerationEnabled;
 
+        @NameInMap("IsAnalyticIns")
+        public Boolean isAnalyticIns;
+
+        @NameInMap("IsAnalyticReadOnlyIns")
+        public Boolean isAnalyticReadOnlyIns;
+
         /**
          * <p>The latest minor engine version that is supported by the instance.</p>
          * 
@@ -1423,6 +1440,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ON</p>
+         */
+        @NameInMap("VectorSupportStatus")
+        public String vectorSupportStatus;
 
         /**
          * <p>The ID of the VPC. This parameter is returned only when the instance resides in a VPC.</p>
@@ -1877,6 +1901,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.ioAccelerationEnabled;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setIsAnalyticIns(Boolean isAnalyticIns) {
+            this.isAnalyticIns = isAnalyticIns;
+            return this;
+        }
+        public Boolean getIsAnalyticIns() {
+            return this.isAnalyticIns;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setIsAnalyticReadOnlyIns(Boolean isAnalyticReadOnlyIns) {
+            this.isAnalyticReadOnlyIns = isAnalyticReadOnlyIns;
+            return this;
+        }
+        public Boolean getIsAnalyticReadOnlyIns() {
+            return this.isAnalyticReadOnlyIns;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setLatestKernelVersion(String latestKernelVersion) {
             this.latestKernelVersion = latestKernelVersion;
             return this;
@@ -2139,6 +2179,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setVectorSupportStatus(String vectorSupportStatus) {
+            this.vectorSupportStatus = vectorSupportStatus;
+            return this;
+        }
+        public String getVectorSupportStatus() {
+            return this.vectorSupportStatus;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setVpcCloudInstanceId(String vpcCloudInstanceId) {

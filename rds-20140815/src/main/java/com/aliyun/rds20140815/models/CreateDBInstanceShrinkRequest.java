@@ -22,7 +22,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>Specifies whether to automatically create a database proxy. Valid values:</p>
+     * <p>Specifies whether to automatically create a proxy. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: automatically creates a database proxy. By default, a general-purpose database proxy is created.</li>
      * <li><strong>false</strong>: does not automatically create a database proxy.</li>
@@ -233,6 +233,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("CreateStrategy")
     public String createStrategy;
 
+    @NameInMap("CustomExtraInfo")
+    public String customExtraInfo;
+
     /**
      * <p>The instance type of the instance. You can specify an instance type of the standard or YiTian product type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
      * <p>To create a serverless instance, set this parameter to one of the following values:</p>
@@ -252,9 +255,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The instance name. The name must be 2 to 255 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The instance name. The value must be 2 to 255 characters in length The name can contain letters, digits, and hyphens (-) and must start with a letter.</p>
      * <blockquote>
-     * <p>The name cannot start with http:// or https://.</p>
+     * <p> The value cannot start with http:// or https://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -379,8 +382,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the release protection feature for the instance. This feature is available only for pay-as-you-go instances. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: enables the feature.</li>
+     * <li><strong>false</strong> (default): disables the feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -482,16 +485,19 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
-     * <li><strong>Classic</strong>: the classic network</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>Classic</strong>: classic network</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</li>
-     * <li>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</li>
-     * <li>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <strong>VPC</strong>.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</p>
+     * </li>
+     * <li><p>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</p>
+     * </li>
+     * <li><p>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engines, you must set this parameter to <strong>VPC</strong>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Classic</p>
@@ -556,7 +562,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <li><strong>Month</strong></li>
      * </ul>
      * <blockquote>
-     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must also specify this parameter.</p>
+     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -654,10 +660,10 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String serverlessConfigShrink;
 
     /**
-     * <p>Specifies whether to enable the automatic storage expansion feature for the instance. If the instance runs MySQL or PostgreSQL, this feature is supported. Valid values:</p>
+     * <p>Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if the instance runs MySQL or PostgreSQL. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disable</strong> (default)</li>
+     * <li><strong>Enable</strong>: enables the feature.</li>
+     * <li><strong>Disable</strong> (default): disables the feature.</li>
      * </ul>
      * <blockquote>
      * <p> After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings. For more information, see <a href="https://help.aliyun.com/document_detail/173826.html">Configure automatic storage expansion</a>.</p>
@@ -670,7 +676,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String storageAutoScale;
 
     /**
-     * <p>The threshold in percentage based on which automatic storage expansion is triggered. Valid values:</p>
+     * <p>The threshold in percentage based on which automatic storage expansion is triggered.</p>
      * <ul>
      * <li><strong>10</strong></li>
      * <li><strong>20</strong></li>
@@ -679,7 +685,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <li><strong>50</strong></li>
      * </ul>
      * <blockquote>
-     * <p> If you set the <strong>StorageAutoScale</strong> parameter to <strong>Enable</strong>, you must also specify this parameter.</p>
+     * <p> If you set the <strong>StorageAutoScale</strong> parameter to <strong>Enable</strong>, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -1019,6 +1025,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public String getCreateStrategy() {
         return this.createStrategy;
+    }
+
+    public CreateDBInstanceShrinkRequest setCustomExtraInfo(String customExtraInfo) {
+        this.customExtraInfo = customExtraInfo;
+        return this;
+    }
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
     }
 
     public CreateDBInstanceShrinkRequest setDBInstanceClass(String DBInstanceClass) {

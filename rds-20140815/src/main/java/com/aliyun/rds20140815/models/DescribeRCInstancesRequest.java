@@ -4,8 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstancesRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("HostIp")
     public String hostIp;
+
+    @NameInMap("ImageId")
+    public String imageId;
 
     /**
      * <p>The instance ID.</p>
@@ -18,6 +24,13 @@ public class DescribeRCInstancesRequest extends TeaModel {
 
     @NameInMap("InstanceIds")
     public String instanceIds;
+
+    /**
+     * <strong>example:</strong>
+     * <p>k8s-node</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
 
     /**
      * <p>The page number.</p>
@@ -73,12 +86,28 @@ public class DescribeRCInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRCInstancesRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public DescribeRCInstancesRequest setHostIp(String hostIp) {
         this.hostIp = hostIp;
         return this;
     }
     public String getHostIp() {
         return this.hostIp;
+    }
+
+    public DescribeRCInstancesRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public DescribeRCInstancesRequest setInstanceId(String instanceId) {
@@ -95,6 +124,14 @@ public class DescribeRCInstancesRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public DescribeRCInstancesRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public DescribeRCInstancesRequest setPageNumber(Integer pageNumber) {

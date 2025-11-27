@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComputeBurstConfigResponseBody extends TeaModel {
     /**
+     * <p>The detailed configurations of the assured serverless feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;cpuEnlargeThreshold&quot;: &quot;60&quot;,
@@ -19,6 +21,12 @@ public class DescribeComputeBurstConfigResponseBody extends TeaModel {
     public java.util.Map<String, ?> computeBurstConfig;
 
     /**
+     * <p>Indicates whether the assured serverless feature is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +34,8 @@ public class DescribeComputeBurstConfigResponseBody extends TeaModel {
     public Boolean computeBurstEnabled;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
      */

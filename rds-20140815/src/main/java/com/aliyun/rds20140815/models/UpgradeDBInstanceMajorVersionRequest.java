@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
+    @NameInMap("AllowDDL")
+    public Boolean allowDDL;
+
     /**
      * <p>Specify the point in time at which the system collects the statistics of the instance.</p>
      * <ul>
@@ -19,6 +22,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
      */
     @NameInMap("CollectStatMode")
     public String collectStatMode;
+
+    @NameInMap("CustomExtraInfo")
+    public String customExtraInfo;
 
     /**
      * <p>The new instance type of the instance. The new CPU and memory specifications of the instance must be higher than or equal to the original CPU and memory specifications. If you set the <strong>UpgradeMode</strong> parameter to <strong>inPlaceUpgrade</strong>, you <strong>do not need to configure</strong> this parameter.</p>
@@ -278,12 +284,28 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpgradeDBInstanceMajorVersionRequest setAllowDDL(Boolean allowDDL) {
+        this.allowDDL = allowDDL;
+        return this;
+    }
+    public Boolean getAllowDDL() {
+        return this.allowDDL;
+    }
+
     public UpgradeDBInstanceMajorVersionRequest setCollectStatMode(String collectStatMode) {
         this.collectStatMode = collectStatMode;
         return this;
     }
     public String getCollectStatMode() {
         return this.collectStatMode;
+    }
+
+    public UpgradeDBInstanceMajorVersionRequest setCustomExtraInfo(String customExtraInfo) {
+        this.customExtraInfo = customExtraInfo;
+        return this;
+    }
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
     }
 
     public UpgradeDBInstanceMajorVersionRequest setDBInstanceClass(String DBInstanceClass) {

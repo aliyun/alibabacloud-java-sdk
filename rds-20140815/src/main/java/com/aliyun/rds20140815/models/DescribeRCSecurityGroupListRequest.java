@@ -5,14 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribeRCSecurityGroupListRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-2ze27hs990o2hn9****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the security group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1opxu1zkhn****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

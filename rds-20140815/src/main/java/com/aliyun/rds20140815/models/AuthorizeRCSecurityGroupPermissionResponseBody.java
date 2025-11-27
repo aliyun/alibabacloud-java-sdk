@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeRCSecurityGroupPermissionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0688F1D2-CDA8-5617-A43C-ADAC61D80D43</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

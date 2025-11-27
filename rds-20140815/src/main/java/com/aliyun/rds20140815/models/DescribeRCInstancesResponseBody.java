@@ -329,6 +329,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>k8s-node</p>
+         */
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -510,6 +517,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setInstanceType(String instanceType) {

@@ -293,6 +293,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("DBStatus")
         public String DBStatus;
 
+        @NameInMap("DuckDBEnabled")
+        public Boolean duckDBEnabled;
+
         /**
          * <p>The database engine of the instance.</p>
          * 
@@ -444,6 +447,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
         public String getDBStatus() {
             return this.DBStatus;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setDuckDBEnabled(Boolean duckDBEnabled) {
+            this.duckDBEnabled = duckDBEnabled;
+            return this;
+        }
+        public Boolean getDuckDBEnabled() {
+            return this.duckDBEnabled;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setEngine(String engine) {

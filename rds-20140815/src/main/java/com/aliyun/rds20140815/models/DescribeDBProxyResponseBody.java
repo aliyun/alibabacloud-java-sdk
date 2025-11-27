@@ -43,6 +43,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyInstanceLatestMinorVersion")
     public String DBProxyInstanceLatestMinorVersion;
 
+    @NameInMap("DBProxyInstanceMinorVersions")
+    public DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions DBProxyInstanceMinorVersions;
+
     /**
      * <p>The name of the proxy instance.</p>
      * 
@@ -213,6 +216,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
     public String getDBProxyInstanceLatestMinorVersion() {
         return this.DBProxyInstanceLatestMinorVersion;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyInstanceMinorVersions(DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions DBProxyInstanceMinorVersions) {
+        this.DBProxyInstanceMinorVersions = DBProxyInstanceMinorVersions;
+        return this;
+    }
+    public DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions getDBProxyInstanceMinorVersions() {
+        return this.DBProxyInstanceMinorVersions;
     }
 
     public DescribeDBProxyResponseBody setDBProxyInstanceName(String DBProxyInstanceName) {
@@ -515,6 +526,25 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems> getDBProxyConnectStringItems() {
             return this.DBProxyConnectStringItems;
+        }
+
+    }
+
+    public static class DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions extends TeaModel {
+        @NameInMap("DBProxyInstanceMinorVersions")
+        public java.util.List<String> DBProxyInstanceMinorVersions;
+
+        public static DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions self = new DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions setDBProxyInstanceMinorVersions(java.util.List<String> DBProxyInstanceMinorVersions) {
+            this.DBProxyInstanceMinorVersions = DBProxyInstanceMinorVersions;
+            return this;
+        }
+        public java.util.List<String> getDBProxyInstanceMinorVersions() {
+            return this.DBProxyInstanceMinorVersions;
         }
 
     }

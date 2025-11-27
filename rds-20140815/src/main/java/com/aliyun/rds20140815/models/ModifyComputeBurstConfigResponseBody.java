@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyComputeBurstConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
      */

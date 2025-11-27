@@ -8,7 +8,15 @@ public class DescribeRdsResourceSettingsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The location of the notification.</p>
+     * <ul>
+     * <li>noticeBar: notification bar</li>
+     * <li>popUp: popup</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>noticeBar</p>
      */
     @NameInMap("ResourceNiche")
     public String resourceNiche;

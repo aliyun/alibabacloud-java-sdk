@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class RunRCInstancesRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>gn8is</p>
+     */
+    @NameInMap("AcuType")
+    public String acuType;
+
+    /**
      * <p>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</p>
      * <p>Valid values: <strong>1</strong> to <strong>10</strong>. Default value: <strong>1</strong>.</p>
      * 
@@ -189,6 +196,9 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("PasswordInherit")
+    public Boolean passwordInherit;
+
     /**
      * <p>The subscription duration of the instance. Default value: <strong>1</strong>.</p>
      * 
@@ -226,6 +236,13 @@ public class RunRCInstancesRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;rule&quot;:[{&quot;beginTime&quot;:&quot;09:00&quot;,&quot;endTime&quot;:&quot;17:00&quot;,&quot;acu&quot;:4}]}</p>
+     */
+    @NameInMap("ScheduledRule")
+    public String scheduledRule;
 
     /**
      * <p>The reserved parameter. This parameter is not supported.</p>
@@ -297,6 +314,14 @@ public class RunRCInstancesRequest extends TeaModel {
     public static RunRCInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         RunRCInstancesRequest self = new RunRCInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunRCInstancesRequest setAcuType(String acuType) {
+        this.acuType = acuType;
+        return this;
+    }
+    public String getAcuType() {
+        return this.acuType;
     }
 
     public RunRCInstancesRequest setAmount(Integer amount) {
@@ -483,6 +508,14 @@ public class RunRCInstancesRequest extends TeaModel {
         return this.password;
     }
 
+    public RunRCInstancesRequest setPasswordInherit(Boolean passwordInherit) {
+        this.passwordInherit = passwordInherit;
+        return this;
+    }
+    public Boolean getPasswordInherit() {
+        return this.passwordInherit;
+    }
+
     public RunRCInstancesRequest setPeriod(Integer period) {
         this.period = period;
         return this;
@@ -521,6 +554,14 @@ public class RunRCInstancesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public RunRCInstancesRequest setScheduledRule(String scheduledRule) {
+        this.scheduledRule = scheduledRule;
+        return this;
+    }
+    public String getScheduledRule() {
+        return this.scheduledRule;
     }
 
     public RunRCInstancesRequest setSecurityEnhancementStrategy(String securityEnhancementStrategy) {

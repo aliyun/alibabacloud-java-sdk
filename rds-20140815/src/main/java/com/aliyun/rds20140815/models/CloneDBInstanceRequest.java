@@ -98,6 +98,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CustomExtraInfo")
+    public String customExtraInfo;
+
     /**
      * <p>The instance type of the new instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
      * <blockquote>
@@ -441,6 +444,14 @@ public class CloneDBInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CloneDBInstanceRequest setCustomExtraInfo(String customExtraInfo) {
+        this.customExtraInfo = customExtraInfo;
+        return this;
+    }
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
     }
 
     public CloneDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {

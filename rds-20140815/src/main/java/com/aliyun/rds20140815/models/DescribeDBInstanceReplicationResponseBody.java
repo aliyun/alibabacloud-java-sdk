@@ -35,6 +35,12 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     @NameInMap("ReplicationErrorMessage")
     public String replicationErrorMessage;
 
+    @NameInMap("ReplicationIp")
+    public String replicationIp;
+
+    @NameInMap("ReplicationPort")
+    public String replicationPort;
+
     /**
      * <p>The source of the native replication.</p>
      * 
@@ -98,6 +104,22 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     }
     public String getReplicationErrorMessage() {
         return this.replicationErrorMessage;
+    }
+
+    public DescribeDBInstanceReplicationResponseBody setReplicationIp(String replicationIp) {
+        this.replicationIp = replicationIp;
+        return this;
+    }
+    public String getReplicationIp() {
+        return this.replicationIp;
+    }
+
+    public DescribeDBInstanceReplicationResponseBody setReplicationPort(String replicationPort) {
+        this.replicationPort = replicationPort;
+        return this;
+    }
+    public String getReplicationPort() {
+        return this.replicationPort;
     }
 
     public DescribeDBInstanceReplicationResponseBody setReplicationSource(String replicationSource) {

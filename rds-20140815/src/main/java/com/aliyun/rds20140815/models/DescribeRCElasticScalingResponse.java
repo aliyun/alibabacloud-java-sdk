@@ -3,7 +3,7 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDiagnosticReportListResponse extends TeaModel {
+public class DescribeRCElasticScalingResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeDiagnosticReportListResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeDiagnosticReportListResponseBody body;
+    public DescribeRCElasticScalingResponseBody body;
 
-    public static DescribeDiagnosticReportListResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDiagnosticReportListResponse self = new DescribeDiagnosticReportListResponse();
+    public static DescribeRCElasticScalingResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeRCElasticScalingResponse self = new DescribeRCElasticScalingResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDiagnosticReportListResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeRCElasticScalingResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeDiagnosticReportListResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDiagnosticReportListResponse setStatusCode(Integer statusCode) {
+    public DescribeRCElasticScalingResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeDiagnosticReportListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDiagnosticReportListResponse setBody(DescribeDiagnosticReportListResponseBody body) {
+    public DescribeRCElasticScalingResponse setBody(DescribeRCElasticScalingResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDiagnosticReportListResponseBody getBody() {
+    public DescribeRCElasticScalingResponseBody getBody() {
         return this.body;
     }
 

@@ -44,6 +44,9 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    @NameInMap("TargetMinorVersion")
+    public String targetMinorVersion;
+
     /**
      * <p>The time when you want to upgrade the database proxy version of the instance. Valid values:</p>
      * <ul>
@@ -115,6 +118,14 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     }
     public String getSwitchTime() {
         return this.switchTime;
+    }
+
+    public UpgradeDBProxyInstanceKernelVersionRequest setTargetMinorVersion(String targetMinorVersion) {
+        this.targetMinorVersion = targetMinorVersion;
+        return this;
+    }
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
     }
 
     public UpgradeDBProxyInstanceKernelVersionRequest setUpgradeTime(String upgradeTime) {

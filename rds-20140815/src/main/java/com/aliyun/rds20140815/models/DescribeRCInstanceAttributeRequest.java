@@ -13,6 +13,13 @@ public class DescribeRCInstanceAttributeRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>k8s-node</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
+
     @NameInMap("MaxDisksResults")
     public Long maxDisksResults;
 
@@ -39,6 +46,14 @@ public class DescribeRCInstanceAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeRCInstanceAttributeRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public DescribeRCInstanceAttributeRequest setMaxDisksResults(Long maxDisksResults) {

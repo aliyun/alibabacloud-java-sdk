@@ -39,6 +39,13 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>k8s-node</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    /**
      * <p>The new password of the instance.</p>
      * <ul>
      * <li>The value must be 8 to 30 characters in length.</li>
@@ -120,6 +127,14 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public ModifyRCInstanceAttributeRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public ModifyRCInstanceAttributeRequest setPassword(String password) {

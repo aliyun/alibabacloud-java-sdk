@@ -36,7 +36,7 @@ public class ModifyBackupSetExpireTimeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>76364A52-E0AB-5CC8-9818-CF1DC482C092</p>

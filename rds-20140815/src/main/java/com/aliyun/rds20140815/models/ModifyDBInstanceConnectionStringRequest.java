@@ -95,6 +95,12 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RetainVip")
+    public Boolean retainVip;
+
+    @NameInMap("TargetDBInstanceId")
+    public String targetDBInstanceId;
+
     public static ModifyDBInstanceConnectionStringRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionStringRequest self = new ModifyDBInstanceConnectionStringRequest();
         return TeaModel.build(map, self);
@@ -186,6 +192,22 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setRetainVip(Boolean retainVip) {
+        this.retainVip = retainVip;
+        return this;
+    }
+    public Boolean getRetainVip() {
+        return this.retainVip;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setTargetDBInstanceId(String targetDBInstanceId) {
+        this.targetDBInstanceId = targetDBInstanceId;
+        return this;
+    }
+    public String getTargetDBInstanceId() {
+        return this.targetDBInstanceId;
     }
 
 }

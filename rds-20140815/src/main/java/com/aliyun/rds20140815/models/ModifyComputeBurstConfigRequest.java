@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyComputeBurstConfigRequest extends TeaModel {
     /**
+     * <p>This parameter is set to <strong>disabled</strong> if the assured serverless feature is disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>disabled</p>
      */
@@ -12,6 +14,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String burstStatus;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of requests and prevent repeated requests from being submitted. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
      */
@@ -19,6 +23,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The CPU utilization threshold for <strong>scale-out</strong>. Valid values: 60 to 90. Unit: %.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -26,6 +32,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String cpuEnlargeThreshold;
 
     /**
+     * <p>The CPU utilization threshold for <strong>scale-in</strong>. Valid values: 30 to 55. Unit: %.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -33,6 +41,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String cpuShrinkThreshold;
 
     /**
+     * <p>The reserved parameter. This parameter is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -40,6 +50,7 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String crontabJobId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +60,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The memory usage threshold for <strong>scale-out</strong>. Valid values: 60 to 90. Unit: %.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -56,6 +69,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String memoryEnlargeThreshold;
 
     /**
+     * <p>The memory usage threshold for <strong>scale-in</strong>. Valid values: 30 to 55. Unit: %.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -69,6 +84,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
      */
@@ -79,6 +96,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
+     * <p>The maximum number of CPU cores for elastic scaling. The maximum value cannot exceed twice the initial CPU configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -86,6 +105,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String scaleMaxCpus;
 
     /**
+     * <p>The maximum memory for elastic scaling. The value cannot exceed twice the instance\&quot;s initial memory size. Unit: GB. Step size: 2 GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -93,6 +114,11 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String scaleMaxMemory;
 
     /**
+     * <p>The time when the specified entry takes effect. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * <blockquote>
+     * <p> This parameter is required only if <strong>SwitchTimeMode</strong> is set to <strong>2</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-06T09:24:00Z</p>
      */
@@ -100,6 +126,13 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String switchTime;
 
     /**
+     * <p>The effective policy. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Immediately takes effect.</li>
+     * <li><strong>1</strong>: Takes effect within the maintenance window. You can call the <strong>ModifyDBInstanceMaintainTime</strong> operation to change the maintenance window of an instance.</li>
+     * <li><strong>2</strong>: Takes effect at a specified point in time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Immediate</p>
      */
@@ -107,6 +140,8 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String switchTimeMode;
 
     /**
+     * <p>The reserved parameter. This parameter is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */

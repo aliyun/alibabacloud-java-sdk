@@ -51,6 +51,10 @@ public class CreateRCSnapshotRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -154,9 +158,17 @@ public class CreateRCSnapshotRequest extends TeaModel {
     }
 
     public static class CreateRCSnapshotRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("Value")
         public String value;
 

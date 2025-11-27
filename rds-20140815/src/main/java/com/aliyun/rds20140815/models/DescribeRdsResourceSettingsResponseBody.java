@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
+    /**
+     * <p>The details about notification settings for an instance.</p>
+     */
     @NameInMap("RdsInstanceResourceSettings")
     public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettings rdsInstanceResourceSettings;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76364A52-E0AB-5CC8-xxxx-CF1DC482C092</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +41,78 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting extends TeaModel {
+        /**
+         * <p>The end date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-25</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>Specifies whether to pin the notification at the top.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsTop")
         public String isTop;
 
+        /**
+         * <p>The notification text.</p>
+         */
         @NameInMap("NoticeBarContent")
         public String noticeBarContent;
 
+        /**
+         * <p>The text of the popup button.</p>
+         */
         @NameInMap("PoppedUpButtonText")
         public String poppedUpButtonText;
 
+        /**
+         * <p>The type of the popup button.</p>
+         * <ul>
+         * <li>BUY</li>
+         * <li>RENEW</li>
+         * <li>UPGRADE</li>
+         * </ul>
+         */
         @NameInMap("PoppedUpButtonType")
         public String poppedUpButtonType;
 
+        /**
+         * <p>The link of the popup button.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/subscribe">https://www.example.com/subscribe</a></p>
+         */
         @NameInMap("PoppedUpButtonUrl")
         public String poppedUpButtonUrl;
 
+        /**
+         * <p>The text of the popup.</p>
+         */
         @NameInMap("PoppedUpContent")
         public String poppedUpContent;
 
+        /**
+         * <p>The location of the notification.</p>
+         */
         @NameInMap("ResourceNiche")
         public String resourceNiche;
 
+        /**
+         * <p>The effective date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-21</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 

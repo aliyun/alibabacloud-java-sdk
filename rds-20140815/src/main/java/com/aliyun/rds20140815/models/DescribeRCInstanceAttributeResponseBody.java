@@ -845,6 +845,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public Boolean deleteWithInstance;
 
         /**
+         * <strong>example:</strong>
+         * <p>/dev/xvdb</p>
+         */
+        @NameInMap("Device")
+        public String device;
+
+        /**
          * <p>Indicates whether the data disk is encrypted. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
@@ -875,6 +882,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rcds-bp18um4r4f2fve24**</p>
+         */
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
         public static DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk self = new DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk();
             return TeaModel.build(map, self);
@@ -894,6 +908,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
         public Boolean getDeleteWithInstance() {
             return this.deleteWithInstance;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
         }
 
         public DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk setEncrypted(String encrypted) {
@@ -918,6 +940,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
         public Long getSize() {
             return this.size;
+        }
+
+        public DescribeRCInstanceAttributeResponseBodyDataDisksDataDisk setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
     }

@@ -51,6 +51,13 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         public Integer cpuCoreCount;
 
         /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
+        @NameInMap("DiskQuantity")
+        public Long diskQuantity;
+
+        /**
          * <p>The ID of the instance family.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +95,14 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        public DescribeRCInstanceTypesResponseBodyInstanceTypesInstanceType setDiskQuantity(Long diskQuantity) {
+            this.diskQuantity = diskQuantity;
+            return this;
+        }
+        public Long getDiskQuantity() {
+            return this.diskQuantity;
         }
 
         public DescribeRCInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeFamily(String instanceTypeFamily) {

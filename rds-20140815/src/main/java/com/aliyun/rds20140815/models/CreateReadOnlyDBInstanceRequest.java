@@ -109,6 +109,9 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CustomExtraInfo")
+    public String customExtraInfo;
+
     /**
      * <p>The instance type of the read-only instance. For more information, see <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</p>
      * <p>This parameter is required.</p>
@@ -256,6 +259,9 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
+
+    @NameInMap("IsAnalyticReadOnlyIns")
+    public Boolean isAnalyticReadOnlyIns;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -494,6 +500,14 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateReadOnlyDBInstanceRequest setCustomExtraInfo(String customExtraInfo) {
+        this.customExtraInfo = customExtraInfo;
+        return this;
+    }
+    public String getCustomExtraInfo() {
+        return this.customExtraInfo;
+    }
+
     public CreateReadOnlyDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {
         this.DBInstanceClass = DBInstanceClass;
         return this;
@@ -588,6 +602,14 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     }
     public String getIoAccelerationEnabled() {
         return this.ioAccelerationEnabled;
+    }
+
+    public CreateReadOnlyDBInstanceRequest setIsAnalyticReadOnlyIns(Boolean isAnalyticReadOnlyIns) {
+        this.isAnalyticReadOnlyIns = isAnalyticReadOnlyIns;
+        return this;
+    }
+    public Boolean getIsAnalyticReadOnlyIns() {
+        return this.isAnalyticReadOnlyIns;
     }
 
     public CreateReadOnlyDBInstanceRequest setOwnerAccount(String ownerAccount) {

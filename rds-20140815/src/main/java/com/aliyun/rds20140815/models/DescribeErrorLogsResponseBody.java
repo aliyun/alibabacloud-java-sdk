@@ -101,6 +101,9 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("Database")
+        public String database;
+
         /**
          * <p>The error log information.</p>
          * 
@@ -109,6 +112,12 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
          */
         @NameInMap("ErrorInfo")
         public String errorInfo;
+
+        @NameInMap("User")
+        public String user;
+
+        @NameInMap("UserIp")
+        public String userIp;
 
         public static DescribeErrorLogsResponseBodyItemsErrorLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeErrorLogsResponseBodyItemsErrorLog self = new DescribeErrorLogsResponseBodyItemsErrorLog();
@@ -123,12 +132,36 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeErrorLogsResponseBodyItemsErrorLog setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
+        }
+
         public DescribeErrorLogsResponseBodyItemsErrorLog setErrorInfo(String errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
         public String getErrorInfo() {
             return this.errorInfo;
+        }
+
+        public DescribeErrorLogsResponseBodyItemsErrorLog setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
+        }
+
+        public DescribeErrorLogsResponseBodyItemsErrorLog setUserIp(String userIp) {
+            this.userIp = userIp;
+            return this;
+        }
+        public String getUserIp() {
+            return this.userIp;
         }
 
     }
