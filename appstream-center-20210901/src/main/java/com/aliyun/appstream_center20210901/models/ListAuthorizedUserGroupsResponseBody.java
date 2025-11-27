@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The maximum number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -26,12 +32,17 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the user groups.</p>
+     */
     @NameInMap("UserGroups")
     public java.util.List<ListAuthorizedUserGroupsResponseBodyUserGroups> userGroups;
 
@@ -82,6 +93,8 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
 
     public static class ListAuthorizedUserGroupsResponseBodyUserGroups extends TeaModel {
         /**
+         * <p>The ID of the delivery group.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
          */
@@ -89,6 +102,14 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The authorization mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>App: authorizes access to apps.</li>
+         * <li>AppInstanceGroup: authorizes access to delivery groups.</li>
+         * <li>Session: authorizes access to sessions.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>App</p>
          */
@@ -96,12 +117,17 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         public String authMode;
 
         /**
+         * <p>The ID of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>ug-00001</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the user group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 

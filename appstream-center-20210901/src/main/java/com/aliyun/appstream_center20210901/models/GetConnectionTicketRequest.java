@@ -106,6 +106,12 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The environment configuration.</p>
+     */
+    @NameInMap("EnvironmentConfig")
+    public String environmentConfig;
+
+    /**
      * <p>The product type.</p>
      * <p>Valid values:</p>
      * <ul>
@@ -215,6 +221,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public GetConnectionTicketRequest setEnvironmentConfig(String environmentConfig) {
+        this.environmentConfig = environmentConfig;
+        return this;
+    }
+    public String getEnvironmentConfig() {
+        return this.environmentConfig;
     }
 
     public GetConnectionTicketRequest setProductType(String productType) {

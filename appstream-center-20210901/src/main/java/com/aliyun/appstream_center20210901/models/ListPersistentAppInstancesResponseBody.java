@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPersistentAppInstancesResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The app instances of the persistent session type.</p>
+     */
     @NameInMap("PersistentAppInstanceModels")
     public java.util.List<ListPersistentAppInstancesResponseBodyPersistentAppInstanceModels> persistentAppInstanceModels;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -82,6 +93,8 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
 
     public static class ListPersistentAppInstancesResponseBodyPersistentAppInstanceModels extends TeaModel {
         /**
+         * <p>The ID of the delivery group.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-0bxls9m9arax6****</p>
          */
@@ -89,6 +102,8 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The ID of the app instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ai-azn3kmwruh1vl****</p>
          */
@@ -96,6 +111,8 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         public String appInstanceId;
 
         /**
+         * <p>The ID of the app instance of the persistent session type.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-0cc7s3mw2fg4j****</p>
          */
@@ -103,6 +120,8 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         public String appInstancePersistentId;
 
         /**
+         * <p>The name of the app instance of the persistent session type.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-persistent-name</p>
          */
@@ -110,6 +129,20 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         public String appInstancePersistentName;
 
         /**
+         * <p>The status of the app instance of the persistent session type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>STARTING</li>
+         * <li>RUNNING</li>
+         * <li>STOPPED</li>
+         * <li>UNAVAILABLE</li>
+         * <li>DELETING</li>
+         * <li>PENDING</li>
+         * <li>STOPPING</li>
+         * <li>DELETED</li>
+         * <li>REBUILDING</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -117,16 +150,35 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         public String appInstancePersistentStatus;
 
         /**
+         * <p>The status of the app instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INIT: The app instance is being initialized.</li>
+         * <li>STARTING: The app instance is being started.</li>
+         * <li>CLOSING: The app instance is being stopped.</li>
+         * <li>CLOSED: The app instance is closed.</li>
+         * <li>RUNNING: The app instance is running.</li>
+         * <li>idle: The app instance is idle.</li>
+         * <li>BOUND: The app instance is bound to an app instance group.</li>
+         * <li>UNAVAILABLE: The app instance is unavailable.</li>
+         * <li>DELETED: The app instance is deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
         @NameInMap("AppInstanceStatus")
         public String appInstanceStatus;
 
+        /**
+         * <p>The authorized users.</p>
+         */
         @NameInMap("AuthorizedUsers")
         public java.util.List<String> authorizedUsers;
 
         /**
+         * <p>The time when the app instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-13T03:22:18.000+00:00</p>
          */

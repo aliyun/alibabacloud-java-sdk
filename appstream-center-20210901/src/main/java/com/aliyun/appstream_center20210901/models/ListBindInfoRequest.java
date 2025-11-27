@@ -4,16 +4,36 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListBindInfoRequest extends TeaModel {
+    /**
+     * <p>The app IDs. You can specify 1 to 100 IDs.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, only the bindings of the specified apps are returned.</p>
+     * </blockquote>
+     */
     @NameInMap("AppIdList")
     public java.util.List<String> appIdList;
 
+    /**
+     * <p>The IDs of the delivery groups. You can specify 1 to 100 IDs.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, only the bindings of the specified delivery groups are returned.</p>
+     * </blockquote>
+     */
     @NameInMap("AppInstanceGroupIdList")
     public java.util.List<String> appInstanceGroupIdList;
 
+    /**
+     * <p>The IDs of app instances. You can specify 1 to 100 IDs.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, only the bindings of the specified app instances are returned.</p>
+     * </blockquote>
+     */
     @NameInMap("AppInstanceIdList")
     public java.util.List<String> appInstanceIdList;
 
     /**
+     * <p>The page number. Default value: <code>1</code>. We recommend that you specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,15 +41,29 @@ public class ListBindInfoRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. The value cannot be greater than <code>100</code>. Default value: <code>20</code>. We recommend that you specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The user IDs. You can specify 1 to 100 IDs.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, only the bindings of the specified users are returned.</p>
+     * </blockquote>
+     */
     @NameInMap("UserIdList")
     public java.util.List<String> userIdList;
 
+    /**
+     * <p>The IDs of the Alibaba Cloud Workspace users. You can specify 1 to 100 IDs.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, only the bindings of the specified Alibaba Cloud Workspace users are returned.</p>
+     * </blockquote>
+     */
     @NameInMap("WyIdList")
     public java.util.List<String> wyIdList;
 

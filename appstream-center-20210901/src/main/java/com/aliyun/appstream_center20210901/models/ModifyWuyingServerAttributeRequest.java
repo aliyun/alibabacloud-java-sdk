@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyWuyingServerAttributeRequest extends TeaModel {
     /**
+     * <p>Workstation login password.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourPassword</p>
      */
@@ -12,6 +14,8 @@ public class ModifyWuyingServerAttributeRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The ID of the workstation.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-0bw2f11****dial</p>
      */
@@ -19,6 +23,8 @@ public class ModifyWuyingServerAttributeRequest extends TeaModel {
     public String wuyingServerId;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>exampleServerName</p>
      */

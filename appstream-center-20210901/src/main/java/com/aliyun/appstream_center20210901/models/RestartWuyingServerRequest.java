@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class RestartWuyingServerRequest extends TeaModel {
+    /**
+     * <p>The list of workstation IDs.</p>
+     */
     @NameInMap("WuyingServerIdList")
     public java.util.List<String> wuyingServerIdList;
 

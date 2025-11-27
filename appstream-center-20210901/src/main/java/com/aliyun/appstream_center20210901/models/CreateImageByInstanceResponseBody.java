@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateImageByInstanceResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateImageByInstanceResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>NULL</p>
      */
@@ -22,6 +29,8 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
 
     public static class CreateImageByInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the RDS image.</p>
+         * 
          * <strong>example:</strong>
          * <p>imgc-07hnjj5fp****</p>
          */
@@ -89,6 +102,8 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The ID of the image creation task.</p>
+         * 
          * <strong>example:</strong>
          * <p>tid-0abxi0lbih******</p>
          */
@@ -96,6 +111,8 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The version of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>iv-0abxi0lbi*****</p>
          */

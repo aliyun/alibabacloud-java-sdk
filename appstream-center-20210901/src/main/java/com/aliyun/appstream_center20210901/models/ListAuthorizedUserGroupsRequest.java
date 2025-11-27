@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUserGroupsRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,22 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The ID of the user group (exact match).</p>
+     * 
      * <strong>example:</strong>
      * <p>ug-00001</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The name of the user group (fuzzy match).</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The maximum number of entries returned per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +50,11 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

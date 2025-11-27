@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppPolicyShrinkRequest extends TeaModel {
     /**
+     * <p>The policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ModifyAppPolicyShrinkRequest extends TeaModel {
     public String appPolicyId;
 
     /**
+     * <p>The product type.</p>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>CloudApp: RDS Cloud App</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +28,9 @@ public class ModifyAppPolicyShrinkRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>Displays the policy.</p>
+     */
     @NameInMap("VideoPolicy")
     public String videoPolicyShrink;
 

@@ -43,6 +43,13 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ExcludedUserGroupIds")
+    public java.util.List<String> excludedUserGroupIds;
+
+    /**
      * <p>The ID of the resource specification that you purchase. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
@@ -113,6 +120,13 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ListAppInstanceGroupRequestTag> tag;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("UserGroupIds")
+    public java.util.List<String> userGroupIds;
+
     public static ListAppInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppInstanceGroupRequest self = new ListAppInstanceGroupRequest();
         return TeaModel.build(map, self);
@@ -148,6 +162,14 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     }
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    public ListAppInstanceGroupRequest setExcludedUserGroupIds(java.util.List<String> excludedUserGroupIds) {
+        this.excludedUserGroupIds = excludedUserGroupIds;
+        return this;
+    }
+    public java.util.List<String> getExcludedUserGroupIds() {
+        return this.excludedUserGroupIds;
     }
 
     public ListAppInstanceGroupRequest setNodeInstanceType(String nodeInstanceType) {
@@ -213,6 +235,14 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     }
     public java.util.List<ListAppInstanceGroupRequestTag> getTag() {
         return this.tag;
+    }
+
+    public ListAppInstanceGroupRequest setUserGroupIds(java.util.List<String> userGroupIds) {
+        this.userGroupIds = userGroupIds;
+        return this;
+    }
+    public java.util.List<String> getUserGroupIds() {
+        return this.userGroupIds;
     }
 
     public static class ListAppInstanceGroupRequestTag extends TeaModel {

@@ -1128,8 +1128,18 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SupportUserGroupMixedAuth")
+        public Boolean supportUserGroupMixedAuth;
+
         @NameInMap("Tags")
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> tags;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Mixed</p>
+         */
+        @NameInMap("UserGroupAuthMode")
+        public String userGroupAuthMode;
 
         public static ListAppInstanceGroupResponseBodyAppInstanceGroupModels build(java.util.Map<String, ?> map) throws Exception {
             ListAppInstanceGroupResponseBodyAppInstanceGroupModels self = new ListAppInstanceGroupResponseBodyAppInstanceGroupModels();
@@ -1416,12 +1426,28 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             return this.status;
         }
 
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setSupportUserGroupMixedAuth(Boolean supportUserGroupMixedAuth) {
+            this.supportUserGroupMixedAuth = supportUserGroupMixedAuth;
+            return this;
+        }
+        public Boolean getSupportUserGroupMixedAuth() {
+            return this.supportUserGroupMixedAuth;
+        }
+
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setTags(java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> tags) {
             this.tags = tags;
             return this;
         }
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> getTags() {
             return this.tags;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setUserGroupAuthMode(String userGroupAuthMode) {
+            this.userGroupAuthMode = userGroupAuthMode;
+            return this;
+        }
+        public String getUserGroupAuthMode() {
+            return this.userGroupAuthMode;
         }
 
     }

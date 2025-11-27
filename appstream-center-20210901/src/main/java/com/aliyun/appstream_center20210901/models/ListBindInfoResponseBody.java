@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListBindInfoResponseBody extends TeaModel {
+    /**
+     * <p>The bindings.</p>
+     */
     @NameInMap("BindInfoModels")
     public java.util.List<ListBindInfoResponseBodyBindInfoModels> bindInfoModels;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListBindInfoResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListBindInfoResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AD2D0761-1FE5-549D-B169-D3F8D19C****</p>
      */
@@ -29,6 +38,8 @@ public class ListBindInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -82,6 +93,13 @@ public class ListBindInfoResponseBody extends TeaModel {
 
     public static class ListBindInfoResponseBodyBindInfoModels extends TeaModel {
         /**
+         * <p>The account type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ad: Active Directory (AD) account</li>
+         * <li>simple: convenience account</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>simple</p>
          */
@@ -89,6 +107,8 @@ public class ListBindInfoResponseBody extends TeaModel {
         public String accountType;
 
         /**
+         * <p>The app ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ca-fq738or6vd854****</p>
          */
@@ -96,6 +116,8 @@ public class ListBindInfoResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The ID of the delivery group.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-0abxhr6ce35w8****</p>
          */
@@ -103,6 +125,8 @@ public class ListBindInfoResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The ID of the app instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ai-83oe276fre4l3****</p>
          */
@@ -110,6 +134,8 @@ public class ListBindInfoResponseBody extends TeaModel {
         public String appInstanceId;
 
         /**
+         * <p>The app version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -117,6 +143,14 @@ public class ListBindInfoResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The product type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * <li>CloudBrowser: Cloud-based Browser</li>
+         * <li>AndroidCloud: Cloud Phone</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CloudApp</p>
          */
@@ -124,6 +158,8 @@ public class ListBindInfoResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -131,6 +167,8 @@ public class ListBindInfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alice</p>
          */
@@ -138,6 +176,8 @@ public class ListBindInfoResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The ID of the Alibaba Cloud Workspace user.</p>
+         * 
          * <strong>example:</strong>
          * <p>2ca6f5a93536****</p>
          */

@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class TagCloudResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The cloud resources on which the operation failed and the corresponding tags.</p>
+     */
     @NameInMap("FailedResources")
     public java.util.List<TagCloudResourcesResponseBodyFailedResources> failedResources;
 
@@ -111,6 +114,16 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The type of the cloud resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CenterImageId: center image ID.</li>
+         * <li>AppId: app ID.</li>
+         * <li>WyId: Alibaba Cloud Workspace user ID.</li>
+         * <li>AppInstanceGroupId: delivery group ID.</li>
+         * <li>AliUid: tenant ID.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AppInstanceGroupId</p>
          */

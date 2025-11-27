@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewWuyingServerRequest extends TeaModel {
     /**
+     * <p>Automatic payment.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class RenewWuyingServerRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>The renewal duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,13 @@ public class RenewWuyingServerRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the renewal time.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Month: month.</li>
+     * <li>Year: year.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -26,6 +37,8 @@ public class RenewWuyingServerRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The discount ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17440009****</p>
      */
@@ -33,6 +46,8 @@ public class RenewWuyingServerRequest extends TeaModel {
     public String promotionId;
 
     /**
+     * <p>The ID of the workstation.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-0bw2f11****dial</p>
      */

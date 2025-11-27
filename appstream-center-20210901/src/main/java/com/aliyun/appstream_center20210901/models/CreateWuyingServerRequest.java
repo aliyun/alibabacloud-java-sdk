@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWuyingServerRequest extends TeaModel {
     /**
+     * <p>Quantity.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateWuyingServerRequest extends TeaModel {
     public Integer amount;
 
     /**
+     * <p>Auto payment.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,16 +23,26 @@ public class CreateWuyingServerRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>Auto-renewal.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>bandwidth value, the NetworkStrategyType is valid for DirectIp. Unit: Mbps, range 2~100</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
+     * <p>Region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -36,16 +50,27 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The billing method.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PrePaid: subscription</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The list of data disks.</p>
+     */
     @NameInMap("DataDisk")
     public java.util.List<CreateWuyingServerRequestDataDisk> dataDisk;
 
     /**
+     * <p>Idempotence token to ensure operation uniqueness</p>
+     * 
      * <strong>example:</strong>
      * <p>6a1b8c3d</p>
      */
@@ -53,16 +78,26 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String idempotenceToken;
 
     /**
+     * <p>The ID of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>img-bp13mu****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The type of the network policy (in invitational preview).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DirectIp</p>
+     */
     @NameInMap("NetworkStrategyType")
     public String networkStrategyType;
 
     /**
+     * <p>The office network IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-643067****</p>
      */
@@ -70,6 +105,8 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>Workstation login password.</p>
+     * 
      * <strong>example:</strong>
      * <p>YourPassword123</p>
      */
@@ -77,6 +114,8 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The subscription period.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -84,6 +123,13 @@ public class CreateWuyingServerRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The time unit.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -91,13 +137,23 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The ID of the discount.</p>
+     * <blockquote>
+     * <p> If PromotionId is set, it will try to apply the corresponding discount.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>17440009****</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("SavingPlanId")
+    public String savingPlanId;
+
     /**
+     * <p>Workstation specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</p>
      */
@@ -108,6 +164,12 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String serverPortRange;
 
     /**
+     * <p>The system disk category.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cloud_auto.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cloud_auto</p>
      */
@@ -115,6 +177,8 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String systemDiskCategory;
 
     /**
+     * <p>The performance level (PL) of the system disk.</p>
+     * 
      * <strong>example:</strong>
      * <p>PL0</p>
      */
@@ -122,19 +186,30 @@ public class CreateWuyingServerRequest extends TeaModel {
     public String systemDiskPerformanceLevel;
 
     /**
+     * <p>The size of the system disk. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
+    /**
+     * <p>The list of office network vSwitches.</p>
+     */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vnp-0b************gyw</p>
+     */
     @NameInMap("VirtualNodePoolId")
     public String virtualNodePoolId;
 
     /**
+     * <p>The name of the workstation. The numeric suffix is automatically added when multiple workstations are created.</p>
+     * 
      * <strong>example:</strong>
      * <p>exampleServerName</p>
      */
@@ -266,6 +341,14 @@ public class CreateWuyingServerRequest extends TeaModel {
         return this.promotionId;
     }
 
+    public CreateWuyingServerRequest setSavingPlanId(String savingPlanId) {
+        this.savingPlanId = savingPlanId;
+        return this;
+    }
+    public String getSavingPlanId() {
+        return this.savingPlanId;
+    }
+
     public CreateWuyingServerRequest setServerInstanceType(String serverInstanceType) {
         this.serverInstanceType = serverInstanceType;
         return this;
@@ -332,6 +415,12 @@ public class CreateWuyingServerRequest extends TeaModel {
 
     public static class CreateWuyingServerRequestDataDisk extends TeaModel {
         /**
+         * <p>The data disk category.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cloud_auto.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
          */
@@ -339,6 +428,8 @@ public class CreateWuyingServerRequest extends TeaModel {
         public String dataDiskCategory;
 
         /**
+         * <p>The PL of the data disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>PL0</p>
          */
@@ -346,6 +437,8 @@ public class CreateWuyingServerRequest extends TeaModel {
         public String dataDiskPerformanceLevel;
 
         /**
+         * <p>The data disk size.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

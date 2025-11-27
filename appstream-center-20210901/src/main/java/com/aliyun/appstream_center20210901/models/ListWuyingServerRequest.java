@@ -8,6 +8,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public java.util.List<String> addVirtualNodePoolStatusList;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -15,6 +17,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The billing method of the Internet access package.</p>
+     * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
      */
@@ -22,6 +26,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>img-bp13mu****</p>
      */
@@ -29,6 +35,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The office network IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-172301****</p>
      */
@@ -36,6 +44,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +53,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -50,6 +62,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Workstation specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>eds.proworkstation_flagship_elite.32c64g.48g1x</p>
      */
@@ -57,6 +71,8 @@ public class ListWuyingServerRequest extends TeaModel {
     public String serverInstanceType;
 
     /**
+     * <p>The status of the workstation.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
@@ -66,10 +82,15 @@ public class ListWuyingServerRequest extends TeaModel {
     @NameInMap("VirtualNodePoolId")
     public String virtualNodePoolId;
 
+    /**
+     * <p>The list of workstation IDs.</p>
+     */
     @NameInMap("WuyingServerIdList")
     public java.util.List<String> wuyingServerIdList;
 
     /**
+     * <p>The workstation name or workstation ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>exampleServerName</p>
      */

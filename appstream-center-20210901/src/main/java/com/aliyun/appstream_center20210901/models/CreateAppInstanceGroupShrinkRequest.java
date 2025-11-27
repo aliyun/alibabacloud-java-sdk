@@ -16,13 +16,23 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>browser.package.5.250.appstreaming.general.basic</p>
+     */
     @NameInMap("AppPackageType")
     public String appPackageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pg-0clfzcy0adpcf****</p>
+     */
     @NameInMap("AppPolicyId")
     public String appPolicyId;
 
     /**
+     * <p>The authentication mode of the delivery group.</p>
+     * 
      * <strong>example:</strong>
      * <p>App</p>
      * 
@@ -73,6 +83,10 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cls-d39iq73l5c0a8****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -93,6 +107,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Week</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
@@ -120,6 +137,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    /**
+     * <p>The runtime policy.</p>
+     */
     @NameInMap("RuntimePolicy")
     public String runtimePolicyShrink;
 
@@ -138,11 +158,22 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("StoragePolicy")
     public String storagePolicyShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>postPaid</p>
+     */
     @NameInMap("SubPayType")
     public String subPayType;
 
     @NameInMap("UserDefinePolicy")
     public String userDefinePolicyShrink;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("UserGroupIds")
+    public java.util.List<String> userGroupIds;
 
     @NameInMap("UserInfo")
     public String userInfoShrink;
@@ -348,6 +379,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getUserDefinePolicyShrink() {
         return this.userDefinePolicyShrink;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setUserGroupIds(java.util.List<String> userGroupIds) {
+        this.userGroupIds = userGroupIds;
+        return this;
+    }
+    public java.util.List<String> getUserGroupIds() {
+        return this.userGroupIds;
     }
 
     public CreateAppInstanceGroupShrinkRequest setUserInfoShrink(String userInfoShrink) {

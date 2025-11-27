@@ -31,6 +31,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    /**
+     * <p>The avatar ID.</p>
+     */
     @NameInMap("AvatarId")
     public String avatarId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopWuyingServerResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AD2D0761-1FE5-549D-B169******</p>
      */

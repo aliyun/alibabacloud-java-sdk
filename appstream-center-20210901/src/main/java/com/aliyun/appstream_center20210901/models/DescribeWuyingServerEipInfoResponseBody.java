@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
+    /**
+     * <p>The information about the associated EIP.</p>
+     */
     @NameInMap("EipInfoModel")
     public DescribeWuyingServerEipInfoResponseBodyEipInfoModel eipInfoModel;
 
@@ -39,6 +42,8 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
 
     public static class DescribeWuyingServerEipInfoResponseBodyEipInfoModel extends TeaModel {
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>171.xxx.xxx.221</p>
          */
@@ -46,6 +51,8 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
+         * <p>The ID of the elastic network interface (ENI).</p>
+         * 
          * <strong>example:</strong>
          * <p>eni-bp174p2xxxxxbyh02ix</p>
          */
@@ -53,6 +60,8 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
+         * <p>The port range.</p>
+         * 
          * <strong>example:</strong>
          * <p>6606/6607</p>
          */

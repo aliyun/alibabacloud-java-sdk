@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateWuyingServerResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public CreateWuyingServerResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,12 +42,17 @@ public class CreateWuyingServerResponseBody extends TeaModel {
 
     public static class CreateWuyingServerResponseBodyData extends TeaModel {
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>23429322113****</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <p>The list of workstation IDs.</p>
+         */
         @NameInMap("WuyingServerIdList")
         public java.util.List<String> wuyingServerIdList;
 

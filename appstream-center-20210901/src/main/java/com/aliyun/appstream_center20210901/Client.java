@@ -175,7 +175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建云应用交付组</p>
+     * <p>Creates a delivery group.</p>
      * 
      * @param tmpReq CreateAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -315,6 +315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SubPayType", request.subPayType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            body.put("UserGroupIds", request.userGroupIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userInfoShrink)) {
             body.put("UserInfo", request.userInfoShrink);
         }
@@ -347,7 +351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建云应用交付组</p>
+     * <p>Creates a delivery group.</p>
      * 
      * @param request CreateAppInstanceGroupRequest
      * @return CreateAppInstanceGroupResponse
@@ -359,7 +363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过实例创建镜像</p>
+     * <p>Create a custom image from a deployed instance. This allows you to quickly create more instances with the same configurations and avoid repeatedly configuring the instance environment each time you create the instance.</p>
      * 
      * @param request CreateImageByInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -423,7 +427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过实例创建镜像</p>
+     * <p>Create a custom image from a deployed instance. This allows you to quickly create more instances with the same configurations and avoid repeatedly configuring the instance environment each time you create the instance.</p>
      * 
      * @param request CreateImageByInstanceRequest
      * @return CreateImageByInstanceResponse
@@ -486,8 +490,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Project is equivalent to the Resource Configuration module of the Cloud Flow console</li>
+     * <li>If there are multiple versions behind the input parameter ContentId:
+     * **
+     * <strong>Note</strong> The default version is used.
+     * Bind simultaneously</li>
+     * <li>You can call the current interface only if the default version of Content is available.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>创建一台或多台研发主机</p>
+     * <p>Create one or more workstations.</p>
      * 
      * @param request CreateWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -495,6 +509,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateWuyingServerResponse createWuyingServerWithOptions(CreateWuyingServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.savingPlanId)) {
+            query.put("SavingPlanId", request.savingPlanId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
             body.put("Amount", request.amount);
@@ -594,6 +613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             com.aliyun.openapiutil.Client.query(bodyFlat)
         );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -611,8 +631,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Project is equivalent to the Resource Configuration module of the Cloud Flow console</li>
+     * <li>If there are multiple versions behind the input parameter ContentId:
+     * **
+     * <strong>Note</strong> The default version is used.
+     * Bind simultaneously</li>
+     * <li>You can call the current interface only if the default version of Content is available.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>创建一台或多台研发主机</p>
+     * <p>Create one or more workstations.</p>
      * 
      * @param request CreateWuyingServerRequest
      * @return CreateWuyingServerResponse
@@ -739,6 +769,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can only delete custom images to which a user belongs.</p>
+     * <ul>
+     * <li>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</li>
+     * <li>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</li>
+     * <li>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete a custom RDS image</p>
+     * 
      * @param request DeleteImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteImageResponse
@@ -768,6 +809,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can only delete custom images to which a user belongs.</p>
+     * <ul>
+     * <li>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</li>
+     * <li>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</li>
+     * <li>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete a custom RDS image</p>
+     * 
      * @param request DeleteImageRequest
      * @return DeleteImageResponse
      */
@@ -777,6 +829,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a workstation.</p>
+     * 
      * <b>summary</b> : 
      * <p>删除工作站</p>
      * 
@@ -809,6 +864,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a workstation.</p>
+     * 
      * <b>summary</b> : 
      * <p>删除工作站</p>
      * 
@@ -822,7 +880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询无影工作站EIP信息</p>
+     * <p>Queries the Elastic IP Addresses (EIPs) of workstations.</p>
      * 
      * @param request DescribeWuyingServerEipInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -858,7 +916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询无影工作站EIP信息</p>
+     * <p>Queries the Elastic IP Addresses (EIPs) of workstations.</p>
      * 
      * @param request DescribeWuyingServerEipInfoRequest
      * @return DescribeWuyingServerEipInfoResponse
@@ -870,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取交付组详情</p>
+     * <p>Queries the details of a delivery group.</p>
      * 
      * @param request GetAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -906,7 +964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取交付组详情</p>
+     * <p>Queries the details of a delivery group.</p>
      * 
      * @param request GetAppInstanceGroupRequest
      * @return GetAppInstanceGroupResponse
@@ -970,6 +1028,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
             body.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentConfig)) {
+            body.put("EnvironmentConfig", request.environmentConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
@@ -1290,8 +1352,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludedUserGroupIds)) {
+            body.put("ExcludedUserGroupIds", request.excludedUserGroupIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            body.put("UserGroupIds", request.userGroupIds);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1400,7 +1470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过交付组查询展示授权的用户组列表</p>
+     * <p>Queries the user groups authorized by a delivery group.</p>
      * 
      * @param request ListAuthorizedUserGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1452,7 +1522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过交付组查询展示授权的用户组列表</p>
+     * <p>Queries the user groups authorized by a delivery group.</p>
      * 
      * @param request ListAuthorizedUserGroupsRequest
      * @return ListAuthorizedUserGroupsResponse
@@ -1464,7 +1534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询绑定信息，支持分页</p>
+     * <p>Queries the bindings between users and resources.</p>
      * 
      * @param request ListBindInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1520,7 +1590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询绑定信息，支持分页</p>
+     * <p>Queries the bindings between users and resources.</p>
      * 
      * @param request ListBindInfoRequest
      * @return ListBindInfoResponse
@@ -1532,7 +1602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表显示镜像</p>
+     * <p>Queries the image information about an ECS instance.</p>
      * 
      * @param request ListImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1646,7 +1716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表显示镜像</p>
+     * <p>Queries the image information about an ECS instance.</p>
      * 
      * @param request ListImageRequest
      * @return ListImageResponse
@@ -1866,7 +1936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询交付组内持久会话列表</p>
+     * <p>Queries app instances of the persistent session type in a delivery group.</p>
      * 
      * @param request ListPersistentAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1914,7 +1984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询交付组内持久会话列表</p>
+     * <p>Queries app instances of the persistent session type in a delivery group.</p>
      * 
      * @param request ListPersistentAppInstancesRequest
      * @return ListPersistentAppInstancesResponse
@@ -2078,7 +2148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询研发主机列表</p>
+     * <p>Queries the list of workstations.</p>
      * 
      * @param request ListWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2159,7 +2229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询研发主机列表</p>
+     * <p>Queries the list of workstations.</p>
      * 
      * @param request ListWuyingServerRequest
      * @return ListWuyingServerResponse
@@ -2333,7 +2403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改策略信息</p>
+     * <p>Modify the delivery group display policy, including settings such as frame rate, resolution, and protocol type.</p>
      * 
      * @param tmpReq ModifyAppPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2379,7 +2449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改策略信息</p>
+     * <p>Modify the delivery group display policy, including settings such as frame rate, resolution, and protocol type.</p>
      * 
      * @param request ModifyAppPolicyRequest
      * @return ModifyAppPolicyResponse
@@ -2387,6 +2457,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAppPolicyResponse modifyAppPolicy(ModifyAppPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAppPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifies the properties of the cloud browser.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the properties of the cloud browser.</p>
+     * 
+     * @param tmpReq ModifyBrowserInstanceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyBrowserInstanceGroupResponse
+     */
+    public ModifyBrowserInstanceGroupResponse modifyBrowserInstanceGroupWithOptions(ModifyBrowserInstanceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyBrowserInstanceGroupShrinkRequest request = new ModifyBrowserInstanceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.browserConfig)) {
+            request.browserConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.browserConfig, "BrowserConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.network)) {
+            request.networkShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.network, "Network", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.policy)) {
+            request.policyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.policy, "Policy", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timers)) {
+            request.timersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timers, "Timers", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.browserConfigShrink)) {
+            query.put("BrowserConfig", request.browserConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.browserInstanceGroupId)) {
+            query.put("BrowserInstanceGroupId", request.browserInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyShrink)) {
+            query.put("Policy", request.policyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timersShrink)) {
+            query.put("Timers", request.timersShrink);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudBrowserName)) {
+            body.put("CloudBrowserName", request.cloudBrowserName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkShrink)) {
+            body.put("Network", request.networkShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyBrowserInstanceGroup"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBrowserInstanceGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifies the properties of the cloud browser.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the properties of the cloud browser.</p>
+     * 
+     * @param request ModifyBrowserInstanceGroupRequest
+     * @return ModifyBrowserInstanceGroupResponse
+     */
+    public ModifyBrowserInstanceGroupResponse modifyBrowserInstanceGroup(ModifyBrowserInstanceGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyBrowserInstanceGroupWithOptions(request, runtime);
     }
 
     /**
@@ -2577,7 +2737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改研发主机属性</p>
+     * <p>Modify workstation properties.</p>
      * 
      * @param request ModifyWuyingServerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2617,7 +2777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改研发主机属性</p>
+     * <p>Modify workstation properties.</p>
      * 
      * @param request ModifyWuyingServerAttributeRequest
      * @return ModifyWuyingServerAttributeResponse
@@ -2773,7 +2933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费研发主机</p>
+     * <p>Renew one workstation.</p>
      * 
      * @param request RenewWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2821,7 +2981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费研发主机</p>
+     * <p>Renew one workstation.</p>
      * 
      * @param request RenewWuyingServerRequest
      * @return RenewWuyingServerResponse
@@ -2833,7 +2993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重启研发主机</p>
+     * <p>Restarts the workstation.</p>
      * 
      * @param request RestartWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2870,7 +3030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重启研发主机</p>
+     * <p>Restarts the workstation.</p>
      * 
      * @param request RestartWuyingServerRequest
      * @return RestartWuyingServerResponse
@@ -2881,6 +3041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Initiates a task to replicate an image to another region.</p>
+     * 
      * @param request StartTaskForDistributeImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartTaskForDistributeImageResponse
@@ -2930,6 +3093,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Initiates a task to replicate an image to another region.</p>
+     * 
      * @param request StartTaskForDistributeImageRequest
      * @return StartTaskForDistributeImageResponse
      */
@@ -2940,7 +3106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动研发主机</p>
+     * <p>Start the workstation.</p>
      * 
      * @param request StartWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2977,7 +3143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动研发主机</p>
+     * <p>Start the workstation.</p>
      * 
      * @param request StartWuyingServerRequest
      * @return StartWuyingServerResponse
@@ -2989,7 +3155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止研发主机</p>
+     * <p>Stops the workstation.</p>
      * 
      * @param request StopWuyingServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3030,7 +3196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止研发主机</p>
+     * <p>Stops the workstation.</p>
      * 
      * @param request StopWuyingServerRequest
      * @return StopWuyingServerResponse

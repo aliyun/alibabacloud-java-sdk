@@ -4,10 +4,22 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class TagCloudResourcesRequest extends TeaModel {
+    /**
+     * <p>The resource IDs. You can specify up to 50 resource IDs. You do not need to specify this parameter if you set ResourceType to AliUid.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
+     * <p>The type of the cloud resource.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CenterImageId: center image ID.</li>
+     * <li>AppId: app ID.</li>
+     * <li>WyId: Alibaba Cloud Workspace user ID.</li>
+     * <li>AppInstanceGroupId: delivery group ID.</li>
+     * <li>AliUid: tenant ID.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +29,20 @@ public class TagCloudResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The tags that you want to remove from the cloud resources. System and custom tags are supported.</p>
+     * <ul>
+     * <li><p>Valid values for system tags:</p>
+     * <ul>
+     * <li><code>System/Scheduler/GRAYSCALE</code>: canary tags.</li>
+     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tags used to stop new users bound to the delivery group from establishing a connection.</li>
+     * </ul>
+     * </li>
+     * <li><p>You can create up to 20 custom tags.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
@@ -53,6 +79,7 @@ public class TagCloudResourcesRequest extends TeaModel {
 
     public static class TagCloudResourcesRequestTags extends TeaModel {
         /**
+         * <p>The key of a tag. The value must be 1 to 128 characters in length and is case-sensitive. The name must be 1 to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +89,7 @@ public class TagCloudResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of a tag. The value must be 1 to 128 characters in length and is case-sensitive. The name must be 1 to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

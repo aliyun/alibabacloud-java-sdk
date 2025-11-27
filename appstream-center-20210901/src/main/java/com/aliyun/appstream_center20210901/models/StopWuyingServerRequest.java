@@ -5,12 +5,22 @@ import com.aliyun.tea.*;
 
 public class StopWuyingServerRequest extends TeaModel {
     /**
+     * <p>Force restart.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>True.</li>
+     * <li>False</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The list of workstation IDs.</p>
+     */
     @NameInMap("WuyingServerIdList")
     public java.util.List<String> wuyingServerIdList;
 

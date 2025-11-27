@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartTaskForDistributeImageResponseBody extends TeaModel {
     /**
+     * <p>The error code if an error occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the image replication task.</p>
+     * 
      * <strong>example:</strong>
      * <p>tid-06xnr5lyp77e7****</p>
      */
@@ -19,6 +23,8 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error message if an error occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>419F31B9-1FDF-5644-ABA3-D00026FA****</p>
      */
@@ -33,6 +41,8 @@ public class StartTaskForDistributeImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the task is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

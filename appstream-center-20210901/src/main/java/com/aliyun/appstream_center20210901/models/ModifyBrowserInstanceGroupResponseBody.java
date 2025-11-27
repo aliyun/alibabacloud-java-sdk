@@ -3,9 +3,9 @@ package com.aliyun.appstream_center20210901.models;
 
 import com.aliyun.tea.*;
 
-public class StartWuyingServerResponseBody extends TeaModel {
+public class ModifyBrowserInstanceGroupResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -13,12 +13,12 @@ public class StartWuyingServerResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static StartWuyingServerResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        StartWuyingServerResponseBody self = new StartWuyingServerResponseBody();
+    public static ModifyBrowserInstanceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyBrowserInstanceGroupResponseBody self = new ModifyBrowserInstanceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public StartWuyingServerResponseBody setRequestId(String requestId) {
+    public ModifyBrowserInstanceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

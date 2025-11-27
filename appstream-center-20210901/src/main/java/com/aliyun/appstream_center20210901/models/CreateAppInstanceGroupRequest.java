@@ -16,13 +16,23 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>browser.package.5.250.appstreaming.general.basic</p>
+     */
     @NameInMap("AppPackageType")
     public String appPackageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pg-0clfzcy0adpcf****</p>
+     */
     @NameInMap("AppPolicyId")
     public String appPolicyId;
 
     /**
+     * <p>The authentication mode of the delivery group.</p>
+     * 
      * <strong>example:</strong>
      * <p>App</p>
      * 
@@ -73,6 +83,10 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cls-d39iq73l5c0a8****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -93,6 +107,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Week</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
@@ -120,6 +137,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    /**
+     * <p>The runtime policy.</p>
+     */
     @NameInMap("RuntimePolicy")
     public CreateAppInstanceGroupRequestRuntimePolicy runtimePolicy;
 
@@ -138,11 +158,22 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("StoragePolicy")
     public CreateAppInstanceGroupRequestStoragePolicy storagePolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>postPaid</p>
+     */
     @NameInMap("SubPayType")
     public String subPayType;
 
     @NameInMap("UserDefinePolicy")
     public CreateAppInstanceGroupRequestUserDefinePolicy userDefinePolicy;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("UserGroupIds")
+    public java.util.List<String> userGroupIds;
 
     @NameInMap("UserInfo")
     public CreateAppInstanceGroupRequestUserInfo userInfo;
@@ -350,6 +381,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         return this.userDefinePolicy;
     }
 
+    public CreateAppInstanceGroupRequest setUserGroupIds(java.util.List<String> userGroupIds) {
+        this.userGroupIds = userGroupIds;
+        return this;
+    }
+    public java.util.List<String> getUserGroupIds() {
+        return this.userGroupIds;
+    }
+
     public CreateAppInstanceGroupRequest setUserInfo(CreateAppInstanceGroupRequestUserInfo userInfo) {
         this.userInfo = userInfo;
         return this;
@@ -375,9 +414,17 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNetworkDomainRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
@@ -453,6 +500,10 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("IpExpireMinutes")
         public Integer ipExpireMinutes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hongkong+dir-842567****</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
@@ -623,6 +674,10 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNodePool extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxIdleAppInstanceAmount")
         public Integer maxIdleAppInstanceAmount;
 
@@ -647,6 +702,10 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("NodeCapacity")
         public Integer nodeCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>appstreaming.general.4c8g</p>
+         */
         @NameInMap("NodeInstanceType")
         public String nodeInstanceType;
 
@@ -814,9 +873,34 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestRuntimePolicy extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the debugging mode. If you want to call the <code>GetDebugAppInstance</code> and <code>CreateImageFromAppInstanceGroup</code> operations, you must set this parameter to <code>ON</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>OFF</li>
+         * <li>ON</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OFF</p>
+         */
         @NameInMap("DebugMode")
         public String debugMode;
 
+        /**
+         * <p>Specifies whether only one app can be opened in a session.</p>
+         * <ul>
+         * <li>After you enable this feature, the system assigns a session to each app if you open multiple apps in a delivery group. This consumes a larger number of sessions.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PerSessionPerApp")
         public Boolean perSessionPerApp;
 
@@ -830,11 +914,30 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("PersistentAppInstanceScheduleMode")
         public String persistentAppInstanceScheduleMode;
 
+        /**
+         * <p>Specifies whether to enable pre-open for sessions.</p>
+         * <ul>
+         * <li>Default value: true</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SessionPreOpen")
         public String sessionPreOpen;
 
         /**
-         * <p>会话类型。</p>
+         * <p>The session type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CONSOLE: console session</li>
+         * <li>NORMAL: Remote Desktop Protocol (RDP)-based O\&amp;M session</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -842,6 +945,15 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("SessionType")
         public String sessionType;
 
+        /**
+         * <p>The generation mode of the session users. Valid value:</p>
+         * <ul>
+         * <li>wyid. In this case, you must set sessionPreOpen to false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>wyid</p>
+         */
         @NameInMap("SessionUserGenerationMode")
         public String sessionUserGenerationMode;
 
@@ -939,12 +1051,24 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestStoragePolicyUserProfile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ID20250101</p>
+         */
         @NameInMap("RemoteStoragePath")
         public String remoteStoragePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NAS</p>
+         */
         @NameInMap("RemoteStorageType")
         public String remoteStorageType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UserProfileSwitch")
         public Boolean userProfileSwitch;
 
@@ -1010,6 +1134,10 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestUserDefinePolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;target&quot;:&quot;agent&quot;,&quot;config&quot;:{&quot;abc&quot;:&quot;xxx&quot;}}]</p>
+         */
         @NameInMap("CustomConfig")
         public String customConfig;
 
@@ -1052,21 +1180,45 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestVideoPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("FrameRate")
         public Integer frameRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("SessionResolutionHeight")
         public Integer sessionResolutionHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("SessionResolutionWidth")
         public Integer sessionResolutionWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("StreamingMode")
         public String streamingMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("TerminalResolutionAdaptive")
         public Boolean terminalResolutionAdaptive;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Webrtc")
         public Boolean webrtc;
 

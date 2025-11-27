@@ -4,10 +4,14 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class StartTaskForDistributeImageRequest extends TeaModel {
+    /**
+     * <p>The regions to which you want to replicate the image.</p>
+     */
     @NameInMap("DestinationRegionList")
     public java.util.List<String> destinationRegionList;
 
     /**
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,14 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CloudDesktop: Elastic Desktop Service</li>
+     * <li>CloudApp: App Streaming</li>
+     * <li>WuyingServer: Workstation</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CloudApp</p>
      */
@@ -24,6 +36,8 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>This parameter is not publicly available.</p>
+     * 
      * <strong>example:</strong>
      * <p>RETRY</p>
      */
@@ -31,6 +45,8 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
     public String retryType;
 
     /**
+     * <p>The region where the source image is located. If you leave this parameter empty, a random region is selected.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -38,6 +54,8 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
     public String sourceRegion;
 
     /**
+     * <p>The ID of the image version. If you do not specify this parameter, the latest image version is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>iv-07jyldnd9i****</p>
      */

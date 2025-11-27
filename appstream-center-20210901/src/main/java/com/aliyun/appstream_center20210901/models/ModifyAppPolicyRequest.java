@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppPolicyRequest extends TeaModel {
     /**
+     * <p>The policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class ModifyAppPolicyRequest extends TeaModel {
     public String appPolicyId;
 
     /**
+     * <p>The product type.</p>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>CloudApp: RDS Cloud App</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +28,9 @@ public class ModifyAppPolicyRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>Displays the policy.</p>
+     */
     @NameInMap("VideoPolicy")
     public ModifyAppPolicyRequestVideoPolicy videoPolicy;
 
@@ -56,6 +65,13 @@ public class ModifyAppPolicyRequest extends TeaModel {
 
     public static class ModifyAppPolicyRequestVideoPolicy extends TeaModel {
         /**
+         * <p>The frame rate (FPS).</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>30: 30 FPS</li>
+         * <li>60: 60 FPS</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -63,6 +79,8 @@ public class ModifyAppPolicyRequest extends TeaModel {
         public Integer frameRate;
 
         /**
+         * <p>The height of the resolution, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */
@@ -70,6 +88,8 @@ public class ModifyAppPolicyRequest extends TeaModel {
         public Integer sessionResolutionHeight;
 
         /**
+         * <p>The width of the resolution, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */
@@ -77,6 +97,13 @@ public class ModifyAppPolicyRequest extends TeaModel {
         public Integer sessionResolutionWidth;
 
         /**
+         * <p>The stream mode. This parameter is used together with <code>Webrtc</code> to specify the protocol type.</p>
+         * <ul>
+         * <li>If you set <code>Webrtc</code> to <code>true</code> and <code>StreamingMode</code> to <code>video</code>, Web Real-Time Communications (WebRTC) streams are used.</li>
+         * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>video</code>, video streams are used.</li>
+         * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>mix</code>, mixed streams are used.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
@@ -84,16 +111,41 @@ public class ModifyAppPolicyRequest extends TeaModel {
         public String streamingMode;
 
         /**
+         * <p>Whether to use adaptive resolution.</p>
+         * <ul>
+         * <li><code>true</code>: The session resolution changes with the display area of the terminal. In this case, <code>SessionResolutionWidth</code> indicates the maximum resolution width and <code>SessionResolutionHeight</code> indicates the maximum resolution height.</li>
+         * <li><code>false</code>: The session resolution does not change with the display area of the terminal. In this case, <code>SessionResolutionWidth</code> specifies the fixed resolution width and <code>SessionResolutionHeight</code> specifies the fixed resolution height.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("TerminalResolutionAdaptive")
         public Boolean terminalResolutionAdaptive;
 
+        /**
+         * <p>The image quality policy.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>adaptive: adaptive.</li>
+         * <li>smooth: smooth first.</li>
+         * <li>quality: quality first.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>smooth</p>
+         */
         @NameInMap("VisualQualityStrategy")
         public String visualQualityStrategy;
 
         /**
+         * <p>Specifies whether to enable WebRTC. This parameter is used together with <code>StreamingMode</code> to specify the protocol type.</p>
+         * <ul>
+         * <li>If you set <code>Webrtc</code> to <code>true</code> and <code>StreamingMode</code> to <code>video</code>, WebRTC streams are used.</li>
+         * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>video</code>, video streams are used.</li>
+         * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>mix</code>, mixed streams are used.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
