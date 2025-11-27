@@ -4,12 +4,29 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobsShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of executor IDs. A maximum of 100 IDs are supported.</p>
+     */
     @NameInMap("ExecutorIds")
     public String executorIdsShrink;
 
+    /**
+     * <p>The type of the job scheduler.</p>
+     * <ul>
+     * <li>HPC</li>
+     * <li>K8S</li>
+     * </ul>
+     * <p>Default value: HPC</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HPC</p>
+     */
     @NameInMap("JobScheduler")
     public String jobScheduler;
 
+    /**
+     * <p>The information about the job to be deleted.</p>
+     */
     @NameInMap("JobSpec")
     public String jobSpecShrink;
 

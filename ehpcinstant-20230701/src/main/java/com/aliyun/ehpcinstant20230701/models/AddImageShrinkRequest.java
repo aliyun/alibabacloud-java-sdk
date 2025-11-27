@@ -4,16 +4,37 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class AddImageShrinkRequest extends TeaModel {
+    /**
+     * <p>The configurations of the container image.</p>
+     */
     @NameInMap("ContainerImageSpec")
     public String containerImageSpecShrink;
 
+    /**
+     * <p>The description of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test image</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The type of the images. Valid values:</p>
+     * <ul>
+     * <li>VM: virtual machine image.</li>
+     * <li>Container: the container image.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VM</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 
     /**
+     * <p>The version of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>V1.0</p>
      */
@@ -21,6 +42,7 @@ public class AddImageShrinkRequest extends TeaModel {
     public String imageVersion;
 
     /**
+     * <p>The name of the custom image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +51,9 @@ public class AddImageShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The image configuration of the virtual machine.</p>
+     */
     @NameInMap("VMImageSpec")
     public String VMImageSpecShrink;
 

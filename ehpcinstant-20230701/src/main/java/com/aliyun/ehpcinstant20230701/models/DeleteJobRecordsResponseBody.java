@@ -3,9 +3,9 @@ package com.aliyun.ehpcinstant20230701.models;
 
 import com.aliyun.tea.*;
 
-public class SynchronizeAppResponseBody extends TeaModel {
+public class DeleteJobRecordsResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
@@ -13,12 +13,12 @@ public class SynchronizeAppResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static SynchronizeAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SynchronizeAppResponseBody self = new SynchronizeAppResponseBody();
+    public static DeleteJobRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteJobRecordsResponseBody self = new DeleteJobRecordsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SynchronizeAppResponseBody setRequestId(String requestId) {
+    public DeleteJobRecordsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveImageRequest extends TeaModel {
     /**
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,16 @@ public class RemoveImageRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The type of the images. Valid values:</p>
+     * <ul>
+     * <li>VM: Virtual Machine Image</li>
+     * <li>Container: container image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VM</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 

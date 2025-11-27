@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateActionPlanShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the execution plan.</p>
+     * 
      * <strong>example:</strong>
      * <p>TestActionPlan</p>
      */
@@ -12,6 +14,13 @@ public class CreateActionPlanShrinkRequest extends TeaModel {
     public String actionPlanName;
 
     /**
+     * <p>The type of the resource.</p>
+     * <ul>
+     * <li>Standard</li>
+     * <li>Dedicated: You must enable a whitelist for use.</li>
+     * <li>Economic: You must enable a whitelist for use.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Standard</p>
      */
@@ -19,6 +28,8 @@ public class CreateActionPlanShrinkRequest extends TeaModel {
     public String allocationSpec;
 
     /**
+     * <p>The ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>ci-vm-rYfypJKwlN9Y</p>
      */
@@ -26,6 +37,8 @@ public class CreateActionPlanShrinkRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -33,6 +46,13 @@ public class CreateActionPlanShrinkRequest extends TeaModel {
     public Double desiredCapacity;
 
     /**
+     * <p>The computing power level. This value is valid only when the resource type is Economic. The following disk categories are supported:</p>
+     * <ul>
+     * <li>General</li>
+     * <li>Performance</li>
+     * </ul>
+     * <p>Default value: General</p>
+     * 
      * <strong>example:</strong>
      * <p>General</p>
      */
@@ -40,26 +60,45 @@ public class CreateActionPlanShrinkRequest extends TeaModel {
     public String level;
 
     /**
+     * <p>The pre-processing script. Base64 encoding is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
      */
     @NameInMap("PrologScript")
     public String prologScript;
 
+    /**
+     * <p>The list of resource configurations in the region where the execution plan runs.</p>
+     */
     @NameInMap("Regions")
     public String regionsShrink;
 
     /**
+     * <p>Target resource type: the capacity of vCPUs or the number of execution nodes. Valid values:</p>
+     * <ul>
+     * <li>VCpuCapacity</li>
+     * <li>ExecutorCapacity</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VCpuCapacity</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The list of resource configurations of the execution plan runtime environment. You can configure 1 to 10 resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("Resources")
     public String resourcesShrink;
 
     /**
+     * <p>The running-job script. Base64 encoding is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
      */

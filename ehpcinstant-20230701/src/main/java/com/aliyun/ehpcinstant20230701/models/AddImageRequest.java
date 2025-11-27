@@ -4,16 +4,37 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class AddImageRequest extends TeaModel {
+    /**
+     * <p>The configurations of the container image.</p>
+     */
     @NameInMap("ContainerImageSpec")
     public AddImageRequestContainerImageSpec containerImageSpec;
 
+    /**
+     * <p>The description of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test image</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The type of the images. Valid values:</p>
+     * <ul>
+     * <li>VM: virtual machine image.</li>
+     * <li>Container: the container image.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VM</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 
     /**
+     * <p>The version of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>V1.0</p>
      */
@@ -21,6 +42,7 @@ public class AddImageRequest extends TeaModel {
     public String imageVersion;
 
     /**
+     * <p>The name of the custom image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +51,9 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The image configuration of the virtual machine.</p>
+     */
     @NameInMap("VMImageSpec")
     public AddImageRequestVMImageSpec VMImageSpec;
 
@@ -87,6 +112,8 @@ public class AddImageRequest extends TeaModel {
 
     public static class AddImageRequestContainerImageSpecRegistryCredential extends TeaModel {
         /**
+         * <p>The password of the logon user.</p>
+         * 
          * <strong>example:</strong>
          * <p>userpassword</p>
          */
@@ -94,6 +121,8 @@ public class AddImageRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The registered address of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
          */
@@ -101,6 +130,8 @@ public class AddImageRequest extends TeaModel {
         public String server;
 
         /**
+         * <p>The username of the logon user.</p>
+         * 
          * <strong>example:</strong>
          * <p>username</p>
          */
@@ -140,6 +171,12 @@ public class AddImageRequest extends TeaModel {
 
     public static class AddImageRequestContainerImageSpec extends TeaModel {
         /**
+         * <p>Whether the instance is an Alibaba Cloud image repository Enterprise Edition.</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -147,16 +184,27 @@ public class AddImageRequest extends TeaModel {
         public Boolean isACREnterprise;
 
         /**
+         * <p>Whether it is an Alibaba Cloud image repository.</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
         @NameInMap("IsACRRegistry")
         public Boolean isACRRegistry;
 
+        /**
+         * <p>The authentication of the private image repository.</p>
+         */
         @NameInMap("RegistryCredential")
         public AddImageRequestContainerImageSpecRegistryCredential registryCredential;
 
         /**
+         * <p>The ID of the Container Registry Enterprise Edition image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>cri-xyz795ygf8k9****</p>
          */
@@ -164,6 +212,8 @@ public class AddImageRequest extends TeaModel {
         public String registryCriId;
 
         /**
+         * <p>The endpoint of the container image.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>
          */
@@ -219,6 +269,8 @@ public class AddImageRequest extends TeaModel {
 
     public static class AddImageRequestVMImageSpec extends TeaModel {
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>m-bp1akkkr1rkxtb******</p>
          */

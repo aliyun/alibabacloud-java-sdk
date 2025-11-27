@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeletePoolRequest extends TeaModel {
     /**
+     * <p>The name of the resource pool.</p>
+     * <ul>
+     * <li>The value can be up to 15 characters in length.</li>
+     * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

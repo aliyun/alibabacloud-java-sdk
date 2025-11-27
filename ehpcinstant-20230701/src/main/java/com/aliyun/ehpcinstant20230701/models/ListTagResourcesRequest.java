@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,16 +14,26 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResult;
 
     /**
+     * <p>A pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86scXXXXXXXXXX</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of resource IDs. Valid values of N: 1 to 50.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>Job</li>
+     * <li>Executor</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +42,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -80,6 +95,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -87,6 +104,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

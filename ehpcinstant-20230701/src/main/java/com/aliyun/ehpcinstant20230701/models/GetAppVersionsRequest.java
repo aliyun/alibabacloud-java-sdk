@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppVersionsRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class GetAppVersionsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The source of the image. Valid values:</p>
+     * <p>Public: public images provided by Alibaba Cloud.</p>
+     * <p>Custom: the custom image that you added.</p>
+     * 
      * <strong>example:</strong>
      * <p>Public</p>
      */
@@ -21,6 +26,10 @@ public class GetAppVersionsRequest extends TeaModel {
     public String imageCategory;
 
     /**
+     * <p>The type of the images. Valid values:</p>
+     * <p>VM: Virtual Machine Image</p>
+     * <p>Container: container image</p>
+     * 
      * <strong>example:</strong>
      * <p>VM</p>
      */
@@ -28,6 +37,8 @@ public class GetAppVersionsRequest extends TeaModel {
     public String imageType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +46,8 @@ public class GetAppVersionsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

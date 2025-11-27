@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86scXXXXXXXXXX</p>
      */
@@ -12,12 +14,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource list.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -52,6 +59,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
+         * <p>The ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-xxxxxxxx</p>
          */
@@ -59,6 +68,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The type of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>Job</p>
          */
@@ -66,6 +77,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The key of the tag that is added to the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -73,6 +86,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

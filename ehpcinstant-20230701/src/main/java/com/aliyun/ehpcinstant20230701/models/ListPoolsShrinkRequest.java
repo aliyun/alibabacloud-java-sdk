@@ -4,10 +4,15 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListPoolsShrinkRequest extends TeaModel {
+    /**
+     * <p>Queries the filter conditions of a resource pool.</p>
+     */
     @NameInMap("Filter")
     public String filterShrink;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListPoolsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on each page. Maximum value: 50. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -4,12 +4,29 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobsRequest extends TeaModel {
+    /**
+     * <p>The list of executor IDs. A maximum of 100 IDs are supported.</p>
+     */
     @NameInMap("ExecutorIds")
     public java.util.List<String> executorIds;
 
+    /**
+     * <p>The type of the job scheduler.</p>
+     * <ul>
+     * <li>HPC</li>
+     * <li>K8S</li>
+     * </ul>
+     * <p>Default value: HPC</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HPC</p>
+     */
     @NameInMap("JobScheduler")
     public String jobScheduler;
 
+    /**
+     * <p>The information about the job to be deleted.</p>
+     */
     @NameInMap("JobSpec")
     public java.util.List<DeleteJobsRequestJobSpec> jobSpec;
 
@@ -43,10 +60,15 @@ public class DeleteJobsRequest extends TeaModel {
     }
 
     public static class DeleteJobsRequestJobSpecTaskSpec extends TeaModel {
+        /**
+         * <p>The list of array job indexes to be deleted.</p>
+         */
         @NameInMap("ArrayIndex")
         public java.util.List<Integer> arrayIndex;
 
         /**
+         * <p>The name of the task to be deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>task0</p>
          */
@@ -78,12 +100,18 @@ public class DeleteJobsRequest extends TeaModel {
 
     public static class DeleteJobsRequestJobSpec extends TeaModel {
         /**
+         * <p>The ID of the job to be deleted.\
+         * You can call the ListJobs operation to query job IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-xxxx</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The task details of the job to be deleted.</p>
+         */
         @NameInMap("TaskSpec")
         public java.util.List<DeleteJobsRequestJobSpecTaskSpec> taskSpec;
 

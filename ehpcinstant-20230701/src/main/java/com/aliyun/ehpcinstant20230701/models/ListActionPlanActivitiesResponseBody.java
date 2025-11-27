@@ -4,10 +4,15 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListActionPlanActivitiesResponseBody extends TeaModel {
+    /**
+     * <p>The list of execution details of the execution plan.</p>
+     */
     @NameInMap("ActionPlanActivities")
     public java.util.List<ListActionPlanActivitiesResponseBodyActionPlanActivities> actionPlanActivities;
 
     /**
+     * <p>The maximum number of records returned in this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -15,6 +20,7 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Indicates the read position returned by the current call. An empty value means all data has been read.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +30,8 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
      */
@@ -31,6 +39,8 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total data count under the current request conditions (optional; not returned by default).</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -84,6 +94,8 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
 
     public static class ListActionPlanActivitiesResponseBodyActionPlanActivitiesJobs extends TeaModel {
         /**
+         * <p>The ID of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-hz12dqq8y3ormo1hz49h</p>
          */
@@ -91,6 +103,12 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The operation type of the execution plan activity on the job. Possible values are as follows:</p>
+         * <ul>
+         * <li>Create</li>
+         * <li>Delete</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Create</p>
          */
@@ -98,6 +116,8 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         public String jobOperationType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -137,6 +157,8 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
 
     public static class ListActionPlanActivitiesResponseBodyActionPlanActivities extends TeaModel {
         /**
+         * <p>The activity ID of the execution plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>et-4119e3f60eb34fc4</p>
          */
@@ -144,6 +166,8 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         public String actionPlanActivityId;
 
         /**
+         * <p>The increased capacity of this execution plan activity.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -151,6 +175,8 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         public Float createdCapacity;
 
         /**
+         * <p>The capacity released by this execution plan activity.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -158,16 +184,23 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         public Float destroyCapacity;
 
         /**
+         * <p>The end time of the execution plan activity.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-10 18:28:05</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The list of Instant jobs involved in the execution plan.</p>
+         */
         @NameInMap("Jobs")
         public java.util.List<ListActionPlanActivitiesResponseBodyActionPlanActivitiesJobs> jobs;
 
         /**
+         * <p>The start time of the implementation of the planned activity.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-10 18:28:05</p>
          */
@@ -175,6 +208,13 @@ public class ListActionPlanActivitiesResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The implementation status of the execution plan activity. Valid values:</p>
+         * <ul>
+         * <li>InProcess</li>
+         * <li>Completed</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>InProcess</p>
          */

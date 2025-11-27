@@ -4,10 +4,15 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListPoolsRequest extends TeaModel {
+    /**
+     * <p>Queries the filter conditions of a resource pool.</p>
+     */
     @NameInMap("Filter")
     public ListPoolsRequestFilter filter;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListPoolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on each page. Maximum value: 50. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -51,13 +58,21 @@ public class ListPoolsRequest extends TeaModel {
     }
 
     public static class ListPoolsRequestFilter extends TeaModel {
+        /**
+         * <p>Queries the list of resource pool names.</p>
+         */
         @NameInMap("PoolName")
         public java.util.List<String> poolName;
 
+        /**
+         * <p>Queries resource pool status list.</p>
+         */
         @NameInMap("Status")
         public java.util.List<String> status;
 
         /**
+         * <p>For node pools created after this time, the time in the region is converted into a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1703819914</p>
          */
@@ -65,6 +80,8 @@ public class ListPoolsRequest extends TeaModel {
         public Integer timeCreatedAfter;
 
         /**
+         * <p>For node pools created before this time, the time in the region is converted into a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1703820113</p>
          */

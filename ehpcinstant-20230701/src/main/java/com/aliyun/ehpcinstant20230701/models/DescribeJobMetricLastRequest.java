@@ -4,10 +4,15 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobMetricLastRequest extends TeaModel {
+    /**
+     * <p>The list of array job indexes.</p>
+     */
     @NameInMap("ArrayIndex")
     public java.util.List<Integer> arrayIndex;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-xxxxx</p>
      */
@@ -15,6 +20,8 @@ public class DescribeJobMetricLastRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The name of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Task0</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class GetPoolResponseBody extends TeaModel {
+    /**
+     * <p>The information about the resource pool.</p>
+     */
     @NameInMap("PoolInfo")
     public GetPoolResponseBodyPoolInfo poolInfo;
 
@@ -39,6 +42,8 @@ public class GetPoolResponseBody extends TeaModel {
 
     public static class GetPoolResponseBodyPoolInfo extends TeaModel {
         /**
+         * <p>The time when the resource pool is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-01 20:00:00</p>
          */
@@ -46,6 +51,8 @@ public class GetPoolResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The usage of execution nodes that are running in a resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -53,6 +60,12 @@ public class GetPoolResponseBody extends TeaModel {
         public Integer exectorUsage;
 
         /**
+         * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -60,6 +73,8 @@ public class GetPoolResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The maximum number of execution nodes that can run concurrently in a resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -67,6 +82,12 @@ public class GetPoolResponseBody extends TeaModel {
         public Integer maxExectorNum;
 
         /**
+         * <p>The name of the resource group.</p>
+         * <ul>
+         * <li>The value can be up to 15 characters in length.</li>
+         * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PoolTest</p>
          */
@@ -74,6 +95,12 @@ public class GetPoolResponseBody extends TeaModel {
         public String poolName;
 
         /**
+         * <p>The priority of the resource pool.</p>
+         * <ul>
+         * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
+         * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -81,6 +108,8 @@ public class GetPoolResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The cause of the error.</p>
+         * 
          * <strong>example:</strong>
          * <p>Fails to *** pool: ***.</p>
          */
@@ -88,6 +117,15 @@ public class GetPoolResponseBody extends TeaModel {
         public String reason;
 
         /**
+         * <p>The status of the resource pool. Valid values:</p>
+         * <ul>
+         * <li>Creating: The resource pool is being created.</li>
+         * <li>Updating: The resource pool is being updated.</li>
+         * <li>Deleting: The resource pool is being deleted.</li>
+         * <li>Working: The resource pool is working.</li>
+         * <li>Deleted: The resource pool is deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Working</p>
          */
@@ -95,6 +133,8 @@ public class GetPoolResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the resource pool was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-01 20:00:00</p>
          */

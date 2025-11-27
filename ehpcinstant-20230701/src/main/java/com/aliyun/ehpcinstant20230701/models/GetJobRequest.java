@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobRequest extends TeaModel {
     /**
+     * <p>The ID of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-xxxx</p>
      */

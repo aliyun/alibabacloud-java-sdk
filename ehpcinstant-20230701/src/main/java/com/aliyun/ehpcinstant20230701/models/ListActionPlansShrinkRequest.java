@@ -4,10 +4,17 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListActionPlansShrinkRequest extends TeaModel {
+    /**
+     * <p>The IDs of the execution plans to be queried.</p>
+     */
     @NameInMap("ActionPlanIds")
     public String actionPlanIdsShrink;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +22,8 @@ public class ListActionPlansShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86scXXXXXXXXXX</p>
      */

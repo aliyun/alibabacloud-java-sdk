@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddImageResponseBody extends TeaModel {
     /**
+     * <p>The image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>m-bp1akkkr1rkxtb******</p>
      */
@@ -12,6 +14,8 @@ public class AddImageResponseBody extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -19,6 +23,12 @@ public class AddImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

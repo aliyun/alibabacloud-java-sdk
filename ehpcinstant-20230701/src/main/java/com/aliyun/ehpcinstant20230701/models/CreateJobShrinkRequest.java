@@ -4,13 +4,21 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class CreateJobShrinkRequest extends TeaModel {
+    /**
+     * <p>Dependency policy.</p>
+     */
     @NameInMap("DependencyPolicy")
     public String dependencyPolicyShrink;
 
+    /**
+     * <p>The resource deployment policy.</p>
+     */
     @NameInMap("DeploymentPolicy")
     public String deploymentPolicyShrink;
 
     /**
+     * <p>The description of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>Demo</p>
      */
@@ -18,6 +26,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String jobDescription;
 
     /**
+     * <p>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, and Chinese characters. It can contain hyphens (-) and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,13 +35,28 @@ public class CreateJobShrinkRequest extends TeaModel {
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>The type of the job scheduler.</p>
+     * <ul>
+     * <li>HPC</li>
+     * <li>K8S</li>
+     * </ul>
+     * <p>Default value: HPC</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HPC</p>
+     */
     @NameInMap("JobScheduler")
     public String jobScheduler;
 
+    /**
+     * <p>The security policy.</p>
+     */
     @NameInMap("SecurityPolicy")
     public String securityPolicyShrink;
 
     /**
+     * <p>The list of tasks. Only one task is supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tasks")

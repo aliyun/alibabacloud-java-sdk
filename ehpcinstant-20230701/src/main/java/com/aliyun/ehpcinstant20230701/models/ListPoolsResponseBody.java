@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPoolsResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,12 +14,17 @@ public class ListPoolsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on each page. Maximum value: 50. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Queries the resource pool list.</p>
+     */
     @NameInMap("PoolList")
     public java.util.List<ListPoolsResponseBodyPoolList> poolList;
 
@@ -31,6 +38,8 @@ public class ListPoolsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of list entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -84,6 +93,12 @@ public class ListPoolsResponseBody extends TeaModel {
 
     public static class ListPoolsResponseBodyPoolList extends TeaModel {
         /**
+         * <p>Indices whether the resource pool is the default resource pool. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -91,6 +106,8 @@ public class ListPoolsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The maximum number of execution nodes that can run concurrently in a resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -98,6 +115,12 @@ public class ListPoolsResponseBody extends TeaModel {
         public Integer maxExectorNum;
 
         /**
+         * <p>The name of the resource pool.</p>
+         * <ul>
+         * <li>The value can be up to 15 characters in length.</li>
+         * <li>It can contain digits, uppercase letters, lowercase letters, underscores (_), and dots (.).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PoolTest</p>
          */
@@ -105,6 +128,12 @@ public class ListPoolsResponseBody extends TeaModel {
         public String poolName;
 
         /**
+         * <p>The priority of the resource pool.</p>
+         * <ul>
+         * <li>You can set a priority in the range of 1 to 99. The default value is 1, which is the lowest priority.</li>
+         * <li>Jobs submitted to a resource pool with a higher priority level value will be scheduled before pending jobs in a resource pool with a lower priority level value, and the priority level of the resource pool takes precedence over the priority of the job.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -112,6 +141,15 @@ public class ListPoolsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The status of the resource pool. Valid values:</p>
+         * <ul>
+         * <li>Creating: The resource pool is being created.</li>
+         * <li>Updating: The resource pool is being updated.</li>
+         * <li>Deleting: The resource pool is being deleted.</li>
+         * <li>Working: The resource pool is working.</li>
+         * <li>Deleted: The resource pool is deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Working</p>
          */

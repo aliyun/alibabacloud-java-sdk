@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateActionPlanResponseBody extends TeaModel {
     /**
+     * <p>The ID of the execution plan.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-hz036ubmx2qmw93k****</p>
      */
@@ -12,6 +14,8 @@ public class CreateActionPlanResponseBody extends TeaModel {
     public String actionPlanId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
      */

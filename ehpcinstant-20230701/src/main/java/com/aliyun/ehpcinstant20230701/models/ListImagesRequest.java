@@ -4,22 +4,62 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
+    /**
+     * <p>The source of the image. Valid values:</p>
+     * <ul>
+     * <li>Public: public images provided by Alibaba Cloud.</li>
+     * <li>Custom: the custom image that you added.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
+     */
     @NameInMap("ImageCategory")
     public String imageCategory;
 
+    /**
+     * <p>The array of image IDs.</p>
+     */
     @NameInMap("ImageIds")
     public java.util.List<String> imageIds;
 
+    /**
+     * <p>The array of image names.</p>
+     */
     @NameInMap("ImageNames")
     public java.util.List<String> imageNames;
 
+    /**
+     * <p>The type of the images. Valid values:</p>
+     * <ul>
+     * <li>VM: virtual machine image.</li>
+     * <li>Container: the container image.</li>
+     * </ul>
+     * <p>Default value: VM</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VM</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 
+    /**
+     * <p>The query mode. Valid values:</p>
+     * <ul>
+     * <li>List: queries the list of all corresponding image versions.</li>
+     * <li>Merge: merges images to query the latest version list.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Merge</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
     /**
+     * <p>The number of the page to return.\
+     * Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -27,6 +67,9 @@ public class ListImagesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of pieces per page.\
+     * Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

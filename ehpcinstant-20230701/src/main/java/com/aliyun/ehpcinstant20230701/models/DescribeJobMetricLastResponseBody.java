@@ -4,10 +4,15 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobMetricLastResponseBody extends TeaModel {
+    /**
+     * <p>The list of the JobMetric details.</p>
+     */
     @NameInMap("Metrics")
     public java.util.List<DescribeJobMetricLastResponseBodyMetrics> metrics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
 
     public static class DescribeJobMetricLastResponseBodyMetrics extends TeaModel {
         /**
+         * <p>The index of the array job.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -44,6 +51,8 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
         public Integer arrayIndex;
 
         /**
+         * <p>The monitoring item information corresponding to the array job index.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;memory_utilization&quot;: 37.42,&quot;cpu_utilization&quot;: 1.008, &quot;disk_utilization&quot;: 3.562}</p>
          */

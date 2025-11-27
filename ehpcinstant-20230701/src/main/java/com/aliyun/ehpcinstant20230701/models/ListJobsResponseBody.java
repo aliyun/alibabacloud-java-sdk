@@ -4,10 +4,15 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of jobs.</p>
+     */
     @NameInMap("JobList")
     public java.util.List<ListJobsResponseBodyJobList> jobList;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
      */
@@ -29,6 +38,8 @@ public class ListJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned. This parameter is optional and is not returned by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -81,9 +92,21 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobListTags extends TeaModel {
+        /**
+         * <p>The key of the job tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the job tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -111,6 +134,12 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobList extends TeaModel {
+        /**
+         * <p>The additional information about the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;xxx\&quot;: \&quot;xxxxx\&quot;}</p>
+         */
         @NameInMap("AppExtraInfo")
         public String appExtraInfo;
 
@@ -118,6 +147,8 @@ public class ListJobsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The time when the job was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-25 12:29:21</p>
          */
@@ -125,6 +156,8 @@ public class ListJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The end time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-25 12:35:23</p>
          */
@@ -132,6 +165,8 @@ public class ListJobsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The number of running nodes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -139,6 +174,8 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer executorCount;
 
         /**
+         * <p>The description of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>Demo</p>
          */
@@ -146,6 +183,8 @@ public class ListJobsResponseBody extends TeaModel {
         public String jobDescription;
 
         /**
+         * <p>The ID of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-xxx</p>
          */
@@ -153,6 +192,8 @@ public class ListJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>testJob</p>
          */
@@ -160,6 +201,8 @@ public class ListJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The UID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>129**********</p>
          */
@@ -167,6 +210,8 @@ public class ListJobsResponseBody extends TeaModel {
         public String ownerUid;
 
         /**
+         * <p>The start time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-25 12:29:23</p>
          */
@@ -174,16 +219,35 @@ public class ListJobsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Initing</li>
+         * <li>Succeed</li>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>Exception</li>
+         * <li>Retrying</li>
+         * <li>Expired</li>
+         * <li>Deleting</li>
+         * <li>Deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of job tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListJobsResponseBodyJobListTags> tags;
 
         /**
+         * <p>The number of tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -191,6 +255,8 @@ public class ListJobsResponseBody extends TeaModel {
         public Integer taskCount;
 
         /**
+         * <p>Indicate whether the job is a long-running job.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobMetricDataRequest extends TeaModel {
+    /**
+     * <p>The list of array job indexes.</p>
+     */
     @NameInMap("ArrayIndex")
     public java.util.List<Integer> arrayIndex;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-xxxxx</p>
      */
@@ -15,6 +20,8 @@ public class DescribeJobMetricDataRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The metrics of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>cpu_utilization</p>
      */
@@ -22,6 +29,8 @@ public class DescribeJobMetricDataRequest extends TeaModel {
     public String metricName;
 
     /**
+     * <p>The name of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Task0</p>
      */

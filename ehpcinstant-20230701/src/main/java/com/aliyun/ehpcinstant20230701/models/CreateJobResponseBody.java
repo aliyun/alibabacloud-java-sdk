@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateJobResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-xxxx</p>
      */
@@ -12,12 +14,17 @@ public class CreateJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<CreateJobResponseBodyTasks> tasks;
 
@@ -51,9 +58,18 @@ public class CreateJobResponseBody extends TeaModel {
     }
 
     public static class CreateJobResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The list of executor IDs contained in the task.</p>
+         */
         @NameInMap("ExecutorIds")
         public java.util.List<String> executorIds;
 
+        /**
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task0</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 

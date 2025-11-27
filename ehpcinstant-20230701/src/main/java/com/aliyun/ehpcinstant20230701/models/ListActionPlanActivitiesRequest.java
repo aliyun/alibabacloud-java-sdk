@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListActionPlanActivitiesRequest extends TeaModel {
     /**
+     * <p>The ID of the execution plan.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-hz036ubmx2qmw93k****</p>
      */
@@ -12,6 +14,10 @@ public class ListActionPlanActivitiesRequest extends TeaModel {
     public String actionPlanId;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +25,8 @@ public class ListActionPlanActivitiesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>1d2db86scXXXXXXXXXX</p>
      */

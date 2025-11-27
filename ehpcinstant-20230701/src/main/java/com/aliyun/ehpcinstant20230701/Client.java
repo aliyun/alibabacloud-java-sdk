@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加托管侧用户自定义镜像</p>
+     * <p>Add a custom image.</p>
      * 
      * @param tmpReq AddImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -90,7 +90,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加托管侧用户自定义镜像</p>
+     * <p>Add a custom image.</p>
      * 
      * @param request AddImageRequest
      * @return AddImageResponse
@@ -101,8 +101,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建执行计划创建执行计划</p>
+     * <p>Create a E-HPC execution plan.</p>
      * 
      * @param tmpReq CreateActionPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -179,8 +182,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>*Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建执行计划创建执行计划</p>
+     * <p>Create a E-HPC execution plan.</p>
      * 
      * @param request CreateActionPlanRequest
      * @return CreateActionPlanResponse
@@ -192,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交任务</p>
+     * <p>Create a E-HPC Instant job.</p>
      * 
      * @param tmpReq CreateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -266,7 +272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交任务</p>
+     * <p>Create a E-HPC Instant job.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -278,7 +284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资源池</p>
+     * <p>Creates a resource pool.</p>
      * 
      * @param tmpReq CreatePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -324,7 +330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资源池</p>
+     * <p>Creates a resource pool.</p>
      * 
      * @param request CreatePoolRequest
      * @return CreatePoolResponse
@@ -335,8 +341,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</em>*
+     * This operation stops all Instant jobs that are managed by ActionPlanId.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除执行计划</p>
+     * <p>Delete an execution plan</p>
      * 
      * @param request DeleteActionPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -367,8 +377,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand E-HPC Instnat billing methods and <a href="https://help.aliyun.com/zh/e-hpc/e-hpc-instant/product-overview/billing-overview?spm=a2c4g.11186623.help-menu-57664.d_0_2_0.5fdd28422y6UvO">prices</a>.</em>*
+     * This operation stops all Instant jobs that are managed by ActionPlanId.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除执行计划</p>
+     * <p>Delete an execution plan</p>
      * 
      * @param request DeleteActionPlanRequest
      * @return DeleteActionPlanResponse
@@ -380,7 +394,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除作业</p>
+     * <p>Deletes one or more job records that are in the final state from a specified cluster.</p>
+     * 
+     * @param tmpReq DeleteJobRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteJobRecordsResponse
+     */
+    public DeleteJobRecordsResponse deleteJobRecordsWithOptions(DeleteJobRecordsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteJobRecordsShrinkRequest request = new DeleteJobRecordsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobIds)) {
+            request.jobIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobIds, "JobIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIdsShrink)) {
+            query.put("JobIds", request.jobIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteJobRecords"),
+            new TeaPair("version", "2023-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteJobRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes one or more job records that are in the final state from a specified cluster.</p>
+     * 
+     * @param request DeleteJobRecordsRequest
+     * @return DeleteJobRecordsResponse
+     */
+    public DeleteJobRecordsResponse deleteJobRecords(DeleteJobRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteJobRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes one or more jobs from a specified cluster.</p>
      * 
      * @param tmpReq DeleteJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -430,7 +494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除作业</p>
+     * <p>Deletes one or more jobs from a specified cluster.</p>
      * 
      * @param request DeleteJobsRequest
      * @return DeleteJobsResponse
@@ -442,7 +506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源池</p>
+     * <p>You can execute this statement to delete a resource pool.</p>
      * 
      * @param request DeletePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -474,7 +538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源池</p>
+     * <p>You can execute this statement to delete a resource pool.</p>
      * 
      * @param request DeletePoolRequest
      * @return DeletePoolResponse
@@ -486,7 +550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业性能数据</p>
+     * <p>You can query the monitoring time series dataset of a job by specifying the job array index and query metric parameters.</p>
      * 
      * @param tmpReq DescribeJobMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -536,7 +600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业性能数据</p>
+     * <p>You can query the monitoring time series dataset of a job by specifying the job array index and query metric parameters.</p>
      * 
      * @param request DescribeJobMetricDataRequest
      * @return DescribeJobMetricDataResponse
@@ -548,7 +612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业即时监控项</p>
+     * <p>Queries all instant monitoring metrics in the job array list by specifying a specific job array index list.</p>
      * 
      * @param tmpReq DescribeJobMetricLastRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -594,7 +658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业即时监控项</p>
+     * <p>Queries all instant monitoring metrics in the job array list by specifying a specific job array index list.</p>
      * 
      * @param request DescribeJobMetricLastRequest
      * @return DescribeJobMetricLastResponse
@@ -606,7 +670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询执行计划详情</p>
+     * <p>Querying Execution Plan Details</p>
      * 
      * @param request GetActionPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -638,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询执行计划详情</p>
+     * <p>Querying Execution Plan Details</p>
      * 
      * @param request GetActionPlanRequest
      * @return GetActionPlanResponse
@@ -650,7 +714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看应用版本列表</p>
+     * <p>Obtains the application version list.</p>
      * 
      * @param request GetAppVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -698,7 +762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看应用版本列表</p>
+     * <p>Obtains the application version list.</p>
      * 
      * @param request GetAppVersionsRequest
      * @return GetAppVersionsResponse
@@ -710,7 +774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询托管侧镜像详情。</p>
+     * <p>Obtains the information about an image.</p>
      * 
      * @param tmpReq GetImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -760,7 +824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询托管侧镜像详情。</p>
+     * <p>Obtains the information about an image.</p>
      * 
      * @param request GetImageRequest
      * @return GetImageResponse
@@ -772,7 +836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业详情</p>
+     * <p>Obtains the details of an execution job.</p>
      * 
      * @param request GetJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -804,7 +868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业详情</p>
+     * <p>Obtains the details of an execution job.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -816,7 +880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询队列详细信息</p>
+     * <p>Obtains the details of a resource pool.</p>
      * 
      * @param request GetPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -848,7 +912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询队列详细信息</p>
+     * <p>Obtains the details of a resource pool.</p>
      * 
      * @param request GetPoolRequest
      * @return GetPoolResponse
@@ -860,7 +924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询执行计划的执行情况。</p>
+     * <p>Queries the execution status of an execution plan.</p>
      * 
      * @param request ListActionPlanActivitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -900,7 +964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询执行计划的执行情况。</p>
+     * <p>Queries the execution status of an execution plan.</p>
      * 
      * @param request ListActionPlanActivitiesRequest
      * @return ListActionPlanActivitiesResponse
@@ -912,7 +976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询执行计划列表</p>
+     * <p>Queries the list of execution plans.</p>
      * 
      * @param tmpReq ListActionPlansRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -958,7 +1022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询执行计划列表</p>
+     * <p>Queries the list of execution plans.</p>
      * 
      * @param request ListActionPlansRequest
      * @return ListActionPlansResponse
@@ -970,7 +1034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全局Executor信息</p>
+     * <p>Querying Global Executor Information</p>
      * 
      * @param tmpReq ListExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1016,7 +1080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全局Executor信息</p>
+     * <p>Querying Global Executor Information</p>
      * 
      * @param request ListExecutorsRequest
      * @return ListExecutorsResponse
@@ -1028,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看托管侧镜像列表</p>
+     * <p>Queries the image list.</p>
      * 
      * @param tmpReq ListImagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1094,7 +1158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看托管侧镜像列表</p>
+     * <p>Queries the image list.</p>
      * 
      * @param request ListImagesRequest
      * @return ListImagesResponse
@@ -1105,8 +1169,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries job executor information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询作业Executor信息</p>
+     * <p>Queries job executor information.</p>
      * 
      * @param request ListJobExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1149,8 +1216,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries job executor information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询作业Executor信息</p>
+     * <p>Queries job executor information.</p>
      * 
      * @param request ListJobExecutorsRequest
      * @return ListJobExecutorsResponse
@@ -1162,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业列表</p>
+     * <p>Queries the jobs in a cluster.</p>
      * 
      * @param tmpReq ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1216,7 +1286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询作业列表</p>
+     * <p>Queries the jobs in a cluster.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -1228,7 +1298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源池列表</p>
+     * <p>Queries the resource pool list.</p>
      * 
      * @param tmpReq ListPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1274,7 +1344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源池列表</p>
+     * <p>Queries the resource pool list.</p>
      * 
      * @param request ListPoolsRequest
      * @return ListPoolsResponse
@@ -1286,7 +1356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一个或多个资源已经绑定的标签列表</p>
+     * <p>Queries the tags that are bound to one or more Instant resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1334,7 +1404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一个或多个资源已经绑定的标签列表</p>
+     * <p>Queries the tags that are bound to one or more Instant resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -1346,7 +1416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除托管侧镜像信息。</p>
+     * <p>Remove a custom image</p>
      * 
      * @param request RemoveImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1382,7 +1452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>移除托管侧镜像信息。</p>
+     * <p>Remove a custom image</p>
      * 
      * @param request RemoveImageRequest
      * @return RemoveImageResponse
@@ -1394,7 +1464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用跨地域同步</p>
+     * <p>Application cross-region synchronization</p>
      * 
      * @param tmpReq SynchronizeAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1436,7 +1506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用跨地域同步</p>
+     * <p>Application cross-region synchronization</p>
      * 
      * @param request SynchronizeAppRequest
      * @return SynchronizeAppResponse
@@ -1448,7 +1518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为指定的资源列表统一创建并绑定标签</p>
+     * <p>Create and bind tags to Instant resource list</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1488,7 +1558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为指定的资源列表统一创建并绑定标签</p>
+     * <p>Create and bind tags to Instant resource list</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -1500,7 +1570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为指定的ECS资源列表统一解绑标签</p>
+     * <p>Unbind tags from Instant resource list. If the tag is not bound to other resources, the tag is automatically deleted.</p>
      * 
      * @param request UnTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1544,7 +1614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为指定的ECS资源列表统一解绑标签</p>
+     * <p>Unbind tags from Instant resource list. If the tag is not bound to other resources, the tag is automatically deleted.</p>
      * 
      * @param request UnTagResourcesRequest
      * @return UnTagResourcesResponse
@@ -1556,7 +1626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新执行计划</p>
+     * <p>Adjust the resource scale of the execution plan or modify the execution status</p>
      * 
      * @param request UpdateActionPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1596,7 +1666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新执行计划</p>
+     * <p>Adjust the resource scale of the execution plan or modify the execution status</p>
      * 
      * @param request UpdateActionPlanRequest
      * @return UpdateActionPlanResponse
@@ -1608,7 +1678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源池</p>
+     * <p>Update the resource pool configuration.</p>
      * 
      * @param tmpReq UpdatePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1654,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源池</p>
+     * <p>Update the resource pool configuration.</p>
      * 
      * @param request UpdatePoolRequest
      * @return UpdatePoolResponse

@@ -4,10 +4,17 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
+    /**
+     * <p>Queries job filter conditions.</p>
+     */
     @NameInMap("Filter")
     public ListJobsRequestFilter filter;
 
     /**
+     * <p>The page number.</p>
+     * <p>Pages start from page 1.</p>
+     * <p>Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,12 +22,17 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The sorting method.</p>
+     */
     @NameInMap("SortBy")
     public ListJobsRequestSortBy sortBy;
 
@@ -63,6 +75,8 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestFilter extends TeaModel {
         /**
+         * <p>The ID of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-xxxx</p>
          */
@@ -70,6 +84,8 @@ public class ListJobsRequest extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The job name. Fuzzy search is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>testJob</p>
          */
@@ -77,6 +93,21 @@ public class ListJobsRequest extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>initing</li>
+         * <li>Succeed</li>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>Exception</li>
+         * <li>Retrying</li>
+         * <li>Expired</li>
+         * <li>Suspended</li>
+         * <li>Restarting</li>
+         * <li>Deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -84,6 +115,8 @@ public class ListJobsRequest extends TeaModel {
         public String status;
 
         /**
+         * <p>For jobs submitted after this time, the time in the region is converted into a UNIX timestamp (UI8).</p>
+         * 
          * <strong>example:</strong>
          * <p>1703819914</p>
          */
@@ -91,6 +124,8 @@ public class ListJobsRequest extends TeaModel {
         public Integer timeCreatedAfter;
 
         /**
+         * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (for domestic sites, the UI8 region).</p>
+         * 
          * <strong>example:</strong>
          * <p>1703820113</p>
          */
@@ -146,6 +181,12 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestSortBy extends TeaModel {
         /**
+         * <p>The sorting label. Valid values:</p>
+         * <ul>
+         * <li>time_start</li>
+         * <li>job_name</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>time_start</p>
          */
@@ -153,6 +194,12 @@ public class ListJobsRequest extends TeaModel {
         public String label;
 
         /**
+         * <p>The sorting order. Valid values:</p>
+         * <ul>
+         * <li>ASC (default): ascending order</li>
+         * <li>DESC: descending order</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ASC</p>
          */
