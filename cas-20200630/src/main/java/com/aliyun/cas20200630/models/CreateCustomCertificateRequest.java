@@ -63,6 +63,12 @@ public class CreateCustomCertificateRequest extends TeaModel {
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateCustomCertificateRequestTags> tags;
+
     /**
      * <p>The validity period of the certificate. The value cannot exceed the validity period of the certificate instance. Relative time and absolute time are supported.</p>
      * <p>Units of relative time: year, month, and day.</p>
@@ -133,6 +139,22 @@ public class CreateCustomCertificateRequest extends TeaModel {
     }
     public String getParentIdentifier() {
         return this.parentIdentifier;
+    }
+
+    public CreateCustomCertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateCustomCertificateRequest setTags(java.util.List<CreateCustomCertificateRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateCustomCertificateRequestTags> getTags() {
+        return this.tags;
     }
 
     public CreateCustomCertificateRequest setValidity(String validity) {
@@ -637,6 +659,36 @@ public class CreateCustomCertificateRequest extends TeaModel {
         }
         public CreateCustomCertificateRequestApiPassthroughSubject getSubject() {
             return this.subject;
+        }
+
+    }
+
+    public static class CreateCustomCertificateRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCustomCertificateRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateCustomCertificateRequestTags self = new CreateCustomCertificateRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCustomCertificateRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCustomCertificateRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

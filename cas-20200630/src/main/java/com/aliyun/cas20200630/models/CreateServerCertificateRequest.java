@@ -177,6 +177,9 @@ public class CreateServerCertificateRequest extends TeaModel {
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
      * 
@@ -185,6 +188,9 @@ public class CreateServerCertificateRequest extends TeaModel {
      */
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateServerCertificateRequestTags> tags;
 
     /**
      * <p>The validity period of the server certificate. Unit: years.</p>
@@ -312,6 +318,14 @@ public class CreateServerCertificateRequest extends TeaModel {
         return this.parentIdentifier;
     }
 
+    public CreateServerCertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateServerCertificateRequest setState(String state) {
         this.state = state;
         return this;
@@ -320,12 +334,50 @@ public class CreateServerCertificateRequest extends TeaModel {
         return this.state;
     }
 
+    public CreateServerCertificateRequest setTags(java.util.List<CreateServerCertificateRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateServerCertificateRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateServerCertificateRequest setYears(Integer years) {
         this.years = years;
         return this;
     }
     public Integer getYears() {
         return this.years;
+    }
+
+    public static class CreateServerCertificateRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateServerCertificateRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateServerCertificateRequestTags self = new CreateServerCertificateRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServerCertificateRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServerCertificateRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

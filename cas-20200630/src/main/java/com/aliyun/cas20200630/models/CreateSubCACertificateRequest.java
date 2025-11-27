@@ -25,6 +25,9 @@ public class CreateSubCACertificateRequest extends TeaModel {
     @NameInMap("Algorithm")
     public String algorithm;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
      * <p>This parameter is required.</p>
@@ -108,7 +111,6 @@ public class CreateSubCACertificateRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1a83bcbb89e562885e40aa0108f5****</p>
@@ -125,6 +127,9 @@ public class CreateSubCACertificateRequest extends TeaModel {
     @NameInMap("PathLenConstraint")
     public Integer pathLenConstraint;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the province or state in which the organization is located. The value can contain letters.</p>
      * <p>This parameter is required.</p>
@@ -134,6 +139,9 @@ public class CreateSubCACertificateRequest extends TeaModel {
      */
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateSubCACertificateRequestTags> tags;
 
     /**
      * <p>The validity period of the intermediate CA certificate. Unit: years.</p>
@@ -160,6 +168,14 @@ public class CreateSubCACertificateRequest extends TeaModel {
     }
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    public CreateSubCACertificateRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateSubCACertificateRequest setCommonName(String commonName) {
@@ -242,6 +258,14 @@ public class CreateSubCACertificateRequest extends TeaModel {
         return this.pathLenConstraint;
     }
 
+    public CreateSubCACertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateSubCACertificateRequest setState(String state) {
         this.state = state;
         return this;
@@ -250,12 +274,50 @@ public class CreateSubCACertificateRequest extends TeaModel {
         return this.state;
     }
 
+    public CreateSubCACertificateRequest setTags(java.util.List<CreateSubCACertificateRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateSubCACertificateRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateSubCACertificateRequest setYears(Integer years) {
         this.years = years;
         return this;
     }
     public Integer getYears() {
         return this.years;
+    }
+
+    public static class CreateSubCACertificateRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateSubCACertificateRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateSubCACertificateRequestTags self = new CreateSubCACertificateRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateSubCACertificateRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateSubCACertificateRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

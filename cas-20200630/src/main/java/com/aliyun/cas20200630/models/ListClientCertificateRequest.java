@@ -25,6 +25,9 @@ public class ListClientCertificateRequest extends TeaModel {
     @NameInMap("Identifier")
     public String identifier;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The number of certificates to return on each page. Default value: <strong>20</strong>.</p>
      * 
@@ -53,6 +56,14 @@ public class ListClientCertificateRequest extends TeaModel {
     }
     public String getIdentifier() {
         return this.identifier;
+    }
+
+    public ListClientCertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListClientCertificateRequest setShowSize(Integer showSize) {

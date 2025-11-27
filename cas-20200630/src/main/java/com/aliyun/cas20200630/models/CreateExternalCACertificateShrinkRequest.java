@@ -8,8 +8,6 @@ public class CreateExternalCACertificateShrinkRequest extends TeaModel {
     public String apiPassthroughShrink;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST-----
      * MIIBczCCARgCAQAwgYoxFDASBgNVBAMMC2FsaXl1bi50ZXN0MQ0wCwYDVQQ
@@ -21,17 +19,19 @@ public class CreateExternalCACertificateShrinkRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>cas_deposit-cn-1234abcd</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateExternalCACertificateShrinkRequestTags> tags;
+
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>10y</p>
      */
@@ -67,12 +67,58 @@ public class CreateExternalCACertificateShrinkRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public CreateExternalCACertificateShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateExternalCACertificateShrinkRequest setTags(java.util.List<CreateExternalCACertificateShrinkRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateExternalCACertificateShrinkRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateExternalCACertificateShrinkRequest setValidity(String validity) {
         this.validity = validity;
         return this;
     }
     public String getValidity() {
         return this.validity;
+    }
+
+    public static class CreateExternalCACertificateShrinkRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateExternalCACertificateShrinkRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateExternalCACertificateShrinkRequestTags self = new CreateExternalCACertificateShrinkRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateExternalCACertificateShrinkRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateExternalCACertificateShrinkRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

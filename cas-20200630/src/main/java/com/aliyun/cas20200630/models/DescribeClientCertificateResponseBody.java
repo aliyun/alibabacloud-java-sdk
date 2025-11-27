@@ -40,6 +40,36 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeClientCertificateResponseBodyCertificateTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeClientCertificateResponseBodyCertificateTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClientCertificateResponseBodyCertificateTags self = new DescribeClientCertificateResponseBodyCertificateTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClientCertificateResponseBodyCertificateTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeClientCertificateResponseBodyCertificateTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeClientCertificateResponseBodyCertificate extends TeaModel {
         /**
          * <p>The expiration date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
@@ -177,6 +207,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.</p>
          * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
@@ -264,6 +297,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
          */
         @NameInMap("SubjectDN")
         public String subjectDN;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeClientCertificateResponseBodyCertificateTags> tags;
 
         /**
          * <p>The content of the certificate.</p>
@@ -391,6 +427,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             return this.parentIdentifier;
         }
 
+        public DescribeClientCertificateResponseBodyCertificate setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeClientCertificateResponseBodyCertificate setSans(String sans) {
             this.sans = sans;
             return this;
@@ -445,6 +489,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
         public String getSubjectDN() {
             return this.subjectDN;
+        }
+
+        public DescribeClientCertificateResponseBodyCertificate setTags(java.util.List<DescribeClientCertificateResponseBodyCertificateTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeClientCertificateResponseBodyCertificateTags> getTags() {
+            return this.tags;
         }
 
         public DescribeClientCertificateResponseBodyCertificate setX509Certificate(String x509Certificate) {

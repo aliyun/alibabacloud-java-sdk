@@ -76,6 +76,9 @@ public class CreateRootCACertificateRequest extends TeaModel {
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</p>
      * <p>This parameter is required.</p>
@@ -85,6 +88,9 @@ public class CreateRootCACertificateRequest extends TeaModel {
      */
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateRootCACertificateRequestTags> tags;
 
     /**
      * <p>The validity period of the root CA certificate. Unit: years.</p>
@@ -160,6 +166,14 @@ public class CreateRootCACertificateRequest extends TeaModel {
         return this.organizationUnit;
     }
 
+    public CreateRootCACertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateRootCACertificateRequest setState(String state) {
         this.state = state;
         return this;
@@ -168,12 +182,50 @@ public class CreateRootCACertificateRequest extends TeaModel {
         return this.state;
     }
 
+    public CreateRootCACertificateRequest setTags(java.util.List<CreateRootCACertificateRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateRootCACertificateRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateRootCACertificateRequest setYears(Integer years) {
         this.years = years;
         return this;
     }
     public Integer getYears() {
         return this.years;
+    }
+
+    public static class CreateRootCACertificateRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateRootCACertificateRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateRootCACertificateRequestTags self = new CreateRootCACertificateRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRootCACertificateRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateRootCACertificateRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -185,6 +185,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
      * 
@@ -193,6 +196,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
      */
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateServerCertificateWithCsrRequestTags> tags;
 
     /**
      * <p>The validity period of the server certificate. Unit: years.</p>
@@ -328,6 +334,14 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
         return this.parentIdentifier;
     }
 
+    public CreateServerCertificateWithCsrRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateServerCertificateWithCsrRequest setState(String state) {
         this.state = state;
         return this;
@@ -336,12 +350,50 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
         return this.state;
     }
 
+    public CreateServerCertificateWithCsrRequest setTags(java.util.List<CreateServerCertificateWithCsrRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateServerCertificateWithCsrRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateServerCertificateWithCsrRequest setYears(Integer years) {
         this.years = years;
         return this;
     }
     public Integer getYears() {
         return this.years;
+    }
+
+    public static class CreateServerCertificateWithCsrRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateServerCertificateWithCsrRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateServerCertificateWithCsrRequestTags self = new CreateServerCertificateWithCsrRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServerCertificateWithCsrRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServerCertificateWithCsrRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

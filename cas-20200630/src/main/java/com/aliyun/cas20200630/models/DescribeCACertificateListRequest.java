@@ -67,6 +67,9 @@ public class DescribeCACertificateListRequest extends TeaModel {
     @NameInMap("IssuerType")
     public String issuerType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The number of CA certificates per page. Default value: <strong>20</strong>.</p>
      * 
@@ -132,6 +135,14 @@ public class DescribeCACertificateListRequest extends TeaModel {
     }
     public String getIssuerType() {
         return this.issuerType;
+    }
+
+    public DescribeCACertificateListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeCACertificateListRequest setShowSize(Integer showSize) {

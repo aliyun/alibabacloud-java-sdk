@@ -57,6 +57,36 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         return this.years;
     }
 
+    public static class DescribeCACertificateResponseBodyCertificateTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeCACertificateResponseBodyCertificateTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCACertificateResponseBodyCertificateTags self = new DescribeCACertificateResponseBodyCertificateTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCACertificateResponseBodyCertificateTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeCACertificateResponseBodyCertificateTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeCACertificateResponseBodyCertificate extends TeaModel {
         /**
          * <p>The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
@@ -147,6 +177,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("CertificateType")
         public String certificateType;
 
+        @NameInMap("ClusterId")
+        public String clusterId;
+
         /**
          * <p>The common name or abbreviation of the organization that is associated with the CA certificate.</p>
          * 
@@ -208,6 +241,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("IssuerType")
         public String issuerType;
 
+        @NameInMap("KeyIndex")
+        public Integer keyIndex;
+
         /**
          * <p>The key length of the CA certificate.</p>
          * 
@@ -264,6 +300,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          */
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         /**
          * <p>This parameter is deprecated.</p>
@@ -339,6 +378,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          */
         @NameInMap("SubjectDN")
         public String subjectDN;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeCACertificateResponseBodyCertificateTags> tags;
 
         /**
          * <p>The content of the CA certificate.</p>
@@ -421,6 +463,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             return this.certificateType;
         }
 
+        public DescribeCACertificateResponseBodyCertificate setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
         public DescribeCACertificateResponseBodyCertificate setCommonName(String commonName) {
             this.commonName = commonName;
             return this;
@@ -485,6 +535,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             return this.issuerType;
         }
 
+        public DescribeCACertificateResponseBodyCertificate setKeyIndex(Integer keyIndex) {
+            this.keyIndex = keyIndex;
+            return this;
+        }
+        public Integer getKeyIndex() {
+            return this.keyIndex;
+        }
+
         public DescribeCACertificateResponseBodyCertificate setKeySize(Integer keySize) {
             this.keySize = keySize;
             return this;
@@ -531,6 +589,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
         public String getParentIdentifier() {
             return this.parentIdentifier;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeCACertificateResponseBodyCertificate setSans(String sans) {
@@ -587,6 +653,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
         public String getSubjectDN() {
             return this.subjectDN;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setTags(java.util.List<DescribeCACertificateResponseBodyCertificateTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeCACertificateResponseBodyCertificateTags> getTags() {
+            return this.tags;
         }
 
         public DescribeCACertificateResponseBodyCertificate setX509Certificate(String x509Certificate) {

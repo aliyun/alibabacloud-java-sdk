@@ -8,8 +8,6 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     public CreateExternalCACertificateRequestApiPassthrough apiPassthrough;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST-----
      * MIIBczCCARgCAQAwgYoxFDASBgNVBAMMC2FsaXl1bi50ZXN0MQ0wCwYDVQQ
@@ -21,17 +19,19 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>cas_deposit-cn-1234abcd</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateExternalCACertificateRequestTags> tags;
+
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>10y</p>
      */
@@ -65,6 +65,22 @@ public class CreateExternalCACertificateRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateExternalCACertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateExternalCACertificateRequest setTags(java.util.List<CreateExternalCACertificateRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateExternalCACertificateRequestTags> getTags() {
+        return this.tags;
     }
 
     public CreateExternalCACertificateRequest setValidity(String validity) {
@@ -213,6 +229,36 @@ public class CreateExternalCACertificateRequest extends TeaModel {
         }
         public CreateExternalCACertificateRequestApiPassthroughSubject getSubject() {
             return this.subject;
+        }
+
+    }
+
+    public static class CreateExternalCACertificateRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateExternalCACertificateRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateExternalCACertificateRequestTags self = new CreateExternalCACertificateRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateExternalCACertificateRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateExternalCACertificateRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

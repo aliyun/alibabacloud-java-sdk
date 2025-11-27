@@ -164,6 +164,9 @@ public class CreateClientCertificateRequest extends TeaModel {
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The type of the Subject Alternative Name (SAN) extension that is supported by the client certificate. Valid values:</p>
      * <ul>
@@ -194,6 +197,9 @@ public class CreateClientCertificateRequest extends TeaModel {
      */
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateClientCertificateRequestTags> tags;
 
     /**
      * <p>The validity period of the client certificate. Unit: years.</p>
@@ -313,6 +319,14 @@ public class CreateClientCertificateRequest extends TeaModel {
         return this.parentIdentifier;
     }
 
+    public CreateClientCertificateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateClientCertificateRequest setSanType(Integer sanType) {
         this.sanType = sanType;
         return this;
@@ -337,12 +351,50 @@ public class CreateClientCertificateRequest extends TeaModel {
         return this.state;
     }
 
+    public CreateClientCertificateRequest setTags(java.util.List<CreateClientCertificateRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateClientCertificateRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateClientCertificateRequest setYears(Integer years) {
         this.years = years;
         return this;
     }
     public Integer getYears() {
         return this.years;
+    }
+
+    public static class CreateClientCertificateRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateClientCertificateRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateClientCertificateRequestTags self = new CreateClientCertificateRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClientCertificateRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateClientCertificateRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

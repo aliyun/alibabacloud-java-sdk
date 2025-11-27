@@ -245,6 +245,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.</p>
          * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
@@ -457,6 +460,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
         public String getParentIdentifier() {
             return this.parentIdentifier;
+        }
+
+        public ListClientCertificateResponseBodyCertificateList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListClientCertificateResponseBodyCertificateList setSans(String sans) {

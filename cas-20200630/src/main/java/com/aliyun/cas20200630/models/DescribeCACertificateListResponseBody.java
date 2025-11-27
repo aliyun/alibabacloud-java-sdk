@@ -251,6 +251,9 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>This parameter is deprecated.</p>
          * 
@@ -469,6 +472,14 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
         public String getParentIdentifier() {
             return this.parentIdentifier;
+        }
+
+        public DescribeCACertificateListResponseBodyCertificateList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeCACertificateListResponseBodyCertificateList setSans(String sans) {
