@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ListExportTasksRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>12343</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
+    /**
+     * <strong>example:</strong>
      * <p>en</p>
      */
     @NameInMap("Language")
@@ -41,6 +48,14 @@ public class ListExportTasksRequest extends TeaModel {
     public static ListExportTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExportTasksRequest self = new ListExportTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListExportTasksRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public ListExportTasksRequest setLanguage(String language) {

@@ -1260,6 +1260,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>下单控制记录查询</p>
+     * 
+     * @param request GetPurchaseControlRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPurchaseControlRecordResponse
+     */
+    public GetPurchaseControlRecordResponse getPurchaseControlRecordWithOptions(GetPurchaseControlRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customerUID)) {
+            query.put("CustomerUID", request.customerUID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationTime)) {
+            query.put("OperationTime", request.operationTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPurchaseControlRecord"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPurchaseControlRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>下单控制记录查询</p>
+     * 
+     * @param request GetPurchaseControlRecordRequest
+     * @return GetPurchaseControlRecordResponse
+     */
+    public GetPurchaseControlRecordResponse getPurchaseControlRecord(GetPurchaseControlRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPurchaseControlRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询延停策略修改记录</p>
+     * 
+     * @param request GetShutdownPolicyRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetShutdownPolicyRecordResponse
+     */
+    public GetShutdownPolicyRecordResponse getShutdownPolicyRecordWithOptions(GetShutdownPolicyRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customerUID)) {
+            query.put("CustomerUID", request.customerUID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationTime)) {
+            query.put("OperationTime", request.operationTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetShutdownPolicyRecord"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetShutdownPolicyRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询延停策略修改记录</p>
+     * 
+     * @param request GetShutdownPolicyRecordRequest
+     * @return GetShutdownPolicyRecordResponse
+     */
+    public GetShutdownPolicyRecordResponse getShutdownPolicyRecord(GetShutdownPolicyRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getShutdownPolicyRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query all the Unassociated Customer.</p>
      * 
      * @param request GetUnassociatedCustomerRequest
@@ -1519,6 +1631,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListExportTasksResponse listExportTasksWithOptions(ListExportTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             query.put("Language", request.language);
         }
