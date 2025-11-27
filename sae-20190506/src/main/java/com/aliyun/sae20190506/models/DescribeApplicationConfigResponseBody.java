@@ -1954,6 +1954,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("SlsConfigs")
         public String slsConfigs;
 
+        @NameInMap("SlsLogEnvTags")
+        public String slsLogEnvTags;
+
         /**
          * <p>Enable startup probe.</p>
          * 
@@ -2780,6 +2783,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getSlsConfigs() {
             return this.slsConfigs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setSlsLogEnvTags(String slsLogEnvTags) {
+            this.slsLogEnvTags = slsLogEnvTags;
+            return this;
+        }
+        public String getSlsLogEnvTags() {
+            return this.slsLogEnvTags;
         }
 
         public DescribeApplicationConfigResponseBodyData setStartupProbe(String startupProbe) {

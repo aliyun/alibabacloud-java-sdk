@@ -730,6 +730,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SlsConfigs", request.slsConfigs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.slsLogEnvTags)) {
+            query.put("SlsLogEnvTags", request.slsLogEnvTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startupProbe)) {
             query.put("StartupProbe", request.startupProbe);
         }
@@ -2856,6 +2860,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
             query.put("SlsConfigs", request.slsConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsLogEnvTags)) {
+            query.put("SlsLogEnvTags", request.slsLogEnvTags);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startupProbe)) {

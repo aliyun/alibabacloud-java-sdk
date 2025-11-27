@@ -883,6 +883,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    @NameInMap("SlsLogEnvTags")
+    public String slsLogEnvTags;
+
     /**
      * <p>Check Failure: Indicates that the application failed to start. The system will report the exception and automatically restart it.</p>
      * <p>Note: </p>
@@ -1604,6 +1607,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public DeployApplicationShrinkRequest setSlsLogEnvTags(String slsLogEnvTags) {
+        this.slsLogEnvTags = slsLogEnvTags;
+        return this;
+    }
+    public String getSlsLogEnvTags() {
+        return this.slsLogEnvTags;
     }
 
     public DeployApplicationShrinkRequest setStartupProbe(String startupProbe) {

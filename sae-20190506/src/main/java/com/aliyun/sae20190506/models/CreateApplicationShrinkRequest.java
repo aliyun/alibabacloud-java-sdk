@@ -883,6 +883,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    @NameInMap("SlsLogEnvTags")
+    public String slsLogEnvTags;
+
     /**
      * <p>Enable application startup probe.</p>
      * <p>Check succeeded: Indicates that the application has started successfully. If you have configured Liveness and Readiness checks, they will be performed after the application startup is successful.
@@ -1586,6 +1589,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public CreateApplicationShrinkRequest setSlsLogEnvTags(String slsLogEnvTags) {
+        this.slsLogEnvTags = slsLogEnvTags;
+        return this;
+    }
+    public String getSlsLogEnvTags() {
+        return this.slsLogEnvTags;
     }
 
     public CreateApplicationShrinkRequest setStartupProbe(String startupProbe) {
