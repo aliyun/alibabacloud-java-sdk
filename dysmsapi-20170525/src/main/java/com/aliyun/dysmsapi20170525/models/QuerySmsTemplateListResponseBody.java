@@ -298,6 +298,9 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         @NameInMap("TemplateType")
         public Integer templateType;
 
+        @NameInMap("TrafficDriving")
+        public String trafficDriving;
+
         public static QuerySmsTemplateListResponseBodySmsTemplateList build(java.util.Map<String, ?> map) throws Exception {
             QuerySmsTemplateListResponseBodySmsTemplateList self = new QuerySmsTemplateListResponseBodySmsTemplateList();
             return TeaModel.build(map, self);
@@ -381,6 +384,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
         public Integer getTemplateType() {
             return this.templateType;
+        }
+
+        public QuerySmsTemplateListResponseBodySmsTemplateList setTrafficDriving(String trafficDriving) {
+            this.trafficDriving = trafficDriving;
+            return this;
+        }
+        public String getTrafficDriving() {
+            return this.trafficDriving;
         }
 
     }
