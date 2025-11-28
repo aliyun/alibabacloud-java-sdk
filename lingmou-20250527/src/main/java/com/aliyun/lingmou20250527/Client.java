@@ -183,6 +183,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建播报贴图</p>
+     * 
+     * @param request CreateBroadcastStickerRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBroadcastStickerResponse
+     */
+    public CreateBroadcastStickerResponse createBroadcastStickerWithOptions(CreateBroadcastStickerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossKey)) {
+            body.put("ossKey", request.ossKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBroadcastSticker"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/customer/broadcast/material/sticker/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBroadcastStickerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建播报贴图</p>
+     * 
+     * @param request CreateBroadcastStickerRequest
+     * @return CreateBroadcastStickerResponse
+     */
+    public CreateBroadcastStickerResponse createBroadcastSticker(CreateBroadcastStickerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createBroadcastStickerWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于模板创建播报视频</p>
+     * 
+     * @param request CreateBroadcastVideoFromTemplateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBroadcastVideoFromTemplateResponse
+     */
+    public CreateBroadcastVideoFromTemplateResponse createBroadcastVideoFromTemplateWithOptions(CreateBroadcastVideoFromTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("templateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variables)) {
+            body.put("variables", request.variables);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoOptions)) {
+            body.put("videoOptions", request.videoOptions);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBroadcastVideoFromTemplate"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/amp/customer/broadcast/video/createFromTemplate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBroadcastVideoFromTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>基于模板创建播报视频</p>
+     * 
+     * @param request CreateBroadcastVideoFromTemplateRequest
+     * @return CreateBroadcastVideoFromTemplateResponse
+     */
+    public CreateBroadcastVideoFromTemplateResponse createBroadcastVideoFromTemplate(CreateBroadcastVideoFromTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createBroadcastVideoFromTemplateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>背景配置</p>
      * 
      * @param request CreateChatConfigRequest
@@ -486,6 +596,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询播报模板详情</p>
+     * 
+     * @param request GetBroadcastTemplateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBroadcastTemplateResponse
+     */
+    public GetBroadcastTemplateResponse getBroadcastTemplateWithOptions(GetBroadcastTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("templateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBroadcastTemplate"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/customer/broadcast/template/detail"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBroadcastTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询播报模板详情</p>
+     * 
+     * @param request GetBroadcastTemplateRequest
+     * @return GetBroadcastTemplateResponse
+     */
+    public GetBroadcastTemplateResponse getBroadcastTemplate(GetBroadcastTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getBroadcastTemplateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询图片训练数字人的状态</p>
      * 
      * @param request GetTrainPicAvatarStatusRequest
@@ -580,6 +737,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getUploadPolicyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举播报模板</p>
+     * 
+     * @param request ListBroadcastTemplatesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBroadcastTemplatesResponse
+     */
+    public ListBroadcastTemplatesResponse listBroadcastTemplatesWithOptions(ListBroadcastTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBroadcastTemplates"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/customer/broadcast/template/list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBroadcastTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举播报模板</p>
+     * 
+     * @param request ListBroadcastTemplatesRequest
+     * @return ListBroadcastTemplatesResponse
+     */
+    public ListBroadcastTemplatesResponse listBroadcastTemplates(ListBroadcastTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listBroadcastTemplatesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据视频id批量查询播报视频（最多查询100个）</p>
+     * 
+     * @param tmpReq ListBroadcastVideosByIdRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBroadcastVideosByIdResponse
+     */
+    public ListBroadcastVideosByIdResponse listBroadcastVideosByIdWithOptions(ListBroadcastVideosByIdRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListBroadcastVideosByIdShrinkRequest request = new ListBroadcastVideosByIdShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoIds)) {
+            request.videoIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoIds, "videoIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.videoIdsShrink)) {
+            query.put("videoIds", request.videoIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBroadcastVideosById"),
+            new TeaPair("version", "2025-05-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/amp/customer/broadcast/video/batchQuery"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBroadcastVideosByIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据视频id批量查询播报视频（最多查询100个）</p>
+     * 
+     * @param request ListBroadcastVideosByIdRequest
+     * @return ListBroadcastVideosByIdResponse
+     */
+    public ListBroadcastVideosByIdResponse listBroadcastVideosById(ListBroadcastVideosByIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listBroadcastVideosByIdWithOptions(request, headers, runtime);
     }
 
     /**
