@@ -1616,6 +1616,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建扫描规则</p>
+     * 
+     * @param tmpReq CreateScanRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateScanRuleResponse
+     */
+    public CreateScanRuleResponse createScanRuleWithOptions(CreateScanRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateScanRuleShrinkRequest request = new CreateScanRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.namespaces)) {
+            request.namespacesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.namespaces, "Namespaces", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.repoNames)) {
+            request.repoNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.repoNames, "RepoNames", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacesShrink)) {
+            query.put("Namespaces", request.namespacesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoNamesShrink)) {
+            query.put("RepoNames", request.repoNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoTagFilterPattern)) {
+            query.put("RepoTagFilterPattern", request.repoTagFilterPattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanScope)) {
+            query.put("ScanScope", request.scanScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanType)) {
+            query.put("ScanType", request.scanType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerType)) {
+            query.put("TriggerType", request.triggerType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateScanRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScanRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建扫描规则</p>
+     * 
+     * @param request CreateScanRuleRequest
+     * @return CreateScanRuleResponse
+     */
+    public CreateScanRuleResponse createScanRule(CreateScanRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createScanRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建实例域名路由规则</p>
+     * 
+     * @param tmpReq CreateStorageDomainRoutingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateStorageDomainRoutingRuleResponse
+     */
+    public CreateStorageDomainRoutingRuleResponse createStorageDomainRoutingRuleWithOptions(CreateStorageDomainRoutingRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateStorageDomainRoutingRuleShrinkRequest request = new CreateStorageDomainRoutingRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.routes)) {
+            request.routesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.routes, "Routes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routesShrink)) {
+            query.put("Routes", request.routesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateStorageDomainRoutingRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStorageDomainRoutingRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建实例域名路由规则</p>
+     * 
+     * @param request CreateStorageDomainRoutingRuleRequest
+     * @return CreateStorageDomainRoutingRuleResponse
+     */
+    public CreateStorageDomainRoutingRuleResponse createStorageDomainRoutingRule(CreateStorageDomainRoutingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createStorageDomainRoutingRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an artifact lifecycle management rule.</p>
      * 
      * @param request DeleteArtifactLifecycleRuleRequest
@@ -2410,6 +2546,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRepositoryResponse deleteRepository(DeleteRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRepositoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除扫描规则</p>
+     * 
+     * @param request DeleteScanRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteScanRuleResponse
+     */
+    public DeleteScanRuleResponse deleteScanRuleWithOptions(DeleteScanRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanRuleId)) {
+            query.put("ScanRuleId", request.scanRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteScanRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScanRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除扫描规则</p>
+     * 
+     * @param request DeleteScanRuleRequest
+     * @return DeleteScanRuleResponse
+     */
+    public DeleteScanRuleResponse deleteScanRule(DeleteScanRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteScanRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实例存储域名映射规则</p>
+     * 
+     * @param request DeleteStorageDomainRoutingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteStorageDomainRoutingRuleResponse
+     */
+    public DeleteStorageDomainRoutingRuleResponse deleteStorageDomainRoutingRuleWithOptions(DeleteStorageDomainRoutingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteStorageDomainRoutingRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteStorageDomainRoutingRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实例存储域名映射规则</p>
+     * 
+     * @param request DeleteStorageDomainRoutingRuleRequest
+     * @return DeleteStorageDomainRoutingRuleResponse
+     */
+    public DeleteStorageDomainRoutingRuleResponse deleteStorageDomainRoutingRule(DeleteStorageDomainRoutingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteStorageDomainRoutingRuleWithOptions(request, runtime);
     }
 
     /**
@@ -3532,6 +3764,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRepositoryResponse getRepository(GetRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepositoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询扫描规则</p>
+     * 
+     * @param request GetScanRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetScanRuleResponse
+     */
+    public GetScanRuleResponse getScanRuleWithOptions(GetScanRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanRuleId)) {
+            query.put("ScanRuleId", request.scanRuleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetScanRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetScanRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询扫描规则</p>
+     * 
+     * @param request GetScanRuleRequest
+     * @return GetScanRuleResponse
+     */
+    public GetScanRuleResponse getScanRule(GetScanRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getScanRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例存储域名路由规则</p>
+     * 
+     * @param request GetStorageDomainRoutingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetStorageDomainRoutingRuleResponse
+     */
+    public GetStorageDomainRoutingRuleResponse getStorageDomainRoutingRuleWithOptions(GetStorageDomainRoutingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStorageDomainRoutingRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStorageDomainRoutingRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例存储域名路由规则</p>
+     * 
+     * @param request GetStorageDomainRoutingRuleRequest
+     * @return GetStorageDomainRoutingRuleResponse
+     */
+    public GetStorageDomainRoutingRuleResponse getStorageDomainRoutingRule(GetStorageDomainRoutingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getStorageDomainRoutingRuleWithOptions(request, runtime);
     }
 
     /**
@@ -4948,6 +5276,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询扫描规则</p>
+     * 
+     * @param request ListScanRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScanRuleResponse
+     */
+    public ListScanRuleResponse listScanRuleWithOptions(ListScanRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListScanRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListScanRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询扫描规则</p>
+     * 
+     * @param request ListScanRuleRequest
+     * @return ListScanRuleResponse
+     */
+    public ListScanRuleResponse listScanRule(ListScanRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listScanRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the tags that are added to cloud resources. Instance resources are supported.</p>
      * 
      * @param request ListTagResourcesRequest
@@ -6024,5 +6392,145 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRepositoryResponse updateRepository(UpdateRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRepositoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新扫描规则</p>
+     * 
+     * @param tmpReq UpdateScanRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateScanRuleResponse
+     */
+    public UpdateScanRuleResponse updateScanRuleWithOptions(UpdateScanRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateScanRuleShrinkRequest request = new UpdateScanRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.namespaces)) {
+            request.namespacesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.namespaces, "Namespaces", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.repoNames)) {
+            request.repoNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.repoNames, "RepoNames", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacesShrink)) {
+            query.put("Namespaces", request.namespacesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoNamesShrink)) {
+            query.put("RepoNames", request.repoNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoTagFilterPattern)) {
+            query.put("RepoTagFilterPattern", request.repoTagFilterPattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanRuleId)) {
+            query.put("ScanRuleId", request.scanRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanScope)) {
+            query.put("ScanScope", request.scanScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerType)) {
+            query.put("TriggerType", request.triggerType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateScanRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateScanRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新扫描规则</p>
+     * 
+     * @param request UpdateScanRuleRequest
+     * @return UpdateScanRuleResponse
+     */
+    public UpdateScanRuleResponse updateScanRule(UpdateScanRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateScanRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新实例域名路由规则</p>
+     * 
+     * @param tmpReq UpdateStorageDomainRoutingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateStorageDomainRoutingRuleResponse
+     */
+    public UpdateStorageDomainRoutingRuleResponse updateStorageDomainRoutingRuleWithOptions(UpdateStorageDomainRoutingRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateStorageDomainRoutingRuleShrinkRequest request = new UpdateStorageDomainRoutingRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.routes)) {
+            request.routesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.routes, "Routes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routesShrink)) {
+            query.put("Routes", request.routesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateStorageDomainRoutingRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateStorageDomainRoutingRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新实例域名路由规则</p>
+     * 
+     * @param request UpdateStorageDomainRoutingRuleRequest
+     * @return UpdateStorageDomainRoutingRuleResponse
+     */
+    public UpdateStorageDomainRoutingRuleResponse updateStorageDomainRoutingRule(UpdateStorageDomainRoutingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateStorageDomainRoutingRuleWithOptions(request, runtime);
     }
 }
