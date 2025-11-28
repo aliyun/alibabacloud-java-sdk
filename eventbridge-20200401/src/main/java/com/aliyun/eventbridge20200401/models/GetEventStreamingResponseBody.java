@@ -789,6 +789,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Bootstraps")
         public String bootstraps;
 
+        @NameInMap("CompressionType")
+        public String compressionType;
+
         @NameInMap("Headers")
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersHeaders headers;
 
@@ -812,6 +815,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         @NameInMap("SecurityProtocol")
         public String securityProtocol;
+
+        @NameInMap("SslTruststoreCertificates")
+        public String sslTruststoreCertificates;
 
         @NameInMap("Topic")
         public String topic;
@@ -844,6 +850,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getBootstraps() {
             return this.bootstraps;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setCompressionType(String compressionType) {
+            this.compressionType = compressionType;
+            return this;
+        }
+        public String getCompressionType() {
+            return this.compressionType;
         }
 
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setHeaders(GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersHeaders headers) {
@@ -908,6 +922,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getSecurityProtocol() {
             return this.securityProtocol;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setSslTruststoreCertificates(String sslTruststoreCertificates) {
+            this.sslTruststoreCertificates = sslTruststoreCertificates;
+            return this;
+        }
+        public String getSslTruststoreCertificates() {
+            return this.sslTruststoreCertificates;
         }
 
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters setTopic(String topic) {
@@ -3975,6 +3997,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Acks")
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersAcks acks;
 
+        @NameInMap("CompressionType")
+        public String compressionType;
+
         @NameInMap("Headers")
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders headers;
 
@@ -4013,6 +4038,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersAcks getAcks() {
             return this.acks;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkKafkaParameters setCompressionType(String compressionType) {
+            this.compressionType = compressionType;
+            return this;
+        }
+        public String getCompressionType() {
+            return this.compressionType;
         }
 
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParameters setHeaders(GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders headers) {
@@ -7218,6 +7251,12 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SinkOpenSourceRabbitMQParameters")
         public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
 
+        @NameInMap("SinkRabbitMQMetaParameters")
+        public SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters;
+
+        @NameInMap("SinkRabbitMQMsgSyncParameters")
+        public SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters;
+
         /**
          * <p>The parameters that are returned if the event target is Message Queue for RabbitMQ.</p>
          */
@@ -7383,6 +7422,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return this.sinkOpenSourceRabbitMQParameters;
         }
 
+        public GetEventStreamingResponseBodyDataSink setSinkRabbitMQMetaParameters(SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters) {
+            this.sinkRabbitMQMetaParameters = sinkRabbitMQMetaParameters;
+            return this;
+        }
+        public SinkRabbitMQMetaParameters getSinkRabbitMQMetaParameters() {
+            return this.sinkRabbitMQMetaParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSink setSinkRabbitMQMsgSyncParameters(SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters) {
+            this.sinkRabbitMQMsgSyncParameters = sinkRabbitMQMsgSyncParameters;
+            return this;
+        }
+        public SinkRabbitMQMsgSyncParameters getSinkRabbitMQMsgSyncParameters() {
+            return this.sinkRabbitMQMsgSyncParameters;
+        }
+
         public GetEventStreamingResponseBodyDataSink setSinkRabbitMQParameters(GetEventStreamingResponseBodyDataSinkSinkRabbitMQParameters sinkRabbitMQParameters) {
             this.sinkRabbitMQParameters = sinkRabbitMQParameters;
             return this;
@@ -7444,6 +7499,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         @NameInMap("SecurityProtocol")
         public String securityProtocol;
+
+        @NameInMap("SslTruststoreCertificates")
+        public String sslTruststoreCertificates;
 
         @NameInMap("Topic")
         public String topic;
@@ -7532,6 +7590,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getSecurityProtocol() {
             return this.securityProtocol;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParameters setSslTruststoreCertificates(String sslTruststoreCertificates) {
+            this.sslTruststoreCertificates = sslTruststoreCertificates;
+            return this;
+        }
+        public String getSslTruststoreCertificates() {
+            return this.sslTruststoreCertificates;
         }
 
         public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParameters setTopic(String topic) {
@@ -9344,6 +9410,12 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SourcePrometheusParameters")
         public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters sourcePrometheusParameters;
 
+        @NameInMap("SourceRabbitMQMetaParameters")
+        public SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters;
+
+        @NameInMap("SourceRabbitMQMsgSyncParameters")
+        public SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters;
+
         /**
          * <p>Source RabbitMQ Parameters</p>
          */
@@ -9480,6 +9552,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters getSourcePrometheusParameters() {
             return this.sourcePrometheusParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSource setSourceRabbitMQMetaParameters(SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters) {
+            this.sourceRabbitMQMetaParameters = sourceRabbitMQMetaParameters;
+            return this;
+        }
+        public SourceRabbitMQMetaParameters getSourceRabbitMQMetaParameters() {
+            return this.sourceRabbitMQMetaParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSource setSourceRabbitMQMsgSyncParameters(SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters) {
+            this.sourceRabbitMQMsgSyncParameters = sourceRabbitMQMsgSyncParameters;
+            return this;
+        }
+        public SourceRabbitMQMsgSyncParameters getSourceRabbitMQMsgSyncParameters() {
+            return this.sourceRabbitMQMsgSyncParameters;
         }
 
         public GetEventStreamingResponseBodyDataSource setSourceRabbitMQParameters(GetEventStreamingResponseBodyDataSourceSourceRabbitMQParameters sourceRabbitMQParameters) {

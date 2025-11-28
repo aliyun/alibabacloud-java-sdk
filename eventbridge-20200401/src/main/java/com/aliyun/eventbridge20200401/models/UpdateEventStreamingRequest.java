@@ -772,6 +772,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("Bootstraps")
         public String bootstraps;
 
+        @NameInMap("CompressionType")
+        public String compressionType;
+
         @NameInMap("Headers")
         public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders headers;
 
@@ -795,6 +798,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
         @NameInMap("SecurityProtocol")
         public String securityProtocol;
+
+        @NameInMap("SslTruststoreCertificates")
+        public String sslTruststoreCertificates;
 
         @NameInMap("Topic")
         public String topic;
@@ -827,6 +833,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public String getBootstraps() {
             return this.bootstraps;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setCompressionType(String compressionType) {
+            this.compressionType = compressionType;
+            return this;
+        }
+        public String getCompressionType() {
+            return this.compressionType;
         }
 
         public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setHeaders(UpdateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders headers) {
@@ -891,6 +905,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public String getSecurityProtocol() {
             return this.securityProtocol;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setSslTruststoreCertificates(String sslTruststoreCertificates) {
+            this.sslTruststoreCertificates = sslTruststoreCertificates;
+            return this;
+        }
+        public String getSslTruststoreCertificates() {
+            return this.sslTruststoreCertificates;
         }
 
         public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters setTopic(String topic) {
@@ -4309,6 +4331,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("Acks")
         public UpdateEventStreamingRequestSinkSinkKafkaParametersAcks acks;
 
+        @NameInMap("CompressionType")
+        public String compressionType;
+
         /**
          * <p>The metadata added to messages in the ApsaraMQ for Kafka instance.</p>
          */
@@ -4350,6 +4375,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public UpdateEventStreamingRequestSinkSinkKafkaParametersAcks getAcks() {
             return this.acks;
+        }
+
+        public UpdateEventStreamingRequestSinkSinkKafkaParameters setCompressionType(String compressionType) {
+            this.compressionType = compressionType;
+            return this;
+        }
+        public String getCompressionType() {
+            return this.compressionType;
         }
 
         public UpdateEventStreamingRequestSinkSinkKafkaParameters setHeaders(UpdateEventStreamingRequestSinkSinkKafkaParametersHeaders headers) {
@@ -8558,6 +8591,12 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkPrometheusParameters")
         public UpdateEventStreamingRequestSinkSinkPrometheusParameters sinkPrometheusParameters;
 
+        @NameInMap("SinkRabbitMQMetaParameters")
+        public SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters;
+
+        @NameInMap("SinkRabbitMQMsgSyncParameters")
+        public SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters;
+
         /**
          * <p>The parameters that are configured if you specify ApsaraMQ for RabbitMQ as the event target.</p>
          */
@@ -8731,6 +8770,22 @@ public class UpdateEventStreamingRequest extends TeaModel {
             return this.sinkPrometheusParameters;
         }
 
+        public UpdateEventStreamingRequestSink setSinkRabbitMQMetaParameters(SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters) {
+            this.sinkRabbitMQMetaParameters = sinkRabbitMQMetaParameters;
+            return this;
+        }
+        public SinkRabbitMQMetaParameters getSinkRabbitMQMetaParameters() {
+            return this.sinkRabbitMQMetaParameters;
+        }
+
+        public UpdateEventStreamingRequestSink setSinkRabbitMQMsgSyncParameters(SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters) {
+            this.sinkRabbitMQMsgSyncParameters = sinkRabbitMQMsgSyncParameters;
+            return this;
+        }
+        public SinkRabbitMQMsgSyncParameters getSinkRabbitMQMsgSyncParameters() {
+            return this.sinkRabbitMQMsgSyncParameters;
+        }
+
         public UpdateEventStreamingRequestSink setSinkRabbitMQParameters(UpdateEventStreamingRequestSinkSinkRabbitMQParameters sinkRabbitMQParameters) {
             this.sinkRabbitMQParameters = sinkRabbitMQParameters;
             return this;
@@ -8792,6 +8847,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
 
         @NameInMap("SecurityProtocol")
         public String securityProtocol;
+
+        @NameInMap("SslTruststoreCertificates")
+        public String sslTruststoreCertificates;
 
         @NameInMap("Topic")
         public String topic;
@@ -8880,6 +8938,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public String getSecurityProtocol() {
             return this.securityProtocol;
+        }
+
+        public UpdateEventStreamingRequestSourceSourceApacheKafkaParameters setSslTruststoreCertificates(String sslTruststoreCertificates) {
+            this.sslTruststoreCertificates = sslTruststoreCertificates;
+            return this;
+        }
+        public String getSslTruststoreCertificates() {
+            return this.sslTruststoreCertificates;
         }
 
         public UpdateEventStreamingRequestSourceSourceApacheKafkaParameters setTopic(String topic) {
@@ -10643,6 +10709,12 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("SourcePrometheusParameters")
         public UpdateEventStreamingRequestSourceSourcePrometheusParameters sourcePrometheusParameters;
 
+        @NameInMap("SourceRabbitMQMetaParameters")
+        public SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters;
+
+        @NameInMap("SourceRabbitMQMsgSyncParameters")
+        public SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters;
+
         /**
          * <p>The parameters that are configured if you specify ApsaraMQ for RabbitMQ as the event source.</p>
          */
@@ -10779,6 +10851,22 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public UpdateEventStreamingRequestSourceSourcePrometheusParameters getSourcePrometheusParameters() {
             return this.sourcePrometheusParameters;
+        }
+
+        public UpdateEventStreamingRequestSource setSourceRabbitMQMetaParameters(SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters) {
+            this.sourceRabbitMQMetaParameters = sourceRabbitMQMetaParameters;
+            return this;
+        }
+        public SourceRabbitMQMetaParameters getSourceRabbitMQMetaParameters() {
+            return this.sourceRabbitMQMetaParameters;
+        }
+
+        public UpdateEventStreamingRequestSource setSourceRabbitMQMsgSyncParameters(SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters) {
+            this.sourceRabbitMQMsgSyncParameters = sourceRabbitMQMsgSyncParameters;
+            return this;
+        }
+        public SourceRabbitMQMsgSyncParameters getSourceRabbitMQMsgSyncParameters() {
+            return this.sourceRabbitMQMsgSyncParameters;
         }
 
         public UpdateEventStreamingRequestSource setSourceRabbitMQParameters(UpdateEventStreamingRequestSourceSourceRabbitMQParameters sourceRabbitMQParameters) {

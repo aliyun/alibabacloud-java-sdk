@@ -3355,6 +3355,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("Acks")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersAcks acks;
 
+        @NameInMap("CompressionType")
+        public String compressionType;
+
         /**
          * <p>The ID of the ApsaraMQ for Kafka instance.</p>
          */
@@ -3390,6 +3393,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersAcks getAcks() {
             return this.acks;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParameters setCompressionType(String compressionType) {
+            this.compressionType = compressionType;
+            return this;
+        }
+        public String getCompressionType() {
+            return this.compressionType;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParameters setInstanceId(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersInstanceId instanceId) {
@@ -6561,6 +6572,12 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SinkOpenSourceRabbitMQParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
 
+        @NameInMap("SinkRabbitMQMetaParameters")
+        public SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters;
+
+        @NameInMap("SinkRabbitMQMsgSyncParameters")
+        public SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters;
+
         /**
          * <p>The parameters that are returned if ApsaraMQ for RabbitMQ is specified as the event target.</p>
          */
@@ -6705,6 +6722,22 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParameters getSinkOpenSourceRabbitMQParameters() {
             return this.sinkOpenSourceRabbitMQParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkRabbitMQMetaParameters(SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters) {
+            this.sinkRabbitMQMetaParameters = sinkRabbitMQMetaParameters;
+            return this;
+        }
+        public SinkRabbitMQMetaParameters getSinkRabbitMQMetaParameters() {
+            return this.sinkRabbitMQMetaParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkRabbitMQMsgSyncParameters(SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters) {
+            this.sinkRabbitMQMsgSyncParameters = sinkRabbitMQMsgSyncParameters;
+            return this;
+        }
+        public SinkRabbitMQMsgSyncParameters getSinkRabbitMQMsgSyncParameters() {
+            return this.sinkRabbitMQMsgSyncParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkRabbitMQParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkRabbitMQParameters sinkRabbitMQParameters) {
@@ -8519,6 +8552,12 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SourcePrometheusParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters sourcePrometheusParameters;
 
+        @NameInMap("SourceRabbitMQMetaParameters")
+        public SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters;
+
+        @NameInMap("SourceRabbitMQMsgSyncParameters")
+        public SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters;
+
         /**
          * <p>The parameters that are returned if ApsaraMQ for RabbitMQ is specified as the event source.</p>
          */
@@ -8647,6 +8686,22 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourcePrometheusParameters getSourcePrometheusParameters() {
             return this.sourcePrometheusParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourceRabbitMQMetaParameters(SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters) {
+            this.sourceRabbitMQMetaParameters = sourceRabbitMQMetaParameters;
+            return this;
+        }
+        public SourceRabbitMQMetaParameters getSourceRabbitMQMetaParameters() {
+            return this.sourceRabbitMQMetaParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourceRabbitMQMsgSyncParameters(SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters) {
+            this.sourceRabbitMQMsgSyncParameters = sourceRabbitMQMsgSyncParameters;
+            return this;
+        }
+        public SourceRabbitMQMsgSyncParameters getSourceRabbitMQMsgSyncParameters() {
+            return this.sourceRabbitMQMsgSyncParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourceRabbitMQParameters(ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRabbitMQParameters sourceRabbitMQParameters) {
