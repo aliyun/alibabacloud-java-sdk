@@ -4,32 +4,62 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class UploadIoTDataToBlockchainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotAuthType")
     public String iotAuthType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotDataDID")
     public String iotDataDID;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotDataDigest")
     public String iotDataDigest;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotDataToken")
     public String iotDataToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotId")
     public String iotId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotIdServiceProvider")
     public String iotIdServiceProvider;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotIdSource")
     public String iotIdSource;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PlainData")
     public String plainData;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PrivacyData")
     public String privacyData;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static UploadIoTDataToBlockchainRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadIoTDataToBlockchainRequest self = new UploadIoTDataToBlockchainRequest();
@@ -106,6 +136,14 @@ public class UploadIoTDataToBlockchainRequest extends TeaModel {
     }
     public String getPrivacyData() {
         return this.privacyData;
+    }
+
+    public UploadIoTDataToBlockchainRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,9 +4,15 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class ListBizChainDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizChainId")
     public String bizChainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -16,12 +22,24 @@ public class ListBizChainDataRequest extends TeaModel {
     @NameInMap("MemberId")
     public String memberId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Num")
     public Integer num;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -68,6 +86,14 @@ public class ListBizChainDataRequest extends TeaModel {
     }
     public Integer getNum() {
         return this.num;
+    }
+
+    public ListBizChainDataRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListBizChainDataRequest setSize(Integer size) {

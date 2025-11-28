@@ -4,11 +4,20 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class UpdateBizChainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizChainId")
     public String bizChainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Remark")
     public String remark;
@@ -32,6 +41,14 @@ public class UpdateBizChainRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateBizChainRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateBizChainRequest setRemark(String remark) {

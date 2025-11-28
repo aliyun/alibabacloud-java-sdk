@@ -4,45 +4,84 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class AddBaaSAntChainBizChainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BaaSAntChainChainId")
     public String baaSAntChainChainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BaaSAntChainConsortiumId")
     public String baaSAntChainConsortiumId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CaCert")
     public String caCert;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CaCertPassword")
     public String caCertPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientCert")
     public String clientCert;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientKey")
     public String clientKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientKeyPassword")
     public String clientKeyPassword;
 
     @NameInMap("ContractTemplateIdList")
     public String contractTemplateIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeNameList")
     public String nodeNameList;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserKey")
     public String userKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserKeyPassword")
     public String userKeyPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
@@ -129,6 +168,14 @@ public class AddBaaSAntChainBizChainRequest extends TeaModel {
     }
     public String getNodeNameList() {
         return this.nodeNameList;
+    }
+
+    public AddBaaSAntChainBizChainRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AddBaaSAntChainBizChainRequest setRemark(String remark) {

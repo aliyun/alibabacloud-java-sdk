@@ -4,7 +4,6 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class DeniedMemberAccessResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("Code")
     public String code;
 

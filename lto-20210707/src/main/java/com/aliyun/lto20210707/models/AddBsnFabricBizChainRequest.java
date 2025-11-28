@@ -4,18 +4,33 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class AddBsnFabricBizChainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeList")
     public String nodeList;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserCode")
     public String userCode;
 
@@ -46,6 +61,14 @@ public class AddBsnFabricBizChainRequest extends TeaModel {
     }
     public String getNodeList() {
         return this.nodeList;
+    }
+
+    public AddBsnFabricBizChainRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AddBsnFabricBizChainRequest setRemark(String remark) {

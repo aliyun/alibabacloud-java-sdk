@@ -1,3 +1,6 @@
+2025-11-28 Version: 1.3.2
+- Generated java 2021-07-07 for lto.
+
 2021-12-29 Version: 1.3.1
 - V131.
 

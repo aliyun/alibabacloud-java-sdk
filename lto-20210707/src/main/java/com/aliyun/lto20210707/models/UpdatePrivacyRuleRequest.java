@@ -7,14 +7,26 @@ public class UpdatePrivacyRuleRequest extends TeaModel {
     @NameInMap("AlgImpl")
     public String algImpl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlgType")
     public String algType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PrivacyRuleId")
     public String privacyRuleId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Remark")
     public String remark;
@@ -54,6 +66,14 @@ public class UpdatePrivacyRuleRequest extends TeaModel {
     }
     public String getPrivacyRuleId() {
         return this.privacyRuleId;
+    }
+
+    public UpdatePrivacyRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdatePrivacyRuleRequest setRemark(String remark) {

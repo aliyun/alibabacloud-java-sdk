@@ -7,8 +7,14 @@ public class SharePrivacyRuleRequest extends TeaModel {
     @NameInMap("MemberIdList")
     public String memberIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PrivacyRuleId")
     public String privacyRuleId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static SharePrivacyRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         SharePrivacyRuleRequest self = new SharePrivacyRuleRequest();
@@ -29,6 +35,14 @@ public class SharePrivacyRuleRequest extends TeaModel {
     }
     public String getPrivacyRuleId() {
         return this.privacyRuleId;
+    }
+
+    public SharePrivacyRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

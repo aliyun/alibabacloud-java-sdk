@@ -4,6 +4,9 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class UpdateRouteRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizChainId")
     public String bizChainId;
 
@@ -13,15 +16,24 @@ public class UpdateRouteRuleRequest extends TeaModel {
     @NameInMap("ContractTemplateId")
     public String contractTemplateId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InvokeType")
     public String invokeType;
 
     @NameInMap("PrivacyRuleId")
     public String privacyRuleId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RouteRuleId")
     public String routeRuleId;
 
@@ -68,6 +80,14 @@ public class UpdateRouteRuleRequest extends TeaModel {
     }
     public String getPrivacyRuleId() {
         return this.privacyRuleId;
+    }
+
+    public UpdateRouteRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateRouteRuleRequest setRemark(String remark) {

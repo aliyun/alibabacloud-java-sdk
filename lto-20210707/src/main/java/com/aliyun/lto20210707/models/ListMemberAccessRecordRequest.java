@@ -13,9 +13,18 @@ public class ListMemberAccessRecordRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Num")
     public Long num;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public Long size;
 
@@ -57,6 +66,14 @@ public class ListMemberAccessRecordRequest extends TeaModel {
     }
     public Long getNum() {
         return this.num;
+    }
+
+    public ListMemberAccessRecordRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListMemberAccessRecordRequest setSize(Long size) {

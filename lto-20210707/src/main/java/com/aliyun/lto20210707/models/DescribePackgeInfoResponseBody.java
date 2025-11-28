@@ -76,6 +76,9 @@ public class DescribePackgeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribePackgeInfoResponseBodyData extends TeaModel {
+        @NameInMap("EnableTrace")
+        public Boolean enableTrace;
+
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -85,6 +88,14 @@ public class DescribePackgeInfoResponseBody extends TeaModel {
         public static DescribePackgeInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribePackgeInfoResponseBodyData self = new DescribePackgeInfoResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePackgeInfoResponseBodyData setEnableTrace(Boolean enableTrace) {
+            this.enableTrace = enableTrace;
+            return this;
+        }
+        public Boolean getEnableTrace() {
+            return this.enableTrace;
         }
 
         public DescribePackgeInfoResponseBodyData setEndTime(Long endTime) {

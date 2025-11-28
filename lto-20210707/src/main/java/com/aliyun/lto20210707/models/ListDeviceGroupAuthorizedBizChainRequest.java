@@ -7,6 +7,9 @@ public class ListDeviceGroupAuthorizedBizChainRequest extends TeaModel {
     @NameInMap("DeviceGroupId")
     public String deviceGroupId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListDeviceGroupAuthorizedBizChainRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceGroupAuthorizedBizChainRequest self = new ListDeviceGroupAuthorizedBizChainRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ListDeviceGroupAuthorizedBizChainRequest extends TeaModel {
     }
     public String getDeviceGroupId() {
         return this.deviceGroupId;
+    }
+
+    public ListDeviceGroupAuthorizedBizChainRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

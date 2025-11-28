@@ -85,6 +85,9 @@ public class ListRouteRuleResponseBody extends TeaModel {
         @NameInMap("BlockChainType")
         public String blockChainType;
 
+        @NameInMap("ChainUpMode")
+        public String chainUpMode;
+
         @NameInMap("ContractName")
         public String contractName;
 
@@ -139,6 +142,14 @@ public class ListRouteRuleResponseBody extends TeaModel {
         }
         public String getBlockChainType() {
             return this.blockChainType;
+        }
+
+        public ListRouteRuleResponseBodyDataPageData setChainUpMode(String chainUpMode) {
+            this.chainUpMode = chainUpMode;
+            return this;
+        }
+        public String getChainUpMode() {
+            return this.chainUpMode;
         }
 
         public ListRouteRuleResponseBodyDataPageData setContractName(String contractName) {

@@ -4,8 +4,14 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class AddRouteRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizChainId")
     public String bizChainId;
+
+    @NameInMap("ChainUpMode")
+    public String chainUpMode;
 
     @NameInMap("ContractName")
     public String contractName;
@@ -16,11 +22,17 @@ public class AddRouteRuleRequest extends TeaModel {
     @NameInMap("DeviceGroupId")
     public String deviceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InvokeType")
     public String invokeType;
 
     @NameInMap("PrivacyRuleId")
     public String privacyRuleId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Remark")
     public String remark;
@@ -36,6 +48,14 @@ public class AddRouteRuleRequest extends TeaModel {
     }
     public String getBizChainId() {
         return this.bizChainId;
+    }
+
+    public AddRouteRuleRequest setChainUpMode(String chainUpMode) {
+        this.chainUpMode = chainUpMode;
+        return this;
+    }
+    public String getChainUpMode() {
+        return this.chainUpMode;
     }
 
     public AddRouteRuleRequest setContractName(String contractName) {
@@ -76,6 +96,14 @@ public class AddRouteRuleRequest extends TeaModel {
     }
     public String getPrivacyRuleId() {
         return this.privacyRuleId;
+    }
+
+    public AddRouteRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AddRouteRuleRequest setRemark(String remark) {

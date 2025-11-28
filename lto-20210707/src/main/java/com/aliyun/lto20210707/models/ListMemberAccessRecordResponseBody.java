@@ -88,6 +88,9 @@ public class ListMemberAccessRecordResponseBody extends TeaModel {
         @NameInMap("AuthorizedCount")
         public Long authorizedCount;
 
+        @NameInMap("AuthorizedDeviceCount")
+        public Integer authorizedDeviceCount;
+
         @NameInMap("Contactor")
         public String contactor;
 
@@ -147,6 +150,14 @@ public class ListMemberAccessRecordResponseBody extends TeaModel {
         }
         public Long getAuthorizedCount() {
             return this.authorizedCount;
+        }
+
+        public ListMemberAccessRecordResponseBodyDataPageData setAuthorizedDeviceCount(Integer authorizedDeviceCount) {
+            this.authorizedDeviceCount = authorizedDeviceCount;
+            return this;
+        }
+        public Integer getAuthorizedDeviceCount() {
+            return this.authorizedDeviceCount;
         }
 
         public ListMemberAccessRecordResponseBodyDataPageData setContactor(String contactor) {

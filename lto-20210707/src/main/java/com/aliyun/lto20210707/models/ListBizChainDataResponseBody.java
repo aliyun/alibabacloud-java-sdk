@@ -85,6 +85,9 @@ public class ListBizChainDataResponseBody extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
 
+        @NameInMap("IotDataDID")
+        public String iotDataDID;
+
         @NameInMap("MemberName")
         public String memberName;
 
@@ -124,6 +127,14 @@ public class ListBizChainDataResponseBody extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public ListBizChainDataResponseBodyDataPageData setIotDataDID(String iotDataDID) {
+            this.iotDataDID = iotDataDID;
+            return this;
+        }
+        public String getIotDataDID() {
+            return this.iotDataDID;
         }
 
         public ListBizChainDataResponseBodyDataPageData setMemberName(String memberName) {

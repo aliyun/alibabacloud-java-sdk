@@ -4,21 +4,42 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class AddMemberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthorizedCount")
     public Long authorizedCount;
 
+    @NameInMap("AuthorizedDeviceCount")
+    public Integer authorizedDeviceCount;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Contactor")
     public String contactor;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Telephony")
     public String telephony;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Uid")
     public String uid;
 
@@ -35,6 +56,14 @@ public class AddMemberRequest extends TeaModel {
         return this.authorizedCount;
     }
 
+    public AddMemberRequest setAuthorizedDeviceCount(Integer authorizedDeviceCount) {
+        this.authorizedDeviceCount = authorizedDeviceCount;
+        return this;
+    }
+    public Integer getAuthorizedDeviceCount() {
+        return this.authorizedDeviceCount;
+    }
+
     public AddMemberRequest setContactor(String contactor) {
         this.contactor = contactor;
         return this;
@@ -49,6 +78,14 @@ public class AddMemberRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public AddMemberRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AddMemberRequest setRemark(String remark) {

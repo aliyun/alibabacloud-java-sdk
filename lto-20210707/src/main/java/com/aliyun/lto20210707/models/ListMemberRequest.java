@@ -10,9 +10,18 @@ public class ListMemberRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Num")
     public Integer num;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
@@ -46,6 +55,14 @@ public class ListMemberRequest extends TeaModel {
     }
     public Integer getNum() {
         return this.num;
+    }
+
+    public ListMemberRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListMemberRequest setSize(Integer size) {

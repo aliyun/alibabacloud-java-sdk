@@ -76,6 +76,9 @@ public class ListDeviceGroupResponseBody extends TeaModel {
     }
 
     public static class ListDeviceGroupResponseBodyDataPageData extends TeaModel {
+        @NameInMap("AuthorizedCount")
+        public Integer authorizedCount;
+
         @NameInMap("CurrentUser")
         public Boolean currentUser;
 
@@ -103,6 +106,14 @@ public class ListDeviceGroupResponseBody extends TeaModel {
         public static ListDeviceGroupResponseBodyDataPageData build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceGroupResponseBodyDataPageData self = new ListDeviceGroupResponseBodyDataPageData();
             return TeaModel.build(map, self);
+        }
+
+        public ListDeviceGroupResponseBodyDataPageData setAuthorizedCount(Integer authorizedCount) {
+            this.authorizedCount = authorizedCount;
+            return this;
+        }
+        public Integer getAuthorizedCount() {
+            return this.authorizedCount;
         }
 
         public ListDeviceGroupResponseBodyDataPageData setCurrentUser(Boolean currentUser) {

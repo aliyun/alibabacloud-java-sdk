@@ -4,15 +4,27 @@ package com.aliyun.lto20210707.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceGroupId")
     public String deviceGroupId;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Num")
     public Integer num;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
@@ -43,6 +55,14 @@ public class ListDeviceRequest extends TeaModel {
     }
     public Integer getNum() {
         return this.num;
+    }
+
+    public ListDeviceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListDeviceRequest setSize(Integer size) {

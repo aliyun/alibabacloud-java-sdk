@@ -7,12 +7,24 @@ public class ListRouteRuleRequest extends TeaModel {
     @NameInMap("BizChainName")
     public String bizChainName;
 
+    @NameInMap("ChainUpMode")
+    public String chainUpMode;
+
     @NameInMap("DeviceGroupName")
     public String deviceGroupName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Num")
     public Integer num;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
@@ -29,6 +41,14 @@ public class ListRouteRuleRequest extends TeaModel {
         return this.bizChainName;
     }
 
+    public ListRouteRuleRequest setChainUpMode(String chainUpMode) {
+        this.chainUpMode = chainUpMode;
+        return this;
+    }
+    public String getChainUpMode() {
+        return this.chainUpMode;
+    }
+
     public ListRouteRuleRequest setDeviceGroupName(String deviceGroupName) {
         this.deviceGroupName = deviceGroupName;
         return this;
@@ -43,6 +63,14 @@ public class ListRouteRuleRequest extends TeaModel {
     }
     public Integer getNum() {
         return this.num;
+    }
+
+    public ListRouteRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListRouteRuleRequest setSize(Integer size) {

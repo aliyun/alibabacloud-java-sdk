@@ -65,6 +65,9 @@ public class QueryBlockchainDataResponseBody extends TeaModel {
     }
 
     public static class QueryBlockchainDataResponseBodyData extends TeaModel {
+        @NameInMap("AlgType")
+        public String algType;
+
         @NameInMap("PlainData")
         public String plainData;
 
@@ -77,6 +80,14 @@ public class QueryBlockchainDataResponseBody extends TeaModel {
         public static QueryBlockchainDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryBlockchainDataResponseBodyData self = new QueryBlockchainDataResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryBlockchainDataResponseBodyData setAlgType(String algType) {
+            this.algType = algType;
+            return this;
+        }
+        public String getAlgType() {
+            return this.algType;
         }
 
         public QueryBlockchainDataResponseBodyData setPlainData(String plainData) {

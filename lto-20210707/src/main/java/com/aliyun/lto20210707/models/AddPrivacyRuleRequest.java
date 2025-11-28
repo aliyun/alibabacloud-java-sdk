@@ -7,11 +7,20 @@ public class AddPrivacyRuleRequest extends TeaModel {
     @NameInMap("AlgImpl")
     public String algImpl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlgType")
     public String algType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Remark")
     public String remark;
@@ -43,6 +52,14 @@ public class AddPrivacyRuleRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public AddPrivacyRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AddPrivacyRuleRequest setRemark(String remark) {
