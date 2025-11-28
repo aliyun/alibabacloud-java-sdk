@@ -36,6 +36,9 @@ public class ModifyAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    @NameInMap("StreamMode")
+    public Integer streamMode;
+
     public static ModifyAndroidInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAndroidInstanceGroupRequest self = new ModifyAndroidInstanceGroupRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class ModifyAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public ModifyAndroidInstanceGroupRequest setStreamMode(Integer streamMode) {
+        this.streamMode = streamMode;
+        return this;
+    }
+    public Integer getStreamMode() {
+        return this.streamMode;
     }
 
 }

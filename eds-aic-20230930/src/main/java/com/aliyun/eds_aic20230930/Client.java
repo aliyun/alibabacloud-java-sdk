@@ -548,6 +548,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PromotionId", request.promotionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.streamMode)) {
+            query.put("StreamMode", request.streamMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -3895,6 +3899,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
             query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamMode)) {
+            query.put("StreamMode", request.streamMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
