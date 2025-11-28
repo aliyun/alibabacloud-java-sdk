@@ -2139,8 +2139,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceTypesShrink)) {
             query.put("InstanceTypes", request.instanceTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4197,6 +4205,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listVirtualResourceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Migrates resource group instances.</p>
+     * 
+     * @param request MigrateResourceInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MigrateResourceInstanceResponse
+     */
+    public MigrateResourceInstanceResponse migrateResourceInstanceWithOptions(String ClusterId, String ResourceId, MigrateResourceInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.destResourceId)) {
+            body.put("DestResourceId", request.destResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            body.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrateToHybrid)) {
+            body.put("MigrateToHybrid", request.migrateToHybrid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MigrateResourceInstance"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/resources/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(ResourceId) + "/instances/migrate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MigrateResourceInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Migrates resource group instances.</p>
+     * 
+     * @param request MigrateResourceInstanceRequest
+     * @return MigrateResourceInstanceResponse
+     */
+    public MigrateResourceInstanceResponse migrateResourceInstance(String ClusterId, String ResourceId, MigrateResourceInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.migrateResourceInstanceWithOptions(ClusterId, ResourceId, request, headers, runtime);
     }
 
     /**

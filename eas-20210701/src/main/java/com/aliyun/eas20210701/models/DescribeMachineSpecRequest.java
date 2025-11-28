@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeMachineSpecRequest extends TeaModel {
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     /**
      * <p>This parameter is deprecated.</p>
      */
@@ -11,9 +14,20 @@ public class DescribeMachineSpecRequest extends TeaModel {
     @Deprecated
     public java.util.List<String> instanceTypes;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static DescribeMachineSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMachineSpecRequest self = new DescribeMachineSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMachineSpecRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     @Deprecated
@@ -23,6 +37,14 @@ public class DescribeMachineSpecRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
+    }
+
+    public DescribeMachineSpecRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }
