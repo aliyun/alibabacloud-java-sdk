@@ -19,6 +19,10 @@ public class ListEvaluationResultsRequest extends TeaModel {
     @NameInMap("Filters")
     public java.util.List<ListEvaluationResultsRequestFilters> filters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>basic</p>
+     */
     @NameInMap("LensCode")
     public String lensCode;
 
@@ -31,11 +35,26 @@ public class ListEvaluationResultsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ResourceDirectory</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-bp1r**************</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>IdentityAndAccessManagement</p>
+     */
+    @NameInMap("TopicCode")
+    public String topicCode;
 
     public static ListEvaluationResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEvaluationResultsRequest self = new ListEvaluationResultsRequest();
@@ -88,6 +107,14 @@ public class ListEvaluationResultsRequest extends TeaModel {
     }
     public String getSnapshotId() {
         return this.snapshotId;
+    }
+
+    public ListEvaluationResultsRequest setTopicCode(String topicCode) {
+        this.topicCode = topicCode;
+        return this;
+    }
+    public String getTopicCode() {
+        return this.topicCode;
     }
 
     public static class ListEvaluationResultsRequestFilters extends TeaModel {

@@ -29,6 +29,13 @@ public class ListEvaluationMetadataRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ResourceUtilization</p>
+     */
+    @NameInMap("TopicCode")
+    public String topicCode;
+
     public static ListEvaluationMetadataRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEvaluationMetadataRequest self = new ListEvaluationMetadataRequest();
         return TeaModel.build(map, self);
@@ -56,6 +63,14 @@ public class ListEvaluationMetadataRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListEvaluationMetadataRequest setTopicCode(String topicCode) {
+        this.topicCode = topicCode;
+        return this;
+    }
+    public String getTopicCode() {
+        return this.topicCode;
     }
 
 }

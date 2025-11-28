@@ -463,6 +463,13 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         @NameInMap("Stage")
         public String stage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ResourceUtilization</p>
+         */
+        @NameInMap("TopicCode")
+        public String topicCode;
+
         public static ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata build(java.util.Map<String, ?> map) throws Exception {
             ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata self = new ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata();
             return TeaModel.build(map, self);
@@ -538,6 +545,14 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         }
         public String getStage() {
             return this.stage;
+        }
+
+        public ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata setTopicCode(String topicCode) {
+            this.topicCode = topicCode;
+            return this;
+        }
+        public String getTopicCode() {
+            return this.topicCode;
         }
 
     }

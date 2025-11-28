@@ -58,6 +58,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NonCompliant")
         public Integer nonCompliant;
 
@@ -72,6 +76,25 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
         public Integer getNonCompliant() {
             return this.nonCompliant;
+        }
+
+    }
+
+    public static class ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation extends TeaModel {
+        @NameInMap("RemediationTemplateId")
+        public String remediationTemplateId;
+
+        public static ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation build(java.util.Map<String, ?> map) throws Exception {
+            ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation self = new ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation setRemediationTemplateId(String remediationTemplateId) {
+            this.remediationTemplateId = remediationTemplateId;
+            return this;
+        }
+        public String getRemediationTemplateId() {
+            return this.remediationTemplateId;
         }
 
     }
@@ -147,6 +170,9 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         @NameInMap("AccountSummary")
         public ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary accountSummary;
 
+        @NameInMap("AvailableRemediation")
+        public java.util.List<ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation> availableRemediation;
+
         /**
          * <p>The error information.</p>
          * <blockquote>
@@ -173,6 +199,13 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
          */
         @NameInMap("Id")
         public String id;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("PotentialScoreIncrease")
+        public Double potentialScoreIncrease;
 
         /**
          * <p>The checked resources.</p>
@@ -230,6 +263,14 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             return this.accountSummary;
         }
 
+        public ListEvaluationResultsResponseBodyResultsMetricResults setAvailableRemediation(java.util.List<ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation> availableRemediation) {
+            this.availableRemediation = availableRemediation;
+            return this;
+        }
+        public java.util.List<ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation> getAvailableRemediation() {
+            return this.availableRemediation;
+        }
+
         public ListEvaluationResultsResponseBodyResultsMetricResults setErrorInfo(ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo errorInfo) {
             this.errorInfo = errorInfo;
             return this;
@@ -252,6 +293,14 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListEvaluationResultsResponseBodyResultsMetricResults setPotentialScoreIncrease(Double potentialScoreIncrease) {
+            this.potentialScoreIncrease = potentialScoreIncrease;
+            return this;
+        }
+        public Double getPotentialScoreIncrease() {
+            return this.potentialScoreIncrease;
         }
 
         public ListEvaluationResultsResponseBodyResultsMetricResults setResourcesSummary(ListEvaluationResultsResponseBodyResultsMetricResultsResourcesSummary resourcesSummary) {
@@ -299,7 +348,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         public String evaluationTime;
 
         /**
-         * <p>The check results.</p>
+         * <p>The check result.</p>
          */
         @NameInMap("MetricResults")
         public java.util.List<ListEvaluationResultsResponseBodyResultsMetricResults> metricResults;
