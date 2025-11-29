@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAINodeRequest extends TeaModel {
     /**
+     * <p>The number of AINodes to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteAINodeRequest extends TeaModel {
     public Integer AINodeNum;
 
     /**
+     * <p>The ID of the AINode resource pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>aipool-xxxx</p>
      */
@@ -21,6 +24,10 @@ public class DeleteAINodeRequest extends TeaModel {
     public String AINodePoolId;
 
     /**
+     * <p>The ID of the instance.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +36,9 @@ public class DeleteAINodeRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The list of AINodes to be deleted.</p>
+     */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSupabaseProjectsRequest extends TeaModel {
     /**
+     * <p>The maximum number of instances to return per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListSupabaseProjectsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token returned from a previous call. Use it to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
@@ -19,6 +23,11 @@ public class ListSupabaseProjectsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID of the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation get a list of available region IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -78,6 +78,16 @@ public class DeleteVectorIndexRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The vector type. Valid values:</p>
+     * <ul>
+     * <li>Dense (default)</li>
+     * <li>Sparse</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Dense</p>
+     */
     @NameInMap("Type")
     public String type;
 

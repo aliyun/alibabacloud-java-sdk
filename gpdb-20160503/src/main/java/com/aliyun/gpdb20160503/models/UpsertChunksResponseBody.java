@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpsertChunksResponseBody extends TeaModel {
     /**
-     * <p>Number of tokens used during vectorization.</p>
+     * <p>The number of tokens that are consumed during vectorization.</p>
      * <blockquote>
-     * <p>A token refers to the smallest unit into which the input text is divided. A token can be a word, a phrase, a punctuation mark, a character, etc.</p>
+     * <p>A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,11 +16,20 @@ public class UpsertChunksResponseBody extends TeaModel {
     @NameInMap("EmbeddingTokens")
     public String embeddingTokens;
 
+    /**
+     * <p>The job ID. You can use the <code>GetGraphRAGJob</code> to view the job status.</p>
+     * <blockquote>
+     * <p>This parameter is returned only when the knowledge base is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -29,7 +38,7 @@ public class UpsertChunksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -38,10 +47,10 @@ public class UpsertChunksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>API execution status, with the following values:</p>
+     * <p>The status of the operation. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: Execution succeeded.</li>
-     * <li><strong>fail</strong>: Execution failed.</li>
+     * <li><strong>success</strong></li>
+     * <li><strong>fail</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

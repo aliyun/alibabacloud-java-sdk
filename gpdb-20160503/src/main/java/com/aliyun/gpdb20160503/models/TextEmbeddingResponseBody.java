@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TextEmbeddingResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -12,16 +14,27 @@ public class TextEmbeddingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The embedding results.</p>
+     */
     @NameInMap("Results")
     public TextEmbeddingResponseBodyResults results;
 
     /**
+     * <p>The status of the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>success</strong></li>
+     * <li><strong>fail</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +42,8 @@ public class TextEmbeddingResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The total number of tokens consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -100,10 +115,15 @@ public class TextEmbeddingResponseBody extends TeaModel {
     }
 
     public static class TextEmbeddingResponseBodyResultsResults extends TeaModel {
+        /**
+         * <p>The embedding values.</p>
+         */
         @NameInMap("Embedding")
         public TextEmbeddingResponseBodyResultsResultsEmbedding embedding;
 
         /**
+         * <p>The number of the embedding in the Input request parameter, which starts from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

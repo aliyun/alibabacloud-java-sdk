@@ -4,10 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListBackupJobsResponseBody extends TeaModel {
+    /**
+     * <p>The queried backup jobs.</p>
+     */
     @NameInMap("Items")
     public ListBackupJobsResponseBodyItems items;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -37,6 +42,8 @@ public class ListBackupJobsResponseBody extends TeaModel {
 
     public static class ListBackupJobsResponseBodyItemsBackupJob extends TeaModel {
         /**
+         * <p>The backup job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -44,6 +51,12 @@ public class ListBackupJobsResponseBody extends TeaModel {
         public String backupJobId;
 
         /**
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong></li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Automated</p>
          */
@@ -51,6 +64,12 @@ public class ListBackupJobsResponseBody extends TeaModel {
         public String backupMode;
 
         /**
+         * <p>The backup status. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failure</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -58,6 +77,8 @@ public class ListBackupJobsResponseBody extends TeaModel {
         public String backupStatus;
 
         /**
+         * <p>The progress of the backup job.</p>
+         * 
          * <strong>example:</strong>
          * <p>50%</p>
          */
@@ -65,6 +86,8 @@ public class ListBackupJobsResponseBody extends TeaModel {
         public String process;
 
         /**
+         * <p>The time when the backup job started. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-11T09:26:43Z</p>
          */

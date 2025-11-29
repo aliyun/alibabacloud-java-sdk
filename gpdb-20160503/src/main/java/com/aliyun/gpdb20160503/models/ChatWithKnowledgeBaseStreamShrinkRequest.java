@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +18,22 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Whether to return the retrieved result. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("IncludeKnowledgeBaseResults")
     public Boolean includeKnowledgeBaseResults;
 
+    /**
+     * <p>The knowledge retrieval parameter object. If you do not specify this parameter, only chat mode is enabled.</p>
+     */
     @NameInMap("KnowledgeParams")
     public String knowledgeParamsShrink;
 
     /**
+     * <p>The Large Language Model (LLM) invocation parameter object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ModelParams")
@@ -32,8 +42,20 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The system prompt template, which should include {{ text_chunks }},{{ user_system_prompt }},{{ graph_entities },{{ graph_relations }}. If any of these placeholders are not specified, the corresponding section should have no effect.</p>
+     */
     @NameInMap("PromptParams")
     public String promptParams;
+
+    /**
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ChatWithKnowledgeBaseStreamShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatWithKnowledgeBaseStreamShrinkRequest self = new ChatWithKnowledgeBaseStreamShrinkRequest();
@@ -86,6 +108,14 @@ public class ChatWithKnowledgeBaseStreamShrinkRequest extends TeaModel {
     }
     public String getPromptParams() {
         return this.promptParams;
+    }
+
+    public ChatWithKnowledgeBaseStreamShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

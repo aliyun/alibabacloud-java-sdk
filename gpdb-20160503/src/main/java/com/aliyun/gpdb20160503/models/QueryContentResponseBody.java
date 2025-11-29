@@ -16,6 +16,9 @@ public class QueryContentResponseBody extends TeaModel {
     @NameInMap("EmbeddingTokens")
     public String embeddingTokens;
 
+    /**
+     * <p>The entities.</p>
+     */
     @NameInMap("Entities")
     public QueryContentResponseBodyEntities entities;
 
@@ -34,6 +37,9 @@ public class QueryContentResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of relationship edges.</p>
+     */
     @NameInMap("Relations")
     public QueryContentResponseBodyRelations relations;
 
@@ -149,18 +155,48 @@ public class QueryContentResponseBody extends TeaModel {
     }
 
     public static class QueryContentResponseBodyEntitiesEntities extends TeaModel {
+        /**
+         * <p>Entity description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A former advisor at DeepMind.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The entity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dr. Wang</p>
+         */
         @NameInMap("Entity")
         public String entity;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_doc.txt</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Figure</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -455,18 +491,48 @@ public class QueryContentResponseBody extends TeaModel {
     }
 
     public static class QueryContentResponseBodyRelationsRelations extends TeaModel {
+        /**
+         * <p>The description of the relationship edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dr. Wang previously served as an advisor at DeepMind.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_doc.txt</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The ID of the relationship edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The source entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Former DeepMind consultant</p>
+         */
         @NameInMap("SourceEntity")
         public String sourceEntity;
 
+        /**
+         * <p>The destination entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dr. Wang</p>
+         */
         @NameInMap("TargetEntity")
         public String targetEntity;
 

@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the document collection.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,10 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public String collection;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +31,30 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The list of entity types.</p>
+     * <blockquote>
+     * <p>If the knowledge graph construction is enabled, this parameter is required.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EntityTypes")
     public String entityTypesShrink;
 
     /**
+     * <p>The name of the LLM model.</p>
+     * <blockquote>
+     * <p>Valid values:</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>knowledge-extract-standard: the default value.</p>
+     * </li>
+     * <li><p>knowledge-extract-mini</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only when the knowledge graph construction is enabled.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>knowledge-extract-standard</p>
      */
@@ -36,6 +62,15 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public String LLMModel;
 
     /**
+     * <p>The language used to build the knowledge graph. Valid values:</p>
+     * <ul>
+     * <li>Simplified Chinese. The default value.</li>
+     * <li>English.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only when the knowledge graph construction is enabled.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Simplified Chinese</p>
      */
@@ -43,6 +78,10 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The name of the privileged database account that has the rds_superuser permission.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation to create an account.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +91,7 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public String managerAccount;
 
     /**
+     * <p>The password for the privileged database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +101,11 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public String managerAccountPassword;
 
     /**
+     * <p>The name of the namespace. Default value: public.</p>
+     * <blockquote>
+     * <p>You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
      */
@@ -68,6 +113,10 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The password of the namespace.</p>
+     * <blockquote>
+     * <p>The value of this parameter is specified by <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +129,10 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +142,10 @@ public class EnableCollectionGraphRAGShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The list of relationship edge types.</p>
+     * <blockquote>
+     * <p>If the knowledge graph construction is enabled, this parameter is required.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RelationshipTypes")

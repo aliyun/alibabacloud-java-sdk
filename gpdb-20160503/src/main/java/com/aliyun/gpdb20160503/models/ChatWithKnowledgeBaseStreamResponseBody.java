@@ -4,20 +4,30 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
+    /**
+     * <p>model response.</p>
+     */
     @NameInMap("ChatCompletion")
     public ChatWithKnowledgeBaseStreamResponseBodyChatCompletion chatCompletion;
 
     /**
+     * <p>The returned information.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Retrieve information from multiple knowledge bases.</p>
+     */
     @NameInMap("MultiCollectionRecallResult")
     public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResult multiCollectionRecallResult;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -25,6 +35,12 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>success</strong>.</li>
+     * <li><strong>fail</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -78,6 +94,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessageToolCallsFunction extends TeaModel {
         /**
+         * <p>Arguments of the called function.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;city&quot;:&quot;hangzhou&quot;}</p>
          */
@@ -85,6 +103,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String arguments;
 
         /**
+         * <p>The name of the called function.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;get_weather&quot;</p>
          */
@@ -115,11 +135,14 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
     }
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessageToolCalls extends TeaModel {
+        /**
+         * <p>Function call information.</p>
+         */
         @NameInMap("Function")
         public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessageToolCallsFunction function;
 
         /**
-         * <p>ID</p>
+         * <p>The ID.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;chatcmpl-c1bebafa-cc48-44e2-88c6-1a3572952f8e&quot;</p>
@@ -128,6 +151,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The position of this tool in the \&quot;input\&quot; request parameter, which starts from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -166,16 +191,38 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
     }
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessage extends TeaModel {
+        /**
+         * <p>The content of the document.</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Model reasoning chain content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Logical reasoning process</p>
+         */
+        @NameInMap("ReasoningContent")
+        public String reasoningContent;
+
+        /**
+         * <p>Message role:</p>
+         * <ul>
+         * <li>system</li>
+         * <li>user</li>
+         * <li>assistant</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>Tool call response.</p>
+         */
         @NameInMap("ToolCalls")
         public java.util.List<ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessageToolCalls> toolCalls;
 
@@ -190,6 +237,14 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessage setReasoningContent(String reasoningContent) {
+            this.reasoningContent = reasoningContent;
+            return this;
+        }
+        public String getReasoningContent() {
+            return this.reasoningContent;
         }
 
         public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessage setRole(String role) {
@@ -212,6 +267,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoices extends TeaModel {
         /**
+         * <p>Finish reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>finish</p>
          */
@@ -219,12 +276,17 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String finishReason;
 
         /**
+         * <p>The sequence number of the reply.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Index")
         public Long index;
 
+        /**
+         * <p>LLM response.</p>
+         */
         @NameInMap("Message")
         public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessage message;
 
@@ -261,6 +323,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsagePromptTokensDetails extends TeaModel {
         /**
+         * <p>The number of tokens from cache hits.</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -284,6 +348,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsage extends TeaModel {
         /**
+         * <p>The number of tokens consumed by the generated content.</p>
+         * 
          * <strong>example:</strong>
          * <p>42</p>
          */
@@ -291,16 +357,23 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public Long completionTokens;
 
         /**
+         * <p>The number of tokens consumed by the prompt.</p>
+         * 
          * <strong>example:</strong>
          * <p>42</p>
          */
         @NameInMap("PromptTokens")
         public Long promptTokens;
 
+        /**
+         * <p>The details about the prompt token.</p>
+         */
         @NameInMap("PromptTokensDetails")
         public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsagePromptTokensDetails promptTokensDetails;
 
         /**
+         * <p>The total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>42</p>
          */
@@ -347,10 +420,15 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
     }
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyChatCompletion extends TeaModel {
+        /**
+         * <p>Text content generated in real time.</p>
+         */
         @NameInMap("Choices")
         public java.util.List<ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoices> choices;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1758529748</p>
          */
@@ -358,6 +436,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public Long created;
 
         /**
+         * <p>The ID of the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>273e3fc7-8f56-4167-a1bb-d35d2f3b9043</p>
          */
@@ -365,12 +445,17 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The number of tokens used in LLM output.</p>
+         */
         @NameInMap("Usage")
         public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsage usage;
 
@@ -423,6 +508,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata extends TeaModel {
         /**
+         * <p>The source of the retrieved results. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path retrieval.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -445,10 +532,15 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
     }
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatches extends TeaModel {
+        /**
+         * <p>The content of the document.</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>a14b0221-e3f2-4cf2-96cd-b3c293510770.jpg</p>
          */
@@ -456,6 +548,9 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The URL of the image result. By default, the URL is valid for 2 hours.</p>
+         * <p>You can use the UrlExpiration parameter to specify a validity period.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://dailyshort-sh.oss-cn-shanghai.aliyuncs.com/vod-8efba5/f06147795c6c71f080605420848d0302/0ca34d5743a84bf7c68f489a60715dac-ld.mp4">http://dailyshort-sh.oss-cn-shanghai.aliyuncs.com/vod-8efba5/f06147795c6c71f080605420848d0302/0ca34d5743a84bf7c68f489a60715dac-ld.mp4</a></p>
          */
@@ -463,6 +558,11 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String fileURL;
 
         /**
+         * <p>The unique ID of the vector data.</p>
+         * <blockquote>
+         * <p> If you leave this parameter empty, a unique ID is automatically generated by using uuidgen. If it is not empty and conflicts with an existing ID in the database, the value in the database will be updated with the data from the API.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>273e3fc7-8f56-4167-a1bb-d35d2f3b9043</p>
          */
@@ -470,16 +570,23 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Document loader metadata.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;page&quot;:1}</p>
          */
         @NameInMap("LoaderMetadata")
         public Object loaderMetadata;
 
+        /**
+         * <p>Metadata.</p>
+         */
         @NameInMap("Metadata")
         public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatchesMetadata metadata;
 
         /**
+         * <p>The rerank score.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.12</p>
          */
@@ -487,6 +594,8 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public Double rerankScore;
 
         /**
+         * <p>The source of the retrieved results. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path retrieval.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.12</p>
          */
@@ -494,12 +603,17 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public Long retrievalSource;
 
         /**
+         * <p>The similarity score of the data. It is related to the <code>l2, ip, or cosine</code> algorithm that is specified when you create an index.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The vector data.</p>
+         */
         @NameInMap("Vector")
         public java.util.List<Double> vector;
 
@@ -592,6 +706,11 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultUsage extends TeaModel {
         /**
+         * <p>The number of tokens that are used during vectorization.</p>
+         * <blockquote>
+         * <p> A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>158</p>
          */
@@ -614,16 +733,27 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
     }
 
     public static class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResult extends TeaModel {
+        /**
+         * <p>The details of the entity.</p>
+         */
         @NameInMap("Entities")
         public java.util.List<String> entities;
 
+        /**
+         * <p>The retrieved item.</p>
+         */
         @NameInMap("Matches")
         public java.util.List<ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatches> matches;
 
+        /**
+         * <p>The relationship name.</p>
+         */
         @NameInMap("Relations")
         public java.util.List<String> relations;
 
         /**
+         * <p>The unique ID of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
@@ -631,6 +761,12 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>.</li>
+         * <li><strong>fail</strong>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -638,12 +774,17 @@ public class ChatWithKnowledgeBaseStreamResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The number of tokens that are consumed.</p>
+         * 
          * <strong>example:</strong>
          * <p>42</p>
          */
         @NameInMap("Tokens")
         public Long tokens;
 
+        /**
+         * <p>The number of tokens that are consumed during document understanding or embedding.</p>
+         */
         @NameInMap("Usage")
         public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultUsage usage;
 

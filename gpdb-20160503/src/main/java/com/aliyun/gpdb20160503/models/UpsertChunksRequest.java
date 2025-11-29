@@ -4,13 +4,22 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpsertChunksRequest extends TeaModel {
+    /**
+     * <p>Based on the Filter input specified under TextChunks, this parameter controls whether data insertion is allowed when a Filter is provided.</p>
+     * <p>If AllowInsertWithFilter = true, the insert operation is performed when the filter does not match any data.</p>
+     * <p>If AllowInsertWithFilter = false, no action is performed if the filter does not match any data.</p>
+     * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AllowInsertWithFilter")
     public Boolean allowInsertWithFilter;
 
     /**
-     * <p>Document collection name.</p>
+     * <p>The name of the document collection.</p>
      * <blockquote>
-     * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can use the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the already created document collections.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -21,9 +30,9 @@ public class UpsertChunksRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,9 +43,9 @@ public class UpsertChunksRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>File name.</p>
+     * <p>The file name of the document.</p>
      * <blockquote>
-     * <p>If a file name is specified and not empty, it will overwrite the data for this file name; if empty, the chunks data will be appended directly to the document collection.</p>
+     * <p>When a non-empty filename is specified, the system will decide whether to overwrite the data associated with that filename based on the value of the ShouldReplaceFile parameter. If you leave this parameter empty, the data of chunks is appended to the document collection.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,9 +55,9 @@ public class UpsertChunksRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>Namespace, default is public.</p>
+     * <p>The name of the namespace. Default value: public.</p>
      * <blockquote>
-     * <p>You can create it using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,9 +67,9 @@ public class UpsertChunksRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Password corresponding to the namespace.</p>
+     * <p>The password of the namespace.</p>
      * <blockquote>
-     * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</p>
+     * <p>The value of this parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -74,7 +83,7 @@ public class UpsertChunksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Region ID where the instance is located.</p>
+     * <p>The region ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,11 +92,20 @@ public class UpsertChunksRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to overwrite the data associated with the file name specified by the FileName parameter.</p>
+     * <p>If you set ShouldReplaceFile to true, the system deletes all data associated with the file name and then inserts new data.</p>
+     * <p>If you set ShouldReplaceFile to false, the system does not delete the data associated with the file name, but inserts or updates the data of chunks based on the TextChunks parameter.</p>
+     * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ShouldReplaceFile")
     public Boolean shouldReplaceFile;
 
     /**
-     * <p>List of split documents.</p>
+     * <p>List of document chunks after splitting.</p>
      */
     @NameInMap("TextChunks")
     public java.util.List<UpsertChunksRequestTextChunks> textChunks;
@@ -179,7 +197,7 @@ public class UpsertChunksRequest extends TeaModel {
 
     public static class UpsertChunksRequestTextChunks extends TeaModel {
         /**
-         * <p>Document content.</p>
+         * <p>The content of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,14 +206,26 @@ public class UpsertChunksRequest extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title = \&quot;seagull\&quot;</p>
+         */
         @NameInMap("Filter")
         public String filter;
 
+        /**
+         * <p>The unique ID of the vector data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>273e3fc7-8f56-4167-a1bb-d35d2f3b9043</p>
+         */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>Metadata.</p>
+         * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;title&quot;:&quot;test&quot;}</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddAINodeRequest extends TeaModel {
     /**
+     * <p>The ID of the resource pool to which the AI node belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>aipool-xxxxx</p>
      */
@@ -12,12 +14,14 @@ public class AddAINodeRequest extends TeaModel {
     public String AINodePoolId;
 
     /**
+     * <p>The AI node specifications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AINodeSpecInfos")
     public java.util.List<AddAINodeRequestAINodeSpecInfos> AINodeSpecInfos;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +61,7 @@ public class AddAINodeRequest extends TeaModel {
 
     public static class AddAINodeRequestAINodeSpecInfos extends TeaModel {
         /**
+         * <p>The number of AI nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -66,6 +71,36 @@ public class AddAINodeRequest extends TeaModel {
         public String nodeNum;
 
         /**
+         * <p>The AI node specifications.</p>
+         * <pre><code>ADB.AIStandard.1
+         * ADB.AIMedium.1
+         * ADB.AILarge.1
+         * ADB.AIStandard.2
+         * ADB.AIMedium.2
+         * ADB.AILarge.2
+         * ADB.AIXLarge.2
+         * ADB.AIStandard.6
+         * ADB.AIMedium.6
+         * ADB.AILarge.6
+         * ADB.AIXLarge.6
+         * ADB.AIStandard.3
+         * ADB.AIMedium.3
+         * ADB.AILarge.3
+         * ADB.AIXLarge.3
+         * ADB.AIStandard.4
+         * ADB.AIMedium.4
+         * ADB.AILarge.4
+         * ADB.AIXLarge.4
+         * ADB.AIStandard.5
+         * ADB.AIMedium.5
+         * ADB.AILarge.5
+         * ADB.AIXLarge.5
+         * ADB.AIStandard.8
+         * ADB.AIMedium.8
+         * ADB.AILarge.8
+         * ADB.AIXLarge.8
+         * ADB.AI2XLarge.8
+         * </code></pre>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
     /**
+     * <p>The backup job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -12,6 +14,8 @@ public class CreateBackupResponseBody extends TeaModel {
     public Long backupJobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */

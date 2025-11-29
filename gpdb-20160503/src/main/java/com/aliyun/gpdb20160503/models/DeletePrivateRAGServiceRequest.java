@@ -1,0 +1,29 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.gpdb20160503.models;
+
+import com.aliyun.tea.*;
+
+public class DeletePrivateRAGServiceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxx</p>
+     */
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    public static DeletePrivateRAGServiceRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeletePrivateRAGServiceRequest self = new DeletePrivateRAGServiceRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DeletePrivateRAGServiceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+}

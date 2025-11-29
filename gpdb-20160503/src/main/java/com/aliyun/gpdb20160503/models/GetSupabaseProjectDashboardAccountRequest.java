@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSupabaseProjectDashboardAccountRequest extends TeaModel {
     /**
+     * <p>The Supabase project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetSupabaseProjectDashboardAccountRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
+    /**
+     * <p>The queried API keys.</p>
+     */
     @NameInMap("ApiKeys")
     public java.util.List<GetSupabaseProjectApiKeysResponseBodyApiKeys> apiKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
      */
@@ -37,6 +42,8 @@ public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
 
     public static class GetSupabaseProjectApiKeysResponseBodyApiKeys extends TeaModel {
         /**
+         * <p>The queried API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Tmz2Z59caMDeq/Xi9vuc****</p>
          */
@@ -44,6 +51,8 @@ public class GetSupabaseProjectApiKeysResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The name of the API key, including the Anon key and the service role key.</p>
+         * 
          * <strong>example:</strong>
          * <p>anon key</p>
          */

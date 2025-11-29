@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
     /**
+     * <p>The username for accessing the project\&quot;s dashboard.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxpassword</p>
      */
@@ -12,6 +14,8 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
     public String dashboardPassword;
 
     /**
+     * <p>The password associated with the dashboard username.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxuser</p>
      */
@@ -19,6 +23,8 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
     public String dashboardUsername;
 
     /**
+     * <p>The ID of the Supabase project.</p>
+     * 
      * <strong>example:</strong>
      * <p>sbp-twmoe9bakow</p>
      */
@@ -26,6 +32,8 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The name of the Supabase project.</p>
+     * 
      * <strong>example:</strong>
      * <p>supabase_prod</p>
      */
@@ -33,6 +41,8 @@ public class GetSupabaseProjectDashboardAccountResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
      */

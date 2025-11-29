@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetGraphRAGJobRequest extends TeaModel {
     /**
+     * <p>The name of the document collection.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,10 @@ public class GetGraphRAGJobRequest extends TeaModel {
     public String collection;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,7 @@ public class GetGraphRAGJobRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +41,11 @@ public class GetGraphRAGJobRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The name of the namespace. Default value: public.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
      */
@@ -39,6 +53,10 @@ public class GetGraphRAGJobRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The password of the namespace.</p>
+     * <blockquote>
+     * <p>The value of this parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +69,10 @@ public class GetGraphRAGJobRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

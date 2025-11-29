@@ -93,6 +93,12 @@ public class DescribeCollectionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The method that is used to create sparse vector indexes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip</p>
+     */
     @NameInMap("SparseVectorMetrics")
     public String sparseVectorMetrics;
 
@@ -109,6 +115,12 @@ public class DescribeCollectionResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether sparse vectors are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SupportSparse")
     public Boolean supportSparse;
 

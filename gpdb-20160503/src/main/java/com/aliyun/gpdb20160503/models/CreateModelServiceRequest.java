@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceRequest extends TeaModel {
     /**
+     * <p>A list of AI nodes for model deployment.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AiNodes")
     public java.util.List<String> aiNodes;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How do I ensure the idempotence?</a></p>
+     * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
      */
@@ -18,6 +21,10 @@ public class CreateModelServiceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +34,8 @@ public class CreateModelServiceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -37,6 +46,8 @@ public class CreateModelServiceRequest extends TeaModel {
     public Boolean enablePublicConnection;
 
     /**
+     * <p>The inference engine. Only vllm is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>vllm</p>
      */
@@ -44,6 +55,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String inferenceEngine;
 
     /**
+     * <p>The name of the model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,10 +64,15 @@ public class CreateModelServiceRequest extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>Model parameters (to be supported).</p>
+     */
     @NameInMap("ModelParams")
     public java.util.Map<String, ?> modelParams;
 
     /**
+     * <p>The number of model service replicas.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -63,6 +80,8 @@ public class CreateModelServiceRequest extends TeaModel {
     public Integer replicas;
 
     /**
+     * <p>The ID of the resource group to which the instance belongs. For more information about how to get the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
      */
@@ -70,6 +89,9 @@ public class CreateModelServiceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The IP address whitelist.</p>
+     * <p>127.0.0.1 indicates that access from any external IP address is prohibited. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after the instance is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */

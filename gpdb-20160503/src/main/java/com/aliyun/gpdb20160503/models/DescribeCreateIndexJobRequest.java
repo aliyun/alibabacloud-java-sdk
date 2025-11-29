@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCreateIndexJobRequest extends TeaModel {
     /**
+     * <p>The name of the collection.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,11 @@ public class DescribeCreateIndexJobRequest extends TeaModel {
     public String collection;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
      */
@@ -21,6 +30,7 @@ public class DescribeCreateIndexJobRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The ID of the index creation job, which is returned from the <code>CreateIndex</code> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +40,10 @@ public class DescribeCreateIndexJobRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The namespace name.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +53,10 @@ public class DescribeCreateIndexJobRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The password for the namespace.</p>
+     * <blockquote>
+     * <p>The value of this parameter is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +69,10 @@ public class DescribeCreateIndexJobRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +82,14 @@ public class DescribeCreateIndexJobRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes precedence.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ip</li>
+     * <li>l2</li>
+     * <li>cosine</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gp-ws-*****</p>
      */

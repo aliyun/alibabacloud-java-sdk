@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeIndexResponseBody extends TeaModel {
     /**
+     * <p>The name of the collection.</p>
+     * 
      * <strong>example:</strong>
      * <p>testcollection</p>
      */
@@ -12,6 +14,8 @@ public class DescribeIndexResponseBody extends TeaModel {
     public String collection;
 
     /**
+     * <p>The definition of the index.</p>
+     * 
      * <strong>example:</strong>
      * <p>CREATE INDEX testindex ON mynamespace. testcollection</p>
      */
@@ -19,6 +23,8 @@ public class DescribeIndexResponseBody extends TeaModel {
     public String indexDef;
 
     /**
+     * <p>The name of the index.</p>
+     * 
      * <strong>example:</strong>
      * <p>testindex</p>
      */
@@ -26,6 +32,8 @@ public class DescribeIndexResponseBody extends TeaModel {
     public String indexName;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,6 +41,8 @@ public class DescribeIndexResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
      */
@@ -40,6 +50,8 @@ public class DescribeIndexResponseBody extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -47,6 +59,12 @@ public class DescribeIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: The operation fails.</li>
+     * <li><strong>true</strong>: The operation is successful.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

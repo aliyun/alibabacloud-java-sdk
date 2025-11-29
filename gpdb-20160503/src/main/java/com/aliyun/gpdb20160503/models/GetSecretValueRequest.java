@@ -53,6 +53,12 @@ public class GetSecretValueRequest extends TeaModel {
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-ws-*****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

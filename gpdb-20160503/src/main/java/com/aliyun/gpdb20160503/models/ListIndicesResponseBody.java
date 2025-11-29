@@ -4,10 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListIndicesResponseBody extends TeaModel {
+    /**
+     * <p>The queried indexes.</p>
+     */
     @NameInMap("Indices")
     public ListIndicesResponseBodyIndices indices;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -24,6 +29,12 @@ public class ListIndicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>success</strong>.</li>
+     * <li><strong>fail</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +80,8 @@ public class ListIndicesResponseBody extends TeaModel {
 
     public static class ListIndicesResponseBodyIndicesIndices extends TeaModel {
         /**
+         * <p>The name of the collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>testcollection</p>
          */
@@ -76,6 +89,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public String collection;
 
         /**
+         * <p>The definition of the index.</p>
+         * 
          * <strong>example:</strong>
          * <p>CREATE INDEX testindex ON mynamespace. testcollection</p>
          */
@@ -83,6 +98,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public String indexDef;
 
         /**
+         * <p>The name of the index.</p>
+         * 
          * <strong>example:</strong>
          * <p>testindex</p>
          */
@@ -90,6 +107,8 @@ public class ListIndicesResponseBody extends TeaModel {
         public String indexName;
 
         /**
+         * <p>The namespace to which the pod belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>mynamespace</p>
          */

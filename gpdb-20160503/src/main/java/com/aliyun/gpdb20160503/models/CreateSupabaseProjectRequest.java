@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSupabaseProjectRequest extends TeaModel {
     /**
+     * <p>The password of the initial account.</p>
+     * <ul>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+     * <li>The password must be 8 to 32 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,8 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String accountPassword;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88888888****</p>
      */
@@ -21,6 +29,12 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The performance level of Enterprise SSDs (ESSDs). Default value: PL0. Valid values:</p>
+     * <ul>
+     * <li>PL0</li>
+     * <li>PL1</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PL0</p>
      */
@@ -28,6 +42,12 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String diskPerformanceLevel;
 
     /**
+     * <p>The name of the Supabase project. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name must be 1 to 128 characters in length.</li>
+     * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start with a letter or an underscore (_).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +57,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The specifications of the Supabase project. Default value: 1C1G.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +67,8 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String projectSpec;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -53,6 +76,8 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The IP address whitelist.</p>
+     * <p>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after you create a project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +87,8 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String securityIPList;
 
     /**
+     * <p>The storage size. Unit: GB. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -69,6 +96,15 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public Long storageSize;
 
     /**
+     * <p>The vSwitch ID.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p><strong>This parameter</strong> must be specified.</p>
+     * </li>
+     * <li><p>The zone where the <strong>vSwitch</strong> resides must be the same as the zone that is specified by <strong>ZoneId</strong>.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +114,15 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The virtual private cloud (VPC) ID.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query the available VPC IDs.</p>
+     * </li>
+     * <li><p>This parameter must be specified.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +132,10 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

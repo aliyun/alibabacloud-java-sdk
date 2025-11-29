@@ -71,9 +71,18 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>Whether to enable knowledge graph enhancement. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("GraphEnhance")
     public Boolean graphEnhance;
 
+    /**
+     * <p>The search parameters of the knowledge graph.</p>
+     */
     @NameInMap("GraphSearchArgs")
     public QueryContentAdvanceRequestGraphSearchArgs graphSearchArgs;
 
@@ -195,6 +204,26 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("NamespacePassword")
     public String namespacePassword;
 
+    /**
+     * <p>Offset, used for paginated queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("Offset")
+    public Integer offset;
+
+    /**
+     * <p>The fields by which to sort the results. This parameter is empty by default.</p>
+     * <p>The field must be either a metadata field or a default field in the table (e.g., id). Supported formats include:</p>
+     * <p>Single field, such as chunk_id. Multiple fields that are separated by commas (,), such as block_id,chunk_id. Descending order is supported, e.g., block_id DESC, chunk_id DESC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>created_at</p>
+     */
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -236,7 +265,7 @@ public class QueryContentAdvanceRequest extends TeaModel {
     public Double rerankFactor;
 
     /**
-     * <p>Set the number of top results to return.</p>
+     * <p>The number of the returned top results.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -244,6 +273,23 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("TopK")
     public Integer topK;
 
+    /**
+     * <p>The validity period of the returned image URL.</p>
+     * <blockquote>
+     * <p> Value Description</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>Supported units are seconds (s) and days (d). For example, 300s specifies that the URL is valid for 300 seconds, and 60d specifies that the URL is valid for 60 days.</p>
+     * </li>
+     * <li><p>Valid values: 60s to 365d.</p>
+     * </li>
+     * <li><p>Default value: 7200s, that is, 2 hours.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>7200s</p>
+     */
     @NameInMap("UrlExpiration")
     public String urlExpiration;
 
@@ -389,6 +435,22 @@ public class QueryContentAdvanceRequest extends TeaModel {
         return this.namespacePassword;
     }
 
+    public QueryContentAdvanceRequest setOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    public Integer getOffset() {
+        return this.offset;
+    }
+
+    public QueryContentAdvanceRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
     public QueryContentAdvanceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -446,6 +508,12 @@ public class QueryContentAdvanceRequest extends TeaModel {
     }
 
     public static class QueryContentAdvanceRequestGraphSearchArgs extends TeaModel {
+        /**
+         * <p>The number of top entities and relationship edges. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("GraphTopK")
         public Integer graphTopK;
 

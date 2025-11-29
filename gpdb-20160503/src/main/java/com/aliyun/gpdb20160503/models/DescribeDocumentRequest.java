@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDocumentRequest extends TeaModel {
     /**
-     * <p>Document collection name.</p>
+     * <p>The name of the document collection.</p>
      * <blockquote>
-     * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can use the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the already created document collections.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection. and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DescribeDocumentRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,9 @@ public class DescribeDocumentRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Document name.</p>
+     * <p>The name of the document.</p>
      * <blockquote>
-     * <p>You can view the list of documents using the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> API.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query a list of documents.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,9 +44,9 @@ public class DescribeDocumentRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>Namespace, default is public.</p>
+     * <p>The name of the namespace. Default value: public.</p>
      * <blockquote>
-     * <p>You can create it via the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list through the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,9 +56,9 @@ public class DescribeDocumentRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Password for the namespace.</p>
+     * <p>The password of the namespace.</p>
      * <blockquote>
-     * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</p>
+     * <p>The value of this parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -72,7 +72,7 @@ public class DescribeDocumentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Region ID where the instance is located.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -76,6 +76,12 @@ public class CreateSecretRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-ws-*****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

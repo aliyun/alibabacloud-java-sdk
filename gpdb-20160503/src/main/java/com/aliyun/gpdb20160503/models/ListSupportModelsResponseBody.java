@@ -4,10 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListSupportModelsResponseBody extends TeaModel {
+    /**
+     * <p>The list of supported model names.</p>
+     */
     @NameInMap("ModelNames")
     public ListSupportModelsResponseBodyModelNames modelNames;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */

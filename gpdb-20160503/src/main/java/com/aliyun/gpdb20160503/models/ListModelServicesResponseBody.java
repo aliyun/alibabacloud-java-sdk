@@ -4,10 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListModelServicesResponseBody extends TeaModel {
+    /**
+     * <p>Model services.</p>
+     */
     @NameInMap("ModelServices")
     public java.util.List<ListModelServicesResponseBodyModelServices> modelServices;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListModelServicesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListModelServicesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -29,6 +38,8 @@ public class ListModelServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -81,10 +92,15 @@ public class ListModelServicesResponseBody extends TeaModel {
     }
 
     public static class ListModelServicesResponseBodyModelServices extends TeaModel {
+        /**
+         * <p>A list of AI nodes for model deployment.</p>
+         */
         @NameInMap("AiNodes")
         public java.util.List<String> aiNodes;
 
         /**
+         * <p>The API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>mI3F7B18vgfqJjUtWmgITw==</p>
          */
@@ -92,6 +108,8 @@ public class ListModelServicesResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-28T02:18:39Z</p>
          */
@@ -99,6 +117,8 @@ public class ListModelServicesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test description</p>
          */
@@ -106,16 +126,23 @@ public class ListModelServicesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>sambert-zhiying-v1</p>
          */
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <p>Model service parameters (not available).</p>
+         */
         @NameInMap("ModelParams")
         public java.util.Map<String, String> modelParams;
 
         /**
+         * <p>Model service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mx-xxxxxxxxx</p>
          */
@@ -123,6 +150,8 @@ public class ListModelServicesResponseBody extends TeaModel {
         public String modelServiceId;
 
         /**
+         * <p>Private Endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ms-xxxxxxx.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx.xxxx.rds.aliyuncs.com</a></p>
          */
@@ -130,6 +159,8 @@ public class ListModelServicesResponseBody extends TeaModel {
         public String privateConnUrl;
 
         /**
+         * <p>Public endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com</a></p>
          */
@@ -137,6 +168,13 @@ public class ListModelServicesResponseBody extends TeaModel {
         public String publicConnUrl;
 
         /**
+         * <p>The IP addresses listed in the whitelist. Up to 1,000 IP addresses are contained in a whitelist and separated by commas (,). The IP addresses must use one of the following formats:</p>
+         * <ul>
+         * <li>0.0.0.0/0</li>
+         * <li>10.23.12.24(IP)</li>
+         * <li>10.23.12.24/24 (This is a CIDR block. The value<code>/24</code>indicates the network prefix length, which must be an integer and in the range of <code>[1,32]</code>.)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
          */
@@ -144,6 +182,12 @@ public class ListModelServicesResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */

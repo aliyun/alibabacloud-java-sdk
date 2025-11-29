@@ -49,18 +49,19 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the document loader. You do not need to specify this parameter. A document loader is automatically specified based on the file extension. Valid values:</p>
+     * <p>Specifies the document loader to use for processing the file. If this parameter is omitted, the system automatically selects a loader based on the file\&quot;s extension.Valid Values:[List of valid loader names would go here] Valid values:</p>
      * <ul>
-     * <li>UnstructuredHTMLLoader: <code>.html</code></li>
-     * <li>UnstructuredMarkdownLoader: <code>.md</code></li>
-     * <li>PyMuPDFLoader: <code>.pdf</code></li>
-     * <li>PyPDFLoader: <code>.pdf</code></li>
-     * <li>RapidOCRPDFLoader: <code>.pdf</code></li>
-     * <li>PDFWithImageRefLoader: <code>.pdf</code> (with the text-image association feature)</li>
-     * <li>JSONLoader: <code>.json</code></li>
-     * <li>CSVLoader: <code>.csv</code></li>
-     * <li>RapidOCRLoader: <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, and <code>.bmp</code></li>
-     * <li>UnstructuredFileLoader: <code>.eml</code>, <code>.msg</code>, <code>.rst</code>, <code>.txt</code>, <code>.docx</code>, <code>.epub</code>, <code>.odt</code>, <code>.pptx</code>, and <code>.tsv</code></li>
+     * <li>UnstructuredHTMLLoader: .html</li>
+     * <li>UnstructuredMarkdownLoader: .md</li>
+     * <li>PyMuPDFLoader: .pdf</li>
+     * <li>PyPDFLoader: .pdf</li>
+     * <li>RapidOCRPDFLoader: .pdf</li>
+     * <li>PDFWithImageRefLoader: .pdf (with the text-image association feature)</li>
+     * <li>JSONLoader: .json</li>
+     * <li>CSVLoader: .csv</li>
+     * <li>RapidOCRLoader: .png, .jpg, .jpeg, and .bmp</li>
+     * <li>UnstructuredFileLoader: .eml, .msg, .rst, .txt, .docx, .epub, .odt, .pptx, and .tsv</li>
+     * <li>ADBPGLoader (free of charge for the first 3,000 pages): .pdf, .doc, .docx, .ppt, .pptx, .xls, .xlsx, .xlsm, .csv, .txt, .jpg, .jpeg, .png, .bmp, .gif, .md, .html, .epub, .mobi, and .rtf</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,15 +83,15 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The file name of the document.</p>
+     * <p>The name of the file being uploaded.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>We recommend that you add an extension to the file name. Examples: <code>.json</code>, <code>.md</code>, and <code>.pdf</code>. If you do not add an extension, the default loader designed for unstructured data is used.</p>
+     * <li><p>File name: .json, .md, and .pdf.</p>
      * </li>
-     * <li><p>If an image file is involved, the file name must contain an extension. The following extensions are supported: <code>.bmp</code>, <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, and <code>.tiff</code>.</p>
+     * <li><p>Images: .bmp,. jpg,. jpeg,. png, and. tiff.</p>
      * </li>
-     * <li><p>You can use a compressed package to upload images. The package file name must contain an extension. Supported package file extensions: <code>.tar</code>, <code>.gz</code>, and <code>.zip</code>.</p>
+     * <li><p>Compressed packages. The package file name must contain an extension: .tar, .gz, and .zip.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -170,16 +171,26 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     @NameInMap("Separators")
     public String separatorsShrink;
 
+    /**
+     * <p>When DocumentLoaderName is set to ADBPGLoader and TextSplitterName is set to LLMSplitter, you can specify the splitting model. Default Value: qwen3-8b.</p>
+     * <blockquote>
+     * <p> Supported splitting models: qwq-plus, qwq-plus-latest, qwen-max, qwen-max-latest, qwen-plus, qwen-plus-latest, qwen-turbo, qwen-turbo-latest, qwen3-235b-a22b, qwen3-32b,qwen3-30b-a3b, qwen3-14b, qwen3-8b, qwen3-4b, qwen3-1.7b, qwen3-0.6b, qwq-32b qwen2.5-14b-instruct-1m, qwen2.5-7b-instruct-1m, qwen2.5-72b-Instruct, qwen2.5-32b-Instruct, qwen2.5-14b-Instruct, qwen2.5-7b-Instruct, qwen2.5-3b-instruct, qwen2.5-1.5b-instruct, qwen2.5-0.5b-instruct.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>qwen3-8b</p>
+     */
     @NameInMap("SplitterModel")
     public String splitterModel;
 
     /**
-     * <p>The name of the splitter. Valid values:</p>
+     * <p>The name of the separator. Valid values:</p>
      * <ul>
-     * <li><strong>ChineseRecursiveTextSplitter</strong>: inherits from RecursiveCharacterTextSplitter, uses <code>[&quot;\\n\\n&quot;,&quot;\\n&quot;, &quot;。|!|?&quot;, &quot;\\.\\s|\\!\\s|\\?\\s&quot;, &quot;;|;\\s&quot;, &quot;,|,\\s&quot;]</code> as separators by default, and uses regular expressions to match text.</li>
-     * <li><strong>RecursiveCharacterTextSplitter</strong>: uses <code>[&quot;\\n\\n&quot;, &quot;\\n&quot;, &quot; &quot;, &quot;&quot;]</code> as separators by default. The splitter supports splitting code in languages such as <code>C++, Go, Java, JS, PHP, Proto, Python, RST, Ruby, Rust, Scala, Swift, Markdown, LaTeX, HTML, Sol, and C Sharp</code>.</li>
-     * <li><strong>SpacyTextSplitter</strong>: uses <code>\\n\\n</code> as separators by default and uses the en_core_web_sm model of spaCy. The splitter can obtain better splitting effect.</li>
-     * <li><strong>MarkdownHeaderTextSplitter</strong>: splits text in the <code>[(&quot;#&quot;, &quot;head1&quot;), (&quot;##&quot;, &quot;head2&quot;), (&quot;###&quot;, &quot;head3&quot;), (&quot;####&quot;, &quot;head4&quot;)]</code> format. The splitter is suitable for Markdown text.</li>
+     * <li><strong>ChineseRecursiveTextSplitter</strong>: Inherits from RecursiveCharacterTextSplitter and, by default, uses the delimiters<code>[&quot;\\n\\n&quot;,&quot;\\n&quot;, &quot;。 |! |?&quot;, &quot;\\.\\s|\\! \\s|\\?\\s&quot;, &quot;;|;\\s&quot;, &quot;,|,\\s&quot;] </code>, employing regular expressions to match text.</li>
+     * <li><strong>RecursiveCharacterTextSplitter</strong>: Uses the delimiters <code>[&quot;\\n\\n&quot;, &quot;\\n&quot;, &quot; &quot;, &quot;&quot;]</code> by default. The splitter supports splitting code in languages such as C++, Go, Java, JS, PHP, Proto, Python, RST, Ruby, Rust, Scala, Swift, Markdown, LaTeX, HTML, Sol, and C Sharp.</li>
+     * <li><strong>SpacyTextSplitter</strong>: Uses the delimiters <code>\\n\\n</code> by default and leverages the spaCy en_core_web_sm model. The splitter can achieve better text splitting performance.</li>
+     * <li><strong>MarkdownHeaderTextSplitter</strong>: Splits text in the [(&quot;#&quot;, &quot;head1&quot;), (&quot;##&quot;, &quot;head2&quot;), (&quot;###&quot;, &quot;head3&quot;), (&quot;####&quot;, &quot;head4&quot;) format. This splitter works well with Markdown text.</li>
+     * <li><strong>LLMSplitter</strong>: Use LLM to split text. The default model is qwen3-8b. Currently, this splitter works only when ADBPGLoader is selected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -188,6 +199,22 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     @NameInMap("TextSplitterName")
     public String textSplitterName;
 
+    /**
+     * <p>Specifies whether to enable VL-enhanced content recognition for complex documents. Default value: false.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>For complex documents with confusing typesetting and formatting, we recommend that you enable VL-enhanced content recognition.</p>
+     * </li>
+     * <li><p>Document processing time is longer after VL-enhanced content recognition is enabled.</p>
+     * </li>
+     * <li><p>After VL-enhanced content recognition is enabled, images in documents cannot be stored or recalled.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("VlEnhance")
     public Boolean vlEnhance;
 

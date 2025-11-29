@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSupportModelsRequest extends TeaModel {
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

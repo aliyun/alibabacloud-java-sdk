@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelCreateIndexJobResponseBody extends TeaModel {
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class CancelCreateIndexJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -19,6 +23,12 @@ public class CancelCreateIndexJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>success</strong></li>
+     * <li><strong>fail</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

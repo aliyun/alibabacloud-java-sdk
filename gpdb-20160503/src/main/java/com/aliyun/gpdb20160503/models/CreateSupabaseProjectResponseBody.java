@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSupabaseProjectResponseBody extends TeaModel {
     /**
+     * <p>The Supabase project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sbp-180****</p>
      */
@@ -12,6 +14,8 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D****</p>
      */
