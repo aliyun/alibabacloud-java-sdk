@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class BatchGetMediaInfosResponseBody extends TeaModel {
+    @NameInMap("IgnoredList")
+    public java.util.List<String> ignoredList;
+
     /**
      * <p>The queried media assets.</p>
      */
@@ -22,6 +25,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     public static BatchGetMediaInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchGetMediaInfosResponseBody self = new BatchGetMediaInfosResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BatchGetMediaInfosResponseBody setIgnoredList(java.util.List<String> ignoredList) {
+        this.ignoredList = ignoredList;
+        return this;
+    }
+    public java.util.List<String> getIgnoredList() {
+        return this.ignoredList;
     }
 
     public BatchGetMediaInfosResponseBody setMediaInfos(java.util.List<BatchGetMediaInfosResponseBodyMediaInfos> mediaInfos) {
@@ -576,6 +587,44 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
     }
 
+    public static class BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData extends TeaModel {
+        @NameInMap("Data")
+        public String data;
+
+        public static BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData build(java.util.Map<String, ?> map) throws Exception {
+            BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData self = new BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData setData(String data) {
+            this.data = data;
+            return this;
+        }
+        public String getData() {
+            return this.data;
+        }
+
+    }
+
+    public static class BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo extends TeaModel {
+        @NameInMap("DynamicMetaData")
+        public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData dynamicMetaData;
+
+        public static BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo build(java.util.Map<String, ?> map) throws Exception {
+            BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo self = new BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo setDynamicMetaData(BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData dynamicMetaData) {
+            this.dynamicMetaData = dynamicMetaData;
+            return this;
+        }
+        public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData getDynamicMetaData() {
+            return this.dynamicMetaData;
+        }
+
+    }
+
     public static class BatchGetMediaInfosResponseBodyMediaInfos extends TeaModel {
         /**
          * <p>FileInfos</p>
@@ -588,6 +637,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
          */
         @NameInMap("MediaBasicInfo")
         public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
+
+        @NameInMap("MediaDynamicInfo")
+        public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo mediaDynamicInfo;
 
         /**
          * <p>The ID of the media asset.</p>
@@ -617,6 +669,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
         public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo getMediaBasicInfo() {
             return this.mediaBasicInfo;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfos setMediaDynamicInfo(BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo mediaDynamicInfo) {
+            this.mediaDynamicInfo = mediaDynamicInfo;
+            return this;
+        }
+        public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo getMediaDynamicInfo() {
+            return this.mediaDynamicInfo;
         }
 
         public BatchGetMediaInfosResponseBodyMediaInfos setMediaId(String mediaId) {
