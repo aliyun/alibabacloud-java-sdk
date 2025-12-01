@@ -1097,6 +1097,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询买家交易记录列表</p>
+     * 
+     * @param tmpReq QueryBuyerDomainTradeRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryBuyerDomainTradeRecordsResponse
+     */
+    public QueryBuyerDomainTradeRecordsResponse queryBuyerDomainTradeRecordsWithOptions(QueryBuyerDomainTradeRecordsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryBuyerDomainTradeRecordsShrinkRequest request = new QueryBuyerDomainTradeRecordsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.bizIdList)) {
+            request.bizIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.bizIdList, "BizIdList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.domainNameList)) {
+            request.domainNameListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.domainNameList, "DomainNameList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statusList)) {
+            request.statusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statusList, "StatusList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.suffixList)) {
+            request.suffixListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.suffixList, "SuffixList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tradeTypeList)) {
+            request.tradeTypeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tradeTypeList, "TradeTypeList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizIdListShrink)) {
+            query.put("BizIdList", request.bizIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainNameListShrink)) {
+            query.put("DomainNameList", request.domainNameListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endPrice)) {
+            query.put("EndPrice", request.endPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sorter)) {
+            query.put("Sorter", request.sorter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startPrice)) {
+            query.put("StartPrice", request.startPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusListShrink)) {
+            query.put("StatusList", request.statusListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.suffixListShrink)) {
+            query.put("SuffixList", request.suffixListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tradeTypeListShrink)) {
+            query.put("TradeTypeList", request.tradeTypeListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryBuyerDomainTradeRecords"),
+            new TeaPair("version", "2018-02-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryBuyerDomainTradeRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询买家交易记录列表</p>
+     * 
+     * @param request QueryBuyerDomainTradeRecordsRequest
+     * @return QueryBuyerDomainTradeRecordsResponse
+     */
+    public QueryBuyerDomainTradeRecordsResponse queryBuyerDomainTradeRecords(QueryBuyerDomainTradeRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryBuyerDomainTradeRecordsWithOptions(request, runtime);
+    }
+
+    /**
      * @param request QueryDomainTransferStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDomainTransferStatusResponse

@@ -81,6 +81,9 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
     }
 
     public static class CreateFixedPriceSelectedOrderResponseBodyModule extends TeaModel {
+        @NameInMap("BizIds")
+        public java.util.Map<String, String> bizIds;
+
         /**
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -108,6 +111,14 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         public static CreateFixedPriceSelectedOrderResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             CreateFixedPriceSelectedOrderResponseBodyModule self = new CreateFixedPriceSelectedOrderResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public CreateFixedPriceSelectedOrderResponseBodyModule setBizIds(java.util.Map<String, String> bizIds) {
+            this.bizIds = bizIds;
+            return this;
+        }
+        public java.util.Map<String, String> getBizIds() {
+            return this.bizIds;
         }
 
         public CreateFixedPriceSelectedOrderResponseBodyModule setDomain(String domain) {
