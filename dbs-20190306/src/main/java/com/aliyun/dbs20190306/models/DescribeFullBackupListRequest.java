@@ -4,12 +4,31 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeFullBackupListRequest extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The total number of full backup tasks.</p>
+     */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    /**
+     * <p>The end time of the backup task, such as 1554560477000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The point in time when the backup set expires, such as 1554560477000.</p>
+     */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -19,15 +38,36 @@ public class DescribeFullBackupListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ShowStorageType")
     public Boolean showStorageType;
 
+    /**
+     * <p>Queries full backup tasks.</p>
+     */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 

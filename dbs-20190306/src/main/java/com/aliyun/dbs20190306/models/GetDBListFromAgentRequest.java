@@ -4,18 +4,42 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class GetDBListFromAgentRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>160813</p>
+     */
     @NameInMap("BackupGatewayId")
     public Long backupGatewayId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The region in which the backup gateway resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("SourceEndpointRegion")
     public String sourceEndpointRegion;
 
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

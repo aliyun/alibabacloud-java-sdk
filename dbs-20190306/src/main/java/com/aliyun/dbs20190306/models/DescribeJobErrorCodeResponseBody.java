@@ -4,21 +4,54 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobErrorCodeResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Param.NotFound</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error information.</p>
+     */
     @NameInMap("Item")
     public DescribeJobErrorCodeResponseBodyItem item;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1FC2F86D-AFF4-4ED9-BB25-ADDE196CB2B5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +109,57 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
     }
 
     public static class DescribeJobErrorCodeResponseBodyItem extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The standard error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Describe preCheck progress failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The ID of the full backup or restore task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tooi0****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>init</p>
+         */
         @NameInMap("JobState")
         public String jobState;
 
+        /**
+         * <p>The internal ID of the DBS task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <p>The language of the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
+         */
         @NameInMap("Language")
         public String language;
 

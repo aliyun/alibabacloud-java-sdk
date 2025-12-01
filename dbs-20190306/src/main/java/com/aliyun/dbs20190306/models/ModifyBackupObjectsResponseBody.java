@@ -4,24 +4,70 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupObjectsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the backup schedule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbs1h****usfa</p>
+     */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Param.NotFound</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Indicates whether a precheck is triggered. If true is returned, you must call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup schedule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NeedPrecheck")
     public Boolean needPrecheck;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

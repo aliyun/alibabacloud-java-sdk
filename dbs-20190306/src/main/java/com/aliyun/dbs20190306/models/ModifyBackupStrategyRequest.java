@@ -4,21 +4,78 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupStrategyRequest extends TeaModel {
+    /**
+     * <p>The interval at which you want to perform incremental log backups. Unit: seconds.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only when physical backups are performed.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("BackupLogIntervalSeconds")
     public Integer backupLogIntervalSeconds;
 
+    /**
+     * <p>The day of each week when the full backup task runs. Valid values:</p>
+     * <ul>
+     * <li>Monday</li>
+     * <li>Tuesday</li>
+     * <li>Wednesday</li>
+     * <li>Thursday</li>
+     * <li>Friday</li>
+     * <li>Saturday</li>
+     * <li>Sunday</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Monday</p>
+     */
     @NameInMap("BackupPeriod")
     public String backupPeriod;
 
+    /**
+     * <p>The ID of the backup schedule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbstooi01XXXX</p>
+     */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    /**
+     * <p>The start time of the full backup task. Specify the time in the HH:mm format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14:22</p>
+     */
     @NameInMap("BackupStartTime")
     public String backupStartTime;
 
+    /**
+     * <p>The backup method that you want to use for full backups. Valid values:</p>
+     * <ul>
+     * <li><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</li>
+     * <li><strong>Manual</strong>: manual backup.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: <strong>simple</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>simple</p>
+     */
     @NameInMap("BackupStrategyType")
     public String backupStrategyType;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 

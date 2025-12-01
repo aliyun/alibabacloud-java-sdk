@@ -4,33 +4,90 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPlanListResponseBody extends TeaModel {
+    /**
+     * <p>Error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameterValid</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Details of the backup plans.</p>
+     */
     @NameInMap("Items")
     public DescribeBackupPlanListResponseBodyItems items;
 
+    /**
+     * <p>Page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>Number of records per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Total number of backup plans.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalElements")
     public Integer totalElements;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -120,111 +177,391 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPlanListResponseBodyItemsBackupPlanDetail extends TeaModel {
+        /**
+         * <p>Backup gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>827362187368736</p>
+         */
         @NameInMap("BackupGatewayId")
         public Long backupGatewayId;
 
+        /**
+         * <p>Backup method. The return values are as follows:</p>
+         * <ul>
+         * <li><strong>logical</strong>: Logical backup</li>
+         * <li><strong>physical</strong>: Physical backup</li>
+         * <li><strong>duplication</strong>: Replication backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>logical</p>
+         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        /**
+         * <p>Backup objects.</p>
+         */
         @NameInMap("BackupObjects")
         public String backupObjects;
 
+        /**
+         * <p>Full backup cycle. The return values are as follows:</p>
+         * <ul>
+         * <li><strong>Monday</strong>: Monday</li>
+         * <li><strong>Tuesday</strong>: Tuesday</li>
+         * <li><strong>Wednesday</strong>: Wednesday</li>
+         * <li><strong>Thursday</strong>: Thursday</li>
+         * <li><strong>Friday</strong>: Friday</li>
+         * <li><strong>Saturday</strong>: Saturday</li>
+         * <li><strong>Sunday</strong>: Sunday</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday</p>
+         */
         @NameInMap("BackupPeriod")
         public String backupPeriod;
 
+        /**
+         * <p>Timestamp of the backup plan creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582527713000</p>
+         */
         @NameInMap("BackupPlanCreateTime")
         public Long backupPlanCreateTime;
 
+        /**
+         * <p>Backup plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01eXXXX</p>
+         */
         @NameInMap("BackupPlanId")
         public String backupPlanId;
 
+        /**
+         * <p>Backup plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbstooi01e****</p>
+         */
         @NameInMap("BackupPlanName")
         public String backupPlanName;
 
+        /**
+         * <p>Backup plan status. The return values are as follows:</p>
+         * <ul>
+         * <li><strong>wait</strong>: Not configured</li>
+         * <li><strong>init</strong>: Not started (pre-check failed)</li>
+         * <li><strong>running</strong>: Running</li>
+         * <li><strong>stop</strong>: Failed</li>
+         * <li><strong>pause</strong>: Paused</li>
+         * <li><strong>locked</strong>: Locked</li>
+         * <li><strong>check_pass</strong>: Pre-check passed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>init</p>
+         */
         @NameInMap("BackupPlanStatus")
         public String backupPlanStatus;
 
+        /**
+         * <p>Backup data retention period, with a value range of 0 to 1825 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
+         */
         @NameInMap("BackupRetentionPeriod")
         public Integer backupRetentionPeriod;
 
+        /**
+         * <p>Download server directory of the backup set</p>
+         */
         @NameInMap("BackupSetDownloadDir")
         public String backupSetDownloadDir;
 
+        /**
+         * <p>Full data format for backup set download:</p>
+         * <ul>
+         * <li><strong>Native</strong></li>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>CSV</strong></li>
+         * <li><strong>JSON</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
+         */
         @NameInMap("BackupSetDownloadFullDataFormat")
         public String backupSetDownloadFullDataFormat;
 
+        /**
+         * <p>Backup set download backup gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("BackupSetDownloadGatewayId")
         public Long backupSetDownloadGatewayId;
 
+        /**
+         * <p>Backup set download full data format:</p>
+         * <ul>
+         * <li><strong>Native</strong></li>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>CSV</strong></li>
+         * <li><strong>JSON</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
+         */
         @NameInMap("BackupSetDownloadIncrementDataFormat")
         public String backupSetDownloadIncrementDataFormat;
 
+        /**
+         * <p>Backup set download target type.</p>
+         * <blockquote>
+         * <p>The only value is: agent, indicating that the backup gateway is installed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("BackupSetDownloadTargetType")
         public String backupSetDownloadTargetType;
 
+        /**
+         * <p>Full backup start time, in the format HH:mm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14:22</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <p>Built-in storage type. The return values are as follows:</p>
+         * <ul>
+         * <li>Empty (default): Backup data is stored on the user\&quot;s OSS.</li>
+         * <li>system: Backup data is stored on the built-in OSS of DBS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("BackupStorageType")
         public String backupStorageType;
 
+        /**
+         * <p>Start time for the database restore period, with a return value of 1554560477000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554560477000</p>
+         */
         @NameInMap("BeginTimestampForRestore")
         public Long beginTimestampForRestore;
 
+        /**
+         * <p>UID for cross-Aliyun account backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2xxx7778xxxxxxxxxx</p>
+         */
         @NameInMap("CrossAliyunId")
         public String crossAliyunId;
 
+        /**
+         * <p>RAM role name for cross-Aliyun account backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
+         */
         @NameInMap("CrossRoleName")
         public String crossRoleName;
 
+        /**
+         * <p>Database type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
+        @NameInMap("DatabaseType")
+        public String databaseType;
+
+        /**
+         * <p>Time (in days) to convert to archive cold backup storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
+         */
         @NameInMap("DuplicationArchivePeriod")
         public Integer duplicationArchivePeriod;
 
+        /**
+         * <p>Time (in days) to convert to infrequent access storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
+         */
         @NameInMap("DuplicationInfrequentAccessPeriod")
         public Integer duplicationInfrequentAccessPeriod;
 
+        /**
+         * <p>Indicates whether incremental log backup is enabled, with return values as follows:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled</li>
+         * <li><strong>false</strong>: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableBackupLog")
         public Boolean enableBackupLog;
 
+        /**
+         * <p>End time of the database restorable period, in timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554560477000</p>
+         */
         @NameInMap("EndTimestampForRestore")
         public Long endTimestampForRestore;
 
+        /**
+         * <p>Pre-check task error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>can not connect to oracle instance orcl with user dbs</p>
+         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        /**
+         * <p>Instance class, with return values as follows:</p>
+         * <ul>
+         * <li><strong>micro</strong>: Entry-level</li>
+         * <li><strong>small</strong>: Low-spec</li>
+         * <li><strong>medium</strong>: Medium-spec</li>
+         * <li><strong>large</strong>: High-spec</li>
+         * <li><strong>xlarge</strong>: High-spec (no traffic limit)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>micro</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>OSS Bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbs-backup-1857XXXXX489</p>
+         */
         @NameInMap("OSSBucketName")
         public String OSSBucketName;
 
+        /**
+         * <p>OSS Bucket region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("OSSBucketRegion")
         public String OSSBucketRegion;
 
+        /**
+         * <p>Indicates whether the automatic backup set download feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OpenBackupSetAutoDownload")
         public Boolean openBackupSetAutoDownload;
 
+        /**
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzecovzti****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SourceEndpointDatabaseName")
         public String sourceEndpointDatabaseName;
 
+        /**
+         * <p>Database instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SourceEndpointInstanceID")
         public String sourceEndpointInstanceID;
 
+        /**
+         * <p>Location of the database, the return values are as follows:</p>
+         * <ul>
+         * <li><strong>rds</strong></li>
+         * <li><strong>ecs</strong></li>
+         * <li><strong>express</strong>: Database connected via dedicated line/VPN gateway/smart gateway</li>
+         * <li><strong>agent</strong>: Database connected via backup gateway</li>
+         * <li><strong>dds</strong>: Cloud MongoDB</li>
+         * <li><strong>other</strong>: Database connected directly via IP:Port</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("SourceEndpointInstanceType")
         public String sourceEndpointInstanceType;
 
+        /**
+         * <p>Database connection address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.<em>.</em>.10:33204</p>
+         */
         @NameInMap("SourceEndpointIpPort")
         public String sourceEndpointIpPort;
 
+        /**
+         * <p>Oracle SID name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SourceEndpointOracleSID")
         public String sourceEndpointOracleSID;
 
+        /**
+         * <p>Database region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("SourceEndpointRegion")
         public String sourceEndpointRegion;
 
+        /**
+         * <p>Database username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SourceEndpointUserName")
         public String sourceEndpointUserName;
 
@@ -383,6 +720,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
         public String getCrossRoleName() {
             return this.crossRoleName;
+        }
+
+        public DescribeBackupPlanListResponseBodyItemsBackupPlanDetail setDatabaseType(String databaseType) {
+            this.databaseType = databaseType;
+            return this;
+        }
+        public String getDatabaseType() {
+            return this.databaseType;
         }
 
         public DescribeBackupPlanListResponseBodyItemsBackupPlanDetail setDuplicationArchivePeriod(Integer duplicationArchivePeriod) {

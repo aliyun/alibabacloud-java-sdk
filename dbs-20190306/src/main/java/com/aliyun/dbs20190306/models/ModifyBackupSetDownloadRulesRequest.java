@@ -4,30 +4,115 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup gateway that is used to download the backup set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2331****</p>
+     */
     @NameInMap("BackupGatewayId")
     public Long backupGatewayId;
 
+    /**
+     * <p>The ID of the backup schedule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbstooi01****</p>
+     */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    /**
+     * <p>The server directory to which the backup set is downloaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("BackupSetDownloadDir")
     public String backupSetDownloadDir;
 
+    /**
+     * <p>The type of the destination server to which the backup set is downloaded.</p>
+     * <blockquote>
+     * <p>Set the value to agent, which indicates a server on which a backup gateway is installed.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>agent</p>
+     */
     @NameInMap("BackupSetDownloadTargetType")
     public String backupSetDownloadTargetType;
 
+    /**
+     * <p>The type of the destination directory to which the backup set is downloaded. This parameter is required if the automatic download feature is enabled. Valid values:</p>
+     * <ul>
+     * <li>local</li>
+     * <li>nas</li>
+     * <li>ftp</li>
+     * <li>minio</li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: local.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>local</p>
+     */
     @NameInMap("BackupSetDownloadTargetTypeLocation")
     public String backupSetDownloadTargetTypeLocation;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzx****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The format in which the full backup set is downloaded. Valid values:</p>
+     * <ul>
+     * <li>Native</li>
+     * <li>SQL</li>
+     * <li>CSV</li>
+     * <li>JSON</li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: CSV.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>CSV</p>
+     */
     @NameInMap("FullDataFormat")
     public String fullDataFormat;
 
+    /**
+     * <p>The format in which the incremental backup set is downloaded. Valid values:</p>
+     * <ul>
+     * <li>Native</li>
+     * <li>SQL</li>
+     * <li>CSV</li>
+     * <li>JSON</li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: Native.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Native</p>
+     */
     @NameInMap("IncrementDataFormat")
     public String incrementDataFormat;
 
+    /**
+     * <p>Specifies whether to enable the automatic download feature. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OpenAutoDownload")
     public Boolean openAutoDownload;
 

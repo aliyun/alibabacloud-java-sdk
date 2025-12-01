@@ -4,12 +4,37 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeCidrListRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The region in which DBS is activated. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-qingdao</strong>: China (Qingdao)</li>
+     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore (Singapore)</li>
+     * <li><strong>cn-hangzhou-finance</strong>: China East 1 Finance</li>
+     * <li><strong>cn-shanghai-finance</strong>: China East 2 Finance</li>
+     * <li><strong>cn-shenzhen-finance</strong>: China South 1 Finance</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 

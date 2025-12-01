@@ -4,15 +4,36 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribePreCheckProgressListRequest extends TeaModel {
+    /**
+     * <p>The backup schedule ID.</p>
+     * <blockquote>
+     * <p> You must specify one of BackupPlanId and RestoreTaskId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dbstooi01XXXX</p>
+     */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The restoration task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbasdsaXXXX</p>
+     */
     @NameInMap("RestoreTaskId")
     public String restoreTaskId;
 

@@ -4,21 +4,61 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class ReleaseBackupPlanResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the backup schedule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbstooi01****</p>
+     */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Param.NotFound</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>findValidDBSJob error</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

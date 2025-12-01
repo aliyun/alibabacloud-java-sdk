@@ -4,12 +4,25 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class StartRestoreTaskRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the restore task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s102h7rfXXXX</p>
+     */
     @NameInMap("RestoreTaskId")
     public String restoreTaskId;
 

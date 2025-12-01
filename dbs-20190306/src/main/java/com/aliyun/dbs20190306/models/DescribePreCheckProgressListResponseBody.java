@@ -4,27 +4,81 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribePreCheckProgressListResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Param.NotFound</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The details of check items.</p>
+     */
     @NameInMap("Items")
     public DescribePreCheckProgressListResponseBodyItems items;
 
+    /**
+     * <p>The precheck progress. Valid values: 0 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Progress")
     public Integer progress;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4A45FE1-A903-470D-B113-F12A4DF942AB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the precheck. Valid values:</p>
+     * <ul>
+     * <li><strong>running</strong>: The precheck is in progress.</li>
+     * <li><strong>failed</strong>: The precheck failed.</li>
+     * <li><strong>finish</strong>: The precheck is complete.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>failed</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,27 +152,83 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckProgressListResponseBodyItemsPreCheckProgressDetail extends TeaModel {
+        /**
+         * <p>The time when the check for the item started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583734969000</p>
+         */
         @NameInMap("BootTime")
         public Long bootTime;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.RuntimeException: Could not find any schema ......</p>
+         */
         @NameInMap("ErrMsg")
         public String errMsg;
 
+        /**
+         * <p>The time when the check for the item was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583734969000</p>
+         */
         @NameInMap("FinishTime")
         public Long finishTime;
 
+        /**
+         * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_OTHER</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>The ID of the job for the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uvk8f6fxnq5s</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The name of the group to which the check item belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_OTHER</p>
+         */
         @NameInMap("Names")
         public String names;
 
+        /**
+         * <p>The sequence number of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("OrderNum")
         public String orderNum;
 
+        /**
+         * <p>The state of the check for the item. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The check for the item is being initialized.</li>
+         * <li><strong>warning</strong>: A warning is reported.</li>
+         * <li><strong>catched</strong>: An exception occurs.</li>
+         * <li><strong>running</strong>: The check for the item is in progress.</li>
+         * <li><strong>failed</strong>: The check for the item fails.</li>
+         * <li><strong>finish</strong>: The check for the item is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>warning</p>
+         */
         @NameInMap("State")
         public String state;
 

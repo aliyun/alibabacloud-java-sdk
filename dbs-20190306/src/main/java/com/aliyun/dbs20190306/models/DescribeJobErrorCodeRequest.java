@@ -4,15 +4,38 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobErrorCodeRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The language of the error message. Valid values:</p>
+     * <ul>
+     * <li><strong>en</strong> (default): English</li>
+     * <li><strong>cn</strong>: Chinese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Language")
     public String language;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the full backup or restore task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbstooi0****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

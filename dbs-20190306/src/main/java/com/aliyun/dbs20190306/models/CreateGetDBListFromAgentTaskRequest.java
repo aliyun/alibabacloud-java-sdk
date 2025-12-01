@@ -4,24 +4,73 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup gateway. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
+     * <blockquote>
+     * <p> This parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>160813</p>
+     */
     @NameInMap("BackupGatewayId")
     public Long backupGatewayId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The type of the database. Valid values:</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>MSSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>MariaDB</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>DRDS</strong></li>
+     * <li><strong>MongoDB</strong></li>
+     * <li><strong>Redis</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
+     */
     @NameInMap("DatabaseType")
     public String databaseType;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The URL that is used to access the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123.0.0.1</p>
+     */
     @NameInMap("SourceEndpointIP")
     public String sourceEndpointIP;
 
+    /**
+     * <p>The port that is used to connect to the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
+     */
     @NameInMap("SourceEndpointPort")
     public Integer sourceEndpointPort;
 
+    /**
+     * <p>The region in which the backup gateway resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("SourceEndpointRegion")
     public String sourceEndpointRegion;
 

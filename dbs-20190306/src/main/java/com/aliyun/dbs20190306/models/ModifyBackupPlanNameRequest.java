@@ -4,12 +4,32 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPlanNameRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup schedule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbstooi0XXXX</p>
+     */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    /**
+     * <p>The name of the backup schedule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbstooi0XXXX</p>
+     */
     @NameInMap("BackupPlanName")
     public String backupPlanName;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 

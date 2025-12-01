@@ -4,33 +4,69 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeFullBackupListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Param.NotFound</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Items")
     public DescribeFullBackupListResponseBodyItems items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>636BC118-6080-4119-A6B5-C199CEC1037D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalElements")
     public Integer totalElements;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -120,6 +156,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     }
 
     public static class DescribeFullBackupListResponseBodyItemsFullBackupFile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;DBName\&quot;:\&quot;test\&quot;}]</p>
+         */
         @NameInMap("BackupObjects")
         public String backupObjects;
 
@@ -132,6 +172,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         @NameInMap("BackupSize")
         public Long backupSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>finish</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
@@ -141,6 +185,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NULL</p>
+         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
@@ -153,6 +201,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("StorageMethod")
         public String storageMethod;
 

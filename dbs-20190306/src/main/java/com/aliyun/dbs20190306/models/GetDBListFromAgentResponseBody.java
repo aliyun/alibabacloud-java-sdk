@@ -4,21 +4,54 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class GetDBListFromAgentResponseBody extends TeaModel {
+    /**
+     * <p>The details of the databases.</p>
+     */
     @NameInMap("DbList")
     public GetDBListFromAgentResponseBodyDbList dbList;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This backupPlan can\&quot;t support this action</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EB4DFD5E-3618-498D-BE35-4DBEA0072122</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

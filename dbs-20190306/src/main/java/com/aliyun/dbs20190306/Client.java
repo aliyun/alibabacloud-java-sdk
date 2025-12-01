@@ -3,16 +3,10 @@ package com.aliyun.dbs20190306;
 
 import com.aliyun.tea.*;
 import com.aliyun.dbs20190306.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
@@ -57,7 +51,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public ConfigureBackupPlanResponse configureBackupPlanWithOptions(ConfigureBackupPlanRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Configures a DBS backup schedule.</p>
+     * 
+     * @param request ConfigureBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureBackupPlanResponse
+     */
+    public ConfigureBackupPlanResponse configureBackupPlanWithOptions(ConfigureBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoStartBackup)) {
@@ -184,10 +186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpointUserName", request.sourceEndpointUserName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureBackupPlan"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -201,12 +203,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigureBackupPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Configures a DBS backup schedule.</p>
+     * 
+     * @param request ConfigureBackupPlanRequest
+     * @return ConfigureBackupPlanResponse
+     */
     public ConfigureBackupPlanResponse configureBackupPlan(ConfigureBackupPlanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureBackupPlanWithOptions(request, runtime);
     }
 
-    public CreateAndStartBackupPlanResponse createAndStartBackupPlanWithOptions(CreateAndStartBackupPlanRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/70005.html">pricing</a> of Database Backup (DBS).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates, configures, and starts a backup schedule.</p>
+     * 
+     * @param request CreateAndStartBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAndStartBackupPlanResponse
+     */
+    public CreateAndStartBackupPlanResponse createAndStartBackupPlanWithOptions(CreateAndStartBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayId)) {
@@ -377,10 +397,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UsedTime", request.usedTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateAndStartBackupPlan"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -394,12 +414,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAndStartBackupPlanResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/70005.html">pricing</a> of Database Backup (DBS).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates, configures, and starts a backup schedule.</p>
+     * 
+     * @param request CreateAndStartBackupPlanRequest
+     * @return CreateAndStartBackupPlanResponse
+     */
     public CreateAndStartBackupPlanResponse createAndStartBackupPlan(CreateAndStartBackupPlanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAndStartBackupPlanWithOptions(request, runtime);
     }
 
-    public CreateBackupPlanResponse createBackupPlanWithOptions(CreateBackupPlanRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>description</b> :
+     * <p>For more information about how to create a backup schedule in the Database Backup (DBS) console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup schedule</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup schedule.</p>
+     * 
+     * @param request CreateBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBackupPlanResponse
+     */
+    public CreateBackupPlanResponse createBackupPlanWithOptions(CreateBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupMethod)) {
@@ -462,10 +503,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UsedTime", request.usedTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateBackupPlan"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -479,12 +520,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBackupPlanResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <p>For more information about how to create a backup schedule in the Database Backup (DBS) console, see <a href="https://help.aliyun.com/document_detail/65909.html">Purchase a backup schedule</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup schedule.</p>
+     * 
+     * @param request CreateBackupPlanRequest
+     * @return CreateBackupPlanResponse
+     */
     public CreateBackupPlanResponse createBackupPlan(CreateBackupPlanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBackupPlanWithOptions(request, runtime);
     }
 
-    public CreateFullBackupSetDownloadResponse createFullBackupSetDownloadWithOptions(CreateFullBackupSetDownloadRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Creates and starts a full backup set download task.</p>
+     * 
+     * @param request CreateFullBackupSetDownloadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFullBackupSetDownloadResponse
+     */
+    public CreateFullBackupSetDownloadResponse createFullBackupSetDownloadWithOptions(CreateFullBackupSetDownloadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupSetDataFormat)) {
@@ -503,10 +562,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateFullBackupSetDownload"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -520,12 +579,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFullBackupSetDownloadResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates and starts a full backup set download task.</p>
+     * 
+     * @param request CreateFullBackupSetDownloadRequest
+     * @return CreateFullBackupSetDownloadResponse
+     */
     public CreateFullBackupSetDownloadResponse createFullBackupSetDownload(CreateFullBackupSetDownloadRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFullBackupSetDownloadWithOptions(request, runtime);
     }
 
-    public CreateGetDBListFromAgentTaskResponse createGetDBListFromAgentTaskWithOptions(CreateGetDBListFromAgentTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>description</b> :
+     * <p>This API operation returns a task ID. You can call the <a href="https://help.aliyun.com/document_detail/2869852.html">GetDBListFromAgent</a> operation to query the task result based on the task ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a task to obtain a database list by using a backup gateway.</p>
+     * 
+     * @param request CreateGetDBListFromAgentTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGetDBListFromAgentTaskResponse
+     */
+    public CreateGetDBListFromAgentTaskResponse createGetDBListFromAgentTaskWithOptions(CreateGetDBListFromAgentTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayId)) {
@@ -556,10 +633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpointRegion", request.sourceEndpointRegion);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateGetDBListFromAgentTask"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -573,12 +650,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGetDBListFromAgentTaskResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This API operation returns a task ID. You can call the <a href="https://help.aliyun.com/document_detail/2869852.html">GetDBListFromAgent</a> operation to query the task result based on the task ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a task to obtain a database list by using a backup gateway.</p>
+     * 
+     * @param request CreateGetDBListFromAgentTaskRequest
+     * @return CreateGetDBListFromAgentTaskResponse
+     */
     public CreateGetDBListFromAgentTaskResponse createGetDBListFromAgentTask(CreateGetDBListFromAgentTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createGetDBListFromAgentTaskWithOptions(request, runtime);
     }
 
-    public CreateIncrementBackupSetDownloadResponse createIncrementBackupSetDownloadWithOptions(CreateIncrementBackupSetDownloadRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Creates and starts an incremental backup set download task.</p>
+     * 
+     * @param request CreateIncrementBackupSetDownloadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateIncrementBackupSetDownloadResponse
+     */
+    public CreateIncrementBackupSetDownloadResponse createIncrementBackupSetDownloadWithOptions(CreateIncrementBackupSetDownloadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupSetDataFormat)) {
@@ -601,10 +696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateIncrementBackupSetDownload"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -618,12 +713,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIncrementBackupSetDownloadResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates and starts an incremental backup set download task.</p>
+     * 
+     * @param request CreateIncrementBackupSetDownloadRequest
+     * @return CreateIncrementBackupSetDownloadResponse
+     */
     public CreateIncrementBackupSetDownloadResponse createIncrementBackupSetDownload(CreateIncrementBackupSetDownloadRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createIncrementBackupSetDownloadWithOptions(request, runtime);
     }
 
-    public CreateRestoreTaskResponse createRestoreTaskWithOptions(CreateRestoreTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a restoration task.</p>
+     * 
+     * @param request CreateRestoreTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRestoreTaskResponse
+     */
+    public CreateRestoreTaskResponse createRestoreTaskWithOptions(CreateRestoreTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayId)) {
@@ -714,10 +824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RestoreTime", request.restoreTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateRestoreTask"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -731,12 +841,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRestoreTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a restoration task.</p>
+     * 
+     * @param request CreateRestoreTaskRequest
+     * @return CreateRestoreTaskResponse
+     */
     public CreateRestoreTaskResponse createRestoreTask(CreateRestoreTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRestoreTaskWithOptions(request, runtime);
     }
 
-    public DescribeBackupGatewayListResponse describeBackupGatewayListWithOptions(DescribeBackupGatewayListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries backup gateways.</p>
+     * 
+     * @param request DescribeBackupGatewayListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupGatewayListResponse
+     */
+    public DescribeBackupGatewayListResponse describeBackupGatewayListWithOptions(DescribeBackupGatewayListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -763,10 +888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Region", request.region);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeBackupGatewayList"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -780,12 +905,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupGatewayListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries backup gateways.</p>
+     * 
+     * @param request DescribeBackupGatewayListRequest
+     * @return DescribeBackupGatewayListResponse
+     */
     public DescribeBackupGatewayListResponse describeBackupGatewayList(DescribeBackupGatewayListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupGatewayListWithOptions(request, runtime);
     }
 
-    public DescribeBackupPlanBillingResponse describeBackupPlanBillingWithOptions(DescribeBackupPlanBillingRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the billing information of a backup schedule.</p>
+     * 
+     * @param request DescribeBackupPlanBillingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupPlanBillingResponse
+     */
+    public DescribeBackupPlanBillingResponse describeBackupPlanBillingWithOptions(DescribeBackupPlanBillingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -804,10 +944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ShowStorageType", request.showStorageType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeBackupPlanBilling"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -821,12 +961,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupPlanBillingResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the billing information of a backup schedule.</p>
+     * 
+     * @param request DescribeBackupPlanBillingRequest
+     * @return DescribeBackupPlanBillingResponse
+     */
     public DescribeBackupPlanBillingResponse describeBackupPlanBilling(DescribeBackupPlanBillingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupPlanBillingWithOptions(request, runtime);
     }
 
-    public DescribeBackupPlanListResponse describeBackupPlanListWithOptions(DescribeBackupPlanListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>description</b> :
+     * <p>Before using this interface, please activate the OSS service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service (OSS)</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the list of backup plans</p>
+     * 
+     * @param request DescribeBackupPlanListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupPlanListResponse
+     */
+    public DescribeBackupPlanListResponse describeBackupPlanListWithOptions(DescribeBackupPlanListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -865,10 +1023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeBackupPlanList"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -882,12 +1040,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupPlanListResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before using this interface, please activate the OSS service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service (OSS)</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the list of backup plans</p>
+     * 
+     * @param request DescribeBackupPlanListRequest
+     * @return DescribeBackupPlanListResponse
+     */
     public DescribeBackupPlanListResponse describeBackupPlanList(DescribeBackupPlanListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupPlanListWithOptions(request, runtime);
     }
 
-    public DescribeBackupSetDownloadTaskListResponse describeBackupSetDownloadTaskListWithOptions(DescribeBackupSetDownloadTaskListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries backup set download tasks.</p>
+     * 
+     * @param request DescribeBackupSetDownloadTaskListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBackupSetDownloadTaskListResponse
+     */
+    public DescribeBackupSetDownloadTaskListResponse describeBackupSetDownloadTaskListWithOptions(DescribeBackupSetDownloadTaskListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -914,10 +1090,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeBackupSetDownloadTaskList"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -931,12 +1107,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupSetDownloadTaskListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries backup set download tasks.</p>
+     * 
+     * @param request DescribeBackupSetDownloadTaskListRequest
+     * @return DescribeBackupSetDownloadTaskListResponse
+     */
     public DescribeBackupSetDownloadTaskListResponse describeBackupSetDownloadTaskList(DescribeBackupSetDownloadTaskListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupSetDownloadTaskListWithOptions(request, runtime);
     }
 
-    public DescribeDLAServiceResponse describeDLAServiceWithOptions(DescribeDLAServiceRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Data Lake Analytics (DLA) service for a backup schedule.</p>
+     * 
+     * @param request DescribeDLAServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDLAServiceResponse
+     */
+    public DescribeDLAServiceResponse describeDLAServiceWithOptions(DescribeDLAServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -951,10 +1142,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDLAService"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -968,12 +1159,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDLAServiceResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Data Lake Analytics (DLA) service for a backup schedule.</p>
+     * 
+     * @param request DescribeDLAServiceRequest
+     * @return DescribeDLAServiceResponse
+     */
     public DescribeDLAServiceResponse describeDLAService(DescribeDLAServiceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDLAServiceWithOptions(request, runtime);
     }
 
-    public DescribeFullBackupListResponse describeFullBackupListWithOptions(DescribeFullBackupListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>cn-hangzhou</p>
+     * 
+     * @param request DescribeFullBackupListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFullBackupListResponse
+     */
+    public DescribeFullBackupListResponse describeFullBackupListWithOptions(DescribeFullBackupListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1012,10 +1218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTimestamp", request.startTimestamp);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeFullBackupList"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1029,12 +1235,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFullBackupListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>cn-hangzhou</p>
+     * 
+     * @param request DescribeFullBackupListRequest
+     * @return DescribeFullBackupListResponse
+     */
     public DescribeFullBackupListResponse describeFullBackupList(DescribeFullBackupListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeFullBackupListWithOptions(request, runtime);
     }
 
-    public DescribeIncrementBackupListResponse describeIncrementBackupListWithOptions(DescribeIncrementBackupListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries incremental backup tasks.</p>
+     * 
+     * @param request DescribeIncrementBackupListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeIncrementBackupListResponse
+     */
+    public DescribeIncrementBackupListResponse describeIncrementBackupListWithOptions(DescribeIncrementBackupListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1069,10 +1290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTimestamp", request.startTimestamp);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeIncrementBackupList"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1086,12 +1307,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIncrementBackupListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries incremental backup tasks.</p>
+     * 
+     * @param request DescribeIncrementBackupListRequest
+     * @return DescribeIncrementBackupListResponse
+     */
     public DescribeIncrementBackupListResponse describeIncrementBackupList(DescribeIncrementBackupListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeIncrementBackupListWithOptions(request, runtime);
     }
 
-    public DescribeJobErrorCodeResponse describeJobErrorCodeWithOptions(DescribeJobErrorCodeRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the error information of a Database Backup (DBS) task.</p>
+     * 
+     * @param request DescribeJobErrorCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeJobErrorCodeResponse
+     */
+    public DescribeJobErrorCodeResponse describeJobErrorCodeWithOptions(DescribeJobErrorCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -1110,10 +1346,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeJobErrorCode"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1127,12 +1363,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeJobErrorCodeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the error information of a Database Backup (DBS) task.</p>
+     * 
+     * @param request DescribeJobErrorCodeRequest
+     * @return DescribeJobErrorCodeResponse
+     */
     public DescribeJobErrorCodeResponse describeJobErrorCode(DescribeJobErrorCodeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeJobErrorCodeWithOptions(request, runtime);
     }
 
-    public DescribeNodeCidrListResponse describeNodeCidrListWithOptions(DescribeNodeCidrListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the CIDR blocks of nodes on which Database Backup (DBS) is running.</p>
+     * 
+     * @param request DescribeNodeCidrListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNodeCidrListResponse
+     */
+    public DescribeNodeCidrListResponse describeNodeCidrListWithOptions(DescribeNodeCidrListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -1147,10 +1398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Region", request.region);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeNodeCidrList"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1164,12 +1415,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNodeCidrListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the CIDR blocks of nodes on which Database Backup (DBS) is running.</p>
+     * 
+     * @param request DescribeNodeCidrListRequest
+     * @return DescribeNodeCidrListResponse
+     */
     public DescribeNodeCidrListResponse describeNodeCidrList(DescribeNodeCidrListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNodeCidrListWithOptions(request, runtime);
     }
 
-    public DescribePreCheckProgressListResponse describePreCheckProgressListWithOptions(DescribePreCheckProgressListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the precheck progress of a backup schedule or a restore task.</p>
+     * 
+     * @param request DescribePreCheckProgressListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePreCheckProgressListResponse
+     */
+    public DescribePreCheckProgressListResponse describePreCheckProgressListWithOptions(DescribePreCheckProgressListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1188,10 +1454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RestoreTaskId", request.restoreTaskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribePreCheckProgressList"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1205,12 +1471,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePreCheckProgressListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the precheck progress of a backup schedule or a restore task.</p>
+     * 
+     * @param request DescribePreCheckProgressListRequest
+     * @return DescribePreCheckProgressListResponse
+     */
     public DescribePreCheckProgressListResponse describePreCheckProgressList(DescribePreCheckProgressListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePreCheckProgressListWithOptions(request, runtime);
     }
 
-    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the regions that Database Backup (DBS) supports.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -1221,10 +1502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeRegions"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1238,12 +1519,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the regions that Database Backup (DBS) supports.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(request, runtime);
     }
 
-    public DescribeRestoreRangeInfoResponse describeRestoreRangeInfoWithOptions(DescribeRestoreRangeInfoRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the range of time to which you can restore data in a backup schedule.</p>
+     * 
+     * @param request DescribeRestoreRangeInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRestoreRangeInfoResponse
+     */
+    public DescribeRestoreRangeInfoResponse describeRestoreRangeInfoWithOptions(DescribeRestoreRangeInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1270,10 +1566,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RecentlyRestore", request.recentlyRestore);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeRestoreRangeInfo"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1287,12 +1583,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRestoreRangeInfoResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the range of time to which you can restore data in a backup schedule.</p>
+     * 
+     * @param request DescribeRestoreRangeInfoRequest
+     * @return DescribeRestoreRangeInfoResponse
+     */
     public DescribeRestoreRangeInfoResponse describeRestoreRangeInfo(DescribeRestoreRangeInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRestoreRangeInfoWithOptions(request, runtime);
     }
 
-    public DescribeRestoreTaskListResponse describeRestoreTaskListWithOptions(DescribeRestoreTaskListRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries restore tasks.</p>
+     * 
+     * @param request DescribeRestoreTaskListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRestoreTaskListResponse
+     */
+    public DescribeRestoreTaskListResponse describeRestoreTaskListWithOptions(DescribeRestoreTaskListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1327,10 +1638,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTimestamp", request.startTimestamp);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeRestoreTaskList"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1344,12 +1655,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRestoreTaskListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries restore tasks.</p>
+     * 
+     * @param request DescribeRestoreTaskListRequest
+     * @return DescribeRestoreTaskListResponse
+     */
     public DescribeRestoreTaskListResponse describeRestoreTaskList(DescribeRestoreTaskListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRestoreTaskListWithOptions(request, runtime);
     }
 
-    public DisableBackupLogResponse disableBackupLogWithOptions(DisableBackupLogRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>description</b> :
+     * <h3>Impact</h3>
+     * <p>After you disable the incremental log backup feature, your backup schedule no longer performs incremental log backups.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables incremental backup for a backup schedule.</p>
+     * 
+     * @param request DisableBackupLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableBackupLogResponse
+     */
+    public DisableBackupLogResponse disableBackupLogWithOptions(DisableBackupLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1364,10 +1694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DisableBackupLog"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1381,12 +1711,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableBackupLogResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>Impact</h3>
+     * <p>After you disable the incremental log backup feature, your backup schedule no longer performs incremental log backups.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables incremental backup for a backup schedule.</p>
+     * 
+     * @param request DisableBackupLogRequest
+     * @return DisableBackupLogResponse
+     */
     public DisableBackupLogResponse disableBackupLog(DisableBackupLogRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableBackupLogWithOptions(request, runtime);
     }
 
-    public EnableBackupLogResponse enableBackupLogWithOptions(EnableBackupLogRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>description</b> :
+     * <h2>Impact</h2>
+     * <p>It is free to enable the incremental log backup feature. However, the backup traffic and storage capacity generated by the feature are billed in the same way as the full backup feature, and can be offset by the free quota of backup schedules or storage plans.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables incremental backup for a backup schedule.</p>
+     * 
+     * @param request EnableBackupLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableBackupLogResponse
+     */
+    public EnableBackupLogResponse enableBackupLogWithOptions(EnableBackupLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1401,10 +1754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "EnableBackupLog"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1418,12 +1771,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableBackupLogResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Impact</h2>
+     * <p>It is free to enable the incremental log backup feature. However, the backup traffic and storage capacity generated by the feature are billed in the same way as the full backup feature, and can be offset by the free quota of backup schedules or storage plans.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables incremental backup for a backup schedule.</p>
+     * 
+     * @param request EnableBackupLogRequest
+     * @return EnableBackupLogResponse
+     */
     public EnableBackupLogResponse enableBackupLog(EnableBackupLogRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableBackupLogWithOptions(request, runtime);
     }
 
-    public GetDBListFromAgentResponse getDBListFromAgentWithOptions(GetDBListFromAgentRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the result of a task that is used to query a database list by using a backup gateway based on the ID of the task.</p>
+     * 
+     * @param request GetDBListFromAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDBListFromAgentResponse
+     */
+    public GetDBListFromAgentResponse getDBListFromAgentWithOptions(GetDBListFromAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayId)) {
@@ -1446,10 +1818,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetDBListFromAgent"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1463,14 +1835,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDBListFromAgentResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the result of a task that is used to query a database list by using a backup gateway based on the ID of the task.</p>
+     * 
+     * @param request GetDBListFromAgentRequest
+     * @return GetDBListFromAgentResponse
+     */
     public GetDBListFromAgentResponse getDBListFromAgent(GetDBListFromAgentRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDBListFromAgentWithOptions(request, runtime);
     }
 
-    public InitializeDbsServiceLinkedRoleResponse initializeDbsServiceLinkedRoleWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        Params params = Params.build(TeaConverter.buildMap(
+    /**
+     * <b>summary</b> : 
+     * <p>Grants the AliyunServiceRoleForDBS role to Database Backup (DBS).</p>
+     * 
+     * @param request InitializeDbsServiceLinkedRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitializeDbsServiceLinkedRoleResponse
+     */
+    public InitializeDbsServiceLinkedRoleResponse initializeDbsServiceLinkedRoleWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InitializeDbsServiceLinkedRole"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1484,12 +1871,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InitializeDbsServiceLinkedRoleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Grants the AliyunServiceRoleForDBS role to Database Backup (DBS).</p>
+     * @return InitializeDbsServiceLinkedRoleResponse
+     */
     public InitializeDbsServiceLinkedRoleResponse initializeDbsServiceLinkedRole() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.initializeDbsServiceLinkedRoleWithOptions(runtime);
     }
 
-    public ModifyBackupObjectsResponse modifyBackupObjectsWithOptions(ModifyBackupObjectsRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies backup objects of a backup schedule in Database Backup (DBS).</p>
+     * 
+     * @param request ModifyBackupObjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyBackupObjectsResponse
+     */
+    public ModifyBackupObjectsResponse modifyBackupObjectsWithOptions(ModifyBackupObjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupObjects)) {
@@ -1508,10 +1908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyBackupObjects"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1525,12 +1925,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBackupObjectsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies backup objects of a backup schedule in Database Backup (DBS).</p>
+     * 
+     * @param request ModifyBackupObjectsRequest
+     * @return ModifyBackupObjectsResponse
+     */
     public ModifyBackupObjectsResponse modifyBackupObjects(ModifyBackupObjectsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBackupObjectsWithOptions(request, runtime);
     }
 
-    public ModifyBackupPlanNameResponse modifyBackupPlanNameWithOptions(ModifyBackupPlanNameRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the name of a backup schedule.</p>
+     * 
+     * @param request ModifyBackupPlanNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyBackupPlanNameResponse
+     */
+    public ModifyBackupPlanNameResponse modifyBackupPlanNameWithOptions(ModifyBackupPlanNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1549,10 +1964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyBackupPlanName"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1566,12 +1981,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBackupPlanNameResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the name of a backup schedule.</p>
+     * 
+     * @param request ModifyBackupPlanNameRequest
+     * @return ModifyBackupPlanNameResponse
+     */
     public ModifyBackupPlanNameResponse modifyBackupPlanName(ModifyBackupPlanNameRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBackupPlanNameWithOptions(request, runtime);
     }
 
-    public ModifyBackupSetDownloadRulesResponse modifyBackupSetDownloadRulesWithOptions(ModifyBackupSetDownloadRulesRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Enables, configures, or disables the automatic download feature.</p>
+     * 
+     * @param request ModifyBackupSetDownloadRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyBackupSetDownloadRulesResponse
+     */
+    public ModifyBackupSetDownloadRulesResponse modifyBackupSetDownloadRulesWithOptions(ModifyBackupSetDownloadRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayId)) {
@@ -1614,10 +2044,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyBackupSetDownloadRules"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1631,12 +2061,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBackupSetDownloadRulesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Enables, configures, or disables the automatic download feature.</p>
+     * 
+     * @param request ModifyBackupSetDownloadRulesRequest
+     * @return ModifyBackupSetDownloadRulesResponse
+     */
     public ModifyBackupSetDownloadRulesResponse modifyBackupSetDownloadRules(ModifyBackupSetDownloadRulesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBackupSetDownloadRulesWithOptions(request, runtime);
     }
 
-    public ModifyBackupSourceEndpointResponse modifyBackupSourceEndpointWithOptions(ModifyBackupSourceEndpointRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the data source of a backup schedule.</p>
+     * 
+     * @param request ModifyBackupSourceEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyBackupSourceEndpointResponse
+     */
+    public ModifyBackupSourceEndpointResponse modifyBackupSourceEndpointWithOptions(ModifyBackupSourceEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayId)) {
@@ -1703,10 +2148,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpointUserName", request.sourceEndpointUserName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyBackupSourceEndpoint"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1720,12 +2165,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBackupSourceEndpointResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the data source of a backup schedule.</p>
+     * 
+     * @param request ModifyBackupSourceEndpointRequest
+     * @return ModifyBackupSourceEndpointResponse
+     */
     public ModifyBackupSourceEndpointResponse modifyBackupSourceEndpoint(ModifyBackupSourceEndpointRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBackupSourceEndpointWithOptions(request, runtime);
     }
 
-    public ModifyBackupStrategyResponse modifyBackupStrategyWithOptions(ModifyBackupStrategyRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the backup time of a backup schedule.</p>
+     * 
+     * @param request ModifyBackupStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyBackupStrategyResponse
+     */
+    public ModifyBackupStrategyResponse modifyBackupStrategyWithOptions(ModifyBackupStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupLogIntervalSeconds)) {
@@ -1756,10 +2216,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyBackupStrategy"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1773,12 +2233,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBackupStrategyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the backup time of a backup schedule.</p>
+     * 
+     * @param request ModifyBackupStrategyRequest
+     * @return ModifyBackupStrategyResponse
+     */
     public ModifyBackupStrategyResponse modifyBackupStrategy(ModifyBackupStrategyRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBackupStrategyWithOptions(request, runtime);
     }
 
-    public ModifyStorageStrategyResponse modifyStorageStrategyWithOptions(ModifyStorageStrategyRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the lifecycle of data that is backed up based on a backup schedule.</p>
+     * 
+     * @param request ModifyStorageStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyStorageStrategyResponse
+     */
+    public ModifyStorageStrategyResponse modifyStorageStrategyWithOptions(ModifyStorageStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1805,10 +2280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyStorageStrategy"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1822,12 +2297,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyStorageStrategyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the lifecycle of data that is backed up based on a backup schedule.</p>
+     * 
+     * @param request ModifyStorageStrategyRequest
+     * @return ModifyStorageStrategyResponse
+     */
     public ModifyStorageStrategyResponse modifyStorageStrategy(ModifyStorageStrategyRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyStorageStrategyWithOptions(request, runtime);
     }
 
-    public ReleaseBackupPlanResponse releaseBackupPlanWithOptions(ReleaseBackupPlanRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>description</b> :
+     * <h2>Impacts</h2>
+     * <p>After a pay-as-you-go backup schedule is released, it stops providing services. Database Backup (DBS) no longer charges you fees for this backup schedule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go backup schedule.</p>
+     * 
+     * @param request ReleaseBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleaseBackupPlanResponse
+     */
+    public ReleaseBackupPlanResponse releaseBackupPlanWithOptions(ReleaseBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1842,10 +2336,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ReleaseBackupPlan"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1859,12 +2353,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseBackupPlanResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Impacts</h2>
+     * <p>After a pay-as-you-go backup schedule is released, it stops providing services. Database Backup (DBS) no longer charges you fees for this backup schedule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go backup schedule.</p>
+     * 
+     * @param request ReleaseBackupPlanRequest
+     * @return ReleaseBackupPlanResponse
+     */
     public ReleaseBackupPlanResponse releaseBackupPlan(ReleaseBackupPlanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseBackupPlanWithOptions(request, runtime);
     }
 
-    public RenewBackupPlanResponse renewBackupPlanWithOptions(RenewBackupPlanRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Renews a backup schedule.</p>
+     * 
+     * @param request RenewBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewBackupPlanResponse
+     */
+    public RenewBackupPlanResponse renewBackupPlanWithOptions(RenewBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1887,10 +2400,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UsedTime", request.usedTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RenewBackupPlan"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1904,12 +2417,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RenewBackupPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Renews a backup schedule.</p>
+     * 
+     * @param request RenewBackupPlanRequest
+     * @return RenewBackupPlanResponse
+     */
     public RenewBackupPlanResponse renewBackupPlan(RenewBackupPlanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewBackupPlanWithOptions(request, runtime);
     }
 
-    public StartBackupPlanResponse startBackupPlanWithOptions(StartBackupPlanRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Starts a backup schedule.</p>
+     * 
+     * @param request StartBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartBackupPlanResponse
+     */
+    public StartBackupPlanResponse startBackupPlanWithOptions(StartBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -1924,10 +2452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartBackupPlan"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1941,12 +2469,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartBackupPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Starts a backup schedule.</p>
+     * 
+     * @param request StartBackupPlanRequest
+     * @return StartBackupPlanResponse
+     */
     public StartBackupPlanResponse startBackupPlan(StartBackupPlanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startBackupPlanWithOptions(request, runtime);
     }
 
-    public StartRestoreTaskResponse startRestoreTaskWithOptions(StartRestoreTaskRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Starts a restore task.</p>
+     * 
+     * @param request StartRestoreTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartRestoreTaskResponse
+     */
+    public StartRestoreTaskResponse startRestoreTaskWithOptions(StartRestoreTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -1961,10 +2504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RestoreTaskId", request.restoreTaskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartRestoreTask"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -1978,12 +2521,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartRestoreTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Starts a restore task.</p>
+     * 
+     * @param request StartRestoreTaskRequest
+     * @return StartRestoreTaskResponse
+     */
     public StartRestoreTaskResponse startRestoreTask(StartRestoreTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startRestoreTaskWithOptions(request, runtime);
     }
 
-    public StopBackupPlanResponse stopBackupPlanWithOptions(StopBackupPlanRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a backup schedule.</p>
+     * 
+     * @param request StopBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopBackupPlanResponse
+     */
+    public StopBackupPlanResponse stopBackupPlanWithOptions(StopBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -2002,10 +2560,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StopMethod", request.stopMethod);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopBackupPlan"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -2019,12 +2577,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopBackupPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a backup schedule.</p>
+     * 
+     * @param request StopBackupPlanRequest
+     * @return StopBackupPlanResponse
+     */
     public StopBackupPlanResponse stopBackupPlan(StopBackupPlanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopBackupPlanWithOptions(request, runtime);
     }
 
-    public UpgradeBackupPlanResponse upgradeBackupPlanWithOptions(UpgradeBackupPlanRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Upgrades a backup schedule.</p>
+     * 
+     * @param request UpgradeBackupPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeBackupPlanResponse
+     */
+    public UpgradeBackupPlanResponse upgradeBackupPlanWithOptions(UpgradeBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupPlanId)) {
@@ -2043,10 +2616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpgradeBackupPlan"),
             new TeaPair("version", "2019-03-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -2060,8 +2633,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeBackupPlanResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Upgrades a backup schedule.</p>
+     * 
+     * @param request UpgradeBackupPlanRequest
+     * @return UpgradeBackupPlanResponse
+     */
     public UpgradeBackupPlanResponse upgradeBackupPlan(UpgradeBackupPlanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeBackupPlanWithOptions(request, runtime);
     }
 }

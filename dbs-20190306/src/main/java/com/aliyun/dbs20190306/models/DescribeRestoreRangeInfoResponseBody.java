@@ -4,21 +4,58 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Param.NotFound</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter %s value is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The information about the time ranges to which you can restore data.</p>
+     */
     @NameInMap("Items")
     public DescribeRestoreRangeInfoResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E2BD9DFC-6760-5F49-97C5-DA739E29****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +113,30 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail extends TeaModel {
+        /**
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qecnsxkd****</p>
+         */
         @NameInMap("BackupSetId")
         public String backupSetId;
 
+        /**
+         * <p>The end time of the full backup task. Example: 1646760308000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646760308000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The start time of the full backup task. Example: 1646760282000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646760282000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -136,21 +191,58 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange extends TeaModel {
+        /**
+         * <p>The beginning of the time range to which you can restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646760282000</p>
+         */
         @NameInMap("BeginTimestampForRestore")
         public Long beginTimestampForRestore;
 
+        /**
+         * <p>The end of the time range to which you can restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646760308000</p>
+         */
         @NameInMap("EndTimestampForRestore")
         public Long endTimestampForRestore;
 
+        /**
+         * <p>If the value of the RangeType parameter is point, this parameter is returned. The value of this parameter describes information about all backup points in the time range.</p>
+         */
         @NameInMap("FullBackupList")
         public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupList fullBackupList;
 
+        /**
+         * <p>The type of the time range to which you can restore data.</p>
+         * <ul>
+         * <li><strong>point</strong>: The time range contains discrete points in time at which full backups were performed.</li>
+         * <li><strong>range</strong>: The time range is a period of time for which continuous backup is performed. You can specify a random point in time in the time range to restore data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>point</p>
+         */
         @NameInMap("RangeType")
         public String rangeType;
 
+        /**
+         * <p>The ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp106x9tk2c91****</p>
+         */
         @NameInMap("SourceEndpointInstanceID")
         public String sourceEndpointInstanceID;
 
+        /**
+         * <p>The location of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("SourceEndpointInstanceType")
         public String sourceEndpointInstanceType;
 
