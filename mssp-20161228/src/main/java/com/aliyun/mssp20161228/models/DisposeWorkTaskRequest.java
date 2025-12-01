@@ -44,6 +44,9 @@ public class DisposeWorkTaskRequest extends TeaModel {
     @NameInMap("TaskIds")
     public String taskIds;
 
+    @NameInMap("WorkTaskAnalysisResults")
+    public java.util.List<DisposeWorkTaskRequestWorkTaskAnalysisResults> workTaskAnalysisResults;
+
     public static DisposeWorkTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DisposeWorkTaskRequest self = new DisposeWorkTaskRequest();
         return TeaModel.build(map, self);
@@ -79,6 +82,44 @@ public class DisposeWorkTaskRequest extends TeaModel {
     }
     public String getTaskIds() {
         return this.taskIds;
+    }
+
+    public DisposeWorkTaskRequest setWorkTaskAnalysisResults(java.util.List<DisposeWorkTaskRequestWorkTaskAnalysisResults> workTaskAnalysisResults) {
+        this.workTaskAnalysisResults = workTaskAnalysisResults;
+        return this;
+    }
+    public java.util.List<DisposeWorkTaskRequestWorkTaskAnalysisResults> getWorkTaskAnalysisResults() {
+        return this.workTaskAnalysisResults;
+    }
+
+    public static class DisposeWorkTaskRequestWorkTaskAnalysisResults extends TeaModel {
+        @NameInMap("AnalysisResult")
+        public String analysisResult;
+
+        @NameInMap("TaskId")
+        public Long taskId;
+
+        public static DisposeWorkTaskRequestWorkTaskAnalysisResults build(java.util.Map<String, ?> map) throws Exception {
+            DisposeWorkTaskRequestWorkTaskAnalysisResults self = new DisposeWorkTaskRequestWorkTaskAnalysisResults();
+            return TeaModel.build(map, self);
+        }
+
+        public DisposeWorkTaskRequestWorkTaskAnalysisResults setAnalysisResult(String analysisResult) {
+            this.analysisResult = analysisResult;
+            return this;
+        }
+        public String getAnalysisResult() {
+            return this.analysisResult;
+        }
+
+        public DisposeWorkTaskRequestWorkTaskAnalysisResults setTaskId(Long taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public Long getTaskId() {
+            return this.taskId;
+        }
+
     }
 
 }

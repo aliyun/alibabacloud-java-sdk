@@ -177,6 +177,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             body.put("StartTime", request.startTime);
         }
@@ -426,12 +430,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Handle Alert Work Order</p>
      * 
-     * @param request DisposeWorkTaskRequest
+     * @param tmpReq DisposeWorkTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisposeWorkTaskResponse
      */
-    public DisposeWorkTaskResponse disposeWorkTaskWithOptions(DisposeWorkTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DisposeWorkTaskResponse disposeWorkTaskWithOptions(DisposeWorkTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DisposeWorkTaskShrinkRequest request = new DisposeWorkTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.workTaskAnalysisResults)) {
+            request.workTaskAnalysisResultsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.workTaskAnalysisResults, "WorkTaskAnalysisResults", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
             body.put("Operator", request.operator);
@@ -447,6 +457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
             body.put("TaskIds", request.taskIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workTaskAnalysisResultsShrink)) {
+            body.put("WorkTaskAnalysisResults", request.workTaskAnalysisResultsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

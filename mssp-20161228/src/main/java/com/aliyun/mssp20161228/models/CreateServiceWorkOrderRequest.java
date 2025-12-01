@@ -117,6 +117,9 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     /**
      * <p>Start time.</p>
      * <p>This parameter is required.</p>
@@ -276,6 +279,14 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     }
     public String getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateServiceWorkOrderRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public CreateServiceWorkOrderRequest setStartTime(Long startTime) {
