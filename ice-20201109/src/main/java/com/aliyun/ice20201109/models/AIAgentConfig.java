@@ -10,6 +10,9 @@ public class AIAgentConfig extends TeaModel {
     @NameInMap("AsrConfig")
     public AIAgentConfigAsrConfig asrConfig;
 
+    @NameInMap("AutoSpeechConfig")
+    public AIAgentConfigAutoSpeechConfig autoSpeechConfig;
+
     @NameInMap("AvatarConfig")
     public AIAgentConfigAvatarConfig avatarConfig;
 
@@ -89,6 +92,14 @@ public class AIAgentConfig extends TeaModel {
     }
     public AIAgentConfigAsrConfig getAsrConfig() {
         return this.asrConfig;
+    }
+
+    public AIAgentConfig setAutoSpeechConfig(AIAgentConfigAutoSpeechConfig autoSpeechConfig) {
+        this.autoSpeechConfig = autoSpeechConfig;
+        return this;
+    }
+    public AIAgentConfigAutoSpeechConfig getAutoSpeechConfig() {
+        return this.autoSpeechConfig;
     }
 
     public AIAgentConfig setAvatarConfig(AIAgentConfigAvatarConfig avatarConfig) {
@@ -355,6 +366,167 @@ public class AIAgentConfig extends TeaModel {
 
     }
 
+    public static class AIAgentConfigAutoSpeechConfigLlmPendingMessages extends TeaModel {
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static AIAgentConfigAutoSpeechConfigLlmPendingMessages build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigAutoSpeechConfigLlmPendingMessages self = new AIAgentConfigAutoSpeechConfigLlmPendingMessages();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigAutoSpeechConfigLlmPendingMessages setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentConfigAutoSpeechConfigLlmPendingMessages setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class AIAgentConfigAutoSpeechConfigLlmPending extends TeaModel {
+        @NameInMap("Messages")
+        public java.util.List<AIAgentConfigAutoSpeechConfigLlmPendingMessages> messages;
+
+        @NameInMap("WaitTime")
+        public Integer waitTime;
+
+        public static AIAgentConfigAutoSpeechConfigLlmPending build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigAutoSpeechConfigLlmPending self = new AIAgentConfigAutoSpeechConfigLlmPending();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigAutoSpeechConfigLlmPending setMessages(java.util.List<AIAgentConfigAutoSpeechConfigLlmPendingMessages> messages) {
+            this.messages = messages;
+            return this;
+        }
+        public java.util.List<AIAgentConfigAutoSpeechConfigLlmPendingMessages> getMessages() {
+            return this.messages;
+        }
+
+        public AIAgentConfigAutoSpeechConfigLlmPending setWaitTime(Integer waitTime) {
+            this.waitTime = waitTime;
+            return this;
+        }
+        public Integer getWaitTime() {
+            return this.waitTime;
+        }
+
+    }
+
+    public static class AIAgentConfigAutoSpeechConfigUserIdleMessages extends TeaModel {
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static AIAgentConfigAutoSpeechConfigUserIdleMessages build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigAutoSpeechConfigUserIdleMessages self = new AIAgentConfigAutoSpeechConfigUserIdleMessages();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigAutoSpeechConfigUserIdleMessages setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentConfigAutoSpeechConfigUserIdleMessages setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class AIAgentConfigAutoSpeechConfigUserIdle extends TeaModel {
+        @NameInMap("MaxRepeats")
+        public Integer maxRepeats;
+
+        @NameInMap("Messages")
+        public java.util.List<AIAgentConfigAutoSpeechConfigUserIdleMessages> messages;
+
+        @NameInMap("WaitTime")
+        public Integer waitTime;
+
+        public static AIAgentConfigAutoSpeechConfigUserIdle build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigAutoSpeechConfigUserIdle self = new AIAgentConfigAutoSpeechConfigUserIdle();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigAutoSpeechConfigUserIdle setMaxRepeats(Integer maxRepeats) {
+            this.maxRepeats = maxRepeats;
+            return this;
+        }
+        public Integer getMaxRepeats() {
+            return this.maxRepeats;
+        }
+
+        public AIAgentConfigAutoSpeechConfigUserIdle setMessages(java.util.List<AIAgentConfigAutoSpeechConfigUserIdleMessages> messages) {
+            this.messages = messages;
+            return this;
+        }
+        public java.util.List<AIAgentConfigAutoSpeechConfigUserIdleMessages> getMessages() {
+            return this.messages;
+        }
+
+        public AIAgentConfigAutoSpeechConfigUserIdle setWaitTime(Integer waitTime) {
+            this.waitTime = waitTime;
+            return this;
+        }
+        public Integer getWaitTime() {
+            return this.waitTime;
+        }
+
+    }
+
+    public static class AIAgentConfigAutoSpeechConfig extends TeaModel {
+        @NameInMap("LlmPending")
+        public AIAgentConfigAutoSpeechConfigLlmPending llmPending;
+
+        @NameInMap("UserIdle")
+        public AIAgentConfigAutoSpeechConfigUserIdle userIdle;
+
+        public static AIAgentConfigAutoSpeechConfig build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigAutoSpeechConfig self = new AIAgentConfigAutoSpeechConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigAutoSpeechConfig setLlmPending(AIAgentConfigAutoSpeechConfigLlmPending llmPending) {
+            this.llmPending = llmPending;
+            return this;
+        }
+        public AIAgentConfigAutoSpeechConfigLlmPending getLlmPending() {
+            return this.llmPending;
+        }
+
+        public AIAgentConfigAutoSpeechConfig setUserIdle(AIAgentConfigAutoSpeechConfigUserIdle userIdle) {
+            this.userIdle = userIdle;
+            return this;
+        }
+        public AIAgentConfigAutoSpeechConfigUserIdle getUserIdle() {
+            return this.userIdle;
+        }
+
+    }
+
     public static class AIAgentConfigAvatarConfig extends TeaModel {
         @NameInMap("AvatarId")
         public String avatarId;
@@ -471,6 +643,9 @@ public class AIAgentConfig extends TeaModel {
         @NameInMap("FunctionMap")
         public java.util.List<AIAgentConfigLlmConfigFunctionMap> functionMap;
 
+        @NameInMap("HistorySyncWithTTS")
+        public Boolean historySyncWithTTS;
+
         @NameInMap("LlmCompleteReply")
         public Boolean llmCompleteReply;
 
@@ -511,6 +686,14 @@ public class AIAgentConfig extends TeaModel {
         }
         public java.util.List<AIAgentConfigLlmConfigFunctionMap> getFunctionMap() {
             return this.functionMap;
+        }
+
+        public AIAgentConfigLlmConfig setHistorySyncWithTTS(Boolean historySyncWithTTS) {
+            this.historySyncWithTTS = historySyncWithTTS;
+            return this;
+        }
+        public Boolean getHistorySyncWithTTS() {
+            return this.historySyncWithTTS;
         }
 
         public AIAgentConfigLlmConfig setLlmCompleteReply(Boolean llmCompleteReply) {

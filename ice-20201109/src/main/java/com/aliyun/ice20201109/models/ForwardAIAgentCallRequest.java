@@ -11,6 +11,9 @@ public class ForwardAIAgentCallRequest extends TeaModel {
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    @NameInMap("CallerNumber")
+    public String callerNumber;
+
     @NameInMap("ErrorPrompt")
     public String errorPrompt;
 
@@ -35,6 +38,14 @@ public class ForwardAIAgentCallRequest extends TeaModel {
     }
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    public ForwardAIAgentCallRequest setCallerNumber(String callerNumber) {
+        this.callerNumber = callerNumber;
+        return this;
+    }
+    public String getCallerNumber() {
+        return this.callerNumber;
     }
 
     public ForwardAIAgentCallRequest setErrorPrompt(String errorPrompt) {

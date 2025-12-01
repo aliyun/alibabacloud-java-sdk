@@ -6521,6 +6521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CalledNumber", request.calledNumber);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callerNumber)) {
+            query.put("CallerNumber", request.callerNumber);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.errorPrompt)) {
             query.put("ErrorPrompt", request.errorPrompt);
         }
