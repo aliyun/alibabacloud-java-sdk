@@ -1009,6 +1009,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request BatchModifyEntitlementRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchModifyEntitlementResponse
+     */
+    public BatchModifyEntitlementResponse batchModifyEntitlementWithOptions(BatchModifyEntitlementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDesktopPerUser)) {
+            query.put("MaxDesktopPerUser", request.maxDesktopPerUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxUserPerDesktop)) {
+            query.put("MaxUserPerDesktop", request.maxUserPerDesktop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preview)) {
+            query.put("Preview", request.preview);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            query.put("Strategy", request.strategy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchModifyEntitlement"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchModifyEntitlementResponse());
+    }
+
+    /**
+     * @param request BatchModifyEntitlementRequest
+     * @return BatchModifyEntitlementResponse
+     */
+    public BatchModifyEntitlementResponse batchModifyEntitlement(BatchModifyEntitlementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchModifyEntitlementWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Binds a configuration group to resources.</p>
      * 
@@ -2459,6 +2521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientControlMenu", request.clientControlMenu);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientCreateSnapshot)) {
+            query.put("ClientCreateSnapshot", request.clientCreateSnapshot);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
             query.put("ClientType", request.clientType);
         }
@@ -2877,6 +2943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkSecurity)) {
             query.put("WatermarkSecurity", request.watermarkSecurity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkShadow)) {
+            query.put("WatermarkShadow", request.watermarkShadow);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkTransparencyValue)) {
@@ -5215,6 +5285,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following item:</p>
+     * <ul>
+     * <li>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</li>
+     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</p>
      * 
@@ -5336,6 +5413,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following item:</p>
+     * <ul>
+     * <li>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</li>
+     * <li>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</p>
      * 
@@ -13327,7 +13411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询桌面内安装的应用</p>
+     * <p>Queries applications installed on a cloud computer.</p>
      * 
      * @param request ListInstalledAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13367,7 +13451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询桌面内安装的应用</p>
+     * <p>Queries applications installed on a cloud computer.</p>
      * 
      * @param request ListInstalledAppsRequest
      * @return ListInstalledAppsResponse
@@ -14472,6 +14556,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientControlMenu", request.clientControlMenu);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientCreateSnapshot)) {
+            query.put("ClientCreateSnapshot", request.clientCreateSnapshot);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
             query.put("ClientType", request.clientType);
         }
@@ -14902,6 +14990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkSecurity)) {
             query.put("WatermarkSecurity", request.watermarkSecurity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkShadow)) {
+            query.put("WatermarkShadow", request.watermarkShadow);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkTransparencyValue)) {

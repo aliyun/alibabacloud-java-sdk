@@ -266,6 +266,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
+         * <strong>example:</strong>
+         * <p>Simple</p>
+         */
+        @NameInMap("OfficeSiteType")
+        public String officeSiteType;
+
+        /**
          * <p>The OS type. Valid values:</p>
          * <ul>
          * <li>Windows</li>
@@ -486,6 +493,14 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         }
         public String getOfficeSiteName() {
             return this.officeSiteName;
+        }
+
+        public DescribeGlobalDesktopRecordsResponseBodySessions setOfficeSiteType(String officeSiteType) {
+            this.officeSiteType = officeSiteType;
+            return this;
+        }
+        public String getOfficeSiteType() {
+            return this.officeSiteType;
         }
 
         public DescribeGlobalDesktopRecordsResponseBodySessions setOsType(String osType) {

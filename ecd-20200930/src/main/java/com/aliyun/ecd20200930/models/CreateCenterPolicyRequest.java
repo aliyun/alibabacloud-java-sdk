@@ -87,6 +87,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("ClientControlMenu")
     public String clientControlMenu;
 
+    @NameInMap("ClientCreateSnapshot")
+    public String clientCreateSnapshot;
+
     /**
      * <p>The types of Alibaba Cloud Workspace clients that end users can use to connect to cloud computers.</p>
      */
@@ -1161,6 +1164,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("WatermarkSecurity")
     public String watermarkSecurity;
 
+    @NameInMap("WatermarkShadow")
+    public String watermarkShadow;
+
     /**
      * <p>The watermark opacity. A higher value makes the watermark more opaque. Valid values: 10 to 100.</p>
      * 
@@ -1284,6 +1290,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getClientControlMenu() {
         return this.clientControlMenu;
+    }
+
+    public CreateCenterPolicyRequest setClientCreateSnapshot(String clientCreateSnapshot) {
+        this.clientCreateSnapshot = clientCreateSnapshot;
+        return this;
+    }
+    public String getClientCreateSnapshot() {
+        return this.clientCreateSnapshot;
     }
 
     public CreateCenterPolicyRequest setClientType(java.util.List<CreateCenterPolicyRequestClientType> clientType) {
@@ -2124,6 +2138,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getWatermarkSecurity() {
         return this.watermarkSecurity;
+    }
+
+    public CreateCenterPolicyRequest setWatermarkShadow(String watermarkShadow) {
+        this.watermarkShadow = watermarkShadow;
+        return this;
+    }
+    public String getWatermarkShadow() {
+        return this.watermarkShadow;
     }
 
     public CreateCenterPolicyRequest setWatermarkTransparencyValue(Integer watermarkTransparencyValue) {

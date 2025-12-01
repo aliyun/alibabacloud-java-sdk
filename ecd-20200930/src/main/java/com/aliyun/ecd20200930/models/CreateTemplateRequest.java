@@ -11,6 +11,14 @@ public class CreateTemplateRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1: the Enterprise edition.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -20,20 +28,34 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The data disks.</p>
+     */
     @NameInMap("DataDiskList")
     public java.util.List<CreateTemplateRequestDataDiskList> dataDiskList;
 
     /**
+     * <p>The default language of cloud computers during startup. This parameter takes effect only when cloud computers are created from system images.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
     @NameInMap("DefaultLanguage")
     public String defaultLanguage;
 
+    /**
+     * <p>The template description. It must meet the following criteria:</p>
+     * <ul>
+     * <li>It can be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It can contain letters, digits, and special characters, including spaces. Note: You can use carriage returns to break lines.</li>
+     * </ul>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the cloud computer image. You can query image IDs on the Images page. System images and custom images are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>desktopimage-windows-server-2022-64-asp</p>
      */
@@ -47,6 +69,8 @@ public class CreateTemplateRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The ID of the policy group.</p>
+     * 
      * <strong>example:</strong>
      * <p>pg-8hlryfn331******</p>
      */
@@ -57,29 +81,59 @@ public class CreateTemplateRequest extends TeaModel {
     public Boolean postPaidAfterUsedUp;
 
     /**
+     * <p>The service type. Set the value to <code>CloudDesktop</code>.</p>
+     * <ul>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CloudDesktop</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The regions of the template. You can create cloud computers by using a template only within the same region as the template itself.</p>
+     * <blockquote>
+     * <p> You can specify up to 20 regions.</p>
+     * </blockquote>
+     */
     @NameInMap("RegionConfigList")
     public java.util.List<CreateTemplateRequestRegionConfigList> regionConfigList;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-4knxmfneq1e******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags added to cloud computers. Specify tags in key-value pairs. You can specify up to 20 tags.</p>
+     */
     @NameInMap("ResourceTagList")
     public java.util.List<CreateTemplateRequestResourceTagList> resourceTagList;
 
+    /**
+     * <p>区域配置管理</p>
+     */
     @NameInMap("SiteConfigList")
     public java.util.List<CreateTemplateRequestSiteConfigList> siteConfigList;
 
     /**
+     * <p>The performance level (PL) of the system disk.</p>
+     * <blockquote>
+     * <p> Only cloud computers of the Graphics or High Frequency type support Enterprise SSDs (ESSDs).</p>
+     * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PL1: a PL1 ESSD.</li>
+     * <li>PL0: a PL0 ESSD.</li>
+     * <li>AutoPL: an AutoPL ESSD.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AutoPL</p>
      */
@@ -87,6 +141,11 @@ public class CreateTemplateRequest extends TeaModel {
     public String systemDiskPerformanceLevel;
 
     /**
+     * <p>The size of the system disk. Unit: GiB. Valid values: 40 to 500. Increments: 10 GiB.</p>
+     * <blockquote>
+     * <p> The system disk size must be at least as large as the configured image size.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -94,12 +153,20 @@ public class CreateTemplateRequest extends TeaModel {
     public Integer systemDiskSize;
 
     /**
+     * <p>The template name. It must meet the following criteria:</p>
+     * <ul>
+     * <li>It can be 2 to 126 characters in length.</li>
+     * <li>It must begin with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Note: Periods (.) are not supported in the name.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The ID of the scheduled task group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccg-0caoeogrk9m5****</p>
      */
@@ -292,6 +359,8 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestDataDiskList extends TeaModel {
         /**
+         * <p>The PL of the data disk. Default value: <code>AutoPL</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>AutoPL</p>
          */
@@ -299,6 +368,10 @@ public class CreateTemplateRequest extends TeaModel {
         public String performanceLevel;
 
         /**
+         * <p>The size of the data disk. Unit: GiB. Valid values: 40 to 2040. Increments: 10 GiB.</p>
+         * <p>**</p>
+         * <p><strong>Keep in mind</strong> that the larger the ESSD disk capacity, the higher the available PL (for example, PL2 is available for disks larger than 460 GiB). A higher PL comes with a higher cost. Select an ESSD based on your specific needs.</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -330,6 +403,8 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestRegionConfigList extends TeaModel {
         /**
+         * <p>The office network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-709******</p>
          */
@@ -337,6 +412,8 @@ public class CreateTemplateRequest extends TeaModel {
         public String officeSiteId;
 
         /**
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -344,6 +421,8 @@ public class CreateTemplateRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the cloud computer type.</p>
+         * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.8c16g</p>
          */
@@ -351,6 +430,8 @@ public class CreateTemplateRequest extends TeaModel {
         public String resourceInstanceType;
 
         /**
+         * <p>The ID of the automatic snapshot policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>sp-35fvn8m21pnx2****</p>
          */
@@ -358,6 +439,8 @@ public class CreateTemplateRequest extends TeaModel {
         public String snapshotPolicyId;
 
         /**
+         * <p>The subnet ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1yiu**********</p>
          */
@@ -365,6 +448,13 @@ public class CreateTemplateRequest extends TeaModel {
         public String subnetId;
 
         /**
+         * <p>Specifies whether to enable disk encryption.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>false (default): disables disk encryption.</li>
+         * <li>true: enables disk encryption.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -372,6 +462,8 @@ public class CreateTemplateRequest extends TeaModel {
         public Boolean volumeEncryptionEnable;
 
         /**
+         * <p>The ID of the Key Management Service (KMS) key that you want to use to encrypt disks. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query KMS keys.</p>
+         * 
          * <strong>example:</strong>
          * <p>a7b3c0c8-b3a2-4876-b1cc-*********</p>
          */
@@ -443,6 +535,8 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestResourceTagList extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>department</p>
          */
@@ -450,6 +544,8 @@ public class CreateTemplateRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>design</p>
          */
@@ -481,6 +577,8 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestSiteConfigList extends TeaModel {
         /**
+         * <p>应用管控策略ID</p>
+         * 
          * <strong>example:</strong>
          * <p>bwr-5a5371e0db954d********</p>
          */
@@ -488,6 +586,8 @@ public class CreateTemplateRequest extends TeaModel {
         public String appRuleId;
 
         /**
+         * <p>站点ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>mainland</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstalledAppsRequest extends TeaModel {
     /**
+     * <p>The cloud computer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,9 @@ public class ListInstalledAppsRequest extends TeaModel {
     public String desktopId;
 
     /**
+     * <p>The page number.\
+     * Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +25,9 @@ public class ListInstalledAppsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.\
+     * Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

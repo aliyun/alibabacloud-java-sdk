@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListInstalledAppsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the application.</p>
+     */
     @NameInMap("Apps")
     public java.util.List<ListInstalledAppsResponseBodyApps> apps;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -15,6 +20,8 @@ public class ListInstalledAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>94</p>
      */
@@ -52,6 +59,8 @@ public class ListInstalledAppsResponseBody extends TeaModel {
 
     public static class ListInstalledAppsResponseBodyApps extends TeaModel {
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_app</p>
          */
@@ -59,6 +68,8 @@ public class ListInstalledAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0.1</p>
          */

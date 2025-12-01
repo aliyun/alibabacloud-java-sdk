@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesRequest extends TeaModel {
     /**
+     * <p>The region that you can use to filter templates.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, only templates that are created in the specified region are returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +17,10 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +28,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The ID of the cloud computer image. You can query image IDs on the Images page. System images and custom images are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>m-dnz9xjgbm8*****</p>
      */
@@ -26,6 +37,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The keyword that you can use to search for the template. It can be the template ID or the template name. Fuzzy search is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
@@ -33,6 +46,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +55,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -47,19 +64,37 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The service type. Set the value to <code>CloudDesktop</code>.</p>
+     * <ul>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CloudDesktop</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The IDs of the templates that you want to query.</p>
+     */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 
+    /**
+     * <p>The name of the template. You can search for template by name.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The type of the template that you want to query. If you leave this parameter empty, all types of templates are queried.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>USER_TEMPLATE: custom templates.</li>
+     * <li>SYSTEM_TEMPLATE: system templates provided by Alibaba Cloud.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>USER_TEMPLATE</p>
      */

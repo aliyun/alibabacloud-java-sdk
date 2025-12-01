@@ -897,6 +897,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("ClientControlMenu")
         public String clientControlMenu;
 
+        @NameInMap("ClientCreateSnapshot")
+        public String clientCreateSnapshot;
+
         /**
          * <p>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</p>
          */
@@ -1983,6 +1986,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("WatermarkSecurity")
         public String watermarkSecurity;
 
+        @NameInMap("WatermarkShadow")
+        public String watermarkShadow;
+
         /**
          * <p>The watermark transparency.</p>
          * <p>Valid values:</p>
@@ -2104,6 +2110,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getClientControlMenu() {
             return this.clientControlMenu;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientCreateSnapshot(String clientCreateSnapshot) {
+            this.clientCreateSnapshot = clientCreateSnapshot;
+            return this;
+        }
+        public String getClientCreateSnapshot() {
+            return this.clientCreateSnapshot;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientTypes(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsClientTypes> clientTypes) {
@@ -2960,6 +2974,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getWatermarkSecurity() {
             return this.watermarkSecurity;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWatermarkShadow(String watermarkShadow) {
+            this.watermarkShadow = watermarkShadow;
+            return this;
+        }
+        public String getWatermarkShadow() {
+            return this.watermarkShadow;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWatermarkTransparency(String watermarkTransparency) {
