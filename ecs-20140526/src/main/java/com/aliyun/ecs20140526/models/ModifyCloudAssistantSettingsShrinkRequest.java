@@ -45,11 +45,12 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     public String sessionManagerConfigShrink;
 
     /**
-     * <p>The Cloud Assistant feature. Valid values:</p>
+     * <p>The Cloud Assistant feature. Set SettingType to one of the following valid values:</p>
      * <ul>
      * <li>SessionManagerDelivery: the Session Record Delivery configurations.</li>
      * <li>InvocationDelivery: the Operation Content and Result Delivery configurations.</li>
      * <li>AgentUpgradeConfig: the Cloud Assistant Agent Upgrade configurations.</li>
+     * <li>SessionManagerConfig: Cloud Assistant the SessionManager configuration.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

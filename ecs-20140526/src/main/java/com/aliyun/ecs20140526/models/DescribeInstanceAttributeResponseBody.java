@@ -234,7 +234,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>Details about network options.</p>
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("NetworkOptions")
@@ -779,6 +779,21 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyNetworkOptions extends TeaModel {
+        /**
+         * <p>The bandwidth weight.</p>
+         * <p>The supported values vary with instance types. You can query the bandwidth weights supported by the current instance type by using the DescribeInstanceTypes.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Vpc-L1.</li>
+         * <li>Vpc-L2.</li>
+         * <li>Ebs-L1.</li>
+         * <li>Ebs-L2.</li>
+         * <li>Default.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Vpc-L1</p>
+         */
         @NameInMap("BandwidthWeighting")
         public String bandwidthWeighting;
 

@@ -33,13 +33,28 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String destCidrIp;
 
     /**
-     * <p>The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:</p>
+     * <p>Network Layer /transport layer protocol. Two types of assignments are supported:</p>
+     * <ol>
+     * <li>The case-insensitive protocol name. Valid values:</li>
+     * </ol>
      * <ul>
      * <li>ICMP</li>
      * <li>GRE</li>
      * <li>TCP</li>
      * <li>UDP</li>
-     * <li>ALL: All protocols are supported.</li>
+     * <li>ALL: supports all protocols.</li>
+     * </ul>
+     * <ol start="2">
+     * <li>The value of the IANA-compliant protocol number, which is an integer from 0 to 255. List of regions currently available:</li>
+     * </ol>
+     * <ul>
+     * <li>Philippines (Manila)</li>
+     * <li>UK (London)</li>
+     * <li>Malaysia (Kuala Lumpur)</li>
+     * <li>China (Hohhot)</li>
+     * <li>China (Qingdao)</li>
+     * <li>US (Silicon Valley)</li>
+     * <li>Singapore</li>
      * </ul>
      * 
      * <strong>example:</strong>

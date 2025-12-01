@@ -362,7 +362,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup extends TeaModel {
         /**
-         * <p>The time when the snapshot-consistent group was created.</p>
+         * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-23T10:58:48Z</p>

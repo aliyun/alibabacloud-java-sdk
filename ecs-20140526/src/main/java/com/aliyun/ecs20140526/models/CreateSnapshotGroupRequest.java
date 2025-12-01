@@ -23,21 +23,21 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of cloud disk N for which you want to create snapshots. You can specify multiple cloud disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 cloud disks whose total disk size does not exceed 32 TiB.</p>
-     * <p>Take note of the following items:</p>
+     * <p>The IDs of the cloud disks for which you want to create a snapshot-consistent group. You can specify the IDs of cloud disks that are attached to multiple instances within the same zone. Valid values of N: 1 to 16. A snapshot-consistent group can contain snapshots of up to 16 cloud disks whose total disk size does not exceed 32 TiB.</p>
+     * <p>Take note of the following:</p>
      * <ul>
-     * <li>You cannot specify both DiskId.N and <code>ExcludeDiskId.N</code> in the same request.</li>
-     * <li>If <code>InstanceId</code> is set, you can use DiskId.N to specify only cloud disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify cloud disks attached to multiple instances.</li>
+     * <li>You cannot specify both the DiskId.N and <code>ExcludeDiskId.N</code> parameters in the same request.</li>
+     * <li>If you specify <code>InstanceId</code>, you can specify the IDs of cloud disks that are attached only to the specified instance. You cannot specify the IDs of cloud disks that are attached to multiple instances.</li>
      * </ul>
      */
     @NameInMap("DiskId")
     public java.util.List<String> diskId;
 
     /**
-     * <p>The ID of cloud disk N for which you do not want to create snapshots. If this parameter is specified, the created snapshot-consistent group does not contain snapshots of the cloud disk. Valid values of N: 1 to 16.</p>
-     * <p>This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.</p>
+     * <p>The IDs of the cloud disks for which you do not want to create snapshots. After you specify the IDs of cloud disks, the snapshot-consistent group that you create does not contain the snapshots of the specified cloud disks. Valid values of N: 1 to 16.</p>
+     * <p>This parameter is empty by default, which indicates that snapshots are created for all disks of the instance.</p>
      * <blockquote>
-     * <p>You cannot specify ExcludeDiskId.N and <code>DiskId.N</code> in the same request.</p>
+     * <p> This parameter cannot be set at the same time as the <code>DiskId.N</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

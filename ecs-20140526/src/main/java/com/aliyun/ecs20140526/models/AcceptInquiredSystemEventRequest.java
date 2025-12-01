@@ -5,10 +5,6 @@ import com.aliyun.tea.*;
 
 public class AcceptInquiredSystemEventRequest extends TeaModel {
     /**
-     * <blockquote>
-     * <p>This parameter is in invitational preview and is unavailable to general users.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>hide</p>
      */
@@ -16,7 +12,6 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
     public String choice;
 
     /**
-     * <p>The ID of the system event.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +27,6 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the system event. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

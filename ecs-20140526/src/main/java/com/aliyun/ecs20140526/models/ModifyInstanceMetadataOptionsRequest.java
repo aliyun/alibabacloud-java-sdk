@@ -60,8 +60,14 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
+     * <p>Default value: disabled.</p>
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p> The tag key must be a combination of letters, digits, @, colons (:), underscores (_), hyphens (-), periods (.), equal signs (=), and commas (,). The tag key cannot be &quot;.&quot; or &quot;..&quot;. Otherwise, the tag key cannot be accessed in the metadata.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

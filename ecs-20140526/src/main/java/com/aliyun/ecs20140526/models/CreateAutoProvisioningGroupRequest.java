@@ -1273,6 +1273,25 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
+    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationSecurityOptions extends TeaModel {
+        @NameInMap("TrustedSystemMode")
+        public String trustedSystemMode;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfigurationSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfigurationSecurityOptions self = new CreateAutoProvisioningGroupRequestLaunchConfigurationSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSecurityOptions setTrustedSystemMode(String trustedSystemMode) {
+            this.trustedSystemMode = trustedSystemMode;
+            return this;
+        }
+        public String getTrustedSystemMode() {
+            return this.trustedSystemMode;
+        }
+
+    }
+
     public static class CreateAutoProvisioningGroupRequestLaunchConfiguration extends TeaModel {
         /**
          * <blockquote>
@@ -1688,6 +1707,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("SchedulerOptions")
         public CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions schedulerOptions;
 
+        @NameInMap("SecurityOptions")
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSecurityOptions securityOptions;
+
         /**
          * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values: Valid values:</p>
          * <ul>
@@ -2032,6 +2054,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions getSchedulerOptions() {
             return this.schedulerOptions;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSecurityOptions(CreateAutoProvisioningGroupRequestLaunchConfigurationSecurityOptions securityOptions) {
+            this.securityOptions = securityOptions;
+            return this;
+        }
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSecurityOptions getSecurityOptions() {
+            return this.securityOptions;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setSpotDuration(Integer spotDuration) {

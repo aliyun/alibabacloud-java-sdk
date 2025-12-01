@@ -504,10 +504,16 @@ public class CreateInstanceRequest extends TeaModel {
      * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
      * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
      * </ul>
-     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
      * <blockquote>
-     * <p> This parameter takes effect only if the SpotStrategy parameter is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
      * </blockquote>
+     * <ul>
+     * <li><p>You can set this parameter only to 0 or 1.</p>
+     * </li>
+     * <li><p>The spot instance is billed by second. Specify an appropriate protection period.</p>
+     * </li>
+     * <li><p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>

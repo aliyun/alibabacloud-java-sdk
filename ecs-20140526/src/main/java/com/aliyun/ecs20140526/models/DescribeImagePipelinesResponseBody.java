@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesResponseBody extends TeaModel {
     /**
-     * <p>Details about the image templates.</p>
+     * <p>Details of the image templates.</p>
      */
     @NameInMap("ImagePipeline")
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
@@ -576,7 +576,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings diskDeviceMappings;
 
         /**
-         * <p>The feature attributes of the image.</p>
+         * <p>The attributes of the custom image.</p>
          */
         @NameInMap("Features")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures features;

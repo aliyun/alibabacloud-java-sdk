@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationResultsRequest extends TeaModel {
     /**
-     * <p>The ID of the command.</p>
+     * <p>$.parameters[11].schema.example</p>
      * 
      * <strong>example:</strong>
      * <p>c-hz0jdfwcsr****</p>
@@ -14,12 +14,38 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
-     * <ul>
-     * <li>PlainText: returns the original command content and command output.</li>
-     * <li>Base64: returns the Base64-encoded command content and command output.</li>
-     * </ul>
-     * <p>Default value: Base64.</p>
+     * <DescribeInvocationResultsResponse>
+     *     <RequestId>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</RequestId>
+     *     <Invocation>
+     *         <InvocationResults>
+     *             <InvocationResult>
+     *                 <Dropped>0</Dropped>
+     *                 <InvocationStatus>Success</InvocationStatus>
+     *                 <InstanceId>i-bp1i7gg30r52z2em****</InstanceId>
+     *                 <ExitCode>0</ExitCode>
+     *                 <ErrorInfo>the specified instance does not exists</ErrorInfo>
+     *                 <StartTime>2019-12-20T06:15:55Z</StartTime>
+     *                 <Repeats>0</Repeats>
+     *                 <InvokeRecordStatus>Running</InvokeRecordStatus>
+     *                 <FinishedTime>2019-12-20T06:15:56Z</FinishedTime>
+     *                 <Output>MTU6MzA6MDEK</Output>
+     *                 <CommandId>c-hz0jdfwcsr****</CommandId>
+     *                 <ErrorCode>InstanceNotExists</ErrorCode>
+     *                 <InvokeId>t-hz0jdfwd9f****</InvokeId>
+     *                 <StopTime>2020-01-19T09:15:47Z</StopTime>
+     *                 <ContainerId>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</ContainerId>
+     *                 <ContainerName>test-container</ContainerName>
+     *                 <Tags>
+     *                     <TagKey>owner</TagKey>
+     *                     <TagValue>zhangsan</TagValue>
+     *                 </Tags>
+     *             </InvocationResult>
+     *         </InvocationResults>
+     *         <TotalCount>1</TotalCount>
+     *         <PageSize>1</PageSize>
+     *         <PageNumber>1</PageNumber>
+     *     </Invocation>
+     * </DescribeInvocationResultsResponse>
      * 
      * <strong>example:</strong>
      * <p>PlainText</p>
@@ -28,12 +54,39 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
-     * <ul>
-     * <li>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</li>
-     * <li>false: does not return the results of historical scheduled executions.</li>
-     * </ul>
-     * <p>Default value: false.</p>
+     * <p>{
+     *   &quot;RequestId&quot; : &quot;473469C7-AA6F-4DC5-B3DB-A3DC0DE*****&quot;,
+     *   &quot;Invocation&quot; : {
+     *     &quot;InvocationResults&quot; : {
+     *       &quot;InvocationResult&quot; : [ {
+     *         &quot;Dropped&quot; : 0,
+     *         &quot;InvocationStatus&quot; : &quot;Success&quot;,
+     *         &quot;InstanceId&quot; : &quot;i-bp1i7gg30r52z2em****&quot;,
+     *         &quot;ExitCode&quot; : 0,
+     *         &quot;ErrorInfo&quot; : &quot;the specified instance does not exists&quot;,
+     *         &quot;StartTime&quot; : &quot;2019-12-20T06:15:55Z&quot;,
+     *         &quot;Repeats&quot; : 0,
+     *         &quot;InvokeRecordStatus&quot; : &quot;Running&quot;,
+     *         &quot;FinishedTime&quot; : &quot;2019-12-20T06:15:56Z&quot;,
+     *         &quot;Output&quot; : &quot;MTU6MzA6MDEK&quot;,
+     *         &quot;CommandId&quot; : &quot;c-hz0jdfwcsr****&quot;,
+     *         &quot;ErrorCode&quot; : &quot;InstanceNotExists&quot;,
+     *         &quot;InvokeId&quot; : &quot;t-hz0jdfwd9f****&quot;,
+     *         &quot;StopTime&quot; : &quot;2020-01-19T09:15:47Z&quot;,
+     *         &quot;ContainerId&quot;:&quot;ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****&quot;,
+     *         &quot;ContainerName&quot;:&quot;test-container&quot;,<br>        &quot;Tags&quot;: [
+     *                     {
+     *                         &quot;TagKey&quot;: &quot;owner&quot;,
+     *                         &quot;TagValue&quot;: &quot;zhangsan&quot;
+     *                     }
+     *                 ]
+     *       } ]
+     *     },
+     *     &quot;TotalCount&quot; : 1,
+     *     &quot;PageSize&quot; : 1,
+     *     &quot;PageNumber&quot; : 1
+     *   }
+     * }</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,7 +95,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Boolean includeHistory;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>$.parameters[11].schema.description</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1i7gg30r52z2em****</p>
@@ -51,7 +104,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the command task. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query the IDs of all command tasks.</p>
+     * <p>$.parameters[11].schema.items.enumValueTitles</p>
      * 
      * <strong>example:</strong>
      * <p>t-hz0jdfwd9f****</p>
@@ -60,43 +113,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The execution status of the command task. Valid values:</p>
-     * <ul>
-     * <li><p>Running:</p>
-     * <ul>
-     * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
-     * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
-     * </ul>
-     * </li>
-     * <li><p>Finished:</p>
-     * <ul>
-     * <li>Scheduled task: The execution state can never be Finished.</li>
-     * <li>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</li>
-     * </ul>
-     * </li>
-     * <li><p>Success:</p>
-     * <ul>
-     * <li>One-time task: The execution is complete, and the exit code is 0.</li>
-     * <li>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</li>
-     * </ul>
-     * </li>
-     * <li><p>Failed:</p>
-     * <ul>
-     * <li>Scheduled task: The execution state can never be Failed.</li>
-     * <li>One-time task: The execution fails on all instances.</li>
-     * </ul>
-     * </li>
-     * <li><p>PartialFailed:</p>
-     * <ul>
-     * <li>Scheduled task: The execution state can never be PartialFailed.</li>
-     * <li>One-time task: The execution fails on some instances.</li>
-     * </ul>
-     * </li>
-     * <li><p>Stopped: The task is stopped.</p>
-     * </li>
-     * <li><p>Stopping: The task is being stopped.</p>
-     * </li>
-     * </ul>
+     * <p>$.parameters[11].schema.enumValueTitles</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -105,9 +122,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String invokeRecordStatus;
 
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <p>Valid values: 1 to 50.</p>
-     * <p>Default value: 10.</p>
+     * <p>FEATUREecsXZ3H4M</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -116,7 +131,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>dubbo</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -131,9 +146,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
-     * </blockquote>
+     * <p>acs:ecs:{#regionId}:{#accountId}:command/*</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -142,9 +155,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <blockquote>
-     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
-     * </blockquote>
+     * <p>acs:ecs:{#regionId}:{#accountId}:instance/*</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -153,7 +164,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>$.parameters[11].schema.items.description</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -163,7 +174,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.</p>
+     * <p>$.parameters[11].schema.items.example</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -178,7 +189,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the command task.</p>
+     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInvocationResultsRequestTag> tag;
@@ -326,9 +337,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
 
     public static class DescribeInvocationResultsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -337,8 +346,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The ID of the command task. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query the IDs of all command tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

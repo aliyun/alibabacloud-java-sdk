@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
     /**
-     * <p>Details about the zones in which resources are available.</p>
+     * <p>The information about the availability of resources in the zones.</p>
      */
     @NameInMap("AvailableZones")
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>0041D94C-FB92-4C49-B115-259DA1C*****</p>
      */
@@ -42,32 +40,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
         /**
-         * <p>The maximum disk capacity.</p>
-         * <p>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</p>
-         * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>2048</p>
          */
         @NameInMap("Max")
         public Integer max;
 
         /**
-         * <p>The minimum disk capacity.</p>
-         * <p>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</p>
-         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>20</p>
          */
         @NameInMap("Min")
         public Integer min;
 
         /**
-         * <p>The status of the resource. Valid values:</p>
-         * <ul>
-         * <li>Available</li>
-         * <li>SoldOut</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -75,14 +61,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The resource category based on the stock level. Valid values:</p>
-         * <ul>
-         * <li>WithStock: Resources are in sufficient stock.</li>
-         * <li>ClosedWithStock: Resources are in insufficient stock. We recommend that you use other resources that are in sufficient stock.</li>
-         * <li>WithoutStock: Resources are out of stock and will be replenished. We recommend that you use other resources that are in sufficient stock.</li>
-         * <li>ClosedWithoutStock: Resources are out of stock and will not be replenished. We recommend that you use other resources that are in sufficient stock.</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>WithStock</p>
          */
@@ -90,18 +68,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String statusCategory;
 
         /**
-         * <p>The unit of the disk capacity.</p>
-         * <p>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</p>
-         * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>GiB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
-         * <p>The resource.</p>
-         * 
          * <strong>example:</strong>
          * <p>ecs.d1ne.xlarge</p>
          */
@@ -183,24 +156,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
-        /**
-         * <p>The information about the resources.</p>
-         */
         @NameInMap("SupportedResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
         /**
-         * <p>The resource type. Valid values:</p>
-         * <ul>
-         * <li>Zone: zone</li>
-         * <li>IoOptimized: I/O optimized resource</li>
-         * <li>InstanceType: instance type</li>
-         * <li>SystemDisk: system disk</li>
-         * <li>DataDisk: data disk</li>
-         * <li>Network: network type</li>
-         * <li>ddh: dedicated host</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>InstanceType</p>
          */
@@ -250,15 +209,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
-        /**
-         * <p>The resources that are available in the zone.</p>
-         */
         @NameInMap("AvailableResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
         /**
-         * <p>The region ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -266,12 +220,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of resources in the zone. Valid values:</p>
-         * <ul>
-         * <li>Available</li>
-         * <li>SoldOut</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -279,12 +227,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The resource category based on the stock level in the zone. Valid values:</p>
+         * <p>The resource status based on the stock level in the zone. Valid value:</p>
          * <ul>
-         * <li>WithStock: Resources are in sufficient stock.</li>
-         * <li>ClosedWithStock: Resources are in insufficient stock. We recommend that you use other resources that are in sufficient stock.</li>
-         * <li>WithoutStock: Resources are out of stock and will be replenished. We recommend that you use other resources that are in sufficient stock.</li>
-         * <li>ClosedWithoutStock: Resources are out of stock and will not be replenished. We recommend that you use other resources that are in sufficient stock.</li>
+         * <li>WithStock: The resources are available and can be continuously replenished.</li>
+         * <li>ClosedWithStock: Inventory is available, but resources will not be replenished. The ability to guarantee the supply of inventory is low. We recommend selecting a product specification in the WithStock state.</li>
+         * <li>WithoutStock: The resource is out of stock and will be replenished. We recommend using other resources that are in stock.</li>
+         * <li>ClosedWithoutStock: The resource is out of stock and will no longer be replenished. We recommend using other resources that are in stock.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,8 +242,6 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String statusCategory;
 
         /**
-         * <p>The zone ID.</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>
          */

@@ -1273,6 +1273,25 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     }
 
+    public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions extends TeaModel {
+        @NameInMap("TrustedSystemMode")
+        public String trustedSystemMode;
+
+        public static CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions self = new CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions setTrustedSystemMode(String trustedSystemMode) {
+            this.trustedSystemMode = trustedSystemMode;
+            return this;
+        }
+        public String getTrustedSystemMode() {
+            return this.trustedSystemMode;
+        }
+
+    }
+
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration extends TeaModel {
         /**
          * <blockquote>
@@ -1688,6 +1707,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         @NameInMap("SchedulerOptions")
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSchedulerOptions schedulerOptions;
 
+        @NameInMap("SecurityOptions")
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions securityOptions;
+
         /**
          * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values: Valid values:</p>
          * <ul>
@@ -2032,6 +2054,14 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         }
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSchedulerOptions getSchedulerOptions() {
             return this.schedulerOptions;
+        }
+
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSecurityOptions(CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions securityOptions) {
+            this.securityOptions = securityOptions;
+            return this;
+        }
+        public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSecurityOptions getSecurityOptions() {
+            return this.securityOptions;
         }
 
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfiguration setSpotDuration(Integer spotDuration) {

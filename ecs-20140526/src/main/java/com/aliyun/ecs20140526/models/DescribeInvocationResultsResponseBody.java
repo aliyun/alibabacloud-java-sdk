@@ -5,13 +5,49 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationResultsResponseBody extends TeaModel {
     /**
-     * <p>Details about the execution results.</p>
+     * <p>The execution status of the command task. Valid values:</p>
+     * <ul>
+     * <li><p>Running:</p>
+     * <ul>
+     * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
+     * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
+     * </ul>
+     * </li>
+     * <li><p>Finished:</p>
+     * <ul>
+     * <li>Scheduled task: The execution state can never be Finished.</li>
+     * <li>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</li>
+     * </ul>
+     * </li>
+     * <li><p>Success:</p>
+     * <ul>
+     * <li>One-time task: The execution is complete, and the exit code is 0.</li>
+     * <li>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</li>
+     * </ul>
+     * </li>
+     * <li><p>Failed:</p>
+     * <ul>
+     * <li>Scheduled task: The execution state can never be Failed.</li>
+     * <li>One-time task: The execution fails on all instances.</li>
+     * </ul>
+     * </li>
+     * <li><p>PartialFailed:</p>
+     * <ul>
+     * <li>Scheduled task: The execution state can never be PartialFailed.</li>
+     * <li>One-time task: The execution fails on some instances.</li>
+     * </ul>
+     * </li>
+     * <li><p>Stopped: The task is stopped.</p>
+     * </li>
+     * <li><p>Stopping: The task is being stopped.</p>
+     * </li>
+     * </ul>
      */
     @NameInMap("Invocation")
     public DescribeInvocationResultsResponseBodyInvocation invocation;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the command.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
@@ -42,7 +78,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the command task.</p>
+         * <p>The output delivery status of the command execution. Valid values:</p>
+         * <ul>
+         * <li>InProgress: The delivery is in progress.</li>
+         * <li>Finished: The delivery is complete.</li>
+         * <li>Failed: The delivery failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
@@ -51,7 +92,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the command task.</p>
+         * <p>The username used to run the command on the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
@@ -103,71 +144,6 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult extends TeaModel {
         /**
-         * <p>The command ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>c-hz0jdfwcsr****</p>
-         */
-        @NameInMap("CommandId")
-        public String commandId;
-
-        /**
-         * <p>The container ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
-         */
-        @NameInMap("ContainerId")
-        public String containerId;
-
-        /**
-         * <p>The container name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-container</p>
-         */
-        @NameInMap("ContainerName")
-        public String containerName;
-
-        /**
-         * <p>The size of the Output text that was truncated and discarded because the <code>Output</code> value exceeded 24 KB in size.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        @NameInMap("Dropped")
-        public Integer dropped;
-
-        /**
-         * <p>The error code returned when the command failed to be sent or run. Valid values:</p>
-         * <ul>
-         * <li>If this parameter is empty, the command was run as expected.</li>
-         * <li>InstanceNotExists: The specified instance did not exist or was released.</li>
-         * <li>InstanceReleased: The instance was released while the command was being run.</li>
-         * <li>InstanceNotRunning: The instance was not running while the command was being run.</li>
-         * <li>CommandNotApplicable: The command was inapplicable to the specified instance.</li>
-         * <li>AccountNotExists: The username specified to run the command did not exist.</li>
-         * <li>DirectoryNotExists: The specified directory did not exist.</li>
-         * <li>BadCronExpression: The specified cron expression for the execution schedule was invalid.</li>
-         * <li>ClientNotRunning: Cloud Assistant Agent was not running.</li>
-         * <li>ClientNotResponse: Cloud Assistant Agent did not respond.</li>
-         * <li>ClientIsUpgrading: Cloud Assistant Agent was being upgraded.</li>
-         * <li>ClientNeedUpgrade: Cloud Assistant Agent needed to be upgraded.</li>
-         * <li>DeliveryTimeout: The request to send the command timed out.</li>
-         * <li>ExecutionTimeout: The execution timed out.</li>
-         * <li>ExecutionException: An exception occurred while the command was being run.</li>
-         * <li>ExecutionInterrupted: The execution was interrupted.</li>
-         * <li>ExitCodeNonzero: The execution was complete, but the exit code was not 0.</li>
-         * <li>SecurityGroupRuleDenied: Access to Cloud Assistant was denied by security group rules.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>InstanceNotExists</p>
-         */
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        /**
          * <p>The error message returned when the command failed to be sent or run. Valid values:</p>
          * <ul>
          * <li>If this parameter is empty, the command was run as expected.</li>
@@ -191,41 +167,19 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>the specified instance does not exists</p>
+         * <p>c-hz0jdfwcsr****</p>
          */
-        @NameInMap("ErrorInfo")
-        public String errorInfo;
+        @NameInMap("CommandId")
+        public String commandId;
 
         /**
-         * <p>The exit code of the command task.</p>
-         * <ul>
-         * <li>For Linux instances, the value is the exit code of the shell command.</li>
-         * <li>For Windows instances, the value is the exit code of the batch or PowerShell command.</li>
-         * </ul>
+         * <p>Command to execute the Output OSS delivery configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
          */
-        @NameInMap("ExitCode")
-        public Long exitCode;
-
-        /**
-         * <p>The time when the command task was completed. If the command task times out, the end time is equal to the start time of the command task specified by <code>StartTime</code> plus the timeout period specified by <code>Timeout</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-20T06:15:56Z</p>
-         */
-        @NameInMap("FinishedTime")
-        public String finishedTime;
-
-        /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i-bp1i7gg30r52z2em****</p>
-         */
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("ContainerId")
+        public String containerId;
 
         /**
          * <p>The execution status on a single instance. Valid values:</p>
@@ -269,19 +223,180 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
+         * <p>test-container</p>
+         */
+        @NameInMap("ContainerName")
+        public String containerName;
+
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Dropped")
+        public Integer dropped;
+
+        /**
+         * <p>The time when the command started to be run on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceNotExists</p>
+         */
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        /**
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the specified instance does not exists</p>
+         */
+        @NameInMap("ErrorInfo")
+        public String errorInfo;
+
+        /**
+         * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("ExitCode")
+        public Long exitCode;
+
+        /**
+         * <p>The total number of the commands.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-20T06:15:56Z</p>
+         */
+        @NameInMap("FinishedTime")
+        public String finishedTime;
+
+        /**
+         * <p>The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1i7gg30r52z2em****</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The tag of the command task.</p>
+         * 
+         * <strong>example:</strong>
          * <p>Success</p>
          */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
         /**
-         * <p>The command task ID.</p>
+         * <p>The number of times that the command was run on the instance.</p>
+         * <ul>
+         * <li>If the command is set to run only once, the value is 0 or 1.</li>
+         * <li>If the command is set to run on a schedule, the value is the number of times that the command has been run on the instance.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>t-hz0jdfwd9f****</p>
          */
         @NameInMap("InvokeId")
         public String invokeId;
+
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        @NameInMap("InvokeRecordStatus")
+        public String invokeRecordStatus;
+
+        /**
+         * <p>The exit code of the command task.</p>
+         * <ul>
+         * <li>For Linux instances, the value is the exit code of the shell command.</li>
+         * <li>For Windows instances, the value is the exit code of the batch or PowerShell command.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+         */
+        @NameInMap("Launcher")
+        public String launcher;
+
+        /**
+         * <p>The tags of the command task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://testBucket/testPrefix</p>
+         */
+        @NameInMap("OssOutputDelivery")
+        public String ossOutputDelivery;
+
+        /**
+         * <p>The execution results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
+         */
+        @NameInMap("OssOutputStatus")
+        public String ossOutputStatus;
+
+        /**
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://testBucket/testPrefix/output.txt</p>
+         */
+        @NameInMap("OssOutputUri")
+        public String ossOutputUri;
+
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTU6MzA6MDEK</p>
+         */
+        @NameInMap("Output")
+        public String output;
+
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Repeats")
+        public Integer repeats;
+
+        /**
+         * <p>Details about the execution results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-20T06:15:55Z</p>
+         */
+        @NameInMap("StartTime")
+        public String startTime;
+
+        /**
+         * <p>root</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-19T09:15:47Z</p>
+         */
+        @NameInMap("StopTime")
+        public String stopTime;
+
+        /**
+         * <p>The time when the command task was completed. If the command task times out, the end time is equal to the start time of the command task specified by <code>StartTime</code> plus the timeout period specified by <code>Timeout</code>.</p>
+         */
+        @NameInMap("Tags")
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags tags;
 
         /**
          * <p>The execution status of the command. Valid values:</p>
@@ -317,120 +432,16 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Running</p>
-         */
-        @NameInMap("InvokeRecordStatus")
-        public String invokeRecordStatus;
-
-        /**
-         * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
-         */
-        @NameInMap("Launcher")
-        public String launcher;
-
-        /**
-         * <p>Command to execute the Output OSS delivery configuration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss://testBucket/testPrefix</p>
-         */
-        @NameInMap("OssOutputDelivery")
-        public String ossOutputDelivery;
-
-        /**
-         * <p>The output delivery status of the command execution. Valid values:</p>
-         * <ul>
-         * <li>InProgress: The delivery is in progress.</li>
-         * <li>Finished: The delivery is complete.</li>
-         * <li>Failed: The delivery failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Finished</p>
-         */
-        @NameInMap("OssOutputStatus")
-        public String ossOutputStatus;
-
-        /**
-         * <p>The command execution Output delivers the object URI to OSS. This field is an empty string when the delivery fails or is in progress.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss://testBucket/testPrefix/output.txt</p>
-         */
-        @NameInMap("OssOutputUri")
-        public String ossOutputUri;
-
-        /**
-         * <p>The command output.</p>
-         * <ul>
-         * <li>If ContentEncoding is set to PlainText in the request, the original command output is returned.</li>
-         * <li>If ContentEncoding is set to Base64 in the request, the Base64-encoded command output is returned.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>MTU6MzA6MDEK</p>
-         */
-        @NameInMap("Output")
-        public String output;
-
-        /**
-         * <p>The number of times that the command was run on the instance.</p>
-         * <ul>
-         * <li>If the command is set to run only once, the value is 0 or 1.</li>
-         * <li>If the command is set to run on a schedule, the value is the number of times that the command has been run on the instance.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        @NameInMap("Repeats")
-        public Integer repeats;
-
-        /**
-         * <p>The time when the command started to be run on the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-12-20T06:15:55Z</p>
-         */
-        @NameInMap("StartTime")
-        public String startTime;
-
-        /**
-         * <p>The time when the command task was stopped. If you call the <code>StopInvocation</code> operation to stop the command task, the value of this parameter is the time when the operation is called.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-01-19T09:15:47Z</p>
-         */
-        @NameInMap("StopTime")
-        public String stopTime;
-
-        /**
-         * <p>The tags of the command task.</p>
-         */
-        @NameInMap("Tags")
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags tags;
-
-        /**
-         * <p>Indicates how the command task is stopped when a command execution is manually stopped or times out. Valid values:</p>
-         * <ul>
-         * <li>Process: The process of the command is stopped.</li>
-         * <li>ProcessTree: The process tree of the command is stopped. In this case, the process of the command and all subprocesses are stopped.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
          * <p>ProcessTree</p>
          */
         @NameInMap("TerminationMode")
         public String terminationMode;
 
         /**
-         * <p>The username used to run the command on the instance.</p>
+         * <p>The size of the Output text that was truncated and discarded because the <code>Output</code> value exceeded 24 KB in size.</p>
          * 
          * <strong>example:</strong>
-         * <p>root</p>
+         * <p>test</p>
          */
         @NameInMap("Username")
         public String username;
@@ -647,13 +658,17 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     public static class DescribeInvocationResultsResponseBodyInvocation extends TeaModel {
         /**
-         * <p>The execution results.</p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          */
         @NameInMap("InvocationResults")
         public DescribeInvocationResultsResponseBodyInvocationInvocationResults invocationResults;
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -662,7 +677,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The page number.</p>
+         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
+         * <ul>
+         * <li>PlainText: returns the original command content and command output.</li>
+         * <li>Base64: returns the Base64-encoded command content and command output.</li>
+         * </ul>
+         * <p>Default value: Base64.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -671,7 +691,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
+         * <ul>
+         * <li>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</li>
+         * <li>false: does not return the results of historical scheduled executions.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -680,7 +705,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of the commands.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>

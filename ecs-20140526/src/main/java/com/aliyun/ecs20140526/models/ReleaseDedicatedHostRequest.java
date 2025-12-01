@@ -36,6 +36,17 @@ public class ReleaseDedicatedHostRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The expiration time of the subscription dedicated host.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("TerminateSubscription")
     public Boolean terminateSubscription;
 

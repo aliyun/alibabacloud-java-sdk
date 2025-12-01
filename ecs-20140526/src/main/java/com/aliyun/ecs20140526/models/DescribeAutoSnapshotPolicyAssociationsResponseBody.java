@@ -4,12 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel {
+    /**
+     * <p>The association of automatic snapshot policies.</p>
+     */
     @NameInMap("AutoSnapshotPolicyAssociations")
     public DescribeAutoSnapshotPolicyAssociationsResponseBodyAutoSnapshotPolicyAssociations autoSnapshotPolicyAssociations;
 
+    /**
+     * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +58,21 @@ public class DescribeAutoSnapshotPolicyAssociationsResponseBody extends TeaModel
     }
 
     public static class DescribeAutoSnapshotPolicyAssociationsResponseBodyAutoSnapshotPolicyAssociationsAutoSnapshotPolicyAssociation extends TeaModel {
+        /**
+         * <p>The ID of the automatic snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-bp12quk7gqhhuu1f****</p>
+         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
+        /**
+         * <p>The ID of the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
