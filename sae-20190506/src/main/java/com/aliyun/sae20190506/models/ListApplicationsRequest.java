@@ -72,6 +72,9 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    @NameInMap("NewSaeVersion")
+    public String newSaeVersion;
+
     /**
      * <p>Specifies how applications are sorted. Valid values:</p>
      * <ul>
@@ -181,6 +184,14 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public ListApplicationsRequest setNewSaeVersion(String newSaeVersion) {
+        this.newSaeVersion = newSaeVersion;
+        return this;
+    }
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
     }
 
     public ListApplicationsRequest setOrderBy(String orderBy) {

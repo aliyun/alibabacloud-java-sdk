@@ -6012,6 +6012,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NamespaceId", request.namespaceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.newSaeVersion)) {
+            query.put("NewSaeVersion", request.newSaeVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
             query.put("OrderBy", request.orderBy);
         }

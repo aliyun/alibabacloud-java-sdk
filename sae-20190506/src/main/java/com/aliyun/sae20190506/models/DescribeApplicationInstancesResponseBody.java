@@ -350,6 +350,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        @NameInMap("TrafficStatus")
+        public String trafficStatus;
+
         /**
          * <p>If the health check of an application instance fails, the detailed failure cause or error message is returned. If the health check of an application instance passes, no response is returned.</p>
          * 
@@ -491,6 +494,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public Long getTimestamp() {
             return this.timestamp;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setTrafficStatus(String trafficStatus) {
+            this.trafficStatus = trafficStatus;
+            return this;
+        }
+        public String getTrafficStatus() {
+            return this.trafficStatus;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setUnhealthyMessage(String unhealthyMessage) {
