@@ -41,12 +41,34 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
     }
 
     public static class DescribeSafDeOrderResponseBodyResultObjectRegions extends TeaModel {
+        /**
+         * <p>Expiration date (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2117750400000</p>
+         */
         @NameInMap("expirationDate")
         public Long expirationDate;
 
+        /**
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("region")
         public String region;
 
+        /**
+         * <p>Specification model:</p>
+         * <p>1: Basic Edition 
+         * 2: Advanced Edition 
+         * 3: Premium Edition 
+         * 4: Flagship Edition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("specification")
         public Integer specification;
 
@@ -104,6 +126,9 @@ public class DescribeSafDeOrderResponseBody extends TeaModel {
         @NameInMap("openUserType")
         public Integer openUserType;
 
+        /**
+         * <p>Activated region permission addresses.</p>
+         */
         @NameInMap("regions")
         public java.util.List<DescribeSafDeOrderResponseBodyResultObjectRegions> regions;
 

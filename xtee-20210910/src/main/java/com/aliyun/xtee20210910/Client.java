@@ -632,6 +632,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Policy Comparison.</p>
+     * 
+     * @param request CompareRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CompareRuleResponse
+     */
+    public CompareRuleResponse compareRuleWithOptions(CompareRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.previousRuleVersionId)) {
+            query.put("previousRuleVersionId", request.previousRuleVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regId)) {
+            query.put("regId", request.regId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleVersionId)) {
+            query.put("ruleVersionId", request.ruleVersionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CompareRule"),
+            new TeaPair("version", "2021-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CompareRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Policy Comparison.</p>
+     * 
+     * @param request CompareRuleRequest
+     * @return CompareRuleResponse
+     */
+    public CompareRuleResponse compareRule(CompareRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.compareRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Add Query Conditions</p>
      * 
      * @param request CreateAnalysisConditionFavoriteRequest
@@ -6436,6 +6492,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeExpressionVariablePageResponse describeExpressionVariablePage(DescribeExpressionVariablePageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeExpressionVariablePageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Custom Variable Version Details.</p>
+     * 
+     * @param request DescribeExpressionVariableVersionDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeExpressionVariableVersionDetailResponse
+     */
+    public DescribeExpressionVariableVersionDetailResponse describeExpressionVariableVersionDetailWithOptions(DescribeExpressionVariableVersionDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectCode)) {
+            query.put("objectCode", request.objectCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectId)) {
+            query.put("objectId", request.objectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regId)) {
+            query.put("regId", request.regId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeExpressionVariableVersionDetail"),
+            new TeaPair("version", "2021-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeExpressionVariableVersionDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Custom Variable Version Details.</p>
+     * 
+     * @param request DescribeExpressionVariableVersionDetailRequest
+     * @return DescribeExpressionVariableVersionDetailResponse
+     */
+    public DescribeExpressionVariableVersionDetailResponse describeExpressionVariableVersionDetail(DescribeExpressionVariableVersionDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeExpressionVariableVersionDetailWithOptions(request, runtime);
     }
 
     /**
@@ -13322,6 +13442,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVariableSceneListResponse describeVariableSceneList(DescribeVariableSceneListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVariableSceneListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cumulative Variable Version Details.</p>
+     * 
+     * @param request DescribeVariableVersionDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVariableVersionDetailResponse
+     */
+    public DescribeVariableVersionDetailResponse describeVariableVersionDetailWithOptions(DescribeVariableVersionDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectCode)) {
+            query.put("objectCode", request.objectCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectId)) {
+            query.put("objectId", request.objectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regId)) {
+            query.put("regId", request.regId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVariableVersionDetail"),
+            new TeaPair("version", "2021-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVariableVersionDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cumulative Variable Version Details.</p>
+     * 
+     * @param request DescribeVariableVersionDetailRequest
+     * @return DescribeVariableVersionDetailResponse
+     */
+    public DescribeVariableVersionDetailResponse describeVariableVersionDetail(DescribeVariableVersionDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVariableVersionDetailWithOptions(request, runtime);
     }
 
     /**
