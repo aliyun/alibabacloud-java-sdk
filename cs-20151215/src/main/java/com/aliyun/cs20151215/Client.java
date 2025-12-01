@@ -2582,6 +2582,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("nodepool_id", request.nodepoolId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.oneTimeToken)) {
+            body.put("one_time_token", request.oneTimeToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.options)) {
             body.put("options", request.options);
         }

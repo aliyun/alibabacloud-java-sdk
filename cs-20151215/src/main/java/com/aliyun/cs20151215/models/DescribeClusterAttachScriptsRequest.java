@@ -71,6 +71,9 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
+    @NameInMap("one_time_token")
+    public Boolean oneTimeToken;
+
     /**
      * <p>The node configurations for the node that you want to add.</p>
      * <blockquote>
@@ -132,6 +135,14 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     }
     public String getNodepoolId() {
         return this.nodepoolId;
+    }
+
+    public DescribeClusterAttachScriptsRequest setOneTimeToken(Boolean oneTimeToken) {
+        this.oneTimeToken = oneTimeToken;
+        return this;
+    }
+    public Boolean getOneTimeToken() {
+        return this.oneTimeToken;
     }
 
     public DescribeClusterAttachScriptsRequest setOptions(String options) {
