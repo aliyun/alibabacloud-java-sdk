@@ -13,6 +13,9 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     /**
      * <p>The description. The value of this parameter can be up to 65,535 bytes in length.</p>
      * 
@@ -45,6 +48,14 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    public AddCheckResultWhiteListRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public AddCheckResultWhiteListRequest setRemark(String remark) {

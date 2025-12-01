@@ -19,6 +19,9 @@ public class RemoveCheckResultWhiteListRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     /**
      * <p>The ID of the whitelist rule.</p>
      * <blockquote>
@@ -59,6 +62,14 @@ public class RemoveCheckResultWhiteListRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    public RemoveCheckResultWhiteListRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public RemoveCheckResultWhiteListRequest setRuleId(Long ruleId) {

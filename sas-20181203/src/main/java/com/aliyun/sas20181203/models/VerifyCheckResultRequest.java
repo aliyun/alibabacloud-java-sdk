@@ -10,6 +10,9 @@ public class VerifyCheckResultRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
     /**
      * <p>The source of task.</p>
      * 
@@ -30,6 +33,14 @@ public class VerifyCheckResultRequest extends TeaModel {
     }
     public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    public VerifyCheckResultRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public VerifyCheckResultRequest setTaskSource(String taskSource) {

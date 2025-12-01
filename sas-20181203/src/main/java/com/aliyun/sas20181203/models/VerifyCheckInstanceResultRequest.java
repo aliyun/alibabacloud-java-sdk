@@ -16,6 +16,9 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     @NameInMap("CheckId")
     public Long checkId;
 
+    @NameInMap("CheckIds")
+    public java.util.List<Long> checkIds;
+
     /**
      * <p>The instance IDs of the assets on which risks are detected based on the check item.</p>
      */
@@ -42,6 +45,14 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     }
     public Long getCheckId() {
         return this.checkId;
+    }
+
+    public VerifyCheckInstanceResultRequest setCheckIds(java.util.List<Long> checkIds) {
+        this.checkIds = checkIds;
+        return this;
+    }
+    public java.util.List<Long> getCheckIds() {
+        return this.checkIds;
     }
 
     public VerifyCheckInstanceResultRequest setInstanceIds(java.util.List<String> instanceIds) {
