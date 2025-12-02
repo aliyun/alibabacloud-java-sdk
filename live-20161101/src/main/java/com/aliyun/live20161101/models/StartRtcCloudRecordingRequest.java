@@ -34,6 +34,9 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
     @NameInMap("NotifyAuthKey")
     public String notifyAuthKey;
 
+    @NameInMap("NotifyFileUploadedFormat")
+    public java.util.List<String> notifyFileUploadedFormat;
+
     /**
      * <strong>example:</strong>
      * <p><a href="http://xxxx/test/mycallback">http://xxxx/test/mycallback</a></p>
@@ -110,6 +113,14 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
     }
     public String getNotifyAuthKey() {
         return this.notifyAuthKey;
+    }
+
+    public StartRtcCloudRecordingRequest setNotifyFileUploadedFormat(java.util.List<String> notifyFileUploadedFormat) {
+        this.notifyFileUploadedFormat = notifyFileUploadedFormat;
+        return this;
+    }
+    public java.util.List<String> getNotifyFileUploadedFormat() {
+        return this.notifyFileUploadedFormat;
     }
 
     public StartRtcCloudRecordingRequest setNotifyUrl(String notifyUrl) {

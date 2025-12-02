@@ -28868,6 +28868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NotifyAuthKey", request.notifyAuthKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyFileUploadedFormat)) {
+            query.put("NotifyFileUploadedFormat", request.notifyFileUploadedFormat);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notifyUrl)) {
             query.put("NotifyUrl", request.notifyUrl);
         }
