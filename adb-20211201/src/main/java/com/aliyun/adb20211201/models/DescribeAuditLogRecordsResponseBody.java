@@ -136,6 +136,9 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        @NameInMap("ExecuteTimestamp")
+        public Long executeTimestamp;
+
         /**
          * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
          * 
@@ -230,6 +233,14 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
         public String getExecuteTime() {
             return this.executeTime;
+        }
+
+        public DescribeAuditLogRecordsResponseBodyItems setExecuteTimestamp(Long executeTimestamp) {
+            this.executeTimestamp = executeTimestamp;
+            return this;
+        }
+        public Long getExecuteTimestamp() {
+            return this.executeTimestamp;
         }
 
         public DescribeAuditLogRecordsResponseBodyItems setHostAddress(String hostAddress) {

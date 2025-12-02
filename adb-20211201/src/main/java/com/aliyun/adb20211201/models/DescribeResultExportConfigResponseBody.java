@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeResultExportConfigResponseBody extends TeaModel {
     /**
+     * <p>API status or POP error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeResultExportConfigResponseBodyData data;
 
     /**
+     * <p>The HTTP response status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,12 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>The request succeeded, and the server returns <strong>OK</strong>.</li>
+     * <li>The request failed, and the server returns an error message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +42,8 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -36,6 +51,12 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values: Valid values:</p>
+     * <ul>
+     * <li><strong>True: Succeeded.</strong></li>
+     * <li>**False: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +118,8 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
 
     public static class DescribeResultExportConfigResponseBodyDataOssInfo extends TeaModel {
         /**
+         * <p>The path of the OSS bucket to which the result sets are exported.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://testBucketName/data_result</p>
          */
@@ -104,6 +127,8 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         public String exportBasePath;
 
         /**
+         * <p>The name of the resource group that runs the export SQL.</p>
+         * 
          * <strong>example:</strong>
          * <p>aps</p>
          */
@@ -111,6 +136,8 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         public String resourceGroup;
 
         /**
+         * <p>The expiration period (in days) for the OSS file. The returned value is between 1 and 30 days (inclusive).</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -150,6 +177,8 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
 
     public static class DescribeResultExportConfigResponseBodyDataSlsInfo extends TeaModel {
         /**
+         * <p>The expiration period (in days) for the temporary Logstore automatically created during result set export. The Logstore is automatically deleted after expiration. The returned value is between 1 and 30 days (inclusive).</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -157,6 +186,8 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         public Integer logstoreTtl;
 
         /**
+         * <p>The name of the resource group that runs the export SQL.</p>
+         * 
          * <strong>example:</strong>
          * <p>aps</p>
          */
@@ -164,6 +195,8 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
         public String resourceGroup;
 
         /**
+         * <p>The name of the SLS project.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-project</p>
          */
@@ -203,15 +236,27 @@ public class DescribeResultExportConfigResponseBody extends TeaModel {
 
     public static class DescribeResultExportConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The export type. Valid values:</p>
+         * <ul>
+         * <li>SLS: Indicates that the export destination is SLS.</li>
+         * <li>OSS: Indicates that the export destination is OSS.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
         @NameInMap("ExportType")
         public String exportType;
 
+        /**
+         * <p>The configured OSS export settings, returned when the export destination is OSS.</p>
+         */
         @NameInMap("OssInfo")
         public DescribeResultExportConfigResponseBodyDataOssInfo ossInfo;
 
+        /**
+         * <p>The configured SLS export settings, returned when the export destination is SLS.</p>
+         */
         @NameInMap("SlsInfo")
         public DescribeResultExportConfigResponseBodyDataSlsInfo slsInfo;
 

@@ -40,6 +40,66 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules extends TeaModel {
+        @NameInMap("EndCronExpression")
+        public String endCronExpression;
+
+        @NameInMap("StartCronExpression")
+        public String startCronExpression;
+
+        public static DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules self = new DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules setEndCronExpression(String endCronExpression) {
+            this.endCronExpression = endCronExpression;
+            return this;
+        }
+        public String getEndCronExpression() {
+            return this.endCronExpression;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules setStartCronExpression(String startCronExpression) {
+            this.startCronExpression = startCronExpression;
+            return this;
+        }
+        public String getStartCronExpression() {
+            return this.startCronExpression;
+        }
+
+    }
+
+    public static class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Rules")
+        public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules> rules;
+
+        public static DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan self = new DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan setRules(java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules> getRules() {
+            return this.rules;
+        }
+
+    }
+
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -576,6 +636,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("EngineParams")
         public java.util.Map<String, ?> engineParams;
 
+        @NameInMap("GpuElasticPlan")
+        public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan gpuElasticPlan;
+
         /**
          * <p>The name of the resource group.</p>
          * 
@@ -772,6 +835,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getEngineParams() {
             return this.engineParams;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setGpuElasticPlan(DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan gpuElasticPlan) {
+            this.gpuElasticPlan = gpuElasticPlan;
+            return this;
+        }
+        public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan getGpuElasticPlan() {
+            return this.gpuElasticPlan;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setGroupName(String groupName) {

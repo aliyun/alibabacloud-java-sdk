@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsWebhookShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateApsWebhookShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The type of the task. Valid value: Task type. SLS or OSS Export Task: ResultExport.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateApsWebhookShrinkRequest extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The ID of the region in which to create the dedicated block storage cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,9 @@ public class CreateApsWebhookShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The array of webhooks.</p>
+     */
     @NameInMap("Webhook")
     public String webhookShrink;
 

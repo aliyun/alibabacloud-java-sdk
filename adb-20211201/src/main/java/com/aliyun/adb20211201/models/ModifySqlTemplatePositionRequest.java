@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySqlTemplatePositionRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifySqlTemplatePositionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifySqlTemplatePositionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the template group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ModifySqlTemplatePositionRequest extends TeaModel {
     public Long targetTemplateGroupId;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

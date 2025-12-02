@@ -7,6 +7,12 @@ public class TableSummaryModel extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("CreatedBySource")
+    public String createdBySource;
+
+    @NameInMap("CreatedByUser")
+    public String createdByUser;
+
     @NameInMap("Description")
     public String description;
 
@@ -45,6 +51,22 @@ public class TableSummaryModel extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public TableSummaryModel setCreatedBySource(String createdBySource) {
+        this.createdBySource = createdBySource;
+        return this;
+    }
+    public String getCreatedBySource() {
+        return this.createdBySource;
+    }
+
+    public TableSummaryModel setCreatedByUser(String createdByUser) {
+        this.createdByUser = createdByUser;
+        return this;
+    }
+    public String getCreatedByUser() {
+        return this.createdByUser;
     }
 
     public TableSummaryModel setDescription(String description) {

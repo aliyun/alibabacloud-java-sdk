@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApsWebhookResponseBody extends TeaModel {
     /**
+     * <p>API status or POP error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListApsWebhookResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListApsWebhookResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class ListApsWebhookResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>exampleRequestId</p>
      */
@@ -33,12 +41,17 @@ public class ListApsWebhookResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The array of webhooks.</p>
+     */
     @NameInMap("Webhook")
     public java.util.List<ListApsWebhookResponseBodyWebhook> webhook;
 
@@ -97,6 +110,8 @@ public class ListApsWebhookResponseBody extends TeaModel {
 
     public static class ListApsWebhookResponseBodyWebhook extends TeaModel {
         /**
+         * <p>Signing key</p>
+         * 
          * <strong>example:</strong>
          * <p>your_secret_key</p>
          */
@@ -104,6 +119,8 @@ public class ListApsWebhookResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The name of the webhook.</p>
+         * 
          * <strong>example:</strong>
          * <p>webhook_name</p>
          */
@@ -111,6 +128,8 @@ public class ListApsWebhookResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The request URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/webhook">https://example.com/webhook</a></p>
          */
@@ -118,6 +137,8 @@ public class ListApsWebhookResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>The ID of the webhook that you want to delete.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong>35</strong>*</p>
          */
@@ -125,6 +146,8 @@ public class ListApsWebhookResponseBody extends TeaModel {
         public String webhookId;
 
         /**
+         * <p>Webhook type.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
          */

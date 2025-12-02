@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsWebhookRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateApsWebhookRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The type of the task. Valid value: Task type. SLS or OSS Export Task: ResultExport.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateApsWebhookRequest extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The ID of the region in which to create the dedicated block storage cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +34,9 @@ public class CreateApsWebhookRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The array of webhooks.</p>
+     */
     @NameInMap("Webhook")
     public java.util.List<CreateApsWebhookRequestWebhook> webhook;
 
@@ -73,6 +79,8 @@ public class CreateApsWebhookRequest extends TeaModel {
 
     public static class CreateApsWebhookRequestWebhook extends TeaModel {
         /**
+         * <p>Signed key.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -80,6 +88,8 @@ public class CreateApsWebhookRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The name of the webhook.</p>
+         * 
          * <strong>example:</strong>
          * <p>MyWebhookName</p>
          */
@@ -87,6 +97,7 @@ public class CreateApsWebhookRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The request path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +107,7 @@ public class CreateApsWebhookRequest extends TeaModel {
         public String url;
 
         /**
+         * <p>The notification method. Valid values: dingtalk. lark.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

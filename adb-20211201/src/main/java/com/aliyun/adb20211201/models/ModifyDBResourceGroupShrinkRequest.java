@@ -59,6 +59,9 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("EngineParams")
     public String engineParamsShrink;
 
+    @NameInMap("GpuElasticPlan")
+    public String gpuElasticPlanShrink;
+
     /**
      * <p>The name of the resource group.</p>
      * <blockquote>
@@ -224,6 +227,14 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     }
     public String getEngineParamsShrink() {
         return this.engineParamsShrink;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setGpuElasticPlanShrink(String gpuElasticPlanShrink) {
+        this.gpuElasticPlanShrink = gpuElasticPlanShrink;
+        return this;
+    }
+    public String getGpuElasticPlanShrink() {
+        return this.gpuElasticPlanShrink;
     }
 
     public ModifyDBResourceGroupShrinkRequest setGroupName(String groupName) {

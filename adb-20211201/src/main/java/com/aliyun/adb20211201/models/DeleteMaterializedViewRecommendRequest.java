@@ -3,13 +3,13 @@ package com.aliyun.adb20211201.models;
 
 import com.aliyun.tea.*;
 
-public class CreateBackupRequest extends TeaModel {
+public class DeleteMaterializedViewRecommendRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>amv-wz9or2xawpnc****</p>
+     * <p>amv-uf66*****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -21,10 +21,10 @@ public class CreateBackupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,12 +35,22 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static CreateBackupRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateBackupRequest self = new CreateBackupRequest();
+    /**
+     * <p>The name of the recommendation task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_task_1</p>
+     */
+    @NameInMap("TaskName")
+    public String taskName;
+
+    public static DeleteMaterializedViewRecommendRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteMaterializedViewRecommendRequest self = new DeleteMaterializedViewRecommendRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateBackupRequest setDBClusterId(String DBClusterId) {
+    public DeleteMaterializedViewRecommendRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -48,7 +58,7 @@ public class CreateBackupRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public CreateBackupRequest setOwnerAccount(String ownerAccount) {
+    public DeleteMaterializedViewRecommendRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -56,7 +66,7 @@ public class CreateBackupRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateBackupRequest setOwnerId(Long ownerId) {
+    public DeleteMaterializedViewRecommendRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -64,7 +74,7 @@ public class CreateBackupRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateBackupRequest setRegionId(String regionId) {
+    public DeleteMaterializedViewRecommendRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -72,7 +82,7 @@ public class CreateBackupRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateBackupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DeleteMaterializedViewRecommendRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -80,12 +90,20 @@ public class CreateBackupRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateBackupRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DeleteMaterializedViewRecommendRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DeleteMaterializedViewRecommendRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
     }
 
 }

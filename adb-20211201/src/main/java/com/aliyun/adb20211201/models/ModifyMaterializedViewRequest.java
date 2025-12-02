@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterializedViewRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyMaterializedViewRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the database where the materialized view resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,12 @@ public class ModifyMaterializedViewRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>Enable the refresh delay alert. Valid values:</p>
+     * <ul>
+     * <li>true: Enables alert.</li>
+     * <li>false: Disables alert.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -30,6 +38,12 @@ public class ModifyMaterializedViewRequest extends TeaModel {
     public Boolean enableDelayAlert;
 
     /**
+     * <p>Specifies whether to send alerts when the refresh task fails. Valid values:</p>
+     * <ul>
+     * <li>true: Send alerts.</li>
+     * <li>false: Alerts disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -37,6 +51,8 @@ public class ModifyMaterializedViewRequest extends TeaModel {
     public Boolean enableFailureAlert;
 
     /**
+     * <p>The name of the resource group to which the materialized view is bound.</p>
+     * 
      * <strong>example:</strong>
      * <p>res_1</p>
      */
@@ -44,6 +60,8 @@ public class ModifyMaterializedViewRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>Refresh delay tolerance (in minutes).</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -57,6 +75,12 @@ public class ModifyMaterializedViewRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Specifies whether to enable query rewrite. Valid values:</p>
+     * <ul>
+     * <li>true: Enables query rewrite.</li>
+     * <li>false: Disables query rewrite.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -64,6 +88,8 @@ public class ModifyMaterializedViewRequest extends TeaModel {
     public Boolean queryWrite;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -77,6 +103,7 @@ public class ModifyMaterializedViewRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The name of the materialized view.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     /**
+     * <p>The Resource Access Management (RAM) role that is created for the trusted Alibaba Cloud account. For more information, see Create a RAM role for a trusted Alibaba Cloud account. The ARN of the RAM role that grants AnalyticDB for MySQL permission to access resources in the source account. Required for cross-account data ingestion.</p>
+     * 
      * <strong>example:</strong>
      * <p>aps</p>
      */
@@ -12,6 +14,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String acrossRole;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the source Kafka belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>123************</p>
      */
@@ -19,6 +23,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String acrossUid;
 
     /**
+     * <p>The advanced configurations.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -28,12 +34,17 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String advancedConfig;
 
     /**
+     * <p>The column information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Columns")
     public String columnsShrink;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +54,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Enumeration value and description. Single: The source is a single-row JSON record. Multi: source is a JSON array. Output a single JSON record.</p>
+     * 
      * <strong>example:</strong>
      * <p>Single</p>
      */
@@ -50,6 +63,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String dataOutputFormat;
 
     /**
+     * <p>The data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -57,6 +72,7 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public Long datasourceId;
 
     /**
+     * <p>The name of the user-defined database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,6 +82,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The full synchronization configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>2ACU</p>
      */
@@ -73,6 +91,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String fullComputeUnit;
 
     /**
+     * <p>The HUDI configuration of the destination.</p>
+     * 
      * <strong>example:</strong>
      * <p>hoodie.keep.min.commits=20</p>
      */
@@ -80,6 +100,7 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String hudiAdvancedConfig;
 
     /**
+     * <p>The incremental synchronization configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +110,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String incrementalComputeUnit;
 
     /**
+     * <p>The number of layers that are parsed for nested JSON fields. Valid values: 0: Nested JSON fields are not parsed. 1: parses one layer. 2: Two layers are parsed. 3: Three layers are parsed. 4: Four layers are parsed. By default, one layer is parsed. For more information about how nested JSON fields are parsed, see the Examples of schema fields parsed with different numbers of layers section of this topic.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -96,6 +119,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public Integer jsonParseLevel;
 
     /**
+     * <p>The ID of the Apache Kafka instance. You can get it in the Kafka console.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -103,6 +128,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String kafkaClusterId;
 
     /**
+     * <p>Kafka Topic ID. You can get it in the Kafka console.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -110,6 +137,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String kafkaTopic;
 
     /**
+     * <p>The ID of the lakehouse.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -117,6 +146,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public Long lakehouseId;
 
     /**
+     * <p>The maximum number of records to fetch in a single batch.</p>
+     * 
      * <strong>example:</strong>
      * <p>50000</p>
      */
@@ -124,6 +155,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public Long maxOffsetsPerTrigger;
 
     /**
+     * <p>The path of the destination data lakehouse in an Object Storage Service (OSS) bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://test-xx-zzz/yyy/</p>
      */
@@ -131,6 +164,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String ossLocation;
 
     /**
+     * <p>The format of the output data.</p>
+     * 
      * <strong>example:</strong>
      * <p>HUDI</p>
      */
@@ -138,6 +173,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String outputFormat;
 
     /**
+     * <p>The partition information.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -145,6 +182,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String partitionSpecsShrink;
 
     /**
+     * <p>The primary key settings. Contains the uuid policy and mapping policy. The explanation is as follows. Uuid policy: &quot;Strategy&quot;: &quot;uuid&quot;. Mapping policy: &quot;Strategy&quot;: &quot;mapping&quot;, &quot;Values&quot;:[ &quot;f1&quot;, &quot;f2&quot; ], &quot;RecordVersionField&quot;,&quot;xxx&quot; The meaning of the RecordVersionField is the HUDI record version.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Strategy&quot;: &quot;mapping&quot;</p>
      */
@@ -152,6 +191,7 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String primaryKeyDefinition;
 
     /**
+     * <p>The region ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -161,6 +201,7 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -170,6 +211,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String resourceGroup;
 
     /**
+     * <p>地域ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -177,6 +220,7 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String sourceRegionId;
 
     /**
+     * <p>Specifies the position from which to start consuming messages. Valid values: begin_cursor/end_cursor/timestamp Each corresponds to the earliest /latest /specified time respectively.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -186,6 +230,7 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String startingOffsets;
 
     /**
+     * <p>The name of the user-defined table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -195,6 +240,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The rules for generating the destination database.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -202,6 +249,8 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String targetGenerateRule;
 
     /**
+     * <p>The destination type.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */
@@ -209,6 +258,7 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     public String targetType;
 
     /**
+     * <p>The name of the workload.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

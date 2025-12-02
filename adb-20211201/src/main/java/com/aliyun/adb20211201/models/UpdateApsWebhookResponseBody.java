@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateApsWebhookResponseBody extends TeaModel {
     /**
+     * <p>The code of the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-bp11q28kvl688****</p>
      */
@@ -19,6 +23,8 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -28,16 +34,23 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>exampleRequestId</p>
      */
@@ -45,6 +58,8 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

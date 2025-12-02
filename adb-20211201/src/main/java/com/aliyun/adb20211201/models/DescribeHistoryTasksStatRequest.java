@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksStatRequest extends TeaModel {
     /**
+     * <p>Minimum task execution time, used to filter tasks with execution time greater than this value, in seconds. Default 0, meaning no limit</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public Integer fromExecTime;
 
     /**
+     * <p>Query start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String fromStartTime;
 
     /**
+     * <p>Cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-********</p>
      */
@@ -31,6 +36,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +46,8 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmy*****</p>
      */
@@ -56,6 +64,18 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The state of the task. Valid values:</p>
+     * <ul>
+     * <li><strong>Scheduled</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Succeed</strong></li>
+     * <li><strong>Failed</strong>: The task failed.</li>
+     * <li><strong>Cancelling</strong></li>
+     * <li><strong>Canceled</strong></li>
+     * <li><strong>Waiting</strong></li>
+     * </ul>
+     * <p>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>Scheduled</p>
      */
@@ -63,6 +83,8 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>Task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1564657730</p>
      */
@@ -70,6 +92,8 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -77,6 +101,8 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String taskType;
 
     /**
+     * <p>Maximum task execution time, used to filter tasks with execution time not less than this value, in seconds. Default 0, meaning no limit</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -84,6 +110,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public Integer toExecTime;
 
     /**
+     * <p>Represents tasks whose start time is before this time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

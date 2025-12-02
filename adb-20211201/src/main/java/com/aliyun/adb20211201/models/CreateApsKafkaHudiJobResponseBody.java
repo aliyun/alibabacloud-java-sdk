@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
     /**
+     * <p>Same as HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Returns the ID of the created task.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -19,6 +23,8 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -33,6 +41,8 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A943417-5B0E-1DB9-A8**-A566****C3</p>
      */
@@ -40,6 +50,8 @@ public class CreateApsKafkaHudiJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. true: The request is successful. false: The message group failed to be unmuted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

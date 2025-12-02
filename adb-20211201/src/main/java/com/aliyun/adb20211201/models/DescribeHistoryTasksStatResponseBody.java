@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksStatResponseBody extends TeaModel {
+    /**
+     * <p>The queried information about the request denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DescribeHistoryTasksStatResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
+     * <p>API status or POP error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,16 +20,27 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryTasksStatResponseBodyItems> items;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, an success message is returned.</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -32,6 +48,8 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -39,6 +57,12 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -108,6 +132,8 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksStatResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>Authorized action</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -115,6 +141,8 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the requester.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -122,6 +150,8 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the authentication principal belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>141345906006****</p>
          */
@@ -129,6 +159,8 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The requester type.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -136,6 +168,8 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -143,6 +177,12 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The type of the policy denial. Valid values:</p>
+         * <ul>
+         * <li><strong>ImplicitDeny</strong>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</li>
+         * <li><strong>ExplicitDeny</strong>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -150,6 +190,15 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The type of the policy that causes the access denied error.</p>
+         * <ul>
+         * <li><strong>ControlPolicy</strong>: control policy</li>
+         * <li><strong>SessionPolicy</strong>: an additional policy that is added to the temporary token.</li>
+         * <li><strong>AssumeRolePolicy</strong>: the authorization policy of the RAM role.</li>
+         * <li><strong>AccountLevelIdentityBasedPolicy</strong>: the principal policies of the account authorization scope, including custom policies and system policies.</li>
+         * <li><strong>ResourceGroupLevelIdentityBasedPolicy</strong>: the principal policy of the resource group authorization scope, including custom policies and system policies.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ControlPolicy</p>
          */
@@ -221,6 +270,17 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksStatResponseBodyItems extends TeaModel {
         /**
+         * <p>The status of the APS job.</p>
+         * <ul>
+         * <li><strong>Scheduled</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Succeed</strong></li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Cancelling</strong></li>
+         * <li><strong>Canceled</strong></li>
+         * <li><strong>Waiting</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Scheduled</p>
          */
@@ -228,6 +288,8 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The total number of tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

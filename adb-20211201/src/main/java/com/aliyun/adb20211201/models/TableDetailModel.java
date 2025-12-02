@@ -13,11 +13,23 @@ public class TableDetailModel extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("CreatedBySource")
+    public String createdBySource;
+
+    @NameInMap("CreatedByUser")
+    public String createdByUser;
+
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Location")
+    public String location;
+
     @NameInMap("Owner")
     public String owner;
+
+    @NameInMap("Parameters")
+    public java.util.Map<String, String> parameters;
 
     @NameInMap("SchemaName")
     public String schemaName;
@@ -60,6 +72,22 @@ public class TableDetailModel extends TeaModel {
         return this.createTime;
     }
 
+    public TableDetailModel setCreatedBySource(String createdBySource) {
+        this.createdBySource = createdBySource;
+        return this;
+    }
+    public String getCreatedBySource() {
+        return this.createdBySource;
+    }
+
+    public TableDetailModel setCreatedByUser(String createdByUser) {
+        this.createdByUser = createdByUser;
+        return this;
+    }
+    public String getCreatedByUser() {
+        return this.createdByUser;
+    }
+
     public TableDetailModel setDescription(String description) {
         this.description = description;
         return this;
@@ -68,12 +96,28 @@ public class TableDetailModel extends TeaModel {
         return this.description;
     }
 
+    public TableDetailModel setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    public String getLocation() {
+        return this.location;
+    }
+
     public TableDetailModel setOwner(String owner) {
         this.owner = owner;
         return this;
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public TableDetailModel setParameters(java.util.Map<String, String> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.Map<String, String> getParameters() {
+        return this.parameters;
     }
 
     public TableDetailModel setSchemaName(String schemaName) {

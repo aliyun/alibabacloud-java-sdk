@@ -634,7 +634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置导出的SLS 或者OSS 信息，实例级别唯一，遵循一次配置多次使用的原则</p>
+     * <p>Configures the export destination (SLS or OSS) at the instance level. The configuration is unique per instance and follows the &quot;configure once, use multiple times&quot; principle.</p>
      * 
      * @param tmpReq ConfigureResultExportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -692,7 +692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置导出的SLS 或者OSS 信息，实例级别唯一，遵循一次配置多次使用的原则</p>
+     * <p>Configures the export destination (SLS or OSS) at the instance level. The configuration is unique per instance and follows the &quot;configure once, use multiple times&quot; principle.</p>
      * 
      * @param request ConfigureResultExportRequest
      * @return ConfigureResultExportResponse
@@ -1162,7 +1162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Kafka到Huid的APS链路</p>
+     * <p>Creates a data ingestion task to load data from an Apache Kafka topic into an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
      * 
      * @param tmpReq CreateApsKafkaHudiJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1312,7 +1312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Kafka到Huid的APS链路</p>
+     * <p>Creates a data ingestion task to load data from an Apache Kafka topic into an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
      * 
      * @param request CreateApsKafkaHudiJobRequest
      * @return CreateApsKafkaHudiJobResponse
@@ -1506,7 +1506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateApsWebhook</p>
+     * <p>Creates a new webhook for the specified cluster or task type.</p>
      * 
      * @param tmpReq CreateApsWebhookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1556,7 +1556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateApsWebhook</p>
+     * <p>Creates a new webhook for the specified cluster or task type.</p>
      * 
      * @param request CreateApsWebhookRequest
      * @return CreateApsWebhookResponse
@@ -1567,8 +1567,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups are the same as regular backups in terms of price and retention period of backup sets.</p>
+     * 
      * <b>summary</b> : 
-     * <p>手动创建备份集</p>
+     * <p>Creates a data backup for an AnalyticDB for MySQL instance.</p>
      * 
      * @param request CreateBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1619,8 +1622,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups are the same as regular backups in terms of price and retention period of backup sets.</p>
+     * 
      * <b>summary</b> : 
-     * <p>手动创建备份集</p>
+     * <p>Creates a data backup for an AnalyticDB for MySQL instance.</p>
      * 
      * @param request CreateBackupRequest
      * @return CreateBackupResponse
@@ -1811,6 +1817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.engineParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.engineParams, "EngineParams", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.gpuElasticPlan)) {
+            request.gpuElasticPlanShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.gpuElasticPlan, "GpuElasticPlan", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.rayConfig)) {
             request.rayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayConfig, "RayConfig", "json");
         }
@@ -1846,6 +1856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.engineParamsShrink)) {
             query.put("EngineParams", request.engineParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuElasticPlanShrink)) {
+            query.put("GpuElasticPlan", request.gpuElasticPlanShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
@@ -2088,7 +2102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建物化视图自动推荐任务</p>
+     * <p>Creates a materialized view recommendation task.</p>
      * 
      * @param request CreateMaterializedViewRecommendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2176,7 +2190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建物化视图自动推荐任务</p>
+     * <p>Creates a materialized view recommendation task.</p>
      * 
      * @param request CreateMaterializedViewRecommendRequest
      * @return CreateMaterializedViewRecommendResponse
@@ -2591,8 +2605,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to delete an existing webhook configuration by providing <code>RegionId</code>, <code>DBClusterId</code>, and <code>WebhookId</code>. Make sure that the provided parameter values are accurate to avoid deleting important settings by mistake.</p>
+     * 
      * <b>summary</b> : 
-     * <p>DeleteApsWebhook</p>
+     * <p>Deletes a specific webhook in a specified cluster.</p>
      * 
      * @param request DeleteApsWebhookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2631,8 +2648,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to delete an existing webhook configuration by providing <code>RegionId</code>, <code>DBClusterId</code>, and <code>WebhookId</code>. Make sure that the provided parameter values are accurate to avoid deleting important settings by mistake.</p>
+     * 
      * <b>summary</b> : 
-     * <p>DeleteApsWebhook</p>
+     * <p>Deletes a specific webhook in a specified cluster.</p>
      * 
      * @param request DeleteApsWebhookRequest
      * @return DeleteApsWebhookResponse
@@ -2948,6 +2968,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteLakeStorageResponse deleteLakeStorage(DeleteLakeStorageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteLakeStorageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a materialized view recommendation task.</p>
+     * 
+     * @param request DeleteMaterializedViewRecommendRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMaterializedViewRecommendResponse
+     */
+    public DeleteMaterializedViewRecommendResponse deleteMaterializedViewRecommendWithOptions(DeleteMaterializedViewRecommendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            query.put("TaskName", request.taskName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMaterializedViewRecommend"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMaterializedViewRecommendResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a materialized view recommendation task.</p>
+     * 
+     * @param request DeleteMaterializedViewRecommendRequest
+     * @return DeleteMaterializedViewRecommendResponse
+     */
+    public DeleteMaterializedViewRecommendResponse deleteMaterializedViewRecommend(DeleteMaterializedViewRecommendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMaterializedViewRecommendWithOptions(request, runtime);
     }
 
     /**
@@ -5720,7 +5808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取SSL配置信息</p>
+     * <p>Queries the SSL configurations of a cluster.</p>
      * 
      * @param request DescribeDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5756,7 +5844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取SSL配置信息</p>
+     * <p>Queries the SSL configurations of a cluster.</p>
      * 
      * @param request DescribeDBClusterSSLRequest
      * @return DescribeDBClusterSSLResponse
@@ -6871,8 +6959,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only supports viewing tasks within the last 30 days.</p>
+     * 
      * <b>summary</b> : 
-     * <p>任务中心任务列表</p>
+     * <p>Retrieve historical task records.</p>
      * 
      * @param request DescribeHistoryTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6959,8 +7050,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only supports viewing tasks within the last 30 days.</p>
+     * 
      * <b>summary</b> : 
-     * <p>任务中心任务列表</p>
+     * <p>Retrieve historical task records.</p>
      * 
      * @param request DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
@@ -6972,7 +7066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务中心任务统计</p>
+     * <p>Queries task statistics.</p>
      * 
      * @param request DescribeHistoryTasksStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7056,7 +7150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>任务中心任务统计</p>
+     * <p>Queries task statistics.</p>
      * 
      * @param request DescribeHistoryTasksStatRequest
      * @return DescribeHistoryTasksStatResponse
@@ -7516,6 +7610,236 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeLakeCacheSizeResponse describeLakeCacheSize(DescribeLakeCacheSizeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLakeCacheSizeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the result of a recommendation task for a materialized view.</p>
+     * 
+     * @param request DescribeMVRecommendResultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMVRecommendResultsResponse
+     */
+    public DescribeMVRecommendResultsResponse describeMVRecommendResultsWithOptions(DescribeMVRecommendResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionInner)) {
+            query.put("ActionInner", request.actionInner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subQueryId)) {
+            query.put("SubQueryId", request.subQueryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subtaskId)) {
+            query.put("SubtaskId", request.subtaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            query.put("TaskName", request.taskName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMVRecommendResults"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMVRecommendResultsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the result of a recommendation task for a materialized view.</p>
+     * 
+     * @param request DescribeMVRecommendResultsRequest
+     * @return DescribeMVRecommendResultsResponse
+     */
+    public DescribeMVRecommendResultsResponse describeMVRecommendResults(DescribeMVRecommendResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMVRecommendResultsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看物化视图子任务</p>
+     * 
+     * @param request DescribeMvRecommendSubTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMvRecommendSubTasksResponse
+     */
+    public DescribeMvRecommendSubTasksResponse describeMvRecommendSubTasksWithOptions(DescribeMvRecommendSubTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionInner)) {
+            query.put("ActionInner", request.actionInner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subtaskId)) {
+            query.put("SubtaskId", request.subtaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            query.put("TaskName", request.taskName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMvRecommendSubTasks"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMvRecommendSubTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看物化视图子任务</p>
+     * 
+     * @param request DescribeMvRecommendSubTasksRequest
+     * @return DescribeMvRecommendSubTasksResponse
+     */
+    public DescribeMvRecommendSubTasksResponse describeMvRecommendSubTasks(DescribeMvRecommendSubTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMvRecommendSubTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看物化视图推荐任务</p>
+     * 
+     * @param request DescribeMvRecommendTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMvRecommendTasksResponse
+     */
+    public DescribeMvRecommendTasksResponse describeMvRecommendTasksWithOptions(DescribeMvRecommendTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionInner)) {
+            query.put("ActionInner", request.actionInner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            query.put("TaskName", request.taskName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMvRecommendTasks"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMvRecommendTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看物化视图推荐任务</p>
+     * 
+     * @param request DescribeMvRecommendTasksRequest
+     * @return DescribeMvRecommendTasksResponse
+     */
+    public DescribeMvRecommendTasksResponse describeMvRecommendTasks(DescribeMvRecommendTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMvRecommendTasksWithOptions(request, runtime);
     }
 
     /**
@@ -8004,7 +8328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户配置的导出信息</p>
+     * <p>Queries the user-configured result set export settings.</p>
      * 
      * @param request DescribeResultExportConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8044,7 +8368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户配置的导出信息</p>
+     * <p>Queries the user-configured result set export settings.</p>
      * 
      * @param request DescribeResultExportConfigRequest
      * @return DescribeResultExportConfigResponse
@@ -8369,8 +8693,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</p>
+     * <blockquote>
+     * <p> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询Spark审计日志</p>
+     * <p>Queries the SQL audit logs for a Spark Interactive resource group.</p>
      * 
      * @param request DescribeSparkAuditLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8481,8 +8811,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</p>
+     * <blockquote>
+     * <p> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询Spark审计日志</p>
+     * <p>Queries the SQL audit logs for a Spark Interactive resource group.</p>
      * 
      * @param request DescribeSparkAuditLogRecordsRequest
      * @return DescribeSparkAuditLogRecordsResponse
@@ -9326,6 +9662,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves materialized view refresh tasks.</p>
+     * 
+     * @param request DescribeViewJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeViewJobsResponse
+     */
+    public DescribeViewJobsResponse describeViewJobsWithOptions(DescribeViewJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterOwner)) {
+            query.put("FilterOwner", request.filterOwner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterViewName)) {
+            query.put("FilterViewName", request.filterViewName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterViewType)) {
+            query.put("FilterViewType", request.filterViewType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            query.put("SchemaName", request.schemaName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeViewJobs"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeViewJobsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves materialized view refresh tasks.</p>
+     * 
+     * @param request DescribeViewJobsRequest
+     * @return DescribeViewJobsResponse
+     */
+    public DescribeViewJobsResponse describeViewJobs(DescribeViewJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeViewJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the diagnostic results of the storage layer.</p>
      * 
      * @param request DescribeWorkerDetectionRequest
@@ -10019,8 +10431,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API diagnosis report contains whether the current user has all permissions required by the AnalyticDB for Spark related features. The scope of the permissions may exceed the minimum requirements of the business. The diagnostic report of the current API is used to quickly initialize the environment of AnalyticDB for Spark. If fine-grained permission configuration is needed, see <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">Configure fine-grained permissions in AnalyDB for Spark.</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Spark权限说明,失败时给出配置权限的帮助信息</p>
+     * <p>View the Spark basic permission diagnosis report of the current user.</p>
      * 
      * @param request GetADBSparkNecessaryRAMPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10051,8 +10466,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The API diagnosis report contains whether the current user has all permissions required by the AnalyticDB for Spark related features. The scope of the permissions may exceed the minimum requirements of the business. The diagnostic report of the current API is used to quickly initialize the environment of AnalyticDB for Spark. If fine-grained permission configuration is needed, see <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">Configure fine-grained permissions in AnalyDB for Spark.</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Spark权限说明,失败时给出配置权限的帮助信息</p>
+     * <p>View the Spark basic permission diagnosis report of the current user.</p>
      * 
      * @param request GetADBSparkNecessaryRAMPermissionsRequest
      * @return GetADBSparkNecessaryRAMPermissionsResponse
@@ -12225,8 +12643,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows you to obtain a list of configured webhooks based on <code>RegionId</code>, <code>DBClusterId</code>, and optional <code>JobType</code>. The <code>JobType</code> parameter specifies the task type, such as SLS/OSS export task. If the parameter is provided, webhooks related to the task type are returned. If the parameter is not provided, all types of webhooks are returned.
+     * Note: Make sure that the <code>RegionId</code> and <code>DBClusterId</code> you provided are correct. Otherwise, the webhook information may not be obtained correctly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>ListApsWebhook</p>
+     * <p>Queries the Webhook configurations of a specified database cluster.</p>
      * 
      * @param request ListApsWebhookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12265,8 +12687,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows you to obtain a list of configured webhooks based on <code>RegionId</code>, <code>DBClusterId</code>, and optional <code>JobType</code>. The <code>JobType</code> parameter specifies the task type, such as SLS/OSS export task. If the parameter is provided, webhooks related to the task type are returned. If the parameter is not provided, all types of webhooks are returned.
+     * Note: Make sure that the <code>RegionId</code> and <code>DBClusterId</code> you provided are correct. Otherwise, the webhook information may not be obtained correctly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>ListApsWebhook</p>
+     * <p>Queries the Webhook configurations of a specified database cluster.</p>
      * 
      * @param request ListApsWebhookRequest
      * @return ListApsWebhookResponse
@@ -13986,7 +14412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置SSL</p>
+     * <p>Modifies the SSL link configuration of a cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14030,7 +14456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置SSL</p>
+     * <p>Modifies the SSL link configuration of a cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @return ModifyDBClusterSSLResponse
@@ -14115,6 +14541,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.engineParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.engineParams, "EngineParams", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.gpuElasticPlan)) {
+            request.gpuElasticPlanShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.gpuElasticPlan, "GpuElasticPlan", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.rayConfig)) {
             request.rayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayConfig, "RayConfig", "json");
         }
@@ -14146,6 +14576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.engineParamsShrink)) {
             query.put("EngineParams", request.engineParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuElasticPlanShrink)) {
+            query.put("GpuElasticPlan", request.gpuElasticPlanShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
@@ -14412,7 +14846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改物化视图</p>
+     * <p>Modifies materialized views.</p>
      * 
      * @param request ModifyMaterializedViewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14492,7 +14926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改物化视图</p>
+     * <p>Modifies materialized views.</p>
      * 
      * @param request ModifyMaterializedViewRequest
      * @return ModifyMaterializedViewResponse
@@ -14504,7 +14938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改物化视图自动推荐任务</p>
+     * <p>Modifies a materialized view recommendation task.</p>
      * 
      * @param request ModifyMaterializedViewRecommendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14592,7 +15026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改物化视图自动推荐任务</p>
+     * <p>Modifies a materialized view recommendation task.</p>
      * 
      * @param request ModifyMaterializedViewRecommendRequest
      * @return ModifyMaterializedViewRecommendResponse
@@ -14681,8 +15115,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改SQL脚本模板位置</p>
+     * <p>Modifies the directory location of SQL templates.</p>
      * 
      * @param request ModifySqlTemplatePositionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14725,8 +15162,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改SQL脚本模板位置</p>
+     * <p>Modifies the directory location of SQL templates.</p>
      * 
      * @param request ModifySqlTemplatePositionRequest
      * @return ModifySqlTemplatePositionResponse
@@ -15700,7 +16140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateApsWebhook</p>
+     * <p>Updates the webhook configuration of a specified cluster.</p>
      * 
      * @param tmpReq UpdateApsWebhookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15746,7 +16186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>UpdateApsWebhook</p>
+     * <p>Updates the webhook configuration of a specified cluster.</p>
      * 
      * @param request UpdateApsWebhookRequest
      * @return UpdateApsWebhookResponse

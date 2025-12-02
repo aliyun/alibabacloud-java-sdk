@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApsWebhookRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,9 @@ public class ListApsWebhookRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p><strong>JobType</strong>\
+     * Job type. SLS or OSS Export Task: ResultExport.</p>
+     * 
      * <strong>example:</strong>
      * <p>ResultExport</p>
      */
@@ -21,6 +25,7 @@ public class ListApsWebhookRequest extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

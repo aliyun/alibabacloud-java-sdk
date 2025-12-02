@@ -66,6 +66,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     @NameInMap("EngineParams")
     public java.util.Map<String, ?> engineParams;
 
+    @NameInMap("GpuElasticPlan")
+    public CreateDBResourceGroupRequestGpuElasticPlan gpuElasticPlan;
+
     /**
      * <p>The name of the resource group.</p>
      * <ul>
@@ -248,6 +251,14 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         return this.engineParams;
     }
 
+    public CreateDBResourceGroupRequest setGpuElasticPlan(CreateDBResourceGroupRequestGpuElasticPlan gpuElasticPlan) {
+        this.gpuElasticPlan = gpuElasticPlan;
+        return this;
+    }
+    public CreateDBResourceGroupRequestGpuElasticPlan getGpuElasticPlan() {
+        return this.gpuElasticPlan;
+    }
+
     public CreateDBResourceGroupRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -350,6 +361,66 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     }
     public String getTargetResourceGroupName() {
         return this.targetResourceGroupName;
+    }
+
+    public static class CreateDBResourceGroupRequestGpuElasticPlanRules extends TeaModel {
+        @NameInMap("EndCronExpression")
+        public String endCronExpression;
+
+        @NameInMap("StartCronExpression")
+        public String startCronExpression;
+
+        public static CreateDBResourceGroupRequestGpuElasticPlanRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBResourceGroupRequestGpuElasticPlanRules self = new CreateDBResourceGroupRequestGpuElasticPlanRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBResourceGroupRequestGpuElasticPlanRules setEndCronExpression(String endCronExpression) {
+            this.endCronExpression = endCronExpression;
+            return this;
+        }
+        public String getEndCronExpression() {
+            return this.endCronExpression;
+        }
+
+        public CreateDBResourceGroupRequestGpuElasticPlanRules setStartCronExpression(String startCronExpression) {
+            this.startCronExpression = startCronExpression;
+            return this;
+        }
+        public String getStartCronExpression() {
+            return this.startCronExpression;
+        }
+
+    }
+
+    public static class CreateDBResourceGroupRequestGpuElasticPlan extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Rules")
+        public java.util.List<CreateDBResourceGroupRequestGpuElasticPlanRules> rules;
+
+        public static CreateDBResourceGroupRequestGpuElasticPlan build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBResourceGroupRequestGpuElasticPlan self = new CreateDBResourceGroupRequestGpuElasticPlan();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBResourceGroupRequestGpuElasticPlan setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateDBResourceGroupRequestGpuElasticPlan setRules(java.util.List<CreateDBResourceGroupRequestGpuElasticPlanRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<CreateDBResourceGroupRequestGpuElasticPlanRules> getRules() {
+            return this.rules;
+        }
+
     }
 
     public static class CreateDBResourceGroupRequestRayConfigWorkerGroups extends TeaModel {

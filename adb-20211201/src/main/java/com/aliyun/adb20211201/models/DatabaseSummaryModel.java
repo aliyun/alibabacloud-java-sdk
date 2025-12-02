@@ -7,8 +7,20 @@ public class DatabaseSummaryModel extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("CreatedBySource")
+    public String createdBySource;
+
+    @NameInMap("CreatedByUser")
+    public String createdByUser;
+
+    @NameInMap("DbType")
+    public String dbType;
+
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("Location")
+    public String location;
 
     @NameInMap("Owner")
     public String owner;
@@ -32,12 +44,44 @@ public class DatabaseSummaryModel extends TeaModel {
         return this.createTime;
     }
 
+    public DatabaseSummaryModel setCreatedBySource(String createdBySource) {
+        this.createdBySource = createdBySource;
+        return this;
+    }
+    public String getCreatedBySource() {
+        return this.createdBySource;
+    }
+
+    public DatabaseSummaryModel setCreatedByUser(String createdByUser) {
+        this.createdByUser = createdByUser;
+        return this;
+    }
+    public String getCreatedByUser() {
+        return this.createdByUser;
+    }
+
+    public DatabaseSummaryModel setDbType(String dbType) {
+        this.dbType = dbType;
+        return this;
+    }
+    public String getDbType() {
+        return this.dbType;
+    }
+
     public DatabaseSummaryModel setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DatabaseSummaryModel setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    public String getLocation() {
+        return this.location;
     }
 
     public DatabaseSummaryModel setOwner(String owner) {

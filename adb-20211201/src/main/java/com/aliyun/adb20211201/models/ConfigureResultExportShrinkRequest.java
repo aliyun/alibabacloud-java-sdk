@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ConfigureResultExportShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +18,26 @@ public class ConfigureResultExportShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The export type. Valid values:</p>
+     * <ul>
+     * <li>SLS: Specifies that the export destination is SLS.</li>
+     * <li>OSS: Specifies that the export destination is OSS.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SLS</p>
      */
     @NameInMap("ExportType")
     public String exportType;
 
+    /**
+     * <p>The OSS configuration details if the destination is of the OSS type.</p>
+     */
     @NameInMap("OssInfo")
     public String ossInfoShrink;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +46,9 @@ public class ConfigureResultExportShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The SLS configuration details if the destination is of the SLS type.</p>
+     */
     @NameInMap("SlsInfo")
     public String slsInfoShrink;
 

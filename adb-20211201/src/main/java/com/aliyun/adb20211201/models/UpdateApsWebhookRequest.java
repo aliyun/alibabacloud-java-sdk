@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApsWebhookRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateApsWebhookRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,9 @@ public class UpdateApsWebhookRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The array of webhooks.</p>
+     */
     @NameInMap("Webhook")
     public java.util.List<UpdateApsWebhookRequestWebhook> webhook;
 
@@ -56,6 +61,8 @@ public class UpdateApsWebhookRequest extends TeaModel {
 
     public static class UpdateApsWebhookRequestWebhook extends TeaModel {
         /**
+         * <p>Signed key.</p>
+         * 
          * <strong>example:</strong>
          * <p>ABC**</p>
          */
@@ -63,6 +70,8 @@ public class UpdateApsWebhookRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The name of the webhook.</p>
+         * 
          * <strong>example:</strong>
          * <p>exampleWebhookName</p>
          */
@@ -70,6 +79,8 @@ public class UpdateApsWebhookRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The URL of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/webhook">https://example.com/webhook</a></p>
          */
@@ -77,7 +88,7 @@ public class UpdateApsWebhookRequest extends TeaModel {
         public String url;
 
         /**
-         * <p>Webhook ID。</p>
+         * <p>The ID of the webhook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +98,8 @@ public class UpdateApsWebhookRequest extends TeaModel {
         public Long webhookId;
 
         /**
+         * <p>The notification method. Valid values: dingtalk. lark.</p>
+         * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
          */

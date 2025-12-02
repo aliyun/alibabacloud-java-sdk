@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterSSLRequest extends TeaModel {
     /**
+     * <p>The private or public endpoint for which the server certificate needs to be created or updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-***********.ads.aliyuncs.com</p>
      */
@@ -12,6 +14,7 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String connectionString;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,11 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,8 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public Boolean enableSSL;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifySqlTemplatePositionResponseBody extends TeaModel {
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request is successful, a <strong>SUCCESS</strong> message is returned.</li>
+     * <li>If the request is abnormal, the detailed error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +18,8 @@ public class ModifySqlTemplatePositionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5DC10091-348D-12B1-906D-AB49D658012E</p>
      */
@@ -19,6 +27,12 @@ public class ModifySqlTemplatePositionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,29 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The description of the recommendation task.</p>
+     * 
      * <strong>example:</strong>
      * <p>task desc</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Pattern匹配的最少慢查询个数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("MinRewriteQueryCount")
     public Integer minRewriteQueryCount;
 
+    /**
+     * <p>最小可加速的Pattern数量</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MinRewriteQueryPattern")
     public Integer minRewriteQueryPattern;
 
@@ -33,6 +48,8 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -46,6 +63,8 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The time range for scanning data. Unit: days. Default value: 3.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -53,6 +72,18 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public Integer scanQueriesRange;
 
     /**
+     * <p>This parameter is valid only when SchedulingPolicy is set to weekly. Valid values:</p>
+     * <ul>
+     * <li>Monday</li>
+     * <li>Tuesday</li>
+     * <li>Wednesday</li>
+     * <li>Thursday</li>
+     * <li>Friday</li>
+     * <li>Saturday</li>
+     * <li>Sunday</li>
+     * </ul>
+     * <p>Separate multiple days with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>Monday;Wednesday</p>
      */
@@ -60,16 +91,36 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public String schedulingDay;
 
     /**
+     * <p>The scheduling policy of the recommendation task. Valid values:</p>
+     * <ul>
+     * <li>daily</li>
+     * <li>weekly</li>
+     * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>weekly</p>
      */
     @NameInMap("SchedulingPolicy")
     public String schedulingPolicy;
 
+    /**
+     * <p>慢查询阈值</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SlowQueryThreshold")
     public Integer slowQueryThreshold;
 
     /**
+     * <p>The execution time of the recommendation task. Specify the time in the HH:MM:SS format.</p>
+     * 
      * <strong>example:</strong>
      * <p>10:00:00</p>
      */
@@ -77,6 +128,7 @@ public class ModifyMaterializedViewRecommendRequest extends TeaModel {
     public String specifiedTime;
 
     /**
+     * <p>The name of the recommendation task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

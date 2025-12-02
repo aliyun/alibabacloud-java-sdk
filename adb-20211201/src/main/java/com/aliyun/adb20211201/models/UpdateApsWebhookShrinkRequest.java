@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApsWebhookShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateApsWebhookShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,9 @@ public class UpdateApsWebhookShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The array of webhooks.</p>
+     */
     @NameInMap("Webhook")
     public String webhookShrink;
 
