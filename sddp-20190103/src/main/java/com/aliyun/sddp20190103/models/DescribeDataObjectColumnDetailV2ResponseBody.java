@@ -95,9 +95,9 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         /**
          * <p>ID corresponding to the data tag name. Values:</p>
          * <ul>
-         * <li><strong>101</strong>: Personal Sensitive Information</li>
-         * <li><strong>102</strong>: Personal Information</li>
-         * <li><strong>107</strong>: General Information</li>
+         * <li><strong>101</strong>: Personal Sensitive Information.</li>
+         * <li><strong>102</strong>: Personal Information.</li>
+         * <li><strong>107</strong>: General Information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,9 +109,9 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         /**
          * <p>Data tag name. Values:</p>
          * <ul>
-         * <li>Personal Sensitive Information</li>
-         * <li>Personal Information</li>
-         * <li>General Information</li>
+         * <li>Personal Sensitive Information.</li>
+         * <li>Personal Information.</li>
+         * <li>General Information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,13 +296,13 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>风险等级名称。取值：</p>
+         * <p>Risk level name. Values:</p>
          * <ul>
-         * <li><strong>N/A</strong>：未识别到敏感数据。</li>
-         * <li><strong>S1</strong>：1级敏感数据。</li>
-         * <li><strong>S2</strong>：2级敏感数据。</li>
-         * <li><strong>S3</strong>：3级敏感数据。</li>
-         * <li><strong>S4</strong>：4级敏感数据。</li>
+         * <li><strong>N/A</strong>: No sensitive data was identified.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>

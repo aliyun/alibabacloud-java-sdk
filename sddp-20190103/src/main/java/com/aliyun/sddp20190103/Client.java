@@ -106,8 +106,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</p>
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.</p>
@@ -215,8 +213,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</p>
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.</p>
@@ -629,6 +625,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRuleResponse deleteRule(DeleteRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询审计告警日志列表</p>
+     * 
+     * @param request DescribeAuditLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAuditLogsResponse
+     */
+    public DescribeAuditLogsResponse describeAuditLogsWithOptions(DescribeAuditLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncRequestId)) {
+            query.put("AsyncRequestId", request.asyncRequestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIp)) {
+            query.put("ClientIp", request.clientIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientUa)) {
+            query.put("ClientUa", request.clientUa);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            query.put("DatabaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectRowRange)) {
+            query.put("EffectRowRange", request.effectRowRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeTimeRange)) {
+            query.put("ExecuteTimeRange", request.executeTimeRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipType)) {
+            query.put("IpType", request.ipType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadWhiteList)) {
+            query.put("LoadWhiteList", request.loadWhiteList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logSource)) {
+            query.put("LogSource", request.logSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberAccount)) {
+            query.put("MemberAccount", request.memberAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.message)) {
+            query.put("Message", request.message);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
+            query.put("OperateType", request.operateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossObjectKey)) {
+            query.put("OssObjectKey", request.ossObjectKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            query.put("ProductId", request.productId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleAggQuery)) {
+            query.put("RuleAggQuery", request.ruleAggQuery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleCategory)) {
+            query.put("RuleCategory", request.ruleCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleID)) {
+            query.put("RuleID", request.ruleID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlText)) {
+            query.put("SqlText", request.sqlText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAuditLogs"),
+            new TeaPair("version", "2019-01-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAuditLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询审计告警日志列表</p>
+     * 
+     * @param request DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     */
+    public DescribeAuditLogsResponse describeAuditLogs(DescribeAuditLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAuditLogsWithOptions(request, runtime);
     }
 
     /**
@@ -2067,8 +2211,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
      * This operation is no longer used for the KMS console of the new version.</p>
-     * <h1><a href="#qps-"></a>QPS limits</h1>
-     * <p>This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of data assets.</p>
@@ -2153,8 +2295,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
      * This operation is no longer used for the KMS console of the new version.</p>
-     * <h1><a href="#qps-"></a>QPS limits</h1>
-     * <p>This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of data assets.</p>
@@ -3209,6 +3349,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>OSS图片脱敏</p>
+     * 
+     * @param request MaskOssImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MaskOssImageResponse
+     */
+    public MaskOssImageResponse maskOssImageWithOptions(MaskOssImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketName)) {
+            query.put("BucketName", request.bucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAlwaysUpload)) {
+            query.put("IsAlwaysUpload", request.isAlwaysUpload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSupportRestore)) {
+            query.put("IsSupportRestore", request.isSupportRestore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maskRuleIdList)) {
+            query.put("MaskRuleIdList", request.maskRuleIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectKey)) {
+            query.put("ObjectKey", request.objectKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
+            query.put("ServiceRegionId", request.serviceRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MaskOssImage"),
+            new TeaPair("version", "2019-01-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MaskOssImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>OSS图片脱敏</p>
+     * 
+     * @param request MaskOssImageRequest
+     * @return MaskOssImageResponse
+     */
+    public MaskOssImageResponse maskOssImage(MaskOssImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.maskOssImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.</p>
      * 
      * @param request ModifyDataLimitRequest
@@ -3721,6 +3929,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyRuleStatusResponse modifyRuleStatus(ModifyRuleStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRuleStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>图片复原</p>
+     * 
+     * @param request RestoreOssImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestoreOssImageResponse
+     */
+    public RestoreOssImageResponse restoreOssImageWithOptions(RestoreOssImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucket)) {
+            query.put("Bucket", request.bucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectKey)) {
+            query.put("ObjectKey", request.objectKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
+            query.put("ServiceRegionId", request.serviceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetObjectKey)) {
+            query.put("TargetObjectKey", request.targetObjectKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestoreOssImage"),
+            new TeaPair("version", "2019-01-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestoreOssImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>图片复原</p>
+     * 
+     * @param request RestoreOssImageRequest
+     * @return RestoreOssImageResponse
+     */
+    public RestoreOssImageResponse restoreOssImage(RestoreOssImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restoreOssImageWithOptions(request, runtime);
     }
 
     /**

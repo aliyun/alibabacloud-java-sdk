@@ -240,11 +240,11 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         /**
          * <p>The risk level name of the asset. Values:</p>
          * <ul>
-         * <li><strong>N/A</strong>：No sensitive data detected.</li>
-         * <li><strong>S1</strong>：Level 1 sensitive data.</li>
-         * <li><strong>S2</strong>：Level 2 sensitive data.</li>
-         * <li><strong>S3</strong>：Level 3 sensitive data.</li>
-         * <li><strong>S4</strong>：Level 4 sensitive data.</li>
+         * <li><strong>N/A</strong>: No sensitive data detected.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,11 +256,11 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         /**
          * <p>The risk level code of the asset. Values:</p>
          * <ul>
-         * <li><strong>1</strong>：N/A.</li>
-         * <li><strong>2</strong>：S1.</li>
-         * <li><strong>3</strong>：S2.</li>
-         * <li><strong>4</strong>：S3.</li>
-         * <li><strong>5</strong>：S4.</li>
+         * <li><strong>1</strong>: N/A.</li>
+         * <li><strong>2</strong>: S1.</li>
+         * <li><strong>3</strong>: S2.</li>
+         * <li><strong>4</strong>: S3.</li>
+         * <li><strong>5</strong>: S4.</li>
          * </ul>
          * <blockquote>
          * <p>A return value &lt;= 1 represents N/A.</p>
@@ -332,11 +332,11 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         /**
          * <p>The risk level ID of the column data in the data asset table. Values:</p>
          * <ul>
-         * <li><strong>1</strong>：N/A.</li>
-         * <li><strong>2</strong>：S1.</li>
-         * <li><strong>3</strong>：S2.</li>
-         * <li><strong>4</strong>：S3.</li>
-         * <li><strong>5</strong>：S4.</li>
+         * <li><strong>1</strong>: N/A.</li>
+         * <li><strong>2</strong>: S1.</li>
+         * <li><strong>3</strong>: S2.</li>
+         * <li><strong>4</strong>: S3.</li>
+         * <li><strong>5</strong>: S4.</li>
          * </ul>
          * <blockquote>
          * <p>A return value &lt;= 1 represents N/A.</p>
@@ -351,11 +351,11 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         /**
          * <p>The risk level name of the column data in the data asset table. Values:</p>
          * <ul>
-         * <li><strong>N/A</strong>：No sensitive data detected.</li>
-         * <li><strong>S1</strong>：Level 1 sensitive data.</li>
-         * <li><strong>S2</strong>：Level 2 sensitive data.</li>
-         * <li><strong>S3</strong>：Level 3 sensitive data.</li>
-         * <li><strong>S4</strong>：Level 4 sensitive data.</li>
+         * <li><strong>N/A</strong>: No sensitive data detected.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -385,11 +385,11 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         /**
          * <p>The sensitivity level name. Values:</p>
          * <ul>
-         * <li><strong>N/A</strong>：No sensitive data detected.</li>
-         * <li><strong>S1</strong>：Level 1 sensitive data.</li>
-         * <li><strong>S2</strong>：Level 2 sensitive data.</li>
-         * <li><strong>S3</strong>：Level 3 sensitive data.</li>
-         * <li><strong>S4</strong>：Level 4 sensitive data.</li>
+         * <li><strong>N/A</strong>: No sensitive data detected.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>

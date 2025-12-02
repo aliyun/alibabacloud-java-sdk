@@ -95,9 +95,9 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         /**
          * <p>ID corresponding to the data tag name. Possible values:</p>
          * <ul>
-         * <li><strong>101</strong>：Personal sensitive information</li>
-         * <li><strong>102</strong>：Personal information</li>
-         * <li><strong>107</strong>：General information</li>
+         * <li><strong>101</strong>: Personal sensitive information.</li>
+         * <li><strong>102</strong>: Personal information.</li>
+         * <li><strong>107</strong>: General information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,9 +109,9 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         /**
          * <p>Data tag name. Possible values:</p>
          * <ul>
-         * <li><strong>101</strong>：Personal sensitive information</li>
-         * <li><strong>102</strong>：Personal information</li>
-         * <li><strong>107</strong>：General information</li>
+         * <li><strong>101</strong>: Personal sensitive information.</li>
+         * <li><strong>102</strong>: Personal information.</li>
+         * <li><strong>107</strong>: General information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,11 +214,11 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         /**
          * <p>Column encryption status. Possible values:</p>
          * <ul>
-         * <li><p><strong>-1</strong>：Not encrypted</p>
+         * <li><p><strong>-1</strong>: Not encrypted</p>
          * </li>
-         * <li><p><strong>1</strong>：Encryption successful</p>
+         * <li><p><strong>1</strong>: Encryption successful</p>
          * </li>
-         * <li><p><strong>2</strong>：Encryption failed</p>
+         * <li><p><strong>2</strong>: Encryption failed</p>
          * </li>
          * </ul>
          * 
@@ -250,18 +250,18 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         /**
          * <p>ID corresponding to the product name of the data object. Possible values:</p>
          * <ul>
-         * <li><strong>1</strong>：MaxCompute</li>
-         * <li><strong>2</strong>：OSS</li>
-         * <li><strong>3</strong>：ADB-MYSQL</li>
-         * <li><strong>4</strong>：TableStore</li>
-         * <li><strong>5</strong>：RDS</li>
-         * <li><strong>6</strong>：SELF_DB</li>
-         * <li><strong>7</strong>：PolarDB-X</li>
-         * <li><strong>8</strong>：PolarDB</li>
-         * <li><strong>9</strong>：ADB-PG</li>
-         * <li><strong>10</strong>：OceanBase</li>
-         * <li><strong>11</strong>：MongoDB</li>
-         * <li><strong>25</strong>：Redis</li>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: ADB-MYSQL</li>
+         * <li><strong>4</strong>: TableStore</li>
+         * <li><strong>5</strong>: RDS</li>
+         * <li><strong>6</strong>: SELF_DB</li>
+         * <li><strong>7</strong>: PolarDB-X</li>
+         * <li><strong>8</strong>: PolarDB</li>
+         * <li><strong>9</strong>: ADB-PG</li>
+         * <li><strong>10</strong>: OceanBase</li>
+         * <li><strong>11</strong>: MongoDB</li>
+         * <li><strong>25</strong>: Redis</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,11 +298,11 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         /**
          * <p>Risk level name. Possible values:</p>
          * <ul>
-         * <li><strong>N/A</strong>：No sensitive data detected.</li>
-         * <li><strong>S1</strong>：Level 1 sensitive data.</li>
-         * <li><strong>S2</strong>：Level 2 sensitive data.</li>
-         * <li><strong>S3</strong>：Level 3 sensitive data.</li>
-         * <li><strong>S4</strong>：Level 4 sensitive data.</li>
+         * <li><strong>N/A</strong>: No sensitive data detected.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
