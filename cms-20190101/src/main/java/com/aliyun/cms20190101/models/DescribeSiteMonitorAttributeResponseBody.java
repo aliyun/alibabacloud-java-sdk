@@ -1681,6 +1681,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("empty_message")
         public Boolean emptyMessage;
 
+        @NameInMap("enable_packet_capture")
+        public Boolean enablePacketCapture;
+
         /**
          * <p>The string that is expected to exist on the page.</p>
          */
@@ -2177,6 +2180,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public Boolean getEmptyMessage() {
             return this.emptyMessage;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setEnablePacketCapture(Boolean enablePacketCapture) {
+            this.enablePacketCapture = enablePacketCapture;
+            return this;
+        }
+        public Boolean getEnablePacketCapture() {
+            return this.enablePacketCapture;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setExpectExistString(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString expectExistString) {
