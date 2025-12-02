@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOnlineTestResponseBody extends TeaModel {
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -12,6 +14,8 @@ public class CreateOnlineTestResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Service Code</p>
+     * 
      * <strong>example:</strong>
      * <p>VideoModeration</p>
      */
@@ -19,6 +23,8 @@ public class CreateOnlineTestResponseBody extends TeaModel {
     public String serviceCode;
 
     /**
+     * <p>Detection Task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxxx</p>
      */
@@ -26,6 +32,8 @@ public class CreateOnlineTestResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Detection Status</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -33,6 +41,8 @@ public class CreateOnlineTestResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
+     * <p>Detection URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></p>
      */

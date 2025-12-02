@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OssCheckResultListResponseBody extends TeaModel {
     /**
+     * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class OssCheckResultListResponseBody extends TeaModel {
     public String authStatus;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Current page number.</p>
+     */
     @NameInMap("Items")
     public java.util.List<OssCheckResultListResponseBodyItems> items;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -36,6 +47,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Authorization status.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -97,6 +110,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
 
     public static class OssCheckResultListResponseBodyItems extends TeaModel {
         /**
+         * <p>Data of the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>tmp</p>
          */
@@ -104,6 +119,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -111,6 +128,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Primary service.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio</p>
          */
@@ -118,6 +137,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String contentType;
 
         /**
+         * <p>Whether to copy.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio_media_detection</p>
          */
@@ -125,6 +146,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String copyFrom;
 
         /**
+         * <p>Details of the result.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></p>
          */
@@ -132,6 +155,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -139,19 +164,29 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public Boolean isCopy;
 
         /**
+         * <p>Image URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>dhT20X2310</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>Further description of the error code.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        /**
+         * <p>Job name.</p>
+         */
         @NameInMap("Labels2")
         public java.util.List<String> labels2;
 
         /**
+         * <p>Object name.</p>
+         * 
          * <strong>example:</strong>
          * <p>54416c9b159df4a60ae03c04ccb94cb5</p>
          */
@@ -159,6 +194,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String md5;
 
         /**
+         * <p>Status code. 200 indicates success.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -166,6 +203,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>OSS Bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1713014531569_958.png.jpeg</p>
          */
@@ -173,6 +212,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String object;
 
         /**
+         * <p>Image labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -180,16 +221,26 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String scanResult;
 
         /**
+         * <p>File MD5.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio_media_detection_01</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>服务名称</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
+         * <p>Task URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>P_XHDUS</p>
          */
@@ -197,6 +248,8 @@ public class OssCheckResultListResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Text labels.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>
          */

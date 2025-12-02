@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportOssCheckStatRequest extends TeaModel {
     /**
+     * <p>Whether to support monthly indexing. Values: -true: supported. -false: not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ExportOssCheckStatRequest extends TeaModel {
     public Boolean byMonth;
 
     /**
+     * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-11 10:00:00</p>
      */
@@ -19,6 +23,8 @@ public class ExportOssCheckStatRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>OSS detection task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>P_UX0K5X</p>
      */
@@ -26,6 +32,8 @@ public class ExportOssCheckStatRequest extends TeaModel {
     public String parentTaskId;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -33,6 +41,8 @@ public class ExportOssCheckStatRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-10 10:00:00</p>
      */

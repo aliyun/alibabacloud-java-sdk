@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetScanResultResponseBody extends TeaModel {
     /**
+     * <p>Error code, consistent with HTTP status.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetScanResultResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetScanResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class GetScanResultResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -36,6 +47,8 @@ public class GetScanResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,16 +110,26 @@ public class GetScanResultResponseBody extends TeaModel {
 
     public static class GetScanResultResponseBodyDataItemsResult extends TeaModel {
         /**
+         * <p>Confidence score, ranging from 0 to 100, with two decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>50.0</p>
          */
         @NameInMap("Confidence")
         public String confidence;
 
+        /**
+         * <p>Description of the Label field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似色情内容</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Label.</p>
+         * 
          * <strong>example:</strong>
          * <p>politics</p>
          */
@@ -145,25 +168,73 @@ public class GetScanResultResponseBody extends TeaModel {
     }
 
     public static class GetScanResultResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>Automated review labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>porn</p>
+         */
         @NameInMap("ApiLabels")
         public String apiLabels;
 
+        /**
+         * <p>Machine review time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755501226</p>
+         */
         @NameInMap("ApiRequestTime")
         public String apiRequestTime;
 
+        /**
+         * <p>Automated review risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("ApiRiskLevel")
         public String apiRiskLevel;
 
+        /**
+         * <p>Automated review service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basecheckLine</p>
+         */
         @NameInMap("ApiService")
         public String apiService;
 
+        /**
+         * <p>Automated review task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ApiTaskId")
         public String apiTaskId;
 
+        /**
+         * <p>Attack level, returned based on the set high and low risk scores. The return values include:</p>
+         * <ul>
+         * <li><p>high: High risk</p>
+         * </li>
+         * <li><p>medium: Medium risk</p>
+         * </li>
+         * <li><p>low: Low risk</p>
+         * </li>
+         * <li><p>none: No risk detected</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("AttackLevel")
         public String attackLevel;
 
         /**
+         * <p>Content.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -171,7 +242,7 @@ public class GetScanResultResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>dataId</p>
+         * <p>Data Id</p>
          * 
          * <strong>example:</strong>
          * <p>4f27b8cc7c4544cb90b41882a5b36326</p>
@@ -180,6 +251,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
+         * <p>Segment end time (in seconds).</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -187,6 +260,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Feedback information.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -194,6 +269,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public String extFeedback;
 
         /**
+         * <p>Additional parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -201,6 +278,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public java.util.Map<String, ?> extra;
 
         /**
+         * <p>Frame count.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -208,22 +287,35 @@ public class GetScanResultResponseBody extends TeaModel {
         public Long frameCount;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-11 09:00:19</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>Multimodal file URLs.</p>
+         */
         @NameInMap("GuardFileUrls")
         public java.util.List<String> guardFileUrls;
 
+        /**
+         * <p>Multimodal image URLs.</p>
+         */
         @NameInMap("GuardImageUrls")
         public java.util.List<String> guardImageUrls;
 
+        /**
+         * <p>Image labels.</p>
+         */
         @NameInMap("ImageLabels")
         public java.util.List<java.util.Map<String, ?>> imageLabels;
 
         /**
+         * <p>Image service.</p>
+         * 
          * <strong>example:</strong>
          * <p>baselineCheck</p>
          */
@@ -231,7 +323,7 @@ public class GetScanResultResponseBody extends TeaModel {
         public String imageService;
 
         /**
-         * <p>url</p>
+         * <p>URL</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyuncs.com/xxx.png">https://www.aliyuncs.com/xxx.png</a></p>
@@ -240,25 +332,50 @@ public class GetScanResultResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>Labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>nonLabel</p>
          */
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <p>Malicious file risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("MaliciousFileLevel")
         public String maliciousFileLevel;
 
+        /**
+         * <p>Malicious URL risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("MaliciousUrlLevel")
         public String maliciousUrlLevel;
 
+        /**
+         * <p>Whether it is a pure manual review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ManualOnly")
         public Boolean manualOnly;
 
+        /**
+         * <p>No labels</p>
+         */
         @NameInMap("NoLabels")
         public java.util.List<String> noLabels;
 
         /**
+         * <p>Frame offset value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -266,16 +383,26 @@ public class GetScanResultResponseBody extends TeaModel {
         public Long offset;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("PageNum")
         public Long pageNum;
 
+        /**
+         * <p>Request source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online_test</p>
+         */
         @NameInMap("RequestFrom")
         public String requestFrom;
 
         /**
+         * <p>Request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
@@ -283,43 +410,114 @@ public class GetScanResultResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>Request time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-11 09:00:19</p>
          */
         @NameInMap("RequestTime")
         public String requestTime;
 
+        /**
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>Return collection.</p>
+         */
         @NameInMap("Result")
         public java.util.List<GetScanResultResponseBodyDataItemsResult> result;
 
+        /**
+         * <p>Review labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>porn</p>
+         */
         @NameInMap("ReviewLabels")
         public String reviewLabels;
 
+        /**
+         * <p>Review status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("ReviewRiskLevel")
         public String reviewRiskLevel;
 
+        /**
+         * <p>Review time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1755501226</p>
+         */
         @NameInMap("ReviewTime")
         public String reviewTime;
 
+        /**
+         * <p>Reviewer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("ReviewUid")
         public String reviewUid;
 
+        /**
+         * <p>Whether it has been reviewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Reviewed")
         public Boolean reviewed;
 
+        /**
+         * <p>Risk level, returned based on the set high and low risk scores. The return values include:</p>
+         * <ul>
+         * <li><p>high: High risk</p>
+         * </li>
+         * <li><p>medium: Medium risk</p>
+         * </li>
+         * <li><p>low: Low risk</p>
+         * </li>
+         * <li><p>none: No risk detected</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>Details of the detected risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>色情服务</p>
+         */
         @NameInMap("RiskTips")
         public String riskTips;
 
+        /**
+         * <p>Keywords of the detected risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>色情_低俗词</p>
+         */
         @NameInMap("RiskWords")
         public String riskWords;
 
         /**
+         * <p>Details of the result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -327,16 +525,33 @@ public class GetScanResultResponseBody extends TeaModel {
         public String scanResult;
 
         /**
+         * <p>Score.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <p>Sensitive level, returned based on the set high and low risk scores. The return values include:</p>
+         * <ul>
+         * <li><strong>S1</strong>: Indicates low sensitivity.</li>
+         * <li><strong>S2</strong>: Indicates medium sensitivity.</li>
+         * <li><strong>S3</strong>: Indicates high sensitivity.</li>
+         * <li><strong>S4</strong>: Indicates very high sensitivity.</li>
+         * <li><strong>S0</strong>: Indicates no sensitivity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S0</p>
+         */
         @NameInMap("SensitiveLevel")
         public String sensitiveLevel;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>baselineCheck</p>
          */
@@ -344,6 +559,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
+         * <p>Segment start time (in seconds).</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -351,6 +568,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>Suggestion.</p>
+         * 
          * <strong>example:</strong>
          * <p>review</p>
          */
@@ -358,16 +577,23 @@ public class GetScanResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vi_s_EbrXb716LyBpkfwxyX5xyh-1A6RY9</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Text labels.</p>
+         */
         @NameInMap("TextLabels")
         public java.util.List<java.util.Map<String, ?>> textLabels;
 
         /**
+         * <p>Thumbnail URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyuncs.com/xxx.png">https://www.aliyuncs.com/xxx.png</a></p>
          */
@@ -375,6 +601,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public String thumbnail;
 
         /**
+         * <p>Timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00:40-00:00:42</p>
          */
@@ -382,16 +610,23 @@ public class GetScanResultResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
+         * <p>Task URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyuncs.com/xxx.png">https://www.aliyuncs.com/xxx.png</a></p>
          */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <p>Voice labels.</p>
+         */
         @NameInMap("VoiceLabels")
         public java.util.List<java.util.Map<String, ?>> voiceLabels;
 
         /**
+         * <p>Whether audio detection is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -399,6 +634,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public Boolean voiceScanOpened;
 
         /**
+         * <p>Voice service.</p>
+         * 
          * <strong>example:</strong>
          * <p>live_stream_detection</p>
          */
@@ -830,16 +1067,23 @@ public class GetScanResultResponseBody extends TeaModel {
 
     public static class GetScanResultResponseBodyData extends TeaModel {
         /**
+         * <p>Current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>Data for the current page.</p>
+         */
         @NameInMap("Items")
         public java.util.List<GetScanResultResponseBodyDataItems> items;
 
         /**
+         * <p>Number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -847,6 +1091,8 @@ public class GetScanResultResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

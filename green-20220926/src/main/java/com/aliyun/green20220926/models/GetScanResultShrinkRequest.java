@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetScanResultShrinkRequest extends TeaModel {
     /**
+     * <p>Current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetScanResultShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>End time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-24 10:01:55</p>
      */
@@ -19,16 +23,23 @@ public class GetScanResultShrinkRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Search criteria.</p>
+     */
     @NameInMap("Query")
     public String queryShrink;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -36,16 +47,23 @@ public class GetScanResultShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>Sort fields.</p>
+     */
     @NameInMap("Sort")
     public String sortShrink;
 
     /**
+     * <p>Start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-11 09:00:19</p>
      */

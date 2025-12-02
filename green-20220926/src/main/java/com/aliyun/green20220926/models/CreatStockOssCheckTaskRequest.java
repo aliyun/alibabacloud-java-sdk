@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatStockOssCheckTaskRequest extends TeaModel {
     /**
+     * <p>OSS buckets</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;Bucket\&quot;:\&quot;bucket01-test\&quot;,\&quot;Region\&quot;:\&quot;cn-beijing\&quot;}]</p>
      */
@@ -12,6 +14,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String buckets;
 
     /**
+     * <p>Callback ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1751</p>
      */
@@ -19,6 +23,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String callbackId;
 
     /**
+     * <p>Flag for deduplicating against previously detected tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public Boolean distinctHistoryTasks;
 
     /**
+     * <p>The end time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-18 10:08:00</p>
      */
@@ -33,6 +41,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Execute date of scheduled task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,34 +50,80 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public Integer executeDate;
 
     /**
+     * <p>Execute time of scheduled task.</p>
+     * 
      * <strong>example:</strong>
      * <p>01:09:30-01:19:30</p>
      */
     @NameInMap("ExecuteTime")
     public String executeTime;
 
+    /**
+     * <p>Freeze indicator</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Freeze")
     public Boolean freeze;
 
+    /**
+     * <p>Freeze High-Risk Images</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("FreezeHighRisk1")
     public Boolean freezeHighRisk1;
 
+    /**
+     * <p>Freeze High-Risk Audio and Text</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("FreezeHighRisk2")
     public Boolean freezeHighRisk2;
 
+    /**
+     * <p>Freeze Medium-Risk Images</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("FreezeMediumRisk1")
     public Boolean freezeMediumRisk1;
 
+    /**
+     * <p>Freeze Medium-Risk Audio and Text</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("FreezeMediumRisk2")
     public Boolean freezeMediumRisk2;
 
+    /**
+     * <p>Freeze Restore Path</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("FreezeRestorePath")
     public String freezeRestorePath;
 
+    /**
+     * <p>Freeze type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACL</p>
+     */
     @NameInMap("FreezeType")
     public String freezeType;
 
     /**
+     * <p>Indicator for scheduled task.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -75,6 +131,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public Boolean isInc;
 
     /**
+     * <p>Media type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +140,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public Integer mediaType;
 
     /**
+     * <p>Prefix filter type.</p>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -89,6 +149,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String prefixFilterType;
 
     /**
+     * <p>Prefix filters</p>
+     * 
      * <strong>example:</strong>
      * <p>dir1,dir2</p>
      */
@@ -96,16 +158,26 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String prefixFilters;
 
     /**
+     * <p>The priority of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>Referer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
+     */
     @NameInMap("Referer")
     public String referer;
 
     /**
+     * <p>Region ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -113,6 +185,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The scan limit of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -120,6 +194,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public Long scanLimit;
 
     /**
+     * <p>Indicator for scanning files without file type.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +203,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public Boolean scanNoFileType;
 
     /**
+     * <p>Scan resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -134,6 +212,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String scanResourceType;
 
     /**
+     * <p>The code of scan service.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
@@ -141,6 +221,8 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String scanService;
 
     /**
+     * <p>The start time of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-17 10:08:00</p>
      */
@@ -148,16 +230,26 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Task Cycle</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("TaskCycle")
     public Integer taskCycle;
 
+    /**
+     * <p>The name of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image task 20240709101602004</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>Task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>batch</p>
      */

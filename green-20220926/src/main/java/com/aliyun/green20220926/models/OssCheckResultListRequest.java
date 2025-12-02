@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OssCheckResultListRequest extends TeaModel {
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class OssCheckResultListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Start date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-10-21 16:08:38</p>
      */
@@ -19,6 +23,8 @@ public class OssCheckResultListRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>55</p>
      */
@@ -26,6 +32,8 @@ public class OssCheckResultListRequest extends TeaModel {
     public Long finishNum;
 
     /**
+     * <p>Query condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class OssCheckResultListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>End date.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -40,16 +50,23 @@ public class OssCheckResultListRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Sort field.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Current page number.</p>
+     */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
     /**
+     * <p>System-defined parameter. Value: <strong>OssCheckResultList</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-21 16:08:38</p>
      */
@@ -57,6 +74,8 @@ public class OssCheckResultListRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>Number of completed items.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

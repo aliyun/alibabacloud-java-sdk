@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetImageSceneLabelConfResponseBody extends TeaModel {
     /**
+     * <p>Error code, consistent with the HTTP status.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<java.util.Map<String, ?>> data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetImageSceneLabelConfResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class GetImageSceneLabelConfResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -36,6 +47,8 @@ public class GetImageSceneLabelConfResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

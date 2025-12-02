@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class ListServiceConfigsRequest extends TeaModel {
+    /**
+     * <p>Category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>guard-scene</p>
+     */
     @NameInMap("Classify")
     public String classify;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -15,12 +23,20 @@ public class ListServiceConfigsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>Usage status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
+     */
     @NameInMap("UseStatus")
     public String useStatus;
 

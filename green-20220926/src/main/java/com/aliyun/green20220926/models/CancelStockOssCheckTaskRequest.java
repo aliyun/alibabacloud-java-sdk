@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelStockOssCheckTaskRequest extends TeaModel {
     /**
+     * <p>Region ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -12,6 +14,8 @@ public class CancelStockOssCheckTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>P_UNYVB</p>
      */

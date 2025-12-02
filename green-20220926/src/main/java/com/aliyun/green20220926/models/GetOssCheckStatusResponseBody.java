@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckStatusResponseBody extends TeaModel {
     /**
-     * <p>Bid。</p>
+     * <p>Bid.</p>
      * 
      * <strong>example:</strong>
      * <p>26842</p>
@@ -14,6 +14,8 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public String bid;
 
     /**
+     * <p>Whether a product has been activated on Alibaba Cloud.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -21,6 +23,8 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public Boolean buy;
 
     /**
+     * <p>Commodity code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -28,6 +32,8 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public String commodityCode;
 
     /**
+     * <p>Whether there is an outstanding payment.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -35,6 +41,8 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public Boolean indebt;
 
     /**
+     * <p>Whether internal security is authorized.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -42,6 +50,8 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public String ramStatus;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -49,6 +59,8 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether log analysis function is authorized.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

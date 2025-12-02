@@ -4,10 +4,15 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageLibFreeInspectionShrinkRequest extends TeaModel {
+    /**
+     * <p>Configuration.</p>
+     */
     @NameInMap("Config")
     public String configShrink;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

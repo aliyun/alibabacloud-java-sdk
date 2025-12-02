@@ -4,10 +4,15 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetJobNameListResponseBody extends TeaModel {
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */

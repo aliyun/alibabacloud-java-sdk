@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListKeywordsRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListKeywordsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Library ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
      */
@@ -19,6 +23,8 @@ public class ListKeywordsRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,15 +32,26 @@ public class ListKeywordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Sort field.</p>
+     */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
+    /**
+     * <p>Keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试词</p>
+     */
     @NameInMap("Word")
     public String word;
 

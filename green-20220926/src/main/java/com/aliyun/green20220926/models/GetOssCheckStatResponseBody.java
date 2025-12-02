@@ -4,10 +4,15 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetOssCheckStatResponseBody extends TeaModel {
+    /**
+     * <p>Bar chart</p>
+     */
     @NameInMap("BarChart")
     public GetOssCheckStatResponseBodyBarChart barChart;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -36,10 +41,15 @@ public class GetOssCheckStatResponseBody extends TeaModel {
     }
 
     public static class GetOssCheckStatResponseBodyBarChartY extends TeaModel {
+        /**
+         * <p>Data.</p>
+         */
         @NameInMap("Data")
         public java.util.List<Long> data;
 
         /**
+         * <p>Name.</p>
+         * 
          * <strong>example:</strong>
          * <p>document_detection</p>
          */
@@ -70,9 +80,15 @@ public class GetOssCheckStatResponseBody extends TeaModel {
     }
 
     public static class GetOssCheckStatResponseBodyBarChart extends TeaModel {
+        /**
+         * <p>X values of the coordinates.</p>
+         */
         @NameInMap("X")
         public java.util.List<String> x;
 
+        /**
+         * <p>Y values of the coordinates.</p>
+         */
         @NameInMap("Y")
         public java.util.List<GetOssCheckStatResponseBodyBarChartY> y;
 

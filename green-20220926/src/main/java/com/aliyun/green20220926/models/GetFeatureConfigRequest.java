@@ -4,6 +4,12 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetFeatureConfigRequest extends TeaModel {
+    /**
+     * <p>Query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;Lang\&quot;:\&quot;zh\&quot;,\&quot;CategoryType\&quot;:1,\&quot;Default\&quot;:false,\&quot;ParentCategoryId\&quot;:1720}</p>
+     */
     @NameInMap("Query")
     public String query;
 

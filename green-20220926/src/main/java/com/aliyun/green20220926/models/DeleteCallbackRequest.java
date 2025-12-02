@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCallbackRequest extends TeaModel {
     /**
+     * <p>callback id.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteCallbackRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>Region ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

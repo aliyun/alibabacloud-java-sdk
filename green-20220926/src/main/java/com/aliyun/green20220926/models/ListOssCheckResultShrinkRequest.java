@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListOssCheckResultShrinkRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListOssCheckResultShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>End date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-24 10:01:55</p>
      */
@@ -19,6 +23,8 @@ public class ListOssCheckResultShrinkRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Number of completed tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,6 +32,8 @@ public class ListOssCheckResultShrinkRequest extends TeaModel {
     public Long finishNum;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class ListOssCheckResultShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Search condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
      */
@@ -40,16 +50,23 @@ public class ListOssCheckResultShrinkRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Sort field.</p>
+     */
     @NameInMap("Sort")
     public String sortShrink;
 
     /**
+     * <p>Start date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-11 09:00:19</p>
      */
@@ -57,6 +74,8 @@ public class ListOssCheckResultShrinkRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>Task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

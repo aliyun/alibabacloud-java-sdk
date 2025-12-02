@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class DeleteKeywordRequest extends TeaModel {
+    /**
+     * <p>The ids\&quot; list of keywords.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[6715465]</p>
+     */
     @NameInMap("KeywordIdList")
     public String keywordIdList;
 
     /**
+     * <p>The ids of keywords.</p>
+     * 
      * <strong>example:</strong>
      * <p>[16754493]</p>
      */
@@ -15,6 +23,8 @@ public class DeleteKeywordRequest extends TeaModel {
     public String keywordIds;
 
     /**
+     * <p>Library id</p>
+     * 
      * <strong>example:</strong>
      * <p>customxx_xxxx</p>
      */
@@ -22,6 +32,8 @@ public class DeleteKeywordRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>Region ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

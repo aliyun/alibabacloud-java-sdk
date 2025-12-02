@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyServiceInfoRequest extends TeaModel {
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -12,6 +14,8 @@ public class ModifyServiceInfoRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -19,15 +23,29 @@ public class ModifyServiceInfoRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>Service description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>描述</p>
+     */
     @NameInMap("ServiceDesc")
     public String serviceDesc;
 
+    /**
+     * <p>Service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>通用基线检测</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

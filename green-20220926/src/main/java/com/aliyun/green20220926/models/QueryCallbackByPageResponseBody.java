@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryCallbackByPageResponseBody extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Data of the current page.</p>
+     */
     @NameInMap("Items")
     public java.util.List<QueryCallbackByPageResponseBodyItems> items;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,8 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
 
     public static class QueryCallbackByPageResponseBodyItems extends TeaModel {
         /**
+         * <p>Encryption algorithm.</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA256</p>
          */
@@ -89,6 +102,8 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         public String cryptType;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
          */
@@ -96,6 +111,8 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
          */
@@ -103,16 +120,26 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1697</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>消息通知</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Result scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>all</p>
          */
@@ -120,7 +147,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>Seed。</p>
+         * <p>Seed.</p>
          * 
          * <strong>example:</strong>
          * <p>cb6gYS8GXj4Vn4Y4FN0Y8R5M-1x46Mq</p>
@@ -129,7 +156,7 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         public String seed;
 
         /**
-         * <p>UID。</p>
+         * <p>UID.</p>
          * 
          * <strong>example:</strong>
          * <p>12161*****398900</p>
@@ -138,6 +165,8 @@ public class QueryCallbackByPageResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>Callback URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://console.aliyun.com/">https://console.aliyun.com/</a></p>
          */

@@ -4,20 +4,30 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class LlmStreamChatResponseBody extends TeaModel {
+    /**
+     * <p>List of model generation results</p>
+     */
     @NameInMap("Choices")
     public java.util.List<LlmStreamChatResponseBodyChoices> choices;
 
     /**
+     * <p>Timestamp of session creation</p>
+     * 
      * <strong>example:</strong>
      * <p>1750990728</p>
      */
     @NameInMap("Created")
     public Long created;
 
+    /**
+     * <p>Streaming response error information content</p>
+     */
     @NameInMap("Error")
     public LlmStreamChatResponseBodyError error;
 
     /**
+     * <p>Unique ID for this session</p>
+     * 
      * <strong>example:</strong>
      * <p>chatcmpl-777bce52-93d3-9f8c-89c3-e99884f4f57f</p>
      */
@@ -25,6 +35,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>Model identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>deepseek-v3</p>
      */
@@ -32,6 +44,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
     public String model;
 
     /**
+     * <p>Response type</p>
+     * 
      * <strong>example:</strong>
      * <p>chat.completion.chunk</p>
      */
@@ -39,6 +53,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
     public String object;
 
     /**
+     * <p>Unique request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>21d296d6-594e-97de-812f-925ec6e05673</p>
      */
@@ -46,6 +62,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>System fingerprint</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -53,6 +71,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
     public String systemFingerprint;
 
     /**
+     * <p>Token usage</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -137,10 +157,18 @@ public class LlmStreamChatResponseBody extends TeaModel {
     }
 
     public static class LlmStreamChatResponseBodyChoicesDelta extends TeaModel {
+        /**
+         * <p>Real-time generated text content</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我是Deepseek-V3，有什么可以帮你</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Role identifier</p>
+         * 
          * <strong>example:</strong>
          * <p>assistant</p>
          */
@@ -171,10 +199,15 @@ public class LlmStreamChatResponseBody extends TeaModel {
     }
 
     public static class LlmStreamChatResponseBodyChoices extends TeaModel {
+        /**
+         * <p>Incremental content object</p>
+         */
         @NameInMap("Delta")
         public LlmStreamChatResponseBodyChoicesDelta delta;
 
         /**
+         * <p>For streaming output, it is null while generating and becomes \&quot;stop\&quot; if the generation ends due to a stop token.</p>
+         * 
          * <strong>example:</strong>
          * <p>stop</p>
          */
@@ -182,6 +215,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
         public String finishReason;
 
         /**
+         * <p>Stream sequence number</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -189,6 +224,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
         public Long index;
 
         /**
+         * <p>Token probability information</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -236,6 +273,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
 
     public static class LlmStreamChatResponseBodyError extends TeaModel {
         /**
+         * <p>Error code</p>
+         * 
          * <strong>example:</strong>
          * <p>data_inspection_failed</p>
          */
@@ -243,6 +282,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Error message</p>
+         * 
          * <strong>example:</strong>
          * <p>Input data may contain inappropriate content.</p>
          */
@@ -250,6 +291,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Parameter that caused the error</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -257,6 +300,8 @@ public class LlmStreamChatResponseBody extends TeaModel {
         public String param;
 
         /**
+         * <p>Error type</p>
+         * 
          * <strong>example:</strong>
          * <p>data_inspection_failed</p>
          */

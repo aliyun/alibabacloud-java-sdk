@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetImageSceneLabelListConfRequest extends TeaModel {
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
@@ -12,6 +14,8 @@ public class GetImageSceneLabelListConfRequest extends TeaModel {
     public String imageServiceCode;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

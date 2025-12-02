@@ -4,10 +4,15 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetServiceLabelConfigResponseBody extends TeaModel {
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<?> data;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. It can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */

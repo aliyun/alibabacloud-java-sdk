@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetStockOssCheckTasksListRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetStockOssCheckTasksListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>End time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-18 02:08:00</p>
      */
@@ -19,6 +23,8 @@ public class GetStockOssCheckTasksListRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Whether it is a scheduled scan task.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +32,8 @@ public class GetStockOssCheckTasksListRequest extends TeaModel {
     public Boolean isInc;
 
     /**
+     * <p>Media type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -33,6 +41,8 @@ public class GetStockOssCheckTasksListRequest extends TeaModel {
     public Integer mediaType;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,16 +50,23 @@ public class GetStockOssCheckTasksListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Sort field.</p>
+     */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
     /**
+     * <p>Start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-17 02:08:00</p>
      */
@@ -57,6 +74,8 @@ public class GetStockOssCheckTasksListRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>batch</p>
      */

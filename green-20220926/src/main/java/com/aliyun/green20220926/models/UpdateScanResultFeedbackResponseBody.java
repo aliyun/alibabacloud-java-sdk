@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateScanResultFeedbackResponseBody extends TeaModel {
     /**
+     * <p>Returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class UpdateScanResultFeedbackResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */

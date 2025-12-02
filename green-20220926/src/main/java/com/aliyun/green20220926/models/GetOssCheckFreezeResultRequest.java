@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckFreezeResultRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetOssCheckFreezeResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>End time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-19 10:05:11</p>
      */
@@ -19,6 +23,8 @@ public class GetOssCheckFreezeResultRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Number of completed tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class GetOssCheckFreezeResultRequest extends TeaModel {
     public Long finishNum;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class GetOssCheckFreezeResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;TaskId\&quot;:\&quot;P_O3SI0I\&quot;}</p>
      */
@@ -40,16 +50,23 @@ public class GetOssCheckFreezeResultRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Sort field.</p>
+     */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
     /**
+     * <p>Start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-09 10:28:54</p>
      */
@@ -57,6 +74,8 @@ public class GetOssCheckFreezeResultRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>Task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

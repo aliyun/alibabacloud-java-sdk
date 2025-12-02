@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class AddKeywordsToLibRequest extends TeaModel {
+    /**
+     * <p>The keyword to be added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>keyword</p>
+     */
     @NameInMap("Keywords")
     public String keywords;
 
     /**
+     * <p>The name of the keyword file.</p>
+     * 
      * <strong>example:</strong>
      * <p>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</p>
      */
@@ -15,6 +23,8 @@ public class AddKeywordsToLibRequest extends TeaModel {
     public String keywordsObject;
 
     /**
+     * <p>The id of the keyword library.</p>
+     * 
      * <strong>example:</strong>
      * <p>customxx_xxxx</p>
      */
@@ -22,6 +32,8 @@ public class AddKeywordsToLibRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>Region ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

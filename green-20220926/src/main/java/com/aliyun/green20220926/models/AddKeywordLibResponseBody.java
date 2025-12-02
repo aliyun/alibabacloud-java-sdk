@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AddKeywordLibResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public AddKeywordLibResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class AddKeywordLibResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class AddKeywordLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,26 +93,38 @@ public class AddKeywordLibResponseBody extends TeaModel {
 
     public static class AddKeywordLibResponseBodyDataKeywordsResult extends TeaModel {
         /**
+         * <p>Internationalization key.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("I18nKey")
         public String i18nKey;
 
+        /**
+         * <p>List of keywords that are too long or too short.</p>
+         */
         @NameInMap("IllegalLengthKeywords")
         public java.util.List<String> illegalLengthKeywords;
 
         /**
+         * <p>Invalid keyword count</p>
+         * 
          * <strong>example:</strong>
          * <p>133</p>
          */
         @NameInMap("InvalidCount")
         public Integer invalidCount;
 
+        /**
+         * <p>List of invalid keywords</p>
+         */
         @NameInMap("InvalidKeywords")
         public java.util.List<String> invalidKeywords;
 
         /**
+         * <p>The id of the keyword library.</p>
+         * 
          * <strong>example:</strong>
          * <p>customxx_xxxx</p>
          */
@@ -109,16 +132,23 @@ public class AddKeywordLibResponseBody extends TeaModel {
         public String libId;
 
         /**
+         * <p>Duplicate keyword count</p>
+         * 
          * <strong>example:</strong>
          * <p>118</p>
          */
         @NameInMap("RepeatCount")
         public Integer repeatCount;
 
+        /**
+         * <p>List of duplicate keywords</p>
+         */
         @NameInMap("RepeatKeywords")
         public java.util.List<String> repeatKeywords;
 
         /**
+         * <p>Successful keyword count</p>
+         * 
          * <strong>example:</strong>
          * <p>278</p>
          */
@@ -126,6 +156,8 @@ public class AddKeywordLibResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>The tips.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -133,6 +165,8 @@ public class AddKeywordLibResponseBody extends TeaModel {
         public String tips;
 
         /**
+         * <p>The total number of keywords.</p>
+         * 
          * <strong>example:</strong>
          * <p>529</p>
          */
@@ -227,10 +261,15 @@ public class AddKeywordLibResponseBody extends TeaModel {
     }
 
     public static class AddKeywordLibResponseBodyData extends TeaModel {
+        /**
+         * <p>Result.</p>
+         */
         @NameInMap("KeywordsResult")
         public AddKeywordLibResponseBodyDataKeywordsResult keywordsResult;
 
         /**
+         * <p>The id of the keyword library.</p>
+         * 
          * <strong>example:</strong>
          * <p>customxx_xxxx</p>
          */
@@ -238,6 +277,8 @@ public class AddKeywordLibResponseBody extends TeaModel {
         public String libId;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx-xxxxx</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryCallbackByPageRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class QueryCallbackByPageRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class QueryCallbackByPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

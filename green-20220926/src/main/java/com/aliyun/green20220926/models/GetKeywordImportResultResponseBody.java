@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetKeywordImportResultResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetKeywordImportResultResponseBodyData data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request, which can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,26 +93,38 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
 
     public static class GetKeywordImportResultResponseBodyData extends TeaModel {
         /**
+         * <p>Internationalization key.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("I18nKey")
         public String i18nKey;
 
+        /**
+         * <p>List of keywords with illegal length (too long or too short).</p>
+         */
         @NameInMap("IllegalLengthKeywords")
         public java.util.List<String> illegalLengthKeywords;
 
         /**
+         * <p>Invalid count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("InvalidCount")
         public Integer invalidCount;
 
+        /**
+         * <p>List of invalid keywords.</p>
+         */
         @NameInMap("InvalidKeywords")
         public java.util.List<String> invalidKeywords;
 
         /**
+         * <p>Keyword library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>customxx_xxx</p>
          */
@@ -109,6 +132,8 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         public String libId;
 
         /**
+         * <p>Task progress percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -116,16 +141,23 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         public Integer progress;
 
         /**
+         * <p>Repeat count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RepeatCount")
         public Integer repeatCount;
 
+        /**
+         * <p>List of repeated keywords.</p>
+         */
         @NameInMap("RepeatKeywords")
         public java.util.List<String> repeatKeywords;
 
         /**
+         * <p>Success count.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -133,6 +165,8 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>Tips message.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -140,6 +174,8 @@ public class GetKeywordImportResultResponseBody extends TeaModel {
         public String tips;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUploadInfoResponseBody extends TeaModel {
     /**
+     * <p>Upload authorization ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>LTAI5t9HM*****EXQmw3DVH</p>
      */
@@ -12,6 +14,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String accessId;
 
     /**
+     * <p>Error code, consistent with HTTP status.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>In seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>900</p>
      */
@@ -26,6 +32,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public Long expire;
 
     /**
+     * <p>Folder name.</p>
+     * 
      * <strong>example:</strong>
      * <p>image/upload/xxx</p>
      */
@@ -33,6 +41,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String folder;
 
     /**
+     * <p>Upload host.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com</a></p>
      */
@@ -40,6 +50,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String host;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -47,6 +59,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Key used for uploading files.</p>
+     * 
      * <strong>example:</strong>
      * <p>image/upload/xxx</p>
      */
@@ -54,16 +68,26 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String key;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <p>Used for front-end image upload.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>OSS upload file Policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -71,6 +95,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String policy;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -78,6 +104,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Upload signature information.</p>
+     * 
      * <strong>example:</strong>
      * <p>iyu7VHblYj+mEF9p46cdGOlNPAw=</p>
      */
@@ -85,6 +113,8 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String signature;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

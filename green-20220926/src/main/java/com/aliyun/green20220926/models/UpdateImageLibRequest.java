@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageLibRequest extends TeaModel {
+    /**
+     * <p>Comment information for the library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>备注</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>Exemption from review configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,16 +23,26 @@ public class UpdateImageLibRequest extends TeaModel {
     public Integer freeInspection;
 
     /**
+     * <p>Library ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
      */
     @NameInMap("LibId")
     public String libId;
 
+    /**
+     * <p>Library name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试图库</p>
+     */
     @NameInMap("LibName")
     public String libName;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

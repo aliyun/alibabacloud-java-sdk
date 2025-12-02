@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListImageLibResponseBody extends TeaModel {
     /**
+     * <p>Error code, consistent with HTTP status.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class ListImageLibResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>List of image library information.</p>
+     */
     @NameInMap("LibList")
     public java.util.List<ListImageLibResponseBodyLibList> libList;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class ListImageLibResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -36,6 +47,8 @@ public class ListImageLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -96,10 +109,18 @@ public class ListImageLibResponseBody extends TeaModel {
     }
 
     public static class ListImageLibResponseBodyLibList extends TeaModel {
+        /**
+         * <p>Comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>Exempt from inspection configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -107,6 +128,8 @@ public class ListImageLibResponseBody extends TeaModel {
         public Integer freeInspection;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
          */
@@ -114,6 +137,8 @@ public class ListImageLibResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
          */
@@ -121,6 +146,8 @@ public class ListImageLibResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Number of images in the library.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -128,12 +155,20 @@ public class ListImageLibResponseBody extends TeaModel {
         public Long imageNum;
 
         /**
+         * <p>Library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
          */
         @NameInMap("LibId")
         public String libId;
 
+        /**
+         * <p>Library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("LibName")
         public String libName;
 

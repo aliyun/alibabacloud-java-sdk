@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetKeywordLibResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data content.</p>
+     */
     @NameInMap("Data")
     public GetKeywordLibResponseBodyData data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetKeywordLibResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class GetKeywordLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +93,8 @@ public class GetKeywordLibResponseBody extends TeaModel {
 
     public static class GetKeywordLibResponseBodyData extends TeaModel {
         /**
+         * <p>Last modified time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-29 10:26:00</p>
          */
@@ -89,6 +102,8 @@ public class GetKeywordLibResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Number of keywords.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -96,16 +111,26 @@ public class GetKeywordLibResponseBody extends TeaModel {
         public String keywordCount;
 
         /**
+         * <p>Keyword library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>customxx_xxx</p>
          */
         @NameInMap("LibId")
         public String libId;
 
+        /**
+         * <p>Library name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试词库</p>
+         */
         @NameInMap("LibName")
         public String libName;
 
         /**
+         * <p>Primary account ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1825457112123838</p>
          */

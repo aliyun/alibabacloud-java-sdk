@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteKeywordLibRequest extends TeaModel {
     /**
+     * <p>Keyword library ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>customxx_xxxx</p>
      */
@@ -12,6 +14,8 @@ public class DeleteKeywordLibRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

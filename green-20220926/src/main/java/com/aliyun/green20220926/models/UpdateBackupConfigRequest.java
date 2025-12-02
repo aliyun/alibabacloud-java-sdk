@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateBackupConfigRequest extends TeaModel {
     /**
+     * <p>Evidence backup configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateBackupConfigRequest extends TeaModel {
     public String backupConfig;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -19,6 +23,8 @@ public class UpdateBackupConfigRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>video</p>
      */
@@ -26,6 +32,8 @@ public class UpdateBackupConfigRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>videoDetection</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFeatureConfigResponseBody extends TeaModel {
     /**
-     * <p>Status code.</p>
+     * <p>Success indicator.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Returned data</p>
+     * <p>query</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -23,7 +23,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>Status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Response message of this request.</p>
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>Returned data</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -50,7 +50,7 @@ public class ModifyFeatureConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success indicator.</p>
+     * <p>Response message of this request.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

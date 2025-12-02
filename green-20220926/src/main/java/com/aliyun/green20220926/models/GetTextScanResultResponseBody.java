@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTextScanResultResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetTextScanResultResponseBodyData data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,16 +93,26 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
     public static class GetTextScanResultResponseBodyDataItemsResult extends TeaModel {
         /**
+         * <p>Confidence score, ranging from 0 to 100, with two decimal places retained.</p>
+         * 
          * <strong>example:</strong>
          * <p>25.0</p>
          */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似色情内容</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Label.</p>
+         * 
          * <strong>example:</strong>
          * <p>political_n</p>
          */
@@ -130,13 +151,27 @@ public class GetTextScanResultResponseBody extends TeaModel {
     }
 
     public static class GetTextScanResultResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>Bailian Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("BailianRequestId")
         public String bailianRequestId;
 
+        /**
+         * <p>Content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试内容</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
+         * <p>Feedback information.</p>
+         * 
          * <strong>example:</strong>
          * <p>miss</p>
          */
@@ -144,6 +179,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String extFeedback;
 
         /**
+         * <p>Spare parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -151,6 +188,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public java.util.Map<String, ?> extra;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-11 14:21:36</p>
          */
@@ -158,6 +197,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>nonLabel</p>
          */
@@ -165,6 +206,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String labels;
 
         /**
+         * <p>Request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
@@ -172,19 +215,42 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>Request time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-11 14:21:36</p>
          */
         @NameInMap("RequestTime")
         public String requestTime;
 
+        /**
+         * <p>Detection results.</p>
+         */
         @NameInMap("Result")
         public java.util.List<GetTextScanResultResponseBodyDataItemsResult> result;
 
+        /**
+         * <p>Risk level, returned based on the set high and low risk scores. The return values include:</p>
+         * <ul>
+         * <li><p>high: High risk</p>
+         * </li>
+         * <li><p>medium: Medium risk</p>
+         * </li>
+         * <li><p>low: Low risk</p>
+         * </li>
+         * <li><p>none: No risk detected</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
+         * <p>Details of the result.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -192,6 +258,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String scanResult;
 
         /**
+         * <p>Score.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -199,6 +267,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>
          */
@@ -206,6 +276,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
+         * <p>Suggestion for handling.</p>
+         * 
          * <strong>example:</strong>
          * <p>review</p>
          */
@@ -213,6 +285,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>txtwkgb******AsYNXoJswy-1Aa1Qk</p>
          */
@@ -348,16 +422,23 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
     public static class GetTextScanResultResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>Data for the current page.</p>
+         */
         @NameInMap("Items")
         public java.util.List<GetTextScanResultResponseBodyDataItems> items;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -365,6 +446,8 @@ public class GetTextScanResultResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

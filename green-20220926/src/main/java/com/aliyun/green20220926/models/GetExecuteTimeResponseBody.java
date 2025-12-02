@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetExecuteTimeResponseBody extends TeaModel {
     /**
+     * <p>Returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>02:24:30</p>
      */
@@ -12,6 +14,8 @@ public class GetExecuteTimeResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */

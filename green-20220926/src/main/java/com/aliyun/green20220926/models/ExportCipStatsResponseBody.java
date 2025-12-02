@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportCipStatsResponseBody extends TeaModel {
     /**
+     * <p>Error code, consistent with HTTP status.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ExportCipStatsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Export result.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/portal_data/production/cipStat/text/statistics1720597246783.xlsx">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/portal_data/production/cipStat/text/statistics1720597246783.xlsx</a></p>
      */
@@ -19,6 +23,8 @@ public class ExportCipStatsResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ExportCipStatsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class ExportCipStatsResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -40,6 +50,8 @@ public class ExportCipStatsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

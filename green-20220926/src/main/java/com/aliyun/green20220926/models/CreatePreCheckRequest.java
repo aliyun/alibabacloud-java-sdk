@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePreCheckRequest extends TeaModel {
     /**
+     * <p>Buckets.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;Bucket\&quot;:\&quot;bucket01-test\&quot;,\&quot;Region\&quot;:\&quot;cn-beijing\&quot;}]</p>
      */
@@ -12,6 +14,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public String buckets;
 
     /**
+     * <p>Whether to deduplicate historical detected tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public Boolean distinctHistoryTasks;
 
     /**
+     * <p>Task end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-18 10:08:00</p>
      */
@@ -26,6 +32,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Whether it is a scheduled scan task.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +41,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public Boolean isInc;
 
     /**
+     * <p>Media type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public Integer mediaType;
 
     /**
+     * <p>Prefix filter type.</p>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -47,6 +59,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public String prefixFilterType;
 
     /**
+     * <p>Prefixes.</p>
+     * 
      * <strong>example:</strong>
      * <p>dir1,dir2</p>
      */
@@ -54,6 +68,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public String prefixFilters;
 
     /**
+     * <p>Priority.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -61,6 +77,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -68,6 +86,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Scan limit count.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -75,6 +95,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public Long scanLimit;
 
     /**
+     * <p>Whether to scan images without file extensions.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +104,8 @@ public class CreatePreCheckRequest extends TeaModel {
     public Boolean scanNoFileType;
 
     /**
+     * <p>Scan service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
@@ -89,12 +113,20 @@ public class CreatePreCheckRequest extends TeaModel {
     public String scanService;
 
     /**
+     * <p>Task start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-17 10:08:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>Task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图片任务 20240709101602004</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

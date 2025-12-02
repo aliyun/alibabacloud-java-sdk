@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetBackupConfigResponseBody extends TeaModel {
     /**
+     * <p>Backup scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public Integer backupMode;
 
     /**
+     * <p>File server OSS Bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>buckect_test</p>
      */
@@ -19,19 +23,39 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public String bucket;
 
     /**
+     * <p>Whether it is enabled. Values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled</li>
+     * <li><strong>false</strong>: Disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>Whether to enable backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("EnableBackup")
     public Boolean enableBackup;
 
+    /**
+     * <p>Whether to enable audio backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("EnableBackupVoice")
     public Boolean enableBackupVoice;
 
     /**
+     * <p>Expiration time in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -39,6 +63,8 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public Integer expireSeconds;
 
     /**
+     * <p>Modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-01-17 12:29:56</p>
      */
@@ -46,16 +72,26 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>Path.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun/template/</p>
      */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>Audio backup path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/back</p>
+     */
     @NameInMap("PathVoice")
     public String pathVoice;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -63,6 +99,8 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public String region;
 
     /**
+     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -70,6 +108,8 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -77,6 +117,8 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
@@ -84,7 +126,7 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>UID。</p>
+     * <p>UID.</p>
      * 
      * <strong>example:</strong>
      * <p>1772612608370735</p>

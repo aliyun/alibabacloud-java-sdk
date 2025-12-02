@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCallbackResponseBody extends TeaModel {
     /**
+     * <p>Return result.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class ModifyCallbackResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */

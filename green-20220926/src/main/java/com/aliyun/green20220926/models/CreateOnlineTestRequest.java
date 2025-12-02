@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOnlineTestRequest extends TeaModel {
     /**
+     * <p>Data ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateOnlineTestRequest extends TeaModel {
     public String dataId;
 
     /**
+     * <p>Resource Type</p>
+     * 
      * <strong>example:</strong>
      * <p>video</p>
      */
@@ -19,6 +23,8 @@ public class CreateOnlineTestRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Service Code</p>
+     * 
      * <strong>example:</strong>
      * <p>VideoModeration</p>
      */
@@ -26,6 +32,8 @@ public class CreateOnlineTestRequest extends TeaModel {
     public String serviceCode;
 
     /**
+     * <p>Detection URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></p>
      */

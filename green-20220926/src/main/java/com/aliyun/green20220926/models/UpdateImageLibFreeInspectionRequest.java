@@ -4,10 +4,15 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageLibFreeInspectionRequest extends TeaModel {
+    /**
+     * <p>Configuration.</p>
+     */
     @NameInMap("Config")
     public java.util.Map<String, Integer> config;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

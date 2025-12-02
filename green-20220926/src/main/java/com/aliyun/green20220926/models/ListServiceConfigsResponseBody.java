@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListServiceConfigsResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListServiceConfigsResponseBodyData> data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -81,6 +92,9 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListServiceConfigsResponseBodyDataCustomServiceConfRulesImageScanRule extends TeaModel {
+        /**
+         * <p>Image services.</p>
+         */
         @NameInMap("Services")
         public java.util.List<String> services;
 
@@ -100,6 +114,9 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListServiceConfigsResponseBodyDataCustomServiceConfRulesTextScanRule extends TeaModel {
+        /**
+         * <p>Text services.</p>
+         */
         @NameInMap("Services")
         public java.util.List<String> services;
 
@@ -119,16 +136,24 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListServiceConfigsResponseBodyDataCustomServiceConfRules extends TeaModel {
+        /**
+         * <p>Image review rule.</p>
+         */
         @NameInMap("ImageScanRule")
         public ListServiceConfigsResponseBodyDataCustomServiceConfRulesImageScanRule imageScanRule;
 
         /**
+         * <p>Index.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>Text review rule.</p>
+         */
         @NameInMap("TextScanRule")
         public ListServiceConfigsResponseBodyDataCustomServiceConfRulesTextScanRule textScanRule;
 
@@ -165,24 +190,41 @@ public class ListServiceConfigsResponseBody extends TeaModel {
 
     public static class ListServiceConfigsResponseBodyDataCustomServiceConf extends TeaModel {
         /**
+         * <p>Audio service.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio_media_detection</p>
          */
         @NameInMap("AudioService")
         public String audioService;
 
+        /**
+         * <p>Image services.</p>
+         */
         @NameInMap("ImageService")
         public java.util.List<String> imageService;
 
+        /**
+         * <p>Ignored word libraries.</p>
+         */
         @NameInMap("KeywordFilterLibs")
         public java.util.List<String> keywordFilterLibs;
 
+        /**
+         * <p>Hit word libraries.</p>
+         */
         @NameInMap("KeywordHitLibs")
         public java.util.List<String> keywordHitLibs;
 
+        /**
+         * <p>Service rules</p>
+         */
         @NameInMap("Rules")
         public java.util.List<ListServiceConfigsResponseBodyDataCustomServiceConfRules> rules;
 
+        /**
+         * <p>Hit similar text libraries.</p>
+         */
         @NameInMap("SimilarTextHitLibs")
         public java.util.List<String> similarTextHitLibs;
 
@@ -242,20 +284,33 @@ public class ListServiceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListServiceConfigsResponseBodyData extends TeaModel {
+        /**
+         * <p>Category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guard-scene</p>
+         */
         @NameInMap("Classify")
         public String classify;
 
         /**
+         * <p>Main service.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>
          */
         @NameInMap("CopyFrom")
         public String copyFrom;
 
+        /**
+         * <p>Service configuration.</p>
+         */
         @NameInMap("CustomServiceConf")
         public ListServiceConfigsResponseBodyDataCustomServiceConf customServiceConf;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-11 15:40:04</p>
          */
@@ -263,6 +318,8 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Options.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -270,6 +327,8 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         public java.util.Map<String, ?> option;
 
         /**
+         * <p>Resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -277,19 +336,35 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>Service description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>服务描述</p>
+         */
         @NameInMap("ServiceDesc")
         public String serviceDesc;
 
+        /**
+         * <p>Service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>服务名称</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
+         * <p>Service type.</p>
+         * 
          * <strong>example:</strong>
          * <p>plus</p>
          */
@@ -297,7 +372,7 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         public String serviceType;
 
         /**
-         * <p>UID。</p>
+         * <p>UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1674*****0071291</p>
@@ -305,6 +380,12 @@ public class ListServiceConfigsResponseBody extends TeaModel {
         @NameInMap("Uid")
         public String uid;
 
+        /**
+         * <p>Usage status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
+         */
         @NameInMap("UseStatus")
         public String useStatus;
 

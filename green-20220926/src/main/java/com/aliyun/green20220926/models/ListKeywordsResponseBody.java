@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListKeywordsResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public ListKeywordsResponseBodyData data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class ListKeywordsResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class ListKeywordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success flag.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +93,8 @@ public class ListKeywordsResponseBody extends TeaModel {
 
     public static class ListKeywordsResponseBodyDataItems extends TeaModel {
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-06-03 14:43:03</p>
          */
@@ -89,6 +102,8 @@ public class ListKeywordsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-06-03 14:43:03</p>
          */
@@ -96,6 +111,8 @@ public class ListKeywordsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>112</p>
          */
@@ -103,6 +120,8 @@ public class ListKeywordsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Keyword library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
          */
@@ -110,12 +129,20 @@ public class ListKeywordsResponseBody extends TeaModel {
         public String keywordLibId;
 
         /**
+         * <p>Keyword data ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4205334</p>
          */
         @NameInMap("KeywordMd5Id")
         public Long keywordMd5Id;
 
+        /**
+         * <p>Keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试词</p>
+         */
         @NameInMap("Word")
         public String word;
 
@@ -176,16 +203,23 @@ public class ListKeywordsResponseBody extends TeaModel {
 
     public static class ListKeywordsResponseBodyData extends TeaModel {
         /**
+         * <p>Current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>Data of the current page.</p>
+         */
         @NameInMap("Items")
         public java.util.List<ListKeywordsResponseBodyDataItems> items;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -193,6 +227,8 @@ public class ListKeywordsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */

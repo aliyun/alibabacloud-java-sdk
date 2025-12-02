@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteOnlineTestRequest extends TeaModel {
     /**
+     * <p>Region ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -12,6 +14,8 @@ public class DeleteOnlineTestRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */

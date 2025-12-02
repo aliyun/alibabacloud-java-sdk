@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportResultRequest extends TeaModel {
     /**
+     * <p>Page number of the query result. Default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ExportResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>End date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-24 10:01:55</p>
      */
@@ -19,6 +23,8 @@ public class ExportResultRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Number of items per page in the query result.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ExportResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
      */
@@ -33,19 +41,32 @@ public class ExportResultRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Sort field.</p>
+     */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
+    /**
+     * <p>Operation source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>disposal</p>
+     */
     @NameInMap("Source")
     public String source;
 
     /**
+     * <p>Start date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-11 09:00:19</p>
      */

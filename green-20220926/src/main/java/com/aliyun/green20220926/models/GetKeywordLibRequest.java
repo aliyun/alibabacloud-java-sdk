@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetKeywordLibRequest extends TeaModel {
     /**
+     * <p>Keyword library ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>customxx_xxx</p>
      */
@@ -12,6 +14,8 @@ public class GetKeywordLibRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteKeywordResponseBody extends TeaModel {
     /**
+     * <p>The returned status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteKeywordResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -19,6 +23,8 @@ public class DeleteKeywordResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Response message for this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class DeleteKeywordResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -33,6 +41,8 @@ public class DeleteKeywordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckStatRequest extends TeaModel {
     /**
+     * <p>Whether to query by month.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class GetOssCheckStatRequest extends TeaModel {
     public Boolean byMonth;
 
     /**
+     * <p>End date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-24 10:01:55</p>
      */
@@ -19,6 +23,8 @@ public class GetOssCheckStatRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>Parent task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>P_UNHBH</p>
      */
@@ -26,6 +32,8 @@ public class GetOssCheckStatRequest extends TeaModel {
     public String parentTaskId;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -33,6 +41,8 @@ public class GetOssCheckStatRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Start date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-11 09:00:19</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckResultDetailRequest extends TeaModel {
     /**
+     * <p>Bucket name.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-tmp</p>
      */
@@ -12,6 +14,8 @@ public class GetOssCheckResultDetailRequest extends TeaModel {
     public String bucket;
 
     /**
+     * <p>Media type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,26 @@ public class GetOssCheckResultDetailRequest extends TeaModel {
     public Integer mediaType;
 
     /**
+     * <p>Object name.</p>
+     * 
      * <strong>example:</strong>
      * <p>1748396909030.jpg</p>
      */
     @NameInMap("Object")
     public String object;
 
+    /**
+     * <p>Parent task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P_RZQ66T</p>
+     */
     @NameInMap("ParentTaskId")
     public String parentTaskId;
 
     /**
+     * <p>Query request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>62E97001-1255-50A9-8E1E-4FD05473D952</p>
      */
@@ -36,6 +50,8 @@ public class GetOssCheckResultDetailRequest extends TeaModel {
     public String queryRequestId;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -43,6 +59,8 @@ public class GetOssCheckResultDetailRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>audio_media_detection_01</p>
      */

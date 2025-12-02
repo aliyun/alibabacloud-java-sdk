@@ -4,10 +4,15 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class ListCallbackResponseBody extends TeaModel {
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCallbackResponseBodyData> data;
 
     /**
+     * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -37,6 +42,8 @@ public class ListCallbackResponseBody extends TeaModel {
 
     public static class ListCallbackResponseBodyData extends TeaModel {
         /**
+         * <p>Encryption algorithm.</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA256</p>
          */
@@ -44,6 +51,8 @@ public class ListCallbackResponseBody extends TeaModel {
         public String cryptType;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
          */
@@ -51,6 +60,8 @@ public class ListCallbackResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
          */
@@ -58,16 +69,26 @@ public class ListCallbackResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11234</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>回调通知</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Result scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>all</p>
          */
@@ -75,7 +96,7 @@ public class ListCallbackResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>Seed。</p>
+         * <p>Seed.</p>
          * 
          * <strong>example:</strong>
          * <p>cbupVnpBjkgjFxfINMHKkrHS-1zZPUm</p>
@@ -84,7 +105,7 @@ public class ListCallbackResponseBody extends TeaModel {
         public String seed;
 
         /**
-         * <p>UID。</p>
+         * <p>UID.</p>
          * 
          * <strong>example:</strong>
          * <p>16537*****831937</p>
@@ -93,6 +114,8 @@ public class ListCallbackResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>Callback URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://console.aliyun.com/">https://console.aliyun.com/</a></p>
          */

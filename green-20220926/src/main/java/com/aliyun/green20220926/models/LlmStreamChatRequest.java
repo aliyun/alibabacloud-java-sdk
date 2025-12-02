@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class LlmStreamChatRequest extends TeaModel {
+    /**
+     * <p>Conversation information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;content\&quot;:\&quot;你好\&quot;,\&quot;role\&quot;:\&quot;user\&quot;}]</p>
+     */
     @NameInMap("Messages")
     public Object messages;
 
     /**
+     * <p>Temperature value for the large model</p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */
@@ -15,12 +23,20 @@ public class LlmStreamChatRequest extends TeaModel {
     public Float temperature;
 
     /**
+     * <p>Top p parameter controlling the randomness of the large model\&quot;s output.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */
     @NameInMap("TopP")
     public Float topP;
 
+    /**
+     * <p>Type of conversation</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
+     */
     @NameInMap("Type")
     public String type;
 

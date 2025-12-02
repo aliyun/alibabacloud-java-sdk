@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetServiceConfResponseBody extends TeaModel {
+    /**
+     * <p>Classification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>guard-scene</p>
+     */
     @NameInMap("Classify")
     public String classify;
 
     /**
+     * <p>Error code, consistent with HTTP status.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +23,8 @@ public class GetServiceConfResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Service details</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,6 +32,8 @@ public class GetServiceConfResponseBody extends TeaModel {
     public java.util.Map<String, ?> customServiceConf;
 
     /**
+     * <p>Modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-01-17 12:29:56</p>
      */
@@ -29,6 +41,8 @@ public class GetServiceConfResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -36,6 +50,8 @@ public class GetServiceConfResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>Options.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -43,6 +59,8 @@ public class GetServiceConfResponseBody extends TeaModel {
     public java.util.Map<String, ?> option;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CF2815C-<strong><strong>-</strong></strong>-B52E-FF6E2****492</p>
      */
@@ -50,6 +68,8 @@ public class GetServiceConfResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -57,16 +77,26 @@ public class GetServiceConfResponseBody extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>Service type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plus</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
     /**
+     * <p>Success indicator</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -74,7 +104,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>UID。</p>
+     * <p>UID.</p>
      * 
      * <strong>example:</strong>
      * <p>17726*****370735</p>

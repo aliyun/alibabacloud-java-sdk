@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFeatureConfigRequest extends TeaModel {
     /**
-     * <p>Configuration, in JSON format</p>
+     * <p>query</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ModifyFeatureConfigRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>Label meaning</p>
+     * <p>query</p>
      * 
      * <strong>example:</strong>
      * <p>标签2</p>
@@ -23,7 +23,7 @@ public class ModifyFeatureConfigRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Label value, customer-defined</p>
+     * <p>query</p>
      * 
      * <strong>example:</strong>
      * <p><strong>config</strong></p>
@@ -32,7 +32,7 @@ public class ModifyFeatureConfigRequest extends TeaModel {
     public String field;
 
     /**
-     * <p>Region</p>
+     * <p>query</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -41,7 +41,7 @@ public class ModifyFeatureConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource type.</p>
+     * <p>query</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -50,7 +50,7 @@ public class ModifyFeatureConfigRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Service code.</p>
+     * <p>System-defined parameter. Value: <strong>ModifyFeatureConfig</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>llm_query_moderation</p>
@@ -59,7 +59,7 @@ public class ModifyFeatureConfigRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Type</p>
+     * <p>query</p>
      * 
      * <strong>example:</strong>
      * <p>custom_llm_template</p>

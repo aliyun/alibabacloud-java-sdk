@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListKeywordLibsResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListKeywordLibsResponseBodyData> data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class ListKeywordLibsResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class ListKeywordLibsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +93,8 @@ public class ListKeywordLibsResponseBody extends TeaModel {
 
     public static class ListKeywordLibsResponseBodyData extends TeaModel {
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-30 16:30:29</p>
          */
@@ -89,6 +102,8 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Number of keywords.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -96,20 +111,34 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         public String keywordCount;
 
         /**
+         * <p>Library ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom_xxxxx</p>
          */
         @NameInMap("LibId")
         public String libId;
 
+        /**
+         * <p>Library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("LibName")
         public String libName;
 
+        /**
+         * <p>Service codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service1,service2</p>
+         */
         @NameInMap("ServiceCodes")
         public String serviceCodes;
 
         /**
-         * <p>UID。</p>
+         * <p>UID.</p>
          * 
          * <strong>example:</strong>
          * <p>19964*****086772</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckResultDetailResponseBody extends TeaModel {
     /**
+     * <p>Error code, consistent with HTTP status.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Detailed data.</p>
+     */
     @NameInMap("Data")
     public GetOssCheckResultDetailResponseBodyData data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>Backend-assigned ID used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>62E97001-1255-50A9-8E1E-4FD05473D952</p>
      */
@@ -29,6 +38,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,12 +92,30 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
     }
 
     public static class GetOssCheckResultDetailResponseBodyDataLabelDetails extends TeaModel {
+        /**
+         * <p>Confidence score, 0 to 100, retained to two decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>Label description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>涉政</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>politics</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -122,12 +151,30 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
     }
 
     public static class GetOssCheckResultDetailResponseBodyDataLabelDetails2 extends TeaModel {
+        /**
+         * <p>Confidence score, 0 to 100, retained to two decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>Label description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>涉政</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>politics</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -164,6 +211,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
 
     public static class GetOssCheckResultDetailResponseBodyDataScanServiceInfos extends TeaModel {
         /**
+         * <p>Main service.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio_media_detection</p>
          */
@@ -171,6 +220,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String copyFrom;
 
         /**
+         * <p>Whether to copy.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -178,12 +229,20 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public Boolean isCopy;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio_media_detection_01</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>Service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>服务名称</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -228,6 +287,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
 
     public static class GetOssCheckResultDetailResponseBodyData extends TeaModel {
         /**
+         * <p>Bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-tmp</p>
          */
@@ -235,6 +296,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String bucket;
 
         /**
+         * <p>Error code, consistent with HTTP status.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -242,6 +305,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>Audio and video detection type.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio</p>
          */
@@ -249,6 +314,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String contentType;
 
         /**
+         * <p>Primary service.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio_media_detection</p>
          */
@@ -256,6 +323,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String copyFrom;
 
         /**
+         * <p>Freeze status.</p>
+         * 
          * <strong>example:</strong>
          * <p>UNFREEZED</p>
          */
@@ -263,6 +332,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String freezeStatus;
 
         /**
+         * <p>Freeze type.</p>
+         * 
          * <strong>example:</strong>
          * <p>COPY</p>
          */
@@ -270,6 +341,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String freezeType;
 
         /**
+         * <p>Image URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></p>
          */
@@ -277,6 +350,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>Whether to copy.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -284,34 +359,68 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public Boolean isCopy;
 
         /**
+         * <p>Job name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dhT20X2310</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>Labels.</p>
+         */
         @NameInMap("LabelDetails")
         public java.util.List<GetOssCheckResultDetailResponseBodyDataLabelDetails> labelDetails;
 
+        /**
+         * <p>Labels.</p>
+         */
         @NameInMap("LabelDetails2")
         public java.util.List<GetOssCheckResultDetailResponseBodyDataLabelDetails2> labelDetails2;
 
+        /**
+         * <p>Image labels.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        /**
+         * <p>Text labels.</p>
+         */
         @NameInMap("Labels2")
         public java.util.List<String> labels2;
 
+        /**
+         * <p>Manual handling status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FREEZE</p>
+         */
         @NameInMap("ManualFreezeAction")
         public String manualFreezeAction;
 
+        /**
+         * <p>Handling time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-09 12:00:00</p>
+         */
         @NameInMap("ManualOperateTime")
         public String manualOperateTime;
 
+        /**
+         * <p>Handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("ManualOperator")
         public String manualOperator;
 
         /**
+         * <p>File MD5.</p>
+         * 
          * <strong>example:</strong>
          * <p>f6e2e1946f06310c8a0cc443a05819f3</p>
          */
@@ -319,6 +428,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String md5;
 
         /**
+         * <p>Further description of the error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -326,6 +437,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>Object name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1748396909030.jpg</p>
          */
@@ -333,6 +446,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String object;
 
         /**
+         * <p>Image risk level</p>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */
@@ -340,6 +455,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
+         * <p>Overall risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>low</p>
          */
@@ -347,6 +464,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String riskLevel0;
 
         /**
+         * <p>Text risk level</p>
+         * 
          * <strong>example:</strong>
          * <p>medium</p>
          */
@@ -354,26 +473,41 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String riskLevel2;
 
         /**
+         * <p>Detailed scan results.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("ScanResult")
         public String scanResult;
 
+        /**
+         * <p>Detection service information</p>
+         */
         @NameInMap("ScanServiceInfos")
         public java.util.List<GetOssCheckResultDetailResponseBodyDataScanServiceInfos> scanServiceInfos;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio_media_detection_01</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>Service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>服务名称</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>P_Z7OLMN</p>
          */
@@ -381,6 +515,8 @@ public class GetOssCheckResultDetailResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>
          */

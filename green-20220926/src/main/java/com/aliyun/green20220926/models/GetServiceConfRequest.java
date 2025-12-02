@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceConfRequest extends TeaModel {
     /**
+     * <p>Query default configuration</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -12,6 +14,8 @@ public class GetServiceConfRequest extends TeaModel {
     public Boolean byDefault;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -19,6 +23,8 @@ public class GetServiceConfRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -26,6 +32,8 @@ public class GetServiceConfRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Audit scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>pornographic</p>
      */
@@ -33,6 +41,8 @@ public class GetServiceConfRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */

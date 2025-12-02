@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetUserBuyStatusRequest extends TeaModel {
+    /**
+     * <p>Commodity code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lvwang_public_cn</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddImageLibResponseBody extends TeaModel {
     /**
+     * <p>Return code. A return of 200 represents success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AddImageLibResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -19,6 +23,8 @@ public class AddImageLibResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class AddImageLibResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class AddImageLibResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -40,6 +50,8 @@ public class AddImageLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

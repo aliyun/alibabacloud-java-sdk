@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetServiceConfigResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetServiceConfigResponseBodyData data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetServiceConfigResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class GetServiceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -81,15 +92,40 @@ public class GetServiceConfigResponseBody extends TeaModel {
     }
 
     public static class GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig extends TeaModel {
+        /**
+         * <p>Risk levels.</p>
+         */
         @NameInMap("AuditRiskLevels")
         public java.util.List<String> auditRiskLevels;
 
+        /**
+         * <p>Callback notification ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("CallbackId")
         public Long callbackId;
 
+        /**
+         * <p>Whether to enable. Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled</li>
+         * <li><strong>false</strong>: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>Manual review service</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imageManualCheck</p>
+         */
         @NameInMap("ManualService")
         public String manualService;
 
@@ -133,15 +169,27 @@ public class GetServiceConfigResponseBody extends TeaModel {
     }
 
     public static class GetServiceConfigResponseBodyDataCustomServiceConf extends TeaModel {
+        /**
+         * <p>Ignore word libraries.</p>
+         */
         @NameInMap("KeywordFilterLibs")
         public java.util.List<String> keywordFilterLibs;
 
+        /**
+         * <p>Hit word libraries.</p>
+         */
         @NameInMap("KeywordHitLibs")
         public java.util.List<String> keywordHitLibs;
 
+        /**
+         * <p>Human-machine review configuration.</p>
+         */
         @NameInMap("ManualMachineConfig")
         public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig manualMachineConfig;
 
+        /**
+         * <p>Hit similar text libraries.</p>
+         */
         @NameInMap("SimilarTextHitLibs")
         public java.util.List<String> similarTextHitLibs;
 
@@ -185,10 +233,15 @@ public class GetServiceConfigResponseBody extends TeaModel {
     }
 
     public static class GetServiceConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Custom service details</p>
+         */
         @NameInMap("CustomServiceConf")
         public GetServiceConfigResponseBodyDataCustomServiceConf customServiceConf;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-06 03:07:44</p>
          */
@@ -196,6 +249,8 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -203,6 +258,8 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>Service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>
          */
@@ -210,7 +267,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>UID。</p>
+         * <p>UID.</p>
          * 
          * <strong>example:</strong>
          * <p>165379****31937</p>

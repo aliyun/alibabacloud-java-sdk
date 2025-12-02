@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetUserBuyStatusResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public GetUserBuyStatusResponseBodyData data;
 
     /**
+     * <p>Further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Success indicator.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,7 +93,7 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
 
     public static class GetUserBuyStatusResponseBodyData extends TeaModel {
         /**
-         * <p>Bid。</p>
+         * <p>Bid.</p>
          * 
          * <strong>example:</strong>
          * <p>26842</p>
@@ -91,6 +102,8 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         public Long bid;
 
         /**
+         * <p>Indicates whether the product has been activated on Alibaba Cloud.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -98,12 +111,23 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         public Boolean buy;
 
         /**
+         * <p>Indicates whether there is an outstanding payment.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
         @NameInMap("Indebt")
         public Boolean indebt;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>Tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
@@ -134,6 +158,14 @@ public class GetUserBuyStatusResponseBody extends TeaModel {
         }
         public Boolean getIndebt() {
             return this.indebt;
+        }
+
+        public GetUserBuyStatusResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public GetUserBuyStatusResponseBodyData setTag(String tag) {

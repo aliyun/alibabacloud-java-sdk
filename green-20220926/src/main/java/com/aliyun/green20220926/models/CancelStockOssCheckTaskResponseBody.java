@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelStockOssCheckTaskResponseBody extends TeaModel {
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class CancelStockOssCheckTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
