@@ -105,6 +105,9 @@ public class CreateDifyInstanceRequest extends TeaModel {
     @NameInMap("NatGatewayOption")
     public String natGatewayOption;
 
+    @NameInMap("OnlyIntranet")
+    public Boolean onlyIntranet;
+
     @NameInMap("OssPath")
     public String ossPath;
 
@@ -447,6 +450,14 @@ public class CreateDifyInstanceRequest extends TeaModel {
     }
     public String getNatGatewayOption() {
         return this.natGatewayOption;
+    }
+
+    public CreateDifyInstanceRequest setOnlyIntranet(Boolean onlyIntranet) {
+        this.onlyIntranet = onlyIntranet;
+        return this;
+    }
+    public Boolean getOnlyIntranet() {
+        return this.onlyIntranet;
     }
 
     public CreateDifyInstanceRequest setOssPath(String ossPath) {

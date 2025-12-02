@@ -20,6 +20,13 @@ public class ChatWithDesensitizeSSERequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>256</p>
+     */
+    @NameInMap("Dimensions")
+    public Integer dimensions;
+
+    /**
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("EnableCodeInterpreter")
@@ -39,8 +46,19 @@ public class ChatWithDesensitizeSSERequest extends TeaModel {
     @NameInMap("EnableThinking")
     public Boolean enableThinking;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeUsage")
     public Boolean includeUsage;
+
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("Input")
+    public String input;
 
     /**
      * <p>This parameter is required.</p>
@@ -206,6 +224,14 @@ public class ChatWithDesensitizeSSERequest extends TeaModel {
         return this.desensitizationRule;
     }
 
+    public ChatWithDesensitizeSSERequest setDimensions(Integer dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    public Integer getDimensions() {
+        return this.dimensions;
+    }
+
     public ChatWithDesensitizeSSERequest setEnableCodeInterpreter(Boolean enableCodeInterpreter) {
         this.enableCodeInterpreter = enableCodeInterpreter;
         return this;
@@ -236,6 +262,14 @@ public class ChatWithDesensitizeSSERequest extends TeaModel {
     }
     public Boolean getIncludeUsage() {
         return this.includeUsage;
+    }
+
+    public ChatWithDesensitizeSSERequest setInput(String input) {
+        this.input = input;
+        return this;
+    }
+    public String getInput() {
+        return this.input;
     }
 
     public ChatWithDesensitizeSSERequest setInstanceId(Long instanceId) {
