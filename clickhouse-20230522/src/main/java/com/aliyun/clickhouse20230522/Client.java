@@ -343,6 +343,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BackupSetId", request.backupSetId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }

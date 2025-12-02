@@ -13,6 +13,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("BackupSetId")
     public String backupSetId;
 
+    @NameInMap("Category")
+    public String category;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
@@ -184,6 +187,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    public CreateDBInstanceRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public CreateDBInstanceRequest setClientToken(String clientToken) {
