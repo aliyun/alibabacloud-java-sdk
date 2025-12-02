@@ -8947,12 +8947,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the execution records of data quality scans in a project.</p>
      * 
-     * @param request ListDataQualityScanRunsRequest
+     * @param tmpReq ListDataQualityScanRunsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataQualityScanRunsResponse
      */
-    public ListDataQualityScanRunsResponse listDataQualityScanRunsWithOptions(ListDataQualityScanRunsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListDataQualityScanRunsResponse listDataQualityScanRunsWithOptions(ListDataQualityScanRunsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListDataQualityScanRunsShrinkRequest request = new ListDataQualityScanRunsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.createTimeFrom)) {
             query.put("CreateTimeFrom", request.createTimeFrom);
@@ -8964,6 +8970,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataQualityScanId)) {
             query.put("DataQualityScanId", request.dataQualityScanId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {

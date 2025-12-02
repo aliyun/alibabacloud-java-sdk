@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class ListDataQualityScanRunsRequest extends TeaModel {
+public class ListDataQualityScanRunsShrinkRequest extends TeaModel {
     /**
      * <p>The earliest time when the data quality monitor starts to run.</p>
      * 
@@ -32,7 +32,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     public Long dataQualityScanId;
 
     @NameInMap("Filter")
-    public java.util.Map<String, ?> filter;
+    public String filterShrink;
 
     /**
      * <p>The page number of the results. Default value: 1.</p>
@@ -91,12 +91,12 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    public static ListDataQualityScanRunsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDataQualityScanRunsRequest self = new ListDataQualityScanRunsRequest();
+    public static ListDataQualityScanRunsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDataQualityScanRunsShrinkRequest self = new ListDataQualityScanRunsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDataQualityScanRunsRequest setCreateTimeFrom(Long createTimeFrom) {
+    public ListDataQualityScanRunsShrinkRequest setCreateTimeFrom(Long createTimeFrom) {
         this.createTimeFrom = createTimeFrom;
         return this;
     }
@@ -104,7 +104,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
         return this.createTimeFrom;
     }
 
-    public ListDataQualityScanRunsRequest setCreateTimeTo(Long createTimeTo) {
+    public ListDataQualityScanRunsShrinkRequest setCreateTimeTo(Long createTimeTo) {
         this.createTimeTo = createTimeTo;
         return this;
     }
@@ -112,7 +112,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
         return this.createTimeTo;
     }
 
-    public ListDataQualityScanRunsRequest setDataQualityScanId(Long dataQualityScanId) {
+    public ListDataQualityScanRunsShrinkRequest setDataQualityScanId(Long dataQualityScanId) {
         this.dataQualityScanId = dataQualityScanId;
         return this;
     }
@@ -120,15 +120,15 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
         return this.dataQualityScanId;
     }
 
-    public ListDataQualityScanRunsRequest setFilter(java.util.Map<String, ?> filter) {
-        this.filter = filter;
+    public ListDataQualityScanRunsShrinkRequest setFilterShrink(String filterShrink) {
+        this.filterShrink = filterShrink;
         return this;
     }
-    public java.util.Map<String, ?> getFilter() {
-        return this.filter;
+    public String getFilterShrink() {
+        return this.filterShrink;
     }
 
-    public ListDataQualityScanRunsRequest setPageNumber(Integer pageNumber) {
+    public ListDataQualityScanRunsShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -136,7 +136,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListDataQualityScanRunsRequest setPageSize(Integer pageSize) {
+    public ListDataQualityScanRunsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -144,7 +144,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDataQualityScanRunsRequest setProjectId(Long projectId) {
+    public ListDataQualityScanRunsShrinkRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
@@ -152,7 +152,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
         return this.projectId;
     }
 
-    public ListDataQualityScanRunsRequest setSortBy(String sortBy) {
+    public ListDataQualityScanRunsShrinkRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
@@ -160,7 +160,7 @@ public class ListDataQualityScanRunsRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListDataQualityScanRunsRequest setStatus(String status) {
+    public ListDataQualityScanRunsShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }
