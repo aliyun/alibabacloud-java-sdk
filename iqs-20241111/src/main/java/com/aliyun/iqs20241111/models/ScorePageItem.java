@@ -13,6 +13,9 @@ public class ScorePageItem extends TeaModel {
     @NameInMap("cardType")
     public String cardType;
 
+    @NameInMap("correlationTag")
+    public Integer correlationTag;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -152,6 +155,14 @@ public class ScorePageItem extends TeaModel {
     }
     public String getCardType() {
         return this.cardType;
+    }
+
+    public ScorePageItem setCorrelationTag(Integer correlationTag) {
+        this.correlationTag = correlationTag;
+        return this;
+    }
+    public Integer getCorrelationTag() {
+        return this.correlationTag;
     }
 
     public ScorePageItem setDisplayLink(String displayLink) {

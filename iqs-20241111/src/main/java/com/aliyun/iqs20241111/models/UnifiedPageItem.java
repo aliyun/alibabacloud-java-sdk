@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedPageItem extends TeaModel {
+    @NameInMap("correlationTag")
+    public Integer correlationTag;
+
     @NameInMap("hostAuthorityScore")
     public Double hostAuthorityScore;
 
@@ -53,6 +56,14 @@ public class UnifiedPageItem extends TeaModel {
     public static UnifiedPageItem build(java.util.Map<String, ?> map) throws Exception {
         UnifiedPageItem self = new UnifiedPageItem();
         return TeaModel.build(map, self);
+    }
+
+    public UnifiedPageItem setCorrelationTag(Integer correlationTag) {
+        this.correlationTag = correlationTag;
+        return this;
+    }
+    public Integer getCorrelationTag() {
+        return this.correlationTag;
     }
 
     public UnifiedPageItem setHostAuthorityScore(Double hostAuthorityScore) {
