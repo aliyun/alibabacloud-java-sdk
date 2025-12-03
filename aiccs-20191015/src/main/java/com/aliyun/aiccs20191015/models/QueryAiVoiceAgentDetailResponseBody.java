@@ -196,6 +196,41 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
     public static class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("BackgroundEnabled")
+        public Boolean backgroundEnabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("BackgroundSound")
+        public Long backgroundSound;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("BackgroundVolume")
+        public Long backgroundVolume;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("MixingEnabled")
+        public Boolean mixingEnabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("MixingTemplate")
+        public Long mixingTemplate;
+
+        /**
+         * <strong>example:</strong>
          * <p>34</p>
          */
         @NameInMap("TtsSpeed")
@@ -215,9 +250,63 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         @NameInMap("TtsVolume")
         public Long ttsVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("VoiceCode")
+        public String voiceCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("VoiceType")
+        public String voiceType;
+
         public static QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig build(java.util.Map<String, ?> map) throws Exception {
             QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig self = new QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig();
             return TeaModel.build(map, self);
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig setBackgroundEnabled(Boolean backgroundEnabled) {
+            this.backgroundEnabled = backgroundEnabled;
+            return this;
+        }
+        public Boolean getBackgroundEnabled() {
+            return this.backgroundEnabled;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig setBackgroundSound(Long backgroundSound) {
+            this.backgroundSound = backgroundSound;
+            return this;
+        }
+        public Long getBackgroundSound() {
+            return this.backgroundSound;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig setBackgroundVolume(Long backgroundVolume) {
+            this.backgroundVolume = backgroundVolume;
+            return this;
+        }
+        public Long getBackgroundVolume() {
+            return this.backgroundVolume;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig setMixingEnabled(Boolean mixingEnabled) {
+            this.mixingEnabled = mixingEnabled;
+            return this;
+        }
+        public Boolean getMixingEnabled() {
+            return this.mixingEnabled;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig setMixingTemplate(Long mixingTemplate) {
+            this.mixingTemplate = mixingTemplate;
+            return this;
+        }
+        public Long getMixingTemplate() {
+            return this.mixingTemplate;
         }
 
         public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig setTtsSpeed(Long ttsSpeed) {
@@ -242,6 +331,22 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         }
         public Long getTtsVolume() {
             return this.ttsVolume;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig setVoiceCode(String voiceCode) {
+            this.voiceCode = voiceCode;
+            return this;
+        }
+        public String getVoiceCode() {
+            return this.voiceCode;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig setVoiceType(String voiceType) {
+            this.voiceType = voiceType;
+            return this;
+        }
+        public String getVoiceType() {
+            return this.voiceType;
         }
 
     }
@@ -774,6 +879,13 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("PhoneTagSource")
+        public String phoneTagSource;
+
+        /**
+         * <strong>example:</strong>
          * <p>ENUM</p>
          */
         @NameInMap("PhoneTagType")
@@ -830,6 +942,14 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         }
         public Boolean getPhoneTagRequired() {
             return this.phoneTagRequired;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigPhoneTagConfig setPhoneTagSource(String phoneTagSource) {
+            this.phoneTagSource = phoneTagSource;
+            return this;
+        }
+        public String getPhoneTagSource() {
+            return this.phoneTagSource;
         }
 
         public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigPhoneTagConfig setPhoneTagType(String phoneTagType) {
@@ -945,6 +1065,20 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
          */
         @NameInMap("Prologue")
         public String prologue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
+        @NameInMap("RecordingFile")
+        public String recordingFile;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("StartWordType")
+        public Long startWordType;
 
         /**
          * <strong>example:</strong>
@@ -1122,6 +1256,22 @@ public class QueryAiVoiceAgentDetailResponseBody extends TeaModel {
         }
         public String getPrologue() {
             return this.prologue;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfig setRecordingFile(String recordingFile) {
+            this.recordingFile = recordingFile;
+            return this;
+        }
+        public String getRecordingFile() {
+            return this.recordingFile;
+        }
+
+        public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfig setStartWordType(Long startWordType) {
+            this.startWordType = startWordType;
+            return this;
+        }
+        public Long getStartWordType() {
+            return this.startWordType;
         }
 
         public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfig setSysRole(String sysRole) {

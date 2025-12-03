@@ -196,6 +196,13 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>示例值示例值</p>
          */
+        @NameInMap("Source")
+        public String source;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -234,6 +241,14 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         }
         public Boolean getRequired() {
             return this.required;
+        }
+
+        public QueryConversationDetailInfoResponseBodyDataVariables setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public QueryConversationDetailInfoResponseBodyDataVariables setValue(String value) {
