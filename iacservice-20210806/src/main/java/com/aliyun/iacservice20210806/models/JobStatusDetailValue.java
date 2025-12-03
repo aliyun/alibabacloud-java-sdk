@@ -21,6 +21,9 @@ public class JobStatusDetailValue extends TeaModel {
     @NameInMap("timeStamps")
     public String timeStamps;
 
+    @NameInMap("errorMessage")
+    public String errorMessage;
+
     public static JobStatusDetailValue build(java.util.Map<String, ?> map) throws Exception {
         JobStatusDetailValue self = new JobStatusDetailValue();
         return TeaModel.build(map, self);
@@ -48,6 +51,14 @@ public class JobStatusDetailValue extends TeaModel {
     }
     public String getTimeStamps() {
         return this.timeStamps;
+    }
+
+    public JobStatusDetailValue setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }
