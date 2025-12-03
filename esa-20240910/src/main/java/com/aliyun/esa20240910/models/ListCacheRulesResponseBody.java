@@ -272,6 +272,23 @@ public class ListCacheRulesResponseBody extends TeaModel {
         public String includeHeader;
 
         /**
+         * <strong>example:</strong>
+         * <p>ignore</p>
+         */
+        @NameInMap("PostBodyCacheKey")
+        public String postBodyCacheKey;
+
+        @NameInMap("PostBodySizeLimit")
+        public String postBodySizeLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
+        @NameInMap("PostCache")
+        public String postCache;
+
+        /**
          * <p>The query strings to be reserved or excluded. Multiple values are supported, separated by spaces.</p>
          * 
          * <strong>example:</strong>
@@ -536,6 +553,30 @@ public class ListCacheRulesResponseBody extends TeaModel {
         }
         public String getIncludeHeader() {
             return this.includeHeader;
+        }
+
+        public ListCacheRulesResponseBodyConfigs setPostBodyCacheKey(String postBodyCacheKey) {
+            this.postBodyCacheKey = postBodyCacheKey;
+            return this;
+        }
+        public String getPostBodyCacheKey() {
+            return this.postBodyCacheKey;
+        }
+
+        public ListCacheRulesResponseBodyConfigs setPostBodySizeLimit(String postBodySizeLimit) {
+            this.postBodySizeLimit = postBodySizeLimit;
+            return this;
+        }
+        public String getPostBodySizeLimit() {
+            return this.postBodySizeLimit;
+        }
+
+        public ListCacheRulesResponseBodyConfigs setPostCache(String postCache) {
+            this.postCache = postCache;
+            return this;
+        }
+        public String getPostCache() {
+            return this.postCache;
         }
 
         public ListCacheRulesResponseBodyConfigs setQueryString(String queryString) {

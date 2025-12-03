@@ -167,6 +167,23 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String includeHeader;
 
     /**
+     * <strong>example:</strong>
+     * <p>ignore</p>
+     */
+    @NameInMap("PostBodyCacheKey")
+    public String postBodyCacheKey;
+
+    @NameInMap("PostBodySizeLimit")
+    public String postBodySizeLimit;
+
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
+    @NameInMap("PostCache")
+    public String postCache;
+
+    /**
      * <p>The query strings to be retained or deleted, supporting multiple values separated by spaces.</p>
      * 
      * <strong>example:</strong>
@@ -440,6 +457,30 @@ public class GetCacheRuleResponseBody extends TeaModel {
     }
     public String getIncludeHeader() {
         return this.includeHeader;
+    }
+
+    public GetCacheRuleResponseBody setPostBodyCacheKey(String postBodyCacheKey) {
+        this.postBodyCacheKey = postBodyCacheKey;
+        return this;
+    }
+    public String getPostBodyCacheKey() {
+        return this.postBodyCacheKey;
+    }
+
+    public GetCacheRuleResponseBody setPostBodySizeLimit(String postBodySizeLimit) {
+        this.postBodySizeLimit = postBodySizeLimit;
+        return this;
+    }
+    public String getPostBodySizeLimit() {
+        return this.postBodySizeLimit;
+    }
+
+    public GetCacheRuleResponseBody setPostCache(String postCache) {
+        this.postCache = postCache;
+        return this;
+    }
+    public String getPostCache() {
+        return this.postCache;
     }
 
     public GetCacheRuleResponseBody setQueryString(String queryString) {

@@ -1423,6 +1423,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IncludeHeader", request.includeHeader);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.postBodyCacheKey)) {
+            query.put("PostBodyCacheKey", request.postBodyCacheKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postBodySizeLimit)) {
+            query.put("PostBodySizeLimit", request.postBodySizeLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postCache)) {
+            query.put("PostCache", request.postCache);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.queryString)) {
             query.put("QueryString", request.queryString);
         }
@@ -16183,6 +16195,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeHeader)) {
             query.put("IncludeHeader", request.includeHeader);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postBodyCacheKey)) {
+            query.put("PostBodyCacheKey", request.postBodyCacheKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postBodySizeLimit)) {
+            query.put("PostBodySizeLimit", request.postBodySizeLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postCache)) {
+            query.put("PostCache", request.postCache);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.queryString)) {
