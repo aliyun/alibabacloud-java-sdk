@@ -623,6 +623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccountId", request.accountId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("Date", request.date);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             query.put("Id", request.id);
         }

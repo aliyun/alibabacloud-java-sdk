@@ -4,6 +4,9 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
+    @NameInMap("Date")
+    public String date;
+
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
@@ -31,6 +34,14 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
     public static ListEvaluationMetricDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEvaluationMetricDetailsResponseBody self = new ListEvaluationMetricDetailsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListEvaluationMetricDetailsResponseBody setDate(String date) {
+        this.date = date;
+        return this;
+    }
+    public String getDate() {
+        return this.date;
     }
 
     public ListEvaluationMetricDetailsResponseBody setNextToken(String nextToken) {

@@ -1,3 +1,8 @@
+2025-12-03 Version: 0.1.10
+- Update API ListEvaluationMetricDetails: add request parameters Date.
+- Update API ListEvaluationMetricDetails: add response parameters Body.Date.
+
+
 2025-11-28 Version: 0.1.9
 - Update API ListEvaluationMetadata: add request parameters TopicCode.
 - Update API ListEvaluationMetadata: add response parameters Body.EvaluationMetadata.$.Metadata.$.TopicCode.

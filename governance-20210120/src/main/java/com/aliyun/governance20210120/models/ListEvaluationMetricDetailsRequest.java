@@ -13,6 +13,9 @@ public class ListEvaluationMetricDetailsRequest extends TeaModel {
     @NameInMap("AccountId")
     public Long accountId;
 
+    @NameInMap("Date")
+    public String date;
+
     /**
      * <p>The ID of the check item.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/2841889.html">ListEvaluationMetadata</a> operation to query the ID of the check item.</p>
@@ -67,6 +70,14 @@ public class ListEvaluationMetricDetailsRequest extends TeaModel {
     }
     public Long getAccountId() {
         return this.accountId;
+    }
+
+    public ListEvaluationMetricDetailsRequest setDate(String date) {
+        this.date = date;
+        return this;
+    }
+    public String getDate() {
+        return this.date;
     }
 
     public ListEvaluationMetricDetailsRequest setId(String id) {
