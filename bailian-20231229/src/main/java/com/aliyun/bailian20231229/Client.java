@@ -669,6 +669,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("metaExtractColumns", request.metaExtractColumnsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineCommercialCu)) {
+            query.put("pipelineCommercialCu", request.pipelineCommercialCu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineCommercialType)) {
+            query.put("pipelineCommercialType", request.pipelineCommercialType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineRetrieveRateLimitStrategy)) {
+            query.put("pipelineRetrieveRateLimitStrategy", request.pipelineRetrieveRateLimitStrategy);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))

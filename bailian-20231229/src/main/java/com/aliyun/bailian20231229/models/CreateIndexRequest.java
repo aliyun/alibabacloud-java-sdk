@@ -258,6 +258,27 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("metaExtractColumns")
     public java.util.List<CreateIndexRequestMetaExtractColumns> metaExtractColumns;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("pipelineCommercialCu")
+    public Integer pipelineCommercialCu;
+
+    /**
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
+    @NameInMap("pipelineCommercialType")
+    public String pipelineCommercialType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>downgrade</p>
+     */
+    @NameInMap("pipelineRetrieveRateLimitStrategy")
+    public String pipelineRetrieveRateLimitStrategy;
+
     public static CreateIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIndexRequest self = new CreateIndexRequest();
         return TeaModel.build(map, self);
@@ -445,6 +466,30 @@ public class CreateIndexRequest extends TeaModel {
     }
     public java.util.List<CreateIndexRequestMetaExtractColumns> getMetaExtractColumns() {
         return this.metaExtractColumns;
+    }
+
+    public CreateIndexRequest setPipelineCommercialCu(Integer pipelineCommercialCu) {
+        this.pipelineCommercialCu = pipelineCommercialCu;
+        return this;
+    }
+    public Integer getPipelineCommercialCu() {
+        return this.pipelineCommercialCu;
+    }
+
+    public CreateIndexRequest setPipelineCommercialType(String pipelineCommercialType) {
+        this.pipelineCommercialType = pipelineCommercialType;
+        return this;
+    }
+    public String getPipelineCommercialType() {
+        return this.pipelineCommercialType;
+    }
+
+    public CreateIndexRequest setPipelineRetrieveRateLimitStrategy(String pipelineRetrieveRateLimitStrategy) {
+        this.pipelineRetrieveRateLimitStrategy = pipelineRetrieveRateLimitStrategy;
+        return this;
+    }
+    public String getPipelineRetrieveRateLimitStrategy() {
+        return this.pipelineRetrieveRateLimitStrategy;
     }
 
     public static class CreateIndexRequestColumns extends TeaModel {

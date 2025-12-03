@@ -258,6 +258,27 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("metaExtractColumns")
     public String metaExtractColumnsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("pipelineCommercialCu")
+    public Integer pipelineCommercialCu;
+
+    /**
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
+    @NameInMap("pipelineCommercialType")
+    public String pipelineCommercialType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>downgrade</p>
+     */
+    @NameInMap("pipelineRetrieveRateLimitStrategy")
+    public String pipelineRetrieveRateLimitStrategy;
+
     public static CreateIndexShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIndexShrinkRequest self = new CreateIndexShrinkRequest();
         return TeaModel.build(map, self);
@@ -445,6 +466,30 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getMetaExtractColumnsShrink() {
         return this.metaExtractColumnsShrink;
+    }
+
+    public CreateIndexShrinkRequest setPipelineCommercialCu(Integer pipelineCommercialCu) {
+        this.pipelineCommercialCu = pipelineCommercialCu;
+        return this;
+    }
+    public Integer getPipelineCommercialCu() {
+        return this.pipelineCommercialCu;
+    }
+
+    public CreateIndexShrinkRequest setPipelineCommercialType(String pipelineCommercialType) {
+        this.pipelineCommercialType = pipelineCommercialType;
+        return this;
+    }
+    public String getPipelineCommercialType() {
+        return this.pipelineCommercialType;
+    }
+
+    public CreateIndexShrinkRequest setPipelineRetrieveRateLimitStrategy(String pipelineRetrieveRateLimitStrategy) {
+        this.pipelineRetrieveRateLimitStrategy = pipelineRetrieveRateLimitStrategy;
+        return this;
+    }
+    public String getPipelineRetrieveRateLimitStrategy() {
+        return this.pipelineRetrieveRateLimitStrategy;
     }
 
 }
