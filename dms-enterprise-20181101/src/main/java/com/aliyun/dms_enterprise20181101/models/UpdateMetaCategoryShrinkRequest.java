@@ -3,7 +3,7 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateMetaCategoryRequest extends TeaModel {
+public class UpdateMetaCategoryShrinkRequest extends TeaModel {
     /**
      * <p>The category ID.</p>
      * <p>This parameter is required.</p>
@@ -24,7 +24,7 @@ public class UpdateMetaCategoryRequest extends TeaModel {
     public String name;
 
     @NameInMap("OwnerIds")
-    public java.util.List<Long> ownerIds;
+    public String ownerIdsShrink;
 
     @NameInMap("Remark")
     public String remark;
@@ -38,12 +38,12 @@ public class UpdateMetaCategoryRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
-    public static UpdateMetaCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateMetaCategoryRequest self = new UpdateMetaCategoryRequest();
+    public static UpdateMetaCategoryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateMetaCategoryShrinkRequest self = new UpdateMetaCategoryShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMetaCategoryRequest setCategoryId(Long categoryId) {
+    public UpdateMetaCategoryShrinkRequest setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -51,7 +51,7 @@ public class UpdateMetaCategoryRequest extends TeaModel {
         return this.categoryId;
     }
 
-    public UpdateMetaCategoryRequest setDescription(String description) {
+    public UpdateMetaCategoryShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -59,7 +59,7 @@ public class UpdateMetaCategoryRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateMetaCategoryRequest setName(String name) {
+    public UpdateMetaCategoryShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -67,15 +67,15 @@ public class UpdateMetaCategoryRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateMetaCategoryRequest setOwnerIds(java.util.List<Long> ownerIds) {
-        this.ownerIds = ownerIds;
+    public UpdateMetaCategoryShrinkRequest setOwnerIdsShrink(String ownerIdsShrink) {
+        this.ownerIdsShrink = ownerIdsShrink;
         return this;
     }
-    public java.util.List<Long> getOwnerIds() {
-        return this.ownerIds;
+    public String getOwnerIdsShrink() {
+        return this.ownerIdsShrink;
     }
 
-    public UpdateMetaCategoryRequest setRemark(String remark) {
+    public UpdateMetaCategoryShrinkRequest setRemark(String remark) {
         this.remark = remark;
         return this;
     }
@@ -83,7 +83,7 @@ public class UpdateMetaCategoryRequest extends TeaModel {
         return this.remark;
     }
 
-    public UpdateMetaCategoryRequest setTid(Long tid) {
+    public UpdateMetaCategoryShrinkRequest setTid(Long tid) {
         this.tid = tid;
         return this;
     }

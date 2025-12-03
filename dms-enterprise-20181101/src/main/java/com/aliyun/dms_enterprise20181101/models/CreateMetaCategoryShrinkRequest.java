@@ -3,7 +3,7 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class CreateMetaCategoryRequest extends TeaModel {
+public class CreateMetaCategoryShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
@@ -18,7 +18,7 @@ public class CreateMetaCategoryRequest extends TeaModel {
     public String name;
 
     @NameInMap("OwnerIds")
-    public java.util.List<Long> ownerIds;
+    public String ownerIdsShrink;
 
     /**
      * <p>The ID of the parent category. The new category is created under this parent category. If this value is left empty, the new category is of the first level.</p>
@@ -41,12 +41,12 @@ public class CreateMetaCategoryRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
-    public static CreateMetaCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateMetaCategoryRequest self = new CreateMetaCategoryRequest();
+    public static CreateMetaCategoryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateMetaCategoryShrinkRequest self = new CreateMetaCategoryShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateMetaCategoryRequest setDescription(String description) {
+    public CreateMetaCategoryShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -54,7 +54,7 @@ public class CreateMetaCategoryRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateMetaCategoryRequest setName(String name) {
+    public CreateMetaCategoryShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -62,15 +62,15 @@ public class CreateMetaCategoryRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateMetaCategoryRequest setOwnerIds(java.util.List<Long> ownerIds) {
-        this.ownerIds = ownerIds;
+    public CreateMetaCategoryShrinkRequest setOwnerIdsShrink(String ownerIdsShrink) {
+        this.ownerIdsShrink = ownerIdsShrink;
         return this;
     }
-    public java.util.List<Long> getOwnerIds() {
-        return this.ownerIds;
+    public String getOwnerIdsShrink() {
+        return this.ownerIdsShrink;
     }
 
-    public CreateMetaCategoryRequest setParentCategoryId(Long parentCategoryId) {
+    public CreateMetaCategoryShrinkRequest setParentCategoryId(Long parentCategoryId) {
         this.parentCategoryId = parentCategoryId;
         return this;
     }
@@ -78,7 +78,7 @@ public class CreateMetaCategoryRequest extends TeaModel {
         return this.parentCategoryId;
     }
 
-    public CreateMetaCategoryRequest setRemark(String remark) {
+    public CreateMetaCategoryShrinkRequest setRemark(String remark) {
         this.remark = remark;
         return this;
     }
@@ -86,7 +86,7 @@ public class CreateMetaCategoryRequest extends TeaModel {
         return this.remark;
     }
 
-    public CreateMetaCategoryRequest setTid(Long tid) {
+    public CreateMetaCategoryShrinkRequest setTid(Long tid) {
         this.tid = tid;
         return this;
     }

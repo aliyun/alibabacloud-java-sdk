@@ -3393,19 +3393,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Create Asset Category</p>
      * 
-     * @param request CreateMetaCategoryRequest
+     * @param tmpReq CreateMetaCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMetaCategoryResponse
      */
-    public CreateMetaCategoryResponse createMetaCategoryWithOptions(CreateMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateMetaCategoryResponse createMetaCategoryWithOptions(CreateMetaCategoryRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMetaCategoryShrinkRequest request = new CreateMetaCategoryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ownerIds)) {
+            request.ownerIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ownerIds, "OwnerIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerIdsShrink)) {
+            query.put("OwnerIds", request.ownerIdsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.parentCategoryId)) {
             query.put("ParentCategoryId", request.parentCategoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
@@ -18203,19 +18221,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates asset category information.</p>
      * 
-     * @param request UpdateMetaCategoryRequest
+     * @param tmpReq UpdateMetaCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMetaCategoryResponse
      */
-    public UpdateMetaCategoryResponse updateMetaCategoryWithOptions(UpdateMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateMetaCategoryResponse updateMetaCategoryWithOptions(UpdateMetaCategoryRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMetaCategoryShrinkRequest request = new UpdateMetaCategoryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ownerIds)) {
+            request.ownerIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ownerIds, "OwnerIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
             query.put("CategoryId", request.categoryId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerIdsShrink)) {
+            query.put("OwnerIds", request.ownerIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
