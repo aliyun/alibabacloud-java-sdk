@@ -6,57 +6,88 @@ import com.aliyun.tea.*;
 public class GetProxyByTypeResponseBody extends TeaModel {
     /**
      * <p>allowRetry</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
     /**
      * <p>appName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>voldemort-aliyun-com</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>dynamicCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>dynamicMessage</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>errorCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>errorMsg</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success. Request Success.</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
      * <p>httpStatusCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>118.113.245.10:3128</p>
+     */
     @NameInMap("Module")
     public String module;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEC1731F-0DA9-5E7D-AE53-7E4D76201C48</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

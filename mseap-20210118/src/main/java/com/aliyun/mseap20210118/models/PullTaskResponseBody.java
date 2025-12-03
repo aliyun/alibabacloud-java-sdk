@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class PullTaskResponseBody extends TeaModel {
     /**
      * <p>allowRetry</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
     /**
      * <p>appName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>voldemort-aliyun-com</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>dynamicCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>dynamicMessage</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>errorCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -42,6 +57,9 @@ public class PullTaskResponseBody extends TeaModel {
 
     /**
      * <p>httpStatusCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -51,12 +69,18 @@ public class PullTaskResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9831C9A6-3423-52C2-B0E5-5AE01D92C097</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -150,21 +174,41 @@ public class PullTaskResponseBody extends TeaModel {
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1649470201045</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutTaskId")
         public String outTaskId;
 
         @NameInMap("PrincipalKey")
         public String principalKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;result\&quot;:\&quot;SUCCESS\&quot;,\&quot;message\&quot;:\&quot;null\&quot;,\&quot;taskId\&quot;:\&quot;d8800bab-88b6-4c60-9e4f-ed38dbbdd9b3\&quot;}</p>
+         */
         @NameInMap("TaskData")
         public String taskData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>704614</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PATENT_QUERY</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

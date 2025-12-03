@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class SetRedisValueResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public SetRedisValueResponseBody body;
 
     public static SetRedisValueResponse build(java.util.Map<String, ?> map) throws Exception {

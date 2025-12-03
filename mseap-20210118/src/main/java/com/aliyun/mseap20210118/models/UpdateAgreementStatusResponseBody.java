@@ -4,6 +4,10 @@ package com.aliyun.mseap20210118.models;
 import com.aliyun.tea.*;
 
 public class UpdateAgreementStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6BDB1964-A6E9-5946-89A4-523D35645BB6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

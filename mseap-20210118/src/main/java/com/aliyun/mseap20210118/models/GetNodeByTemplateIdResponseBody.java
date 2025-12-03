@@ -6,60 +6,90 @@ import com.aliyun.tea.*;
 public class GetNodeByTemplateIdResponseBody extends TeaModel {
     /**
      * <p>allowRetry</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
     /**
      * <p>appName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qdhxgcagent01</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>dynamicCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>dynamicMessage</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>errorCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>errorMsg</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zxdfghjklasdfghjkl</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
      * <p>httpStatusCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>module</p>
+     * 
+     * <strong>example:</strong>
+     * <p>220,116</p>
      */
     @NameInMap("Module")
     public String module;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53D045B1-466F-5165-B3BB-42E36F02BA86</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

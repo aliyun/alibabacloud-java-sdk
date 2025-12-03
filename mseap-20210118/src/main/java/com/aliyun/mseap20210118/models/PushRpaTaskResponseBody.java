@@ -6,57 +6,88 @@ import com.aliyun.tea.*;
 public class PushRpaTaskResponseBody extends TeaModel {
     /**
      * <p>allowRetry</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
     /**
      * <p>appName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>itl-material</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>dynamicCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>dynamicMessage</p>
+     * 
+     * <strong>example:</strong>
+     * <p>can not find env: lazada-sg-pre</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>errorCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>errorMsg</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111111111111111111111</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
      * <p>httpStatusCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>58.23.71.83:3128</p>
+     */
     @NameInMap("Module")
     public String module;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECE5E7EF-6898-5E24-97A1-B96C73BDE26C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

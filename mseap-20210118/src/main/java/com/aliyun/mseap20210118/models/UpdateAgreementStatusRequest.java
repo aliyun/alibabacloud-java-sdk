@@ -4,6 +4,10 @@ package com.aliyun.mseap20210118.models;
 import com.aliyun.tea.*;
 
 public class UpdateAgreementStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10aa40008e081ad7b1fb50bffc3a70b1</p>
+     */
     @NameInMap("AgreementCode")
     public String agreementCode;
 

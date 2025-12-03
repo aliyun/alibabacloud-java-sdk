@@ -6,57 +6,88 @@ import com.aliyun.tea.*;
 public class CallbackTaskResponseBody extends TeaModel {
     /**
      * <p>allowRetry</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
     /**
      * <p>appName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bohai-web-app</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>dynamicCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>dynamicMessage</p>
+     * 
+     * <strong>example:</strong>
+     * <p>can not find env: vpc-sg-pre</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>errorCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>errorMsg</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success. Request Success.</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
      * <p>httpStatusCode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Module")
     public Boolean module;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>56B009EB-AAA5-52C9-B05F-AF425E3885E8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

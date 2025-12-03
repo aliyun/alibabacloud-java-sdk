@@ -6,24 +6,27 @@ import com.aliyun.tea.*;
 public class PullTaskRequest extends TeaModel {
     /**
      * <p>aliyunKp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AliyunKp")
     public String aliyunKp;
 
     /**
-     * <p>aliyunKpLong</p>
-     */
-    @NameInMap("AliyunKpLong")
-    public Long aliyunKpLong;
-
-    /**
      * <p>apiType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>openAPI</p>
      */
     @NameInMap("ApiType")
     public String apiType;
 
     /**
      * <p>bid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26842</p>
      */
     @NameInMap("Bid")
     public String bid;
@@ -32,154 +35,119 @@ public class PullTaskRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>callerParentId</p>
-     */
-    @NameInMap("CallerParentId")
-    public Long callerParentId;
-
-    /**
-     * <p>callerSecurityTransport</p>
-     */
-    @NameInMap("CallerSecurityTransport")
-    public Boolean callerSecurityTransport;
-
-    /**
-     * <p>callerType</p>
-     */
-    @NameInMap("CallerType")
-    public String callerType;
-
-    /**
-     * <p>clientIp</p>
-     */
-    @NameInMap("ClientIp")
-    public String clientIp;
-
-    /**
      * <p>lang</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>mfaPresent</p>
+     * <strong>example:</strong>
+     * <p>1672369049358</p>
      */
-    @NameInMap("MfaPresent")
-    public Boolean mfaPresent;
-
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>originalRequest</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OriginalRequest")
     public String originalRequest;
-
-    /**
-     * <p>popAction</p>
-     */
-    @NameInMap("PopAction")
-    public String popAction;
 
     @NameInMap("PrincipalKey")
     public String principalKey;
 
     /**
-     * <p>proxyCallerIp</p>
-     */
-    @NameInMap("ProxyCallerIp")
-    public String proxyCallerIp;
-
-    /**
-     * <p>proxyCallerSecurityTransport</p>
-     */
-    @NameInMap("ProxyCallerSecurityTransport")
-    public Boolean proxyCallerSecurityTransport;
-
-    /**
-     * <p>proxyTrustTransportInfo</p>
-     */
-    @NameInMap("ProxyTrustTransportInfo")
-    public Boolean proxyTrustTransportInfo;
-
-    /**
-     * <p>requestId</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    /**
-     * <p>stsTokenCallerBid</p>
-     */
-    @NameInMap("StsTokenCallerBid")
-    public Long stsTokenCallerBid;
-
-    /**
-     * <p>stsTokenCallerUid</p>
-     */
-    @NameInMap("StsTokenCallerUid")
-    public Long stsTokenCallerUid;
-
-    /**
      * <p>taskType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PATENT_CHECK</p>
      */
     @NameInMap("TaskType")
     public String taskType;
 
     /**
      * <p>userAccessKeyId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
     /**
      * <p>userBid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserBid")
     public String userBid;
 
     /**
      * <p>userCallerParentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserCallerParentId")
     public Long userCallerParentId;
 
     /**
      * <p>userCallerSecurityTransport</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserCallerSecurityTransport")
     public Boolean userCallerSecurityTransport;
 
     /**
      * <p>userCallerType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserCallerType")
     public String userCallerType;
 
     /**
      * <p>userClientIp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
      * <p>userKp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserKp")
     public String userKp;
 
     /**
      * <p>userMfaPresent</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserMfaPresent")
     public Boolean userMfaPresent;
 
     /**
      * <p>userSecurityToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserSecurityToken")
     public String userSecurityToken;
@@ -195,14 +163,6 @@ public class PullTaskRequest extends TeaModel {
     }
     public String getAliyunKp() {
         return this.aliyunKp;
-    }
-
-    public PullTaskRequest setAliyunKpLong(Long aliyunKpLong) {
-        this.aliyunKpLong = aliyunKpLong;
-        return this;
-    }
-    public Long getAliyunKpLong() {
-        return this.aliyunKpLong;
     }
 
     public PullTaskRequest setApiType(String apiType) {
@@ -229,52 +189,12 @@ public class PullTaskRequest extends TeaModel {
         return this.bizCode;
     }
 
-    public PullTaskRequest setCallerParentId(Long callerParentId) {
-        this.callerParentId = callerParentId;
-        return this;
-    }
-    public Long getCallerParentId() {
-        return this.callerParentId;
-    }
-
-    public PullTaskRequest setCallerSecurityTransport(Boolean callerSecurityTransport) {
-        this.callerSecurityTransport = callerSecurityTransport;
-        return this;
-    }
-    public Boolean getCallerSecurityTransport() {
-        return this.callerSecurityTransport;
-    }
-
-    public PullTaskRequest setCallerType(String callerType) {
-        this.callerType = callerType;
-        return this;
-    }
-    public String getCallerType() {
-        return this.callerType;
-    }
-
-    public PullTaskRequest setClientIp(String clientIp) {
-        this.clientIp = clientIp;
-        return this;
-    }
-    public String getClientIp() {
-        return this.clientIp;
-    }
-
     public PullTaskRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public PullTaskRequest setMfaPresent(Boolean mfaPresent) {
-        this.mfaPresent = mfaPresent;
-        return this;
-    }
-    public Boolean getMfaPresent() {
-        return this.mfaPresent;
     }
 
     public PullTaskRequest setOrderId(String orderId) {
@@ -293,76 +213,12 @@ public class PullTaskRequest extends TeaModel {
         return this.originalRequest;
     }
 
-    public PullTaskRequest setPopAction(String popAction) {
-        this.popAction = popAction;
-        return this;
-    }
-    public String getPopAction() {
-        return this.popAction;
-    }
-
     public PullTaskRequest setPrincipalKey(String principalKey) {
         this.principalKey = principalKey;
         return this;
     }
     public String getPrincipalKey() {
         return this.principalKey;
-    }
-
-    public PullTaskRequest setProxyCallerIp(String proxyCallerIp) {
-        this.proxyCallerIp = proxyCallerIp;
-        return this;
-    }
-    public String getProxyCallerIp() {
-        return this.proxyCallerIp;
-    }
-
-    public PullTaskRequest setProxyCallerSecurityTransport(Boolean proxyCallerSecurityTransport) {
-        this.proxyCallerSecurityTransport = proxyCallerSecurityTransport;
-        return this;
-    }
-    public Boolean getProxyCallerSecurityTransport() {
-        return this.proxyCallerSecurityTransport;
-    }
-
-    public PullTaskRequest setProxyTrustTransportInfo(Boolean proxyTrustTransportInfo) {
-        this.proxyTrustTransportInfo = proxyTrustTransportInfo;
-        return this;
-    }
-    public Boolean getProxyTrustTransportInfo() {
-        return this.proxyTrustTransportInfo;
-    }
-
-    public PullTaskRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public PullTaskRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public PullTaskRequest setStsTokenCallerBid(Long stsTokenCallerBid) {
-        this.stsTokenCallerBid = stsTokenCallerBid;
-        return this;
-    }
-    public Long getStsTokenCallerBid() {
-        return this.stsTokenCallerBid;
-    }
-
-    public PullTaskRequest setStsTokenCallerUid(Long stsTokenCallerUid) {
-        this.stsTokenCallerUid = stsTokenCallerUid;
-        return this;
-    }
-    public Long getStsTokenCallerUid() {
-        return this.stsTokenCallerUid;
     }
 
     public PullTaskRequest setTaskType(String taskType) {

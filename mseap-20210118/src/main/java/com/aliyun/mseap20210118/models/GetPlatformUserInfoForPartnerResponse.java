@@ -3,25 +3,22 @@ package com.aliyun.mseap20210118.models;
 
 import com.aliyun.tea.*;
 
-public class BusinessLicenseOcrResponse extends TeaModel {
+public class GetPlatformUserInfoForPartnerResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public BusinessLicenseOcrResponseBody body;
+    public GetPlatformUserInfoForPartnerResponseBody body;
 
-    public static BusinessLicenseOcrResponse build(java.util.Map<String, ?> map) throws Exception {
-        BusinessLicenseOcrResponse self = new BusinessLicenseOcrResponse();
+    public static GetPlatformUserInfoForPartnerResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetPlatformUserInfoForPartnerResponse self = new GetPlatformUserInfoForPartnerResponse();
         return TeaModel.build(map, self);
     }
 
-    public BusinessLicenseOcrResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetPlatformUserInfoForPartnerResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class BusinessLicenseOcrResponse extends TeaModel {
         return this.headers;
     }
 
-    public BusinessLicenseOcrResponse setStatusCode(Integer statusCode) {
+    public GetPlatformUserInfoForPartnerResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class BusinessLicenseOcrResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public BusinessLicenseOcrResponse setBody(BusinessLicenseOcrResponseBody body) {
+    public GetPlatformUserInfoForPartnerResponse setBody(GetPlatformUserInfoForPartnerResponseBody body) {
         this.body = body;
         return this;
     }
-    public BusinessLicenseOcrResponseBody getBody() {
+    public GetPlatformUserInfoForPartnerResponseBody getBody() {
         return this.body;
     }
 

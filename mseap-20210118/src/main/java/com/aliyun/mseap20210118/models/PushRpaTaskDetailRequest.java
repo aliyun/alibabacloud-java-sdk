@@ -6,90 +6,81 @@ import com.aliyun.tea.*;
 public class PushRpaTaskDetailRequest extends TeaModel {
     /**
      * <p>aliyunKp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AliyunKp")
     public String aliyunKp;
 
     /**
-     * <p>aliyunKpLong</p>
-     */
-    @NameInMap("AliyunKpLong")
-    public Long aliyunKpLong;
-
-    /**
      * <p>apiType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MPC</p>
      */
     @NameInMap("ApiType")
     public String apiType;
 
     /**
      * <p>bid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26842</p>
      */
     @NameInMap("Bid")
     public String bid;
 
     /**
-     * <p>callerParentId</p>
-     */
-    @NameInMap("CallerParentId")
-    public Long callerParentId;
-
-    /**
-     * <p>callerSecurityTransport</p>
-     */
-    @NameInMap("CallerSecurityTransport")
-    public Boolean callerSecurityTransport;
-
-    /**
-     * <p>callerType</p>
-     */
-    @NameInMap("CallerType")
-    public String callerType;
-
-    /**
-     * <p>clientIp</p>
-     */
-    @NameInMap("ClientIp")
-    public String clientIp;
-
-    /**
      * <p>inputData</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://wssq.sbj.cnipa.gov.cn:9080/tmsve/wssqsy_getCayzDl.xhtml">http://wssq.sbj.cnipa.gov.cn:9080/tmsve/wssqsy_getCayzDl.xhtml</a></p>
      */
     @NameInMap("InputData")
     public String inputData;
 
     /**
      * <p>inputHtml</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InputHtml")
     public String inputHtml;
 
     /**
      * <p>inputScreenshot</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InputScreenshot")
     public String inputScreenshot;
 
     /**
      * <p>lang</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>mfaPresent</p>
-     */
-    @NameInMap("MfaPresent")
-    public Boolean mfaPresent;
-
-    /**
      * <p>modelDetailId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("ModelDetailId")
     public Long modelDetailId;
 
     /**
      * <p>originalRequest</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OriginalRequest")
     public String originalRequest;
@@ -102,129 +93,108 @@ public class PushRpaTaskDetailRequest extends TeaModel {
 
     /**
      * <p>outputHtml</p>
+     * 
+     * <strong>example:</strong>
+     * <div class=\\"photobox\\" id=\\"Layer3\\" style=\\"visibility: visible
      */
     @NameInMap("OutputHtml")
     public String outputHtml;
 
     /**
      * <p>outputScreenshot</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://dbu-nap-p-test.oss-cn-beijing.aliyuncs.com/202301/20230110/5782089/1673334129101-d111874e-f181-4d1c-8edc-83e789975329.jpg?Expires=1675926129&OSSAccessKeyId=hObpgEXoca42qH3V&Signature=------">http://dbu-nap-p-test.oss-cn-beijing.aliyuncs.com/202301/20230110/5782089/1673334129101-d111874e-f181-4d1c-8edc-83e789975329.jpg?Expires=1675926129&amp;OSSAccessKeyId=hObpgEXoca42qH3V&amp;Signature=------</a></p>
      */
     @NameInMap("OutputScreenshot")
     public String outputScreenshot;
 
     /**
-     * <p>popAction</p>
-     */
-    @NameInMap("PopAction")
-    public String popAction;
-
-    /**
-     * <p>proxyCallerIp</p>
-     */
-    @NameInMap("ProxyCallerIp")
-    public String proxyCallerIp;
-
-    /**
-     * <p>proxyCallerSecurityTransport</p>
-     */
-    @NameInMap("ProxyCallerSecurityTransport")
-    public Boolean proxyCallerSecurityTransport;
-
-    /**
-     * <p>proxyTrustTransportInfo</p>
-     */
-    @NameInMap("ProxyTrustTransportInfo")
-    public Boolean proxyTrustTransportInfo;
-
-    /**
-     * <p>requestId</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    /**
      * <p>status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
-     * <p>stsTokenCallerBid</p>
-     */
-    @NameInMap("StsTokenCallerBid")
-    public Long stsTokenCallerBid;
-
-    /**
-     * <p>stsTokenCallerUid</p>
-     */
-    @NameInMap("StsTokenCallerUid")
-    public Long stsTokenCallerUid;
-
-    /**
      * <p>taskDetailId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TaskDetailId")
     public Long taskDetailId;
 
     /**
      * <p>taskId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5596654</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
      * <p>userAccessKeyId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
     /**
      * <p>userBid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserBid")
     public String userBid;
 
     /**
      * <p>userCallerParentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserCallerParentId")
     public Long userCallerParentId;
 
     /**
-     * <p>userCallerSecurityTransport</p>
-     */
-    @NameInMap("UserCallerSecurityTransport")
-    public Boolean userCallerSecurityTransport;
-
-    /**
      * <p>userCallerType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserCallerType")
     public String userCallerType;
 
     /**
      * <p>userClientIp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
      * <p>userKp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserKp")
     public String userKp;
 
     /**
-     * <p>userMfaPresent</p>
-     */
-    @NameInMap("UserMfaPresent")
-    public Boolean userMfaPresent;
-
-    /**
      * <p>userSecurityToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserSecurityToken")
     public String userSecurityToken;
@@ -242,14 +212,6 @@ public class PushRpaTaskDetailRequest extends TeaModel {
         return this.aliyunKp;
     }
 
-    public PushRpaTaskDetailRequest setAliyunKpLong(Long aliyunKpLong) {
-        this.aliyunKpLong = aliyunKpLong;
-        return this;
-    }
-    public Long getAliyunKpLong() {
-        return this.aliyunKpLong;
-    }
-
     public PushRpaTaskDetailRequest setApiType(String apiType) {
         this.apiType = apiType;
         return this;
@@ -264,38 +226,6 @@ public class PushRpaTaskDetailRequest extends TeaModel {
     }
     public String getBid() {
         return this.bid;
-    }
-
-    public PushRpaTaskDetailRequest setCallerParentId(Long callerParentId) {
-        this.callerParentId = callerParentId;
-        return this;
-    }
-    public Long getCallerParentId() {
-        return this.callerParentId;
-    }
-
-    public PushRpaTaskDetailRequest setCallerSecurityTransport(Boolean callerSecurityTransport) {
-        this.callerSecurityTransport = callerSecurityTransport;
-        return this;
-    }
-    public Boolean getCallerSecurityTransport() {
-        return this.callerSecurityTransport;
-    }
-
-    public PushRpaTaskDetailRequest setCallerType(String callerType) {
-        this.callerType = callerType;
-        return this;
-    }
-    public String getCallerType() {
-        return this.callerType;
-    }
-
-    public PushRpaTaskDetailRequest setClientIp(String clientIp) {
-        this.clientIp = clientIp;
-        return this;
-    }
-    public String getClientIp() {
-        return this.clientIp;
     }
 
     public PushRpaTaskDetailRequest setInputData(String inputData) {
@@ -328,14 +258,6 @@ public class PushRpaTaskDetailRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public PushRpaTaskDetailRequest setMfaPresent(Boolean mfaPresent) {
-        this.mfaPresent = mfaPresent;
-        return this;
-    }
-    public Boolean getMfaPresent() {
-        return this.mfaPresent;
     }
 
     public PushRpaTaskDetailRequest setModelDetailId(Long modelDetailId) {
@@ -378,76 +300,12 @@ public class PushRpaTaskDetailRequest extends TeaModel {
         return this.outputScreenshot;
     }
 
-    public PushRpaTaskDetailRequest setPopAction(String popAction) {
-        this.popAction = popAction;
-        return this;
-    }
-    public String getPopAction() {
-        return this.popAction;
-    }
-
-    public PushRpaTaskDetailRequest setProxyCallerIp(String proxyCallerIp) {
-        this.proxyCallerIp = proxyCallerIp;
-        return this;
-    }
-    public String getProxyCallerIp() {
-        return this.proxyCallerIp;
-    }
-
-    public PushRpaTaskDetailRequest setProxyCallerSecurityTransport(Boolean proxyCallerSecurityTransport) {
-        this.proxyCallerSecurityTransport = proxyCallerSecurityTransport;
-        return this;
-    }
-    public Boolean getProxyCallerSecurityTransport() {
-        return this.proxyCallerSecurityTransport;
-    }
-
-    public PushRpaTaskDetailRequest setProxyTrustTransportInfo(Boolean proxyTrustTransportInfo) {
-        this.proxyTrustTransportInfo = proxyTrustTransportInfo;
-        return this;
-    }
-    public Boolean getProxyTrustTransportInfo() {
-        return this.proxyTrustTransportInfo;
-    }
-
-    public PushRpaTaskDetailRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public PushRpaTaskDetailRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public PushRpaTaskDetailRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
     public Integer getStatus() {
         return this.status;
-    }
-
-    public PushRpaTaskDetailRequest setStsTokenCallerBid(Long stsTokenCallerBid) {
-        this.stsTokenCallerBid = stsTokenCallerBid;
-        return this;
-    }
-    public Long getStsTokenCallerBid() {
-        return this.stsTokenCallerBid;
-    }
-
-    public PushRpaTaskDetailRequest setStsTokenCallerUid(Long stsTokenCallerUid) {
-        this.stsTokenCallerUid = stsTokenCallerUid;
-        return this;
-    }
-    public Long getStsTokenCallerUid() {
-        return this.stsTokenCallerUid;
     }
 
     public PushRpaTaskDetailRequest setTaskDetailId(Long taskDetailId) {
@@ -490,14 +348,6 @@ public class PushRpaTaskDetailRequest extends TeaModel {
         return this.userCallerParentId;
     }
 
-    public PushRpaTaskDetailRequest setUserCallerSecurityTransport(Boolean userCallerSecurityTransport) {
-        this.userCallerSecurityTransport = userCallerSecurityTransport;
-        return this;
-    }
-    public Boolean getUserCallerSecurityTransport() {
-        return this.userCallerSecurityTransport;
-    }
-
     public PushRpaTaskDetailRequest setUserCallerType(String userCallerType) {
         this.userCallerType = userCallerType;
         return this;
@@ -520,14 +370,6 @@ public class PushRpaTaskDetailRequest extends TeaModel {
     }
     public String getUserKp() {
         return this.userKp;
-    }
-
-    public PushRpaTaskDetailRequest setUserMfaPresent(Boolean userMfaPresent) {
-        this.userMfaPresent = userMfaPresent;
-        return this;
-    }
-    public Boolean getUserMfaPresent() {
-        return this.userMfaPresent;
     }
 
     public PushRpaTaskDetailRequest setUserSecurityToken(String userSecurityToken) {

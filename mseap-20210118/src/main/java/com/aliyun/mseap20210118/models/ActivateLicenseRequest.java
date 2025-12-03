@@ -4,18 +4,40 @@ package com.aliyun.mseap20210118.models;
 import com.aliyun.tea.*;
 
 public class ActivateLicenseRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>P20211118170645000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.bookkeeping_course</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B09YICKLVHNR7ZQR</p>
+     */
     @NameInMap("LicenseCode")
     public String licenseCode;
 
     @NameInMap("LicenseNo")
     public String licenseNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yunMarket</p>
+     */
     @NameInMap("LicensePublisher")
     public String licensePublisher;
 

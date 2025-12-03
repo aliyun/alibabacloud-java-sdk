@@ -4,9 +4,17 @@ package com.aliyun.mseap20210118.models;
 import com.aliyun.tea.*;
 
 public class ActivateLicenseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>88EDA98E-6BE7-55DA-9EB6-B6444B882C59</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

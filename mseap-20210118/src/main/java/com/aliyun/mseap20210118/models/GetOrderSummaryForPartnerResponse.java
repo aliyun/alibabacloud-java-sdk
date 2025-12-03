@@ -3,7 +3,7 @@ package com.aliyun.mseap20210118.models;
 
 import com.aliyun.tea.*;
 
-public class GetVariableResponse extends TeaModel {
+public class GetOrderSummaryForPartnerResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetVariableResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetVariableResponseBody body;
+    public GetOrderSummaryForPartnerResponseBody body;
 
-    public static GetVariableResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetVariableResponse self = new GetVariableResponse();
+    public static GetOrderSummaryForPartnerResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetOrderSummaryForPartnerResponse self = new GetOrderSummaryForPartnerResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetVariableResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetOrderSummaryForPartnerResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetVariableResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetVariableResponse setStatusCode(Integer statusCode) {
+    public GetOrderSummaryForPartnerResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetVariableResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetVariableResponse setBody(GetVariableResponseBody body) {
+    public GetOrderSummaryForPartnerResponse setBody(GetOrderSummaryForPartnerResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetVariableResponseBody getBody() {
+    public GetOrderSummaryForPartnerResponseBody getBody() {
         return this.body;
     }
 

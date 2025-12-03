@@ -6,168 +6,133 @@ import com.aliyun.tea.*;
 public class GetNodeByFlowIdRequest extends TeaModel {
     /**
      * <p>aliyunKp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AliyunKp")
     public String aliyunKp;
 
     /**
-     * <p>aliyunKpLong</p>
-     */
-    @NameInMap("AliyunKpLong")
-    public Long aliyunKpLong;
-
-    /**
      * <p>apiType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MPC</p>
      */
     @NameInMap("ApiType")
     public String apiType;
 
     /**
      * <p>bid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26842</p>
      */
     @NameInMap("Bid")
     public String bid;
 
     /**
-     * <p>callerParentId</p>
+     * <strong>example:</strong>
+     * <p>180</p>
      */
-    @NameInMap("CallerParentId")
-    public Long callerParentId;
-
-    /**
-     * <p>callerSecurityTransport</p>
-     */
-    @NameInMap("CallerSecurityTransport")
-    public Boolean callerSecurityTransport;
-
-    /**
-     * <p>callerType</p>
-     */
-    @NameInMap("CallerType")
-    public String callerType;
-
-    /**
-     * <p>clientIp</p>
-     */
-    @NameInMap("ClientIp")
-    public String clientIp;
-
     @NameInMap("FlowId")
     public Long flowId;
 
     /**
      * <p>lang</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>mfaPresent</p>
-     */
-    @NameInMap("MfaPresent")
-    public Boolean mfaPresent;
-
-    /**
      * <p>originalRequest</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OriginalRequest")
     public String originalRequest;
 
     /**
-     * <p>popAction</p>
-     */
-    @NameInMap("PopAction")
-    public String popAction;
-
-    /**
-     * <p>proxyCallerIp</p>
-     */
-    @NameInMap("ProxyCallerIp")
-    public String proxyCallerIp;
-
-    /**
-     * <p>proxyCallerSecurityTransport</p>
-     */
-    @NameInMap("ProxyCallerSecurityTransport")
-    public Boolean proxyCallerSecurityTransport;
-
-    /**
-     * <p>proxyTrustTransportInfo</p>
-     */
-    @NameInMap("ProxyTrustTransportInfo")
-    public Boolean proxyTrustTransportInfo;
-
-    /**
-     * <p>requestId</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    /**
-     * <p>stsTokenCallerBid</p>
-     */
-    @NameInMap("StsTokenCallerBid")
-    public Long stsTokenCallerBid;
-
-    /**
-     * <p>stsTokenCallerUid</p>
-     */
-    @NameInMap("StsTokenCallerUid")
-    public Long stsTokenCallerUid;
-
-    /**
      * <p>userAccessKeyId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
     /**
      * <p>userBid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserBid")
     public String userBid;
 
     /**
      * <p>userCallerParentId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserCallerParentId")
     public Long userCallerParentId;
 
     /**
      * <p>userCallerSecurityTransport</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UserCallerSecurityTransport")
     public Boolean userCallerSecurityTransport;
 
     /**
      * <p>userCallerType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserCallerType")
     public String userCallerType;
 
     /**
      * <p>userClientIp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
      * <p>userKp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserKp")
     public String userKp;
 
     /**
      * <p>userMfaPresent</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UserMfaPresent")
     public Boolean userMfaPresent;
 
     /**
      * <p>userSecurityToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserSecurityToken")
     public String userSecurityToken;
@@ -183,14 +148,6 @@ public class GetNodeByFlowIdRequest extends TeaModel {
     }
     public String getAliyunKp() {
         return this.aliyunKp;
-    }
-
-    public GetNodeByFlowIdRequest setAliyunKpLong(Long aliyunKpLong) {
-        this.aliyunKpLong = aliyunKpLong;
-        return this;
-    }
-    public Long getAliyunKpLong() {
-        return this.aliyunKpLong;
     }
 
     public GetNodeByFlowIdRequest setApiType(String apiType) {
@@ -209,38 +166,6 @@ public class GetNodeByFlowIdRequest extends TeaModel {
         return this.bid;
     }
 
-    public GetNodeByFlowIdRequest setCallerParentId(Long callerParentId) {
-        this.callerParentId = callerParentId;
-        return this;
-    }
-    public Long getCallerParentId() {
-        return this.callerParentId;
-    }
-
-    public GetNodeByFlowIdRequest setCallerSecurityTransport(Boolean callerSecurityTransport) {
-        this.callerSecurityTransport = callerSecurityTransport;
-        return this;
-    }
-    public Boolean getCallerSecurityTransport() {
-        return this.callerSecurityTransport;
-    }
-
-    public GetNodeByFlowIdRequest setCallerType(String callerType) {
-        this.callerType = callerType;
-        return this;
-    }
-    public String getCallerType() {
-        return this.callerType;
-    }
-
-    public GetNodeByFlowIdRequest setClientIp(String clientIp) {
-        this.clientIp = clientIp;
-        return this;
-    }
-    public String getClientIp() {
-        return this.clientIp;
-    }
-
     public GetNodeByFlowIdRequest setFlowId(Long flowId) {
         this.flowId = flowId;
         return this;
@@ -257,84 +182,12 @@ public class GetNodeByFlowIdRequest extends TeaModel {
         return this.lang;
     }
 
-    public GetNodeByFlowIdRequest setMfaPresent(Boolean mfaPresent) {
-        this.mfaPresent = mfaPresent;
-        return this;
-    }
-    public Boolean getMfaPresent() {
-        return this.mfaPresent;
-    }
-
     public GetNodeByFlowIdRequest setOriginalRequest(String originalRequest) {
         this.originalRequest = originalRequest;
         return this;
     }
     public String getOriginalRequest() {
         return this.originalRequest;
-    }
-
-    public GetNodeByFlowIdRequest setPopAction(String popAction) {
-        this.popAction = popAction;
-        return this;
-    }
-    public String getPopAction() {
-        return this.popAction;
-    }
-
-    public GetNodeByFlowIdRequest setProxyCallerIp(String proxyCallerIp) {
-        this.proxyCallerIp = proxyCallerIp;
-        return this;
-    }
-    public String getProxyCallerIp() {
-        return this.proxyCallerIp;
-    }
-
-    public GetNodeByFlowIdRequest setProxyCallerSecurityTransport(Boolean proxyCallerSecurityTransport) {
-        this.proxyCallerSecurityTransport = proxyCallerSecurityTransport;
-        return this;
-    }
-    public Boolean getProxyCallerSecurityTransport() {
-        return this.proxyCallerSecurityTransport;
-    }
-
-    public GetNodeByFlowIdRequest setProxyTrustTransportInfo(Boolean proxyTrustTransportInfo) {
-        this.proxyTrustTransportInfo = proxyTrustTransportInfo;
-        return this;
-    }
-    public Boolean getProxyTrustTransportInfo() {
-        return this.proxyTrustTransportInfo;
-    }
-
-    public GetNodeByFlowIdRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetNodeByFlowIdRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public GetNodeByFlowIdRequest setStsTokenCallerBid(Long stsTokenCallerBid) {
-        this.stsTokenCallerBid = stsTokenCallerBid;
-        return this;
-    }
-    public Long getStsTokenCallerBid() {
-        return this.stsTokenCallerBid;
-    }
-
-    public GetNodeByFlowIdRequest setStsTokenCallerUid(Long stsTokenCallerUid) {
-        this.stsTokenCallerUid = stsTokenCallerUid;
-        return this;
-    }
-    public Long getStsTokenCallerUid() {
-        return this.stsTokenCallerUid;
     }
 
     public GetNodeByFlowIdRequest setUserAccessKeyId(String userAccessKeyId) {

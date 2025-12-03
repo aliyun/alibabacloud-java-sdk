@@ -4,15 +4,31 @@ package com.aliyun.mseap20210118.models;
 import com.aliyun.tea.*;
 
 public class DescribeAgreementStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10aa40008e081ad7b1fb50bffc3a70b1</p>
+     */
     @NameInMap("AgreementCode")
     public String agreementCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6254E13A-A79F-5786-9C75-7590727342C9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1219541161213057</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
