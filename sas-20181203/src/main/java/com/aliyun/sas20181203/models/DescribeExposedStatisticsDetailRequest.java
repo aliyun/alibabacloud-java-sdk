@@ -22,9 +22,21 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The public IP address of the server or the cloud asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116.12.XX.XX</p>
+     */
     @NameInMap("ExposureIp")
     public String exposureIp;
 
+    /**
+     * <p>The instance ID of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-bp1g6wxdwps7s9dz****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

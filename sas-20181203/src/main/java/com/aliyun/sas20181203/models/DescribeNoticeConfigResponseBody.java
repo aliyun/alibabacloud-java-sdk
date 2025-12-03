@@ -50,6 +50,9 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
 
+        @NameInMap("Category")
+        public String category;
+
         /**
          * <p>The page number of the returned page.</p>
          * 
@@ -143,6 +146,14 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
         }
         public Long getAliUid() {
             return this.aliUid;
+        }
+
+        public DescribeNoticeConfigResponseBodyNoticeConfigList setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeNoticeConfigResponseBodyNoticeConfigList setCurrentPage(Integer currentPage) {

@@ -13,6 +13,9 @@ public class AddCheckResultWhiteListRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    /**
+     * <p>IDs of the cloud product instances that need to be whitelisted. Separate multiple IDs with a comma (,).</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 

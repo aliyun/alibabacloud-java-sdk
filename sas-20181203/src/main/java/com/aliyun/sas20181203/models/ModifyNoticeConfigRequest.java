@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyNoticeConfigRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
     /**
      * <p>The identifier of the notification item. Valid values:</p>
      * <ul>
@@ -89,6 +92,14 @@ public class ModifyNoticeConfigRequest extends TeaModel {
     public static ModifyNoticeConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNoticeConfigRequest self = new ModifyNoticeConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNoticeConfigRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
     }
 
     public ModifyNoticeConfigRequest setProject(String project) {

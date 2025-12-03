@@ -16,6 +16,9 @@ public class VerifyCheckInstanceResultRequest extends TeaModel {
     @NameInMap("CheckId")
     public Long checkId;
 
+    /**
+     * <p>List of item IDs to be checked.</p>
+     */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 

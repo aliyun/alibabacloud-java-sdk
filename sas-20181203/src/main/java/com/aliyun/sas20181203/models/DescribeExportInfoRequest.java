@@ -17,6 +17,9 @@ public class DescribeExportInfoRequest extends TeaModel {
     @NameInMap("ExportId")
     public Long exportId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static DescribeExportInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExportInfoRequest self = new DescribeExportInfoRequest();
         return TeaModel.build(map, self);
@@ -28,6 +31,14 @@ public class DescribeExportInfoRequest extends TeaModel {
     }
     public Long getExportId() {
         return this.exportId;
+    }
+
+    public DescribeExportInfoRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

@@ -19,6 +19,9 @@ public class RemoveCheckResultWhiteListRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
+    /**
+     * <p>A set of cloud product instance IDs that require validation.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 

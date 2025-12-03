@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeSecureSuggestionRequest extends TeaModel {
     /**
-     * <p>The old or new version of the security score rule. If you set this parameter to <strong>home_security_score</strong>, the new version of the security score rule is returned. Otherwise, the old version of the security score rule is returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>home_security_score</p>
      */
@@ -14,12 +12,6 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     public String calType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
-     * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -27,14 +19,18 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Source of security score, default is Cloud Security Center if left empty. Enum values: </p>
-     * <ul>
-     * <li><p>0:Cloud Security Center. </p>
-     * </li>
-     * <li><p>1:Yaochi Console.</p>
-     * </li>
-     * </ul>
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+     * </blockquote>
      * 
+     * <strong>example:</strong>
+     * <p>1232428423234****</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -42,8 +38,6 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     public Integer source;
 
     /**
-     * <p>The source IP address of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
      */
@@ -69,6 +63,14 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeSecureSuggestionRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeSecureSuggestionRequest setSource(Integer source) {

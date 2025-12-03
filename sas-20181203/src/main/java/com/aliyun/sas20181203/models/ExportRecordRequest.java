@@ -81,6 +81,9 @@ public class ExportRecordRequest extends TeaModel {
     @NameInMap("Params")
     public String params;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static ExportRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportRecordRequest self = new ExportRecordRequest();
         return TeaModel.build(map, self);
@@ -116,6 +119,14 @@ public class ExportRecordRequest extends TeaModel {
     }
     public String getParams() {
         return this.params;
+    }
+
+    public ExportRecordRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

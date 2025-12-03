@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeNoticeConfigRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
     /**
      * <p>The source IP address of the request.</p>
      * 
@@ -16,6 +19,14 @@ public class DescribeNoticeConfigRequest extends TeaModel {
     public static DescribeNoticeConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNoticeConfigRequest self = new DescribeNoticeConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNoticeConfigRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
     }
 
     public DescribeNoticeConfigRequest setSourceIp(String sourceIp) {
