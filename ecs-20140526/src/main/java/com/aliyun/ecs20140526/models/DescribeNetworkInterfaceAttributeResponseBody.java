@@ -176,6 +176,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("PrivateIpSets")
     public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets;
 
+    @NameInMap("QoSConfig")
+    public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig qoSConfig;
+
     /**
      * <p>The number of queues supported by the ENI.</p>
      * <ul>
@@ -515,6 +518,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
     public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets getPrivateIpSets() {
         return this.privateIpSets;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setQoSConfig(DescribeNetworkInterfaceAttributeResponseBodyQoSConfig qoSConfig) {
+        this.qoSConfig = qoSConfig;
+        return this;
+    }
+    public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig getQoSConfig() {
+        return this.qoSConfig;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setQueueNumber(Integer queueNumber) {
@@ -1376,6 +1387,119 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> getPrivateIpSet() {
             return this.privateIpSet;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
+        @NameInMap("BandwidthRx")
+        public Long bandwidthRx;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
+        @NameInMap("BandwidthTx")
+        public Long bandwidthTx;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
+        @NameInMap("ConcurrentConnections")
+        public Long concurrentConnections;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
+        @NameInMap("PpsRx")
+        public Long ppsRx;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
+        @NameInMap("PpsTx")
+        public Long ppsTx;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS self = new DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS setBandwidthRx(Long bandwidthRx) {
+            this.bandwidthRx = bandwidthRx;
+            return this;
+        }
+        public Long getBandwidthRx() {
+            return this.bandwidthRx;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS setBandwidthTx(Long bandwidthTx) {
+            this.bandwidthTx = bandwidthTx;
+            return this;
+        }
+        public Long getBandwidthTx() {
+            return this.bandwidthTx;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS setConcurrentConnections(Long concurrentConnections) {
+            this.concurrentConnections = concurrentConnections;
+            return this;
+        }
+        public Long getConcurrentConnections() {
+            return this.concurrentConnections;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS setPpsRx(Long ppsRx) {
+            this.ppsRx = ppsRx;
+            return this;
+        }
+        public Long getPpsRx() {
+            return this.ppsRx;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS setPpsTx(Long ppsTx) {
+            this.ppsTx = ppsTx;
+            return this;
+        }
+        public Long getPpsTx() {
+            return this.ppsTx;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyQoSConfig extends TeaModel {
+        @NameInMap("EnableQoS")
+        public Boolean enableQoS;
+
+        @NameInMap("QoS")
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS qoS;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyQoSConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyQoSConfig self = new DescribeNetworkInterfaceAttributeResponseBodyQoSConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig setEnableQoS(Boolean enableQoS) {
+            this.enableQoS = enableQoS;
+            return this;
+        }
+        public Boolean getEnableQoS() {
+            return this.enableQoS;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig setQoS(DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS qoS) {
+            this.qoS = qoS;
+            return this;
+        }
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS getQoS() {
+            return this.qoS;
         }
 
     }
