@@ -53,6 +53,9 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("DataFormatType")
+    public String dataFormatType;
+
     /**
      * <p>Enumeration value and description. Single: The source is a single-row JSON record. Multi: source is a JSON array. Output a single JSON record.</p>
      * 
@@ -310,6 +313,14 @@ public class CreateApsKafkaHudiJobShrinkRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public CreateApsKafkaHudiJobShrinkRequest setDataFormatType(String dataFormatType) {
+        this.dataFormatType = dataFormatType;
+        return this;
+    }
+    public String getDataFormatType() {
+        return this.dataFormatType;
     }
 
     public CreateApsKafkaHudiJobShrinkRequest setDataOutputFormat(String dataOutputFormat) {

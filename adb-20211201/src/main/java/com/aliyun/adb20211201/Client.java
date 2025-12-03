@@ -1201,6 +1201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormatType)) {
+            body.put("DataFormatType", request.dataFormatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataOutputFormat)) {
             body.put("DataOutputFormat", request.dataOutputFormat);
         }
