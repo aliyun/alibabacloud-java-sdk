@@ -1,0 +1,84 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.rdsai20250507.models;
+
+import com.aliyun.tea.*;
+
+public class ChatMessagesShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
+     */
+    @NameInMap("ApiId")
+    public String apiId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>fea7bdca-e848-44dd-b1ae-852472b8****</p>
+     */
+    @NameInMap("ConversationId")
+    public String conversationId;
+
+    @NameInMap("Inputs")
+    public String inputsShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
+     */
+    @NameInMap("ParentMessageId")
+    public String parentMessageId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("Query")
+    public String query;
+
+    public static ChatMessagesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ChatMessagesShrinkRequest self = new ChatMessagesShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ChatMessagesShrinkRequest setApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    public String getApiId() {
+        return this.apiId;
+    }
+
+    public ChatMessagesShrinkRequest setConversationId(String conversationId) {
+        this.conversationId = conversationId;
+        return this;
+    }
+    public String getConversationId() {
+        return this.conversationId;
+    }
+
+    public ChatMessagesShrinkRequest setInputsShrink(String inputsShrink) {
+        this.inputsShrink = inputsShrink;
+        return this;
+    }
+    public String getInputsShrink() {
+        return this.inputsShrink;
+    }
+
+    public ChatMessagesShrinkRequest setParentMessageId(String parentMessageId) {
+        this.parentMessageId = parentMessageId;
+        return this;
+    }
+    public String getParentMessageId() {
+        return this.parentMessageId;
+    }
+
+    public ChatMessagesShrinkRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
+    }
+
+}
