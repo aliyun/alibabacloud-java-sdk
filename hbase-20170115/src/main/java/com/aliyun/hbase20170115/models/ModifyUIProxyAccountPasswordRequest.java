@@ -4,18 +4,30 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class ModifyUIProxyAccountPasswordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

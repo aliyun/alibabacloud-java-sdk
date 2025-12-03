@@ -4,6 +4,9 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class ModifyRestartClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -13,6 +16,9 @@ public class ModifyRestartClusterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

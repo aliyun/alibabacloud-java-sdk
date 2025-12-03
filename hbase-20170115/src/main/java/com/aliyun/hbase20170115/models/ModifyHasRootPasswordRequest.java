@@ -4,15 +4,24 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class ModifyHasRootPasswordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HasPassword")
     public String hasPassword;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

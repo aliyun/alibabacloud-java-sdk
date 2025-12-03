@@ -4,6 +4,9 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterServiceConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,6 +19,9 @@ public class ModifyClusterServiceConfigRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

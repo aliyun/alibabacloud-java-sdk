@@ -13,27 +13,48 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CloudType")
     public String cloudType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
     @NameInMap("ColdStorageSize")
     public String coldStorageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CoreDiskQuantity")
     public String coreDiskQuantity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CoreDiskSize")
     public String coreDiskSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CoreDiskType")
     public String coreDiskType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CoreInstanceQuantity")
     public String coreInstanceQuantity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
@@ -52,18 +73,30 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("IsColdStorage")
     public String isColdStorage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MasterInstanceType")
     public String masterInstanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NetType")
     public String netType;
 
@@ -73,12 +106,18 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
@@ -91,6 +130,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

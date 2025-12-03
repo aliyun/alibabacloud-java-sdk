@@ -4,12 +4,18 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class DeleteHbaseSlbServerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +25,9 @@ public class DeleteHbaseSlbServerRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SlbServer")
     public String slbServer;
 

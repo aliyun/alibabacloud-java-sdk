@@ -7,9 +7,15 @@ public class ModifyUpgradeToHasForHbaseRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HasPassword")
     public String hasPassword;
 

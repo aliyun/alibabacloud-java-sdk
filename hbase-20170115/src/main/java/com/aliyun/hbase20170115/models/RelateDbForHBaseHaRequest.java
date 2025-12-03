@@ -4,15 +4,24 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class RelateDbForHBaseHaRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HaActive")
     public String haActive;
 
     @NameInMap("HaActiveClusterKey")
     public String haActiveClusterKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HaActiveDBType")
     public String haActiveDBType;
 
@@ -31,15 +40,24 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     @NameInMap("HaActiveVersion")
     public String haActiveVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HaMigrateType")
     public String haMigrateType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HaStandby")
     public String haStandby;
 
     @NameInMap("HaStandbyClusterKey")
     public String haStandbyClusterKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HaStandbyDBType")
     public String haStandbyDBType;
 
@@ -61,9 +79,15 @@ public class RelateDbForHBaseHaRequest extends TeaModel {
     @NameInMap("HaTables")
     public String haTables;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IsActiveStandard")
     public Boolean isActiveStandard;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IsStandbyStandard")
     public Boolean isStandbyStandard;
 

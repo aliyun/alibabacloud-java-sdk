@@ -4,15 +4,24 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class CreateSubscriptionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DestinationInstanceId")
     public String destinationInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DestinationInstanceRegionId")
     public String destinationInstanceRegionId;
 
     @NameInMap("ExtraContext")
     public String extraContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mapping")
     public String mapping;
 
@@ -28,15 +37,24 @@ public class CreateSubscriptionRequest extends TeaModel {
     @NameInMap("SlbServer")
     public String slbServer;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceInstanceId")
     public String sourceInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceInstanceRegionId")
     public String sourceInstanceRegionId;
 
     @NameInMap("SubscriptionDescription")
     public String subscriptionDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 

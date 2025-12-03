@@ -7,6 +7,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,12 +19,18 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("PreferredBackupEndTimeUTC")
     public String preferredBackupEndTimeUTC;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
     @NameInMap("PreferredBackupStartTimeUTC")
     public String preferredBackupStartTimeUTC;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 

@@ -7,9 +7,15 @@ public class ResizeClusterRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CloudType")
     public String cloudType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -25,12 +31,18 @@ public class ResizeClusterRequest extends TeaModel {
     @NameInMap("CoreDiskType")
     public String coreDiskType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CoreInstanceQuantity")
     public String coreInstanceQuantity;
 
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
@@ -40,12 +52,21 @@ public class ResizeClusterRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UpgradeType")
     public String upgradeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

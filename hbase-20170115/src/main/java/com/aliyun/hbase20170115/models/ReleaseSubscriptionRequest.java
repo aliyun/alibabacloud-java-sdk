@@ -7,12 +7,18 @@ public class ReleaseSubscriptionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubscriptionId")
     public String subscriptionId;
 
@@ -27,6 +33,14 @@ public class ReleaseSubscriptionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ReleaseSubscriptionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ReleaseSubscriptionRequest setResourceOwnerAccount(String resourceOwnerAccount) {

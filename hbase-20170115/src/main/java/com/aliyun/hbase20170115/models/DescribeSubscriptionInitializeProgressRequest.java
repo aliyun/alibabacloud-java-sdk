@@ -13,12 +13,18 @@ public class DescribeSubscriptionInitializeProgressRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubscriptionId")
     public String subscriptionId;
 
@@ -49,6 +55,14 @@ public class DescribeSubscriptionInitializeProgressRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeSubscriptionInitializeProgressRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSubscriptionInitializeProgressRequest setResourceOwnerAccount(String resourceOwnerAccount) {

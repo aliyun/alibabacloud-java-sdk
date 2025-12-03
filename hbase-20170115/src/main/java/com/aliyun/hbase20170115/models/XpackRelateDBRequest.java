@@ -4,9 +4,15 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class XpackRelateDBRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DbClusterIds")
     public String dbClusterIds;
 
@@ -16,6 +22,9 @@ public class XpackRelateDBRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RelateDbType")
     public String relateDbType;
 

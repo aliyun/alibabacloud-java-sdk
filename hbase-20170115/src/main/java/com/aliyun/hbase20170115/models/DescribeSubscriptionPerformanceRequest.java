@@ -4,14 +4,23 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionPerformanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Key")
     public String key;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,12 +28,21 @@ public class DescribeSubscriptionPerformanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceInstanceId")
     public String sourceInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubscriptionId")
     public String subscriptionId;
 
@@ -55,6 +73,14 @@ public class DescribeSubscriptionPerformanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeSubscriptionPerformanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSubscriptionPerformanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {

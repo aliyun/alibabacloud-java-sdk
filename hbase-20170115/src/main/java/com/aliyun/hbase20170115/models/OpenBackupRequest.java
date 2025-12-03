@@ -4,6 +4,9 @@ package com.aliyun.hbase20170115.models;
 import com.aliyun.tea.*;
 
 public class OpenBackupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

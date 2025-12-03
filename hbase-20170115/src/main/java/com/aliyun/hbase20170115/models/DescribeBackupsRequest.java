@@ -7,6 +7,9 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("BackupId")
     public Integer backupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

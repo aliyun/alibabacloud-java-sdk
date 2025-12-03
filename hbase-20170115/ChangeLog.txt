@@ -1,3 +1,14 @@
+2025-12-03 Version: 1.0.1
+- Update API DescribeSubscriptionInitializeProgress: add request parameters RegionId.
+- Update API DescribeSubscriptionPerformance: add request parameters RegionId.
+- Update API DescribeSubscriptionPermission: add request parameters RegionId.
+- Update API DescribeSubscriptions: add request parameters RegionId.
+- Update API ModifySubscriptionDescription: add request parameters RegionId.
+- Update API ModifySubscriptionMapping: add request parameters RegionId.
+- Update API ModifySubscriptionPermission: add request parameters RegionId.
+- Update API ReleaseSubscription: add request parameters RegionId.
+
+
 2024-05-06 Version: 1.0.0
 - Generated java 2017-01-15 for HBase.
 
