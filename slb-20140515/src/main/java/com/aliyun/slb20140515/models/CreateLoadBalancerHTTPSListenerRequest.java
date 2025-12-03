@@ -134,10 +134,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     public String enableHttp2;
 
     /**
-     * <p>Specifies whether to enable <code>Gzip</code> compression to compress specific types of files. Valid values:</p>
+     * <p>Specifies whether to enable <code>GZIP</code> compression to compress specific types of files. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: yes</li>
-     * <li><strong>off</strong>: no</li>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -353,8 +353,8 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable session persistence. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: yes</li>
-     * <li><strong>off</strong>: no</li>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -445,8 +445,8 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the <code>X-Forwarded-For</code> header to retrieve client IP addresses. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: yes</li>
-     * <li><strong>off</strong>: no</li>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -471,8 +471,8 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the <code>SLB-ID</code> header to retrieve the ID of the CLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: yes</li>
-     * <li><strong>off</strong>: no</li>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -482,10 +482,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     public String XForwardedFor_SLBID;
 
     /**
-     * <p>Specifies whether to use the <code>SLB-IP</code> header to retrieve the virtual IP address (VIP) of the client. Valid values:</p>
+     * <p>Specifies whether to use the <code>SLB-IP</code> header to retrieve the virtual IP address of the client. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: yes</li>
-     * <li><strong>off</strong>: no</li>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -510,8 +510,8 @@ public class CreateLoadBalancerHTTPSListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: yes</li>
-     * <li><strong>off</strong>: no</li>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

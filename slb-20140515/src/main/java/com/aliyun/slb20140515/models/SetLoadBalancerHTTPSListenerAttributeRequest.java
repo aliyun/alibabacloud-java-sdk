@@ -81,7 +81,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>B490B5EBF6F3CD4****</p>
+     * <p>testCookie</p>
      */
     @NameInMap("Cookie")
     public String cookie;
@@ -104,7 +104,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
      * The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
      * 
      * <strong>example:</strong>
-     * <p>Listener1</p>
+     * <p>https_80</p>
      */
     @NameInMap("Description")
     public String description;

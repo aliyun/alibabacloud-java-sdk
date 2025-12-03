@@ -11,7 +11,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>acl-uf60jw******</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -69,7 +69,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
+     * <p>testCookie</p>
      */
     @NameInMap("Cookie")
     public String cookie;

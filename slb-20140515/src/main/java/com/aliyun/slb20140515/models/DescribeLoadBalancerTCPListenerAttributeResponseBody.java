@@ -106,7 +106,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
      * <p>The description of the listener.</p>
      * 
      * <strong>example:</strong>
-     * <p>TCP listener</p>
+     * <p>TCP_80</p>
      */
     @NameInMap("Description")
     public String description;
@@ -318,7 +318,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>enable</p>
+     * <p>disable</p>
      */
     @NameInMap("SynProxy")
     public String synProxy;

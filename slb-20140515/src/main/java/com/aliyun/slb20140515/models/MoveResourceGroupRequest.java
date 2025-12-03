@@ -40,7 +40,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the resource for which you want to modify the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,10 +71,10 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The AccessKey ID provided by Alibaba Cloud.</p>
+     * <p>The AccessKey ID provided to you by Alibaba Cloud for accessing the service.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI5tPmFGUpmyWwD8gp****</p>
+     * <p>yourAccessKeyID</p>
      */
     @NameInMap("access_key_id")
     public String accessKeyId;

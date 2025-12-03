@@ -11,11 +11,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>on</p>
+     * <p>acl-uf60jw******</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The ID of the access control list (ACL).</p>
+     */
     @NameInMap("AclIds")
     public DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds aclIds;
 
@@ -78,7 +81,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
      * <p>The cookie that is configured on the server.</p>
      * 
      * <strong>example:</strong>
-     * <p>B490B5EBF6F3CD402E515D22BCDA1598</p>
+     * <p>testCookie</p>
      */
     @NameInMap("Cookie")
     public String cookie;
@@ -96,7 +99,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
      * <p>The name of the listener.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>HTTP_80</p>
      */
     @NameInMap("Description")
     public String description;
@@ -854,7 +857,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
          * <p>The ID of the server group specified in the forwarding rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>123</p>
+         * <p>rsp-uf6w******</p>
          */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
@@ -927,7 +930,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
 
     public static class DescribeLoadBalancerHTTPListenerAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -936,7 +939,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         public String tagKey;
 
         /**
-         * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value must be 0 to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

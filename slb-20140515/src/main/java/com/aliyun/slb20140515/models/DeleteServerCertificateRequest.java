@@ -11,8 +11,8 @@ public class DeleteServerCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the Server Load Balancer (SLB) instance is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class DeleteServerCertificateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the server certificate.</p>
+     * <p>The server certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

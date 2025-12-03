@@ -18,7 +18,7 @@ public class StopLoadBalancerListenerRequest extends TeaModel {
     /**
      * <p>The frontend protocol that is used by the CLB instance.</p>
      * <blockquote>
-     * <p>This parameter is required if the same port is used by listeners of different protocols.</p>
+     * <p> This parameter is required if the same port is used by listeners of different protocols.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,8 +44,8 @@ public class StopLoadBalancerListenerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the SLB instance belongs.</p>
-     * <p>To query the region ID, refer to the list of  <a href="https://help.aliyun.com/document_detail/40654.html">regions and zones</a> or call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a>.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>To query the region ID, refer to the list of <a href="https://help.aliyun.com/document_detail/40654.html">regions and zones</a> or call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -41,7 +41,7 @@ public class SetServerCertificateNameRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>abc</p>
+     * <p>mycert01</p>
      */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;

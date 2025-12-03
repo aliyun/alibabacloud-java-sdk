@@ -50,7 +50,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
+     * <p>9DEC9C28-AB05-4DDF-9A78-6B0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -145,7 +145,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
          * <p>The ID of the backend server.</p>
          * 
          * <strong>example:</strong>
-         * <p>vm-hrf******</p>
+         * <p>eni-hhshhs****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -168,7 +168,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ecs</p>
+         * <p>eni</p>
          */
         @NameInMap("Type")
         public String type;
@@ -262,7 +262,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
          * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
@@ -272,7 +272,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
          * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>value</p>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

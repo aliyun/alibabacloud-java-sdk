@@ -55,7 +55,7 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     public java.util.List<String> ciphers;
 
     /**
-     * <p>The name of the TLS policy. The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the TLS policy. The name must be 2 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

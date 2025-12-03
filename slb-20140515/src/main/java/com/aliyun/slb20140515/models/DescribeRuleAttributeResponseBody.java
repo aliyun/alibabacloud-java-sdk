@@ -32,7 +32,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
      * <p>The domain name that is configured in the forwarding rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>test.com</p>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -125,7 +125,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>10.21.22.1</p>
+     * <p>/rest</p>
      */
     @NameInMap("HealthCheckURI")
     public String healthCheckURI;

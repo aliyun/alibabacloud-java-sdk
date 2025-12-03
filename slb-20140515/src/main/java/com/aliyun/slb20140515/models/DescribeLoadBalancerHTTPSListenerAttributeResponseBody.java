@@ -11,11 +11,14 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>nacl-a2do9e413e0spzasx****</p>
+     * <p>acl-a2do9e413e0spzasx****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The ID of the network access control list (ACL) that is associated with the listener.</p>
+     */
     @NameInMap("AclIds")
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds aclIds;
 
@@ -65,7 +68,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
      * <p>The maximum bandwidth of the listener. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
-     * <p>-1</p>
+     * <p>10</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -83,7 +86,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
      * <p>The cookie that is configured on the server.</p>
      * 
      * <strong>example:</strong>
-     * <p>B490B5EBF6F3CD402E515D22BCDA1598</p>
+     * <p>testCookie</p>
      */
     @NameInMap("Cookie")
     public String cookie;
@@ -101,7 +104,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
      * <p>The name of the listener.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>HTTPS_443</p>
      */
     @NameInMap("Description")
     public String description;
@@ -957,7 +960,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension extends TeaModel {
         /**
-         * <p>The endpoint.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -966,7 +969,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         public String domain;
 
         /**
-         * <p>The ID of the additional domain name.</p>
+         * <p>The ID of the additional certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -975,7 +978,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         public String domainExtensionId;
 
         /**
-         * <p>The ID of the server certificate that is associated with the domain name.</p>
+         * <p>The ID of the certificate used by the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>13344444****</p>
@@ -1035,7 +1038,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule extends TeaModel {
         /**
-         * <p>The endpoint.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -1062,7 +1065,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         public String ruleName;
 
         /**
-         * <p>The request path.</p>
+         * <p>The request URL.</p>
          * 
          * <strong>example:</strong>
          * <p>/example</p>
@@ -1071,10 +1074,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         public String url;
 
         /**
-         * <p>The ID of the server group that is associated with the forwarding rule.</p>
+         * <p>The ID of the server group specified in the forwarding rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>12</p>
+         * <p>rsp-cige6j5e********</p>
          */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
@@ -1147,7 +1150,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1156,7 +1159,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         public String tagKey;
 
         /**
-         * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

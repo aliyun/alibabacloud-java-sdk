@@ -345,6 +345,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.addressType;
     }
 
+    @Deprecated
     public CreateLoadBalancerRequest setAutoPay(Boolean autoPay) {
         this.autoPay = autoPay;
         return this;
@@ -377,6 +378,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.deleteProtection;
     }
 
+    @Deprecated
     public CreateLoadBalancerRequest setDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -457,6 +459,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.ownerId;
     }
 
+    @Deprecated
     public CreateLoadBalancerRequest setPayType(String payType) {
         this.payType = payType;
         return this;
@@ -465,6 +468,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.payType;
     }
 
+    @Deprecated
     public CreateLoadBalancerRequest setPricingCycle(String pricingCycle) {
         this.pricingCycle = pricingCycle;
         return this;

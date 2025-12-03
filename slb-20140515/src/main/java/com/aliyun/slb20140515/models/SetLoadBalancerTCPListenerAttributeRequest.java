@@ -306,11 +306,11 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
      * <li><strong>tch</strong>: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
      * <li>Only high-performance CLB instances support the <strong>sch</strong> and <strong>tch</strong> algorithms.</li>
      * <li>CLB does not support converting the <strong>wrr</strong> and <strong>rr</strong> algorithms to sch or tch. You cannot switch the hash algorithm from one to another.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>wrr</p>

@@ -90,7 +90,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
 
     /**
      * <p>The timeout period of a health check.</p>
-     * <p>If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. Unit: seconds.</p>
+     * <p>If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. Unit: seconds</p>
      * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
 
     /**
      * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
-     * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10</strong></p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -190,9 +190,9 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The routing algorithm. Valid values:</p>
+     * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+     * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than those with lower weights.</li>
      * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
      * <li><strong>sch</strong>: specifies consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
      * <li><strong>tch</strong>: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</li>
@@ -214,7 +214,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
 
     /**
      * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
-     * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10</strong></p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

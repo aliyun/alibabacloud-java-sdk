@@ -350,8 +350,8 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The network type of the internal-facing CLB instance. Valid values:</p>
          * <ul>
-         * <li><strong>vpc:</strong> VPC.</li>
-         * <li><strong>classic:</strong> classic network.</li>
+         * <li><strong>vpc</strong>: VPC</li>
+         * <li><strong>Classic</strong>: classic network</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -409,7 +409,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         public String slaveZoneId;
 
         /**
-         * <p>The tags of the CLB instance.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancerTags tags;

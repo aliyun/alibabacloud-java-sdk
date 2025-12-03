@@ -43,8 +43,8 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     /**
      * <p>The network type of the CLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>vpc</strong></li>
-     * <li><strong>classic</strong></li>
+     * <li><strong>vpc</strong>: VPC</li>
+     * <li><strong>Classic</strong>: classic network</li>
      * </ul>
      * 
      * <strong>example:</strong>
