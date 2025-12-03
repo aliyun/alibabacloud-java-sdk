@@ -107,6 +107,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("autoApply")
         public Boolean autoApply;
 
+        @NameInMap("hasConfigProactive")
+        public String hasConfigProactive;
+
         /**
          * <strong>example:</strong>
          * <p>fales</p>
@@ -142,6 +145,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public Boolean getAutoApply() {
             return this.autoApply;
+        }
+
+        public GetJobResponseBodyJobConfig setHasConfigProactive(String hasConfigProactive) {
+            this.hasConfigProactive = hasConfigProactive;
+            return this;
+        }
+        public String getHasConfigProactive() {
+            return this.hasConfigProactive;
         }
 
         public GetJobResponseBodyJobConfig setIsDestroy(Boolean isDestroy) {

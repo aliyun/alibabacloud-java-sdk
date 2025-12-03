@@ -1474,6 +1474,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>生成模板</p>
+     * 
+     * @param request GenerateModuleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateModuleResponse
+     */
+    public GenerateModuleResponse generateModuleWithOptions(GenerateModuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.generateSource)) {
+            body.put("generateSource", request.generateSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syntax)) {
+            body.put("syntax", request.syntax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.template)) {
+            body.put("template", request.template);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terraformProviderVersion)) {
+            body.put("terraformProviderVersion", request.terraformProviderVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terraformResourceType)) {
+            body.put("terraformResourceType", request.terraformResourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateModule"),
+            new TeaPair("version", "2021-08-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/explorer/generate/module"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new GenerateModuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成模板</p>
+     * 
+     * @param request GenerateModuleRequest
+     * @return GenerateModuleResponse
+     */
+    public GenerateModuleResponse generateModule(GenerateModuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.generateModuleWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取Terraform运行结果</p>
      * 
      * @param headers map
