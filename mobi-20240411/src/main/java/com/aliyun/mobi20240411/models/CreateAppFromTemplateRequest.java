@@ -11,6 +11,9 @@ public class CreateAppFromTemplateRequest extends TeaModel {
     @NameInMap("ActualParameters")
     public String actualParameters;
 
+    @NameInMap("AgentId")
+    public String agentId;
+
     @NameInMap("ConnectionsContent")
     public String connectionsContent;
 
@@ -77,6 +80,14 @@ public class CreateAppFromTemplateRequest extends TeaModel {
     }
     public String getActualParameters() {
         return this.actualParameters;
+    }
+
+    public CreateAppFromTemplateRequest setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
     }
 
     public CreateAppFromTemplateRequest setConnectionsContent(String connectionsContent) {

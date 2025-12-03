@@ -41,6 +41,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ActualParameters", request.actualParameters);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.connectionsContent)) {
             query.put("ConnectionsContent", request.connectionsContent);
         }
@@ -95,12 +99,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppFromTemplateResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateAppFromTemplateResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppFromTemplateResponse());
     }
 
     /**
