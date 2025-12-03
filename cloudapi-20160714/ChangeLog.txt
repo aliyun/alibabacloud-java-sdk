@@ -1,3 +1,6 @@
+2025-12-03 Version: 3.14.8
+- Update SDK.
+
 2025-07-28 Version: 3.14.7
 - Update API DescribeInstances: add request parameters InstanceType.
 
