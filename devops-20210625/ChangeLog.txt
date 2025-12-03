@@ -1,3 +1,6 @@
+2025-12-03 Version: 5.0.2
+- Update SDK.
+
 2025-03-13 Version: 5.0.1
 - Update API CreateComment: update param body.
 - Update API CreateServiceConnection: update param body.
