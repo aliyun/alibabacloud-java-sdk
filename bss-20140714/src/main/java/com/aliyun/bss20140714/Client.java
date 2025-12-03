@@ -27,6 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建订单</p>
+     * 
      * @param request CreateOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOrderResponse
@@ -56,6 +59,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建订单</p>
+     * 
      * @param request CreateOrderRequest
      * @return CreateOrderResponse
      */
@@ -99,6 +105,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询卡券列表</p>
+     * 
      * @param request DescribeCouponListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCouponListResponse
@@ -144,6 +153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询卡券列表</p>
+     * 
      * @param request DescribeCouponListRequest
      * @return DescribeCouponListResponse
      */
@@ -154,7 +166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OpenCallback</p>
+     * <p>生产开通回调接口</p>
      * 
      * @param request OpenCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -186,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OpenCallback</p>
+     * <p>生产开通回调接口</p>
      * 
      * @param request OpenCallbackRequest
      * @return OpenCallbackResponse
@@ -197,6 +209,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>订单询价</p>
+     * 
      * @param request QueryForCssOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryForCssOrderResponse
@@ -226,6 +241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>订单询价</p>
+     * 
      * @param request QueryForCssOrderRequest
      * @return QueryForCssOrderResponse
      */
@@ -235,6 +253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>vnoBatchRefundOrder</p>
+     * 
      * @param request VnoBatchRefundOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VnoBatchRefundOrderResponse
@@ -264,6 +285,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>vnoBatchRefundOrder</p>
+     * 
      * @param request VnoBatchRefundOrderRequest
      * @return VnoBatchRefundOrderResponse
      */
