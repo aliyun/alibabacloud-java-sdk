@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ciomarketpop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -52,7 +51,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "array")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEveryOneSellsFormListResponse());
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new GetEveryOneSellsFormListResponse());
     }
 
     /**
@@ -110,7 +109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "string")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PushEveryOneSellMsgResponse());
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new PushEveryOneSellMsgResponse());
     }
 
     /**
