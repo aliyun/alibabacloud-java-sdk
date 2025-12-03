@@ -10,6 +10,9 @@ public class DatasetShareRelationship extends TeaModel {
     @NameInMap("ExpiresAt")
     public String expiresAt;
 
+    @NameInMap("Extra")
+    public String extra;
+
     @NameInMap("IsSecureMode")
     public Boolean isSecureMode;
 
@@ -50,6 +53,14 @@ public class DatasetShareRelationship extends TeaModel {
     }
     public String getExpiresAt() {
         return this.expiresAt;
+    }
+
+    public DatasetShareRelationship setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
     }
 
     public DatasetShareRelationship setIsSecureMode(Boolean isSecureMode) {

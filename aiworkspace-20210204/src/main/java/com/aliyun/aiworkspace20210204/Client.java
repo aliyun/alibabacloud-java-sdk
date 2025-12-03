@@ -3916,6 +3916,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTagUpdateTime", request.startTagUpdateTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thumbnailMode)) {
             query.put("ThumbnailMode", request.thumbnailMode);
         }

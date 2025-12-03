@@ -174,6 +174,9 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     @NameInMap("StartTagUpdateTime")
     public String startTagUpdateTime;
 
+    @NameInMap("Status")
+    public String status;
+
     /**
      * <strong>example:</strong>
      * <p>w_100</p>
@@ -380,6 +383,14 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     }
     public String getStartTagUpdateTime() {
         return this.startTagUpdateTime;
+    }
+
+    public ListDatasetFileMetasShrinkRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListDatasetFileMetasShrinkRequest setThumbnailMode(String thumbnailMode) {

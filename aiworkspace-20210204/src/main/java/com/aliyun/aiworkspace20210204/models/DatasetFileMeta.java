@@ -85,6 +85,9 @@ public class DatasetFileMeta extends TeaModel {
     @NameInMap("SemanticIndexUpdateTime")
     public String semanticIndexUpdateTime;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("Tags")
     public String tags;
 
@@ -205,6 +208,14 @@ public class DatasetFileMeta extends TeaModel {
     }
     public String getSemanticIndexUpdateTime() {
         return this.semanticIndexUpdateTime;
+    }
+
+    public DatasetFileMeta setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public DatasetFileMeta setTags(String tags) {

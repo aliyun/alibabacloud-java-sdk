@@ -61,6 +61,9 @@ public class DatasetFileMetaContentGet extends TeaModel {
     @NameInMap("SemanticIndexUpdateTime")
     public String semanticIndexUpdateTime;
 
+    @NameInMap("Status")
+    public String status;
+
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
@@ -183,6 +186,14 @@ public class DatasetFileMetaContentGet extends TeaModel {
     }
     public String getSemanticIndexUpdateTime() {
         return this.semanticIndexUpdateTime;
+    }
+
+    public DatasetFileMetaContentGet setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public DatasetFileMetaContentGet setTagUpdateTime(String tagUpdateTime) {
