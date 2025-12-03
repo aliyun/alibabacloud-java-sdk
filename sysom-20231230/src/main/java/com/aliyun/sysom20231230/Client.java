@@ -193,6 +193,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建宕机诊断任务</p>
+     * 
+     * @param request CreateVmcoreDiagnosisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVmcoreDiagnosisTaskResponse
+     */
+    public CreateVmcoreDiagnosisTaskResponse createVmcoreDiagnosisTaskWithOptions(CreateVmcoreDiagnosisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.debuginfoCommonUrl)) {
+            body.put("debuginfoCommonUrl", request.debuginfoCommonUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.debuginfoUrl)) {
+            body.put("debuginfoUrl", request.debuginfoUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dmesgUrl)) {
+            body.put("dmesgUrl", request.dmesgUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("taskType", request.taskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vmcoreUrl)) {
+            body.put("vmcoreUrl", request.vmcoreUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVmcoreDiagnosisTask"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/crashAgent/diagnosis/createDiagnosisTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVmcoreDiagnosisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建宕机诊断任务</p>
+     * 
+     * @param request CreateVmcoreDiagnosisTaskRequest
+     * @return CreateVmcoreDiagnosisTaskResponse
+     */
+    public CreateVmcoreDiagnosisTaskResponse createVmcoreDiagnosisTask(CreateVmcoreDiagnosisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createVmcoreDiagnosisTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>用户删除推送告警的策略</p>
      * 
      * @param request DeleteAlertStrategyRequest
@@ -1606,6 +1669,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询宕机诊断任务结果</p>
+     * 
+     * @param request GetVmcoreDiagnosisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVmcoreDiagnosisTaskResponse
+     */
+    public GetVmcoreDiagnosisTaskResponse getVmcoreDiagnosisTaskWithOptions(GetVmcoreDiagnosisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVmcoreDiagnosisTask"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/crashAgent/diagnosis/queryTask"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVmcoreDiagnosisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询宕机诊断任务结果</p>
+     * 
+     * @param request GetVmcoreDiagnosisTaskRequest
+     * @return GetVmcoreDiagnosisTaskResponse
+     */
+    public GetVmcoreDiagnosisTaskResponse getVmcoreDiagnosisTask(GetVmcoreDiagnosisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVmcoreDiagnosisTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>初始化SysOM，确保角色存在</p>
      * 
      * @param request InitialSysomRequest
@@ -3010,6 +3120,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listRegionsWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询历史宕机诊断任务</p>
+     * 
+     * @param request ListVmcoreDiagnosisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVmcoreDiagnosisTaskResponse
+     */
+    public ListVmcoreDiagnosisTaskResponse listVmcoreDiagnosisTaskWithOptions(ListVmcoreDiagnosisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.days)) {
+            query.put("days", request.days);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVmcoreDiagnosisTask"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/crashAgent/diagnosis/queryTaskList"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVmcoreDiagnosisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询历史宕机诊断任务</p>
+     * 
+     * @param request ListVmcoreDiagnosisTaskRequest
+     * @return ListVmcoreDiagnosisTaskResponse
+     */
+    public ListVmcoreDiagnosisTaskResponse listVmcoreDiagnosisTask(ListVmcoreDiagnosisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listVmcoreDiagnosisTaskWithOptions(request, headers, runtime);
     }
 
     /**
