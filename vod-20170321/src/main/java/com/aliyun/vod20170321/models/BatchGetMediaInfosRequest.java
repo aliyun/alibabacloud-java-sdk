@@ -19,6 +19,13 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     @NameInMap("MediaIds")
     public String mediaIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123-123,1234-1234</p>
+     */
+    @NameInMap("ReferenceIds")
+    public String referenceIds;
+
     public static BatchGetMediaInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetMediaInfosRequest self = new BatchGetMediaInfosRequest();
         return TeaModel.build(map, self);
@@ -30,6 +37,14 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     }
     public String getMediaIds() {
         return this.mediaIds;
+    }
+
+    public BatchGetMediaInfosRequest setReferenceIds(String referenceIds) {
+        this.referenceIds = referenceIds;
+        return this;
+    }
+    public String getReferenceIds() {
+        return this.referenceIds;
     }
 
 }

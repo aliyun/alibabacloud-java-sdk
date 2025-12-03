@@ -19,8 +19,14 @@ public class DeleteStreamRequest extends TeaModel {
     public String jobIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
+    /**
      * <p>The ID of the video.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>95948ddba24446b6aed5db985e78****</p>
@@ -39,6 +45,14 @@ public class DeleteStreamRequest extends TeaModel {
     }
     public String getJobIds() {
         return this.jobIds;
+    }
+
+    public DeleteStreamRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public DeleteStreamRequest setVideoId(String videoId) {

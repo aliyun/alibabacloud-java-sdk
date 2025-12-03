@@ -37,6 +37,13 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     public Long interval;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
+    /**
      * <p>The ID of the snapshot template.</p>
      * <ul>
      * <li>We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see <a href="https://help.aliyun.com/document_detail/99406.html">AddVodTemplate</a>.</li>
@@ -139,6 +146,14 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     }
     public Long getInterval() {
         return this.interval;
+    }
+
+    public SubmitSnapshotJobRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public SubmitSnapshotJobRequest setSnapshotTemplateId(String snapshotTemplateId) {

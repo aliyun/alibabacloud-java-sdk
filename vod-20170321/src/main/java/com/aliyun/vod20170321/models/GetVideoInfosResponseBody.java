@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVideoInfosResponseBody extends TeaModel {
+    @NameInMap("NonExistReferenceIds")
+    public java.util.List<String> nonExistReferenceIds;
+
     /**
      * <p>The IDs of the videos that do not exist.</p>
      */
@@ -28,6 +31,14 @@ public class GetVideoInfosResponseBody extends TeaModel {
     public static GetVideoInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVideoInfosResponseBody self = new GetVideoInfosResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetVideoInfosResponseBody setNonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
+        this.nonExistReferenceIds = nonExistReferenceIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistReferenceIds() {
+        return this.nonExistReferenceIds;
     }
 
     public GetVideoInfosResponseBody setNonExistVideoIds(java.util.List<String> nonExistVideoIds) {
@@ -139,6 +150,13 @@ public class GetVideoInfosResponseBody extends TeaModel {
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>123-123</p>
+         */
+        @NameInMap("ReferenceId")
+        public String referenceId;
 
         /**
          * <p>The period of time in which the audio file remains in the restored state.</p>
@@ -345,6 +363,14 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        public GetVideoInfosResponseBodyVideoList setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public GetVideoInfosResponseBodyVideoList setRestoreExpiration(String restoreExpiration) {

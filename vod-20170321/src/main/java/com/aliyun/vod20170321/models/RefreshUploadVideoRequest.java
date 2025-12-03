@@ -7,6 +7,13 @@ public class RefreshUploadVideoRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -20,7 +27,6 @@ public class RefreshUploadVideoRequest extends TeaModel {
      * <li>View the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to upload the audio or video file.</li>
      * <li>After an audio or video file is uploaded, obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the audio or video ID.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>c6a23a870c8c4ffcd40cbd381333****</p>
@@ -39,6 +45,14 @@ public class RefreshUploadVideoRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RefreshUploadVideoRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public RefreshUploadVideoRequest setResourceOwnerAccount(String resourceOwnerAccount) {

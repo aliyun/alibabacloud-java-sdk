@@ -65,8 +65,14 @@ public class GetMezzanineInfoRequest extends TeaModel {
     public String outputType;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
+    /**
      * <p>The ID of the video.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1f1a6fc03ca04814031b8a6559e****</p>
@@ -101,6 +107,14 @@ public class GetMezzanineInfoRequest extends TeaModel {
     }
     public String getOutputType() {
         return this.outputType;
+    }
+
+    public GetMezzanineInfoRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public GetMezzanineInfoRequest setVideoId(String videoId) {

@@ -46,6 +46,13 @@ public class GetVideoListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123,1234-1234</p>
+     */
+    @NameInMap("ReferenceIds")
+    public String referenceIds;
+
+    /**
      * <p>The sorting method of the results. Valid values:</p>
      * <ul>
      * <li><strong>CreationTime:Desc</strong> (default): The results are sorted in reverse chronological order based on the creation time.</li>
@@ -132,6 +139,14 @@ public class GetVideoListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetVideoListRequest setReferenceIds(String referenceIds) {
+        this.referenceIds = referenceIds;
+        return this;
+    }
+    public String getReferenceIds() {
+        return this.referenceIds;
     }
 
     public GetVideoListRequest setSortBy(String sortBy) {

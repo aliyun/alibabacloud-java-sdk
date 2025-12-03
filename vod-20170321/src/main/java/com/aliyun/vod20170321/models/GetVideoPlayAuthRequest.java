@@ -27,13 +27,19 @@ public class GetVideoPlayAuthRequest extends TeaModel {
     public Long authInfoTimeout;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
+    /**
      * <p>The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the ID of the file:</p>
      * <ul>
      * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the media file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
      * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation.</li>
      * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>dfde02284a5c46622a097adaf44a****</p>
@@ -60,6 +66,14 @@ public class GetVideoPlayAuthRequest extends TeaModel {
     }
     public Long getAuthInfoTimeout() {
         return this.authInfoTimeout;
+    }
+
+    public GetVideoPlayAuthRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public GetVideoPlayAuthRequest setVideoId(String videoId) {

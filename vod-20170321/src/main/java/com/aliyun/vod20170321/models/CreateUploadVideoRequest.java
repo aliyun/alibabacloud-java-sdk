@@ -73,6 +73,13 @@ public class CreateUploadVideoRequest extends TeaModel {
     public Long fileSize;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
+    /**
      * <p>The storage address. Perform the following operations to obtain the storage address: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, view the storage address.</p>
      * <blockquote>
      * <p> If you leave this parameter empty, audio and video files are uploaded to the default storage address. If you specify a storage address, audio and video files are uploaded to the specified address.</p>
@@ -213,6 +220,14 @@ public class CreateUploadVideoRequest extends TeaModel {
     }
     public Long getFileSize() {
         return this.fileSize;
+    }
+
+    public CreateUploadVideoRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public CreateUploadVideoRequest setStorageLocation(String storageLocation) {

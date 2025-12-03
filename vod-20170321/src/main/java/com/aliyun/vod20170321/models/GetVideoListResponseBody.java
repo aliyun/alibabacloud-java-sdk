@@ -150,6 +150,13 @@ public class GetVideoListResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>123-123</p>
+         */
+        @NameInMap("ReferenceId")
+        public String referenceId;
+
+        /**
          * <p>The period of time in which the audio or video file remains in the restored state.</p>
          * 
          * <strong>example:</strong>
@@ -334,6 +341,14 @@ public class GetVideoListResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        public GetVideoListResponseBodyVideoListVideo setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public GetVideoListResponseBodyVideoListVideo setRestoreExpiration(String restoreExpiration) {

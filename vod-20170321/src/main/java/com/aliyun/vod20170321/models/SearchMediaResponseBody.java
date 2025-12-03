@@ -798,6 +798,13 @@ public class SearchMediaResponseBody extends TeaModel {
         public String preprocessStatus;
 
         /**
+         * <strong>example:</strong>
+         * <p>123-123</p>
+         */
+        @NameInMap("ReferenceId")
+        public String referenceId;
+
+        /**
          * <p>The period of time in which the audio file remains in the restored state.</p>
          * 
          * <strong>example:</strong>
@@ -1015,6 +1022,14 @@ public class SearchMediaResponseBody extends TeaModel {
         }
         public String getPreprocessStatus() {
             return this.preprocessStatus;
+        }
+
+        public SearchMediaResponseBodyMediaListAudio setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public SearchMediaResponseBodyMediaListAudio setRestoreExpiration(String restoreExpiration) {
@@ -1441,6 +1456,13 @@ public class SearchMediaResponseBody extends TeaModel {
         public String preprocessStatus;
 
         /**
+         * <strong>example:</strong>
+         * <p>123-123</p>
+         */
+        @NameInMap("ReferenceId")
+        public String referenceId;
+
+        /**
          * <p>The period of time in which the video file remains in the restored state.</p>
          * 
          * <strong>example:</strong>
@@ -1663,6 +1685,14 @@ public class SearchMediaResponseBody extends TeaModel {
         }
         public String getPreprocessStatus() {
             return this.preprocessStatus;
+        }
+
+        public SearchMediaResponseBodyMediaListVideo setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public SearchMediaResponseBodyMediaListVideo setRestoreExpiration(String restoreExpiration) {

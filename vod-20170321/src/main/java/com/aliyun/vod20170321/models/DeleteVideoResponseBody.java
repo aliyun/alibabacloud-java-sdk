@@ -13,6 +13,9 @@ public class DeleteVideoResponseBody extends TeaModel {
     @NameInMap("ForbiddenVideoIds")
     public java.util.List<String> forbiddenVideoIds;
 
+    @NameInMap("NonExistReferenceIds")
+    public java.util.List<String> nonExistReferenceIds;
+
     /**
      * <p>The IDs of the videos that do not exist.</p>
      * <blockquote>
@@ -42,6 +45,14 @@ public class DeleteVideoResponseBody extends TeaModel {
     }
     public java.util.List<String> getForbiddenVideoIds() {
         return this.forbiddenVideoIds;
+    }
+
+    public DeleteVideoResponseBody setNonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
+        this.nonExistReferenceIds = nonExistReferenceIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistReferenceIds() {
+        return this.nonExistReferenceIds;
     }
 
     public DeleteVideoResponseBody setNonExistVideoIds(java.util.List<String> nonExistVideoIds) {

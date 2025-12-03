@@ -168,6 +168,13 @@ public class GetVideoInfoResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>123-123</p>
+         */
+        @NameInMap("ReferenceId")
+        public String referenceId;
+
+        /**
          * <p>The region where the media file is stored.</p>
          * 
          * <strong>example:</strong>
@@ -397,6 +404,14 @@ public class GetVideoInfoResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        public GetVideoInfoResponseBodyVideo setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public GetVideoInfoResponseBodyVideo setRegionId(String regionId) {

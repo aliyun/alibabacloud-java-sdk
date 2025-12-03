@@ -143,6 +143,13 @@ public class GetPlayInfoRequest extends TeaModel {
     public String reAuthInfo;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
+    /**
      * <p>The type of the data to return. Default value: Single. Valid values:</p>
      * <ul>
      * <li><strong>Single</strong>: Only one latest transcoded stream is returned for each quality and format.</li>
@@ -189,7 +196,6 @@ public class GetPlayInfoRequest extends TeaModel {
      * <li>Obtain the value of the VideoId parameter in the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to upload the audio or video file.</li>
      * <li>Obtain the value of VideoId by calling the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>93ab850b4f654b6e91d24d81d44****</p>
@@ -264,6 +270,14 @@ public class GetPlayInfoRequest extends TeaModel {
     }
     public String getReAuthInfo() {
         return this.reAuthInfo;
+    }
+
+    public GetPlayInfoRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public GetPlayInfoRequest setResultType(String resultType) {

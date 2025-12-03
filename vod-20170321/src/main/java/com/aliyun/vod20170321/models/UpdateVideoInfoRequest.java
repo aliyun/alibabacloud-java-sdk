@@ -41,6 +41,13 @@ public class UpdateVideoInfoRequest extends TeaModel {
     public String description;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
+    /**
      * <p>The tags of the media file.</p>
      * <ul>
      * <li>Each tag can be up to 32 bytes in length. You can specify up to 16 tags.</li>
@@ -83,7 +90,6 @@ public class UpdateVideoInfoRequest extends TeaModel {
      * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
      * <li>View the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>2deda93265312baf9b0ed810d****</p>
@@ -118,6 +124,14 @@ public class UpdateVideoInfoRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateVideoInfoRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public UpdateVideoInfoRequest setTags(String tags) {

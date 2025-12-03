@@ -57,6 +57,13 @@ public class SubmitTranscodeJobsRequest extends TeaModel {
     public String priority;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
+    /**
      * <p>The custom identifier for deduplication. If you send a request, an error is returned if a request with the same identifier was sent in the last 7 days. A custom identifier can be up to 50 characters in length and can contain letters, digits, hyphens (-), and underscores (_). If you do not specify this parameter or leave this parameter empty, duplicate requests are not filtered.</p>
      * 
      * <strong>example:</strong>
@@ -136,6 +143,14 @@ public class SubmitTranscodeJobsRequest extends TeaModel {
     }
     public String getPriority() {
         return this.priority;
+    }
+
+    public SubmitTranscodeJobsRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public SubmitTranscodeJobsRequest setSessionId(String sessionId) {

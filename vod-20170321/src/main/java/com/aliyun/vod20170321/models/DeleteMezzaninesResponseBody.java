@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteMezzaninesResponseBody extends TeaModel {
+    @NameInMap("NonExistReferenceIds")
+    public java.util.List<String> nonExistReferenceIds;
+
     /**
      * <p>The IDs of the audio or video files that do not exist.</p>
      */
@@ -31,6 +34,14 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     public static DeleteMezzaninesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMezzaninesResponseBody self = new DeleteMezzaninesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMezzaninesResponseBody setNonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
+        this.nonExistReferenceIds = nonExistReferenceIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistReferenceIds() {
+        return this.nonExistReferenceIds;
     }
 
     public DeleteMezzaninesResponseBody setNonExistVideoIds(java.util.List<String> nonExistVideoIds) {

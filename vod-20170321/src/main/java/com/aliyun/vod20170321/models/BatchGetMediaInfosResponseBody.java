@@ -22,6 +22,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     @NameInMap("NonExistMediaIds")
     public java.util.List<String> nonExistMediaIds;
 
+    @NameInMap("NonExistReferenceIds")
+    public java.util.List<String> nonExistReferenceIds;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -58,6 +61,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
     public java.util.List<String> getNonExistMediaIds() {
         return this.nonExistMediaIds;
+    }
+
+    public BatchGetMediaInfosResponseBody setNonExistReferenceIds(java.util.List<String> nonExistReferenceIds) {
+        this.nonExistReferenceIds = nonExistReferenceIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistReferenceIds() {
+        return this.nonExistReferenceIds;
     }
 
     public BatchGetMediaInfosResponseBody setRequestId(String requestId) {
@@ -153,6 +164,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>123-123</p>
+         */
+        @NameInMap("ReferenceId")
+        public String referenceId;
 
         /**
          * <p>The period of time in which the audio file remains in the restored state.</p>
@@ -341,6 +359,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosMediaInfo setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public BatchGetMediaInfosResponseBodyMediaInfosMediaInfo setRestoreExpiration(String restoreExpiration) {

@@ -21,13 +21,19 @@ public class DeleteMezzaninesRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <strong>example:</strong>
+     * <p>123-123,1234-1234</p>
+     */
+    @NameInMap("ReferenceIds")
+    public String referenceIds;
+
+    /**
      * <p>The IDs of audio or video files whose source files that you want to delete. You can specify up to 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</p>
      * <ul>
      * <li>After you upload a video in the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, you can log on to the ApsaraVideo VOD console and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the ID of the video.</li>
      * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
      * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>23ab850b4f654b6e91d24d8157****,93ab850b4f6f4b6e91d24d81d4****</p>
@@ -46,6 +52,14 @@ public class DeleteMezzaninesRequest extends TeaModel {
     }
     public Boolean getForce() {
         return this.force;
+    }
+
+    public DeleteMezzaninesRequest setReferenceIds(String referenceIds) {
+        this.referenceIds = referenceIds;
+        return this;
+    }
+    public String getReferenceIds() {
+        return this.referenceIds;
     }
 
     public DeleteMezzaninesRequest setVideoIds(String videoIds) {
