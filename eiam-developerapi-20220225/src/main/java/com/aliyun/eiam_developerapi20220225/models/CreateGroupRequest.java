@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
     /**
+     * <p>The external ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>group_2bo6lefcewdausyyxxxx</p>
      */
@@ -12,6 +14,7 @@ public class CreateGroupRequest extends TeaModel {
     public String groupExternalId;
 
     /**
+     * <p>The organization name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

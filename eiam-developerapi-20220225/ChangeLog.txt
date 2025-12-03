@@ -1,3 +1,6 @@
+2025-12-03 Version: 1.1.1
+- Update SDK.
+
 2025-03-18 Version: 1.1.0
 - Support API AddUsersToGroup.
 - Support API CreateGroup.

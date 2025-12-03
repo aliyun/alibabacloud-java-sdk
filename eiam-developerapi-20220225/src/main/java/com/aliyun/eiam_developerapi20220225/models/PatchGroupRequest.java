@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PatchGroupRequest extends TeaModel {
     /**
+     * <p>The group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name001</p>
      */

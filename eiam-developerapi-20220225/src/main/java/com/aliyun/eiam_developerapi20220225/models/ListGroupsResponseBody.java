@@ -4,10 +4,15 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListGroupsResponseBodyData> data;
 
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListGroupsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The start position of the query. If this parameter is left empty, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>NTxxx</p>
      */
@@ -22,6 +29,8 @@ public class ListGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -67,6 +76,8 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the group was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
          */
@@ -74,6 +85,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The group description.</p>
+         * 
          * <strong>example:</strong>
          * <p>description_demo</p>
          */
@@ -81,6 +94,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The external ID of the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>group_ufdsasn35ea5lmthk267xxxxx</p>
          */
@@ -88,6 +103,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupExternalId;
 
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>group_ufdsasn35ea5lmthk267xxxxx</p>
          */
@@ -95,6 +112,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>name_test</p>
          */
@@ -102,6 +121,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The source ID of the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
@@ -109,6 +130,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupSourceId;
 
         /**
+         * <p>The source type of the group. Valid values: build_in, ding_talk, ad, and ldap.</p>
+         * 
          * <strong>example:</strong>
          * <p>build_in</p>
          */
@@ -116,6 +139,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String groupSourceType;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
@@ -123,6 +148,8 @@ public class ListGroupsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time when the group was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
          */

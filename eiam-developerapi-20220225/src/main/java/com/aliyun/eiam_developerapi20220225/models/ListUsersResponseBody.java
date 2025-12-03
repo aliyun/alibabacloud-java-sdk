@@ -112,8 +112,6 @@ public class ListUsersResponseBody extends TeaModel {
         public Long lockExpireTime;
 
         /**
-         * <p>密码是否已设置</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

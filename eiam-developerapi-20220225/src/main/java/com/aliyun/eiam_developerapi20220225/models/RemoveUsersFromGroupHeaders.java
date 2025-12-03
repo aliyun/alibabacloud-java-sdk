@@ -8,6 +8,7 @@ public class RemoveUsersFromGroupHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The authentication information. The value is in the Bearer ${access_token} format. Example: Bearer ATxxxx.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

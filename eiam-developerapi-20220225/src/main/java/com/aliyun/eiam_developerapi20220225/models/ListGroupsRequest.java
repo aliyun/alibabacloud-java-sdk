@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
     /**
+     * <p>The prefix of the group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>group_xxx</p>
      */
@@ -12,6 +14,8 @@ public class ListGroupsRequest extends TeaModel {
     public String groupNameStartWith;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

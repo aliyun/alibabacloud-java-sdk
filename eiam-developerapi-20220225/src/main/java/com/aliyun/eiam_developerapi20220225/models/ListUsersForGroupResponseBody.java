@@ -4,10 +4,15 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class ListUsersForGroupResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListUsersForGroupResponseBodyData> data;
 
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>NTxxx</p>
      */
@@ -22,6 +29,8 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -67,6 +76,8 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
     public static class ListUsersForGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
@@ -74,6 +85,8 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_001</p>
          */

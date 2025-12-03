@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUsersForGroupRequest extends TeaModel {
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

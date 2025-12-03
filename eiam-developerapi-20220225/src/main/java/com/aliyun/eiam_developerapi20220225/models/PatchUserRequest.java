@@ -4,6 +4,9 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class PatchUserRequest extends TeaModel {
+    /**
+     * <p>The extended fields of the account.</p>
+     */
     @NameInMap("customFields")
     public java.util.List<PatchUserRequestCustomFields> customFields;
 
@@ -17,7 +20,7 @@ public class PatchUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The email address of the user who owns the account.</p>
+     * <p>The email address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:example@example.com">example@example.com</a></p>
@@ -26,7 +29,7 @@ public class PatchUserRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>Indicates whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</p>
+     * <p>Specifies whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -35,7 +38,7 @@ public class PatchUserRequest extends TeaModel {
     public Boolean emailVerified;
 
     /**
-     * <p>The mobile number of the user who owns the account.</p>
+     * <p>The mobile number.</p>
      * 
      * <strong>example:</strong>
      * <p>156xxxxxxx</p>
@@ -44,7 +47,7 @@ public class PatchUserRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>Indicates whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</p>
+     * <p>Specifies whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +65,7 @@ public class PatchUserRequest extends TeaModel {
     public String phoneRegion;
 
     /**
-     * <p>The username of the account.</p>
+     * <p>The name of the account.</p>
      * 
      * <strong>example:</strong>
      * <p>name001</p>
@@ -141,6 +144,8 @@ public class PatchUserRequest extends TeaModel {
 
     public static class PatchUserRequestCustomFields extends TeaModel {
         /**
+         * <p>The name of the extended field. For more information about the type and valid values of the extended field, see the detailed description of the extended field in the IDaaS console.</p>
+         * 
          * <strong>example:</strong>
          * <p>age</p>
          */
@@ -148,6 +153,8 @@ public class PatchUserRequest extends TeaModel {
         public String fieldName;
 
         /**
+         * <p>The value of the extended field.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_value</p>
          */
@@ -155,11 +162,11 @@ public class PatchUserRequest extends TeaModel {
         public String fieldValue;
 
         /**
-         * <p>字段操作类型，取值可选范围：</p>
+         * <p>The operation to be performed on the field. Valid values:</p>
          * <ul>
-         * <li>add：添加。</li>
-         * <li>replace：替换。若对应扩展字段无设置值，会转换为add操作。</li>
-         * <li>remove：移除。</li>
+         * <li>add</li>
+         * <li>replace If you leave the value of the extended field empty, the replace operation is converted to an add operation.</li>
+         * <li>remove</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,6 +176,8 @@ public class PatchUserRequest extends TeaModel {
         public String operation;
 
         /**
+         * <p>The type of the operation. This parameter is deprecated. Replace it with operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>replace</p>
          */

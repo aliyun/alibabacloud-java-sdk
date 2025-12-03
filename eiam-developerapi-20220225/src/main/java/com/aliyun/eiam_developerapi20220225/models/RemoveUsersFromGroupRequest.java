@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersFromGroupRequest extends TeaModel {
     /**
+     * <p>The account IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

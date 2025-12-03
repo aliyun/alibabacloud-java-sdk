@@ -59,22 +59,13 @@ public class GenerateTokenRequest extends TeaModel {
     public String exclusiveTag;
 
     /**
-     * <p>The authorization type. Valid values:</p>
+     * <p>The supported authorization types are as follows:</p>
      * <ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * </ul>
-     * <!---->
-     * 
-     * <ul>
-     * <li>authorization_code</li>
-     * <li>urn:ietf:params:oauth:grant-type:device_code</li>
-     * <li>refresh_token</li>
-     * <li>client_credentials: You must specify the client_id and client_secret parameters.</li>
-     * <li>password: This option is not supported.</li>
+     * <li>client_credentials:Client credentials flow, requires client_id and client_secret.</li>
+     * <li>refresh_token:Refresh token flow.</li>
+     * <li>authorization_code:Authorization code flow.</li>
+     * <li>urn:ietf:params:oauth:grant-type:device_code:Device authorization flow.</li>
+     * <li>password:Password (Resource Owner Password Credentials) flow.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

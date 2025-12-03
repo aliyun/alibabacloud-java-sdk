@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetGroupResponseBody extends TeaModel {
     /**
+     * <p>The time when the group was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1652085686179</p>
      */
@@ -12,6 +14,8 @@ public class GetGroupResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The group description.</p>
+     * 
      * <strong>example:</strong>
      * <p>description_demo</p>
      */
@@ -19,6 +23,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The external ID of the group.</p>
+     * 
      * <strong>example:</strong>
      * <p>group_ufdsasn35ea5lmthk267xxxxx</p>
      */
@@ -26,6 +32,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String groupExternalId;
 
     /**
+     * <p>The group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>group_ufdsasn35ea5lmthk267xxxxx</p>
      */
@@ -33,6 +41,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>name_test</p>
      */
@@ -40,6 +50,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The source ID of the group.</p>
+     * 
      * <strong>example:</strong>
      * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
@@ -47,6 +59,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String groupSourceId;
 
     /**
+     * <p>The source type of the group. Valid values: build_in, ding_talk, ad, and ldap.</p>
+     * 
      * <strong>example:</strong>
      * <p>build_in</p>
      */
@@ -54,6 +68,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String groupSourceType;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
@@ -61,6 +77,8 @@ public class GetGroupResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The time when the group was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1652085686179</p>
      */
