@@ -3,12 +3,12 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class OSSIngestion extends TeaModel {
+public class ESIngestion extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
-    public OSSIngestionConfiguration configuration;
+    public ESIngestionConfiguration configuration;
 
     /**
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class OSSIngestion extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>oss ingestion</p>
+     * <p>es ingestion</p>
      */
     @NameInMap("description")
     public String description;
@@ -28,7 +28,7 @@ public class OSSIngestion extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss ingestion</p>
+     * <p>es ingestion</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -44,17 +44,10 @@ public class OSSIngestion extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ingest-oss-123456</p>
+     * <p>ingest-es-123456</p>
      */
     @NameInMap("name")
     public String name;
-
-    /**
-     * <strong>example:</strong>
-     * <p>ingest-processor-1756802123-953901</p>
-     */
-    @NameInMap("processorId")
-    public String processorId;
 
     /**
      * <p>This parameter is required.</p>
@@ -76,20 +69,20 @@ public class OSSIngestion extends TeaModel {
     @NameInMap("status")
     public String status;
 
-    public static OSSIngestion build(java.util.Map<String, ?> map) throws Exception {
-        OSSIngestion self = new OSSIngestion();
+    public static ESIngestion build(java.util.Map<String, ?> map) throws Exception {
+        ESIngestion self = new ESIngestion();
         return TeaModel.build(map, self);
     }
 
-    public OSSIngestion setConfiguration(OSSIngestionConfiguration configuration) {
+    public ESIngestion setConfiguration(ESIngestionConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
-    public OSSIngestionConfiguration getConfiguration() {
+    public ESIngestionConfiguration getConfiguration() {
         return this.configuration;
     }
 
-    public OSSIngestion setCreateTime(Long createTime) {
+    public ESIngestion setCreateTime(Long createTime) {
         this.createTime = createTime;
         return this;
     }
@@ -97,7 +90,7 @@ public class OSSIngestion extends TeaModel {
         return this.createTime;
     }
 
-    public OSSIngestion setDescription(String description) {
+    public ESIngestion setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -105,7 +98,7 @@ public class OSSIngestion extends TeaModel {
         return this.description;
     }
 
-    public OSSIngestion setDisplayName(String displayName) {
+    public ESIngestion setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
@@ -113,7 +106,7 @@ public class OSSIngestion extends TeaModel {
         return this.displayName;
     }
 
-    public OSSIngestion setLastModifiedTime(Long lastModifiedTime) {
+    public ESIngestion setLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
@@ -121,7 +114,7 @@ public class OSSIngestion extends TeaModel {
         return this.lastModifiedTime;
     }
 
-    public OSSIngestion setName(String name) {
+    public ESIngestion setName(String name) {
         this.name = name;
         return this;
     }
@@ -129,15 +122,7 @@ public class OSSIngestion extends TeaModel {
         return this.name;
     }
 
-    public OSSIngestion setProcessorId(String processorId) {
-        this.processorId = processorId;
-        return this;
-    }
-    public String getProcessorId() {
-        return this.processorId;
-    }
-
-    public OSSIngestion setSchedule(Schedule schedule) {
+    public ESIngestion setSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
     }
@@ -145,7 +130,7 @@ public class OSSIngestion extends TeaModel {
         return this.schedule;
     }
 
-    public OSSIngestion setScheduleId(String scheduleId) {
+    public ESIngestion setScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
         return this;
     }
@@ -153,7 +138,7 @@ public class OSSIngestion extends TeaModel {
         return this.scheduleId;
     }
 
-    public OSSIngestion setStatus(String status) {
+    public ESIngestion setStatus(String status) {
         this.status = status;
         return this;
     }

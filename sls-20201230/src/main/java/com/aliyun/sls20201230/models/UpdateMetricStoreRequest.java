@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetricStoreRequest extends TeaModel {
+    @NameInMap("appendMeta")
+    public Boolean appendMeta;
+
     /**
      * <p>Specifies whether to enable automatic sharding.</p>
      * 
@@ -37,6 +40,9 @@ public class UpdateMetricStoreRequest extends TeaModel {
     @NameInMap("mode")
     public String mode;
 
+    @NameInMap("shardingPolicy")
+    public ShardingPolicy shardingPolicy;
+
     /**
      * <p>The retention period of the metric data. Unit: days.</p>
      * 
@@ -49,6 +55,14 @@ public class UpdateMetricStoreRequest extends TeaModel {
     public static UpdateMetricStoreRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMetricStoreRequest self = new UpdateMetricStoreRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMetricStoreRequest setAppendMeta(Boolean appendMeta) {
+        this.appendMeta = appendMeta;
+        return this;
+    }
+    public Boolean getAppendMeta() {
+        return this.appendMeta;
     }
 
     public UpdateMetricStoreRequest setAutoSplit(Boolean autoSplit) {
@@ -89,6 +103,14 @@ public class UpdateMetricStoreRequest extends TeaModel {
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public UpdateMetricStoreRequest setShardingPolicy(ShardingPolicy shardingPolicy) {
+        this.shardingPolicy = shardingPolicy;
+        return this;
+    }
+    public ShardingPolicy getShardingPolicy() {
+        return this.shardingPolicy;
     }
 
     public UpdateMetricStoreRequest setTtl(Integer ttl) {

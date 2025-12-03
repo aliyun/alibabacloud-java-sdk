@@ -115,6 +115,9 @@ public class UpdateLogStoreRequest extends TeaModel {
     @Deprecated
     public Integer shardCount;
 
+    @NameInMap("shardingPolicy")
+    public ShardingPolicy shardingPolicy;
+
     /**
      * <p>The type of the observable data. Valid values:</p>
      * <ul>
@@ -223,6 +226,14 @@ public class UpdateLogStoreRequest extends TeaModel {
     }
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    public UpdateLogStoreRequest setShardingPolicy(ShardingPolicy shardingPolicy) {
+        this.shardingPolicy = shardingPolicy;
+        return this;
+    }
+    public ShardingPolicy getShardingPolicy() {
+        return this.shardingPolicy;
     }
 
     @Deprecated

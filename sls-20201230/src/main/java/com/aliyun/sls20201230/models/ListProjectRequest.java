@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListProjectRequest extends TeaModel {
+    @NameInMap("description")
+    public String description;
+
     @NameInMap("fetchQuota")
     public Boolean fetchQuota;
 
@@ -40,6 +43,14 @@ public class ListProjectRequest extends TeaModel {
     public static ListProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProjectRequest self = new ListProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListProjectRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ListProjectRequest setFetchQuota(Boolean fetchQuota) {

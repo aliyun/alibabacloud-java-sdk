@@ -128,6 +128,9 @@ public class CreateLogStoreRequest extends TeaModel {
     @NameInMap("shardCount")
     public Integer shardCount;
 
+    @NameInMap("shardingPolicy")
+    public ShardingPolicy shardingPolicy;
+
     /**
      * <p>The type of the observable data. Valid values:</p>
      * <ul>
@@ -242,6 +245,14 @@ public class CreateLogStoreRequest extends TeaModel {
     }
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    public CreateLogStoreRequest setShardingPolicy(ShardingPolicy shardingPolicy) {
+        this.shardingPolicy = shardingPolicy;
+        return this;
+    }
+    public ShardingPolicy getShardingPolicy() {
+        return this.shardingPolicy;
     }
 
     public CreateLogStoreRequest setTelemetryType(String telemetryType) {

@@ -19,6 +19,13 @@ public class LogItem extends TeaModel {
     @NameInMap("Time")
     public Integer time;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
+    @NameInMap("TimeNs")
+    public Integer timeNs;
+
     public static LogItem build(java.util.Map<String, ?> map) throws Exception {
         LogItem self = new LogItem();
         return TeaModel.build(map, self);
@@ -38,6 +45,14 @@ public class LogItem extends TeaModel {
     }
     public Integer getTime() {
         return this.time;
+    }
+
+    public LogItem setTimeNs(Integer timeNs) {
+        this.timeNs = timeNs;
+        return this;
+    }
+    public Integer getTimeNs() {
+        return this.timeNs;
     }
 
 }

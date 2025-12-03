@@ -30,6 +30,13 @@ public class Index extends TeaModel {
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("scan_index")
+    public Boolean scanIndex;
+
     public static Index build(java.util.Map<String, ?> map) throws Exception {
         Index self = new Index();
         return TeaModel.build(map, self);
@@ -81,6 +88,14 @@ public class Index extends TeaModel {
     }
     public Integer getMaxTextLen() {
         return this.maxTextLen;
+    }
+
+    public Index setScanIndex(Boolean scanIndex) {
+        this.scanIndex = scanIndex;
+        return this;
+    }
+    public Boolean getScanIndex() {
+        return this.scanIndex;
     }
 
     public static class IndexLine extends TeaModel {

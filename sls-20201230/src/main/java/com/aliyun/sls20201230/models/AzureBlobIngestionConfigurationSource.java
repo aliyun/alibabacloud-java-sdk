@@ -3,15 +3,24 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class OSSIngestionConfigurationSource extends TeaModel {
+public class AzureBlobIngestionConfigurationSource extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ossbucket</p>
+     * <p>dGVzdGtleQ==</p>
      */
-    @NameInMap("bucket")
-    public String bucket;
+    @NameInMap("accountKey")
+    public String accountKey;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test001</p>
+     */
+    @NameInMap("accountName")
+    public String accountName;
 
     /**
      * <p>This parameter is required.</p>
@@ -21,6 +30,15 @@ public class OSSIngestionConfigurationSource extends TeaModel {
      */
     @NameInMap("compressionCodec")
     public String compressionCodec;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-container</p>
+     */
+    @NameInMap("containerName")
+    public String containerName;
 
     /**
      * <p>This parameter is required.</p>
@@ -40,15 +58,6 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>oss-cn-hangzhou.aliyuncs.com</p>
-     */
-    @NameInMap("endpoint")
-    public String endpoint;
-
-    /**
-     * <p>This parameter is required.</p>
      */
     @NameInMap("format")
     public java.util.Map<String, ?> format;
@@ -57,7 +66,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>never</p>
+     * <p>30m</p>
      */
     @NameInMap("interval")
     public String interval;
@@ -85,20 +94,6 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("restoreObjectEnabled")
-    public Boolean restoreObjectEnabled;
-
-    /**
-     * <strong>example:</strong>
-     * <p>acs:ram::12345:role/aliyunlogdefaultrole</p>
-     */
-    @NameInMap("roleARN")
-    public String roleARN;
-
-    /**
-     * <strong>example:</strong>
      * <p>1714274081</p>
      */
     @NameInMap("startTime")
@@ -106,7 +101,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("tagPackId")
     public Boolean tagPackId;
@@ -139,29 +134,28 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     @NameInMap("timeZone")
     public String timeZone;
 
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
-    @NameInMap("useMetaIndex")
-    public Boolean useMetaIndex;
-
-    public static OSSIngestionConfigurationSource build(java.util.Map<String, ?> map) throws Exception {
-        OSSIngestionConfigurationSource self = new OSSIngestionConfigurationSource();
+    public static AzureBlobIngestionConfigurationSource build(java.util.Map<String, ?> map) throws Exception {
+        AzureBlobIngestionConfigurationSource self = new AzureBlobIngestionConfigurationSource();
         return TeaModel.build(map, self);
     }
 
-    public OSSIngestionConfigurationSource setBucket(String bucket) {
-        this.bucket = bucket;
+    public AzureBlobIngestionConfigurationSource setAccountKey(String accountKey) {
+        this.accountKey = accountKey;
         return this;
     }
-    public String getBucket() {
-        return this.bucket;
+    public String getAccountKey() {
+        return this.accountKey;
     }
 
-    public OSSIngestionConfigurationSource setCompressionCodec(String compressionCodec) {
+    public AzureBlobIngestionConfigurationSource setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public AzureBlobIngestionConfigurationSource setCompressionCodec(String compressionCodec) {
         this.compressionCodec = compressionCodec;
         return this;
     }
@@ -169,7 +163,15 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.compressionCodec;
     }
 
-    public OSSIngestionConfigurationSource setEncoding(String encoding) {
+    public AzureBlobIngestionConfigurationSource setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
+    }
+
+    public AzureBlobIngestionConfigurationSource setEncoding(String encoding) {
         this.encoding = encoding;
         return this;
     }
@@ -177,7 +179,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.encoding;
     }
 
-    public OSSIngestionConfigurationSource setEndTime(Long endTime) {
+    public AzureBlobIngestionConfigurationSource setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -185,15 +187,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.endTime;
     }
 
-    public OSSIngestionConfigurationSource setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-        return this;
-    }
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
-    public OSSIngestionConfigurationSource setFormat(java.util.Map<String, ?> format) {
+    public AzureBlobIngestionConfigurationSource setFormat(java.util.Map<String, ?> format) {
         this.format = format;
         return this;
     }
@@ -201,7 +195,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.format;
     }
 
-    public OSSIngestionConfigurationSource setInterval(String interval) {
+    public AzureBlobIngestionConfigurationSource setInterval(String interval) {
         this.interval = interval;
         return this;
     }
@@ -209,7 +203,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.interval;
     }
 
-    public OSSIngestionConfigurationSource setPattern(String pattern) {
+    public AzureBlobIngestionConfigurationSource setPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
@@ -217,7 +211,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.pattern;
     }
 
-    public OSSIngestionConfigurationSource setPrefix(String prefix) {
+    public AzureBlobIngestionConfigurationSource setPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
@@ -225,7 +219,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.prefix;
     }
 
-    public OSSIngestionConfigurationSource setProcessorId(String processorId) {
+    public AzureBlobIngestionConfigurationSource setProcessorId(String processorId) {
         this.processorId = processorId;
         return this;
     }
@@ -233,23 +227,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.processorId;
     }
 
-    public OSSIngestionConfigurationSource setRestoreObjectEnabled(Boolean restoreObjectEnabled) {
-        this.restoreObjectEnabled = restoreObjectEnabled;
-        return this;
-    }
-    public Boolean getRestoreObjectEnabled() {
-        return this.restoreObjectEnabled;
-    }
-
-    public OSSIngestionConfigurationSource setRoleARN(String roleARN) {
-        this.roleARN = roleARN;
-        return this;
-    }
-    public String getRoleARN() {
-        return this.roleARN;
-    }
-
-    public OSSIngestionConfigurationSource setStartTime(Long startTime) {
+    public AzureBlobIngestionConfigurationSource setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -257,7 +235,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.startTime;
     }
 
-    public OSSIngestionConfigurationSource setTagPackId(Boolean tagPackId) {
+    public AzureBlobIngestionConfigurationSource setTagPackId(Boolean tagPackId) {
         this.tagPackId = tagPackId;
         return this;
     }
@@ -265,7 +243,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.tagPackId;
     }
 
-    public OSSIngestionConfigurationSource setTimeField(String timeField) {
+    public AzureBlobIngestionConfigurationSource setTimeField(String timeField) {
         this.timeField = timeField;
         return this;
     }
@@ -273,7 +251,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.timeField;
     }
 
-    public OSSIngestionConfigurationSource setTimeFormat(String timeFormat) {
+    public AzureBlobIngestionConfigurationSource setTimeFormat(String timeFormat) {
         this.timeFormat = timeFormat;
         return this;
     }
@@ -281,7 +259,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.timeFormat;
     }
 
-    public OSSIngestionConfigurationSource setTimePattern(String timePattern) {
+    public AzureBlobIngestionConfigurationSource setTimePattern(String timePattern) {
         this.timePattern = timePattern;
         return this;
     }
@@ -289,20 +267,12 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.timePattern;
     }
 
-    public OSSIngestionConfigurationSource setTimeZone(String timeZone) {
+    public AzureBlobIngestionConfigurationSource setTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     public String getTimeZone() {
         return this.timeZone;
-    }
-
-    public OSSIngestionConfigurationSource setUseMetaIndex(Boolean useMetaIndex) {
-        this.useMetaIndex = useMetaIndex;
-        return this;
-    }
-    public Boolean getUseMetaIndex() {
-        return this.useMetaIndex;
     }
 
 }

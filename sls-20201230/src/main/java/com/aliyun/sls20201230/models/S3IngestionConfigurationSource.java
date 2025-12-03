@@ -80,6 +80,13 @@ public class S3IngestionConfigurationSource extends TeaModel {
     public Long endTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>s3.us-east-1.amazonaws.com</p>
+     */
+    @NameInMap("endpoint")
+    public String endpoint;
+
+    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("format")
@@ -107,6 +114,13 @@ public class S3IngestionConfigurationSource extends TeaModel {
      */
     @NameInMap("prefix")
     public String prefix;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ingest-processor-1756802123-953901</p>
+     */
+    @NameInMap("processorId")
+    public String processorId;
 
     /**
      * <strong>example:</strong>
@@ -234,6 +248,14 @@ public class S3IngestionConfigurationSource extends TeaModel {
         return this.endTime;
     }
 
+    public S3IngestionConfigurationSource setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    public String getEndpoint() {
+        return this.endpoint;
+    }
+
     public S3IngestionConfigurationSource setFormat(java.util.Map<String, ?> format) {
         this.format = format;
         return this;
@@ -264,6 +286,14 @@ public class S3IngestionConfigurationSource extends TeaModel {
     }
     public String getPrefix() {
         return this.prefix;
+    }
+
+    public S3IngestionConfigurationSource setProcessorId(String processorId) {
+        this.processorId = processorId;
+        return this;
+    }
+    public String getProcessorId() {
+        return this.processorId;
     }
 
     public S3IngestionConfigurationSource setStartTime(Long startTime) {

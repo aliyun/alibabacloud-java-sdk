@@ -50,6 +50,13 @@ public class S3Ingestion extends TeaModel {
     public String name;
 
     /**
+     * <strong>example:</strong>
+     * <p>ingest-processor-1756802123-953901</p>
+     */
+    @NameInMap("processorId")
+    public String processorId;
+
+    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("schedule")
@@ -120,6 +127,14 @@ public class S3Ingestion extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public S3Ingestion setProcessorId(String processorId) {
+        this.processorId = processorId;
+        return this;
+    }
+    public String getProcessorId() {
+        return this.processorId;
     }
 
     public S3Ingestion setSchedule(Schedule schedule) {

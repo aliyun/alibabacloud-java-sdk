@@ -573,6 +573,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建Azure blob文件导入任务</p>
+     * 
+     * @param request CreateAzureBlobIngestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAzureBlobIngestionResponse
+     */
+    public CreateAzureBlobIngestionResponse createAzureBlobIngestionWithOptions(String project, CreateAzureBlobIngestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            body.put("configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            body.put("schedule", request.schedule);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAzureBlobIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/azureblobingestions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateAzureBlobIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Azure blob文件导入任务</p>
+     * 
+     * @param request CreateAzureBlobIngestionRequest
+     * @return CreateAzureBlobIngestionResponse
+     */
+    public CreateAzureBlobIngestionResponse createAzureBlobIngestion(String project, CreateAzureBlobIngestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAzureBlobIngestionWithOptions(project, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Usage notes</h3>
      * <ul>
@@ -991,6 +1057,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建ES导入任务</p>
+     * 
+     * @param request CreateElasticsearchIngestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateElasticsearchIngestionResponse
+     */
+    public CreateElasticsearchIngestionResponse createElasticsearchIngestionWithOptions(String project, CreateElasticsearchIngestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            body.put("configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            body.put("schedule", request.schedule);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateElasticsearchIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/elasticsearchingestions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateElasticsearchIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建ES导入任务</p>
+     * 
+     * @param request CreateElasticsearchIngestionRequest
+     * @return CreateElasticsearchIngestionResponse
+     */
+    public CreateElasticsearchIngestionResponse createElasticsearchIngestion(String project, CreateElasticsearchIngestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createElasticsearchIngestionWithOptions(project, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
      * 
@@ -1122,6 +1254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.shardCount)) {
             body.put("shardCount", request.shardCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardingPolicy)) {
+            body.put("shardingPolicy", request.shardingPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.telemetryType)) {
@@ -1510,6 +1646,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appendMeta)) {
+            body.put("appendMeta", request.appendMeta);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoSplit)) {
             body.put("autoSplit", request.autoSplit);
         }
@@ -1540,6 +1680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.shardCount)) {
             body.put("shardCount", request.shardCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardingPolicy)) {
+            body.put("shardingPolicy", request.shardingPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
@@ -1840,6 +1984,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createProjectWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建S3文件导入任务</p>
+     * 
+     * @param request CreateS3IngestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateS3IngestionResponse
+     */
+    public CreateS3IngestionResponse createS3IngestionWithOptions(String project, CreateS3IngestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            body.put("configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            body.put("schedule", request.schedule);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateS3Ingestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/s3ingestions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateS3IngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建S3文件导入任务</p>
+     * 
+     * @param request CreateS3IngestionRequest
+     * @return CreateS3IngestionResponse
+     */
+    public CreateS3IngestionResponse createS3Ingestion(String project, CreateS3IngestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createS3IngestionWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -2408,6 +2618,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建Azure blob文件导入任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAzureBlobIngestionResponse
+     */
+    public DeleteAzureBlobIngestionResponse deleteAzureBlobIngestionWithOptions(String project, String azureBlobIngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAzureBlobIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/azureblobingestions/" + azureBlobIngestionName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAzureBlobIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Azure blob文件导入任务</p>
+     * @return DeleteAzureBlobIngestionResponse
+     */
+    public DeleteAzureBlobIngestionResponse deleteAzureBlobIngestion(String project, String azureBlobIngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAzureBlobIngestionWithOptions(project, azureBlobIngestionName, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You must use the Simple Log Service endpoint for the China (Shanghai), Singapore, or Heyuan ACDR Auto region to call the operation.</p>
      * 
@@ -2836,6 +3086,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteETLWithOptions(project, etlName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除ES导入任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteElasticsearchIngestionResponse
+     */
+    public DeleteElasticsearchIngestionResponse deleteElasticsearchIngestionWithOptions(String project, String esIngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteElasticsearchIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/elasticsearchingestions/" + esIngestionName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteElasticsearchIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除ES导入任务</p>
+     * @return DeleteElasticsearchIngestionResponse
+     */
+    public DeleteElasticsearchIngestionResponse deleteElasticsearchIngestion(String project, String esIngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteElasticsearchIngestionWithOptions(project, esIngestionName, headers, runtime);
     }
 
     /**
@@ -3500,6 +3790,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteProjectPolicyWithOptions(project, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除s3导入任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteS3IngestionResponse
+     */
+    public DeleteS3IngestionResponse deleteS3IngestionWithOptions(String project, String s3IngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteS3Ingestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/s3ingestions/" + s3IngestionName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteS3IngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除s3导入任务</p>
+     * @return DeleteS3IngestionResponse
+     */
+    public DeleteS3IngestionResponse deleteS3Ingestion(String project, String s3IngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteS3IngestionWithOptions(project, s3IngestionName, headers, runtime);
     }
 
     /**
@@ -4174,6 +4504,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取Azure blob文件导入任务信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAzureBlobIngestionResponse
+     */
+    public GetAzureBlobIngestionResponse getAzureBlobIngestionWithOptions(String project, String azureBlobIngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAzureBlobIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/azureblobingestions/" + azureBlobIngestionName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetAzureBlobIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Azure blob文件导入任务信息</p>
+     * @return GetAzureBlobIngestionResponse
+     */
+    public GetAzureBlobIngestionResponse getAzureBlobIngestion(String project, String azureBlobIngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAzureBlobIngestionWithOptions(project, azureBlobIngestionName, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
      * 
@@ -4760,6 +5130,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getETLWithOptions(project, etlName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取ElasticSearch导入任务信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetElasticsearchIngestionResponse
+     */
+    public GetElasticsearchIngestionResponse getElasticsearchIngestionWithOptions(String project, String esIngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetElasticsearchIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/elasticsearchingestions/" + esIngestionName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetElasticsearchIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取ElasticSearch导入任务信息</p>
+     * @return GetElasticsearchIngestionResponse
+     */
+    public GetElasticsearchIngestionResponse getElasticsearchIngestion(String project, String esIngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getElasticsearchIngestionWithOptions(project, esIngestionName, headers, runtime);
     }
 
     /**
@@ -6044,6 +6454,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取s3导入任务信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetS3IngestionResponse
+     */
+    public GetS3IngestionResponse getS3IngestionWithOptions(String project, String s3IngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetS3Ingestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/s3ingestions/" + s3IngestionName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetS3IngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取s3导入任务信息</p>
+     * @return GetS3IngestionResponse
+     */
+    public GetS3IngestionResponse getS3Ingestion(String project, String s3IngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getS3IngestionWithOptions(project, s3IngestionName, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -6632,6 +7082,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>列出Azure blob文件导入任务</p>
+     * 
+     * @param request ListAzureBlobIngestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAzureBlobIngestionResponse
+     */
+    public ListAzureBlobIngestionResponse listAzureBlobIngestionWithOptions(String project, ListAzureBlobIngestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
+            query.put("logstore", request.logstore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAzureBlobIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/azureblobingestions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListAzureBlobIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出Azure blob文件导入任务</p>
+     * 
+     * @param request ListAzureBlobIngestionRequest
+     * @return ListAzureBlobIngestionResponse
+     */
+    public ListAzureBlobIngestionResponse listAzureBlobIngestion(String project, ListAzureBlobIngestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAzureBlobIngestionWithOptions(project, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You must use the Simple Log Service endpoint for the China (Shanghai), Singapore, or Heyuan ACDR Auto region to call the operation.</p>
      * 
@@ -7210,6 +7718,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listETLsWithOptions(project, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建ES导入任务</p>
+     * 
+     * @param request ListElasticsearchIngestionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListElasticsearchIngestionsResponse
+     */
+    public ListElasticsearchIngestionsResponse listElasticsearchIngestionsWithOptions(String project, ListElasticsearchIngestionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
+            query.put("logstore", request.logstore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListElasticsearchIngestions"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/elasticsearchingestions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListElasticsearchIngestionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建ES导入任务</p>
+     * 
+     * @param request ListElasticsearchIngestionsRequest
+     * @return ListElasticsearchIngestionsResponse
+     */
+    public ListElasticsearchIngestionsResponse listElasticsearchIngestions(String project, ListElasticsearchIngestionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listElasticsearchIngestionsWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -7924,6 +8490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListProjectResponse listProjectWithOptions(ListProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fetchQuota)) {
             query.put("fetchQuota", request.fetchQuota);
         }
@@ -7977,6 +8547,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listProjectWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出s3导入任务</p>
+     * 
+     * @param request ListS3IngestionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListS3IngestionsResponse
+     */
+    public ListS3IngestionsResponse listS3IngestionsWithOptions(String project, ListS3IngestionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
+            query.put("logstore", request.logstore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListS3Ingestions"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/s3ingestions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListS3IngestionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出s3导入任务</p>
+     * 
+     * @param request ListS3IngestionsRequest
+     * @return ListS3IngestionsResponse
+     */
+    public ListS3IngestionsResponse listS3Ingestions(String project, ListS3IngestionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listS3IngestionsWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -8410,6 +9038,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public PullLogsResponse pullLogsWithOptions(String project, String logStore, String shardId, PullLogsRequest request, PullLogsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.count)) {
             query.put("count", request.count);
@@ -8437,6 +9067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -9102,6 +9733,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启动Azure blob文件导入任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartAzureBlobIngestionResponse
+     */
+    public StartAzureBlobIngestionResponse startAzureBlobIngestionWithOptions(String project, String azureBlobIngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartAzureBlobIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/azureblobingestions/" + azureBlobIngestionName + "?action=START"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new StartAzureBlobIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动Azure blob文件导入任务</p>
+     * @return StartAzureBlobIngestionResponse
+     */
+    public StartAzureBlobIngestionResponse startAzureBlobIngestion(String project, String azureBlobIngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startAzureBlobIngestionWithOptions(project, azureBlobIngestionName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Starts a data transformation job.</p>
      * 
      * @param headers map
@@ -9138,6 +9809,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startETLWithOptions(project, etlName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动ES导入任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartElasticsearchIngestionResponse
+     */
+    public StartElasticsearchIngestionResponse startElasticsearchIngestionWithOptions(String project, String elasticsearchIngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartElasticsearchIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/elasticsearchingestions/" + elasticsearchIngestionName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new StartElasticsearchIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动ES导入任务</p>
+     * @return StartElasticsearchIngestionResponse
+     */
+    public StartElasticsearchIngestionResponse startElasticsearchIngestion(String project, String elasticsearchIngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startElasticsearchIngestionWithOptions(project, elasticsearchIngestionName, headers, runtime);
     }
 
     /**
@@ -9318,6 +10029,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>启动Azure blob文件导入任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopAzureBlobIngestionResponse
+     */
+    public StopAzureBlobIngestionResponse stopAzureBlobIngestionWithOptions(String project, String azureBlobIngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopAzureBlobIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/azureblobingestions/" + azureBlobIngestionName + "?action=STOP"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new StopAzureBlobIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动Azure blob文件导入任务</p>
+     * @return StopAzureBlobIngestionResponse
+     */
+    public StopAzureBlobIngestionResponse stopAzureBlobIngestion(String project, String azureBlobIngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopAzureBlobIngestionWithOptions(project, azureBlobIngestionName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Stops a data transformation job.</p>
      * 
      * @param headers map
@@ -9354,6 +10105,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopETLWithOptions(project, etlName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止ES导入任务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopElasticsearchIngestionResponse
+     */
+    public StopElasticsearchIngestionResponse stopElasticsearchIngestionWithOptions(String project, String elasticsearchIngestionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopElasticsearchIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/elasticsearchingestion/" + elasticsearchIngestionName + "?action=STOP"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new StopElasticsearchIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止ES导入任务</p>
+     * @return StopElasticsearchIngestionResponse
+     */
+    public StopElasticsearchIngestionResponse stopElasticsearchIngestion(String project, String elasticsearchIngestionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopElasticsearchIngestionWithOptions(project, elasticsearchIngestionName, headers, runtime);
     }
 
     /**
@@ -9956,6 +10747,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新Azure blob文件导入任务</p>
+     * 
+     * @param request UpdateAzureBlobIngestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAzureBlobIngestionResponse
+     */
+    public UpdateAzureBlobIngestionResponse updateAzureBlobIngestionWithOptions(String project, String azureBlobIngestionName, UpdateAzureBlobIngestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            body.put("configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            body.put("schedule", request.schedule);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAzureBlobIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/azureblobingestions/" + azureBlobIngestionName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAzureBlobIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Azure blob文件导入任务</p>
+     * 
+     * @param request UpdateAzureBlobIngestionRequest
+     * @return UpdateAzureBlobIngestionResponse
+     */
+    public UpdateAzureBlobIngestionResponse updateAzureBlobIngestion(String project, String azureBlobIngestionName, UpdateAzureBlobIngestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAzureBlobIngestionWithOptions(project, azureBlobIngestionName, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Usage notes</h3>
      * <ul>
@@ -10255,6 +11108,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新ES导入任务</p>
+     * 
+     * @param request UpdateElasticsearchIngestionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateElasticsearchIngestionResponse
+     */
+    public UpdateElasticsearchIngestionResponse updateElasticsearchIngestionWithOptions(String project, String elasticsearchIngestionName, UpdateElasticsearchIngestionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            body.put("configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schedule)) {
+            body.put("schedule", request.schedule);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateElasticsearchIngestion"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/elasticsearchingestions/" + elasticsearchIngestionName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateElasticsearchIngestionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新ES导入任务</p>
+     * 
+     * @param request UpdateElasticsearchIngestionRequest
+     * @return UpdateElasticsearchIngestionResponse
+     */
+    public UpdateElasticsearchIngestionResponse updateElasticsearchIngestion(String project, String elasticsearchIngestionName, UpdateElasticsearchIngestionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateElasticsearchIngestionWithOptions(project, elasticsearchIngestionName, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
@@ -10366,6 +11281,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.shardCount)) {
             body.put("shardCount", request.shardCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardingPolicy)) {
+            body.put("shardingPolicy", request.shardingPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.telemetryType)) {
@@ -10968,6 +11887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appendMeta)) {
+            body.put("appendMeta", request.appendMeta);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoSplit)) {
             body.put("autoSplit", request.autoSplit);
         }
@@ -10986,6 +11909,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
             body.put("mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardingPolicy)) {
+            body.put("shardingPolicy", request.shardingPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {

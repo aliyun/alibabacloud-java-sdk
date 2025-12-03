@@ -82,6 +82,9 @@ public class Logstore extends TeaModel {
     @NameInMap("shardCount")
     public Integer shardCount;
 
+    @NameInMap("shardingPolicy")
+    public ShardingPolicy shardingPolicy;
+
     @NameInMap("telemetryType")
     public String telemetryType;
 
@@ -209,6 +212,14 @@ public class Logstore extends TeaModel {
     }
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    public Logstore setShardingPolicy(ShardingPolicy shardingPolicy) {
+        this.shardingPolicy = shardingPolicy;
+        return this;
+    }
+    public ShardingPolicy getShardingPolicy() {
+        return this.shardingPolicy;
     }
 
     public Logstore setTelemetryType(String telemetryType) {

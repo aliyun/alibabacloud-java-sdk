@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetMetricStoreResponseBody extends TeaModel {
+    @NameInMap("appendMeta")
+    public Boolean appendMeta;
+
     /**
      * <p>Indicates whether the automatic sharding feature is enabled.</p>
      * 
@@ -82,6 +85,9 @@ public class GetMetricStoreResponseBody extends TeaModel {
     @NameInMap("shardCount")
     public Integer shardCount;
 
+    @NameInMap("shardingPolicy")
+    public ShardingPolicy shardingPolicy;
+
     /**
      * <p>The retention period. Unit: days.</p>
      * 
@@ -94,6 +100,14 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public static GetMetricStoreResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetricStoreResponseBody self = new GetMetricStoreResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMetricStoreResponseBody setAppendMeta(Boolean appendMeta) {
+        this.appendMeta = appendMeta;
+        return this;
+    }
+    public Boolean getAppendMeta() {
+        return this.appendMeta;
     }
 
     public GetMetricStoreResponseBody setAutoSplit(Boolean autoSplit) {
@@ -174,6 +188,14 @@ public class GetMetricStoreResponseBody extends TeaModel {
     }
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    public GetMetricStoreResponseBody setShardingPolicy(ShardingPolicy shardingPolicy) {
+        this.shardingPolicy = shardingPolicy;
+        return this;
+    }
+    public ShardingPolicy getShardingPolicy() {
+        return this.shardingPolicy;
     }
 
     public GetMetricStoreResponseBody setTtl(Integer ttl) {

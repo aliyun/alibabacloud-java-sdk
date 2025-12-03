@@ -1,3 +1,34 @@
+2025-12-03 Version: 5.11.0
+- Support API CreateAzureBlobIngestion.
+- Support API CreateElasticsearchIngestion.
+- Support API CreateS3Ingestion.
+- Support API DeleteAzureBlobIngestion.
+- Support API DeleteElasticsearchIngestion.
+- Support API DeleteS3Ingestion.
+- Support API GetAzureBlobIngestion.
+- Support API GetElasticsearchIngestion.
+- Support API GetS3Ingestion.
+- Support API ListAzureBlobIngestion.
+- Support API ListElasticsearchIngestions.
+- Support API ListS3Ingestions.
+- Support API StartAzureBlobIngestion.
+- Support API StartElasticsearchIngestion.
+- Support API StopAzureBlobIngestion.
+- Support API StopElasticsearchIngestion.
+- Support API UpdateAzureBlobIngestion.
+- Support API UpdateElasticsearchIngestion.
+- Update API CreateLogStore: add request parameters body.shardingPolicy.
+- Update API CreateMetricStore: add request parameters body.appendMeta.
+- Update API CreateMetricStore: add request parameters body.shardingPolicy.
+- Update API DescribeRegions: add response parameters Body.regions.$.dataRedundancyType.
+- Update API GetMetricStore: add response parameters Body.appendMeta.
+- Update API GetMetricStore: add response parameters Body.shardingPolicy.
+- Update API ListProject: add request parameters description.
+- Update API UpdateLogStore: add request parameters body.shardingPolicy.
+- Update API UpdateMetricStore: add request parameters body.appendMeta.
+- Update API UpdateMetricStore: add request parameters body.shardingPolicy.
+
+
 2025-09-10 Version: 5.9.1
 - Update API CreateLogtailPipelineConfig: add request parameters body.task.
 - Update API ListLogtailPipelineConfig: add request parameters configType.
