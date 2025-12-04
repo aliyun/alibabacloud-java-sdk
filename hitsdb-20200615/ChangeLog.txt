@@ -1,3 +1,9 @@
+2025-12-04 Version: 5.7.0
+- Support API GetLindormV2InstanceDetails.
+- Support API OpenLdpsColumnarIndex.
+- Support API UpdateLindormInstanceAttribute.
+
+
 2025-09-12 Version: 5.5.0
 - Support API GetLindormV2InstanceForTerraform.
 - Support API GetLindormV2InstanceSecurityGroups.
