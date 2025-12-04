@@ -258,6 +258,9 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
         @NameInMap("IgnoredLifecycleHookIds")
         public java.util.List<String> ignoredLifecycleHookIds;
 
+        @NameInMap("LifecycleHookResult")
+        public String lifecycleHookResult;
+
         public static ScaleWithAdjustmentRequestLifecycleHookContext build(java.util.Map<String, ?> map) throws Exception {
             ScaleWithAdjustmentRequestLifecycleHookContext self = new ScaleWithAdjustmentRequestLifecycleHookContext();
             return TeaModel.build(map, self);
@@ -277,6 +280,14 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
         }
         public java.util.List<String> getIgnoredLifecycleHookIds() {
             return this.ignoredLifecycleHookIds;
+        }
+
+        public ScaleWithAdjustmentRequestLifecycleHookContext setLifecycleHookResult(String lifecycleHookResult) {
+            this.lifecycleHookResult = lifecycleHookResult;
+            return this;
+        }
+        public String getLifecycleHookResult() {
+            return this.lifecycleHookResult;
         }
 
     }

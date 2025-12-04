@@ -260,6 +260,9 @@ public class RemoveInstancesRequest extends TeaModel {
         @NameInMap("IgnoredLifecycleHookIds")
         public java.util.List<String> ignoredLifecycleHookIds;
 
+        @NameInMap("LifecycleHookResult")
+        public String lifecycleHookResult;
+
         public static RemoveInstancesRequestLifecycleHookContext build(java.util.Map<String, ?> map) throws Exception {
             RemoveInstancesRequestLifecycleHookContext self = new RemoveInstancesRequestLifecycleHookContext();
             return TeaModel.build(map, self);
@@ -279,6 +282,14 @@ public class RemoveInstancesRequest extends TeaModel {
         }
         public java.util.List<String> getIgnoredLifecycleHookIds() {
             return this.ignoredLifecycleHookIds;
+        }
+
+        public RemoveInstancesRequestLifecycleHookContext setLifecycleHookResult(String lifecycleHookResult) {
+            this.lifecycleHookResult = lifecycleHookResult;
+            return this;
+        }
+        public String getLifecycleHookResult() {
+            return this.lifecycleHookResult;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class RemoveInstancesResponseBody extends TeaModel {
+    @NameInMap("IgnoredInstances")
+    public java.util.List<RemoveInstancesResponseBodyIgnoredInstances> ignoredInstances;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -27,6 +30,14 @@ public class RemoveInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveInstancesResponseBody setIgnoredInstances(java.util.List<RemoveInstancesResponseBodyIgnoredInstances> ignoredInstances) {
+        this.ignoredInstances = ignoredInstances;
+        return this;
+    }
+    public java.util.List<RemoveInstancesResponseBodyIgnoredInstances> getIgnoredInstances() {
+        return this.ignoredInstances;
+    }
+
     public RemoveInstancesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -41,6 +52,47 @@ public class RemoveInstancesResponseBody extends TeaModel {
     }
     public String getScalingActivityId() {
         return this.scalingActivityId;
+    }
+
+    public static class RemoveInstancesResponseBodyIgnoredInstances extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Message")
+        public String message;
+
+        public static RemoveInstancesResponseBodyIgnoredInstances build(java.util.Map<String, ?> map) throws Exception {
+            RemoveInstancesResponseBodyIgnoredInstances self = new RemoveInstancesResponseBodyIgnoredInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public RemoveInstancesResponseBodyIgnoredInstances setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public RemoveInstancesResponseBodyIgnoredInstances setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public RemoveInstancesResponseBodyIgnoredInstances setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
     }
 
 }
