@@ -3,12 +3,12 @@ package com.aliyun.alidns20150109.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
+public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
-    public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail accessDeniedDetail;
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     @NameInMap("Data")
-    public UpdateRspDomainStatusOteResponseBodyData data;
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData data;
 
     /**
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>0629502C-XXXX-5DC9-A8ED-2ED73A2E3931</p>
+     * <p>0629502C-6224-5DC9-A8ED-2ED73A2E3931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -31,28 +31,28 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateRspDomainStatusOteResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateRspDomainStatusOteResponseBody self = new UpdateRspDomainStatusOteResponseBody();
+    public static UpdateRspDomainServerProhibitStatusForGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateRspDomainServerProhibitStatusForGatewayResponseBody self = new UpdateRspDomainServerProhibitStatusForGatewayResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateRspDomainStatusOteResponseBody setAccessDeniedDetail(UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail accessDeniedDetail) {
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBody setAccessDeniedDetail(UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
-    public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
         return this.accessDeniedDetail;
     }
 
-    public UpdateRspDomainStatusOteResponseBody setData(UpdateRspDomainStatusOteResponseBodyData data) {
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBody setData(UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public UpdateRspDomainStatusOteResponseBodyData getData() {
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData getData() {
         return this.data;
     }
 
-    public UpdateRspDomainStatusOteResponseBody setRecoverableError(Boolean recoverableError) {
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBody setRecoverableError(Boolean recoverableError) {
         this.recoverableError = recoverableError;
         return this;
     }
@@ -60,7 +60,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
         return this.recoverableError;
     }
 
-    public UpdateRspDomainStatusOteResponseBody setRequestId(String requestId) {
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -68,7 +68,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateRspDomainStatusOteResponseBody setSuccess(Boolean success) {
+    public UpdateRspDomainServerProhibitStatusForGatewayResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -76,7 +76,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail extends TeaModel {
+    public static class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>CreateUser</p>
@@ -126,12 +126,12 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
-        public static UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail self = new UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail();
+        public static UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail self = new UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail();
             return TeaModel.build(map, self);
         }
 
-        public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
             this.authAction = authAction;
             return this;
         }
@@ -139,7 +139,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.authAction;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
             this.authPrincipalDisplayName = authPrincipalDisplayName;
             return this;
         }
@@ -147,7 +147,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.authPrincipalDisplayName;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
             this.authPrincipalOwnerId = authPrincipalOwnerId;
             return this;
         }
@@ -155,7 +155,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.authPrincipalOwnerId;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
             this.authPrincipalType = authPrincipalType;
             return this;
         }
@@ -163,7 +163,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.authPrincipalType;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
             this.encodedDiagnosticMessage = encodedDiagnosticMessage;
             return this;
         }
@@ -171,7 +171,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.encodedDiagnosticMessage;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
             this.noPermissionType = noPermissionType;
             return this;
         }
@@ -179,7 +179,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.noPermissionType;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
@@ -189,7 +189,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
 
     }
 
-    public static class UpdateRspDomainStatusOteResponseBodyDataStatusList extends TeaModel {
+    public static class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>uptp.test.abchina.com.cn</p>
@@ -207,12 +207,12 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
         @NameInMap("StatusMsg")
         public String statusMsg;
 
-        public static UpdateRspDomainStatusOteResponseBodyDataStatusList build(java.util.Map<String, ?> map) throws Exception {
-            UpdateRspDomainStatusOteResponseBodyDataStatusList self = new UpdateRspDomainStatusOteResponseBodyDataStatusList();
+        public static UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList self = new UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList();
             return TeaModel.build(map, self);
         }
 
-        public UpdateRspDomainStatusOteResponseBodyDataStatusList setDomainName(String domainName) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
@@ -220,7 +220,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyDataStatusList setStatus(String status) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -228,7 +228,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.status;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyDataStatusList setStatusMsg(String statusMsg) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList setStatusMsg(String statusMsg) {
             this.statusMsg = statusMsg;
             return this;
         }
@@ -238,7 +238,7 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
 
     }
 
-    public static class UpdateRspDomainStatusOteResponseBodyData extends TeaModel {
+    public static class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -247,14 +247,14 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
         public String domainName;
 
         @NameInMap("StatusList")
-        public java.util.List<UpdateRspDomainStatusOteResponseBodyDataStatusList> statusList;
+        public java.util.List<UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList> statusList;
 
-        public static UpdateRspDomainStatusOteResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            UpdateRspDomainStatusOteResponseBodyData self = new UpdateRspDomainStatusOteResponseBodyData();
+        public static UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData self = new UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public UpdateRspDomainStatusOteResponseBodyData setDomainName(String domainName) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
@@ -262,11 +262,11 @@ public class UpdateRspDomainStatusOteResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public UpdateRspDomainStatusOteResponseBodyData setStatusList(java.util.List<UpdateRspDomainStatusOteResponseBodyDataStatusList> statusList) {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData setStatusList(java.util.List<UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList> statusList) {
             this.statusList = statusList;
             return this;
         }
-        public java.util.List<UpdateRspDomainStatusOteResponseBodyDataStatusList> getStatusList() {
+        public java.util.List<UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList> getStatusList() {
             return this.statusList;
         }
 
