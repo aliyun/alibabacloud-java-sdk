@@ -69,6 +69,12 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String corpId;
 
         /**
+         * <p>IDaaS EIAM 钉钉扫码登录版本</p>
+         */
+        @NameInMap("DingtalkLoginVersion")
+        public String dingtalkLoginVersion;
+
+        /**
          * <p>DingTalk Version.</p>
          * 
          * <strong>example:</strong>
@@ -122,6 +128,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
         public String getCorpId() {
             return this.corpId;
+        }
+
+        public GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkAppConfig setDingtalkLoginVersion(String dingtalkLoginVersion) {
+            this.dingtalkLoginVersion = dingtalkLoginVersion;
+            return this;
+        }
+        public String getDingtalkLoginVersion() {
+            return this.dingtalkLoginVersion;
         }
 
         public GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkAppConfig setDingtalkVersion(String dingtalkVersion) {

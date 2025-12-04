@@ -190,6 +190,13 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         @NameInMap("AppSecret")
         public String appSecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
+        @NameInMap("DingtalkLoginVersion")
+        public String dingtalkLoginVersion;
+
         @NameInMap("EncryptKey")
         public String encryptKey;
 
@@ -215,6 +222,14 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         }
         public String getAppSecret() {
             return this.appSecret;
+        }
+
+        public UpdateIdentityProviderRequestDingtalkAppConfig setDingtalkLoginVersion(String dingtalkLoginVersion) {
+            this.dingtalkLoginVersion = dingtalkLoginVersion;
+            return this;
+        }
+        public String getDingtalkLoginVersion() {
+            return this.dingtalkLoginVersion;
         }
 
         public UpdateIdentityProviderRequestDingtalkAppConfig setEncryptKey(String encryptKey) {
