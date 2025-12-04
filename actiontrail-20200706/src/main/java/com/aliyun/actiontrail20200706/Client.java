@@ -463,6 +463,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除数据事件选择器</p>
+     * 
+     * @param request DeleteDataEventSelectorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataEventSelectorResponse
+     */
+    public DeleteDataEventSelectorResponse deleteDataEventSelectorWithOptions(DeleteDataEventSelectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.trailName)) {
+            query.put("TrailName", request.trailName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataEventSelector"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataEventSelectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除数据事件选择器</p>
+     * 
+     * @param request DeleteDataEventSelectorRequest
+     * @return DeleteDataEventSelectorResponse
+     */
+    public DeleteDataEventSelectorResponse deleteDataEventSelector(DeleteDataEventSelectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataEventSelectorWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This topic describes how to delete a data backfill task whose ID is <code>16602</code>.</p>
      * 
@@ -1371,6 +1415,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询事件选择器</p>
+     * 
+     * @param request GetDataEventSelectorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataEventSelectorResponse
+     */
+    public GetDataEventSelectorResponse getDataEventSelectorWithOptions(GetDataEventSelectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.trailName)) {
+            query.put("TrailName", request.trailName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataEventSelector"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataEventSelectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询事件选择器</p>
+     * 
+     * @param request GetDataEventSelectorRequest
+     * @return GetDataEventSelectorResponse
+     */
+    public GetDataEventSelectorResponse getDataEventSelector(GetDataEventSelectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataEventSelectorWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to query the details of a data backfill task whose ID is <code>16602</code>. The return result shows that historical events for a trail named <code>trail-name</code> are delivered to Simple Log Service and the task is complete.</p>
      * 
@@ -1552,6 +1640,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量查询事件选择器</p>
+     * 
+     * @param request ListDataEventSelectorsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataEventSelectorsResponse
+     */
+    public ListDataEventSelectorsResponse listDataEventSelectorsWithOptions(ListDataEventSelectorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataEventSelectors"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataEventSelectorsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量查询事件选择器</p>
+     * 
+     * @param request ListDataEventSelectorsRequest
+     * @return ListDataEventSelectorsResponse
+     */
+    public ListDataEventSelectorsResponse listDataEventSelectors(ListDataEventSelectorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataEventSelectorsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询数据事件支持的服务与事件名称</p>
      * 
      * @param request ListDataEventServicesRequest
@@ -1726,6 +1862,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LookupEventsResponse lookupEvents(LookupEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.lookupEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建事件选择器</p>
+     * 
+     * @param request PutDataEventSelectorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutDataEventSelectorResponse
+     */
+    public PutDataEventSelectorResponse putDataEventSelectorWithOptions(PutDataEventSelectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventSelectors)) {
+            query.put("EventSelectors", request.eventSelectors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isTrailAllRegion)) {
+            query.put("IsTrailAllRegion", request.isTrailAllRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trailName)) {
+            query.put("TrailName", request.trailName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trailRegionIds)) {
+            query.put("TrailRegionIds", request.trailRegionIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutDataEventSelector"),
+            new TeaPair("version", "2020-07-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutDataEventSelectorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建事件选择器</p>
+     * 
+     * @param request PutDataEventSelectorRequest
+     * @return PutDataEventSelectorResponse
+     */
+    public PutDataEventSelectorResponse putDataEventSelector(PutDataEventSelectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.putDataEventSelectorWithOptions(request, runtime);
     }
 
     /**
