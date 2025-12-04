@@ -233,6 +233,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request CancelCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelCallResponse
+     */
+    public CancelCallResponse cancelCallWithOptions(CancelCallRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
+            query.put("CallId", request.callId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelCall"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCallResponse());
+    }
+
+    /**
+     * @param request CancelCallRequest
+     * @return CancelCallResponse
+     */
+    public CancelCallResponse cancelCall(CancelCallRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelCallWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>QPS limits</h3>
      * <p>You can call this operation up to 100 times per second per account.</p>
@@ -2634,6 +2684,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryVirtualNumberRelationResponse queryVirtualNumberRelation(QueryVirtualNumberRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryVirtualNumberRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询真实号接通率</p>
+     * 
+     * @param request QueryVmsRealNumberCallConnectionRateInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryVmsRealNumberCallConnectionRateInfoResponse
+     */
+    public QueryVmsRealNumberCallConnectionRateInfoResponse queryVmsRealNumberCallConnectionRateInfoWithOptions(QueryVmsRealNumberCallConnectionRateInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realNumber)) {
+            query.put("RealNumber", request.realNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timePeriod)) {
+            query.put("TimePeriod", request.timePeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualNumber)) {
+            query.put("VirtualNumber", request.virtualNumber);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryVmsRealNumberCallConnectionRateInfo"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVmsRealNumberCallConnectionRateInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询真实号接通率</p>
+     * 
+     * @param request QueryVmsRealNumberCallConnectionRateInfoRequest
+     * @return QueryVmsRealNumberCallConnectionRateInfoResponse
+     */
+    public QueryVmsRealNumberCallConnectionRateInfoResponse queryVmsRealNumberCallConnectionRateInfo(QueryVmsRealNumberCallConnectionRateInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryVmsRealNumberCallConnectionRateInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询虚拟号码与真实号码绑定关系列表</p>
+     * 
+     * @param request QueryVmsVirtualNumberRelationByPageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryVmsVirtualNumberRelationByPageResponse
+     */
+    public QueryVmsVirtualNumberRelationByPageResponse queryVmsVirtualNumberRelationByPageWithOptions(QueryVmsVirtualNumberRelationByPageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.numberCity)) {
+            query.put("NumberCity", request.numberCity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.numberProvince)) {
+            query.put("NumberProvince", request.numberProvince);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realNumber)) {
+            query.put("RealNumber", request.realNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualNumber)) {
+            query.put("VirtualNumber", request.virtualNumber);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryVmsVirtualNumberRelationByPage"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVmsVirtualNumberRelationByPageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询虚拟号码与真实号码绑定关系列表</p>
+     * 
+     * @param request QueryVmsVirtualNumberRelationByPageRequest
+     * @return QueryVmsVirtualNumberRelationByPageResponse
+     */
+    public QueryVmsVirtualNumberRelationByPageResponse queryVmsVirtualNumberRelationByPage(QueryVmsVirtualNumberRelationByPageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryVmsVirtualNumberRelationByPageWithOptions(request, runtime);
     }
 
     /**
