@@ -38,6 +38,20 @@ public class CreateInstanceV1Request extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>paimon_test</p>
+     */
+    @NameInMap("DlfCatalogName")
+    public String dlfCatalogName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>paimon</p>
+     */
+    @NameInMap("DlfCatalogType")
+    public String dlfCatalogType;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Duration")
@@ -71,6 +85,13 @@ public class CreateInstanceV1Request extends TeaModel {
      */
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>aliyun.test1</p>
+     */
+    @NameInMap("LinkedRamUserName")
+    public String linkedRamUserName;
 
     @NameInMap("ObserverNodeGroups")
     public java.util.List<CreateInstanceV1RequestObserverNodeGroups> observerNodeGroups;
@@ -109,10 +130,24 @@ public class CreateInstanceV1Request extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>RR</p>
+     */
+    @NameInMap("PrincipalType")
+    public String principalType;
+
+    /**
+     * <strong>example:</strong>
      * <p>165445235634</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
+
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
+    @NameInMap("RamUserId")
+    public String ramUserId;
 
     /**
      * <p>This parameter is required.</p>
@@ -226,6 +261,22 @@ public class CreateInstanceV1Request extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateInstanceV1Request setDlfCatalogName(String dlfCatalogName) {
+        this.dlfCatalogName = dlfCatalogName;
+        return this;
+    }
+    public String getDlfCatalogName() {
+        return this.dlfCatalogName;
+    }
+
+    public CreateInstanceV1Request setDlfCatalogType(String dlfCatalogType) {
+        this.dlfCatalogType = dlfCatalogType;
+        return this;
+    }
+    public String getDlfCatalogType() {
+        return this.dlfCatalogType;
+    }
+
     public CreateInstanceV1Request setDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -274,6 +325,14 @@ public class CreateInstanceV1Request extends TeaModel {
         return this.kmsKeyId;
     }
 
+    public CreateInstanceV1Request setLinkedRamUserName(String linkedRamUserName) {
+        this.linkedRamUserName = linkedRamUserName;
+        return this;
+    }
+    public String getLinkedRamUserName() {
+        return this.linkedRamUserName;
+    }
+
     public CreateInstanceV1Request setObserverNodeGroups(java.util.List<CreateInstanceV1RequestObserverNodeGroups> observerNodeGroups) {
         this.observerNodeGroups = observerNodeGroups;
         return this;
@@ -314,12 +373,28 @@ public class CreateInstanceV1Request extends TeaModel {
         return this.pricingCycle;
     }
 
+    public CreateInstanceV1Request setPrincipalType(String principalType) {
+        this.principalType = principalType;
+        return this;
+    }
+    public String getPrincipalType() {
+        return this.principalType;
+    }
+
     public CreateInstanceV1Request setPromotionOptionNo(String promotionOptionNo) {
         this.promotionOptionNo = promotionOptionNo;
         return this;
     }
     public String getPromotionOptionNo() {
         return this.promotionOptionNo;
+    }
+
+    public CreateInstanceV1Request setRamUserId(String ramUserId) {
+        this.ramUserId = ramUserId;
+        return this;
+    }
+    public String getRamUserId() {
+        return this.ramUserId;
     }
 
     public CreateInstanceV1Request setRegionId(String regionId) {

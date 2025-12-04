@@ -148,6 +148,36 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNodeGroupsResponseBodyDataTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNodeGroupsResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNodeGroupsResponseBodyDataTags self = new DescribeNodeGroupsResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNodeGroupsResponseBodyDataTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNodeGroupsResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeNodeGroupsResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -350,6 +380,9 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
          */
         @NameInMap("StorageSize")
         public Integer storageSize;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeNodeGroupsResponseBodyDataTags> tags;
 
         /**
          * <strong>example:</strong>
@@ -608,6 +641,14 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
         public Integer getStorageSize() {
             return this.storageSize;
+        }
+
+        public DescribeNodeGroupsResponseBodyData setTags(java.util.List<DescribeNodeGroupsResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeNodeGroupsResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public DescribeNodeGroupsResponseBodyData setTargetElasticNodeNumber(Integer targetElasticNodeNumber) {

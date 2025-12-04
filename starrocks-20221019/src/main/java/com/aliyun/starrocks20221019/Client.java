@@ -121,6 +121,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dlfCatalogName)) {
+            body.put("DlfCatalogName", request.dlfCatalogName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dlfCatalogType)) {
+            body.put("DlfCatalogType", request.dlfCatalogType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
             body.put("Duration", request.duration);
         }
@@ -145,6 +153,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("KmsKeyId", request.kmsKeyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.linkedRamUserName)) {
+            body.put("LinkedRamUserName", request.linkedRamUserName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.observerNodeGroups)) {
             body.put("ObserverNodeGroups", request.observerNodeGroups);
         }
@@ -165,8 +177,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PricingCycle", request.pricingCycle);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            body.put("PrincipalType", request.principalType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.promotionOptionNo)) {
             body.put("PromotionOptionNo", request.promotionOptionNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ramUserId)) {
+            body.put("RamUserId", request.ramUserId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
