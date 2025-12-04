@@ -201,6 +201,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
         @NameInMap("MainEthPublicIp")
         public String mainEthPublicIp;
 
+        @NameInMap("NetworkInterfaceId")
+        public String networkInterfaceId;
+
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 
@@ -298,6 +301,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
         public String getMainEthPublicIp() {
             return this.mainEthPublicIp;
+        }
+
+        public ListAppInstancesResponseBodyAppInstanceModels setNetworkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
         }
 
         public ListAppInstancesResponseBodyAppInstanceModels setNetworkInterfaceIp(String networkInterfaceIp) {
