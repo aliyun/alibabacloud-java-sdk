@@ -25,6 +25,20 @@ public class CreateScalingGroupRequest extends TeaModel {
     public String allocationStrategy;
 
     /**
+     * <p>Whether to enable automatic rebalancing for the scaling group. This takes effect only when BalancedOnly is enabled for the scaling group. Valid values:</p>
+     * <ul>
+     * <li>false: Auto rebalancing is disabled for the scaling group.</li>
+     * <li>true: If Auto rebalancing is enabled, the scaling group automatically detects the capacity of the zone. If the capacity of the zone is unbalanced, the scaling group actively scales out the zone and re-balances the capacity of the zone.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("AutoRebalance")
+    public Boolean autoRebalance;
+
+    /**
      * <p>Specifies whether to evenly distribute instances in the scaling group across multiple zones. This parameter takes effect only if you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>. Valid values:</p>
      * <ul>
      * <li>true</li>
@@ -40,6 +54,20 @@ public class CreateScalingGroupRequest extends TeaModel {
      */
     @NameInMap("AzBalance")
     public Boolean azBalance;
+
+    /**
+     * <p>The zone balancing mode. This mode takes effect only when the zone balancing mode is enabled. Valid values:</p>
+     * <ul>
+     * <li>BalancedBestEffort: If a resource fails to be created in a zone, it is downgraded to another zone to ensure best-effort delivery of the resource.</li>
+     * <li>BalancedOnly: If a resource fails to be created in a zone, it is not downgraded to another zone. The scale-out activity is partially successful to avoid excessive imbalance of resources in different zones.</li>
+     * </ul>
+     * <p>Default value: BalancedBestEffort.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BalancedBestEffort</p>
+     */
+    @NameInMap("BalanceMode")
+    public String balanceMode;
 
     /**
      * <p>The capacity options.</p>
@@ -472,7 +500,7 @@ public class CreateScalingGroupRequest extends TeaModel {
     public Boolean syncAlarmRuleToCms;
 
     /**
-     * <p>The tags that you want to add to the scaling group.</p>
+     * <p>The information about the tags of the scaling group.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateScalingGroupRequestTags> tags;
@@ -531,12 +559,28 @@ public class CreateScalingGroupRequest extends TeaModel {
         return this.allocationStrategy;
     }
 
+    public CreateScalingGroupRequest setAutoRebalance(Boolean autoRebalance) {
+        this.autoRebalance = autoRebalance;
+        return this;
+    }
+    public Boolean getAutoRebalance() {
+        return this.autoRebalance;
+    }
+
     public CreateScalingGroupRequest setAzBalance(Boolean azBalance) {
         this.azBalance = azBalance;
         return this;
     }
     public Boolean getAzBalance() {
         return this.azBalance;
+    }
+
+    public CreateScalingGroupRequest setBalanceMode(String balanceMode) {
+        this.balanceMode = balanceMode;
+        return this;
+    }
+    public String getBalanceMode() {
+        return this.balanceMode;
     }
 
     public CreateScalingGroupRequest setCapacityOptions(CreateScalingGroupRequestCapacityOptions capacityOptions) {
@@ -1472,7 +1516,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestTags extends TeaModel {
         /**
-         * <p>The tag key that you want to add to the scaling group.</p>
+         * <p>The tag key of the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>Department</p>
@@ -1481,7 +1525,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:</p>
+         * <p>Identifies whether the tag is a propagatable tag. Valid values:</p>
          * <ul>
          * <li>true: propagates the tag to only instances that are newly created.</li>
          * <li>false: does not propagate the tag to any instances.</li>
@@ -1495,7 +1539,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Boolean propagate;
 
         /**
-         * <p>The tag value that you want to add to the scaling group.</p>
+         * <p>The tag value of the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>Finance</p>

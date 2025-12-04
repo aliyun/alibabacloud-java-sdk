@@ -11,7 +11,7 @@ public class CreateAlarmRequest extends TeaModel {
     public java.util.List<String> alarmActions;
 
     /**
-     * <p>The operator that you want to use to compare the metric value and the threshold. Valid values:</p>
+     * <p>The operator that you want to use to compare the metric value and the threshold. Valid Values:</p>
      * <ul>
      * <li>If the metric value is greater than or equal to the threshold, set the value to &gt;=.</li>
      * <li>If the metric value is less than or equal to the metric threshold, set the value to &lt;=.</li>
@@ -68,7 +68,7 @@ public class CreateAlarmRequest extends TeaModel {
 
     /**
      * <p>The number of consecutive times that the threshold must be reached before a scaling rule is executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before the scaling rule is executed.</p>
-     * <p>Default value: 3.</p>
+     * <p>Default value: 3</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -149,7 +149,7 @@ public class CreateAlarmRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The metric type. Valid values:</p>
+     * <p>The metric type. Valid Values:</p>
      * <ul>
      * <li>system: a system metric of CloudMonitor.</li>
      * <li>custom: a custom metric that is reported to CloudMonitor.</li>
@@ -174,7 +174,7 @@ public class CreateAlarmRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The statistical period of the metric data. Unit: seconds. Valid values:</p>
+     * <p>The statistical period of the metric data. Unit: seconds. Valid Values:</p>
      * <ul>
      * <li>15</li>
      * <li>60</li>
@@ -183,7 +183,7 @@ public class CreateAlarmRequest extends TeaModel {
      * <li>900</li>
      * </ul>
      * <blockquote>
-     * <p> You can set this parameter to 15 seconds only for scaling groups of the ECS type.</p>
+     * <p>You can set this parameter to 15 seconds only for scaling groups of the ECS type.</p>
      * </blockquote>
      * <p>Default value: 300.</p>
      * 
@@ -217,7 +217,7 @@ public class CreateAlarmRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The statistical method of the metric data. Valid values:</p>
+     * <p>The statistical method of the metric data. Valid Values:</p>
      * <ul>
      * <li>Average: calculates the average value of the metric data.</li>
      * <li>Minimum: calculates the minimum value of the metric data.</li>
@@ -406,9 +406,10 @@ public class CreateAlarmRequest extends TeaModel {
          * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
          * <ul>
          * <li>user_id: the ID of your Alibaba Cloud account.</li>
-         * <li>scaling_group: the scaling group that you want to monitor by using the event-triggered task.</li>
+         * <li>scaling_group: the scaling group that is monitored by the event-triggered task.</li>
          * <li>device: the NIC type.</li>
          * <li>state: the status of the TCP connection.</li>
+         * <li>rulePool: the specified server group for the ALB qps metric.</li>
          * </ul>
          * </li>
          * </ul>
@@ -430,17 +431,19 @@ public class CreateAlarmRequest extends TeaModel {
          * </li>
          * <li><p>scaling_group: The system specifies the value.</p>
          * </li>
-         * <li><p>device: You can set this parameter to eth0 or eth1.</p>
+         * <li><p>device:</p>
          * <ul>
-         * <li>For instances of the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in VPCs.</li>
-         * <li>For instances of the classic network type, eth1 specifies the public NIC.</li>
+         * <li>eth0: For classic network instances, eth0 indicates the internal network network interface controller. Only one eth0 NIC exists on each instance that resides in VPCs.</li>
+         * <li>eth1: For classic network instances, eth1 represents the Internet network interface controller.</li>
          * </ul>
          * </li>
-         * <li><p>state: You can set this parameter to TCP_TOTAL or ESTABLISHED.</p>
+         * <li><p>state:</p>
          * <ul>
          * <li>TCP_TOTAL specifies the total number of TCP connections.</li>
-         * <li>ESTABLISHED specifies the number of TCP connections that are established.</li>
+         * <li>ESTABLISHED indicates the number of TCP connections that are established.</li>
          * </ul>
+         * </li>
+         * <li><p>rulePool: the ID of the ALB server group. Example: sgp-xxxxx.</p>
          * </li>
          * </ul>
          * </li>

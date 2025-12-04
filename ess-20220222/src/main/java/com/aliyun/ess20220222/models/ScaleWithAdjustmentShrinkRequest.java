@@ -52,6 +52,17 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The execution mode. Valid values:</p>
+     * <ul>
+     * <li>None: If this is not specified, auto scaling is performed.</li>
+     * <li>PlanOnly: Scaling is not triggered. Only elastic planning is performed. The planning result is returned in PlanResult, including the instance type, zone ID, billing type, and number of created instances.</li>
+     * </ul>
+     * <p>Default value: None.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PlanOnly</p>
+     */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
@@ -79,6 +90,12 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Whether the current scale-out task supports concurrency.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ParallelTask")
     public Boolean parallelTask;
 
@@ -96,13 +113,13 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:</p>
+     * <p>Specifies whether to trigger the scaling task in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid Values:</p>
      * <ul>
-     * <li>true: triggers the scaling activity in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</li>
-     * <li>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</li>
+     * <li>true: triggers the scaling task in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</li>
+     * <li>false: does not trigger the scaling task in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</li>
      * </ul>
      * <blockquote>
-     * <p> For more information about the expected number of instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
+     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
      * </blockquote>
      * <p>Default value: false.</p>
      * 

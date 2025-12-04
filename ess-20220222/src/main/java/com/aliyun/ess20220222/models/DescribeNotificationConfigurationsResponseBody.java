@@ -42,6 +42,13 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>PlainText</p>
+         */
+        @NameInMap("MessageEncoding")
+        public String messageEncoding;
+
+        /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The value is in one of the following formats:</p>
          * <ul>
          * <li>If you specify CloudMonitor as the notification recipient, the value is in the acs:ess:{region-id}:{account-id}:cloudmonitor format.</li>
@@ -89,6 +96,14 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         public static DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels build(java.util.Map<String, ?> map) throws Exception {
             DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels self = new DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels setMessageEncoding(String messageEncoding) {
+            this.messageEncoding = messageEncoding;
+            return this;
+        }
+        public String getMessageEncoding() {
+            return this.messageEncoding;
         }
 
         public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels setNotificationArn(String notificationArn) {

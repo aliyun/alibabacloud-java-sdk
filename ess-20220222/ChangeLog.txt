@@ -1,3 +1,29 @@
+2025-12-04 Version: 1.9.16
+- Update API CreateNotificationConfiguration: add request parameters MessageEncoding.
+- Update API CreateScalingGroup: add request parameters AutoRebalance.
+- Update API CreateScalingGroup: add request parameters BalanceMode.
+- Update API DescribeInstanceRefreshes: add response parameters Body.InstanceRefreshTasks.$.CheckpointPauseTime.
+- Update API DescribeInstanceRefreshes: add response parameters Body.InstanceRefreshTasks.$.Checkpoints.
+- Update API DescribeInstanceRefreshes: add response parameters Body.InstanceRefreshTasks.$.DesiredConfiguration.Containers.
+- Update API DescribeInstanceRefreshes: add response parameters Body.InstanceRefreshTasks.$.DesiredConfiguration.LaunchTemplateId.
+- Update API DescribeInstanceRefreshes: add response parameters Body.InstanceRefreshTasks.$.DesiredConfiguration.LaunchTemplateOverrides.
+- Update API DescribeInstanceRefreshes: add response parameters Body.InstanceRefreshTasks.$.DesiredConfiguration.LaunchTemplateVersion.
+- Update API DescribeNotificationConfigurations: add response parameters Body.NotificationConfigurationModels.$.MessageEncoding.
+- Update API DescribeScalingGroups: add response parameters Body.ScalingGroups.$.AutoRebalance.
+- Update API DescribeScalingGroups: add response parameters Body.ScalingGroups.$.BalanceMode.
+- Update API ModifyEciScalingConfiguration: add request parameters Override.
+- Update API ModifyNotificationConfiguration: add request parameters MessageEncoding.
+- Update API ModifyScalingGroup: add request parameters AutoRebalance.
+- Update API ModifyScalingGroup: add request parameters BalanceMode.
+- Update API ScaleWithAdjustment: add request parameters Overrides.UserData.
+- Update API StartInstanceRefresh: add request parameters CheckpointPauseTime.
+- Update API StartInstanceRefresh: add request parameters Checkpoints.
+- Update API StartInstanceRefresh: add request parameters DesiredConfiguration.Containers.
+- Update API StartInstanceRefresh: add request parameters DesiredConfiguration.LaunchTemplateId.
+- Update API StartInstanceRefresh: add request parameters DesiredConfiguration.LaunchTemplateOverrides.
+- Update API StartInstanceRefresh: add request parameters DesiredConfiguration.LaunchTemplateVersion.
+
+
 2025-07-17 Version: 1.9.14
 - Update API ScaleWithAdjustment: add request parameters ExecutionMode.
 - Update API ScaleWithAdjustment: add response parameters Body.PlanResult.

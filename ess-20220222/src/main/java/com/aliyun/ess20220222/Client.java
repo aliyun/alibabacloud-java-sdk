@@ -1792,6 +1792,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNotificationConfigurationResponse createNotificationConfigurationWithOptions(CreateNotificationConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.messageEncoding)) {
+            query.put("MessageEncoding", request.messageEncoding);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notificationArn)) {
             query.put("NotificationArn", request.notificationArn);
         }
@@ -2219,8 +2223,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AllocationStrategy", request.allocationStrategy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRebalance)) {
+            query.put("AutoRebalance", request.autoRebalance);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.azBalance)) {
             query.put("AzBalance", request.azBalance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceMode)) {
+            query.put("BalanceMode", request.balanceMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.capacityOptions)) {
@@ -6625,6 +6637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NtpServers", request.ntpServers);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.override)) {
+            query.put("Override", request.override);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -6901,6 +6917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyNotificationConfigurationResponse modifyNotificationConfigurationWithOptions(ModifyNotificationConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.messageEncoding)) {
+            query.put("MessageEncoding", request.messageEncoding);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notificationArn)) {
             query.put("NotificationArn", request.notificationArn);
         }
@@ -7296,8 +7316,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AllocationStrategy", request.allocationStrategy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRebalance)) {
+            query.put("AutoRebalance", request.autoRebalance);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.azBalance)) {
             query.put("AzBalance", request.azBalance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceMode)) {
+            query.put("BalanceMode", request.balanceMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.capacityOptions)) {
@@ -8412,7 +8440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from the corresponding scaling groups. If you want to retain a specific instance in the corresponding scaling group, you can put the instance into the Standby or Protected state. For more information, see <a href="~~EnterStandby~~">EnterStandby</a> and <a href="~~SetInstancesProtection~~">SetInstancesProtection</a>.</p>
+     * <p>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from their scaling groups. To prevent a specific instance from being removed, you can put it in either the Standby or Protected state. For more information, see <a href="https://help.aliyun.com/document_detail/459345.html">EnterStandby</a> and <a href="https://help.aliyun.com/document_detail/459342.html">SetInstancesProtection</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\&amp;M hurdles efficiently.</p>
@@ -8459,7 +8487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from the corresponding scaling groups. If you want to retain a specific instance in the corresponding scaling group, you can put the instance into the Standby or Protected state. For more information, see <a href="~~EnterStandby~~">EnterStandby</a> and <a href="~~SetInstancesProtection~~">SetInstancesProtection</a>.</p>
+     * <p>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from their scaling groups. To prevent a specific instance from being removed, you can put it in either the Standby or Protected state. For more information, see <a href="https://help.aliyun.com/document_detail/459345.html">EnterStandby</a> and <a href="https://help.aliyun.com/document_detail/459342.html">SetInstancesProtection</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets instance health. At times, the automatic health check system might not sufficiently determine the precise health status of your Elastic Compute Service (ECS) instances or elastic container instances. To overcome this, you can call the SetInstanceHealth operation to swiftly pinpoint problematic instances and resolve issues. This operation is designed to more precisely align with real-world business requirements and tackle O\&amp;M hurdles efficiently.</p>
@@ -8567,6 +8595,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartInstanceRefreshResponse startInstanceRefreshWithOptions(StartInstanceRefreshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkpointPauseTime)) {
+            query.put("CheckpointPauseTime", request.checkpointPauseTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkpoints)) {
+            query.put("Checkpoints", request.checkpoints);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }

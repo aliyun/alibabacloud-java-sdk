@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateNotificationConfigurationRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>PlainText</p>
+     */
+    @NameInMap("MessageEncoding")
+    public String messageEncoding;
+
+    /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</p>
      * <ul>
      * <li>If you specify CloudMonitor as the notification recipient, specify the value in the <code>acs:ess:{region-id}:{account-id}:cloudmonitor</code> format.</li>
@@ -71,6 +78,14 @@ public class CreateNotificationConfigurationRequest extends TeaModel {
     public static CreateNotificationConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNotificationConfigurationRequest self = new CreateNotificationConfigurationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateNotificationConfigurationRequest setMessageEncoding(String messageEncoding) {
+        this.messageEncoding = messageEncoding;
+        return this;
+    }
+    public String getMessageEncoding() {
+        return this.messageEncoding;
     }
 
     public CreateNotificationConfigurationRequest setNotificationArn(String notificationArn) {

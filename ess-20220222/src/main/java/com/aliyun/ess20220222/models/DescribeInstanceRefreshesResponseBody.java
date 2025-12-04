@@ -91,7 +91,180 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("Percentage")
+        public Integer percentage;
+
+        public static DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints self = new DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints setPercentage(Integer percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+    }
+
+    public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>fieldPath</p>
+         */
+        @NameInMap("FieldRefFieldPath")
+        public String fieldRefFieldPath;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PATH</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>/usr/local/bin</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars self = new DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars setFieldRefFieldPath(String fieldRefFieldPath) {
+            this.fieldRefFieldPath = fieldRefFieldPath;
+            return this;
+        }
+        public String getFieldRefFieldPath() {
+            return this.fieldRefFieldPath;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers extends TeaModel {
+        @NameInMap("Args")
+        public java.util.List<String> args;
+
+        @NameInMap("Commands")
+        public java.util.List<String> commands;
+
+        @NameInMap("EnvironmentVars")
+        public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars> environmentVars;
+
+        /**
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
+         */
+        @NameInMap("Image")
+        public String image;
+
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers self = new DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers setArgs(java.util.List<String> args) {
+            this.args = args;
+            return this;
+        }
+        public java.util.List<String> getArgs() {
+            return this.args;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers setCommands(java.util.List<String> commands) {
+            this.commands = commands;
+            return this;
+        }
+        public java.util.List<String> getCommands() {
+            return this.commands;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers setEnvironmentVars(java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars> environmentVars) {
+            this.environmentVars = environmentVars;
+            return this;
+        }
+        public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars> getEnvironmentVars() {
+            return this.environmentVars;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.sn1ne.large</p>
+         */
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        public static DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides self = new DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+    }
+
     public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration extends TeaModel {
+        @NameInMap("Containers")
+        public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers> containers;
+
         /**
          * <p>The ID of the image file that provides the image resource for Auto Scaling to create instances.</p>
          * 
@@ -100,6 +273,23 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
          */
         @NameInMap("ImageId")
         public String imageId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>lt-2ze5x4mp*****</p>
+         */
+        @NameInMap("LaunchTemplateId")
+        public String launchTemplateId;
+
+        @NameInMap("LaunchTemplateOverrides")
+        public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides> launchTemplateOverrides;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Latest</p>
+         */
+        @NameInMap("LaunchTemplateVersion")
+        public String launchTemplateVersion;
 
         /**
          * <p>The ID of the scaling configuration.</p>
@@ -115,12 +305,44 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration setContainers(java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers> containers) {
+            this.containers = containers;
+            return this;
+        }
+        public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers> getContainers() {
+            return this.containers;
+        }
+
         public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration setLaunchTemplateId(String launchTemplateId) {
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+        public String getLaunchTemplateId() {
+            return this.launchTemplateId;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration setLaunchTemplateOverrides(java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides> launchTemplateOverrides) {
+            this.launchTemplateOverrides = launchTemplateOverrides;
+            return this;
+        }
+        public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides> getLaunchTemplateOverrides() {
+            return this.launchTemplateOverrides;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration setLaunchTemplateVersion(String launchTemplateVersion) {
+            this.launchTemplateVersion = launchTemplateVersion;
+            return this;
+        }
+        public String getLaunchTemplateVersion() {
+            return this.launchTemplateVersion;
         }
 
         public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration setScalingConfigurationId(String scalingConfigurationId) {
@@ -134,6 +356,16 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("CheckpointPauseTime")
+        public Integer checkpointPauseTime;
+
+        @NameInMap("Checkpoints")
+        public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints> checkpoints;
+
         /**
          * <p>The desired configurations of the instance refresh task.</p>
          */
@@ -271,6 +503,22 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         public static DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks self = new DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks setCheckpointPauseTime(Integer checkpointPauseTime) {
+            this.checkpointPauseTime = checkpointPauseTime;
+            return this;
+        }
+        public Integer getCheckpointPauseTime() {
+            return this.checkpointPauseTime;
+        }
+
+        public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks setCheckpoints(java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints> checkpoints) {
+            this.checkpoints = checkpoints;
+            return this;
+        }
+        public java.util.List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints> getCheckpoints() {
+            return this.checkpoints;
         }
 
         public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks setDesiredConfiguration(DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration desiredConfiguration) {

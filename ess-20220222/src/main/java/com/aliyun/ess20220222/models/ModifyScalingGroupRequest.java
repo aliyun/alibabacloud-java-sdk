@@ -28,6 +28,20 @@ public class ModifyScalingGroupRequest extends TeaModel {
     public String allocationStrategy;
 
     /**
+     * <p>Whether to enable automatic rebalancing for the scaling group. This takes effect only when BalancedOnly is enabled for the scaling group. Valid values:</p>
+     * <ul>
+     * <li>false: Auto rebalancing is disabled for the scaling group.</li>
+     * <li>true: If Auto rebalancing is enabled, the scaling group automatically detects the capacity of the zone. If the capacity of the zone is unbalanced, the scaling group actively scales out the zone and re-balances the capacity of the zone.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("AutoRebalance")
+    public Boolean autoRebalance;
+
+    /**
      * <p>Specifies whether to evenly distribute instances in the scaling group across zones. This parameter takes effect only when you set the <code>MultiAZPolicy</code> parameter to <code>COMPOSABLE</code>. Valid values:</p>
      * <ul>
      * <li>true</li>
@@ -40,6 +54,20 @@ public class ModifyScalingGroupRequest extends TeaModel {
      */
     @NameInMap("AzBalance")
     public Boolean azBalance;
+
+    /**
+     * <p>The zone balancing mode. This mode takes effect only when the zone balancing mode is enabled. Valid values:</p>
+     * <ul>
+     * <li>BalancedBestEffort: If a resource fails to be created in a zone, the resource is downgraded to another zone. This ensures best-effort delivery of the resource.</li>
+     * <li>BalancedOnly: If a resource fails to be created in a zone, the resource is not downgraded to another zone. The scale-out activity is partially successful to avoid excessive imbalance of resources in different zones.</li>
+     * </ul>
+     * <p>Default value: BalancedBestEffort.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BalancedBestEffort</p>
+     */
+    @NameInMap("BalanceMode")
+    public String balanceMode;
 
     /**
      * <p>The capacity options.</p>
@@ -390,12 +418,28 @@ public class ModifyScalingGroupRequest extends TeaModel {
         return this.allocationStrategy;
     }
 
+    public ModifyScalingGroupRequest setAutoRebalance(Boolean autoRebalance) {
+        this.autoRebalance = autoRebalance;
+        return this;
+    }
+    public Boolean getAutoRebalance() {
+        return this.autoRebalance;
+    }
+
     public ModifyScalingGroupRequest setAzBalance(Boolean azBalance) {
         this.azBalance = azBalance;
         return this;
     }
     public Boolean getAzBalance() {
         return this.azBalance;
+    }
+
+    public ModifyScalingGroupRequest setBalanceMode(String balanceMode) {
+        this.balanceMode = balanceMode;
+        return this;
+    }
+    public String getBalanceMode() {
+        return this.balanceMode;
     }
 
     public ModifyScalingGroupRequest setCapacityOptions(ModifyScalingGroupRequestCapacityOptions capacityOptions) {

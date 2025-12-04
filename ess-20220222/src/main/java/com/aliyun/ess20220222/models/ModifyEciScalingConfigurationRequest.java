@@ -364,6 +364,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("NtpServers")
     public java.util.List<String> ntpServers;
 
+    @NameInMap("Override")
+    public Boolean override;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -784,6 +787,14 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
     public java.util.List<String> getNtpServers() {
         return this.ntpServers;
+    }
+
+    public ModifyEciScalingConfigurationRequest setOverride(Boolean override) {
+        this.override = override;
+        return this;
+    }
+    public Boolean getOverride() {
+        return this.override;
     }
 
     public ModifyEciScalingConfigurationRequest setOwnerId(Long ownerId) {
