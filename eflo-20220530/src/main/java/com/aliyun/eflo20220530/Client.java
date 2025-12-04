@@ -1454,6 +1454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ErId", request.erId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.erRouteMapId)) {
+            body.put("ErRouteMapId", request.erRouteMapId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.erRouteMapIds)) {
             body.put("ErRouteMapIds", request.erRouteMapIds);
         }
@@ -4626,6 +4630,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RetryVccResponse retryVcc(RetryVccRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.retryVccWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Switch the VCC connection instance or type</p>
+     * 
+     * @param request SwitchVccConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SwitchVccConnectionResponse
+     */
+    public SwitchVccConnectionResponse switchVccConnectionWithOptions(SwitchVccConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cenId)) {
+            body.put("CenId", request.cenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionType)) {
+            body.put("ConnectionType", request.connectionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            body.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vccId)) {
+            body.put("VccId", request.vccId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SwitchVccConnection"),
+            new TeaPair("version", "2022-05-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchVccConnectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Switch the VCC connection instance or type</p>
+     * 
+     * @param request SwitchVccConnectionRequest
+     * @return SwitchVccConnectionResponse
+     */
+    public SwitchVccConnectionResponse switchVccConnection(SwitchVccConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.switchVccConnectionWithOptions(request, runtime);
     }
 
     /**

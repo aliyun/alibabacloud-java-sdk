@@ -14,9 +14,11 @@ public class DeleteErRouteMapRequest extends TeaModel {
     @NameInMap("ErId")
     public String erId;
 
+    @NameInMap("ErRouteMapId")
+    public String erRouteMapId;
+
     /**
      * <p>routing policy Instance ID List</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ErRouteMapIds")
     public java.util.List<String> erRouteMapIds;
@@ -42,6 +44,14 @@ public class DeleteErRouteMapRequest extends TeaModel {
     }
     public String getErId() {
         return this.erId;
+    }
+
+    public DeleteErRouteMapRequest setErRouteMapId(String erRouteMapId) {
+        this.erRouteMapId = erRouteMapId;
+        return this;
+    }
+    public String getErRouteMapId() {
+        return this.erRouteMapId;
     }
 
     public DeleteErRouteMapRequest setErRouteMapIds(java.util.List<String> erRouteMapIds) {
