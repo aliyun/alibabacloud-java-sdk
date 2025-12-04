@@ -13,6 +13,9 @@ public class CreateMessageRequest extends TeaModel {
     @NameInMap("assistantId")
     public String assistantId;
 
+    @NameInMap("extLoginUser")
+    public CreateMessageRequestExtLoginUser extLoginUser;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -62,6 +65,14 @@ public class CreateMessageRequest extends TeaModel {
         return this.assistantId;
     }
 
+    public CreateMessageRequest setExtLoginUser(CreateMessageRequestExtLoginUser extLoginUser) {
+        this.extLoginUser = extLoginUser;
+        return this;
+    }
+    public CreateMessageRequestExtLoginUser getExtLoginUser() {
+        return this.extLoginUser;
+    }
+
     public CreateMessageRequest setMessages(java.util.List<CreateMessageRequestMessages> messages) {
         this.messages = messages;
         return this;
@@ -100,6 +111,59 @@ public class CreateMessageRequest extends TeaModel {
     }
     public String getThreadId() {
         return this.threadId;
+    }
+
+    public static class CreateMessageRequestExtLoginUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mozi</p>
+         */
+        @NameInMap("extLoginUserDomain")
+        public String extLoginUserDomain;
+
+        /**
+         * <strong>example:</strong>
+         * <p>outeruserId123</p>
+         */
+        @NameInMap("extLoginUserId")
+        public String extLoginUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>外部游客1</p>
+         */
+        @NameInMap("extLoginUserName")
+        public String extLoginUserName;
+
+        public static CreateMessageRequestExtLoginUser build(java.util.Map<String, ?> map) throws Exception {
+            CreateMessageRequestExtLoginUser self = new CreateMessageRequestExtLoginUser();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMessageRequestExtLoginUser setExtLoginUserDomain(String extLoginUserDomain) {
+            this.extLoginUserDomain = extLoginUserDomain;
+            return this;
+        }
+        public String getExtLoginUserDomain() {
+            return this.extLoginUserDomain;
+        }
+
+        public CreateMessageRequestExtLoginUser setExtLoginUserId(String extLoginUserId) {
+            this.extLoginUserId = extLoginUserId;
+            return this;
+        }
+        public String getExtLoginUserId() {
+            return this.extLoginUserId;
+        }
+
+        public CreateMessageRequestExtLoginUser setExtLoginUserName(String extLoginUserName) {
+            this.extLoginUserName = extLoginUserName;
+            return this;
+        }
+        public String getExtLoginUserName() {
+            return this.extLoginUserName;
+        }
+
     }
 
     public static class CreateMessageRequestMessagesContentCardCallback extends TeaModel {

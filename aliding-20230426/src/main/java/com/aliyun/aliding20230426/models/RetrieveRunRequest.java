@@ -13,6 +13,9 @@ public class RetrieveRunRequest extends TeaModel {
     @NameInMap("assistantId")
     public String assistantId;
 
+    @NameInMap("extLoginUser")
+    public RetrieveRunRequestExtLoginUser extLoginUser;
+
     /**
      * <strong>example:</strong>
      * <p>assistantId</p>
@@ -54,6 +57,14 @@ public class RetrieveRunRequest extends TeaModel {
         return this.assistantId;
     }
 
+    public RetrieveRunRequest setExtLoginUser(RetrieveRunRequestExtLoginUser extLoginUser) {
+        this.extLoginUser = extLoginUser;
+        return this;
+    }
+    public RetrieveRunRequestExtLoginUser getExtLoginUser() {
+        return this.extLoginUser;
+    }
+
     public RetrieveRunRequest setOriginalAssistantId(String originalAssistantId) {
         this.originalAssistantId = originalAssistantId;
         return this;
@@ -84,6 +95,59 @@ public class RetrieveRunRequest extends TeaModel {
     }
     public String getSourceTypeOfOriginalAssistantId() {
         return this.sourceTypeOfOriginalAssistantId;
+    }
+
+    public static class RetrieveRunRequestExtLoginUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mozi</p>
+         */
+        @NameInMap("extLoginUserDomain")
+        public String extLoginUserDomain;
+
+        /**
+         * <strong>example:</strong>
+         * <p>outeruserId123</p>
+         */
+        @NameInMap("extLoginUserId")
+        public String extLoginUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>外部游客1</p>
+         */
+        @NameInMap("extLoginUserName")
+        public String extLoginUserName;
+
+        public static RetrieveRunRequestExtLoginUser build(java.util.Map<String, ?> map) throws Exception {
+            RetrieveRunRequestExtLoginUser self = new RetrieveRunRequestExtLoginUser();
+            return TeaModel.build(map, self);
+        }
+
+        public RetrieveRunRequestExtLoginUser setExtLoginUserDomain(String extLoginUserDomain) {
+            this.extLoginUserDomain = extLoginUserDomain;
+            return this;
+        }
+        public String getExtLoginUserDomain() {
+            return this.extLoginUserDomain;
+        }
+
+        public RetrieveRunRequestExtLoginUser setExtLoginUserId(String extLoginUserId) {
+            this.extLoginUserId = extLoginUserId;
+            return this;
+        }
+        public String getExtLoginUserId() {
+            return this.extLoginUserId;
+        }
+
+        public RetrieveRunRequestExtLoginUser setExtLoginUserName(String extLoginUserName) {
+            this.extLoginUserName = extLoginUserName;
+            return this;
+        }
+        public String getExtLoginUserName() {
+            return this.extLoginUserName;
+        }
+
     }
 
 }

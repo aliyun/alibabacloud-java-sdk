@@ -16,6 +16,9 @@ public class CreateRunRequest extends TeaModel {
     @NameInMap("assistantId")
     public String assistantId;
 
+    @NameInMap("extLoginUser")
+    public CreateRunRequestExtLoginUser extLoginUser;
+
     /**
      * <strong>example:</strong>
      * <p>assistantId</p>
@@ -74,6 +77,14 @@ public class CreateRunRequest extends TeaModel {
         return this.assistantId;
     }
 
+    public CreateRunRequest setExtLoginUser(CreateRunRequestExtLoginUser extLoginUser) {
+        this.extLoginUser = extLoginUser;
+        return this;
+    }
+    public CreateRunRequestExtLoginUser getExtLoginUser() {
+        return this.extLoginUser;
+    }
+
     public CreateRunRequest setOriginalAssistantId(String originalAssistantId) {
         this.originalAssistantId = originalAssistantId;
         return this;
@@ -112,6 +123,59 @@ public class CreateRunRequest extends TeaModel {
     }
     public String getThreadId() {
         return this.threadId;
+    }
+
+    public static class CreateRunRequestExtLoginUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mozi</p>
+         */
+        @NameInMap("extLoginUserDomain")
+        public String extLoginUserDomain;
+
+        /**
+         * <strong>example:</strong>
+         * <p>outeruserId123</p>
+         */
+        @NameInMap("extLoginUserId")
+        public String extLoginUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>外部游客1</p>
+         */
+        @NameInMap("extLoginUserName")
+        public String extLoginUserName;
+
+        public static CreateRunRequestExtLoginUser build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunRequestExtLoginUser self = new CreateRunRequestExtLoginUser();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunRequestExtLoginUser setExtLoginUserDomain(String extLoginUserDomain) {
+            this.extLoginUserDomain = extLoginUserDomain;
+            return this;
+        }
+        public String getExtLoginUserDomain() {
+            return this.extLoginUserDomain;
+        }
+
+        public CreateRunRequestExtLoginUser setExtLoginUserId(String extLoginUserId) {
+            this.extLoginUserId = extLoginUserId;
+            return this;
+        }
+        public String getExtLoginUserId() {
+            return this.extLoginUserId;
+        }
+
+        public CreateRunRequestExtLoginUser setExtLoginUserName(String extLoginUserName) {
+            this.extLoginUserName = extLoginUserName;
+            return this;
+        }
+        public String getExtLoginUserName() {
+            return this.extLoginUserName;
+        }
+
     }
 
 }

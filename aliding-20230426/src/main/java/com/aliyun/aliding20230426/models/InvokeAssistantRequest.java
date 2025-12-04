@@ -13,6 +13,9 @@ public class InvokeAssistantRequest extends TeaModel {
     @NameInMap("assistantId")
     public String assistantId;
 
+    @NameInMap("extLoginUser")
+    public InvokeAssistantRequestExtLoginUser extLoginUser;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -67,6 +70,14 @@ public class InvokeAssistantRequest extends TeaModel {
         return this.assistantId;
     }
 
+    public InvokeAssistantRequest setExtLoginUser(InvokeAssistantRequestExtLoginUser extLoginUser) {
+        this.extLoginUser = extLoginUser;
+        return this;
+    }
+    public InvokeAssistantRequestExtLoginUser getExtLoginUser() {
+        return this.extLoginUser;
+    }
+
     public InvokeAssistantRequest setMessages(java.util.List<InvokeAssistantRequestMessages> messages) {
         this.messages = messages;
         return this;
@@ -113,6 +124,59 @@ public class InvokeAssistantRequest extends TeaModel {
     }
     public Boolean getStream() {
         return this.stream;
+    }
+
+    public static class InvokeAssistantRequestExtLoginUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mozi</p>
+         */
+        @NameInMap("extLoginUserDomain")
+        public String extLoginUserDomain;
+
+        /**
+         * <strong>example:</strong>
+         * <p>outeruserId123</p>
+         */
+        @NameInMap("extLoginUserId")
+        public String extLoginUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>外部游客1</p>
+         */
+        @NameInMap("extLoginUserName")
+        public String extLoginUserName;
+
+        public static InvokeAssistantRequestExtLoginUser build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestExtLoginUser self = new InvokeAssistantRequestExtLoginUser();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestExtLoginUser setExtLoginUserDomain(String extLoginUserDomain) {
+            this.extLoginUserDomain = extLoginUserDomain;
+            return this;
+        }
+        public String getExtLoginUserDomain() {
+            return this.extLoginUserDomain;
+        }
+
+        public InvokeAssistantRequestExtLoginUser setExtLoginUserId(String extLoginUserId) {
+            this.extLoginUserId = extLoginUserId;
+            return this;
+        }
+        public String getExtLoginUserId() {
+            return this.extLoginUserId;
+        }
+
+        public InvokeAssistantRequestExtLoginUser setExtLoginUserName(String extLoginUserName) {
+            this.extLoginUserName = extLoginUserName;
+            return this;
+        }
+        public String getExtLoginUserName() {
+            return this.extLoginUserName;
+        }
+
     }
 
     public static class InvokeAssistantRequestMessagesContentCardCallback extends TeaModel {

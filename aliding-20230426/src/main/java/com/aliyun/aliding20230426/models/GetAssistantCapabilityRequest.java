@@ -13,6 +13,9 @@ public class GetAssistantCapabilityRequest extends TeaModel {
     @NameInMap("assistantId")
     public String assistantId;
 
+    @NameInMap("extLoginUser")
+    public GetAssistantCapabilityRequestExtLoginUser extLoginUser;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -74,6 +77,14 @@ public class GetAssistantCapabilityRequest extends TeaModel {
         return this.assistantId;
     }
 
+    public GetAssistantCapabilityRequest setExtLoginUser(GetAssistantCapabilityRequestExtLoginUser extLoginUser) {
+        this.extLoginUser = extLoginUser;
+        return this;
+    }
+    public GetAssistantCapabilityRequestExtLoginUser getExtLoginUser() {
+        return this.extLoginUser;
+    }
+
     public GetAssistantCapabilityRequest setMessages(java.util.List<GetAssistantCapabilityRequestMessages> messages) {
         this.messages = messages;
         return this;
@@ -128,6 +139,59 @@ public class GetAssistantCapabilityRequest extends TeaModel {
     }
     public Integer getTimeout() {
         return this.timeout;
+    }
+
+    public static class GetAssistantCapabilityRequestExtLoginUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mozi</p>
+         */
+        @NameInMap("extLoginUserDomain")
+        public String extLoginUserDomain;
+
+        /**
+         * <strong>example:</strong>
+         * <p>outeruserId123</p>
+         */
+        @NameInMap("extLoginUserId")
+        public String extLoginUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>外部游客1</p>
+         */
+        @NameInMap("extLoginUserName")
+        public String extLoginUserName;
+
+        public static GetAssistantCapabilityRequestExtLoginUser build(java.util.Map<String, ?> map) throws Exception {
+            GetAssistantCapabilityRequestExtLoginUser self = new GetAssistantCapabilityRequestExtLoginUser();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAssistantCapabilityRequestExtLoginUser setExtLoginUserDomain(String extLoginUserDomain) {
+            this.extLoginUserDomain = extLoginUserDomain;
+            return this;
+        }
+        public String getExtLoginUserDomain() {
+            return this.extLoginUserDomain;
+        }
+
+        public GetAssistantCapabilityRequestExtLoginUser setExtLoginUserId(String extLoginUserId) {
+            this.extLoginUserId = extLoginUserId;
+            return this;
+        }
+        public String getExtLoginUserId() {
+            return this.extLoginUserId;
+        }
+
+        public GetAssistantCapabilityRequestExtLoginUser setExtLoginUserName(String extLoginUserName) {
+            this.extLoginUserName = extLoginUserName;
+            return this;
+        }
+        public String getExtLoginUserName() {
+            return this.extLoginUserName;
+        }
+
     }
 
     public static class GetAssistantCapabilityRequestMessagesContentCardCallback extends TeaModel {

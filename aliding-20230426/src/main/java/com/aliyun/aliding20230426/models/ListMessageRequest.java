@@ -13,6 +13,9 @@ public class ListMessageRequest extends TeaModel {
     @NameInMap("assistantId")
     public String assistantId;
 
+    @NameInMap("extLoginUser")
+    public ListMessageRequestExtLoginUser extLoginUser;
+
     /**
      * <strong>example:</strong>
      * <p>20</p>
@@ -77,6 +80,14 @@ public class ListMessageRequest extends TeaModel {
         return this.assistantId;
     }
 
+    public ListMessageRequest setExtLoginUser(ListMessageRequestExtLoginUser extLoginUser) {
+        this.extLoginUser = extLoginUser;
+        return this;
+    }
+    public ListMessageRequestExtLoginUser getExtLoginUser() {
+        return this.extLoginUser;
+    }
+
     public ListMessageRequest setLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -131,6 +142,59 @@ public class ListMessageRequest extends TeaModel {
     }
     public String getThreadId() {
         return this.threadId;
+    }
+
+    public static class ListMessageRequestExtLoginUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mozi</p>
+         */
+        @NameInMap("extLoginUserDomain")
+        public String extLoginUserDomain;
+
+        /**
+         * <strong>example:</strong>
+         * <p>outeruserId123</p>
+         */
+        @NameInMap("extLoginUserId")
+        public String extLoginUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>外部游客1</p>
+         */
+        @NameInMap("extLoginUserName")
+        public String extLoginUserName;
+
+        public static ListMessageRequestExtLoginUser build(java.util.Map<String, ?> map) throws Exception {
+            ListMessageRequestExtLoginUser self = new ListMessageRequestExtLoginUser();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMessageRequestExtLoginUser setExtLoginUserDomain(String extLoginUserDomain) {
+            this.extLoginUserDomain = extLoginUserDomain;
+            return this;
+        }
+        public String getExtLoginUserDomain() {
+            return this.extLoginUserDomain;
+        }
+
+        public ListMessageRequestExtLoginUser setExtLoginUserId(String extLoginUserId) {
+            this.extLoginUserId = extLoginUserId;
+            return this;
+        }
+        public String getExtLoginUserId() {
+            return this.extLoginUserId;
+        }
+
+        public ListMessageRequestExtLoginUser setExtLoginUserName(String extLoginUserName) {
+            this.extLoginUserName = extLoginUserName;
+            return this;
+        }
+        public String getExtLoginUserName() {
+            return this.extLoginUserName;
+        }
+
     }
 
 }
