@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class ListJobsRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>Default</p>
+     */
+    @NameInMap("jobType")
+    public String jobType;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("pageNumber")
@@ -31,6 +38,14 @@ public class ListJobsRequest extends TeaModel {
     public static ListJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobsRequest self = new ListJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobsRequest setJobType(String jobType) {
+        this.jobType = jobType;
+        return this;
+    }
+    public String getJobType() {
+        return this.jobType;
     }
 
     public ListJobsRequest setPageNumber(Integer pageNumber) {

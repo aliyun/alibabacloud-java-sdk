@@ -233,6 +233,13 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("jobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
+        @NameInMap("jobType")
+        public String jobType;
+
         @NameInMap("logFile")
         public java.util.Map<String, ?> logFile;
 
@@ -347,6 +354,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getJobId() {
             return this.jobId;
+        }
+
+        public GetJobResponseBodyJob setJobType(String jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public String getJobType() {
+            return this.jobType;
         }
 
         public GetJobResponseBodyJob setLogFile(java.util.Map<String, ?> logFile) {
