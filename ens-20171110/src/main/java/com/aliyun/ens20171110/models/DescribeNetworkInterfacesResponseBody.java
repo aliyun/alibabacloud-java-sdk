@@ -158,6 +158,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        @NameInMap("PrivateIpStatus")
+        public String privateIpStatus;
+
         public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet();
             return TeaModel.build(map, self);
@@ -177,6 +180,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getPrivateIpAddress() {
             return this.privateIpAddress;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet setPrivateIpStatus(String privateIpStatus) {
+            this.privateIpStatus = privateIpStatus;
+            return this;
+        }
+        public String getPrivateIpStatus() {
+            return this.privateIpStatus;
         }
 
     }
