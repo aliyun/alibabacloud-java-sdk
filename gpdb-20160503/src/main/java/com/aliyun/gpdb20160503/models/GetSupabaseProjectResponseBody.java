@@ -62,6 +62,12 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("InstanceVersion")
+    public String instanceVersion;
+
+    @NameInMap("PayType")
+    public String payType;
+
     /**
      * <p>The private (VPC) connection URL for the Supabase Dashboard.</p>
      * 
@@ -155,6 +161,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("StorageSize")
     public Long storageSize;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     /**
      * <p>The vSwitch ID of the instance. This parameter must be specified when VPCId is specified.</p>
      * 
@@ -246,6 +255,22 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         return this.engineVersion;
     }
 
+    public GetSupabaseProjectResponseBody setInstanceVersion(String instanceVersion) {
+        this.instanceVersion = instanceVersion;
+        return this;
+    }
+    public String getInstanceVersion() {
+        return this.instanceVersion;
+    }
+
+    public GetSupabaseProjectResponseBody setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
     public GetSupabaseProjectResponseBody setPrivateConnectUrl(String privateConnectUrl) {
         this.privateConnectUrl = privateConnectUrl;
         return this;
@@ -324,6 +349,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     }
     public Long getStorageSize() {
         return this.storageSize;
+    }
+
+    public GetSupabaseProjectResponseBody setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public GetSupabaseProjectResponseBody setVSwitchId(String vSwitchId) {

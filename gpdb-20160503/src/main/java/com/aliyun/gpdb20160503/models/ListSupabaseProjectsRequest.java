@@ -22,6 +22,12 @@ public class ListSupabaseProjectsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
@@ -53,6 +59,22 @@ public class ListSupabaseProjectsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListSupabaseProjectsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListSupabaseProjectsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListSupabaseProjectsRequest setRegionId(String regionId) {

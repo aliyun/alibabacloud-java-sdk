@@ -133,6 +133,9 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos build(java.util.Map<String, ?> map) throws Exception {
             ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos self = new ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos();
             return TeaModel.build(map, self);
@@ -192,6 +195,14 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

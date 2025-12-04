@@ -180,6 +180,9 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
@@ -358,6 +361,14 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         }
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        public ListSupabaseProjectsResponseBodyItems setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         public ListSupabaseProjectsResponseBodyItems setPayType(String payType) {
