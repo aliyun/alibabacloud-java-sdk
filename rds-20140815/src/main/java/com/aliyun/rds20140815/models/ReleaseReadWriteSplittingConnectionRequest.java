@@ -20,6 +20,9 @@ public class ReleaseReadWriteSplittingConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RWAddressType")
+    public String RWAddressType;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -53,6 +56,14 @@ public class ReleaseReadWriteSplittingConnectionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ReleaseReadWriteSplittingConnectionRequest setRWAddressType(String RWAddressType) {
+        this.RWAddressType = RWAddressType;
+        return this;
+    }
+    public String getRWAddressType() {
+        return this.RWAddressType;
     }
 
     public ReleaseReadWriteSplittingConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
