@@ -3129,6 +3129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("sortName", request.sortName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("sortOrder", request.sortOrder);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;

@@ -47,6 +47,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("sortName")
     public String sortName;
 
+    @NameInMap("sortOrder")
+    public String sortOrder;
+
     public static ListJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobsRequest self = new ListJobsRequest();
         return TeaModel.build(map, self);
@@ -82,6 +85,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getSortName() {
         return this.sortName;
+    }
+
+    public ListJobsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
 }
