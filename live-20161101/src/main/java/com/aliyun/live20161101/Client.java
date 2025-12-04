@@ -16166,6 +16166,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>云端录制用量</p>
+     * 
+     * @param request DescribeLiveRtcRecordUsageDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLiveRtcRecordUsageDataResponse
+     */
+    public DescribeLiveRtcRecordUsageDataResponse describeLiveRtcRecordUsageDataWithOptions(DescribeLiveRtcRecordUsageDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordMode)) {
+            query.put("RecordMode", request.recordMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLiveRtcRecordUsageData"),
+            new TeaPair("version", "2016-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLiveRtcRecordUsageDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>云端录制用量</p>
+     * 
+     * @param request DescribeLiveRtcRecordUsageDataRequest
+     * @return DescribeLiveRtcRecordUsageDataResponse
+     */
+    public DescribeLiveRtcRecordUsageDataResponse describeLiveRtcRecordUsageData(DescribeLiveRtcRecordUsageDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLiveRtcRecordUsageDataWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation is applicable to the streaming domains.</p>
      * <h2>QPS limit</h2>

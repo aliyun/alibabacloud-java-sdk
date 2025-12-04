@@ -1,3 +1,7 @@
+2025-12-04 Version: 2.4.0
+- Support API DescribeLiveRtcRecordUsageData.
+
+
 2025-12-02 Version: 2.3.3
 - Update API StartRtcCloudRecording: add request parameters NotifyFileUploadedFormat.
 
