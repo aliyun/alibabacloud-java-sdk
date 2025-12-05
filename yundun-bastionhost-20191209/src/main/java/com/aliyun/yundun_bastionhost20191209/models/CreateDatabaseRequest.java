@@ -99,6 +99,13 @@ public class CreateDatabaseRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("InstanceMemberId")
+    public Long instanceMemberId;
+
+    /**
      * <p>The ID of the network domain to which the database to add belongs.</p>
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</p>
@@ -241,6 +248,14 @@ public class CreateDatabaseRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateDatabaseRequest setInstanceMemberId(Long instanceMemberId) {
+        this.instanceMemberId = instanceMemberId;
+        return this;
+    }
+    public Long getInstanceMemberId() {
+        return this.instanceMemberId;
     }
 
     public CreateDatabaseRequest setNetworkDomainId(String networkDomainId) {

@@ -75,6 +75,13 @@ public class CreateHostRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("InstanceMemberId")
+    public Long instanceMemberId;
+
+    /**
      * <p>The ID of the region to which the ECS instance or the host in an ApsaraDB MyBase dedicated cluster belongs.</p>
      * <blockquote>
      * <p>This parameter is required if the <strong>Source</strong> parameter is set to <strong>Ecs</strong> or <strong>Rds</strong>.</p>
@@ -202,6 +209,14 @@ public class CreateHostRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateHostRequest setInstanceMemberId(Long instanceMemberId) {
+        this.instanceMemberId = instanceMemberId;
+        return this;
+    }
+    public Long getInstanceMemberId() {
+        return this.instanceMemberId;
     }
 
     public CreateHostRequest setInstanceRegionId(String instanceRegionId) {

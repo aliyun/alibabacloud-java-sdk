@@ -969,6 +969,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceMemberId)) {
+            query.put("InstanceMemberId", request.instanceMemberId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkDomainId)) {
             query.put("NetworkDomainId", request.networkDomainId);
         }
@@ -1165,6 +1169,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceMemberId)) {
+            query.put("InstanceMemberId", request.instanceMemberId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceRegionId)) {
