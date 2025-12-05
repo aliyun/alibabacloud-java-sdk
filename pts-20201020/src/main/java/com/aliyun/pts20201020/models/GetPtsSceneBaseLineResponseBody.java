@@ -4,24 +4,64 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetPtsSceneBaseLineResponseBody extends TeaModel {
+    /**
+     * <p>Baseline data</p>
+     */
     @NameInMap("Baseline")
     public GetPtsSceneBaseLineResponseBodyBaseline baseline;
 
+    /**
+     * <p>The system status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>null</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F7D2CE0-AE4C-4143-955A-8E4595AF86A6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the scene.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NHG67BF</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false:</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,39 +127,108 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneBaseLineResponseBodyBaselineApiBaselines extends TeaModel {
+        /**
+         * <p>Average RT</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("AvgRt")
         public Float avgRt;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("AvgTps")
         public Float avgTps;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FailCountBiz")
         public Long failCountBiz;
 
+        /**
+         * <p>Failures</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FailCountReq")
         public Long failCountReq;
 
+        /**
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76543</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("MaxRt")
         public Integer maxRt;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("MinRt")
         public Integer minRt;
 
+        /**
+         * <p>The name of the API operation.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("Seg90Rt")
         public Float seg90Rt;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Seg99Rt")
         public Float seg99Rt;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("SuccessRateBiz")
         public Float successRateBiz;
 
+        /**
+         * <p>request success rate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
         @NameInMap("SuccessRateReq")
         public Float successRateReq;
 
@@ -227,27 +336,75 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneBaseLineResponseBodyBaselineSceneBaseline extends TeaModel {
+        /**
+         * <p>Average RT</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("AvgRt")
         public Float avgRt;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("AvgTps")
         public Float avgTps;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("FailCountBiz")
         public Long failCountBiz;
 
+        /**
+         * <p>Failures</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("FailCountReq")
         public Long failCountReq;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Seg90Rt")
         public Float seg90Rt;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Seg99Rt")
         public Float seg99Rt;
 
+        /**
+         * <p>null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("SuccessRateBiz")
         public Float successRateBiz;
 
+        /**
+         * <p>request success rate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
         @NameInMap("SuccessRateReq")
         public Float successRateReq;
 
@@ -323,12 +480,21 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneBaseLineResponseBodyBaseline extends TeaModel {
+        /**
+         * <p>null</p>
+         */
         @NameInMap("ApiBaselines")
         public java.util.List<GetPtsSceneBaseLineResponseBodyBaselineApiBaselines> apiBaselines;
 
+        /**
+         * <p>Scenario</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>null</p>
+         */
         @NameInMap("SceneBaseline")
         public GetPtsSceneBaseLineResponseBodyBaselineSceneBaseline sceneBaseline;
 

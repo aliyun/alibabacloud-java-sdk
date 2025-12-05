@@ -4,6 +4,10 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SavePtsSceneShrinkRequest extends TeaModel {
+    /**
+     * <p>The information about the scenario.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Scene")
     public String sceneShrink;
 

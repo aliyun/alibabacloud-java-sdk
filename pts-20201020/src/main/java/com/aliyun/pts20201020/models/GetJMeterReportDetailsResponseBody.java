@@ -4,36 +4,85 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetJMeterReportDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The system status code. If the request was successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4001</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The code key that corresponds to the key in Medusa. If no code key is available, or if the content corresponding to the code key fails to be obtained or is empty, the returned message is displayed as the default information.</p>
+     */
     @NameInMap("CodeKey")
     public String codeKey;
 
+    /**
+     * <p>The URL used to access the document.</p>
+     */
     @NameInMap("DocumentUrl")
     public String documentUrl;
 
+    /**
+     * <p>The returned dynamic contents that are separated by the &amp;&amp; operator.</p>
+     */
     @NameInMap("DynamicCtx")
     public String dynamicCtx;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message. If the request was successful, this parameter is not returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The details of the report.</p>
+     */
     @NameInMap("ReportOverView")
     public GetJMeterReportDetailsResponseBodyReportOverView reportOverView;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The dimensions of APIs.</p>
+     */
     @NameInMap("SamplerMetricsList")
     public java.util.List<GetJMeterReportDetailsResponseBodySamplerMetricsList> samplerMetricsList;
 
+    /**
+     * <p>The dimensions of the whole scenario.</p>
+     */
     @NameInMap("SceneMetrics")
     public GetJMeterReportDetailsResponseBodySceneMetrics sceneMetrics;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -131,21 +180,54 @@ public class GetJMeterReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetJMeterReportDetailsResponseBodyReportOverView extends TeaModel {
+        /**
+         * <p>The number of used engines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AgentCount")
         public Integer agentCount;
 
+        /**
+         * <p>The end of the queried time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-03 10:45:11</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The report ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GHB56VD</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <p>The report name.</p>
+         */
         @NameInMap("ReportName")
         public String reportName;
 
+        /**
+         * <p>The beginning of the queried time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-03 10:35:11</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The consumed Virtual User Minutes (VUM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4452</p>
+         */
         @NameInMap("Vum")
         public Long vum;
 
@@ -205,36 +287,99 @@ public class GetJMeterReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetJMeterReportDetailsResponseBodySamplerMetricsList extends TeaModel {
+        /**
+         * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>731</p>
+         */
         @NameInMap("AllCount")
         public Long allCount;
 
+        /**
+         * <p>The API name.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The average RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44.2</p>
+         */
         @NameInMap("AvgRt")
         public Double avgRt;
 
+        /**
+         * <p>The average TPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("AvgTps")
         public Double avgTps;
 
+        /**
+         * <p>The request failure rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("FailCountReq")
         public Long failCountReq;
 
+        /**
+         * <p>The maximum RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78</p>
+         */
         @NameInMap("MaxRt")
         public Double maxRt;
 
+        /**
+         * <p>The minimum RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("MinRt")
         public Double minRt;
 
+        /**
+         * <p>The 75th percentile of RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22.4</p>
+         */
         @NameInMap("Seg75Rt")
         public Double seg75Rt;
 
+        /**
+         * <p>The 90th percentile of RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65</p>
+         */
         @NameInMap("Seg90Rt")
         public Double seg90Rt;
 
+        /**
+         * <p>The 99th percentile of RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77</p>
+         */
         @NameInMap("Seg99Rt")
         public Double seg99Rt;
 
+        /**
+         * <p>The request success rate. The parameter value must be a non-negative number less than or equal to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SuccessRateReq")
         public Double successRateReq;
 
@@ -334,24 +479,66 @@ public class GetJMeterReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetJMeterReportDetailsResponseBodySceneMetrics extends TeaModel {
+        /**
+         * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>717</p>
+         */
         @NameInMap("AllCount")
         public Long allCount;
 
+        /**
+         * <p>The average response time (RT). Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("AvgRt")
         public Double avgRt;
 
+        /**
+         * <p>The average transactions per second (TPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78</p>
+         */
         @NameInMap("AvgTps")
         public Double avgTps;
 
+        /**
+         * <p>The request failure rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("FailCountReq")
         public Long failCountReq;
 
+        /**
+         * <p>The 90th percentile of RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35</p>
+         */
         @NameInMap("Seg90Rt")
         public Double seg90Rt;
 
+        /**
+         * <p>The 99th percentile of RT. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
+         */
         @NameInMap("Seg99Rt")
         public Double seg99Rt;
 
+        /**
+         * <p>The request success rate. The parameter value must be a non-negative number less than or equal to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.99</p>
+         */
         @NameInMap("SuccessRateReq")
         public Double successRateReq;
 

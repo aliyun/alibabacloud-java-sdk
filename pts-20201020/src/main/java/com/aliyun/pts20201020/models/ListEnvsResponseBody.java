@@ -4,30 +4,82 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class ListEnvsResponseBody extends TeaModel {
+    /**
+     * <p>The system status code. If the operation is successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The environments.</p>
+     */
     @NameInMap("Envs")
     public java.util.List<ListEnvsResponseBodyEnvs> envs;
 
+    /**
+     * <p>The HTTP status code. If the operation is successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message. If the operation is successful, this parameter is not returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of environments per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of environments.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,18 +161,48 @@ public class ListEnvsResponseBody extends TeaModel {
     }
 
     public static class ListEnvsResponseBodyEnvsFiles extends TeaModel {
+        /**
+         * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61660</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>json.jar</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The OSS address of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/json.jar">https://test.oss-cn-shanghai.aliyuncs.com/json.jar</a></p>
+         */
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
+        /**
+         * <p>The size of the file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>788</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <p>The MD5 checksum of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43B584026CE5E570F3DE638FA7EEF9E0</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
@@ -172,12 +254,30 @@ public class ListEnvsResponseBody extends TeaModel {
     }
 
     public static class ListEnvsResponseBodyEnvsProperties extends TeaModel {
+        /**
+         * <p>The description of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>远程主机</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remote_hosts</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -213,33 +313,81 @@ public class ListEnvsResponseBody extends TeaModel {
     }
 
     public static class ListEnvsResponseBodyEnvs extends TeaModel {
+        /**
+         * <p>The time when the environment was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637053715165</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86S1LH</p>
+         */
         @NameInMap("EnvId")
         public String envId;
 
+        /**
+         * <p>The name of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-create</p>
+         */
         @NameInMap("EnvName")
         public String envName;
 
+        /**
+         * <p>The JMeter version of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
+         */
         @NameInMap("EnvVersion")
         public String envVersion;
 
+        /**
+         * <p>The JAR files.</p>
+         */
         @NameInMap("Files")
         public java.util.List<ListEnvsResponseBodyEnvsFiles> files;
 
+        /**
+         * <p>The time when the environment was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637053719165</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The JMeter attributes.</p>
+         */
         @NameInMap("Properties")
         public java.util.List<ListEnvsResponseBodyEnvsProperties> properties;
 
+        /**
+         * <p>The scenarios related to the environment.</p>
+         */
         @NameInMap("RelatedScenes")
         public java.util.List<String> relatedScenes;
 
+        /**
+         * <p>The IDs of the scenarios that run in the environment.</p>
+         */
         @NameInMap("RunningScenes")
         public java.util.List<String> runningScenes;
 
+        /**
+         * <p>The total size of the environment file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26668</p>
+         */
         @NameInMap("UsedCapacity")
         public Long usedCapacity;
 

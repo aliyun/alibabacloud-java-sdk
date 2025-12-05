@@ -4,6 +4,13 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetJMeterReportDetailsRequest extends TeaModel {
+    /**
+     * <p>The report ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KS2YE3J2</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 

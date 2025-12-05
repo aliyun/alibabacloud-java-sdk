@@ -4,21 +4,55 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class ListPtsSceneResponseBody extends TeaModel {
+    /**
+     * <p>The system status code. If the request was successful, no data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4001</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code. If the request was successful, no data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message. If the request was successful, no data is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6F2ED8-E31B-497F-85AB-C4E358A5F667</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned scenarios.</p>
+     */
     @NameInMap("SceneViewList")
     public java.util.List<ListPtsSceneResponseBodySceneViewList> sceneViewList;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +110,36 @@ public class ListPtsSceneResponseBody extends TeaModel {
     }
 
     public static class ListPtsSceneResponseBodySceneViewList extends TeaModel {
+        /**
+         * <p>The time when the PTS scenario was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-26 15:28:39</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DFGVS3S</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <p>The scenario name.</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>The status of the PTS scenario. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Draft WaitStart Debugging Running</p>
+         */
         @NameInMap("Status")
         public String status;
 

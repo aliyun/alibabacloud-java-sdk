@@ -4,6 +4,13 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class StopPtsSceneRequest extends TeaModel {
+    /**
+     * <p>The ID of the scenario that you want to stop, which is the ID that is returned after the scenario is created. You can view scenario IDs on the scenario list page in the PTS console.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GV4DEBG</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

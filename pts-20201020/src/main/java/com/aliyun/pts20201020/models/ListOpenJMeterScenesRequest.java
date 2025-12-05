@@ -4,15 +4,41 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class ListOpenJMeterScenesRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of scenarios to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The scenario ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DYYPZIH</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>The scenario name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("SceneName")
     public String sceneName;
 

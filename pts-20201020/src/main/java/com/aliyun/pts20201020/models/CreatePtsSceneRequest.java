@@ -4,6 +4,10 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class CreatePtsSceneRequest extends TeaModel {
+    /**
+     * <p>The scenario details.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Scene")
     public String scene;
 

@@ -4,9 +4,19 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class AdjustPtsSceneSpeedRequest extends TeaModel {
+    /**
+     * <p>The stress testing speed in the PTS scenario.</p>
+     */
     @NameInMap("ApiSpeedList")
     public java.util.List<AdjustPtsSceneSpeedRequestApiSpeedList> apiSpeedList;
 
+    /**
+     * <p>The scenario ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DYXXX12H</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
@@ -32,9 +42,21 @@ public class AdjustPtsSceneSpeedRequest extends TeaModel {
     }
 
     public static class AdjustPtsSceneSpeedRequestApiSpeedList extends TeaModel {
+        /**
+         * <p>The API ID. You can find the information of the API corresponding to the ID in the Relation response parameter of the GetPtsSceneRunningData operation based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DYXXX12H</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The new stress. In concurrency mode, the new stress is the concurrency. In RPS mode, the new stress is the RPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Speed")
         public Long speed;
 

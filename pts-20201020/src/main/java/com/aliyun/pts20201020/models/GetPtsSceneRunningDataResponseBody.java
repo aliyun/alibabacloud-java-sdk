@@ -4,75 +4,217 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetPtsSceneRunningDataResponseBody extends TeaModel {
+    /**
+     * <p>The location information of stress testers.</p>
+     */
     @NameInMap("AgentLocation")
     public java.util.List<GetPtsSceneRunningDataResponseBodyAgentLocation> agentLocation;
 
+    /**
+     * <p>The number of healthy engines.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("AliveAgents")
     public Integer aliveAgents;
 
+    /**
+     * <p>The average RT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45</p>
+     */
     @NameInMap("AverageRt")
     public Long averageRt;
 
+    /**
+     * <p>The start time of the stress testing that is displayed as a timestamp. Unit: ms.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1651895518339</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    /**
+     * <p>The stress testing details of the GetPtsSceneRunningData operation.</p>
+     */
     @NameInMap("ChainMonitorDataList")
     public java.util.List<GetPtsSceneRunningDataResponseBodyChainMonitorDataList> chainMonitorDataList;
 
+    /**
+     * <p>The system status code. If the request was successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4001</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The total concurrency.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Concurrency")
     public Integer concurrency;
 
+    /**
+     * <p>The maximum concurrency.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("ConcurrencyLimit")
     public Integer concurrencyLimit;
 
+    /**
+     * <p>The total number of failed businesses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78</p>
+     */
     @NameInMap("FailedBusinessCount")
     public Long failedBusinessCount;
 
+    /**
+     * <p>The number of failed requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("FailedRequestCount")
     public Long failedRequestCount;
 
+    /**
+     * <p>Indicates whether a report is generated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HasReport")
     public Boolean hasReport;
 
+    /**
+     * <p>The HTTP status code. If the request was successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message. If the request was successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>no message</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The size of the request body.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89kb</p>
+     */
     @NameInMap("RequestBps")
     public String requestBps;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC4E3177-6745-4925-B423-4E89VV34221A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The size of the response body.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8kb</p>
+     */
     @NameInMap("ResponseBps")
     public String responseBps;
 
+    /**
+     * <p>The 90th percentile of reaction time (RT).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45</p>
+     */
     @NameInMap("Seg90Rt")
     public Long seg90Rt;
 
+    /**
+     * <p>The scenario status. The default parameter value is 7.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of stress testers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalAgents")
     public Integer totalAgents;
 
+    /**
+     * <p>The total number of queries per second (QPS).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalRealQps")
     public Integer totalRealQps;
 
+    /**
+     * <p>The total number of requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8900</p>
+     */
     @NameInMap("TotalRequestCount")
     public Long totalRequestCount;
 
+    /**
+     * <p>The maximum transactions per second (TPS).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("TpsLimit")
     public Integer tpsLimit;
 
+    /**
+     * <p>The consumed Virtual User Minutes (VUM).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Vum")
     public Long vum;
 
@@ -274,15 +416,30 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneRunningDataResponseBodyAgentLocation extends TeaModel {
+        /**
+         * <p>The number of stress testers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The provider of the stress tester.</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>The province in which the stress tester resides.</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <p>The region in which the stress tester resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -326,15 +483,39 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneRunningDataResponseBodyChainMonitorDataListCheckPointResult extends TeaModel {
+        /**
+         * <p>The number of failed businesses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("FailedBusinessCount")
         public Long failedBusinessCount;
 
+        /**
+         * <p>The RPS of failed businesses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78</p>
+         */
         @NameInMap("FailedBusinessQps")
         public Float failedBusinessQps;
 
+        /**
+         * <p>The number of successful businesses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>908</p>
+         */
         @NameInMap("SucceedBusinessCount")
         public Long succeedBusinessCount;
 
+        /**
+         * <p>The RPS of the successful businesses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
+         */
         @NameInMap("SucceedBusinessQps")
         public Float succeedBusinessQps;
 
@@ -378,48 +559,132 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneRunningDataResponseBodyChainMonitorDataList extends TeaModel {
+        /**
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANBDC8B</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The API name.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The average RT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46</p>
+         */
         @NameInMap("AverageRt")
         public Integer averageRt;
 
+        /**
+         * <p>The check point results.</p>
+         */
         @NameInMap("CheckPointResult")
         public GetPtsSceneRunningDataResponseBodyChainMonitorDataListCheckPointResult checkPointResult;
 
+        /**
+         * <p>The concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Concurrency")
         public Float concurrency;
 
+        /**
+         * <p>The RPS of successful and failed requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78</p>
+         */
         @NameInMap("ConfigQps")
         public Integer configQps;
 
+        /**
+         * <p>The number of successful requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7890</p>
+         */
         @NameInMap("Count2XX")
         public Long count2XX;
 
+        /**
+         * <p>The total number of failed requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>456</p>
+         */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>The RPS of failed requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("FailedQps")
         public Float failedQps;
 
+        /**
+         * <p>The maximum RT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
+         */
         @NameInMap("MaxRt")
         public Integer maxRt;
 
+        /**
+         * <p>The minimum RT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("MinRt")
         public Integer minRt;
 
+        /**
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78509</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The Requests Per Second (RPS) of successful requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78</p>
+         */
         @NameInMap("Qps2XX")
         public Float qps2XX;
 
+        /**
+         * <p>The actual RPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("RealQps")
         public Float realQps;
 
+        /**
+         * <p>The point in time at which the stress testing is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1278908899</p>
+         */
         @NameInMap("TimePoint")
         public Long timePoint;
 

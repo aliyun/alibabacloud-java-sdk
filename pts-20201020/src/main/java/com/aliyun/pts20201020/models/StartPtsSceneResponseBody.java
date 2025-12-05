@@ -4,21 +4,58 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class StartPtsSceneResponseBody extends TeaModel {
+    /**
+     * <p>The system status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message. If the operation is successful, this parameter is not returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The performance testing plan ID. If the scenario is successfully started, this parameter is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SFVAFE</p>
+     */
     @NameInMap("PlanId")
     public String planId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD12DCC9-5E48-4E77-9657-8D34D8C0F97B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

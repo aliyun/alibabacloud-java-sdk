@@ -4,30 +4,82 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
+    /**
+     * <p>The system status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message. If the operation is successful, this parameter is not returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61B15017-1A68-5C47-834F-87E2BBC44F2C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of security groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("SecurityGroupCount")
     public Integer securityGroupCount;
 
+    /**
+     * <p>The security groups.</p>
+     */
     @NameInMap("SecurityGroupList")
     public java.util.List<GetUserVpcSecurityGroupResponseBodySecurityGroupList> securityGroupList;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,15 +161,36 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
     }
 
     public static class GetUserVpcSecurityGroupResponseBodySecurityGroupList extends TeaModel {
+        /**
+         * <p>The description of the security group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp16bt3zuugxpfjkasdfvthxth8</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The name of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-security-group</p>
+         */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6tar2ohlasdhsatjln37h30bv</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

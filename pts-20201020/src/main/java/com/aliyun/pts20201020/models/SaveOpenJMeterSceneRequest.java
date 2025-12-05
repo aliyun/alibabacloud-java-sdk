@@ -4,6 +4,10 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SaveOpenJMeterSceneRequest extends TeaModel {
+    /**
+     * <p>The details of the scenario.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OpenJMeterScene")
     public SaveOpenJMeterSceneRequestOpenJMeterScene openJMeterScene;
 
@@ -21,12 +25,24 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
     }
 
     public static class SaveOpenJMeterSceneRequestOpenJMeterSceneDnsCacheConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to clear the cache in each iteration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ClearCacheEachIteration")
         public Boolean clearCacheEachIteration;
 
+        /**
+         * <p>The DNS servers.</p>
+         */
         @NameInMap("DnsServers")
         public java.util.List<String> dnsServers;
 
+        /**
+         * <p>The table that contains bound domain names.</p>
+         */
         @NameInMap("HostTable")
         public java.util.Map<String, String> hostTable;
 
@@ -62,24 +78,68 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
     }
 
     public static class SaveOpenJMeterSceneRequestOpenJMeterSceneFileList extends TeaModel {
+        /**
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61232</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <p>The name of the test file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baidu.jmx</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The Object Storage Service (OSS) path that is used to access the test file over the Internet.</p>
+         * <blockquote>
+         * <p> Only test files in the China (Shanghai) region can be accessed.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.cn-shanghai.aliyuncs.com/baidu.jmx">https://test.cn-shanghai.aliyuncs.com/baidu.jmx</a></p>
+         */
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
+        /**
+         * <p>The file size. The total file size cannot exceed 500 MB. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28880</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <p>The MD5 hash of the test file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA70F97A74D76B6A3BEF9CC8AE0D89EB</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>Specifies whether to split the test file. This parameter is valid only for CSV files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SplitCsv")
         public Boolean splitCsv;
 
+        /**
+         * <p>The file tag.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -147,9 +207,21 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
     }
 
     public static class SaveOpenJMeterSceneRequestOpenJMeterSceneJMeterProperties extends TeaModel {
+        /**
+         * <p>The property name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https.sessioncontext.shared</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The values of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -177,9 +249,21 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
     }
 
     public static class SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition extends TeaModel {
+        /**
+         * <p>The number of stress tests. The sum of the number of stress tests in all regions must be equal to the AgentCount value of a specified scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -207,78 +291,222 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
     }
 
     public static class SaveOpenJMeterSceneRequestOpenJMeterScene extends TeaModel {
+        /**
+         * <p>The number of stress testers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AgentCount")
         public Integer agentCount;
 
+        /**
+         * <p>The maximum concurrency that is determined by the resource plans of users. You must configure this parameter when the mode is set to CONCURRENCY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Concurrency")
         public Integer concurrency;
 
+        /**
+         * <p>The type of the synchronization timer with fixed throughput in JMeter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL</p>
+         */
         @NameInMap("ConstantThroughputTimerType")
         public String constantThroughputTimerType;
 
+        /**
+         * <p>The settings of Domain Name System (DNS).</p>
+         */
         @NameInMap("DnsCacheConfig")
         public SaveOpenJMeterSceneRequestOpenJMeterSceneDnsCacheConfig dnsCacheConfig;
 
+        /**
+         * <p>The stress testing duration. The maximum stress testing duration is no more than one day, Unit: seconds. Valid values: 60 to 86400.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>The ID of the environment associated with the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I8PZIH</p>
+         */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
+        /**
+         * <p>The test files.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FileList")
         public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneFileList> fileList;
 
+        /**
+         * <p>Specifies whether the test is a virtual private cloud (VPC) test. The default value is false, which indicates a public network test. VPC-related settings take effect only when you set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsVpcTest")
         public Boolean isVpcTest;
 
+        /**
+         * <p>The JMeter properties.</p>
+         */
         @NameInMap("JMeterProperties")
         public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneJMeterProperties> JMeterProperties;
 
+        /**
+         * <p>The JMeter plug-in tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("JmeterPluginLabel")
         public String jmeterPluginLabel;
 
+        /**
+         * <p>The maximum RPS that takes effect in RPS mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxRps")
         public Integer maxRps;
 
+        /**
+         * <p>The stress model.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONCURRENCY</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The ramp-up period. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("RampUp")
         public Integer rampUp;
 
+        /**
+         * <p>The region ID that is specified in the VPC test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The requirements for the regions of the stress testers.</p>
+         */
         @NameInMap("RegionalCondition")
         public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition> regionalCondition;
 
+        /**
+         * <p>The scenario ID. If you do not configure this parameter, the system creates a scenario. If you configure this parameter, the system updates the scenario corresponding to the ID specified by this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DYYPZIH</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <p>The scenario name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>The security group ID that is specified in the VPC test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2zeid0dd7bhahsgdahspaly</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The initial concurrency that takes effect in concurrency mode. You must configure this parameter when the mode is set to CONCURRENCY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("StartConcurrency")
         public Integer startConcurrency;
 
+        /**
+         * <p>The initial RPS that takes effect in RPS mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("StartRps")
         public Integer startRps;
 
+        /**
+         * <p>The number of ramp-up steps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Steps")
         public Integer steps;
 
+        /**
+         * <p>The type of the synchronization timer in JMeter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL</p>
+         */
         @NameInMap("SyncTimerType")
         public String syncTimerType;
 
+        /**
+         * <p>The test file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baidu.jmx</p>
+         */
         @NameInMap("TestFile")
         public String testFile;
 
+        /**
+         * <p>The vSwitch ID that is specified in the VPC test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zehsgdhsahw1r</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The VPC ID that is specified in the VPC test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze2sahjdgahsebjkqhf4pyj</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

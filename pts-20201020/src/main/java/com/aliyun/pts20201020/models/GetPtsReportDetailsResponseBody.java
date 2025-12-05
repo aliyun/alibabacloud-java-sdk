@@ -4,30 +4,73 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetPtsReportDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The metrics for API operations in the PTS scenario</p>
+     */
     @NameInMap("ApiMetricsList")
     public java.util.List<GetPtsReportDetailsResponseBodyApiMetricsList> apiMetricsList;
 
+    /**
+     * <p>The system status code. If the operation is successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code. If the operation is successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message. If the operation is successful, this parameter is not returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The summary of the report.</p>
+     */
     @NameInMap("ReportOverView")
     public GetPtsReportDetailsResponseBodyReportOverView reportOverView;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC4E3177-6745-4925-B423-4E89VV34221A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The metrics of the scenario.</p>
+     */
     @NameInMap("SceneMetrics")
     public GetPtsReportDetailsResponseBodySceneMetrics sceneMetrics;
 
+    /**
+     * <p>The snapshot of the scenario.</p>
+     */
     @NameInMap("SceneSnapShot")
     public GetPtsReportDetailsResponseBodySceneSnapShot sceneSnapShot;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,45 +152,129 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodyApiMetricsList extends TeaModel {
+        /**
+         * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11872</p>
+         */
         @NameInMap("AllCount")
         public Long allCount;
 
+        /**
+         * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-API</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The average response time. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170.49</p>
+         */
         @NameInMap("AvgRt")
         public Float avgRt;
 
+        /**
+         * <p>The average TPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.61</p>
+         */
         @NameInMap("AvgTps")
         public Float avgTps;
 
+        /**
+         * <p>The number of business-related failures. If a checkpoint is defined, a failure occurs when the conditions for the checkpoint are not satisfied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FailCountBiz")
         public Long failCountBiz;
 
+        /**
+         * <p>The number of failed requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FailCountReq")
         public Long failCountReq;
 
+        /**
+         * <p>The maximum response time. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("MaxRt")
         public Float maxRt;
 
+        /**
+         * <p>The minimum response time. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162</p>
+         */
         @NameInMap("MinRt")
         public Float minRt;
 
+        /**
+         * <p>The 50th percentile response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168</p>
+         */
         @NameInMap("Seg50Rt")
         public Float seg50Rt;
 
+        /**
+         * <p>The 75th percentile response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169</p>
+         */
         @NameInMap("Seg75Rt")
         public Float seg75Rt;
 
+        /**
+         * <p>The 90th percentile response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170</p>
+         */
         @NameInMap("Seg90Rt")
         public Float seg90Rt;
 
+        /**
+         * <p>The 99th percentile response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>284</p>
+         */
         @NameInMap("Seg99Rt")
         public Float seg99Rt;
 
+        /**
+         * <p>The business success rate. The value is the ratio of the number of successful business to the total number of business.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SuccessRateBiz")
         public Float successRateBiz;
 
+        /**
+         * <p>The request success rate. The value is the ratio of the number of successful requests to the total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessRateReq")
         public Float successRateReq;
 
@@ -271,21 +398,57 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodyReportOverView extends TeaModel {
+        /**
+         * <p>The number of load generators. Each load generator has an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AgentCount")
         public Integer agentCount;
 
+        /**
+         * <p>The end time of the performance testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-20 10:41:33</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GHB56VD</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <p>The name of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PTS-TEST</p>
+         */
         @NameInMap("ReportName")
         public String reportName;
 
+        /**
+         * <p>The start time of the performance testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-20 10:39:33</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The virtual user minutes (VUM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1012</p>
+         */
         @NameInMap("Vum")
         public Long vum;
 
@@ -345,30 +508,84 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneMetrics extends TeaModel {
+        /**
+         * <p>The number of requests in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11872</p>
+         */
         @NameInMap("AllCount")
         public Long allCount;
 
+        /**
+         * <p>The average response time in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170.49</p>
+         */
         @NameInMap("AvgRt")
         public Float avgRt;
 
+        /**
+         * <p>The average transactions per second (TPS) in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.61</p>
+         */
         @NameInMap("AvgTps")
         public Float avgTps;
 
+        /**
+         * <p>The number of business failures in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FailCountBiz")
         public Long failCountBiz;
 
+        /**
+         * <p>The number of failed requests in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FailCountReq")
         public Long failCountReq;
 
+        /**
+         * <p>The 90th percentile response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170</p>
+         */
         @NameInMap("Seg90Rt")
         public Float seg90Rt;
 
+        /**
+         * <p>The 99th percentile response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>284</p>
+         */
         @NameInMap("Seg99Rt")
         public Float seg99Rt;
 
+        /**
+         * <p>The business success rate in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SuccessRateBiz")
         public Float successRateBiz;
 
+        /**
+         * <p>The request success rate in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessRateReq")
         public Float successRateReq;
 
@@ -452,9 +669,18 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotAdvanceSettingDomainBindingList extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The IP addresses bound to the domain name.</p>
+         */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
@@ -482,15 +708,36 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotAdvanceSetting extends TeaModel {
+        /**
+         * <p>The timeout period of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ConnectionTimeoutInSecond")
         public Integer connectionTimeoutInSecond;
 
+        /**
+         * <p>The domain name-IP address binding relationships.</p>
+         */
         @NameInMap("DomainBindingList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotAdvanceSettingDomainBindingList> domainBindingList;
 
+        /**
+         * <p>The log sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LogRate")
         public Integer logRate;
 
+        /**
+         * <p>The custom success code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>429,404</p>
+         */
         @NameInMap("SuccessCode")
         public String successCode;
 
@@ -534,9 +781,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotFileParameterList extends TeaModel {
+        /**
+         * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The Object Storage Service (OSS) URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.csv">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.csv</a></p>
+         */
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
@@ -564,9 +823,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotGlobalParameterList extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 
@@ -594,9 +865,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotLoadConfigApiLoadConfigList extends TeaModel {
+        /**
+         * <p>The starting requests per second (RPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RpsBegin")
         public Integer rpsBegin;
 
+        /**
+         * <p>The maximum RPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RpsLimit")
         public Integer rpsLimit;
 
@@ -624,15 +907,39 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotLoadConfigConfiguration extends TeaModel {
+        /**
+         * <p>The starting number of concurrent virtual users in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AllConcurrencyBegin")
         public Integer allConcurrencyBegin;
 
+        /**
+         * <p>The maximum number of concurrent virtual users in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("AllConcurrencyLimit")
         public Integer allConcurrencyLimit;
 
+        /**
+         * <p>The starting RPS in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AllRpsBegin")
         public Integer allRpsBegin;
 
+        /**
+         * <p>The maximum RPS in the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("AllRpsLimit")
         public Integer allRpsLimit;
 
@@ -676,9 +983,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotLoadConfigRelationLoadConfigList extends TeaModel {
+        /**
+         * <p>The starting number of concurrent virtual users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ConcurrencyBegin")
         public Integer concurrencyBegin;
 
+        /**
+         * <p>The maximum number of concurrent virtual users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("ConcurrencyLimit")
         public Integer concurrencyLimit;
 
@@ -706,21 +1025,48 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotLoadConfig extends TeaModel {
+        /**
+         * <p>The number of load generators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AgentCount")
         public Integer agentCount;
 
+        /**
+         * <p>The API request load settings.</p>
+         */
         @NameInMap("ApiLoadConfigList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotLoadConfigApiLoadConfigList> apiLoadConfigList;
 
+        /**
+         * <p>The concurrency and RPS limits in the scenario.</p>
+         */
         @NameInMap("Configuration")
         public GetPtsReportDetailsResponseBodySceneSnapShotLoadConfigConfiguration configuration;
 
+        /**
+         * <p>The maximum running time. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaxRunningTime")
         public Integer maxRunningTime;
 
+        /**
+         * <p>The settings of the session.</p>
+         */
         @NameInMap("RelationLoadConfigList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotLoadConfigRelationLoadConfigList> relationLoadConfigList;
 
+        /**
+         * <p>The load application mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TPS</p>
+         */
         @NameInMap("TestMode")
         public String testMode;
 
@@ -780,9 +1126,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiListBody extends TeaModel {
+        /**
+         * <p>The content of the request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{key:value}</p>
+         */
         @NameInMap("BodyValue")
         public String bodyValue;
 
+        /**
+         * <p>The type of the request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/x-www-form-urlencoded</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
@@ -810,15 +1168,39 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiListCheckPointList extends TeaModel {
+        /**
+         * <p>The checked item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userId</p>
+         */
         @NameInMap("CheckPoint")
         public String checkPoint;
 
+        /**
+         * <p>The check type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPORTED_PARAM</p>
+         */
         @NameInMap("CheckType")
         public String checkType;
 
+        /**
+         * <p>The expected value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("ExpectValue")
         public String expectValue;
 
+        /**
+         * <p>The check operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctn</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
@@ -862,15 +1244,39 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiListExportList extends TeaModel {
+        /**
+         * <p>The index of the export parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The name of the export parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userId</p>
+         */
         @NameInMap("ExportName")
         public String exportName;
 
+        /**
+         * <p>The source of the export parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BODY_JSON</p>
+         */
         @NameInMap("ExportType")
         public String exportType;
 
+        /**
+         * <p>The actual path from which you want to extract the export parameter values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data.userId</p>
+         */
         @NameInMap("ExportValue")
         public String exportValue;
 
@@ -914,9 +1320,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiListHeaderList extends TeaModel {
+        /**
+         * <p>The name of the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User-Agent</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 
+        /**
+         * <p>The value of the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PTS</p>
+         */
         @NameInMap("HeaderValue")
         public String headerValue;
 
@@ -945,35 +1363,80 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiList extends TeaModel {
         /**
-         * <p>API ID。</p>
+         * <p>The ID of the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MNB45</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The name of the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-API</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The request body.</p>
+         */
         @NameInMap("Body")
         public GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiListBody body;
 
+        /**
+         * <p>The checkpoints of the API operation.</p>
+         */
         @NameInMap("CheckPointList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiListCheckPointList> checkPointList;
 
+        /**
+         * <p>The export parameters.</p>
+         */
         @NameInMap("ExportList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiListExportList> exportList;
 
+        /**
+         * <p>The headers.</p>
+         */
         @NameInMap("HeaderList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiListHeaderList> headerList;
 
+        /**
+         * <p>The method of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The number of redirections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("RedirectCountLimit")
         public Integer redirectCountLimit;
 
+        /**
+         * <p>The timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TimeoutInSecond")
         public Integer timeoutInSecond;
 
+        /**
+         * <p>The URL to which the API request is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/">http://www.example.com/</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -1065,15 +1528,39 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotRelationListFileParameterExplainList extends TeaModel {
+        /**
+         * <p>Indicates whether the file is used as the baseline file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BaseFile")
         public Boolean baseFile;
 
+        /**
+         * <p>Indicates whether the parameters are used once.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CycleOnce")
         public Boolean cycleOnce;
 
+        /**
+         * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The parameters in the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("FileParamName")
         public String fileParamName;
 
@@ -1117,15 +1604,33 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotRelationList extends TeaModel {
+        /**
+         * <p>The settings of the API operation.</p>
+         */
         @NameInMap("ApiList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiList> apiList;
 
+        /**
+         * <p>The file parameters used by the session.</p>
+         */
         @NameInMap("FileParameterExplainList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotRelationListFileParameterExplainList> fileParameterExplainList;
 
+        /**
+         * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGBN4D</p>
+         */
         @NameInMap("RelationId")
         public String relationId;
 
+        /**
+         * <p>The name of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-session-1</p>
+         */
         @NameInMap("RelationName")
         public String relationName;
 
@@ -1169,33 +1674,78 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShot extends TeaModel {
+        /**
+         * <p>The advanced settings of the scenario.</p>
+         */
         @NameInMap("AdvanceSetting")
         public GetPtsReportDetailsResponseBodySceneSnapShotAdvanceSetting advanceSetting;
 
+        /**
+         * <p>The time when the scenario was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-20 09:28:10</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The file used in the scenario.</p>
+         */
         @NameInMap("FileParameterList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotFileParameterList> fileParameterList;
 
+        /**
+         * <p>The global parameters.</p>
+         */
         @NameInMap("GlobalParameterList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotGlobalParameterList> globalParameterList;
 
+        /**
+         * <p>The load settings.</p>
+         */
         @NameInMap("LoadConfig")
         public GetPtsReportDetailsResponseBodySceneSnapShotLoadConfig loadConfig;
 
+        /**
+         * <p>The last modification time of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-10 10:10:10</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The sessions.</p>
+         */
         @NameInMap("RelationList")
         public java.util.List<GetPtsReportDetailsResponseBodySceneSnapShotRelationList> relationList;
 
+        /**
+         * <p>The ID of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7HBNS3</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <p>The name of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PTS-TEST</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>The status of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STOPPED</p>
+         */
         @NameInMap("Status")
         public String status;
 

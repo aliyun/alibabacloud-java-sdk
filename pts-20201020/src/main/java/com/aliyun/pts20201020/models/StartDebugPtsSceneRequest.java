@@ -4,6 +4,13 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class StartDebugPtsSceneRequest extends TeaModel {
+    /**
+     * <p>The scenario ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NHBGB8B</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

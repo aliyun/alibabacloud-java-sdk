@@ -4,6 +4,13 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class ModifyPtsSceneRequest extends TeaModel {
+    /**
+     * <p>null</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SD6YZCI</p>
+     */
     @NameInMap("Scene")
     public String scene;
 

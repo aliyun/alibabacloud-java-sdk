@@ -4,30 +4,82 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class ListJMeterReportsResponseBody extends TeaModel {
+    /**
+     * <p>The system status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message. If the request was successful, this parameter is left empty.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The number of the returned report page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of returned reports.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The reports.</p>
+     */
     @NameInMap("Reports")
     public java.util.List<ListJMeterReportsResponseBodyReports> reports;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of reports returned based on the condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,18 +161,48 @@ public class ListJMeterReportsResponseBody extends TeaModel {
     }
 
     public static class ListJMeterReportsResponseBodyReports extends TeaModel {
+        /**
+         * <p>The start time of the stress testing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637157073000</p>
+         */
         @NameInMap("ActualStartTime")
         public Long actualStartTime;
 
+        /**
+         * <p>The stress testing duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10分钟</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The report ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7R4RE352</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <p>The report name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ReportName")
         public String reportName;
 
+        /**
+         * <p>The consumed Virtual User Minutes (VUM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Vum")
         public Long vum;
 

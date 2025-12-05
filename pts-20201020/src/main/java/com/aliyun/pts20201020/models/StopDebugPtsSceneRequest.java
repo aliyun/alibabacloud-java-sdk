@@ -4,9 +4,23 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class StopDebugPtsSceneRequest extends TeaModel {
+    /**
+     * <p>The ID of the stress testing task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FVDC7HB</p>
+     */
     @NameInMap("PlanId")
     public String planId;
 
+    /**
+     * <p>The scenario ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDDCF7</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

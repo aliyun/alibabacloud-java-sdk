@@ -4,6 +4,13 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class DeletePtsSceneRequest extends TeaModel {
+    /**
+     * <p>The ID of the PTS scenario that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XANH3H</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

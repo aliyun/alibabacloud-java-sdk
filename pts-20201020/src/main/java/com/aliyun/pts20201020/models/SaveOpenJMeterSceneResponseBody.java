@@ -4,21 +4,58 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SaveOpenJMeterSceneResponseBody extends TeaModel {
+    /**
+     * <p>The system status code. If the request was successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code. If the request was successful, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message. If the request was successful, this parameter is not returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the created or updated scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DYYPZIH</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

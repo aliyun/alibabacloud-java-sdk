@@ -4,6 +4,10 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SaveEnvRequest extends TeaModel {
+    /**
+     * <p>The JMeter environment.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Env")
     public SaveEnvRequestEnv env;
 
@@ -21,9 +25,26 @@ public class SaveEnvRequest extends TeaModel {
     }
 
     public static class SaveEnvRequestEnvFiles extends TeaModel {
+        /**
+         * <p>The name of the file. Make sure that the file name is the same as the file name in the value of <strong>FileOssAddress</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>json.jar</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The Object Storage Service (OSS) URL of the file. Make sure that the file is accessible from the Internet.</p>
+         * <blockquote>
+         * <p> Only OSS URLs in the China (Shanghai) region are supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/json.jar">https://test.oss-cn-shanghai.aliyuncs.com/json.jar</a></p>
+         */
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
@@ -51,12 +72,30 @@ public class SaveEnvRequest extends TeaModel {
     }
 
     public static class SaveEnvRequestEnvProperties extends TeaModel {
+        /**
+         * <p>The description of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>远程主机</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remote_hosts</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -92,18 +131,44 @@ public class SaveEnvRequest extends TeaModel {
     }
 
     public static class SaveEnvRequestEnv extends TeaModel {
+        /**
+         * <p>The ID of the JMeter environment. To create a JMeter environment, leave this parameter empty. To update a JMeter environment, specify the ID of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10YPA8H</p>
+         */
         @NameInMap("EnvId")
         public String envId;
 
+        /**
+         * <p>The name of the environment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-create</p>
+         */
         @NameInMap("EnvName")
         public String envName;
 
+        /**
+         * <p>The files on which the environment depends.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Files")
         public java.util.List<SaveEnvRequestEnvFiles> files;
 
+        /**
+         * <p>The extension label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("JmeterPluginLabel")
         public String jmeterPluginLabel;
 
+        /**
+         * <p>The JMeter attributes.</p>
+         */
         @NameInMap("Properties")
         public java.util.List<SaveEnvRequestEnvProperties> properties;
 

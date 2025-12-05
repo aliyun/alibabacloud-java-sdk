@@ -4,6 +4,12 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class DeletePtsScenesShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;XVB4DF&quot;,&quot;AFG3CV&quot;]</p>
+     */
     @NameInMap("SceneIds")
     public String sceneIdsShrink;
 

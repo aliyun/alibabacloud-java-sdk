@@ -4,15 +4,41 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class ListEnvsRequest extends TeaModel {
+    /**
+     * <p>The ID of the environment. If you specify this parameter, the operation returns the information about the environment identified by the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10YPA8H</p>
+     */
     @NameInMap("EnvId")
     public String envId;
 
+    /**
+     * <p>The keyword of the environment name. If you specify this parameter, the operation returns the information about the environments whose names contain the keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-create</p>
+     */
     @NameInMap("EnvName")
     public String envName;
 
+    /**
+     * <p>The page number.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of environments per page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

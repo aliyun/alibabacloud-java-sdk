@@ -4,21 +4,55 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetOpenJMeterSceneResponseBody extends TeaModel {
+    /**
+     * <p>The system status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message. If the operation is successful, this parameter is not returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the scenario.</p>
+     */
     @NameInMap("Scene")
     public GetOpenJMeterSceneResponseBodyScene scene;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +110,57 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodySceneBaseInfo extends TeaModel {
+        /**
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("CreateName")
         public String createName;
 
+        /**
+         * <p>The name of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>里斯</p>
+         */
         @NameInMap("ModifyName")
         public String modifyName;
 
+        /**
+         * <p>The type of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>保存去压测</p>
+         */
         @NameInMap("OperateType")
         public String operateType;
 
+        /**
+         * <p>The person who takes charge of the performance testing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-person</p>
+         */
         @NameInMap("Principal")
         public String principal;
 
+        /**
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>小心压测</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The origin of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
@@ -150,12 +220,27 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodySceneDnsCacheConfig extends TeaModel {
+        /**
+         * <p>Indicates whether the cache is cleared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ClearCacheEachIteration")
         public Boolean clearCacheEachIteration;
 
+        /**
+         * <p>The DNS servers</p>
+         */
         @NameInMap("DnsServers")
         public java.util.List<String> dnsServers;
 
+        /**
+         * <p>The domain name and its bounded IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;server.com&quot;:&quot;6.6.6.6&quot;}</p>
+         */
         @NameInMap("HostTable")
         public java.util.Map<String, ?> hostTable;
 
@@ -191,24 +276,66 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodySceneFileList extends TeaModel {
+        /**
+         * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>json.jar</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The Object Storage Service (OSS) URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/json.jar">https://test.oss-cn-shanghai.aliyuncs.com/json.jar</a></p>
+         */
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
+        /**
+         * <p>The size of the file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <p>The type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jar</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61660</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The MD5 value of the JAR package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43B584026CE5E570F3DE638FA7EEF9E0</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>Indicates whether the file is split.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SplitCsv")
         public Boolean splitCsv;
 
@@ -276,9 +403,21 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodySceneRegionalCondition extends TeaModel {
+        /**
+         * <p>The number of load generators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -306,78 +445,216 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodyScene extends TeaModel {
+        /**
+         * <p>The number of load generators. A load generator supports up to 500 concurrent virtual users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AgentCount")
         public Integer agentCount;
 
+        /**
+         * <p>The basic information.</p>
+         */
         @NameInMap("BaseInfo")
         public GetOpenJMeterSceneResponseBodySceneBaseInfo baseInfo;
 
+        /**
+         * <p>The maximum number of concurrent virtual users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Concurrency")
         public Integer concurrency;
 
+        /**
+         * <p>The type of the constant throughput timer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STAND_ALONE</p>
+         */
         @NameInMap("ConstantThroughputTimerType")
         public String constantThroughputTimerType;
 
+        /**
+         * <p>The DNS settings.</p>
+         */
         @NameInMap("DnsCacheConfig")
         public GetOpenJMeterSceneResponseBodySceneDnsCacheConfig dnsCacheConfig;
 
+        /**
+         * <p>The duration of the performance testing. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>The ID of the environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEDT7</p>
+         */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
+        /**
+         * <p>The files.</p>
+         */
         @NameInMap("FileList")
         public java.util.List<GetOpenJMeterSceneResponseBodySceneFileList> fileList;
 
+        /**
+         * <p>Indicates whether the load is from a virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsVpcTest")
         public Boolean isVpcTest;
 
+        /**
+         * <p>The maximum RPS. This parameter is returned if you set Mode to tps_mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MaxRps")
         public Integer maxRps;
 
+        /**
+         * <p>The load application mode. Valid values: concurrency_mode and tps_mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>concurrency_mode</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The origin of the load. &quot;&quot; indicates the Internet and intranet-vpc indicates the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("Pool")
         public String pool;
 
+        /**
+         * <p>The period of time during which the load is gradually increased to the desired level. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("RampUp")
         public Integer rampUp;
 
+        /**
+         * <p>The region ID. This parameter is returned if the load is from a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Customized load generator settings for regions</p>
+         */
         @NameInMap("RegionalCondition")
         public java.util.List<GetOpenJMeterSceneResponseBodySceneRegionalCondition> regionalCondition;
 
+        /**
+         * <p>The ID of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DYYPZIH</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <p>The name of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>The ID of the security group. This parameter is returned if the load is from a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2zeid0dd7bhahsgdahspaly</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The start number of concurrent virtual users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("StartConcurrency")
         public Integer startConcurrency;
 
+        /**
+         * <p>The start requests per second (RPS). This parameter is returned if you set Mode to tps_mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("StartRps")
         public Integer startRps;
 
+        /**
+         * <p>The number of incremented users per step. If RampUp or Steps is not specified, the fixed load is used. If RampUp is specified but Steps is not specified, the load increases uniformly based on the value of RampUp. If RampUp and Steps are specified and Steps is less than RampUp, the load increases based on the value of Steps. You cannot specify Steps without specifying RampUp. If you do so, the fixed load is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Steps")
         public Integer steps;
 
+        /**
+         * <p>The type of the synchronization timer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL</p>
+         */
         @NameInMap("SyncTimerType")
         public String syncTimerType;
 
+        /**
+         * <p>The test file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baidu.jmx</p>
+         */
         @NameInMap("TestFile")
         public String testFile;
 
+        /**
+         * <p>The ID of the vSwitch. This parameter is returned if the load is from a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zehsgdhsahw1r</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC. This parameter is returned if the load is from a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze2sahjdgahsebjkqhf4pyj</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

@@ -4,9 +4,23 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class AdjustJMeterSceneSpeedRequest extends TeaModel {
+    /**
+     * <p>The ID of the report.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DYYPZIH</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 
+    /**
+     * <p>The load to which you want to adjust.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Speed")
     public Integer speed;
 

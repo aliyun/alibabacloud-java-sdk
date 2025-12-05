@@ -4,9 +4,19 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class AdjustPtsSceneSpeedShrinkRequest extends TeaModel {
+    /**
+     * <p>The stress testing speed in the PTS scenario.</p>
+     */
     @NameInMap("ApiSpeedList")
     public String apiSpeedListShrink;
 
+    /**
+     * <p>The scenario ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DYXXX12H</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

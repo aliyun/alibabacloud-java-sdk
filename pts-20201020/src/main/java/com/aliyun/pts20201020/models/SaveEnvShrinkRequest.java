@@ -4,6 +4,10 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SaveEnvShrinkRequest extends TeaModel {
+    /**
+     * <p>The JMeter environment.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Env")
     public String envShrink;
 

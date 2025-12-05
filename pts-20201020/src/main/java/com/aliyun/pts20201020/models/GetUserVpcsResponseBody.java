@@ -4,30 +4,82 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetUserVpcsResponseBody extends TeaModel {
+    /**
+     * <p>The system status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message. If the operation is successful, this parameter is not returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEE46204-E1CF-5F48-B094-67362DD4B73F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The VPCs.</p>
+     */
     @NameInMap("Vpcs")
     public java.util.List<GetUserVpcsResponseBodyVpcs> vpcs;
 
@@ -109,27 +161,66 @@ public class GetUserVpcsResponseBody extends TeaModel {
     }
 
     public static class GetUserVpcsResponseBodyVpcs extends TeaModel {
+        /**
+         * <p>The IPv4 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.80.0/20</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>The description of the VPC.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3fzmgkehpewjertna</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The IDs of the route tables.</p>
+         */
         @NameInMap("RouterTableIds")
         public java.util.List<String> routerTableIds;
 
+        /**
+         * <p>The vSwitches.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6gc56wdjpafoiwej6adqb4qn72xtw</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shanghai-vpc</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 

@@ -3,9 +3,22 @@ package com.aliyun.pts20201020.models;
 
 import com.aliyun.tea.*;
 
-public class GetUserVpcVSwitchRequest extends TeaModel {
+public class ListVpcConfigsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <strong>example:</strong>
+     * <p>05AHW</p>
+     */
+    @NameInMap("ConfigId")
+    public String configId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>my-vpc-config-info</p>
+     */
+    @NameInMap("ConfigName")
+    public String configName;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,19 +28,15 @@ public class GetUserVpcVSwitchRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -35,21 +44,34 @@ public class GetUserVpcVSwitchRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
-     * <p>vpc-2ze22scdz2ebdfjasdfjkqhf4pyj</p>
+     * <p>vpc-bp11w3qellkjwnhqxzmt2</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
-    public static GetUserVpcVSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetUserVpcVSwitchRequest self = new GetUserVpcVSwitchRequest();
+    public static ListVpcConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListVpcConfigsRequest self = new ListVpcConfigsRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetUserVpcVSwitchRequest setPageNumber(Integer pageNumber) {
+    public ListVpcConfigsRequest setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    public ListVpcConfigsRequest setConfigName(String configName) {
+        this.configName = configName;
+        return this;
+    }
+    public String getConfigName() {
+        return this.configName;
+    }
+
+    public ListVpcConfigsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -57,7 +79,7 @@ public class GetUserVpcVSwitchRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public GetUserVpcVSwitchRequest setPageSize(Integer pageSize) {
+    public ListVpcConfigsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -65,7 +87,7 @@ public class GetUserVpcVSwitchRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetUserVpcVSwitchRequest setRegionId(String regionId) {
+    public ListVpcConfigsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -73,7 +95,7 @@ public class GetUserVpcVSwitchRequest extends TeaModel {
         return this.regionId;
     }
 
-    public GetUserVpcVSwitchRequest setVpcId(String vpcId) {
+    public ListVpcConfigsRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }

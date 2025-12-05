@@ -4,9 +4,23 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetPtsReportDetailsRequest extends TeaModel {
+    /**
+     * <p>The ID of the performance testing task. A task ID is generated each time a PTS scenario is started.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OH5HA3VB</p>
+     */
     @NameInMap("PlanId")
     public String planId;
 
+    /**
+     * <p>The ID of the scenario.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>G5HCVS</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

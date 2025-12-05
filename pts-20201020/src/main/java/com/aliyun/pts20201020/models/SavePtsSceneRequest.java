@@ -4,6 +4,10 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class SavePtsSceneRequest extends TeaModel {
+    /**
+     * <p>The information about the scenario.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Scene")
     public SavePtsSceneRequestScene scene;
 
@@ -21,9 +25,18 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneAdvanceSettingDomainBindingList extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The IP addresses.</p>
+         */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
@@ -51,15 +64,36 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneAdvanceSetting extends TeaModel {
+        /**
+         * <p>The timeout period. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ConnectionTimeoutInSecond")
         public Integer connectionTimeoutInSecond;
 
+        /**
+         * <p>The domain name-IP address binding relationships</p>
+         */
         @NameInMap("DomainBindingList")
         public java.util.List<SavePtsSceneRequestSceneAdvanceSettingDomainBindingList> domainBindingList;
 
+        /**
+         * <p>The log sampling rate. Valid values: 1, 10, 20, 30, 40, and 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LogRate")
         public Integer logRate;
 
+        /**
+         * <p>The success status code. Separate multiple status codes with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>205</p>
+         */
         @NameInMap("SuccessCode")
         public String successCode;
 
@@ -103,9 +137,21 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneFileParameterList extends TeaModel {
+        /**
+         * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The OSS URL of the file, which must be accessible over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://jmeter-pts-testing-version.oss-cn-shanghai.aliyuncs.com/param-file.csv">https://jmeter-pts-testing-version.oss-cn-shanghai.aliyuncs.com/param-file.csv</a></p>
+         */
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
@@ -133,9 +179,21 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneGlobalParameterList extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 
@@ -164,14 +222,32 @@ public class SavePtsSceneRequest extends TeaModel {
 
     public static class SavePtsSceneRequestSceneLoadConfigApiLoadConfigList extends TeaModel {
         /**
-         * <p>API ID。</p>
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The starting RPS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("RpsBegin")
         public Integer rpsBegin;
 
+        /**
+         * <p>The maximum RPS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("RpsLimit")
         public Integer rpsLimit;
 
@@ -207,15 +283,43 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfigConfiguration extends TeaModel {
+        /**
+         * <p>The starting total number of concurrent virtual users in all sessions.</p>
+         * <p>The value is evenly distributed among all sessions if you set TestMode to concurrency_mode. If you do not specify this parameter, you must configure <strong>relationLoadConfig</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AllConcurrencyBegin")
         public Integer allConcurrencyBegin;
 
+        /**
+         * <p>The maximum total number of concurrent virtual users in all sessions.</p>
+         * <p>The value is evenly distributed among all sessions if you set TestMode to concurrency_mode. If you do not specify this parameter, you must configure <strong>relationLoadConfig</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AllConcurrencyLimit")
         public Integer allConcurrencyLimit;
 
+        /**
+         * <p>The starting RPS for all APIs.</p>
+         * <p>The value is evenly distributed among all APIs if you set TestMode to RPS. If you do not specify this parameter, you must specify <strong>apiLoadConfig</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AllRpsBegin")
         public Integer allRpsBegin;
 
+        /**
+         * <p>The maximum RPS for all APIs.</p>
+         * <p>The value is evenly distributed among all APIs if you set TestMode to RPS. If you do not specify this parameter, you must specify <strong>apiLoadConfig</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AllRpsLimit")
         public Integer allRpsLimit;
 
@@ -259,12 +363,32 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfigRelationLoadConfigList extends TeaModel {
+        /**
+         * <p>The starting number of concurrent virtual users.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ConcurrencyBegin")
         public Integer concurrencyBegin;
 
+        /**
+         * <p>The maximum number of concurrent virtual users.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ConcurrencyLimit")
         public Integer concurrencyLimit;
 
+        /**
+         * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RelationId")
         public String relationId;
 
@@ -300,17 +424,42 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfigVpcLoadConfig extends TeaModel {
+        /**
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-jkasgfieiajidsjakjscb</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-skjfhlahsljkhsfalkjdoiw</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-akjhsdajgjsfggahjkga</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -355,33 +504,92 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfig extends TeaModel {
+        /**
+         * <p>The number of load generators. If the number of concurrent virtual users exceeds 250 or the RPS exceeds 2,000, you can use multiple load generators. The maximum number of load generators is limited to the total number of concurrent virtual users divided by 250 or the total RPS divided by 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AgentCount")
         public Integer agentCount;
 
+        /**
+         * <p>The API request load settings.</p>
+         */
         @NameInMap("ApiLoadConfigList")
         public java.util.List<SavePtsSceneRequestSceneLoadConfigApiLoadConfigList> apiLoadConfigList;
 
+        /**
+         * <p>Specifies whether the load is automatically incremented. This parameter takes effect only if you set <code>TestMode=concurrency_mode</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoStep")
         public Boolean autoStep;
 
+        /**
+         * <p>The load level settings of the scenario.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Configuration")
         public SavePtsSceneRequestSceneLoadConfigConfiguration configuration;
 
+        /**
+         * <p>The increment percentage. Valid values: 10 to 100, in increments of 10.</p>
+         * <p>This parameter takes effect only if you set <code>testMode=concurrency_mode</code>and <code>autoStep=true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Increment")
         public Integer increment;
 
+        /**
+         * <p>The duration of a specific load level. Unit: minutes. The value must be less than the value of <strong>maxRunningTime</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("KeepTime")
         public Integer keepTime;
 
+        /**
+         * <p>The duration of load application. Unit: minutes. Valid values: 1 to 1440.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxRunningTime")
         public Integer maxRunningTime;
 
+        /**
+         * <p>The session settings.</p>
+         */
         @NameInMap("RelationLoadConfigList")
         public java.util.List<SavePtsSceneRequestSceneLoadConfigRelationLoadConfigList> relationLoadConfigList;
 
+        /**
+         * <p>The load application mode. Valid values:</p>
+         * <ul>
+         * <li>concurrency_mode: concurrency mode</li>
+         * <li>tps_mode: RPS mode.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>concurrency_mode</p>
+         */
         @NameInMap("TestMode")
         public String testMode;
 
+        /**
+         * <p>The VPC settings.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("VpcLoadConfig")
         public SavePtsSceneRequestSceneLoadConfigVpcLoadConfig vpcLoadConfig;
 
@@ -473,9 +681,21 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiListBody extends TeaModel {
+        /**
+         * <p>The data in the body. For example, {&quot;key1&quot;:&quot;value2&quot;,&quot;key2&quot;:&quot;value2&quot;}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;global\&quot;:\&quot;${global}\&quot;,\&quot;name\&quot;:\&quot;${name}\&quot;}</p>
+         */
         @NameInMap("BodyValue")
         public String bodyValue;
 
+        /**
+         * <p>The body type. Default: <code>application/x-www-form-urlencoded</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/x-www-form-urlencoded</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
@@ -503,15 +723,46 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiListCheckPointList extends TeaModel {
+        /**
+         * <p>The checked item.</p>
+         * <p>This parameter specifies the fields in the header if you specify <code>CheckType=HEADER</code> or the name of the export parameter if you specify <code>CheckType=EXPORTED_PARAM</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userId</p>
+         */
         @NameInMap("CheckPoint")
         public String checkPoint;
 
+        /**
+         * <p>The type of check. Valid values:</p>
+         * <ul>
+         * <li>BODY_TEXT: the response body</li>
+         * <li>HEADER: the response headers</li>
+         * <li>STATUS_CODE: the HTTP status code returned by the API</li>
+         * <li>EXPORTED_PARAM: a specific export parameter</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPORTED_PARAM</p>
+         */
         @NameInMap("CheckType")
         public String checkType;
 
+        /**
+         * <p>The expected value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("ExpectValue")
         public String expectValue;
 
+        /**
+         * <p>The operation or condition that is checked against the expected value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctn</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
@@ -555,15 +806,45 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiListExportList extends TeaModel {
+        /**
+         * <p>The index of the matched item. You can specify a number or &quot;Random&quot;. If you set ExportType to BODY_TEXT, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The name of the export parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ExportName")
         public String exportName;
 
+        /**
+         * <p>The source of the export parameter. Valid values:</p>
+         * <ul>
+         * <li>BODY_TEXT: the request body in the BODY_TEXT format</li>
+         * <li>BODY_JSON: the request body in the BODY_JSON format.</li>
+         * <li>HEADER: the request header</li>
+         * <li>STATUS_CODE: the HTTP status code returned by the API</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BODY_JSON</p>
+         */
         @NameInMap("ExportType")
         public String exportType;
 
+        /**
+         * <p>The actual path from which you want to extract the export parameter values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data.itemlist[0]</p>
+         */
         @NameInMap("ExportValue")
         public String exportValue;
 
@@ -607,9 +888,21 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiListHeaderList extends TeaModel {
+        /**
+         * <p>The name of the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Accept-Encoding</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 
+        /**
+         * <p>The value of the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gzip, deflate, br</p>
+         */
         @NameInMap("HeaderValue")
         public String headerValue;
 
@@ -637,33 +930,88 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListApiList extends TeaModel {
+        /**
+         * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The name of the API operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The request body.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Body")
         public SavePtsSceneRequestSceneRelationListApiListBody body;
 
+        /**
+         * <p>The checkpoints.</p>
+         */
         @NameInMap("CheckPointList")
         public java.util.List<SavePtsSceneRequestSceneRelationListApiListCheckPointList> checkPointList;
 
+        /**
+         * <p>The export parameters.</p>
+         */
         @NameInMap("ExportList")
         public java.util.List<SavePtsSceneRequestSceneRelationListApiListExportList> exportList;
 
+        /**
+         * <p>The headers.</p>
+         */
         @NameInMap("HeaderList")
         public java.util.List<SavePtsSceneRequestSceneRelationListApiListHeaderList> headerList;
 
+        /**
+         * <p>The request method.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The number of redirections. The value can be 0, which specifies that redirection is allowed, or 10, which specifies that redirection is not allowed. You can specify a value based on your business requirements.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RedirectCountLimit")
         public Integer redirectCountLimit;
 
+        /**
+         * <p>The timeout period of the API operation. Unit: seconds. Default: 5. Valid values: 1 to 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TimeoutInSecond")
         public Integer timeoutInSecond;
 
+        /**
+         * <p>The URL to which the API request is sent.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">http://www.example.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -755,15 +1103,41 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationListFileParameterExplainList extends TeaModel {
+        /**
+         * <p>Specifies whether the file is used as the baseline file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BaseFile")
         public Boolean baseFile;
 
+        /**
+         * <p>Specifies whether the file is used for a single execution of the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CycleOnce")
         public Boolean cycleOnce;
 
+        /**
+         * <p>The name of the file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileName.csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The parameter names in the file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name,uid,age</p>
+         */
         @NameInMap("FileParamName")
         public String fileParamName;
 
@@ -807,15 +1181,32 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneRelationList extends TeaModel {
+        /**
+         * <p>The API operations on the session.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ApiList")
         public java.util.List<SavePtsSceneRequestSceneRelationListApiList> apiList;
 
+        /**
+         * <p>The file parameters of the session.</p>
+         */
         @NameInMap("FileParameterExplainList")
         public java.util.List<SavePtsSceneRequestSceneRelationListFileParameterExplainList> fileParameterExplainList;
 
+        /**
+         * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RelationId")
         public String relationId;
 
+        /**
+         * <p>The name of the session.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RelationName")
         public String relationName;
 
@@ -859,24 +1250,63 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestScene extends TeaModel {
+        /**
+         * <p>The advanced settings.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AdvanceSetting")
         public SavePtsSceneRequestSceneAdvanceSetting advanceSetting;
 
+        /**
+         * <p>The file parameters.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FileParameterList")
         public java.util.List<SavePtsSceneRequestSceneFileParameterList> fileParameterList;
 
+        /**
+         * <p>The global customization parameters.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("GlobalParameterList")
         public java.util.List<SavePtsSceneRequestSceneGlobalParameterList> globalParameterList;
 
+        /**
+         * <p>The load settings.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("LoadConfig")
         public SavePtsSceneRequestSceneLoadConfig loadConfig;
 
+        /**
+         * <p>The sessions.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RelationList")
         public java.util.List<SavePtsSceneRequestSceneRelationList> relationList;
 
+        /**
+         * <p>The ID of the scenario. To save a new scenario, leave this parameter empty. To update an existing scenario, specify the ID of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IUYAHGJ</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <p>The name of the scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 

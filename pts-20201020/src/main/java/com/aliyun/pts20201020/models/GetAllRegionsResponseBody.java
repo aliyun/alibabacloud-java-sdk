@@ -4,21 +4,55 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetAllRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The supported regions.</p>
+     */
     @NameInMap("AllRegions")
     public java.util.Map<String, String> allRegions;
 
+    /**
+     * <p>The system status code. If the request was successful, no data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message. If the request was successful, no data is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73D16B8D-0FCD-5596-B7BE-A47042989318</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

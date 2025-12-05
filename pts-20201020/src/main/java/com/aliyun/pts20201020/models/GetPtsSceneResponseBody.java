@@ -4,21 +4,55 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class GetPtsSceneResponseBody extends TeaModel {
+    /**
+     * <p>The system status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message. If the operation is successful, N/A is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC4E3177-6745-4925-B423-4E89VV34221A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The structure of the scenario.</p>
+     */
     @NameInMap("Scene")
     public GetPtsSceneResponseBodyScene scene;
 
+    /**
+     * <p>Indicates whether the operation is successful.</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +110,18 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneAdvanceSettingDomainBindingList extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The IPs bound to the domain name.</p>
+         */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
@@ -106,15 +149,36 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneAdvanceSetting extends TeaModel {
+        /**
+         * <p>The timeout period of the scenario. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ConnectionTimeoutInSecond")
         public Integer connectionTimeoutInSecond;
 
+        /**
+         * <p>The IP-domain name bindings.</p>
+         */
         @NameInMap("DomainBindingList")
         public java.util.List<GetPtsSceneResponseBodySceneAdvanceSettingDomainBindingList> domainBindingList;
 
+        /**
+         * <p>The log sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LogRate")
         public Integer logRate;
 
+        /**
+         * <p>The custom success code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>429,304</p>
+         */
         @NameInMap("SuccessCode")
         public String successCode;
 
@@ -158,9 +222,21 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneFileParameterList extends TeaModel {
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>city.csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The OSS address of the file. Make sure that the address is accessible from the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/json.jar">https://test.oss-cn-shanghai.aliyuncs.com/json.jar</a></p>
+         */
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
@@ -188,9 +264,21 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneGlobalParameterList extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userName</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lisi</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 
@@ -218,9 +306,21 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneHeaders extends TeaModel {
+        /**
+         * <p>The name of the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -248,12 +348,30 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList extends TeaModel {
+        /**
+         * <p>The API ID. You can track an API by its ID in sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GBFDCV8</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The starting requests per second (RPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RpsBegin")
         public Integer rpsBegin;
 
+        /**
+         * <p>The maximum RPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("RpsLimit")
         public Integer rpsLimit;
 
@@ -289,15 +407,39 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneLoadConfigConfiguration extends TeaModel {
+        /**
+         * <p>The starting number of concurrent sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AllConcurrencyBegin")
         public Integer allConcurrencyBegin;
 
+        /**
+         * <p>The maximum number of concurrent sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("AllConcurrencyLimit")
         public Integer allConcurrencyLimit;
 
+        /**
+         * <p>The starting RPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AllRpsBegin")
         public Integer allRpsBegin;
 
+        /**
+         * <p>The maximum RPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("AllRpsLimit")
         public Integer allRpsLimit;
 
@@ -341,12 +483,30 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneLoadConfigRelationLoadConfigList extends TeaModel {
+        /**
+         * <p>The starting number of concurrent sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ConcurrencyBegin")
         public Integer concurrencyBegin;
 
+        /**
+         * <p>The maximum number of concurrent sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("ConcurrencyLimit")
         public Integer concurrencyLimit;
 
+        /**
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HNBGS7M</p>
+         */
         @NameInMap("RelationId")
         public String relationId;
 
@@ -382,15 +542,39 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-jkasgfieiajidsjakjscb</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-skjfhlahsljkhsfalkjdoiw</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-akjhsdajgjsfggahjkga</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -434,33 +618,84 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneLoadConfig extends TeaModel {
+        /**
+         * <p>The number of load generators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AgentCount")
         public Integer agentCount;
 
+        /**
+         * <p>The API request load settings.</p>
+         */
         @NameInMap("ApiLoadConfigList")
         public java.util.List<GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList> apiLoadConfigList;
 
+        /**
+         * <p>Indicates whether the load is automatically incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoStep")
         public Boolean autoStep;
 
+        /**
+         * <p>The concurrency and RPS settings of the scenario.</p>
+         */
         @NameInMap("Configuration")
         public GetPtsSceneResponseBodySceneLoadConfigConfiguration configuration;
 
+        /**
+         * <p>The increment percentage. The valid values are 10 to 100, in increments of 10. This parameter is returned only if you set testMode to concurrency_mode and set autoStep to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Increment")
         public Integer increment;
 
+        /**
+         * <p>The duration during which a specific load level is applied. The duration is less than the value of maxRunningTime. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("KeepTime")
         public Integer keepTime;
 
+        /**
+         * <p>The maximum duration of load application. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaxRunningTime")
         public Integer maxRunningTime;
 
+        /**
+         * <p>The session load settings.</p>
+         */
         @NameInMap("RelationLoadConfigList")
         public java.util.List<GetPtsSceneResponseBodySceneLoadConfigRelationLoadConfigList> relationLoadConfigList;
 
+        /**
+         * <p>The load application mode. Transactions per second (TPS) indicates the RPS mode.</p>
+         * <blockquote>
+         * <p> The load application mode is CONCURRENCY/TPS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>TPS</p>
+         */
         @NameInMap("TestMode")
         public String testMode;
 
+        /**
+         * <p>The virtual private cloud (VPC) settings. This information is returned only if you set the testing mode to VPC.</p>
+         */
         @NameInMap("VpcLoadConfig")
         public GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig vpcLoadConfig;
 
@@ -552,9 +787,21 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneRelationListApiListBody extends TeaModel {
+        /**
+         * <p>The body value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;key1\&quot;:\&quot;111\&quot;,\&quot;key2\&quot;:\&quot;222\&quot;}</p>
+         */
         @NameInMap("BodyValue")
         public String bodyValue;
 
+        /**
+         * <p>The body type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/x-www-form-urlencoded</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
@@ -582,15 +829,39 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneRelationListApiListCheckPointList extends TeaModel {
+        /**
+         * <p>The checked parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userId</p>
+         */
         @NameInMap("CheckPoint")
         public String checkPoint;
 
+        /**
+         * <p>The check type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPORTED_PARAM</p>
+         */
         @NameInMap("CheckType")
         public String checkType;
 
+        /**
+         * <p>The expected value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("ExpectValue")
         public String expectValue;
 
+        /**
+         * <p>The check operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctn</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
@@ -634,15 +905,39 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneRelationListApiListExportList extends TeaModel {
+        /**
+         * <p>The number of items or entries related to the export operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The path where the exported value can be found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data.username</p>
+         */
         @NameInMap("ExportName")
         public String exportName;
 
+        /**
+         * <p>The format in which data is exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BODY_JSON</p>
+         */
         @NameInMap("ExportType")
         public String exportType;
 
+        /**
+         * <p>The parameter that is exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("ExportValue")
         public String exportValue;
 
@@ -686,9 +981,21 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneRelationListApiListHeaderList extends TeaModel {
+        /**
+         * <p>The header name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userId</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 
+        /**
+         * <p>The header value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("HeaderValue")
         public String headerValue;
 
@@ -716,33 +1023,78 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneRelationListApiList extends TeaModel {
+        /**
+         * <p>The API ID. You can track an API by its ID in sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GBFDCV8</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The API name.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The request body.</p>
+         */
         @NameInMap("Body")
         public GetPtsSceneResponseBodySceneRelationListApiListBody body;
 
+        /**
+         * <p>The checkpoints.</p>
+         */
         @NameInMap("CheckPointList")
         public java.util.List<GetPtsSceneResponseBodySceneRelationListApiListCheckPointList> checkPointList;
 
+        /**
+         * <p>The exported parameters.</p>
+         */
         @NameInMap("ExportList")
         public java.util.List<GetPtsSceneResponseBodySceneRelationListApiListExportList> exportList;
 
+        /**
+         * <p>The headers used in the API request.</p>
+         */
         @NameInMap("HeaderList")
         public java.util.List<GetPtsSceneResponseBodySceneRelationListApiListHeaderList> headerList;
 
+        /**
+         * <p>The request method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The number of redirections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("RedirectCountLimit")
         public Integer redirectCountLimit;
 
+        /**
+         * <p>The timeout period. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TimeoutInSecond")
         public Integer timeoutInSecond;
 
+        /**
+         * <p>The URL to which the request is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyundoc.com">https://www.aliyundoc.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -834,15 +1186,39 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneRelationListFileParameterExplainList extends TeaModel {
+        /**
+         * <p>Indicates whether the file serves as the primary dataset for the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BaseFile")
         public Boolean baseFile;
 
+        /**
+         * <p>Indicates whether the parameters are used for a single test execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CycleOnce")
         public Boolean cycleOnce;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>city.csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The parameter names in the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userName,age</p>
+         */
         @NameInMap("FileParamName")
         public String fileParamName;
 
@@ -886,15 +1262,30 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodySceneRelationList extends TeaModel {
+        /**
+         * <p>The APIs.</p>
+         */
         @NameInMap("ApiList")
         public java.util.List<GetPtsSceneResponseBodySceneRelationListApiList> apiList;
 
+        /**
+         * <p>The file parameters.</p>
+         */
         @NameInMap("FileParameterExplainList")
         public java.util.List<GetPtsSceneResponseBodySceneRelationListFileParameterExplainList> fileParameterExplainList;
 
+        /**
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HNBGS7M</p>
+         */
         @NameInMap("RelationId")
         public String relationId;
 
+        /**
+         * <p>The session name.</p>
+         */
         @NameInMap("RelationName")
         public String relationName;
 
@@ -938,36 +1329,81 @@ public class GetPtsSceneResponseBody extends TeaModel {
     }
 
     public static class GetPtsSceneResponseBodyScene extends TeaModel {
+        /**
+         * <p>The advanced settings.</p>
+         */
         @NameInMap("AdvanceSetting")
         public GetPtsSceneResponseBodySceneAdvanceSetting advanceSetting;
 
+        /**
+         * <p>The creation time of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-26 15:30:30</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The file parameters.</p>
+         */
         @NameInMap("FileParameterList")
         public java.util.List<GetPtsSceneResponseBodySceneFileParameterList> fileParameterList;
 
+        /**
+         * <p>Global parameters</p>
+         */
         @NameInMap("GlobalParameterList")
         public java.util.List<GetPtsSceneResponseBodySceneGlobalParameterList> globalParameterList;
 
+        /**
+         * <p>The global headers for the scenario.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<GetPtsSceneResponseBodySceneHeaders> headers;
 
+        /**
+         * <p>The load settings.</p>
+         */
         @NameInMap("LoadConfig")
         public GetPtsSceneResponseBodySceneLoadConfig loadConfig;
 
+        /**
+         * <p>The last modification time of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-26 15:30:30</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The sessions.</p>
+         */
         @NameInMap("RelationList")
         public java.util.List<GetPtsSceneResponseBodySceneRelationList> relationList;
 
+        /**
+         * <p>The ID of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGFJ7GV</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <p>The name of the scenario</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>The status of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 

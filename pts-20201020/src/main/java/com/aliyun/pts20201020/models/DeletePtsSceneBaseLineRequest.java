@@ -4,6 +4,12 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class DeletePtsSceneBaseLineRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NHGV4CDG</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

@@ -4,21 +4,58 @@ package com.aliyun.pts20201020.models;
 import com.aliyun.tea.*;
 
 public class CreatePtsSceneResponseBody extends TeaModel {
+    /**
+     * <p>The system status code. If the request was successful, no data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4001</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code. If the request was successful, no data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message. If the request was successful, no data is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F7D2CE0-AE4C-4143-955A-8E4595AF86A6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the created scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SDR3CX</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
