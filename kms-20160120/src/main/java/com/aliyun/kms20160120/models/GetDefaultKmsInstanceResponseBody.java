@@ -4,9 +4,17 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultKmsInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>kst-hzz65f176a0ogplgq****</p>
+     */
     @NameInMap("DefaultKmsInstanceId")
     public String defaultKmsInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bbc4e9ab-c76f-48ca-9c2a-8535772117e2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

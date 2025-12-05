@@ -202,8 +202,20 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         @NameInMap("KeyNum")
         public Long keyNum;
 
+        @NameInMap("Log")
+        public Long log;
+
+        @NameInMap("LogStorage")
+        public Long logStorage;
+
+        @NameInMap("ProductType")
+        public String productType;
+
         @NameInMap("ProductVersion")
         public String productVersion;
+
+        @NameInMap("SaleStatus")
+        public String saleStatus;
 
         /**
          * <p>The number of secrets that can be created for the KMS instance.</p>
@@ -273,7 +285,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
          * <p>vsw-bp1i512amda6d10a0****</p>
          */
         @NameInMap("VswitchIds")
-        public String vswitchIds;
+        public java.util.List<String> vswitchIds;
 
         /**
          * <p>The zone with which the KMS instance is associated.</p>
@@ -282,7 +294,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
          * <p>&quot;cn-hangzhou-k&quot;,       &quot;cn-hangzhou-j&quot;</p>
          */
         @NameInMap("ZoneIds")
-        public String zoneIds;
+        public java.util.List<String> zoneIds;
 
         public static GetKmsInstanceResponseBodyKmsInstance build(java.util.Map<String, ?> map) throws Exception {
             GetKmsInstanceResponseBodyKmsInstance self = new GetKmsInstanceResponseBodyKmsInstance();
@@ -353,12 +365,44 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             return this.keyNum;
         }
 
+        public GetKmsInstanceResponseBodyKmsInstance setLog(Long log) {
+            this.log = log;
+            return this;
+        }
+        public Long getLog() {
+            return this.log;
+        }
+
+        public GetKmsInstanceResponseBodyKmsInstance setLogStorage(Long logStorage) {
+            this.logStorage = logStorage;
+            return this;
+        }
+        public Long getLogStorage() {
+            return this.logStorage;
+        }
+
+        public GetKmsInstanceResponseBodyKmsInstance setProductType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+        public String getProductType() {
+            return this.productType;
+        }
+
         public GetKmsInstanceResponseBodyKmsInstance setProductVersion(String productVersion) {
             this.productVersion = productVersion;
             return this;
         }
         public String getProductVersion() {
             return this.productVersion;
+        }
+
+        public GetKmsInstanceResponseBodyKmsInstance setSaleStatus(String saleStatus) {
+            this.saleStatus = saleStatus;
+            return this;
+        }
+        public String getSaleStatus() {
+            return this.saleStatus;
         }
 
         public GetKmsInstanceResponseBodyKmsInstance setSecretNum(String secretNum) {
@@ -409,19 +453,19 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             return this.vpcNum;
         }
 
-        public GetKmsInstanceResponseBodyKmsInstance setVswitchIds(String vswitchIds) {
+        public GetKmsInstanceResponseBodyKmsInstance setVswitchIds(java.util.List<String> vswitchIds) {
             this.vswitchIds = vswitchIds;
             return this;
         }
-        public String getVswitchIds() {
+        public java.util.List<String> getVswitchIds() {
             return this.vswitchIds;
         }
 
-        public GetKmsInstanceResponseBodyKmsInstance setZoneIds(String zoneIds) {
+        public GetKmsInstanceResponseBodyKmsInstance setZoneIds(java.util.List<String> zoneIds) {
             this.zoneIds = zoneIds;
             return this;
         }
-        public String getZoneIds() {
+        public java.util.List<String> getZoneIds() {
             return this.zoneIds;
         }
 

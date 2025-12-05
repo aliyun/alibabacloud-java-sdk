@@ -158,6 +158,9 @@ public class ListSecretsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("OwingService")
+        public String owingService;
+
         /**
          * <p>The resource tags of the secret.</p>
          * <p>This parameter is not returned if you set the FetchTags parameter to false or do not specify the FetchTags parameter.</p>
@@ -216,6 +219,14 @@ public class ListSecretsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListSecretsResponseBodySecretListSecret setOwingService(String owingService) {
+            this.owingService = owingService;
+            return this;
+        }
+        public String getOwingService() {
+            return this.owingService;
         }
 
         public ListSecretsResponseBodySecretListSecret setPlannedDeleteTime(String plannedDeleteTime) {

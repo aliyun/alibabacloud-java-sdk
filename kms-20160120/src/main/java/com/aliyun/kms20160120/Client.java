@@ -1271,70 +1271,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To create a certificate, you must specify the type of the asymmetric key. Certificates Manager generates a private key and returns a certificate signing request (CSR). Submit the CSR in the Privacy Enhanced Mail (PEM) format to a certificate authority (CA) to obtain the formal certificate and certificate chain. Then, call the <a href="https://help.aliyun.com/document_detail/212136.html">UploadCertificate</a> operation to import the certificate into Certificates Manager.
-     * In this example, a certificate is created and the CSR is obtained.</p>
-     * 
-     * @param tmpReq CreateCertificateRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateCertificateResponse
-     */
-    public CreateCertificateResponse createCertificateWithOptions(CreateCertificateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateCertificateShrinkRequest request = new CreateCertificateShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.subjectAlternativeNames)) {
-            request.subjectAlternativeNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.subjectAlternativeNames, "SubjectAlternativeNames", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.exportablePrivateKey)) {
-            query.put("ExportablePrivateKey", request.exportablePrivateKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.keySpec)) {
-            query.put("KeySpec", request.keySpec);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
-            query.put("Subject", request.subject);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.subjectAlternativeNamesShrink)) {
-            query.put("SubjectAlternativeNames", request.subjectAlternativeNamesShrink);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateCertificate"),
-            new TeaPair("version", "2016-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCertificateResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>To create a certificate, you must specify the type of the asymmetric key. Certificates Manager generates a private key and returns a certificate signing request (CSR). Submit the CSR in the Privacy Enhanced Mail (PEM) format to a certificate authority (CA) to obtain the formal certificate and certificate chain. Then, call the <a href="https://help.aliyun.com/document_detail/212136.html">UploadCertificate</a> operation to import the certificate into Certificates Manager.
-     * In this example, a certificate is created and the CSR is obtained.</p>
-     * 
-     * @param request CreateCertificateRequest
-     * @return CreateCertificateResponse
-     */
-    public CreateCertificateResponse createCertificate(CreateCertificateRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createCertificateWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
      * <p>To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/2539407.html">CreateNetworkRule</a>.
      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see <a href="https://help.aliyun.com/document_detail/2539454.html">CreatePolicy</a>.
@@ -3367,6 +3303,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取实例配额信息</p>
+     * 
+     * @param request GetKmsInstanceQuotaInfosRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKmsInstanceQuotaInfosResponse
+     */
+    public GetKmsInstanceQuotaInfosResponse getKmsInstanceQuotaInfosWithOptions(GetKmsInstanceQuotaInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsInstanceId)) {
+            query.put("KmsInstanceId", request.kmsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKmsInstanceQuotaInfos"),
+            new TeaPair("version", "2016-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKmsInstanceQuotaInfosResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例配额信息</p>
+     * 
+     * @param request GetKmsInstanceQuotaInfosRequest
+     * @return GetKmsInstanceQuotaInfosResponse
+     */
+    public GetKmsInstanceQuotaInfosResponse getKmsInstanceQuotaInfos(GetKmsInstanceQuotaInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKmsInstanceQuotaInfosWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>The returned parameters can be used to call the <a href="https://www.alibabacloud.com/help/en/key-management-service/latest/importkeymaterial">ImportKeyMaterial</a> operation.</p>
      * <ul>
@@ -4119,6 +4103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListKmsInstancesResponse listKmsInstancesWithOptions(ListKmsInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            query.put("Filters", request.filters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -5537,7 +5525,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateKmsInstanceBindVpcResponse updateKmsInstanceBindVpcWithOptions(UpdateKmsInstanceBindVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bindVpcs)) {
+            query.put("BindVpcs", request.bindVpcs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsInstanceId)) {
+            query.put("KmsInstanceId", request.kmsInstanceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5546,7 +5542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2016-01-20"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),

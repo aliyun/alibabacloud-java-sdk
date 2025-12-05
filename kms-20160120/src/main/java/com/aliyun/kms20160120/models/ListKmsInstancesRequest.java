@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListKmsInstancesRequest extends TeaModel {
+    @NameInMap("Filters")
+    public String filters;
+
     /**
      * <p>The page number. Default value: 1.</p>
      * 
@@ -25,6 +28,14 @@ public class ListKmsInstancesRequest extends TeaModel {
     public static ListKmsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListKmsInstancesRequest self = new ListKmsInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListKmsInstancesRequest setFilters(String filters) {
+        this.filters = filters;
+        return this;
+    }
+    public String getFilters() {
+        return this.filters;
     }
 
     public ListKmsInstancesRequest setPageNumber(Integer pageNumber) {

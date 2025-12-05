@@ -102,6 +102,9 @@ public class DescribeSecretResponseBody extends TeaModel {
     @NameInMap("NextRotationDate")
     public String nextRotationDate;
 
+    @NameInMap("OwingService")
+    public String owingService;
+
     /**
      * <p>The time when the secret is scheduled to be deleted.</p>
      * 
@@ -248,6 +251,14 @@ public class DescribeSecretResponseBody extends TeaModel {
     }
     public String getNextRotationDate() {
         return this.nextRotationDate;
+    }
+
+    public DescribeSecretResponseBody setOwingService(String owingService) {
+        this.owingService = owingService;
+        return this;
+    }
+    public String getOwingService() {
+        return this.owingService;
     }
 
     public DescribeSecretResponseBody setPlannedDeleteTime(String plannedDeleteTime) {

@@ -3,7 +3,7 @@ package com.aliyun.kms20160120.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCertificateResponse extends TeaModel {
+public class GetKmsInstanceQuotaInfosResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateCertificateResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateCertificateResponseBody body;
+    public GetKmsInstanceQuotaInfosResponseBody body;
 
-    public static CreateCertificateResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateCertificateResponse self = new CreateCertificateResponse();
+    public static GetKmsInstanceQuotaInfosResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetKmsInstanceQuotaInfosResponse self = new GetKmsInstanceQuotaInfosResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCertificateResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetKmsInstanceQuotaInfosResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateCertificateResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateCertificateResponse setStatusCode(Integer statusCode) {
+    public GetKmsInstanceQuotaInfosResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateCertificateResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateCertificateResponse setBody(CreateCertificateResponseBody body) {
+    public GetKmsInstanceQuotaInfosResponse setBody(GetKmsInstanceQuotaInfosResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateCertificateResponseBody getBody() {
+    public GetKmsInstanceQuotaInfosResponseBody getBody() {
         return this.body;
     }
 
