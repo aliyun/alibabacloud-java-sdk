@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ActiveAiRtcLicenseRequest extends TeaModel {
     /**
+     * <p>The authorization code.</p>
+     * 
      * <strong>example:</strong>
      * <p>iU1IeJech7***</p>
      */
@@ -12,6 +14,8 @@ public class ActiveAiRtcLicenseRequest extends TeaModel {
     public String authCode;
 
     /**
+     * <p>The device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>device-***</p>
      */
@@ -19,6 +23,8 @@ public class ActiveAiRtcLicenseRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The batch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17712***</p>
      */

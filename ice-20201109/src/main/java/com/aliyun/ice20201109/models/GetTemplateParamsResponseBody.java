@@ -70,6 +70,9 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        @NameInMap("Height")
+        public Integer height;
+
         /**
          * <p>The parameter name.</p>
          * 
@@ -85,6 +88,12 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         @NameInMap("MediaUrl")
         public String mediaUrl;
 
+        @NameInMap("TimelineIn")
+        public Float timelineIn;
+
+        @NameInMap("TimelineOut")
+        public Float timelineOut;
+
         /**
          * <p>The material type.</p>
          * <p>Valid values:</p>
@@ -99,6 +108,15 @@ public class GetTemplateParamsResponseBody extends TeaModel {
          */
         @NameInMap("Type")
         public String type;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
 
         public static GetTemplateParamsResponseBodyParamList build(java.util.Map<String, ?> map) throws Exception {
             GetTemplateParamsResponseBodyParamList self = new GetTemplateParamsResponseBodyParamList();
@@ -121,6 +139,14 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             return this.coverUrl;
         }
 
+        public GetTemplateParamsResponseBodyParamList setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
         public GetTemplateParamsResponseBodyParamList setKey(String key) {
             this.key = key;
             return this;
@@ -137,12 +163,52 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             return this.mediaUrl;
         }
 
+        public GetTemplateParamsResponseBodyParamList setTimelineIn(Float timelineIn) {
+            this.timelineIn = timelineIn;
+            return this;
+        }
+        public Float getTimelineIn() {
+            return this.timelineIn;
+        }
+
+        public GetTemplateParamsResponseBodyParamList setTimelineOut(Float timelineOut) {
+            this.timelineOut = timelineOut;
+            return this;
+        }
+        public Float getTimelineOut() {
+            return this.timelineOut;
+        }
+
         public GetTemplateParamsResponseBodyParamList setType(String type) {
             this.type = type;
             return this;
         }
         public String getType() {
             return this.type;
+        }
+
+        public GetTemplateParamsResponseBodyParamList setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public GetTemplateParamsResponseBodyParamList setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public GetTemplateParamsResponseBodyParamList setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
         }
 
     }

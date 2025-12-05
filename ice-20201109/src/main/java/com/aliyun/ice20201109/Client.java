@@ -85,8 +85,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API is used to activate a specific license for Real-time Conversational AI by providing a batch ID (<code>LicenseItemId</code>), authorization code (<code>AuthCode</code>), and device ID (<code>DeviceId</code>). Upon successful activation, the API returns a response containing the request ID, an error code, the request status, the HTTP status code, and the activated license information.
+     * <strong>Note</strong>: Ensure that the provided batch ID, authorization code, and device ID are correct. Incorrect information may cause the activation to fail.</p>
+     * 
      * <b>summary</b> : 
-     * <p>激活AI实时互动授权信息</p>
+     * <p>Activates a specified license using the batch ID, authorization code, and device SN.</p>
      * 
      * @param request ActiveAiRtcLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -125,8 +130,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API is used to activate a specific license for Real-time Conversational AI by providing a batch ID (<code>LicenseItemId</code>), authorization code (<code>AuthCode</code>), and device ID (<code>DeviceId</code>). Upon successful activation, the API returns a response containing the request ID, an error code, the request status, the HTTP status code, and the activated license information.
+     * <strong>Note</strong>: Ensure that the provided batch ID, authorization code, and device ID are correct. Incorrect information may cause the activation to fail.</p>
+     * 
      * <b>summary</b> : 
-     * <p>激活AI实时互动授权信息</p>
+     * <p>Activates a specified license using the batch ID, authorization code, and device SN.</p>
      * 
      * @param request ActiveAiRtcLicenseRequest
      * @return ActiveAiRtcLicenseResponse
@@ -6841,8 +6851,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>This API retrieves a list of authorization codes for a specific batch ID. You can filter the results by status and type.</li>
+     * <li>Pagination is supported via the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>By default, the <code>NeedTotalCount</code> parameter is set to <code>true</code>, indicating that the response includes the total count of matching records.</li>
+     * <li><code>LicenseItemId</code> is a required parameter that specifies the batch to query.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取AI实时互动授权码列表</p>
+     * <p>Retrieves a list of Real-time Conversational AI authentication codes and their status for a specified batch.</p>
      * 
      * @param request GetAiRtcAuthCodeListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6893,8 +6912,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>This API retrieves a list of authorization codes for a specific batch ID. You can filter the results by status and type.</li>
+     * <li>Pagination is supported via the <code>PageNo</code> and <code>PageSize</code> parameters.</li>
+     * <li>By default, the <code>NeedTotalCount</code> parameter is set to <code>true</code>, indicating that the response includes the total count of matching records.</li>
+     * <li><code>LicenseItemId</code> is a required parameter that specifies the batch to query.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取AI实时互动授权码列表</p>
+     * <p>Retrieves a list of Real-time Conversational AI authentication codes and their status for a specified batch.</p>
      * 
      * @param request GetAiRtcAuthCodeListRequest
      * @return GetAiRtcAuthCodeListResponse
@@ -6905,8 +6933,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>This API allows you to retrieve a list of license batches for Real-time Conversational AI using filters such as Batch ID, status, and type.</li>
+     * <li>By default, the <code>NeedTotalCount</code> parameter is set to <code>true</code>, indicating that the response includes the total count of matching records. Set it to <code>false</code> if you do not need this total.</li>
+     * <li>If no filter criteria are provided, the API returns information for all license batches.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取AI实时互动授权批次列表</p>
+     * <p>Retrieves a list of license batches for Real-time Conversational AI based on specified filter criteria.</p>
      * 
      * @param request GetAiRtcLicenseInfoListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6957,8 +6993,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>This API allows you to retrieve a list of license batches for Real-time Conversational AI using filters such as Batch ID, status, and type.</li>
+     * <li>By default, the <code>NeedTotalCount</code> parameter is set to <code>true</code>, indicating that the response includes the total count of matching records. Set it to <code>false</code> if you do not need this total.</li>
+     * <li>If no filter criteria are provided, the API returns information for all license batches.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取AI实时互动授权批次列表</p>
+     * <p>Retrieves a list of license batches for Real-time Conversational AI based on specified filter criteria.</p>
      * 
      * @param request GetAiRtcLicenseInfoListRequest
      * @return GetAiRtcLicenseInfoListResponse
@@ -19253,8 +19297,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  After submitting a job, you can call ListBatchMediaProducingJob to retrieve all matching jobs. To get detailed information for a specific job, including its status, output media asset IDs, and URLs, call GetBatchMediaProducingJob.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交场景化批量合成任务</p>
+     * <p>Submits a batch job to render multiple videos by providing a list of editing project IDs.</p>
      * 
      * @param request SubmitSceneBatchEditingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19293,8 +19340,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  After submitting a job, you can call ListBatchMediaProducingJob to retrieve all matching jobs. To get detailed information for a specific job, including its status, output media asset IDs, and URLs, call GetBatchMediaProducingJob.</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交场景化批量合成任务</p>
+     * <p>Submits a batch job to render multiple videos by providing a list of editing project IDs.</p>
      * 
      * @param request SubmitSceneBatchEditingJobRequest
      * @return SubmitSceneBatchEditingJobResponse
@@ -19379,8 +19429,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  After submitting a job, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve matching jobs. To get detailed information for a specific job, including its status, output media asset IDs, and URLs, call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</p>
+     * <ul>
+     * <li>The feature is in public preview and does not charge fees.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交场景化时间线编排任务</p>
+     * <p>Arranges media assets, including videos, images, background music, and voiceovers, into a complete timeline based on media selection results, and creates an editing project for preview. Two scenarios are supported: image-text matching and highlight mashup.</p>
      * 
      * @param request SubmitSceneTimelineOrganizationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19433,8 +19489,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  After submitting a job, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve matching jobs. To get detailed information for a specific job, including its status, output media asset IDs, and URLs, call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</p>
+     * <ul>
+     * <li>The feature is in public preview and does not charge fees.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>提交场景化时间线编排任务</p>
+     * <p>Arranges media assets, including videos, images, background music, and voiceovers, into a complete timeline based on media selection results, and creates an editing project for preview. Two scenarios are supported: image-text matching and highlight mashup.</p>
      * 
      * @param request SubmitSceneTimelineOrganizationJobRequest
      * @return SubmitSceneTimelineOrganizationJobResponse

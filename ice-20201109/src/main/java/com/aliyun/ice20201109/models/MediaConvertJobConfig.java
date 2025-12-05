@@ -103,18 +103,26 @@ public class MediaConvertJobConfig extends TeaModel {
     }
 
     public static class MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes extends TeaModel {
+        @NameInMap("Language")
+        public String language;
+
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("language")
-        public String language;
-
         public static MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes build(java.util.Map<String, ?> map) throws Exception {
             MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes self = new MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes();
             return TeaModel.build(map, self);
+        }
+
+        public MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes setLanguage(String language) {
+            this.language = language;
+            return this;
+        }
+        public String getLanguage() {
+            return this.language;
         }
 
         public MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes setName(String name) {
@@ -131,14 +139,6 @@ public class MediaConvertJobConfig extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes setLanguage(String language) {
-            this.language = language;
-            return this;
-        }
-        public String getLanguage() {
-            return this.language;
         }
 
     }

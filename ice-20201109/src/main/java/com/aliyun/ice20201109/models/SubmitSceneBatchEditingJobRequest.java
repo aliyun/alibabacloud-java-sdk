@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSceneBatchEditingJobRequest extends TeaModel {
     /**
+     * <p>The output configuration. The structure is the same as the <a href="https://help.aliyun.com/zh/ims/use-cases/create-highlight-videos?spm=a2c4g.11186623.help-menu-193643.d_3_2_0_3.3af86997GreVu9%5C&scm=20140722.H_2863940._.OR_help-T_cn~zh-V_1#4111a373d0xbz">OutputConfig</a> for batch video generation, except that Count and GeneratePreviewOnly are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +19,7 @@ public class SubmitSceneBatchEditingJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
+     * <p>A comma-separated list of editing project IDs. The video is rendered based on the timeline from each project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,9 @@ public class SubmitSceneBatchEditingJobRequest extends TeaModel {
     @NameInMap("ProjectIds")
     public String projectIds;
 
+    /**
+     * <p>Custom user data, including callback configurations. For more information, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

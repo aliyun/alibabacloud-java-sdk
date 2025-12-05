@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ActiveAiRtcLicenseResponseBody extends TeaModel {
     /**
+     * <p>The error code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The license information.</p>
+     * 
      * <strong>example:</strong>
      * <p>a659a06659a***</p>
      */
@@ -26,6 +32,8 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
     public String license;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4F9C14FE-1147-15AC-8EDF-A590FF12***</p>
      */
@@ -40,6 +50,8 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

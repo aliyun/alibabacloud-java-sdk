@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
     /**
+     * <p>The error code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,16 +14,23 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>httpStatusCode</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>An array of AiRtcLicenseInfoDTO objects, each representing a license batch.</p>
+     */
     @NameInMap("LicenseInfoList")
     public java.util.List<AiRtcLicenseInfoDTO> licenseInfoList;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B117AF5-2A16-412C-B127-FA6175ED1***</p>
      */
@@ -36,6 +47,8 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

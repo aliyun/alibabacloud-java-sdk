@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAiRtcLicenseInfoListRequest extends TeaModel {
     /**
+     * <p>The ID of the batch.</p>
+     * 
      * <strong>example:</strong>
      * <p>17712***</p>
      */
@@ -12,6 +14,8 @@ public class GetAiRtcLicenseInfoListRequest extends TeaModel {
     public String licenseItemId;
 
     /**
+     * <p>Specifies whether to include the total count of records in the response. Defaults to <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class GetAiRtcLicenseInfoListRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class GetAiRtcLicenseInfoListRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,12 @@ public class GetAiRtcLicenseInfoListRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The status of the batch. Valid values:</p>
+     * <ul>
+     * <li><code>1</code>: Active</li>
+     * <li><code>2</code>: Expired</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +54,12 @@ public class GetAiRtcLicenseInfoListRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The type of license. Valid values:</p>
+     * <ul>
+     * <li><code>1</code>: Audio call</li>
+     * <li><code>2</code>: Vision call</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
