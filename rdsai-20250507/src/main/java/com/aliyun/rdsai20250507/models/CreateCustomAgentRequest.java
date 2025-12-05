@@ -6,13 +6,6 @@ import com.aliyun.tea.*;
 public class CreateCustomAgentRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-     */
-    @NameInMap("ApiId")
-    public String apiId;
-
-    /**
-     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableTools")
@@ -33,14 +26,6 @@ public class CreateCustomAgentRequest extends TeaModel {
     public static CreateCustomAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomAgentRequest self = new CreateCustomAgentRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateCustomAgentRequest setApiId(String apiId) {
-        this.apiId = apiId;
-        return this;
-    }
-    public String getApiId() {
-        return this.apiId;
     }
 
     public CreateCustomAgentRequest setEnableTools(Boolean enableTools) {

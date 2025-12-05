@@ -5,13 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomAgentRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-     */
-    @NameInMap("ApiId")
-    public String apiId;
-
-    /**
      * <p>AgentId。</p>
      * 
      * <strong>example:</strong>
@@ -23,14 +16,6 @@ public class DeleteCustomAgentRequest extends TeaModel {
     public static DeleteCustomAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCustomAgentRequest self = new DeleteCustomAgentRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteCustomAgentRequest setApiId(String apiId) {
-        this.apiId = apiId;
-        return this;
-    }
-    public String getApiId() {
-        return this.apiId;
     }
 
     public DeleteCustomAgentRequest setCustomAgentId(String customAgentId) {

@@ -4,13 +4,6 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyMessagesFeedbacksRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-     */
-    @NameInMap("ApiId")
-    public String apiId;
-
     @NameInMap("Content")
     public String content;
 
@@ -31,14 +24,6 @@ public class ModifyMessagesFeedbacksRequest extends TeaModel {
     public static ModifyMessagesFeedbacksRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMessagesFeedbacksRequest self = new ModifyMessagesFeedbacksRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyMessagesFeedbacksRequest setApiId(String apiId) {
-        this.apiId = apiId;
-        return this;
-    }
-    public String getApiId() {
-        return this.apiId;
     }
 
     public ModifyMessagesFeedbacksRequest setContent(String content) {

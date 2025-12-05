@@ -5,15 +5,6 @@ import com.aliyun.tea.*;
 
 public class ChatMessagesRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-     */
-    @NameInMap("ApiId")
-    public String apiId;
-
-    /**
      * <strong>example:</strong>
      * <p>fea7bdca-e848-44dd-b1ae-852472b8****</p>
      */
@@ -39,14 +30,6 @@ public class ChatMessagesRequest extends TeaModel {
     public static ChatMessagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatMessagesRequest self = new ChatMessagesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ChatMessagesRequest setApiId(String apiId) {
-        this.apiId = apiId;
-        return this;
-    }
-    public String getApiId() {
-        return this.apiId;
     }
 
     public ChatMessagesRequest setConversationId(String conversationId) {

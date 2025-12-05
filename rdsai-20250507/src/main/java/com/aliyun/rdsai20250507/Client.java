@@ -43,10 +43,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
             query.put("ConversationId", request.conversationId);
         }
@@ -103,10 +99,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatMessagesTaskStopResponse chatMessagesTaskStopWithOptions(ChatMessagesTaskStopRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("TaskId", request.taskId);
         }
@@ -259,10 +251,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.enableTools)) {
             query.put("EnableTools", request.enableTools);
         }
@@ -371,10 +359,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCustomAgentResponse deleteCustomAgentWithOptions(DeleteCustomAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
             query.put("CustomAgentId", request.customAgentId);
         }
@@ -879,10 +863,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConversationsResponse getConversationsWithOptions(GetConversationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.lastId)) {
             query.put("LastId", request.lastId);
         }
@@ -939,10 +919,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCustomAgentResponse getCustomAgentWithOptions(GetCustomAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
             query.put("CustomAgentId", request.customAgentId);
         }
@@ -987,10 +963,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetMessagesResponse getMessagesWithOptions(GetMessagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
             query.put("ConversationId", request.conversationId);
         }
@@ -1043,10 +1015,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCustomAgentResponse listCustomAgentWithOptions(ListCustomAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -1092,16 +1060,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomAgentToolsResponse
      */
-    public ListCustomAgentToolsResponse listCustomAgentToolsWithOptions(ListCustomAgentToolsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
+    public ListCustomAgentToolsResponse listCustomAgentToolsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListCustomAgentTools"),
             new TeaPair("version", "2025-05-07"),
@@ -1119,13 +1079,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>获取专属Agent可用工具</p>
-     * 
-     * @param request ListCustomAgentToolsRequest
      * @return ListCustomAgentToolsResponse
      */
-    public ListCustomAgentToolsResponse listCustomAgentTools(ListCustomAgentToolsRequest request) throws Exception {
+    public ListCustomAgentToolsResponse listCustomAgentTools() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listCustomAgentToolsWithOptions(request, runtime);
+        return this.listCustomAgentToolsWithOptions(runtime);
     }
 
     /**
@@ -1513,10 +1471,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyMessagesFeedbacksResponse modifyMessagesFeedbacksWithOptions(ModifyMessagesFeedbacksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             query.put("Content", request.content);
         }
@@ -1775,10 +1729,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
-            query.put("ApiId", request.apiId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
             query.put("CustomAgentId", request.customAgentId);
         }

@@ -5,13 +5,6 @@ import com.aliyun.tea.*;
 
 public class ChatMessagesTaskStopRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-     */
-    @NameInMap("ApiId")
-    public String apiId;
-
-    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,14 +16,6 @@ public class ChatMessagesTaskStopRequest extends TeaModel {
     public static ChatMessagesTaskStopRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatMessagesTaskStopRequest self = new ChatMessagesTaskStopRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ChatMessagesTaskStopRequest setApiId(String apiId) {
-        this.apiId = apiId;
-        return this;
-    }
-    public String getApiId() {
-        return this.apiId;
     }
 
     public ChatMessagesTaskStopRequest setTaskId(String taskId) {

@@ -5,15 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentShrinkRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-     */
-    @NameInMap("ApiId")
-    public String apiId;
-
-    /**
      * <p>AgentId。</p>
      * <p>This parameter is required.</p>
      * 
@@ -42,14 +33,6 @@ public class UpdateCustomAgentShrinkRequest extends TeaModel {
     public static UpdateCustomAgentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCustomAgentShrinkRequest self = new UpdateCustomAgentShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateCustomAgentShrinkRequest setApiId(String apiId) {
-        this.apiId = apiId;
-        return this;
-    }
-    public String getApiId() {
-        return this.apiId;
     }
 
     public UpdateCustomAgentShrinkRequest setCustomAgentId(String customAgentId) {

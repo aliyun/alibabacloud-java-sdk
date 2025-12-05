@@ -6,13 +6,6 @@ import com.aliyun.tea.*;
 public class GetMessagesRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-     */
-    @NameInMap("ApiId")
-    public String apiId;
-
-    /**
-     * <strong>example:</strong>
      * <p>941c6f59-acf5-4e11-9adc-31e52e1f****</p>
      */
     @NameInMap("ConversationId")
@@ -35,14 +28,6 @@ public class GetMessagesRequest extends TeaModel {
     public static GetMessagesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMessagesRequest self = new GetMessagesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetMessagesRequest setApiId(String apiId) {
-        this.apiId = apiId;
-        return this;
-    }
-    public String getApiId() {
-        return this.apiId;
     }
 
     public GetMessagesRequest setConversationId(String conversationId) {
