@@ -63,6 +63,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("ProcessStatus")
+    public String processStatus;
+
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
@@ -159,6 +162,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public DescribeInstanceResponseBody setProcessStatus(String processStatus) {
+        this.processStatus = processStatus;
+        return this;
+    }
+    public String getProcessStatus() {
+        return this.processStatus;
     }
 
     public DescribeInstanceResponseBody setRegionId(String regionId) {
