@@ -402,6 +402,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("BindUserId")
         public String bindUserId;
 
+        @NameInMap("BizImageType")
+        public String bizImageType;
+
         @NameInMap("BizTags")
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> bizTags;
 
@@ -756,6 +759,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getBindUserId() {
             return this.bindUserId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setBizImageType(String bizImageType) {
+            this.bizImageType = bizImageType;
+            return this;
+        }
+        public String getBizImageType() {
+            return this.bizImageType;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setBizTags(java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> bizTags) {
