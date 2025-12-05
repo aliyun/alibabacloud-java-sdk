@@ -56,6 +56,9 @@ public class CreateMcpServerRequest extends TeaModel {
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    @NameInMap("grayMcpServerConfigs")
+    public java.util.List<CreateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
+
     /**
      * <p>The route match rule.</p>
      */
@@ -160,6 +163,14 @@ public class CreateMcpServerRequest extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public CreateMcpServerRequest setGrayMcpServerConfigs(java.util.List<CreateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs) {
+        this.grayMcpServerConfigs = grayMcpServerConfigs;
+        return this;
+    }
+    public java.util.List<CreateMcpServerRequestGrayMcpServerConfigs> getGrayMcpServerConfigs() {
+        return this.grayMcpServerConfigs;
     }
 
     public CreateMcpServerRequest setMatch(HttpRouteMatch match) {
@@ -390,6 +401,140 @@ public class CreateMcpServerRequest extends TeaModel {
         }
         public java.util.List<CreateMcpServerRequestBackendConfigServices> getServices() {
             return this.services;
+        }
+
+    }
+
+    public static class CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices extends TeaModel {
+        @NameInMap("port")
+        public Integer port;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        @NameInMap("version")
+        public String version;
+
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices build(java.util.Map<String, ?> map) throws Exception {
+            CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices self = new CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class CreateMcpServerRequestGrayMcpServerConfigsBackendConfig extends TeaModel {
+        @NameInMap("scene")
+        public String scene;
+
+        @NameInMap("services")
+        public java.util.List<CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> services;
+
+        public static CreateMcpServerRequestGrayMcpServerConfigsBackendConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateMcpServerRequestGrayMcpServerConfigsBackendConfig self = new CreateMcpServerRequestGrayMcpServerConfigsBackendConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfig setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfig setServices(java.util.List<CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> services) {
+            this.services = services;
+            return this;
+        }
+        public java.util.List<CreateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> getServices() {
+            return this.services;
+        }
+
+    }
+
+    public static class CreateMcpServerRequestGrayMcpServerConfigs extends TeaModel {
+        @NameInMap("backendConfig")
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig;
+
+        @NameInMap("match")
+        public HttpRouteMatch match;
+
+        @NameInMap("routeId")
+        public String routeId;
+
+        public static CreateMcpServerRequestGrayMcpServerConfigs build(java.util.Map<String, ?> map) throws Exception {
+            CreateMcpServerRequestGrayMcpServerConfigs self = new CreateMcpServerRequestGrayMcpServerConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigs setBackendConfig(CreateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig) {
+            this.backendConfig = backendConfig;
+            return this;
+        }
+        public CreateMcpServerRequestGrayMcpServerConfigsBackendConfig getBackendConfig() {
+            return this.backendConfig;
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigs setMatch(HttpRouteMatch match) {
+            this.match = match;
+            return this;
+        }
+        public HttpRouteMatch getMatch() {
+            return this.match;
+        }
+
+        public CreateMcpServerRequestGrayMcpServerConfigs setRouteId(String routeId) {
+            this.routeId = routeId;
+            return this;
+        }
+        public String getRouteId() {
+            return this.routeId;
         }
 
     }

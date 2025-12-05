@@ -43,6 +43,9 @@ public class UpdateMcpServerRequest extends TeaModel {
     @NameInMap("exposedUriPath")
     public String exposedUriPath;
 
+    @NameInMap("grayMcpServerConfigs")
+    public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
+
     /**
      * <p>The route match rule.</p>
      */
@@ -129,6 +132,14 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
     public String getExposedUriPath() {
         return this.exposedUriPath;
+    }
+
+    public UpdateMcpServerRequest setGrayMcpServerConfigs(java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs) {
+        this.grayMcpServerConfigs = grayMcpServerConfigs;
+        return this;
+    }
+    public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> getGrayMcpServerConfigs() {
+        return this.grayMcpServerConfigs;
     }
 
     public UpdateMcpServerRequest setMatch(HttpRouteMatch match) {
@@ -352,6 +363,140 @@ public class UpdateMcpServerRequest extends TeaModel {
         }
         public java.util.List<UpdateMcpServerRequestBackendConfigServices> getServices() {
             return this.services;
+        }
+
+    }
+
+    public static class UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices extends TeaModel {
+        @NameInMap("port")
+        public Integer port;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        @NameInMap("version")
+        public String version;
+
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices self = new UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig extends TeaModel {
+        @NameInMap("scene")
+        public String scene;
+
+        @NameInMap("services")
+        public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> services;
+
+        public static UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig self = new UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig setServices(java.util.List<UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> services) {
+            this.services = services;
+            return this;
+        }
+        public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> getServices() {
+            return this.services;
+        }
+
+    }
+
+    public static class UpdateMcpServerRequestGrayMcpServerConfigs extends TeaModel {
+        @NameInMap("backendConfig")
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig;
+
+        @NameInMap("match")
+        public HttpRouteMatch match;
+
+        @NameInMap("routeId")
+        public String routeId;
+
+        public static UpdateMcpServerRequestGrayMcpServerConfigs build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMcpServerRequestGrayMcpServerConfigs self = new UpdateMcpServerRequestGrayMcpServerConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigs setBackendConfig(UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig) {
+            this.backendConfig = backendConfig;
+            return this;
+        }
+        public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig getBackendConfig() {
+            return this.backendConfig;
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigs setMatch(HttpRouteMatch match) {
+            this.match = match;
+            return this;
+        }
+        public HttpRouteMatch getMatch() {
+            return this.match;
+        }
+
+        public UpdateMcpServerRequestGrayMcpServerConfigs setRouteId(String routeId) {
+            this.routeId = routeId;
+            return this;
+        }
+        public String getRouteId() {
+            return this.routeId;
         }
 
     }

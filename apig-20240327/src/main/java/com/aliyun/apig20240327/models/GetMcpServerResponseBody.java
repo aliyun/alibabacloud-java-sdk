@@ -189,6 +189,140 @@ public class GetMcpServerResponseBody extends TeaModel {
 
     }
 
+    public static class GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices extends TeaModel {
+        @NameInMap("port")
+        public Integer port;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        @NameInMap("version")
+        public String version;
+
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices build(java.util.Map<String, ?> map) throws Exception {
+            GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices self = new GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig extends TeaModel {
+        @NameInMap("scene")
+        public String scene;
+
+        @NameInMap("services")
+        public java.util.List<GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices> services;
+
+        public static GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig self = new GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig setServices(java.util.List<GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices> services) {
+            this.services = services;
+            return this;
+        }
+        public java.util.List<GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfigServices> getServices() {
+            return this.services;
+        }
+
+    }
+
+    public static class GetMcpServerResponseBodyDataGrayMcpServerConfigs extends TeaModel {
+        @NameInMap("backendConfig")
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig backendConfig;
+
+        @NameInMap("match")
+        public HttpRouteMatch match;
+
+        @NameInMap("routeId")
+        public String routeId;
+
+        public static GetMcpServerResponseBodyDataGrayMcpServerConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetMcpServerResponseBodyDataGrayMcpServerConfigs self = new GetMcpServerResponseBodyDataGrayMcpServerConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigs setBackendConfig(GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig backendConfig) {
+            this.backendConfig = backendConfig;
+            return this;
+        }
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig getBackendConfig() {
+            return this.backendConfig;
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigs setMatch(HttpRouteMatch match) {
+            this.match = match;
+            return this;
+        }
+        public HttpRouteMatch getMatch() {
+            return this.match;
+        }
+
+        public GetMcpServerResponseBodyDataGrayMcpServerConfigs setRouteId(String routeId) {
+            this.routeId = routeId;
+            return this;
+        }
+        public String getRouteId() {
+            return this.routeId;
+        }
+
+    }
+
     public static class GetMcpServerResponseBodyDataNacosMcpSyncInfo extends TeaModel {
         /**
          * <p>The Nacos instance.</p>
@@ -328,6 +462,9 @@ public class GetMcpServerResponseBody extends TeaModel {
          */
         @NameInMap("gatewayId")
         public String gatewayId;
+
+        @NameInMap("grayMcpServerConfigs")
+        public java.util.List<GetMcpServerResponseBodyDataGrayMcpServerConfigs> grayMcpServerConfigs;
 
         /**
          * <p>The route match rule.</p>
@@ -505,6 +642,14 @@ public class GetMcpServerResponseBody extends TeaModel {
         }
         public String getGatewayId() {
             return this.gatewayId;
+        }
+
+        public GetMcpServerResponseBodyData setGrayMcpServerConfigs(java.util.List<GetMcpServerResponseBodyDataGrayMcpServerConfigs> grayMcpServerConfigs) {
+            this.grayMcpServerConfigs = grayMcpServerConfigs;
+            return this;
+        }
+        public java.util.List<GetMcpServerResponseBodyDataGrayMcpServerConfigs> getGrayMcpServerConfigs() {
+            return this.grayMcpServerConfigs;
         }
 
         public GetMcpServerResponseBodyData setMatch(HttpRouteMatch match) {

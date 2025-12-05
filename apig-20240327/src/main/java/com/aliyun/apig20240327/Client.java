@@ -977,6 +977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("gatewayId", request.gatewayId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.grayMcpServerConfigs)) {
+            body.put("grayMcpServerConfigs", request.grayMcpServerConfigs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
             body.put("match", request.match);
         }
@@ -5032,6 +5036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.exposedUriPath)) {
             body.put("exposedUriPath", request.exposedUriPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grayMcpServerConfigs)) {
+            body.put("grayMcpServerConfigs", request.grayMcpServerConfigs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
