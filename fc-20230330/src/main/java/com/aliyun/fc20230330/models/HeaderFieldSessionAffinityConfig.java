@@ -7,6 +7,9 @@ public class HeaderFieldSessionAffinityConfig extends TeaModel {
     @NameInMap("affinityHeaderFieldName")
     public String affinityHeaderFieldName;
 
+    @NameInMap("disableSessionIdReuse")
+    public Boolean disableSessionIdReuse;
+
     @NameInMap("sessionConcurrencyPerInstance")
     public Long sessionConcurrencyPerInstance;
 
@@ -27,6 +30,14 @@ public class HeaderFieldSessionAffinityConfig extends TeaModel {
     }
     public String getAffinityHeaderFieldName() {
         return this.affinityHeaderFieldName;
+    }
+
+    public HeaderFieldSessionAffinityConfig setDisableSessionIdReuse(Boolean disableSessionIdReuse) {
+        this.disableSessionIdReuse = disableSessionIdReuse;
+        return this;
+    }
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
     }
 
     public HeaderFieldSessionAffinityConfig setSessionConcurrencyPerInstance(Long sessionConcurrencyPerInstance) {

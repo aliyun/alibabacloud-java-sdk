@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CookieSessionAffinityConfig extends TeaModel {
+    @NameInMap("disableSessionIdReuse")
+    public Boolean disableSessionIdReuse;
+
     @NameInMap("sessionConcurrencyPerInstance")
     public Long sessionConcurrencyPerInstance;
 
@@ -16,6 +19,14 @@ public class CookieSessionAffinityConfig extends TeaModel {
     public static CookieSessionAffinityConfig build(java.util.Map<String, ?> map) throws Exception {
         CookieSessionAffinityConfig self = new CookieSessionAffinityConfig();
         return TeaModel.build(map, self);
+    }
+
+    public CookieSessionAffinityConfig setDisableSessionIdReuse(Boolean disableSessionIdReuse) {
+        this.disableSessionIdReuse = disableSessionIdReuse;
+        return this;
+    }
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
     }
 
     public CookieSessionAffinityConfig setSessionConcurrencyPerInstance(Long sessionConcurrencyPerInstance) {

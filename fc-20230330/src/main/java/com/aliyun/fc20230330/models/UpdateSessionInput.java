@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateSessionInput extends TeaModel {
+    @NameInMap("disableSessionIdReuse")
+    public Boolean disableSessionIdReuse;
+
     /**
      * <strong>example:</strong>
      * <p>1800</p>
@@ -21,6 +24,14 @@ public class UpdateSessionInput extends TeaModel {
     public static UpdateSessionInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateSessionInput self = new UpdateSessionInput();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSessionInput setDisableSessionIdReuse(Boolean disableSessionIdReuse) {
+        this.disableSessionIdReuse = disableSessionIdReuse;
+        return this;
+    }
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
     }
 
     public UpdateSessionInput setSessionIdleTimeoutInSeconds(Long sessionIdleTimeoutInSeconds) {

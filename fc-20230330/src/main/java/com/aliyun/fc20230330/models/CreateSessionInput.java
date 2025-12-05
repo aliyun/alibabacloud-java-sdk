@@ -4,8 +4,18 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateSessionInput extends TeaModel {
+    @NameInMap("disableSessionIdReuse")
+    public Boolean disableSessionIdReuse;
+
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
+
+    /**
+     * <strong>example:</strong>
+     * <p>custom-test-session-id</p>
+     */
+    @NameInMap("sessionId")
+    public String sessionId;
 
     /**
      * <strong>example:</strong>
@@ -26,12 +36,28 @@ public class CreateSessionInput extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSessionInput setDisableSessionIdReuse(Boolean disableSessionIdReuse) {
+        this.disableSessionIdReuse = disableSessionIdReuse;
+        return this;
+    }
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
+    }
+
     public CreateSessionInput setNasConfig(NASConfig nasConfig) {
         this.nasConfig = nasConfig;
         return this;
     }
     public NASConfig getNasConfig() {
         return this.nasConfig;
+    }
+
+    public CreateSessionInput setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public CreateSessionInput setSessionIdleTimeoutInSeconds(Long sessionIdleTimeoutInSeconds) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSessionRequest extends TeaModel {
     /**
+     * <p>The function alias or version associated with the queried session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliasName1</p>
      */

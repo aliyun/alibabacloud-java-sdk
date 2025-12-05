@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSessionsRequest extends TeaModel {
     /**
+     * <p>The number of sessions to be returned. If this parameter is not specified, 20 sessions are returned by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListSessionsRequest extends TeaModel {
     public Integer limit;
 
     /**
+     * <p>The token for the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>
      */
@@ -19,6 +23,8 @@ public class ListSessionsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The function alias or version.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliasName1</p>
      */
@@ -26,6 +32,8 @@ public class ListSessionsRequest extends TeaModel {
     public String qualifier;
 
     /**
+     * <p>The SessionId value to filter. If specified, all session information associated with this session ID in Active or Expired states is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-session-id-1</p>
      */
@@ -33,6 +41,8 @@ public class ListSessionsRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The session status to filter. By default, information for all sessions in the Active and Expired states is returned. You can specify Active to retrieve only active sessions, or Expired to retrieve only expired sessions.</p>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */

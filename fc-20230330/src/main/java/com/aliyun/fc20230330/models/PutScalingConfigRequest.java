@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutScalingConfigRequest extends TeaModel {
+    /**
+     * <p>The function scalability configuration.</p>
+     */
     @NameInMap("body")
     public PutScalingConfigInput body;
 
     /**
+     * <p>The function alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>LATEST</p>
      */

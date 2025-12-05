@@ -18,6 +18,9 @@ public class Session extends TeaModel {
     @NameInMap("createdTime")
     public String createdTime;
 
+    @NameInMap("disableSessionIdReuse")
+    public Boolean disableSessionIdReuse;
+
     /**
      * <strong>example:</strong>
      * <p>functionName1</p>
@@ -96,6 +99,14 @@ public class Session extends TeaModel {
     }
     public String getCreatedTime() {
         return this.createdTime;
+    }
+
+    public Session setDisableSessionIdReuse(Boolean disableSessionIdReuse) {
+        this.disableSessionIdReuse = disableSessionIdReuse;
+        return this;
+    }
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
     }
 
     public Session setFunctionName(String functionName) {

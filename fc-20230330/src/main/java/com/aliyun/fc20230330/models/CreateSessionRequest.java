@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateSessionRequest extends TeaModel {
+    /**
+     * <p>Creates session configurations.</p>
+     */
     @NameInMap("body")
     public CreateSessionInput body;
 
     /**
+     * <p>Specifies the version or alias to which the sesion belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliasName1</p>
      */

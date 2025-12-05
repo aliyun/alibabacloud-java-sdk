@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetScalingConfigRequest extends TeaModel {
     /**
+     * <p>The alias of the function.</p>
+     * 
      * <strong>example:</strong>
      * <p>LATEST</p>
      */

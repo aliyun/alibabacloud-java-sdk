@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutScalingConfigInput extends TeaModel {
+    @NameInMap("enableOnDemandScaling")
+    public Boolean enableOnDemandScaling;
+
     @NameInMap("horizontalScalingPolicies")
     public java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
@@ -19,6 +22,14 @@ public class PutScalingConfigInput extends TeaModel {
     public static PutScalingConfigInput build(java.util.Map<String, ?> map) throws Exception {
         PutScalingConfigInput self = new PutScalingConfigInput();
         return TeaModel.build(map, self);
+    }
+
+    public PutScalingConfigInput setEnableOnDemandScaling(Boolean enableOnDemandScaling) {
+        this.enableOnDemandScaling = enableOnDemandScaling;
+        return this;
+    }
+    public Boolean getEnableOnDemandScaling() {
+        return this.enableOnDemandScaling;
     }
 
     public PutScalingConfigInput setHorizontalScalingPolicies(java.util.List<ScalingPolicy> horizontalScalingPolicies) {

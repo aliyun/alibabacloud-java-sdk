@@ -16,6 +16,9 @@ public class ResidentResourceAllocation extends TeaModel {
     @NameInMap("instanceCount")
     public Integer instanceCount;
 
+    @NameInMap("instanceType")
+    public String instanceType;
+
     /**
      * <p>函数的别名</p>
      */
@@ -65,6 +68,14 @@ public class ResidentResourceAllocation extends TeaModel {
     }
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    public ResidentResourceAllocation setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public ResidentResourceAllocation setQualifier(String qualifier) {

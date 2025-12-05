@@ -10,6 +10,9 @@ public class ScalingConfigStatus extends TeaModel {
     @NameInMap("currentInstances")
     public Long currentInstances;
 
+    @NameInMap("enableOnDemandScaling")
+    public Boolean enableOnDemandScaling;
+
     @NameInMap("functionArn")
     public String functionArn;
 
@@ -47,6 +50,14 @@ public class ScalingConfigStatus extends TeaModel {
     }
     public Long getCurrentInstances() {
         return this.currentInstances;
+    }
+
+    public ScalingConfigStatus setEnableOnDemandScaling(Boolean enableOnDemandScaling) {
+        this.enableOnDemandScaling = enableOnDemandScaling;
+        return this;
+    }
+    public Boolean getEnableOnDemandScaling() {
+        return this.enableOnDemandScaling;
     }
 
     public ScalingConfigStatus setFunctionArn(String functionArn) {

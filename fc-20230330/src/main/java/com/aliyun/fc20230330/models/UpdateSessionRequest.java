@@ -4,10 +4,15 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateSessionRequest extends TeaModel {
+    /**
+     * <p>The session update configuration.</p>
+     */
     @NameInMap("body")
     public UpdateSessionInput body;
 
     /**
+     * <p>The function alias or version associated with the session to be updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliasName1</p>
      */
