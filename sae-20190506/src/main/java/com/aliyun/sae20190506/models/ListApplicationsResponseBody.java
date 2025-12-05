@@ -359,6 +359,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         /**
          * <p>The number of instances in running state.</p>
          * 
@@ -523,6 +526,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public ListApplicationsResponseBodyDataApplicationsChildren setRunningInstances(Integer runningInstances) {
@@ -823,6 +834,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         /**
          * <p>The number of running instances.</p>
          * 
@@ -1023,6 +1037,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public ListApplicationsResponseBodyDataApplications setRunningInstances(Integer runningInstances) {
