@@ -1983,6 +1983,210 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>通过Ip获取已部署作业</p>
+     * 
+     * @param request GetDeploymentsByIpRequest
+     * @param headers GetDeploymentsByIpHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeploymentsByIpResponse
+     */
+    public GetDeploymentsByIpResponse getDeploymentsByIpWithOptions(String namespace, GetDeploymentsByIpRequest request, GetDeploymentsByIpHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dstIp)) {
+            query.put("dstIp", request.dstIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dstPort)) {
+            query.put("dstPort", request.dstPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreJobSummary)) {
+            query.put("ignoreJobSummary", request.ignoreJobSummary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreResourceSetting)) {
+            query.put("ignoreResourceSetting", request.ignoreResourceSetting);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcIp)) {
+            query.put("srcIp", request.srcIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcPort)) {
+            query.put("srcPort", request.srcPort);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeploymentsByIp"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/getDeployments/byIp"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeploymentsByIpResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过Ip获取已部署作业</p>
+     * 
+     * @param request GetDeploymentsByIpRequest
+     * @return GetDeploymentsByIpResponse
+     */
+    public GetDeploymentsByIpResponse getDeploymentsByIp(String namespace, GetDeploymentsByIpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDeploymentsByIpHeaders headers = new GetDeploymentsByIpHeaders();
+        return this.getDeploymentsByIpWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过标签获取已部署作业</p>
+     * 
+     * @param request GetDeploymentsByLabelRequest
+     * @param headers GetDeploymentsByLabelHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeploymentsByLabelResponse
+     */
+    public GetDeploymentsByLabelResponse getDeploymentsByLabelWithOptions(String namespace, GetDeploymentsByLabelRequest request, GetDeploymentsByLabelHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreJobSummary)) {
+            query.put("ignoreJobSummary", request.ignoreJobSummary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreResourceSetting)) {
+            query.put("ignoreResourceSetting", request.ignoreResourceSetting);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelKey)) {
+            query.put("labelKey", request.labelKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelValue)) {
+            query.put("labelValue", request.labelValue);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeploymentsByLabel"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/getDeployments/byLabel"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeploymentsByLabelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过标签获取已部署作业</p>
+     * 
+     * @param request GetDeploymentsByLabelRequest
+     * @return GetDeploymentsByLabelResponse
+     */
+    public GetDeploymentsByLabelResponse getDeploymentsByLabel(String namespace, GetDeploymentsByLabelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDeploymentsByLabelHeaders headers = new GetDeploymentsByLabelHeaders();
+        return this.getDeploymentsByLabelWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过名称获取已部署作业</p>
+     * 
+     * @param request GetDeploymentsByNameRequest
+     * @param headers GetDeploymentsByNameHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeploymentsByNameResponse
+     */
+    public GetDeploymentsByNameResponse getDeploymentsByNameWithOptions(String namespace, String deploymentName, GetDeploymentsByNameRequest request, GetDeploymentsByNameHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreJobSummary)) {
+            query.put("ignoreJobSummary", request.ignoreJobSummary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ignoreResourceSetting)) {
+            query.put("ignoreResourceSetting", request.ignoreResourceSetting);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeploymentsByName"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/name/" + com.aliyun.openapiutil.Client.getEncodeParam(deploymentName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeploymentsByNameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过名称获取已部署作业</p>
+     * 
+     * @param request GetDeploymentsByNameRequest
+     * @return GetDeploymentsByNameResponse
+     */
+    public GetDeploymentsByNameResponse getDeploymentsByName(String namespace, String deploymentName, GetDeploymentsByNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDeploymentsByNameHeaders headers = new GetDeploymentsByNameHeaders();
+        return this.getDeploymentsByNameWithOptions(namespace, deploymentName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取运行事件</p>
      * 
      * @param request GetEventsRequest
@@ -2686,6 +2890,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetUdfArtifactsHeaders headers = new GetUdfArtifactsHeaders();
         return this.getUdfArtifactsWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get validate DeploymentDraft result</p>
+     * 
+     * @param headers GetValidateDeploymentDraftResultHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetValidateDeploymentDraftResultResponse
+     */
+    public GetValidateDeploymentDraftResultResponse getValidateDeploymentDraftResultWithOptions(String namespace, String ticketId, GetValidateDeploymentDraftResultHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetValidateDeploymentDraftResult"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployment-drafts/tickets/" + com.aliyun.openapiutil.Client.getEncodeParam(ticketId) + "/async-validate"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetValidateDeploymentDraftResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get validate DeploymentDraft result</p>
+     * @return GetValidateDeploymentDraftResultResponse
+     */
+    public GetValidateDeploymentDraftResultResponse getValidateDeploymentDraftResult(String namespace, String ticketId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetValidateDeploymentDraftResultHeaders headers = new GetValidateDeploymentDraftResultHeaders();
+        return this.getValidateDeploymentDraftResultWithOptions(namespace, ticketId, headers, runtime);
     }
 
     /**
@@ -4515,6 +4765,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateVariableHeaders headers = new UpdateVariableHeaders();
         return this.updateVariableWithOptions(namespace, name, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>validate DeploymentDraft async</p>
+     * 
+     * @param request ValidateDeploymentDraftAsyncRequest
+     * @param headers ValidateDeploymentDraftAsyncHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateDeploymentDraftAsyncResponse
+     */
+    public ValidateDeploymentDraftAsyncResponse validateDeploymentDraftAsyncWithOptions(String namespace, ValidateDeploymentDraftAsyncRequest request, ValidateDeploymentDraftAsyncHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ValidateDeploymentDraftAsync"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployment-drafts/async-validate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateDeploymentDraftAsyncResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>validate DeploymentDraft async</p>
+     * 
+     * @param request ValidateDeploymentDraftAsyncRequest
+     * @return ValidateDeploymentDraftAsyncResponse
+     */
+    public ValidateDeploymentDraftAsyncResponse validateDeploymentDraftAsync(String namespace, ValidateDeploymentDraftAsyncRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ValidateDeploymentDraftAsyncHeaders headers = new ValidateDeploymentDraftAsyncHeaders();
+        return this.validateDeploymentDraftAsyncWithOptions(namespace, request, headers, runtime);
     }
 
     /**
