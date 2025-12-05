@@ -45,11 +45,6 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>tea-roa</artifactId>
-      <version>0.0.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
       <version>0.0.6</version>
     </dependency>
