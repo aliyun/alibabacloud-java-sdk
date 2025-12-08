@@ -7,6 +7,10 @@ public class BatchAddFacesResponseBody extends TeaModel {
     @NameInMap("Data")
     public BatchAddFacesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C46A46D0-3263-181A-A1EE-0901E4595390</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class BatchAddFacesResponseBody extends TeaModel {
     }
 
     public static class BatchAddFacesResponseBodyDataFailedFaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ClientError.IllegalArgument</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test/imgsearch/demo/xxxx.png">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test/imgsearch/demo/xxxx.png</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>not found the db=test</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -73,12 +89,24 @@ public class BatchAddFacesResponseBody extends TeaModel {
     }
 
     public static class BatchAddFacesResponseBodyDataInsertedFaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>16350536</p>
+         */
         @NameInMap("FaceId")
         public String faceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test/imgsearch/demo/xxxx.png">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test/imgsearch/demo/xxxx.png</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99.79581</p>
+         */
         @NameInMap("QualitieScore")
         public Float qualitieScore;
 

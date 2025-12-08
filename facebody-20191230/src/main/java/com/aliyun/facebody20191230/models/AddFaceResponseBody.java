@@ -7,6 +7,10 @@ public class AddFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public AddFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2B93C43A-F824-40C8-AF79-844342B0F43A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class AddFaceResponseBody extends TeaModel {
     }
 
     public static class AddFaceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("FaceId")
         public String faceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99.79581</p>
+         */
         @NameInMap("QualitieScore")
         public Float qualitieScore;
 

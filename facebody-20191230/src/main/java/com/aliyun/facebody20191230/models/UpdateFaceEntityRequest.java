@@ -4,9 +4,21 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaceEntityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mm2</p>
+     */
     @NameInMap("EntityId")
     public String entityId;
 

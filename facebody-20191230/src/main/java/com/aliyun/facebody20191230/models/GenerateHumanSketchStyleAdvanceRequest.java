@@ -4,9 +4,19 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GenerateHumanSketchStyleAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/GenerateHumanSketchStyle/GenerateHumanSketchStyle7.png">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/GenerateHumanSketchStyle/GenerateHumanSketchStyle7.png</a></p>
+     */
     @NameInMap("ImageURL")
     public java.io.InputStream imageURLObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>head</p>
+     */
     @NameInMap("ReturnType")
     public String returnType;
 

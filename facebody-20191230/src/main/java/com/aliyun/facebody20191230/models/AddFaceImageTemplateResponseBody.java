@@ -7,6 +7,10 @@ public class AddFaceImageTemplateResponseBody extends TeaModel {
     @NameInMap("Data")
     public AddFaceImageTemplateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>798A721D-7C7F-4D87-A125-1D04B3055C2C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class AddFaceImageTemplateResponseBody extends TeaModel {
     }
 
     public static class AddFaceImageTemplateResponseBodyDataFaceInfosFaceRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>94</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>89</p>
+         */
         @NameInMap("Width")
         public String width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>254</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>318</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -87,6 +107,10 @@ public class AddFaceImageTemplateResponseBody extends TeaModel {
         @NameInMap("FaceRect")
         public AddFaceImageTemplateResponseBodyDataFaceInfosFaceRect faceRect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>string 6cd509ea-54fa-4730-8e9d-c94cadcda048_0</p>
+         */
         @NameInMap("TemplateFaceID")
         public String templateFaceID;
 
@@ -117,6 +141,10 @@ public class AddFaceImageTemplateResponseBody extends TeaModel {
         @NameInMap("FaceInfos")
         public java.util.List<AddFaceImageTemplateResponseBodyDataFaceInfos> faceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6cd509ea-54fa-4730-8e9d-c94cadcda048</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

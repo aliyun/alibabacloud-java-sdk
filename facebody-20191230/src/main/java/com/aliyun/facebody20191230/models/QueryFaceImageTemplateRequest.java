@@ -7,9 +7,17 @@ public class QueryFaceImageTemplateRequest extends TeaModel {
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6cd509ea-54fa-4730-8e9d-c94cadcda048</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

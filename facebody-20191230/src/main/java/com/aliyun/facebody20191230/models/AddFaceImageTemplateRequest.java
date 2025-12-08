@@ -4,6 +4,12 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class AddFaceImageTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/img_facefusion/template/sucai1.jpg">https://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/img_facefusion/template/sucai1.jpg</a></p>
+     */
     @NameInMap("ImageURL")
     public String imageURL;
 

@@ -152,6 +152,10 @@ public class DetectFaceResponseBody extends TeaModel {
     }
 
     public static class DetectFaceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FaceCount")
         public Integer faceCount;
 
@@ -167,6 +171,10 @@ public class DetectFaceResponseBody extends TeaModel {
         @NameInMap("FaceRectangles")
         public java.util.List<Integer> faceRectangles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>105</p>
+         */
         @NameInMap("LandmarkCount")
         public Integer landmarkCount;
 

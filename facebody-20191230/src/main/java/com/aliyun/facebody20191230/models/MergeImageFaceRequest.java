@@ -4,18 +4,36 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class MergeImageFaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("AddWatermark")
     public Boolean addWatermark;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/MergeImageFace/MergeImageFace-1.png">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/MergeImageFace/MergeImageFace-1.png</a></p>
+     */
     @NameInMap("ImageURL")
     public String imageURL;
 
     @NameInMap("MergeInfos")
     public java.util.List<MergeImageFaceRequestMergeInfos> mergeInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("ModelVersion")
     public String modelVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6cd509ea-54fa-4730-8e9d-c94cadcda048</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -76,9 +94,17 @@ public class MergeImageFaceRequest extends TeaModel {
     }
 
     public static class MergeImageFaceRequestMergeInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/ref/ref.jpg">http://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/ref/ref.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6cd509ea-54fa-4730-8e9d-c94cadcda048_0</p>
+         */
         @NameInMap("TemplateFaceID")
         public String templateFaceID;
 

@@ -7,6 +7,10 @@ public class ExtractFingerPrintResponseBody extends TeaModel {
     @NameInMap("Data")
     public ExtractFingerPrintResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D21978CC-C1E7-4A7A-A1B2-D5896BDC7ADF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class ExtractFingerPrintResponseBody extends TeaModel {
     }
 
     public static class ExtractFingerPrintResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAAAQABAAD****</p>
+         */
         @NameInMap("FingerPrint")
         public String fingerPrint;
 

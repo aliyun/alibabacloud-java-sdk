@@ -27,6 +27,10 @@ public class RecognizePublicFaceAdvanceRequest extends TeaModel {
         @NameInMap("ImageData")
         public String imageData;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://viapi-oss.oss-cn-shanghai.aliyuncs.com/doc/facebody/xxx.jpg">https://viapi-oss.oss-cn-shanghai.aliyuncs.com/doc/facebody/xxx.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public java.io.InputStream imageURLObject;
 

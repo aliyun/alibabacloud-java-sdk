@@ -4,9 +4,17 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ExtractFingerPrintRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>iVBORw0KGgoAAAANSUhEUgAAASUAA****</p>
+     */
     @NameInMap("ImageData")
     public String imageData;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/xuhan/ExtractFingerPrint.png">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/xuhan/ExtractFingerPrint.png</a></p>
+     */
     @NameInMap("ImageURL")
     public String imageURL;
 

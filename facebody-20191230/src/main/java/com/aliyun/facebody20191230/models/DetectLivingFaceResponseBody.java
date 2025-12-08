@@ -7,6 +7,10 @@ public class DetectLivingFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectLivingFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2EEA0396-BD84-5729-B8BD-D60776FCEF2B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DetectLivingFaceResponseBody extends TeaModel {
     }
 
     public static class DetectLivingFaceResponseBodyDataElementsResultsFrames extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>84.83</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://aligreen-shanghai.oss-cn-shanghai.aliyuncs.com/prod/hammal/26210da42/28118541_TB1urBOQFXXXXbMXFXXXXXXXXXX-1442-257.png?Expires=1582703593&OSSAccessKeyId=H4sp5QfNbuDg****&Signature=%2B8iUkb5YjomYR8ujV2c8wMAavs****&x-oss-process=image%2Fcrop%2Cx_0%2Cw_288%2Fauto-orient%2C0">http://aligreen-shanghai.oss-cn-shanghai.aliyuncs.com/prod/hammal/26210da42/28118541_TB1urBOQFXXXXbMXFXXXXXXXXXX-1442-257.png?Expires=1582703593&amp;OSSAccessKeyId=H4sp5QfNbuDg****&amp;Signature=%2B8iUkb5YjomYR8ujV2c8wMAavs****&amp;x-oss-process=image%2Fcrop%2Cx_0%2Cw_288%2Fauto-orient%2C0</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -62,15 +74,31 @@ public class DetectLivingFaceResponseBody extends TeaModel {
     }
 
     public static class DetectLivingFaceResponseBodyDataElementsResultsRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Left")
         public Long left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Top")
         public Long top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Width")
         public Long width;
 
@@ -117,18 +145,34 @@ public class DetectLivingFaceResponseBody extends TeaModel {
         @NameInMap("Frames")
         public java.util.List<DetectLivingFaceResponseBodyDataElementsResultsFrames> frames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>liveness</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>blurred, occluded or large angle face, please check.</p>
+         */
         @NameInMap("MessageTips")
         public String messageTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>76.22</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
         @NameInMap("Rect")
         public DetectLivingFaceResponseBodyDataElementsResultsRect rect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>review</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -188,15 +232,27 @@ public class DetectLivingFaceResponseBody extends TeaModel {
     }
 
     public static class DetectLivingFaceResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FaceNumber")
         public Long faceNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DetectLivingFace/DetectLivingFace4.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DetectLivingFace/DetectLivingFace4.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
         @NameInMap("Results")
         public java.util.List<DetectLivingFaceResponseBodyDataElementsResults> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p>img1owc8WGskNm78OEAPJTZal-1****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

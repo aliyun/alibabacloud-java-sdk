@@ -4,21 +4,49 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class SearchFaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1,test2,test3</p>
+     */
     @NameInMap("DbNames")
     public String dbNames;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/SearchFace/SearchFace1.png">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/SearchFace/SearchFace1.png</a></p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MaxFaceNum")
     public Long maxFaceNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50.0</p>
+     */
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 

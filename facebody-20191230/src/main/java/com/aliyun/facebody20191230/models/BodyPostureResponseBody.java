@@ -7,6 +7,10 @@ public class BodyPostureResponseBody extends TeaModel {
     @NameInMap("Data")
     public BodyPostureResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B854094B-9231-4A54-89AB-C377CB0D237D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class BodyPostureResponseBody extends TeaModel {
     }
 
     public static class BodyPostureResponseBodyDataMetaObject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -81,9 +93,17 @@ public class BodyPostureResponseBody extends TeaModel {
     }
 
     public static class BodyPostureResponseBodyDataOutputsResultsBodies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.91309475898742676</p>
+         */
         @NameInMap("Confident")
         public Float confident;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nose</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -141,6 +161,10 @@ public class BodyPostureResponseBody extends TeaModel {
     }
 
     public static class BodyPostureResponseBodyDataOutputs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HumanCount")
         public Integer humanCount;
 

@@ -4,6 +4,10 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DeleteFaceImageTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F9E76786-3A85-43C3-B79C-3175B4536252</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

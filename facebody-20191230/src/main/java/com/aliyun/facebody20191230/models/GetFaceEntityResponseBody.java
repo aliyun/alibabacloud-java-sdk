@@ -7,6 +7,10 @@ public class GetFaceEntityResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetFaceEntityResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA7CAFEB-0A37-4496-9CDF-E3DBB6309CB2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class GetFaceEntityResponseBody extends TeaModel {
     }
 
     public static class GetFaceEntityResponseBodyDataFaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FaceId")
         public String faceId;
 
@@ -51,9 +59,17 @@ public class GetFaceEntityResponseBody extends TeaModel {
     }
 
     public static class GetFaceEntityResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 

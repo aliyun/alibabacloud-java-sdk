@@ -7,6 +7,10 @@ public class DetectBodyCountResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectBodyCountResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1C709078-8886-4C91-AEDE-4E04EED0A689</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DetectBodyCountResponseBody extends TeaModel {
     }
 
     public static class DetectBodyCountResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("PersonNumber")
         public Integer personNumber;
 

@@ -4,6 +4,12 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class CreateFaceDbRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -7,6 +7,10 @@ public class DeepfakeFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public DeepfakeFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8E6F65D5-62A1-1E5B-BC0B-00508034AC92</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DeepfakeFaceResponseBody extends TeaModel {
     }
 
     public static class DeepfakeFaceResponseBodyDataElementsResultsRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>284</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>373</p>
+         */
         @NameInMap("Left")
         public Long left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("Top")
         public Long top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>207</p>
+         */
         @NameInMap("Width")
         public Long width;
 
@@ -84,12 +104,24 @@ public class DeepfakeFaceResponseBody extends TeaModel {
     }
 
     public static class DeepfakeFaceResponseBodyDataElementsResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>36.6455</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normalface</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>blurred, occluded or large angle face, please check.</p>
+         */
         @NameInMap("MessageTips")
         public String messageTips;
 
@@ -136,15 +168,27 @@ public class DeepfakeFaceResponseBody extends TeaModel {
     }
 
     public static class DeepfakeFaceResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FaceNumber")
         public Long faceNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DeepfakeFace/DeepfakeFace1.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DeepfakeFace/DeepfakeFace1.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
         @NameInMap("Results")
         public java.util.List<DeepfakeFaceResponseBodyDataElementsResults> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8E6F65D5-62A1-1E5B-BC0B-00508034AC92</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

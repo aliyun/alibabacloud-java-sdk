@@ -7,6 +7,10 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     @NameInMap("Data")
     public PedestrianDetectAttributeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4F609A30-F645-481E-A513-CADAA14DFB0A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesAge extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Age18-60</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.99590516090393066</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -62,9 +74,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesBackpack extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>No</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.96486538648605347</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -92,9 +112,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesGender extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>female</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.97989875078201294</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -122,9 +150,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesGlasses extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>No</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.87284471094608307</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -152,9 +188,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesHandbag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Yes</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.55011671781539917</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -182,9 +226,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesHat extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>No</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.98272394016385078</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -215,6 +267,10 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.69961744546890259</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -242,9 +298,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesLowerWear extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Trousers</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6424860954284668</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -272,9 +336,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesOrient extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Front</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.97838658094406128</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -302,9 +374,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesShoulderBag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>No</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.91198787838220596</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -335,6 +415,10 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.97796273231506348</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -362,9 +446,17 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataAttributesUpperWear extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ShortSleeve</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.89291918277740479</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -532,18 +624,38 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
     }
 
     public static class PedestrianDetectAttributeResponseBodyDataBoxes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>584</p>
+         */
         @NameInMap("BottomRightX")
         public Float bottomRightX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>218</p>
+         */
         @NameInMap("BottomRightY")
         public Float bottomRightY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.88381063938140869</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36</p>
+         */
         @NameInMap("TopLeftX")
         public Float topLeftX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>27</p>
+         */
         @NameInMap("TopLeftY")
         public Float topLeftY;
 
@@ -601,12 +713,24 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<PedestrianDetectAttributeResponseBodyDataBoxes> boxes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>584</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PersonNumber")
         public Integer personNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>264</p>
+         */
         @NameInMap("Width")
         public Long width;
 

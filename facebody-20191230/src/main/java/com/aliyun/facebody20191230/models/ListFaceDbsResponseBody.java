@@ -7,6 +7,10 @@ public class ListFaceDbsResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListFaceDbsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2B93C43A-F824-40C8-AF79-844342B0F43A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class ListFaceDbsResponseBody extends TeaModel {
     }
 
     public static class ListFaceDbsResponseBodyDataDbList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Name")
         public String name;
 

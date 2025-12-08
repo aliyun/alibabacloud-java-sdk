@@ -7,6 +7,10 @@ public class CompareFaceWithMaskResponseBody extends TeaModel {
     @NameInMap("Data")
     public CompareFaceWithMaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C6499918-E932-41B3-96F5-A18F50D262DD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -47,6 +51,10 @@ public class CompareFaceWithMaskResponseBody extends TeaModel {
         @NameInMap("LandmarksBList")
         public java.util.List<Long> landmarksBList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>imageB quality score less threshold</p>
+         */
         @NameInMap("MessageTips")
         public String messageTips;
 

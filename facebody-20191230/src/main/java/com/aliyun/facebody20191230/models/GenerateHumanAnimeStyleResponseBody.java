@@ -7,6 +7,10 @@ public class GenerateHumanAnimeStyleResponseBody extends TeaModel {
     @NameInMap("Data")
     public GenerateHumanAnimeStyleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>59697D68-2A6E-4553-89BD-0FADD07881E8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class GenerateHumanAnimeStyleResponseBody extends TeaModel {
     }
 
     public static class GenerateHumanAnimeStyleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/person-image-cartoonizer/59697D68-2A6E-4553-89BD-0FADD07881E8_7ee5_20201027-070958.jpg?Expires=1603784400&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&Signature=ut2kn46Lz%2FRwqJ9jWJ0RBDut12">http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/person-image-cartoonizer/59697D68-2A6E-4553-89BD-0FADD07881E8_7ee5_20201027-070958.jpg?Expires=1603784400&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&amp;Signature=ut2kn46Lz%2FRwqJ9jWJ0RBDut12</a>****</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

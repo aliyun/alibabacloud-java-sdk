@@ -4,21 +4,48 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class BatchAddFacesShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>U1</p>
+     */
     @NameInMap("EntityId")
     public String entityId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Faces")
     public String facesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50.0</p>
+     */
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50.0</p>
+     */
     @NameInMap("SimilarityScoreThresholdBetweenEntity")
     public Float similarityScoreThresholdBetweenEntity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50.0</p>
+     */
     @NameInMap("SimilarityScoreThresholdInEntity")
     public Float similarityScoreThresholdInEntity;
 

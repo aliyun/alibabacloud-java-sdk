@@ -4,6 +4,10 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class CreateFaceDbResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>818D24A6-E368-46B3-99C5-3CF36D98CCA3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

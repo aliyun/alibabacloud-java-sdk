@@ -7,6 +7,10 @@ public class LiquifyFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public LiquifyFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA1C8937-B30C-15E6-B804-41C357BA413B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class LiquifyFaceResponseBody extends TeaModel {
     }
 
     public static class LiquifyFaceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/face-liquify/CA1C8937-B30C-15E6-B804-41C357BA413B_5eca_20210923-093411.jpg?Expires=1632391451&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=46apJQVNBz%2FFzDLEYn2M1w9MKA">http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/face-liquify/CA1C8937-B30C-15E6-B804-41C357BA413B_5eca_20210923-093411.jpg?Expires=1632391451&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=46apJQVNBz%2FFzDLEYn2M1w9MKA</a>****</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

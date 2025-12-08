@@ -7,6 +7,10 @@ public class RecognizeActionResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeActionResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E9C40AF5-A7F8-49D5-8A0C-B21F15A07F17</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -60,6 +64,10 @@ public class RecognizeActionResponseBody extends TeaModel {
         @NameInMap("Scores")
         public java.util.List<Float> scores;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Timestamp")
         public Integer timestamp;
 

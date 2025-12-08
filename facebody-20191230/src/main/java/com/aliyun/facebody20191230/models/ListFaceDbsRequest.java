@@ -4,9 +4,17 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ListFaceDbsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Offset")
     public Long offset;
 

@@ -47,12 +47,24 @@ public class CompareFaceResponseBody extends TeaModel {
         @NameInMap("LandmarksBList")
         public java.util.List<Long> landmarksBList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>imageB quality score less threshold</p>
+         */
         @NameInMap("MessageTips")
         public String messageTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75.16</p>
+         */
         @NameInMap("QualityScoreA")
         public Float qualityScoreA;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75.20</p>
+         */
         @NameInMap("QualityScoreB")
         public Float qualityScoreB;
 

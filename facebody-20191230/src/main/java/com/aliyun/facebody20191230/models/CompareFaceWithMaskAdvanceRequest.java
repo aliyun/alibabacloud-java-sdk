@@ -4,12 +4,22 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class CompareFaceWithMaskAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageURLA")
     public java.io.InputStream imageURLAObject;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageURLB")
     public java.io.InputStream imageURLBObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>97.0</p>
+     */
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 

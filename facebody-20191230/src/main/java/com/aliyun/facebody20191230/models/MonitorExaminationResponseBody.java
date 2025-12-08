@@ -7,6 +7,10 @@ public class MonitorExaminationResponseBody extends TeaModel {
     @NameInMap("Data")
     public MonitorExaminationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D0F6EB94-73B6-4CB8-B266-22D2F221C475</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class MonitorExaminationResponseBody extends TeaModel {
     }
 
     public static class MonitorExaminationResponseBodyDataFaceInfoPose extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-0.9185499548912048</p>
+         */
         @NameInMap("Pitch")
         public Float pitch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-0.18541647493839264</p>
+         */
         @NameInMap("Roll")
         public Float roll;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.095342636108398</p>
+         */
         @NameInMap("Yaw")
         public Float yaw;
 
@@ -73,9 +89,17 @@ public class MonitorExaminationResponseBody extends TeaModel {
     }
 
     public static class MonitorExaminationResponseBodyDataFaceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Completeness")
         public Float completeness;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FaceNumber")
         public Long faceNumber;
 
@@ -114,9 +138,17 @@ public class MonitorExaminationResponseBody extends TeaModel {
     }
 
     public static class MonitorExaminationResponseBodyDataPersonInfoCellPhone extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.39076218008995056</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
@@ -144,9 +176,17 @@ public class MonitorExaminationResponseBody extends TeaModel {
     }
 
     public static class MonitorExaminationResponseBodyDataPersonInfoEarPhone extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.7980290651321411</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
@@ -180,6 +220,10 @@ public class MonitorExaminationResponseBody extends TeaModel {
         @NameInMap("EarPhone")
         public MonitorExaminationResponseBodyDataPersonInfoEarPhone earPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PersonNumber")
         public Long personNumber;
 
@@ -215,6 +259,10 @@ public class MonitorExaminationResponseBody extends TeaModel {
     }
 
     public static class MonitorExaminationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.28805577754974365</p>
+         */
         @NameInMap("ChatScore")
         public Float chatScore;
 
@@ -224,6 +272,10 @@ public class MonitorExaminationResponseBody extends TeaModel {
         @NameInMap("PersonInfo")
         public MonitorExaminationResponseBodyDataPersonInfo personInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 

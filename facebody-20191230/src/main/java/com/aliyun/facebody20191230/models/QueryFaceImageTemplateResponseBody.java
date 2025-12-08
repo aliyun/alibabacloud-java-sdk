@@ -7,6 +7,10 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryFaceImageTemplateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7C29675C-751F-4D2F-86FB-2BD8D69AC860</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
     }
 
     public static class QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>94</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>89</p>
+         */
         @NameInMap("Width")
         public String width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>254</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>318</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -87,6 +107,10 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         @NameInMap("FaceRect")
         public QueryFaceImageTemplateResponseBodyDataElementsFaceInfosFaceRect faceRect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6cd509ea-54fa-4730-8e9d-c94cadcda048</p>
+         */
         @NameInMap("TemplateFaceID")
         public String templateFaceID;
 
@@ -114,21 +138,41 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
     }
 
     public static class QueryFaceImageTemplateResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-29 10:19:05</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("FaceInfos")
         public java.util.List<QueryFaceImageTemplateResponseBodyDataElementsFaceInfos> faceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6cd509ea-54fa-4730-8e9d-c94cadcda048</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/MergeImageFace/MergeImageFace-1.png">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/MergeImageFace/MergeImageFace-1.png</a></p>
+         */
         @NameInMap("TemplateURL")
         public String templateURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-29 10:19:05</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

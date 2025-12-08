@@ -7,6 +7,10 @@ public class DetectInfraredLivingFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectInfraredLivingFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>68DF6EC7-3B1D-11EE-9FA7-1122F1AE92DD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DetectInfraredLivingFaceResponseBody extends TeaModel {
     }
 
     public static class DetectInfraredLivingFaceResponseBodyDataElementsResultsRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Left")
         public Long left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Top")
         public Long top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Width")
         public Long width;
 
@@ -84,18 +104,34 @@ public class DetectInfraredLivingFaceResponseBody extends TeaModel {
     }
 
     public static class DetectInfraredLivingFaceResponseBodyDataElementsResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>liveness</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>blurred, occluded or large angle face, please check.</p>
+         */
         @NameInMap("MessageTips")
         public String messageTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>83.3848</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
         @NameInMap("Rect")
         public DetectInfraredLivingFaceResponseBodyDataElementsResultsRect rect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>review</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -147,9 +183,17 @@ public class DetectInfraredLivingFaceResponseBody extends TeaModel {
     }
 
     public static class DetectInfraredLivingFaceResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FaceNumber")
         public Long faceNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-demo.oss-cn-shanghai.aliyuncs.com/viapi-demo/images/SegmentCommonImage/segmentimage-src-hu.jpeg">http://viapi-demo.oss-cn-shanghai.aliyuncs.com/viapi-demo/images/SegmentCommonImage/segmentimage-src-hu.jpeg</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

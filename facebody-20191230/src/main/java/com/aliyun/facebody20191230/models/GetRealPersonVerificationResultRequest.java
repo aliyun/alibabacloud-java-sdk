@@ -4,6 +4,12 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GetRealPersonVerificationResultRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cwek23dw24geor89230hf2rw</p>
+     */
     @NameInMap("VerificationToken")
     public String verificationToken;
 

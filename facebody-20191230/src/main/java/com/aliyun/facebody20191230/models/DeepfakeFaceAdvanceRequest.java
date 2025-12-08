@@ -4,6 +4,9 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DeepfakeFaceAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<DeepfakeFaceAdvanceRequestTasks> tasks;
 
@@ -21,9 +24,17 @@ public class DeepfakeFaceAdvanceRequest extends TeaModel {
     }
 
     public static class DeepfakeFaceAdvanceRequestTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAAAQABAAD/2****</p>
+         */
         @NameInMap("ImageData")
         public String imageData;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DeepfakeFace/DeepfakeFace1.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DeepfakeFace/DeepfakeFace1.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public java.io.InputStream imageURLObject;
 

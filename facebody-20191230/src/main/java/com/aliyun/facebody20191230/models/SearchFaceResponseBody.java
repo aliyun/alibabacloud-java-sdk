@@ -7,6 +7,10 @@ public class SearchFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public SearchFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4159e64a-0fe8-436c-a8de-ee531555db3c</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,41 @@ public class SearchFaceResponseBody extends TeaModel {
     }
 
     public static class SearchFaceResponseBodyDataMatchListFaceItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>36.820168</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>U1</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
         @NameInMap("ExtraData")
         public String extraData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>001</p>
+         */
         @NameInMap("FaceId")
         public String faceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.892133</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -106,15 +130,31 @@ public class SearchFaceResponseBody extends TeaModel {
     }
 
     public static class SearchFaceResponseBodyDataMatchListLocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -164,6 +204,10 @@ public class SearchFaceResponseBody extends TeaModel {
         @NameInMap("Location")
         public SearchFaceResponseBodyDataMatchListLocation location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>71.7349</p>
+         */
         @NameInMap("QualitieScore")
         public Float qualitieScore;
 

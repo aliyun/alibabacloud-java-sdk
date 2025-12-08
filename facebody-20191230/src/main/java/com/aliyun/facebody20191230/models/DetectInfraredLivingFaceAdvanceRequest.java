@@ -4,6 +4,9 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectInfraredLivingFaceAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<DetectInfraredLivingFaceAdvanceRequestTasks> tasks;
 
@@ -21,6 +24,12 @@ public class DetectInfraredLivingFaceAdvanceRequest extends TeaModel {
     }
 
     public static class DetectInfraredLivingFaceAdvanceRequestTasks extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DetectInfraredLivingFace/DetectInfraredLivingFace.jpeg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DetectInfraredLivingFace/DetectInfraredLivingFace.jpeg</a></p>
+         */
         @NameInMap("ImageURL")
         public java.io.InputStream imageURLObject;
 

@@ -7,6 +7,10 @@ public class RecognizeFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8251C88E-8273-4DBF-94FB-A6BCB268CEA2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -164,6 +168,10 @@ public class RecognizeFaceResponseBody extends TeaModel {
         @NameInMap("BeautyList")
         public java.util.List<Float> beautyList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("DenseFeatureLength")
         public Integer denseFeatureLength;
 
@@ -179,6 +187,10 @@ public class RecognizeFaceResponseBody extends TeaModel {
         @NameInMap("Expressions")
         public java.util.List<Integer> expressions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FaceCount")
         public Integer faceCount;
 
@@ -212,6 +224,10 @@ public class RecognizeFaceResponseBody extends TeaModel {
         @NameInMap("HatList")
         public java.util.List<Integer> hatList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>105</p>
+         */
         @NameInMap("LandmarkCount")
         public Integer landmarkCount;
 

@@ -7,6 +7,10 @@ public class DetectCelebrityResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectCelebrityResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4E92C0D4-BB0F-4F25-AD13-E87D02FAA205</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -68,9 +72,17 @@ public class DetectCelebrityResponseBody extends TeaModel {
         @NameInMap("FaceRecognizeResults")
         public java.util.List<DetectCelebrityResponseBodyDataFaceRecognizeResults> faceRecognizeResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Width")
         public Integer width;
 

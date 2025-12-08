@@ -7,6 +7,10 @@ public class DetectPedestrianResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectPedestrianResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>45DBA494-6250-42C4-80D1-7CF19BDD2CB1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,9 +42,17 @@ public class DetectPedestrianResponseBody extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.999</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>person</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -79,9 +91,17 @@ public class DetectPedestrianResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<DetectPedestrianResponseBodyDataElements> elements;
 
+        /**
+         * <strong>example:</strong>
+         * <p>599</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>899</p>
+         */
         @NameInMap("Width")
         public Integer width;
 

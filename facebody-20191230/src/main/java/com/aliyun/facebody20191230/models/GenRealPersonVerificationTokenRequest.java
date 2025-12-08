@@ -4,12 +4,27 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GenRealPersonVerificationTokenRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CertificateName")
     public String certificateName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33010219001123123X</p>
+     */
     @NameInMap("CertificateNumber")
     public String certificateNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;dwe&quot;:&quot;ew4e&quot;...}</p>
+     */
     @NameInMap("MetaInfo")
     public String metaInfo;
 

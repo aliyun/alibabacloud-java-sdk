@@ -7,6 +7,10 @@ public class GenRealPersonVerificationTokenResponseBody extends TeaModel {
     @NameInMap("Data")
     public GenRealPersonVerificationTokenResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A31006F2-22E7-4538-93BB-DE6B563643EE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class GenRealPersonVerificationTokenResponseBody extends TeaModel {
     }
 
     public static class GenRealPersonVerificationTokenResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9fca3791c158a479ead9f2ba65ab3XXX</p>
+         */
         @NameInMap("VerificationToken")
         public String verificationToken;
 

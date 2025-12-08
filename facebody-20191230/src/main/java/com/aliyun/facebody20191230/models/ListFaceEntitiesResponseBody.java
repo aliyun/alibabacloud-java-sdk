@@ -7,6 +7,10 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListFaceEntitiesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA7CAFEB-0A37-4496-9CDF-E3DBB6309CB2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,41 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
     }
 
     public static class ListFaceEntitiesResponseBodyDataEntities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1589203871832</p>
+         */
         @NameInMap("CreatedAt")
         public Long createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>222</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FaceCount")
         public Integer faceCount;
 
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1589203871832</p>
+         */
         @NameInMap("UpdatedAt")
         public Long updatedAt;
 
@@ -109,9 +133,17 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
         @NameInMap("Entities")
         public java.util.List<ListFaceEntitiesResponseBodyDataEntities> entities;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

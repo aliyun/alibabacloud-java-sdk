@@ -7,6 +7,10 @@ public class RecognizeExpressionResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeExpressionResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E1C4C576-1799-4079-A934-15BC406A54EF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class RecognizeExpressionResponseBody extends TeaModel {
     }
 
     public static class RecognizeExpressionResponseBodyDataElementsFaceRectangle extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>174</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>196</p>
+         */
         @NameInMap("Left")
         public Integer left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>41</p>
+         */
         @NameInMap("Top")
         public Integer top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>121</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -84,9 +104,17 @@ public class RecognizeExpressionResponseBody extends TeaModel {
     }
 
     public static class RecognizeExpressionResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>surprise</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.99651491641998291</p>
+         */
         @NameInMap("FaceProbability")
         public Float faceProbability;
 

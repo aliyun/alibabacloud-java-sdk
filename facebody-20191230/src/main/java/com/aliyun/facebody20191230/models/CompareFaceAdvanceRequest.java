@@ -4,18 +4,38 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class CompareFaceAdvanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK****</p>
+     */
     @NameInMap("ImageDataA")
     public String imageDataA;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgQ****</p>
+     */
     @NameInMap("ImageDataB")
     public String imageDataB;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/CompareFace/CompareFace-right1.png">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/CompareFace/CompareFace-right1.png</a></p>
+     */
     @NameInMap("ImageURLA")
     public java.io.InputStream imageURLAObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/CompareFace/CompareFace-left1.png">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/CompareFace/CompareFace-left1.png</a></p>
+     */
     @NameInMap("ImageURLB")
     public java.io.InputStream imageURLBObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>75.12</p>
+     */
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 

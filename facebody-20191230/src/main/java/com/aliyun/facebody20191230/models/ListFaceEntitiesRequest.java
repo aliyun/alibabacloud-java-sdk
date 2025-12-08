@@ -4,24 +4,50 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ListFaceEntitiesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>U1</p>
+     */
     @NameInMap("EntityIdPrefix")
     public String entityIdPrefix;
 
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Offset")
     public Integer offset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Token")
     public String token;
 

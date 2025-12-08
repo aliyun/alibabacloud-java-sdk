@@ -7,6 +7,10 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetRealPersonVerificationResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10FC953D-7C0C-4915-8949-34E3246E5B79</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
     }
 
     public static class GetRealPersonVerificationResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Passed")
         public Boolean passed;
 

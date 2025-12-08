@@ -7,6 +7,10 @@ public class RecognizePublicFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizePublicFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AC4D107C-29E3-4873-A719-0D2217EA28A8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,20 @@ public class RecognizePublicFaceResponseBody extends TeaModel {
     }
 
     public static class RecognizePublicFaceResponseBodyDataElementsResultsSubResultsFaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AliFace_0006272</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>98.35</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
@@ -76,15 +88,31 @@ public class RecognizePublicFaceResponseBody extends TeaModel {
         @NameInMap("Faces")
         public java.util.List<RecognizePublicFaceResponseBodyDataElementsResultsSubResultsFaces> faces;
 
+        /**
+         * <strong>example:</strong>
+         * <p>153</p>
+         */
         @NameInMap("H")
         public Float h;
 
+        /**
+         * <strong>example:</strong>
+         * <p>132</p>
+         */
         @NameInMap("W")
         public Float w;
 
+        /**
+         * <strong>example:</strong>
+         * <p>182</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>153</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -136,15 +164,27 @@ public class RecognizePublicFaceResponseBody extends TeaModel {
     }
 
     public static class RecognizePublicFaceResponseBodyDataElementsResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sface</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>98.35</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
         @NameInMap("SubResults")
         public java.util.List<RecognizePublicFaceResponseBodyDataElementsResultsSubResults> subResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>review</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -188,12 +228,20 @@ public class RecognizePublicFaceResponseBody extends TeaModel {
     }
 
     public static class RecognizePublicFaceResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://viapi-oss.oss-cn-shanghai.aliyuncs.com/doc/facebody/xxx.jpg">https://viapi-oss.oss-cn-shanghai.aliyuncs.com/doc/facebody/xxx.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
         @NameInMap("Results")
         public java.util.List<RecognizePublicFaceResponseBodyDataElementsResults> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p>img3dhYqt1e4wO77Wnf2y@t@E-1tYAEt</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

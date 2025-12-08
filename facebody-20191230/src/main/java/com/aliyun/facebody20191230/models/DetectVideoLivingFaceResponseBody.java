@@ -7,6 +7,10 @@ public class DetectVideoLivingFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectVideoLivingFaceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8E92F28B-F889-48CB-9FCC-3207CFA2215E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DetectVideoLivingFaceResponseBody extends TeaModel {
     }
 
     public static class DetectVideoLivingFaceResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.84644949436187744</p>
+         */
         @NameInMap("FaceConfidence")
         public Float faceConfidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.72464925050735474</p>
+         */
         @NameInMap("LiveConfidence")
         public Float liveConfidence;
 

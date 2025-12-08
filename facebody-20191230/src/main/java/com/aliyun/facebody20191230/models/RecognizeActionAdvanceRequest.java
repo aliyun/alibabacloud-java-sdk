@@ -4,15 +4,29 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeActionAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
     @NameInMap("URLList")
     public java.util.List<RecognizeActionAdvanceRequestURLList> URLList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iVBORw0KGgoAAAANSUhEUgAAAoAAAAHJCAIAAACaEB9NAAEAAElEQVR4nNT9Wb****</p>
+     */
     @NameInMap("VideoData")
     public String videoData;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/RecognizeAction/RecognizeAction-video1.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/RecognizeAction/RecognizeAction-video1.mp4</a></p>
+     */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 
@@ -54,9 +68,17 @@ public class RecognizeActionAdvanceRequest extends TeaModel {
     }
 
     public static class RecognizeActionAdvanceRequestURLList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/RecognizeAction/1RecognizeAction1.png">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/RecognizeAction/1RecognizeAction1.png</a></p>
+         */
         @NameInMap("URL")
         public java.io.InputStream URLObject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgQ****</p>
+         */
         @NameInMap("imageData")
         public String imageData;
 
