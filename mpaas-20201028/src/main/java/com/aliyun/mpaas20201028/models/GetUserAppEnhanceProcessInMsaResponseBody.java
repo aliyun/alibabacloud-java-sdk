@@ -117,7 +117,7 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
         public Long beforeSize;
 
         @NameInMap("ClassForest")
-        public java.util.List<String> classForest;
+        public String classForest;
 
         @NameInMap("EnhanceMapping")
         public java.util.List<GetUserAppEnhanceProcessInMsaResponseBodyResultContentDataEnhanceMapping> enhanceMapping;
@@ -219,11 +219,11 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
             return this.beforeSize;
         }
 
-        public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setClassForest(java.util.List<String> classForest) {
+        public GetUserAppEnhanceProcessInMsaResponseBodyResultContentData setClassForest(String classForest) {
             this.classForest = classForest;
             return this;
         }
-        public java.util.List<String> getClassForest() {
+        public String getClassForest() {
             return this.classForest;
         }
 
