@@ -571,6 +571,9 @@ public class ListImageResponseBody extends TeaModel {
         @NameInMap("ResourceInstanceCategory")
         public String resourceInstanceCategory;
 
+        @NameInMap("Scene")
+        public String scene;
+
         /**
          * <p>The type of the session.</p>
          * <p>Valid values:</p>
@@ -923,6 +926,14 @@ public class ListImageResponseBody extends TeaModel {
         }
         public String getResourceInstanceCategory() {
             return this.resourceInstanceCategory;
+        }
+
+        public ListImageResponseBodyData setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
         }
 
         public ListImageResponseBodyData setSessionType(String sessionType) {
