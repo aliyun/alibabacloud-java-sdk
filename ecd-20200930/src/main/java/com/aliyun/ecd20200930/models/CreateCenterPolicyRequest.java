@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateCenterPolicyRequest extends TeaModel {
+    @NameInMap("AcademicProxy")
+    public String academicProxy;
+
     /**
      * <p>Specifies whether to grant the admin permissions to end users.</p>
      * <blockquote>
@@ -54,6 +57,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("AutoReconnect")
     public String autoReconnect;
+
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
 
     /**
      * <p>The business type.</p>
@@ -147,6 +153,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("CpuDownGradeDuration")
     public Integer cpuDownGradeDuration;
+
+    @NameInMap("CpuOverload")
+    public String cpuOverload;
 
     /**
      * <p>The CPU processors.</p>
@@ -244,6 +253,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("DisconnectKeepSessionTime")
     public Integer disconnectKeepSessionTime;
+
+    @NameInMap("DiskOverload")
+    public String diskOverload;
 
     /**
      * <p>The display mode.</p>
@@ -426,6 +438,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("MemoryDownGradeDuration")
     public Integer memoryDownGradeDuration;
 
+    @NameInMap("MemoryOverload")
+    public String memoryOverload;
+
     /**
      * <p>The memory processors.</p>
      */
@@ -528,6 +543,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("MobileWyAssistant")
     public String mobileWyAssistant;
 
+    @NameInMap("ModelLibrary")
+    public String modelLibrary;
+
     /**
      * <p>The policy name.</p>
      * <p>This parameter is required.</p>
@@ -593,6 +611,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("NoOperationDisconnectTime")
     public Integer noOperationDisconnectTime;
+
+    @NameInMap("PortProxy")
+    public String portProxy;
 
     /**
      * <p>The printer redirection policy. This parameter only applies if DeviceRedirects does not include a printer redirection policy.</p>
@@ -1228,6 +1249,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateCenterPolicyRequest setAcademicProxy(String academicProxy) {
+        this.academicProxy = academicProxy;
+        return this;
+    }
+    public String getAcademicProxy() {
+        return this.academicProxy;
+    }
+
     public CreateCenterPolicyRequest setAdminAccess(String adminAccess) {
         this.adminAccess = adminAccess;
         return this;
@@ -1266,6 +1295,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getAutoReconnect() {
         return this.autoReconnect;
+    }
+
+    public CreateCenterPolicyRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public CreateCenterPolicyRequest setBusinessType(Integer businessType) {
@@ -1356,6 +1393,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.cpuDownGradeDuration;
     }
 
+    public CreateCenterPolicyRequest setCpuOverload(String cpuOverload) {
+        this.cpuOverload = cpuOverload;
+        return this;
+    }
+    public String getCpuOverload() {
+        return this.cpuOverload;
+    }
+
     public CreateCenterPolicyRequest setCpuProcessors(java.util.List<String> cpuProcessors) {
         this.cpuProcessors = cpuProcessors;
         return this;
@@ -1434,6 +1479,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public Integer getDisconnectKeepSessionTime() {
         return this.disconnectKeepSessionTime;
+    }
+
+    public CreateCenterPolicyRequest setDiskOverload(String diskOverload) {
+        this.diskOverload = diskOverload;
+        return this;
+    }
+    public String getDiskOverload() {
+        return this.diskOverload;
     }
 
     public CreateCenterPolicyRequest setDisplayMode(String displayMode) {
@@ -1580,6 +1633,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.memoryDownGradeDuration;
     }
 
+    public CreateCenterPolicyRequest setMemoryOverload(String memoryOverload) {
+        this.memoryOverload = memoryOverload;
+        return this;
+    }
+    public String getMemoryOverload() {
+        return this.memoryOverload;
+    }
+
     public CreateCenterPolicyRequest setMemoryProcessors(java.util.List<String> memoryProcessors) {
         this.memoryProcessors = memoryProcessors;
         return this;
@@ -1660,6 +1721,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.mobileWyAssistant;
     }
 
+    public CreateCenterPolicyRequest setModelLibrary(String modelLibrary) {
+        this.modelLibrary = modelLibrary;
+        return this;
+    }
+    public String getModelLibrary() {
+        return this.modelLibrary;
+    }
+
     public CreateCenterPolicyRequest setName(String name) {
         this.name = name;
         return this;
@@ -1698,6 +1767,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public Integer getNoOperationDisconnectTime() {
         return this.noOperationDisconnectTime;
+    }
+
+    public CreateCenterPolicyRequest setPortProxy(String portProxy) {
+        this.portProxy = portProxy;
+        return this;
+    }
+    public String getPortProxy() {
+        return this.portProxy;
     }
 
     public CreateCenterPolicyRequest setPrinterRedirect(String printerRedirect) {

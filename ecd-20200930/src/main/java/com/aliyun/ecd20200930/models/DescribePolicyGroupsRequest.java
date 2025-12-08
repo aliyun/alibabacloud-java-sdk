@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsRequest extends TeaModel {
+    @NameInMap("BusinessChannel")
+    public String businessChannel;
+
     /**
      * <p>The array of cloud computer policy IDs to be excluded.</p>
      */
@@ -75,6 +78,14 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public static DescribePolicyGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePolicyGroupsRequest self = new DescribePolicyGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePolicyGroupsRequest setBusinessChannel(String businessChannel) {
+        this.businessChannel = businessChannel;
+        return this;
+    }
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     public DescribePolicyGroupsRequest setExternalPolicyGroupIds(java.util.List<String> externalPolicyGroupIds) {

@@ -833,6 +833,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroups extends TeaModel {
+        @NameInMap("AcademicProxy")
+        public String academicProxy;
+
         /**
          * <p>Indicates whether end users are granted the administrator permissions.</p>
          * <blockquote>
@@ -948,6 +951,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("CpuDownGradeDuration")
         public Integer cpuDownGradeDuration;
 
+        @NameInMap("CpuOverload")
+        public String cpuOverload;
+
         /**
          * <p>The process whitelist that is not restricted by the CPU usage limit.</p>
          */
@@ -1027,6 +1033,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("DeviceRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules> deviceRules;
+
+        @NameInMap("DiskOverload")
+        public String diskOverload;
 
         /**
          * <p>The display mode.</p>
@@ -1233,6 +1242,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("MemoryDownGradeDuration")
         public Integer memoryDownGradeDuration;
 
+        @NameInMap("MemoryOverload")
+        public String memoryOverload;
+
         /**
          * <p>The whitelist of processes that are not restricted by the memory usage limit.</p>
          */
@@ -1341,6 +1353,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("MobileWyAssistant")
         public String mobileWyAssistant;
 
+        @NameInMap("ModelLibrary")
+        public String modelLibrary;
+
         /**
          * <p>The name of the cloud computer policy.</p>
          * 
@@ -1412,6 +1427,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("PolicyStatus")
         public String policyStatus;
+
+        @NameInMap("PortProxy")
+        public String portProxy;
 
         /**
          * <p>The cloud computer preemption feature.</p>
@@ -2056,6 +2074,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAcademicProxy(String academicProxy) {
+            this.academicProxy = academicProxy;
+            return this;
+        }
+        public String getAcademicProxy() {
+            return this.academicProxy;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAdminAccess(String adminAccess) {
             this.adminAccess = adminAccess;
             return this;
@@ -2160,6 +2186,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.cpuDownGradeDuration;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuOverload(String cpuOverload) {
+            this.cpuOverload = cpuOverload;
+            return this;
+        }
+        public String getCpuOverload() {
+            return this.cpuOverload;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuProcessors(java.util.List<String> cpuProcessors) {
             this.cpuProcessors = cpuProcessors;
             return this;
@@ -2238,6 +2272,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules> getDeviceRules() {
             return this.deviceRules;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDiskOverload(String diskOverload) {
+            this.diskOverload = diskOverload;
+            return this;
+        }
+        public String getDiskOverload() {
+            return this.diskOverload;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDisplayMode(String displayMode) {
@@ -2408,6 +2450,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.memoryDownGradeDuration;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMemoryOverload(String memoryOverload) {
+            this.memoryOverload = memoryOverload;
+            return this;
+        }
+        public String getMemoryOverload() {
+            return this.memoryOverload;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMemoryProcessors(java.util.List<String> memoryProcessors) {
             this.memoryProcessors = memoryProcessors;
             return this;
@@ -2488,6 +2538,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.mobileWyAssistant;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setModelLibrary(String modelLibrary) {
+            this.modelLibrary = modelLibrary;
+            return this;
+        }
+        public String getModelLibrary() {
+            return this.modelLibrary;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setName(String name) {
             this.name = name;
             return this;
@@ -2534,6 +2592,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getPolicyStatus() {
             return this.policyStatus;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setPortProxy(String portProxy) {
+            this.portProxy = portProxy;
+            return this;
+        }
+        public String getPortProxy() {
+            return this.portProxy;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setPreemptLogin(String preemptLogin) {

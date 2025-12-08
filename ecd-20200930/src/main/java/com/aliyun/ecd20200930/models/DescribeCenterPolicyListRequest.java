@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenterPolicyListRequest extends TeaModel {
+    @NameInMap("AcademicProxy")
+    public String academicProxy;
+
     /**
      * <p>The business type.</p>
      * <p>Valid values:</p>
@@ -18,6 +21,9 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
      */
     @NameInMap("BusinessType")
     public Integer businessType;
+
+    @NameInMap("ModelLibrary")
+    public String modelLibrary;
 
     /**
      * <p>The page number.\
@@ -43,6 +49,9 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
      */
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
+
+    @NameInMap("PortProxy")
+    public String portProxy;
 
     /**
      * <p>The resource type.</p>
@@ -78,12 +87,28 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCenterPolicyListRequest setAcademicProxy(String academicProxy) {
+        this.academicProxy = academicProxy;
+        return this;
+    }
+    public String getAcademicProxy() {
+        return this.academicProxy;
+    }
+
     public DescribeCenterPolicyListRequest setBusinessType(Integer businessType) {
         this.businessType = businessType;
         return this;
     }
     public Integer getBusinessType() {
         return this.businessType;
+    }
+
+    public DescribeCenterPolicyListRequest setModelLibrary(String modelLibrary) {
+        this.modelLibrary = modelLibrary;
+        return this;
+    }
+    public String getModelLibrary() {
+        return this.modelLibrary;
     }
 
     public DescribeCenterPolicyListRequest setPageNumber(Integer pageNumber) {
@@ -108,6 +133,14 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     }
     public java.util.List<String> getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public DescribeCenterPolicyListRequest setPortProxy(String portProxy) {
+        this.portProxy = portProxy;
+        return this;
+    }
+    public String getPortProxy() {
+        return this.portProxy;
     }
 
     public DescribeCenterPolicyListRequest setResourceType(String resourceType) {

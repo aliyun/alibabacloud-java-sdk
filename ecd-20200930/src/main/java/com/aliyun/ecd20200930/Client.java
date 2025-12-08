@@ -2501,6 +2501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCenterPolicyResponse createCenterPolicyWithOptions(CreateCenterPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.academicProxy)) {
+            query.put("AcademicProxy", request.academicProxy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.adminAccess)) {
             query.put("AdminAccess", request.adminAccess);
         }
@@ -2519,6 +2523,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoReconnect)) {
             query.put("AutoReconnect", request.autoReconnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
@@ -2565,6 +2573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CpuDownGradeDuration", request.cpuDownGradeDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuOverload)) {
+            query.put("CpuOverload", request.cpuOverload);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpuProcessors)) {
             query.put("CpuProcessors", request.cpuProcessors);
         }
@@ -2603,6 +2615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.disconnectKeepSessionTime)) {
             query.put("DisconnectKeepSessionTime", request.disconnectKeepSessionTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskOverload)) {
+            query.put("DiskOverload", request.diskOverload);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.displayMode)) {
@@ -2677,6 +2693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MemoryDownGradeDuration", request.memoryDownGradeDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryOverload)) {
+            query.put("MemoryOverload", request.memoryOverload);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memoryProcessors)) {
             query.put("MemoryProcessors", request.memoryProcessors);
         }
@@ -2717,6 +2737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MobileWyAssistant", request.mobileWyAssistant);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelLibrary)) {
+            query.put("ModelLibrary", request.modelLibrary);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -2735,6 +2759,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.noOperationDisconnectTime)) {
             query.put("NoOperationDisconnectTime", request.noOperationDisconnectTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portProxy)) {
+            query.put("PortProxy", request.portProxy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.printerRedirect)) {
@@ -7290,8 +7318,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCenterPolicyListResponse describeCenterPolicyListWithOptions(DescribeCenterPolicyListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.academicProxy)) {
+            query.put("AcademicProxy", request.academicProxy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
             query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelLibrary)) {
+            query.put("ModelLibrary", request.modelLibrary);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -7304,6 +7340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
             query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portProxy)) {
+            query.put("PortProxy", request.portProxy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
@@ -10368,6 +10408,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePolicyGroupsResponse describePolicyGroupsWithOptions(DescribePolicyGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.externalPolicyGroupIds)) {
             query.put("ExternalPolicyGroupIds", request.externalPolicyGroupIds);
         }
@@ -14536,6 +14580,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCenterPolicyResponse modifyCenterPolicyWithOptions(ModifyCenterPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.academicProxy)) {
+            query.put("AcademicProxy", request.academicProxy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.adminAccess)) {
             query.put("AdminAccess", request.adminAccess);
         }
@@ -14554,6 +14602,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoReconnect)) {
             query.put("AutoReconnect", request.autoReconnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
@@ -14600,6 +14652,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CpuDownGradeDuration", request.cpuDownGradeDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuOverload)) {
+            query.put("CpuOverload", request.cpuOverload);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpuProcessors)) {
             query.put("CpuProcessors", request.cpuProcessors);
         }
@@ -14638,6 +14694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.disconnectKeepSessionTime)) {
             query.put("DisconnectKeepSessionTime", request.disconnectKeepSessionTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskOverload)) {
+            query.put("DiskOverload", request.diskOverload);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.displayMode)) {
@@ -14712,6 +14772,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MemoryDownGradeDuration", request.memoryDownGradeDuration);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryOverload)) {
+            query.put("MemoryOverload", request.memoryOverload);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memoryProcessors)) {
             query.put("MemoryProcessors", request.memoryProcessors);
         }
@@ -14752,6 +14816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MobileWyAssistant", request.mobileWyAssistant);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelLibrary)) {
+            query.put("ModelLibrary", request.modelLibrary);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -14774,6 +14842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
             query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portProxy)) {
+            query.put("PortProxy", request.portProxy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.printerRedirect)) {
