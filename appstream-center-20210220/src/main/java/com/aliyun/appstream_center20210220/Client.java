@@ -28,6 +28,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>终端用户登出</p>
+     * 
+     * @param request ClientUserLogoutRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClientUserLogoutResponse
+     */
+    public ClientUserLogoutResponse clientUserLogoutWithOptions(ClientUserLogoutRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
+            query.put("LoginToken", request.loginToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profileRegion)) {
+            query.put("ProfileRegion", request.profileRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClientUserLogout"),
+            new TeaPair("version", "2021-02-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new ClientUserLogoutResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>终端用户登出</p>
+     * 
+     * @param request ClientUserLogoutRequest
+     * @return ClientUserLogoutResponse
+     */
+    public ClientUserLogoutResponse clientUserLogout(ClientUserLogoutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clientUserLogoutWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>身份认证查询接口</p>
      * 
      * @param tmpReq FindIdpListByLoginIdentifierRequest
