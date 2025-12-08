@@ -413,6 +413,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AllocateIpAddressResponse allocateIpAddressWithOptions(AllocateIpAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            query.put("Bandwidth", request.bandwidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
+            query.put("InternetChargeType", request.internetChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
             query.put("NetworkInterfaceId", request.networkInterfaceId);
         }
