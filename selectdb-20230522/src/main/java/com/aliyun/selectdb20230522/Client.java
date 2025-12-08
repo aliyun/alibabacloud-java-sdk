@@ -802,6 +802,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建虚拟集群</p>
+     * 
+     * @param request CreateVirtualClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVirtualClusterResponse
+     */
+    public CreateVirtualClusterResponse createVirtualClusterWithOptions(CreateVirtualClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activeClusterId)) {
+            query.put("ActiveClusterId", request.activeClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
+            query.put("ClusterName", request.clusterName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyClusterId)) {
+            query.put("StandbyClusterId", request.standbyClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVirtualCluster"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVirtualClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建虚拟集群</p>
+     * 
+     * @param request CreateVirtualClusterRequest
+     * @return CreateVirtualClusterResponse
+     */
+    public CreateVirtualClusterResponse createVirtualCluster(CreateVirtualClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVirtualClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a cluster from an instance.</p>
      * 
      * @param request DeleteDBClusterRequest
@@ -1034,6 +1094,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteElasticRuleResponse deleteElasticRule(DeleteElasticRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteElasticRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除虚拟集群</p>
+     * 
+     * @param request DeleteVirtualClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVirtualClusterResponse
+     */
+    public DeleteVirtualClusterResponse deleteVirtualClusterWithOptions(DeleteVirtualClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVirtualCluster"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVirtualClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除虚拟集群</p>
+     * 
+     * @param request DeleteVirtualClusterRequest
+     * @return DeleteVirtualClusterResponse
+     */
+    public DeleteVirtualClusterResponse deleteVirtualCluster(DeleteVirtualClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVirtualClusterWithOptions(request, runtime);
     }
 
     /**
@@ -2132,6 +2244,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySecurityIPListResponse modifySecurityIPList(ModifySecurityIPListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySecurityIPListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改虚拟集群</p>
+     * 
+     * @param request ModifyVirtualClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyVirtualClusterResponse
+     */
+    public ModifyVirtualClusterResponse modifyVirtualClusterWithOptions(ModifyVirtualClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activeClusterId)) {
+            query.put("ActiveClusterId", request.activeClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyClusterId)) {
+            query.put("StandbyClusterId", request.standbyClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyVirtualCluster"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVirtualClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改虚拟集群</p>
+     * 
+     * @param request ModifyVirtualClusterRequest
+     * @return ModifyVirtualClusterResponse
+     */
+    public ModifyVirtualClusterResponse modifyVirtualCluster(ModifyVirtualClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyVirtualClusterWithOptions(request, runtime);
     }
 
     /**
