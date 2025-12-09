@@ -37,6 +37,12 @@ public class AddZoneToVpcEndpointRequest extends TeaModel {
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The IPv6 address of the endpoint ENI in the zone that you want to add.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:4005:3b6:<strong><strong>:6955:c3cb:34c:</strong></strong></p>
+     */
     @NameInMap("Ipv6Address")
     public String ipv6Address;
 

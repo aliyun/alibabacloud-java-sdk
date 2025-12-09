@@ -4,6 +4,16 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointsRequest extends TeaModel {
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
@@ -72,7 +82,7 @@ public class ListVpcEndpointsRequest extends TeaModel {
     public String endpointType;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -123,7 +133,7 @@ public class ListVpcEndpointsRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListVpcEndpointsRequestTag> tag;
@@ -248,8 +258,8 @@ public class ListVpcEndpointsRequest extends TeaModel {
 
     public static class ListVpcEndpointsRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -258,8 +268,8 @@ public class ListVpcEndpointsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

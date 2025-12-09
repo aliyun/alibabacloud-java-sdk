@@ -70,6 +70,9 @@ public class EnableVpcEndpointConnectionRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    @NameInMap("TrafficControlMode")
+    public String trafficControlMode;
+
     public static EnableVpcEndpointConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableVpcEndpointConnectionRequest self = new EnableVpcEndpointConnectionRequest();
         return TeaModel.build(map, self);
@@ -121,6 +124,14 @@ public class EnableVpcEndpointConnectionRequest extends TeaModel {
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public EnableVpcEndpointConnectionRequest setTrafficControlMode(String trafficControlMode) {
+        this.trafficControlMode = trafficControlMode;
+        return this;
+    }
+    public String getTrafficControlMode() {
+        return this.trafficControlMode;
     }
 
 }

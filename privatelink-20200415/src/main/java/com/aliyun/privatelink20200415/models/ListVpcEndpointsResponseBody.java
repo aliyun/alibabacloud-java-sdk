@@ -138,6 +138,16 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointsResponseBodyEndpoints extends TeaModel {
+        /**
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("AddressIpVersion")
         public String addressIpVersion;
 

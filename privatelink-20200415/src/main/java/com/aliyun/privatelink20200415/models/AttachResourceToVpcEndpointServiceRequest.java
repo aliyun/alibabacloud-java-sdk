@@ -29,7 +29,7 @@ public class AttachResourceToVpcEndpointServiceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the endpoint service to which you want to add the service resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

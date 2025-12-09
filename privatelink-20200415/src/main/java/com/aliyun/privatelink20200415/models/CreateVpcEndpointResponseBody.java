@@ -4,6 +4,16 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong> (default)</li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
@@ -142,6 +152,9 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    @NameInMap("ZoneAffinityEnabled")
+    public Boolean zoneAffinityEnabled;
+
     public static CreateVpcEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcEndpointResponseBody self = new CreateVpcEndpointResponseBody();
         return TeaModel.build(map, self);
@@ -257,6 +270,14 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public CreateVpcEndpointResponseBody setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {
+        this.zoneAffinityEnabled = zoneAffinityEnabled;
+        return this;
+    }
+    public Boolean getZoneAffinityEnabled() {
+        return this.zoneAffinityEnabled;
     }
 
 }

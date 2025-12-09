@@ -345,6 +345,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @NameInMap("ServiceId")
         public String serviceId;
 
+        @NameInMap("TrafficControlMode")
+        public String trafficControlMode;
+
         /**
          * <p>The zones.</p>
          */
@@ -426,6 +429,14 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public ListVpcEndpointConnectionsResponseBodyConnections setTrafficControlMode(String trafficControlMode) {
+            this.trafficControlMode = trafficControlMode;
+            return this;
+        }
+        public String getTrafficControlMode() {
+            return this.trafficControlMode;
         }
 
         public ListVpcEndpointConnectionsResponseBodyConnections setZones(java.util.List<ListVpcEndpointConnectionsResponseBodyConnectionsZones> zones) {

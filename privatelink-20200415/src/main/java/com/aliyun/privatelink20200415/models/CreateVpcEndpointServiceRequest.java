@@ -4,6 +4,19 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointServiceRequest extends TeaModel {
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong> (default)</li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB. An endpoint service supports dual-stack only if its backend resources support dual-stack.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
@@ -68,7 +81,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The service resources of the endpoint service.</p>
+     * <p>The service resources of the endpoint service. You can create at most 10 resources. After the resource is created, you can continue to add service resources to the endpoint.</p>
      */
     @NameInMap("Resource")
     public java.util.List<CreateVpcEndpointServiceRequestResource> resource;
@@ -253,7 +266,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
 
     public static class CreateVpcEndpointServiceRequestResource extends TeaModel {
         /**
-         * <p>The ID of the service resource that is added to the endpoint service. You can specify up to 20 service resource IDs.</p>
+         * <p>The ID of the service resource that is added to the endpoint service.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-hp32z1wp5peaoox2q****</p>
@@ -279,7 +292,7 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huhehaote-a</p>

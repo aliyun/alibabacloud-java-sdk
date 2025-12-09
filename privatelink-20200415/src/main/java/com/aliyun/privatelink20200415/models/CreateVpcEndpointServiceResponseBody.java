@@ -4,6 +4,16 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointServiceResponseBody extends TeaModel {
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
@@ -122,6 +132,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("ServiceSupportIPv6")
+    @Deprecated
     public Boolean serviceSupportIPv6;
 
     /**
@@ -230,6 +241,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         return this.serviceStatus;
     }
 
+    @Deprecated
     public CreateVpcEndpointServiceResponseBody setServiceSupportIPv6(Boolean serviceSupportIPv6) {
         this.serviceSupportIPv6 = serviceSupportIPv6;
         return this;

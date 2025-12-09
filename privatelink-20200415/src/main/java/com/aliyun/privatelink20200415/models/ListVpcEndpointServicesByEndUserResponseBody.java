@@ -138,6 +138,16 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServicesByEndUserResponseBodyServices extends TeaModel {
+        /**
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("AddressIpVersion")
         public String addressIpVersion;
 
@@ -233,6 +243,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> tags;
 
+        @NameInMap("ZoneAffinityEnabled")
+        public Boolean zoneAffinityEnabled;
+
         /**
          * <p>The zones of the endpoint service that can be associated with the endpoint.</p>
          */
@@ -322,6 +335,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
         public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> getTags() {
             return this.tags;
+        }
+
+        public ListVpcEndpointServicesByEndUserResponseBodyServices setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {
+            this.zoneAffinityEnabled = zoneAffinityEnabled;
+            return this;
+        }
+        public Boolean getZoneAffinityEnabled() {
+            return this.zoneAffinityEnabled;
         }
 
         public ListVpcEndpointServicesByEndUserResponseBodyServices setZones(java.util.List<String> zones) {

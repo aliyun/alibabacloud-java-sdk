@@ -4,6 +4,19 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 

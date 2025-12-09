@@ -4,6 +4,19 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointRequest extends TeaModel {
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong> (default)</li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> An endpoint supports dual-stack if its associated endpoint service and VPC both support dual-stack.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
@@ -175,6 +188,9 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("Zone")
     public java.util.List<CreateVpcEndpointRequestZone> zone;
 
+    @NameInMap("ZoneAffinityEnabled")
+    public Boolean zoneAffinityEnabled;
+
     /**
      * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Set the value to <strong>1</strong>.</p>
      * 
@@ -317,6 +333,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
         return this.zone;
     }
 
+    public CreateVpcEndpointRequest setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {
+        this.zoneAffinityEnabled = zoneAffinityEnabled;
+        return this;
+    }
+    public Boolean getZoneAffinityEnabled() {
+        return this.zoneAffinityEnabled;
+    }
+
     public CreateVpcEndpointRequest setZonePrivateIpAddressCount(Long zonePrivateIpAddressCount) {
         this.zonePrivateIpAddressCount = zonePrivateIpAddressCount;
         return this;
@@ -368,11 +392,20 @@ public class CreateVpcEndpointRequest extends TeaModel {
     }
 
     public static class CreateVpcEndpointRequestZone extends TeaModel {
+        /**
+         * <p>The IPv6 address of the zone where the endpoint is deployed.</p>
+         * <blockquote>
+         * <p> You can specify this parameter only if AddressIpVersion is set to DualStack.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:4005:34d:<strong><strong>:a58b:62a3:6b55:</strong></strong></p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
         /**
-         * <p>The ID of the vSwitch where you want to create the endpoint ENI in the zone. You can specify up to 10 vSwitch IDs.</p>
+         * <p>The ID of the vSwitch for which you want to create the endpoint elastic network interface (ENI) in the zone. You can specify up to 10 vSwitches.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-hp3uf6045ljdhd5zr****</p>
@@ -381,8 +414,8 @@ public class CreateVpcEndpointRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone in which the endpoint is deployed.</p>
-         * <p>You can specify up to 10 zone IDs.</p>
+         * <p>The ID of the zone where the endpoint service is deployed.</p>
+         * <p>You can specify up to 10 zones.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-huhehaote-b</p>
@@ -391,8 +424,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>The IP address of the zone in which the endpoint is deployed.</p>
-         * <p>You can specify up to 10 IP addresses.</p>
+         * <p>The IP address of the zone where the endpoint is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>

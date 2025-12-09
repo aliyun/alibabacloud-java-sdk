@@ -4,6 +4,19 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpcEndpointAttributeRequest extends TeaModel {
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> An endpoint supports dual-stack only if its associated endpoint service and VPC support dual-stack.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
@@ -97,6 +110,9 @@ public class UpdateVpcEndpointAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ZoneAffinityEnabled")
+    public Boolean zoneAffinityEnabled;
+
     public static UpdateVpcEndpointAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateVpcEndpointAttributeRequest self = new UpdateVpcEndpointAttributeRequest();
         return TeaModel.build(map, self);
@@ -164,6 +180,14 @@ public class UpdateVpcEndpointAttributeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateVpcEndpointAttributeRequest setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {
+        this.zoneAffinityEnabled = zoneAffinityEnabled;
+        return this;
+    }
+    public Boolean getZoneAffinityEnabled() {
+        return this.zoneAffinityEnabled;
     }
 
 }
