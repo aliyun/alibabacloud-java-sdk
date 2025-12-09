@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "central";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-southeast-1", "openapi-mcp.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "openapi-mcp.cn-hangzhou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("openapiexplorer", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -113,6 +117,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enableAssumeRole", request.enableAssumeRole);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCustomVpcWhitelist)) {
+            body.put("enableCustomVpcWhitelist", request.enableCustomVpcWhitelist);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instructions)) {
             body.put("instructions", request.instructions);
         }
@@ -133,12 +141,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("prompts", request.prompts);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.publicAccess)) {
+            body.put("publicAccess", request.publicAccess);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemTools)) {
             body.put("systemTools", request.systemTools);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.terraformTools)) {
             body.put("terraformTools", request.terraformTools);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcWhitelists)) {
+            body.put("vpcWhitelists", request.vpcWhitelists);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -251,6 +267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.apiVersion)) {
             body.put("apiVersion", request.apiVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonApiParams)) {
+            body.put("jsonApiParams", request.jsonApiParams);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.product)) {
@@ -392,6 +412,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getApiMcpServerWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户全局API MCP Server配置</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetApiMcpServerUserConfigResponse
+     */
+    public GetApiMcpServerUserConfigResponse getApiMcpServerUserConfigWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetApiMcpServerUserConfig"),
+            new TeaPair("version", "2024-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/userconfig/get"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetApiMcpServerUserConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户全局API MCP Server配置</p>
+     * @return GetApiMcpServerUserConfigResponse
+     */
+    public GetApiMcpServerUserConfigResponse getApiMcpServerUserConfig() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getApiMcpServerUserConfigWithOptions(headers, runtime);
     }
 
     /**
@@ -846,6 +903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enableAssumeRole", request.enableAssumeRole);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCustomVpcWhitelist)) {
+            body.put("enableCustomVpcWhitelist", request.enableCustomVpcWhitelist);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instructions)) {
             body.put("instructions", request.instructions);
         }
@@ -862,12 +923,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("prompts", request.prompts);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.publicAccess)) {
+            body.put("publicAccess", request.publicAccess);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemTools)) {
             body.put("systemTools", request.systemTools);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.terraformTools)) {
             body.put("terraformTools", request.terraformTools);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcWhitelists)) {
+            body.put("vpcWhitelists", request.vpcWhitelists);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -900,5 +969,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateApiMcpServerWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改用户全局API MCP Server配置</p>
+     * 
+     * @param request UpdateApiMcpServerUserConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateApiMcpServerUserConfigResponse
+     */
+    public UpdateApiMcpServerUserConfigResponse updateApiMcpServerUserConfigWithOptions(UpdateApiMcpServerUserConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enablePublicAccess)) {
+            body.put("enablePublicAccess", request.enablePublicAccess);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcWhitelists)) {
+            body.put("vpcWhitelists", request.vpcWhitelists);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateApiMcpServerUserConfig"),
+            new TeaPair("version", "2024-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/userconfig/update"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateApiMcpServerUserConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改用户全局API MCP Server配置</p>
+     * 
+     * @param request UpdateApiMcpServerUserConfigRequest
+     * @return UpdateApiMcpServerUserConfigResponse
+     */
+    public UpdateApiMcpServerUserConfigResponse updateApiMcpServerUserConfig(UpdateApiMcpServerUserConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateApiMcpServerUserConfigWithOptions(request, headers, runtime);
     }
 }

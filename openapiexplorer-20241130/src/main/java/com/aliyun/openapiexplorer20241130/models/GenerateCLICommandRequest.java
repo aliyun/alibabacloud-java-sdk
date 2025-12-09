@@ -11,6 +11,7 @@ public class GenerateCLICommandRequest extends TeaModel {
     public String api;
 
     @NameInMap("apiParams")
+    @Deprecated
     public java.util.Map<String, ?> apiParams;
 
     /**
@@ -18,6 +19,9 @@ public class GenerateCLICommandRequest extends TeaModel {
      */
     @NameInMap("apiVersion")
     public String apiVersion;
+
+    @NameInMap("jsonApiParams")
+    public String jsonApiParams;
 
     /**
      * <p>This parameter is required.</p>
@@ -41,6 +45,7 @@ public class GenerateCLICommandRequest extends TeaModel {
         return this.api;
     }
 
+    @Deprecated
     public GenerateCLICommandRequest setApiParams(java.util.Map<String, ?> apiParams) {
         this.apiParams = apiParams;
         return this;
@@ -55,6 +60,14 @@ public class GenerateCLICommandRequest extends TeaModel {
     }
     public String getApiVersion() {
         return this.apiVersion;
+    }
+
+    public GenerateCLICommandRequest setJsonApiParams(String jsonApiParams) {
+        this.jsonApiParams = jsonApiParams;
+        return this;
+    }
+    public String getJsonApiParams() {
+        return this.jsonApiParams;
     }
 
     public GenerateCLICommandRequest setProduct(String product) {

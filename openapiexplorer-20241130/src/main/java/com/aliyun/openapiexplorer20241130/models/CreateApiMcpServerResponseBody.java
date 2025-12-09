@@ -65,6 +65,12 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
         @NameInMap("sse")
         public String sse;
 
+        @NameInMap("vpcMcp")
+        public String vpcMcp;
+
+        @NameInMap("vpcSse")
+        public String vpcSse;
+
         public static CreateApiMcpServerResponseBodyUrls build(java.util.Map<String, ?> map) throws Exception {
             CreateApiMcpServerResponseBodyUrls self = new CreateApiMcpServerResponseBodyUrls();
             return TeaModel.build(map, self);
@@ -84,6 +90,22 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
         }
         public String getSse() {
             return this.sse;
+        }
+
+        public CreateApiMcpServerResponseBodyUrls setVpcMcp(String vpcMcp) {
+            this.vpcMcp = vpcMcp;
+            return this;
+        }
+        public String getVpcMcp() {
+            return this.vpcMcp;
+        }
+
+        public CreateApiMcpServerResponseBodyUrls setVpcSse(String vpcSse) {
+            this.vpcSse = vpcSse;
+            return this;
+        }
+        public String getVpcSse() {
+            return this.vpcSse;
         }
 
     }

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>openapiexplorer20241130</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <packaging>jar</packaging>
   <name>openapiexplorer20241130</name>
   <description>Alibaba Cloud OpenAPI Explorer (20241130) SDK for Java

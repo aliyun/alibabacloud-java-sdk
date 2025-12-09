@@ -47,6 +47,9 @@ public class UpdateApiMcpServerRequest extends TeaModel {
     @NameInMap("enableAssumeRole")
     public Boolean enableAssumeRole;
 
+    @NameInMap("enableCustomVpcWhitelist")
+    public Boolean enableCustomVpcWhitelist;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -71,11 +74,17 @@ public class UpdateApiMcpServerRequest extends TeaModel {
     @NameInMap("prompts")
     public java.util.List<UpdateApiMcpServerRequestPrompts> prompts;
 
+    @NameInMap("publicAccess")
+    public String publicAccess;
+
     @NameInMap("systemTools")
     public java.util.List<String> systemTools;
 
     @NameInMap("terraformTools")
     public java.util.List<UpdateApiMcpServerRequestTerraformTools> terraformTools;
+
+    @NameInMap("vpcWhitelists")
+    public java.util.List<String> vpcWhitelists;
 
     /**
      * <strong>example:</strong>
@@ -146,6 +155,14 @@ public class UpdateApiMcpServerRequest extends TeaModel {
         return this.enableAssumeRole;
     }
 
+    public UpdateApiMcpServerRequest setEnableCustomVpcWhitelist(Boolean enableCustomVpcWhitelist) {
+        this.enableCustomVpcWhitelist = enableCustomVpcWhitelist;
+        return this;
+    }
+    public Boolean getEnableCustomVpcWhitelist() {
+        return this.enableCustomVpcWhitelist;
+    }
+
     public UpdateApiMcpServerRequest setInstructions(String instructions) {
         this.instructions = instructions;
         return this;
@@ -178,6 +195,14 @@ public class UpdateApiMcpServerRequest extends TeaModel {
         return this.prompts;
     }
 
+    public UpdateApiMcpServerRequest setPublicAccess(String publicAccess) {
+        this.publicAccess = publicAccess;
+        return this;
+    }
+    public String getPublicAccess() {
+        return this.publicAccess;
+    }
+
     public UpdateApiMcpServerRequest setSystemTools(java.util.List<String> systemTools) {
         this.systemTools = systemTools;
         return this;
@@ -192,6 +217,14 @@ public class UpdateApiMcpServerRequest extends TeaModel {
     }
     public java.util.List<UpdateApiMcpServerRequestTerraformTools> getTerraformTools() {
         return this.terraformTools;
+    }
+
+    public UpdateApiMcpServerRequest setVpcWhitelists(java.util.List<String> vpcWhitelists) {
+        this.vpcWhitelists = vpcWhitelists;
+        return this;
+    }
+    public java.util.List<String> getVpcWhitelists() {
+        return this.vpcWhitelists;
     }
 
     public UpdateApiMcpServerRequest setClientToken(String clientToken) {

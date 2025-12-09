@@ -57,6 +57,9 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     @NameInMap("enableAssumeRole")
     public Boolean enableAssumeRole;
 
+    @NameInMap("enableCustomVpcWhitelist")
+    public Boolean enableCustomVpcWhitelist;
+
     /**
      * <strong>example:</strong>
      * <p>v6ZZ7ftCzEILW***</p>
@@ -94,6 +97,9 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     @NameInMap("prompts")
     public java.util.List<GetApiMcpServerResponseBodyPrompts> prompts;
+
+    @NameInMap("publicAccess")
+    public String publicAccess;
 
     /**
      * <strong>example:</strong>
@@ -147,6 +153,9 @@ public class GetApiMcpServerResponseBody extends TeaModel {
 
     @NameInMap("urls")
     public GetApiMcpServerResponseBodyUrls urls;
+
+    @NameInMap("vpcWhitelists")
+    public java.util.List<String> vpcWhitelists;
 
     public static GetApiMcpServerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetApiMcpServerResponseBody self = new GetApiMcpServerResponseBody();
@@ -217,6 +226,14 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         return this.enableAssumeRole;
     }
 
+    public GetApiMcpServerResponseBody setEnableCustomVpcWhitelist(Boolean enableCustomVpcWhitelist) {
+        this.enableCustomVpcWhitelist = enableCustomVpcWhitelist;
+        return this;
+    }
+    public Boolean getEnableCustomVpcWhitelist() {
+        return this.enableCustomVpcWhitelist;
+    }
+
     public GetApiMcpServerResponseBody setId(String id) {
         this.id = id;
         return this;
@@ -263,6 +280,14 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     }
     public java.util.List<GetApiMcpServerResponseBodyPrompts> getPrompts() {
         return this.prompts;
+    }
+
+    public GetApiMcpServerResponseBody setPublicAccess(String publicAccess) {
+        this.publicAccess = publicAccess;
+        return this;
+    }
+    public String getPublicAccess() {
+        return this.publicAccess;
     }
 
     public GetApiMcpServerResponseBody setRequestId(String requestId) {
@@ -327,6 +352,14 @@ public class GetApiMcpServerResponseBody extends TeaModel {
     }
     public GetApiMcpServerResponseBodyUrls getUrls() {
         return this.urls;
+    }
+
+    public GetApiMcpServerResponseBody setVpcWhitelists(java.util.List<String> vpcWhitelists) {
+        this.vpcWhitelists = vpcWhitelists;
+        return this;
+    }
+    public java.util.List<String> getVpcWhitelists() {
+        return this.vpcWhitelists;
     }
 
     public static class GetApiMcpServerResponseBodyAdditionalApiDescriptionsConstParameters extends TeaModel {
@@ -831,6 +864,12 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         @NameInMap("sse")
         public String sse;
 
+        @NameInMap("vpcMcp")
+        public String vpcMcp;
+
+        @NameInMap("vpcSse")
+        public String vpcSse;
+
         public static GetApiMcpServerResponseBodyUrls build(java.util.Map<String, ?> map) throws Exception {
             GetApiMcpServerResponseBodyUrls self = new GetApiMcpServerResponseBodyUrls();
             return TeaModel.build(map, self);
@@ -850,6 +889,22 @@ public class GetApiMcpServerResponseBody extends TeaModel {
         }
         public String getSse() {
             return this.sse;
+        }
+
+        public GetApiMcpServerResponseBodyUrls setVpcMcp(String vpcMcp) {
+            this.vpcMcp = vpcMcp;
+            return this;
+        }
+        public String getVpcMcp() {
+            return this.vpcMcp;
+        }
+
+        public GetApiMcpServerResponseBodyUrls setVpcSse(String vpcSse) {
+            this.vpcSse = vpcSse;
+            return this;
+        }
+        public String getVpcSse() {
+            return this.vpcSse;
         }
 
     }

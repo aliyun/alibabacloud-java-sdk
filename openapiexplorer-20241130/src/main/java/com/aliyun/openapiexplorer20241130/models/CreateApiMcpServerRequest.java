@@ -57,6 +57,9 @@ public class CreateApiMcpServerRequest extends TeaModel {
     @NameInMap("enableAssumeRole")
     public Boolean enableAssumeRole;
 
+    @NameInMap("enableCustomVpcWhitelist")
+    public Boolean enableCustomVpcWhitelist;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -90,11 +93,17 @@ public class CreateApiMcpServerRequest extends TeaModel {
     @NameInMap("prompts")
     public java.util.List<CreateApiMcpServerRequestPrompts> prompts;
 
+    @NameInMap("publicAccess")
+    public String publicAccess;
+
     @NameInMap("systemTools")
     public java.util.List<String> systemTools;
 
     @NameInMap("terraformTools")
     public java.util.List<CreateApiMcpServerRequestTerraformTools> terraformTools;
+
+    @NameInMap("vpcWhitelists")
+    public java.util.List<String> vpcWhitelists;
 
     public static CreateApiMcpServerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApiMcpServerRequest self = new CreateApiMcpServerRequest();
@@ -157,6 +166,14 @@ public class CreateApiMcpServerRequest extends TeaModel {
         return this.enableAssumeRole;
     }
 
+    public CreateApiMcpServerRequest setEnableCustomVpcWhitelist(Boolean enableCustomVpcWhitelist) {
+        this.enableCustomVpcWhitelist = enableCustomVpcWhitelist;
+        return this;
+    }
+    public Boolean getEnableCustomVpcWhitelist() {
+        return this.enableCustomVpcWhitelist;
+    }
+
     public CreateApiMcpServerRequest setInstructions(String instructions) {
         this.instructions = instructions;
         return this;
@@ -197,6 +214,14 @@ public class CreateApiMcpServerRequest extends TeaModel {
         return this.prompts;
     }
 
+    public CreateApiMcpServerRequest setPublicAccess(String publicAccess) {
+        this.publicAccess = publicAccess;
+        return this;
+    }
+    public String getPublicAccess() {
+        return this.publicAccess;
+    }
+
     public CreateApiMcpServerRequest setSystemTools(java.util.List<String> systemTools) {
         this.systemTools = systemTools;
         return this;
@@ -211,6 +236,14 @@ public class CreateApiMcpServerRequest extends TeaModel {
     }
     public java.util.List<CreateApiMcpServerRequestTerraformTools> getTerraformTools() {
         return this.terraformTools;
+    }
+
+    public CreateApiMcpServerRequest setVpcWhitelists(java.util.List<String> vpcWhitelists) {
+        this.vpcWhitelists = vpcWhitelists;
+        return this;
+    }
+    public java.util.List<String> getVpcWhitelists() {
+        return this.vpcWhitelists;
     }
 
     public static class CreateApiMcpServerRequestAdditionalApiDescriptionsConstParameters extends TeaModel {

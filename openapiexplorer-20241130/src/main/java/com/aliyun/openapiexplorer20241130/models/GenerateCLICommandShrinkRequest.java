@@ -11,6 +11,7 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
     public String api;
 
     @NameInMap("apiParams")
+    @Deprecated
     public String apiParamsShrink;
 
     /**
@@ -18,6 +19,9 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
      */
     @NameInMap("apiVersion")
     public String apiVersion;
+
+    @NameInMap("jsonApiParams")
+    public String jsonApiParams;
 
     /**
      * <p>This parameter is required.</p>
@@ -41,6 +45,7 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
         return this.api;
     }
 
+    @Deprecated
     public GenerateCLICommandShrinkRequest setApiParamsShrink(String apiParamsShrink) {
         this.apiParamsShrink = apiParamsShrink;
         return this;
@@ -55,6 +60,14 @@ public class GenerateCLICommandShrinkRequest extends TeaModel {
     }
     public String getApiVersion() {
         return this.apiVersion;
+    }
+
+    public GenerateCLICommandShrinkRequest setJsonApiParams(String jsonApiParams) {
+        this.jsonApiParams = jsonApiParams;
+        return this;
+    }
+    public String getJsonApiParams() {
+        return this.jsonApiParams;
     }
 
     public GenerateCLICommandShrinkRequest setProduct(String product) {
