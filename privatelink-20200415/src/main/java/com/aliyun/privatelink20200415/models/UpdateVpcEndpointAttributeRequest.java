@@ -110,6 +110,9 @@ public class UpdateVpcEndpointAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResetPolicy")
+    public Boolean resetPolicy;
+
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
@@ -180,6 +183,14 @@ public class UpdateVpcEndpointAttributeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateVpcEndpointAttributeRequest setResetPolicy(Boolean resetPolicy) {
+        this.resetPolicy = resetPolicy;
+        return this;
+    }
+    public Boolean getResetPolicy() {
+        return this.resetPolicy;
     }
 
     public UpdateVpcEndpointAttributeRequest setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {

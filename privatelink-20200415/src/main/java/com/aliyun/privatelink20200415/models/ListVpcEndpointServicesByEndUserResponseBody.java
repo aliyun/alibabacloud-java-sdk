@@ -151,6 +151,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @NameInMap("AddressIpVersion")
         public String addressIpVersion;
 
+        @NameInMap("AutoAcceptEnabled")
+        public Boolean autoAcceptEnabled;
+
         /**
          * <p>The payer. Valid values:</p>
          * <ul>
@@ -243,6 +246,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> tags;
 
+        @NameInMap("VpcEndpointPolicySupported")
+        public Boolean vpcEndpointPolicySupported;
+
         @NameInMap("ZoneAffinityEnabled")
         public Boolean zoneAffinityEnabled;
 
@@ -263,6 +269,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
         public String getAddressIpVersion() {
             return this.addressIpVersion;
+        }
+
+        public ListVpcEndpointServicesByEndUserResponseBodyServices setAutoAcceptEnabled(Boolean autoAcceptEnabled) {
+            this.autoAcceptEnabled = autoAcceptEnabled;
+            return this;
+        }
+        public Boolean getAutoAcceptEnabled() {
+            return this.autoAcceptEnabled;
         }
 
         public ListVpcEndpointServicesByEndUserResponseBodyServices setPayer(String payer) {
@@ -335,6 +349,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
         public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> getTags() {
             return this.tags;
+        }
+
+        public ListVpcEndpointServicesByEndUserResponseBodyServices setVpcEndpointPolicySupported(Boolean vpcEndpointPolicySupported) {
+            this.vpcEndpointPolicySupported = vpcEndpointPolicySupported;
+            return this;
+        }
+        public Boolean getVpcEndpointPolicySupported() {
+            return this.vpcEndpointPolicySupported;
         }
 
         public ListVpcEndpointServicesByEndUserResponseBodyServices setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {
