@@ -1410,19 +1410,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a Container Service for Kubernetes (ACK) edge cluster.</p>
      * 
-     * @param request CreateClusterRequest
+     * @param tmpReq CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateClusterResponse
      */
-    public CreateClusterResponse createClusterWithOptions(CreateClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateClusterResponse createClusterWithOptions(CreateClusterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateClusterShrinkRequest request = new CreateClusterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.controlPlaneConfig)) {
+            request.controlPlaneConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.controlPlaneConfig, "ControlPlaneConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.podVswitchIds)) {
+            request.podVswitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.podVswitchIds, "PodVswitchIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.vswitchIds)) {
+            request.vswitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vswitchIds, "VswitchIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
+            query.put("ClusterType", request.clusterType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterVersion)) {
             query.put("ClusterVersion", request.clusterVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.containerCidr)) {
+            query.put("ContainerCidr", request.containerCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.controlPlaneConfigShrink)) {
+            query.put("ControlPlaneConfig", request.controlPlaneConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
+            query.put("EnsRegionId", request.ensRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kubernetesVersion)) {
+            query.put("KubernetesVersion", request.kubernetesVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
+            query.put("LoadBalancerId", request.loadBalancerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.podVswitchIdsShrink)) {
+            query.put("PodVswitchIds", request.podVswitchIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profile)) {
+            query.put("Profile", request.profile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publicAccess)) {
+            query.put("PublicAccess", request.publicAccess);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCidr)) {
+            query.put("ServiceCidr", request.serviceCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswitchIdsShrink)) {
+            query.put("VswitchIds", request.vswitchIdsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
