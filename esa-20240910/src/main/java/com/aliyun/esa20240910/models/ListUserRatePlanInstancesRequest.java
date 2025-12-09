@@ -44,6 +44,9 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PlanNameEn")
+    public String planNameEn;
+
     @NameInMap("PlanType")
     public String planType;
 
@@ -132,6 +135,14 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUserRatePlanInstancesRequest setPlanNameEn(String planNameEn) {
+        this.planNameEn = planNameEn;
+        return this;
+    }
+    public String getPlanNameEn() {
+        return this.planNameEn;
     }
 
     public ListUserRatePlanInstancesRequest setPlanType(String planType) {
