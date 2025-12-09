@@ -18,6 +18,9 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Score")
+    public String score;
+
     @NameInMap("Suggestions")
     public java.util.List<DescribeSecureSuggestionResponseBodySuggestions> suggestions;
 
@@ -47,6 +50,14 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeSecureSuggestionResponseBody setScore(String score) {
+        this.score = score;
+        return this;
+    }
+    public String getScore() {
+        return this.score;
     }
 
     public DescribeSecureSuggestionResponseBody setSuggestions(java.util.List<DescribeSecureSuggestionResponseBodySuggestions> suggestions) {

@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesRequest extends TeaModel {
+    @NameInMap("CloudAssetQueryData")
+    public java.util.List<ListCloudAssetInstancesRequestCloudAssetQueryData> cloudAssetQueryData;
+
     /**
      * <p>The details of the cloud asset.</p>
      */
@@ -79,6 +82,14 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListCloudAssetInstancesRequest setCloudAssetQueryData(java.util.List<ListCloudAssetInstancesRequestCloudAssetQueryData> cloudAssetQueryData) {
+        this.cloudAssetQueryData = cloudAssetQueryData;
+        return this;
+    }
+    public java.util.List<ListCloudAssetInstancesRequestCloudAssetQueryData> getCloudAssetQueryData() {
+        return this.cloudAssetQueryData;
+    }
+
     public ListCloudAssetInstancesRequest setCloudAssetTypes(java.util.List<ListCloudAssetInstancesRequestCloudAssetTypes> cloudAssetTypes) {
         this.cloudAssetTypes = cloudAssetTypes;
         return this;
@@ -125,6 +136,36 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public static class ListCloudAssetInstancesRequestCloudAssetQueryData extends TeaModel {
+        @NameInMap("Data")
+        public String data;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        public static ListCloudAssetInstancesRequestCloudAssetQueryData build(java.util.Map<String, ?> map) throws Exception {
+            ListCloudAssetInstancesRequestCloudAssetQueryData self = new ListCloudAssetInstancesRequestCloudAssetQueryData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCloudAssetInstancesRequestCloudAssetQueryData setData(String data) {
+            this.data = data;
+            return this;
+        }
+        public String getData() {
+            return this.data;
+        }
+
+        public ListCloudAssetInstancesRequestCloudAssetQueryData setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
     }
 
     public static class ListCloudAssetInstancesRequestCloudAssetTypes extends TeaModel {

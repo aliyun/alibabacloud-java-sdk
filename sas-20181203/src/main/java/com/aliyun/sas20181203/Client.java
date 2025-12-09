@@ -36108,6 +36108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCloudAssetInstancesResponse listCloudAssetInstancesWithOptions(ListCloudAssetInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAssetQueryData)) {
+            query.put("CloudAssetQueryData", request.cloudAssetQueryData);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cloudAssetTypes)) {
             query.put("CloudAssetTypes", request.cloudAssetTypes);
         }
