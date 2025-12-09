@@ -1036,6 +1036,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>GetChatContent</p>
+     * 
+     * @param request GetChatContentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChatContentResponse
+     */
+    public GetChatContentResponse getChatContentWithOptions(GetChatContentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkpoint)) {
+            query.put("Checkpoint", request.checkpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChatContent"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatContentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetChatContent</p>
+     * 
+     * @param request GetChatContentRequest
+     * @return GetChatContentResponse
+     */
+    public GetChatContentResponse getChatContent(GetChatContentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getChatContentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取uc的数据库目录</p>
      * 
      * @param request GetDataLakeCatalogRequest
@@ -1392,6 +1448,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNotebookAndSubmitTaskResponse getNotebookAndSubmitTask(GetNotebookAndSubmitTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNotebookAndSubmitTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看Notebook任务运行结果</p>
+     * 
+     * @param request GetNotebookTaskStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNotebookTaskStatusResponse
+     */
+    public GetNotebookTaskStatusResponse getNotebookTaskStatusWithOptions(GetNotebookTaskStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNotebookTaskStatus"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNotebookTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看Notebook任务运行结果</p>
+     * 
+     * @param request GetNotebookTaskStatusRequest
+     * @return GetNotebookTaskStatusResponse
+     */
+    public GetNotebookTaskStatusResponse getNotebookTaskStatus(GetNotebookTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNotebookTaskStatusWithOptions(request, runtime);
     }
 
     /**
@@ -2138,6 +2246,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDataLakeTablebaseInfoResponse listDataLakeTablebaseInfo(ListDataLakeTablebaseInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataLakeTablebaseInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>SendChatMessage</p>
+     * 
+     * @param tmpReq SendChatMessageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendChatMessageResponse
+     */
+    public SendChatMessageResponse sendChatMessageWithOptions(SendChatMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SendChatMessageShrinkRequest request = new SendChatMessageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSource)) {
+            request.dataSourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSource, "DataSource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sessionConfig)) {
+            request.sessionConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sessionConfig, "SessionConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceShrink)) {
+            query.put("DataSource", request.dataSourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.message)) {
+            query.put("Message", request.message);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
+            query.put("MessageType", request.messageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.question)) {
+            query.put("Question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotedMessage)) {
+            query.put("QuotedMessage", request.quotedMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replyTo)) {
+            query.put("ReplyTo", request.replyTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionConfigShrink)) {
+            query.put("SessionConfig", request.sessionConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendChatMessage"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendChatMessageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>SendChatMessage</p>
+     * 
+     * @param request SendChatMessageRequest
+     * @return SendChatMessageResponse
+     */
+    public SendChatMessageResponse sendChatMessage(SendChatMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendChatMessageWithOptions(request, runtime);
     }
 
     /**
