@@ -284,6 +284,9 @@ public class CreateCloudResourceRequest extends TeaModel {
         @NameInMap("ResourceProduct")
         public String resourceProduct;
 
+        @NameInMap("ResourceRegionId")
+        public String resourceRegionId;
+
         /**
          * <p>The Transport Layer Security (TLS) version that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
          * <ul>
@@ -373,6 +376,14 @@ public class CreateCloudResourceRequest extends TeaModel {
         }
         public String getResourceProduct() {
             return this.resourceProduct;
+        }
+
+        public CreateCloudResourceRequestListen setResourceRegionId(String resourceRegionId) {
+            this.resourceRegionId = resourceRegionId;
+            return this;
+        }
+        public String getResourceRegionId() {
+            return this.resourceRegionId;
         }
 
         public CreateCloudResourceRequestListen setTLSVersion(String TLSVersion) {
