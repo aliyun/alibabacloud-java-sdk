@@ -29,6 +29,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     @NameInMap("Components")
     public String componentsShrink;
 
@@ -76,6 +79,13 @@ public class CreateApplicationShrinkRequest extends TeaModel {
      */
     @NameInMap("PolarFSInstanceId")
     public String polarFSInstanceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
 
     /**
      * <strong>example:</strong>
@@ -144,6 +154,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
         return this.autoRenew;
     }
 
+    public CreateApplicationShrinkRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
+    }
+
     public CreateApplicationShrinkRequest setComponentsShrink(String componentsShrink) {
         this.componentsShrink = componentsShrink;
         return this;
@@ -206,6 +224,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getPolarFSInstanceId() {
         return this.polarFSInstanceId;
+    }
+
+    public CreateApplicationShrinkRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public CreateApplicationShrinkRequest setRegionId(String regionId) {

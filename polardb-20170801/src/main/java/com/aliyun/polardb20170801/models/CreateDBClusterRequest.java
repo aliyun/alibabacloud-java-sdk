@@ -52,6 +52,9 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>Backup retention policy upon cluster deletion, with valid values as follows:</p>
      * <ul>
@@ -464,6 +467,13 @@ public class CreateDBClusterRequest extends TeaModel {
     public String period;
 
     /**
+     * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
+    /**
      * <p id="p_wyg_t4a_glm">The provisioned read and write IOPS for ESSD AutoPL cloud disks. Possible values: 0 to min{50,000, 1000*capacity-Baseline Performance}.</p>
      * <p id="p_6de_jxy_k2g">Baseline Performance = min{1,800+50*capacity, 50000}.</p>
      * <note id="note_7kj_j0o_rgs">This parameter is supported only when StorageType is ESSDAUTOPL.</note>
@@ -872,6 +882,14 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.autoRenew;
     }
 
+    public CreateDBClusterRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
+    }
+
     public CreateDBClusterRequest setBackupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
         this.backupRetentionPolicyOnClusterDeletion = backupRetentionPolicyOnClusterDeletion;
         return this;
@@ -1086,6 +1104,14 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public CreateDBClusterRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public CreateDBClusterRequest setProvisionedIops(Long provisionedIops) {

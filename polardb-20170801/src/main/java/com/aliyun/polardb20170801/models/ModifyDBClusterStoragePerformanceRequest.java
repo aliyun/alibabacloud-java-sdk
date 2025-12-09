@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>Specifies whether to enable the I/O Burst feature for the ESSD AutoPL disk. Valid value:</p>
      * <ul>
@@ -45,6 +48,13 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
+    /**
+     * <strong>example:</strong>
      * <p>2500</p>
      */
     @NameInMap("ProvisionedIops")
@@ -63,6 +73,14 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     public static ModifyDBClusterStoragePerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterStoragePerformanceRequest self = new ModifyDBClusterStoragePerformanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterStoragePerformanceRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public ModifyDBClusterStoragePerformanceRequest setBurstingEnabled(String burstingEnabled) {
@@ -95,6 +113,14 @@ public class ModifyDBClusterStoragePerformanceRequest extends TeaModel {
     }
     public String getModifyType() {
         return this.modifyType;
+    }
+
+    public ModifyDBClusterStoragePerformanceRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public ModifyDBClusterStoragePerformanceRequest setProvisionedIops(Integer provisionedIops) {

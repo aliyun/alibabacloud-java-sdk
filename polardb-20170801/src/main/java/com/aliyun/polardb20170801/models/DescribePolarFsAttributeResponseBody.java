@@ -54,6 +54,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>xxxxxx-%d.oss-cn-beijing-internal.aliyuncs.com</p>
+     */
+    @NameInMap("CustomBucketPath")
+    public String customBucketPath;
+
+    /**
+     * <strong>example:</strong>
      * <p>MySQL</p>
      */
     @NameInMap("DBType")
@@ -276,6 +283,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public DescribePolarFsAttributeResponseBody setCustomBucketPath(String customBucketPath) {
+        this.customBucketPath = customBucketPath;
+        return this;
+    }
+    public String getCustomBucketPath() {
+        return this.customBucketPath;
     }
 
     public DescribePolarFsAttributeResponseBody setDBType(String DBType) {

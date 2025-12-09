@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateStoragePlanRequest extends TeaModel {
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
      * 
@@ -32,6 +35,13 @@ public class CreateStoragePlanRequest extends TeaModel {
      */
     @NameInMap("Period")
     public String period;
+
+    /**
+     * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -82,6 +92,14 @@ public class CreateStoragePlanRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateStoragePlanRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
+    }
+
     public CreateStoragePlanRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -112,6 +130,14 @@ public class CreateStoragePlanRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public CreateStoragePlanRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public CreateStoragePlanRequest setResourceOwnerAccount(String resourceOwnerAccount) {

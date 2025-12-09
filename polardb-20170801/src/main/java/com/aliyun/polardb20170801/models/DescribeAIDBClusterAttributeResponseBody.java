@@ -49,6 +49,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("DBVersion")
     public String DBVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-xxxxxx</p>
+     */
+    @NameInMap("EcsSecurityGroupId")
+    public String ecsSecurityGroupId;
+
     @NameInMap("EndpointList")
     public java.util.List<DescribeAIDBClusterAttributeResponseBodyEndpointList> endpointList;
 
@@ -238,6 +245,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getDBVersion() {
         return this.DBVersion;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setEcsSecurityGroupId(String ecsSecurityGroupId) {
+        this.ecsSecurityGroupId = ecsSecurityGroupId;
+        return this;
+    }
+    public String getEcsSecurityGroupId() {
+        return this.ecsSecurityGroupId;
     }
 
     public DescribeAIDBClusterAttributeResponseBody setEndpointList(java.util.List<DescribeAIDBClusterAttributeResponseBodyEndpointList> endpointList) {

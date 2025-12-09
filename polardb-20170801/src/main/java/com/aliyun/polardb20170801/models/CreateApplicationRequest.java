@@ -29,6 +29,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     @NameInMap("Components")
     public java.util.List<CreateApplicationRequestComponents> components;
 
@@ -76,6 +79,13 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("PolarFSInstanceId")
     public String polarFSInstanceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
 
     /**
      * <strong>example:</strong>
@@ -144,6 +154,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.autoRenew;
     }
 
+    public CreateApplicationRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
+    }
+
     public CreateApplicationRequest setComponents(java.util.List<CreateApplicationRequestComponents> components) {
         this.components = components;
         return this;
@@ -206,6 +224,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getPolarFSInstanceId() {
         return this.polarFSInstanceId;
+    }
+
+    public CreateApplicationRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public CreateApplicationRequest setRegionId(String regionId) {

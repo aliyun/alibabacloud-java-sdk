@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class TransformDBClusterPayTypeRequest extends TeaModel {
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
@@ -60,6 +63,13 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     public String period;
 
     /**
+     * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
+    /**
      * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
@@ -103,6 +113,14 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     public static TransformDBClusterPayTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         TransformDBClusterPayTypeRequest self = new TransformDBClusterPayTypeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TransformDBClusterPayTypeRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public TransformDBClusterPayTypeRequest setClientToken(String clientToken) {
@@ -151,6 +169,14 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public TransformDBClusterPayTypeRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public TransformDBClusterPayTypeRequest setRegionId(String regionId) {

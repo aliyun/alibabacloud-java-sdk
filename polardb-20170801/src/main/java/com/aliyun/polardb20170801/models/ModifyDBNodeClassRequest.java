@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBNodeClassRequest extends TeaModel {
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
      * 
@@ -108,6 +111,13 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -130,6 +140,14 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     public static ModifyDBNodeClassRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBNodeClassRequest self = new ModifyDBNodeClassRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBNodeClassRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public ModifyDBNodeClassRequest setClientToken(String clientToken) {
@@ -218,6 +236,14 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     }
     public String getPlannedStartTime() {
         return this.plannedStartTime;
+    }
+
+    public ModifyDBNodeClassRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public ModifyDBNodeClassRequest setResourceOwnerAccount(String resourceOwnerAccount) {

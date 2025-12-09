@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBNodesClassRequest extends TeaModel {
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
      * 
@@ -91,6 +94,13 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -113,6 +123,14 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     public static ModifyDBNodesClassRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBNodesClassRequest self = new ModifyDBNodesClassRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBNodesClassRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public ModifyDBNodesClassRequest setClientToken(String clientToken) {
@@ -193,6 +211,14 @@ public class ModifyDBNodesClassRequest extends TeaModel {
     }
     public String getPlannedStartTime() {
         return this.plannedStartTime;
+    }
+
+    public ModifyDBNodesClassRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public ModifyDBNodesClassRequest setResourceOwnerAccount(String resourceOwnerAccount) {

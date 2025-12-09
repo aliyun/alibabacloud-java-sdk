@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterArchRequest extends TeaModel {
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>The ID of the cluster.</p>
      * 
@@ -25,6 +28,13 @@ public class ModifyDBClusterArchRequest extends TeaModel {
      */
     @NameInMap("HotStandbyCluster")
     public String hotStandbyCluster;
+
+    /**
+     * <strong>example:</strong>
+     * <p>727xxxxxx934</p>
+     */
+    @NameInMap("PromotionCode")
+    public String promotionCode;
 
     /**
      * <p>The region ID.</p>
@@ -58,6 +68,14 @@ public class ModifyDBClusterArchRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDBClusterArchRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
+    }
+
     public ModifyDBClusterArchRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
@@ -72,6 +90,14 @@ public class ModifyDBClusterArchRequest extends TeaModel {
     }
     public String getHotStandbyCluster() {
         return this.hotStandbyCluster;
+    }
+
+    public ModifyDBClusterArchRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public ModifyDBClusterArchRequest setRegionId(String regionId) {
