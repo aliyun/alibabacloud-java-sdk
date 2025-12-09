@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ContainerConfiguration extends TeaModel {
     /**
+     * <p>阿里云容器镜像服务（ACR）的实例ID或名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xxxxx</p>
+     */
+    @NameInMap("acrInstanceId")
+    public String acrInstanceId;
+
+    /**
      * <p>在容器中运行的命令（例如：[&quot;python3&quot;, &quot;app.py&quot;]）</p>
      * 
      * <strong>example:</strong>
@@ -20,9 +29,26 @@ public class ContainerConfiguration extends TeaModel {
     @NameInMap("image")
     public String image;
 
+    /**
+     * <p>容器镜像的来源类型，支持ACR（阿里云容器镜像服务）、ACREE（阿里云容器镜像服务企业版）、CUSTOM（自定义镜像仓库）</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACR</p>
+     */
+    @NameInMap("imageRegistryType")
+    public String imageRegistryType;
+
     public static ContainerConfiguration build(java.util.Map<String, ?> map) throws Exception {
         ContainerConfiguration self = new ContainerConfiguration();
         return TeaModel.build(map, self);
+    }
+
+    public ContainerConfiguration setAcrInstanceId(String acrInstanceId) {
+        this.acrInstanceId = acrInstanceId;
+        return this;
+    }
+    public String getAcrInstanceId() {
+        return this.acrInstanceId;
     }
 
     public ContainerConfiguration setCommand(java.util.List<String> command) {
@@ -39,6 +65,14 @@ public class ContainerConfiguration extends TeaModel {
     }
     public String getImage() {
         return this.image;
+    }
+
+    public ContainerConfiguration setImageRegistryType(String imageRegistryType) {
+        this.imageRegistryType = imageRegistryType;
+        return this;
+    }
+    public String getImageRegistryType() {
+        return this.imageRegistryType;
     }
 
 }

@@ -26,7 +26,7 @@ public class Template extends TeaModel {
     public Integer diskSize;
 
     @NameInMap("environmentVariables")
-    public String environmentVariables;
+    public java.util.Map<String, String> environmentVariables;
 
     @NameInMap("executionRoleArn")
     public String executionRoleArn;
@@ -62,6 +62,7 @@ public class Template extends TeaModel {
     public String sandboxIdleTimeoutInSeconds;
 
     @NameInMap("sandboxTTLInSeconds")
+    @Deprecated
     public String sandboxTTLInSeconds;
 
     @NameInMap("status")
@@ -74,7 +75,7 @@ public class Template extends TeaModel {
     public String templateArn;
 
     @NameInMap("templateConfiguration")
-    public String templateConfiguration;
+    public java.util.Map<String, ?> templateConfiguration;
 
     /**
      * <p>This parameter is required.</p>
@@ -147,11 +148,11 @@ public class Template extends TeaModel {
         return this.diskSize;
     }
 
-    public Template setEnvironmentVariables(String environmentVariables) {
+    public Template setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
     }
-    public String getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -235,6 +236,7 @@ public class Template extends TeaModel {
         return this.sandboxIdleTimeoutInSeconds;
     }
 
+    @Deprecated
     public Template setSandboxTTLInSeconds(String sandboxTTLInSeconds) {
         this.sandboxTTLInSeconds = sandboxTTLInSeconds;
         return this;
@@ -267,11 +269,11 @@ public class Template extends TeaModel {
         return this.templateArn;
     }
 
-    public Template setTemplateConfiguration(String templateConfiguration) {
+    public Template setTemplateConfiguration(java.util.Map<String, ?> templateConfiguration) {
         this.templateConfiguration = templateConfiguration;
         return this;
     }
-    public String getTemplateConfiguration() {
+    public java.util.Map<String, ?> getTemplateConfiguration() {
         return this.templateConfiguration;
     }
 

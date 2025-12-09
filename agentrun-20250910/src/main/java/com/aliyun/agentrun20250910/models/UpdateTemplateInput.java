@@ -56,6 +56,7 @@ public class UpdateTemplateInput extends TeaModel {
      * <p>沙箱存活时间（秒）</p>
      */
     @NameInMap("sandboxTTLInSeconds")
+    @Deprecated
     public Integer sandboxTTLInSeconds;
 
     /**
@@ -165,6 +166,7 @@ public class UpdateTemplateInput extends TeaModel {
         return this.sandboxIdleTimeoutInSeconds;
     }
 
+    @Deprecated
     public UpdateTemplateInput setSandboxTTLInSeconds(Integer sandboxTTLInSeconds) {
         this.sandboxTTLInSeconds = sandboxTTLInSeconds;
         return this;

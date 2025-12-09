@@ -16,11 +16,11 @@ public class ModelService extends TeaModel {
     @NameInMap("lastUpdatedAt")
     public String lastUpdatedAt;
 
-    @NameInMap("modeServiceId")
-    public String modeServiceId;
-
     @NameInMap("modelInfoConfigs")
     public java.util.List<ModelInfoConfig> modelInfoConfigs;
+
+    @NameInMap("modelServiceId")
+    public String modelServiceId;
 
     @NameInMap("modelServiceName")
     public String modelServiceName;
@@ -80,20 +80,20 @@ public class ModelService extends TeaModel {
         return this.lastUpdatedAt;
     }
 
-    public ModelService setModeServiceId(String modeServiceId) {
-        this.modeServiceId = modeServiceId;
-        return this;
-    }
-    public String getModeServiceId() {
-        return this.modeServiceId;
-    }
-
     public ModelService setModelInfoConfigs(java.util.List<ModelInfoConfig> modelInfoConfigs) {
         this.modelInfoConfigs = modelInfoConfigs;
         return this;
     }
     public java.util.List<ModelInfoConfig> getModelInfoConfigs() {
         return this.modelInfoConfigs;
+    }
+
+    public ModelService setModelServiceId(String modelServiceId) {
+        this.modelServiceId = modelServiceId;
+        return this;
+    }
+    public String getModelServiceId() {
+        return this.modelServiceId;
     }
 
     public ModelService setModelServiceName(String modelServiceName) {
