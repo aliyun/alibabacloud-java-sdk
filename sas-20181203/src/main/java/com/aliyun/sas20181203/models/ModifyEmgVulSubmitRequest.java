@@ -27,6 +27,9 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>Specifies whether to scan for urgent vulnerabilities. Valid values:</p>
      * <ul>
@@ -60,6 +63,14 @@ public class ModifyEmgVulSubmitRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyEmgVulSubmitRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ModifyEmgVulSubmitRequest setUserAgreement(String userAgreement) {
