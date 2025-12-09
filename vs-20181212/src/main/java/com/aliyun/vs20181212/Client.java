@@ -7785,6 +7785,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>云应用服务实例主机重启</p>
+     * 
+     * @param tmpReq RebootRenderingServerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RebootRenderingServerResponse
+     */
+    public RebootRenderingServerResponse rebootRenderingServerWithOptions(RebootRenderingServerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RebootRenderingServerShrinkRequest request = new RebootRenderingServerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.renderingInstanceIds)) {
+            request.renderingInstanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.renderingInstanceIds, "RenderingInstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceIdsShrink)) {
+            query.put("RenderingInstanceIds", request.renderingInstanceIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RebootRenderingServer"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RebootRenderingServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>云应用服务实例主机重启</p>
+     * 
+     * @param request RebootRenderingServerRequest
+     * @return RebootRenderingServerResponse
+     */
+    public RebootRenderingServerResponse rebootRenderingServer(RebootRenderingServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rebootRenderingServerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>恢复数据到云渲染实例</p>
      * 
      * @param request RecoverRenderingDataPackageRequest
