@@ -1363,6 +1363,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建AI节点</p>
+     * 
+     * @param request CreateAINodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAINodesResponse
+     */
+    public CreateAINodesResponse createAINodesWithOptions(CreateAINodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodes)) {
+            query.put("DBNodes", request.DBNodes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAINodes"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAINodesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建AI节点</p>
+     * 
+     * @param request CreateAINodesRequest
+     * @return CreateAINodesResponse
+     */
+    public CreateAINodesResponse createAINodes(CreateAINodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAINodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a database account for a PolarDB cluster.</p>
      * 
      * @param request CreateAccountRequest
@@ -3873,6 +3921,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAIDBClusterResponse deleteAIDBCluster(DeleteAIDBClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAIDBClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除ai实例子节点</p>
+     * 
+     * @param request DeleteAINodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAINodesResponse
+     */
+    public DeleteAINodesResponse deleteAINodesWithOptions(DeleteAINodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeId)) {
+            query.put("DBNodeId", request.DBNodeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAINodes"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAINodesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除ai实例子节点</p>
+     * 
+     * @param request DeleteAINodesRequest
+     * @return DeleteAINodesResponse
+     */
+    public DeleteAINodesResponse deleteAINodes(DeleteAINodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAINodesWithOptions(request, runtime);
     }
 
     /**
