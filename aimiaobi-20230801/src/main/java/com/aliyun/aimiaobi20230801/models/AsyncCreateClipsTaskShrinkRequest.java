@@ -4,8 +4,31 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
+    @NameInMap("CloseMusic")
+    public Boolean closeMusic;
+
+    @NameInMap("CloseSubtitle")
+    public Boolean closeSubtitle;
+
+    @NameInMap("CloseVoice")
+    public Boolean closeVoice;
+
     @NameInMap("ColorWords")
     public String colorWordsShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+     */
+    @NameInMap("CustomVoiceUrl")
+    public String customVoiceUrl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("CustomVoiceVolume")
+    public Integer customVoiceVolume;
 
     /**
      * <strong>example:</strong>
@@ -23,6 +46,9 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
 
     @NameInMap("MusicVolume")
     public Integer musicVolume;
+
+    @NameInMap("Stickers")
+    public String stickersShrink;
 
     @NameInMap("SubtitleFontSize")
     public Integer subtitleFontSize;
@@ -63,12 +89,52 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AsyncCreateClipsTaskShrinkRequest setCloseMusic(Boolean closeMusic) {
+        this.closeMusic = closeMusic;
+        return this;
+    }
+    public Boolean getCloseMusic() {
+        return this.closeMusic;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setCloseSubtitle(Boolean closeSubtitle) {
+        this.closeSubtitle = closeSubtitle;
+        return this;
+    }
+    public Boolean getCloseSubtitle() {
+        return this.closeSubtitle;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setCloseVoice(Boolean closeVoice) {
+        this.closeVoice = closeVoice;
+        return this;
+    }
+    public Boolean getCloseVoice() {
+        return this.closeVoice;
+    }
+
     public AsyncCreateClipsTaskShrinkRequest setColorWordsShrink(String colorWordsShrink) {
         this.colorWordsShrink = colorWordsShrink;
         return this;
     }
     public String getColorWordsShrink() {
         return this.colorWordsShrink;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setCustomVoiceUrl(String customVoiceUrl) {
+        this.customVoiceUrl = customVoiceUrl;
+        return this;
+    }
+    public String getCustomVoiceUrl() {
+        return this.customVoiceUrl;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setCustomVoiceVolume(Integer customVoiceVolume) {
+        this.customVoiceVolume = customVoiceVolume;
+        return this;
+    }
+    public Integer getCustomVoiceVolume() {
+        return this.customVoiceVolume;
     }
 
     public AsyncCreateClipsTaskShrinkRequest setHeight(Integer height) {
@@ -93,6 +159,14 @@ public class AsyncCreateClipsTaskShrinkRequest extends TeaModel {
     }
     public Integer getMusicVolume() {
         return this.musicVolume;
+    }
+
+    public AsyncCreateClipsTaskShrinkRequest setStickersShrink(String stickersShrink) {
+        this.stickersShrink = stickersShrink;
+        return this;
+    }
+    public String getStickersShrink() {
+        return this.stickersShrink;
     }
 
     public AsyncCreateClipsTaskShrinkRequest setSubtitleFontSize(Integer subtitleFontSize) {

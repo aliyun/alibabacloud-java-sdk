@@ -174,9 +174,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.colorWordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.colorWords, "ColorWords", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stickers)) {
+            request.stickersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stickers, "Stickers", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.closeMusic)) {
+            body.put("CloseMusic", request.closeMusic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.closeSubtitle)) {
+            body.put("CloseSubtitle", request.closeSubtitle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.closeVoice)) {
+            body.put("CloseVoice", request.closeVoice);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.colorWordsShrink)) {
             body.put("ColorWords", request.colorWordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customVoiceUrl)) {
+            body.put("CustomVoiceUrl", request.customVoiceUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customVoiceVolume)) {
+            body.put("CustomVoiceVolume", request.customVoiceVolume);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.height)) {
@@ -189,6 +213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.musicVolume)) {
             body.put("MusicVolume", request.musicVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stickersShrink)) {
+            body.put("Stickers", request.stickersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.subtitleFontSize)) {
@@ -442,13 +470,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sourceVideosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceVideos, "SourceVideos", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoRoles)) {
+            request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "VideoRoles", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.anlysisPrompt)) {
             body.put("AnlysisPrompt", request.anlysisPrompt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.faceIdentitySimilarityMinScore)) {
+            body.put("FaceIdentitySimilarityMinScore", request.faceIdentitySimilarityMinScore);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.referenceVideoShrink)) {
             body.put("ReferenceVideo", request.referenceVideoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.removeSubtitle)) {
+            body.put("RemoveSubtitle", request.removeSubtitle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceVideosShrink)) {
@@ -457,6 +497,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.splitInterval)) {
             body.put("SplitInterval", request.splitInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoRolesShrink)) {
+            body.put("VideoRoles", request.videoRolesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoShotFaceIdentityCount)) {
+            body.put("VideoShotFaceIdentityCount", request.videoShotFaceIdentityCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {

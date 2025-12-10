@@ -7,8 +7,18 @@ public class AsyncUploadVideoRequest extends TeaModel {
     @NameInMap("AnlysisPrompt")
     public String anlysisPrompt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.7</p>
+     */
+    @NameInMap("FaceIdentitySimilarityMinScore")
+    public Double faceIdentitySimilarityMinScore;
+
     @NameInMap("ReferenceVideo")
     public AsyncUploadVideoRequestReferenceVideo referenceVideo;
+
+    @NameInMap("RemoveSubtitle")
+    public Boolean removeSubtitle;
 
     /**
      * <p>This parameter is required.</p>
@@ -18,6 +28,16 @@ public class AsyncUploadVideoRequest extends TeaModel {
 
     @NameInMap("SplitInterval")
     public Integer splitInterval;
+
+    @NameInMap("VideoRoles")
+    public java.util.List<AsyncUploadVideoRequestVideoRoles> videoRoles;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("VideoShotFaceIdentityCount")
+    public Integer videoShotFaceIdentityCount;
 
     /**
      * <p>This parameter is required.</p>
@@ -41,12 +61,28 @@ public class AsyncUploadVideoRequest extends TeaModel {
         return this.anlysisPrompt;
     }
 
+    public AsyncUploadVideoRequest setFaceIdentitySimilarityMinScore(Double faceIdentitySimilarityMinScore) {
+        this.faceIdentitySimilarityMinScore = faceIdentitySimilarityMinScore;
+        return this;
+    }
+    public Double getFaceIdentitySimilarityMinScore() {
+        return this.faceIdentitySimilarityMinScore;
+    }
+
     public AsyncUploadVideoRequest setReferenceVideo(AsyncUploadVideoRequestReferenceVideo referenceVideo) {
         this.referenceVideo = referenceVideo;
         return this;
     }
     public AsyncUploadVideoRequestReferenceVideo getReferenceVideo() {
         return this.referenceVideo;
+    }
+
+    public AsyncUploadVideoRequest setRemoveSubtitle(Boolean removeSubtitle) {
+        this.removeSubtitle = removeSubtitle;
+        return this;
+    }
+    public Boolean getRemoveSubtitle() {
+        return this.removeSubtitle;
     }
 
     public AsyncUploadVideoRequest setSourceVideos(java.util.List<AsyncUploadVideoRequestSourceVideos> sourceVideos) {
@@ -63,6 +99,22 @@ public class AsyncUploadVideoRequest extends TeaModel {
     }
     public Integer getSplitInterval() {
         return this.splitInterval;
+    }
+
+    public AsyncUploadVideoRequest setVideoRoles(java.util.List<AsyncUploadVideoRequestVideoRoles> videoRoles) {
+        this.videoRoles = videoRoles;
+        return this;
+    }
+    public java.util.List<AsyncUploadVideoRequestVideoRoles> getVideoRoles() {
+        return this.videoRoles;
+    }
+
+    public AsyncUploadVideoRequest setVideoShotFaceIdentityCount(Integer videoShotFaceIdentityCount) {
+        this.videoShotFaceIdentityCount = videoShotFaceIdentityCount;
+        return this;
+    }
+    public Integer getVideoShotFaceIdentityCount() {
+        return this.videoShotFaceIdentityCount;
     }
 
     public AsyncUploadVideoRequest setWorkspaceId(String workspaceId) {
@@ -160,6 +212,93 @@ public class AsyncUploadVideoRequest extends TeaModel {
         }
         public String getVideoUrl() {
             return this.videoUrl;
+        }
+
+    }
+
+    public static class AsyncUploadVideoRequestVideoRolesRoleUrls extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>王小明.jpeg</p>
+         */
+        @NameInMap("RoleFileName")
+        public String roleFileName;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.jpeg">http://xxx/xxx.jpeg</a></p>
+         */
+        @NameInMap("RoleFileUrl")
+        public String roleFileUrl;
+
+        public static AsyncUploadVideoRequestVideoRolesRoleUrls build(java.util.Map<String, ?> map) throws Exception {
+            AsyncUploadVideoRequestVideoRolesRoleUrls self = new AsyncUploadVideoRequestVideoRolesRoleUrls();
+            return TeaModel.build(map, self);
+        }
+
+        public AsyncUploadVideoRequestVideoRolesRoleUrls setRoleFileName(String roleFileName) {
+            this.roleFileName = roleFileName;
+            return this;
+        }
+        public String getRoleFileName() {
+            return this.roleFileName;
+        }
+
+        public AsyncUploadVideoRequestVideoRolesRoleUrls setRoleFileUrl(String roleFileUrl) {
+            this.roleFileUrl = roleFileUrl;
+            return this;
+        }
+        public String getRoleFileUrl() {
+            return this.roleFileUrl;
+        }
+
+    }
+
+    public static class AsyncUploadVideoRequestVideoRoles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>李晓明是一位警察</p>
+         */
+        @NameInMap("RoleInfo")
+        public String roleInfo;
+
+        /**
+         * <strong>example:</strong>
+         * <p>李晓明</p>
+         */
+        @NameInMap("RoleName")
+        public String roleName;
+
+        @NameInMap("RoleUrls")
+        public java.util.List<AsyncUploadVideoRequestVideoRolesRoleUrls> roleUrls;
+
+        public static AsyncUploadVideoRequestVideoRoles build(java.util.Map<String, ?> map) throws Exception {
+            AsyncUploadVideoRequestVideoRoles self = new AsyncUploadVideoRequestVideoRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public AsyncUploadVideoRequestVideoRoles setRoleInfo(String roleInfo) {
+            this.roleInfo = roleInfo;
+            return this;
+        }
+        public String getRoleInfo() {
+            return this.roleInfo;
+        }
+
+        public AsyncUploadVideoRequestVideoRoles setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public AsyncUploadVideoRequestVideoRoles setRoleUrls(java.util.List<AsyncUploadVideoRequestVideoRolesRoleUrls> roleUrls) {
+            this.roleUrls = roleUrls;
+            return this;
+        }
+        public java.util.List<AsyncUploadVideoRequestVideoRolesRoleUrls> getRoleUrls() {
+            return this.roleUrls;
         }
 
     }

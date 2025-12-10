@@ -194,6 +194,134 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
 
     }
 
+    public static class GetAutoClipsTaskInfoResponseBodyDataStickers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("Duration")
+        public Integer duration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        @NameInMap("DyncFrames")
+        public Integer dyncFrames;
+
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("Height")
+        public Integer height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("TimelineIn")
+        public Integer timelineIn;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.gif">http://xxx/xxx.gif</a></p>
+         */
+        @NameInMap("Url")
+        public String url;
+
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("Width")
+        public Integer width;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("X")
+        public Float x;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("Y")
+        public Float y;
+
+        public static GetAutoClipsTaskInfoResponseBodyDataStickers build(java.util.Map<String, ?> map) throws Exception {
+            GetAutoClipsTaskInfoResponseBodyDataStickers self = new GetAutoClipsTaskInfoResponseBodyDataStickers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataStickers setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataStickers setDyncFrames(Integer dyncFrames) {
+            this.dyncFrames = dyncFrames;
+            return this;
+        }
+        public Integer getDyncFrames() {
+            return this.dyncFrames;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataStickers setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataStickers setTimelineIn(Integer timelineIn) {
+            this.timelineIn = timelineIn;
+            return this;
+        }
+        public Integer getTimelineIn() {
+            return this.timelineIn;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataStickers setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataStickers setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataStickers setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataStickers setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+    }
+
     public static class GetAutoClipsTaskInfoResponseBodyDataTimelinesClips extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -356,11 +484,34 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyData extends TeaModel {
+        @NameInMap("CloseMusic")
+        public Boolean closeMusic;
+
+        @NameInMap("CloseSubtitle")
+        public Boolean closeSubtitle;
+
+        @NameInMap("CloseVoice")
+        public Boolean closeVoice;
+
         @NameInMap("ColorWords")
         public java.util.List<GetAutoClipsTaskInfoResponseBodyDataColorWords> colorWords;
 
         @NameInMap("Content")
         public String content;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+         */
+        @NameInMap("CustomVoiceUrl")
+        public String customVoiceUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("CustomVoiceVolume")
+        public Integer customVoiceVolume;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -402,6 +553,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @NameInMap("Step")
         public String step;
 
+        @NameInMap("Stickers")
+        public java.util.List<GetAutoClipsTaskInfoResponseBodyDataStickers> stickers;
+
         /**
          * <strong>example:</strong>
          * <p>5</p>
@@ -434,6 +588,30 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetAutoClipsTaskInfoResponseBodyData setCloseMusic(Boolean closeMusic) {
+            this.closeMusic = closeMusic;
+            return this;
+        }
+        public Boolean getCloseMusic() {
+            return this.closeMusic;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setCloseSubtitle(Boolean closeSubtitle) {
+            this.closeSubtitle = closeSubtitle;
+            return this;
+        }
+        public Boolean getCloseSubtitle() {
+            return this.closeSubtitle;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setCloseVoice(Boolean closeVoice) {
+            this.closeVoice = closeVoice;
+            return this;
+        }
+        public Boolean getCloseVoice() {
+            return this.closeVoice;
+        }
+
         public GetAutoClipsTaskInfoResponseBodyData setColorWords(java.util.List<GetAutoClipsTaskInfoResponseBodyDataColorWords> colorWords) {
             this.colorWords = colorWords;
             return this;
@@ -448,6 +626,22 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setCustomVoiceUrl(String customVoiceUrl) {
+            this.customVoiceUrl = customVoiceUrl;
+            return this;
+        }
+        public String getCustomVoiceUrl() {
+            return this.customVoiceUrl;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setCustomVoiceVolume(Integer customVoiceVolume) {
+            this.customVoiceVolume = customVoiceVolume;
+            return this;
+        }
+        public Integer getCustomVoiceVolume() {
+            return this.customVoiceVolume;
         }
 
         public GetAutoClipsTaskInfoResponseBodyData setErrorMessage(String errorMessage) {
@@ -512,6 +706,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
         public String getStep() {
             return this.step;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setStickers(java.util.List<GetAutoClipsTaskInfoResponseBodyDataStickers> stickers) {
+            this.stickers = stickers;
+            return this;
+        }
+        public java.util.List<GetAutoClipsTaskInfoResponseBodyDataStickers> getStickers() {
+            return this.stickers;
         }
 
         public GetAutoClipsTaskInfoResponseBodyData setSubtitleFontSize(Integer subtitleFontSize) {

@@ -7,8 +7,18 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     @NameInMap("AnlysisPrompt")
     public String anlysisPrompt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.7</p>
+     */
+    @NameInMap("FaceIdentitySimilarityMinScore")
+    public Double faceIdentitySimilarityMinScore;
+
     @NameInMap("ReferenceVideo")
     public String referenceVideoShrink;
+
+    @NameInMap("RemoveSubtitle")
+    public Boolean removeSubtitle;
 
     /**
      * <p>This parameter is required.</p>
@@ -18,6 +28,16 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
 
     @NameInMap("SplitInterval")
     public Integer splitInterval;
+
+    @NameInMap("VideoRoles")
+    public String videoRolesShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("VideoShotFaceIdentityCount")
+    public Integer videoShotFaceIdentityCount;
 
     /**
      * <p>This parameter is required.</p>
@@ -41,12 +61,28 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
         return this.anlysisPrompt;
     }
 
+    public AsyncUploadVideoShrinkRequest setFaceIdentitySimilarityMinScore(Double faceIdentitySimilarityMinScore) {
+        this.faceIdentitySimilarityMinScore = faceIdentitySimilarityMinScore;
+        return this;
+    }
+    public Double getFaceIdentitySimilarityMinScore() {
+        return this.faceIdentitySimilarityMinScore;
+    }
+
     public AsyncUploadVideoShrinkRequest setReferenceVideoShrink(String referenceVideoShrink) {
         this.referenceVideoShrink = referenceVideoShrink;
         return this;
     }
     public String getReferenceVideoShrink() {
         return this.referenceVideoShrink;
+    }
+
+    public AsyncUploadVideoShrinkRequest setRemoveSubtitle(Boolean removeSubtitle) {
+        this.removeSubtitle = removeSubtitle;
+        return this;
+    }
+    public Boolean getRemoveSubtitle() {
+        return this.removeSubtitle;
     }
 
     public AsyncUploadVideoShrinkRequest setSourceVideosShrink(String sourceVideosShrink) {
@@ -63,6 +99,22 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     }
     public Integer getSplitInterval() {
         return this.splitInterval;
+    }
+
+    public AsyncUploadVideoShrinkRequest setVideoRolesShrink(String videoRolesShrink) {
+        this.videoRolesShrink = videoRolesShrink;
+        return this;
+    }
+    public String getVideoRolesShrink() {
+        return this.videoRolesShrink;
+    }
+
+    public AsyncUploadVideoShrinkRequest setVideoShotFaceIdentityCount(Integer videoShotFaceIdentityCount) {
+        this.videoShotFaceIdentityCount = videoShotFaceIdentityCount;
+        return this;
+    }
+    public Integer getVideoShotFaceIdentityCount() {
+        return this.videoShotFaceIdentityCount;
     }
 
     public AsyncUploadVideoShrinkRequest setWorkspaceId(String workspaceId) {
