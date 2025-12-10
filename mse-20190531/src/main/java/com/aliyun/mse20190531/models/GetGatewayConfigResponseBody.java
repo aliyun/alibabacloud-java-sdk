@@ -652,6 +652,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         @NameInMap("KeepaliveHeaderTimeout")
         public Integer keepaliveHeaderTimeout;
 
+        @NameInMap("LiteMetrics")
+        public Boolean liteMetrics;
+
         /**
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -672,6 +675,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
          */
         @NameInMap("PathWithEscapedSlashes")
         public String pathWithEscapedSlashes;
+
+        @NameInMap("PreserveExternalRequestID")
+        public Boolean preserveExternalRequestID;
 
         /**
          * <strong>example:</strong>
@@ -886,6 +892,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             return this.keepaliveHeaderTimeout;
         }
 
+        public GetGatewayConfigResponseBodyData setLiteMetrics(Boolean liteMetrics) {
+            this.liteMetrics = liteMetrics;
+            return this;
+        }
+        public Boolean getLiteMetrics() {
+            return this.liteMetrics;
+        }
+
         public GetGatewayConfigResponseBodyData setLogFilterConfig(String logFilterConfig) {
             this.logFilterConfig = logFilterConfig;
             return this;
@@ -908,6 +922,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
         public String getPathWithEscapedSlashes() {
             return this.pathWithEscapedSlashes;
+        }
+
+        public GetGatewayConfigResponseBodyData setPreserveExternalRequestID(Boolean preserveExternalRequestID) {
+            this.preserveExternalRequestID = preserveExternalRequestID;
+            return this;
+        }
+        public Boolean getPreserveExternalRequestID() {
+            return this.preserveExternalRequestID;
         }
 
         public GetGatewayConfigResponseBodyData setPreserveHeaderFormat(Boolean preserveHeaderFormat) {
