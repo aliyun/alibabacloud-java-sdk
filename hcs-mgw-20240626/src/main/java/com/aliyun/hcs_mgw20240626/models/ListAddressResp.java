@@ -9,7 +9,7 @@ public class ListAddressResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_marker</p>
+     * <your-next-address-name>
      */
     @NameInMap("NextMarker")
     public String nextMarker;

@@ -14,7 +14,7 @@ public class CreateAddressInfo extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <your-address-name>
      */
     @NameInMap("Name")
     public String name;

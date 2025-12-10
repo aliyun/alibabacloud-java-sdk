@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateReportInfo extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>test_job_name</p>
+     * <your-job-name>
      */
     @NameInMap("JobName")
     public String jobName;
@@ -20,7 +20,7 @@ public class CreateReportInfo extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_job_id</p>
+     * <your-job-version>
      */
     @NameInMap("Version")
     public String version;

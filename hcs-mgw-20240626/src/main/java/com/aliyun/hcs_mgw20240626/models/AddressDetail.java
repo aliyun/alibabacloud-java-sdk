@@ -8,7 +8,7 @@ public class AddressDetail extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_access_id</p>
+     * <hr>
      */
     @NameInMap("AccessId")
     public String accessId;
@@ -17,7 +17,7 @@ public class AddressDetail extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_secret_key</p>
+     * <hr>
      */
     @NameInMap("AccessSecret")
     public String accessSecret;
@@ -31,6 +31,10 @@ public class AddressDetail extends TeaModel {
     @NameInMap("AddressType")
     public String addressType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agnet1,agent2,agent3</p>
+     */
     @NameInMap("AgentList")
     public String agentList;
 
@@ -38,44 +42,51 @@ public class AddressDetail extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_bucket</p>
+     * <your-bucket-name>
      */
     @NameInMap("Bucket")
     public String bucket;
 
     /**
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
+    @NameInMap("DataType")
+    public String dataType;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_domain</p>
+     * <p>oss-cn-hangzhou.aliyuncs.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <strong>example:</strong>
-     * <p>test_inv_access_id</p>
+     * <hr>
      */
     @NameInMap("InvAccessId")
     public String invAccessId;
 
     /**
      * <strong>example:</strong>
-     * <p>test_inv_secret_key</p>
+     * <hr>
      */
     @NameInMap("InvAccessSecret")
     public String invAccessSecret;
 
     /**
      * <strong>example:</strong>
-     * <p>test_inv_bucket</p>
+     * <your-inv-bucket-name>
      */
     @NameInMap("InvBucket")
     public String invBucket;
 
     /**
      * <strong>example:</strong>
-     * <p>test_inv_domain</p>
+     * <p>oss-cn-hangzhou.aliyuncs.com</p>
      */
     @NameInMap("InvDomain")
     public String invDomain;
@@ -89,42 +100,42 @@ public class AddressDetail extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>manifest.json</p>
+     * <p>dir/manifest.json</p>
      */
     @NameInMap("InvPath")
     public String invPath;
 
     /**
      * <strong>example:</strong>
-     * <p>test_inv_region_id</p>
+     * <p>oss-cn-hangzhou</p>
      */
     @NameInMap("InvRegionId")
     public String invRegionId;
 
     /**
      * <strong>example:</strong>
-     * <p>test_inv_role</p>
+     * <your-role-name>
      */
     @NameInMap("InvRole")
     public String invRole;
 
     /**
      * <strong>example:</strong>
-     * <p>test_prefix</p>
+     * <p>dir1/dir2/</p>
      */
     @NameInMap("Prefix")
     public String prefix;
 
     /**
      * <strong>example:</strong>
-     * <p>test_region_id</p>
+     * <p>oss-cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <strong>example:</strong>
-     * <p>test_role</p>
+     * <your-role-name>
      */
     @NameInMap("Role")
     public String role;
@@ -172,6 +183,14 @@ public class AddressDetail extends TeaModel {
     }
     public String getBucket() {
         return this.bucket;
+    }
+
+    public AddressDetail setDataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+    public String getDataType() {
+        return this.dataType;
     }
 
     public AddressDetail setDomain(String domain) {

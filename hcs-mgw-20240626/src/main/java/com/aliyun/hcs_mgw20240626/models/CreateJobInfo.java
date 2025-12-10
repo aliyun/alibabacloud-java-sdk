@@ -4,6 +4,13 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class CreateJobInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("AppendableToNormal")
+    public Boolean appendableToNormal;
+
     @NameInMap("Audit")
     public Audit audit;
 
@@ -14,6 +21,10 @@ public class CreateJobInfo extends TeaModel {
     @NameInMap("ConvertSymlinkTarget")
     public Boolean convertSymlinkTarget;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CreateReport")
     public Boolean createReport;
 
@@ -21,11 +32,15 @@ public class CreateJobInfo extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_dest_address</p>
+     * <your-dest-address-name>
      */
     @NameInMap("DestAddress")
     public String destAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableMultiVersioning")
     public Boolean enableMultiVersioning;
 
@@ -39,7 +54,7 @@ public class CreateJobInfo extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <your-job-name>
      */
     @NameInMap("Name")
     public String name;
@@ -53,6 +68,10 @@ public class CreateJobInfo extends TeaModel {
     @NameInMap("OverwriteMode")
     public String overwriteMode;
 
+    /**
+     * <strong>example:</strong>
+     * <your-parent-version>
+     */
     @NameInMap("ParentVersion")
     public String parentVersion;
 
@@ -63,7 +82,7 @@ public class CreateJobInfo extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_src_address</p>
+     * <your-src-address-name>
      */
     @NameInMap("SrcAddress")
     public String srcAddress;
@@ -76,6 +95,13 @@ public class CreateJobInfo extends TeaModel {
     public String tags;
 
     /**
+     * <strong>example:</strong>
+     * <p>Standard</p>
+     */
+    @NameInMap("TargetStorageClass")
+    public String targetStorageClass;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,9 +110,31 @@ public class CreateJobInfo extends TeaModel {
     @NameInMap("TransferMode")
     public String transferMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("WithLastModifyTime")
+    public Boolean withLastModifyTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("WithStorageClass")
+    public Boolean withStorageClass;
+
     public static CreateJobInfo build(java.util.Map<String, ?> map) throws Exception {
         CreateJobInfo self = new CreateJobInfo();
         return TeaModel.build(map, self);
+    }
+
+    public CreateJobInfo setAppendableToNormal(Boolean appendableToNormal) {
+        this.appendableToNormal = appendableToNormal;
+        return this;
+    }
+    public Boolean getAppendableToNormal() {
+        return this.appendableToNormal;
     }
 
     public CreateJobInfo setAudit(Audit audit) {
@@ -193,12 +241,36 @@ public class CreateJobInfo extends TeaModel {
         return this.tags;
     }
 
+    public CreateJobInfo setTargetStorageClass(String targetStorageClass) {
+        this.targetStorageClass = targetStorageClass;
+        return this;
+    }
+    public String getTargetStorageClass() {
+        return this.targetStorageClass;
+    }
+
     public CreateJobInfo setTransferMode(String transferMode) {
         this.transferMode = transferMode;
         return this;
     }
     public String getTransferMode() {
         return this.transferMode;
+    }
+
+    public CreateJobInfo setWithLastModifyTime(Boolean withLastModifyTime) {
+        this.withLastModifyTime = withLastModifyTime;
+        return this;
+    }
+    public Boolean getWithLastModifyTime() {
+        return this.withLastModifyTime;
+    }
+
+    public CreateJobInfo setWithStorageClass(Boolean withStorageClass) {
+        this.withStorageClass = withStorageClass;
+        return this;
+    }
+    public Boolean getWithStorageClass() {
+        return this.withStorageClass;
     }
 
 }

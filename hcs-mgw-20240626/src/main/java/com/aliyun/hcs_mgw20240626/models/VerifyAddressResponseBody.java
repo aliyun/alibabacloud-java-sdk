@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyAddressResponseBody extends TeaModel {
     /**
-     * <p>校验数据地址详情。</p>
+     * <p>The details for verifying the data address.</p>
      */
     @NameInMap("VerifyAddressResponse")
     public VerifyAddressResp verifyAddressResponse;

@@ -37,14 +37,14 @@ public class GetAgentResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <your-agent-name>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <strong>example:</strong>
-     * <p>test_owner</p>
+     * <p>1<em><strong>90</strong>87</em>*<em>53</em></p>
      */
     @NameInMap("Owner")
     public String owner;
@@ -58,14 +58,14 @@ public class GetAgentResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_tunnel_id</p>
+     * <p><strong><strong>13f-</strong></strong>-0567-<strong><strong>-af8d</strong></strong>446665</p>
      */
     @NameInMap("TunnelId")
     public String tunnelId;
 
     /**
      * <strong>example:</strong>
-     * <p>test_agent_id</p>
+     * <p><strong><strong>33f-</strong></strong>-4740-<strong><strong>-bc4f</strong></strong>332b3</p>
      */
     @NameInMap("Version")
     public String version;

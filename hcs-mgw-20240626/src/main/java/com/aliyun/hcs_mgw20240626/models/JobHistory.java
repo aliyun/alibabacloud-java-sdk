@@ -27,7 +27,7 @@ public class JobHistory extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2025-07-04T08:09:26.000Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -41,7 +41,7 @@ public class JobHistory extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_id</p>
+     * <p><em><em><strong>-188f-</strong></em>-b266-</em>***</p>
      */
     @NameInMap("JobVersion")
     public String jobVersion;
@@ -58,7 +58,7 @@ public class JobHistory extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <your-job-name>
      */
     @NameInMap("Name")
     public String name;
@@ -86,7 +86,7 @@ public class JobHistory extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2025-07-04T07:09:26.000Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

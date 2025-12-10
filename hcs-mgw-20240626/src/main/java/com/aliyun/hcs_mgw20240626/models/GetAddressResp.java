@@ -23,14 +23,14 @@ public class GetAddressResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <your-address-name>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <strong>example:</strong>
-     * <p>test_owner</p>
+     * <p>1<em><strong>90</strong>87</em>*<em>53</em></p>
      */
     @NameInMap("Owner")
     public String owner;
@@ -61,7 +61,7 @@ public class GetAddressResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_id</p>
+     * <p><strong><strong>sf-</strong></strong>-0078-<strong><strong>-drfg</strong></strong>df1334</p>
      */
     @NameInMap("Version")
     public String version;

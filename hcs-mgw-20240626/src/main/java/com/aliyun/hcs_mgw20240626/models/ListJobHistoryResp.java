@@ -9,7 +9,7 @@ public class ListJobHistoryResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_next_marker</p>
+     * <p>1#3</p>
      */
     @NameInMap("NextMarker")
     public String nextMarker;

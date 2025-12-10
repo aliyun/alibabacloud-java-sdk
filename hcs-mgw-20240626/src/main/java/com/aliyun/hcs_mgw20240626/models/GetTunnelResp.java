@@ -6,21 +6,21 @@ import com.aliyun.tea.*;
 public class GetTunnelResp extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2025-08-03T07:09:25.000Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2025-08-04T07:09:26.000Z</p>
      */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
     /**
      * <strong>example:</strong>
-     * <p>test_owner</p>
+     * <p>1<em>5</em>**<em><strong>7</strong>43</em></p>
      */
     @NameInMap("Owner")
     public String owner;
@@ -34,7 +34,7 @@ public class GetTunnelResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_tunnel_id</p>
+     * <p><strong><strong>33f-</strong></strong>-4740-<strong><strong>-bc4f</strong></strong>332b3</p>
      */
     @NameInMap("TunnelId")
     public String tunnelId;

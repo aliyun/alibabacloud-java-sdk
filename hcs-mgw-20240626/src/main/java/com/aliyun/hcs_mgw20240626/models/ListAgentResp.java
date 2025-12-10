@@ -9,7 +9,7 @@ public class ListAgentResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_next_marker</p>
+     * <your-next-agent-name>
      */
     @NameInMap("NextMarker")
     public String nextMarker;

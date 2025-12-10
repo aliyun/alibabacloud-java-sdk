@@ -1400,6 +1400,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To verify a data address, you must have the permission on mgw:VerifyImportAddress.</p>
+     * <ul>
+     * <li>A data address may not be available even if the data address passes the availability verification. The data migration results prevail.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Verifies whether a data address is available.</p>
      * 
@@ -1429,6 +1435,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To verify a data address, you must have the permission on mgw:VerifyImportAddress.</p>
+     * <ul>
+     * <li>A data address may not be available even if the data address passes the availability verification. The data migration results prevail.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Verifies whether a data address is available.</p>
      * @return VerifyAddressResponse

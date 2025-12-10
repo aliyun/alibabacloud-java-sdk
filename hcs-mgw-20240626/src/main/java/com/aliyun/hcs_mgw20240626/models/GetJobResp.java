@@ -4,6 +4,13 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class GetJobResp extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AppendableToNormal")
+    public Boolean appendableToNormal;
+
     @NameInMap("Audit")
     public Audit audit;
 
@@ -23,14 +30,14 @@ public class GetJobResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2025-07-04T06:02:21.000Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <strong>example:</strong>
-     * <p>test_dest_address</p>
+     * <your-dest-address-name>
      */
     @NameInMap("DestAddress")
     public String destAddress;
@@ -50,14 +57,14 @@ public class GetJobResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>2025-07-05T06:02:22.000Z</p>
      */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
     /**
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <your-job-name>
      */
     @NameInMap("Name")
     public String name;
@@ -69,12 +76,24 @@ public class GetJobResp extends TeaModel {
     @NameInMap("OverwriteMode")
     public String overwriteMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11<strong><em>9</em>38</strong><em>34</em>*</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <your-parent-job-name>
+     */
     @NameInMap("ParentName")
     public String parentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3<em><strong>1a7f-18</strong>-41d9-</em><em><strong>-21591</strong></em>49**</p>
+     */
     @NameInMap("ParentVersion")
     public String parentVersion;
 
@@ -83,7 +102,7 @@ public class GetJobResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_src_address</p>
+     * <your-src-address-name>
      */
     @NameInMap("SrcAddress")
     public String srcAddress;
@@ -104,6 +123,13 @@ public class GetJobResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>Standard</p>
+     */
+    @NameInMap("TargetStorageClass")
+    public String targetStorageClass;
+
+    /**
+     * <strong>example:</strong>
      * <p>all</p>
      */
     @NameInMap("TransferMode")
@@ -111,14 +137,36 @@ public class GetJobResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_id</p>
+     * <p>31<em><strong>a7f-188f-</strong></em><em>-b266-215</em>**8e49d7</p>
      */
     @NameInMap("Version")
     public String version;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("WithLastModifyTime")
+    public Boolean withLastModifyTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("WithStorageClass")
+    public Boolean withStorageClass;
+
     public static GetJobResp build(java.util.Map<String, ?> map) throws Exception {
         GetJobResp self = new GetJobResp();
         return TeaModel.build(map, self);
+    }
+
+    public GetJobResp setAppendableToNormal(Boolean appendableToNormal) {
+        this.appendableToNormal = appendableToNormal;
+        return this;
+    }
+    public Boolean getAppendableToNormal() {
+        return this.appendableToNormal;
     }
 
     public GetJobResp setAudit(Audit audit) {
@@ -265,6 +313,14 @@ public class GetJobResp extends TeaModel {
         return this.tags;
     }
 
+    public GetJobResp setTargetStorageClass(String targetStorageClass) {
+        this.targetStorageClass = targetStorageClass;
+        return this;
+    }
+    public String getTargetStorageClass() {
+        return this.targetStorageClass;
+    }
+
     public GetJobResp setTransferMode(String transferMode) {
         this.transferMode = transferMode;
         return this;
@@ -279,6 +335,22 @@ public class GetJobResp extends TeaModel {
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public GetJobResp setWithLastModifyTime(Boolean withLastModifyTime) {
+        this.withLastModifyTime = withLastModifyTime;
+        return this;
+    }
+    public Boolean getWithLastModifyTime() {
+        return this.withLastModifyTime;
+    }
+
+    public GetJobResp setWithStorageClass(Boolean withStorageClass) {
+        this.withStorageClass = withStorageClass;
+        return this;
+    }
+    public Boolean getWithStorageClass() {
+        return this.withStorageClass;
     }
 
 }

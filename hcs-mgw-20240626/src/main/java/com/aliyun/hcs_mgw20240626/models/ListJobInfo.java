@@ -9,7 +9,7 @@ public class ListJobInfo extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_next_marker</p>
+     * <your-next-job-name>
      */
     @NameInMap("NextMarker")
     public String nextMarker;

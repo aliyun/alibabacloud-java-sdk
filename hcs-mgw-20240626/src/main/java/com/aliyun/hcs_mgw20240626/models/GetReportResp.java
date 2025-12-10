@@ -21,23 +21,19 @@ public class GetReportResp extends TeaModel {
     @NameInMap("FailedCount")
     public Long failedCount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test_failed_prefix/</p>
-     */
     @NameInMap("FailedListPrefix")
     public String failedListPrefix;
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>1754445355</p>
      */
     @NameInMap("JobCreateTime")
     public String jobCreateTime;
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>1754445355</p>
      */
     @NameInMap("JobEndTime")
     public String jobEndTime;
@@ -51,14 +47,14 @@ public class GetReportResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>1748232558</p>
      */
     @NameInMap("ReportCreateTime")
     public String reportCreateTime;
 
     /**
      * <strong>example:</strong>
-     * <p>2024-05-01 12:00:00</p>
+     * <p>1748232845</p>
      */
     @NameInMap("ReportEndTime")
     public String reportEndTime;
@@ -70,16 +66,12 @@ public class GetReportResp extends TeaModel {
     @NameInMap("SkippedCount")
     public Long skippedCount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test_skipped_prefix/</p>
-     */
     @NameInMap("SkippedListPrefix")
     public String skippedListPrefix;
 
     /**
      * <strong>example:</strong>
-     * <p>Running</p>
+     * <p>Finished</p>
      */
     @NameInMap("Status")
     public String status;
@@ -91,10 +83,6 @@ public class GetReportResp extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test_total_prefix/</p>
-     */
     @NameInMap("TotalListPrefix")
     public String totalListPrefix;
 

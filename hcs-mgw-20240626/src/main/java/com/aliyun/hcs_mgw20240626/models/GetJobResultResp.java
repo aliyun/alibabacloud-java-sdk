@@ -34,28 +34,28 @@ public class GetJobResultResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_access_id</p>
+     * <hr>
      */
     @NameInMap("InvAccessId")
     public String invAccessId;
 
     /**
      * <strong>example:</strong>
-     * <p>test_secret_key</p>
+     * <hr>
      */
     @NameInMap("InvAccessSecret")
     public String invAccessSecret;
 
     /**
      * <strong>example:</strong>
-     * <p>test_sys_bucket</p>
+     * <your-bucket-name>
      */
     @NameInMap("InvBucket")
     public String invBucket;
 
     /**
      * <strong>example:</strong>
-     * <p>test_domain</p>
+     * <p>oss-cn-hangzhou.aliyuncs.com</p>
      */
     @NameInMap("InvDomain")
     public String invDomain;
@@ -69,14 +69,14 @@ public class GetJobResultResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>mainfest.json</p>
+     * <p>dir/mainfest.json</p>
      */
     @NameInMap("InvPath")
     public String invPath;
 
     /**
      * <strong>example:</strong>
-     * <p>test_region_id</p>
+     * <p>oss-cn-hangzhou</p>
      */
     @NameInMap("InvRegionId")
     public String invRegionId;
@@ -87,6 +87,20 @@ public class GetJobResultResp extends TeaModel {
      */
     @NameInMap("ReadyRetry")
     public String readyRetry;
+
+    /**
+     * <strong>example:</strong>
+     * <p>5000</p>
+     */
+    @NameInMap("SkippedObjectCount")
+    public Long skippedObjectCount;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1000000</p>
+     */
+    @NameInMap("SkippedObjectSize")
+    public Long skippedObjectSize;
 
     /**
      * <strong>example:</strong>
@@ -104,7 +118,7 @@ public class GetJobResultResp extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_job_id</p>
+     * <p><strong><strong><strong>-188f-41d9-b266-</strong></strong></strong></p>
      */
     @NameInMap("Version")
     public String version;
@@ -208,6 +222,22 @@ public class GetJobResultResp extends TeaModel {
     }
     public String getReadyRetry() {
         return this.readyRetry;
+    }
+
+    public GetJobResultResp setSkippedObjectCount(Long skippedObjectCount) {
+        this.skippedObjectCount = skippedObjectCount;
+        return this;
+    }
+    public Long getSkippedObjectCount() {
+        return this.skippedObjectCount;
+    }
+
+    public GetJobResultResp setSkippedObjectSize(Long skippedObjectSize) {
+        this.skippedObjectSize = skippedObjectSize;
+        return this;
+    }
+    public Long getSkippedObjectSize() {
+        return this.skippedObjectSize;
     }
 
     public GetJobResultResp setTotalObjectCount(Long totalObjectCount) {

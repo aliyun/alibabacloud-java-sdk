@@ -7,9 +7,17 @@ public class ListJobResp extends TeaModel {
     @NameInMap("ImportJob")
     public java.util.List<GetJobResp> importJob;
 
+    /**
+     * <strong>example:</strong>
+     * <your-next-job-name>
+     */
     @NameInMap("NextMarker")
     public String nextMarker;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Truncated")
     public Boolean truncated;
 
