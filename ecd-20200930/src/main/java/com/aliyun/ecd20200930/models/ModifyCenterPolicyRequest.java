@@ -2574,6 +2574,9 @@ public class ModifyCenterPolicyRequest extends TeaModel {
         @NameInMap("ClipboardSize")
         public Integer clipboardSize;
 
+        @NameInMap("ClipboardSizeUnit")
+        public String clipboardSizeUnit;
+
         @NameInMap("ClipboardType")
         public String clipboardType;
 
@@ -2591,6 +2594,14 @@ public class ModifyCenterPolicyRequest extends TeaModel {
         }
         public Integer getClipboardSize() {
             return this.clipboardSize;
+        }
+
+        public ModifyCenterPolicyRequestClipboardGraineds setClipboardSizeUnit(String clipboardSizeUnit) {
+            this.clipboardSizeUnit = clipboardSizeUnit;
+            return this;
+        }
+        public String getClipboardSizeUnit() {
+            return this.clipboardSizeUnit;
         }
 
         public ModifyCenterPolicyRequestClipboardGraineds setClipboardType(String clipboardType) {
