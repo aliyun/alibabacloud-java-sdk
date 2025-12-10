@@ -7,9 +7,17 @@ public class GetExperimentStatusResponseBody extends TeaModel {
     @NameInMap("Nodes")
     public java.util.List<GetExperimentStatusResponseBodyNodes> nodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -43,24 +51,52 @@ public class GetExperimentStatusResponseBody extends TeaModel {
     }
 
     public static class GetExperimentStatusResponseBodyNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T18:12:35.232Z</p>
+         */
         @NameInMap("FinishedAt")
         public String finishedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-mewqhd72nsrqujn1px</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id-2317-1608984201281-74996</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>flow-wayrh3k605s7i51wey</p>
+         */
         @NameInMap("RunId")
         public String runId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node-6hc0eocnmzf4pk9njc</p>
+         */
         @NameInMap("RunNodeId")
         public String runNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("StartedAt")
         public String startedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 

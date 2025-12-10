@@ -4,9 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class CopyExperimentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>draft-rbvg5wzljzjhc9ks92</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6D161C28-9CB1-584E-8DD5-64441E32A5B3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

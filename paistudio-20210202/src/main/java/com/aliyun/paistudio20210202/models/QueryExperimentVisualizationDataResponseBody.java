@@ -7,6 +7,10 @@ public class QueryExperimentVisualizationDataResponseBody extends TeaModel {
     @NameInMap("VisualizationData")
     public java.util.List<QueryExperimentVisualizationDataResponseBodyVisualizationData> visualizationData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFB1D4B4-B253-540A-9B3B-AA711C48A1B7</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class QueryExperimentVisualizationDataResponseBody extends TeaModel {
     }
 
     public static class QueryExperimentVisualizationDataResponseBodyVisualizationData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dataId1</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node-ux55ier8axzo2xelcc</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 

@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class SearchMCTablesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

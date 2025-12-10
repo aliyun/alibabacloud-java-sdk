@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentsUsersStatisticsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class GetExperimentsUsersStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetExperimentsUsersStatisticsResponseBodyUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12345******67890</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

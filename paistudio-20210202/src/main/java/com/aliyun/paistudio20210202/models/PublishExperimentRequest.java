@@ -4,6 +4,12 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class PublishExperimentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 

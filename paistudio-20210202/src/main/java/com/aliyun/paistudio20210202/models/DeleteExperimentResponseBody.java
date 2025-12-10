@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class DeleteExperimentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2ABF5D32-C9EE-55AE-92EE-DB08E8988AD3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

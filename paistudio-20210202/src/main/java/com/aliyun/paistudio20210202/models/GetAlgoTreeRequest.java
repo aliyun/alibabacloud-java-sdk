@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetAlgoTreeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PaiStudio</p>
+     */
     @NameInMap("Source")
     public String source;
 

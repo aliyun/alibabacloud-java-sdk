@@ -4,9 +4,19 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentsStatisticsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PaiStudio</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123,345</p>
+     */
     @NameInMap("WorkspaceIds")
     public String workspaceIds;
 

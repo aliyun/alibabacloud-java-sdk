@@ -4,9 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmDefResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B4F16666-FD54-5D9D-A362-53A4C66692DF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Spec")
     public java.util.Map<String, ?> spec;
 

@@ -4,15 +4,35 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class PreviewMCTableRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://service.cn-hangzhou-vpc.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou-vpc.maxcompute.aliyun-inc.com/api</a></p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pt=20240805</p>
+     */
     @NameInMap("Partition")
     public String partition;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

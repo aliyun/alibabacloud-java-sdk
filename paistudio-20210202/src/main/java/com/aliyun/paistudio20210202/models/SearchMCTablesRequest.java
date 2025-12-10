@@ -4,9 +4,21 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class SearchMCTablesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>project.table_name_prefix</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

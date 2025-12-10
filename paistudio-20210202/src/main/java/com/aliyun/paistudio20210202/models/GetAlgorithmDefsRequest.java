@@ -4,15 +4,31 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmDefsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1709950208</p>
+     */
     @NameInMap("LatestTimestamp")
     public String latestTimestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("RangeEnd")
     public Integer rangeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RangeStart")
     public Integer rangeStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1709950208</p>
+     */
     @NameInMap("Timestamp")
     public String timestamp;
 

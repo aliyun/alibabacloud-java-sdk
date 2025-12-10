@@ -4,39 +4,87 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentMetaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1326****76250</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pipeline draft description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>draft-rbvg5wzljzjhc9ks92</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pipeline draft name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;mlflow&quot;:{&quot;experimentId&quot;:&quot;exp-1&quot;}}</p>
+     */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PaiStudio</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Version")
     public String version;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23487</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

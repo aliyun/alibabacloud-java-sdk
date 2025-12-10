@@ -7,9 +7,17 @@ public class ListImageLabelsRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a=b,c=d</p>
+     */
     @NameInMap("LabelFilter")
     public String labelFilter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ImageType,Framework,Platform</p>
+     */
     @NameInMap("LabelKeys")
     public String labelKeys;
 

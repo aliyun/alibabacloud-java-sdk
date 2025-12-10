@@ -10,6 +10,10 @@ public class GetMCTableSchemaResponseBody extends TeaModel {
     @NameInMap("PartitionColumns")
     public java.util.List<String> partitionColumns;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +47,20 @@ public class GetMCTableSchemaResponseBody extends TeaModel {
     }
 
     public static class GetMCTableSchemaResponseBodyColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>column1</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Preview")
         public java.util.List<String> preview;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("Type")
         public String type;
 

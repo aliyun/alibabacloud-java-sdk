@@ -7,33 +7,61 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <strong>example:</strong>
+     * <p>types</p>
+     */
     @NameInMap("List")
     public String list;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PaiStudio</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>template-tag-12345</p>
+     */
     @NameInMap("TagId")
     public String tagId;
 
     @NameInMap("TemplateType")
     public String templateType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>template-type-12345</p>
+     */
     @NameInMap("TypeId")
     public String typeId;
 

@@ -7,6 +7,10 @@ public class ListImageLabelsResponseBody extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<ListImageLabelsResponseBodyLabels> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

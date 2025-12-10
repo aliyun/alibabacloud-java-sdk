@@ -4,15 +4,27 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class MigrateExperimentsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NO_PERMISSION</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public MigrateExperimentsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NotExistError</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7C42CC7-2E85-508A-84F4-923B605FD10F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,24 @@ public class MigrateExperimentsResponseBody extends TeaModel {
     }
 
     public static class MigrateExperimentsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AlreadyExists")
         public Boolean alreadyExists;
 
+        /**
+         * <strong>example:</strong>
+         * <p>draft-8u3ck2or5pw2i4auhf</p>
+         */
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Updated")
         public Boolean updated;
 

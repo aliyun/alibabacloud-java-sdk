@@ -4,6 +4,9 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class QueryExperimentVisualizationDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("body")
     public java.util.List<QueryExperimentVisualizationDataRequestBody> body;
 
@@ -21,12 +24,24 @@ public class QueryExperimentVisualizationDataRequest extends TeaModel {
     }
 
     public static class QueryExperimentVisualizationDataRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node-2dfd8xfjda</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

@@ -4,18 +4,42 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class CreateExperimentFolderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pipeline draft name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>folder-xxfdjhfxdfad</p>
+     */
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PaiStudio</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45699</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,9 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmTreeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>46B59732-033F-5C96-9B15-1E05E7705548</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20210317101023</p>
+     */
     @NameInMap("Timestamp")
     public String timestamp;
 

@@ -7,6 +7,10 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("Jobs")
     public java.util.List<ListJobsResponseBodyJobs> jobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +36,73 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>17677*******89598</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EXECUTE_ALL</p>
+         */
         @NameInMap("ExecuteType")
         public String executeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>draft-4x4iv3a9enuxw4vgka</p>
+         */
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-mewqhd72nsrqujn1px</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nodeId1</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node-xdfasf8ewxfdaddl</p>
+         */
         @NameInMap("PaiflowNodeId")
         public String paiflowNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>flow-aayfouai80i980ncvz</p>
+         */
         @NameInMap("RunId")
         public String runId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>94436</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

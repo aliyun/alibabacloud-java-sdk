@@ -7,9 +7,17 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<GetExperimentFolderChildrenResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,24 +51,56 @@ public class GetExperimentFolderChildrenResponseBody extends TeaModel {
     }
 
     public static class GetExperimentFolderChildrenResponseBodyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Empty")
         public Boolean empty;
 
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>icon-folder</p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>folder-xzf7t7****ch7qce</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pipeline draft name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dir</p>
+         */
         @NameInMap("Type")
         public String type;
 

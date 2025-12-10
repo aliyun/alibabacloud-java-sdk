@@ -7,6 +7,10 @@ public class ListImagesResponseBody extends TeaModel {
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,9 +80,17 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image-tzi7f9czc0cxs9s45t</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 

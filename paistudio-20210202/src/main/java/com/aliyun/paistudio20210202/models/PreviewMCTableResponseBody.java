@@ -7,6 +7,10 @@ public class PreviewMCTableResponseBody extends TeaModel {
     @NameInMap("Content")
     public java.util.List<java.util.List<String>> content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

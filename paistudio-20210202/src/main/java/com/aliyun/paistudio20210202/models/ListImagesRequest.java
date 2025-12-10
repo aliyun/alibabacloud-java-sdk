@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Framework=&quot;Tensorflow 1.0&quot;,Framework=&quot;Tensorflow 2.0&quot;,Platform=&quot;GPU&quot;</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
@@ -19,9 +23,17 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Verbose")
     public Boolean verbose;
 

@@ -4,9 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetAlgoTreeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[{}]</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8CAA642F-EFEB-5F87-8F2F-ACD58B15FA03</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,18 +4,38 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentMetaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pipeline draft description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>folder-xfd782efd08wex</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pipeline draft name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;mlflow&quot;:{&quot;experimentId&quot;:&quot;exp-1&quot;}}</p>
+     */
     @NameInMap("Options")
     public String options;
 

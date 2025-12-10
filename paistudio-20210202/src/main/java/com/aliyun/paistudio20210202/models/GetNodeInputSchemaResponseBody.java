@@ -10,6 +10,10 @@ public class GetNodeInputSchemaResponseBody extends TeaModel {
     @NameInMap("ColTypes")
     public java.util.List<String> colTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CEB07647-8A5D-56F1-8B99-361BCF51402F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

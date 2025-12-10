@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentFolderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E7C42CC7-2E85-508A-84F4-923B605FD10F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

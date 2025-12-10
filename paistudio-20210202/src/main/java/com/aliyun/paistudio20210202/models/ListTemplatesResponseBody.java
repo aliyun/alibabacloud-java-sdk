@@ -10,6 +10,10 @@ public class ListTemplatesResponseBody extends TeaModel {
     @NameInMap("TemplateData")
     public java.util.List<ListTemplatesResponseBodyTemplateData> templateData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,6 +47,10 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplateDataTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Content")
         public String content;
 
@@ -55,15 +63,29 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>url://xxx</p>
+         */
         @NameInMap("DocLink")
         public String docLink;
 
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>url://xxx</p>
+         */
         @NameInMap("ImageLink")
         public String imageLink;
 
@@ -73,6 +95,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>template-rbvg5wzljzjhc9ks92</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -172,12 +198,24 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplateDataTemplateTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PyTorch</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>template-tag-rbvg5wzljzjhc9ks92</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>template-tag-type-rbvg5wzljzjhc9ks92</p>
+         */
         @NameInMap("TypeId")
         public String typeId;
 
@@ -213,9 +251,17 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplateDataTemplateType extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>行业分类</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>templatetagtype-rbvg5wzljzjhc9ks92</p>
+         */
         @NameInMap("TypeId")
         public String typeId;
 

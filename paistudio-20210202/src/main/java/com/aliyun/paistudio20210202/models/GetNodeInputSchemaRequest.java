@@ -4,9 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetNodeInputSchemaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>inputTable</p>
+     */
     @NameInMap("InputId")
     public String inputId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("InputIndex")
     public Integer inputIndex;
 

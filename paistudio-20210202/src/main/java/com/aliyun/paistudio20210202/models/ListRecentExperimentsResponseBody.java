@@ -7,9 +7,17 @@ public class ListRecentExperimentsResponseBody extends TeaModel {
     @NameInMap("Experiments")
     public java.util.List<ListRecentExperimentsResponseBodyExperiments> experiments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,27 +51,59 @@ public class ListRecentExperimentsResponseBody extends TeaModel {
     }
 
     public static class ListRecentExperimentsResponseBodyExperiments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Pipeline draft description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>draft-76p70ye0gwv3vbur55</p>
+         */
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ModifyCnt")
         public Long modifyCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pipeline draft name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
+         */
         @NameInMap("RecentGmtModifiedTime")
         public String recentGmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PaiStudio</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15821</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Workspace name</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

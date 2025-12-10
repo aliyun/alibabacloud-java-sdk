@@ -7,6 +7,10 @@ public class GetExperimentsStatisticsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<GetExperimentsStatisticsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GetExperimentsStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetExperimentsStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CreateCount")
         public Long createCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16381</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

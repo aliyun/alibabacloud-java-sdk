@@ -4,9 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class CreateJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>job-jcs4mmyangk7r2zdqz</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>85082123-2A3F-52E7-B27A-F04700B82FFB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListAuthRolesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8E2C1BB9-57C4-5051-9EF2-570ADC03A164</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class ListAuthRolesResponseBody extends TeaModel {
     }
 
     public static class ListAuthRolesResponseBodyRolesToken extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>STS.NU************TT5LoC</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>E1h2n66Duo1D**********c79JVk59R6i</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-19T19:14:42Z</p>
+         */
         @NameInMap("Expiration")
         public String expiration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CAISggJ1q6Ft5B2yf***************aAaDf+bmceH2MNtNe9XtmTXJytadQ2T0RT8uOA+4kSypOPxSHjdjmnQjbdA/Q9MyNtTErQ/m45RNsg==</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 
@@ -84,15 +104,31 @@ public class ListAuthRolesResponseBody extends TeaModel {
     }
 
     public static class ListAuthRolesResponseBodyRoles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsEnabled")
         public String isEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs:ram::1557********904:role/aliyunodpspaidefaultrole</p>
+         */
         @NameInMap("RoleARN")
         public String roleARN;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliyunODPSPAIDefaultRole</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PaiStudio。</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 

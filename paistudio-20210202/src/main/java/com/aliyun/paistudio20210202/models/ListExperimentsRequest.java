@@ -4,30 +4,68 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class ListExperimentsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>13266******376250</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>draft-rbvg5wzljzjhc9ks92</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pipeline draft name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreate</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PaiStudio</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34875</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

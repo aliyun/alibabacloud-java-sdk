@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{     &quot;metadata&quot;: {       &quot;name&quot;: &quot;实验名称&quot;,       &quot;id&quot;: &quot;pai_exp_xxxdfafafasfa&quot;,       &quot;desc&quot;: &quot;实验描述&quot;,     },     &quot;nodes&quot;: [     ],     &quot;edges&quot;: [     ],     &quot;globalParams&quot;: [     ],     &quot;globalSettings&quot;:[     ]  }</p>
+     */
     @NameInMap("Content")
     public String content;
 
@@ -13,9 +17,17 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("Detail")
     public String detail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>URL://xxx</p>
+     */
     @NameInMap("DocLink")
     public String docLink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>URL://xxx</p>
+     */
     @NameInMap("ImageLink")
     public String imageLink;
 
@@ -34,6 +46,10 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>template-12345</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

@@ -4,9 +4,17 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentFolderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>folder1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>folder-xzf7t785nka4c2334</p>
+     */
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 

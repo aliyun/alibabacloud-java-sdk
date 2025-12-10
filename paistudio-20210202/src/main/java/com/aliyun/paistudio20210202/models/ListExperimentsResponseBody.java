@@ -7,9 +7,17 @@ public class ListExperimentsResponseBody extends TeaModel {
     @NameInMap("Experiments")
     public java.util.List<ListExperimentsResponseBodyExperiments> experiments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9708FB85-232F-5F9A-9D67-7F9CCCE20E06</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,33 +51,73 @@ public class ListExperimentsResponseBody extends TeaModel {
     }
 
     public static class ListExperimentsResponseBodyExperiments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
+         */
         @NameInMap("Accessibility")
         public String accessibility;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1326*******76250</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pipeline draft description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>draft-rbvg5wzljzjhc9ks92</p>
+         */
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-30T12:51:33.028Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pipeline draft name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PaiStudio</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Version")
         public Long version;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23487</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

@@ -4,45 +4,135 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     * <p>arguments:
+     *   parameters:</p>
+     * <ul>
+     * <li>name: &quot;execution_maxcompute&quot;
+     * value:
+     *   endpoint: &quot;<a href="http://service.cn-shanghai.maxcompute.aliyun.com/api">http://service.cn-shanghai.maxcompute.aliyun.com/api</a>&quot;
+     *   odpsProject: &quot;xxxxxxx&quot;</li>
+     * </ul>
+     */
     @NameInMap("Arguments")
     public String arguments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13266*******76250</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EXECUTE_TO_HERE</p>
+     */
     @NameInMap("ExecuteType")
     public String executeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>draft-rbvg5wzljzjhc9ks92</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35.232Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-6xfhrofqx93y139fg3</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id-xxxxx</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>node-5dzotrnwyzfxmbwwc8</p>
+     */
     @NameInMap("PaiflowNodeId")
     public String paiflowNodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>flow-lcs8ez11961l6urc3m</p>
+     */
     @NameInMap("RunId")
     public String runId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>apiVersion: &quot;core/v1&quot;
+     * metadata:
+     *   version: &quot;v1&quot;
+     *   identifier: &quot;1de8f7c8-a9d8-4433-9e87-d95979ccab14&quot;
+     *   annotations: {}
+     * spec:
+     *   inputs:
+     *     artifacts: []
+     *     parameters:
+     *     - name: &quot;execution&quot;
+     *       type: &quot;Map&quot;
+     *   arguments:
+     *     artifacts: []
+     *     parameters: []
+     *   dependencies: []
+     *   initContainers: []
+     *   sideCarContainers: []
+     *   pipelines:</p>
+     * <ul>
+     * <li>apiVersion: &quot;core/v1&quot;
+     * metadata:
+     *   provider: &quot;pai&quot;
+     *   name: &quot;id-2d88-1608982098027-91558&quot;
+     *   version: &quot;v1&quot;
+     *   identifier: &quot;type_transform&quot;
+     *   annotations: {}</li>
+     * </ul>
+     */
     @NameInMap("RunInfo")
     public String runInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Snapshot")
     public String snapshot;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86995</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

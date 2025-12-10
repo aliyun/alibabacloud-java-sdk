@@ -4,6 +4,10 @@ package com.aliyun.paistudio20210202.models;
 import com.aliyun.tea.*;
 
 public class GetExperimentVisualizationMetaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>node_id1,node_id2</p>
+     */
     @NameInMap("NodeIds")
     public String nodeIds;
 

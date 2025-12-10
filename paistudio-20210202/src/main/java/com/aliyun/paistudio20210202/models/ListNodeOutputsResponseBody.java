@@ -7,6 +7,10 @@ public class ListNodeOutputsResponseBody extends TeaModel {
     @NameInMap("Outputs")
     public java.util.List<ListNodeOutputsResponseBodyOutputs> outputs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +42,48 @@ public class ListNodeOutputsResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaxComputeTable</p>
+         */
         @NameInMap("LocationType")
         public String locationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node1</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>outputModel</p>
+         */
         @NameInMap("OutputId")
         public String outputId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OutputIndex")
         public String outputIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Model</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *    &quot;table&quot;: &quot;table_name&quot;,
+         *    &quot;locationType&quot;: &quot;MaxComputeTable&quot;
+         * }</p>
+         */
         @NameInMap("Value")
         public java.util.Map<String, ?> value;
 
