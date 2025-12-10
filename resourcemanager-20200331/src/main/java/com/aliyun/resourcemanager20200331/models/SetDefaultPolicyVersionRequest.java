@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetDefaultPolicyVersionRequest extends TeaModel {
     /**
-     * <p>The name of the policy.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>The name of the permission policy.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphen (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

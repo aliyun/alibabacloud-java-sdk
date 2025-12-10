@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPolicyAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The policy attachment records.</p>
+     * <p>The information about the permission policies.</p>
      */
     @NameInMap("PolicyAttachments")
     public ListPolicyAttachmentsResponseBodyPolicyAttachments policyAttachments;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -38,7 +38,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,7 +93,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
 
     public static class ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment extends TeaModel {
         /**
-         * <p>The time when the policy was attached.</p>
+         * <p>The time when the permission policy is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -102,7 +102,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         public String attachDate;
 
         /**
-         * <p>The description of the policy.</p>
+         * <p>The description of the permission policy.</p>
          * 
          * <strong>example:</strong>
          * <p>The description of the policy.</p>
@@ -111,7 +111,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The name of the permission policy.</p>
          * 
          * <strong>example:</strong>
          * <p>AdministratorAccess</p>
@@ -120,10 +120,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The type of the policy. Valid values:</p>
+         * <p>The type of the permission policy. Valid values:</p>
          * <ul>
-         * <li>Custom: custom policy</li>
-         * <li>System: system policy</li>
+         * <li>Custom</li>
+         * <li>System</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The name of the object to which the policy is attached.</p>
+         * <p>The name of the object to which the permission policy is attached.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></p>
@@ -142,7 +142,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         public String principalName;
 
         /**
-         * <p>The type of the object to which the policy is attached. Valid values:</p>
+         * <p>The type of the object to which the permission policy is attached. Valid values:</p>
          * <ul>
          * <li>IMSUser: RAM user</li>
          * <li>IMSGroup: RAM user group</li>

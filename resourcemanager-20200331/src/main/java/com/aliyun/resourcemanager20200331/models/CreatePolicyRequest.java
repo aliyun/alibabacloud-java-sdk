@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyRequest extends TeaModel {
     /**
-     * <p>The description of the policy.</p>
+     * <p>The description of the permission policy.</p>
      * <p>The description must be 1 to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class CreatePolicyRequest extends TeaModel {
 
     /**
      * <p>The document of the policy.</p>
-     * <p>The document must be 1 to 2,048 characters in length.</p>
+     * <p>The document must be 1 to 6,144 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class CreatePolicyRequest extends TeaModel {
     public String policyDocument;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The name of the permission policy.</p>
      * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 

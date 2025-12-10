@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPolicyVersionResponseBody extends TeaModel {
     /**
-     * <p>The information of the policy version.</p>
+     * <p>The information about the policy version.</p>
      */
     @NameInMap("PolicyVersion")
     public GetPolicyVersionResponseBodyPolicyVersion policyVersion;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -60,7 +60,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         public Boolean isDefaultVersion;
 
         /**
-         * <p>The document of the policy.</p>
+         * <p>The document of the permission policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{ \&quot;Statement\&quot;: [{ \&quot;Action\&quot;: [\&quot;oss:<em>\&quot;], \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Resource\&quot;: [\&quot;acs:oss:</em>:<em>:</em>\&quot;]}], \&quot;Version\&quot;: \&quot;1\&quot;}</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesRequest extends TeaModel {
     /**
-     * <p>The language that is used to return the description of the system policy. Valid values:</p>
+     * <p>The language in which you want to return the descriptions of the system permission policies. Valid values:</p>
      * <ul>
-     * <li>en: English</li>
+     * <li>en: English.</li>
      * <li>zh-CN: Chinese</li>
      * <li>ja: Japanese</li>
      * </ul>
@@ -19,7 +19,7 @@ public class ListPoliciesRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class ListPoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class ListPoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:</p>
+     * <p>The type of the permission policy. If you do not configure this parameter, all types of permission policies are returned. Valid values:</p>
      * <ul>
-     * <li>Custom: custom policy</li>
-     * <li>System: system policy</li>
+     * <li>Custom</li>
+     * <li>System</li>
      * </ul>
      * 
      * <strong>example:</strong>

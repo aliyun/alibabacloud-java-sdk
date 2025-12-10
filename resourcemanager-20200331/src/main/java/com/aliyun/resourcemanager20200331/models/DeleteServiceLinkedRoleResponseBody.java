@@ -14,7 +14,7 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
     public String deletionTaskId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B595E5BF-FF5F-4E7F-B95A-B90FE242FEB6</p>

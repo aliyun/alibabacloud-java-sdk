@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRoleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>898FAB24-7509-43EE-A287-086FE4C44394</p>

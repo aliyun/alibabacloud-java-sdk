@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRoleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -14,7 +14,7 @@ public class CreateRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the RAM role.</p>
+     * <p>The information about the role.</p>
      */
     @NameInMap("Role")
     public CreateRoleResponseBodyRole role;
@@ -42,7 +42,7 @@ public class CreateRoleResponseBody extends TeaModel {
 
     public static class CreateRoleResponseBodyRole extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -51,7 +51,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The document of the policy that specifies the trusted entity to assume the RAM role.</p>
+         * <p>The document of the policy in which the entity that can assume the role is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>{ \&quot;Statement\&quot;: [ { \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;, \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Principal\&quot;: { \&quot;RAM\&quot;: \&quot;acs:ram::12345678901234****:root\&quot; } } ], \&quot;Version\&quot;: \&quot;1\&quot; }</p>
@@ -60,7 +60,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String assumeRolePolicyDocument;
 
         /**
-         * <p>The time when the RAM role was created.</p>
+         * <p>The time when the role was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-01-23T12:33:18Z</p>
@@ -69,7 +69,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The description of the RAM role.</p>
+         * <p>The description of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS administrator</p>
@@ -78,7 +78,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum session duration of the RAM role.</p>
+         * <p>The maximum session duration of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -87,7 +87,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public Long maxSessionDuration;
 
         /**
-         * <p>The ID of the RAM role.</p>
+         * <p>The ID of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>90123456789****</p>
@@ -96,7 +96,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String roleId;
 
         /**
-         * <p>The name of the RAM role.</p>
+         * <p>The name of the role.</p>
          * 
          * <strong>example:</strong>
          * <p>ECSAdmin</p>
@@ -105,7 +105,7 @@ public class CreateRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The name of the RAM role after authorization.</p>
+         * <p>The name of the role after authorization.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>

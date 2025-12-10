@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
     /**
-     * <p>The reason why the deletion task failed.</p>
+     * <p>The cause for the failure of the deletion task.</p>
      */
     @NameInMap("Reason")
     public GetServiceLinkedRoleDeletionStatusResponseBodyReason reason;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>07194EB1-DB50-4513-A51D-99B30D635AEF</p>
@@ -85,7 +85,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
 
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsage extends TeaModel {
         /**
-         * <p>The IDs of the regions in which the resources are to be queried.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -94,7 +94,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The returned resources.</p>
+         * <p>The information about resources.</p>
          */
         @NameInMap("Resources")
         public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsageResources resources;
@@ -143,7 +143,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
 
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReason extends TeaModel {
         /**
-         * <p>Failure information.</p>
+         * <p>The failure information.</p>
          * 
          * <strong>example:</strong>
          * <p>Service-Linked Role acs:ram::196813227629****:role/aliyunserviceroleforhdr cannot be deleted as it is in use by hdr.aliyuncs.com.</p>
@@ -152,7 +152,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Use resource information of the service linked role.</p>
+         * <p>The information about the resources that the service-linked role can use.</p>
          */
         @NameInMap("RoleUsages")
         public GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsages roleUsages;

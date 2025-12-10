@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE58D7CF-03BC-432A-B42D-BC3390C8C2E1</p>
@@ -80,8 +80,8 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the role is a service-linked role. Valid values:</p>
          * <ul>
-         * <li>true: The role is a service-linked role.</li>
-         * <li>false: The role is not a service-linked role.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>

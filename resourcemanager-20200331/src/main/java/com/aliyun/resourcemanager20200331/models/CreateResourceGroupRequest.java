@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateResourceGroupRequest extends TeaModel {
     /**
      * <p>The display name of the resource group.</p>
-     * <p>The name must be 1 to 50 characters in length.</p>
+     * <p>It must be 1 to 50 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The unique identifier of the resource group.</p>
-     * <p>The identifier must be 3 to 50 characters in length and can contain letters, digits, and hyphens (-). The identifier must start with a letter.</p>
+     * <p>It must be 2 to 50 characters in length and can contain letters, digits, and hyphens (-). It must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateResourceGroupRequestTag> tag;
@@ -63,8 +63,8 @@ public class CreateResourceGroupRequest extends TeaModel {
 
     public static class CreateResourceGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. </p>
-         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The key of the tag.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>k1</p>
@@ -73,8 +73,8 @@ public class CreateResourceGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. </p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The value of the tag.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

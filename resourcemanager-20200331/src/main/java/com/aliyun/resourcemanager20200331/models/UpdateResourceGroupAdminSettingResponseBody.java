@@ -3,22 +3,20 @@ package com.aliyun.resourcemanager20200331.models;
 
 import com.aliyun.tea.*;
 
-public class DeletePolicyVersionResponseBody extends TeaModel {
+public class UpdateResourceGroupAdminSettingResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeletePolicyVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeletePolicyVersionResponseBody self = new DeletePolicyVersionResponseBody();
+    public static UpdateResourceGroupAdminSettingResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateResourceGroupAdminSettingResponseBody self = new UpdateResourceGroupAdminSettingResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeletePolicyVersionResponseBody setRequestId(String requestId) {
+    public UpdateResourceGroupAdminSettingResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

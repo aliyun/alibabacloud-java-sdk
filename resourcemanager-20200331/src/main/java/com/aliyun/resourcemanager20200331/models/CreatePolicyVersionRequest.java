@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyVersionRequest extends TeaModel {
     /**
-     * <p>The document of the policy.</p>
-     * <p>The document must be 1 to 2,048 characters in length.</p>
+     * <p>The document of the permission policy.</p>
+     * <p>The document must be 1 to 6,144 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,8 +16,8 @@ public class CreatePolicyVersionRequest extends TeaModel {
     public String policyDocument;
 
     /**
-     * <p>The name of the policy.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>The name of the permission policy.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphen (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,12 +27,11 @@ public class CreatePolicyVersionRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>Specifies whether to set the policy version as the default version. Valid values:</p>
+     * <p>Specifies whether to set the policy version as the default version.</p>
      * <ul>
-     * <li>false: The policy version is not set as the default version.</li>
-     * <li>true: The policy version is set as the default version.</li>
+     * <li>false (default)</li>
+     * <li>true</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

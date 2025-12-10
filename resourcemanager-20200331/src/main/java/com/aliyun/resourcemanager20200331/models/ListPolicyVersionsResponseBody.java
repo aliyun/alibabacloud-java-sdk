@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPolicyVersionsResponseBody extends TeaModel {
     /**
-     * <p>The information of the policy versions.</p>
+     * <p>The information about the policy version.</p>
      */
     @NameInMap("PolicyVersions")
     public ListPolicyVersionsResponseBodyPolicyVersions policyVersions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRoleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -14,7 +14,7 @@ public class UpdateRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the RAM role.</p>
+     * <p>The information about the RAM role.</p>
      */
     @NameInMap("Role")
     public UpdateRoleResponseBodyRole role;
@@ -51,7 +51,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The document of the policy that specifies the trusted entity to assume the RAM role.</p>
+         * <p>The trust policy of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>{ \&quot;Statement\&quot;: [ { \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;, \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Principal\&quot;: { \&quot;RAM\&quot;: \&quot;acs:ram::12345678901234****:root\&quot; } } ], \&quot;Version\&quot;: \&quot;1\&quot; }</p>
@@ -78,7 +78,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum session duration of the RAM role.</p>
+         * <p>The maximum session time of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to return the information of tags. Valid values:</p>
+     * <ul>
+     * <li>false (default value)</li>
+     * <li>true</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,11 +18,8 @@ public class GetResourceGroupRequest extends TeaModel {
     public Boolean includeTags;
 
     /**
-     * <p>Specifies whether to return the information of tags. Valid values:</p>
-     * <ul>
-     * <li>false (default value)</li>
-     * <li>true</li>
-     * </ul>
+     * <p>The ID of the resource group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID of the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
