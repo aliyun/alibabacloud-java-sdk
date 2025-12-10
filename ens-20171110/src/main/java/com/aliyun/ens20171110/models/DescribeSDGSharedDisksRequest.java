@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGSharedDisksRequest extends TeaModel {
     /**
+     * <p>The namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSDGSharedDisksRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The page number, which is used for paged query</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSDGSharedDisksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class DescribeSDGSharedDisksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-xx</p>
      */
@@ -33,6 +41,7 @@ public class DescribeSDGSharedDisksRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>sdg ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

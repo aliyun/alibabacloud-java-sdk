@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAICPublicKeyDeliveriesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aic-xxxx-0</p>
      */
@@ -12,6 +14,8 @@ public class ListAICPublicKeyDeliveriesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Public Key Grouping</p>
+     * 
      * <strong>example:</strong>
      * <p>g-test</p>
      */
@@ -19,6 +23,8 @@ public class ListAICPublicKeyDeliveriesRequest extends TeaModel {
     public String keyGroup;
 
     /**
+     * <p>Public Key Name</p>
+     * 
      * <strong>example:</strong>
      * <p>mykey</p>
      */
@@ -26,6 +32,8 @@ public class ListAICPublicKeyDeliveriesRequest extends TeaModel {
     public String keyName;
 
     /**
+     * <p>Public key type</p>
+     * 
      * <strong>example:</strong>
      * <p>adb</p>
      */
@@ -33,6 +41,8 @@ public class ListAICPublicKeyDeliveriesRequest extends TeaModel {
     public String keyType;
 
     /**
+     * <p>The page number of the page to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ListAICPublicKeyDeliveriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

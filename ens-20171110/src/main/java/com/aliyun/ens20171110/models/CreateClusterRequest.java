@@ -234,6 +234,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        @NameInMap("LoginPassword")
+        public String loginPassword;
+
         /**
          * <strong>example:</strong>
          * <p>30000-32767</p>
@@ -288,6 +291,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public String getInstanceSpec() {
             return this.instanceSpec;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setLoginPassword(String loginPassword) {
+            this.loginPassword = loginPassword;
+            return this;
+        }
+        public String getLoginPassword() {
+            return this.loginPassword;
         }
 
         public CreateClusterRequestControlPlaneConfig setNodePortRange(String nodePortRange) {

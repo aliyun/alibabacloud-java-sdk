@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityGroupPermissionsShrinkRequest extends TeaModel {
     /**
+     * <p>The security group rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Permissions")
     public String permissionsShrink;
 
     /**
+     * <p>The IDs of the security groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

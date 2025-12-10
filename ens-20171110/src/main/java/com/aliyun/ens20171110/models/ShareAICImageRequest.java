@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShareAICImageRequest extends TeaModel {
     /**
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ShareAICImageRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The user groups.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")

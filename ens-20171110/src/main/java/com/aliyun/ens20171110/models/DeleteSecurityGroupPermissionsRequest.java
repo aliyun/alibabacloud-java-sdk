@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
     /**
+     * <p>The security group rules.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<DeleteSecurityGroupPermissionsRequestPermissions> permissions;
 
     /**
+     * <p>The ID of the security group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
 
     public static class DeleteSecurityGroupPermissionsRequestPermissions extends TeaModel {
         /**
+         * <p>The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.XX.XX.91</p>
          */
@@ -49,6 +53,11 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public String destCidrIp;
 
         /**
+         * <p>The direction in which the security group rule is applied.</p>
+         * <ul>
+         * <li>egress</li>
+         * <li>ingress</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -58,6 +67,14 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public String direction;
 
         /**
+         * <p>Protocol type. Valid values:</p>
+         * <ul>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * <li>ICMP: the ICMP protocol</li>
+         * <li>ICMPv6: the IPv6 ICMP protocol.</li>
+         * <li>ALL: All protocols are supported.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +84,11 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public String ipProtocol;
 
         /**
+         * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+         * <blockquote>
+         * <p> This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>::/0</p>
          */
@@ -74,6 +96,11 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public String ipv6DestCidrIp;
 
         /**
+         * <p>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+         * <blockquote>
+         * <p> This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>::/0</p>
          */
@@ -81,6 +108,11 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public String ipv6SourceCidrIp;
 
         /**
+         * <p>The action specified in the security group rule. Valid values:</p>
+         * <ul>
+         * <li>Accept</li>
+         * <li>Drop</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,6 +122,12 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public String policy;
 
         /**
+         * <p>The destination port range of the security group rule. Valid values:</p>
+         * <ul>
+         * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
+         * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
+         * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -99,6 +137,7 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public String portRange;
 
         /**
+         * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -108,6 +147,8 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.XX.XX.0/0</p>
          */
@@ -115,6 +156,13 @@ public class DeleteSecurityGroupPermissionsRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
+         * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+         * <ul>
+         * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
+         * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
+         * <li>If you set IpProtocol to ALL, the port range is -1/-1.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>22/22</p>
          */

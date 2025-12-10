@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadAICPublicKeyRequest extends TeaModel {
     /**
+     * <p>Public Key</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UploadAICPublicKeyRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The description of the document.</p>
+     * 
      * <strong>example:</strong>
      * <p>测试</p>
      */
@@ -21,6 +24,8 @@ public class UploadAICPublicKeyRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Public Key Grouping</p>
+     * 
      * <strong>example:</strong>
      * <p>g-test</p>
      */
@@ -28,6 +33,7 @@ public class UploadAICPublicKeyRequest extends TeaModel {
     public String keyGroup;
 
     /**
+     * <p>Public Key Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class UploadAICPublicKeyRequest extends TeaModel {
     public String keyName;
 
     /**
+     * <p>Public key type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

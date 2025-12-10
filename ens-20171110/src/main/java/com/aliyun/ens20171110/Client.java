@@ -1639,8 +1639,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceChargeType", request.instanceChargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
             query.put("InternetChargeType", request.internetChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipAddress)) {
+            query.put("IpAddress", request.ipAddress);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isp)) {
@@ -3524,7 +3532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用CreateSecurityGroupPermissions创建安全组规则。</p>
+     * <p>Create an ENS security group rule.</p>
      * 
      * @param tmpReq CreateSecurityGroupPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3566,7 +3574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用CreateSecurityGroupPermissions创建安全组规则。</p>
+     * <p>Create an ENS security group rule.</p>
      * 
      * @param request CreateSecurityGroupPermissionsRequest
      * @return CreateSecurityGroupPermissionsResponse
@@ -3912,7 +3920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除托管公钥</p>
+     * <p>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</p>
      * 
      * @param request DeleteAICPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3944,7 +3952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除托管公钥</p>
+     * <p>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</p>
      * 
      * @param request DeleteAICPublicKeyRequest
      * @return DeleteAICPublicKeyResponse
@@ -5164,7 +5172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用DeleteSecurityGroupPermissions删除安全组规则。</p>
+     * <p>Deletes an ENS security group rule.</p>
      * 
      * @param tmpReq DeleteSecurityGroupPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5206,7 +5214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用DeleteSecurityGroupPermissions删除安全组规则。</p>
+     * <p>Deletes an ENS security group rule.</p>
      * 
      * @param request DeleteSecurityGroupPermissionsRequest
      * @return DeleteSecurityGroupPermissionsResponse
@@ -7868,7 +7876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用DescribeForwardEntryAttribute查询DNAT条目明细</p>
+     * <p>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</p>
      * 
      * @param request DescribeForwardEntryAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7900,7 +7908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用DescribeForwardEntryAttribute查询DNAT条目明细</p>
+     * <p>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</p>
      * 
      * @param request DescribeForwardEntryAttributeRequest
      * @return DescribeForwardEntryAttributeResponse
@@ -10320,7 +10328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询SDG下的共享盘</p>
+     * <p>You can query the information of shared disks in a specified SDG.</p>
      * 
      * @param request DescribeSDGSharedDisksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10368,7 +10376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询SDG下的共享盘</p>
+     * <p>You can query the information of shared disks in a specified SDG.</p>
      * 
      * @param request DescribeSDGSharedDisksRequest
      * @return DescribeSDGSharedDisksResponse
@@ -12454,7 +12462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询公钥下发信息</p>
+     * <p>Queries the related information of AIC public keys. Paged query is supported.</p>
      * 
      * @param request ListAICPublicKeyDeliveriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12506,7 +12514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询公钥下发信息</p>
+     * <p>Queries the related information of AIC public keys. Paged query is supported.</p>
      * 
      * @param request ListAICPublicKeyDeliveriesRequest
      * @return ListAICPublicKeyDeliveriesResponse
@@ -12518,7 +12526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有托管的公钥</p>
+     * <p>Query the list of AIC public keys that meet the conditions. Paged query is supported.</p>
      * 
      * @param request ListAICPublicKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12566,7 +12574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有托管的公钥</p>
+     * <p>Query the list of AIC public keys that meet the conditions. Paged query is supported.</p>
      * 
      * @param request ListAICPublicKeysRequest
      * @return ListAICPublicKeysResponse
@@ -12860,7 +12868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AIC公钥登入管理</p>
+     * <p>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</p>
      * 
      * @param request ManageAICLoginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12904,7 +12912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AIC公钥登入管理</p>
+     * <p>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</p>
      * 
      * @param request ManageAICLoginRequest
      * @return ManageAICLoginResponse
@@ -13629,8 +13637,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</p>
+     * <ul>
+     * <li>Instance:<ul>
+     * <li>Instances that are associated with SLB are not supported.</li>
+     * </ul>
+     * </li>
+     * <li>Network:<ul>
+     * <li>Instances that are associated with EIPs are not supported.</li>
+     * <li>Instances that are associated with high-availability virtual IP addresses are not supported.</li>
+     * <li>Instances that have been used as next hops in the routing table are not supported.</li>
+     * <li>Secondary ENIs cannot be attached to the ECS instance.</li>
+     * <li>Instances configured with secondary IP addresses are not supported.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例网络</p>
+     * <p>Modifies the private IP address or vSwitch of a VPC-type ECS instance.</p>
      * 
      * @param request ModifyInstanceNetworkAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13669,8 +13694,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</p>
+     * <ul>
+     * <li>Instance:<ul>
+     * <li>Instances that are associated with SLB are not supported.</li>
+     * </ul>
+     * </li>
+     * <li>Network:<ul>
+     * <li>Instances that are associated with EIPs are not supported.</li>
+     * <li>Instances that are associated with high-availability virtual IP addresses are not supported.</li>
+     * <li>Instances that have been used as next hops in the routing table are not supported.</li>
+     * <li>Secondary ENIs cannot be attached to the ECS instance.</li>
+     * <li>Instances configured with secondary IP addresses are not supported.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例网络</p>
+     * <p>Modifies the private IP address or vSwitch of a VPC-type ECS instance.</p>
      * 
      * @param request ModifyInstanceNetworkAttributeRequest
      * @return ModifyInstanceNetworkAttributeResponse
@@ -17040,7 +17082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>共享AIC镜像</p>
+     * <p>Share the specified AIC image to other users.</p>
      * 
      * @param tmpReq ShareAICImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17082,7 +17124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>共享AIC镜像</p>
+     * <p>Share the specified AIC image to other users.</p>
      * 
      * @param request ShareAICImageRequest
      * @return ShareAICImageResponse
@@ -18208,7 +18250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传公钥</p>
+     * <p>Upload a new AIC public key.</p>
      * 
      * @param request UploadAICPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18256,7 +18298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传公钥</p>
+     * <p>Upload a new AIC public key.</p>
      * 
      * @param request UploadAICPublicKeyRequest
      * @return UploadAICPublicKeyResponse

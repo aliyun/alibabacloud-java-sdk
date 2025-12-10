@@ -57,6 +57,9 @@ public class CreateEipInstanceRequest extends TeaModel {
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>The metering method of the EIP. Set the value to <strong>95BandwidthByMonth</strong>.</p>
      * <p>This parameter is required.</p>
@@ -66,6 +69,9 @@ public class CreateEipInstanceRequest extends TeaModel {
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
+
+    @NameInMap("IpAddress")
+    public String ipAddress;
 
     /**
      * <p>The Internet service provider. Valid values:</p>
@@ -141,12 +147,28 @@ public class CreateEipInstanceRequest extends TeaModel {
         return this.instanceChargeType;
     }
 
+    public CreateEipInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public CreateEipInstanceRequest setInternetChargeType(String internetChargeType) {
         this.internetChargeType = internetChargeType;
         return this;
     }
     public String getInternetChargeType() {
         return this.internetChargeType;
+    }
+
+    public CreateEipInstanceRequest setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    public String getIpAddress() {
+        return this.ipAddress;
     }
 
     public CreateEipInstanceRequest setIsp(String isp) {

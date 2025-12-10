@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeForwardEntryAttributeRequest extends TeaModel {
     /**
+     * <p>The ID of the DNAT entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
