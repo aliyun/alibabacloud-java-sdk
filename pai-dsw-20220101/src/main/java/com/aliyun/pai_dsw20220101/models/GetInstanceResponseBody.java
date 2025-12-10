@@ -287,6 +287,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    @NameInMap("PodIps")
+    public java.util.List<PodIp> podIps;
+
     /**
      * <p>The priority based on which resources are allocated to instances.</p>
      * 
@@ -735,6 +738,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public GetInstanceResponseBody setPodIps(java.util.List<PodIp> podIps) {
+        this.podIps = podIps;
+        return this;
+    }
+    public java.util.List<PodIp> getPodIps() {
+        return this.podIps;
     }
 
     public GetInstanceResponseBody setPriority(Long priority) {

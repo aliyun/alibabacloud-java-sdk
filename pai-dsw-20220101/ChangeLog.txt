@@ -1,3 +1,7 @@
+2025-12-10 Version: 2.2.3
+- Update API GetInstance: add response parameters Body.PodIps.
+
+
 2025-11-06 Version: 2.2.2
 - Update API GetInstance: add response parameters Body.ServiceConfig.
 - Update API GetInstance: add response parameters Body.UserVpc.Ip.
