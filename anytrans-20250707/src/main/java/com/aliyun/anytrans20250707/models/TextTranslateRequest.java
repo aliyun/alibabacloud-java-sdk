@@ -272,6 +272,9 @@ public class TextTranslateRequest extends TeaModel {
         @NameInMap("examples")
         public java.util.List<TextTranslateRequestExtExamples> examples;
 
+        @NameInMap("prefix")
+        public String prefix;
+
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
@@ -316,6 +319,14 @@ public class TextTranslateRequest extends TeaModel {
         }
         public java.util.List<TextTranslateRequestExtExamples> getExamples() {
             return this.examples;
+        }
+
+        public TextTranslateRequestExt setPrefix(String prefix) {
+            this.prefix = prefix;
+            return this;
+        }
+        public String getPrefix() {
+            return this.prefix;
         }
 
         public TextTranslateRequestExt setSensitives(java.util.List<String> sensitives) {
