@@ -95,6 +95,9 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("IsSingleImgDisk")
+    public Boolean isSingleImgDisk;
+
     /**
      * <p>The office network ID.</p>
      * 
@@ -320,6 +323,14 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public CreateCloudPhoneNodeRequest setIsSingleImgDisk(Boolean isSingleImgDisk) {
+        this.isSingleImgDisk = isSingleImgDisk;
+        return this;
+    }
+    public Boolean getIsSingleImgDisk() {
+        return this.isSingleImgDisk;
     }
 
     public CreateCloudPhoneNodeRequest setNetworkId(String networkId) {

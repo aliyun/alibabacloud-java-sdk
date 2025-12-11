@@ -789,6 +789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceType", request.instanceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isSingleImgDisk)) {
+            query.put("IsSingleImgDisk", request.isSingleImgDisk);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkId)) {
             query.put("NetworkId", request.networkId);
         }
