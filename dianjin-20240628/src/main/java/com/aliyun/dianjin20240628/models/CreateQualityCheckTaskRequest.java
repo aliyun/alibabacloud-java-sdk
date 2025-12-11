@@ -34,6 +34,9 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("sceneCode")
+    public String sceneCode;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -86,6 +89,14 @@ public class CreateQualityCheckTaskRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateQualityCheckTaskRequest setSceneCode(String sceneCode) {
+        this.sceneCode = sceneCode;
+        return this;
+    }
+    public String getSceneCode() {
+        return this.sceneCode;
     }
 
     public CreateQualityCheckTaskRequest setType(String type) {

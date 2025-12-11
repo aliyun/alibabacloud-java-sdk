@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dianjin20240628</artifactId>
-  <version>1.16.0</version>
+  <version>1.17.0</version>
   <packaging>jar</packaging>
   <name>dianjin20240628</name>
   <description>Alibaba Cloud DianJin (20240628) SDK for Java
@@ -193,12 +193,11 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.8.0</version>
+        <version>0.9.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>
           <autoPublish>true</autoPublish>
-          <waitUntil>published</waitUntil>
         </configuration>
       </plugin>
     </plugins>
