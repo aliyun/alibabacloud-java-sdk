@@ -83,6 +83,13 @@ public class ListDocumentRetrieveRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>国防和交流合作事务</p>
+     */
+    @NameInMap("SubjectClassify")
+    public String subjectClassify;
+
+    /**
+     * <strong>example:</strong>
      * <p>宁民规〔2020〕5号</p>
      */
     @NameInMap("WordSize")
@@ -188,6 +195,14 @@ public class ListDocumentRetrieveRequest extends TeaModel {
     }
     public String getSubContentType() {
         return this.subContentType;
+    }
+
+    public ListDocumentRetrieveRequest setSubjectClassify(String subjectClassify) {
+        this.subjectClassify = subjectClassify;
+        return this;
+    }
+    public String getSubjectClassify() {
+        return this.subjectClassify;
     }
 
     public ListDocumentRetrieveRequest setWordSize(String wordSize) {
