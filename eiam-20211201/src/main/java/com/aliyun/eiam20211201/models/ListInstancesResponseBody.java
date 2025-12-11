@@ -135,6 +135,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <strong>example:</strong>
+         * <p>sase</p>
+         */
+        @NameInMap("ManagedServiceCode")
+        public String managedServiceCode;
+
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
+        /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
          * <li>creating</li>
@@ -182,6 +192,22 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListInstancesResponseBodyInstances setManagedServiceCode(String managedServiceCode) {
+            this.managedServiceCode = managedServiceCode;
+            return this;
+        }
+        public String getManagedServiceCode() {
+            return this.managedServiceCode;
+        }
+
+        public ListInstancesResponseBodyInstances setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
         }
 
         public ListInstancesResponseBodyInstances setStatus(String status) {

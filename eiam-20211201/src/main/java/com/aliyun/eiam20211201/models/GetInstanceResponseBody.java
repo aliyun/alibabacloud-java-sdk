@@ -196,6 +196,23 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <strong>example:</strong>
+         * <p>sase</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("ManagedServiceCode")
+        public String managedServiceCode;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
+        /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
          * <li>creating</li>
@@ -259,6 +276,22 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetInstanceResponseBodyInstance setManagedServiceCode(String managedServiceCode) {
+            this.managedServiceCode = managedServiceCode;
+            return this;
+        }
+        public String getManagedServiceCode() {
+            return this.managedServiceCode;
+        }
+
+        public GetInstanceResponseBodyInstance setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
         }
 
         public GetInstanceResponseBodyInstance setStatus(String status) {
