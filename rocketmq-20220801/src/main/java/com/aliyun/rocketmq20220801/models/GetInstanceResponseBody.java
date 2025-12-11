@@ -524,6 +524,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyDataNetworkInfoEndpoints extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>ep-bpxxx</p>
+         */
+        @NameInMap("endpointId")
+        public String endpointId;
+
+        /**
          * <p>The type of the endpoint that is used to access the instance.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -563,6 +570,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static GetInstanceResponseBodyDataNetworkInfoEndpoints build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyDataNetworkInfoEndpoints self = new GetInstanceResponseBodyDataNetworkInfoEndpoints();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataNetworkInfoEndpoints setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+        public String getEndpointId() {
+            return this.endpointId;
         }
 
         public GetInstanceResponseBodyDataNetworkInfoEndpoints setEndpointType(String endpointType) {
