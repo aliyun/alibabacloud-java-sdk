@@ -11,10 +11,6 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
-    /**
-     * <strong>example:</strong>
-     * <p>a***<a href="mailto:bcx@gmail.com">bcx@gmail.com</a></p>
-     */
     @NameInMap("Email")
     public String email;
 
@@ -25,6 +21,27 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;xx&quot;: 123,
+     *     &quot;yy&quot;: 22332,
+     *     &quot;customerNameCard&quot;: [
+     *         {
+     *             &quot;key&quot;: &quot;姓名&quot;,
+     *             &quot;value&quot;: &quot;张三&quot;
+     *         },
+     *         {
+     *             &quot;key&quot;: &quot;等级&quot;,
+     *             &quot;value&quot;: &quot;v2&quot;
+     *         },
+     *         {
+     *             &quot;key&quot;: &quot;联系方式&quot;,
+     *             &quot;value&quot;: &quot;123&quot;
+     *         }
+     *     ]
+     * }</p>
+     */
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
@@ -39,14 +56,13 @@ public class GenerateUserAccessTokenRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
      */
     @NameInMap("Nick")
     public String nick;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1381111****</p>
-     */
     @NameInMap("Telephone")
     public String telephone;
 

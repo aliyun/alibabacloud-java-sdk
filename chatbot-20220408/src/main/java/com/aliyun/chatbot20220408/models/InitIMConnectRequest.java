@@ -13,17 +13,10 @@ public class InitIMConnectRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>8XNBzDucJv</p>
      */
     @NameInMap("From")
     public String from;
 
-    /**
-     * <strong>example:</strong>
-     * <p>QUM4SndaY3VPMjhkQldDZUNOR0ZaTmZ5R3NBY0FKWHJ4OGc4dERZbEJzcjNIKzFiS1RyTjhXRUpBYmVpQlpsakprNDRFVkdxcy9HWVk2RXZvalU3bHhxRkJlc1NBUXZwdHFKOTE2UTNwamQ4b1U4N3dEbmhyRjc4R2hOQStvMnMrYkV2dlVpSHNvWC96SEVNZWRqMjBuMXdjNklpamJzaDNWYllnUldDZGhJPQ==</p>
-     */
     @NameInMap("UserAccessToken")
     public String userAccessToken;
 
