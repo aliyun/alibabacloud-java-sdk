@@ -277,6 +277,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("OpType")
+        public String opType;
+
         @NameInMap("OriginTime")
         public String originTime;
 
@@ -632,6 +635,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyDataLogs setOpType(String opType) {
+            this.opType = opType;
+            return this;
+        }
+        public String getOpType() {
+            return this.opType;
         }
 
         public DescribeSlowLogRecordsResponseBodyDataLogs setOriginTime(String originTime) {
