@@ -18,6 +18,9 @@ public class DeleteDBClusterRequest extends TeaModel {
     @NameInMap("BackupRetentionPolicyOnClusterDeletion")
     public String backupRetentionPolicyOnClusterDeletion;
 
+    @NameInMap("CloudProvider")
+    public String cloudProvider;
+
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -51,6 +54,14 @@ public class DeleteDBClusterRequest extends TeaModel {
     }
     public String getBackupRetentionPolicyOnClusterDeletion() {
         return this.backupRetentionPolicyOnClusterDeletion;
+    }
+
+    public DeleteDBClusterRequest setCloudProvider(String cloudProvider) {
+        this.cloudProvider = cloudProvider;
+        return this;
+    }
+    public String getCloudProvider() {
+        return this.cloudProvider;
     }
 
     public DeleteDBClusterRequest setDBClusterId(String DBClusterId) {

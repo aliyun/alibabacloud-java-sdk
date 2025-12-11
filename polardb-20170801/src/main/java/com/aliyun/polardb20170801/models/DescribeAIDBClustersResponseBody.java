@@ -209,6 +209,9 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         @NameInMap("LockMode")
         public String lockMode;
 
+        @NameInMap("ModelType")
+        public String modelType;
+
         /**
          * <strong>example:</strong>
          * <p>Postpaid</p>
@@ -362,6 +365,14 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         }
         public String getLockMode() {
             return this.lockMode;
+        }
+
+        public DescribeAIDBClustersResponseBodyItemsDBCluster setModelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+        public String getModelType() {
+            return this.modelType;
         }
 
         public DescribeAIDBClustersResponseBodyItemsDBCluster setPayType(String payType) {

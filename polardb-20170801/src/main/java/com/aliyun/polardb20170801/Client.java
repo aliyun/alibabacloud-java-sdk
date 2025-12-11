@@ -4310,6 +4310,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BackupRetentionPolicyOnClusterDeletion", request.backupRetentionPolicyOnClusterDeletion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudProvider)) {
+            query.put("CloudProvider", request.cloudProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
@@ -19489,6 +19493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetDBClusterId)) {
+            query.put("TargetDBClusterId", request.targetDBClusterId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

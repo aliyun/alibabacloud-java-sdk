@@ -115,6 +115,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("ModelType")
+    public String modelType;
+
     /**
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -325,6 +328,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
     }
 
     public DescribeAIDBClusterAttributeResponseBody setPayType(String payType) {

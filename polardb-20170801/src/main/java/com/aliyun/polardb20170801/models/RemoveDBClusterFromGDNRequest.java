@@ -45,6 +45,9 @@ public class RemoveDBClusterFromGDNRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("TargetDBClusterId")
+    public String targetDBClusterId;
+
     public static RemoveDBClusterFromGDNRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveDBClusterFromGDNRequest self = new RemoveDBClusterFromGDNRequest();
         return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class RemoveDBClusterFromGDNRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public RemoveDBClusterFromGDNRequest setTargetDBClusterId(String targetDBClusterId) {
+        this.targetDBClusterId = targetDBClusterId;
+        return this;
+    }
+    public String getTargetDBClusterId() {
+        return this.targetDBClusterId;
     }
 
 }
