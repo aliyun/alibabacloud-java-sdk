@@ -629,6 +629,16 @@ public class CreateDomainRequest extends TeaModel {
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
 
+        @NameInMap("Http2Origin")
+        public Boolean http2Origin;
+
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
+        @NameInMap("Http2OriginMaxConcurrency")
+        public Integer http2OriginMaxConcurrency;
+
         /**
          * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
          * <ul>
@@ -849,6 +859,22 @@ public class CreateDomainRequest extends TeaModel {
         }
         public Boolean getFocusHttpBackend() {
             return this.focusHttpBackend;
+        }
+
+        public CreateDomainRequestRedirect setHttp2Origin(Boolean http2Origin) {
+            this.http2Origin = http2Origin;
+            return this;
+        }
+        public Boolean getHttp2Origin() {
+            return this.http2Origin;
+        }
+
+        public CreateDomainRequestRedirect setHttp2OriginMaxConcurrency(Integer http2OriginMaxConcurrency) {
+            this.http2OriginMaxConcurrency = http2OriginMaxConcurrency;
+            return this;
+        }
+        public Integer getHttp2OriginMaxConcurrency() {
+            return this.http2OriginMaxConcurrency;
         }
 
         public CreateDomainRequestRedirect setKeepalive(Boolean keepalive) {

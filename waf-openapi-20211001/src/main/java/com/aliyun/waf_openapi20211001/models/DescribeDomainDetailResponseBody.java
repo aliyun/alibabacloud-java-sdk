@@ -789,6 +789,16 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
 
+        @NameInMap("Http2Origin")
+        public Boolean http2Origin;
+
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
+        @NameInMap("Http2OriginMaxConcurrency")
+        public Integer http2OriginMaxConcurrency;
+
         /**
          * <p>Indicates whether the persistent connection feature is enabled. Valid values:</p>
          * <ul>
@@ -992,6 +1002,22 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public Boolean getFocusHttpBackend() {
             return this.focusHttpBackend;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setHttp2Origin(Boolean http2Origin) {
+            this.http2Origin = http2Origin;
+            return this;
+        }
+        public Boolean getHttp2Origin() {
+            return this.http2Origin;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setHttp2OriginMaxConcurrency(Integer http2OriginMaxConcurrency) {
+            this.http2OriginMaxConcurrency = http2OriginMaxConcurrency;
+            return this;
+        }
+        public Integer getHttp2OriginMaxConcurrency() {
+            return this.http2OriginMaxConcurrency;
         }
 
         public DescribeDomainDetailResponseBodyRedirect setKeepalive(Boolean keepalive) {
