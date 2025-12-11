@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateServiceVersionRequest extends TeaModel {
     /**
+     * <p>The service tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("labels")
     public java.util.List<CreateServiceVersionRequestLabels> labels;
 
     /**
+     * <p>The version name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class CreateServiceVersionRequest extends TeaModel {
 
     public static class CreateServiceVersionRequestLabels extends TeaModel {
         /**
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,8 @@ public class CreateServiceVersionRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */

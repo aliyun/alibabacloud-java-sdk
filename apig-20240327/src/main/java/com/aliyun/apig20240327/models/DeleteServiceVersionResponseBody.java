@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceVersionResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class DeleteServiceVersionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteServiceVersionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1994B10-C6A8-58FA-8347-6A08B0D4EFDE</p>
      */

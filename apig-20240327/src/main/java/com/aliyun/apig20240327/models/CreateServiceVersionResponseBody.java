@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateServiceVersionResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class CreateServiceVersionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -19,6 +23,8 @@ public class CreateServiceVersionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B373A13-9BB8-5068-9C94-AD6D39E6BBA2</p>
      */

@@ -3,10 +3,8 @@ package com.aliyun.apig20240327.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateServiceVersionResponseBody extends TeaModel {
+public class DeleteSourceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -14,8 +12,6 @@ public class UpdateServiceVersionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message returned.</p>
-     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -23,20 +19,18 @@ public class UpdateServiceVersionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>
+     * <p>C67DED2B-F19B-5BEC-88C1-D6EB854CD0D4</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    public static UpdateServiceVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateServiceVersionResponseBody self = new UpdateServiceVersionResponseBody();
+    public static DeleteSourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSourceResponseBody self = new DeleteSourceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateServiceVersionResponseBody setCode(String code) {
+    public DeleteSourceResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,7 +38,7 @@ public class UpdateServiceVersionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateServiceVersionResponseBody setMessage(String message) {
+    public DeleteSourceResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -52,7 +46,7 @@ public class UpdateServiceVersionResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateServiceVersionResponseBody setRequestId(String requestId) {
+    public DeleteSourceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
