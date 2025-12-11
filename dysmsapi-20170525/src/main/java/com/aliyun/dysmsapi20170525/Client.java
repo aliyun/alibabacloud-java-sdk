@@ -819,6 +819,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appIcpRecordId)) {
+            query.put("AppIcpRecordId", request.appIcpRecordId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applySceneContent)) {
             query.put("ApplySceneContent", request.applySceneContent);
         }
@@ -865,6 +869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.thirdParty)) {
             query.put("ThirdParty", request.thirdParty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trademarkId)) {
+            query.put("TrademarkId", request.trademarkId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4434,6 +4442,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appIcpRecordId)) {
+            query.put("AppIcpRecordId", request.appIcpRecordId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applySceneContent)) {
             query.put("ApplySceneContent", request.applySceneContent);
         }
@@ -4480,6 +4492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.thirdParty)) {
             query.put("ThirdParty", request.thirdParty);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trademarkId)) {
+            query.put("TrademarkId", request.trademarkId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

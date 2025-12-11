@@ -189,6 +189,9 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     }
 
     public static class QuerySmsSignListResponseBodySmsSignList extends TeaModel {
+        @NameInMap("AppIcpRecordId")
+        public Long appIcpRecordId;
+
         /**
          * <p>The approval status of the signature. Valid values:</p>
          * <ul>
@@ -257,12 +260,23 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         @NameInMap("SignName")
         public String signName;
 
+        @NameInMap("TrademarkId")
+        public Long trademarkId;
+
         @NameInMap("authorizationLetterAuditPass")
         public Boolean authorizationLetterAuditPass;
 
         public static QuerySmsSignListResponseBodySmsSignList build(java.util.Map<String, ?> map) throws Exception {
             QuerySmsSignListResponseBodySmsSignList self = new QuerySmsSignListResponseBodySmsSignList();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySmsSignListResponseBodySmsSignList setAppIcpRecordId(Long appIcpRecordId) {
+            this.appIcpRecordId = appIcpRecordId;
+            return this;
+        }
+        public Long getAppIcpRecordId() {
+            return this.appIcpRecordId;
         }
 
         public QuerySmsSignListResponseBodySmsSignList setAuditStatus(String auditStatus) {
@@ -319,6 +333,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
         public String getSignName() {
             return this.signName;
+        }
+
+        public QuerySmsSignListResponseBodySmsSignList setTrademarkId(Long trademarkId) {
+            this.trademarkId = trademarkId;
+            return this;
+        }
+        public Long getTrademarkId() {
+            return this.trademarkId;
         }
 
         public QuerySmsSignListResponseBodySmsSignList setAuthorizationLetterAuditPass(Boolean authorizationLetterAuditPass) {

@@ -4,6 +4,9 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateSmsSignRequest extends TeaModel {
+    @NameInMap("AppIcpRecordId")
+    public Long appIcpRecordId;
+
     /**
      * <p>Application scenarios, instructions as follows:</p>
      * <ul>
@@ -144,9 +147,20 @@ public class CreateSmsSignRequest extends TeaModel {
     @NameInMap("ThirdParty")
     public Boolean thirdParty;
 
+    @NameInMap("TrademarkId")
+    public Long trademarkId;
+
     public static CreateSmsSignRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSmsSignRequest self = new CreateSmsSignRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSmsSignRequest setAppIcpRecordId(Long appIcpRecordId) {
+        this.appIcpRecordId = appIcpRecordId;
+        return this;
+    }
+    public Long getAppIcpRecordId() {
+        return this.appIcpRecordId;
     }
 
     public CreateSmsSignRequest setApplySceneContent(String applySceneContent) {
@@ -243,6 +257,14 @@ public class CreateSmsSignRequest extends TeaModel {
     }
     public Boolean getThirdParty() {
         return this.thirdParty;
+    }
+
+    public CreateSmsSignRequest setTrademarkId(Long trademarkId) {
+        this.trademarkId = trademarkId;
+        return this;
+    }
+    public Long getTrademarkId() {
+        return this.trademarkId;
     }
 
 }
