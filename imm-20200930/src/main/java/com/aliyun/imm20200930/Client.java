@@ -7836,6 +7836,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Query", request.query);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceURI)) {
+            query.put("SourceURI", request.sourceURI);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.withFieldsShrink)) {
             query.put("WithFields", request.withFieldsShrink);
         }

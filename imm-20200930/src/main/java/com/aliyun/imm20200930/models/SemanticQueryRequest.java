@@ -55,6 +55,9 @@ public class SemanticQueryRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    @NameInMap("SourceURI")
+    public String sourceURI;
+
     /**
      * <p>The fields that you want to include in the response. Including only necessary metadata fields can help reduce the size of the response.</p>
      * <p>If you do not specify this parameter or set the value to null, all existing metadata fields are returned.</p>
@@ -113,6 +116,14 @@ public class SemanticQueryRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public SemanticQueryRequest setSourceURI(String sourceURI) {
+        this.sourceURI = sourceURI;
+        return this;
+    }
+    public String getSourceURI() {
+        return this.sourceURI;
     }
 
     public SemanticQueryRequest setWithFields(java.util.List<String> withFields) {
