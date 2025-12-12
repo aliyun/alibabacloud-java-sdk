@@ -53,6 +53,9 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <blockquote>
@@ -79,6 +82,9 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
      */
     @NameInMap("SearchCriteriaList")
     public java.util.List<GetAssetsPropertyDetailRequestSearchCriteriaList> searchCriteriaList;
+
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
 
     /**
      * <p>The UUID of the server.</p>
@@ -129,6 +135,14 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
         return this.lang;
     }
 
+    public GetAssetsPropertyDetailRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public GetAssetsPropertyDetailRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -151,6 +165,14 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
     }
     public java.util.List<GetAssetsPropertyDetailRequestSearchCriteriaList> getSearchCriteriaList() {
         return this.searchCriteriaList;
+    }
+
+    public GetAssetsPropertyDetailRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     public GetAssetsPropertyDetailRequest setUuid(String uuid) {

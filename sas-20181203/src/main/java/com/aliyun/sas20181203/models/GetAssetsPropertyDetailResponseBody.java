@@ -73,6 +73,9 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        @NameInMap("NextToken")
+        public String nextToken;
+
         /**
          * <p>The number of entries returned per page.</p>
          * 
@@ -110,6 +113,14 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
+        }
+
+        public GetAssetsPropertyDetailResponseBodyPageInfo setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         public GetAssetsPropertyDetailResponseBodyPageInfo setPageSize(Integer pageSize) {

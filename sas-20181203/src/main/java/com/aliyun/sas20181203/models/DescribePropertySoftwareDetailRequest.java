@@ -49,6 +49,9 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
      * 
@@ -84,6 +87,9 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
      */
     @NameInMap("SoftwareVersion")
     public String softwareVersion;
+
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
 
     /**
      * <p>The UUID of the server.</p>
@@ -139,6 +145,14 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
         return this.name;
     }
 
+    public DescribePropertySoftwareDetailRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribePropertySoftwareDetailRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -169,6 +183,14 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     }
     public String getSoftwareVersion() {
         return this.softwareVersion;
+    }
+
+    public DescribePropertySoftwareDetailRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     public DescribePropertySoftwareDetailRequest setUuid(String uuid) {

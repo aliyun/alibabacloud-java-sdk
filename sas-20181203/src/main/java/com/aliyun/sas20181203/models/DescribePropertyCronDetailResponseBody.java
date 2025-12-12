@@ -73,6 +73,9 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        @NameInMap("NextToken")
+        public String nextToken;
+
         /**
          * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
          * 
@@ -110,6 +113,14 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
+        }
+
+        public DescribePropertyCronDetailResponseBodyPageInfo setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         public DescribePropertyCronDetailResponseBodyPageInfo setPageSize(Integer pageSize) {

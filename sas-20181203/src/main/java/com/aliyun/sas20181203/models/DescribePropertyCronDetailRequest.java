@@ -22,6 +22,9 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     @NameInMap("Extend")
     public String extend;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
@@ -48,6 +51,9 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
      */
     @NameInMap("Source")
     public String source;
+
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
 
     /**
      * <p>The username of the account that runs the scheduled task.</p>
@@ -88,6 +94,14 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
         return this.extend;
     }
 
+    public DescribePropertyCronDetailRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribePropertyCronDetailRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -110,6 +124,14 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public DescribePropertyCronDetailRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     public DescribePropertyCronDetailRequest setUser(String user) {

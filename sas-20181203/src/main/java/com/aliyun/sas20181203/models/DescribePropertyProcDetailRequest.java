@@ -40,6 +40,9 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
@@ -87,6 +90,9 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
+
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
 
     /**
      * <p>The user who runs the process.</p>
@@ -143,6 +149,14 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
         return this.name;
     }
 
+    public DescribePropertyProcDetailRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribePropertyProcDetailRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -181,6 +195,14 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     }
     public Long getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
+    }
+
+    public DescribePropertyProcDetailRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     public DescribePropertyProcDetailRequest setUser(String user) {

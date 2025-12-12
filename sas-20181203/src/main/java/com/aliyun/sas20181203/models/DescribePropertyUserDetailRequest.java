@@ -53,6 +53,9 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     @NameInMap("LastLoginTimeStart")
     public Long lastLoginTimeStart;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
@@ -70,6 +73,9 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
      */
     @NameInMap("Remark")
     public String remark;
+
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
 
     /**
      * <p>The name of the account to which the server belongs.</p>
@@ -134,6 +140,14 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
         return this.lastLoginTimeStart;
     }
 
+    public DescribePropertyUserDetailRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribePropertyUserDetailRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -148,6 +162,14 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public DescribePropertyUserDetailRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     public DescribePropertyUserDetailRequest setUser(String user) {

@@ -19386,6 +19386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Extend", request.extend);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -19396,6 +19400,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
+            query.put("UseNextToken", request.useNextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.user)) {
@@ -19514,6 +19522,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Extend", request.extend);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -19532,6 +19544,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
             query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
+            query.put("UseNextToken", request.useNextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
@@ -19650,6 +19666,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -19668,6 +19688,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
             query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
+            query.put("UseNextToken", request.useNextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.user)) {
@@ -19794,6 +19818,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -19844,6 +19872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchItemSub)) {
             query.put("SearchItemSub", request.searchItemSub);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
+            query.put("UseNextToken", request.useNextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.user)) {
@@ -20094,6 +20126,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -20108,6 +20144,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.softwareVersion)) {
             query.put("SoftwareVersion", request.softwareVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
+            query.put("UseNextToken", request.useNextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
@@ -20332,12 +20372,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LastLoginTimeStart", request.lastLoginTimeStart);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
+            query.put("UseNextToken", request.useNextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.user)) {
@@ -28234,6 +28282,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -28244,6 +28296,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchCriteriaList)) {
             query.put("SearchCriteriaList", request.searchCriteriaList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNextToken)) {
+            query.put("UseNextToken", request.useNextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
@@ -42197,7 +42253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Runs a scan task for urgent vulnerabilities.</p>
+     * <p>Scans for urgent vulnerabilities.</p>
      * 
      * @param request ModifyEmgVulSubmitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42241,7 +42297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Runs a scan task for urgent vulnerabilities.</p>
+     * <p>Scans for urgent vulnerabilities.</p>
      * 
      * @param request ModifyEmgVulSubmitRequest
      * @return ModifyEmgVulSubmitResponse

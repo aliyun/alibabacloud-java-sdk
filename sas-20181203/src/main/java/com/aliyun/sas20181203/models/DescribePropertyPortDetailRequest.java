@@ -31,6 +31,9 @@ public class DescribePropertyPortDetailRequest extends TeaModel {
     @NameInMap("Extend")
     public String extend;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * 
@@ -79,6 +82,9 @@ public class DescribePropertyPortDetailRequest extends TeaModel {
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
+
     /**
      * <p>The UUID of the server.</p>
      * 
@@ -115,6 +121,14 @@ public class DescribePropertyPortDetailRequest extends TeaModel {
     }
     public String getExtend() {
         return this.extend;
+    }
+
+    public DescribePropertyPortDetailRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribePropertyPortDetailRequest setPageSize(Integer pageSize) {
@@ -155,6 +169,14 @@ public class DescribePropertyPortDetailRequest extends TeaModel {
     }
     public Long getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
+    }
+
+    public DescribePropertyPortDetailRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     public DescribePropertyPortDetailRequest setUuid(String uuid) {

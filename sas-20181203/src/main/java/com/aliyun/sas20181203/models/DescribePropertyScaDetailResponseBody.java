@@ -73,6 +73,9 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        @NameInMap("NextToken")
+        public String nextToken;
+
         /**
          * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
          * 
@@ -110,6 +113,14 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
+        }
+
+        public DescribePropertyScaDetailResponseBodyPageInfo setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         public DescribePropertyScaDetailResponseBodyPageInfo setPageSize(Integer pageSize) {

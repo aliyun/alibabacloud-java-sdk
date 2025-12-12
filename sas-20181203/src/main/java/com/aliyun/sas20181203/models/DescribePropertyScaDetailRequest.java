@@ -73,6 +73,9 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     @NameInMap("Name")
     public Long name;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
      * <blockquote>
@@ -236,6 +239,9 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     @NameInMap("SearchItemSub")
     public String searchItemSub;
 
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
+
     /**
      * <p>The user who runs the process.</p>
      * 
@@ -297,6 +303,14 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     }
     public Long getName() {
         return this.name;
+    }
+
+    public DescribePropertyScaDetailRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribePropertyScaDetailRequest setPageSize(Integer pageSize) {
@@ -401,6 +415,14 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     }
     public String getSearchItemSub() {
         return this.searchItemSub;
+    }
+
+    public DescribePropertyScaDetailRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     public DescribePropertyScaDetailRequest setUser(String user) {
