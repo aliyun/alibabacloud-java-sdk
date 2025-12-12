@@ -793,6 +793,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Platform", request.platform);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.returnPicCount)) {
+            query.put("ReturnPicCount", request.returnPicCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnVideoLength)) {
+            query.put("ReturnVideoLength", request.returnVideoLength);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sceneName)) {
             query.put("SceneName", request.sceneName);
         }
@@ -7066,6 +7074,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
             query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnPicCount)) {
+            query.put("ReturnPicCount", request.returnPicCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnVideoLength)) {
+            query.put("ReturnVideoLength", request.returnVideoLength);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {

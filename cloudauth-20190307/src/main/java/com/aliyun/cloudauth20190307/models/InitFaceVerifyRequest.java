@@ -226,6 +226,16 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("FaceGuardOutput")
     public String faceGuardOutput;
 
+    /**
+     * <p>H5 Downgrade Confirmation Button Switch:</p>
+     * <ul>
+     * <li><strong>Y</strong>: Enabled (On)</li>
+     * <li><strong>N (default)</strong>: Disabled (Off)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("H5DegradeConfirmBtn")
     public String h5DegradeConfirmBtn;
 

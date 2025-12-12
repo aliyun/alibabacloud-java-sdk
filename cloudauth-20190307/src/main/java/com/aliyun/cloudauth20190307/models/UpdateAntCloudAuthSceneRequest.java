@@ -61,6 +61,12 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
+    @NameInMap("ReturnPicCount")
+    public Long returnPicCount;
+
+    @NameInMap("ReturnVideoLength")
+    public Long returnVideoLength;
+
     /**
      * <p>Scenario ID.</p>
      * <p>This parameter is required.</p>
@@ -147,6 +153,22 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     }
     public String getPlatform() {
         return this.platform;
+    }
+
+    public UpdateAntCloudAuthSceneRequest setReturnPicCount(Long returnPicCount) {
+        this.returnPicCount = returnPicCount;
+        return this;
+    }
+    public Long getReturnPicCount() {
+        return this.returnPicCount;
+    }
+
+    public UpdateAntCloudAuthSceneRequest setReturnVideoLength(Long returnVideoLength) {
+        this.returnVideoLength = returnVideoLength;
+        return this;
+    }
+    public Long getReturnVideoLength() {
+        return this.returnVideoLength;
     }
 
     public UpdateAntCloudAuthSceneRequest setSceneId(Long sceneId) {

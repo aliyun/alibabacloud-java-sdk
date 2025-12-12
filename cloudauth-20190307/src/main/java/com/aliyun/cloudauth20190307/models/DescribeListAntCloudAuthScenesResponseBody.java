@@ -122,6 +122,12 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         @NameInMap("Platform")
         public String platform;
 
+        @NameInMap("ReturnPicCount")
+        public Long returnPicCount;
+
+        @NameInMap("ReturnVideoLength")
+        public Long returnVideoLength;
+
         /**
          * <p>Scenario ID.</p>
          * 
@@ -238,6 +244,22 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public DescribeListAntCloudAuthScenesResponseBodyScenes setReturnPicCount(Long returnPicCount) {
+            this.returnPicCount = returnPicCount;
+            return this;
+        }
+        public Long getReturnPicCount() {
+            return this.returnPicCount;
+        }
+
+        public DescribeListAntCloudAuthScenesResponseBodyScenes setReturnVideoLength(Long returnVideoLength) {
+            this.returnVideoLength = returnVideoLength;
+            return this;
+        }
+        public Long getReturnVideoLength() {
+            return this.returnVideoLength;
         }
 
         public DescribeListAntCloudAuthScenesResponseBodyScenes setSceneId(Long sceneId) {
