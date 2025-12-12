@@ -3,7 +3,7 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class ListAutoScalingConfigsRequest extends TeaModel {
+public class ListAutoScalingConfigsShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
@@ -23,17 +23,17 @@ public class ListAutoScalingConfigsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("ScaleTypes")
-    public java.util.List<String> scaleTypes;
+    public String scaleTypesShrink;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static ListAutoScalingConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListAutoScalingConfigsRequest self = new ListAutoScalingConfigsRequest();
+    public static ListAutoScalingConfigsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAutoScalingConfigsShrinkRequest self = new ListAutoScalingConfigsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListAutoScalingConfigsRequest setInstanceId(String instanceId) {
+    public ListAutoScalingConfigsShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -41,7 +41,7 @@ public class ListAutoScalingConfigsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListAutoScalingConfigsRequest setOwnerAccount(String ownerAccount) {
+    public ListAutoScalingConfigsShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -49,7 +49,7 @@ public class ListAutoScalingConfigsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ListAutoScalingConfigsRequest setOwnerId(Long ownerId) {
+    public ListAutoScalingConfigsShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -57,7 +57,7 @@ public class ListAutoScalingConfigsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ListAutoScalingConfigsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ListAutoScalingConfigsShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -65,7 +65,7 @@ public class ListAutoScalingConfigsRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ListAutoScalingConfigsRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ListAutoScalingConfigsShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -73,15 +73,15 @@ public class ListAutoScalingConfigsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListAutoScalingConfigsRequest setScaleTypes(java.util.List<String> scaleTypes) {
-        this.scaleTypes = scaleTypes;
+    public ListAutoScalingConfigsShrinkRequest setScaleTypesShrink(String scaleTypesShrink) {
+        this.scaleTypesShrink = scaleTypesShrink;
         return this;
     }
-    public java.util.List<String> getScaleTypes() {
-        return this.scaleTypes;
+    public String getScaleTypesShrink() {
+        return this.scaleTypesShrink;
     }
 
-    public ListAutoScalingConfigsRequest setSecurityToken(String securityToken) {
+    public ListAutoScalingConfigsShrinkRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

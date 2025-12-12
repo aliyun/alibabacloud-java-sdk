@@ -137,6 +137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建弹性伸缩配置</p>
+     * 
      * @param tmpReq CreateAutoScalingConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAutoScalingConfigResponse
@@ -214,6 +217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SpecId", request.specId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storageCapacityMax)) {
+            query.put("StorageCapacityMax", request.storageCapacityMax);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -232,6 +239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建弹性伸缩配置</p>
+     * 
      * @param request CreateAutoScalingConfigRequest
      * @return CreateAutoScalingConfigResponse
      */
@@ -241,6 +251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建弹性伸缩规则</p>
+     * 
      * @param request CreateAutoScalingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAutoScalingRuleResponse
@@ -354,6 +367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建弹性伸缩规则</p>
+     * 
      * @param request CreateAutoScalingRuleRequest
      * @return CreateAutoScalingRuleResponse
      */
@@ -2603,12 +2619,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request ListAutoScalingConfigsRequest
+     * <b>summary</b> : 
+     * <p>查询弹性伸缩配置</p>
+     * 
+     * @param tmpReq ListAutoScalingConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAutoScalingConfigsResponse
      */
-    public ListAutoScalingConfigsResponse listAutoScalingConfigsWithOptions(ListAutoScalingConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListAutoScalingConfigsResponse listAutoScalingConfigsWithOptions(ListAutoScalingConfigsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAutoScalingConfigsShrinkRequest request = new ListAutoScalingConfigsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scaleTypes)) {
+            request.scaleTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scaleTypes, "ScaleTypes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
@@ -2628,6 +2653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleTypesShrink)) {
+            query.put("ScaleTypes", request.scaleTypesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
@@ -2652,6 +2681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询弹性伸缩配置</p>
+     * 
      * @param request ListAutoScalingConfigsRequest
      * @return ListAutoScalingConfigsResponse
      */
@@ -2661,12 +2693,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request ListAutoScalingRecordsRequest
+     * <b>summary</b> : 
+     * <p>查询伸缩记录</p>
+     * 
+     * @param tmpReq ListAutoScalingRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAutoScalingRecordsResponse
      */
-    public ListAutoScalingRecordsResponse listAutoScalingRecordsWithOptions(ListAutoScalingRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListAutoScalingRecordsResponse listAutoScalingRecordsWithOptions(ListAutoScalingRecordsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAutoScalingRecordsShrinkRequest request = new ListAutoScalingRecordsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scaleTypes)) {
+            request.scaleTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scaleTypes, "ScaleTypes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
@@ -2696,6 +2737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleTypesShrink)) {
+            query.put("ScaleTypes", request.scaleTypesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
         }
@@ -2718,6 +2763,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询伸缩记录</p>
+     * 
      * @param request ListAutoScalingRecordsRequest
      * @return ListAutoScalingRecordsResponse
      */
@@ -3015,12 +3063,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request ModifyAutoScalingConfigRequest
+     * <b>summary</b> : 
+     * <p>修改弹性伸缩配置</p>
+     * 
+     * @param tmpReq ModifyAutoScalingConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAutoScalingConfigResponse
      */
-    public ModifyAutoScalingConfigResponse modifyAutoScalingConfigWithOptions(ModifyAutoScalingConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyAutoScalingConfigResponse modifyAutoScalingConfigWithOptions(ModifyAutoScalingConfigRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyAutoScalingConfigShrinkRequest request = new ModifyAutoScalingConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scaleRuleList)) {
+            request.scaleRuleListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scaleRuleList, "ScaleRuleList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
             query.put("ConfigId", request.configId);
@@ -3074,6 +3131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleRuleListShrink)) {
+            query.put("ScaleRuleList", request.scaleRuleListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scaleType)) {
             query.put("ScaleType", request.scaleType);
         }
@@ -3084,6 +3145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.specId)) {
             query.put("SpecId", request.specId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageCapacityMax)) {
+            query.put("StorageCapacityMax", request.storageCapacityMax);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3104,6 +3169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改弹性伸缩配置</p>
+     * 
      * @param request ModifyAutoScalingConfigRequest
      * @return ModifyAutoScalingConfigResponse
      */
@@ -3113,6 +3181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改弹性伸缩规则</p>
+     * 
      * @param request ModifyAutoScalingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAutoScalingRuleResponse
@@ -3230,6 +3301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改弹性伸缩规则</p>
+     * 
      * @param request ModifyAutoScalingRuleRequest
      * @return ModifyAutoScalingRuleResponse
      */
@@ -4800,6 +4874,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateLindormV2InstanceParameterResponse updateLindormV2InstanceParameter(UpdateLindormV2InstanceParameterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLindormV2InstanceParameterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改Lindorm新版实例白名单分组列表</p>
+     * 
+     * @param request UpdateLindormV2WhiteIpListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLindormV2WhiteIpListResponse
+     */
+    public UpdateLindormV2WhiteIpListResponse updateLindormV2WhiteIpListWithOptions(UpdateLindormV2WhiteIpListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteIpGroupList)) {
+            query.put("WhiteIpGroupList", request.whiteIpGroupList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLindormV2WhiteIpList"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLindormV2WhiteIpListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改Lindorm新版实例白名单分组列表</p>
+     * 
+     * @param request UpdateLindormV2WhiteIpListRequest
+     * @return UpdateLindormV2WhiteIpListResponse
+     */
+    public UpdateLindormV2WhiteIpListResponse updateLindormV2WhiteIpList(UpdateLindormV2WhiteIpListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateLindormV2WhiteIpListWithOptions(request, runtime);
     }
 
     /**

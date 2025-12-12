@@ -467,6 +467,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         @NameInMap("EnableAttachLocalDisk")
         public Boolean enableAttachLocalDisk;
 
+        @NameInMap("IsScaleSpecGroup")
+        public Boolean isScaleSpecGroup;
+
         @NameInMap("LocalDiskCapacity")
         public Long localDiskCapacity;
 
@@ -518,6 +521,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         }
         public Boolean getEnableAttachLocalDisk() {
             return this.enableAttachLocalDisk;
+        }
+
+        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setIsScaleSpecGroup(Boolean isScaleSpecGroup) {
+            this.isScaleSpecGroup = isScaleSpecGroup;
+            return this;
+        }
+        public Boolean getIsScaleSpecGroup() {
+            return this.isScaleSpecGroup;
         }
 
         public GetLindormV2InstanceResponseBodyEngineListNodeGroup setLocalDiskCapacity(Long localDiskCapacity) {

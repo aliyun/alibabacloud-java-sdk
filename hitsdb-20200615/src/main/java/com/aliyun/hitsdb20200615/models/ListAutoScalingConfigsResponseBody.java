@@ -351,6 +351,9 @@ public class ListAutoScalingConfigsResponseBody extends TeaModel {
         @NameInMap("SpecId")
         public String specId;
 
+        @NameInMap("StorageCapacityMax")
+        public Long storageCapacityMax;
+
         public static ListAutoScalingConfigsResponseBodyDataScaleConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListAutoScalingConfigsResponseBodyDataScaleConfigs self = new ListAutoScalingConfigsResponseBodyDataScaleConfigs();
             return TeaModel.build(map, self);
@@ -450,6 +453,14 @@ public class ListAutoScalingConfigsResponseBody extends TeaModel {
         }
         public String getSpecId() {
             return this.specId;
+        }
+
+        public ListAutoScalingConfigsResponseBodyDataScaleConfigs setStorageCapacityMax(Long storageCapacityMax) {
+            this.storageCapacityMax = storageCapacityMax;
+            return this;
+        }
+        public Long getStorageCapacityMax() {
+            return this.storageCapacityMax;
         }
 
     }

@@ -67,6 +67,9 @@ public class CreateAutoScalingConfigRequest extends TeaModel {
     @NameInMap("SpecId")
     public String specId;
 
+    @NameInMap("StorageCapacityMax")
+    public Long storageCapacityMax;
+
     public static CreateAutoScalingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoScalingConfigRequest self = new CreateAutoScalingConfigRequest();
         return TeaModel.build(map, self);
@@ -198,6 +201,14 @@ public class CreateAutoScalingConfigRequest extends TeaModel {
     }
     public String getSpecId() {
         return this.specId;
+    }
+
+    public CreateAutoScalingConfigRequest setStorageCapacityMax(Long storageCapacityMax) {
+        this.storageCapacityMax = storageCapacityMax;
+        return this;
+    }
+    public Long getStorageCapacityMax() {
+        return this.storageCapacityMax;
     }
 
     public static class CreateAutoScalingConfigRequestScaleRuleList extends TeaModel {

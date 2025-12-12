@@ -3,10 +3,13 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
+public class ModifyAutoScalingConfigShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
+    @NameInMap("ConfigId")
+    public String configId;
+
     @NameInMap("ConfigName")
     public String configName;
 
@@ -19,9 +22,6 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
     @NameInMap("Enabled")
     public Boolean enabled;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Engine")
     public String engine;
 
@@ -52,30 +52,32 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
     @NameInMap("ScaleRuleList")
     public String scaleRuleListShrink;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ScaleType")
     public String scaleType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("SpecId")
     public String specId;
 
     @NameInMap("StorageCapacityMax")
     public Long storageCapacityMax;
 
-    public static CreateAutoScalingConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAutoScalingConfigShrinkRequest self = new CreateAutoScalingConfigShrinkRequest();
+    public static ModifyAutoScalingConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyAutoScalingConfigShrinkRequest self = new ModifyAutoScalingConfigShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAutoScalingConfigShrinkRequest setConfigName(String configName) {
+    public ModifyAutoScalingConfigShrinkRequest setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    public ModifyAutoScalingConfigShrinkRequest setConfigName(String configName) {
         this.configName = configName;
         return this;
     }
@@ -83,7 +85,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.configName;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setEffectiveTimeEnd(String effectiveTimeEnd) {
+    public ModifyAutoScalingConfigShrinkRequest setEffectiveTimeEnd(String effectiveTimeEnd) {
         this.effectiveTimeEnd = effectiveTimeEnd;
         return this;
     }
@@ -91,7 +93,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.effectiveTimeEnd;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setEffectiveTimeStart(String effectiveTimeStart) {
+    public ModifyAutoScalingConfigShrinkRequest setEffectiveTimeStart(String effectiveTimeStart) {
         this.effectiveTimeStart = effectiveTimeStart;
         return this;
     }
@@ -99,7 +101,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.effectiveTimeStart;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setEnabled(Boolean enabled) {
+    public ModifyAutoScalingConfigShrinkRequest setEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
@@ -107,7 +109,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.enabled;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setEngine(String engine) {
+    public ModifyAutoScalingConfigShrinkRequest setEngine(String engine) {
         this.engine = engine;
         return this;
     }
@@ -115,7 +117,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.engine;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setInstanceId(String instanceId) {
+    public ModifyAutoScalingConfigShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -123,7 +125,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setNodesMax(Integer nodesMax) {
+    public ModifyAutoScalingConfigShrinkRequest setNodesMax(Integer nodesMax) {
         this.nodesMax = nodesMax;
         return this;
     }
@@ -131,7 +133,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.nodesMax;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setNodesMin(Integer nodesMin) {
+    public ModifyAutoScalingConfigShrinkRequest setNodesMin(Integer nodesMin) {
         this.nodesMin = nodesMin;
         return this;
     }
@@ -139,7 +141,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.nodesMin;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setOwnerAccount(String ownerAccount) {
+    public ModifyAutoScalingConfigShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -147,7 +149,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setOwnerId(Long ownerId) {
+    public ModifyAutoScalingConfigShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -155,7 +157,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyAutoScalingConfigShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -163,7 +165,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyAutoScalingConfigShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -171,7 +173,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setScaleRuleListShrink(String scaleRuleListShrink) {
+    public ModifyAutoScalingConfigShrinkRequest setScaleRuleListShrink(String scaleRuleListShrink) {
         this.scaleRuleListShrink = scaleRuleListShrink;
         return this;
     }
@@ -179,7 +181,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.scaleRuleListShrink;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setScaleType(String scaleType) {
+    public ModifyAutoScalingConfigShrinkRequest setScaleType(String scaleType) {
         this.scaleType = scaleType;
         return this;
     }
@@ -187,7 +189,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.scaleType;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setSecurityToken(String securityToken) {
+    public ModifyAutoScalingConfigShrinkRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
@@ -195,7 +197,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setSpecId(String specId) {
+    public ModifyAutoScalingConfigShrinkRequest setSpecId(String specId) {
         this.specId = specId;
         return this;
     }
@@ -203,7 +205,7 @@ public class CreateAutoScalingConfigShrinkRequest extends TeaModel {
         return this.specId;
     }
 
-    public CreateAutoScalingConfigShrinkRequest setStorageCapacityMax(Long storageCapacityMax) {
+    public ModifyAutoScalingConfigShrinkRequest setStorageCapacityMax(Long storageCapacityMax) {
         this.storageCapacityMax = storageCapacityMax;
         return this;
     }

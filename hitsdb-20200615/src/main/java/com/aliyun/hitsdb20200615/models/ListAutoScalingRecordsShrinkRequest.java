@@ -3,7 +3,7 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class ListAutoScalingRecordsRequest extends TeaModel {
+public class ListAutoScalingRecordsShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
@@ -35,17 +35,17 @@ public class ListAutoScalingRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("ScaleTypes")
-    public java.util.List<String> scaleTypes;
+    public String scaleTypesShrink;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static ListAutoScalingRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListAutoScalingRecordsRequest self = new ListAutoScalingRecordsRequest();
+    public static ListAutoScalingRecordsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAutoScalingRecordsShrinkRequest self = new ListAutoScalingRecordsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListAutoScalingRecordsRequest setInstanceId(String instanceId) {
+    public ListAutoScalingRecordsShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -53,7 +53,7 @@ public class ListAutoScalingRecordsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListAutoScalingRecordsRequest setOwnerAccount(String ownerAccount) {
+    public ListAutoScalingRecordsShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -61,7 +61,7 @@ public class ListAutoScalingRecordsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ListAutoScalingRecordsRequest setOwnerId(Long ownerId) {
+    public ListAutoScalingRecordsShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -69,7 +69,7 @@ public class ListAutoScalingRecordsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ListAutoScalingRecordsRequest setPageNum(Integer pageNum) {
+    public ListAutoScalingRecordsShrinkRequest setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -77,7 +77,7 @@ public class ListAutoScalingRecordsRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public ListAutoScalingRecordsRequest setPageSize(Integer pageSize) {
+    public ListAutoScalingRecordsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -85,7 +85,7 @@ public class ListAutoScalingRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAutoScalingRecordsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ListAutoScalingRecordsShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -93,7 +93,7 @@ public class ListAutoScalingRecordsRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ListAutoScalingRecordsRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ListAutoScalingRecordsShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -101,15 +101,15 @@ public class ListAutoScalingRecordsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListAutoScalingRecordsRequest setScaleTypes(java.util.List<String> scaleTypes) {
-        this.scaleTypes = scaleTypes;
+    public ListAutoScalingRecordsShrinkRequest setScaleTypesShrink(String scaleTypesShrink) {
+        this.scaleTypesShrink = scaleTypesShrink;
         return this;
     }
-    public java.util.List<String> getScaleTypes() {
-        return this.scaleTypes;
+    public String getScaleTypesShrink() {
+        return this.scaleTypesShrink;
     }
 
-    public ListAutoScalingRecordsRequest setSecurityToken(String securityToken) {
+    public ListAutoScalingRecordsShrinkRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
