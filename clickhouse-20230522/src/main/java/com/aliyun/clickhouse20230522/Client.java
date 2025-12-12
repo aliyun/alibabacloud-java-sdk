@@ -74,6 +74,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>白名单模板关联实例</p>
+     * 
+     * @param request AttachWhitelistTemplateToInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachWhitelistTemplateToInstanceResponse
+     */
+    public AttachWhitelistTemplateToInstanceResponse attachWhitelistTemplateToInstanceWithOptions(AttachWhitelistTemplateToInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachWhitelistTemplateToInstance"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachWhitelistTemplateToInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>白名单模板关联实例</p>
+     * 
+     * @param request AttachWhitelistTemplateToInstanceRequest
+     * @return AttachWhitelistTemplateToInstanceResponse
+     */
+    public AttachWhitelistTemplateToInstanceResponse attachWhitelistTemplateToInstance(AttachWhitelistTemplateToInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachWhitelistTemplateToInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>资源转组</p>
      * 
      * @param request ChangeResourceGroupRequest
@@ -778,6 +830,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteEndpointResponse deleteEndpoint(DeleteEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEndpointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除白名单模板</p>
+     * 
+     * @param request DeleteWhitelistTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWhitelistTemplateResponse
+     */
+    public DeleteWhitelistTemplateResponse deleteWhitelistTemplateWithOptions(DeleteWhitelistTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWhitelistTemplate"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWhitelistTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除白名单模板</p>
+     * 
+     * @param request DeleteWhitelistTemplateRequest
+     * @return DeleteWhitelistTemplateResponse
+     */
+    public DeleteWhitelistTemplateResponse deleteWhitelistTemplate(DeleteWhitelistTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteWhitelistTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -1578,6 +1682,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>取消白名单模板和实例关联关系</p>
+     * 
+     * @param request DetachWhitelistTemplateToInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachWhitelistTemplateToInstanceResponse
+     */
+    public DetachWhitelistTemplateToInstanceResponse detachWhitelistTemplateToInstanceWithOptions(DetachWhitelistTemplateToInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachWhitelistTemplateToInstance"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachWhitelistTemplateToInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消白名单模板和实例关联关系</p>
+     * 
+     * @param request DetachWhitelistTemplateToInstanceRequest
+     * @return DetachWhitelistTemplateToInstanceResponse
+     */
+    public DetachWhitelistTemplateToInstanceResponse detachWhitelistTemplateToInstance(DetachWhitelistTemplateToInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachWhitelistTemplateToInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询白名单模板详情</p>
+     * 
+     * @param request GetWhitelistTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWhitelistTemplateResponse
+     */
+    public GetWhitelistTemplateResponse getWhitelistTemplateWithOptions(GetWhitelistTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWhitelistTemplate"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWhitelistTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询白名单模板详情</p>
+     * 
+     * @param request GetWhitelistTemplateRequest
+     * @return GetWhitelistTemplateResponse
+     */
+    public GetWhitelistTemplateResponse getWhitelistTemplate(GetWhitelistTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWhitelistTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Terminates an ongoing query.</p>
      * 
      * @param request KillProcessRequest
@@ -1630,6 +1834,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public KillProcessResponse killProcess(KillProcessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.killProcessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例关联的白名单模板清单</p>
+     * 
+     * @param request ListInstanceLinkedWhitelistTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceLinkedWhitelistTemplatesResponse
+     */
+    public ListInstanceLinkedWhitelistTemplatesResponse listInstanceLinkedWhitelistTemplatesWithOptions(ListInstanceLinkedWhitelistTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstanceLinkedWhitelistTemplates"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceLinkedWhitelistTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例关联的白名单模板清单</p>
+     * 
+     * @param request ListInstanceLinkedWhitelistTemplatesRequest
+     * @return ListInstanceLinkedWhitelistTemplatesResponse
+     */
+    public ListInstanceLinkedWhitelistTemplatesResponse listInstanceLinkedWhitelistTemplates(ListInstanceLinkedWhitelistTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInstanceLinkedWhitelistTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询白名单模板清单</p>
+     * 
+     * @param request ListWhitelistTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWhitelistTemplatesResponse
+     */
+    public ListWhitelistTemplatesResponse listWhitelistTemplatesWithOptions(ListWhitelistTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWhitelistTemplates"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWhitelistTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询白名单模板清单</p>
+     * 
+     * @param request ListWhitelistTemplatesRequest
+     * @return ListWhitelistTemplatesResponse
+     */
+    public ListWhitelistTemplatesResponse listWhitelistTemplates(ListWhitelistTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWhitelistTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -2332,6 +2640,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopDBInstanceResponse stopDBInstance(StopDBInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDBInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新白名单模板</p>
+     * 
+     * @param request UpdateWhitelistTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWhitelistTemplateResponse
+     */
+    public UpdateWhitelistTemplateResponse updateWhitelistTemplateWithOptions(UpdateWhitelistTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            query.put("SecurityIPList", request.securityIPList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWhitelistTemplate"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWhitelistTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新白名单模板</p>
+     * 
+     * @param request UpdateWhitelistTemplateRequest
+     * @return UpdateWhitelistTemplateResponse
+     */
+    public UpdateWhitelistTemplateResponse updateWhitelistTemplate(UpdateWhitelistTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateWhitelistTemplateWithOptions(request, runtime);
     }
 
     /**
