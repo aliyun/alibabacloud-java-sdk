@@ -2069,6 +2069,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The permission to query member information refers to the permission to call the <a href="~~GetAccount~~">GetAccount</a> API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of members who have the permission to query member information in a resource directory.</p>
+     * 
+     * @param request ListAuthorizedAccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizedAccountsResponse
+     */
+    public ListAuthorizedAccountsResponse listAuthorizedAccountsWithOptions(ListAuthorizedAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizedAccounts"),
+            new TeaPair("version", "2022-04-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizedAccountsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The permission to query member information refers to the permission to call the <a href="~~GetAccount~~">GetAccount</a> API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of members who have the permission to query member information in a resource directory.</p>
+     * 
+     * @param request ListAuthorizedAccountsRequest
+     * @return ListAuthorizedAccountsResponse
+     */
+    public ListAuthorizedAccountsResponse listAuthorizedAccounts(ListAuthorizedAccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizedAccountsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The permissions to query subfolder information refer to the permissions to call the <a href="~~ListAccountsForParent~~">ListAccountsForParent</a> and <a href="~~ListFoldersForParent~~">ListFoldersForParent</a> API operations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of folders that have permissions to query subfolder information in a resource directory.</p>
+     * 
+     * @param request ListAuthorizedFoldersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuthorizedFoldersResponse
+     */
+    public ListAuthorizedFoldersResponse listAuthorizedFoldersWithOptions(ListAuthorizedFoldersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizedFolders"),
+            new TeaPair("version", "2022-04-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizedFoldersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The permissions to query subfolder information refer to the permissions to call the <a href="~~ListAccountsForParent~~">ListAccountsForParent</a> and <a href="~~ListFoldersForParent~~">ListFoldersForParent</a> API operations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of folders that have permissions to query subfolder information in a resource directory.</p>
+     * 
+     * @param request ListAuthorizedFoldersRequest
+     * @return ListAuthorizedFoldersResponse
+     */
+    public ListAuthorizedFoldersResponse listAuthorizedFolders(ListAuthorizedFoldersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorizedFoldersWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries access control policies.</p>
      * 
