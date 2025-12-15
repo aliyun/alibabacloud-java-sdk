@@ -130,6 +130,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<CreateInstanceRequestLabels> labels;
 
+    @NameInMap("MigrationOptions")
+    public java.util.Map<String, ?> migrationOptions;
+
     @NameInMap("OversoldType")
     public String oversoldType;
 
@@ -344,6 +347,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public java.util.List<CreateInstanceRequestLabels> getLabels() {
         return this.labels;
+    }
+
+    public CreateInstanceRequest setMigrationOptions(java.util.Map<String, ?> migrationOptions) {
+        this.migrationOptions = migrationOptions;
+        return this;
+    }
+    public java.util.Map<String, ?> getMigrationOptions() {
+        return this.migrationOptions;
     }
 
     public CreateInstanceRequest setOversoldType(String oversoldType) {

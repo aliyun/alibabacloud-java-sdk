@@ -208,6 +208,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Labels", request.labels);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.migrationOptions)) {
+            body.put("MigrationOptions", request.migrationOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.oversoldType)) {
             body.put("OversoldType", request.oversoldType);
         }
@@ -1879,6 +1883,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DisassociateForwardInfos", request.disassociateForwardInfos);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.disassociateMigrationOptions)) {
+            body.put("DisassociateMigrationOptions", request.disassociateMigrationOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.disassociateSpot)) {
             body.put("DisassociateSpot", request.disassociateSpot);
         }
@@ -1921,6 +1929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrationOptions)) {
+            body.put("MigrationOptions", request.migrationOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.oversoldType)) {

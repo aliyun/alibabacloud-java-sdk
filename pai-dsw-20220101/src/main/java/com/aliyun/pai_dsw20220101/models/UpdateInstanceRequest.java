@@ -94,6 +94,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("DisassociateForwardInfos")
     public Boolean disassociateForwardInfos;
 
+    @NameInMap("DisassociateMigrationOptions")
+    public Boolean disassociateMigrationOptions;
+
     @NameInMap("DisassociateSpot")
     public Boolean disassociateSpot;
 
@@ -175,6 +178,9 @@ public class UpdateInstanceRequest extends TeaModel {
      */
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("MigrationOptions")
+    public java.util.Map<String, ?> migrationOptions;
 
     @NameInMap("OversoldType")
     public String oversoldType;
@@ -347,6 +353,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.disassociateForwardInfos;
     }
 
+    public UpdateInstanceRequest setDisassociateMigrationOptions(Boolean disassociateMigrationOptions) {
+        this.disassociateMigrationOptions = disassociateMigrationOptions;
+        return this;
+    }
+    public Boolean getDisassociateMigrationOptions() {
+        return this.disassociateMigrationOptions;
+    }
+
     public UpdateInstanceRequest setDisassociateSpot(Boolean disassociateSpot) {
         this.disassociateSpot = disassociateSpot;
         return this;
@@ -433,6 +447,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public UpdateInstanceRequest setMigrationOptions(java.util.Map<String, ?> migrationOptions) {
+        this.migrationOptions = migrationOptions;
+        return this;
+    }
+    public java.util.Map<String, ?> getMigrationOptions() {
+        return this.migrationOptions;
     }
 
     public UpdateInstanceRequest setOversoldType(String oversoldType) {

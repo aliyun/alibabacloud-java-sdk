@@ -268,6 +268,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("MigrationOptions")
+    public java.util.Map<String, ?> migrationOptions;
+
     /**
      * <p>The error recovery configuration of the node.</p>
      */
@@ -722,6 +725,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public GetInstanceResponseBody setMigrationOptions(java.util.Map<String, ?> migrationOptions) {
+        this.migrationOptions = migrationOptions;
+        return this;
+    }
+    public java.util.Map<String, ?> getMigrationOptions() {
+        return this.migrationOptions;
     }
 
     public GetInstanceResponseBody setNodeErrorRecovery(GetInstanceResponseBodyNodeErrorRecovery nodeErrorRecovery) {

@@ -45,6 +45,9 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("MigrationOptions")
+    public java.util.Map<String, ?> migrationOptions;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -111,6 +114,14 @@ public class ListInstancesResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ListInstancesResponseBody setMigrationOptions(java.util.Map<String, ?> migrationOptions) {
+        this.migrationOptions = migrationOptions;
+        return this;
+    }
+    public java.util.Map<String, ?> getMigrationOptions() {
+        return this.migrationOptions;
     }
 
     public ListInstancesResponseBody setRequestId(String requestId) {
