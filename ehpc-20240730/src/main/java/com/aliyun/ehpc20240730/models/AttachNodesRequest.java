@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachNodesRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AttachNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The compute node information.</p>
+     * <p>The list of compute nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ComputeNode")
@@ -71,7 +71,7 @@ public class AttachNodesRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The IDs of ECS instances.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("InstanceIds")

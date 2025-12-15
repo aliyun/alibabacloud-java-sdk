@@ -632,7 +632,80 @@ public class GetClusterResponseBody extends TeaModel {
 
     }
 
+    public static class GetClusterResponseBodyManagerManagerNodeSystemDisk extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
+        @NameInMap("Category")
+        public String category;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
+        @NameInMap("Level")
+        public String level;
+
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
+        @NameInMap("Size")
+        public Long size;
+
+        public static GetClusterResponseBodyManagerManagerNodeSystemDisk build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterResponseBodyManagerManagerNodeSystemDisk self = new GetClusterResponseBodyManagerManagerNodeSystemDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public GetClusterResponseBodyManagerManagerNodeSystemDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public GetClusterResponseBodyManagerManagerNodeSystemDisk setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public GetClusterResponseBodyManagerManagerNodeSystemDisk setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+    }
+
     public static class GetClusterResponseBodyManagerManagerNode extends TeaModel {
+        @NameInMap("AutoRenew")
+        public Boolean autoRenew;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
+        @NameInMap("AutoRenewPeriod")
+        public Long autoRenewPeriod;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Duration")
+        public Long duration;
+
+        @NameInMap("EnableHt")
+        public Boolean enableHt;
+
         /**
          * <p>The expiration time of the management node.</p>
          * 
@@ -641,6 +714,13 @@ public class GetClusterResponseBody extends TeaModel {
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200324.vhd</p>
+         */
+        @NameInMap("ImageId")
+        public String imageId;
 
         /**
          * <p>The instance billing method of the management node. Valid values:</p>
@@ -673,9 +753,72 @@ public class GetClusterResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Period")
+        public Long period;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
+        @NameInMap("PeriodUnit")
+        public String periodUnit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SpotPriceLimit")
+        public Float spotPriceLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
+         */
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
+        @NameInMap("SystemDisk")
+        public GetClusterResponseBodyManagerManagerNodeSystemDisk systemDisk;
+
         public static GetClusterResponseBodyManagerManagerNode build(java.util.Map<String, ?> map) throws Exception {
             GetClusterResponseBodyManagerManagerNode self = new GetClusterResponseBodyManagerManagerNode();
             return TeaModel.build(map, self);
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setAutoRenewPeriod(Long autoRenewPeriod) {
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+        public Long getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setEnableHt(Boolean enableHt) {
+            this.enableHt = enableHt;
+            return this;
+        }
+        public Boolean getEnableHt() {
+            return this.enableHt;
         }
 
         public GetClusterResponseBodyManagerManagerNode setExpiredTime(String expiredTime) {
@@ -684,6 +827,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
         }
 
         public GetClusterResponseBodyManagerManagerNode setInstanceChargeType(String instanceChargeType) {
@@ -708,6 +859,46 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setPeriod(Long period) {
+            this.period = period;
+            return this;
+        }
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setPeriodUnit(String periodUnit) {
+            this.periodUnit = periodUnit;
+            return this;
+        }
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setSpotPriceLimit(Float spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public Float getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public GetClusterResponseBodyManagerManagerNode setSystemDisk(GetClusterResponseBodyManagerManagerNodeSystemDisk systemDisk) {
+            this.systemDisk = systemDisk;
+            return this;
+        }
+        public GetClusterResponseBodyManagerManagerNodeSystemDisk getSystemDisk() {
+            return this.systemDisk;
         }
 
     }

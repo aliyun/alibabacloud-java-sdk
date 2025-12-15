@@ -76,8 +76,8 @@ public class UpdateQueueRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable auto scale-out for the queue. Valid values:</p>
          * <ul>
-         * <li>true: deletion protection is enabled.</li>
-         * <li>false: disables ASM.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class UpdateQueueRequest extends TeaModel {
         public String interConnect;
 
         /**
-         * <p>The nodes for which deletion protection is enabled in the queue.</p>
+         * <p>List of excluded compute nodes in the queue.</p>
          */
         @NameInMap("KeepAliveNodes")
         public java.util.List<String> keepAliveNodes;
