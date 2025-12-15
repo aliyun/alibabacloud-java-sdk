@@ -150,6 +150,9 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         @NameInMap("image_count")
         public Long imageCount;
 
+        @NameInMap("semantic_token_count")
+        public Long semanticTokenCount;
+
         @NameInMap("table_count")
         public Long tableCount;
 
@@ -167,6 +170,14 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         }
         public Long getImageCount() {
             return this.imageCount;
+        }
+
+        public GetDocumentAnalyzeTaskStatusResponseBodyUsage setSemanticTokenCount(Long semanticTokenCount) {
+            this.semanticTokenCount = semanticTokenCount;
+            return this;
+        }
+        public Long getSemanticTokenCount() {
+            return this.semanticTokenCount;
         }
 
         public GetDocumentAnalyzeTaskStatusResponseBodyUsage setTableCount(Long tableCount) {

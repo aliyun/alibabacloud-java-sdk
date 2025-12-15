@@ -7,6 +7,9 @@ public class GetMultiModalEmbeddingRequest extends TeaModel {
     @NameInMap("input")
     public java.util.List<GetMultiModalEmbeddingRequestInput> input;
 
+    @NameInMap("options")
+    public java.util.Map<String, ?> options;
+
     public static GetMultiModalEmbeddingRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMultiModalEmbeddingRequest self = new GetMultiModalEmbeddingRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetMultiModalEmbeddingRequest extends TeaModel {
     }
     public java.util.List<GetMultiModalEmbeddingRequestInput> getInput() {
         return this.input;
+    }
+
+    public GetMultiModalEmbeddingRequest setOptions(java.util.Map<String, ?> options) {
+        this.options = options;
+        return this;
+    }
+    public java.util.Map<String, ?> getOptions() {
+        return this.options;
     }
 
     public static class GetMultiModalEmbeddingRequestInput extends TeaModel {

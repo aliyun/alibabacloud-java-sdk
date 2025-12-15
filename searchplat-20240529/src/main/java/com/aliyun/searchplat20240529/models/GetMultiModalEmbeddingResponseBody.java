@@ -106,6 +106,12 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
         @NameInMap("image")
         public Long image;
 
+        @NameInMap("image_token")
+        public Long imageToken;
+
+        @NameInMap("text_token")
+        public Long textToken;
+
         @NameInMap("token_count")
         public Long tokenCount;
 
@@ -120,6 +126,22 @@ public class GetMultiModalEmbeddingResponseBody extends TeaModel {
         }
         public Long getImage() {
             return this.image;
+        }
+
+        public GetMultiModalEmbeddingResponseBodyUsage setImageToken(Long imageToken) {
+            this.imageToken = imageToken;
+            return this;
+        }
+        public Long getImageToken() {
+            return this.imageToken;
+        }
+
+        public GetMultiModalEmbeddingResponseBodyUsage setTextToken(Long textToken) {
+            this.textToken = textToken;
+            return this;
+        }
+        public Long getTextToken() {
+            return this.textToken;
         }
 
         public GetMultiModalEmbeddingResponseBodyUsage setTokenCount(Long tokenCount) {
