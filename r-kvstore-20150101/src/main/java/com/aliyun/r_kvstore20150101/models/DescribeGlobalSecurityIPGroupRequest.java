@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
+    @NameInMap("Engine")
+    public String engine;
+
     /**
      * <p>The ID of the IP whitelist template.</p>
      * 
@@ -50,6 +53,14 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     public static DescribeGlobalSecurityIPGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalSecurityIPGroupRequest self = new DescribeGlobalSecurityIPGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGlobalSecurityIPGroupRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
     }
 
     public DescribeGlobalSecurityIPGroupRequest setGlobalSecurityGroupId(String globalSecurityGroupId) {

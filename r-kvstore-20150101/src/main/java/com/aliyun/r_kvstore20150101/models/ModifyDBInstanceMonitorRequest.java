@@ -3,7 +3,7 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDBInstanceNetInfoRequest extends TeaModel {
+public class ModifyDBInstanceMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -11,11 +11,18 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
      */
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
-    @NameInMap("NetType")
-    public String netType;
+    /**
+     * <p>The interval at which monitoring data is collected. Valid values: 5 and 60. Unit: seconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("Interval")
+    public String interval;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -32,28 +39,28 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static DescribeDBInstanceNetInfoRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDBInstanceNetInfoRequest self = new DescribeDBInstanceNetInfoRequest();
+    public static ModifyDBInstanceMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBInstanceMonitorRequest self = new ModifyDBInstanceMonitorRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceNetInfoRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ModifyDBInstanceMonitorRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
-    public DescribeDBInstanceNetInfoRequest setNetType(String netType) {
-        this.netType = netType;
+    public ModifyDBInstanceMonitorRequest setInterval(String interval) {
+        this.interval = interval;
         return this;
     }
-    public String getNetType() {
-        return this.netType;
+    public String getInterval() {
+        return this.interval;
     }
 
-    public DescribeDBInstanceNetInfoRequest setOwnerAccount(String ownerAccount) {
+    public ModifyDBInstanceMonitorRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -61,7 +68,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeDBInstanceNetInfoRequest setOwnerId(Long ownerId) {
+    public ModifyDBInstanceMonitorRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -69,7 +76,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeDBInstanceNetInfoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyDBInstanceMonitorRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -77,7 +84,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeDBInstanceNetInfoRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyDBInstanceMonitorRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -85,7 +92,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDBInstanceNetInfoRequest setSecurityToken(String securityToken) {
+    public ModifyDBInstanceMonitorRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

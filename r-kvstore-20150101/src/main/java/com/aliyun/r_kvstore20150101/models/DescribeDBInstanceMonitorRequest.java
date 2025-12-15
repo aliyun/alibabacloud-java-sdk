@@ -3,19 +3,16 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDBInstanceNetInfoRequest extends TeaModel {
+public class DescribeDBInstanceMonitorRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>r-bp1zxszhcgatnx****</p>
+     * <p>r-bp1xp9esa45nll****</p>
      */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("NetType")
-    public String netType;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -32,28 +29,20 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static DescribeDBInstanceNetInfoRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDBInstanceNetInfoRequest self = new DescribeDBInstanceNetInfoRequest();
+    public static DescribeDBInstanceMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBInstanceMonitorRequest self = new DescribeDBInstanceMonitorRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceNetInfoRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public DescribeDBInstanceMonitorRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
-    public DescribeDBInstanceNetInfoRequest setNetType(String netType) {
-        this.netType = netType;
-        return this;
-    }
-    public String getNetType() {
-        return this.netType;
-    }
-
-    public DescribeDBInstanceNetInfoRequest setOwnerAccount(String ownerAccount) {
+    public DescribeDBInstanceMonitorRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -61,7 +50,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeDBInstanceNetInfoRequest setOwnerId(Long ownerId) {
+    public DescribeDBInstanceMonitorRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -69,7 +58,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeDBInstanceNetInfoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeDBInstanceMonitorRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -77,7 +66,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeDBInstanceNetInfoRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeDBInstanceMonitorRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -85,7 +74,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDBInstanceNetInfoRequest setSecurityToken(String securityToken) {
+    public DescribeDBInstanceMonitorRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

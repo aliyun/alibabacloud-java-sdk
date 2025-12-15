@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupExpireTimeRequest extends TeaModel {
     /**
+     * <p>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the IDs of backup files.</p>
+     * 
      * <strong>example:</strong>
      * <p>521****66</p>
      */
@@ -12,6 +14,7 @@ public class ModifyBackupExpireTimeRequest extends TeaModel {
     public String backupId;
 
     /**
+     * <p>The point in time to which you want to extend the expiration time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The time cannot be earlier than the current expiration time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ModifyBackupExpireTimeRequest extends TeaModel {
     public String expectExpireTime;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

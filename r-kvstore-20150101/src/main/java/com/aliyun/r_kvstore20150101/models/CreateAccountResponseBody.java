@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountResponseBody extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     /**
      * <p>The name of the account.</p>
      * 
@@ -34,6 +37,14 @@ public class CreateAccountResponseBody extends TeaModel {
     public static CreateAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountResponseBody self = new CreateAccountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAccountResponseBody setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public CreateAccountResponseBody setAcountName(String acountName) {

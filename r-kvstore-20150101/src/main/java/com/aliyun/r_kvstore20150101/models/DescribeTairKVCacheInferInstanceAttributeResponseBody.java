@@ -135,6 +135,9 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ReplicaNum")
+        public String replicaNum;
+
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -303,6 +306,14 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setReplicaNum(String replicaNum) {
+            this.replicaNum = replicaNum;
+            return this;
+        }
+        public String getReplicaNum() {
+            return this.replicaNum;
         }
 
         public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setResourceGroupId(String resourceGroupId) {

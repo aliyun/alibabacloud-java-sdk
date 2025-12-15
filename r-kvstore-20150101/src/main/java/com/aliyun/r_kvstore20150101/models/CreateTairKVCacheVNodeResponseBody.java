@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
     /**
+     * <p>The ID of the Tair VNode instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>tv-2zeb1ce76fee****</p>
      */
@@ -12,6 +14,8 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the VNode.</p>
+     * 
      * <strong>example:</strong>
      * <p>vn-03a49876edb****</p>
      */
@@ -19,6 +23,8 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20905403119****</p>
      */
@@ -26,6 +32,8 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -33,6 +41,8 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
      */
@@ -40,6 +50,8 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the VCluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>vc-16965a9267*****-*****</p>
      */
@@ -47,6 +59,8 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
     public String VClusterId;
 
     /**
+     * <p>The ID of the VCluster instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>tk-2ze4bba3c8fe****</p>
      */
@@ -54,6 +68,8 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
     public String vkName;
 
     /**
+     * <p>The zone ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-f</p>
      */

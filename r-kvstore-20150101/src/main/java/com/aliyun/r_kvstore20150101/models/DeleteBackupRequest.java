@@ -14,6 +14,7 @@ public class DeleteBackupRequest extends TeaModel {
     public String backupId;
 
     /**
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

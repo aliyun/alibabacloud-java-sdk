@@ -21,9 +21,9 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The name of the account. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name can contain lowercase letters, digits, and hyphens (-), and must start with a lowercase letter.</li>
+     * <li>The name must start with a lowercase letter and can contain lowercase letters, digits, and underscores (_).</li>
      * <li>The name can be up to 100 characters in length.</li>
-     * <li>The name cannot be one of the reserved words in the <a href="https://www.alibabacloud.com/help/en/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Reserved words for Redis account names</a> section.</li>
+     * <li>The name cannot be one of the reserved words listed in the <a href="https://www.alibabacloud.com/help/zh/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Reserved words for Redis account names</a> section.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

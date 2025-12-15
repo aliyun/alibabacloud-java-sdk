@@ -45,6 +45,9 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    @NameInMap("BandWidthBurst")
+    public Boolean bandWidthBurst;
+
     /**
      * <p>The amount of extra bandwidth that you want to purchase. Unit: Mbit/s. The value must be an integer greater than or equal to <strong>0</strong>. The maximum value can be up to six times the default bandwidth of the instance or a single shard, but cannot exceed 192 Mbit/s. For example, if the default bandwidth of an instance is 10 Mbit/s, the value range of this parameter is <strong>0</strong> to <strong>60</strong>.</p>
      * <blockquote>
@@ -169,6 +172,14 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     }
     public Integer getAutoRenewPeriod() {
         return this.autoRenewPeriod;
+    }
+
+    public EnableAdditionalBandwidthRequest setBandWidthBurst(Boolean bandWidthBurst) {
+        this.bandWidthBurst = bandWidthBurst;
+        return this;
+    }
+    public Boolean getBandWidthBurst() {
+        return this.bandWidthBurst;
     }
 
     public EnableAdditionalBandwidthRequest setBandwidth(String bandwidth) {

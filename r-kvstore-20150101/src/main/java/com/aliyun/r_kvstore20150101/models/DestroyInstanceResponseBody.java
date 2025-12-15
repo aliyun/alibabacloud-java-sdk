@@ -3,22 +3,22 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyBackupExpireTimeResponseBody extends TeaModel {
+public class DestroyInstanceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>B560AAD5-5027-51AD-A0D4-FA4DB1A76F40</p>
+     * <p>870422DE-B64C-5A15-9C48-4A9485D1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyBackupExpireTimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyBackupExpireTimeResponseBody self = new ModifyBackupExpireTimeResponseBody();
+    public static DestroyInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DestroyInstanceResponseBody self = new DestroyInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyBackupExpireTimeResponseBody setRequestId(String requestId) {
+    public DestroyInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

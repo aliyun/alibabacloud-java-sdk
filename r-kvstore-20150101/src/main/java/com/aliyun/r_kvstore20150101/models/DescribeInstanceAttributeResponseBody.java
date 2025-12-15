@@ -204,6 +204,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("CloudType")
         public String cloudType;
 
+        @NameInMap("ComputingType")
+        public String computingType;
+
         /**
          * <p>The parameter configurations of the instance in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter descriptions</a>. You can use the <a href="https://help.aliyun.com/document_detail/473830.html">DescribeAuditLogConfig</a> operation to query audit log configurations.</p>
          * 
@@ -783,6 +786,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public String getCloudType() {
             return this.cloudType;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setComputingType(String computingType) {
+            this.computingType = computingType;
+            return this;
+        }
+        public String getComputingType() {
+            return this.computingType;
         }
 
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setConfig(String config) {

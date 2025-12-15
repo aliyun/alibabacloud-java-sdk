@@ -7,15 +7,31 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public DescribeTairKVCacheInferInstancesResponseBodyInstances instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CD225838-7069-5CE4-89E1-67B83AC149C8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTOTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>thread</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,75 +138,173 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c809******************************</p>
+         */
         @NameInMap("AckId")
         public String ackId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>256</p>
+         */
         @NameInMap("Capacity")
         public Long capacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ComputeUnitNum")
         public Integer computeUnitNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-04-07T04:46Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-04-07T04:46Z</p>
+         */
         @NameInMap("DestroyTime")
         public String destroyTime;
 
+        @NameInMap("ElasticVNodeCount")
+        public Integer elasticVNodeCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2025-11-04T02:09:26Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("FixedVNodeCount")
+        public Integer fixedVNodeCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>kvcache.cu.g4b.2</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tk-9dp7e37bab*****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kvcache-7</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TairInfer</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DeepSeek-OCR</p>
+         */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ModelServiceNum")
         public Integer modelServiceNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172.16.49.***</p>
+         */
         @NameInMap("PrivateIp")
         public String privateIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-acfm4bdru5z****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("Tags")
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTOTags tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("VNodeCount")
         public Integer VNodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tv-xxxxx</p>
+         */
         @NameInMap("VNodeName")
         public String VNodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-8vbf0ksk774ai6q1d****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2zef5w848p4j5g***</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -239,12 +361,28 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             return this.destroyTime;
         }
 
+        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setElasticVNodeCount(Integer elasticVNodeCount) {
+            this.elasticVNodeCount = elasticVNodeCount;
+            return this;
+        }
+        public Integer getElasticVNodeCount() {
+            return this.elasticVNodeCount;
+        }
+
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setFixedVNodeCount(Integer fixedVNodeCount) {
+            this.fixedVNodeCount = fixedVNodeCount;
+            return this;
+        }
+        public Integer getFixedVNodeCount() {
+            return this.fixedVNodeCount;
         }
 
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setInstanceClass(String instanceClass) {
