@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableResourceGroupNotificationResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F7701451-340B-5CB3-AEA7-7D831F7F38C0</p>
      */

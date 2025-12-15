@@ -2014,7 +2014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭资源组通知</p>
+     * <p>Disables group event notification.</p>
      * 
      * @param request DisableResourceGroupNotificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2038,7 +2038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭资源组通知</p>
+     * <p>Disables group event notification.</p>
      * @return DisableResourceGroupNotificationResponse
      */
     public DisableResourceGroupNotificationResponse disableResourceGroupNotification() throws Exception {
@@ -2220,7 +2220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通资源组通知</p>
+     * <p>Enables group event notification.</p>
      * 
      * @param request EnableResourceGroupNotificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2244,7 +2244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通资源组通知</p>
+     * <p>Enables group event notification.</p>
      * @return EnableResourceGroupNotificationResponse
      */
     public EnableResourceGroupNotificationResponse enableResourceGroupNotification() throws Exception {
@@ -2888,7 +2888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源组管理员配置</p>
+     * <p>Queries the configurations of a resource group administrator.</p>
      * 
      * @param request GetResourceGroupAdminSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2912,7 +2912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源组管理员配置</p>
+     * <p>Queries the configurations of a resource group administrator.</p>
      * @return GetResourceGroupAdminSettingResponse
      */
     public GetResourceGroupAdminSettingResponse getResourceGroupAdminSetting() throws Exception {
@@ -2922,7 +2922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源组通知设置</p>
+     * <p>Queries the notification settings of a resource group.</p>
      * 
      * @param request GetResourceGroupNotificationSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2946,7 +2946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源组通知设置</p>
+     * <p>Queries the notification settings of a resource group.</p>
      * @return GetResourceGroupNotificationSettingResponse
      */
     public GetResourceGroupNotificationSettingResponse getResourceGroupNotificationSetting() throws Exception {
@@ -3414,7 +3414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出自动分组修正记录</p>
+     * <p>Queries a list of automatic grouping remediation records.</p>
      * 
      * @param request ListAutoGroupingRemediationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3478,7 +3478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出自动分组修正记录</p>
+     * <p>Queries a list of automatic grouping remediation records.</p>
      * 
      * @param request ListAutoGroupingRemediationsRequest
      * @return ListAutoGroupingRemediationsResponse
@@ -4121,6 +4121,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>列出资源组能力项</p>
+     * 
+     * @param request ListResourceGroupCapabilityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceGroupCapabilityResponse
+     */
+    public ListResourceGroupCapabilityResponse listResourceGroupCapabilityWithOptions(ListResourceGroupCapabilityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportResourceGroupEvent)) {
+            query.put("SupportResourceGroupEvent", request.supportResourceGroupEvent);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceGroupCapability"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceGroupCapabilityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出资源组能力项</p>
+     * 
+     * @param request ListResourceGroupCapabilityRequest
+     * @return ListResourceGroupCapabilityResponse
+     */
+    public ListResourceGroupCapabilityResponse listResourceGroupCapability(ListResourceGroupCapabilityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listResourceGroupCapabilityWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
      * This topic provides an example on how to call the API operation to query the basic information about the resource groups <code>rg-1hSBH2****</code> and <code>rg-9gLOoK****</code> within the current account.</p>
@@ -4722,6 +4774,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTrustedServiceStatusResponse listTrustedServiceStatus(ListTrustedServiceStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTrustedServiceStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资源组事件</p>
+     * 
+     * @param request LookupResourceGroupEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LookupResourceGroupEventsResponse
+     */
+    public LookupResourceGroupEventsResponse lookupResourceGroupEventsWithOptions(LookupResourceGroupEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventCategory)) {
+            query.put("EventCategory", request.eventCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lookupAttributes)) {
+            query.put("LookupAttributes", request.lookupAttributes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupDisplayName)) {
+            query.put("ResourceGroupDisplayName", request.resourceGroupDisplayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LookupResourceGroupEvents"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LookupResourceGroupEventsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资源组事件</p>
+     * 
+     * @param request LookupResourceGroupEventsRequest
+     * @return LookupResourceGroupEventsResponse
+     */
+    public LookupResourceGroupEventsResponse lookupResourceGroupEvents(LookupResourceGroupEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.lookupResourceGroupEventsWithOptions(request, runtime);
     }
 
     /**
@@ -5834,7 +5958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源组管理员配置</p>
+     * <p>Updates the configurations of a resource group administrator.</p>
      * 
      * @param request UpdateResourceGroupAdminSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5866,7 +5990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源组管理员配置</p>
+     * <p>Updates the configurations of a resource group administrator.</p>
      * 
      * @param request UpdateResourceGroupAdminSettingRequest
      * @return UpdateResourceGroupAdminSettingResponse

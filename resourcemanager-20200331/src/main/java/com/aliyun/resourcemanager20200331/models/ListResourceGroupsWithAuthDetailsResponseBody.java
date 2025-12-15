@@ -21,6 +21,12 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4141780B-4E3D-5D2A-A8F4-44D6D34F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

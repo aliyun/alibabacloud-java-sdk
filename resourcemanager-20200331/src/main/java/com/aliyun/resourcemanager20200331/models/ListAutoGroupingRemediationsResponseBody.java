@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
     /**
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,16 +15,23 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The remediation records.</p>
+     */
     @NameInMap("Remediations")
     public java.util.List<ListAutoGroupingRemediationsResponseBodyRemediations> remediations;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6F959E33-7B6D-5F58-BB0B-ED616DC7C70B</p>
      */
@@ -67,6 +77,8 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
 
     public static class ListAutoGroupingRemediationsResponseBodyRemediationsTargetResourceGroupInfo extends TeaModel {
         /**
+         * <p>The resource group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ProjectA</p>
          */
@@ -74,6 +86,8 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String resourceGroupDisplayName;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfmygrk****wfa</p>
          */
@@ -105,6 +119,8 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
 
     public static class ListAutoGroupingRemediationsResponseBodyRemediations extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -112,6 +128,8 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The remediation record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0028d4****cfe94956ef6708a373f396fbc840e306f</p>
          */
@@ -119,6 +137,8 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String remediationId;
 
         /**
+         * <p>The remediation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-01 00:00:00</p>
          */
@@ -126,6 +146,8 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String remediationTime;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-uf664f66v1****drkea4</p>
          */
@@ -133,6 +155,9 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance</p>
          */
@@ -140,12 +165,18 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The ID of the Alibaba Cloud service.</p>
+         * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
         @NameInMap("Service")
         public String service;
 
+        /**
+         * <p>The information about the new resource group.</p>
+         */
         @NameInMap("TargetResourceGroupInfo")
         public ListAutoGroupingRemediationsResponseBodyRemediationsTargetResourceGroupInfo targetResourceGroupInfo;
 

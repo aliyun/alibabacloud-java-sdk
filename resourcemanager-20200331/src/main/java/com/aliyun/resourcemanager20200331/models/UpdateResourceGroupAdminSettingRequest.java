@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceGroupAdminSettingRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the Use Creator as Administrator feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

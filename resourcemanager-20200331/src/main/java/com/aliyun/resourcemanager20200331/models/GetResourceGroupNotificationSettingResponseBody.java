@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupNotificationSettingResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7F70D09B-0EE5-54A6-A09A-1EBDB9297172</p>
      */
@@ -12,6 +14,8 @@ public class GetResourceGroupNotificationSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the group event notification is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

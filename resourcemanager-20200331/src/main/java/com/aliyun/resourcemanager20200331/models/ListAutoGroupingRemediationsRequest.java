@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAutoGroupingRemediationsRequest extends TeaModel {
     /**
+     * <p>The earliest remediation time. This parameter is empty by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-01-01 00:00:00</p>
      */
@@ -12,6 +14,8 @@ public class ListAutoGroupingRemediationsRequest extends TeaModel {
     public String earliestRemediationTime;
 
     /**
+     * <p>The latest remediation time. This parameter is empty by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-02-01 00:00:00</p>
      */
@@ -19,6 +23,8 @@ public class ListAutoGroupingRemediationsRequest extends TeaModel {
     public String latestRemediationTime;
 
     /**
+     * <p>The maximum number of data entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListAutoGroupingRemediationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cm****</p>
      */
@@ -33,6 +41,8 @@ public class ListAutoGroupingRemediationsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The resource ID,</p>
+     * 
      * <strong>example:</strong>
      * <p>i-23v38****</p>
      */
@@ -40,6 +50,9 @@ public class ListAutoGroupingRemediationsRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource type,</p>
+     * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>instance</p>
      */
@@ -47,6 +60,7 @@ public class ListAutoGroupingRemediationsRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +70,9 @@ public class ListAutoGroupingRemediationsRequest extends TeaModel {
     public String ruleId;
 
     /**
+     * <p>The ID of the Alibaba Cloud service.</p>
+     * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */
@@ -63,6 +80,8 @@ public class ListAutoGroupingRemediationsRequest extends TeaModel {
     public String service;
 
     /**
+     * <p>The ID of the new resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekz26emqhc****</p>
      */
