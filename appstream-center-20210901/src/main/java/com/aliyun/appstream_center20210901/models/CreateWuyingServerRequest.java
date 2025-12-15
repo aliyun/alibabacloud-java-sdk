@@ -68,6 +68,9 @@ public class CreateWuyingServerRequest extends TeaModel {
     @NameInMap("DataDisk")
     public java.util.List<CreateWuyingServerRequestDataDisk> dataDisk;
 
+    @NameInMap("HostName")
+    public String hostName;
+
     /**
      * <p>Idempotence token to ensure operation uniqueness</p>
      * 
@@ -275,6 +278,14 @@ public class CreateWuyingServerRequest extends TeaModel {
     }
     public java.util.List<CreateWuyingServerRequestDataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    public CreateWuyingServerRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
     }
 
     public CreateWuyingServerRequest setIdempotenceToken(String idempotenceToken) {
