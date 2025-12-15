@@ -62,6 +62,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("Eni")
+    public String eni;
+
     @NameInMap("InstanceVersion")
     public String instanceVersion;
 
@@ -253,6 +256,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public GetSupabaseProjectResponseBody setEni(String eni) {
+        this.eni = eni;
+        return this;
+    }
+    public String getEni() {
+        return this.eni;
     }
 
     public GetSupabaseProjectResponseBody setInstanceVersion(String instanceVersion) {
