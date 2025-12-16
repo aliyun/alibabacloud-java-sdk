@@ -28,6 +28,9 @@ public class DescribeCertificatePrivateKeyRequest extends TeaModel {
     @NameInMap("Identifier")
     public String identifier;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeCertificatePrivateKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCertificatePrivateKeyRequest self = new DescribeCertificatePrivateKeyRequest();
         return TeaModel.build(map, self);
@@ -47,6 +50,14 @@ public class DescribeCertificatePrivateKeyRequest extends TeaModel {
     }
     public String getIdentifier() {
         return this.identifier;
+    }
+
+    public DescribeCertificatePrivateKeyRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

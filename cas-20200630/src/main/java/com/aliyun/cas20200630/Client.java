@@ -1351,6 +1351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Identifier", request.identifier);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1470,6 +1474,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取客户端证书</p>
+     * 
+     * @deprecated OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.
+     * 
+     * @param request DescribeClientCertificateForSerialNumberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeClientCertificateForSerialNumberResponse
+     */
+    @Deprecated
+    // Deprecated
+    public DescribeClientCertificateForSerialNumberResponse describeClientCertificateForSerialNumberWithOptions(DescribeClientCertificateForSerialNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
+            query.put("SerialNumber", request.serialNumber);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeClientCertificateForSerialNumber"),
+            new TeaPair("version", "2020-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateForSerialNumberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户端证书</p>
+     * 
+     * @deprecated OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.
+     * 
+     * @param request DescribeClientCertificateForSerialNumberRequest
+     * @return DescribeClientCertificateForSerialNumberResponse
+     */
+    @Deprecated
+    // Deprecated
+    public DescribeClientCertificateForSerialNumberResponse describeClientCertificateForSerialNumber(DescribeClientCertificateForSerialNumberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeClientCertificateForSerialNumberWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call the DescribeClientCertificateStatus operation to query the status information about multiple client certificates or server certificates at a time by using the unique identifiers of the certificates. For example, you can check whether a certificate is revoked.</p>
      * <h2>Limits</h2>
@@ -1521,6 +1577,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeClientCertificateStatusResponse describeClientCertificateStatus(DescribeClientCertificateStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeClientCertificateStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户端证书状态</p>
+     * 
+     * @param request DescribeClientCertificateStatusForSerialNumberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeClientCertificateStatusForSerialNumberResponse
+     */
+    public DescribeClientCertificateStatusForSerialNumberResponse describeClientCertificateStatusForSerialNumberWithOptions(DescribeClientCertificateStatusForSerialNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
+            query.put("SerialNumber", request.serialNumber);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeClientCertificateStatusForSerialNumber"),
+            new TeaPair("version", "2020-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateStatusForSerialNumberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户端证书状态</p>
+     * 
+     * @param request DescribeClientCertificateStatusForSerialNumberRequest
+     * @return DescribeClientCertificateStatusForSerialNumberResponse
+     */
+    public DescribeClientCertificateStatusForSerialNumberResponse describeClientCertificateStatusForSerialNumber(DescribeClientCertificateStatusForSerialNumberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeClientCertificateStatusForSerialNumberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</p>
+     * 
+     * @deprecated OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
+     * 
+     * @param request DescribePcaAndExternalCACertificateListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePcaAndExternalCACertificateListResponse
+     */
+    @Deprecated
+    // Deprecated
+    public DescribePcaAndExternalCACertificateListResponse describePcaAndExternalCACertificateListWithOptions(DescribePcaAndExternalCACertificateListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
+            query.put("ShowSize", request.showSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePcaAndExternalCACertificateList"),
+            new TeaPair("version", "2020-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePcaAndExternalCACertificateListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</p>
+     * 
+     * @deprecated OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
+     * 
+     * @param request DescribePcaAndExternalCACertificateListRequest
+     * @return DescribePcaAndExternalCACertificateListResponse
+     */
+    @Deprecated
+    // Deprecated
+    public DescribePcaAndExternalCACertificateListResponse describePcaAndExternalCACertificateList(DescribePcaAndExternalCACertificateListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePcaAndExternalCACertificateListWithOptions(request, runtime);
     }
 
     /**
@@ -1643,6 +1799,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAllEndEntityInstanceResponse listAllEndEntityInstance(ListAllEndEntityInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAllEndEntityInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取证书日志</p>
+     * 
+     * @param request ListCACertificateLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCACertificateLogResponse
+     */
+    public ListCACertificateLogResponse listCACertificateLogWithOptions(ListCACertificateLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifier)) {
+            query.put("Identifier", request.identifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCACertificateLog"),
+            new TeaPair("version", "2020-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCACertificateLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取证书日志</p>
+     * 
+     * @param request ListCACertificateLogRequest
+     * @return ListCACertificateLogResponse
+     */
+    public ListCACertificateLogResponse listCACertificateLog(ListCACertificateLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCACertificateLogWithOptions(request, runtime);
     }
 
     /**
