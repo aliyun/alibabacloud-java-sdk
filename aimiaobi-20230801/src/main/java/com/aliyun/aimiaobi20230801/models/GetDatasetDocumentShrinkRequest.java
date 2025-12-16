@@ -3,7 +3,7 @@ package com.aliyun.aimiaobi20230801.models;
 
 import com.aliyun.tea.*;
 
-public class GetDatasetDocumentRequest extends TeaModel {
+public class GetDatasetDocumentShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class GetDatasetDocumentRequest extends TeaModel {
     public String docUuid;
 
     @NameInMap("IncludeFields")
-    public java.util.List<String> includeFields;
+    public String includeFieldsShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -44,12 +44,12 @@ public class GetDatasetDocumentRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static GetDatasetDocumentRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetDatasetDocumentRequest self = new GetDatasetDocumentRequest();
+    public static GetDatasetDocumentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDatasetDocumentShrinkRequest self = new GetDatasetDocumentShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetDatasetDocumentRequest setDatasetId(Long datasetId) {
+    public GetDatasetDocumentShrinkRequest setDatasetId(Long datasetId) {
         this.datasetId = datasetId;
         return this;
     }
@@ -57,7 +57,7 @@ public class GetDatasetDocumentRequest extends TeaModel {
         return this.datasetId;
     }
 
-    public GetDatasetDocumentRequest setDatasetName(String datasetName) {
+    public GetDatasetDocumentShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -65,7 +65,7 @@ public class GetDatasetDocumentRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public GetDatasetDocumentRequest setDocId(String docId) {
+    public GetDatasetDocumentShrinkRequest setDocId(String docId) {
         this.docId = docId;
         return this;
     }
@@ -73,7 +73,7 @@ public class GetDatasetDocumentRequest extends TeaModel {
         return this.docId;
     }
 
-    public GetDatasetDocumentRequest setDocUuid(String docUuid) {
+    public GetDatasetDocumentShrinkRequest setDocUuid(String docUuid) {
         this.docUuid = docUuid;
         return this;
     }
@@ -81,15 +81,15 @@ public class GetDatasetDocumentRequest extends TeaModel {
         return this.docUuid;
     }
 
-    public GetDatasetDocumentRequest setIncludeFields(java.util.List<String> includeFields) {
-        this.includeFields = includeFields;
+    public GetDatasetDocumentShrinkRequest setIncludeFieldsShrink(String includeFieldsShrink) {
+        this.includeFieldsShrink = includeFieldsShrink;
         return this;
     }
-    public java.util.List<String> getIncludeFields() {
-        return this.includeFields;
+    public String getIncludeFieldsShrink() {
+        return this.includeFieldsShrink;
     }
 
-    public GetDatasetDocumentRequest setWorkspaceId(String workspaceId) {
+    public GetDatasetDocumentShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

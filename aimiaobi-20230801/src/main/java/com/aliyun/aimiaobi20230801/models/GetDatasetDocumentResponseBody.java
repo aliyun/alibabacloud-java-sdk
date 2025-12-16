@@ -95,6 +95,129 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetDatasetDocumentResponseBodyDataMetadataAsrSentences extends TeaModel {
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static GetDatasetDocumentResponseBodyDataMetadataAsrSentences build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetDocumentResponseBodyDataMetadataAsrSentences self = new GetDatasetDocumentResponseBodyDataMetadataAsrSentences();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadataAsrSentences setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadataAsrSentences setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadataAsrSentences setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class GetDatasetDocumentResponseBodyDataMetadataVideoShots extends TeaModel {
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static GetDatasetDocumentResponseBodyDataMetadataVideoShots build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetDocumentResponseBodyDataMetadataVideoShots self = new GetDatasetDocumentResponseBodyDataMetadataVideoShots();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadataVideoShots setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadataVideoShots setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadataVideoShots setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class GetDatasetDocumentResponseBodyDataMetadata extends TeaModel {
+        @NameInMap("AsrSentences")
+        public java.util.List<GetDatasetDocumentResponseBodyDataMetadataAsrSentences> asrSentences;
+
+        @NameInMap("Text")
+        public String text;
+
+        @NameInMap("VideoShots")
+        public java.util.List<GetDatasetDocumentResponseBodyDataMetadataVideoShots> videoShots;
+
+        public static GetDatasetDocumentResponseBodyDataMetadata build(java.util.Map<String, ?> map) throws Exception {
+            GetDatasetDocumentResponseBodyDataMetadata self = new GetDatasetDocumentResponseBodyDataMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadata setAsrSentences(java.util.List<GetDatasetDocumentResponseBodyDataMetadataAsrSentences> asrSentences) {
+            this.asrSentences = asrSentences;
+            return this;
+        }
+        public java.util.List<GetDatasetDocumentResponseBodyDataMetadataAsrSentences> getAsrSentences() {
+            return this.asrSentences;
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadata setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public GetDatasetDocumentResponseBodyDataMetadata setVideoShots(java.util.List<GetDatasetDocumentResponseBodyDataMetadataVideoShots> videoShots) {
+            this.videoShots = videoShots;
+            return this;
+        }
+        public java.util.List<GetDatasetDocumentResponseBodyDataMetadataVideoShots> getVideoShots() {
+            return this.videoShots;
+        }
+
+    }
+
     public static class GetDatasetDocumentResponseBodyData extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -113,12 +236,18 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         @NameInMap("DocId")
         public String docId;
 
+        @NameInMap("DocType")
+        public String docType;
+
         /**
          * <strong>example:</strong>
          * <p>内部文档唯一ID</p>
          */
         @NameInMap("DocUuid")
         public String docUuid;
+
+        @NameInMap("Metadata")
+        public GetDatasetDocumentResponseBodyDataMetadata metadata;
 
         /**
          * <strong>example:</strong>
@@ -133,6 +262,9 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
          */
         @NameInMap("SourceFrom")
         public String sourceFrom;
+
+        @NameInMap("Status")
+        public Integer status;
 
         /**
          * <strong>example:</strong>
@@ -180,12 +312,28 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
             return this.docId;
         }
 
+        public GetDatasetDocumentResponseBodyData setDocType(String docType) {
+            this.docType = docType;
+            return this;
+        }
+        public String getDocType() {
+            return this.docType;
+        }
+
         public GetDatasetDocumentResponseBodyData setDocUuid(String docUuid) {
             this.docUuid = docUuid;
             return this;
         }
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        public GetDatasetDocumentResponseBodyData setMetadata(GetDatasetDocumentResponseBodyDataMetadata metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public GetDatasetDocumentResponseBodyDataMetadata getMetadata() {
+            return this.metadata;
         }
 
         public GetDatasetDocumentResponseBodyData setPubTime(String pubTime) {
@@ -202,6 +350,14 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         }
         public String getSourceFrom() {
             return this.sourceFrom;
+        }
+
+        public GetDatasetDocumentResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public GetDatasetDocumentResponseBodyData setSummary(String summary) {

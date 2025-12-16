@@ -3646,12 +3646,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取数据集文档</p>
      * 
-     * @param request GetDatasetDocumentRequest
+     * @param tmpReq GetDatasetDocumentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDatasetDocumentResponse
      */
-    public GetDatasetDocumentResponse getDatasetDocumentWithOptions(GetDatasetDocumentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetDatasetDocumentResponse getDatasetDocumentWithOptions(GetDatasetDocumentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDatasetDocumentShrinkRequest request = new GetDatasetDocumentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.includeFields)) {
+            request.includeFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.includeFields, "IncludeFields", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
             body.put("DatasetId", request.datasetId);
@@ -3667,6 +3673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.docUuid)) {
             body.put("DocUuid", request.docUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeFieldsShrink)) {
+            body.put("IncludeFields", request.includeFieldsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {

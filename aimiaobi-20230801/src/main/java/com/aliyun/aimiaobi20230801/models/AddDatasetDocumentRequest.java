@@ -70,6 +70,129 @@ public class AddDatasetDocumentRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class AddDatasetDocumentRequestDocumentMetadataAsrSentences extends TeaModel {
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static AddDatasetDocumentRequestDocumentMetadataAsrSentences build(java.util.Map<String, ?> map) throws Exception {
+            AddDatasetDocumentRequestDocumentMetadataAsrSentences self = new AddDatasetDocumentRequestDocumentMetadataAsrSentences();
+            return TeaModel.build(map, self);
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadataAsrSentences setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadataAsrSentences setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadataAsrSentences setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class AddDatasetDocumentRequestDocumentMetadataVideoShots extends TeaModel {
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static AddDatasetDocumentRequestDocumentMetadataVideoShots build(java.util.Map<String, ?> map) throws Exception {
+            AddDatasetDocumentRequestDocumentMetadataVideoShots self = new AddDatasetDocumentRequestDocumentMetadataVideoShots();
+            return TeaModel.build(map, self);
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadataVideoShots setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadataVideoShots setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadataVideoShots setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class AddDatasetDocumentRequestDocumentMetadata extends TeaModel {
+        @NameInMap("AsrSentences")
+        public java.util.List<AddDatasetDocumentRequestDocumentMetadataAsrSentences> asrSentences;
+
+        @NameInMap("Text")
+        public String text;
+
+        @NameInMap("VideoShots")
+        public java.util.List<AddDatasetDocumentRequestDocumentMetadataVideoShots> videoShots;
+
+        public static AddDatasetDocumentRequestDocumentMetadata build(java.util.Map<String, ?> map) throws Exception {
+            AddDatasetDocumentRequestDocumentMetadata self = new AddDatasetDocumentRequestDocumentMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadata setAsrSentences(java.util.List<AddDatasetDocumentRequestDocumentMetadataAsrSentences> asrSentences) {
+            this.asrSentences = asrSentences;
+            return this;
+        }
+        public java.util.List<AddDatasetDocumentRequestDocumentMetadataAsrSentences> getAsrSentences() {
+            return this.asrSentences;
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadata setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public AddDatasetDocumentRequestDocumentMetadata setVideoShots(java.util.List<AddDatasetDocumentRequestDocumentMetadataVideoShots> videoShots) {
+            this.videoShots = videoShots;
+            return this;
+        }
+        public java.util.List<AddDatasetDocumentRequestDocumentMetadataVideoShots> getVideoShots() {
+            return this.videoShots;
+        }
+
+    }
+
     public static class AddDatasetDocumentRequestDocumentMultimodalMedias extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -179,6 +302,9 @@ public class AddDatasetDocumentRequest extends TeaModel {
          */
         @NameInMap("Extend3")
         public String extend3;
+
+        @NameInMap("Metadata")
+        public AddDatasetDocumentRequestDocumentMetadata metadata;
 
         /**
          * <strong>example:</strong>
@@ -292,6 +418,14 @@ public class AddDatasetDocumentRequest extends TeaModel {
         }
         public String getExtend3() {
             return this.extend3;
+        }
+
+        public AddDatasetDocumentRequestDocument setMetadata(AddDatasetDocumentRequestDocumentMetadata metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public AddDatasetDocumentRequestDocumentMetadata getMetadata() {
+            return this.metadata;
         }
 
         public AddDatasetDocumentRequestDocument setMultimodalIndexName(String multimodalIndexName) {
