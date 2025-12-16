@@ -4868,6 +4868,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询自动续费参数</p>
+     * 
+     * @param tmpReq DescribeAutoRenewalAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAutoRenewalAttributeResponse
+     */
+    public DescribeAutoRenewalAttributeResponse describeAutoRenewalAttributeWithOptions(DescribeAutoRenewalAttributeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeAutoRenewalAttributeShrinkRequest request = new DescribeAutoRenewalAttributeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.DBClusterId)) {
+            request.DBClusterIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.DBClusterId, "DBClusterId", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterIdShrink)) {
+            query.put("DBClusterId", request.DBClusterIdShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAutoRenewalAttribute"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAutoRenewalAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自动续费参数</p>
+     * 
+     * @param request DescribeAutoRenewalAttributeRequest
+     * @return DescribeAutoRenewalAttributeResponse
+     */
+    public DescribeAutoRenewalAttributeResponse describeAutoRenewalAttribute(DescribeAutoRenewalAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAutoRenewalAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the available optimization suggestions for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeAvailableAdvicesRequest
@@ -13828,6 +13910,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAuditLogConfigResponse modifyAuditLogConfig(ModifyAuditLogConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAuditLogConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改自动续费配置</p>
+     * 
+     * @param request ModifyAutoRenewalAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAutoRenewalAttributeResponse
+     */
+    public ModifyAutoRenewalAttributeResponse modifyAutoRenewalAttributeWithOptions(ModifyAutoRenewalAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewalPeriod)) {
+            query.put("AutoRenewalPeriod", request.autoRenewalPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewalPeriodUnit)) {
+            query.put("AutoRenewalPeriodUnit", request.autoRenewalPeriodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewalStatus)) {
+            query.put("AutoRenewalStatus", request.autoRenewalStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAutoRenewalAttribute"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAutoRenewalAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改自动续费配置</p>
+     * 
+     * @param request ModifyAutoRenewalAttributeRequest
+     * @return ModifyAutoRenewalAttributeResponse
+     */
+    public ModifyAutoRenewalAttributeResponse modifyAutoRenewalAttribute(ModifyAutoRenewalAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAutoRenewalAttributeWithOptions(request, runtime);
     }
 
     /**
