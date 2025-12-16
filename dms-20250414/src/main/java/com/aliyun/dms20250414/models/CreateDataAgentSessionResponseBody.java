@@ -111,6 +111,9 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("McpServerIds")
+        public java.util.List<String> mcpServerIds;
+
         /**
          * <strong>example:</strong>
          * <p>ANALYSIS</p>
@@ -153,6 +156,14 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public CreateDataAgentSessionResponseBodyDataSessionConfig setMcpServerIds(java.util.List<String> mcpServerIds) {
+            this.mcpServerIds = mcpServerIds;
+            return this;
+        }
+        public java.util.List<String> getMcpServerIds() {
+            return this.mcpServerIds;
         }
 
         public CreateDataAgentSessionResponseBodyDataSessionConfig setMode(String mode) {
