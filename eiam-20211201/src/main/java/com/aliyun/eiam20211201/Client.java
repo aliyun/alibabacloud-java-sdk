@@ -4108,6 +4108,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取应用高阶配置</p>
+     * 
+     * @param request GetApplicationAdvancedConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetApplicationAdvancedConfigResponse
+     */
+    public GetApplicationAdvancedConfigResponse getApplicationAdvancedConfigWithOptions(GetApplicationAdvancedConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetApplicationAdvancedConfig"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetApplicationAdvancedConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用高阶配置</p>
+     * 
+     * @param request GetApplicationAdvancedConfigRequest
+     * @return GetApplicationAdvancedConfigResponse
+     */
+    public GetApplicationAdvancedConfigResponse getApplicationAdvancedConfig(GetApplicationAdvancedConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getApplicationAdvancedConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取应用联邦凭证</p>
      * 
      * @param request GetApplicationFederatedCredentialRequest
@@ -9526,6 +9574,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnlockUserResponse unlockUser(UnlockUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unlockUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改应用高阶配置</p>
+     * 
+     * @param request UpdateApplicationAdvancedConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateApplicationAdvancedConfigResponse
+     */
+    public UpdateApplicationAdvancedConfigResponse updateApplicationAdvancedConfigWithOptions(UpdateApplicationAdvancedConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scimServerAdvancedConfig)) {
+            query.put("ScimServerAdvancedConfig", request.scimServerAdvancedConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateApplicationAdvancedConfig"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateApplicationAdvancedConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改应用高阶配置</p>
+     * 
+     * @param request UpdateApplicationAdvancedConfigRequest
+     * @return UpdateApplicationAdvancedConfigResponse
+     */
+    public UpdateApplicationAdvancedConfigResponse updateApplicationAdvancedConfig(UpdateApplicationAdvancedConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateApplicationAdvancedConfigWithOptions(request, runtime);
     }
 
     /**
