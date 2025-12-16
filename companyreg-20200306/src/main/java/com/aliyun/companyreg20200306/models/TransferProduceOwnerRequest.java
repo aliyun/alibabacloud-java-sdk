@@ -22,9 +22,10 @@ public class TransferProduceOwnerRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    @NameInMap("EmployeeCode")
+    public String employeeCode;
+
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>15565</p>
      */
@@ -53,6 +54,14 @@ public class TransferProduceOwnerRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public TransferProduceOwnerRequest setEmployeeCode(String employeeCode) {
+        this.employeeCode = employeeCode;
+        return this;
+    }
+    public String getEmployeeCode() {
+        return this.employeeCode;
     }
 
     public TransferProduceOwnerRequest setPersonId(Integer personId) {

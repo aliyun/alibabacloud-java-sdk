@@ -1,3 +1,8 @@
+2025-12-16 Version: 2.2.3
+- Update API TransferIntentionOwner: add request parameters EmployeeCode.
+- Update API TransferProduceOwner: add request parameters EmployeeCode.
+
+
 2025-10-30 Version: 2.2.2
 - Update API RecordCallCenterEventForPartner: add request parameters EmployeeCode.
 - Update API RecordCallCenterEventForPartner: add request parameters TenantId.

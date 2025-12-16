@@ -85,6 +85,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>服务单授权</p>
+     * 
      * @param request BindProduceAuthorizationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindProduceAuthorizationResponse
@@ -122,6 +125,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>服务单授权</p>
+     * 
      * @param request BindProduceAuthorizationRequest
      * @return BindProduceAuthorizationResponse
      */
@@ -1922,6 +1928,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizType", request.bizType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.employeeCode)) {
+            query.put("EmployeeCode", request.employeeCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.personId)) {
             query.put("PersonId", request.personId);
         }
@@ -1976,6 +1986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
             query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.employeeCode)) {
+            query.put("EmployeeCode", request.employeeCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.personId)) {
