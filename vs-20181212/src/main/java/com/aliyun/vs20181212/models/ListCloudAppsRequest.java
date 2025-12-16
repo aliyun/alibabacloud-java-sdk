@@ -28,6 +28,9 @@ public class ListCloudAppsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("LatestVersionOnly")
+    public Boolean latestVersionOnly;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,11 +45,17 @@ public class ListCloudAppsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("PkgLabel")
+    public String pkgLabel;
+
     @NameInMap("PkgType")
     public String pkgType;
 
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("Status")
+    public String status;
 
     public static ListCloudAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCloudAppsRequest self = new ListCloudAppsRequest();
@@ -85,6 +94,14 @@ public class ListCloudAppsRequest extends TeaModel {
         return this.endTime;
     }
 
+    public ListCloudAppsRequest setLatestVersionOnly(Boolean latestVersionOnly) {
+        this.latestVersionOnly = latestVersionOnly;
+        return this;
+    }
+    public Boolean getLatestVersionOnly() {
+        return this.latestVersionOnly;
+    }
+
     public ListCloudAppsRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -101,6 +118,14 @@ public class ListCloudAppsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListCloudAppsRequest setPkgLabel(String pkgLabel) {
+        this.pkgLabel = pkgLabel;
+        return this;
+    }
+    public String getPkgLabel() {
+        return this.pkgLabel;
+    }
+
     public ListCloudAppsRequest setPkgType(String pkgType) {
         this.pkgType = pkgType;
         return this;
@@ -115,6 +140,14 @@ public class ListCloudAppsRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public ListCloudAppsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

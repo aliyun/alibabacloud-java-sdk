@@ -19,6 +19,9 @@ public class UpdateCloudAppInfoRequest extends TeaModel {
     @NameInMap("Patch")
     public UpdateCloudAppInfoRequestPatch patch;
 
+    @NameInMap("PkgLabels")
+    public java.util.List<String> pkgLabels;
+
     /**
      * <strong>example:</strong>
      * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
@@ -55,6 +58,14 @@ public class UpdateCloudAppInfoRequest extends TeaModel {
         return this.patch;
     }
 
+    public UpdateCloudAppInfoRequest setPkgLabels(java.util.List<String> pkgLabels) {
+        this.pkgLabels = pkgLabels;
+        return this;
+    }
+    public java.util.List<String> getPkgLabels() {
+        return this.pkgLabels;
+    }
+
     public UpdateCloudAppInfoRequest setStablePatchId(String stablePatchId) {
         this.stablePatchId = stablePatchId;
         return this;
@@ -64,6 +75,9 @@ public class UpdateCloudAppInfoRequest extends TeaModel {
     }
 
     public static class UpdateCloudAppInfoRequestPatch extends TeaModel {
+        @NameInMap("AsStablePatch")
+        public Boolean asStablePatch;
+
         /**
          * <strong>example:</strong>
          * <p><a href="https://test_host/app/test-tar-pkg.tar">https://test_host/app/test-tar-pkg.tar</a></p>
@@ -85,9 +99,27 @@ public class UpdateCloudAppInfoRequest extends TeaModel {
         @NameInMap("PatchName")
         public String patchName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tar</p>
+         */
+        @NameInMap("PkgFormat")
+        public String pkgFormat;
+
+        @NameInMap("RenderingInstanceId")
+        public String renderingInstanceId;
+
         public static UpdateCloudAppInfoRequestPatch build(java.util.Map<String, ?> map) throws Exception {
             UpdateCloudAppInfoRequestPatch self = new UpdateCloudAppInfoRequestPatch();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudAppInfoRequestPatch setAsStablePatch(Boolean asStablePatch) {
+            this.asStablePatch = asStablePatch;
+            return this;
+        }
+        public Boolean getAsStablePatch() {
+            return this.asStablePatch;
         }
 
         public UpdateCloudAppInfoRequestPatch setDownloadURL(String downloadURL) {
@@ -112,6 +144,22 @@ public class UpdateCloudAppInfoRequest extends TeaModel {
         }
         public String getPatchName() {
             return this.patchName;
+        }
+
+        public UpdateCloudAppInfoRequestPatch setPkgFormat(String pkgFormat) {
+            this.pkgFormat = pkgFormat;
+            return this;
+        }
+        public String getPkgFormat() {
+            return this.pkgFormat;
+        }
+
+        public UpdateCloudAppInfoRequestPatch setRenderingInstanceId(String renderingInstanceId) {
+            this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+        public String getRenderingInstanceId() {
+            return this.renderingInstanceId;
         }
 
     }

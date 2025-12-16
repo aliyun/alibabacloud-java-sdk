@@ -3,7 +3,7 @@ package com.aliyun.vs20181212.models;
 
 import com.aliyun.tea.*;
 
-public class UploadCloudAppRequest extends TeaModel {
+public class UploadCloudAppShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -47,17 +47,17 @@ public class UploadCloudAppRequest extends TeaModel {
     public String pkgFormat;
 
     @NameInMap("PkgLabels")
-    public java.util.List<String> pkgLabels;
+    public String pkgLabelsShrink;
 
     @NameInMap("PkgType")
     public String pkgType;
 
-    public static UploadCloudAppRequest build(java.util.Map<String, ?> map) throws Exception {
-        UploadCloudAppRequest self = new UploadCloudAppRequest();
+    public static UploadCloudAppShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UploadCloudAppShrinkRequest self = new UploadCloudAppShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UploadCloudAppRequest setAppName(String appName) {
+    public UploadCloudAppShrinkRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -65,7 +65,7 @@ public class UploadCloudAppRequest extends TeaModel {
         return this.appName;
     }
 
-    public UploadCloudAppRequest setAppVersion(String appVersion) {
+    public UploadCloudAppShrinkRequest setAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
@@ -73,7 +73,7 @@ public class UploadCloudAppRequest extends TeaModel {
         return this.appVersion;
     }
 
-    public UploadCloudAppRequest setDescription(String description) {
+    public UploadCloudAppShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -81,7 +81,7 @@ public class UploadCloudAppRequest extends TeaModel {
         return this.description;
     }
 
-    public UploadCloudAppRequest setDownloadUrl(String downloadUrl) {
+    public UploadCloudAppShrinkRequest setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
@@ -89,7 +89,7 @@ public class UploadCloudAppRequest extends TeaModel {
         return this.downloadUrl;
     }
 
-    public UploadCloudAppRequest setMd5(String md5) {
+    public UploadCloudAppShrinkRequest setMd5(String md5) {
         this.md5 = md5;
         return this;
     }
@@ -97,7 +97,7 @@ public class UploadCloudAppRequest extends TeaModel {
         return this.md5;
     }
 
-    public UploadCloudAppRequest setPkgFormat(String pkgFormat) {
+    public UploadCloudAppShrinkRequest setPkgFormat(String pkgFormat) {
         this.pkgFormat = pkgFormat;
         return this;
     }
@@ -105,15 +105,15 @@ public class UploadCloudAppRequest extends TeaModel {
         return this.pkgFormat;
     }
 
-    public UploadCloudAppRequest setPkgLabels(java.util.List<String> pkgLabels) {
-        this.pkgLabels = pkgLabels;
+    public UploadCloudAppShrinkRequest setPkgLabelsShrink(String pkgLabelsShrink) {
+        this.pkgLabelsShrink = pkgLabelsShrink;
         return this;
     }
-    public java.util.List<String> getPkgLabels() {
-        return this.pkgLabels;
+    public String getPkgLabelsShrink() {
+        return this.pkgLabelsShrink;
     }
 
-    public UploadCloudAppRequest setPkgType(String pkgType) {
+    public UploadCloudAppShrinkRequest setPkgType(String pkgType) {
         this.pkgType = pkgType;
         return this;
     }

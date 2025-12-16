@@ -9529,6 +9529,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.patchShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.patch, "Patch", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.pkgLabels)) {
+            request.pkgLabelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.pkgLabels, "PkgLabels", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
@@ -9538,16 +9542,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.patchShrink)) {
-            query.put("Patch", request.patchShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.pkgLabelsShrink)) {
+            query.put("PkgLabels", request.pkgLabelsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.stablePatchId)) {
             query.put("StablePatchId", request.stablePatchId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.patchShrink)) {
+            body.put("Patch", request.patchShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateCloudAppInfo"),
@@ -9865,12 +9875,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>应用上架</p>
      * 
-     * @param request UploadCloudAppRequest
+     * @param tmpReq UploadCloudAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UploadCloudAppResponse
      */
-    public UploadCloudAppResponse uploadCloudAppWithOptions(UploadCloudAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UploadCloudAppResponse uploadCloudAppWithOptions(UploadCloudAppRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UploadCloudAppShrinkRequest request = new UploadCloudAppShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.pkgLabels)) {
+            request.pkgLabelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.pkgLabels, "PkgLabels", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
@@ -9894,6 +9910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pkgFormat)) {
             query.put("PkgFormat", request.pkgFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pkgLabelsShrink)) {
+            query.put("PkgLabels", request.pkgLabelsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pkgType)) {

@@ -19,6 +19,9 @@ public class UpdateCloudAppInfoShrinkRequest extends TeaModel {
     @NameInMap("Patch")
     public String patchShrink;
 
+    @NameInMap("PkgLabels")
+    public String pkgLabelsShrink;
+
     /**
      * <strong>example:</strong>
      * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
@@ -53,6 +56,14 @@ public class UpdateCloudAppInfoShrinkRequest extends TeaModel {
     }
     public String getPatchShrink() {
         return this.patchShrink;
+    }
+
+    public UpdateCloudAppInfoShrinkRequest setPkgLabelsShrink(String pkgLabelsShrink) {
+        this.pkgLabelsShrink = pkgLabelsShrink;
+        return this;
+    }
+    public String getPkgLabelsShrink() {
+        return this.pkgLabelsShrink;
     }
 
     public UpdateCloudAppInfoShrinkRequest setStablePatchId(String stablePatchId) {
