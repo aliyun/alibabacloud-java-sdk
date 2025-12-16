@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoAnalysisTaskRequest extends TeaModel {
+    @NameInMap("addDocumentParam")
+    public SubmitVideoAnalysisTaskRequestAddDocumentParam addDocumentParam;
+
     @NameInMap("autoRoleRecognitionVideoUrl")
     public String autoRoleRecognitionVideoUrl;
 
@@ -108,6 +111,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     public static SubmitVideoAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskRequest self = new SubmitVideoAnalysisTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoAnalysisTaskRequest setAddDocumentParam(SubmitVideoAnalysisTaskRequestAddDocumentParam addDocumentParam) {
+        this.addDocumentParam = addDocumentParam;
+        return this;
+    }
+    public SubmitVideoAnalysisTaskRequestAddDocumentParam getAddDocumentParam() {
+        return this.addDocumentParam;
     }
 
     public SubmitVideoAnalysisTaskRequest setAutoRoleRecognitionVideoUrl(String autoRoleRecognitionVideoUrl) {
@@ -276,6 +287,77 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
+    }
+
+    public static class SubmitVideoAnalysisTaskRequestAddDocumentParamDocument extends TeaModel {
+        @NameInMap("docId")
+        public String docId;
+
+        @NameInMap("title")
+        public String title;
+
+        public static SubmitVideoAnalysisTaskRequestAddDocumentParamDocument build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestAddDocumentParamDocument self = new SubmitVideoAnalysisTaskRequestAddDocumentParamDocument();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setDocId(String docId) {
+            this.docId = docId;
+            return this;
+        }
+        public String getDocId() {
+            return this.docId;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class SubmitVideoAnalysisTaskRequestAddDocumentParam extends TeaModel {
+        @NameInMap("datasetId")
+        public Long datasetId;
+
+        @NameInMap("datasetName")
+        public String datasetName;
+
+        @NameInMap("document")
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument document;
+
+        public static SubmitVideoAnalysisTaskRequestAddDocumentParam build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestAddDocumentParam self = new SubmitVideoAnalysisTaskRequestAddDocumentParam();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParam setDatasetId(Long datasetId) {
+            this.datasetId = datasetId;
+            return this;
+        }
+        public Long getDatasetId() {
+            return this.datasetId;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParam setDatasetName(String datasetName) {
+            this.datasetName = datasetName;
+            return this;
+        }
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        public SubmitVideoAnalysisTaskRequestAddDocumentParam setDocument(SubmitVideoAnalysisTaskRequestAddDocumentParamDocument document) {
+            this.document = document;
+            return this;
+        }
+        public SubmitVideoAnalysisTaskRequestAddDocumentParamDocument getDocument() {
+            return this.document;
+        }
+
     }
 
     public static class SubmitVideoAnalysisTaskRequestFrameSampleMethod extends TeaModel {

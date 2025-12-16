@@ -155,7 +155,73 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
     }
 
+    public static class RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult extends TeaModel {
+        @NameInMap("docId")
+        public String docId;
+
+        @NameInMap("docUuid")
+        public String docUuid;
+
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
+        @NameInMap("status")
+        public Long status;
+
+        @NameInMap("title")
+        public String title;
+
+        public static RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult self = new RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult setDocId(String docId) {
+            this.docId = docId;
+            return this;
+        }
+        public String getDocId() {
+            return this.docId;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult setDocUuid(String docUuid) {
+            this.docUuid = docUuid;
+            return this;
+        }
+        public String getDocUuid() {
+            return this.docUuid;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult setStatus(Long status) {
+            this.status = status;
+            return this;
+        }
+        public Long getStatus() {
+            return this.status;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
     public static class RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResultUsage extends TeaModel {
+        @NameInMap("imageTokens")
+        public Long imageTokens;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -180,6 +246,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         public static RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResultUsage build(java.util.Map<String, ?> map) throws Exception {
             RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResultUsage self = new RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResultUsage();
             return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResultUsage setImageTokens(Long imageTokens) {
+            this.imageTokens = imageTokens;
+            return this;
+        }
+        public Long getImageTokens() {
+            return this.imageTokens;
         }
 
         public RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResultUsage setInputTokens(Long inputTokens) {
@@ -324,6 +398,136 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
         public java.util.List<RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResultVideoShotAnalysisResults> getVideoShotAnalysisResults() {
             return this.videoShotAnalysisResults;
+        }
+
+    }
+
+    public static class RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems extends TeaModel {
+        @NameInMap("inputExpense")
+        public Double inputExpense;
+
+        @NameInMap("inputToken")
+        public Long inputToken;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("outputExpense")
+        public Double outputExpense;
+
+        @NameInMap("outputToken")
+        public Long outputToken;
+
+        @NameInMap("time")
+        public Long time;
+
+        @NameInMap("timeExpense")
+        public Double timeExpense;
+
+        @NameInMap("totalExpense")
+        public Double totalExpense;
+
+        @NameInMap("type")
+        public String type;
+
+        public static RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems self = new RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setInputExpense(Double inputExpense) {
+            this.inputExpense = inputExpense;
+            return this;
+        }
+        public Double getInputExpense() {
+            return this.inputExpense;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setInputToken(Long inputToken) {
+            this.inputToken = inputToken;
+            return this;
+        }
+        public Long getInputToken() {
+            return this.inputToken;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setOutputExpense(Double outputExpense) {
+            this.outputExpense = outputExpense;
+            return this;
+        }
+        public Double getOutputExpense() {
+            return this.outputExpense;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setOutputToken(Long outputToken) {
+            this.outputToken = outputToken;
+            return this;
+        }
+        public Long getOutputToken() {
+            return this.outputToken;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setTime(Long time) {
+            this.time = time;
+            return this;
+        }
+        public Long getTime() {
+            return this.time;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setTimeExpense(Double timeExpense) {
+            this.timeExpense = timeExpense;
+            return this;
+        }
+        public Double getTimeExpense() {
+            return this.timeExpense;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setTotalExpense(Double totalExpense) {
+            this.totalExpense = totalExpense;
+            return this;
+        }
+        public Double getTotalExpense() {
+            return this.totalExpense;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResult extends TeaModel {
+        @NameInMap("items")
+        public java.util.List<RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems> items;
+
+        public static RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResult build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResult self = new RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResult();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResult setItems(java.util.List<RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResultItems> getItems() {
+            return this.items;
         }
 
     }
@@ -1295,6 +1499,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunVideoAnalysisResponseBodyPayloadOutput extends TeaModel {
+        @NameInMap("addDatasetDocumentsResult")
+        public RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult addDatasetDocumentsResult;
+
         /**
          * <strong>example:</strong>
          * <p>http://</p>
@@ -1304,6 +1511,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         @NameInMap("videoAnalysisResult")
         public RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResult videoAnalysisResult;
+
+        @NameInMap("videoCalculatorResult")
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResult videoCalculatorResult;
 
         @NameInMap("videoCaptionResult")
         public RunVideoAnalysisResponseBodyPayloadOutputVideoCaptionResult videoCaptionResult;
@@ -1331,6 +1541,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunVideoAnalysisResponseBodyPayloadOutput setAddDatasetDocumentsResult(RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult addDatasetDocumentsResult) {
+            this.addDatasetDocumentsResult = addDatasetDocumentsResult;
+            return this;
+        }
+        public RunVideoAnalysisResponseBodyPayloadOutputAddDatasetDocumentsResult getAddDatasetDocumentsResult() {
+            return this.addDatasetDocumentsResult;
+        }
+
         public RunVideoAnalysisResponseBodyPayloadOutput setResultJsonFileUrl(String resultJsonFileUrl) {
             this.resultJsonFileUrl = resultJsonFileUrl;
             return this;
@@ -1345,6 +1563,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
         public RunVideoAnalysisResponseBodyPayloadOutputVideoAnalysisResult getVideoAnalysisResult() {
             return this.videoAnalysisResult;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutput setVideoCalculatorResult(RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResult videoCalculatorResult) {
+            this.videoCalculatorResult = videoCalculatorResult;
+            return this;
+        }
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoCalculatorResult getVideoCalculatorResult() {
+            return this.videoCalculatorResult;
         }
 
         public RunVideoAnalysisResponseBodyPayloadOutput setVideoCaptionResult(RunVideoAnalysisResponseBodyPayloadOutputVideoCaptionResult videoCaptionResult) {

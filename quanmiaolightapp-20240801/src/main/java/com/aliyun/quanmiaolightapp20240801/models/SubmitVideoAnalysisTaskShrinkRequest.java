@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
+    @NameInMap("addDocumentParam")
+    public String addDocumentParamShrink;
+
     @NameInMap("autoRoleRecognitionVideoUrl")
     public String autoRoleRecognitionVideoUrl;
 
@@ -108,6 +111,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     public static SubmitVideoAnalysisTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskShrinkRequest self = new SubmitVideoAnalysisTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoAnalysisTaskShrinkRequest setAddDocumentParamShrink(String addDocumentParamShrink) {
+        this.addDocumentParamShrink = addDocumentParamShrink;
+        return this;
+    }
+    public String getAddDocumentParamShrink() {
+        return this.addDocumentParamShrink;
     }
 
     public SubmitVideoAnalysisTaskShrinkRequest setAutoRoleRecognitionVideoUrl(String autoRoleRecognitionVideoUrl) {

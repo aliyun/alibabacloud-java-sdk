@@ -1780,6 +1780,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RunVideoAnalysisShrinkRequest request = new RunVideoAnalysisShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.addDocumentParam)) {
+            request.addDocumentParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.addDocumentParam, "addDocumentParam", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeGenerateOptions)) {
             request.excludeGenerateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeGenerateOptions, "excludeGenerateOptions", "json");
         }
@@ -1805,6 +1809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addDocumentParamShrink)) {
+            body.put("addDocumentParam", request.addDocumentParamShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRoleRecognitionVideoUrl)) {
             body.put("autoRoleRecognitionVideoUrl", request.autoRoleRecognitionVideoUrl);
         }
@@ -2313,6 +2321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitVideoAnalysisTaskShrinkRequest request = new SubmitVideoAnalysisTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.addDocumentParam)) {
+            request.addDocumentParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.addDocumentParam, "addDocumentParam", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeGenerateOptions)) {
             request.excludeGenerateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeGenerateOptions, "excludeGenerateOptions", "json");
         }
@@ -2338,6 +2350,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addDocumentParamShrink)) {
+            body.put("addDocumentParam", request.addDocumentParamShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRoleRecognitionVideoUrl)) {
             body.put("autoRoleRecognitionVideoUrl", request.autoRoleRecognitionVideoUrl);
         }
