@@ -35,6 +35,9 @@ public class CreateVaultRequest extends TeaModel {
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
+    @NameInMap("Replication")
+    public Boolean replication;
+
     /**
      * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
      * <p>This parameter is required.</p>
@@ -119,6 +122,14 @@ public class CreateVaultRequest extends TeaModel {
     }
     public String getKmsKeyId() {
         return this.kmsKeyId;
+    }
+
+    public CreateVaultRequest setReplication(Boolean replication) {
+        this.replication = replication;
+        return this;
+    }
+    public Boolean getReplication() {
+        return this.replication;
     }
 
     public CreateVaultRequest setVaultName(String vaultName) {

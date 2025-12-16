@@ -453,6 +453,25 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds extends TeaModel {
+        @NameInMap("RsTargetAccountId")
+        public java.util.List<Long> rsTargetAccountId;
+
+        public static DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds self = new DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds setRsTargetAccountId(java.util.List<Long> rsTargetAccountId) {
+            this.rsTargetAccountId = rsTargetAccountId;
+            return this;
+        }
+        public java.util.List<Long> getRsTargetAccountId() {
+            return this.rsTargetAccountId;
+        }
+
+    }
+
     public static class DescribeVaultsResponseBodyVaultsVaultSourceTypes extends TeaModel {
         @NameInMap("SourceType")
         public java.util.List<String> sourceType;
@@ -817,6 +836,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @NameInMap("ReplicationProgress")
         public DescribeVaultsResponseBodyVaultsVaultReplicationProgress replicationProgress;
 
+        @NameInMap("ReplicationSourceOwnerId")
+        public Long replicationSourceOwnerId;
+
         /**
          * <p>The ID of the region in which the source vault resides. This parameter is valid only for remote backup vaults.</p>
          * 
@@ -848,6 +870,12 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @NameInMap("ReplicationSourceVaultId")
         public String replicationSourceVaultId;
 
+        @NameInMap("ReplicationStatus")
+        public String replicationStatus;
+
+        @NameInMap("ReplicationTargetOwnerId")
+        public Long replicationTargetOwnerId;
+
         /**
          * <p>Target region for remote backup repository.</p>
          * 
@@ -856,6 +884,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
          */
         @NameInMap("ReplicationTargetRegionId")
         public String replicationTargetRegionId;
+
+        @NameInMap("ReplicationTargetVaultId")
+        public String replicationTargetVaultId;
 
         /**
          * <p>The ID of the resource group.</p>
@@ -874,6 +905,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
          */
         @NameInMap("Retention")
         public Long retention;
+
+        @NameInMap("RsTargetAccountIds")
+        public DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds rsTargetAccountIds;
 
         /**
          * <p>Indicates whether the backup search feature is enabled.</p>
@@ -961,6 +995,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
          */
         @NameInMap("VaultName")
         public String vaultName;
+
+        @NameInMap("VaultOwnerId")
+        public Long vaultOwnerId;
 
         /**
          * <p>The ID of the region in which the backup vault resides.</p>
@@ -1176,6 +1213,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
             return this.replicationProgress;
         }
 
+        public DescribeVaultsResponseBodyVaultsVault setReplicationSourceOwnerId(Long replicationSourceOwnerId) {
+            this.replicationSourceOwnerId = replicationSourceOwnerId;
+            return this;
+        }
+        public Long getReplicationSourceOwnerId() {
+            return this.replicationSourceOwnerId;
+        }
+
         public DescribeVaultsResponseBodyVaultsVault setReplicationSourceRegionId(String replicationSourceRegionId) {
             this.replicationSourceRegionId = replicationSourceRegionId;
             return this;
@@ -1200,12 +1245,36 @@ public class DescribeVaultsResponseBody extends TeaModel {
             return this.replicationSourceVaultId;
         }
 
+        public DescribeVaultsResponseBodyVaultsVault setReplicationStatus(String replicationStatus) {
+            this.replicationStatus = replicationStatus;
+            return this;
+        }
+        public String getReplicationStatus() {
+            return this.replicationStatus;
+        }
+
+        public DescribeVaultsResponseBodyVaultsVault setReplicationTargetOwnerId(Long replicationTargetOwnerId) {
+            this.replicationTargetOwnerId = replicationTargetOwnerId;
+            return this;
+        }
+        public Long getReplicationTargetOwnerId() {
+            return this.replicationTargetOwnerId;
+        }
+
         public DescribeVaultsResponseBodyVaultsVault setReplicationTargetRegionId(String replicationTargetRegionId) {
             this.replicationTargetRegionId = replicationTargetRegionId;
             return this;
         }
         public String getReplicationTargetRegionId() {
             return this.replicationTargetRegionId;
+        }
+
+        public DescribeVaultsResponseBodyVaultsVault setReplicationTargetVaultId(String replicationTargetVaultId) {
+            this.replicationTargetVaultId = replicationTargetVaultId;
+            return this;
+        }
+        public String getReplicationTargetVaultId() {
+            return this.replicationTargetVaultId;
         }
 
         public DescribeVaultsResponseBodyVaultsVault setResourceGroupId(String resourceGroupId) {
@@ -1222,6 +1291,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
         public Long getRetention() {
             return this.retention;
+        }
+
+        public DescribeVaultsResponseBodyVaultsVault setRsTargetAccountIds(DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds rsTargetAccountIds) {
+            this.rsTargetAccountIds = rsTargetAccountIds;
+            return this;
+        }
+        public DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds getRsTargetAccountIds() {
+            return this.rsTargetAccountIds;
         }
 
         public DescribeVaultsResponseBodyVaultsVault setSearchEnabled(Boolean searchEnabled) {
@@ -1302,6 +1379,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
         public String getVaultName() {
             return this.vaultName;
+        }
+
+        public DescribeVaultsResponseBodyVaultsVault setVaultOwnerId(Long vaultOwnerId) {
+            this.vaultOwnerId = vaultOwnerId;
+            return this;
+        }
+        public Long getVaultOwnerId() {
+            return this.vaultOwnerId;
         }
 
         public DescribeVaultsResponseBodyVaultsVault setVaultRegionId(String vaultRegionId) {

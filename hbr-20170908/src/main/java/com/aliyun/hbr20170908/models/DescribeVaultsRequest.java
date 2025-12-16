@@ -22,6 +22,9 @@ public class DescribeVaultsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Replication")
+    public Boolean replication;
+
     /**
      * <p>Resource group ID.</p>
      * 
@@ -73,6 +76,9 @@ public class DescribeVaultsRequest extends TeaModel {
     @NameInMap("VaultName")
     public String vaultName;
 
+    @NameInMap("VaultOwnerId")
+    public Long vaultOwnerId;
+
     /**
      * <p>The region ID to which the backup vault belongs.</p>
      * 
@@ -116,6 +122,14 @@ public class DescribeVaultsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeVaultsRequest setReplication(Boolean replication) {
+        this.replication = replication;
+        return this;
+    }
+    public Boolean getReplication() {
+        return this.replication;
+    }
+
     public DescribeVaultsRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -154,6 +168,14 @@ public class DescribeVaultsRequest extends TeaModel {
     }
     public String getVaultName() {
         return this.vaultName;
+    }
+
+    public DescribeVaultsRequest setVaultOwnerId(Long vaultOwnerId) {
+        this.vaultOwnerId = vaultOwnerId;
+        return this;
+    }
+    public Long getVaultOwnerId() {
+        return this.vaultOwnerId;
     }
 
     public DescribeVaultsRequest setVaultRegionId(String vaultRegionId) {

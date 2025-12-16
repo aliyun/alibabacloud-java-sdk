@@ -1546,6 +1546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("KmsKeyId", request.kmsKeyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.replication)) {
+            query.put("Replication", request.replication);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vaultName)) {
             query.put("VaultName", request.vaultName);
         }
@@ -1601,6 +1605,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateVaultResponse createVault(CreateVaultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVaultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建备份库复制</p>
+     * 
+     * @param request CreateVaultReplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVaultReplicationResponse
+     */
+    public CreateVaultReplicationResponse createVaultReplicationWithOptions(CreateVaultReplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.replicationSourceRegionId)) {
+            query.put("ReplicationSourceRegionId", request.replicationSourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replicationSourceVaultId)) {
+            query.put("ReplicationSourceVaultId", request.replicationSourceVaultId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replicationTargetVaultId)) {
+            query.put("ReplicationTargetVaultId", request.replicationTargetVaultId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVaultReplication"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVaultReplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建备份库复制</p>
+     * 
+     * @param request CreateVaultReplicationRequest
+     * @return CreateVaultReplicationResponse
+     */
+    public CreateVaultReplicationResponse createVaultReplication(CreateVaultReplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVaultReplicationWithOptions(request, runtime);
     }
 
     /**
@@ -2343,6 +2399,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVaultResponse deleteVault(DeleteVaultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVaultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭备份库复制</p>
+     * 
+     * @param request DeleteVaultReplicationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVaultReplicationResponse
+     */
+    public DeleteVaultReplicationResponse deleteVaultReplicationWithOptions(DeleteVaultReplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.replicationSourceRegionId)) {
+            query.put("ReplicationSourceRegionId", request.replicationSourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replicationSourceVaultId)) {
+            query.put("ReplicationSourceVaultId", request.replicationSourceVaultId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replicationTargetVaultId)) {
+            query.put("ReplicationTargetVaultId", request.replicationTargetVaultId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVaultReplication"),
+            new TeaPair("version", "2017-09-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVaultReplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭备份库复制</p>
+     * 
+     * @param request DeleteVaultReplicationRequest
+     * @return DeleteVaultReplicationResponse
+     */
+    public DeleteVaultReplicationResponse deleteVaultReplication(DeleteVaultReplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVaultReplicationWithOptions(request, runtime);
     }
 
     /**
@@ -3813,6 +3921,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.replication)) {
+            query.put("Replication", request.replication);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -3827,6 +3939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.vaultName)) {
             query.put("VaultName", request.vaultName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vaultOwnerId)) {
+            query.put("VaultOwnerId", request.vaultOwnerId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vaultRegionId)) {
