@@ -79,6 +79,9 @@ public class ModifyNetworkRuleAttributeRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Module")
+    public String module;
+
     public static ModifyNetworkRuleAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkRuleAttributeRequest self = new ModifyNetworkRuleAttributeRequest();
         return TeaModel.build(map, self);
@@ -114,6 +117,14 @@ public class ModifyNetworkRuleAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyNetworkRuleAttributeRequest setModule(String module) {
+        this.module = module;
+        return this;
+    }
+    public String getModule() {
+        return this.module;
     }
 
 }
