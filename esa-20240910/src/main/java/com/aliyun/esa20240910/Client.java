@@ -1812,6 +1812,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建边缘容器应用的镜像秘钥</p>
+     * 
+     * @param request CreateEdgeContainerAppImageSecretRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEdgeContainerAppImageSecretResponse
+     */
+    public CreateEdgeContainerAppImageSecretResponse createEdgeContainerAppImageSecretWithOptions(CreateEdgeContainerAppImageSecretRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registry)) {
+            query.put("Registry", request.registry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEdgeContainerAppImageSecret"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEdgeContainerAppImageSecretResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建边缘容器应用的镜像秘钥</p>
+     * 
+     * @param request CreateEdgeContainerAppImageSecretRequest
+     * @return CreateEdgeContainerAppImageSecretResponse
+     */
+    public CreateEdgeContainerAppImageSecretResponse createEdgeContainerAppImageSecret(CreateEdgeContainerAppImageSecretRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEdgeContainerAppImageSecretWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Associates a domain name with a containerized application. This way, requests destined for the associated domain name are forwarded to the application.</p>
      * 
      * @param request CreateEdgeContainerAppRecordRequest
@@ -5248,6 +5304,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteEdgeContainerAppResponse deleteEdgeContainerApp(DeleteEdgeContainerAppRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEdgeContainerAppWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘容器应用的镜像秘钥</p>
+     * 
+     * @param request DeleteEdgeContainerAppImageSecretRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEdgeContainerAppImageSecretResponse
+     */
+    public DeleteEdgeContainerAppImageSecretResponse deleteEdgeContainerAppImageSecretWithOptions(DeleteEdgeContainerAppImageSecretRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEdgeContainerAppImageSecret"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEdgeContainerAppImageSecretResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘容器应用的镜像秘钥</p>
+     * 
+     * @param request DeleteEdgeContainerAppImageSecretRequest
+     * @return DeleteEdgeContainerAppImageSecretResponse
+     */
+    public DeleteEdgeContainerAppImageSecretResponse deleteEdgeContainerAppImageSecret(DeleteEdgeContainerAppImageSecretRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEdgeContainerAppImageSecretWithOptions(request, runtime);
     }
 
     /**
@@ -8826,6 +8930,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取边缘容器应用的资源容量</p>
+     * 
+     * @param request GetEdgeContainerAppResourceCapacityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerAppResourceCapacityResponse
+     */
+    public GetEdgeContainerAppResourceCapacityResponse getEdgeContainerAppResourceCapacityWithOptions(GetEdgeContainerAppResourceCapacityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerAppResourceCapacity"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerAppResourceCapacityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的资源容量</p>
+     * 
+     * @param request GetEdgeContainerAppResourceCapacityRequest
+     * @return GetEdgeContainerAppResourceCapacityResponse
+     */
+    public GetEdgeContainerAppResourceCapacityResponse getEdgeContainerAppResourceCapacity(GetEdgeContainerAppResourceCapacityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerAppResourceCapacityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtain the resource reservation configuration of the edge container.</p>
      * 
      * @param request GetEdgeContainerAppResourceReserveRequest
@@ -11914,6 +12062,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListESAIPInfoResponse listESAIPInfo(ListESAIPInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listESAIPInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的镜像秘钥列表</p>
+     * 
+     * @param request ListEdgeContainerAppImageSecretsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEdgeContainerAppImageSecretsResponse
+     */
+    public ListEdgeContainerAppImageSecretsResponse listEdgeContainerAppImageSecretsWithOptions(ListEdgeContainerAppImageSecretsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEdgeContainerAppImageSecrets"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEdgeContainerAppImageSecretsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用的镜像秘钥列表</p>
+     * 
+     * @param request ListEdgeContainerAppImageSecretsRequest
+     * @return ListEdgeContainerAppImageSecretsResponse
+     */
+    public ListEdgeContainerAppImageSecretsResponse listEdgeContainerAppImageSecrets(ListEdgeContainerAppImageSecretsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEdgeContainerAppImageSecretsWithOptions(request, runtime);
     }
 
     /**

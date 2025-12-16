@@ -40,6 +40,36 @@ public class GetWafQuotaResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetWafQuotaResponseBodyQuotaCaptcha extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("NumberTotal")
+        public WafQuotaInteger numberTotal;
+
+        public static GetWafQuotaResponseBodyQuotaCaptcha build(java.util.Map<String, ?> map) throws Exception {
+            GetWafQuotaResponseBodyQuotaCaptcha self = new GetWafQuotaResponseBodyQuotaCaptcha();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWafQuotaResponseBodyQuotaCaptcha setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetWafQuotaResponseBodyQuotaCaptcha setNumberTotal(WafQuotaInteger numberTotal) {
+            this.numberTotal = numberTotal;
+            return this;
+        }
+        public WafQuotaInteger getNumberTotal() {
+            return this.numberTotal;
+        }
+
+    }
+
     public static class GetWafQuotaResponseBodyQuotaList extends TeaModel {
         /**
          * <p>Indicates whether the custom list is enabled.</p>
@@ -241,6 +271,9 @@ public class GetWafQuotaResponseBody extends TeaModel {
     }
 
     public static class GetWafQuotaResponseBodyQuota extends TeaModel {
+        @NameInMap("Captcha")
+        public GetWafQuotaResponseBodyQuotaCaptcha captcha;
+
         /**
          * <p>Quota information related to custom lists.</p>
          */
@@ -268,6 +301,14 @@ public class GetWafQuotaResponseBody extends TeaModel {
         public static GetWafQuotaResponseBodyQuota build(java.util.Map<String, ?> map) throws Exception {
             GetWafQuotaResponseBodyQuota self = new GetWafQuotaResponseBodyQuota();
             return TeaModel.build(map, self);
+        }
+
+        public GetWafQuotaResponseBodyQuota setCaptcha(GetWafQuotaResponseBodyQuotaCaptcha captcha) {
+            this.captcha = captcha;
+            return this;
+        }
+        public GetWafQuotaResponseBodyQuotaCaptcha getCaptcha() {
+            return this.captcha;
         }
 
         public GetWafQuotaResponseBodyQuota setList(GetWafQuotaResponseBodyQuotaList list) {
