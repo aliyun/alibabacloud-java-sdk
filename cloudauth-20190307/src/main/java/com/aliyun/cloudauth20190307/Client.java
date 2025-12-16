@@ -2325,6 +2325,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取结果</p>
+     * 
+     * @param request DescribeAuthVerifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAuthVerifyResponse
+     */
+    public DescribeAuthVerifyResponse describeAuthVerifyWithOptions(DescribeAuthVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
+            body.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAuthVerify"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAuthVerifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取结果</p>
+     * 
+     * @param request DescribeAuthVerifyRequest
+     * @return DescribeAuthVerifyResponse
+     */
+    public DescribeAuthVerifyResponse describeAuthVerify(DescribeAuthVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAuthVerifyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</p>
      * 
@@ -5232,6 +5280,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         Id3MetaVerifyWithOCRResponse id3MetaVerifyWithOCRResp = this.id3MetaVerifyWithOCRWithOptions(id3MetaVerifyWithOCRReq, runtime);
         return id3MetaVerifyWithOCRResp;
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>服务端初始化</p>
+     * 
+     * @param request InitAuthVerifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitAuthVerifyResponse
+     */
+    public InitAuthVerifyResponse initAuthVerifyWithOptions(InitAuthVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackToken)) {
+            body.put("CallbackToken", request.callbackToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
+            body.put("CallbackUrl", request.callbackUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardPageNumber)) {
+            body.put("CardPageNumber", request.cardPageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardType)) {
+            body.put("CardType", request.cardType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docScanMode)) {
+            body.put("DocScanMode", request.docScanMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idSpoof)) {
+            body.put("IdSpoof", request.idSpoof);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metaInfo)) {
+            body.put("MetaInfo", request.metaInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerOrderNo)) {
+            body.put("OuterOrderNo", request.outerOrderNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("SceneId", request.sceneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InitAuthVerify"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InitAuthVerifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>服务端初始化</p>
+     * 
+     * @param request InitAuthVerifyRequest
+     * @return InitAuthVerifyResponse
+     */
+    public InitAuthVerifyResponse initAuthVerify(InitAuthVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.initAuthVerifyWithOptions(request, runtime);
     }
 
     /**
