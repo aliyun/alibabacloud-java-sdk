@@ -22,6 +22,9 @@ public class UpdateAppGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableLog")
+    public Boolean enableLog;
+
     /**
      * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
@@ -74,6 +77,13 @@ public class UpdateAppGroupRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <strong>example:</strong>
+     * <p>test-workday-notification</p>
+     */
+    @NameInMap("NotificationPolicyName")
+    public String notificationPolicyName;
+
+    /**
      * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
@@ -102,6 +112,14 @@ public class UpdateAppGroupRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateAppGroupRequest setEnableLog(Boolean enableLog) {
+        this.enableLog = enableLog;
+        return this;
+    }
+    public Boolean getEnableLog() {
+        return this.enableLog;
     }
 
     public UpdateAppGroupRequest setGroupId(String groupId) {
@@ -142,6 +160,14 @@ public class UpdateAppGroupRequest extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public UpdateAppGroupRequest setNotificationPolicyName(String notificationPolicyName) {
+        this.notificationPolicyName = notificationPolicyName;
+        return this;
+    }
+    public String getNotificationPolicyName() {
+        return this.notificationPolicyName;
     }
 
     public UpdateAppGroupRequest setRegionId(String regionId) {

@@ -141,6 +141,9 @@ public class ListGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableLog")
+        public Boolean enableLog;
+
         /**
          * <p>The application ID.</p>
          * 
@@ -202,6 +205,14 @@ public class ListGroupsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListGroupsResponseBodyDataAppGroups setEnableLog(Boolean enableLog) {
+            this.enableLog = enableLog;
+            return this;
+        }
+        public Boolean getEnableLog() {
+            return this.enableLog;
         }
 
         public ListGroupsResponseBodyDataAppGroups setGroupId(String groupId) {

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReadSchedulerxDesignateInfoRequest extends TeaModel {
     /**
+     * <p>The ID of the application. You can obtain the application ID on the <strong>Applications</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ReadSchedulerxDesignateInfoRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The job ID. You can obtain the ID on the Tasks page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ReadSchedulerxDesignateInfoRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The unique identifier (UID) of the namespace. You can obtain the namespace UID on the Namespaces page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class ReadSchedulerxDesignateInfoRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
      */
@@ -39,6 +44,7 @@ public class ReadSchedulerxDesignateInfoRequest extends TeaModel {
     public String namespaceSource;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

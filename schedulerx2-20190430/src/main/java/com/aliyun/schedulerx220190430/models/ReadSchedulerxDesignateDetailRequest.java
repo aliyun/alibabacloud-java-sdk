@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ReadSchedulerxDesignateDetailRequest extends TeaModel {
     /**
+     * <p>The information type of the specified workers that you want to query. Valid values: 1 and 2.</p>
+     * <p>1: the IP address of the specified workers.
+     * 2: the tags of the specified workers.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +16,7 @@ public class ReadSchedulerxDesignateDetailRequest extends TeaModel {
     public Integer designateType;
 
     /**
+     * <p>The ID of the application. You can obtain the application ID on the Applications page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +26,7 @@ public class ReadSchedulerxDesignateDetailRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The job ID. You can obtain the ID on the Tasks page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +36,7 @@ public class ReadSchedulerxDesignateDetailRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The unique identifier (UID) of the namespace. You can obtain the namespace UID on the Namespaces page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +46,8 @@ public class ReadSchedulerxDesignateDetailRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
      */
@@ -46,6 +55,7 @@ public class ReadSchedulerxDesignateDetailRequest extends TeaModel {
     public String namespaceSource;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

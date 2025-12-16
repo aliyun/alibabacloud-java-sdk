@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ManageSchedulerxJobSyncResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ManageSchedulerxJobSyncResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The error message. Returned only when an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>jobId=xxx is not existed</p>
      */
@@ -19,6 +23,8 @@ public class ManageSchedulerxJobSyncResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB58C</p>
      */
@@ -26,6 +32,8 @@ public class ManageSchedulerxJobSyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

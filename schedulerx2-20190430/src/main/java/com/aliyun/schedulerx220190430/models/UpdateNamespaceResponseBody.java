@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateNamespaceResponseBody extends TeaModel {
     /**
+     * <p>The returned code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The additional information returned only if an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>The system namespace cannot be modified</p>
      */
@@ -19,6 +23,8 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
      */
@@ -26,6 +32,8 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

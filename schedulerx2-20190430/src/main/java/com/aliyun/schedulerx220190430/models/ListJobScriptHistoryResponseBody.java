@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobScriptHistoryResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,14 +14,14 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The information about the jobs.</p>
      */
     @NameInMap("Data")
     public ListJobScriptHistoryResponseBodyData data;
 
     /**
+     * <p>The additional information returned only if an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>job is not existed, jobId=302</p>
      */
@@ -27,6 +29,8 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
@@ -34,6 +38,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>true</p>
+     * <p>false</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -87,6 +95,8 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
 
     public static class ListJobScriptHistoryResponseBodyDataJobScriptHistoryInfos extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-12 14:52:42</p>
          */
@@ -94,16 +104,39 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1272118248844842</p>
          */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The script content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/bash</p>
+         * <h1>The following are predefined variables provided by the system. You can use them to obtain information about the job run.</h1>
+         * <p>echo &quot;Job parameters: #{schedulerx.jobParameters}&quot;
+         * echo &quot;Shard index: #{schedulerx.shardingId}&quot;
+         * echo &quot;Shard parameters: #{schedulerx.shardingParameters}&quot;
+         * echo &quot;Total number of shards: #{schedulerx.shardingNum}&quot;
+         * echo &quot;Current retry count: #{schedulerx.attempt}&quot;
+         * echo &quot;Trigger type: #{schedulerx.triggerType}&quot;
+         * echo &quot;Scheduled timestamp: #{schedulerx.scheduleTime}&quot;
+         * echo &quot;Data timestamp: #{schedulerx.dataTime}&quot;</p>
+         * <h1>The output of the last line will be returned as the result</h1>
+         * <p>echo &quot;hello world&quot;</p>
+         * <h1>exit 1 indicates failure</h1>
+         * <p>exit 0</p>
+         */
         @NameInMap("ScriptContent")
         public String scriptContent;
 
         /**
+         * <p>The description of the script version.</p>
+         * 
          * <strong>example:</strong>
          * <p>init version</p>
          */
@@ -151,9 +184,7 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
 
     public static class ListJobScriptHistoryResponseBodyData extends TeaModel {
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The information about the job\&quot;s historical scripts.</p>
          */
         @NameInMap("JobScriptHistoryInfos")
         public java.util.List<ListJobScriptHistoryResponseBodyDataJobScriptHistoryInfos> jobScriptHistoryInfos;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateJobScriptResponseBody extends TeaModel {
     /**
+     * <p>The returned code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateJobScriptResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The additional information returned only if an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>job is not existed, jobId=302</p>
      */
@@ -19,6 +23,8 @@ public class UpdateJobScriptResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
@@ -26,6 +32,8 @@ public class UpdateJobScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

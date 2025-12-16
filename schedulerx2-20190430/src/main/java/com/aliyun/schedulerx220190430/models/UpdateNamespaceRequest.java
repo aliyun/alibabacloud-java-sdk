@@ -4,10 +4,17 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class UpdateNamespaceRequest extends TeaModel {
+    /**
+     * <p>The description of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +23,17 @@ public class UpdateNamespaceRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

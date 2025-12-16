@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobScriptHistoryRequest extends TeaModel {
     /**
+     * <p>The application ID. You can obtain the application ID on the Applications page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListJobScriptHistoryRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The job ID. You can obtain the job ID on the Tasks page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListJobScriptHistoryRequest extends TeaModel {
     public Long jobId;
 
     /**
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class ListJobScriptHistoryRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
      */
@@ -39,6 +44,7 @@ public class ListJobScriptHistoryRequest extends TeaModel {
     public String namespaceSource;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

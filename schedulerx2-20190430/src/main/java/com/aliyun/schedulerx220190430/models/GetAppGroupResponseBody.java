@@ -141,6 +141,9 @@ public class GetAppGroupResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableLog")
+        public Boolean enableLog;
+
         /**
          * <p>The ID of the application.</p>
          * 
@@ -192,6 +195,13 @@ public class GetAppGroupResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-workday-notification</p>
+         */
+        @NameInMap("NotificationPolicyName")
+        public String notificationPolicyName;
+
         public static GetAppGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAppGroupResponseBodyData self = new GetAppGroupResponseBodyData();
             return TeaModel.build(map, self);
@@ -237,6 +247,14 @@ public class GetAppGroupResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetAppGroupResponseBodyData setEnableLog(Boolean enableLog) {
+            this.enableLog = enableLog;
+            return this;
+        }
+        public Boolean getEnableLog() {
+            return this.enableLog;
+        }
+
         public GetAppGroupResponseBodyData setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
@@ -275,6 +293,14 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public GetAppGroupResponseBodyData setNotificationPolicyName(String notificationPolicyName) {
+            this.notificationPolicyName = notificationPolicyName;
+            return this;
+        }
+        public String getNotificationPolicyName() {
+            return this.notificationPolicyName;
         }
 
     }

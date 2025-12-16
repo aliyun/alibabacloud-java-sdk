@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ManageSchedulerxJobSyncShrinkRequest extends TeaModel {
     /**
+     * <p>The list of task IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("JobIdList")
     public String jobIdListShrink;
 
     /**
+     * <p>The source of the namespace. Required only for specific third-party cases.</p>
+     * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
      */
@@ -18,6 +21,7 @@ public class ManageSchedulerxJobSyncShrinkRequest extends TeaModel {
     public String namespaceSource;
 
     /**
+     * <p>The source application group to which the task belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,7 @@ public class ManageSchedulerxJobSyncShrinkRequest extends TeaModel {
     public String originalGroupId;
 
     /**
+     * <p>The source namespace where the task resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +41,7 @@ public class ManageSchedulerxJobSyncShrinkRequest extends TeaModel {
     public String originalNamespace;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +51,7 @@ public class ManageSchedulerxJobSyncShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the destination application group to which the task will be synchronized.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +61,7 @@ public class ManageSchedulerxJobSyncShrinkRequest extends TeaModel {
     public String targetGroupId;
 
     /**
+     * <p>The destination namespace to which the task will be synchronized.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

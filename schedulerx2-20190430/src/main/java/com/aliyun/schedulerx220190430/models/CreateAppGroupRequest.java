@@ -133,6 +133,13 @@ public class CreateAppGroupRequest extends TeaModel {
     public String namespaceSource;
 
     /**
+     * <strong>example:</strong>
+     * <p>test-workday-notification</p>
+     */
+    @NameInMap("NotificationPolicyName")
+    public String notificationPolicyName;
+
+    /**
      * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
@@ -257,6 +264,14 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public String getNamespaceSource() {
         return this.namespaceSource;
+    }
+
+    public CreateAppGroupRequest setNotificationPolicyName(String notificationPolicyName) {
+        this.notificationPolicyName = notificationPolicyName;
+        return this;
+    }
+    public String getNotificationPolicyName() {
+        return this.notificationPolicyName;
     }
 
     public CreateAppGroupRequest setRegionId(String regionId) {

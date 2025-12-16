@@ -4,10 +4,15 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
+    /**
+     * <p>The access denial details.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public ReadSchedulerxDesignateInfoResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -23,6 +28,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
     public ReadSchedulerxDesignateInfoResponseBodyData data;
 
     /**
+     * <p>The error message returned only if an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>jobId=xxx is not existed</p>
      */
@@ -30,6 +37,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
@@ -37,6 +46,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,6 +109,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
 
     public static class ReadSchedulerxDesignateInfoResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The authentication operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>edas:ReadSchedulerxDesignateInfo</p>
          */
@@ -105,6 +118,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The principal name.</p>
+         * 
          * <strong>example:</strong>
          * <p>209312833131416xxx</p>
          */
@@ -112,6 +127,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The principal account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1827811800526xxx</p>
          */
@@ -119,6 +136,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The principal type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -126,6 +145,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQFn/cLPZ/3Cz0YxQkZBMjVGLTY0REUtNTlGNS05NzUwLTgyMUE4M0MwMTFDRQ==</p>
          */
@@ -133,6 +154,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The permission denial type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -140,6 +163,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccountLevelIdentityBasedPolicy</p>
          */
@@ -211,6 +236,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
 
     public static class ReadSchedulerxDesignateInfoResponseBodyDataDesignateDetailVosMetrics extends TeaModel {
         /**
+         * <p>The most recent value of CPU workload.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -218,6 +245,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Double cpuLoad1;
 
         /**
+         * <p>The average of the latest five values of CPU workload.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -225,6 +254,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Double cpuLoad5;
 
         /**
+         * <p>The number of available CPU processors.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -232,6 +263,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Integer cpuProcessors;
 
         /**
+         * <p>The total disk capacity in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -239,6 +272,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Integer diskMax;
 
         /**
+         * <p>The disk usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.19142496008515167</p>
          */
@@ -246,6 +281,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Double diskUsage;
 
         /**
+         * <p>The used disk space in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>148</p>
          */
@@ -253,6 +290,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Integer diskUsed;
 
         /**
+         * <p>The number of job executions.</p>
+         * 
          * <strong>example:</strong>
          * <p>56</p>
          */
@@ -260,6 +299,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Long execCount;
 
         /**
+         * <p>The most recent value of heap memory usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.06072874493927125</p>
          */
@@ -267,6 +308,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Double heap1Usage;
 
         /**
+         * <p>The most recent value of used heap memory in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>14</p>
          */
@@ -274,6 +317,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Double heap1Used;
 
         /**
+         * <p>The average of the latest five values of heap memory usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.06477732793522267</p>
          */
@@ -281,6 +326,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Double heap5Usage;
 
         /**
+         * <p>The maximum heap memory in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -288,6 +335,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Integer heapMax;
 
         /**
+         * <p>The number of available resources in the shared pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>72</p>
          */
@@ -295,6 +344,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Integer sharePoolAvailableSize;
 
         /**
+         * <p>The queue size in the shared pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -414,6 +465,14 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
 
     public static class ReadSchedulerxDesignateInfoResponseBodyDataDesignateDetailVos extends TeaModel {
         /**
+         * <p>The status of the workers. Valid values:</p>
+         * <ul>
+         * <li>FREE: idle.</li>
+         * <li>LOAD5_BUSY: The average of the latest five values of CPU workload is too high.</li>
+         * <li>HEAP5_BUSY: The average of the latest five values of heap memory usage is too high.</li>
+         * <li>DISK_BUSY: The disk usage is too high.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FREE</p>
          */
@@ -421,6 +480,12 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public String busy;
 
         /**
+         * <p>Indicates whether the workers are specified.</p>
+         * <ul>
+         * <li>true: The workers are specified.</li>
+         * <li>false: The workers are not specified.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -428,16 +493,27 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Boolean checked;
 
         /**
+         * <p>The information returned based on the value of the DesignateType parameter.</p>
+         * <ul>
+         * <li>If you set the DesignateType parameter to 2, the tags of the workers are returned.</li>
+         * <li>If you set the DesignateType parameter to 1, the IP addresses of the workers are returned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>10.52.169.25</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The metric values.</p>
+         */
         @NameInMap("Metrics")
         public ReadSchedulerxDesignateInfoResponseBodyDataDesignateDetailVosMetrics metrics;
 
         /**
+         * <p>Indicates whether the workers are offline.</p>
+         * 
          * <strong>example:</strong>
          * <p>fasle</p>
          */
@@ -445,6 +521,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Boolean offline;
 
         /**
+         * <p>The number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -452,6 +530,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The startup method of the workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>pod</p>
          */
@@ -459,6 +539,8 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public String starter;
 
         /**
+         * <p>The version of the workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.12.5</p>
          */
@@ -546,6 +628,15 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public java.util.List<ReadSchedulerxDesignateInfoResponseBodyDataDesignateDetailVos> designateDetailVos;
 
         /**
+         * <p>The information type of the specified workers.</p>
+         * <ul>
+         * <li>1: the IP address of the specified workers.</li>
+         * <li>2: the tags of the specified workers.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value of the DesignateType parameter is 1.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -553,6 +644,15 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         public Integer designateType;
 
         /**
+         * <p>Indicates whether to enable failover for the workers. If you set this parameter to true, the job is scheduled to other workers when the specified workers go offline.</p>
+         * <ul>
+         * <li>true: enables failover for the workers.</li>
+         * <li>false: disables failover for the workers.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value of the Transferable parameter is false.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

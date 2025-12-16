@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
     /**
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteNamespaceRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
