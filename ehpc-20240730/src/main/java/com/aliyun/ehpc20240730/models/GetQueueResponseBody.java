@@ -57,6 +57,13 @@ public class GetQueueResponseBody extends TeaModel {
         public java.util.List<NodeTemplate> computeNodes;
 
         /**
+         * <strong>example:</strong>
+         * <p>2025-01-01T12:05:00Z</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
          * <p>Indicates whether auto scale-in is enabled for the queue. Valid values:</p>
          * <ul>
          * <li>true</li>
@@ -184,6 +191,13 @@ public class GetQueueResponseBody extends TeaModel {
         public String reservedNodePoolId;
 
         /**
+         * <strong>example:</strong>
+         * <p>2025-01-01T12:05:00Z</p>
+         */
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        /**
          * <p>The available vSwitches for compute nodes in the queue. Valid values of N: 1 to 5.</p>
          */
         @NameInMap("VSwitchIds")
@@ -208,6 +222,14 @@ public class GetQueueResponseBody extends TeaModel {
         }
         public java.util.List<NodeTemplate> getComputeNodes() {
             return this.computeNodes;
+        }
+
+        public GetQueueResponseBodyQueue setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetQueueResponseBodyQueue setEnableScaleIn(Boolean enableScaleIn) {
@@ -312,6 +334,14 @@ public class GetQueueResponseBody extends TeaModel {
         }
         public String getReservedNodePoolId() {
             return this.reservedNodePoolId;
+        }
+
+        public GetQueueResponseBodyQueue setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public GetQueueResponseBodyQueue setVSwitchIds(java.util.List<String> vSwitchIds) {
