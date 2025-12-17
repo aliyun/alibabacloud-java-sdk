@@ -199,10 +199,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Address Verification</p>
      * 
+     * @deprecated OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.
+     * 
      * @param request AddressVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddressVerifyIntlResponse
      */
+    @Deprecated
+    // Deprecated
     public AddressVerifyIntlResponse addressVerifyIntlWithOptions(AddressVerifyIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -274,9 +278,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Address Verification</p>
      * 
+     * @deprecated OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.
+     * 
      * @param request AddressVerifyIntlRequest
      * @return AddressVerifyIntlResponse
      */
+    @Deprecated
+    // Deprecated
     public AddressVerifyIntlResponse addressVerifyIntl(AddressVerifyIntlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addressVerifyIntlWithOptions(request, runtime);
@@ -1544,6 +1552,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Console Export Records</p>
+     * 
+     * @param request DownloadVerifyRecordIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DownloadVerifyRecordIntlResponse
+     */
+    public DownloadVerifyRecordIntlResponse downloadVerifyRecordIntlWithOptions(DownloadVerifyRecordIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            query.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadMode)) {
+            query.put("DownloadMode", request.downloadMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.param)) {
+            query.put("Param", request.param);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DownloadVerifyRecordIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DownloadVerifyRecordIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Console Export Records</p>
+     * 
+     * @param request DownloadVerifyRecordIntlRequest
+     * @return DownloadVerifyRecordIntlResponse
+     */
+    public DownloadVerifyRecordIntlResponse downloadVerifyRecordIntl(DownloadVerifyRecordIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.downloadVerifyRecordIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>This topic describes how to integrate with ID Verification using only the server-side API.</p>
      * 
      * @param request EkycVerifyRequest
@@ -1733,32 +1801,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SceneCode", request.sceneCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceAFacePicture)) {
-            query.put("SourceAFacePicture", request.sourceAFacePicture);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.sourceAFacePictureUrl)) {
             query.put("SourceAFacePictureUrl", request.sourceAFacePictureUrl);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceBFacePicture)) {
-            query.put("SourceBFacePicture", request.sourceBFacePicture);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceBFacePictureUrl)) {
             query.put("SourceBFacePictureUrl", request.sourceBFacePictureUrl);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceCFacePicture)) {
-            query.put("SourceCFacePicture", request.sourceCFacePicture);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.sourceCFacePictureUrl)) {
             query.put("SourceCFacePictureUrl", request.sourceCFacePictureUrl);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceAFacePicture)) {
+            body.put("SourceAFacePicture", request.sourceAFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceBFacePicture)) {
+            body.put("SourceBFacePicture", request.sourceBFacePicture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCFacePicture)) {
+            body.put("SourceCFacePicture", request.sourceCFacePicture);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "FaceCrossCompareIntl"),
@@ -2026,10 +2096,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Anti-Fraud Callback Interface</p>
      * 
+     * @deprecated OpenAPI FraudResultCallBack is deprecated
+     * 
      * @param request FraudResultCallBackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return FraudResultCallBackResponse
      */
+    @Deprecated
+    // Deprecated
     public FraudResultCallBackResponse fraudResultCallBackWithOptions(FraudResultCallBackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2070,9 +2144,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Anti-Fraud Callback Interface</p>
      * 
+     * @deprecated OpenAPI FraudResultCallBack is deprecated
+     * 
      * @param request FraudResultCallBackRequest
      * @return FraudResultCallBackResponse
      */
+    @Deprecated
+    // Deprecated
     public FraudResultCallBackResponse fraudResultCallBack(FraudResultCallBackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.fraudResultCallBackWithOptions(request, runtime);

@@ -56,12 +56,6 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     @NameInMap("SceneCode")
     public String sceneCode;
 
-    /**
-     * <p>Base64 encoded portrait photo.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>base64</p>
-     */
     @NameInMap("SourceAFacePicture")
     public String sourceAFacePicture;
 
@@ -74,12 +68,6 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     @NameInMap("SourceAFacePictureUrl")
     public String sourceAFacePictureUrl;
 
-    /**
-     * <p>Base64 encoded portrait photo.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>base64</p>
-     */
     @NameInMap("SourceBFacePicture")
     public String sourceBFacePicture;
 
@@ -92,12 +80,6 @@ public class FaceCrossCompareIntlRequest extends TeaModel {
     @NameInMap("SourceBFacePictureUrl")
     public String sourceBFacePictureUrl;
 
-    /**
-     * <p>Base64 encoded portrait photo.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>base64</p>
-     */
     @NameInMap("SourceCFacePicture")
     public String sourceCFacePicture;
 

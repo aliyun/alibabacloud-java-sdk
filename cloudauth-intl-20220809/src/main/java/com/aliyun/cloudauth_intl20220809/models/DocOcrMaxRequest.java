@@ -4,6 +4,25 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DocOcrMaxRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable verification with an authoritative data source to enhance document anti-spoofing capabilities.</p>
+     * <ul>
+     * <li><p><strong>T</strong>: Enable</p>
+     * </li>
+     * <li><p><strong>F</strong>: Disable (default)</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li><strong>Applicable document types</strong>: Chinese resident ID cards (CHN01001) and Chinese mainland driver\&quot;s licenses (CHN02001).</li>
+     * <li><strong>Data transfer declaration</strong>: If you enable this parameter, you agree to transfer the user\&quot;s name and certificate number to an authoritative data source in the Chinese mainland for consistency verification.</li>
+     * <li><strong>Performance impact:</strong> After you enable this feature, the response time of the API operation increases by 1 to 2 seconds. Adjust the timeout setting.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>T</p>
+     */
     @NameInMap("Authorize")
     public String authorize;
 
@@ -111,6 +130,14 @@ public class DocOcrMaxRequest extends TeaModel {
     public String ocrModel;
 
     /**
+     * <p>Specifies whether to return additional OCR fields in a standardized format:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: No (default)</p>
+     * </li>
+     * <li><p><strong>1</strong>: Yes</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

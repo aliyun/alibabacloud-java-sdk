@@ -340,10 +340,6 @@ public class InitializeRequest extends TeaModel {
      * </li>
      * <li><p><strong>PHOTINUS_LIVENESS</strong>: Blinking action liveness + photinus liveness dual detection.</p>
      * </li>
-     * <li><p><strong>PHOTINUS_FAR_NEAR_LIVENESS</strong>:
-     * Blinking action + far/near + photinus liveness detection.
-     * (Only supported by APP SDK or Flutter integration based on APP SDK)</p>
-     * </li>
      * </ul>
      * <blockquote>
      * <ul>
