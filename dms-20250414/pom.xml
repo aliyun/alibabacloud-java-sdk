@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dms20250414</artifactId>
-  <version>1.4.1</version>
+  <version>1.5.0</version>
   <packaging>jar</packaging>
   <name>dms20250414</name>
   <description>Alibaba Cloud Data Management (20250414) SDK for Java
