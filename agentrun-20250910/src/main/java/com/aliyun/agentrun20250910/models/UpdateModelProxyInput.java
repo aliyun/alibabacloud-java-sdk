@@ -13,6 +13,9 @@ public class UpdateModelProxyInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("executionRoleArn")
+    public String executionRoleArn;
+
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
@@ -49,6 +52,14 @@ public class UpdateModelProxyInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateModelProxyInput setExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
+        return this;
+    }
+    public String getExecutionRoleArn() {
+        return this.executionRoleArn;
     }
 
     public UpdateModelProxyInput setLogConfiguration(LogConfiguration logConfiguration) {

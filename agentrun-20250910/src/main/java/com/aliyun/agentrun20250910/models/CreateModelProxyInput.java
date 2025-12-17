@@ -19,6 +19,9 @@ public class CreateModelProxyInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("executionRoleArn")
+    public String executionRoleArn;
+
     @NameInMap("litellmVersion")
     public String litellmVersion;
 
@@ -93,6 +96,14 @@ public class CreateModelProxyInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateModelProxyInput setExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
+        return this;
+    }
+    public String getExecutionRoleArn() {
+        return this.executionRoleArn;
     }
 
     public CreateModelProxyInput setLitellmVersion(String litellmVersion) {

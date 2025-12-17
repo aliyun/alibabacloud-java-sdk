@@ -83,6 +83,113 @@ public class ProxyConfig extends TeaModel {
 
     }
 
+    public static class ProxyConfigPoliciesAiGuardrailConfig extends TeaModel {
+        @NameInMap("blockOnContentModeration")
+        public Boolean blockOnContentModeration;
+
+        @NameInMap("blockOnMaliciousUrl")
+        public Boolean blockOnMaliciousUrl;
+
+        @NameInMap("blockOnModelHallucination")
+        public Boolean blockOnModelHallucination;
+
+        @NameInMap("blockOnPromptAttack")
+        public Boolean blockOnPromptAttack;
+
+        @NameInMap("blockOnSensitiveData")
+        public Boolean blockOnSensitiveData;
+
+        @NameInMap("checkRequest")
+        public Boolean checkRequest;
+
+        @NameInMap("checkResponse")
+        public Boolean checkResponse;
+
+        @NameInMap("level")
+        public String level;
+
+        @NameInMap("maxTextLength")
+        public Integer maxTextLength;
+
+        public static ProxyConfigPoliciesAiGuardrailConfig build(java.util.Map<String, ?> map) throws Exception {
+            ProxyConfigPoliciesAiGuardrailConfig self = new ProxyConfigPoliciesAiGuardrailConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setBlockOnContentModeration(Boolean blockOnContentModeration) {
+            this.blockOnContentModeration = blockOnContentModeration;
+            return this;
+        }
+        public Boolean getBlockOnContentModeration() {
+            return this.blockOnContentModeration;
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setBlockOnMaliciousUrl(Boolean blockOnMaliciousUrl) {
+            this.blockOnMaliciousUrl = blockOnMaliciousUrl;
+            return this;
+        }
+        public Boolean getBlockOnMaliciousUrl() {
+            return this.blockOnMaliciousUrl;
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setBlockOnModelHallucination(Boolean blockOnModelHallucination) {
+            this.blockOnModelHallucination = blockOnModelHallucination;
+            return this;
+        }
+        public Boolean getBlockOnModelHallucination() {
+            return this.blockOnModelHallucination;
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setBlockOnPromptAttack(Boolean blockOnPromptAttack) {
+            this.blockOnPromptAttack = blockOnPromptAttack;
+            return this;
+        }
+        public Boolean getBlockOnPromptAttack() {
+            return this.blockOnPromptAttack;
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setBlockOnSensitiveData(Boolean blockOnSensitiveData) {
+            this.blockOnSensitiveData = blockOnSensitiveData;
+            return this;
+        }
+        public Boolean getBlockOnSensitiveData() {
+            return this.blockOnSensitiveData;
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setCheckRequest(Boolean checkRequest) {
+            this.checkRequest = checkRequest;
+            return this;
+        }
+        public Boolean getCheckRequest() {
+            return this.checkRequest;
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setCheckResponse(Boolean checkResponse) {
+            this.checkResponse = checkResponse;
+            return this;
+        }
+        public Boolean getCheckResponse() {
+            return this.checkResponse;
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public ProxyConfigPoliciesAiGuardrailConfig setMaxTextLength(Integer maxTextLength) {
+            this.maxTextLength = maxTextLength;
+            return this;
+        }
+        public Integer getMaxTextLength() {
+            return this.maxTextLength;
+        }
+
+    }
+
     public static class ProxyConfigPoliciesFallbacks extends TeaModel {
         @NameInMap("modelName")
         public String modelName;
@@ -113,7 +220,62 @@ public class ProxyConfig extends TeaModel {
 
     }
 
+    public static class ProxyConfigPoliciesTokenRateLimiter extends TeaModel {
+        @NameInMap("tpd")
+        public Integer tpd;
+
+        @NameInMap("tph")
+        public Integer tph;
+
+        @NameInMap("tpm")
+        public Integer tpm;
+
+        @NameInMap("tps")
+        public Integer tps;
+
+        public static ProxyConfigPoliciesTokenRateLimiter build(java.util.Map<String, ?> map) throws Exception {
+            ProxyConfigPoliciesTokenRateLimiter self = new ProxyConfigPoliciesTokenRateLimiter();
+            return TeaModel.build(map, self);
+        }
+
+        public ProxyConfigPoliciesTokenRateLimiter setTpd(Integer tpd) {
+            this.tpd = tpd;
+            return this;
+        }
+        public Integer getTpd() {
+            return this.tpd;
+        }
+
+        public ProxyConfigPoliciesTokenRateLimiter setTph(Integer tph) {
+            this.tph = tph;
+            return this;
+        }
+        public Integer getTph() {
+            return this.tph;
+        }
+
+        public ProxyConfigPoliciesTokenRateLimiter setTpm(Integer tpm) {
+            this.tpm = tpm;
+            return this;
+        }
+        public Integer getTpm() {
+            return this.tpm;
+        }
+
+        public ProxyConfigPoliciesTokenRateLimiter setTps(Integer tps) {
+            this.tps = tps;
+            return this;
+        }
+        public Integer getTps() {
+            return this.tps;
+        }
+
+    }
+
     public static class ProxyConfigPolicies extends TeaModel {
+        @NameInMap("aiGuardrailConfig")
+        public ProxyConfigPoliciesAiGuardrailConfig aiGuardrailConfig;
+
         @NameInMap("cache")
         public Boolean cache;
 
@@ -129,9 +291,20 @@ public class ProxyConfig extends TeaModel {
         @NameInMap("requestTimeout")
         public Integer requestTimeout;
 
+        @NameInMap("tokenRateLimiter")
+        public ProxyConfigPoliciesTokenRateLimiter tokenRateLimiter;
+
         public static ProxyConfigPolicies build(java.util.Map<String, ?> map) throws Exception {
             ProxyConfigPolicies self = new ProxyConfigPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public ProxyConfigPolicies setAiGuardrailConfig(ProxyConfigPoliciesAiGuardrailConfig aiGuardrailConfig) {
+            this.aiGuardrailConfig = aiGuardrailConfig;
+            return this;
+        }
+        public ProxyConfigPoliciesAiGuardrailConfig getAiGuardrailConfig() {
+            return this.aiGuardrailConfig;
         }
 
         public ProxyConfigPolicies setCache(Boolean cache) {
@@ -172,6 +345,14 @@ public class ProxyConfig extends TeaModel {
         }
         public Integer getRequestTimeout() {
             return this.requestTimeout;
+        }
+
+        public ProxyConfigPolicies setTokenRateLimiter(ProxyConfigPoliciesTokenRateLimiter tokenRateLimiter) {
+            this.tokenRateLimiter = tokenRateLimiter;
+            return this;
+        }
+        public ProxyConfigPoliciesTokenRateLimiter getTokenRateLimiter() {
+            return this.tokenRateLimiter;
         }
 
     }

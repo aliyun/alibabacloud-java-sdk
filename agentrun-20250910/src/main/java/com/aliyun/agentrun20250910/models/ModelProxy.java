@@ -19,6 +19,9 @@ public class ModelProxy extends TeaModel {
     @NameInMap("endpoint")
     public String endpoint;
 
+    @NameInMap("executionRoleArn")
+    public String executionRoleArn;
+
     @NameInMap("functionName")
     public String functionName;
 
@@ -104,6 +107,14 @@ public class ModelProxy extends TeaModel {
     }
     public String getEndpoint() {
         return this.endpoint;
+    }
+
+    public ModelProxy setExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
+        return this;
+    }
+    public String getExecutionRoleArn() {
+        return this.executionRoleArn;
     }
 
     public ModelProxy setFunctionName(String functionName) {
