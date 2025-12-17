@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>apig20240327</artifactId>
-  <version>6.3.0</version>
+  <version>6.4.0</version>
   <packaging>jar</packaging>
   <name>apig20240327</name>
   <description>Alibaba Cloud APIG (20240327) SDK for Java

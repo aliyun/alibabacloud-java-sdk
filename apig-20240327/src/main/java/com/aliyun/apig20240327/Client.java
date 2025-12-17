@@ -5341,6 +5341,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新服务</p>
+     * 
+     * @param request UpdateServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateServiceResponse
+     */
+    public UpdateServiceResponse updateServiceWithOptions(String serviceId, UpdateServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addresses)) {
+            body.put("addresses", request.addresses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentServiceConfig)) {
+            body.put("agentServiceConfig", request.agentServiceConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aiServiceConfig)) {
+            body.put("aiServiceConfig", request.aiServiceConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnsServers)) {
+            body.put("dnsServers", request.dnsServers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
+            body.put("healthCheckConfig", request.healthCheckConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthyPanicThreshold)) {
+            body.put("healthyPanicThreshold", request.healthyPanicThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outlierDetectionConfig)) {
+            body.put("outlierDetectionConfig", request.outlierDetectionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ports)) {
+            body.put("ports", request.ports);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            body.put("protocol", request.protocol);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateService"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新服务</p>
+     * 
+     * @param request UpdateServiceRequest
+     * @return UpdateServiceResponse
+     */
+    public UpdateServiceResponse updateService(String serviceId, UpdateServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateServiceWithOptions(serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates a service version.</p>
      * 
      * @param request UpdateServiceVersionRequest
