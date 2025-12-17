@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWuyingServerImageRequest extends TeaModel {
     /**
+     * <p>The image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>imgc-0aae4rgk9****6e8p</p>
      */
@@ -12,6 +14,8 @@ public class UpdateWuyingServerImageRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The product type. Set this parameter to WuyingServer.</p>
+     * 
      * <strong>example:</strong>
      * <p>WuyingServer</p>
      */
@@ -19,6 +23,8 @@ public class UpdateWuyingServerImageRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The ID of the workstation.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-0bw2f11****dial</p>
      */

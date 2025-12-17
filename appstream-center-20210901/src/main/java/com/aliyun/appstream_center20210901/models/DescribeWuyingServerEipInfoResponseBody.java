@@ -41,6 +41,9 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeWuyingServerEipInfoResponseBodyEipInfoModel extends TeaModel {
+        @NameInMap("EipId")
+        public String eipId;
+
         /**
          * <p>The public IP address.</p>
          * 
@@ -71,6 +74,14 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         public static DescribeWuyingServerEipInfoResponseBodyEipInfoModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeWuyingServerEipInfoResponseBodyEipInfoModel self = new DescribeWuyingServerEipInfoResponseBodyEipInfoModel();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeWuyingServerEipInfoResponseBodyEipInfoModel setEipId(String eipId) {
+            this.eipId = eipId;
+            return this;
+        }
+        public String getEipId() {
+            return this.eipId;
         }
 
         public DescribeWuyingServerEipInfoResponseBodyEipInfoModel setIpAddress(String ipAddress) {

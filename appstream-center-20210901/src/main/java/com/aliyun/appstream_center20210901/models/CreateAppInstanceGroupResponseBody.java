@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateAppInstanceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The delivery group.</p>
+     */
     @NameInMap("AppInstanceGroupModel")
     public CreateAppInstanceGroupResponseBodyAppInstanceGroupModel appInstanceGroupModel;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
 
     public static class CreateAppInstanceGroupResponseBodyAppInstanceGroupModel extends TeaModel {
         /**
+         * <p>The ID of the delivery group.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
          */
@@ -44,6 +51,8 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The ID of the resource group. This parameter is returned if a resource group was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-ew7va2g1wl3vm****</p>
          */
@@ -51,6 +60,8 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
         public String nodePoolId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345****</p>
          */

@@ -174,6 +174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
+     * A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a delivery group.</p>
      * 
@@ -350,6 +354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
+     * A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a delivery group.</p>
      * 
@@ -3446,7 +3454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新研发主机镜像</p>
+     * <p>Updates the workstation image.</p>
      * 
      * @param request UpdateWuyingServerImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3486,7 +3494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新研发主机镜像</p>
+     * <p>Updates the workstation image.</p>
      * 
      * @param request UpdateWuyingServerImageRequest
      * @return UpdateWuyingServerImageResponse
