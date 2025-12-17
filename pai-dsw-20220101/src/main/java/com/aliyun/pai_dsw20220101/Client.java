@@ -407,6 +407,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建一个健康检查任务</p>
+     * 
+     * @param request CreateSanityCheckTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSanityCheckTaskResponse
+     */
+    public CreateSanityCheckTaskResponse createSanityCheckTaskWithOptions(String CheckType, CreateSanityCheckTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSanityCheckTask"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/sanitychecks/" + com.aliyun.openapiutil.Client.getEncodeParam(CheckType) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSanityCheckTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个健康检查任务</p>
+     * 
+     * @param request CreateSanityCheckTaskRequest
+     * @return CreateSanityCheckTaskResponse
+     */
+    public CreateSanityCheckTaskResponse createSanityCheckTask(String CheckType, CreateSanityCheckTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSanityCheckTaskWithOptions(CheckType, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes the automatic stop policy of an instance.</p>
      * 
      * @param headers map
@@ -1130,6 +1177,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getResourceGroupStatisticsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询健康检查任务结果</p>
+     * 
+     * @param request GetSanityCheckTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSanityCheckTaskResponse
+     */
+    public GetSanityCheckTaskResponse getSanityCheckTaskWithOptions(String CheckType, String TaskId, GetSanityCheckTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.verbose)) {
+            query.put("Verbose", request.verbose);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSanityCheckTask"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/sanitychecks/" + com.aliyun.openapiutil.Client.getEncodeParam(CheckType) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSanityCheckTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询健康检查任务结果</p>
+     * 
+     * @param request GetSanityCheckTaskRequest
+     * @return GetSanityCheckTaskResponse
+     */
+    public GetSanityCheckTaskResponse getSanityCheckTask(String CheckType, String TaskId, GetSanityCheckTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSanityCheckTaskWithOptions(CheckType, TaskId, request, headers, runtime);
     }
 
     /**
