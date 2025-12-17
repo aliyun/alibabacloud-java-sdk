@@ -364,6 +364,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("NtpServers")
     public java.util.List<String> ntpServers;
 
+    /**
+     * <p>Specifies whether to override existing data. Valid Values:</p>
+     * <p>true false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Override")
     public Boolean override;
 

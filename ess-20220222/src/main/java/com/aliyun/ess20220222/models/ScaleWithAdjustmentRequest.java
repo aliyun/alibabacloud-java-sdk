@@ -82,7 +82,7 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     public Integer minAdjustmentMagnitude;
 
     /**
-     * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.</p>
+     * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance (ECI) type during a scale-out event.</p>
      */
     @NameInMap("Overrides")
     public ScaleWithAdjustmentRequestOverrides overrides;
@@ -240,7 +240,7 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
 
     public static class ScaleWithAdjustmentRequestLifecycleHookContext extends TeaModel {
         /**
-         * <p>Specifies whether to disable the Lifecycle Hook feature. Valid values:</p>
+         * <p>Specifies whether to disable the lifecycle hook. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -372,7 +372,7 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
         public Float memory;
 
         /**
-         * <p>The name of container N. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</p>
+         * <p>The name of the container. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>container-1</p>
@@ -461,6 +461,8 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
         public Float memory;
 
         /**
+         * <p>The user data of the Elastic Compute Service (ECS) instance. The user data must be encoded in Base64 format. The size of raw data before Base64 encoding cannot exceed 32 KB.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
          */

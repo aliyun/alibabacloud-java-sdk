@@ -82,7 +82,7 @@ public class ScaleWithAdjustmentShrinkRequest extends TeaModel {
     public Integer minAdjustmentMagnitude;
 
     /**
-     * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.</p>
+     * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance (ECI) type during a scale-out event.</p>
      */
     @NameInMap("Overrides")
     public String overridesShrink;

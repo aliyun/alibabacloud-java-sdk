@@ -2917,6 +2917,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DeleteDiagnoseReport</p>
+     * 
+     * @param request DeleteDiagnoseReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDiagnoseReportResponse
+     */
+    public DeleteDiagnoseReportResponse deleteDiagnoseReportWithOptions(DeleteDiagnoseReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDiagnoseReport"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDiagnoseReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteDiagnoseReport</p>
+     * 
+     * @param request DeleteDiagnoseReportRequest
+     * @return DeleteDiagnoseReportResponse
+     */
+    public DeleteDiagnoseReportResponse deleteDiagnoseReport(DeleteDiagnoseReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDiagnoseReportWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You cannot call this operation to delete a scaling configuration in the following scenarios:</p>
      * <ul>
