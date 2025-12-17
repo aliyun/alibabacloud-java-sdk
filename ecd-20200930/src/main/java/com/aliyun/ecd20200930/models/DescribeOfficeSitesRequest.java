@@ -158,6 +158,12 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6bpyqivwl5f3pvoxxu0</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

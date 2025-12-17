@@ -1021,6 +1021,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  The cloud computers for which you want to change their policies must be in the Running state.</p>
+     * <ul>
+     * <li>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <code>ManagementFlags</code> response parameter indicates the assignment of the cloud computer. A value of <code>ASSIGNING</code> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</li>
+     * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
+     * </ul>
+     * 
      * @param request BatchModifyEntitlementRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchModifyEntitlementResponse
@@ -1074,6 +1081,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  The cloud computers for which you want to change their policies must be in the Running state.</p>
+     * <ul>
+     * <li>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <code>ManagementFlags</code> response parameter indicates the assignment of the cloud computer. A value of <code>ASSIGNING</code> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</li>
+     * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
+     * </ul>
+     * 
      * @param request BatchModifyEntitlementRequest
      * @return BatchModifyEntitlementResponse
      */
@@ -9591,6 +9605,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询全局定时任务Batch记录</p>
+     * 
+     * @param request DescribeGlobalTimerBatchesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGlobalTimerBatchesResponse
+     */
+    public DescribeGlobalTimerBatchesResponse describeGlobalTimerBatchesWithOptions(DescribeGlobalTimerBatchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRegionId)) {
+            query.put("SearchRegionId", request.searchRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timerType)) {
+            query.put("TimerType", request.timerType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGlobalTimerBatches"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGlobalTimerBatchesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询全局定时任务Batch记录</p>
+     * 
+     * @param request DescribeGlobalTimerBatchesRequest
+     * @return DescribeGlobalTimerBatchesResponse
+     */
+    public DescribeGlobalTimerBatchesResponse describeGlobalTimerBatches(DescribeGlobalTimerBatchesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeGlobalTimerBatchesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the execution records of scheduled tasks on cloud computers.</p>
+     * 
+     * @param request DescribeGlobalTimerRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGlobalTimerRecordsResponse
+     */
+    public DescribeGlobalTimerRecordsResponse describeGlobalTimerRecordsWithOptions(DescribeGlobalTimerRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchId)) {
+            query.put("BatchId", request.batchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopIds)) {
+            query.put("DesktopIds", request.desktopIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resultCategory)) {
+            query.put("ResultCategory", request.resultCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRegionId)) {
+            query.put("SearchRegionId", request.searchRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timerResult)) {
+            query.put("TimerResult", request.timerResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timerTypes)) {
+            query.put("TimerTypes", request.timerTypes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGlobalTimerRecords"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGlobalTimerRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the execution records of scheduled tasks on cloud computers.</p>
+     * 
+     * @param request DescribeGlobalTimerRecordsRequest
+     * @return DescribeGlobalTimerRecordsResponse
+     */
+    public DescribeGlobalTimerRecordsResponse describeGlobalTimerRecords(DescribeGlobalTimerRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeGlobalTimerRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the applications and their processes of an end user.</p>
      * 
      * @param request DescribeGuestApplicationsRequest
@@ -17330,6 +17488,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning</strong> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Modifies a custom cloud computer template.</p>
      * 
@@ -17447,6 +17610,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning</strong> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Modifies a custom cloud computer template.</p>
      * 

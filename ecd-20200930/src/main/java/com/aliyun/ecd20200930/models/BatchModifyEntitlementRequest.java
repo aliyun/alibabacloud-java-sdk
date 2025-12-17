@@ -5,15 +5,21 @@ import com.aliyun.tea.*;
 
 public class BatchModifyEntitlementRequest extends TeaModel {
     /**
+     * <p>The IDs of the cloud computers for which you want to modify end users.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>The IDs of the users.</p>
+     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
+     * <p>The number of cloud computers allocated to each user.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -21,6 +27,8 @@ public class BatchModifyEntitlementRequest extends TeaModel {
     public Integer maxDesktopPerUser;
 
     /**
+     * <p>The number of users assigned to each cloud computer.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +36,8 @@ public class BatchModifyEntitlementRequest extends TeaModel {
     public Integer maxUserPerDesktop;
 
     /**
+     * <p>Whether to preview the assign results instead of actually assigning cloud computers.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,6 +45,7 @@ public class BatchModifyEntitlementRequest extends TeaModel {
     public Boolean preview;
 
     /**
+     * <p>The ID of the region. Call the DescribeRegions operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +55,10 @@ public class BatchModifyEntitlementRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The disproportional assignment policy. Valid values:</p>
+     * <p>AVERAGE: The system preferentially guarantees that each user is assigned with at least a cloud computer. If the number of selected cloud computers cannot be proportionally assigned to the selected users, ensure that each user is assigned a cloud computer.</p>
+     * <p>CENTRAL: The system preferentially assigns the designated number of cloud computers to each user. If the number of selected cloud computers cannot be proportionally assigned to the selected users, ensure that each user is assigned the specified number of cloud computers.</p>
+     * 
      * <strong>example:</strong>
      * <p>AVERAGE</p>
      */
