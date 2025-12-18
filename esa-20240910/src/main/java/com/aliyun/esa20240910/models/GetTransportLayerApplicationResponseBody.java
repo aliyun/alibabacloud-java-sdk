@@ -5,22 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetTransportLayerApplicationResponseBody extends TeaModel {
     /**
-     * <p>Transport layer application ID.</p>
+     * <p>Specific value of the origin, which needs to match the type of the origin.</p>
      * 
      * <strong>example:</strong>
      * <p>17099311410****</p>
      */
     @NameInMap("ApplicationId")
     public Long applicationId;
-
-    /**
-     * <p>The CNAME domain corresponding to the transport layer acceleration application. This field is not empty only when the site is accessed via CNAME.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>example.com.ialicdn.com</p>
-     */
-    @NameInMap("Cname")
-    public String cname;
 
     /**
      * <p>Whether to enable China mainland network access optimization, default is off. Value range:</p>
@@ -30,17 +21,20 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
+     * <p>example.com.ialicdn.com</p>
+     */
+    @NameInMap("Cname")
+    public String cname;
+
+    /**
+     * <strong>example:</strong>
      * <p>on</p>
      */
     @NameInMap("CrossBorderOptimization")
     public String crossBorderOptimization;
 
     /**
-     * <p>Switch for IP access rules. When turned on, the IP access rules in WAF take effect on the transport layer application.</p>
-     * <ul>
-     * <li>on: Turned on.</li>
-     * <li>off: Turned off.</li>
-     * </ul>
+     * <p>#/components/schemas/WafRuleMatch2</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -49,7 +43,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
     public String ipAccessRule;
 
     /**
-     * <p>IPv6 switch.</p>
+     * <p>Ipv6 switch</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -58,7 +52,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
     public String ipv6;
 
     /**
-     * <p>The domain name of the transport layer application.</p>
+     * <p>Query Transport Layer Acceleration Application</p>
      * 
      * <strong>example:</strong>
      * <p>test.example.com</p>
@@ -76,13 +70,22 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of forwarding rules.</p>
+     * <p>Edge port. Supports:</p>
+     * <ul>
+     * <li>A single port, such as 80.</li>
+     * <li>Port range, such as 81-85, representing ports 81, 82, 83, 84, 85.</li>
+     * <li>Combination of ports and port ranges, separated by commas, for example 80,81-85,90, representing ports 80, 81, 82, 83, 84, 85, 90.</li>
+     * </ul>
      */
     @NameInMap("Rules")
     public java.util.List<GetTransportLayerApplicationResponseBodyRules> rules;
 
     /**
-     * <p>Number of forwarding rules contained in the transport layer acceleration application.</p>
+     * <p>Forwarding rule protocol, with values:</p>
+     * <ul>
+     * <li>TCP: TCP protocol.</li>
+     * <li>UDP: UDP protocol.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -91,7 +94,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
     public Integer rulesCount;
 
     /**
-     * <p>Site ID.</p>
+     * <p>Details of the forwarding rule.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -106,12 +109,6 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
     public java.util.List<GetTransportLayerApplicationResponseBodyStaticIpV4List> staticIpV4List;
 
     /**
-     * <p>Status of the transport layer application</p>
-     * <ul>
-     * <li><strong>deploying</strong>: Deploying. In this state, modification and deletion are not allowed.</li>
-     * <li><strong>active</strong>: Active.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
@@ -229,6 +226,37 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
 
     public static class GetTransportLayerApplicationResponseBodyRules extends TeaModel {
         /**
+         * <p>The domain name of the transport layer application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("ClientIPPassThroughMode")
+        public String clientIPPassThroughMode;
+
+        /**
+         * <p>Switch for IP access rules. When turned on, the IP access rules in WAF take effect on the transport layer application.</p>
+         * <ul>
+         * <li>on: Turned on.</li>
+         * <li>off: Turned off.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv6 switch.</p>
+         */
+        @NameInMap("Comment")
+        public String comment;
+
+        /**
+         * <p>Comment information of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
+        @NameInMap("EdgePort")
+        public String edgePort;
+
+        /**
          * <p>Client IP pass-through protocol, supporting:</p>
          * <ul>
          * <li><strong>off</strong>: No pass-through.</li>
@@ -238,64 +266,23 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>off</p>
-         */
-        @NameInMap("ClientIPPassThroughMode")
-        public String clientIPPassThroughMode;
-
-        /**
-         * <p>Comment information of the rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>测试</p>
-         */
-        @NameInMap("Comment")
-        public String comment;
-
-        /**
-         * <p>Edge port. Supports:</p>
-         * <ul>
-         * <li>A single port, such as 80.</li>
-         * <li>Port range, such as 81-85, representing ports 81, 82, 83, 84, 85.</li>
-         * <li>Combination of ports and port ranges, separated by commas, for example 80,81-85,90, representing ports 80, 81, 82, 83, 84, 85, 90.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
-        @NameInMap("EdgePort")
-        public String edgePort;
-
-        /**
-         * <p>Forwarding rule protocol, with values:</p>
-         * <ul>
-         * <li>TCP: TCP protocol.</li>
-         * <li>UDP: UDP protocol.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
          * <p>TCP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
-         * <p>Rule ID.</p>
+         * <p>Status of the transport layer application</p>
+         * <ul>
+         * <li><strong>deploying</strong>: Deploying. In this state, modification and deletion are not allowed.</li>
+         * <li><strong>active</strong>: Active.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1234323***</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
-
-        /**
-         * <p>Specific value of the origin, which needs to match the type of the origin.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.1.1.1</p>
-         */
-        @NameInMap("Source")
-        public String source;
 
         /**
          * <p>Origin port. Supports:</p>
@@ -305,19 +292,22 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
+        @NameInMap("Source")
+        public String source;
+
+        /**
+         * <p>The CNAME domain corresponding to the transport layer acceleration application. This field is not empty only when the site is accessed via CNAME.</p>
+         * 
+         * <strong>example:</strong>
          * <p>80</p>
          */
         @NameInMap("SourcePort")
         public String sourcePort;
 
         /**
-         * <p>Origin type, supporting:</p>
-         * <ul>
-         * <li><strong>ip</strong>: IP.</li>
-         * <li><strong>domain</strong>: Domain name.</li>
-         * <li><strong>OP</strong>: Origin pool.</li>
-         * <li><strong>LB</strong>: Load balancer.</li>
-         * </ul>
+         * <p>Rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>domain</p>

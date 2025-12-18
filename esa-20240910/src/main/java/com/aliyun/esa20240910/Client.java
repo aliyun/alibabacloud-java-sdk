@@ -10158,7 +10158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a Single Origin Rule Configuration</p>
+     * <p>Queries the configurations of a single origin rule.</p>
      * 
      * @param request GetOriginRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10186,7 +10186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a Single Origin Rule Configuration</p>
+     * <p>Queries the configurations of a single origin rule.</p>
      * 
      * @param request GetOriginRuleRequest
      * @return GetOriginRuleResponse

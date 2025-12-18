@@ -4,6 +4,9 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListListsResponseBody extends TeaModel {
+    @NameInMap("ItemsUsage")
+    public Long itemsUsage;
+
     /**
      * <p>The array that contains list information, including list data after paging.</p>
      */
@@ -58,6 +61,14 @@ public class ListListsResponseBody extends TeaModel {
     public static ListListsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListListsResponseBody self = new ListListsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListListsResponseBody setItemsUsage(Long itemsUsage) {
+        this.itemsUsage = itemsUsage;
+        return this;
+    }
+    public Long getItemsUsage() {
+        return this.itemsUsage;
     }
 
     public ListListsResponseBody setLists(java.util.List<ListListsResponseBodyLists> lists) {
