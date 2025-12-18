@@ -9324,6 +9324,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>同步部门信息。</p>
+     * 
+     * @param tmpReq SyncDepartmentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SyncDepartmentResponse
+     */
+    public SyncDepartmentResponse syncDepartmentWithOptions(SyncDepartmentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SyncDepartmentShrinkRequest request = new SyncDepartmentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.syncDepartmentCommand)) {
+            request.syncDepartmentCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.syncDepartmentCommand, "SyncDepartmentCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.syncDepartmentCommandShrink)) {
+            body.put("SyncDepartmentCommand", request.syncDepartmentCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SyncDepartment"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SyncDepartmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步部门信息。</p>
+     * 
+     * @param request SyncDepartmentRequest
+     * @return SyncDepartmentResponse
+     */
+    public SyncDepartmentResponse syncDepartment(SyncDepartmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.syncDepartmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步部门成员信息</p>
+     * 
+     * @param tmpReq SyncDepartmentUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SyncDepartmentUserResponse
+     */
+    public SyncDepartmentUserResponse syncDepartmentUserWithOptions(SyncDepartmentUserRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SyncDepartmentUserShrinkRequest request = new SyncDepartmentUserShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.syncDepartmentUserCommand)) {
+            request.syncDepartmentUserCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.syncDepartmentUserCommand, "SyncDepartmentUserCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.syncDepartmentUserCommandShrink)) {
+            body.put("SyncDepartmentUserCommand", request.syncDepartmentUserCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SyncDepartmentUser"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SyncDepartmentUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步部门成员信息</p>
+     * 
+     * @param request SyncDepartmentUserRequest
+     * @return SyncDepartmentUserResponse
+     */
+    public SyncDepartmentUserResponse syncDepartmentUser(SyncDepartmentUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.syncDepartmentUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>一键转交负责人</p>
      * 
      * @param tmpReq TransferOwnershipForAllObjectRequest
