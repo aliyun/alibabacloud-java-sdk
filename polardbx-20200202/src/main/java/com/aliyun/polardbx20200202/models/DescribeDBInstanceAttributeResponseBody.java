@@ -416,6 +416,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Engine")
         public String engine;
 
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
         /**
          * <strong>example:</strong>
          * <p>2022-08-31T16:00:00.000+0000</p>
@@ -806,6 +809,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setExpireDate(String expireDate) {

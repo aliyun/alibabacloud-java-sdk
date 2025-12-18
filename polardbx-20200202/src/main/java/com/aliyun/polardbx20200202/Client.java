@@ -878,6 +878,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DNNodeCount", request.DNNodeCount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dnClass)) {
             query.put("DnClass", request.dnClass);
         }
@@ -1684,6 +1688,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>释放实例</p>
+     * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBInstanceResponse
@@ -1717,6 +1724,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>释放实例</p>
+     * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
      */

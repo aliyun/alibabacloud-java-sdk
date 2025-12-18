@@ -41,6 +41,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DNNodeCount")
     public Integer DNNodeCount;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("DnClass")
     public String dnClass;
 
@@ -237,6 +240,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public Integer getDNNodeCount() {
         return this.DNNodeCount;
+    }
+
+    public CreateDBInstanceRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateDBInstanceRequest setDnClass(String dnClass) {
