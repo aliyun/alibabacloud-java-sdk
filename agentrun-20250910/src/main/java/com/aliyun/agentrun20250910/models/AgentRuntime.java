@@ -86,6 +86,15 @@ public class AgentRuntime extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-credential</p>
+     */
+    @NameInMap("credentialName")
+    public String credentialName;
+
+    /**
      * <p>智能体运行时的描述信息，说明该运行时的用途和功能</p>
      * 
      * <strong>example:</strong>
@@ -286,6 +295,14 @@ public class AgentRuntime extends TeaModel {
     }
     public String getCreatedAt() {
         return this.createdAt;
+    }
+
+    public AgentRuntime setCredentialName(String credentialName) {
+        this.credentialName = credentialName;
+        return this;
+    }
+    public String getCredentialName() {
+        return this.credentialName;
     }
 
     public AgentRuntime setDescription(String description) {
