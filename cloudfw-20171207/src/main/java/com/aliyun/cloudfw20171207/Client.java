@@ -13997,6 +13997,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新用户版本信息</p>
+     * 
+     * @param request ModifyCfwInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCfwInstanceResponse
+     */
+    public ModifyCfwInstanceResponse modifyCfwInstanceWithOptions(ModifyCfwInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateList)) {
+            query.put("UpdateList", request.updateList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCfwInstance"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCfwInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新用户版本信息</p>
+     * 
+     * @param request ModifyCfwInstanceRequest
+     * @return ModifyCfwInstanceResponse
+     */
+    public ModifyCfwInstanceResponse modifyCfwInstance(ModifyCfwInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCfwInstanceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.</p>
      * <h2><a href="#qps"></a>Limit</h2>
