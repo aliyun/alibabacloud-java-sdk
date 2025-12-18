@@ -5390,6 +5390,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取实例组日报详情</p>
+     * 
+     * @param request GetInstanceGroupInspectReportDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceGroupInspectReportDetailResponse
+     */
+    public GetInstanceGroupInspectReportDetailResponse getInstanceGroupInspectReportDetailWithOptions(GetInstanceGroupInspectReportDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
+            body.put("ReportId", request.reportId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceGroupInspectReportDetail"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceGroupInspectReportDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取实例组日报详情</p>
+     * 
+     * @param request GetInstanceGroupInspectReportDetailRequest
+     * @return GetInstanceGroupInspectReportDetailResponse
+     */
+    public GetInstanceGroupInspectReportDetailResponse getInstanceGroupInspectReportDetail(GetInstanceGroupInspectReportDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInstanceGroupInspectReportDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例组的报告信息</p>
+     * 
+     * @param request GetInstanceGroupInspectReportListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceGroupInspectReportListResponse
+     */
+    public GetInstanceGroupInspectReportListResponse getInstanceGroupInspectReportListWithOptions(GetInstanceGroupInspectReportListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceGroupInspectReportList"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceGroupInspectReportListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例组的报告信息</p>
+     * 
+     * @param request GetInstanceGroupInspectReportListRequest
+     * @return GetInstanceGroupInspectReportListResponse
+     */
+    public GetInstanceGroupInspectReportListResponse getInstanceGroupInspectReportList(GetInstanceGroupInspectReportListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInstanceGroupInspectReportListWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Database Autonomy Service (DAS) provides the inspection and scoring feature. This feature allows you to inspect and score the health status of your instance on a regular basis. This helps you obtain information about the status of your databases. For more information, see <a href="https://help.aliyun.com/document_detail/205659.html">Inspection and scoring</a>.
      * Before you call this operation, take note of the following items:</p>
