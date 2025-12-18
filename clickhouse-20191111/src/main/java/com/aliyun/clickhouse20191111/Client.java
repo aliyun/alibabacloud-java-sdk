@@ -1178,6 +1178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceDBClusterId", request.sourceDBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
             query.put("UsedTime", request.usedTime);
         }

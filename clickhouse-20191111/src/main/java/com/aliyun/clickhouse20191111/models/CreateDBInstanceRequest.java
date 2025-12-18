@@ -255,6 +255,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("SourceDBClusterId")
     public String sourceDBClusterId;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateDBInstanceRequestTags> tags;
+
     /**
      * <p>The subscription duration of the subscription cluster.</p>
      * <blockquote>
@@ -517,6 +520,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.sourceDBClusterId;
     }
 
+    public CreateDBInstanceRequest setTags(java.util.List<CreateDBInstanceRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateDBInstanceRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateDBInstanceRequest setUsedTime(String usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -579,6 +590,44 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getZoneIdBak() {
         return this.zoneIdBak;
+    }
+
+    public static class CreateDBInstanceRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>user123</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例字符串</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static CreateDBInstanceRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBInstanceRequestTags self = new CreateDBInstanceRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBInstanceRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDBInstanceRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
