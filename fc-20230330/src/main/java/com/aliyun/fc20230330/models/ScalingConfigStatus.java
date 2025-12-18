@@ -10,6 +10,9 @@ public class ScalingConfigStatus extends TeaModel {
     @NameInMap("currentInstances")
     public Long currentInstances;
 
+    @NameInMap("enableMixMode")
+    public Boolean enableMixMode;
+
     @NameInMap("enableOnDemandScaling")
     public Boolean enableOnDemandScaling;
 
@@ -21,6 +24,9 @@ public class ScalingConfigStatus extends TeaModel {
 
     @NameInMap("minInstances")
     public Long minInstances;
+
+    @NameInMap("requestDispatchPolicy")
+    public String requestDispatchPolicy;
 
     @NameInMap("residentPoolId")
     public String residentPoolId;
@@ -50,6 +56,14 @@ public class ScalingConfigStatus extends TeaModel {
     }
     public Long getCurrentInstances() {
         return this.currentInstances;
+    }
+
+    public ScalingConfigStatus setEnableMixMode(Boolean enableMixMode) {
+        this.enableMixMode = enableMixMode;
+        return this;
+    }
+    public Boolean getEnableMixMode() {
+        return this.enableMixMode;
     }
 
     public ScalingConfigStatus setEnableOnDemandScaling(Boolean enableOnDemandScaling) {
@@ -82,6 +96,14 @@ public class ScalingConfigStatus extends TeaModel {
     }
     public Long getMinInstances() {
         return this.minInstances;
+    }
+
+    public ScalingConfigStatus setRequestDispatchPolicy(String requestDispatchPolicy) {
+        this.requestDispatchPolicy = requestDispatchPolicy;
+        return this;
+    }
+    public String getRequestDispatchPolicy() {
+        return this.requestDispatchPolicy;
     }
 
     public ScalingConfigStatus setResidentPoolId(String residentPoolId) {

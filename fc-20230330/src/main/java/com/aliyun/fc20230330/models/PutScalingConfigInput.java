@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutScalingConfigInput extends TeaModel {
+    @NameInMap("enableMixMode")
+    public Boolean enableMixMode;
+
     @NameInMap("enableOnDemandScaling")
     public Boolean enableOnDemandScaling;
 
@@ -12,6 +15,9 @@ public class PutScalingConfigInput extends TeaModel {
 
     @NameInMap("minInstances")
     public Long minInstances;
+
+    @NameInMap("requestDispatchPolicy")
+    public String requestDispatchPolicy;
 
     @NameInMap("residentPoolId")
     public String residentPoolId;
@@ -22,6 +28,14 @@ public class PutScalingConfigInput extends TeaModel {
     public static PutScalingConfigInput build(java.util.Map<String, ?> map) throws Exception {
         PutScalingConfigInput self = new PutScalingConfigInput();
         return TeaModel.build(map, self);
+    }
+
+    public PutScalingConfigInput setEnableMixMode(Boolean enableMixMode) {
+        this.enableMixMode = enableMixMode;
+        return this;
+    }
+    public Boolean getEnableMixMode() {
+        return this.enableMixMode;
     }
 
     public PutScalingConfigInput setEnableOnDemandScaling(Boolean enableOnDemandScaling) {
@@ -46,6 +60,14 @@ public class PutScalingConfigInput extends TeaModel {
     }
     public Long getMinInstances() {
         return this.minInstances;
+    }
+
+    public PutScalingConfigInput setRequestDispatchPolicy(String requestDispatchPolicy) {
+        this.requestDispatchPolicy = requestDispatchPolicy;
+        return this;
+    }
+    public String getRequestDispatchPolicy() {
+        return this.requestDispatchPolicy;
     }
 
     public PutScalingConfigInput setResidentPoolId(String residentPoolId) {

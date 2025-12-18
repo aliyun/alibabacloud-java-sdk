@@ -20,6 +20,9 @@ public class InstanceInfo extends TeaModel {
     @NameInMap("qualifier")
     public String qualifier;
 
+    @NameInMap("resourceType")
+    public String resourceType;
+
     @NameInMap("status")
     public String status;
 
@@ -61,6 +64,14 @@ public class InstanceInfo extends TeaModel {
     }
     public String getQualifier() {
         return this.qualifier;
+    }
+
+    public InstanceInfo setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public InstanceInfo setStatus(String status) {
