@@ -158,6 +158,134 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     }
 
+    public static class GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gw-xxxxxx</p>
+         */
+        @NameInMap("gatewayId")
+        public String gatewayId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test-gateway</p>
+         */
+        @NameInMap("gatewayName")
+        public String gatewayName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>LOW</p>
+         */
+        @NameInMap("riskLevel")
+        public String riskLevel;
+
+        @NameInMap("riskNames")
+        public java.util.List<String> riskNames;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("score")
+        public String score;
+
+        public static GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails self = new GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails setGatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        public GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails setGatewayName(String gatewayName) {
+            this.gatewayName = gatewayName;
+            return this;
+        }
+        public String getGatewayName() {
+            return this.gatewayName;
+        }
+
+        public GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails setRiskNames(java.util.List<String> riskNames) {
+            this.riskNames = riskNames;
+            return this;
+        }
+        public java.util.List<String> getRiskNames() {
+            return this.riskNames;
+        }
+
+        public GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+    }
+
+    public static class GetResourceOverviewResponseBodyDataRiskOverview extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("count")
+        public String count;
+
+        @NameInMap("riskDetails")
+        public java.util.List<GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails> riskDetails;
+
+        /**
+         * <strong>example:</strong>
+         * <p>LOW</p>
+         */
+        @NameInMap("riskLevel")
+        public String riskLevel;
+
+        public static GetResourceOverviewResponseBodyDataRiskOverview build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceOverviewResponseBodyDataRiskOverview self = new GetResourceOverviewResponseBodyDataRiskOverview();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceOverviewResponseBodyDataRiskOverview setCount(String count) {
+            this.count = count;
+            return this;
+        }
+        public String getCount() {
+            return this.count;
+        }
+
+        public GetResourceOverviewResponseBodyDataRiskOverview setRiskDetails(java.util.List<GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails> riskDetails) {
+            this.riskDetails = riskDetails;
+            return this;
+        }
+        public java.util.List<GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails> getRiskDetails() {
+            return this.riskDetails;
+        }
+
+        public GetResourceOverviewResponseBodyDataRiskOverview setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+    }
+
     public static class GetResourceOverviewResponseBodyData extends TeaModel {
         /**
          * <p>API information.</p>
@@ -170,6 +298,9 @@ public class GetResourceOverviewResponseBody extends TeaModel {
          */
         @NameInMap("gateway")
         public GetResourceOverviewResponseBodyDataGateway gateway;
+
+        @NameInMap("riskOverview")
+        public java.util.List<GetResourceOverviewResponseBodyDataRiskOverview> riskOverview;
 
         public static GetResourceOverviewResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetResourceOverviewResponseBodyData self = new GetResourceOverviewResponseBodyData();
@@ -190,6 +321,14 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         }
         public GetResourceOverviewResponseBodyDataGateway getGateway() {
             return this.gateway;
+        }
+
+        public GetResourceOverviewResponseBodyData setRiskOverview(java.util.List<GetResourceOverviewResponseBodyDataRiskOverview> riskOverview) {
+            this.riskOverview = riskOverview;
+            return this;
+        }
+        public java.util.List<GetResourceOverviewResponseBodyDataRiskOverview> getRiskOverview() {
+            return this.riskOverview;
         }
 
     }

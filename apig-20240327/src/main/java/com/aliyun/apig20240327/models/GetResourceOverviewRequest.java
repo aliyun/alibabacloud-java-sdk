@@ -4,6 +4,10 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GetResourceOverviewRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AI</p>
+     */
     @NameInMap("gatewayType")
     public String gatewayType;
 
