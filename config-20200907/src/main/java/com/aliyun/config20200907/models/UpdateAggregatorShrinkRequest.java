@@ -70,6 +70,7 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
+    @Deprecated
     public String tagShrink;
 
     public static UpdateAggregatorShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -125,6 +126,7 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
         return this.folderId;
     }
 
+    @Deprecated
     public UpdateAggregatorShrinkRequest setTagShrink(String tagShrink) {
         this.tagShrink = tagShrink;
         return this;

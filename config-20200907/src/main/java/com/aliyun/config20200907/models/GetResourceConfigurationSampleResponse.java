@@ -3,7 +3,7 @@ package com.aliyun.config20200907.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateDeliveryChannelResponse extends TeaModel {
+public class GetResourceConfigurationSampleResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class UpdateDeliveryChannelResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public UpdateDeliveryChannelResponseBody body;
+    public GetResourceConfigurationSampleResponseBody body;
 
-    public static UpdateDeliveryChannelResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateDeliveryChannelResponse self = new UpdateDeliveryChannelResponse();
+    public static GetResourceConfigurationSampleResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetResourceConfigurationSampleResponse self = new GetResourceConfigurationSampleResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDeliveryChannelResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetResourceConfigurationSampleResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class UpdateDeliveryChannelResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateDeliveryChannelResponse setStatusCode(Integer statusCode) {
+    public GetResourceConfigurationSampleResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class UpdateDeliveryChannelResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateDeliveryChannelResponse setBody(UpdateDeliveryChannelResponseBody body) {
+    public GetResourceConfigurationSampleResponse setBody(GetResourceConfigurationSampleResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateDeliveryChannelResponseBody getBody() {
+    public GetResourceConfigurationSampleResponseBody getBody() {
         return this.body;
     }
 

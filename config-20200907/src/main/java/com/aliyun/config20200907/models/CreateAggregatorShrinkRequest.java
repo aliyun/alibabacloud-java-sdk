@@ -61,7 +61,6 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the account group.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Aggregator description.</p>

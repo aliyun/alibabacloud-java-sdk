@@ -31,6 +31,7 @@ public class GetAggregateConfigRuleShrinkRequest extends TeaModel {
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
+    @Deprecated
     public String tagShrink;
 
     public static GetAggregateConfigRuleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -54,6 +55,7 @@ public class GetAggregateConfigRuleShrinkRequest extends TeaModel {
         return this.configRuleId;
     }
 
+    @Deprecated
     public GetAggregateConfigRuleShrinkRequest setTagShrink(String tagShrink) {
         this.tagShrink = tagShrink;
         return this;

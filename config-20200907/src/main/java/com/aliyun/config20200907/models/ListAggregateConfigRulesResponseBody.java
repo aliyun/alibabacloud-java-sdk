@@ -330,6 +330,9 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         @NameInMap("CreateBy")
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy;
 
+        @NameInMap("CreateDate")
+        public String createDate;
+
         /**
          * <p>The description of the rule.</p>
          * 
@@ -461,6 +464,14 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         }
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy getCreateBy() {
             return this.createBy;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setDescription(String description) {

@@ -135,6 +135,15 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
+        @NameInMap("HighRiskRuleNonCompliantResourceCount")
+        public Integer highRiskRuleNonCompliantResourceCount;
+
+        @NameInMap("LowRiskRuleNonCompliantResourceCount")
+        public Integer lowRiskRuleNonCompliantResourceCount;
+
+        @NameInMap("MediumRiskRuleNonCompliantResourceCount")
+        public Integer mediumRiskRuleNonCompliantResourceCount;
+
         /**
          * <p>The number of non-compliant resources.</p>
          * 
@@ -172,6 +181,30 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         }
         public Integer getCompliantCount() {
             return this.compliantCount;
+        }
+
+        public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setHighRiskRuleNonCompliantResourceCount(Integer highRiskRuleNonCompliantResourceCount) {
+            this.highRiskRuleNonCompliantResourceCount = highRiskRuleNonCompliantResourceCount;
+            return this;
+        }
+        public Integer getHighRiskRuleNonCompliantResourceCount() {
+            return this.highRiskRuleNonCompliantResourceCount;
+        }
+
+        public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setLowRiskRuleNonCompliantResourceCount(Integer lowRiskRuleNonCompliantResourceCount) {
+            this.lowRiskRuleNonCompliantResourceCount = lowRiskRuleNonCompliantResourceCount;
+            return this;
+        }
+        public Integer getLowRiskRuleNonCompliantResourceCount() {
+            return this.lowRiskRuleNonCompliantResourceCount;
+        }
+
+        public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setMediumRiskRuleNonCompliantResourceCount(Integer mediumRiskRuleNonCompliantResourceCount) {
+            this.mediumRiskRuleNonCompliantResourceCount = mediumRiskRuleNonCompliantResourceCount;
+            return this;
+        }
+        public Integer getMediumRiskRuleNonCompliantResourceCount() {
+            return this.mediumRiskRuleNonCompliantResourceCount;
         }
 
         public GetAggregateComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setNonCompliantCount(Integer nonCompliantCount) {

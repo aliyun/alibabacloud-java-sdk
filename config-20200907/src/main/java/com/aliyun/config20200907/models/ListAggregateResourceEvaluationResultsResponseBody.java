@@ -107,6 +107,9 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         @NameInMap("ResourceName")
         public String resourceName;
 
+        @NameInMap("ResourceOwnerId")
+        public Integer resourceOwnerId;
+
         /**
          * <p>The type of the resource.</p>
          * 
@@ -175,6 +178,14 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         }
         public String getResourceName() {
             return this.resourceName;
+        }
+
+        public ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setResourceOwnerId(Integer resourceOwnerId) {
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+        public Integer getResourceOwnerId() {
+            return this.resourceOwnerId;
         }
 
         public ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setResourceType(String resourceType) {

@@ -20,6 +20,7 @@ public class GetConfigRuleRequest extends TeaModel {
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
+    @Deprecated
     public java.util.List<GetConfigRuleRequestTag> tag;
 
     public static GetConfigRuleRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -35,6 +36,7 @@ public class GetConfigRuleRequest extends TeaModel {
         return this.configRuleId;
     }
 
+    @Deprecated
     public GetConfigRuleRequest setTag(java.util.List<GetConfigRuleRequestTag> tag) {
         this.tag = tag;
         return this;

@@ -14,6 +14,13 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     public String compliancePackTemplateId;
 
     /**
+     * <strong>example:</strong>
+     * <p>LAW</p>
+     */
+    @NameInMap("FilterType")
+    public String filterType;
+
+    /**
      * <p>The page number.</p>
      * <p>Pages start from page 1. Default value: 1</p>
      * 
@@ -42,6 +49,9 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 
+    @NameInMap("RuleRiskLevel")
+    public Integer ruleRiskLevel;
+
     public static ListCompliancePackTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCompliancePackTemplatesRequest self = new ListCompliancePackTemplatesRequest();
         return TeaModel.build(map, self);
@@ -53,6 +63,14 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     }
     public String getCompliancePackTemplateId() {
         return this.compliancePackTemplateId;
+    }
+
+    public ListCompliancePackTemplatesRequest setFilterType(String filterType) {
+        this.filterType = filterType;
+        return this;
+    }
+    public String getFilterType() {
+        return this.filterType;
     }
 
     public ListCompliancePackTemplatesRequest setPageNumber(Integer pageNumber) {
@@ -77,6 +95,14 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     }
     public String getResourceTypes() {
         return this.resourceTypes;
+    }
+
+    public ListCompliancePackTemplatesRequest setRuleRiskLevel(Integer ruleRiskLevel) {
+        this.ruleRiskLevel = ruleRiskLevel;
+        return this;
+    }
+    public Integer getRuleRiskLevel() {
+        return this.ruleRiskLevel;
     }
 
 }

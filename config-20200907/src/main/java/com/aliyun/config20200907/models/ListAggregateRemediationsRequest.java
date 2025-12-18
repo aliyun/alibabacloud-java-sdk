@@ -18,7 +18,6 @@ public class ListAggregateRemediationsRequest extends TeaModel {
     /**
      * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
      * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cr-6b7c626622af00b4****</p>

@@ -20,6 +20,7 @@ public class GetCompliancePackRequest extends TeaModel {
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
+    @Deprecated
     public java.util.List<GetCompliancePackRequestTag> tag;
 
     public static GetCompliancePackRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -35,6 +36,7 @@ public class GetCompliancePackRequest extends TeaModel {
         return this.compliancePackId;
     }
 
+    @Deprecated
     public GetCompliancePackRequest setTag(java.util.List<GetCompliancePackRequestTag> tag) {
         this.tag = tag;
         return this;

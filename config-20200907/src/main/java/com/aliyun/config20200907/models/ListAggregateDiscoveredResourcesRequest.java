@@ -100,6 +100,9 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("ResourceName")
+    public String resourceName;
+
     @NameInMap("ResourceOwnerId")
     @Deprecated
     public Long resourceOwnerId;
@@ -202,6 +205,14 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public ListAggregateDiscoveredResourcesRequest setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
     }
 
     @Deprecated

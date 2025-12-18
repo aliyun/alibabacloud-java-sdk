@@ -50,6 +50,15 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        @NameInMap("CompliantCount")
+        public Integer compliantCount;
+
+        @NameInMap("IgnoredCount")
+        public Integer ignoredCount;
+
+        @NameInMap("InsufficientDataCount")
+        public Integer insufficientDataCount;
+
         /**
          * <p>The number of non-compliant resources.</p>
          * 
@@ -58,6 +67,9 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
          */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
+
+        @NameInMap("NotApplicableCount")
+        public Integer notApplicableCount;
 
         /**
          * <p>The total number of resources.</p>
@@ -81,12 +93,44 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
             return this.compliancePackId;
         }
 
+        public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult setCompliantCount(Integer compliantCount) {
+            this.compliantCount = compliantCount;
+            return this;
+        }
+        public Integer getCompliantCount() {
+            return this.compliantCount;
+        }
+
+        public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult setIgnoredCount(Integer ignoredCount) {
+            this.ignoredCount = ignoredCount;
+            return this;
+        }
+        public Integer getIgnoredCount() {
+            return this.ignoredCount;
+        }
+
+        public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult setInsufficientDataCount(Integer insufficientDataCount) {
+            this.insufficientDataCount = insufficientDataCount;
+            return this;
+        }
+        public Integer getInsufficientDataCount() {
+            return this.insufficientDataCount;
+        }
+
         public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult setNonCompliantCount(Integer nonCompliantCount) {
             this.nonCompliantCount = nonCompliantCount;
             return this;
         }
         public Integer getNonCompliantCount() {
             return this.nonCompliantCount;
+        }
+
+        public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult setNotApplicableCount(Integer notApplicableCount) {
+            this.notApplicableCount = notApplicableCount;
+            return this;
+        }
+        public Integer getNotApplicableCount() {
+            return this.notApplicableCount;
         }
 
         public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult setTotalCount(Integer totalCount) {

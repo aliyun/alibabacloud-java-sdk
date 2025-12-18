@@ -265,6 +265,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
+        @NameInMap("FolderName")
+        public String folderName;
+
         /**
          * <p>tags</p>
          */
@@ -354,6 +357,14 @@ public class GetAggregatorResponseBody extends TeaModel {
         }
         public String getFolderId() {
             return this.folderId;
+        }
+
+        public GetAggregatorResponseBodyAggregator setFolderName(String folderName) {
+            this.folderName = folderName;
+            return this;
+        }
+        public String getFolderName() {
+            return this.folderName;
         }
 
         public GetAggregatorResponseBodyAggregator setTags(java.util.List<GetAggregatorResponseBodyAggregatorTags> tags) {

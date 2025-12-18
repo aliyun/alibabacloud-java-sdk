@@ -68,6 +68,12 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("RiskLevel")
+    public Integer riskLevel;
+
+    @NameInMap("SortBy")
+    public String sortBy;
+
     public static ListResourceEvaluationResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceEvaluationResultsRequest self = new ListResourceEvaluationResultsRequest();
         return TeaModel.build(map, self);
@@ -119,6 +125,22 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public ListResourceEvaluationResultsRequest setRiskLevel(Integer riskLevel) {
+        this.riskLevel = riskLevel;
+        return this;
+    }
+    public Integer getRiskLevel() {
+        return this.riskLevel;
+    }
+
+    public ListResourceEvaluationResultsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
 }

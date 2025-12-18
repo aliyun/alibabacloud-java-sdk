@@ -80,6 +80,9 @@ public class ListDiscoveredResourcesRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("ResourceName")
+    public String resourceName;
+
     /**
      * <p>The type of the resource. Separate multiple resource types with commas (,).</p>
      * 
@@ -162,6 +165,14 @@ public class ListDiscoveredResourcesRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public ListDiscoveredResourcesRequest setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
     }
 
     public ListDiscoveredResourcesRequest setResourceTypes(String resourceTypes) {

@@ -70,6 +70,7 @@ public class UpdateAggregatorRequest extends TeaModel {
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
+    @Deprecated
     public java.util.List<UpdateAggregatorRequestTag> tag;
 
     public static UpdateAggregatorRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -125,6 +126,7 @@ public class UpdateAggregatorRequest extends TeaModel {
         return this.folderId;
     }
 
+    @Deprecated
     public UpdateAggregatorRequest setTag(java.util.List<UpdateAggregatorRequestTag> tag) {
         this.tag = tag;
         return this;

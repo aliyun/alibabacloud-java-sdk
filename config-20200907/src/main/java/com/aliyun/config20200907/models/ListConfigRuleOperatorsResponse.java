@@ -3,7 +3,7 @@ package com.aliyun.config20200907.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDeliveryChannelResponse extends TeaModel {
+public class ListConfigRuleOperatorsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateDeliveryChannelResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateDeliveryChannelResponseBody body;
+    public ListConfigRuleOperatorsResponseBody body;
 
-    public static CreateDeliveryChannelResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateDeliveryChannelResponse self = new CreateDeliveryChannelResponse();
+    public static ListConfigRuleOperatorsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListConfigRuleOperatorsResponse self = new ListConfigRuleOperatorsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDeliveryChannelResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListConfigRuleOperatorsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateDeliveryChannelResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateDeliveryChannelResponse setStatusCode(Integer statusCode) {
+    public ListConfigRuleOperatorsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateDeliveryChannelResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateDeliveryChannelResponse setBody(CreateDeliveryChannelResponseBody body) {
+    public ListConfigRuleOperatorsResponse setBody(ListConfigRuleOperatorsResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateDeliveryChannelResponseBody getBody() {
+    public ListConfigRuleOperatorsResponseBody getBody() {
         return this.body;
     }
 

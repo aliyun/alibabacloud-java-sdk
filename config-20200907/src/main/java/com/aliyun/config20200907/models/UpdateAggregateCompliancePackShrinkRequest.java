@@ -140,6 +140,7 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
+    @Deprecated
     public String tagShrink;
 
     /**
@@ -286,6 +287,7 @@ public class UpdateAggregateCompliancePackShrinkRequest extends TeaModel {
         return this.riskLevel;
     }
 
+    @Deprecated
     public UpdateAggregateCompliancePackShrinkRequest setTagShrink(String tagShrink) {
         this.tagShrink = tagShrink;
         return this;

@@ -262,6 +262,7 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
+    @Deprecated
     public java.util.List<UpdateAggregateConfigRuleRequestTag> tag;
 
     /**
@@ -496,6 +497,7 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
         return this.riskLevel;
     }
 
+    @Deprecated
     public UpdateAggregateConfigRuleRequest setTag(java.util.List<UpdateAggregateConfigRuleRequestTag> tag) {
         this.tag = tag;
         return this;

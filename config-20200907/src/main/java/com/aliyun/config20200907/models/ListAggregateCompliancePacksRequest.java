@@ -35,6 +35,9 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RiskLevel")
+    public Integer riskLevel;
+
     /**
      * <p>The status of the one or more compliance packages to be queried. Valid values:</p>
      * <ul>
@@ -81,6 +84,14 @@ public class ListAggregateCompliancePacksRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAggregateCompliancePacksRequest setRiskLevel(Integer riskLevel) {
+        this.riskLevel = riskLevel;
+        return this;
+    }
+    public Integer getRiskLevel() {
+        return this.riskLevel;
     }
 
     public ListAggregateCompliancePacksRequest setStatus(String status) {

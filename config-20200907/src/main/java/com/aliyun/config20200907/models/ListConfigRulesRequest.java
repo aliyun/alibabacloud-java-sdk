@@ -109,6 +109,9 @@ public class ListConfigRulesRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    @NameInMap("SortBy")
+    public String sortBy;
+
     /**
      * <p>The tags of the resource.</p>
      * <p>You can add up to 20 tags to a resource.</p>
@@ -191,6 +194,14 @@ public class ListConfigRulesRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public ListConfigRulesRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
     public ListConfigRulesRequest setTag(java.util.List<ListConfigRulesRequestTag> tag) {

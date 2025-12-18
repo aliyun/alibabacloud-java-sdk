@@ -31,6 +31,7 @@ public class GetAggregateCompliancePackShrinkRequest extends TeaModel {
      * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
+    @Deprecated
     public String tagShrink;
 
     public static GetAggregateCompliancePackShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -54,6 +55,7 @@ public class GetAggregateCompliancePackShrinkRequest extends TeaModel {
         return this.compliancePackId;
     }
 
+    @Deprecated
     public GetAggregateCompliancePackShrinkRequest setTagShrink(String tagShrink) {
         this.tagShrink = tagShrink;
         return this;
