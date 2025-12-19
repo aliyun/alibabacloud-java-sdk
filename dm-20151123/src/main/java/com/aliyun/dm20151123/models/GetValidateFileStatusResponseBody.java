@@ -25,6 +25,9 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     @NameInMap("DoNotMailNum")
     public String doNotMailNum;
 
+    @NameInMap("FileId")
+    public String fileId;
+
     /**
      * <strong>example:</strong>
      * <p>file.txt</p>
@@ -122,6 +125,14 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     }
     public String getDoNotMailNum() {
         return this.doNotMailNum;
+    }
+
+    public GetValidateFileStatusResponseBody setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public GetValidateFileStatusResponseBody setFileName(String fileName) {
