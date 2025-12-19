@@ -98,10 +98,12 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public String domainNameServers;
 
         /**
-         * <p>The lease time of the IPv6 addresses for the DHCP options set.</p>
+         * <p>The lease time of the IPv6 DHCP options set.</p>
          * <ul>
-         * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
-         * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+         * <li><p>If you use hours as the unit, Unit: h. Valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>24h</strong>.</p>
+         * </li>
+         * <li><p>If you use days as the unit, Unit: d. Valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>1d</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,11 +216,17 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         @NameInMap("AssociateVpcCount")
         public Integer associateVpcCount;
 
+        /**
+         * <p>The creation time of the DHCP options sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-21 ***</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The configuration information about the DHCP options set.</p>
+         * <p>The details of DHCP options.</p>
          */
         @NameInMap("DhcpOptions")
         public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions dhcpOptions;

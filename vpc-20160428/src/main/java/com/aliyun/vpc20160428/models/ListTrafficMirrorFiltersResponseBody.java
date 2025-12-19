@@ -144,6 +144,12 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        /**
+         * <p>The version of IP protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
@@ -370,6 +376,12 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        /**
+         * <p>The version of IP protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 

@@ -87,6 +87,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("DhcpOptionsSetStatus")
     public String dhcpOptionsSetStatus;
 
+    /**
+     * <p>Indicates whether DNS hostname is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DISABLED</p>
+     */
     @NameInMap("DnsHostnameStatus")
     public String dnsHostnameStatus;
 

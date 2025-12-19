@@ -4,6 +4,10 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatIpResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Ipv4Prefix")
     public String ipv4Prefix;
 
@@ -24,6 +28,9 @@ public class CreateNatIpResponseBody extends TeaModel {
      */
     @NameInMap("NatIpId")
     public String natIpId;
+
+    @NameInMap("NatIps")
+    public java.util.List<CreateNatIpResponseBodyNatIps> natIps;
 
     /**
      * <p>The request ID.</p>
@@ -63,12 +70,76 @@ public class CreateNatIpResponseBody extends TeaModel {
         return this.natIpId;
     }
 
+    public CreateNatIpResponseBody setNatIps(java.util.List<CreateNatIpResponseBodyNatIps> natIps) {
+        this.natIps = natIps;
+        return this;
+    }
+    public java.util.List<CreateNatIpResponseBodyNatIps> getNatIps() {
+        return this.natIps;
+    }
+
     public CreateNatIpResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class CreateNatIpResponseBodyNatIps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.1.128/28</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Ipv4Prefix")
+        public String ipv4Prefix;
+
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.2.128</p>
+         */
+        @NameInMap("NatIp")
+        public String natIp;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vpcnatip-xxxxxxxx</p>
+         */
+        @NameInMap("NatIpId")
+        public String natIpId;
+
+        public static CreateNatIpResponseBodyNatIps build(java.util.Map<String, ?> map) throws Exception {
+            CreateNatIpResponseBodyNatIps self = new CreateNatIpResponseBodyNatIps();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNatIpResponseBodyNatIps setIpv4Prefix(String ipv4Prefix) {
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+        public String getIpv4Prefix() {
+            return this.ipv4Prefix;
+        }
+
+        public CreateNatIpResponseBodyNatIps setNatIp(String natIp) {
+            this.natIp = natIp;
+            return this;
+        }
+        public String getNatIp() {
+            return this.natIp;
+        }
+
+        public CreateNatIpResponseBodyNatIps setNatIpId(String natIpId) {
+            this.natIpId = natIpId;
+            return this;
+        }
+        public String getNatIpId() {
+            return this.natIpId;
+        }
+
     }
 
 }

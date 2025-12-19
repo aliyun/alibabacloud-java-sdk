@@ -24,7 +24,7 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -92,6 +92,12 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<ListVpcGatewayEndpointsRequestTags> tags;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1gsk7h12ew7oegk****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

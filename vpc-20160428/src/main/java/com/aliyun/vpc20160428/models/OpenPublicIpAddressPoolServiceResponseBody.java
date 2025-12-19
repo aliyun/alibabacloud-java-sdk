@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OpenPublicIpAddressPoolServiceResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OpenPublicIpAddressPoolServiceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class OpenPublicIpAddressPoolServiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>28CF47AB-B6C0-5FA2-80C7-2B37726A92CB</p>
      */

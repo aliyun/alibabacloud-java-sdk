@@ -227,7 +227,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
         /**
          * <p>The description of the CIDR block to be added to the prefix list.</p>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>newcidr</p>

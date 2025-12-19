@@ -337,6 +337,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("OpticalModuleModel")
+        public String opticalModuleModel;
+
         /**
          * <p>The payer for the hosted connection. Valid values:</p>
          * <ul>
@@ -703,6 +706,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setOpticalModuleModel(String opticalModuleModel) {
+            this.opticalModuleModel = opticalModuleModel;
+            return this;
+        }
+        public String getOpticalModuleModel() {
+            return this.opticalModuleModel;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setOrderMode(String orderMode) {

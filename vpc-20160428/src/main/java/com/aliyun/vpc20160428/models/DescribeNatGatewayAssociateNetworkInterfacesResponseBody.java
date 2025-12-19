@@ -4,13 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends TeaModel {
+    /**
+     * <p>The ENIs associated with the VPC NAT gateway.</p>
+     */
     @NameInMap("AssociateNetworkInterfaces")
     public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfaces associateNetworkInterfaces;
 
+    /**
+     * <p>Number of associated ENIs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     /**
+     * <p>The number of entries to return per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -18,6 +29,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public Integer maxResults;
 
     /**
+     * <p>The ID of the VPC NAT gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>ngw-bp1uewa15k4iy5770****</p>
      */
@@ -25,6 +38,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public String natGatewayId;
 
     /**
+     * <p>Indicates whether the token for the next query exists. Valid value:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+     * <li>If the value returned of <strong>NextToken</strong> is not empty, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
@@ -32,6 +51,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public String nextToken;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD****</p>
      */
@@ -39,6 +60,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -108,6 +131,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
 
     public static class DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4SetsIPv4Set extends TeaModel {
         /**
+         * <p>The primary private IP address of the ENI.</p>
+         * 
          * <strong>example:</strong>
          * <p><code>172.17.**.**</code></p>
          */
@@ -115,6 +140,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         public String IPv4Address;
 
         /**
+         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+         * <ul>
+         * <li>true: Primary private IP address</li>
+         * <li>false: Secondary private IP addresses</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -164,10 +195,15 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     }
 
     public static class DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface extends TeaModel {
+        /**
+         * <p>The IPv4 addresses of the ENIs.</p>
+         */
         @NameInMap("IPv4Sets")
         public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterfaceIPv4Sets IPv4Sets;
 
         /**
+         * <p>The ID of the ENI.</p>
+         * 
          * <strong>example:</strong>
          * <p>eni-gw8g131ef2dnbu3k****</p>
          */
@@ -175,6 +211,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         public String networkInterfaceId;
 
         /**
+         * <p>The ID of the service resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>ep-8psre8c8936596cd****</p>
          */
@@ -182,6 +220,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         public String resourceId;
 
         /**
+         * <p>The UID of the account to which the service resource belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>138859086900****</p>
          */
@@ -189,6 +229,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         public String resourceOwnerId;
 
         /**
+         * <p>The type of the service resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrivateLink</p>
          */
@@ -198,6 +240,12 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         @NameInMap("ResourceVpcId")
         public String resourceVpcId;
 
+        /**
+         * <p>The ID of the tunnel index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41a5489ea2a0****</p>
+         */
         @NameInMap("TunnelIndex")
         public String tunnelIndex;
 

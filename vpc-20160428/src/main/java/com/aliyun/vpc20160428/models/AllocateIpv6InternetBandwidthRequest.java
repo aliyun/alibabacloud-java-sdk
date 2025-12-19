@@ -69,7 +69,6 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPv6 gateway.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6gw-uf6hcyzu65v98v3du****</p>

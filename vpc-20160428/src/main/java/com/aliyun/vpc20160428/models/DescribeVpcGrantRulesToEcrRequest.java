@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     /**
+     * <p>The ID of the ECR that you want to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecr-ncxadcujadncsa****</p>
      */
@@ -12,6 +14,11 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public String ecrInstanceId;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the ECR belongs.</p>
+     * <blockquote>
+     * <p>If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>192732132151****</p>
      */
@@ -19,6 +26,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public Long ecrOwnerId;
 
     /**
+     * <p>The ID of the network instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-wz9ek66wd7tl5xqpy****</p>
      */
@@ -26,6 +35,12 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The type of instance. Valid values:</p>
+     * <ul>
+     * <li><strong>VBR</strong>: queries the permissions that are granted to a VBR.</li>
+     * <li><strong>VPC</strong>: queries the permissions that are granted from a VPC.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
@@ -33,6 +48,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -40,6 +57,12 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -53,6 +76,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the network instance that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +86,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group to which the network instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
      */
@@ -74,6 +100,9 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeVpcGrantRulesToEcrRequestTags> tags;
 
@@ -188,6 +217,9 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
 
     public static class DescribeVpcGrantRulesToEcrRequestTags extends TeaModel {
         /**
+         * <p>The key of the tag. You must specify at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
          */
@@ -195,6 +227,9 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag. You can enter a maximum of 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
          */

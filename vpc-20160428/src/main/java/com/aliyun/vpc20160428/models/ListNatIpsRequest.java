@@ -31,6 +31,13 @@ public class ListNatIpsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <strong>example:</strong>
+     * <p>cidr</p>
+     */
+    @NameInMap("IpOrigin")
+    public String ipOrigin;
+
+    /**
      * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -145,6 +152,14 @@ public class ListNatIpsRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public ListNatIpsRequest setIpOrigin(String ipOrigin) {
+        this.ipOrigin = ipOrigin;
+        return this;
+    }
+    public String getIpOrigin() {
+        return this.ipOrigin;
     }
 
     public ListNatIpsRequest setMaxResults(String maxResults) {

@@ -80,6 +80,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("OpticalModuleModel")
+    public String opticalModuleModel;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -235,6 +238,14 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreatePhysicalConnectionRequest setOpticalModuleModel(String opticalModuleModel) {
+        this.opticalModuleModel = opticalModuleModel;
+        return this;
+    }
+    public String getOpticalModuleModel() {
+        return this.opticalModuleModel;
     }
 
     public CreatePhysicalConnectionRequest setOwnerAccount(String ownerAccount) {

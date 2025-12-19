@@ -4,10 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
+    /**
+     * <p>The authorization information.</p>
+     */
     @NameInMap("GrantRuleModels")
     public java.util.List<DescribeVpcGrantRulesToEcrResponseBodyGrantRuleModels> grantRuleModels;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+     * </ul>
+     * <hr>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -15,6 +24,8 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique ID that Alibaba Cloud generates for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>66342E8E-5E87-5FF9-80C7-C3E3571A****</p>
      */
@@ -22,6 +33,8 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of instances queried. If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -67,6 +80,8 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
 
     public static class DescribeVpcGrantRulesToEcrResponseBodyGrantRuleModels extends TeaModel {
         /**
+         * <p>The creation time in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-09T02:14:51Z</p>
          */
@@ -74,6 +89,8 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The ECR ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecr-tz7w3chlaptxr2****</p>
          */
@@ -81,6 +98,8 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public String ecrId;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the ECR belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>192732132151****</p>
          */
@@ -88,6 +107,8 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public Long ecrOwnerId;
 
         /**
+         * <p>The ID of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-wz9ek66wd7tl5xqpy****</p>
          */
@@ -95,6 +116,8 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>192745367151****</p>
          */
@@ -102,6 +125,8 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public Long instanceUid;
 
         /**
+         * <p>The ID of the region where the instance is deployed.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -109,6 +134,12 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The type of instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VBR</strong>: queries the permissions that are granted to a VBR.</li>
+         * <li><strong>VPC</strong>: queries the permissions that are granted from a VPC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */

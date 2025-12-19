@@ -319,6 +319,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("OpticalModuleModel")
+        public String opticalModuleModel;
+
         /**
          * <p>The geographical location of the data center.</p>
          * 
@@ -408,6 +411,14 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateHighReliablePhysicalConnectionRequestApList setOpticalModuleModel(String opticalModuleModel) {
+            this.opticalModuleModel = opticalModuleModel;
+            return this;
+        }
+        public String getOpticalModuleModel() {
+            return this.opticalModuleModel;
         }
 
         public CreateHighReliablePhysicalConnectionRequestApList setPeerLocation(String peerLocation) {

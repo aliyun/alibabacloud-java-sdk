@@ -40,6 +40,36 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels extends TeaModel {
+        @NameInMap("OpticalModuleModel")
+        public String opticalModuleModel;
+
+        @NameInMap("PortType")
+        public String portType;
+
+        public static ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels build(java.util.Map<String, ?> map) throws Exception {
+            ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels self = new ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels setOpticalModuleModel(String opticalModuleModel) {
+            this.opticalModuleModel = opticalModuleModel;
+            return this;
+        }
+        public String getOpticalModuleModel() {
+            return this.opticalModuleModel;
+        }
+
+        public ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels setPortType(String portType) {
+            this.portType = portType;
+            return this;
+        }
+        public String getPortType() {
+            return this.portType;
+        }
+
+    }
+
     public static class ListBusinessAccessPointsResponseBodyBusinessAccessPoints extends TeaModel {
         /**
          * <p>The ID of the access point.</p>
@@ -88,6 +118,9 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
          */
         @NameInMap("Longitude")
         public Double longitude;
+
+        @NameInMap("OpticalModuleModels")
+        public java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> opticalModuleModels;
 
         /**
          * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
@@ -170,6 +203,14 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         }
         public Double getLongitude() {
             return this.longitude;
+        }
+
+        public ListBusinessAccessPointsResponseBodyBusinessAccessPoints setOpticalModuleModels(java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> opticalModuleModels) {
+            this.opticalModuleModels = opticalModuleModels;
+            return this;
+        }
+        public java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> getOpticalModuleModels() {
+            return this.opticalModuleModels;
         }
 
         public ListBusinessAccessPointsResponseBodyBusinessAccessPoints setSupportLineOperator(String supportLineOperator) {

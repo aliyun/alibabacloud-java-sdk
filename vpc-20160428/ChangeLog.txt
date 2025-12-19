@@ -1,3 +1,16 @@
+2025-12-19 Version: 7.17.0
+- Support API DeleteExpressConnect.
+- Support API DescribeGrantRulesToEcr.
+- Support API ListBusinessRegions.
+- Support API ListPhysicalConnectionFeatures.
+- Update API CreateHighReliablePhysicalConnection: add request parameters ApList.$.OpticalModuleModel.
+- Update API CreateNatIp: add response parameters Body.NatIps.
+- Update API CreatePhysicalConnection: add request parameters OpticalModuleModel.
+- Update API DescribePhysicalConnections: add response parameters Body.PhysicalConnectionSet.$.OpticalModuleModel.
+- Update API ListBusinessAccessPoints: add response parameters Body.BusinessAccessPoints.$.OpticalModuleModels.
+- Update API ListNatIps: add request parameters IpOrigin.
+
+
 2025-09-02 Version: 7.14.7
 - Update API CreatePhysicalConnectionOccupancyOrder: add request parameters AutoRenew.
 - Update API CreatePhysicalConnectionOccupancyOrder: add request parameters AutoRenewDuration.

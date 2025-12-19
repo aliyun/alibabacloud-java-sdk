@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class OpenPublicIpAddressPoolServiceRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655442455</p>
      */
@@ -18,6 +24,8 @@ public class OpenPublicIpAddressPoolServiceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region.
+     * Call <a href="https://www.alibabacloud.com/help/en/vpc/developer-reference/api-vpc-2016-04-28-describeregions?spm=a2c63.p38356.0.i2">DescribeRegion</a> to get the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

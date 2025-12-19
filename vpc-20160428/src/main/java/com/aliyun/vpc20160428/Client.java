@@ -2667,6 +2667,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>You cannot repeatedly call the <strong>AttachDhcpOptionsSetToVpc</strong> operation to associate DHCP options sets with a VPC within the specified period of time.</li>
      * </ul>
      * 
+     * <b>summary</b> : 
+     * <p>将DHCP选项集与VPC关联</p>
+     * 
      * @param request AttachDhcpOptionsSetToVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachDhcpOptionsSetToVpcResponse
@@ -2735,6 +2738,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You cannot repeatedly call the <strong>AttachDhcpOptionsSetToVpc</strong> operation to associate DHCP options sets with a VPC within the specified period of time.</li>
      * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>将DHCP选项集与VPC关联</p>
      * 
      * @param request AttachDhcpOptionsSetToVpcRequest
      * @return AttachDhcpOptionsSetToVpcResponse
@@ -6743,6 +6749,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.opticalModuleModel)) {
+            query.put("OpticalModuleModel", request.opticalModuleModel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -7896,9 +7906,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You cannot repeatedly call the <strong>CreateSslVpnServer</strong> operation within the specified period of time.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisite</h3>
+     * <h3><a href="#prerequisite"></a><a href="#"></a>Prerequisite</h3>
      * <ul>
-     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a> .</li>
      * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
      * </ul>
      * 
@@ -8013,9 +8023,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>You cannot repeatedly call the <strong>CreateSslVpnServer</strong> operation within the specified period of time.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisite</h3>
+     * <h3><a href="#prerequisite"></a><a href="#"></a>Prerequisite</h3>
      * <ul>
-     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a> .</li>
      * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
      * </ul>
      * 
@@ -10812,6 +10822,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDhcpOptionsSetResponse deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDhcpOptionsSetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a Express Connect instance, including the initiator and acceptor.</p>
+     * 
+     * @param request DeleteExpressConnectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteExpressConnectResponse
+     */
+    public DeleteExpressConnectResponse deleteExpressConnectWithOptions(DeleteExpressConnectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routerInterfaceId)) {
+            query.put("RouterInterfaceId", request.routerInterfaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteExpressConnect"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExpressConnectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a Express Connect instance, including the initiator and acceptor.</p>
+     * 
+     * @param request DeleteExpressConnectRequest
+     * @return DeleteExpressConnectResponse
+     */
+    public DeleteExpressConnectResponse deleteExpressConnect(DeleteExpressConnectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteExpressConnectWithOptions(request, runtime);
     }
 
     /**
@@ -16856,6 +16938,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the cross-account authorization list of an Express Connect Router (ECR).</p>
+     * 
+     * @param request DescribeGrantRulesToEcrRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGrantRulesToEcrResponse
+     */
+    public DescribeGrantRulesToEcrResponse describeGrantRulesToEcrWithOptions(DescribeGrantRulesToEcrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGrantRulesToEcr"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGrantRulesToEcrResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the cross-account authorization list of an Express Connect Router (ECR).</p>
+     * 
+     * @param request DescribeGrantRulesToEcrRequest
+     * @return DescribeGrantRulesToEcrResponse
+     */
+    public DescribeGrantRulesToEcrResponse describeGrantRulesToEcr(DescribeGrantRulesToEcrRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeGrantRulesToEcrWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries HaVips in a region.</p>
      * 
      * @param request DescribeHaVipsRequest
@@ -17772,7 +17918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询NAT已绑定ENI信息</p>
+     * <p>Queries elastic network interfaces (ENIs) associated with a virtual private cloud (VPC) NAT gateway when the VPC NAT gateway serves as a PrivateLink service resource. This feature is not publicly available.</p>
      * 
      * @param request DescribeNatGatewayAssociateNetworkInterfacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17852,7 +17998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询NAT已绑定ENI信息</p>
+     * <p>Queries elastic network interfaces (ENIs) associated with a virtual private cloud (VPC) NAT gateway when the VPC NAT gateway serves as a PrivateLink service resource. This feature is not publicly available.</p>
      * 
      * @param request DescribeNatGatewayAssociateNetworkInterfacesRequest
      * @return DescribeNatGatewayAssociateNetworkInterfacesResponse
@@ -20302,7 +20448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询VPC跨账号授权给ECR</p>
+     * <p>Queries the cross-account authorization information of an ECR for a specified network instance.</p>
      * 
      * @param request DescribeVpcGrantRulesToEcrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20382,7 +20528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询VPC跨账号授权给ECR</p>
+     * <p>Queries the cross-account authorization information of an ECR for a specified network instance.</p>
      * 
      * @param request DescribeVpcGrantRulesToEcrRequest
      * @return DescribeVpcGrantRulesToEcrResponse
@@ -23512,6 +23658,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Query the list of regions available for an Express Connect circuit.</p>
+     * 
+     * @param request ListBusinessRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBusinessRegionsResponse
+     */
+    public ListBusinessRegionsResponse listBusinessRegionsWithOptions(ListBusinessRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBusinessRegions"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBusinessRegionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query the list of regions available for an Express Connect circuit.</p>
+     * 
+     * @param request ListBusinessRegionsRequest
+     * @return ListBusinessRegionsResponse
+     */
+    public ListBusinessRegionsResponse listBusinessRegions(ListBusinessRegionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBusinessRegionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries Dynamic Host Configuration Protocol (DHCP) options sets.</p>
      * 
      * @param request ListDhcpOptionsSetsRequest
@@ -24241,6 +24431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipOrigin)) {
+            query.put("IpOrigin", request.ipOrigin);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -24320,6 +24514,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNatIpsResponse listNatIps(ListNatIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNatIpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Querying the connection features supported by a Express Connect circuit.</p>
+     * 
+     * @param request ListPhysicalConnectionFeaturesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPhysicalConnectionFeaturesResponse
+     */
+    public ListPhysicalConnectionFeaturesResponse listPhysicalConnectionFeaturesWithOptions(ListPhysicalConnectionFeaturesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.physicalConnectionId)) {
+            query.put("PhysicalConnectionId", request.physicalConnectionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPhysicalConnectionFeatures"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPhysicalConnectionFeaturesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Querying the connection features supported by a Express Connect circuit.</p>
+     * 
+     * @param request ListPhysicalConnectionFeaturesRequest
+     * @return ListPhysicalConnectionFeaturesResponse
+     */
+    public ListPhysicalConnectionFeaturesResponse listPhysicalConnectionFeatures(ListPhysicalConnectionFeaturesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPhysicalConnectionFeaturesWithOptions(request, runtime);
     }
 
     /**
@@ -31166,7 +31428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通IP地址池功能。</p>
+     * <p>Enables the IP address pool feature.</p>
      * 
      * @param request OpenPublicIpAddressPoolServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31222,7 +31484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通IP地址池功能。</p>
+     * <p>Enables the IP address pool feature.</p>
      * 
      * @param request OpenPublicIpAddressPoolServiceRequest
      * @return OpenPublicIpAddressPoolServiceResponse
@@ -33218,7 +33480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrate contiguous EIP groups to IP address pool by calling TransformEipSegmentToPublicIpAddressPool.</p>
+     * <p>Migrate a contiguous EIP group to an IP address pool.</p>
      * 
      * @param request TransformEipSegmentToPublicIpAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33270,7 +33532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Migrate contiguous EIP groups to IP address pool by calling TransformEipSegmentToPublicIpAddressPool.</p>
+     * <p>Migrate a contiguous EIP group to an IP address pool.</p>
      * 
      * @param request TransformEipSegmentToPublicIpAddressPoolRequest
      * @return TransformEipSegmentToPublicIpAddressPoolResponse

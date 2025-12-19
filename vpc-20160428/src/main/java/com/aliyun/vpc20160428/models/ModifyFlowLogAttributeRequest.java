@@ -44,6 +44,12 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public String flowLogName;
 
     /**
+     * <p>The version of the IP address. Valid values:</p>
+     * <ul>
+     * <li><strong>IPV4</strong>: the IPv4 address.</li>
+     * <li><strong>DualStack</strong>: includes IPv4 and IPv6 address</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>IPv4</p>
      */
