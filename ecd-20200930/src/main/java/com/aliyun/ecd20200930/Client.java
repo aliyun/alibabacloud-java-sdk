@@ -10945,6 +10945,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询录屏文件列表</p>
+     * 
+     * @param request DescribeRecordFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRecordFileResponse
+     */
+    public DescribeRecordFileResponse describeRecordFileWithOptions(DescribeRecordFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderSort)) {
+            query.put("OrderSort", request.orderSort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordType)) {
+            query.put("RecordType", request.recordType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRecordFile"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRecordFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询录屏文件列表</p>
+     * 
+     * @param request DescribeRecordFileRequest
+     * @return DescribeRecordFileResponse
+     */
+    public DescribeRecordFileResponse describeRecordFile(DescribeRecordFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRecordFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of screen recording files.</p>
      * 
      * @param request DescribeRecordingsRequest
