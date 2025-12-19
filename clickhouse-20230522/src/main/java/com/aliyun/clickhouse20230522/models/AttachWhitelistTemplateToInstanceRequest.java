@@ -14,6 +14,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>RegionId</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

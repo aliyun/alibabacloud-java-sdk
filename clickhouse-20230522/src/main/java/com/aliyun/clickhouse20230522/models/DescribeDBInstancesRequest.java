@@ -67,6 +67,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeDBInstancesRequestTags> tags;
+
     public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
         return TeaModel.build(map, self);
@@ -126,6 +129,52 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeDBInstancesRequest setTags(java.util.List<DescribeDBInstancesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeDBInstancesRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeDBInstancesRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>user_123</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDBInstancesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstancesRequestTags self = new DescribeDBInstancesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDBInstancesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

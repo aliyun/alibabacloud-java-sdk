@@ -149,6 +149,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateDBInstanceShrinkRequestTags> tags;
+
     /**
      * <p>The virtual private cloud (VPC) ID.</p>
      * 
@@ -333,6 +336,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
         return this.storageType;
     }
 
+    public CreateDBInstanceShrinkRequest setTags(java.util.List<CreateDBInstanceShrinkRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateDBInstanceShrinkRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateDBInstanceShrinkRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -355,6 +366,44 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateDBInstanceShrinkRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>user_123</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>示例字符串</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDBInstanceShrinkRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBInstanceShrinkRequestTags self = new CreateDBInstanceShrinkRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBInstanceShrinkRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDBInstanceShrinkRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
