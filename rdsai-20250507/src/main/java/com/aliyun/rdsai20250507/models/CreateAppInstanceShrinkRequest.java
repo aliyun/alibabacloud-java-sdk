@@ -56,6 +56,9 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     @NameInMap("DatabasePassword")
     public String databasePassword;
 
+    @NameInMap("InitializeWithExistingData")
+    public Boolean initializeWithExistingData;
+
     /**
      * <strong>example:</strong>
      * <p>rdsai.supabase.basic</p>
@@ -157,6 +160,14 @@ public class CreateAppInstanceShrinkRequest extends TeaModel {
     }
     public String getDatabasePassword() {
         return this.databasePassword;
+    }
+
+    public CreateAppInstanceShrinkRequest setInitializeWithExistingData(Boolean initializeWithExistingData) {
+        this.initializeWithExistingData = initializeWithExistingData;
+        return this;
+    }
+    public Boolean getInitializeWithExistingData() {
+        return this.initializeWithExistingData;
     }
 
     public CreateAppInstanceShrinkRequest setInstanceClass(String instanceClass) {

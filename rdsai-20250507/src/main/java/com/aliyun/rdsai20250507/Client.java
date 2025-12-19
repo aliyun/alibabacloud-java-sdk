@@ -181,6 +181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DatabasePassword", request.databasePassword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.initializeWithExistingData)) {
+            query.put("InitializeWithExistingData", request.initializeWithExistingData);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceClass)) {
             query.put("InstanceClass", request.instanceClass);
         }
