@@ -19,6 +19,9 @@ public class UnifiedSearchInput extends TeaModel {
     @NameInMap("location")
     public String location;
 
+    @NameInMap("locationInfo")
+    public LocationInfo locationInfo;
+
     @NameInMap("query")
     public String query;
 
@@ -68,6 +71,14 @@ public class UnifiedSearchInput extends TeaModel {
     }
     public String getLocation() {
         return this.location;
+    }
+
+    public UnifiedSearchInput setLocationInfo(LocationInfo locationInfo) {
+        this.locationInfo = locationInfo;
+        return this;
+    }
+    public LocationInfo getLocationInfo() {
+        return this.locationInfo;
     }
 
     public UnifiedSearchInput setQuery(String query) {
