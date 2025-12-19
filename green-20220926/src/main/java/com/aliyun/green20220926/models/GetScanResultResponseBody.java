@@ -168,6 +168,9 @@ public class GetScanResultResponseBody extends TeaModel {
     }
 
     public static class GetScanResultResponseBodyDataItems extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
         /**
          * <p>Automated review labels.</p>
          * 
@@ -339,6 +342,9 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         @NameInMap("Labels")
         public String labels;
+
+        @NameInMap("LiveId")
+        public String liveId;
 
         /**
          * <p>Malicious file risk level.</p>
@@ -647,6 +653,14 @@ public class GetScanResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetScanResultResponseBodyDataItems setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
         public GetScanResultResponseBodyDataItems setApiLabels(String apiLabels) {
             this.apiLabels = apiLabels;
             return this;
@@ -797,6 +811,14 @@ public class GetScanResultResponseBody extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
+        }
+
+        public GetScanResultResponseBodyDataItems setLiveId(String liveId) {
+            this.liveId = liveId;
+            return this;
+        }
+        public String getLiveId() {
+            return this.liveId;
         }
 
         public GetScanResultResponseBodyDataItems setMaliciousFileLevel(String maliciousFileLevel) {
