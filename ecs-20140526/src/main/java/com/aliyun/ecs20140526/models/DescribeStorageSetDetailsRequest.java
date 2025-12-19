@@ -49,8 +49,8 @@ public class DescribeStorageSetDetailsRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>Maximum value: 100</p>
+     * <p>Default value: 10</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

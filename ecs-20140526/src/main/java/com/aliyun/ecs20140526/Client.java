@@ -17611,6 +17611,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ActivationId", request.activationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.connected)) {
+            query.put("Connected", request.connected);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

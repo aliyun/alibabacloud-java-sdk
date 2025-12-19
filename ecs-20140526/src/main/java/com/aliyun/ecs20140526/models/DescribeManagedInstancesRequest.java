@@ -13,6 +13,9 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     @NameInMap("ActivationId")
     public String activationId;
 
+    @NameInMap("Connected")
+    public String connected;
+
     /**
      * <p>The ID of managed instance N. Valid values of N: 1 to 50.</p>
      * 
@@ -166,6 +169,14 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     }
     public String getActivationId() {
         return this.activationId;
+    }
+
+    public DescribeManagedInstancesRequest setConnected(String connected) {
+        this.connected = connected;
+        return this;
+    }
+    public String getConnected() {
+        return this.connected;
     }
 
     public DescribeManagedInstancesRequest setInstanceId(java.util.List<String> instanceId) {
