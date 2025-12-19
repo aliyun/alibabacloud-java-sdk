@@ -947,6 +947,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查看某操作的输入参数</p>
+     * 
+     * @param request GetOperationParamsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOperationParamsResponse
+     */
+    public GetOperationParamsResponse getOperationParamsWithOptions(GetOperationParamsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            body.put("Operation", request.operation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceType)) {
+            body.put("ServiceType", request.serviceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOperationParams"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOperationParamsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看某操作的输入参数</p>
+     * 
+     * @param request GetOperationParamsRequest
+     * @return GetOperationParamsResponse
+     */
+    public GetOperationParamsResponse getOperationParams(GetOperationParamsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOperationParamsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the zones where the specified disaster recovery service can be switched.</p>
      * 
@@ -1422,6 +1470,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFoCreatedAppsResponse listFoCreatedApps() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listFoCreatedAppsWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看某服务支持的操作</p>
+     * 
+     * @param request ListOperationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListOperationsResponse
+     */
+    public ListOperationsResponse listOperationsWithOptions(ListOperationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceType)) {
+            query.put("ServiceType", request.serviceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOperations"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOperationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看某服务支持的操作</p>
+     * 
+     * @param request ListOperationsRequest
+     * @return ListOperationsResponse
+     */
+    public ListOperationsResponse listOperations(ListOperationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOperationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看支持的服务列表</p>
+     * 
+     * @param request ListServicesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServicesResponse
+     */
+    public ListServicesResponse listServicesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServices"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看支持的服务列表</p>
+     * @return ListServicesResponse
+     */
+    public ListServicesResponse listServices() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listServicesWithOptions(runtime);
     }
 
     /**
