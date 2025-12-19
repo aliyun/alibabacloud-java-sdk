@@ -1755,13 +1755,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取资源节点列表</p>
      * 
-     * @param request ListNodesRequest
+     * @param tmpReq ListNodesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNodesResponse
      */
-    public ListNodesResponse listNodesWithOptions(ListNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListNodesResponse listNodesWithOptions(ListNodesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListNodesShrinkRequest request = new ListNodesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.healthCount)) {
+            request.healthCountShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.healthCount, "HealthCount", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.healthRate)) {
+            request.healthRateShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.healthRate, "HealthRate", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceleratorType)) {
             query.put("AcceleratorType", request.acceleratorType);
@@ -1787,12 +1797,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GPUType", request.GPUType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCountShrink)) {
+            query.put("HealthCount", request.healthCountShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthRateShrink)) {
+            query.put("HealthRate", request.healthRateShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hyperNode)) {
             query.put("HyperNode", request.hyperNode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hyperZone)) {
             query.put("HyperZone", request.hyperZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.layoutMode)) {
+            query.put("LayoutMode", request.layoutMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.machineGroupIds)) {

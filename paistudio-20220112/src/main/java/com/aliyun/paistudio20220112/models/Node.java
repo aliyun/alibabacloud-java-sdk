@@ -115,6 +115,9 @@ public class Node extends TeaModel {
     @NameInMap("SelfQuotaWorkloadNum")
     public Long selfQuotaWorkloadNum;
 
+    @NameInMap("SubNodes")
+    public java.util.List<String> subNodes;
+
     @NameInMap("SystemReservedCPU")
     public String systemReservedCPU;
 
@@ -426,6 +429,14 @@ public class Node extends TeaModel {
     }
     public Long getSelfQuotaWorkloadNum() {
         return this.selfQuotaWorkloadNum;
+    }
+
+    public Node setSubNodes(java.util.List<String> subNodes) {
+        this.subNodes = subNodes;
+        return this;
+    }
+    public java.util.List<String> getSubNodes() {
+        return this.subNodes;
     }
 
     public Node setSystemReservedCPU(String systemReservedCPU) {

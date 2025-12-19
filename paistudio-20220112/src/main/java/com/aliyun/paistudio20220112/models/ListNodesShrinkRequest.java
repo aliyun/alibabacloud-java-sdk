@@ -3,7 +3,7 @@ package com.aliyun.paistudio20220112.models;
 
 import com.aliyun.tea.*;
 
-public class ListNodesRequest extends TeaModel {
+public class ListNodesShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>CPU</p>
@@ -39,10 +39,10 @@ public class ListNodesRequest extends TeaModel {
     public String GPUType;
 
     @NameInMap("HealthCount")
-    public ListNodesRequestHealthCount healthCount;
+    public String healthCountShrink;
 
     @NameInMap("HealthRate")
-    public ListNodesRequestHealthRate healthRate;
+    public String healthRateShrink;
 
     @NameInMap("HyperNode")
     public String hyperNode;
@@ -149,12 +149,12 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static ListNodesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListNodesRequest self = new ListNodesRequest();
+    public static ListNodesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListNodesShrinkRequest self = new ListNodesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListNodesRequest setAcceleratorType(String acceleratorType) {
+    public ListNodesShrinkRequest setAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
     }
@@ -162,7 +162,7 @@ public class ListNodesRequest extends TeaModel {
         return this.acceleratorType;
     }
 
-    public ListNodesRequest setAvailabilityZone(String availabilityZone) {
+    public ListNodesShrinkRequest setAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
     }
@@ -170,7 +170,7 @@ public class ListNodesRequest extends TeaModel {
         return this.availabilityZone;
     }
 
-    public ListNodesRequest setCliqueID(String cliqueID) {
+    public ListNodesShrinkRequest setCliqueID(String cliqueID) {
         this.cliqueID = cliqueID;
         return this;
     }
@@ -178,7 +178,7 @@ public class ListNodesRequest extends TeaModel {
         return this.cliqueID;
     }
 
-    public ListNodesRequest setFilterByQuotaId(String filterByQuotaId) {
+    public ListNodesShrinkRequest setFilterByQuotaId(String filterByQuotaId) {
         this.filterByQuotaId = filterByQuotaId;
         return this;
     }
@@ -186,7 +186,7 @@ public class ListNodesRequest extends TeaModel {
         return this.filterByQuotaId;
     }
 
-    public ListNodesRequest setFilterByResourceGroupIds(String filterByResourceGroupIds) {
+    public ListNodesShrinkRequest setFilterByResourceGroupIds(String filterByResourceGroupIds) {
         this.filterByResourceGroupIds = filterByResourceGroupIds;
         return this;
     }
@@ -194,7 +194,7 @@ public class ListNodesRequest extends TeaModel {
         return this.filterByResourceGroupIds;
     }
 
-    public ListNodesRequest setGPUType(String GPUType) {
+    public ListNodesShrinkRequest setGPUType(String GPUType) {
         this.GPUType = GPUType;
         return this;
     }
@@ -202,23 +202,23 @@ public class ListNodesRequest extends TeaModel {
         return this.GPUType;
     }
 
-    public ListNodesRequest setHealthCount(ListNodesRequestHealthCount healthCount) {
-        this.healthCount = healthCount;
+    public ListNodesShrinkRequest setHealthCountShrink(String healthCountShrink) {
+        this.healthCountShrink = healthCountShrink;
         return this;
     }
-    public ListNodesRequestHealthCount getHealthCount() {
-        return this.healthCount;
+    public String getHealthCountShrink() {
+        return this.healthCountShrink;
     }
 
-    public ListNodesRequest setHealthRate(ListNodesRequestHealthRate healthRate) {
-        this.healthRate = healthRate;
+    public ListNodesShrinkRequest setHealthRateShrink(String healthRateShrink) {
+        this.healthRateShrink = healthRateShrink;
         return this;
     }
-    public ListNodesRequestHealthRate getHealthRate() {
-        return this.healthRate;
+    public String getHealthRateShrink() {
+        return this.healthRateShrink;
     }
 
-    public ListNodesRequest setHyperNode(String hyperNode) {
+    public ListNodesShrinkRequest setHyperNode(String hyperNode) {
         this.hyperNode = hyperNode;
         return this;
     }
@@ -226,7 +226,7 @@ public class ListNodesRequest extends TeaModel {
         return this.hyperNode;
     }
 
-    public ListNodesRequest setHyperZone(String hyperZone) {
+    public ListNodesShrinkRequest setHyperZone(String hyperZone) {
         this.hyperZone = hyperZone;
         return this;
     }
@@ -234,7 +234,7 @@ public class ListNodesRequest extends TeaModel {
         return this.hyperZone;
     }
 
-    public ListNodesRequest setLayoutMode(String layoutMode) {
+    public ListNodesShrinkRequest setLayoutMode(String layoutMode) {
         this.layoutMode = layoutMode;
         return this;
     }
@@ -242,7 +242,7 @@ public class ListNodesRequest extends TeaModel {
         return this.layoutMode;
     }
 
-    public ListNodesRequest setMachineGroupIds(String machineGroupIds) {
+    public ListNodesShrinkRequest setMachineGroupIds(String machineGroupIds) {
         this.machineGroupIds = machineGroupIds;
         return this;
     }
@@ -250,7 +250,7 @@ public class ListNodesRequest extends TeaModel {
         return this.machineGroupIds;
     }
 
-    public ListNodesRequest setNodeNames(String nodeNames) {
+    public ListNodesShrinkRequest setNodeNames(String nodeNames) {
         this.nodeNames = nodeNames;
         return this;
     }
@@ -258,7 +258,7 @@ public class ListNodesRequest extends TeaModel {
         return this.nodeNames;
     }
 
-    public ListNodesRequest setNodeStatuses(String nodeStatuses) {
+    public ListNodesShrinkRequest setNodeStatuses(String nodeStatuses) {
         this.nodeStatuses = nodeStatuses;
         return this;
     }
@@ -266,7 +266,7 @@ public class ListNodesRequest extends TeaModel {
         return this.nodeStatuses;
     }
 
-    public ListNodesRequest setNodeTypes(String nodeTypes) {
+    public ListNodesShrinkRequest setNodeTypes(String nodeTypes) {
         this.nodeTypes = nodeTypes;
         return this;
     }
@@ -274,7 +274,7 @@ public class ListNodesRequest extends TeaModel {
         return this.nodeTypes;
     }
 
-    public ListNodesRequest setOrder(String order) {
+    public ListNodesShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -282,7 +282,7 @@ public class ListNodesRequest extends TeaModel {
         return this.order;
     }
 
-    public ListNodesRequest setOrderInstanceIds(String orderInstanceIds) {
+    public ListNodesShrinkRequest setOrderInstanceIds(String orderInstanceIds) {
         this.orderInstanceIds = orderInstanceIds;
         return this;
     }
@@ -290,7 +290,7 @@ public class ListNodesRequest extends TeaModel {
         return this.orderInstanceIds;
     }
 
-    public ListNodesRequest setOrderStatuses(String orderStatuses) {
+    public ListNodesShrinkRequest setOrderStatuses(String orderStatuses) {
         this.orderStatuses = orderStatuses;
         return this;
     }
@@ -298,7 +298,7 @@ public class ListNodesRequest extends TeaModel {
         return this.orderStatuses;
     }
 
-    public ListNodesRequest setPageNumber(Integer pageNumber) {
+    public ListNodesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -306,7 +306,7 @@ public class ListNodesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListNodesRequest setPageSize(Integer pageSize) {
+    public ListNodesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -314,7 +314,7 @@ public class ListNodesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListNodesRequest setPaymentType(String paymentType) {
+    public ListNodesShrinkRequest setPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
     }
@@ -322,7 +322,7 @@ public class ListNodesRequest extends TeaModel {
         return this.paymentType;
     }
 
-    public ListNodesRequest setQuotaId(String quotaId) {
+    public ListNodesShrinkRequest setQuotaId(String quotaId) {
         this.quotaId = quotaId;
         return this;
     }
@@ -330,7 +330,7 @@ public class ListNodesRequest extends TeaModel {
         return this.quotaId;
     }
 
-    public ListNodesRequest setReasonCodes(String reasonCodes) {
+    public ListNodesShrinkRequest setReasonCodes(String reasonCodes) {
         this.reasonCodes = reasonCodes;
         return this;
     }
@@ -338,7 +338,7 @@ public class ListNodesRequest extends TeaModel {
         return this.reasonCodes;
     }
 
-    public ListNodesRequest setResourceGroupIds(String resourceGroupIds) {
+    public ListNodesShrinkRequest setResourceGroupIds(String resourceGroupIds) {
         this.resourceGroupIds = resourceGroupIds;
         return this;
     }
@@ -346,7 +346,7 @@ public class ListNodesRequest extends TeaModel {
         return this.resourceGroupIds;
     }
 
-    public ListNodesRequest setSortBy(String sortBy) {
+    public ListNodesShrinkRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
@@ -354,7 +354,7 @@ public class ListNodesRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListNodesRequest setVerbose(Boolean verbose) {
+    public ListNodesShrinkRequest setVerbose(Boolean verbose) {
         this.verbose = verbose;
         return this;
     }
@@ -362,72 +362,12 @@ public class ListNodesRequest extends TeaModel {
         return this.verbose;
     }
 
-    public ListNodesRequest setWorkspaceId(String workspaceId) {
+    public ListNodesShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public static class ListNodesRequestHealthCount extends TeaModel {
-        @NameInMap("operation")
-        public String operation;
-
-        @NameInMap("value")
-        public Integer value;
-
-        public static ListNodesRequestHealthCount build(java.util.Map<String, ?> map) throws Exception {
-            ListNodesRequestHealthCount self = new ListNodesRequestHealthCount();
-            return TeaModel.build(map, self);
-        }
-
-        public ListNodesRequestHealthCount setOperation(String operation) {
-            this.operation = operation;
-            return this;
-        }
-        public String getOperation() {
-            return this.operation;
-        }
-
-        public ListNodesRequestHealthCount setValue(Integer value) {
-            this.value = value;
-            return this;
-        }
-        public Integer getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class ListNodesRequestHealthRate extends TeaModel {
-        @NameInMap("operation")
-        public String operation;
-
-        @NameInMap("value")
-        public Integer value;
-
-        public static ListNodesRequestHealthRate build(java.util.Map<String, ?> map) throws Exception {
-            ListNodesRequestHealthRate self = new ListNodesRequestHealthRate();
-            return TeaModel.build(map, self);
-        }
-
-        public ListNodesRequestHealthRate setOperation(String operation) {
-            this.operation = operation;
-            return this;
-        }
-        public String getOperation() {
-            return this.operation;
-        }
-
-        public ListNodesRequestHealthRate setValue(Integer value) {
-            this.value = value;
-            return this;
-        }
-        public Integer getValue() {
-            return this.value;
-        }
-
     }
 
 }
