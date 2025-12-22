@@ -75,14 +75,14 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
     public static class GetImageDetectionTaskResultResponseBodyDataDetectionResultDetectionDetails extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>x</p>
+         * <p>no_face_detected</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>0.8</p>
          */
         @NameInMap("confidence")
         public Double confidence;
@@ -92,7 +92,7 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>未检测到人脸</p>
          */
         @NameInMap("reason")
         public String reason;
@@ -137,8 +137,22 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetImageDetectionTaskResultResponseBodyDataDetectionResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>图像为一只猫</p>
+         */
+        @NameInMap("description")
+        public String description;
+
         @NameInMap("detectionDetails")
         public java.util.List<GetImageDetectionTaskResultResponseBodyDataDetectionResultDetectionDetails> detectionDetails;
+
+        /**
+         * <strong>example:</strong>
+         * <p>full_body</p>
+         */
+        @NameInMap("portraitType")
+        public String portraitType;
 
         @NameInMap("suggestions")
         public java.util.List<String> suggestions;
@@ -148,12 +162,28 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetImageDetectionTaskResultResponseBodyDataDetectionResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public GetImageDetectionTaskResultResponseBodyDataDetectionResult setDetectionDetails(java.util.List<GetImageDetectionTaskResultResponseBodyDataDetectionResultDetectionDetails> detectionDetails) {
             this.detectionDetails = detectionDetails;
             return this;
         }
         public java.util.List<GetImageDetectionTaskResultResponseBodyDataDetectionResultDetectionDetails> getDetectionDetails() {
             return this.detectionDetails;
+        }
+
+        public GetImageDetectionTaskResultResponseBodyDataDetectionResult setPortraitType(String portraitType) {
+            this.portraitType = portraitType;
+            return this;
+        }
+        public String getPortraitType() {
+            return this.portraitType;
         }
 
         public GetImageDetectionTaskResultResponseBodyDataDetectionResult setSuggestions(java.util.List<String> suggestions) {
