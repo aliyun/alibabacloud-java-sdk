@@ -169,6 +169,9 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         @NameInMap("CountryCode")
         public String countryCode;
 
+        @NameInMap("CustomIdentifier")
+        public String customIdentifier;
+
         /**
          * <p>The unique identifier of the certificate.</p>
          * 
@@ -376,6 +379,14 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        public ListRevokeCertificateResponseBodyCertificateList setCustomIdentifier(String customIdentifier) {
+            this.customIdentifier = customIdentifier;
+            return this;
+        }
+        public String getCustomIdentifier() {
+            return this.customIdentifier;
         }
 
         public ListRevokeCertificateResponseBodyCertificateList setIdentifier(String identifier) {

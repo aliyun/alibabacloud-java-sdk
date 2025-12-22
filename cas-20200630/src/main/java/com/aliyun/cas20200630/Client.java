@@ -163,6 +163,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Country", request.country);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("CustomIdentifier", request.customIdentifier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
             query.put("Days", request.days);
         }
@@ -291,6 +295,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
             query.put("Csr", request.csr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("CustomIdentifier", request.customIdentifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
@@ -443,6 +451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.validity)) {
             query.put("Validity", request.validity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("customIdentifier", request.customIdentifier);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -751,6 +763,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Country", request.country);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("CustomIdentifier", request.customIdentifier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
             query.put("Days", request.days);
         }
@@ -874,6 +890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
             query.put("Csr", request.csr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("CustomIdentifier", request.customIdentifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {

@@ -178,6 +178,9 @@ public class ListCertResponseBody extends TeaModel {
         @NameInMap("CommonName")
         public String commonName;
 
+        @NameInMap("CustomIdentifier")
+        public String customIdentifier;
+
         /**
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;APP_PFHMIGUHKDUW6S3N7ZL2\&quot;}</p>
@@ -303,6 +306,14 @@ public class ListCertResponseBody extends TeaModel {
         }
         public String getCommonName() {
             return this.commonName;
+        }
+
+        public ListCertResponseBodyList setCustomIdentifier(String customIdentifier) {
+            this.customIdentifier = customIdentifier;
+            return this;
+        }
+        public String getCustomIdentifier() {
+            return this.customIdentifier;
         }
 
         public ListCertResponseBodyList setExtra(String extra) {

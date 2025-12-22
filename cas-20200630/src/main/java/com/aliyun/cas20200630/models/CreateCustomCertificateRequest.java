@@ -96,6 +96,9 @@ public class CreateCustomCertificateRequest extends TeaModel {
     @NameInMap("Validity")
     public String validity;
 
+    @NameInMap("customIdentifier")
+    public String customIdentifier;
+
     public static CreateCustomCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomCertificateRequest self = new CreateCustomCertificateRequest();
         return TeaModel.build(map, self);
@@ -163,6 +166,14 @@ public class CreateCustomCertificateRequest extends TeaModel {
     }
     public String getValidity() {
         return this.validity;
+    }
+
+    public CreateCustomCertificateRequest setCustomIdentifier(String customIdentifier) {
+        this.customIdentifier = customIdentifier;
+        return this;
+    }
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
     }
 
     public static class CreateCustomCertificateRequestApiPassthroughExtensionsKeyUsage extends TeaModel {

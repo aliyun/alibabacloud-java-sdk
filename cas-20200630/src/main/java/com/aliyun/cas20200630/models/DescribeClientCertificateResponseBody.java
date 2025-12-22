@@ -103,6 +103,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        @NameInMap("CertChain")
+        public String certChain;
+
         /**
          * <p>The type of the certificate. Valid values:</p>
          * <ul>
@@ -134,6 +137,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
          */
         @NameInMap("CountryCode")
         public String countryCode;
+
+        @NameInMap("CustomIdentifier")
+        public String customIdentifier;
 
         /**
          * <p>The validity period of the certificate. Unit: days.</p>
@@ -339,6 +345,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             return this.beforeDate;
         }
 
+        public DescribeClientCertificateResponseBodyCertificate setCertChain(String certChain) {
+            this.certChain = certChain;
+            return this;
+        }
+        public String getCertChain() {
+            return this.certChain;
+        }
+
         public DescribeClientCertificateResponseBodyCertificate setCertificateType(String certificateType) {
             this.certificateType = certificateType;
             return this;
@@ -361,6 +375,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        public DescribeClientCertificateResponseBodyCertificate setCustomIdentifier(String customIdentifier) {
+            this.customIdentifier = customIdentifier;
+            return this;
+        }
+        public String getCustomIdentifier() {
+            return this.customIdentifier;
         }
 
         public DescribeClientCertificateResponseBodyCertificate setDays(Integer days) {

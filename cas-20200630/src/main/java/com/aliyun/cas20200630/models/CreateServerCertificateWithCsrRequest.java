@@ -79,6 +79,9 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     @NameInMap("Csr")
     public String csr;
 
+    @NameInMap("CustomIdentifier")
+    public String customIdentifier;
+
     /**
      * <p>The validity period of the server certificate. Unit: days.</p>
      * <p>You must specify at least one of the <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> parameters. The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both empty or both specified. The following list describes how to specify these parameters:</p>
@@ -260,6 +263,14 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
     }
     public String getCsr() {
         return this.csr;
+    }
+
+    public CreateServerCertificateWithCsrRequest setCustomIdentifier(String customIdentifier) {
+        this.customIdentifier = customIdentifier;
+        return this;
+    }
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
     }
 
     public CreateServerCertificateWithCsrRequest setDays(Integer days) {

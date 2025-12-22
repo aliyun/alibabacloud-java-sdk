@@ -173,6 +173,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
         @NameInMap("CountryCode")
         public String countryCode;
 
+        @NameInMap("CustomIdentifier")
+        public String customIdentifier;
+
         /**
          * <p>The validity period of the certificate. Unit: days.</p>
          * 
@@ -396,6 +399,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
         }
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        public ListClientCertificateResponseBodyCertificateList setCustomIdentifier(String customIdentifier) {
+            this.customIdentifier = customIdentifier;
+            return this;
+        }
+        public String getCustomIdentifier() {
+            return this.customIdentifier;
         }
 
         public ListClientCertificateResponseBodyCertificateList setDays(Integer days) {
