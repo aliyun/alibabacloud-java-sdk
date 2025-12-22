@@ -1790,6 +1790,9 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyData extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
         /**
          * <p>The ID of the moderated object.</p>
          * <blockquote>
@@ -1829,6 +1832,14 @@ public class ImageModerationResponseBody extends TeaModel {
         public static ImageModerationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ImageModerationResponseBodyData self = new ImageModerationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyData setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public ImageModerationResponseBodyData setDataId(String dataId) {

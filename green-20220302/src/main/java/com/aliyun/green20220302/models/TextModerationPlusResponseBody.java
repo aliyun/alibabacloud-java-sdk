@@ -415,6 +415,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
     }
 
     public static class TextModerationPlusResponseBodyData extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
         /**
          * <p>The suggestion.</p>
          */
@@ -496,6 +499,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         public static TextModerationPlusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TextModerationPlusResponseBodyData self = new TextModerationPlusResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public TextModerationPlusResponseBodyData setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public TextModerationPlusResponseBodyData setAdvice(java.util.List<TextModerationPlusResponseBodyDataAdvice> advice) {

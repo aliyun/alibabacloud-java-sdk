@@ -786,6 +786,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>多模态同步检测接口，支持图片base64字符串</p>
+     * 
+     * @param request MultiModalGuardForBase64Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MultiModalGuardForBase64Response
+     */
+    public MultiModalGuardForBase64Response multiModalGuardForBase64WithOptions(MultiModalGuardForBase64Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageBase64Str)) {
+            body.put("ImageBase64Str", request.imageBase64Str);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            body.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MultiModalGuardForBase64"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MultiModalGuardForBase64Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>多模态同步检测接口，支持图片base64字符串</p>
+     * 
+     * @param request MultiModalGuardForBase64Request
+     * @return MultiModalGuardForBase64Response
+     */
+    public MultiModalGuardForBase64Response multiModalGuardForBase64(MultiModalGuardForBase64Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.multiModalGuardForBase64WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>多模态-异步检测</p>
      * 
      * @param request MultimodalAsyncModerationRequest

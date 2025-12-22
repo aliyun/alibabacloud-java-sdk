@@ -151,6 +151,9 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeImageModerationResultResponseBodyData extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
         /**
          * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
          * 
@@ -208,6 +211,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         public static DescribeImageModerationResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageModerationResultResponseBodyData self = new DescribeImageModerationResultResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageModerationResultResponseBodyData setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public DescribeImageModerationResultResponseBodyData setDataId(String dataId) {

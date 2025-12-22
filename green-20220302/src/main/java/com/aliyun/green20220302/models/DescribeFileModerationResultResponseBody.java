@@ -794,6 +794,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyData extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
         /**
          * <p>The ID of the moderated object.</p>
          * 
@@ -845,6 +848,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public static DescribeFileModerationResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeFileModerationResultResponseBodyData self = new DescribeFileModerationResultResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFileModerationResultResponseBodyData setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public DescribeFileModerationResultResponseBodyData setDataId(String dataId) {
