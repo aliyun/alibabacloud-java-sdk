@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataFlowsResponseBody extends TeaModel {
     /**
-     * <p>The details about data flows.</p>
+     * <p>The dataflow details.</p>
      */
     @NameInMap("DataFlowInfo")
     public DescribeDataFlowsResponseBodyDataFlowInfo dataFlowInfo;
@@ -134,13 +134,13 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public Long autoRefreshInterval;
 
         /**
-         * <p>The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:</p>
+         * <p>The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. The following information is displayed:</p>
          * <ul>
-         * <li>None: Updated data in the source storage is not automatically imported into the CPFS file system. You can run a data flow task to import the updated data from the source storage.</li>
+         * <li>None: Updated data in the source storage is not automatically imported into the CPFS file system. You can run a dataflow task to import the updated data from the source storage.</li>
          * <li>ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.</li>
          * </ul>
          * <blockquote>
-         * <p> Only CPFS supports this parameter.</p>
+         * <p> Only CPFS is supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,6 +152,9 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         /**
          * <p>The time when the fileset was created.</p>
          * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2021-09-30T10:08:08Z</p>
@@ -160,7 +163,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The dataflow ID.</p>
+         * <p>The ID of the dataflow.</p>
          * 
          * <strong>example:</strong>
          * <p>df-194433a5be31****</p>
@@ -172,9 +175,9 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
          * <p>The description of the dataflow.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>The description must be 2 to 128 characters in length.</li>
-         * <li>The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * <li>The name must be 2 to 128 characters in length and</li>
+         * <li>start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +187,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The error message returned. Valid values:</p>
+         * <p>The error message. Valid values:</p>
          * <ul>
          * <li>None (default): The dataflow status is normal.</li>
          * <li>SourceStorageUnreachable: The access path of the source storage is not found.</li>
@@ -210,13 +213,13 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
          * <p>The directory of the fileset in the CPFS file system.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>The directory must be 2 to 1,024 characters in length.</li>
+         * <li>The directory must be 2 to 1024 characters in length.</li>
          * <li>The directory must be encoded in UTF-8.</li>
          * <li>The directory must start and end with a forward slash (/).</li>
          * <li>The directory must be a fileset directory in the CPFS file system.</li>
          * </ul>
          * <blockquote>
-         * <p> Only CPFS supports this parameter.</p>
+         * <p> Only CPFS is supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -239,6 +242,9 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
 
         /**
          * <p>The fileset ID.</p>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>fset-1902718ea0ae****</p>
@@ -247,9 +253,9 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public String fsetId;
 
         /**
-         * <p>The type of security mechanism for the source storage. This parameter must be specified if the source storage is accessed with a security mechanism. Valid values:</p>
+         * <p>The type of security mechanism for the source storage. This parameter must be specified if the source storage is accessed with a security mechanism. Valid value:</p>
          * <ul>
-         * <li>None (default): The source storage can be accessed without a security mechanism.</li>
+         * <li>Null (default): The OSS bucket can be accessed without a security mechanism.</li>
          * <li>SSL: The source storage must be accessed with an SSL certificate.</li>
          * </ul>
          * 
@@ -260,23 +266,30 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public String sourceSecurityType;
 
         /**
-         * <p>The access path of the source storage. Format: <code>&lt;storage type&gt;://&lt;path&gt;</code>.</p>
-         * <p>Parameters:</p>
+         * <p>The access path of the source storage. Format: <code>&lt;storage type&gt;://[&lt;account id&gt;:]&lt;path&gt;</code>.</p>
+         * <p>Among them:</p>
          * <ul>
-         * <li><p>storage type: Only Object Storage Service (OSS) is supported.</p>
+         * <li><p>storage type: Only OSS is supported.</p>
          * </li>
-         * <li><p>path: the name of the OSS bucket.</p>
+         * <li><p>account id: The UID of the account of the source storage.</p>
+         * </li>
+         * <li><p>path: The name of the OSS bucket.</p>
          * <ul>
          * <li>The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.</li>
          * <li>The name must be 8 to 128 characters in length.</li>
-         * <li>The name must be encoded in UTF-8.</li>
+         * <li>Must be encoded in UTF-8.</li>
          * <li>The name cannot start with http:// or https://.</li>
          * </ul>
          * </li>
          * </ul>
          * <blockquote>
-         * <p> The OSS bucket must be an existing bucket in the region.</p>
          * </blockquote>
+         * <ul>
+         * <li><p>The OSS bucket must be an existing bucket in the region.</p>
+         * </li>
+         * <li><p>Only CPFS for Lingjun V2.6.0 and later support the account id parameter.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket1</p>
@@ -287,7 +300,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         /**
          * <p>The access path in the bucket of the source storage.</p>
          * <blockquote>
-         * <p> Only CPFS for LINGJUN supports this parameter.</p>
+         * <p> Only CPFS for Lingjun supports this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -297,7 +310,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public String sourceStoragePath;
 
         /**
-         * <p>The dataflow status. Valid values:</p>
+         * <p>The dataflow status. The following information is displayed:</p>
          * <ul>
          * <li>Starting: The dataflow is being created or enabled.</li>
          * <li>Running: The dataflow has been created and is running properly.</li>
@@ -315,15 +328,20 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The maximum dataflow throughput. Unit: MB/s. Valid values:</p>
+         * <p>The maximum dataflow throughput. Unit: MB/s. Valid value:</p>
          * <ul>
          * <li>600</li>
-         * <li>1,200</li>
-         * <li>1,500</li>
+         * <li>1200</li>
+         * <li>1500</li>
          * </ul>
          * <blockquote>
-         * <p> The dataflow throughput must be less than the I/O throughput of the file system.</p>
          * </blockquote>
+         * <ul>
+         * <li><p>The dataflow throughput must be less than the I/O throughput of the file system.</p>
+         * </li>
+         * <li><p>Only CPFS supports this parameter.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -334,6 +352,9 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         /**
          * <p>The time when the fileset was last updated.</p>
          * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * <blockquote>
+         * <p> Only CPFS supports this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2021-09-30T10:08:08Z</p>

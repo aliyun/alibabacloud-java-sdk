@@ -8,6 +8,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * <p>The maximum throughput of the file system.</p>
      * <p>Unit: MB/s.</p>
      * <p>Specify a value based on the specifications on the buy page.</p>
+     * <p><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui%5C&commodityCode=nas_cpfspost_public_intl#/buy">CPFS file system (Pay-as-you-go)</a></p>
      * 
      * <strong>example:</strong>
      * <p>150</p>
@@ -16,10 +17,12 @@ public class CreateFileSystemRequest extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The capacity of the file system. Unit: GiB.</p>
-     * <p>This parameter is valid and required if the FileSystemType parameter is set to extreme.</p>
+     * <p>Specify the capacity of the file system. Unit: GiB. Specify the Capacity parameter when the FileSystemType parameter is set to extreme or cpfs.</p>
      * <p>Specify a value based on the specifications on the following buy page:</p>
-     * <p><a href="https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy">Extreme NAS file system (Pay-as-you-go)</a></p>
+     * <ul>
+     * <li><a href="https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy">Extreme NAS file system (Pay-as-you-go)</a></li>
+     * <li><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui%5C&commodityCode=nas_cpfspost_public_intl#/buy">CPFS file system (Pay-as-you-go)</a></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -32,7 +35,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li>PayAsYouGo (default): pay-as-you-go</li>
-     * <li>Subscription: subscription</li>
+     * <li>Subscription</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,13 +123,10 @@ public class CreateFileSystemRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard (default): General-purpose NAS file system</li>
-     * <li>extreme: Extreme NAS file system</li>
-     * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+     * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
+     * <li>extreme: Extreme NAS file system.</li>
+     * <li>cpfs: CPFS file system</li>
      * </ul>
-     * <blockquote>
-     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>standard</p>
@@ -145,10 +145,11 @@ public class CreateFileSystemRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>The protocol type.</p>
+     * <p>Specify the protocol type.</p>
      * <ul>
-     * <li>If the FileSystemType parameter is set to standard, you can set the ProtocolType parameter to NFS or SMB.</li>
-     * <li>If the FileSystemType parameter is set to extreme, you can set the ProtocolType parameter to NFS.</li>
+     * <li>If the FileSystemType parameter is set to standard, set the ProtocolType parameter to NFS or SMB.</li>
+     * <li>If the FileSystemType parameter is set to extreme, set the ProtocolType parameter to NFS.</li>
+     * <li>If the FileSystemType parameter is set to cpfs, set the ProtocolType parameter to cpfs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -157,6 +158,23 @@ public class CreateFileSystemRequest extends TeaModel {
      */
     @NameInMap("ProtocolType")
     public String protocolType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ZRS</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("RedundancyType")
+    public String redundancyType;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("RedundancyVSwitchIds")
+    public java.util.List<String> redundancyVSwitchIds;
 
     /**
      * <p>The resource group ID.</p>
@@ -182,10 +200,11 @@ public class CreateFileSystemRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The storage class.</p>
+     * <p>The storage type.</p>
      * <ul>
-     * <li>If the FileSystemType parameter is set to standard, you can set the StorageType parameter to Performance, Capacity, or Premium.</li>
-     * <li>If the FileSystemType parameter is set to extreme, you can set the StorageType parameter to standard or advance.</li>
+     * <li>If the FileSystemType parameter is set to standard, set the StorageType parameter to Performance, Capacity, or Premium.</li>
+     * <li>If the FileSystemType parameter is set to extreme, set the StorageType parameter to standard or advance.</li>
+     * <li>If the FileSystemType parameter is set to cpfs, set the StorageType parameter to advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -203,8 +222,11 @@ public class CreateFileSystemRequest extends TeaModel {
     public java.util.List<CreateFileSystemRequestTag> tag;
 
     /**
-     * <p>The vSwitch ID.</p>
-     * <p>This parameter is reserved and does not take effect. You do not need to configure this parameter.</p>
+     * <p>The vSwitch ID of the cluster.</p>
+     * <ul>
+     * <li>This parameter is required only if you set the FileSystemType parameter to cpfs.</li>
+     * <li>This parameter is reserved and not required if you set the FileSystemType parameter to standard or extreme.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>vsw-2ze37k6jh8ums2fw2****</p>
@@ -214,7 +236,10 @@ public class CreateFileSystemRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
-     * <p>This parameter is reserved and does not take effect. You do not need to configure this parameter.</p>
+     * <ul>
+     * <li>This parameter is required only if you set the FileSystemType parameter to cpfs.</li>
+     * <li>This parameter is reserved and not required if you set the FileSystemType parameter to standard or extreme.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1cbv1ljve4j5hlw****</p>
@@ -223,16 +248,18 @@ public class CreateFileSystemRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID.</p>
-     * <p>Each region has multiple isolated locations known as zones. Each zone has its own independent power supply and networks.</p>
+     * <p>The ID of the zone.</p>
+     * <p>Each region has multiple isolated locations known as zones. Each zone has its own independent power supply and network.</p>
      * <p>This parameter is not required if the FileSystemType parameter is set to standard. By default, a random zone is selected based on the protocol type and storage type.</p>
-     * <p>This parameter is required if the FileSystemType parameter is set to extreme.</p>
+     * <p>This parameter is required if the FileSystemType parameter is set to extreme or cpfs.</p>
      * <blockquote>
-     * <ul>
-     * <li>An Elastic Compute Service (ECS) instance and a NAS file system that reside in different zones of the same region can access each other.</li>
-     * <li>We recommend that you select the zone where the ECS instance resides. This prevents cross-zone latency between the file system and the ECS instance.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>An Elastic Compute Service (ECS) instance and a NAS file system that reside in different zones of the same region can access each other.</p>
+     * </li>
+     * <li><p>We recommend that you select the zone where the ECS instance resides. This prevents cross-zone latency between the file system and the ECS instance.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>
@@ -331,6 +358,22 @@ public class CreateFileSystemRequest extends TeaModel {
     }
     public String getProtocolType() {
         return this.protocolType;
+    }
+
+    public CreateFileSystemRequest setRedundancyType(String redundancyType) {
+        this.redundancyType = redundancyType;
+        return this;
+    }
+    public String getRedundancyType() {
+        return this.redundancyType;
+    }
+
+    public CreateFileSystemRequest setRedundancyVSwitchIds(java.util.List<String> redundancyVSwitchIds) {
+        this.redundancyVSwitchIds = redundancyVSwitchIds;
+        return this;
+    }
+    public java.util.List<String> getRedundancyVSwitchIds() {
+        return this.redundancyVSwitchIds;
     }
 
     public CreateFileSystemRequest setResourceGroupId(String resourceGroupId) {

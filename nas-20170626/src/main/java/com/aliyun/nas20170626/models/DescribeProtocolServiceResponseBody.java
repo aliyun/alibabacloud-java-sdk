@@ -199,6 +199,20 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-123xxx</p>
+         */
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-123xxx</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static DescribeProtocolServiceResponseBodyProtocolServices build(java.util.Map<String, ?> map) throws Exception {
             DescribeProtocolServiceResponseBodyProtocolServices self = new DescribeProtocolServiceResponseBodyProtocolServices();
             return TeaModel.build(map, self);
@@ -306,6 +320,22 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeProtocolServiceResponseBodyProtocolServices setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeProtocolServiceResponseBodyProtocolServices setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

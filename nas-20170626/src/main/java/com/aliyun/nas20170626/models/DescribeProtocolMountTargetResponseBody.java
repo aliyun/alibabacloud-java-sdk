@@ -157,6 +157,9 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
+
         /**
          * <p>The VPC ID of the export directory for the protocol service.</p>
          * 
@@ -257,6 +260,14 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public DescribeProtocolMountTargetResponseBodyProtocolMountTargets setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
         }
 
         public DescribeProtocolMountTargetResponseBodyProtocolMountTargets setVpcId(String vpcId) {

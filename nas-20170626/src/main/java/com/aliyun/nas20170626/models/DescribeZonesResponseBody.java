@@ -67,9 +67,6 @@ public class DescribeZonesResponseBody extends TeaModel {
          * <li>If the FileSystemType parameter is set to extreme, the protocol type is nfs.</li>
          * <li>If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</li>
          * </ul>
-         * <blockquote>
-         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>nfs</p>
@@ -84,9 +81,6 @@ public class DescribeZonesResponseBody extends TeaModel {
          * <li>If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</li>
          * <li>If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</li>
          * </ul>
-         * <blockquote>
-         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Capacity</p>

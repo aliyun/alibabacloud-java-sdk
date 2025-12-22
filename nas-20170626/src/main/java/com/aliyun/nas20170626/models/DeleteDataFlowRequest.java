@@ -18,7 +18,7 @@ public class DeleteDataFlowRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The dataflow ID.</p>
+     * <p>The ID of the dataflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,11 +46,8 @@ public class DeleteDataFlowRequest extends TeaModel {
      * <p>The ID of the file system.</p>
      * <ul>
      * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</li>
      * </ul>
-     * <blockquote>
-     * <p> CPFS is not supported on the international site.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

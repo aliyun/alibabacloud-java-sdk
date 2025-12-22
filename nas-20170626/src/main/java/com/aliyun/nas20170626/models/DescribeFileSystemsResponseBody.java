@@ -625,6 +625,25 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds extends TeaModel {
+        @NameInMap("RedundancyVSwitchId")
+        public java.util.List<String> redundancyVSwitchId;
+
+        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds setRedundancyVSwitchId(java.util.List<String> redundancyVSwitchId) {
+            this.redundancyVSwitchId = redundancyVSwitchId;
+            return this;
+        }
+        public java.util.List<String> getRedundancyVSwitchId() {
+            return this.redundancyVSwitchId;
+        }
+
+    }
+
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures extends TeaModel {
         @NameInMap("SupportedFeature")
         public java.util.List<String> supportedFeature;
@@ -831,15 +850,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         /**
          * <p>The file system type.</p>
-         * <p>Valid values:</p>
+         * <p>The following information is displayed:</p>
          * <ul>
          * <li>standard: General-purpose NAS file system.</li>
          * <li>extreme: Extreme NAS file system.</li>
          * <li>cpfs: CPFS file system.</li>
          * </ul>
-         * <blockquote>
-         * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -913,15 +929,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type of the file system.</p>
-         * <p>Valid values:</p>
+         * <p>The following information is displayed:</p>
          * <ul>
          * <li>NFS: Network File System.</li>
          * <li>SMB: Server Message Block.</li>
          * <li>cpfs: The protocol type supported by the CPFS file system.</li>
          * </ul>
-         * <blockquote>
-         * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>NFS</p>
@@ -937,6 +950,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
          */
         @NameInMap("QuorumVswId")
         public String quorumVswId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>LRS</p>
+         */
+        @NameInMap("RedundancyType")
+        public String redundancyType;
+
+        @NameInMap("RedundancyVSwitchIds")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds redundancyVSwitchIds;
 
         /**
          * <p>The region ID.</p>
@@ -974,15 +997,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage type.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the storage.</p>
+         * <p>The following information is displayed:</p>
          * <ul>
-         * <li>Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.</li>
-         * <li>Valid values for Extreme NAS file systems: standard and advance.</li>
-         * <li>Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).<blockquote>
-         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
-         * </li>
+         * <li>Valid values for General-purpose NAS file systems: Capacity, Performance, and Premium</li>
+         * <li>Valid values for Extreme NAS file systems: standard and advance</li>
+         * <li>Valid values for Cloud Parallel File Storage (CPFS) file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1219,6 +1239,22 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public String getQuorumVswId() {
             return this.quorumVswId;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setRedundancyType(String redundancyType) {
+            this.redundancyType = redundancyType;
+            return this;
+        }
+        public String getRedundancyType() {
+            return this.redundancyType;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setRedundancyVSwitchIds(DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds redundancyVSwitchIds) {
+            this.redundancyVSwitchIds = redundancyVSwitchIds;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds getRedundancyVSwitchIds() {
+            return this.redundancyVSwitchIds;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setRegionId(String regionId) {

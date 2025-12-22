@@ -16,9 +16,6 @@ public class DescribeFilesetsResponseBody extends TeaModel {
      * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</li>
      * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</li>
      * </ul>
-     * <blockquote>
-     * <p> CPFS is not supported on the international site.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>bmcpfs-290w65p03ok64ya****</p>
@@ -145,13 +142,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2838077.html">DeleteFileset</a> operation. Valid values:</p>
+         * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: enables release protection.</li>
+         * <li>false: disables release protection.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter can protect filesets only against manual releases, but not against automatic releases.</p>
+         * <p>This parameter can protect filesets only against manual releases, but not against automatic releases.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,9 +184,6 @@ public class DescribeFilesetsResponseBody extends TeaModel {
          * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</li>
          * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</li>
          * </ul>
-         * <blockquote>
-         * <p> CPFS is not supported on the international site.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>bmcpfs-290w65p03ok64ya****</p>

@@ -114,20 +114,31 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
 
     /**
      * <p>The vSwitch ID of the export directory for the protocol service.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-123****</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("VSwitchIds")
+    public java.util.List<String> vSwitchIds;
+
+    /**
      * <p>The VPC ID of the export directory for the protocol service.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-123****</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -207,6 +218,14 @@ public class CreateProtocolMountTargetRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public CreateProtocolMountTargetRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
+        this.vSwitchIds = vSwitchIds;
+        return this;
+    }
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
     }
 
     public CreateProtocolMountTargetRequest setVpcId(String vpcId) {

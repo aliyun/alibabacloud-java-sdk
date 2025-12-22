@@ -55,6 +55,13 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ptc-123xxx</p>
+     */
+    @NameInMap("ProtocolServiceIds")
+    public String protocolServiceIds;
+
     public static DescribeProtocolMountTargetRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeProtocolMountTargetRequest self = new DescribeProtocolMountTargetRequest();
         return TeaModel.build(map, self);
@@ -98,6 +105,14 @@ public class DescribeProtocolMountTargetRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeProtocolMountTargetRequest setProtocolServiceIds(String protocolServiceIds) {
+        this.protocolServiceIds = protocolServiceIds;
+        return this;
+    }
+    public String getProtocolServiceIds() {
+        return this.protocolServiceIds;
     }
 
     public static class DescribeProtocolMountTargetRequestFilters extends TeaModel {

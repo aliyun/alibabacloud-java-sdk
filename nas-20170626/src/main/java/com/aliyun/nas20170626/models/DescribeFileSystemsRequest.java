@@ -7,12 +7,9 @@ public class DescribeFileSystemsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
      * <ul>
-     * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
-     * <li>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.</li>
-     * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487****.<blockquote>
-     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-     * </blockquote>
-     * </li>
+     * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of CPFS file systems must start with cpfs-. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,13 +25,10 @@ public class DescribeFileSystemsRequest extends TeaModel {
      * <li>all (default): All types.</li>
      * <li>standard: General-purpose NAS file system.</li>
      * <li>extreme: Extreme NAS file system.</li>
-     * <li>cpfs: Cloud Parallel File Storage (CPFS) file system.</li>
+     * <li>cpfs: CPFS file system.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>CPFS file systems are available only on the China site (aliyun.com).</li>
-     * <li>Separate multiple file types with commas (,).</li>
-     * </ul>
+     * <p> Separate multiple data types with commas (,).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

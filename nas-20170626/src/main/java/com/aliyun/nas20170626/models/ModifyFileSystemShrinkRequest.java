@@ -24,10 +24,7 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
      * <ul>
      * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
      * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>. Example: <code>extreme-0015****</code>.</li>
-     * <li>The IDs of Cloud Paralleled File System (CPFS) file systems must start with <code>cpfs-</code>. Example: <code>cpfs-125487****</code>.<blockquote>
-     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-     * </blockquote>
-     * </li>
+     * <li>The IDs of Cloud Paralleled File System (CPFS) file systems must start with <code>cpfs-</code>. Example: <code>cpfs-125487****</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -8,11 +8,8 @@ public class DescribeDataFlowsRequest extends TeaModel {
      * <p>The ID of the file system.</p>
      * <ul>
      * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</li>
      * </ul>
-     * <blockquote>
-     * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class DescribeDataFlowsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The filter that is used to query data flows.</p>
+     * <p>The filter that is used to query dataflows.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -88,15 +85,15 @@ public class DescribeDataFlowsRequest extends TeaModel {
 
     public static class DescribeDataFlowsRequestFilters extends TeaModel {
         /**
-         * <p>The filter name. Valid values:</p>
+         * <p>The filter name. Valid value:</p>
          * <ul>
-         * <li>DataFlowIds: filters data flows by data flow ID.</li>
-         * <li>FsetIds: filters data flows by fileset ID.</li>
-         * <li>FileSystemPath: filters data flows based on the path of a fileset in a CPFS file system.</li>
-         * <li>SourceStorage: filters data flows based on the access path of the source storage.</li>
-         * <li>ThroughputList: filters data flows based on data flow throughput.</li>
-         * <li>Description: filters data flows based on the fileset description.</li>
-         * <li>Status: filters data flows based on data flow status.</li>
+         * <li>DataFlowIds: filters dataflow tasks by dataflow ID.</li>
+         * <li>FsetIds: filters dataflows by fileset ID.</li>
+         * <li>FileSystemPath: filters dataflows based on the path of a fileset in a CPFS file system.</li>
+         * <li>SourceStorage: filters dataflows based on the access path of the source storage.</li>
+         * <li>ThroughputList: filters dataflows based on dataflow throughput.</li>
+         * <li>Description: filters dataflows based on the fileset description.</li>
+         * <li>Status: filters dataflows based on dataflow status.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,15 +103,15 @@ public class DescribeDataFlowsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value. This parameter does not support wildcards.</p>
+         * <p>The value of the filter. This parameter does not support wildcards.</p>
          * <ul>
-         * <li>If Key is set to DataFlowIds, set Value to a data flow ID or a part of the data flow ID. You can specify a data flow ID or a group of data flow IDs. You can specify a maximum of 10 data flow IDs. Example: <code>df-194433a5be31****</code> or <code>df-194433a5be31****,df-184433a5be31****</code>.</li>
-         * <li>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <code>fset-1902718ea0ae****</code> or <code>fset-1902718ea0ae****,fset-1242718ea0ae****</code>.</li>
+         * <li>If Key is set to DataFlowIds, set Value to a dataflow ID or a part of the dataflow ID. You can specify a dataflow ID or a group of dataflow IDs. You can specify a maximum of 10 dataflow IDs. Example: <code>df-194433a5be31****</code> or <code>df-194433a512a2****,df-234533a5be31****</code>.</li>
+         * <li>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. For example, <code>fset-1902718ea0ae****</code> or <code>fset-235718ea0ae****,fset-5122718ea0ae****</code>.</li>
          * <li>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value of the parameter must be 1 to 1,024 characters in length.</li>
          * <li>If Key is set to SourceStorage, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</li>
-         * <li>If Key is set to ThroughputList, set Value to the data flow throughput. Combined query is supported.</li>
-         * <li>If Key is set to Description, set Value to a data flow description or a part of the data flow description.</li>
-         * <li>If Key is set to Status, set Value to the data flow status.</li>
+         * <li>If Key is set to ThroughputList, set Value to the dataflow throughput. Combined query is supported.</li>
+         * <li>If Key is set to Description, set Value to a dataflow description or a part of the dataflow description.</li>
+         * <li>If Key is set to Status, set Value to the dataflow status.</li>
          * <li>If Key is set to SourceStoragePath, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</li>
          * </ul>
          * 

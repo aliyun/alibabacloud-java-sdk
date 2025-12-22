@@ -18,8 +18,8 @@ public class CreateAccessRuleRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard (default): General-purpose NAS file system</li>
-     * <li>extreme: Extreme NAS file system</li>
+     * <li>standard (default): General-purpose NAS file system.</li>
+     * <li>extreme: Extreme NAS file system.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,8 +60,8 @@ public class CreateAccessRuleRequest extends TeaModel {
      * <p>The access permissions of the authorized object on the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>RDWR (default): the read and write permissions</li>
-     * <li>RDONLY: the read-only permissions</li>
+     * <li>RDWR (default): the read and write permissions.</li>
+     * <li>RDONLY: the read-only permissions.</li>
      * </ul>
      * 
      * <strong>example:</strong>

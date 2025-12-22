@@ -14,7 +14,7 @@ public class CreateFilesetResponseBody extends TeaModel {
     public String fsetId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>

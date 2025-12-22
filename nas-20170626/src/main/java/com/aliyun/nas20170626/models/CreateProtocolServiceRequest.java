@@ -97,20 +97,24 @@ public class CreateProtocolServiceRequest extends TeaModel {
 
     /**
      * <p>The vSwitch ID of the protocol service.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-123****</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The virtual private cloud (VPC) ID of the protocol service. The VPC ID of the protocol service must be the same as the VPC ID of the file system.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-123****</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

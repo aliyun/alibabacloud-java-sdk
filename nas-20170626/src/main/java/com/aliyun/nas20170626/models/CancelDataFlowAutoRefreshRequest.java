@@ -18,7 +18,7 @@ public class CancelDataFlowAutoRefreshRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The dataflow ID.</p>
+     * <p>The ID of the dataflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

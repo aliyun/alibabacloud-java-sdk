@@ -51,11 +51,8 @@ public class CreateMountTargetRequest extends TeaModel {
      * <ul>
      * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
      * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
-     * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</li>
+     * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
      * </ul>
-     * <blockquote>
-     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

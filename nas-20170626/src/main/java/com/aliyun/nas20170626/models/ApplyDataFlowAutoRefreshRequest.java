@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyDataFlowAutoRefreshRequest extends TeaModel {
     /**
-     * <p>The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.</p>
-     * <p>Valid values: 5 to 526600. Default value: 10.</p>
+     * <p>The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minute.</p>
+     * <p>Valid values: 10 to 525600. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,7 +48,7 @@ public class ApplyDataFlowAutoRefreshRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The dataflow ID.</p>
+     * <p>The ID of the dataflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
