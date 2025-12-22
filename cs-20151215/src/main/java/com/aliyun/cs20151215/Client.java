@@ -4957,6 +4957,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取集群组件实例的资源列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListClusterAddonInstanceResourcesResponse
+     */
+    public ListClusterAddonInstanceResourcesResponse listClusterAddonInstanceResourcesWithOptions(String clusterId, String instanceName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListClusterAddonInstanceResources"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/addon_instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceName) + "/resources"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListClusterAddonInstanceResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取集群组件实例的资源列表</p>
+     * @return ListClusterAddonInstanceResourcesResponse
+     */
+    public ListClusterAddonInstanceResourcesResponse listClusterAddonInstanceResources(String clusterId, String instanceName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listClusterAddonInstanceResourcesWithOptions(clusterId, instanceName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the component instances that are running in the specified cluster and the information about the component instances. The information includes the component version and status.</p>
      * 
      * @param headers map
