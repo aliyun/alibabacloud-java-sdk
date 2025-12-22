@@ -3,7 +3,7 @@ package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class ListGatewayRequest extends TeaModel {
+public class ListGatewayShrinkRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -32,7 +32,7 @@ public class ListGatewayRequest extends TeaModel {
     public Boolean internetEnabled;
 
     @NameInMap("Label")
-    public java.util.Map<String, String> label;
+    public String labelShrink;
 
     @NameInMap("Order")
     public String order;
@@ -70,12 +70,12 @@ public class ListGatewayRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    public static ListGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListGatewayRequest self = new ListGatewayRequest();
+    public static ListGatewayShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListGatewayShrinkRequest self = new ListGatewayShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListGatewayRequest setChargeType(String chargeType) {
+    public ListGatewayShrinkRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
     }
@@ -83,7 +83,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public ListGatewayRequest setGatewayId(String gatewayId) {
+    public ListGatewayShrinkRequest setGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
     }
@@ -91,7 +91,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.gatewayId;
     }
 
-    public ListGatewayRequest setGatewayName(String gatewayName) {
+    public ListGatewayShrinkRequest setGatewayName(String gatewayName) {
         this.gatewayName = gatewayName;
         return this;
     }
@@ -99,7 +99,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.gatewayName;
     }
 
-    public ListGatewayRequest setGatewayType(String gatewayType) {
+    public ListGatewayShrinkRequest setGatewayType(String gatewayType) {
         this.gatewayType = gatewayType;
         return this;
     }
@@ -107,7 +107,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.gatewayType;
     }
 
-    public ListGatewayRequest setInternetEnabled(Boolean internetEnabled) {
+    public ListGatewayShrinkRequest setInternetEnabled(Boolean internetEnabled) {
         this.internetEnabled = internetEnabled;
         return this;
     }
@@ -115,15 +115,15 @@ public class ListGatewayRequest extends TeaModel {
         return this.internetEnabled;
     }
 
-    public ListGatewayRequest setLabel(java.util.Map<String, String> label) {
-        this.label = label;
+    public ListGatewayShrinkRequest setLabelShrink(String labelShrink) {
+        this.labelShrink = labelShrink;
         return this;
     }
-    public java.util.Map<String, String> getLabel() {
-        return this.label;
+    public String getLabelShrink() {
+        return this.labelShrink;
     }
 
-    public ListGatewayRequest setOrder(String order) {
+    public ListGatewayShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -131,7 +131,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.order;
     }
 
-    public ListGatewayRequest setPageNumber(Integer pageNumber) {
+    public ListGatewayShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -139,7 +139,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListGatewayRequest setPageSize(Integer pageSize) {
+    public ListGatewayShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -147,7 +147,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListGatewayRequest setResourceName(String resourceName) {
+    public ListGatewayShrinkRequest setResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
@@ -155,7 +155,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.resourceName;
     }
 
-    public ListGatewayRequest setSort(String sort) {
+    public ListGatewayShrinkRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }
@@ -163,7 +163,7 @@ public class ListGatewayRequest extends TeaModel {
         return this.sort;
     }
 
-    public ListGatewayRequest setStatus(String status) {
+    public ListGatewayShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }

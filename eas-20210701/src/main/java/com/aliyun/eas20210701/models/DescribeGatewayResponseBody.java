@@ -115,6 +115,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
+    @NameInMap("Labels")
+    public java.util.List<DescribeGatewayResponseBodyLabels> labels;
+
     /**
      * <p>The number of nodes in the private gateway.</p>
      * 
@@ -271,6 +274,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
         return this.isDefault;
     }
 
+    public DescribeGatewayResponseBody setLabels(java.util.List<DescribeGatewayResponseBodyLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<DescribeGatewayResponseBodyLabels> getLabels() {
+        return this.labels;
+    }
+
     public DescribeGatewayResponseBody setReplicas(Integer replicas) {
         this.replicas = replicas;
         return this;
@@ -309,6 +320,44 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public static class DescribeGatewayResponseBodyLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
+        @NameInMap("LabelKey")
+        public String labelKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
+        @NameInMap("LabelValue")
+        public String labelValue;
+
+        public static DescribeGatewayResponseBodyLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGatewayResponseBodyLabels self = new DescribeGatewayResponseBodyLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGatewayResponseBodyLabels setLabelKey(String labelKey) {
+            this.labelKey = labelKey;
+            return this;
+        }
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        public DescribeGatewayResponseBodyLabels setLabelValue(String labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
     }
 
 }

@@ -3108,13 +3108,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of private gateways.</p>
      * 
-     * @param request ListGatewayRequest
+     * @param tmpReq ListGatewayRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayResponse
      */
-    public ListGatewayResponse listGatewayWithOptions(ListGatewayRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListGatewayResponse listGatewayWithOptions(ListGatewayRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListGatewayShrinkRequest request = new ListGatewayShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.label)) {
+            request.labelShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.label, "Label", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             query.put("ChargeType", request.chargeType);
@@ -3134,6 +3140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.internetEnabled)) {
             query.put("InternetEnabled", request.internetEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelShrink)) {
+            query.put("Label", request.labelShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {

@@ -91,6 +91,44 @@ public class ListGatewayResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListGatewayResponseBodyGatewaysLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
+        @NameInMap("LabelKey")
+        public String labelKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
+        @NameInMap("LabelValue")
+        public String labelValue;
+
+        public static ListGatewayResponseBodyGatewaysLabels build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayResponseBodyGatewaysLabels self = new ListGatewayResponseBodyGatewaysLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayResponseBodyGatewaysLabels setLabelKey(String labelKey) {
+            this.labelKey = labelKey;
+            return this;
+        }
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        public ListGatewayResponseBodyGatewaysLabels setLabelValue(String labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
+    }
+
     public static class ListGatewayResponseBodyGateways extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
@@ -179,6 +217,9 @@ public class ListGatewayResponseBody extends TeaModel {
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
+
+        @NameInMap("Labels")
+        public java.util.List<ListGatewayResponseBodyGatewaysLabels> labels;
 
         /**
          * <p>The number of nodes in the private gateway.</p>
@@ -309,6 +350,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public Boolean getIsDefault() {
             return this.isDefault;
+        }
+
+        public ListGatewayResponseBodyGateways setLabels(java.util.List<ListGatewayResponseBodyGatewaysLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<ListGatewayResponseBodyGatewaysLabels> getLabels() {
+            return this.labels;
         }
 
         public ListGatewayResponseBodyGateways setReplicas(Integer replicas) {
