@@ -5456,6 +5456,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除深度学习和防护下发的规则</p>
+     * 
+     * @param request DeleteHttpDDoSIntelligentRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHttpDDoSIntelligentRuleResponse
+     */
+    public DeleteHttpDDoSIntelligentRuleResponse deleteHttpDDoSIntelligentRuleWithOptions(DeleteHttpDDoSIntelligentRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordName)) {
+            query.put("RecordName", request.recordName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteHttpDDoSIntelligentRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHttpDDoSIntelligentRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除深度学习和防护下发的规则</p>
+     * 
+     * @param request DeleteHttpDDoSIntelligentRuleRequest
+     * @return DeleteHttpDDoSIntelligentRuleResponse
+     */
+    public DeleteHttpDDoSIntelligentRuleResponse deleteHttpDDoSIntelligentRule(DeleteHttpDDoSIntelligentRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteHttpDDoSIntelligentRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes the configuration of modifying incoming HTTP request headers for a website.</p>
      * 
      * @param request DeleteHttpIncomingRequestHeaderModificationRuleRequest
@@ -15986,6 +16038,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetHttpDDoSAttackProtectionResponse setHttpDDoSAttackProtection(SetHttpDDoSAttackProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setHttpDDoSAttackProtectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置HTTP DDoS攻击防护指定规则防护动作</p>
+     * 
+     * @param request SetHttpDDoSAttackRuleActionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetHttpDDoSAttackRuleActionResponse
+     */
+    public SetHttpDDoSAttackRuleActionResponse setHttpDDoSAttackRuleActionWithOptions(SetHttpDDoSAttackRuleActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleAction)) {
+            query.put("RuleAction", request.ruleAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleIds)) {
+            query.put("RuleIds", request.ruleIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetHttpDDoSAttackRuleAction"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetHttpDDoSAttackRuleActionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置HTTP DDoS攻击防护指定规则防护动作</p>
+     * 
+     * @param request SetHttpDDoSAttackRuleActionRequest
+     * @return SetHttpDDoSAttackRuleActionResponse
+     */
+    public SetHttpDDoSAttackRuleActionResponse setHttpDDoSAttackRuleAction(SetHttpDDoSAttackRuleActionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setHttpDDoSAttackRuleActionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置HTTP DDoS攻击防护指定规则防护状态</p>
+     * 
+     * @param request SetHttpDDoSAttackRuleStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetHttpDDoSAttackRuleStatusResponse
+     */
+    public SetHttpDDoSAttackRuleStatusResponse setHttpDDoSAttackRuleStatusWithOptions(SetHttpDDoSAttackRuleStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleIds)) {
+            query.put("RuleIds", request.ruleIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetHttpDDoSAttackRuleStatus"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetHttpDDoSAttackRuleStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置HTTP DDoS攻击防护指定规则防护状态</p>
+     * 
+     * @param request SetHttpDDoSAttackRuleStatusRequest
+     * @return SetHttpDDoSAttackRuleStatusResponse
+     */
+    public SetHttpDDoSAttackRuleStatusResponse setHttpDDoSAttackRuleStatus(SetHttpDDoSAttackRuleStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setHttpDDoSAttackRuleStatusWithOptions(request, runtime);
     }
 
     /**
