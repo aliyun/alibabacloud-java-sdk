@@ -427,6 +427,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Liveness")
     public String liveness;
 
+    @NameInMap("LokiConfigs")
+    public String lokiConfigs;
+
     @NameInMap("MaxSurgeInstanceRatio")
     public Integer maxSurgeInstanceRatio;
 
@@ -1319,6 +1322,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getLiveness() {
         return this.liveness;
+    }
+
+    public DeployApplicationRequest setLokiConfigs(String lokiConfigs) {
+        this.lokiConfigs = lokiConfigs;
+        return this;
+    }
+    public String getLokiConfigs() {
+        return this.lokiConfigs;
     }
 
     public DeployApplicationRequest setMaxSurgeInstanceRatio(Integer maxSurgeInstanceRatio) {

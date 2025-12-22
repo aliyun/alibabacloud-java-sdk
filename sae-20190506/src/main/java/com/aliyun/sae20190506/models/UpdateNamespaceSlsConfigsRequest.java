@@ -47,6 +47,9 @@ public class UpdateNamespaceSlsConfigsRequest extends TeaModel {
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    @NameInMap("SlsLogEnvTags")
+    public String slsLogEnvTags;
+
     public static UpdateNamespaceSlsConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNamespaceSlsConfigsRequest self = new UpdateNamespaceSlsConfigsRequest();
         return TeaModel.build(map, self);
@@ -74,6 +77,14 @@ public class UpdateNamespaceSlsConfigsRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public UpdateNamespaceSlsConfigsRequest setSlsLogEnvTags(String slsLogEnvTags) {
+        this.slsLogEnvTags = slsLogEnvTags;
+        return this;
+    }
+    public String getSlsLogEnvTags() {
+        return this.slsLogEnvTags;
     }
 
 }

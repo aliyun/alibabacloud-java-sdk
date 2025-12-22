@@ -435,6 +435,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Liveness")
     public String liveness;
 
+    @NameInMap("LokiConfigs")
+    public String lokiConfigs;
+
     /**
      * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
      * <ul>
@@ -1301,6 +1304,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getLiveness() {
         return this.liveness;
+    }
+
+    public CreateApplicationRequest setLokiConfigs(String lokiConfigs) {
+        this.lokiConfigs = lokiConfigs;
+        return this;
+    }
+    public String getLokiConfigs() {
+        return this.lokiConfigs;
     }
 
     public CreateApplicationRequest setMemory(Integer memory) {

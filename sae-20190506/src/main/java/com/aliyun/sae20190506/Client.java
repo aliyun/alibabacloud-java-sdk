@@ -618,6 +618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Liveness", request.liveness);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lokiConfigs)) {
+            query.put("LokiConfigs", request.lokiConfigs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
             query.put("Memory", request.memory);
         }
@@ -2748,6 +2752,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
             query.put("Liveness", request.liveness);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lokiConfigs)) {
+            query.put("LokiConfigs", request.lokiConfigs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxSurgeInstanceRatio)) {
@@ -9210,6 +9218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
             query.put("SlsConfigs", request.slsConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slsLogEnvTags)) {
+            query.put("SlsLogEnvTags", request.slsLogEnvTags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
