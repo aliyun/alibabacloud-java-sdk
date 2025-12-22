@@ -19,43 +19,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpoint = this.getEndpoint("ocr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
-    public java.util.Map<String, ?> _postOSSObject(String bucketName, java.util.Map<String, ?> data) throws Exception {
-        TeaRequest request_ = new TeaRequest();
-        java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
-        String boundary = com.aliyun.fileform.Client.getBoundary();
-        String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
-        request_.protocol = "HTTPS";
-        request_.method = "POST";
-        request_.pathname = "/";
-        request_.headers = TeaConverter.buildMap(
-            new TeaPair("host", host),
-            new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
-            new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(""))
+    public java.util.Map<String, ?> _postOSSObject(String bucketName, java.util.Map<String, ?> data, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, Object> runtime_ = TeaConverter.buildMap(
+            new TeaPair("timeouted", "retry"),
+            new TeaPair("key", com.aliyun.teautil.Common.defaultString(runtime.key, _key)),
+            new TeaPair("cert", com.aliyun.teautil.Common.defaultString(runtime.cert, _cert)),
+            new TeaPair("ca", com.aliyun.teautil.Common.defaultString(runtime.ca, _ca)),
+            new TeaPair("readTimeout", com.aliyun.teautil.Common.defaultNumber(runtime.readTimeout, _readTimeout)),
+            new TeaPair("connectTimeout", com.aliyun.teautil.Common.defaultNumber(runtime.connectTimeout, _connectTimeout)),
+            new TeaPair("httpProxy", com.aliyun.teautil.Common.defaultString(runtime.httpProxy, _httpProxy)),
+            new TeaPair("httpsProxy", com.aliyun.teautil.Common.defaultString(runtime.httpsProxy, _httpsProxy)),
+            new TeaPair("noProxy", com.aliyun.teautil.Common.defaultString(runtime.noProxy, _noProxy)),
+            new TeaPair("socks5Proxy", com.aliyun.teautil.Common.defaultString(runtime.socks5Proxy, _socks5Proxy)),
+            new TeaPair("socks5NetWork", com.aliyun.teautil.Common.defaultString(runtime.socks5NetWork, _socks5NetWork)),
+            new TeaPair("maxIdleConns", com.aliyun.teautil.Common.defaultNumber(runtime.maxIdleConns, _maxIdleConns)),
+            new TeaPair("retry", TeaConverter.buildMap(
+                new TeaPair("retryable", runtime.autoretry),
+                new TeaPair("maxAttempts", com.aliyun.teautil.Common.defaultNumber(runtime.maxAttempts, 3))
+            )),
+            new TeaPair("backoff", TeaConverter.buildMap(
+                new TeaPair("policy", com.aliyun.teautil.Common.defaultString(runtime.backoffPolicy, "no")),
+                new TeaPair("period", com.aliyun.teautil.Common.defaultNumber(runtime.backoffPeriod, 1))
+            )),
+            new TeaPair("ignoreSSL", com.aliyun.teaopenapi.Client.defaultAny(runtime.ignoreSSL, false)),
+            new TeaPair("tlsMinVersion", _tlsMinVersion)
         );
-        request_.headers.put("content-type", "multipart/form-data; boundary=" + boundary + "");
-        request_.body = com.aliyun.fileform.Client.toFileForm(form, boundary);
-        TeaResponse response_ = Tea.doAction(request_, new java.util.HashMap<String, Object>(), interceptorChain);
 
-        java.util.Map<String, Object> respMap = null;
-        String bodyStr = com.aliyun.teautil.Common.readAsString(response_.body);
-        if (com.aliyun.teautil.Common.is4xx(response_.statusCode) || com.aliyun.teautil.Common.is5xx(response_.statusCode)) {
-            respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
-            java.util.Map<String, Object> err = com.aliyun.teautil.Common.assertAsMap(respMap.get("Error"));
-            throw new TeaException(TeaConverter.buildMap(
-                new TeaPair("code", err.get("Code")),
-                new TeaPair("message", err.get("Message")),
-                new TeaPair("data", TeaConverter.buildMap(
-                    new TeaPair("httpCode", response_.statusCode),
-                    new TeaPair("requestId", err.get("RequestId")),
-                    new TeaPair("hostId", err.get("HostId"))
-                ))
-            ));
+        TeaRequest _lastRequest = null;
+        Exception _lastException = null;
+        long _now = System.currentTimeMillis();
+        int _retryTimes = 0;
+        while (Tea.allowRetry((java.util.Map<String, Object>) runtime_.get("retry"), _retryTimes, _now)) {
+            if (_retryTimes > 0) {
+                int backoffTime = Tea.getBackoffTime(runtime_.get("backoff"), _retryTimes);
+                if (backoffTime > 0) {
+                    Tea.sleep(backoffTime);
+                }
+            }
+            _retryTimes = _retryTimes + 1;
+            try {
+                TeaRequest request_ = new TeaRequest();
+                java.util.Map<String, Object> form = com.aliyun.teautil.Common.assertAsMap(data);
+                String boundary = com.aliyun.fileform.Client.getBoundary();
+                String host = com.aliyun.teautil.Common.assertAsString(form.get("host"));
+                request_.protocol = "HTTPS";
+                request_.method = "POST";
+                request_.pathname = "/";
+                request_.headers = TeaConverter.buildMap(
+                    new TeaPair("host", host),
+                    new TeaPair("date", com.aliyun.teautil.Common.getDateUTCString()),
+                    new TeaPair("user-agent", com.aliyun.teautil.Common.getUserAgent(""))
+                );
+                request_.headers.put("content-type", "multipart/form-data; boundary=" + boundary + "");
+                request_.body = com.aliyun.fileform.Client.toFileForm(form, boundary);
+                _lastRequest = request_;
+                TeaResponse response_ = Tea.doAction(request_, runtime_, interceptorChain);
+
+                java.util.Map<String, Object> respMap = null;
+                String bodyStr = com.aliyun.teautil.Common.readAsString(response_.body);
+                if (com.aliyun.teautil.Common.is4xx(response_.statusCode) || com.aliyun.teautil.Common.is5xx(response_.statusCode)) {
+                    respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
+                    java.util.Map<String, Object> err = com.aliyun.teautil.Common.assertAsMap(respMap.get("Error"));
+                    throw new TeaException(TeaConverter.buildMap(
+                        new TeaPair("code", err.get("Code")),
+                        new TeaPair("message", err.get("Message")),
+                        new TeaPair("data", TeaConverter.buildMap(
+                            new TeaPair("httpCode", response_.statusCode),
+                            new TeaPair("requestId", err.get("RequestId")),
+                            new TeaPair("hostId", err.get("HostId"))
+                        ))
+                    ));
+                }
+
+                respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
+                return TeaConverter.merge(Object.class,
+                    respMap
+                );
+            } catch (Exception e) {
+                if (Tea.isRetryable(e)) {
+                    _lastException = e;
+                    continue;
+                }
+                throw e;
+            }
         }
-
-        respMap = com.aliyun.teaxml.Client.parseXml(bodyStr, null);
-        return TeaConverter.merge(Object.class,
-            respMap
-        );
+        throw new TeaUnretryableException(_lastRequest, _lastException);
     }
 
     public void addRuntimeOptionsInterceptor(RuntimeOptionsInterceptor interceptor) {
@@ -238,7 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeBankCardReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -364,7 +412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeBusinessLicenseReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -373,6 +421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通用文字识别</p>
+     * 
      * @param request RecognizeCharacterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeCharacterResponse
@@ -410,6 +461,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>通用文字识别</p>
+     * 
      * @param request RecognizeCharacterRequest
      * @return RecognizeCharacterResponse
      */
@@ -498,7 +552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeCharacterReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -628,7 +682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeDriverLicenseReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -758,7 +812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeDrivingLicenseReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -888,7 +942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeIdentityCardReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1014,7 +1068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeLicensePlateReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1146,7 +1200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizePdfReq.fileURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1275,7 +1329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                         new TeaPair("file", fileObj),
                         new TeaPair("success_action_status", "201")
                     );
-                    this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+                    this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
                     RecognizeQrCodeRequest.RecognizeQrCodeRequestTasks tmp = recognizeQrCodeReq.tasks.get(i0);
                     tmp.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
                     i0 = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i0), com.aliyun.darabonbanumber.Client.itol(1)));
@@ -1412,7 +1466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeQuotaInvoiceReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1558,7 +1612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeTableReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1684,7 +1738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeTaxiInvoiceReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1816,7 +1870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeTicketInvoiceReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -1942,7 +1996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeTrainTicketReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -2072,7 +2126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeVATInvoiceReq.fileURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -2198,7 +2252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeVINCodeReq.imageURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 
@@ -2330,7 +2384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("success_action_status", "201")
             );
-            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader);
+            this._postOSSObject(authResponseBody.get("Bucket"), ossHeader, runtime);
             recognizeVideoCharacterReq.videoURL = "http://" + authResponseBody.get("Bucket") + "." + authResponseBody.get("Endpoint") + "/" + authResponseBody.get("ObjectKey") + "";
         }
 

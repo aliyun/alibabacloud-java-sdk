@@ -35,6 +35,36 @@ public class RecognizeCharacterResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class RecognizeCharacterResponseBodyDataResultsTextRectanglesPos extends TeaModel {
+        @NameInMap("x")
+        public Integer x;
+
+        @NameInMap("y")
+        public Integer y;
+
+        public static RecognizeCharacterResponseBodyDataResultsTextRectanglesPos build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeCharacterResponseBodyDataResultsTextRectanglesPos self = new RecognizeCharacterResponseBodyDataResultsTextRectanglesPos();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeCharacterResponseBodyDataResultsTextRectanglesPos setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public RecognizeCharacterResponseBodyDataResultsTextRectanglesPos setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
     public static class RecognizeCharacterResponseBodyDataResultsTextRectangles extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -56,6 +86,9 @@ public class RecognizeCharacterResponseBody extends TeaModel {
          */
         @NameInMap("Left")
         public Integer left;
+
+        @NameInMap("Pos")
+        public java.util.List<RecognizeCharacterResponseBodyDataResultsTextRectanglesPos> pos;
 
         /**
          * <strong>example:</strong>
@@ -98,6 +131,14 @@ public class RecognizeCharacterResponseBody extends TeaModel {
         }
         public Integer getLeft() {
             return this.left;
+        }
+
+        public RecognizeCharacterResponseBodyDataResultsTextRectangles setPos(java.util.List<RecognizeCharacterResponseBodyDataResultsTextRectanglesPos> pos) {
+            this.pos = pos;
+            return this;
+        }
+        public java.util.List<RecognizeCharacterResponseBodyDataResultsTextRectanglesPos> getPos() {
+            return this.pos;
         }
 
         public RecognizeCharacterResponseBodyDataResultsTextRectangles setTop(Integer top) {
