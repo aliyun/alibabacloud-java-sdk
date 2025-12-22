@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dlfnext20250310</artifactId>
-  <version>3.4.1</version>
+  <version>3.5.0</version>
   <packaging>jar</packaging>
   <name>dlfnext20250310</name>
   <description>Alibaba Cloud DlfNext (20250310) SDK for Java
