@@ -7195,6 +7195,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询反馈记录</p>
+     * 
+     * @param request ListFeedbacksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFeedbacksResponse
+     */
+    public ListFeedbacksResponse listFeedbacksWithOptions(ListFeedbacksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIdList)) {
+            query.put("TaskIdList", request.taskIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFeedbacks"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFeedbacksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询反馈记录</p>
+     * 
+     * @param request ListFeedbacksRequest
+     * @return ListFeedbacksResponse
+     */
+    public ListFeedbacksResponse listFeedbacks(ListFeedbacksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFeedbacksWithOptions(request, runtime);
+    }
+
+    /**
      * @param request ListFlashSmsApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFlashSmsApplicationsResponse
@@ -12144,6 +12192,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendDtmfSignalingResponse sendDtmfSignaling(SendDtmfSignalingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendDtmfSignalingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>推送消息</p>
+     * 
+     * @param request SendNotificationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendNotificationResponse
+     */
+    public SendNotificationResponse sendNotificationWithOptions(SendNotificationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageBody)) {
+            query.put("MessageBody", request.messageBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationTarget)) {
+            query.put("NotificationTarget", request.notificationTarget);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationType)) {
+            query.put("NotificationType", request.notificationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shardingKey)) {
+            query.put("ShardingKey", request.shardingKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendNotification"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendNotificationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>推送消息</p>
+     * 
+     * @param request SendNotificationRequest
+     * @return SendNotificationResponse
+     */
+    public SendNotificationResponse sendNotification(SendNotificationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendNotificationWithOptions(request, runtime);
     }
 
     /**

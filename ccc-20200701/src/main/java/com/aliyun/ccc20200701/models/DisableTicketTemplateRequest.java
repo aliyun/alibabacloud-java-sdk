@@ -6,17 +6,10 @@ import com.aliyun.tea.*;
 public class DisableTicketTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>43c2671b-8939-4223-86d0-6bd187905cc8_1717664210492</p>
-     */
     @NameInMap("TemplateId")
     public String templateId;
 
