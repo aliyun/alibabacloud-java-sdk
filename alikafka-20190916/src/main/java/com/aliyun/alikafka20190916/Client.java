@@ -28,6 +28,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>AddUserDefinedSg</p>
+     * 
+     * @param tmpReq AddUserDefinedSgRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddUserDefinedSgResponse
+     */
+    public AddUserDefinedSgResponse addUserDefinedSgWithOptions(AddUserDefinedSgRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddUserDefinedSgShrinkRequest request = new AddUserDefinedSgShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sgIdList)) {
+            request.sgIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sgIdList, "SgIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sgIdListShrink)) {
+            query.put("SgIdList", request.sgIdListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUserDefinedSg"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUserDefinedSgResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AddUserDefinedSg</p>
+     * 
+     * @param request AddUserDefinedSgRequest
+     * @return AddUserDefinedSgResponse
+     */
+    public AddUserDefinedSgResponse addUserDefinedSg(AddUserDefinedSgRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addUserDefinedSgWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Changes the resource group of an ApsaraMQ for Kafka instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
@@ -1300,6 +1358,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteTopicResponse deleteTopic(DeleteTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTopicWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteUserDefinedSg</p>
+     * 
+     * @param tmpReq DeleteUserDefinedSgRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUserDefinedSgResponse
+     */
+    public DeleteUserDefinedSgResponse deleteUserDefinedSgWithOptions(DeleteUserDefinedSgRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteUserDefinedSgShrinkRequest request = new DeleteUserDefinedSgShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sgIdList)) {
+            request.sgIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sgIdList, "SgIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sgIdListShrink)) {
+            query.put("SgIdList", request.sgIdListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUserDefinedSg"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserDefinedSgResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteUserDefinedSg</p>
+     * 
+     * @param request DeleteUserDefinedSgRequest
+     * @return DeleteUserDefinedSgResponse
+     */
+    public DeleteUserDefinedSgResponse deleteUserDefinedSg(DeleteUserDefinedSgRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUserDefinedSgWithOptions(request, runtime);
     }
 
     /**
@@ -2862,6 +2978,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyTopicRemarkResponse modifyTopicRemark(ModifyTopicRemarkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyTopicRemarkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ModifyUserDefinedSg</p>
+     * 
+     * @param tmpReq ModifyUserDefinedSgRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyUserDefinedSgResponse
+     */
+    public ModifyUserDefinedSgResponse modifyUserDefinedSgWithOptions(ModifyUserDefinedSgRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyUserDefinedSgShrinkRequest request = new ModifyUserDefinedSgShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sgIdList)) {
+            request.sgIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sgIdList, "SgIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sgIdListShrink)) {
+            query.put("SgIdList", request.sgIdListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyUserDefinedSg"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyUserDefinedSgResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ModifyUserDefinedSg</p>
+     * 
+     * @param request ModifyUserDefinedSgRequest
+     * @return ModifyUserDefinedSgResponse
+     */
+    public ModifyUserDefinedSgResponse modifyUserDefinedSg(ModifyUserDefinedSgRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyUserDefinedSgWithOptions(request, runtime);
     }
 
     /**
