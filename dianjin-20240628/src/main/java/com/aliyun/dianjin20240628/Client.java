@@ -463,6 +463,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建图片检测任务</p>
+     * 
+     * @param request CreateImageDetectionTaskRequest
+     * @param headers CreateImageDetectionTaskHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateImageDetectionTaskResponse
+     */
+    public CreateImageDetectionTaskResponse createImageDetectionTaskWithOptions(String workspaceId, CreateImageDetectionTaskRequest request, CreateImageDetectionTaskHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileInfo)) {
+            body.put("fileInfo", request.fileInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("fileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateImageDetectionTask"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/imageDetect/task/submit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImageDetectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建图片检测任务</p>
+     * 
+     * @param request CreateImageDetectionTaskRequest
+     * @return CreateImageDetectionTaskResponse
+     */
+    public CreateImageDetectionTaskResponse createImageDetectionTask(String workspaceId, CreateImageDetectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateImageDetectionTaskHeaders headers = new CreateImageDetectionTaskHeaders();
+        return this.createImageDetectionTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建文档库</p>
      * 
      * @param request CreateLibraryRequest
@@ -707,6 +775,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createQualityCheckTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建视频生成任务</p>
+     * 
+     * @param request CreateVideoCreationTaskRequest
+     * @param headers CreateVideoCreationTaskHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVideoCreationTaskResponse
+     */
+    public CreateVideoCreationTaskResponse createVideoCreationTaskWithOptions(String workspaceId, CreateVideoCreationTaskRequest request, CreateVideoCreationTaskHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.creationInstruction)) {
+            body.put("creationInstruction", request.creationInstruction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileInfo)) {
+            body.put("fileInfo", request.fileInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageDetectionTaskId)) {
+            body.put("imageDetectionTaskId", request.imageDetectionTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVideoCreationTask"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/videoCreation/task/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVideoCreationTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建视频生成任务</p>
+     * 
+     * @param request CreateVideoCreationTaskRequest
+     * @return CreateVideoCreationTaskResponse
+     */
+    public CreateVideoCreationTaskResponse createVideoCreationTask(String workspaceId, CreateVideoCreationTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateVideoCreationTaskHeaders headers = new CreateVideoCreationTaskHeaders();
+        return this.createVideoCreationTaskWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -1550,6 +1690,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取检测结果</p>
+     * 
+     * @param request GetImageDetectionTaskResultRequest
+     * @param headers GetImageDetectionTaskResultHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageDetectionTaskResultResponse
+     */
+    public GetImageDetectionTaskResultResponse getImageDetectionTaskResultWithOptions(String workspaceId, GetImageDetectionTaskResultRequest request, GetImageDetectionTaskResultHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetImageDetectionTaskResult"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/imageDetect/task/query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetImageDetectionTaskResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取检测结果</p>
+     * 
+     * @param request GetImageDetectionTaskResultRequest
+     * @return GetImageDetectionTaskResultResponse
+     */
+    public GetImageDetectionTaskResultResponse getImageDetectionTaskResult(String workspaceId, GetImageDetectionTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetImageDetectionTaskResultHeaders headers = new GetImageDetectionTaskResultHeaders();
+        return this.getImageDetectionTaskResultWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取文档库配置详情</p>
      * 
      * @param request GetLibraryRequest
@@ -1891,6 +2091,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTaskStatusWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频生成任务结果</p>
+     * 
+     * @param request GetVideoCreationTaskResultRequest
+     * @param headers GetVideoCreationTaskResultHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoCreationTaskResultResponse
+     */
+    public GetVideoCreationTaskResultResponse getVideoCreationTaskResultWithOptions(String workspaceId, GetVideoCreationTaskResultRequest request, GetVideoCreationTaskResultHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoCreationTaskResult"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/videoCreation/task/query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoCreationTaskResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频生成任务结果</p>
+     * 
+     * @param request GetVideoCreationTaskResultRequest
+     * @return GetVideoCreationTaskResultResponse
+     */
+    public GetVideoCreationTaskResultResponse getVideoCreationTaskResult(String workspaceId, GetVideoCreationTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetVideoCreationTaskResultHeaders headers = new GetVideoCreationTaskResultHeaders();
+        return this.getVideoCreationTaskResultWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
