@@ -135,6 +135,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataInternet extends TeaModel {
+        @NameInMap("ConnectionDrainTimeout")
+        public Integer connectionDrainTimeout;
+
         /**
          * <strong>example:</strong>
          * <p>wwe</p>
@@ -157,6 +160,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("EnableConnectionDrain")
+        public Boolean enableConnectionDrain;
 
         /**
          * <strong>example:</strong>
@@ -215,9 +221,20 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("TargetPort")
         public Integer targetPort;
 
+        @NameInMap("VServerGroupId")
+        public String VServerGroupId;
+
         public static DescribeApplicationSlbsResponseBodyDataInternet build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyDataInternet self = new DescribeApplicationSlbsResponseBodyDataInternet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataInternet setConnectionDrainTimeout(Integer connectionDrainTimeout) {
+            this.connectionDrainTimeout = connectionDrainTimeout;
+            return this;
+        }
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
         }
 
         public DescribeApplicationSlbsResponseBodyDataInternet setCookie(String cookie) {
@@ -242,6 +259,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataInternet setEnableConnectionDrain(Boolean enableConnectionDrain) {
+            this.enableConnectionDrain = enableConnectionDrain;
+            return this;
+        }
+        public Boolean getEnableConnectionDrain() {
+            return this.enableConnectionDrain;
         }
 
         public DescribeApplicationSlbsResponseBodyDataInternet setHttpsCaCertId(String httpsCaCertId) {
@@ -300,9 +325,20 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.targetPort;
         }
 
+        public DescribeApplicationSlbsResponseBodyDataInternet setVServerGroupId(String VServerGroupId) {
+            this.VServerGroupId = VServerGroupId;
+            return this;
+        }
+        public String getVServerGroupId() {
+            return this.VServerGroupId;
+        }
+
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataIntranet extends TeaModel {
+        @NameInMap("ConnectionDrainTimeout")
+        public Integer connectionDrainTimeout;
+
         /**
          * <strong>example:</strong>
          * <p>wwe</p>
@@ -325,6 +361,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("EnableConnectionDrain")
+        public Boolean enableConnectionDrain;
 
         /**
          * <strong>example:</strong>
@@ -383,9 +422,20 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("TargetPort")
         public Integer targetPort;
 
+        @NameInMap("VServerGroupId")
+        public String VServerGroupId;
+
         public static DescribeApplicationSlbsResponseBodyDataIntranet build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyDataIntranet self = new DescribeApplicationSlbsResponseBodyDataIntranet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setConnectionDrainTimeout(Integer connectionDrainTimeout) {
+            this.connectionDrainTimeout = connectionDrainTimeout;
+            return this;
+        }
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
         }
 
         public DescribeApplicationSlbsResponseBodyDataIntranet setCookie(String cookie) {
@@ -410,6 +460,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setEnableConnectionDrain(Boolean enableConnectionDrain) {
+            this.enableConnectionDrain = enableConnectionDrain;
+            return this;
+        }
+        public Boolean getEnableConnectionDrain() {
+            return this.enableConnectionDrain;
         }
 
         public DescribeApplicationSlbsResponseBodyDataIntranet setHttpsCaCertId(String httpsCaCertId) {
@@ -466,6 +524,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
         public Integer getTargetPort() {
             return this.targetPort;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setVServerGroupId(String VServerGroupId) {
+            this.VServerGroupId = VServerGroupId;
+            return this;
+        }
+        public String getVServerGroupId() {
+            return this.VServerGroupId;
         }
 
     }
