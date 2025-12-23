@@ -120,6 +120,9 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("ExternalData")
+        public String externalData;
+
         /**
          * <p>来源Idp Id</p>
          * 
@@ -184,6 +187,14 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings setExternalData(String externalData) {
+            this.externalData = externalData;
+            return this;
+        }
+        public String getExternalData() {
+            return this.externalData;
         }
 
         public ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings setIdentityProviderId(String identityProviderId) {
