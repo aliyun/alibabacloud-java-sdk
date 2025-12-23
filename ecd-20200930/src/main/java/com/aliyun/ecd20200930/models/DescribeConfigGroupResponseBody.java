@@ -126,6 +126,26 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <strong>example:</strong>
+         * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</p>
+         */
+        @NameInMap("InnerTimerDesc")
+        public String innerTimerDesc;
+
+        /**
+         * <strong>example:</strong>
+         * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</p>
+         */
+        @NameInMap("InnerTimerName")
+        public String innerTimerName;
+
+        @NameInMap("IsBind")
+        public Boolean isBind;
+
+        @NameInMap("IsUpdate")
+        public Boolean isUpdate;
+
+        /**
          * <p>The name of the configuration group.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +231,38 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+        public DescribeConfigGroupResponseBodyData setInnerTimerDesc(String innerTimerDesc) {
+            this.innerTimerDesc = innerTimerDesc;
+            return this;
+        }
+        public String getInnerTimerDesc() {
+            return this.innerTimerDesc;
+        }
+
+        public DescribeConfigGroupResponseBodyData setInnerTimerName(String innerTimerName) {
+            this.innerTimerName = innerTimerName;
+            return this;
+        }
+        public String getInnerTimerName() {
+            return this.innerTimerName;
+        }
+
+        public DescribeConfigGroupResponseBodyData setIsBind(Boolean isBind) {
+            this.isBind = isBind;
+            return this;
+        }
+        public Boolean getIsBind() {
+            return this.isBind;
+        }
+
+        public DescribeConfigGroupResponseBodyData setIsUpdate(Boolean isUpdate) {
+            this.isUpdate = isUpdate;
+            return this;
+        }
+        public Boolean getIsUpdate() {
+            return this.isUpdate;
         }
 
         public DescribeConfigGroupResponseBodyData setName(String name) {

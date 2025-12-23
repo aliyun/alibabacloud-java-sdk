@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeOfficeSitesRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     /**
      * <p>The number of entries to return on each page.</p>
      * <ul>
@@ -170,6 +173,14 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public static DescribeOfficeSitesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOfficeSitesRequest self = new DescribeOfficeSitesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeOfficeSitesRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public DescribeOfficeSitesRequest setMaxResults(Integer maxResults) {

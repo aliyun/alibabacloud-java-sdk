@@ -41,14 +41,35 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1764660600967</p>
+         */
+        @NameInMap("AppointmentTimer")
+        public Long appointmentTimer;
+
         @NameInMap("EndCronExpression")
         public String endCronExpression;
 
         @NameInMap("Enforce")
         public Boolean enforce;
 
+        /**
+         * <strong>example:</strong>
+         * <p>m-5b0vjqbiqu010XXXXXX</p>
+         */
+        @NameInMap("ImageId")
+        public String imageId;
+
         @NameInMap("Interval")
         public Integer interval;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
+        @NameInMap("LockScreenTime")
+        public Integer lockScreenTime;
 
         @NameInMap("NotificationTime")
         public Integer notificationTime;
@@ -79,6 +100,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setAppointmentTimer(Long appointmentTimer) {
+            this.appointmentTimer = appointmentTimer;
+            return this;
+        }
+        public Long getAppointmentTimer() {
+            return this.appointmentTimer;
+        }
+
         public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setEndCronExpression(String endCronExpression) {
             this.endCronExpression = endCronExpression;
             return this;
@@ -95,12 +124,28 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             return this.enforce;
         }
 
+        public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
         public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setInterval(Integer interval) {
             this.interval = interval;
             return this;
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setLockScreenTime(Integer lockScreenTime) {
+            this.lockScreenTime = lockScreenTime;
+            return this;
+        }
+        public Integer getLockScreenTime() {
+            return this.lockScreenTime;
         }
 
         public DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers setNotificationTime(Integer notificationTime) {
@@ -415,6 +460,26 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <strong>example:</strong>
+         * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</p>
+         */
+        @NameInMap("InnerTimerDesc")
+        public String innerTimerDesc;
+
+        /**
+         * <strong>example:</strong>
+         * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</p>
+         */
+        @NameInMap("InnerTimerName")
+        public String innerTimerName;
+
+        @NameInMap("IsBind")
+        public Boolean isBind;
+
+        @NameInMap("IsUpdate")
+        public Boolean isUpdate;
+
+        /**
          * <p>The name of the configuration group.</p>
          */
         @NameInMap("Name")
@@ -505,6 +570,38 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+        public DescribeTimerGroupResponseBodyData setInnerTimerDesc(String innerTimerDesc) {
+            this.innerTimerDesc = innerTimerDesc;
+            return this;
+        }
+        public String getInnerTimerDesc() {
+            return this.innerTimerDesc;
+        }
+
+        public DescribeTimerGroupResponseBodyData setInnerTimerName(String innerTimerName) {
+            this.innerTimerName = innerTimerName;
+            return this;
+        }
+        public String getInnerTimerName() {
+            return this.innerTimerName;
+        }
+
+        public DescribeTimerGroupResponseBodyData setIsBind(Boolean isBind) {
+            this.isBind = isBind;
+            return this;
+        }
+        public Boolean getIsBind() {
+            return this.isBind;
+        }
+
+        public DescribeTimerGroupResponseBodyData setIsUpdate(Boolean isUpdate) {
+            this.isUpdate = isUpdate;
+            return this;
+        }
+        public Boolean getIsUpdate() {
+            return this.isUpdate;
         }
 
         public DescribeTimerGroupResponseBodyData setName(String name) {

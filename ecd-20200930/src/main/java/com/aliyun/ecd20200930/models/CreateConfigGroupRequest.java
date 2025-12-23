@@ -120,14 +120,35 @@ public class CreateConfigGroupRequest extends TeaModel {
     }
 
     public static class CreateConfigGroupRequestConfigTimersSegmentTimers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1764660600967</p>
+         */
+        @NameInMap("AppointmentTimer")
+        public Long appointmentTimer;
+
         @NameInMap("EndCronExpression")
         public String endCronExpression;
 
         @NameInMap("Enforce")
         public Boolean enforce;
 
+        /**
+         * <strong>example:</strong>
+         * <p>m-5b0vjqbiqu010XXXXXX</p>
+         */
+        @NameInMap("ImageId")
+        public String imageId;
+
         @NameInMap("Interval")
         public Integer interval;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
+        @NameInMap("LockScreenTime")
+        public Integer lockScreenTime;
 
         @NameInMap("NotificationTime")
         public Integer notificationTime;
@@ -158,6 +179,14 @@ public class CreateConfigGroupRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setAppointmentTimer(Long appointmentTimer) {
+            this.appointmentTimer = appointmentTimer;
+            return this;
+        }
+        public Long getAppointmentTimer() {
+            return this.appointmentTimer;
+        }
+
         public CreateConfigGroupRequestConfigTimersSegmentTimers setEndCronExpression(String endCronExpression) {
             this.endCronExpression = endCronExpression;
             return this;
@@ -174,12 +203,28 @@ public class CreateConfigGroupRequest extends TeaModel {
             return this.enforce;
         }
 
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
         public CreateConfigGroupRequestConfigTimersSegmentTimers setInterval(Integer interval) {
             this.interval = interval;
             return this;
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setLockScreenTime(Integer lockScreenTime) {
+            this.lockScreenTime = lockScreenTime;
+            return this;
+        }
+        public Integer getLockScreenTime() {
+            return this.lockScreenTime;
         }
 
         public CreateConfigGroupRequestConfigTimersSegmentTimers setNotificationTime(Integer notificationTime) {
