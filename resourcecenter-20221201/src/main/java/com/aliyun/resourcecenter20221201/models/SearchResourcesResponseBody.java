@@ -271,6 +271,9 @@ public class SearchResourcesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("Deleted")
+        public Boolean deleted;
+
         /**
          * <p>The time when the resource expires.</p>
          * 
@@ -377,6 +380,14 @@ public class SearchResourcesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public SearchResourcesResponseBodyResources setDeleted(Boolean deleted) {
+            this.deleted = deleted;
+            return this;
+        }
+        public Boolean getDeleted() {
+            return this.deleted;
         }
 
         public SearchResourcesResponseBodyResources setExpireTime(String expireTime) {

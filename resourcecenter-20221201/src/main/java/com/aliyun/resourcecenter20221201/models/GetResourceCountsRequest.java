@@ -26,6 +26,12 @@ public class GetResourceCountsRequest extends TeaModel {
     @NameInMap("GroupByKey")
     public String groupByKey;
 
+    @NameInMap("IncludeDeletedResources")
+    public Boolean includeDeletedResources;
+
+    @NameInMap("SearchExpression")
+    public String searchExpression;
+
     public static GetResourceCountsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetResourceCountsRequest self = new GetResourceCountsRequest();
         return TeaModel.build(map, self);
@@ -45,6 +51,22 @@ public class GetResourceCountsRequest extends TeaModel {
     }
     public String getGroupByKey() {
         return this.groupByKey;
+    }
+
+    public GetResourceCountsRequest setIncludeDeletedResources(Boolean includeDeletedResources) {
+        this.includeDeletedResources = includeDeletedResources;
+        return this;
+    }
+    public Boolean getIncludeDeletedResources() {
+        return this.includeDeletedResources;
+    }
+
+    public GetResourceCountsRequest setSearchExpression(String searchExpression) {
+        this.searchExpression = searchExpression;
+        return this;
+    }
+    public String getSearchExpression() {
+        return this.searchExpression;
     }
 
     public static class GetResourceCountsRequestFilter extends TeaModel {

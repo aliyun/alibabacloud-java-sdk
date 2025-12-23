@@ -10,6 +10,9 @@ public class SearchResourcesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<SearchResourcesRequestFilter> filter;
 
+    @NameInMap("IncludeDeletedResources")
+    public Boolean includeDeletedResources;
+
     /**
      * <p>The maximum number of entries per page.</p>
      * <p>Valid values: 1 to 100.</p>
@@ -40,6 +43,9 @@ public class SearchResourcesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SearchExpression")
+    public String searchExpression;
+
     /**
      * <p>The method that is used to sort the entries returned.</p>
      */
@@ -57,6 +63,14 @@ public class SearchResourcesRequest extends TeaModel {
     }
     public java.util.List<SearchResourcesRequestFilter> getFilter() {
         return this.filter;
+    }
+
+    public SearchResourcesRequest setIncludeDeletedResources(Boolean includeDeletedResources) {
+        this.includeDeletedResources = includeDeletedResources;
+        return this;
+    }
+    public Boolean getIncludeDeletedResources() {
+        return this.includeDeletedResources;
     }
 
     public SearchResourcesRequest setMaxResults(Integer maxResults) {
@@ -81,6 +95,14 @@ public class SearchResourcesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public SearchResourcesRequest setSearchExpression(String searchExpression) {
+        this.searchExpression = searchExpression;
+        return this;
+    }
+    public String getSearchExpression() {
+        return this.searchExpression;
     }
 
     public SearchResourcesRequest setSortCriterion(SearchResourcesRequestSortCriterion sortCriterion) {
