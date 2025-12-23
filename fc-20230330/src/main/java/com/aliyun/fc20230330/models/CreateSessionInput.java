@@ -10,6 +10,12 @@ public class CreateSessionInput extends TeaModel {
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    @NameInMap("ossMountConfig")
+    public OSSMountConfig ossMountConfig;
+
+    @NameInMap("polarFsConfig")
+    public PolarFsConfig polarFsConfig;
+
     /**
      * <strong>example:</strong>
      * <p>custom-test-session-id</p>
@@ -50,6 +56,22 @@ public class CreateSessionInput extends TeaModel {
     }
     public NASConfig getNasConfig() {
         return this.nasConfig;
+    }
+
+    public CreateSessionInput setOssMountConfig(OSSMountConfig ossMountConfig) {
+        this.ossMountConfig = ossMountConfig;
+        return this;
+    }
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
+    public CreateSessionInput setPolarFsConfig(PolarFsConfig polarFsConfig) {
+        this.polarFsConfig = polarFsConfig;
+        return this;
+    }
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
     }
 
     public CreateSessionInput setSessionId(String sessionId) {

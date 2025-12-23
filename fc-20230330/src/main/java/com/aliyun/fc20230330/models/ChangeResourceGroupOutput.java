@@ -4,13 +4,13 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupOutput extends TeaModel {
-    @NameInMap("newResourceGroupId")
+    @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
-    @NameInMap("oldResourceGroupId")
+    @NameInMap("OldResourceGroupId")
     public String oldResourceGroupId;
 
-    @NameInMap("resourceId")
+    @NameInMap("ResourceId")
     public String resourceId;
 
     public static ChangeResourceGroupOutput build(java.util.Map<String, ?> map) throws Exception {
