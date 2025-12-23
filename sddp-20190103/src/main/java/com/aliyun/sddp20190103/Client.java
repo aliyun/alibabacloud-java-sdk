@@ -686,6 +686,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LoadWhiteList", request.loadWhiteList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logQueryOpJson)) {
+            query.put("LogQueryOpJson", request.logQueryOpJson);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.logSource)) {
             query.put("LogSource", request.logSource);
         }

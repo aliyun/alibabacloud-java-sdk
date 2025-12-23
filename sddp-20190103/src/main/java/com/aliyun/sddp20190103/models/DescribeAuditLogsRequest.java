@@ -90,6 +90,13 @@ public class DescribeAuditLogsRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>[ {   &quot;isContain&quot; : false,   &quot;queryKey&quot; : &quot;effectRowRange&quot; }, {   &quot;isContain&quot; : false,   &quot;queryKey&quot; : &quot;remoteClientIp&quot; } ]</p>
+     */
+    @NameInMap("LogQueryOpJson")
+    public String logQueryOpJson;
+
+    /**
+     * <strong>example:</strong>
      * <p>SLOW_SQL</p>
      */
     @NameInMap("LogSource")
@@ -284,6 +291,14 @@ public class DescribeAuditLogsRequest extends TeaModel {
     }
     public Boolean getLoadWhiteList() {
         return this.loadWhiteList;
+    }
+
+    public DescribeAuditLogsRequest setLogQueryOpJson(String logQueryOpJson) {
+        this.logQueryOpJson = logQueryOpJson;
+        return this;
+    }
+    public String getLogQueryOpJson() {
+        return this.logQueryOpJson;
     }
 
     public DescribeAuditLogsRequest setLogSource(String logSource) {
