@@ -151,6 +151,9 @@ public class GetTextScanResultResponseBody extends TeaModel {
     }
 
     public static class GetTextScanResultResponseBodyDataItems extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
         /**
          * <p>Bailian Request ID</p>
          * 
@@ -168,6 +171,9 @@ public class GetTextScanResultResponseBody extends TeaModel {
          */
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("DataId")
+        public String dataId;
 
         /**
          * <p>Feedback information.</p>
@@ -298,6 +304,14 @@ public class GetTextScanResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetTextScanResultResponseBodyDataItems setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
         public GetTextScanResultResponseBodyDataItems setBailianRequestId(String bailianRequestId) {
             this.bailianRequestId = bailianRequestId;
             return this;
@@ -312,6 +326,14 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetTextScanResultResponseBodyDataItems setDataId(String dataId) {
+            this.dataId = dataId;
+            return this;
+        }
+        public String getDataId() {
+            return this.dataId;
         }
 
         public GetTextScanResultResponseBodyDataItems setExtFeedback(String extFeedback) {
