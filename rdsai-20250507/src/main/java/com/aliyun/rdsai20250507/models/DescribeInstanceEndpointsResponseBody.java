@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceEndpointsResponseBody extends TeaModel {
+    @NameInMap("DBInstanceEndpoints")
+    public java.util.List<DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints> DBInstanceEndpoints;
+
     @NameInMap("InstanceEndpoints")
     public java.util.List<DescribeInstanceEndpointsResponseBodyInstanceEndpoints> instanceEndpoints;
 
@@ -24,6 +27,14 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     public static DescribeInstanceEndpointsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceEndpointsResponseBody self = new DescribeInstanceEndpointsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceEndpointsResponseBody setDBInstanceEndpoints(java.util.List<DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints> DBInstanceEndpoints) {
+        this.DBInstanceEndpoints = DBInstanceEndpoints;
+        return this;
+    }
+    public java.util.List<DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints> getDBInstanceEndpoints() {
+        return this.DBInstanceEndpoints;
     }
 
     public DescribeInstanceEndpointsResponseBody setInstanceEndpoints(java.util.List<DescribeInstanceEndpointsResponseBodyInstanceEndpoints> instanceEndpoints) {
@@ -48,6 +59,47 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints extends TeaModel {
+        @NameInMap("ConnectionString")
+        public String connectionString;
+
+        @NameInMap("IpType")
+        public String ipType;
+
+        @NameInMap("Port")
+        public String port;
+
+        public static DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints self = new DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints setConnectionString(String connectionString) {
+            this.connectionString = connectionString;
+            return this;
+        }
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        public DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints setIpType(String ipType) {
+            this.ipType = ipType;
+            return this;
+        }
+        public String getIpType() {
+            return this.ipType;
+        }
+
+        public DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
     }
 
     public static class DescribeInstanceEndpointsResponseBodyInstanceEndpoints extends TeaModel {

@@ -160,6 +160,9 @@ public class DescribeEventsListResponseBody extends TeaModel {
         @NameInMap("RecoveryTime")
         public String recoveryTime;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         public static DescribeEventsListResponseBodyEvents build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventsListResponseBodyEvents self = new DescribeEventsListResponseBodyEvents();
             return TeaModel.build(map, self);
@@ -211,6 +214,14 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
         public String getRecoveryTime() {
             return this.recoveryTime;
+        }
+
+        public DescribeEventsListResponseBodyEvents setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }
