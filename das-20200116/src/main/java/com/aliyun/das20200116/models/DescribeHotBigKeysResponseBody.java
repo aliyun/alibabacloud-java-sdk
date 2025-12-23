@@ -462,6 +462,88 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey extends TeaModel {
+        @NameInMap("DataSize")
+        public String dataSize;
+
+        @NameInMap("Db")
+        public String db;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("KeyType")
+        public String keyType;
+
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        public static DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey self = new DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey setDataSize(String dataSize) {
+            this.dataSize = dataSize;
+            return this;
+        }
+        public String getDataSize() {
+            return this.dataSize;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey setDb(String db) {
+            this.db = db;
+            return this;
+        }
+        public String getDb() {
+            return this.db;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey setKeyType(String keyType) {
+            this.keyType = keyType;
+            return this;
+        }
+        public String getKeyType() {
+            return this.keyType;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+    }
+
+    public static class DescribeHotBigKeysResponseBodyDataLargeKeys extends TeaModel {
+        @NameInMap("LargeKey")
+        public java.util.List<DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey> largeKey;
+
+        public static DescribeHotBigKeysResponseBodyDataLargeKeys build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHotBigKeysResponseBodyDataLargeKeys self = new DescribeHotBigKeysResponseBodyDataLargeKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHotBigKeysResponseBodyDataLargeKeys setLargeKey(java.util.List<DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey> largeKey) {
+            this.largeKey = largeKey;
+            return this;
+        }
+        public java.util.List<DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey> getLargeKey() {
+            return this.largeKey;
+        }
+
+    }
+
     public static class DescribeHotBigKeysResponseBodyData extends TeaModel {
         /**
          * <p>The reason why the large key failed to be queried.</p>
@@ -498,6 +580,12 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
          */
         @NameInMap("HotKeys")
         public DescribeHotBigKeysResponseBodyDataHotKeys hotKeys;
+
+        @NameInMap("LargeKeyMsg")
+        public String largeKeyMsg;
+
+        @NameInMap("LargeKeys")
+        public DescribeHotBigKeysResponseBodyDataLargeKeys largeKeys;
 
         public static DescribeHotBigKeysResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeHotBigKeysResponseBodyData self = new DescribeHotBigKeysResponseBodyData();
@@ -550,6 +638,22 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         }
         public DescribeHotBigKeysResponseBodyDataHotKeys getHotKeys() {
             return this.hotKeys;
+        }
+
+        public DescribeHotBigKeysResponseBodyData setLargeKeyMsg(String largeKeyMsg) {
+            this.largeKeyMsg = largeKeyMsg;
+            return this;
+        }
+        public String getLargeKeyMsg() {
+            return this.largeKeyMsg;
+        }
+
+        public DescribeHotBigKeysResponseBodyData setLargeKeys(DescribeHotBigKeysResponseBodyDataLargeKeys largeKeys) {
+            this.largeKeys = largeKeys;
+            return this;
+        }
+        public DescribeHotBigKeysResponseBodyDataLargeKeys getLargeKeys() {
+            return this.largeKeys;
         }
 
     }
