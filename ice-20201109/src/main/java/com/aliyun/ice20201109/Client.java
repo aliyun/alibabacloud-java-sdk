@@ -1797,6 +1797,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>IPC下单</p>
+     * 
+     * @param request CreateIpcOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateIpcOrderResponse
+     */
+    public CreateIpcOrderResponse createIpcOrderWithOptions(CreateIpcOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.capability)) {
+            query.put("Capability", request.capability);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIpcOrder"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpcOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>IPC下单</p>
+     * 
+     * @param request CreateIpcOrderRequest
+     * @return CreateIpcOrderResponse
+     */
+    public CreateIpcOrderResponse createIpcOrder(CreateIpcOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createIpcOrderWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</p>
@@ -7790,6 +7842,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetHotwordLibraryResponse getHotwordLibrary(GetHotwordLibraryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getHotwordLibraryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询IPC设备信息</p>
+     * 
+     * @param request GetIpcDeviceInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIpcDeviceInfoResponse
+     */
+    public GetIpcDeviceInfoResponse getIpcDeviceInfoWithOptions(GetIpcDeviceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.capability)) {
+            query.put("Capability", request.capability);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIpcDeviceInfo"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIpcDeviceInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询IPC设备信息</p>
+     * 
+     * @param request GetIpcDeviceInfoRequest
+     * @return GetIpcDeviceInfoResponse
+     */
+    public GetIpcDeviceInfoResponse getIpcDeviceInfo(GetIpcDeviceInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getIpcDeviceInfoWithOptions(request, runtime);
     }
 
     /**
@@ -14406,6 +14522,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryIProductionJobResponse queryIProductionJob(QueryIProductionJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryIProductionJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询IPC用量</p>
+     * 
+     * @param request QueryIpcQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryIpcQuotaResponse
+     */
+    public QueryIpcQuotaResponse queryIpcQuotaWithOptions(QueryIpcQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.capability)) {
+            query.put("Capability", request.capability);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryIpcQuota"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryIpcQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询IPC用量</p>
+     * 
+     * @param request QueryIpcQuotaRequest
+     * @return QueryIpcQuotaResponse
+     */
+    public QueryIpcQuotaResponse queryIpcQuota(QueryIpcQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryIpcQuotaWithOptions(request, runtime);
     }
 
     /**

@@ -34,6 +34,9 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     @NameInMap("Results")
     public QuerySmarttagJobResponseBodyResults results;
 
+    @NameInMap("Usages")
+    public QuerySmarttagJobResponseBodyUsages usages;
+
     /**
      * <p>The content of callback messages that are sent to Simple Message Queue (SMQ) when the information of the smart tagging job changes. For more information about the parameters contained in the callback message, see the &quot;Callback parameters&quot; section of this topic.</p>
      * 
@@ -70,6 +73,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     }
     public QuerySmarttagJobResponseBodyResults getResults() {
         return this.results;
+    }
+
+    public QuerySmarttagJobResponseBody setUsages(QuerySmarttagJobResponseBodyUsages usages) {
+        this.usages = usages;
+        return this;
+    }
+    public QuerySmarttagJobResponseBodyUsages getUsages() {
+        return this.usages;
     }
 
     public QuerySmarttagJobResponseBody setUserData(String userData) {
@@ -161,6 +172,55 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         }
         public java.util.List<QuerySmarttagJobResponseBodyResultsResult> getResult() {
             return this.result;
+        }
+
+    }
+
+    public static class QuerySmarttagJobResponseBodyUsagesUsage extends TeaModel {
+        @NameInMap("Quota")
+        public Long quota;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static QuerySmarttagJobResponseBodyUsagesUsage build(java.util.Map<String, ?> map) throws Exception {
+            QuerySmarttagJobResponseBodyUsagesUsage self = new QuerySmarttagJobResponseBodyUsagesUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public QuerySmarttagJobResponseBodyUsagesUsage setQuota(Long quota) {
+            this.quota = quota;
+            return this;
+        }
+        public Long getQuota() {
+            return this.quota;
+        }
+
+        public QuerySmarttagJobResponseBodyUsagesUsage setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class QuerySmarttagJobResponseBodyUsages extends TeaModel {
+        @NameInMap("Usage")
+        public java.util.List<QuerySmarttagJobResponseBodyUsagesUsage> usage;
+
+        public static QuerySmarttagJobResponseBodyUsages build(java.util.Map<String, ?> map) throws Exception {
+            QuerySmarttagJobResponseBodyUsages self = new QuerySmarttagJobResponseBodyUsages();
+            return TeaModel.build(map, self);
+        }
+
+        public QuerySmarttagJobResponseBodyUsages setUsage(java.util.List<QuerySmarttagJobResponseBodyUsagesUsage> usage) {
+            this.usage = usage;
+            return this;
+        }
+        public java.util.List<QuerySmarttagJobResponseBodyUsagesUsage> getUsage() {
+            return this.usage;
         }
 
     }
