@@ -112,6 +112,36 @@ public class QueryConfigResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryConfigResponseBodyDataNacosRunningEnvFencePolicy extends TeaModel {
+        @NameInMap("enabledModules")
+        public java.util.List<String> enabledModules;
+
+        @NameInMap("interceptPolicy")
+        public java.util.Map<String, String> interceptPolicy;
+
+        public static QueryConfigResponseBodyDataNacosRunningEnvFencePolicy build(java.util.Map<String, ?> map) throws Exception {
+            QueryConfigResponseBodyDataNacosRunningEnvFencePolicy self = new QueryConfigResponseBodyDataNacosRunningEnvFencePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryConfigResponseBodyDataNacosRunningEnvFencePolicy setEnabledModules(java.util.List<String> enabledModules) {
+            this.enabledModules = enabledModules;
+            return this;
+        }
+        public java.util.List<String> getEnabledModules() {
+            return this.enabledModules;
+        }
+
+        public QueryConfigResponseBodyDataNacosRunningEnvFencePolicy setInterceptPolicy(java.util.Map<String, String> interceptPolicy) {
+            this.interceptPolicy = interceptPolicy;
+            return this;
+        }
+        public java.util.Map<String, String> getInterceptPolicy() {
+            return this.interceptPolicy;
+        }
+
+    }
+
     public static class QueryConfigResponseBodyDataNacosRunningEnv extends TeaModel {
         /**
          * <p>Indicates whether empty list protection is enabled.</p>
@@ -121,6 +151,12 @@ public class QueryConfigResponseBody extends TeaModel {
          */
         @NameInMap("emptyProtect")
         public Boolean emptyProtect;
+
+        @NameInMap("fenceEnabled")
+        public Boolean fenceEnabled;
+
+        @NameInMap("fencePolicy")
+        public QueryConfigResponseBodyDataNacosRunningEnvFencePolicy fencePolicy;
 
         @NameInMap("grayAuth")
         public String grayAuth;
@@ -136,6 +172,22 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public Boolean getEmptyProtect() {
             return this.emptyProtect;
+        }
+
+        public QueryConfigResponseBodyDataNacosRunningEnv setFenceEnabled(Boolean fenceEnabled) {
+            this.fenceEnabled = fenceEnabled;
+            return this;
+        }
+        public Boolean getFenceEnabled() {
+            return this.fenceEnabled;
+        }
+
+        public QueryConfigResponseBodyDataNacosRunningEnv setFencePolicy(QueryConfigResponseBodyDataNacosRunningEnvFencePolicy fencePolicy) {
+            this.fencePolicy = fencePolicy;
+            return this;
+        }
+        public QueryConfigResponseBodyDataNacosRunningEnvFencePolicy getFencePolicy() {
+            return this.fencePolicy;
         }
 
         public QueryConfigResponseBodyDataNacosRunningEnv setGrayAuth(String grayAuth) {
@@ -421,6 +473,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("PassWord")
         public String passWord;
 
+        @NameInMap("PrometheusSdProtocolEnabled")
+        public String prometheusSdProtocolEnabled;
+
         /**
          * <p>Indicates whether the instance was restarted and new configurations have taken effect. Valid values:</p>
          * <ul>
@@ -698,6 +753,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public String getPassWord() {
             return this.passWord;
+        }
+
+        public QueryConfigResponseBodyData setPrometheusSdProtocolEnabled(String prometheusSdProtocolEnabled) {
+            this.prometheusSdProtocolEnabled = prometheusSdProtocolEnabled;
+            return this;
+        }
+        public String getPrometheusSdProtocolEnabled() {
+            return this.prometheusSdProtocolEnabled;
         }
 
         public QueryConfigResponseBodyData setRestartFlag(Boolean restartFlag) {

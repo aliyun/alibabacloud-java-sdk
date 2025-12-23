@@ -190,6 +190,9 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("ConfigTags")
+        public String configTags;
+
         /**
          * <p>The ID of the configuration.</p>
          * 
@@ -198,6 +201,9 @@ public class ListNacosConfigsResponseBody extends TeaModel {
          */
         @NameInMap("DataId")
         public String dataId;
+
+        @NameInMap("Description")
+        public String description;
 
         /**
          * <p>The ID of the group.</p>
@@ -230,12 +236,28 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListNacosConfigsResponseBodyConfigurations setConfigTags(String configTags) {
+            this.configTags = configTags;
+            return this;
+        }
+        public String getConfigTags() {
+            return this.configTags;
+        }
+
         public ListNacosConfigsResponseBodyConfigurations setDataId(String dataId) {
             this.dataId = dataId;
             return this;
         }
         public String getDataId() {
             return this.dataId;
+        }
+
+        public ListNacosConfigsResponseBodyConfigurations setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListNacosConfigsResponseBodyConfigurations setGroup(String group) {
