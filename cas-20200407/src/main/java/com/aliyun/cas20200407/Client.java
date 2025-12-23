@@ -613,6 +613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CiphertextBlob", request.ciphertextBlob);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("CustomIdentifier", request.customIdentifier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
             query.put("MessageType", request.messageType);
         }
@@ -1195,6 +1199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.certIdentifier)) {
             query.put("CertIdentifier", request.certIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("CustomIdentifier", request.customIdentifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
@@ -2175,6 +2183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CertIdentifier", request.certIdentifier);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("CustomIdentifier", request.customIdentifier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.message)) {
             query.put("Message", request.message);
         }
@@ -2585,6 +2597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.certIdentifier)) {
             query.put("CertIdentifier", request.certIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customIdentifier)) {
+            query.put("CustomIdentifier", request.customIdentifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.message)) {

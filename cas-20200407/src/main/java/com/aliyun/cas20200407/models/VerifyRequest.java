@@ -10,13 +10,15 @@ public class VerifyRequest extends TeaModel {
      * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
      * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>5870821-cn-hangzhou</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
+
+    @NameInMap("CustomIdentifier")
+    public String customIdentifier;
 
     /**
      * <p>The data for which you want to verify the signature. The value must be encoded in Base64.\
@@ -84,6 +86,14 @@ public class VerifyRequest extends TeaModel {
     }
     public String getCertIdentifier() {
         return this.certIdentifier;
+    }
+
+    public VerifyRequest setCustomIdentifier(String customIdentifier) {
+        this.customIdentifier = customIdentifier;
+        return this;
+    }
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
     }
 
     public VerifyRequest setMessage(String message) {

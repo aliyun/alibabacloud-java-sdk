@@ -25,7 +25,6 @@ public class DecryptRequest extends TeaModel {
      * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
      * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-12345678****</p>
@@ -42,6 +41,9 @@ public class DecryptRequest extends TeaModel {
      */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
+
+    @NameInMap("CustomIdentifier")
+    public String customIdentifier;
 
     /**
      * <p>The value type of the Message parameter. Valid values:</p>
@@ -83,6 +85,14 @@ public class DecryptRequest extends TeaModel {
     }
     public String getCiphertextBlob() {
         return this.ciphertextBlob;
+    }
+
+    public DecryptRequest setCustomIdentifier(String customIdentifier) {
+        this.customIdentifier = customIdentifier;
+        return this;
+    }
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
     }
 
     public DecryptRequest setMessageType(String messageType) {

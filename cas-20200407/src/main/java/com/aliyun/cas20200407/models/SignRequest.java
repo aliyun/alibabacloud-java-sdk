@@ -10,13 +10,15 @@ public class SignRequest extends TeaModel {
      * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
      * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ccaf0c629c2be1e2abb63bb76b</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
+
+    @NameInMap("CustomIdentifier")
+    public String customIdentifier;
 
     /**
      * <p>The data to sign. The value must be encoded in Base64.\
@@ -74,6 +76,14 @@ public class SignRequest extends TeaModel {
     }
     public String getCertIdentifier() {
         return this.certIdentifier;
+    }
+
+    public SignRequest setCustomIdentifier(String customIdentifier) {
+        this.customIdentifier = customIdentifier;
+        return this;
+    }
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
     }
 
     public SignRequest setMessage(String message) {
