@@ -7,6 +7,12 @@ public class PatchEventResponseBody extends TeaModel {
     @NameInMap("attendees")
     public java.util.List<PatchEventResponseBodyAttendees> attendees;
 
+    @NameInMap("cardInstances")
+    public java.util.List<PatchEventResponseBodyCardInstances> cardInstances;
+
+    @NameInMap("categories")
+    public java.util.List<PatchEventResponseBodyCategories> categories;
+
     /**
      * <strong>example:</strong>
      * <p>2022-10-25T02:26:14Z</p>
@@ -19,6 +25,9 @@ public class PatchEventResponseBody extends TeaModel {
 
     @NameInMap("end")
     public PatchEventResponseBodyEnd end;
+
+    @NameInMap("freeBusyStatus")
+    public String freeBusyStatus;
 
     /**
      * <strong>example:</strong>
@@ -36,6 +45,9 @@ public class PatchEventResponseBody extends TeaModel {
 
     @NameInMap("location")
     public PatchEventResponseBodyLocation location;
+
+    @NameInMap("onlineMeetingInfo")
+    public PatchEventResponseBodyOnlineMeetingInfo onlineMeetingInfo;
 
     @NameInMap("organizer")
     public PatchEventResponseBodyOrganizer organizer;
@@ -55,11 +67,17 @@ public class PatchEventResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("richTextDescription")
+    public PatchEventResponseBodyRichTextDescription richTextDescription;
+
     @NameInMap("start")
     public PatchEventResponseBodyStart start;
 
     @NameInMap("summary")
     public String summary;
+
+    @NameInMap("uiConfigs")
+    public java.util.List<PatchEventResponseBodyUiConfigs> uiConfigs;
 
     /**
      * <strong>example:</strong>
@@ -79,6 +97,22 @@ public class PatchEventResponseBody extends TeaModel {
     }
     public java.util.List<PatchEventResponseBodyAttendees> getAttendees() {
         return this.attendees;
+    }
+
+    public PatchEventResponseBody setCardInstances(java.util.List<PatchEventResponseBodyCardInstances> cardInstances) {
+        this.cardInstances = cardInstances;
+        return this;
+    }
+    public java.util.List<PatchEventResponseBodyCardInstances> getCardInstances() {
+        return this.cardInstances;
+    }
+
+    public PatchEventResponseBody setCategories(java.util.List<PatchEventResponseBodyCategories> categories) {
+        this.categories = categories;
+        return this;
+    }
+    public java.util.List<PatchEventResponseBodyCategories> getCategories() {
+        return this.categories;
     }
 
     public PatchEventResponseBody setCreateTime(String createTime) {
@@ -105,6 +139,14 @@ public class PatchEventResponseBody extends TeaModel {
         return this.end;
     }
 
+    public PatchEventResponseBody setFreeBusyStatus(String freeBusyStatus) {
+        this.freeBusyStatus = freeBusyStatus;
+        return this;
+    }
+    public String getFreeBusyStatus() {
+        return this.freeBusyStatus;
+    }
+
     public PatchEventResponseBody setId(String id) {
         this.id = id;
         return this;
@@ -127,6 +169,14 @@ public class PatchEventResponseBody extends TeaModel {
     }
     public PatchEventResponseBodyLocation getLocation() {
         return this.location;
+    }
+
+    public PatchEventResponseBody setOnlineMeetingInfo(PatchEventResponseBodyOnlineMeetingInfo onlineMeetingInfo) {
+        this.onlineMeetingInfo = onlineMeetingInfo;
+        return this;
+    }
+    public PatchEventResponseBodyOnlineMeetingInfo getOnlineMeetingInfo() {
+        return this.onlineMeetingInfo;
     }
 
     public PatchEventResponseBody setOrganizer(PatchEventResponseBodyOrganizer organizer) {
@@ -161,6 +211,14 @@ public class PatchEventResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public PatchEventResponseBody setRichTextDescription(PatchEventResponseBodyRichTextDescription richTextDescription) {
+        this.richTextDescription = richTextDescription;
+        return this;
+    }
+    public PatchEventResponseBodyRichTextDescription getRichTextDescription() {
+        return this.richTextDescription;
+    }
+
     public PatchEventResponseBody setStart(PatchEventResponseBodyStart start) {
         this.start = start;
         return this;
@@ -175,6 +233,14 @@ public class PatchEventResponseBody extends TeaModel {
     }
     public String getSummary() {
         return this.summary;
+    }
+
+    public PatchEventResponseBody setUiConfigs(java.util.List<PatchEventResponseBodyUiConfigs> uiConfigs) {
+        this.uiConfigs = uiConfigs;
+        return this;
+    }
+    public java.util.List<PatchEventResponseBodyUiConfigs> getUiConfigs() {
+        return this.uiConfigs;
     }
 
     public PatchEventResponseBody setUpdateTime(String updateTime) {
@@ -268,6 +334,66 @@ public class PatchEventResponseBody extends TeaModel {
 
     }
 
+    public static class PatchEventResponseBodyCardInstances extends TeaModel {
+        @NameInMap("outTrackId")
+        public String outTrackId;
+
+        @NameInMap("scenario")
+        public String scenario;
+
+        public static PatchEventResponseBodyCardInstances build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventResponseBodyCardInstances self = new PatchEventResponseBodyCardInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventResponseBodyCardInstances setOutTrackId(String outTrackId) {
+            this.outTrackId = outTrackId;
+            return this;
+        }
+        public String getOutTrackId() {
+            return this.outTrackId;
+        }
+
+        public PatchEventResponseBodyCardInstances setScenario(String scenario) {
+            this.scenario = scenario;
+            return this;
+        }
+        public String getScenario() {
+            return this.scenario;
+        }
+
+    }
+
+    public static class PatchEventResponseBodyCategories extends TeaModel {
+        @NameInMap("categoryId")
+        public String categoryId;
+
+        @NameInMap("displayName")
+        public String displayName;
+
+        public static PatchEventResponseBodyCategories build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventResponseBodyCategories self = new PatchEventResponseBodyCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventResponseBodyCategories setCategoryId(String categoryId) {
+            this.categoryId = categoryId;
+            return this;
+        }
+        public String getCategoryId() {
+            return this.categoryId;
+        }
+
+        public PatchEventResponseBodyCategories setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+    }
+
     public static class PatchEventResponseBodyEnd extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -351,6 +477,47 @@ public class PatchEventResponseBody extends TeaModel {
         }
         public java.util.List<String> getMeetingRooms() {
             return this.meetingRooms;
+        }
+
+    }
+
+    public static class PatchEventResponseBodyOnlineMeetingInfo extends TeaModel {
+        @NameInMap("conferenceId")
+        public String conferenceId;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("url")
+        public String url;
+
+        public static PatchEventResponseBodyOnlineMeetingInfo build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventResponseBodyOnlineMeetingInfo self = new PatchEventResponseBodyOnlineMeetingInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventResponseBodyOnlineMeetingInfo setConferenceId(String conferenceId) {
+            this.conferenceId = conferenceId;
+            return this;
+        }
+        public String getConferenceId() {
+            return this.conferenceId;
+        }
+
+        public PatchEventResponseBodyOnlineMeetingInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public PatchEventResponseBodyOnlineMeetingInfo setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
@@ -627,6 +794,25 @@ public class PatchEventResponseBody extends TeaModel {
 
     }
 
+    public static class PatchEventResponseBodyRichTextDescription extends TeaModel {
+        @NameInMap("text")
+        public String text;
+
+        public static PatchEventResponseBodyRichTextDescription build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventResponseBodyRichTextDescription self = new PatchEventResponseBodyRichTextDescription();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventResponseBodyRichTextDescription setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
     public static class PatchEventResponseBodyStart extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -676,6 +862,36 @@ public class PatchEventResponseBody extends TeaModel {
         }
         public String getTimeZone() {
             return this.timeZone;
+        }
+
+    }
+
+    public static class PatchEventResponseBodyUiConfigs extends TeaModel {
+        @NameInMap("uiName")
+        public String uiName;
+
+        @NameInMap("uiStatus")
+        public String uiStatus;
+
+        public static PatchEventResponseBodyUiConfigs build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventResponseBodyUiConfigs self = new PatchEventResponseBodyUiConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventResponseBodyUiConfigs setUiName(String uiName) {
+            this.uiName = uiName;
+            return this;
+        }
+        public String getUiName() {
+            return this.uiName;
+        }
+
+        public PatchEventResponseBodyUiConfigs setUiStatus(String uiStatus) {
+            this.uiStatus = uiStatus;
+            return this;
+        }
+        public String getUiStatus() {
+            return this.uiStatus;
         }
 
     }

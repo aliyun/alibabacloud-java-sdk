@@ -59,6 +59,21 @@ public class PatchEventShrinkRequest extends TeaModel {
     @NameInMap("Summary")
     public String summary;
 
+    @NameInMap("categories")
+    public String categoriesShrink;
+
+    @NameInMap("freeBusyStatus")
+    public String freeBusyStatus;
+
+    @NameInMap("onlineMeetingInfo")
+    public String onlineMeetingInfoShrink;
+
+    @NameInMap("richTextDescription")
+    public String richTextDescriptionShrink;
+
+    @NameInMap("uiConfigs")
+    public String uiConfigsShrink;
+
     public static PatchEventShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         PatchEventShrinkRequest self = new PatchEventShrinkRequest();
         return TeaModel.build(map, self);
@@ -166,6 +181,46 @@ public class PatchEventShrinkRequest extends TeaModel {
     }
     public String getSummary() {
         return this.summary;
+    }
+
+    public PatchEventShrinkRequest setCategoriesShrink(String categoriesShrink) {
+        this.categoriesShrink = categoriesShrink;
+        return this;
+    }
+    public String getCategoriesShrink() {
+        return this.categoriesShrink;
+    }
+
+    public PatchEventShrinkRequest setFreeBusyStatus(String freeBusyStatus) {
+        this.freeBusyStatus = freeBusyStatus;
+        return this;
+    }
+    public String getFreeBusyStatus() {
+        return this.freeBusyStatus;
+    }
+
+    public PatchEventShrinkRequest setOnlineMeetingInfoShrink(String onlineMeetingInfoShrink) {
+        this.onlineMeetingInfoShrink = onlineMeetingInfoShrink;
+        return this;
+    }
+    public String getOnlineMeetingInfoShrink() {
+        return this.onlineMeetingInfoShrink;
+    }
+
+    public PatchEventShrinkRequest setRichTextDescriptionShrink(String richTextDescriptionShrink) {
+        this.richTextDescriptionShrink = richTextDescriptionShrink;
+        return this;
+    }
+    public String getRichTextDescriptionShrink() {
+        return this.richTextDescriptionShrink;
+    }
+
+    public PatchEventShrinkRequest setUiConfigsShrink(String uiConfigsShrink) {
+        this.uiConfigsShrink = uiConfigsShrink;
+        return this;
+    }
+    public String getUiConfigsShrink() {
+        return this.uiConfigsShrink;
     }
 
 }

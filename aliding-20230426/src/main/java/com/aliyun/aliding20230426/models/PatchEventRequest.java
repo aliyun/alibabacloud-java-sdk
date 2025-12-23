@@ -59,6 +59,21 @@ public class PatchEventRequest extends TeaModel {
     @NameInMap("Summary")
     public String summary;
 
+    @NameInMap("categories")
+    public java.util.List<PatchEventRequestCategories> categories;
+
+    @NameInMap("freeBusyStatus")
+    public String freeBusyStatus;
+
+    @NameInMap("onlineMeetingInfo")
+    public PatchEventRequestOnlineMeetingInfo onlineMeetingInfo;
+
+    @NameInMap("richTextDescription")
+    public PatchEventRequestRichTextDescription richTextDescription;
+
+    @NameInMap("uiConfigs")
+    public java.util.List<PatchEventRequestUiConfigs> uiConfigs;
+
     public static PatchEventRequest build(java.util.Map<String, ?> map) throws Exception {
         PatchEventRequest self = new PatchEventRequest();
         return TeaModel.build(map, self);
@@ -166,6 +181,46 @@ public class PatchEventRequest extends TeaModel {
     }
     public String getSummary() {
         return this.summary;
+    }
+
+    public PatchEventRequest setCategories(java.util.List<PatchEventRequestCategories> categories) {
+        this.categories = categories;
+        return this;
+    }
+    public java.util.List<PatchEventRequestCategories> getCategories() {
+        return this.categories;
+    }
+
+    public PatchEventRequest setFreeBusyStatus(String freeBusyStatus) {
+        this.freeBusyStatus = freeBusyStatus;
+        return this;
+    }
+    public String getFreeBusyStatus() {
+        return this.freeBusyStatus;
+    }
+
+    public PatchEventRequest setOnlineMeetingInfo(PatchEventRequestOnlineMeetingInfo onlineMeetingInfo) {
+        this.onlineMeetingInfo = onlineMeetingInfo;
+        return this;
+    }
+    public PatchEventRequestOnlineMeetingInfo getOnlineMeetingInfo() {
+        return this.onlineMeetingInfo;
+    }
+
+    public PatchEventRequest setRichTextDescription(PatchEventRequestRichTextDescription richTextDescription) {
+        this.richTextDescription = richTextDescription;
+        return this;
+    }
+    public PatchEventRequestRichTextDescription getRichTextDescription() {
+        return this.richTextDescription;
+    }
+
+    public PatchEventRequest setUiConfigs(java.util.List<PatchEventRequestUiConfigs> uiConfigs) {
+        this.uiConfigs = uiConfigs;
+        return this;
+    }
+    public java.util.List<PatchEventRequestUiConfigs> getUiConfigs() {
+        return this.uiConfigs;
     }
 
     public static class PatchEventRequestAttendees extends TeaModel {
@@ -565,6 +620,104 @@ public class PatchEventRequest extends TeaModel {
         }
         public String getTimeZone() {
             return this.timeZone;
+        }
+
+    }
+
+    public static class PatchEventRequestCategories extends TeaModel {
+        @NameInMap("categoryId")
+        public String categoryId;
+
+        @NameInMap("displayName")
+        public String displayName;
+
+        public static PatchEventRequestCategories build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventRequestCategories self = new PatchEventRequestCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventRequestCategories setCategoryId(String categoryId) {
+            this.categoryId = categoryId;
+            return this;
+        }
+        public String getCategoryId() {
+            return this.categoryId;
+        }
+
+        public PatchEventRequestCategories setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+    }
+
+    public static class PatchEventRequestOnlineMeetingInfo extends TeaModel {
+        @NameInMap("type")
+        public String type;
+
+        public static PatchEventRequestOnlineMeetingInfo build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventRequestOnlineMeetingInfo self = new PatchEventRequestOnlineMeetingInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventRequestOnlineMeetingInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class PatchEventRequestRichTextDescription extends TeaModel {
+        @NameInMap("text")
+        public String text;
+
+        public static PatchEventRequestRichTextDescription build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventRequestRichTextDescription self = new PatchEventRequestRichTextDescription();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventRequestRichTextDescription setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class PatchEventRequestUiConfigs extends TeaModel {
+        @NameInMap("uiName")
+        public String uiName;
+
+        @NameInMap("uiStatus")
+        public String uiStatus;
+
+        public static PatchEventRequestUiConfigs build(java.util.Map<String, ?> map) throws Exception {
+            PatchEventRequestUiConfigs self = new PatchEventRequestUiConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public PatchEventRequestUiConfigs setUiName(String uiName) {
+            this.uiName = uiName;
+            return this;
+        }
+        public String getUiName() {
+            return this.uiName;
+        }
+
+        public PatchEventRequestUiConfigs setUiStatus(String uiStatus) {
+            this.uiStatus = uiStatus;
+            return this;
+        }
+        public String getUiStatus() {
+            return this.uiStatus;
         }
 
     }

@@ -29,15 +29,6 @@ public class QueryDentriesInfoShrinkRequest extends TeaModel {
     public String tenantContextShrink;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>urv3ZIAtcmmIgQzHq08YcAiEiE</p>
-     */
-    @NameInMap("UnionId")
-    public String unionId;
-
-    /**
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -79,14 +70,6 @@ public class QueryDentriesInfoShrinkRequest extends TeaModel {
     }
     public String getTenantContextShrink() {
         return this.tenantContextShrink;
-    }
-
-    public QueryDentriesInfoShrinkRequest setUnionId(String unionId) {
-        this.unionId = unionId;
-        return this;
-    }
-    public String getUnionId() {
-        return this.unionId;
     }
 
     public QueryDentriesInfoShrinkRequest setWithThumbnail(Boolean withThumbnail) {

@@ -4488,6 +4488,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("assistantId", request.assistantId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientEnum)) {
+            body.put("clientEnum", request.clientEnum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.extLoginUser)) {
             body.put("extLoginUser", request.extLoginUser);
         }
@@ -13068,6 +13072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("assistantId", request.assistantId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientEnum)) {
+            body.put("clientEnum", request.clientEnum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.extLoginUser)) {
             body.put("extLoginUser", request.extLoginUser);
         }
@@ -14835,6 +14843,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.startShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.start, "Start", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.categories)) {
+            request.categoriesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.categories, "categories", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.onlineMeetingInfo)) {
+            request.onlineMeetingInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.onlineMeetingInfo, "onlineMeetingInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.richTextDescription)) {
+            request.richTextDescriptionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.richTextDescription, "richTextDescription", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.uiConfigs)) {
+            request.uiConfigsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.uiConfigs, "uiConfigs", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoriesShrink)) {
+            query.put("categories", request.categoriesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.freeBusyStatus)) {
+            query.put("freeBusyStatus", request.freeBusyStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlineMeetingInfoShrink)) {
+            query.put("onlineMeetingInfo", request.onlineMeetingInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.richTextDescriptionShrink)) {
+            query.put("richTextDescription", request.richTextDescriptionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uiConfigsShrink)) {
+            query.put("uiConfigs", request.uiConfigsShrink);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.attendeesShrink)) {
             body.put("Attendees", request.attendeesShrink);
@@ -14899,6 +14944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -15432,10 +15478,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
             body.put("TenantContext", request.tenantContextShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.unionId)) {
-            body.put("UnionId", request.unionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.withThumbnail)) {

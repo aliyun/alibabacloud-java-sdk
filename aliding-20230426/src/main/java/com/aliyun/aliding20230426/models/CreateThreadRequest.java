@@ -13,6 +13,9 @@ public class CreateThreadRequest extends TeaModel {
     @NameInMap("assistantId")
     public String assistantId;
 
+    @NameInMap("clientEnum")
+    public String clientEnum;
+
     @NameInMap("extLoginUser")
     public CreateThreadRequestExtLoginUser extLoginUser;
 
@@ -44,6 +47,14 @@ public class CreateThreadRequest extends TeaModel {
     }
     public String getAssistantId() {
         return this.assistantId;
+    }
+
+    public CreateThreadRequest setClientEnum(String clientEnum) {
+        this.clientEnum = clientEnum;
+        return this;
+    }
+    public String getClientEnum() {
+        return this.clientEnum;
     }
 
     public CreateThreadRequest setExtLoginUser(CreateThreadRequestExtLoginUser extLoginUser) {
