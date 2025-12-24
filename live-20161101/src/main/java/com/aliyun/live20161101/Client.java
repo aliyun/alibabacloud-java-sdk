@@ -11382,6 +11382,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询直播CDN诊断信息</p>
+     * 
      * @param request DescribeLiveCdnDiagnoseInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLiveCdnDiagnoseInfoResponse
@@ -11447,6 +11450,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询直播CDN诊断信息</p>
+     * 
      * @param request DescribeLiveCdnDiagnoseInfoRequest
      * @return DescribeLiveCdnDiagnoseInfoResponse
      */
@@ -14318,6 +14324,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询直播域名转码参数</p>
+     * 
      * @param request DescribeLiveDomainTranscodeParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLiveDomainTranscodeParamsResponse
@@ -14359,6 +14368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询直播域名转码参数</p>
+     * 
      * @param request DescribeLiveDomainTranscodeParamsRequest
      * @return DescribeLiveDomainTranscodeParamsResponse
      */
@@ -14376,6 +14388,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3><a href="#qps-"></a>QPS limit</h3>
      * <p>You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取直播DRM用量数据</p>
      * 
      * @param request DescribeLiveDrmUsageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14438,6 +14453,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3><a href="#qps-"></a>QPS limit</h3>
      * <p>You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取直播DRM用量数据</p>
      * 
      * @param request DescribeLiveDrmUsageDataRequest
      * @return DescribeLiveDrmUsageDataResponse
@@ -19196,6 +19214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取直播用户标签</p>
+     * 
      * @param request DescribeLiveUserTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLiveUserTagsResponse
@@ -19229,6 +19250,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取直播用户标签</p>
+     * 
      * @param request DescribeLiveUserTagsRequest
      * @return DescribeLiveUserTagsResponse
      */
@@ -21694,6 +21718,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取转码任务状态</p>
+     * 
      * @param request GetTranscodeTaskStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTranscodeTaskStatusResponse
@@ -21739,6 +21766,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取转码任务状态</p>
+     * 
      * @param request GetTranscodeTaskStatusRequest
      * @return GetTranscodeTaskStatusResponse
      */
@@ -22971,6 +23001,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListLiveRealtimeLogDeliveryInfosResponse listLiveRealtimeLogDeliveryInfos(ListLiveRealtimeLogDeliveryInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listLiveRealtimeLogDeliveryInfosWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询符合条件的资源和标签</p>
+     * 
+     * @param request ListLiveTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLiveTagResourcesResponse
+     */
+    public ListLiveTagResourcesResponse listLiveTagResourcesWithOptions(ListLiveTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagOwnerBid)) {
+            query.put("TagOwnerBid", request.tagOwnerBid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagOwnerUid)) {
+            query.put("TagOwnerUid", request.tagOwnerUid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLiveTagResources"),
+            new TeaPair("version", "2016-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLiveTagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询符合条件的资源和标签</p>
+     * 
+     * @param request ListLiveTagResourcesRequest
+     * @return ListLiveTagResourcesResponse
+     */
+    public ListLiveTagResourcesResponse listLiveTagResources(ListLiveTagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLiveTagResourcesWithOptions(request, runtime);
     }
 
     /**
@@ -26334,6 +26436,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>重启转码任务</p>
+     * 
      * @param request RestartTranscodeTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartTranscodeTaskResponse
@@ -26379,6 +26484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>重启转码任务</p>
+     * 
      * @param request RestartTranscodeTaskRequest
      * @return RestartTranscodeTaskResponse
      */
