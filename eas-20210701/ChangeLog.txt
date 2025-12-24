@@ -1,3 +1,8 @@
+2025-12-24 Version: 7.4.0
+- Support API DeleteGatewayLabel.
+- Support API UpdateGatewayLabel.
+
+
 2025-12-22 Version: 7.3.1
 - Update API DescribeGateway: add response parameters Body.Labels.
 - Update API ListGateway: add request parameters Label.
