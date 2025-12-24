@@ -9778,6 +9778,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopIds", request.desktopIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.displayResultName)) {
+            query.put("DisplayResultName", request.displayResultName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
         }
@@ -9796,6 +9800,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resultCategory)) {
             query.put("ResultCategory", request.resultCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryable)) {
+            query.put("Retryable", request.retryable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchRegionId)) {

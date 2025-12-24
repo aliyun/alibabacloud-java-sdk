@@ -117,6 +117,9 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         @NameInMap("DesktopName")
         public String desktopName;
 
+        @NameInMap("DisplayResultName")
+        public String displayResultName;
+
         /**
          * <p>The time when the scheduled task ended.</p>
          * 
@@ -135,6 +138,9 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Retryable")
+        public Boolean retryable;
+
         /**
          * <p>The ID of the scheduled task group.</p>
          * 
@@ -143,6 +149,9 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
          */
         @NameInMap("TimerGroupId")
         public String timerGroupId;
+
+        @NameInMap("TimerRecordId")
+        public String timerRecordId;
 
         /**
          * <p>The execution result of the scheduled task.</p>
@@ -215,6 +224,14 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             return this.desktopName;
         }
 
+        public DescribeGlobalTimerRecordsResponseBodyResults setDisplayResultName(String displayResultName) {
+            this.displayResultName = displayResultName;
+            return this;
+        }
+        public String getDisplayResultName() {
+            return this.displayResultName;
+        }
+
         public DescribeGlobalTimerRecordsResponseBodyResults setFinishTime(String finishTime) {
             this.finishTime = finishTime;
             return this;
@@ -231,12 +248,28 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeGlobalTimerRecordsResponseBodyResults setRetryable(Boolean retryable) {
+            this.retryable = retryable;
+            return this;
+        }
+        public Boolean getRetryable() {
+            return this.retryable;
+        }
+
         public DescribeGlobalTimerRecordsResponseBodyResults setTimerGroupId(String timerGroupId) {
             this.timerGroupId = timerGroupId;
             return this;
         }
         public String getTimerGroupId() {
             return this.timerGroupId;
+        }
+
+        public DescribeGlobalTimerRecordsResponseBodyResults setTimerRecordId(String timerRecordId) {
+            this.timerRecordId = timerRecordId;
+            return this;
+        }
+        public String getTimerRecordId() {
+            return this.timerRecordId;
         }
 
         public DescribeGlobalTimerRecordsResponseBodyResults setTimerResult(String timerResult) {

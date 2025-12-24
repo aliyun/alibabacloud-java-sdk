@@ -19,6 +19,9 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
+    @NameInMap("DisplayResultName")
+    public String displayResultName;
+
     /**
      * <p>The ID of the scheduled task group.</p>
      * 
@@ -72,6 +75,9 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
      */
     @NameInMap("ResultCategory")
     public String resultCategory;
+
+    @NameInMap("Retryable")
+    public Boolean retryable;
 
     /**
      * <p>The ID of the searched region. You can specify this parameter to filter cloud computers in specific regions.</p>
@@ -127,6 +133,14 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
         return this.desktopIds;
     }
 
+    public DescribeGlobalTimerRecordsRequest setDisplayResultName(String displayResultName) {
+        this.displayResultName = displayResultName;
+        return this;
+    }
+    public String getDisplayResultName() {
+        return this.displayResultName;
+    }
+
     public DescribeGlobalTimerRecordsRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -165,6 +179,14 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     }
     public String getResultCategory() {
         return this.resultCategory;
+    }
+
+    public DescribeGlobalTimerRecordsRequest setRetryable(Boolean retryable) {
+        this.retryable = retryable;
+        return this;
+    }
+    public Boolean getRetryable() {
+        return this.retryable;
     }
 
     public DescribeGlobalTimerRecordsRequest setSearchRegionId(String searchRegionId) {
