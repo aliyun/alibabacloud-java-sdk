@@ -24,6 +24,13 @@ public class CreatePlaybookRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
+     */
+    @NameInMap("InputParams")
+    public String inputParams;
+
+    /**
      * <p>Language type for receiving messages. Values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
@@ -35,6 +42,13 @@ public class CreatePlaybookRequest extends TeaModel {
      */
     @NameInMap("Lang")
     public String lang;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;result&quot;: &quot;success&quot;}</p>
+     */
+    @NameInMap("OutputParams")
+    public String outputParams;
 
     /**
      * <p>Playbook TaskFlow type.</p>
@@ -70,12 +84,28 @@ public class CreatePlaybookRequest extends TeaModel {
         return this.displayName;
     }
 
+    public CreatePlaybookRequest setInputParams(String inputParams) {
+        this.inputParams = inputParams;
+        return this;
+    }
+    public String getInputParams() {
+        return this.inputParams;
+    }
+
     public CreatePlaybookRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public CreatePlaybookRequest setOutputParams(String outputParams) {
+        this.outputParams = outputParams;
+        return this;
+    }
+    public String getOutputParams() {
+        return this.outputParams;
     }
 
     public CreatePlaybookRequest setTaskflowType(String taskflowType) {

@@ -17,6 +17,18 @@ public class DescribeSoarTaskAndActionsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("QueryType")
+    public String queryType;
+
+    @NameInMap("QueryValue")
+    public String queryValue;
+
     /**
      * <p>The playbook UUID.</p>
      * 
@@ -37,6 +49,38 @@ public class DescribeSoarTaskAndActionsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeSoarTaskAndActionsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSoarTaskAndActionsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSoarTaskAndActionsRequest setQueryType(String queryType) {
+        this.queryType = queryType;
+        return this;
+    }
+    public String getQueryType() {
+        return this.queryType;
+    }
+
+    public DescribeSoarTaskAndActionsRequest setQueryValue(String queryValue) {
+        this.queryValue = queryValue;
+        return this;
+    }
+    public String getQueryValue() {
+        return this.queryValue;
     }
 
     public DescribeSoarTaskAndActionsRequest setRequestUuid(String requestUuid) {

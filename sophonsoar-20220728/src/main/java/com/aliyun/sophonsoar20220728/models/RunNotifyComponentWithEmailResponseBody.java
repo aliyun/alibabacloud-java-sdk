@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RunNotifyComponentWithEmailResponseBody extends TeaModel {
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public RunNotifyComponentWithEmailResponseBodyPage page;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D4CC979E-3D5B-5A6A-BC87-C93C9E861C7B</p>
      */
@@ -52,6 +59,8 @@ public class RunNotifyComponentWithEmailResponseBody extends TeaModel {
 
     public static class RunNotifyComponentWithEmailResponseBodyPage extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,6 +68,8 @@ public class RunNotifyComponentWithEmailResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -66,6 +77,8 @@ public class RunNotifyComponentWithEmailResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */

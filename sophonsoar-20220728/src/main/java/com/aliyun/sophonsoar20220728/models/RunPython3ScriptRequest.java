@@ -53,6 +53,13 @@ public class RunPython3ScriptRequest extends TeaModel {
     @NameInMap("PythonScript")
     public String pythonScript;
 
+    /**
+     * <strong>example:</strong>
+     * <p>python2.0</p>
+     */
+    @NameInMap("PythonVersion")
+    public String pythonVersion;
+
     public static RunPython3ScriptRequest build(java.util.Map<String, ?> map) throws Exception {
         RunPython3ScriptRequest self = new RunPython3ScriptRequest();
         return TeaModel.build(map, self);
@@ -88,6 +95,14 @@ public class RunPython3ScriptRequest extends TeaModel {
     }
     public String getPythonScript() {
         return this.pythonScript;
+    }
+
+    public RunPython3ScriptRequest setPythonVersion(String pythonVersion) {
+        this.pythonVersion = pythonVersion;
+        return this;
+    }
+    public String getPythonVersion() {
+        return this.pythonVersion;
     }
 
 }

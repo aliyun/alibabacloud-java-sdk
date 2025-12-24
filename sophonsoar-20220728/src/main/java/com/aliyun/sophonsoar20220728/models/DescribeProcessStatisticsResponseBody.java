@@ -4,10 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Metrics")
     public DescribeProcessStatisticsResponseBodyMetrics metrics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4CFC0F8A-D600-5FFF-A0DF-3121C4C1B90F</p>
      */
@@ -37,6 +42,8 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
 
     public static class DescribeProcessStatisticsResponseBodyMetrics extends TeaModel {
         /**
+         * <p>The number of blocked files.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -44,6 +51,8 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
         public Integer banFileNum;
 
         /**
+         * <p>The number of blocked IP addresses.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,6 +60,8 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
         public Integer banIpNum;
 
         /**
+         * <p>The number of blocked processes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -58,6 +69,8 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
         public Integer banProcessNum;
 
         /**
+         * <p>The number of handling tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

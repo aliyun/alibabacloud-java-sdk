@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     /**
+     * <p>The name of the action in the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,13 +15,16 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String actionName;
 
     /**
+     * <p>The ID of the resource. This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("AssetId")
-    public Integer assetId;
+    public String assetId;
 
     /**
+     * <p>The name of the component in the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String componentName;
 
     /**
+     * <p>The message body sent by the DingTalk group chatbot webhook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +58,12 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -60,6 +71,12 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The type of the webhook message. Valid values:</p>
+     * <ul>
+     * <li>text.</li>
+     * <li>markdown.</li>
+     * <li>actionCard.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,6 +86,7 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String msgType;
 
     /**
+     * <p>The name of the node in the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +96,10 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String nodeName;
 
     /**
+     * <p>The UUID of the playbook.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +109,8 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String playbookUuid;
 
     /**
+     * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+     * 
      * <strong>example:</strong>
      * <p>126339xxxx805497</p>
      */
@@ -94,6 +118,12 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public Long roleFor;
 
     /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0 (default): the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts for the enterprise.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -101,6 +131,8 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String roleType;
 
     /**
+     * <p>The message key of the DingTalk chatbot webhook. This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>SECc1<em><strong><strong>e157b32b380f</strong></strong></em>***bb8c70e1a67a22072</p>
      */
@@ -108,6 +140,10 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
     public String secret;
 
     /**
+     * <p>The IDs of chatbots that are configured in the message center. Only DingTalk chatbots are supported.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~ListEncryptWebhooks~~">ListEncryptWebhooks</a> operation to query the chatbot IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,11 +165,11 @@ public class RunNotifyComponentWithWebhookRequest extends TeaModel {
         return this.actionName;
     }
 
-    public RunNotifyComponentWithWebhookRequest setAssetId(Integer assetId) {
+    public RunNotifyComponentWithWebhookRequest setAssetId(String assetId) {
         this.assetId = assetId;
         return this;
     }
-    public Integer getAssetId() {
+    public String getAssetId() {
         return this.assetId;
     }
 

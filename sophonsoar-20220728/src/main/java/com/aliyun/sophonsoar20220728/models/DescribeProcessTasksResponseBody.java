@@ -141,6 +141,12 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The UUID of the handling entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
+         */
         @NameInMap("EntityUuid")
         public String entityUuid;
 
@@ -171,6 +177,12 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @NameInMap("ErrTip")
         public String errTip;
 
+        /**
+         * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1020ce1-d6a5-11e8-8298-00163e10****</p>
+         */
         @NameInMap("EventUuid")
         public String eventUuid;
 
@@ -228,6 +240,12 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @NameInMap("RemoveTime")
         public Long removeTime;
 
+        /**
+         * <p>The UUID of the playbook execution record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93e5df20-3d03-42e1-b44b-58197c71****</p>
+         */
         @NameInMap("ReqUuid")
         public String reqUuid;
 
@@ -285,6 +303,19 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
+        /**
+         * <p>The triggering source of the handling task. Valid values:</p>
+         * <ul>
+         * <li><strong>system</strong>: triggered when you manually handle an event.</li>
+         * <li><strong>custom</strong>: triggered by an event based on an automatic response rule.</li>
+         * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule.</li>
+         * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook.</li>
+         * <li><strong>soar-mdr</strong>: triggered by Managed Security Service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("TriggerSource")
         public String triggerSource;
 

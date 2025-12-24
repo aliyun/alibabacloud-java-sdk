@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeNotifyTemplateListRequest extends TeaModel {
     /**
+     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class DescribeNotifyTemplateListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+     * 
      * <strong>example:</strong>
      * <p>137602425xxx8726</p>
      */
@@ -19,6 +27,12 @@ public class DescribeNotifyTemplateListRequest extends TeaModel {
     public Long roleFor;
 
     /**
+     * <p>The type of the view. Default value: 0. Valid values:</p>
+     * <ul>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts for the enterprise.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

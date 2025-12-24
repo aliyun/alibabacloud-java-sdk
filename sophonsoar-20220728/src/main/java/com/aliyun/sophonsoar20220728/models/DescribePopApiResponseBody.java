@@ -132,6 +132,9 @@ public class DescribePopApiResponseBody extends TeaModel {
         @NameInMap("Required")
         public Boolean required;
 
+        @NameInMap("Style")
+        public String style;
+
         /**
          * <p>The data type of the parameter field. Valid values:</p>
          * <ul>
@@ -182,6 +185,14 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
         public Boolean getRequired() {
             return this.required;
+        }
+
+        public DescribePopApiResponseBodyOpenApiMetaList setStyle(String style) {
+            this.style = style;
+            return this;
+        }
+        public String getStyle() {
+            return this.style;
         }
 
         public DescribePopApiResponseBodyOpenApiMetaList setType(String type) {

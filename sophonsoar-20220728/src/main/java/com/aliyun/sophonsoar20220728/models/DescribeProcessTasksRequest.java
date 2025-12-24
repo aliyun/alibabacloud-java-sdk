@@ -7,8 +7,8 @@ public class DescribeProcessTasksRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>desc</strong> (default)</li>
-     * <li><strong>asc</strong></li>
+     * <li><strong>desc</strong> (default).</li>
+     * <li><strong>asc</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class DescribeProcessTasksRequest extends TeaModel {
     /**
      * <p>The type of the handling entity. Valid values:</p>
      * <ul>
-     * <li><strong>ip</strong></li>
-     * <li><strong>file</strong></li>
-     * <li><strong>process</strong></li>
+     * <li><strong>ip</strong>.</li>
+     * <li><strong>file</strong>.</li>
+     * <li><strong>process</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,9 +40,21 @@ public class DescribeProcessTasksRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>The UUID of the handling entity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
+     */
     @NameInMap("EntityUuid")
     public String entityUuid;
 
+    /**
+     * <p>The UUID of the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c1020ce1-d6a5-11e8-8298-00163e10****</p>
+     */
     @NameInMap("EventUuid")
     public String eventUuid;
 
@@ -136,6 +148,9 @@ public class DescribeProcessTasksRequest extends TeaModel {
     @NameInMap("ProcessStrategyUuid")
     public String processStrategyUuid;
 
+    @NameInMap("ReqUuid")
+    public String reqUuid;
+
     /**
      * <p>The scenario code of the handling task.</p>
      * <blockquote>
@@ -160,11 +175,11 @@ public class DescribeProcessTasksRequest extends TeaModel {
     /**
      * <p>The triggering source of the handling task. The value is a string array. Valid values:</p>
      * <ul>
-     * <li><strong>system</strong>: triggered when you manually handle an event</li>
-     * <li><strong>custom</strong>: triggered by an event based on an automatic response rule</li>
-     * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule</li>
-     * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook</li>
-     * <li><strong>soar-mdr</strong>: triggered by Managed Security Service</li>
+     * <li><strong>system</strong>: triggered when you manually handle an event.</li>
+     * <li><strong>custom</strong>: triggered by an event based on an automatic response rule.</li>
+     * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule.</li>
+     * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook.</li>
+     * <li><strong>soar-mdr</strong>: triggered by Managed Security Service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -188,14 +203,14 @@ public class DescribeProcessTasksRequest extends TeaModel {
     /**
      * <p>The status of the handling task. The value is a string. Valid values:</p>
      * <ul>
-     * <li><strong>11</strong>: being handled</li>
-     * <li><strong>21</strong>: being blocked</li>
-     * <li><strong>22</strong>: being quarantined</li>
-     * <li><strong>23</strong>: completed</li>
-     * <li><strong>24</strong>: added to the whitelist</li>
-     * <li><strong>20</strong>: successful</li>
-     * <li><strong>90</strong>: failed</li>
-     * <li><strong>91</strong>: unblocking failed</li>
+     * <li><strong>11</strong>: being handled.</li>
+     * <li><strong>21</strong>: being blocked.</li>
+     * <li><strong>22</strong>: being quarantined.</li>
+     * <li><strong>23</strong>: completed.</li>
+     * <li><strong>24</strong>: added to the whitelist.</li>
+     * <li><strong>20</strong>: successful.</li>
+     * <li><strong>90</strong>: failed.</li>
+     * <li><strong>91</strong>: unblocking failed.</li>
      * <li><strong>92</strong>: restoring quarantined files failed</li>
      * </ul>
      * 
@@ -205,15 +220,28 @@ public class DescribeProcessTasksRequest extends TeaModel {
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The triggering source of the handling task. Valid values:</p>
+     * <ul>
+     * <li><strong>system</strong>: triggered when you manually handle an event.</li>
+     * <li><strong>custom</strong>: triggered by an event based on an automatic response rule.</li>
+     * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule.</li>
+     * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook.</li>
+     * <li><strong>soar-mdr</strong>: triggered by Managed Security Service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
+     */
     @NameInMap("TriggerSource")
     public String triggerSource;
 
     /**
      * <p>The cloud service that is associated with the handling task. The value is a string. Valid values:</p>
      * <ul>
-     * <li><strong>WAF</strong>: Web Application Firewall (WAF)</li>
-     * <li><strong>CFW</strong>: Cloud Firewall</li>
-     * <li><strong>Aegis</strong>: Security Center</li>
+     * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+     * <li><strong>CFW</strong>: Cloud Firewall.</li>
+     * <li><strong>Aegis</strong>: Security Center.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -337,6 +365,14 @@ public class DescribeProcessTasksRequest extends TeaModel {
     }
     public String getProcessStrategyUuid() {
         return this.processStrategyUuid;
+    }
+
+    public DescribeProcessTasksRequest setReqUuid(String reqUuid) {
+        this.reqUuid = reqUuid;
+        return this;
+    }
+    public String getReqUuid() {
+        return this.reqUuid;
     }
 
     public DescribeProcessTasksRequest setSceneCode(String sceneCode) {

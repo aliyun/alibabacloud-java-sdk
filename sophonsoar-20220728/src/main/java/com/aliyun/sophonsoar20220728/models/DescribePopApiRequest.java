@@ -28,16 +28,6 @@ public class DescribePopApiRequest extends TeaModel {
     public String apiVersion;
 
     /**
-     * <p>The environment in which the API operation parameter is used. Set the value to online.</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>online</p>
-     */
-    @NameInMap("Env")
-    public String env;
-
-    /**
      * <p>The POP code of the Alibaba Cloud service.</p>
      * <blockquote>
      * <p> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</p>
@@ -69,14 +59,6 @@ public class DescribePopApiRequest extends TeaModel {
     }
     public String getApiVersion() {
         return this.apiVersion;
-    }
-
-    public DescribePopApiRequest setEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    public String getEnv() {
-        return this.env;
     }
 
     public DescribePopApiRequest setPopCode(String popCode) {

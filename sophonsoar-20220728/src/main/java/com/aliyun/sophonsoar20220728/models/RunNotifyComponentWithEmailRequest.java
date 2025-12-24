@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunNotifyComponentWithEmailRequest extends TeaModel {
     /**
+     * <p>The action name of the component.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,19 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String actionName;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The resource instance ID of the email sender.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to query the ID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("AssetId")
-    public Integer assetId;
+    public String assetId;
 
     /**
+     * <p>The name of component in the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +37,7 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String componentName;
 
     /**
+     * <p>The body of the email.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +47,12 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The language of the content within the request and the response. Valid value:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -48,6 +60,7 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The name of the node in the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +70,10 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String nodeName;
 
     /**
+     * <p>The UUID of the playbook.</p>
+     * <blockquote>
+     * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,12 +83,15 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String playbookUuid;
 
     /**
+     * <p>The email addresses.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Receivers")
     public java.util.List<String> receivers;
 
     /**
+     * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+     * 
      * <strong>example:</strong>
      * <p>137602xxx718726</p>
      */
@@ -79,6 +99,12 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public Long roleFor;
 
     /**
+     * <p>The type of the view. Valid values:</p>
+     * <ul>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts for the enterprise.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -86,6 +112,7 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
     public String roleType;
 
     /**
+     * <p>The subject of the email.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,11 +134,11 @@ public class RunNotifyComponentWithEmailRequest extends TeaModel {
         return this.actionName;
     }
 
-    public RunNotifyComponentWithEmailRequest setAssetId(Integer assetId) {
+    public RunNotifyComponentWithEmailRequest setAssetId(String assetId) {
         this.assetId = assetId;
         return this;
     }
-    public Integer getAssetId() {
+    public String getAssetId() {
         return this.assetId;
     }
 

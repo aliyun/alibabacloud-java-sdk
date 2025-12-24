@@ -4,10 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeOpenApiListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeOpenApiListResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EF2ECA2D-D8E6-5021-BF5C-19DD6D52C5B2</p>
      */
@@ -37,6 +42,12 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
 
     public static class DescribeOpenApiListResponseBodyData extends TeaModel {
         /**
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>200: successful.</li>
+         * <li>500: failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -44,6 +55,8 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The information about the returned APIs.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;apis&quot;:[{&quot;summary&quot;:&quot;get account information&quot;,&quot;deprecated&quot;:false,&quot;name&quot;:&quot;DescAccountSummary&quot;,&quot;title&quot;:&quot;get account information&quot;}],&quot;childrens&quot;:[],&quot;title&quot;:&quot;account&quot;}]</p>
          */
@@ -51,6 +64,8 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
         public Object directories;
 
         /**
+         * <p>The version number of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-12-03</p>
          */

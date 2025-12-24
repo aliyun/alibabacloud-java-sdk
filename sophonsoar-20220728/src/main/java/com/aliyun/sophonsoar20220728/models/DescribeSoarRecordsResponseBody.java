@@ -114,6 +114,47 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList extends TeaModel {
+        @NameInMap("ActionUuid")
+        public String actionUuid;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        public static DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList self = new DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList setActionUuid(String actionUuid) {
+            this.actionUuid = actionUuid;
+            return this;
+        }
+        public String getActionUuid() {
+            return this.actionUuid;
+        }
+
+        public DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+    }
+
     public static class DescribeSoarRecordsResponseBodySoarExecuteRecords extends TeaModel {
         /**
          * <p>The end time of the component execution, in 13-digit timestamp format.</p>
@@ -132,6 +173,9 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
+
+        @NameInMap("OutputList")
+        public java.util.List<DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList> outputList;
 
         /**
          * <p>The request parameters of the playbook task.</p>
@@ -153,15 +197,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
          */
         @NameInMap("RequestUuid")
         public String requestUuid;
-
-        /**
-         * <p>The return information of the playbook, defined by the user within the playbook.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Playbook finish</p>
-         */
-        @NameInMap("ResultMessage")
-        public String resultMessage;
 
         /**
          * <p>The start time of the task execution, in 13-digit timestamp format.</p>
@@ -194,19 +229,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
          */
         @NameInMap("TaskName")
         public String taskName;
-
-        /**
-         * <p>The type of the playbook task, with values:</p>
-         * <ul>
-         * <li><strong>general</strong>: Represents a general playbook task.</li>
-         * <li><strong>standard</strong>: Represents a component execution task.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
-        @NameInMap("TaskType")
-        public String taskType;
 
         /**
          * <p>The MD5 value of the playbook configuration.</p>
@@ -261,6 +283,14 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             return this.errorMsg;
         }
 
+        public DescribeSoarRecordsResponseBodySoarExecuteRecords setOutputList(java.util.List<DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList> outputList) {
+            this.outputList = outputList;
+            return this;
+        }
+        public java.util.List<DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList> getOutputList() {
+            return this.outputList;
+        }
+
         public DescribeSoarRecordsResponseBodySoarExecuteRecords setRawEventReq(String rawEventReq) {
             this.rawEventReq = rawEventReq;
             return this;
@@ -275,14 +305,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         }
         public String getRequestUuid() {
             return this.requestUuid;
-        }
-
-        public DescribeSoarRecordsResponseBodySoarExecuteRecords setResultMessage(String resultMessage) {
-            this.resultMessage = resultMessage;
-            return this;
-        }
-        public String getResultMessage() {
-            return this.resultMessage;
         }
 
         public DescribeSoarRecordsResponseBodySoarExecuteRecords setStartTime(Long startTime) {
@@ -307,14 +329,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         }
         public String getTaskName() {
             return this.taskName;
-        }
-
-        public DescribeSoarRecordsResponseBodySoarExecuteRecords setTaskType(String taskType) {
-            this.taskType = taskType;
-            return this;
-        }
-        public String getTaskType() {
-            return this.taskType;
         }
 
         public DescribeSoarRecordsResponseBodySoarExecuteRecords setTaskflowMd5(String taskflowMd5) {

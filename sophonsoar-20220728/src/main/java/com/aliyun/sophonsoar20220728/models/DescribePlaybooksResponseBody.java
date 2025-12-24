@@ -128,6 +128,15 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         public Integer active;
 
         /**
+         * <p>The description of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aegis_kill_process</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
          * <p>The display name of the playbook.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +213,15 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>296004</p>
+         */
+        @NameInMap("TenantId")
+        public String tenantId;
+
         public static DescribePlaybooksResponseBodyPlaybooks build(java.util.Map<String, ?> map) throws Exception {
             DescribePlaybooksResponseBodyPlaybooks self = new DescribePlaybooksResponseBodyPlaybooks();
             return TeaModel.build(map, self);
@@ -215,6 +233,14 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
         public Integer getActive() {
             return this.active;
+        }
+
+        public DescribePlaybooksResponseBodyPlaybooks setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribePlaybooksResponseBodyPlaybooks setDisplayName(String displayName) {
@@ -271,6 +297,14 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
         public String getPlaybookUuid() {
             return this.playbookUuid;
+        }
+
+        public DescribePlaybooksResponseBodyPlaybooks setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
         }
 
     }

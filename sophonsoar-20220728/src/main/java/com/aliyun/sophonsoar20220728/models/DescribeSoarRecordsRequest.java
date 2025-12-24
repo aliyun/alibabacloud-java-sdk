@@ -4,6 +4,12 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeSoarRecordsRequest extends TeaModel {
+    @NameInMap("CompletedBeginTime")
+    public Long completedBeginTime;
+
+    @NameInMap("CompletedEndTime")
+    public Long completedEndTime;
+
     /**
      * <p>The end time of the task execution, in 13-digit timestamp format.</p>
      * 
@@ -52,13 +58,15 @@ public class DescribeSoarRecordsRequest extends TeaModel {
      * <blockquote>
      * <p>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>8f55e76d-b5d5-4720-9cd7-xxxxx</p>
      */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
+
+    @NameInMap("QueryValue")
+    public String queryValue;
 
     /**
      * <p>UUID of the playbook task execution.</p>
@@ -104,6 +112,9 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     @NameInMap("TaskflowMd5")
     public String taskflowMd5;
 
+    @NameInMap("TriggerType")
+    public String triggerType;
+
     /**
      * <p>The Alibaba Cloud account ID that executed the playbook task.</p>
      * 
@@ -116,6 +127,22 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     public static DescribeSoarRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSoarRecordsRequest self = new DescribeSoarRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSoarRecordsRequest setCompletedBeginTime(Long completedBeginTime) {
+        this.completedBeginTime = completedBeginTime;
+        return this;
+    }
+    public Long getCompletedBeginTime() {
+        return this.completedBeginTime;
+    }
+
+    public DescribeSoarRecordsRequest setCompletedEndTime(Long completedEndTime) {
+        this.completedEndTime = completedEndTime;
+        return this;
+    }
+    public Long getCompletedEndTime() {
+        return this.completedEndTime;
     }
 
     public DescribeSoarRecordsRequest setEndMillis(Long endMillis) {
@@ -158,6 +185,14 @@ public class DescribeSoarRecordsRequest extends TeaModel {
         return this.playbookUuid;
     }
 
+    public DescribeSoarRecordsRequest setQueryValue(String queryValue) {
+        this.queryValue = queryValue;
+        return this;
+    }
+    public String getQueryValue() {
+        return this.queryValue;
+    }
+
     public DescribeSoarRecordsRequest setRequestUuid(String requestUuid) {
         this.requestUuid = requestUuid;
         return this;
@@ -188,6 +223,14 @@ public class DescribeSoarRecordsRequest extends TeaModel {
     }
     public String getTaskflowMd5() {
         return this.taskflowMd5;
+    }
+
+    public DescribeSoarRecordsRequest setTriggerType(String triggerType) {
+        this.triggerType = triggerType;
+        return this;
+    }
+    public String getTriggerType() {
+        return this.triggerType;
     }
 
     public DescribeSoarRecordsRequest setTriggerUser(String triggerUser) {

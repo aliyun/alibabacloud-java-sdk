@@ -10,6 +10,9 @@ public class VerifyPlaybookResponseBody extends TeaModel {
     @NameInMap("CheckTaskInfos")
     public java.util.List<VerifyPlaybookResponseBodyCheckTaskInfos> checkTaskInfos;
 
+    @NameInMap("Prerequisites")
+    public java.util.List<VerifyPlaybookResponseBodyPrerequisites> prerequisites;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -30,6 +33,14 @@ public class VerifyPlaybookResponseBody extends TeaModel {
     }
     public java.util.List<VerifyPlaybookResponseBodyCheckTaskInfos> getCheckTaskInfos() {
         return this.checkTaskInfos;
+    }
+
+    public VerifyPlaybookResponseBody setPrerequisites(java.util.List<VerifyPlaybookResponseBodyPrerequisites> prerequisites) {
+        this.prerequisites = prerequisites;
+        return this;
+    }
+    public java.util.List<VerifyPlaybookResponseBodyPrerequisites> getPrerequisites() {
+        return this.prerequisites;
     }
 
     public VerifyPlaybookResponseBody setRequestId(String requestId) {
@@ -100,6 +111,36 @@ public class VerifyPlaybookResponseBody extends TeaModel {
         }
         public String getRiskLevel() {
             return this.riskLevel;
+        }
+
+    }
+
+    public static class VerifyPlaybookResponseBodyPrerequisites extends TeaModel {
+        @NameInMap("PrerequisiteType")
+        public String prerequisiteType;
+
+        @NameInMap("PrerequisiteValue")
+        public String prerequisiteValue;
+
+        public static VerifyPlaybookResponseBodyPrerequisites build(java.util.Map<String, ?> map) throws Exception {
+            VerifyPlaybookResponseBodyPrerequisites self = new VerifyPlaybookResponseBodyPrerequisites();
+            return TeaModel.build(map, self);
+        }
+
+        public VerifyPlaybookResponseBodyPrerequisites setPrerequisiteType(String prerequisiteType) {
+            this.prerequisiteType = prerequisiteType;
+            return this;
+        }
+        public String getPrerequisiteType() {
+            return this.prerequisiteType;
+        }
+
+        public VerifyPlaybookResponseBodyPrerequisites setPrerequisiteValue(String prerequisiteValue) {
+            this.prerequisiteValue = prerequisiteValue;
+            return this;
+        }
+        public String getPrerequisiteValue() {
+            return this.prerequisiteValue;
         }
 
     }

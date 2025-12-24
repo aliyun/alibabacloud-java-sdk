@@ -10,6 +10,9 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     @NameInMap("Details")
     public DescribeSoarTaskAndActionsResponseBodyDetails details;
 
+    @NameInMap("Page")
+    public DescribeSoarTaskAndActionsResponseBodyPage page;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -30,6 +33,14 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     }
     public DescribeSoarTaskAndActionsResponseBodyDetails getDetails() {
         return this.details;
+    }
+
+    public DescribeSoarTaskAndActionsResponseBody setPage(DescribeSoarTaskAndActionsResponseBodyPage page) {
+        this.page = page;
+        return this;
+    }
+    public DescribeSoarTaskAndActionsResponseBodyPage getPage() {
+        return this.page;
     }
 
     public DescribeSoarTaskAndActionsResponseBody setRequestId(String requestId) {
@@ -96,15 +107,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The request ID of the task. The value is unique.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8dac16c6-7411-4116-8d70-xxxxxxx</p>
-         */
-        @NameInMap("RequestUuid")
-        public String requestUuid;
-
-        /**
          * <p>The beginning of the time range during which the component is run. The value is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
@@ -125,36 +127,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
-
-        /**
-         * <p>The name of the task. The value is the same as the playbook UUID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ed127287-6699-4e4d-b986-xxxxxxx</p>
-         */
-        @NameInMap("TaskName")
-        public String taskName;
-
-        /**
-         * <p>The status of the triggered component action.</p>
-         * <blockquote>
-         * <p> This parameter is disabled and left empty.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>NULL</p>
-         */
-        @NameInMap("TaskStatus")
-        public String taskStatus;
-
-        /**
-         * <p>The ID of the Alibaba Cloud account that is used to execute the task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127xxxx4392</p>
-         */
-        @NameInMap("TriggerUser")
-        public String triggerUser;
 
         public static DescribeSoarTaskAndActionsResponseBodyDetailsActions build(java.util.Map<String, ?> map) throws Exception {
             DescribeSoarTaskAndActionsResponseBodyDetailsActions self = new DescribeSoarTaskAndActionsResponseBodyDetailsActions();
@@ -209,14 +181,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             return this.nodeName;
         }
 
-        public DescribeSoarTaskAndActionsResponseBodyDetailsActions setRequestUuid(String requestUuid) {
-            this.requestUuid = requestUuid;
-            return this;
-        }
-        public String getRequestUuid() {
-            return this.requestUuid;
-        }
-
         public DescribeSoarTaskAndActionsResponseBodyDetailsActions setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
@@ -233,33 +197,12 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeSoarTaskAndActionsResponseBodyDetailsActions setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public DescribeSoarTaskAndActionsResponseBodyDetailsActions setTaskStatus(String taskStatus) {
-            this.taskStatus = taskStatus;
-            return this;
-        }
-        public String getTaskStatus() {
-            return this.taskStatus;
-        }
-
-        public DescribeSoarTaskAndActionsResponseBodyDetailsActions setTriggerUser(String triggerUser) {
-            this.triggerUser = triggerUser;
-            return this;
-        }
-        public String getTriggerUser() {
-            return this.triggerUser;
-        }
-
     }
 
     public static class DescribeSoarTaskAndActionsResponseBodyDetails extends TeaModel {
+        @NameInMap("ActionLogNum")
+        public Integer actionLogNum;
+
         /**
          * <p>The list of component actions during the running of the playbook.</p>
          */
@@ -306,24 +249,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String requestUuid;
 
         /**
-         * <p>The flag of the task. For debugging tasks, the value is <strong>DEBUG</strong>. For other tasks, the parameter is left empty.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DEBUG</p>
-         */
-        @NameInMap("ResultLevel")
-        public String resultLevel;
-
-        /**
-         * <p>The returned information about the playbook. You can define the value in the playbook.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>deubug playbook finished</p>
-         */
-        @NameInMap("ResultMessage")
-        public String resultMessage;
-
-        /**
          * <p>The beginning of the time range during which the playbook is run. The value is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
@@ -365,15 +290,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the task belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127xxxx4392</p>
-         */
-        @NameInMap("TaskTenantId")
-        public String taskTenantId;
-
-        /**
          * <p>The task type. Valid values:</p>
          * <ul>
          * <li><strong>debug</strong>: a debugging task</li>
@@ -399,6 +315,14 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         public static DescribeSoarTaskAndActionsResponseBodyDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeSoarTaskAndActionsResponseBodyDetails self = new DescribeSoarTaskAndActionsResponseBodyDetails();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSoarTaskAndActionsResponseBodyDetails setActionLogNum(Integer actionLogNum) {
+            this.actionLogNum = actionLogNum;
+            return this;
+        }
+        public Integer getActionLogNum() {
+            return this.actionLogNum;
         }
 
         public DescribeSoarTaskAndActionsResponseBodyDetails setActions(java.util.List<DescribeSoarTaskAndActionsResponseBodyDetailsActions> actions) {
@@ -441,22 +365,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             return this.requestUuid;
         }
 
-        public DescribeSoarTaskAndActionsResponseBodyDetails setResultLevel(String resultLevel) {
-            this.resultLevel = resultLevel;
-            return this;
-        }
-        public String getResultLevel() {
-            return this.resultLevel;
-        }
-
-        public DescribeSoarTaskAndActionsResponseBodyDetails setResultMessage(String resultMessage) {
-            this.resultMessage = resultMessage;
-            return this;
-        }
-        public String getResultMessage() {
-            return this.resultMessage;
-        }
-
         public DescribeSoarTaskAndActionsResponseBodyDetails setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
@@ -489,14 +397,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             return this.taskName;
         }
 
-        public DescribeSoarTaskAndActionsResponseBodyDetails setTaskTenantId(String taskTenantId) {
-            this.taskTenantId = taskTenantId;
-            return this;
-        }
-        public String getTaskTenantId() {
-            return this.taskTenantId;
-        }
-
         public DescribeSoarTaskAndActionsResponseBodyDetails setTriggerType(String triggerType) {
             this.triggerType = triggerType;
             return this;
@@ -511,6 +411,47 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         }
         public String getTriggerUser() {
             return this.triggerUser;
+        }
+
+    }
+
+    public static class DescribeSoarTaskAndActionsResponseBodyPage extends TeaModel {
+        @NameInMap("PageNumber")
+        public String pageNumber;
+
+        @NameInMap("PageSize")
+        public String pageSize;
+
+        @NameInMap("TotalCount")
+        public String totalCount;
+
+        public static DescribeSoarTaskAndActionsResponseBodyPage build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSoarTaskAndActionsResponseBodyPage self = new DescribeSoarTaskAndActionsResponseBodyPage();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSoarTaskAndActionsResponseBodyPage setPageNumber(String pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public String getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public DescribeSoarTaskAndActionsResponseBodyPage setPageSize(String pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public String getPageSize() {
+            return this.pageSize;
+        }
+
+        public DescribeSoarTaskAndActionsResponseBodyPage setTotalCount(String totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public String getTotalCount() {
+            return this.totalCount;
         }
 
     }

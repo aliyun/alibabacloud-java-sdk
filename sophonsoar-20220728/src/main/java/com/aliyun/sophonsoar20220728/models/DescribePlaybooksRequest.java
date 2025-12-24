@@ -120,7 +120,7 @@ public class DescribePlaybooksRequest extends TeaModel {
      * <blockquote>
      * <p>You can use the UUID to query specific playbook information.</p>
      * <ul>
-     * <li>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> API to obtain this parameter.</li>
+     * <li>Call the <a href="~~CreatePlaybook~~">CreatePlaybook</a> API to obtain this parameter.</li>
      * </ul>
      * </blockquote>
      * 
@@ -152,7 +152,7 @@ public class DescribePlaybooksRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("Sort")
-    public String sort;
+    public Integer sort;
 
     /**
      * <p>Start time for the query, in 13-digit timestamp format.</p>
@@ -256,11 +256,11 @@ public class DescribePlaybooksRequest extends TeaModel {
         return this.playbookUuids;
     }
 
-    public DescribePlaybooksRequest setSort(String sort) {
+    public DescribePlaybooksRequest setSort(Integer sort) {
         this.sort = sort;
         return this;
     }
-    public String getSort() {
+    public Integer getSort() {
         return this.sort;
     }
 

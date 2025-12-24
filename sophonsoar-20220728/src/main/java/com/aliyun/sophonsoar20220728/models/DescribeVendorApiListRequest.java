@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVendorApiListRequest extends TeaModel {
     /**
+     * <p>The name of the Alibaba Cloud product interface, supporting fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>AddAssetCleanConfig</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVendorApiListRequest extends TeaModel {
     public String apiName;
 
     /**
+     * <p>Keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>Create</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVendorApiListRequest extends TeaModel {
     public String keyWord;
 
     /**
+     * <p>The current page number for pagination. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeVendorApiListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of items per page when displaying paginated results. The default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,12 @@ public class DescribeVendorApiListRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Vendor\&quot;s product identifier:</p>
+     * <ul>
+     * <li><strong>waf</strong>: Web Application Firewall.</li>
+     * <li><strong>cfw</strong>: Cloud Firewall.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>waf</p>
      */
@@ -40,6 +54,15 @@ public class DescribeVendorApiListRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>Vendor code:</p>
+     * <ul>
+     * <li><strong>Tencent</strong>: Tencent.</li>
+     * <li><strong>HUAWEICLOUD</strong>: Huawei.</li>
+     * <li><strong>Azure</strong>: Microsoft Azure.</li>
+     * <li><strong>AWS</strong>: Amazon Web Services.</li>
+     * <li><strong>Chaitin</strong>: Chaitin.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Azure</p>
      */

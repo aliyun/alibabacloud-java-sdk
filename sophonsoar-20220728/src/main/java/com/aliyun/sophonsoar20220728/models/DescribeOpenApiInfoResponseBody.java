@@ -4,10 +4,15 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeOpenApiInfoResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeOpenApiInfoResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>358E012F-B516-599D-9ED0-A1A361CDE615</p>
      */
@@ -37,6 +42,8 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
 
     public static class DescribeOpenApiInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The description of the API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>describeEcs</p>
          */
@@ -44,6 +51,8 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The input parameters of the API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -51,6 +60,8 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
         public String inputParams;
 
         /**
+         * <p>The output parameters of the API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -58,6 +69,8 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
         public String outputParams;
 
         /**
+         * <p>The sample response parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -65,6 +78,8 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
         public String responseDemo;
 
         /**
+         * <p>The summary of the API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>describeEcs</p>
          */
@@ -72,6 +87,8 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>The title of the API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>describeEcs</p>
          */

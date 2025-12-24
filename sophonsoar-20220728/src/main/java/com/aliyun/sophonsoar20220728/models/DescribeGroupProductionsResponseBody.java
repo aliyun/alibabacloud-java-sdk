@@ -4,15 +4,23 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupProductionsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the groups.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeGroupProductionsResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public DescribeGroupProductionsResponseBodyPage page;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>358E012F-B516-599D-9ED0-A1A361CDE615</p>
+     * <p>358E012F-****-599D-9ED0-****61CDE615</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -48,12 +56,24 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
 
     public static class DescribeGroupProductionsResponseBodyDataProductionsPolicyList extends TeaModel {
         /**
+         * <p>The name of the RAM policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliyunRAMReadOnlyAccess</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the RAM policy. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: permissions.</li>
+         * <li><strong>Read-only</strong>: permissions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -82,62 +102,101 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
 
     public static class DescribeGroupProductionsResponseBodyDataProductions extends TeaModel {
         /**
+         * <p>The code of the cloud service.</p>
+         * 
          * <strong>example:</strong>
-         * <p>Rds</p>
+         * <p>DM</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
+         * <p>The default requested domain name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>rds.aliyuncs.com</p>
+         * <p>dm.aliyuncs.com</p>
          */
         @NameInMap("DefaultDomain")
         public String defaultDomain;
 
         /**
+         * <p>The default version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2014-08-15</p>
          */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
+        /**
+         * <p>The description of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DM</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The requested domain names.</p>
+         */
         @NameInMap("FullDomains")
         public java.util.List<String> fullDomains;
 
+        /**
+         * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud Communication</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The name of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DirectMail</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The RAM policies of the cloud service.</p>
+         */
         @NameInMap("PolicyList")
         public java.util.List<DescribeGroupProductionsResponseBodyDataProductionsPolicyList> policyList;
 
         /**
+         * <p>The Resource Access Management (RAM) code of the POP to which the resource belongs.</p>
+         * 
          * <strong>example:</strong>
-         * <p>rds</p>
+         * <p>dm</p>
          */
         @NameInMap("RamCode")
         public String ramCode;
 
         /**
+         * <p>The short name of the cloud service.</p>
+         * 
          * <strong>example:</strong>
-         * <p>RDS</p>
+         * <p>DM</p>
          */
         @NameInMap("ShortName")
         public String shortName;
 
         /**
+         * <p>The information source of the cloud service.</p>
+         * 
          * <strong>example:</strong>
          * <p>next</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The API versions.</p>
+         */
         @NameInMap("Versions")
         public java.util.List<String> versions;
 
@@ -245,9 +304,18 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupProductionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud Communication</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The information about the cloud services.</p>
+         */
         @NameInMap("Productions")
         public java.util.List<DescribeGroupProductionsResponseBodyDataProductions> productions;
 
@@ -276,6 +344,8 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
 
     public static class DescribeGroupProductionsResponseBodyPage extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -283,6 +353,8 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -290,6 +362,8 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

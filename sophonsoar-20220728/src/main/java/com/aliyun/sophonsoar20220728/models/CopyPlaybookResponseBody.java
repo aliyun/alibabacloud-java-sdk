@@ -4,13 +4,21 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class CopyPlaybookResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public CopyPlaybookResponseBodyData data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public CopyPlaybookResponseBodyPage page;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2EC05B06-<strong><strong>-5F3E-</strong></strong>-3B1FAD76087A</p>
      */
@@ -48,6 +56,12 @@ public class CopyPlaybookResponseBody extends TeaModel {
 
     public static class CopyPlaybookResponseBodyData extends TeaModel {
         /**
+         * <p>The status of the playbook. Valid values:</p>
+         * <ul>
+         * <li>1: enabled.</li>
+         * <li>0: disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -55,6 +69,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Integer active;
 
         /**
+         * <p>The description of the playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a action of processing for WAF</p>
          */
@@ -62,6 +78,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the new playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>11111</p>
          */
@@ -69,6 +87,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The number of playbook execution failures.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -76,6 +96,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Integer failNum;
 
         /**
+         * <p>The failure rate of playbook execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -83,6 +105,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Double failRate;
 
         /**
+         * <p>The time when the playbook was created. The value is a 13-digit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1655951601000</p>
          */
@@ -90,6 +114,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The time when the playbook was modified. The value is a 13-digit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1638270967000</p>
          */
@@ -97,6 +123,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The number of historical versions of the playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -104,6 +132,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Integer historyMd5;
 
         /**
+         * <p>The input parameters of the playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;name\&quot;:\&quot;1\&quot;,\&quot;dataType\&quot;:\&quot;String\&quot;,\&quot;required\&quot;:false,\&quot;isArray\&quot;:false,\&quot;example\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;id\&quot;:0,\&quot;typeName\&quot;:\&quot;String\&quot;,\&quot;dataClass\&quot;:\&quot;normal\&quot;}]</p>
          */
@@ -111,6 +141,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public String inputParams;
 
         /**
+         * <p>The time when the playbook was last run. The value is a 13-digit timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1725258397847</p>
          */
@@ -118,6 +150,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Long lastRuntime;
 
         /**
+         * <p>The online version MD5 of the playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>037046****1b00c4717963818ccbf2xx</p>
          */
@@ -125,6 +159,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public String logicReleaseTaskflowMd5;
 
         /**
+         * <p>The output parameters of the playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -132,6 +168,12 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public String outputParams;
 
         /**
+         * <p>The type of the playbook. Valid values:</p>
+         * <ul>
+         * <li>preset: predefined playbook.</li>
+         * <li>user: custom playbook.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -139,6 +181,12 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public String ownType;
 
         /**
+         * <p>The permission to operate the playbook. Valid values:</p>
+         * <ul>
+         * <li>1: view.</li>
+         * <li>2: edit.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -146,6 +194,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Integer permission;
 
         /**
+         * <p>The status of the playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,6 +203,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Integer playbookStatus;
 
         /**
+         * <p>The UUID of the new playbook.</p>
+         * 
          * <strong>example:</strong>
          * <p>9e38111e-9794-4784-9ca8-xxxxxxx</p>
          */
@@ -160,6 +212,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public String playbookUuid;
 
         /**
+         * <p>The number of successful playbook executions.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -167,6 +221,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Integer succNum;
 
         /**
+         * <p>The ID of the user to which the playbook belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>13760*****8718726</p>
          */
@@ -326,6 +382,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
 
     public static class CopyPlaybookResponseBodyPage extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -333,6 +391,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -340,6 +400,8 @@ public class CopyPlaybookResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

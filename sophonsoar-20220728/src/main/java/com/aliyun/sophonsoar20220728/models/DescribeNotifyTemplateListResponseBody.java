@@ -4,13 +4,21 @@ package com.aliyun.sophonsoar20220728.models;
 import com.aliyun.tea.*;
 
 public class DescribeNotifyTemplateListResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeNotifyTemplateListResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("Page")
     public DescribeNotifyTemplateListResponseBodyPage page;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B3FED5B9-190A-5952-93A4-24FBF0F0C573</p>
      */
@@ -48,6 +56,8 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
 
     public static class DescribeNotifyTemplateListResponseBodyData extends TeaModel {
         /**
+         * <p>The body of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dear $aliyunUID : Cloud Security Center Threat Analysis and Response has detected a newly discovered security incident $incidentName(Incident id :$incidentID) in $startTime, Please go to Cloud Security Center Console View.</p>
          */
@@ -55,6 +65,8 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The ID of the message event corresponding to the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>yundun_soar_incident_generate</p>
          */
@@ -62,6 +74,8 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         public String eventId;
 
         /**
+         * <p>The parameters of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>[\&quot;aliyunUID\&quot;,\&quot;incidentName\&quot;,\&quot;incidentID\&quot;,\&quot;startTime\&quot;]</p>
          */
@@ -69,6 +83,8 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         public String params;
 
         /**
+         * <p>The title of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>[Alibaba Cloud Threat Analysis and Response] has detected a newly discovered security incident $incidentName($incidentID)</p>
          */
@@ -76,6 +92,8 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         public String subject;
 
         /**
+         * <p>The name of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>incident generate</p>
          */
@@ -131,6 +149,8 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
 
     public static class DescribeNotifyTemplateListResponseBodyPage extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -138,6 +158,8 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -145,6 +167,8 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */

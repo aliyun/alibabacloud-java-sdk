@@ -81,6 +81,13 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         @NameInMap("InputParams")
         public String inputParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>template-alert</p>
+         */
+        @NameInMap("ParamType")
+        public String paramType;
+
         public static DescribeComponentPlaybookResponseBodyPlaybooks build(java.util.Map<String, ?> map) throws Exception {
             DescribeComponentPlaybookResponseBodyPlaybooks self = new DescribeComponentPlaybookResponseBodyPlaybooks();
             return TeaModel.build(map, self);
@@ -108,6 +115,14 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         }
         public String getInputParams() {
             return this.inputParams;
+        }
+
+        public DescribeComponentPlaybookResponseBodyPlaybooks setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
         }
 
     }
