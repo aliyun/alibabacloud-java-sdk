@@ -108,6 +108,13 @@ public class ListScheduleEventResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <strong>example:</strong>
+         * <p>JOB</p>
+         */
+        @NameInMap("EventType")
+        public String eventType;
+
+        /**
          * <p>130</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +144,20 @@ public class ListScheduleEventResponseBody extends TeaModel {
         @NameInMap("WorkerAddr")
         public String workerAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1450568762586578000</p>
+         */
+        @NameInMap("WorkflowExecutionId")
+        public String workflowExecutionId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>工作流0001</p>
+         */
+        @NameInMap("WorkflowName")
+        public String workflowName;
+
         public static ListScheduleEventResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListScheduleEventResponseBodyDataRecords self = new ListScheduleEventResponseBodyDataRecords();
             return TeaModel.build(map, self);
@@ -164,6 +185,14 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
         public String getEvent() {
             return this.event;
+        }
+
+        public ListScheduleEventResponseBodyDataRecords setEventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+        public String getEventType() {
+            return this.eventType;
         }
 
         public ListScheduleEventResponseBodyDataRecords setJobExecutionId(String jobExecutionId) {
@@ -196,6 +225,22 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
         public String getWorkerAddr() {
             return this.workerAddr;
+        }
+
+        public ListScheduleEventResponseBodyDataRecords setWorkflowExecutionId(String workflowExecutionId) {
+            this.workflowExecutionId = workflowExecutionId;
+            return this;
+        }
+        public String getWorkflowExecutionId() {
+            return this.workflowExecutionId;
+        }
+
+        public ListScheduleEventResponseBodyDataRecords setWorkflowName(String workflowName) {
+            this.workflowName = workflowName;
+            return this;
+        }
+        public String getWorkflowName() {
+            return this.workflowName;
         }
 
     }

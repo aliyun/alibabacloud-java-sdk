@@ -27,6 +27,10 @@ public class CreateJobShrinkRequest extends TeaModel {
     @NameInMap("Calendar")
     public String calendar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,2</p>
+     */
     @NameInMap("ChildJobId")
     public String childJobId;
 
@@ -38,6 +42,16 @@ public class CreateJobShrinkRequest extends TeaModel {
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    @NameInMap("Coordinate")
+    public String coordinateShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("DependentStrategy")
+    public Integer dependentStrategy;
 
     /**
      * <strong>example:</strong>
@@ -119,6 +133,10 @@ public class CreateJobShrinkRequest extends TeaModel {
     @NameInMap("RouteStrategy")
     public Integer routeStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>echo &quot;hello world&quot;</p>
+     */
     @NameInMap("Script")
     public String script;
 
@@ -128,6 +146,13 @@ public class CreateJobShrinkRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("StartTimeType")
+    public Integer startTimeType;
 
     /**
      * <strong>example:</strong>
@@ -209,6 +234,22 @@ public class CreateJobShrinkRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public CreateJobShrinkRequest setCoordinateShrink(String coordinateShrink) {
+        this.coordinateShrink = coordinateShrink;
+        return this;
+    }
+    public String getCoordinateShrink() {
+        return this.coordinateShrink;
+    }
+
+    public CreateJobShrinkRequest setDependentStrategy(Integer dependentStrategy) {
+        this.dependentStrategy = dependentStrategy;
+        return this;
+    }
+    public Integer getDependentStrategy() {
+        return this.dependentStrategy;
     }
 
     public CreateJobShrinkRequest setDescription(String description) {
@@ -321,6 +362,14 @@ public class CreateJobShrinkRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public CreateJobShrinkRequest setStartTimeType(Integer startTimeType) {
+        this.startTimeType = startTimeType;
+        return this;
+    }
+    public Integer getStartTimeType() {
+        return this.startTimeType;
     }
 
     public CreateJobShrinkRequest setStatus(Integer status) {

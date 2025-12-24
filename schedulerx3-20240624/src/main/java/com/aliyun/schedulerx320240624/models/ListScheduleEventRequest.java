@@ -34,6 +34,10 @@ public class ListScheduleEventRequest extends TeaModel {
     @NameInMap("Event")
     public String event;
 
+    /**
+     * <strong>example:</strong>
+     * <p>JOB | WORKFLOW</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
@@ -85,6 +89,20 @@ public class ListScheduleEventRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1450568762586578000</p>
+     */
+    @NameInMap("WorkflowExecutionId")
+    public Long workflowExecutionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>流程001</p>
+     */
+    @NameInMap("WorkflowName")
+    public String workflowName;
 
     public static ListScheduleEventRequest build(java.util.Map<String, ?> map) throws Exception {
         ListScheduleEventRequest self = new ListScheduleEventRequest();
@@ -185,6 +203,22 @@ public class ListScheduleEventRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public ListScheduleEventRequest setWorkflowExecutionId(Long workflowExecutionId) {
+        this.workflowExecutionId = workflowExecutionId;
+        return this;
+    }
+    public Long getWorkflowExecutionId() {
+        return this.workflowExecutionId;
+    }
+
+    public ListScheduleEventRequest setWorkflowName(String workflowName) {
+        this.workflowName = workflowName;
+        return this;
+    }
+    public String getWorkflowName() {
+        return this.workflowName;
     }
 
 }

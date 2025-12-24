@@ -34,6 +34,9 @@ public class OperateRetryJobExecutionRequest extends TeaModel {
     @NameInMap("TaskList")
     public java.util.List<String> taskList;
 
+    @NameInMap("TriggerChild")
+    public Boolean triggerChild;
+
     public static OperateRetryJobExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateRetryJobExecutionRequest self = new OperateRetryJobExecutionRequest();
         return TeaModel.build(map, self);
@@ -69,6 +72,14 @@ public class OperateRetryJobExecutionRequest extends TeaModel {
     }
     public java.util.List<String> getTaskList() {
         return this.taskList;
+    }
+
+    public OperateRetryJobExecutionRequest setTriggerChild(Boolean triggerChild) {
+        this.triggerChild = triggerChild;
+        return this;
+    }
+    public Boolean getTriggerChild() {
+        return this.triggerChild;
     }
 
 }

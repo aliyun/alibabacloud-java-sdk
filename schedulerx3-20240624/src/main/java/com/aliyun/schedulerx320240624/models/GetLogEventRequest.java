@@ -36,6 +36,13 @@ public class GetLogEventRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>JOB</p>
+     */
+    @NameInMap("EventType")
+    public String eventType;
+
+    /**
+     * <strong>example:</strong>
      * <p>101</p>
      */
     @NameInMap("JobExecutionId")
@@ -83,6 +90,20 @@ public class GetLogEventRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1450568762586578000</p>
+     */
+    @NameInMap("WorkflowExecutionId")
+    public Long workflowExecutionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>流程001</p>
+     */
+    @NameInMap("WorkflowName")
+    public String workflowName;
+
     public static GetLogEventRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLogEventRequest self = new GetLogEventRequest();
         return TeaModel.build(map, self);
@@ -118,6 +139,14 @@ public class GetLogEventRequest extends TeaModel {
     }
     public String getEvent() {
         return this.event;
+    }
+
+    public GetLogEventRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
     }
 
     public GetLogEventRequest setJobExecutionId(Long jobExecutionId) {
@@ -174,6 +203,22 @@ public class GetLogEventRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public GetLogEventRequest setWorkflowExecutionId(Long workflowExecutionId) {
+        this.workflowExecutionId = workflowExecutionId;
+        return this;
+    }
+    public Long getWorkflowExecutionId() {
+        return this.workflowExecutionId;
+    }
+
+    public GetLogEventRequest setWorkflowName(String workflowName) {
+        this.workflowName = workflowName;
+        return this;
+    }
+    public String getWorkflowName() {
+        return this.workflowName;
     }
 
 }

@@ -65,6 +65,13 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("WorkflowId")
+    public Long workflowId;
+
     public static ListJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobsRequest self = new ListJobsRequest();
         return TeaModel.build(map, self);
@@ -140,6 +147,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListJobsRequest setWorkflowId(Long workflowId) {
+        this.workflowId = workflowId;
+        return this;
+    }
+    public Long getWorkflowId() {
+        return this.workflowId;
     }
 
 }

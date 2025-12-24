@@ -34,6 +34,9 @@ public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
     @NameInMap("TaskList")
     public String taskListShrink;
 
+    @NameInMap("TriggerChild")
+    public Boolean triggerChild;
+
     public static OperateRetryJobExecutionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateRetryJobExecutionShrinkRequest self = new OperateRetryJobExecutionShrinkRequest();
         return TeaModel.build(map, self);
@@ -69,6 +72,14 @@ public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
     }
     public String getTaskListShrink() {
         return this.taskListShrink;
+    }
+
+    public OperateRetryJobExecutionShrinkRequest setTriggerChild(Boolean triggerChild) {
+        this.triggerChild = triggerChild;
+        return this;
+    }
+    public Boolean getTriggerChild() {
+        return this.triggerChild;
     }
 
 }

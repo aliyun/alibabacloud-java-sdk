@@ -27,6 +27,10 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("Calendar")
     public String calendar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,2</p>
+     */
     @NameInMap("ChildJobId")
     public String childJobId;
 
@@ -38,6 +42,16 @@ public class CreateJobRequest extends TeaModel {
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    @NameInMap("Coordinate")
+    public CreateJobRequestCoordinate coordinate;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("DependentStrategy")
+    public Integer dependentStrategy;
 
     /**
      * <strong>example:</strong>
@@ -119,6 +133,10 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("RouteStrategy")
     public Integer routeStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>echo &quot;hello world&quot;</p>
+     */
     @NameInMap("Script")
     public String script;
 
@@ -128,6 +146,13 @@ public class CreateJobRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("StartTimeType")
+    public Integer startTimeType;
 
     /**
      * <strong>example:</strong>
@@ -209,6 +234,22 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public CreateJobRequest setCoordinate(CreateJobRequestCoordinate coordinate) {
+        this.coordinate = coordinate;
+        return this;
+    }
+    public CreateJobRequestCoordinate getCoordinate() {
+        return this.coordinate;
+    }
+
+    public CreateJobRequest setDependentStrategy(Integer dependentStrategy) {
+        this.dependentStrategy = dependentStrategy;
+        return this;
+    }
+    public Integer getDependentStrategy() {
+        return this.dependentStrategy;
     }
 
     public CreateJobRequest setDescription(String description) {
@@ -323,6 +364,14 @@ public class CreateJobRequest extends TeaModel {
         return this.startTime;
     }
 
+    public CreateJobRequest setStartTimeType(Integer startTimeType) {
+        this.startTimeType = startTimeType;
+        return this;
+    }
+    public Integer getStartTimeType() {
+        return this.startTimeType;
+    }
+
     public CreateJobRequest setStatus(Integer status) {
         this.status = status;
         return this;
@@ -363,7 +412,85 @@ public class CreateJobRequest extends TeaModel {
         return this.weight;
     }
 
+    public static class CreateJobRequestCoordinate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50.0</p>
+         */
+        @NameInMap("Height")
+        public Float height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
+        @NameInMap("Width")
+        public Float width;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
+        @NameInMap("X")
+        public Float x;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
+        @NameInMap("Y")
+        public Float y;
+
+        public static CreateJobRequestCoordinate build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestCoordinate self = new CreateJobRequestCoordinate();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestCoordinate setHeight(Float height) {
+            this.height = height;
+            return this;
+        }
+        public Float getHeight() {
+            return this.height;
+        }
+
+        public CreateJobRequestCoordinate setWidth(Float width) {
+            this.width = width;
+            return this;
+        }
+        public Float getWidth() {
+            return this.width;
+        }
+
+        public CreateJobRequestCoordinate setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public CreateJobRequestCoordinate setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+    }
+
     public static class CreateJobRequestNoticeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("EndEarly")
+        public Integer endEarly;
+
+        @NameInMap("EndEarlyEnable")
+        public Boolean endEarlyEnable;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -423,6 +550,22 @@ public class CreateJobRequest extends TeaModel {
         public static CreateJobRequestNoticeConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestNoticeConfig self = new CreateJobRequestNoticeConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestNoticeConfig setEndEarly(Integer endEarly) {
+            this.endEarly = endEarly;
+            return this;
+        }
+        public Integer getEndEarly() {
+            return this.endEarly;
+        }
+
+        public CreateJobRequestNoticeConfig setEndEarlyEnable(Boolean endEarlyEnable) {
+            this.endEarlyEnable = endEarlyEnable;
+            return this;
+        }
+        public Boolean getEndEarlyEnable() {
+            return this.endEarlyEnable;
         }
 
         public CreateJobRequestNoticeConfig setFailEnable(Boolean failEnable) {

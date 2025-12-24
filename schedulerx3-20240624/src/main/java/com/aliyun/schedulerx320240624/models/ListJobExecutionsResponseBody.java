@@ -207,6 +207,10 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         @NameInMap("TimeType")
         public Integer timeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("TotalTokens")
         public Integer totalTokens;
 
@@ -223,6 +227,27 @@ public class ListJobExecutionsResponseBody extends TeaModel {
          */
         @NameInMap("WorkAddr")
         public String workAddr;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("WorkflowExecutionId")
+        public String workflowExecutionId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("WorkflowId")
+        public Long workflowId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>myWorkflow</p>
+         */
+        @NameInMap("WorkflowName")
+        public String workflowName;
 
         public static ListJobExecutionsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListJobExecutionsResponseBodyDataRecords self = new ListJobExecutionsResponseBodyDataRecords();
@@ -387,6 +412,30 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         }
         public String getWorkAddr() {
             return this.workAddr;
+        }
+
+        public ListJobExecutionsResponseBodyDataRecords setWorkflowExecutionId(String workflowExecutionId) {
+            this.workflowExecutionId = workflowExecutionId;
+            return this;
+        }
+        public String getWorkflowExecutionId() {
+            return this.workflowExecutionId;
+        }
+
+        public ListJobExecutionsResponseBodyDataRecords setWorkflowId(Long workflowId) {
+            this.workflowId = workflowId;
+            return this;
+        }
+        public Long getWorkflowId() {
+            return this.workflowId;
+        }
+
+        public ListJobExecutionsResponseBodyDataRecords setWorkflowName(String workflowName) {
+            this.workflowName = workflowName;
+            return this;
+        }
+        public String getWorkflowName() {
+            return this.workflowName;
         }
 
     }

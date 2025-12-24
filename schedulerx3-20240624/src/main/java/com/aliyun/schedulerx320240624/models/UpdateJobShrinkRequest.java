@@ -27,6 +27,10 @@ public class UpdateJobShrinkRequest extends TeaModel {
     @NameInMap("Calendar")
     public String calendar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,2</p>
+     */
     @NameInMap("ChildJobId")
     public String childJobId;
 
@@ -38,6 +42,13 @@ public class UpdateJobShrinkRequest extends TeaModel {
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("DependentStrategy")
+    public Integer dependentStrategy;
 
     /**
      * <strong>example:</strong>
@@ -117,6 +128,10 @@ public class UpdateJobShrinkRequest extends TeaModel {
     @NameInMap("RouteStrategy")
     public Integer routeStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>echo &quot;hello world&quot;</p>
+     */
     @NameInMap("Script")
     public String script;
 
@@ -126,6 +141,13 @@ public class UpdateJobShrinkRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("StartTimeType")
+    public String startTimeType;
 
     /**
      * <strong>example:</strong>
@@ -198,6 +220,14 @@ public class UpdateJobShrinkRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public UpdateJobShrinkRequest setDependentStrategy(Integer dependentStrategy) {
+        this.dependentStrategy = dependentStrategy;
+        return this;
+    }
+    public Integer getDependentStrategy() {
+        return this.dependentStrategy;
     }
 
     public UpdateJobShrinkRequest setDescription(String description) {
@@ -310,6 +340,14 @@ public class UpdateJobShrinkRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public UpdateJobShrinkRequest setStartTimeType(String startTimeType) {
+        this.startTimeType = startTimeType;
+        return this;
+    }
+    public String getStartTimeType() {
+        return this.startTimeType;
     }
 
     public UpdateJobShrinkRequest setTimeExpression(String timeExpression) {

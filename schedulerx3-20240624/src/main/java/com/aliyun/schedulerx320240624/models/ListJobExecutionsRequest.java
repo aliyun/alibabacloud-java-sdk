@@ -76,6 +76,13 @@ public class ListJobExecutionsRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("WorkflowExecutionId")
+    public Long workflowExecutionId;
+
     public static ListJobExecutionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobExecutionsRequest self = new ListJobExecutionsRequest();
         return TeaModel.build(map, self);
@@ -159,6 +166,14 @@ public class ListJobExecutionsRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ListJobExecutionsRequest setWorkflowExecutionId(Long workflowExecutionId) {
+        this.workflowExecutionId = workflowExecutionId;
+        return this;
+    }
+    public Long getWorkflowExecutionId() {
+        return this.workflowExecutionId;
     }
 
 }

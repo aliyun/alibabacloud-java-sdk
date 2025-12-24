@@ -122,6 +122,13 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("DataOffset")
         public Integer dataOffset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DependentStrategy")
+        public Integer dependentStrategy;
+
         @NameInMap("Description")
         public String description;
 
@@ -178,6 +185,13 @@ public class ListJobsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("NodeType")
+        public Integer nodeType;
+
+        /**
+         * <strong>example:</strong>
          * <p>{&quot;failLimitTimes&quot;:1,&quot;failEnable&quot;:true,&quot;timeoutKillEnable&quot;:false,&quot;missWorkerEnable&quot;:true,&quot;timeoutEnable&quot;:true,&quot;sendChannel&quot;:&quot;&quot;,&quot;timeout&quot;:300,&quot;successNotice&quot;:false}</p>
          */
         @NameInMap("NoticeConfig")
@@ -209,6 +223,13 @@ public class ListJobsResponseBody extends TeaModel {
 
         @NameInMap("Script")
         public String script;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("StartTimeType")
+        public Integer startTimeType;
 
         /**
          * <strong>example:</strong>
@@ -258,6 +279,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         @NameInMap("Weight")
         public Integer weight;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("WorkflowId")
+        public Long workflowId;
 
         @NameInMap("Xattrs")
         public String xattrs;
@@ -329,6 +357,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Integer getDataOffset() {
             return this.dataOffset;
+        }
+
+        public ListJobsResponseBodyDataRecords setDependentStrategy(Integer dependentStrategy) {
+            this.dependentStrategy = dependentStrategy;
+            return this;
+        }
+        public Integer getDependentStrategy() {
+            return this.dependentStrategy;
         }
 
         public ListJobsResponseBodyDataRecords setDescription(String description) {
@@ -411,6 +447,14 @@ public class ListJobsResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListJobsResponseBodyDataRecords setNodeType(Integer nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public Integer getNodeType() {
+            return this.nodeType;
+        }
+
         public ListJobsResponseBodyDataRecords setNoticeConfig(String noticeConfig) {
             this.noticeConfig = noticeConfig;
             return this;
@@ -457,6 +501,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getScript() {
             return this.script;
+        }
+
+        public ListJobsResponseBodyDataRecords setStartTimeType(Integer startTimeType) {
+            this.startTimeType = startTimeType;
+            return this;
+        }
+        public Integer getStartTimeType() {
+            return this.startTimeType;
         }
 
         public ListJobsResponseBodyDataRecords setStatus(Integer status) {
@@ -513,6 +565,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Integer getWeight() {
             return this.weight;
+        }
+
+        public ListJobsResponseBodyDataRecords setWorkflowId(Long workflowId) {
+            this.workflowId = workflowId;
+            return this;
+        }
+        public Long getWorkflowId() {
+            return this.workflowId;
         }
 
         public ListJobsResponseBodyDataRecords setXattrs(String xattrs) {

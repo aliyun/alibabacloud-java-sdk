@@ -27,6 +27,10 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("Calendar")
     public String calendar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,2</p>
+     */
     @NameInMap("ChildJobId")
     public String childJobId;
 
@@ -38,6 +42,13 @@ public class UpdateJobRequest extends TeaModel {
      */
     @NameInMap("ClusterId")
     public String clusterId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("DependentStrategy")
+    public Integer dependentStrategy;
 
     /**
      * <strong>example:</strong>
@@ -117,6 +128,10 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("RouteStrategy")
     public Integer routeStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>echo &quot;hello world&quot;</p>
+     */
     @NameInMap("Script")
     public String script;
 
@@ -126,6 +141,13 @@ public class UpdateJobRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public Long startTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("StartTimeType")
+    public String startTimeType;
 
     /**
      * <strong>example:</strong>
@@ -198,6 +220,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public UpdateJobRequest setDependentStrategy(Integer dependentStrategy) {
+        this.dependentStrategy = dependentStrategy;
+        return this;
+    }
+    public Integer getDependentStrategy() {
+        return this.dependentStrategy;
     }
 
     public UpdateJobRequest setDescription(String description) {
@@ -312,6 +342,14 @@ public class UpdateJobRequest extends TeaModel {
         return this.startTime;
     }
 
+    public UpdateJobRequest setStartTimeType(String startTimeType) {
+        this.startTimeType = startTimeType;
+        return this;
+    }
+    public String getStartTimeType() {
+        return this.startTimeType;
+    }
+
     public UpdateJobRequest setTimeExpression(String timeExpression) {
         this.timeExpression = timeExpression;
         return this;
@@ -345,6 +383,16 @@ public class UpdateJobRequest extends TeaModel {
     }
 
     public static class UpdateJobRequestNoticeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("EndEarly")
+        public Integer endEarly;
+
+        @NameInMap("EndEarlyEnable")
+        public Boolean endEarlyEnable;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -404,6 +452,22 @@ public class UpdateJobRequest extends TeaModel {
         public static UpdateJobRequestNoticeConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateJobRequestNoticeConfig self = new UpdateJobRequestNoticeConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateJobRequestNoticeConfig setEndEarly(Integer endEarly) {
+            this.endEarly = endEarly;
+            return this;
+        }
+        public Integer getEndEarly() {
+            return this.endEarly;
+        }
+
+        public UpdateJobRequestNoticeConfig setEndEarlyEnable(Boolean endEarlyEnable) {
+            this.endEarlyEnable = endEarlyEnable;
+            return this;
+        }
+        public Boolean getEndEarlyEnable() {
+            return this.endEarlyEnable;
         }
 
         public UpdateJobRequestNoticeConfig setFailEnable(Boolean failEnable) {

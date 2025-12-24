@@ -236,6 +236,13 @@ public class GetClusterResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("MaxWorkflowNum")
+        public Integer maxWorkflowNum;
+
+        /**
+         * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("ProductType")
@@ -279,6 +286,13 @@ public class GetClusterResponseBody extends TeaModel {
          */
         @NameInMap("WorkerNum")
         public Integer workerNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("WorkflowNum")
+        public Integer workflowNum;
 
         @NameInMap("Zones")
         public java.util.List<String> zones;
@@ -392,6 +406,14 @@ public class GetClusterResponseBody extends TeaModel {
             return this.maxJobNum;
         }
 
+        public GetClusterResponseBodyData setMaxWorkflowNum(Integer maxWorkflowNum) {
+            this.maxWorkflowNum = maxWorkflowNum;
+            return this;
+        }
+        public Integer getMaxWorkflowNum() {
+            return this.maxWorkflowNum;
+        }
+
         public GetClusterResponseBodyData setProductType(Integer productType) {
             this.productType = productType;
             return this;
@@ -454,6 +476,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public Integer getWorkerNum() {
             return this.workerNum;
+        }
+
+        public GetClusterResponseBodyData setWorkflowNum(Integer workflowNum) {
+            this.workflowNum = workflowNum;
+            return this;
+        }
+        public Integer getWorkflowNum() {
+            return this.workflowNum;
         }
 
         public GetClusterResponseBodyData setZones(java.util.List<String> zones) {
