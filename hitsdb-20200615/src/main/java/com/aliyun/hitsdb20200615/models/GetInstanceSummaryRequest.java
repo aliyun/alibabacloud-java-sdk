@@ -3,21 +3,19 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class GetLindormV2StorageUsageRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ld-ufxxxxxxxxxx</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
-
+public class GetInstanceSummaryRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -28,20 +26,12 @@ public class GetLindormV2StorageUsageRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static GetLindormV2StorageUsageRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetLindormV2StorageUsageRequest self = new GetLindormV2StorageUsageRequest();
+    public static GetInstanceSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetInstanceSummaryRequest self = new GetInstanceSummaryRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetLindormV2StorageUsageRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public GetLindormV2StorageUsageRequest setOwnerAccount(String ownerAccount) {
+    public GetInstanceSummaryRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -49,7 +39,7 @@ public class GetLindormV2StorageUsageRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public GetLindormV2StorageUsageRequest setOwnerId(Long ownerId) {
+    public GetInstanceSummaryRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -57,7 +47,15 @@ public class GetLindormV2StorageUsageRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public GetLindormV2StorageUsageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetInstanceSummaryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetInstanceSummaryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -65,7 +63,7 @@ public class GetLindormV2StorageUsageRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public GetLindormV2StorageUsageRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetInstanceSummaryRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -73,7 +71,7 @@ public class GetLindormV2StorageUsageRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetLindormV2StorageUsageRequest setSecurityToken(String securityToken) {
+    public GetInstanceSummaryRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
