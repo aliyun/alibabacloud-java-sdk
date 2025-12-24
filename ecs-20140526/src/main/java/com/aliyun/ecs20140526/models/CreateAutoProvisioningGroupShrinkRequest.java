@@ -83,6 +83,9 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     @NameInMap("ExcessCapacityTerminationPolicy")
     public String excessCapacityTerminationPolicy;
 
+    @NameInMap("ExecutionMode")
+    public String executionMode;
+
     /**
      * <blockquote>
      * <p>This parameter is in invitational preview and is not publicly available.</p>
@@ -403,6 +406,14 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
     public String getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy;
+    }
+
+    public CreateAutoProvisioningGroupShrinkRequest setExecutionMode(String executionMode) {
+        this.executionMode = executionMode;
+        return this;
+    }
+    public String getExecutionMode() {
+        return this.executionMode;
     }
 
     public CreateAutoProvisioningGroupShrinkRequest setHibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
