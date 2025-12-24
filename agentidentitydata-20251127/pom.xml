@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>agentidentitydata20251127</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>agentidentitydata20251127</name>
   <description>Alibaba Cloud AgentIdentityData (20251127) SDK for Java
