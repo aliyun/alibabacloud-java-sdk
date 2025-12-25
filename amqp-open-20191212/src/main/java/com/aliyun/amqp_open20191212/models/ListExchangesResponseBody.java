@@ -77,6 +77,9 @@ public class ListExchangesResponseBody extends TeaModel {
         @NameInMap("ExchangeType")
         public String exchangeType;
 
+        @NameInMap("Internal")
+        public Boolean internal;
+
         /**
          * <p>The exchange name.</p>
          * 
@@ -130,6 +133,14 @@ public class ListExchangesResponseBody extends TeaModel {
         }
         public String getExchangeType() {
             return this.exchangeType;
+        }
+
+        public ListExchangesResponseBodyDataExchanges setInternal(Boolean internal) {
+            this.internal = internal;
+            return this;
+        }
+        public Boolean getInternal() {
+            return this.internal;
         }
 
         public ListExchangesResponseBodyDataExchanges setName(String name) {

@@ -1,3 +1,7 @@
+2025-12-25 Version: 1.4.6
+- Update API ListExchanges: add response parameters Body.Data.Exchanges.$.Internal.
+
+
 2025-11-03 Version: 1.4.5
 - Update API CreateInstance: add request parameters Tags.
 
