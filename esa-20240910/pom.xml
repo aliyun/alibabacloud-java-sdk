@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>esa20240910</artifactId>
-  <version>2.40.0</version>
+  <version>2.41.0</version>
   <packaging>jar</packaging>
   <name>esa20240910</name>
   <description>Alibaba Cloud ESA (20240910) SDK for Java

@@ -4445,6 +4445,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</p>
+     * 
+     * @param tmpReq CreateUserWafRulesetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUserWafRulesetResponse
+     */
+    public CreateUserWafRulesetResponse createUserWafRulesetWithOptions(CreateUserWafRulesetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateUserWafRulesetShrinkRequest request = new CreateUserWafRulesetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
+            request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shared)) {
+            request.sharedShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shared, "Shared", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expression)) {
+            body.put("Expression", request.expression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
+            body.put("Phase", request.phase);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rulesShrink)) {
+            body.put("Rules", request.rulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedShrink)) {
+            body.put("Shared", request.sharedShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUserWafRuleset"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUserWafRulesetResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于创建实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</p>
+     * 
+     * @param request CreateUserWafRulesetRequest
+     * @return CreateUserWafRulesetResponse
+     */
+    public CreateUserWafRulesetResponse createUserWafRuleset(CreateUserWafRulesetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createUserWafRulesetWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Add video processing configurations for a website.</p>
      * 
@@ -7060,6 +7170,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteUserDeliveryTaskResponse deleteUserDeliveryTask(DeleteUserDeliveryTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUserDeliveryTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除实例级别的Web应用防火墙规则集。</p>
+     * 
+     * @param request DeleteUserWafRulesetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUserWafRulesetResponse
+     */
+    public DeleteUserWafRulesetResponse deleteUserWafRulesetWithOptions(DeleteUserWafRulesetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUserWafRuleset"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserWafRulesetResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除实例级别的Web应用防火墙规则集。</p>
+     * 
+     * @param request DeleteUserWafRulesetRequest
+     * @return DeleteUserWafRulesetResponse
+     */
+    public DeleteUserWafRulesetResponse deleteUserWafRuleset(DeleteUserWafRulesetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUserWafRulesetWithOptions(request, runtime);
     }
 
     /**
@@ -10538,6 +10724,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询Routine默认访问记录访问鉴权token</p>
+     * 
+     * @param request GetRoutineAccessTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRoutineAccessTokenResponse
+     */
+    public GetRoutineAccessTokenResponse getRoutineAccessTokenWithOptions(GetRoutineAccessTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRoutineAccessToken"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRoutineAccessTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Routine默认访问记录访问鉴权token</p>
+     * 
+     * @param request GetRoutineAccessTokenRequest
+     * @return GetRoutineAccessTokenResponse
+     */
+    public GetRoutineAccessTokenResponse getRoutineAccessToken(GetRoutineAccessTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRoutineAccessTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries information about a code version of a routine.</p>
      * 
      * @param request GetRoutineCodeVersionRequest
@@ -11466,6 +11696,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserLogDeliveryQuotaResponse getUserLogDeliveryQuota(GetUserLogDeliveryQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserLogDeliveryQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于获取实例级别的Web应用防火墙规则集详情</p>
+     * 
+     * @param request GetUserWafRulesetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserWafRulesetResponse
+     */
+    public GetUserWafRulesetResponse getUserWafRulesetWithOptions(GetUserWafRulesetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserWafRuleset"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserWafRulesetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于获取实例级别的Web应用防火墙规则集详情</p>
+     * 
+     * @param request GetUserWafRulesetRequest
+     * @return GetUserWafRulesetResponse
+     */
+    public GetUserWafRulesetResponse getUserWafRuleset(GetUserWafRulesetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserWafRulesetWithOptions(request, runtime);
     }
 
     /**
@@ -14250,6 +14528,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUserRoutinesResponse listUserRoutines(ListUserRoutinesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserRoutinesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于列举实例级别的Web应用防火墙规则集。</p>
+     * 
+     * @param tmpReq ListUserWafRulesetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserWafRulesetsResponse
+     */
+    public ListUserWafRulesetsResponse listUserWafRulesetsWithOptions(ListUserWafRulesetsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListUserWafRulesetsShrinkRequest request = new ListUserWafRulesetsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryArgs)) {
+            request.queryArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryArgs, "QueryArgs", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phase)) {
+            query.put("Phase", request.phase);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryArgsShrink)) {
+            query.put("QueryArgs", request.queryArgsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserWafRulesets"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserWafRulesetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于列举实例级别的Web应用防火墙规则集。</p>
+     * 
+     * @param request ListUserWafRulesetsRequest
+     * @return ListUserWafRulesetsResponse
+     */
+    public ListUserWafRulesetsResponse listUserWafRulesets(ListUserWafRulesetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserWafRulesetsWithOptions(request, runtime);
     }
 
     /**
@@ -19694,6 +20038,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUserDeliveryTaskStatusResponse updateUserDeliveryTaskStatus(UpdateUserDeliveryTaskStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateUserDeliveryTaskStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于更新实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</p>
+     * 
+     * @param tmpReq UpdateUserWafRulesetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateUserWafRulesetResponse
+     */
+    public UpdateUserWafRulesetResponse updateUserWafRulesetWithOptions(UpdateUserWafRulesetRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateUserWafRulesetShrinkRequest request = new UpdateUserWafRulesetShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
+            request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shared)) {
+            request.sharedShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shared, "Shared", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expression)) {
+            body.put("Expression", request.expression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.position)) {
+            body.put("Position", request.position);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rulesShrink)) {
+            body.put("Rules", request.rulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedShrink)) {
+            body.put("Shared", request.sharedShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUserWafRuleset"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserWafRulesetResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于更新实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</p>
+     * 
+     * @param request UpdateUserWafRulesetRequest
+     * @return UpdateUserWafRulesetResponse
+     */
+    public UpdateUserWafRulesetResponse updateUserWafRuleset(UpdateUserWafRulesetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateUserWafRulesetWithOptions(request, runtime);
     }
 
     /**
