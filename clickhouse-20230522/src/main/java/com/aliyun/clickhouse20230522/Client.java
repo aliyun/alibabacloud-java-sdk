@@ -574,6 +574,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新增白名单模板</p>
+     * 
+     * @param request CreateWhitelistTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWhitelistTemplateResponse
+     */
+    public CreateWhitelistTemplateResponse createWhitelistTemplateWithOptions(CreateWhitelistTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            body.put("SecurityIPList", request.securityIPList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWhitelistTemplate"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWhitelistTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增白名单模板</p>
+     * 
+     * @param request CreateWhitelistTemplateRequest
+     * @return CreateWhitelistTemplateResponse
+     */
+    public CreateWhitelistTemplateResponse createWhitelistTemplate(CreateWhitelistTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWhitelistTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a database account from an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteAccountRequest
@@ -1842,6 +1896,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public KillProcessResponse killProcess(KillProcessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.killProcessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举ClickHouse时区参数枚举值</p>
+     * 
+     * @param request ListClickHouseDBTimezonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListClickHouseDBTimezonesResponse
+     */
+    public ListClickHouseDBTimezonesResponse listClickHouseDBTimezonesWithOptions(ListClickHouseDBTimezonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListClickHouseDBTimezones"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListClickHouseDBTimezonesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举ClickHouse时区参数枚举值</p>
+     * 
+     * @param request ListClickHouseDBTimezonesRequest
+     * @return ListClickHouseDBTimezonesResponse
+     */
+    public ListClickHouseDBTimezonesResponse listClickHouseDBTimezones(ListClickHouseDBTimezonesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listClickHouseDBTimezonesWithOptions(request, runtime);
     }
 
     /**
