@@ -1218,6 +1218,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Elastic")
         public Boolean elastic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f-cn-e3afbd321</p>
+         */
+        @NameInMap("ElasticInstanceId")
+        public String elasticInstanceId;
+
         @NameInMap("ElasticOrderState")
         public String elasticOrderState;
 
@@ -1417,6 +1424,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Boolean getElastic() {
             return this.elastic;
+        }
+
+        public DescribeInstancesResponseBodyInstances setElasticInstanceId(String elasticInstanceId) {
+            this.elasticInstanceId = elasticInstanceId;
+            return this;
+        }
+        public String getElasticInstanceId() {
+            return this.elasticInstanceId;
         }
 
         public DescribeInstancesResponseBodyInstances setElasticOrderState(String elasticOrderState) {

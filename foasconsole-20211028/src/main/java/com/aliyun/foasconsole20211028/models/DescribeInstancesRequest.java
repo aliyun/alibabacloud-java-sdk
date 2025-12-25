@@ -4,6 +4,10 @@ package com.aliyun.foasconsole20211028.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>X86</p>
+     */
     @NameInMap("ArchitectureType")
     public String architectureType;
 
@@ -20,6 +24,20 @@ public class DescribeInstancesRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>e2e-test</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>e2e-test-default</p>
+     */
+    @NameInMap("NamespaceName")
+    public String namespaceName;
 
     /**
      * <strong>example:</strong>
@@ -77,6 +95,22 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInstancesRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public DescribeInstancesRequest setNamespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
+        return this;
+    }
+    public String getNamespaceName() {
+        return this.namespaceName;
     }
 
     public DescribeInstancesRequest setPageIndex(Integer pageIndex) {

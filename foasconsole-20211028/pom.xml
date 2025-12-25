@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>foasconsole20211028</artifactId>
-  <version>2.1.2</version>
+  <version>2.1.3</version>
   <packaging>jar</packaging>
   <name>foasconsole20211028</name>
   <description>Alibaba Cloud foasconsole (20211028) SDK for Java
@@ -173,12 +173,11 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.8.0</version>
+        <version>0.9.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>
           <autoPublish>true</autoPublish>
-          <waitUntil>published</waitUntil>
         </configuration>
       </plugin>
     </plugins>

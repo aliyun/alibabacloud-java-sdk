@@ -260,6 +260,13 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+         */
+        @NameInMap("LxRequestId")
+        public String lxRequestId;
+
+        /**
+         * <strong>example:</strong>
          * <p>存在未支付订单，请先支付或取消原有订单</p>
          */
         @NameInMap("Message")
@@ -334,6 +341,14 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         }
         public Boolean getIsContractActivity() {
             return this.isContractActivity;
+        }
+
+        public QueryModifyInstancePriceResponseBodyPriceInfo setLxRequestId(String lxRequestId) {
+            this.lxRequestId = lxRequestId;
+            return this;
+        }
+        public String getLxRequestId() {
+            return this.lxRequestId;
         }
 
         public QueryModifyInstancePriceResponseBodyPriceInfo setMessage(String message) {
