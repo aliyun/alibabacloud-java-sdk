@@ -151,6 +151,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("autoBackup", request.autoBackup);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            body.put("autoRenew", request.autoRenew);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.components)) {
             body.put("components", request.components);
         }
@@ -179,8 +183,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("instanceName", request.instanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isMultiAzStorage)) {
+            body.put("isMultiAzStorage", request.isMultiAzStorage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
             body.put("kmsKeyId", request.kmsKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadReplicas)) {
+            body.put("loadReplicas", request.loadReplicas);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.multiZoneMode)) {
@@ -197,6 +209,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
             body.put("paymentType", request.paymentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionNo)) {
+            body.put("promotionNo", request.promotionNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {

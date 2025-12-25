@@ -562,6 +562,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyDataTags> tags;
 
+        @NameInMap("Version")
+        public String version;
+
         /**
          * <p>The virtual private cloud (VPC) ID.</p>
          * 
@@ -728,6 +731,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public java.util.List<ListInstancesResponseBodyDataTags> getTags() {
             return this.tags;
+        }
+
+        public ListInstancesResponseBodyData setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
         public ListInstancesResponseBodyData setVpcId(String vpcId) {

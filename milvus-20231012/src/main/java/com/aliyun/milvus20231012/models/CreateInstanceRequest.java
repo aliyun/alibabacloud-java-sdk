@@ -14,6 +14,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("autoBackup")
     public Boolean autoBackup;
 
+    @NameInMap("autoRenew")
+    public Boolean autoRenew;
+
     @NameInMap("components")
     public java.util.List<CreateInstanceRequestComponents> components;
 
@@ -53,8 +56,14 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("instanceName")
     public String instanceName;
 
+    @NameInMap("isMultiAzStorage")
+    public Boolean isMultiAzStorage;
+
     @NameInMap("kmsKeyId")
     public String kmsKeyId;
+
+    @NameInMap("loadReplicas")
+    public Integer loadReplicas;
 
     @NameInMap("multiZoneMode")
     public String multiZoneMode;
@@ -81,6 +90,9 @@ public class CreateInstanceRequest extends TeaModel {
      */
     @NameInMap("paymentType")
     public String paymentType;
+
+    @NameInMap("promotionNo")
+    public String promotionNo;
 
     /**
      * <strong>example:</strong>
@@ -141,6 +153,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.autoBackup;
     }
 
+    public CreateInstanceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
     public CreateInstanceRequest setComponents(java.util.List<CreateInstanceRequestComponents> components) {
         this.components = components;
         return this;
@@ -197,12 +217,28 @@ public class CreateInstanceRequest extends TeaModel {
         return this.instanceName;
     }
 
+    public CreateInstanceRequest setIsMultiAzStorage(Boolean isMultiAzStorage) {
+        this.isMultiAzStorage = isMultiAzStorage;
+        return this;
+    }
+    public Boolean getIsMultiAzStorage() {
+        return this.isMultiAzStorage;
+    }
+
     public CreateInstanceRequest setKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     public String getKmsKeyId() {
         return this.kmsKeyId;
+    }
+
+    public CreateInstanceRequest setLoadReplicas(Integer loadReplicas) {
+        this.loadReplicas = loadReplicas;
+        return this;
+    }
+    public Integer getLoadReplicas() {
+        return this.loadReplicas;
     }
 
     public CreateInstanceRequest setMultiZoneMode(String multiZoneMode) {
@@ -235,6 +271,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public CreateInstanceRequest setPromotionNo(String promotionNo) {
+        this.promotionNo = promotionNo;
+        return this;
+    }
+    public String getPromotionNo() {
+        return this.promotionNo;
     }
 
     public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {

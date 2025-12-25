@@ -186,6 +186,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("Replica")
         public Integer replica;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static GetInstanceDetailResponseBodyDataClusterInfoMilvusResourceInfoList build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceDetailResponseBodyDataClusterInfoMilvusResourceInfoList self = new GetInstanceDetailResponseBodyDataClusterInfoMilvusResourceInfoList();
             return TeaModel.build(map, self);
@@ -237,6 +240,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public Integer getReplica() {
             return this.replica;
+        }
+
+        public GetInstanceDetailResponseBodyDataClusterInfoMilvusResourceInfoList setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
@@ -395,6 +406,58 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public Integer getTotalDiskSize() {
             return this.totalDiskSize;
+        }
+
+    }
+
+    public static class GetInstanceDetailResponseBodyDataHighAvailability extends TeaModel {
+        @NameInMap("CurrentActiveAZ")
+        public String currentActiveAZ;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("PrimaryZoneId")
+        public String primaryZoneId;
+
+        @NameInMap("SecondaryZoneId")
+        public String secondaryZoneId;
+
+        public static GetInstanceDetailResponseBodyDataHighAvailability build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceDetailResponseBodyDataHighAvailability self = new GetInstanceDetailResponseBodyDataHighAvailability();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceDetailResponseBodyDataHighAvailability setCurrentActiveAZ(String currentActiveAZ) {
+            this.currentActiveAZ = currentActiveAZ;
+            return this;
+        }
+        public String getCurrentActiveAZ() {
+            return this.currentActiveAZ;
+        }
+
+        public GetInstanceDetailResponseBodyDataHighAvailability setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public GetInstanceDetailResponseBodyDataHighAvailability setPrimaryZoneId(String primaryZoneId) {
+            this.primaryZoneId = primaryZoneId;
+            return this;
+        }
+        public String getPrimaryZoneId() {
+            return this.primaryZoneId;
+        }
+
+        public GetInstanceDetailResponseBodyDataHighAvailability setSecondaryZoneId(String secondaryZoneId) {
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
         }
 
     }
@@ -696,6 +759,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        @NameInMap("HighAvailability")
+        public GetInstanceDetailResponseBodyDataHighAvailability highAvailability;
+
         /**
          * <p>The ID of the instance.</p>
          * 
@@ -953,6 +1019,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
         public Long getExpireTime() {
             return this.expireTime;
+        }
+
+        public GetInstanceDetailResponseBodyData setHighAvailability(GetInstanceDetailResponseBodyDataHighAvailability highAvailability) {
+            this.highAvailability = highAvailability;
+            return this;
+        }
+        public GetInstanceDetailResponseBodyDataHighAvailability getHighAvailability() {
+            return this.highAvailability;
         }
 
         public GetInstanceDetailResponseBodyData setInstanceId(String instanceId) {
