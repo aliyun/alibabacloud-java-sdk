@@ -9681,6 +9681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Content", request.content);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originContent)) {
+            body.put("OriginContent", request.originContent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
             body.put("Prompt", request.prompt);
         }

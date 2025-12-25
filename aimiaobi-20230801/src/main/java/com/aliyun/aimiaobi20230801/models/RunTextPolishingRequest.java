@@ -13,6 +13,9 @@ public class RunTextPolishingRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("OriginContent")
+    public String originContent;
+
     @NameInMap("Prompt")
     public String prompt;
 
@@ -36,6 +39,14 @@ public class RunTextPolishingRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public RunTextPolishingRequest setOriginContent(String originContent) {
+        this.originContent = originContent;
+        return this;
+    }
+    public String getOriginContent() {
+        return this.originContent;
     }
 
     public RunTextPolishingRequest setPrompt(String prompt) {
