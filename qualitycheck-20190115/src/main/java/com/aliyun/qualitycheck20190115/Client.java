@@ -705,6 +705,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建用户</p>
+     * 
+     * @param request CreateUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateUserResponse
+     */
+    public CreateUserResponse createUserWithOptions(CreateUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUser"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建用户</p>
+     * 
+     * @param request CreateUserRequest
+     * @return CreateUserResponse
+     */
+    public CreateUserResponse createUser(CreateUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createUserWithOptions(request, runtime);
+    }
+
+    /**
      * @param request CreateWarningConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateWarningConfigResponse
@@ -1855,6 +1903,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取质检结果详情用于复核</p>
+     * 
      * @param request GetResultToReviewRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResultToReviewResponse
@@ -1888,6 +1939,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取质检结果详情用于复核</p>
+     * 
      * @param request GetResultToReviewRequest
      * @return GetResultToReviewResponse
      */
@@ -3662,6 +3716,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitReviewInfoResponse submitReviewInfo(SubmitReviewInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitReviewInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交复核结果v4</p>
+     * 
+     * @param request SubmitReviewInfoV4Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitReviewInfoV4Response
+     */
+    public SubmitReviewInfoV4Response submitReviewInfoV4WithOptions(SubmitReviewInfoV4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            body.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            body.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitReviewInfoV4"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitReviewInfoV4Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交复核结果v4</p>
+     * 
+     * @param request SubmitReviewInfoV4Request
+     * @return SubmitReviewInfoV4Response
+     */
+    public SubmitReviewInfoV4Response submitReviewInfoV4(SubmitReviewInfoV4Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitReviewInfoV4WithOptions(request, runtime);
     }
 
     /**

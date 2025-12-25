@@ -669,6 +669,179 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
 
+    public static class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults extends TeaModel {
+        @NameInMap("Changed")
+        public Boolean changed;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Cid")
+        public Long cid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>无意见</p>
+         */
+        @NameInMap("Comment")
+        public String comment;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("HitStatus")
+        public Integer hitStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>122-122-22-333</p>
+         */
+        @NameInMap("OriginTaskId")
+        public String originTaskId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("OriginVid")
+        public String originVid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Pid")
+        public String pid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("ReviewDimensionType")
+        public String reviewDimensionType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Rid")
+        public Long rid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Sid")
+        public Long sid;
+
+        public static GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults build(java.util.Map<String, ?> map) throws Exception {
+            GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults self = new GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setChanged(Boolean changed) {
+            this.changed = changed;
+            return this;
+        }
+        public Boolean getChanged() {
+            return this.changed;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setCid(Long cid) {
+            this.cid = cid;
+            return this;
+        }
+        public Long getCid() {
+            return this.cid;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setHitStatus(Integer hitStatus) {
+            this.hitStatus = hitStatus;
+            return this;
+        }
+        public Integer getHitStatus() {
+            return this.hitStatus;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setOriginTaskId(String originTaskId) {
+            this.originTaskId = originTaskId;
+            return this;
+        }
+        public String getOriginTaskId() {
+            return this.originTaskId;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setOriginVid(String originVid) {
+            this.originVid = originVid;
+            return this;
+        }
+        public String getOriginVid() {
+            return this.originVid;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setReviewDimensionType(String reviewDimensionType) {
+            this.reviewDimensionType = reviewDimensionType;
+            return this;
+        }
+        public String getReviewDimensionType() {
+            return this.reviewDimensionType;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setRid(Long rid) {
+            this.rid = rid;
+            return this;
+        }
+        public Long getRid() {
+            return this.rid;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults setSid(Long sid) {
+            this.sid = sid;
+            return this;
+        }
+        public Long getSid() {
+            return this.sid;
+        }
+
+    }
+
+    public static class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults extends TeaModel {
+        @NameInMap("SentenceReviewResults")
+        public java.util.List<GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults> sentenceReviewResults;
+
+        public static GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults build(java.util.Map<String, ?> map) throws Exception {
+            GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults self = new GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults setSentenceReviewResults(java.util.List<GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults> sentenceReviewResults) {
+            this.sentenceReviewResults = sentenceReviewResults;
+            return this;
+        }
+        public java.util.List<GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults> getSentenceReviewResults() {
+            return this.sentenceReviewResults;
+        }
+
+    }
+
     public static class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -704,6 +877,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
          */
         @NameInMap("Rid")
         public Long rid;
+
+        @NameInMap("SentenceReviewResults")
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults sentenceReviewResults;
 
         public static GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo build(java.util.Map<String, ?> map) throws Exception {
             GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo self = new GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo();
@@ -748,6 +924,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
         public Long getRid() {
             return this.rid;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo setSentenceReviewResults(GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults sentenceReviewResults) {
+            this.sentenceReviewResults = sentenceReviewResults;
+            return this;
+        }
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults getSentenceReviewResults() {
+            return this.sentenceReviewResults;
         }
 
     }
