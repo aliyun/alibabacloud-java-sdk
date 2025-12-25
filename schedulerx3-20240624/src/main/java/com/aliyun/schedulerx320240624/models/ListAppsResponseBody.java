@@ -166,6 +166,7 @@ public class ListAppsResponseBody extends TeaModel {
          * <p>1000</p>
          */
         @NameInMap("MaxJobs")
+        @Deprecated
         public Integer maxJobs;
 
         @NameInMap("Title")
@@ -184,6 +185,13 @@ public class ListAppsResponseBody extends TeaModel {
          */
         @NameInMap("WorkerRegistry")
         public String workerRegistry;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("WorkflowNum")
+        public Integer workflowNum;
 
         public static ListAppsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListAppsResponseBodyDataRecords self = new ListAppsResponseBodyDataRecords();
@@ -278,6 +286,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.maxConcurrency;
         }
 
+        @Deprecated
         public ListAppsResponseBodyDataRecords setMaxJobs(Integer maxJobs) {
             this.maxJobs = maxJobs;
             return this;
@@ -308,6 +317,14 @@ public class ListAppsResponseBody extends TeaModel {
         }
         public String getWorkerRegistry() {
             return this.workerRegistry;
+        }
+
+        public ListAppsResponseBodyDataRecords setWorkflowNum(Integer workflowNum) {
+            this.workflowNum = workflowNum;
+            return this;
+        }
+        public Integer getWorkflowNum() {
+            return this.workflowNum;
         }
 
     }
