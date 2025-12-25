@@ -153,6 +153,9 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("qualifier")
         public String qualifier;
 
+        @NameInMap("sourceId")
+        public String sourceId;
+
         public static CreateServiceRequestServiceConfigs build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceRequestServiceConfigs self = new CreateServiceRequestServiceConfigs();
             return TeaModel.build(map, self);
@@ -220,6 +223,14 @@ public class CreateServiceRequest extends TeaModel {
         }
         public String getQualifier() {
             return this.qualifier;
+        }
+
+        public CreateServiceRequestServiceConfigs setSourceId(String sourceId) {
+            this.sourceId = sourceId;
+            return this;
+        }
+        public String getSourceId() {
+            return this.sourceId;
         }
 
     }

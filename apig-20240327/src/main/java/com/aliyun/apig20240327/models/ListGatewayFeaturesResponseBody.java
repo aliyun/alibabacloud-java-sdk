@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListGatewayFeaturesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListGatewayFeaturesResponseBodyData data;
 
     /**
+     * <p>The response message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
      */
@@ -67,12 +76,17 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
 
     public static class ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions extends TeaModel {
         /**
+         * <p>The key to pass the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>KEEP_UNCHANGED</p>
          */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The display value.</p>
+         */
         @NameInMap("label")
         public String label;
 
@@ -101,16 +115,23 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
 
     public static class ListGatewayFeaturesResponseBodyDataItemsDefinition extends TeaModel {
         /**
+         * <p>The default value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;true&quot;</p>
          */
         @NameInMap("defaultValue")
         public String defaultValue;
 
+        /**
+         * <p>The parameter description.</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The display name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>EnableGzip</p>
          */
@@ -118,6 +139,12 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The parameter group to which the parameter belongs. Valid values:</p>
+         * <ul>
+         * <li>Telemetry: an observability parameter</li>
+         * <li>Engine: an engine parameter</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Engine</p>
          */
@@ -125,6 +152,14 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public String group;
 
         /**
+         * <p>The input type of the parameter. Valid values:</p>
+         * <ul>
+         * <li>Trigger</li>
+         * <li>Input</li>
+         * <li>SingleSelect</li>
+         * <li>MultiSelect</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Trigger</p>
          */
@@ -132,6 +167,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public String inputType;
 
         /**
+         * <p>The maximum length of the value. This parameter is valid when the value type is string.</p>
+         * 
          * <strong>example:</strong>
          * <p>64</p>
          */
@@ -139,6 +176,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public Integer maxLength;
 
         /**
+         * <p>The maximum value of the parameter. This parameter is valid when the value type is int32, int64, or float.</p>
+         * 
          * <strong>example:</strong>
          * <p>65535</p>
          */
@@ -146,6 +185,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public String maxValue;
 
         /**
+         * <p>The minimum length of the value. This parameter is valid when the value type is string.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -153,6 +194,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public Integer minLength;
 
         /**
+         * <p>The minimum value of the parameter. This parameter is valid when the value type is int32, int64, or float.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -160,6 +203,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public String minValue;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable-gzip</p>
          */
@@ -167,6 +212,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the parameter is read-only.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -174,16 +221,32 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public Boolean readOnly;
 
         /**
+         * <p>The regular expression that the parameter value must fulfill. This parameter is valid when the value type is string.</p>
+         * 
          * <strong>example:</strong>
          * <p>[a-z].*</p>
          */
         @NameInMap("regex")
         public String regex;
 
+        /**
+         * <p>The list of options supported by the parameter value.</p>
+         */
         @NameInMap("valueOptions")
         public java.util.List<ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions> valueOptions;
 
         /**
+         * <p>The value type of the parameter. Valid values:</p>
+         * <ul>
+         * <li>bool: boolean</li>
+         * <li>string</li>
+         * <li>int32: integer</li>
+         * <li>int64: long integer</li>
+         * <li>json</li>
+         * <li>array: JSON array</li>
+         * <li>float: floating point</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>bool</p>
          */
@@ -191,6 +254,8 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         public String valueType;
 
         /**
+         * <p>The value unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>byte</p>
          */
@@ -325,10 +390,15 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
     }
 
     public static class ListGatewayFeaturesResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The parameter definition.</p>
+         */
         @NameInMap("definition")
         public ListGatewayFeaturesResponseBodyDataItemsDefinition definition;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;true&quot;</p>
          */
@@ -359,6 +429,9 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
     }
 
     public static class ListGatewayFeaturesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of parameter configurations.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListGatewayFeaturesResponseBodyDataItems> items;
 

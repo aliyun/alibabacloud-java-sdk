@@ -312,6 +312,9 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     public static class HttpApiDeployConfigServiceConfigs extends TeaModel {
+        @NameInMap("intentCode")
+        public String intentCode;
+
         /**
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -343,6 +346,14 @@ public class HttpApiDeployConfig extends TeaModel {
         public static HttpApiDeployConfigServiceConfigs build(java.util.Map<String, ?> map) throws Exception {
             HttpApiDeployConfigServiceConfigs self = new HttpApiDeployConfigServiceConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigServiceConfigs setIntentCode(String intentCode) {
+            this.intentCode = intentCode;
+            return this;
+        }
+        public String getIntentCode() {
+            return this.intentCode;
         }
 
         public HttpApiDeployConfigServiceConfigs setModelName(String modelName) {

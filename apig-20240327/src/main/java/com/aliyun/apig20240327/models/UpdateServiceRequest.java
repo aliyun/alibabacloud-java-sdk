@@ -4,31 +4,60 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceRequest extends TeaModel {
+    /**
+     * <p>The list of domain names or fixed addresses.</p>
+     */
     @NameInMap("addresses")
     public java.util.List<String> addresses;
 
+    /**
+     * <p>The agent service configurations.</p>
+     */
     @NameInMap("agentServiceConfig")
     public AgentServiceConfig agentServiceConfig;
 
+    /**
+     * <p>The AI service configurations.</p>
+     */
     @NameInMap("aiServiceConfig")
     public AiServiceConfig aiServiceConfig;
 
+    /**
+     * <p>A DNS service address.</p>
+     */
     @NameInMap("dnsServers")
     public java.util.List<String> dnsServers;
 
+    /**
+     * <p>The health check configurations.</p>
+     */
     @NameInMap("healthCheckConfig")
     public UpdateServiceRequestHealthCheckConfig healthCheckConfig;
 
+    /**
+     * <p>The health check threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("healthyPanicThreshold")
     public Float healthyPanicThreshold;
 
+    /**
+     * <p>The passive health check configurations.</p>
+     */
     @NameInMap("outlierDetectionConfig")
     public UpdateServiceRequestOutlierDetectionConfig outlierDetectionConfig;
 
+    /**
+     * <p>The port information.</p>
+     */
     @NameInMap("ports")
     public java.util.List<UpdateServiceRequestPorts> ports;
 
     /**
+     * <p>The service protocol.</p>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -114,16 +143,23 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestHealthCheckConfig extends TeaModel {
         /**
+         * <p>Specifies whether to enable health checks.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The normal status codes to be returned. This parameter is required if the health check protocol is HTTP.</p>
+         */
         @NameInMap("expectedStatuses")
         public java.util.List<String> expectedStatuses;
 
         /**
+         * <p>The healthy threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -131,6 +167,8 @@ public class UpdateServiceRequest extends TeaModel {
         public Integer healthyThreshold;
 
         /**
+         * <p>The domain name that you want to use for health checks. Optional. This parameter is available if the health check protocol is HTTP.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev.itemcener.com</p>
          */
@@ -138,6 +176,8 @@ public class UpdateServiceRequest extends TeaModel {
         public String httpHost;
 
         /**
+         * <p>The request path of health checks. This parameter is required if the health check protocol is HTTP.</p>
+         * 
          * <strong>example:</strong>
          * <p>/healthz</p>
          */
@@ -145,6 +185,8 @@ public class UpdateServiceRequest extends TeaModel {
         public String httpPath;
 
         /**
+         * <p>The health check interval. Unit: seconds</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -152,6 +194,13 @@ public class UpdateServiceRequest extends TeaModel {
         public Integer interval;
 
         /**
+         * <p>The protocol over which the system performs health checks.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TCP</li>
+         * <li>HTTP</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -159,6 +208,8 @@ public class UpdateServiceRequest extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The timeout period for a health check response. Unit: seconds</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -166,6 +217,8 @@ public class UpdateServiceRequest extends TeaModel {
         public Integer timeout;
 
         /**
+         * <p>The unhealthy threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -252,18 +305,49 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestOutlierDetectionConfig extends TeaModel {
+        /**
+         * <p>The initial isolation duration after a node is isolated (e.g., 30 seconds). The isolation time is calculated as: k \* base_ejection_time (with k initially set to 1). Each subsequent isolation increases the isolation time (k is incremented by 1), while consecutive healthy checks gradually decrease the isolation time (k is decremented by 1).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("baseEjectionTime")
         public Integer baseEjectionTime;
 
+        /**
+         * <p>enable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The panic threshold.</p>
+         * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks take effect normally, and requests are only sent to healthy nodes, not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled, and requests are sent to all nodes, including those that have been ejected nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("failurePercentageMinimumHosts")
         public Integer failurePercentageMinimumHosts;
 
+        /**
+         * <p>When the request failure rate of a node reaches this threshold, the system triggers the isolation mechanism of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("failurePercentageThreshold")
         public Integer failurePercentageThreshold;
 
+        /**
+         * <p>The detection interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("interval")
         public Integer interval;
 
@@ -315,12 +399,30 @@ public class UpdateServiceRequest extends TeaModel {
     }
 
     public static class UpdateServiceRequestPorts extends TeaModel {
+        /**
+         * <p>The port name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>catalog</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP|UDP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 

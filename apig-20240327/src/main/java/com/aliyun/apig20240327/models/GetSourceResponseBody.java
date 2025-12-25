@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSourceResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetSourceResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyDataK8SSourceInfo extends TeaModel {
         /**
+         * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>c2d290b2d8b5d4935864cace5f0173f31</p>
          */
@@ -92,6 +101,8 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyDataNacosSourceInfo extends TeaModel {
         /**
+         * <p>The endpoint of the Nacos instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>mse</p>
          */
@@ -99,6 +110,8 @@ public class GetSourceResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fluss-cn-w7k4hann601</p>
          */
@@ -106,6 +119,8 @@ public class GetSourceResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The Nacos instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hgprecn-cn-cfn47q7oh001</p>
          */
@@ -145,6 +160,8 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyData extends TeaModel {
         /**
+         * <p>The creation timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */
@@ -152,19 +169,29 @@ public class GetSourceResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-cq2vundlhtg***</p>
          */
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>Kubernetes source information.</p>
+         */
         @NameInMap("k8SSourceInfo")
         public GetSourceResponseBodyDataK8SSourceInfo k8SSourceInfo;
 
+        /**
+         * <p>The source information when the source type is MSE_NACOS.</p>
+         */
         @NameInMap("nacosSourceInfo")
         public GetSourceResponseBodyDataNacosSourceInfo nacosSourceInfo;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>import-test</p>
          */
@@ -172,6 +199,8 @@ public class GetSourceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aekz4us4iruleja</p>
          */
@@ -179,6 +208,8 @@ public class GetSourceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgt***</p>
          */
@@ -186,6 +217,8 @@ public class GetSourceResponseBody extends TeaModel {
         public String sourceId;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>K8S</p>
          */
@@ -193,6 +226,8 @@ public class GetSourceResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The update timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
          */

@@ -2796,7 +2796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务来源</p>
+     * <p>Obtains the details of a service source.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2822,7 +2822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务来源</p>
+     * <p>Obtains the details of a service source.</p>
      * @return GetSourceResponse
      */
     public GetSourceResponse getSource(String sourceId) throws Exception {
@@ -3235,7 +3235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Gateway的Features</p>
+     * <p>Queries the feature parameter configurations of an instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3261,7 +3261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Gateway的Features</p>
+     * <p>Queries the feature parameter configurations of an instance.</p>
      * @return ListGatewayFeaturesResponse
      */
     public ListGatewayFeaturesResponse listGatewayFeatures(String gatewayId) throws Exception {
@@ -4359,6 +4359,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.restartGatewayWithOptions(gatewayId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步外部MCP server</p>
+     * 
+     * @param request SyncMCPServersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SyncMCPServersResponse
+     */
+    public SyncMCPServersResponse syncMCPServersWithOptions(SyncMCPServersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainIds)) {
+            body.put("domainIds", request.domainIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nacosMcpServers)) {
+            body.put("nacosMcpServers", request.nacosMcpServers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("sourceId", request.sourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SyncMCPServers"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/mcp-servers/sync-mcp-server"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SyncMCPServersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步外部MCP server</p>
+     * 
+     * @param request SyncMCPServersRequest
+     * @return SyncMCPServersResponse
+     */
+    public SyncMCPServersResponse syncMCPServers(SyncMCPServersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.syncMCPServersWithOptions(request, headers, runtime);
     }
 
     /**

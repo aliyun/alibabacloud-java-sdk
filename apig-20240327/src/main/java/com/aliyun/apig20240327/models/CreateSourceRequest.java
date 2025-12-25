@@ -5,22 +5,42 @@ import com.aliyun.tea.*;
 
 public class CreateSourceRequest extends TeaModel {
     /**
+     * <p>The gateway instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtgi6q***</p>
      */
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The source configuration when the source type is K8S.</p>
+     */
     @NameInMap("k8sSourceConfig")
     public CreateSourceRequestK8sSourceConfig k8sSourceConfig;
 
+    /**
+     * <p>The source configuration when the source type is MSE_NACOS.</p>
+     */
     @NameInMap("nacosSourceConfig")
     public CreateSourceRequestNacosSourceConfig nacosSourceConfig;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-xxx</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The source type. Valid values:</p>
+     * <ul>
+     * <li>MSE_NACOS: MSE Nacos</li>
+     * <li>K8S: Container Service for Kubernetes (ACK)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MSE_NACOS</p>
      */
@@ -73,13 +93,21 @@ public class CreateSourceRequest extends TeaModel {
     }
 
     public static class CreateSourceRequestK8sSourceConfigAuthorizeSecurityGroupRules extends TeaModel {
+        /**
+         * <p>The rule description.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The list of port ranges.</p>
+         */
         @NameInMap("portRanges")
         public java.util.List<String> portRanges;
 
         /**
+         * <p>The ID of a security group.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-bp14w4fa4j***</p>
          */
@@ -118,10 +146,15 @@ public class CreateSourceRequest extends TeaModel {
     }
 
     public static class CreateSourceRequestK8sSourceConfig extends TeaModel {
+        /**
+         * <p>The security group rules.</p>
+         */
         @NameInMap("authorizeSecurityGroupRules")
         public java.util.List<CreateSourceRequestK8sSourceConfigAuthorizeSecurityGroupRules> authorizeSecurityGroupRules;
 
         /**
+         * <p>The ID of the ACK cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>c3fbe6caaaece4062b*****</p>
          */
@@ -153,6 +186,8 @@ public class CreateSourceRequest extends TeaModel {
 
     public static class CreateSourceRequestNacosSourceConfig extends TeaModel {
         /**
+         * <p>The Nacos instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mse-cn-0dw3w***</p>
          */
