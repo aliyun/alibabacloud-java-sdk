@@ -626,6 +626,13 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("SliceDuration")
+        public Long sliceDuration;
+
+        /**
+         * <strong>example:</strong>
          * <p>{AppId}<em>{ChannelId}</em>{StartTime}_{Sequence}</p>
          */
         @NameInMap("SliceNamePattern")
@@ -658,6 +665,14 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
         }
         public String getFormat() {
             return this.format;
+        }
+
+        public StartRtcCloudRecordingRequestStorageParamsFileInfo setSliceDuration(Long sliceDuration) {
+            this.sliceDuration = sliceDuration;
+            return this;
+        }
+        public Long getSliceDuration() {
+            return this.sliceDuration;
         }
 
         public StartRtcCloudRecordingRequestStorageParamsFileInfo setSliceNamePattern(String sliceNamePattern) {
