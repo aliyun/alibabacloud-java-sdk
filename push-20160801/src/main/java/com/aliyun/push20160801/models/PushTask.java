@@ -726,6 +726,12 @@ public class PushTask extends TeaModel {
         @NameInMap("SlotType")
         public String slotType;
 
+        @NameInMap("Sound")
+        public String sound;
+
+        @NameInMap("SoundDuration")
+        public Integer soundDuration;
+
         @NameInMap("TestMessage")
         public Boolean testMessage;
 
@@ -847,6 +853,22 @@ public class PushTask extends TeaModel {
         }
         public String getSlotType() {
             return this.slotType;
+        }
+
+        public PushTaskNotificationHmos setSound(String sound) {
+            this.sound = sound;
+            return this;
+        }
+        public String getSound() {
+            return this.sound;
+        }
+
+        public PushTaskNotificationHmos setSoundDuration(Integer soundDuration) {
+            this.soundDuration = soundDuration;
+            return this;
+        }
+        public Integer getSoundDuration() {
+            return this.soundDuration;
         }
 
         public PushTaskNotificationHmos setTestMessage(Boolean testMessage) {
