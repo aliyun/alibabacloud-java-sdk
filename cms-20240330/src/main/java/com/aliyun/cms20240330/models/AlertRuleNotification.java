@@ -10,6 +10,9 @@ public class AlertRuleNotification extends TeaModel {
     @NameInMap("customWebhooks")
     public java.util.List<String> customWebhooks;
 
+    @NameInMap("dingCoolAppWebhooks")
+    public java.util.List<String> dingCoolAppWebhooks;
+
     @NameInMap("dingWebhooks")
     public java.util.List<String> dingWebhooks;
 
@@ -50,6 +53,14 @@ public class AlertRuleNotification extends TeaModel {
     }
     public java.util.List<String> getCustomWebhooks() {
         return this.customWebhooks;
+    }
+
+    public AlertRuleNotification setDingCoolAppWebhooks(java.util.List<String> dingCoolAppWebhooks) {
+        this.dingCoolAppWebhooks = dingCoolAppWebhooks;
+        return this;
+    }
+    public java.util.List<String> getDingCoolAppWebhooks() {
+        return this.dingCoolAppWebhooks;
     }
 
     public AlertRuleNotification setDingWebhooks(java.util.List<String> dingWebhooks) {
