@@ -3,9 +3,9 @@ package com.aliyun.anytrans20250707.models;
 
 import com.aliyun.tea.*;
 
-public class TermQueryRequest extends TeaModel {
+public class TermQueryShrinkRequest extends TeaModel {
     @NameInMap("ext")
-    public TermQueryRequestExt ext;
+    public String extShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -46,20 +46,20 @@ public class TermQueryRequest extends TeaModel {
     @NameInMap("workspaceId")
     public String workspaceId;
 
-    public static TermQueryRequest build(java.util.Map<String, ?> map) throws Exception {
-        TermQueryRequest self = new TermQueryRequest();
+    public static TermQueryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        TermQueryShrinkRequest self = new TermQueryShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public TermQueryRequest setExt(TermQueryRequestExt ext) {
-        this.ext = ext;
+    public TermQueryShrinkRequest setExtShrink(String extShrink) {
+        this.extShrink = extShrink;
         return this;
     }
-    public TermQueryRequestExt getExt() {
-        return this.ext;
+    public String getExtShrink() {
+        return this.extShrink;
     }
 
-    public TermQueryRequest setScene(String scene) {
+    public TermQueryShrinkRequest setScene(String scene) {
         this.scene = scene;
         return this;
     }
@@ -67,7 +67,7 @@ public class TermQueryRequest extends TeaModel {
         return this.scene;
     }
 
-    public TermQueryRequest setSourceLanguage(String sourceLanguage) {
+    public TermQueryShrinkRequest setSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
     }
@@ -75,7 +75,7 @@ public class TermQueryRequest extends TeaModel {
         return this.sourceLanguage;
     }
 
-    public TermQueryRequest setTargetLanguage(String targetLanguage) {
+    public TermQueryShrinkRequest setTargetLanguage(String targetLanguage) {
         this.targetLanguage = targetLanguage;
         return this;
     }
@@ -83,7 +83,7 @@ public class TermQueryRequest extends TeaModel {
         return this.targetLanguage;
     }
 
-    public TermQueryRequest setText(String text) {
+    public TermQueryShrinkRequest setText(String text) {
         this.text = text;
         return this;
     }
@@ -91,31 +91,12 @@ public class TermQueryRequest extends TeaModel {
         return this.text;
     }
 
-    public TermQueryRequest setWorkspaceId(String workspaceId) {
+    public TermQueryShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public static class TermQueryRequestExt extends TeaModel {
-        @NameInMap("paramMap")
-        public Object paramMap;
-
-        public static TermQueryRequestExt build(java.util.Map<String, ?> map) throws Exception {
-            TermQueryRequestExt self = new TermQueryRequestExt();
-            return TeaModel.build(map, self);
-        }
-
-        public TermQueryRequestExt setParamMap(Object paramMap) {
-            this.paramMap = paramMap;
-            return this;
-        }
-        public Object getParamMap() {
-            return this.paramMap;
-        }
-
     }
 
 }

@@ -280,6 +280,9 @@ public class BatchTranslateRequest extends TeaModel {
         @NameInMap("examples")
         public java.util.List<BatchTranslateRequestExtExamples> examples;
 
+        @NameInMap("paramMap")
+        public Object paramMap;
+
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
@@ -316,6 +319,14 @@ public class BatchTranslateRequest extends TeaModel {
         }
         public java.util.List<BatchTranslateRequestExtExamples> getExamples() {
             return this.examples;
+        }
+
+        public BatchTranslateRequestExt setParamMap(Object paramMap) {
+            this.paramMap = paramMap;
+            return this;
+        }
+        public Object getParamMap() {
+            return this.paramMap;
         }
 
         public BatchTranslateRequestExt setSensitives(java.util.List<String> sensitives) {

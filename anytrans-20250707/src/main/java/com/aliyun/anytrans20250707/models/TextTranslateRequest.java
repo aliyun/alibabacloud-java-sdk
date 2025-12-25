@@ -272,6 +272,9 @@ public class TextTranslateRequest extends TeaModel {
         @NameInMap("examples")
         public java.util.List<TextTranslateRequestExtExamples> examples;
 
+        @NameInMap("paramMap")
+        public Object paramMap;
+
         @NameInMap("prefix")
         public String prefix;
 
@@ -319,6 +322,14 @@ public class TextTranslateRequest extends TeaModel {
         }
         public java.util.List<TextTranslateRequestExtExamples> getExamples() {
             return this.examples;
+        }
+
+        public TextTranslateRequestExt setParamMap(Object paramMap) {
+            this.paramMap = paramMap;
+            return this;
+        }
+        public Object getParamMap() {
+            return this.paramMap;
         }
 
         public TextTranslateRequestExt setPrefix(String prefix) {

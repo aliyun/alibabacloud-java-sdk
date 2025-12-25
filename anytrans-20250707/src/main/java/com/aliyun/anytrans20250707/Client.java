@@ -789,14 +789,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>通义多模态翻译术语查询</p>
      * 
-     * @param request TermQueryRequest
+     * @param tmpReq TermQueryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return TermQueryResponse
      */
-    public TermQueryResponse termQueryWithOptions(TermQueryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public TermQueryResponse termQueryWithOptions(TermQueryRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TermQueryShrinkRequest request = new TermQueryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ext)) {
+            request.extShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ext, "ext", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extShrink)) {
+            body.put("ext", request.extShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
             body.put("scene", request.scene);
         }

@@ -262,6 +262,9 @@ public class SubmitLongTextTranslateTaskRequest extends TeaModel {
         @NameInMap("examples")
         public java.util.List<SubmitLongTextTranslateTaskRequestExtExamples> examples;
 
+        @NameInMap("paramMap")
+        public Object paramMap;
+
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
@@ -298,6 +301,14 @@ public class SubmitLongTextTranslateTaskRequest extends TeaModel {
         }
         public java.util.List<SubmitLongTextTranslateTaskRequestExtExamples> getExamples() {
             return this.examples;
+        }
+
+        public SubmitLongTextTranslateTaskRequestExt setParamMap(Object paramMap) {
+            this.paramMap = paramMap;
+            return this;
+        }
+        public Object getParamMap() {
+            return this.paramMap;
         }
 
         public SubmitLongTextTranslateTaskRequestExt setSensitives(java.util.List<String> sensitives) {

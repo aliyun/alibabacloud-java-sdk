@@ -182,6 +182,9 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
         @NameInMap("domainHint")
         public String domainHint;
 
+        @NameInMap("paramMap")
+        public Object paramMap;
+
         @NameInMap("terminologies")
         public java.util.List<SubmitDocTranslateTaskRequestExtTerminologies> terminologies;
 
@@ -204,6 +207,14 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
         }
         public String getDomainHint() {
             return this.domainHint;
+        }
+
+        public SubmitDocTranslateTaskRequestExt setParamMap(Object paramMap) {
+            this.paramMap = paramMap;
+            return this;
+        }
+        public Object getParamMap() {
+            return this.paramMap;
         }
 
         public SubmitDocTranslateTaskRequestExt setTerminologies(java.util.List<SubmitDocTranslateTaskRequestExtTerminologies> terminologies) {

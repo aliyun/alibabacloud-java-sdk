@@ -246,6 +246,9 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
         @NameInMap("examples")
         public java.util.List<SubmitImageTranslateTaskRequestExtExamples> examples;
 
+        @NameInMap("paramMap")
+        public Object paramMap;
+
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
@@ -274,6 +277,14 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
         }
         public java.util.List<SubmitImageTranslateTaskRequestExtExamples> getExamples() {
             return this.examples;
+        }
+
+        public SubmitImageTranslateTaskRequestExt setParamMap(Object paramMap) {
+            this.paramMap = paramMap;
+            return this;
+        }
+        public Object getParamMap() {
+            return this.paramMap;
         }
 
         public SubmitImageTranslateTaskRequestExt setSensitives(java.util.List<String> sensitives) {

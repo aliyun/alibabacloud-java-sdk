@@ -163,6 +163,9 @@ public class TermEditRequest extends TeaModel {
     }
 
     public static class TermEditRequestExt extends TeaModel {
+        @NameInMap("paramMap")
+        public Object paramMap;
+
         /**
          * <p>This parameter is required.</p>
          */
@@ -172,6 +175,14 @@ public class TermEditRequest extends TeaModel {
         public static TermEditRequestExt build(java.util.Map<String, ?> map) throws Exception {
             TermEditRequestExt self = new TermEditRequestExt();
             return TeaModel.build(map, self);
+        }
+
+        public TermEditRequestExt setParamMap(Object paramMap) {
+            this.paramMap = paramMap;
+            return this;
+        }
+        public Object getParamMap() {
+            return this.paramMap;
         }
 
         public TermEditRequestExt setTerms(java.util.List<TermEditRequestExtTerms> terms) {
