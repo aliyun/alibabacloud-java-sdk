@@ -1629,6 +1629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NeedDesensitization", request.needDesensitization);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.presencePenalty)) {
             query.put("PresencePenalty", request.presencePenalty);
         }

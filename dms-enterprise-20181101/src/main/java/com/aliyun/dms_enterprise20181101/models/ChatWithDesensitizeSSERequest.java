@@ -118,6 +118,13 @@ public class ChatWithDesensitizeSSERequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("Parameters")
+    public String parameters;
+
+    /**
+     * <strong>example:</strong>
      * <p>0.0</p>
      */
     @NameInMap("PresencePenalty")
@@ -326,6 +333,14 @@ public class ChatWithDesensitizeSSERequest extends TeaModel {
     }
     public Boolean getNeedDesensitization() {
         return this.needDesensitization;
+    }
+
+    public ChatWithDesensitizeSSERequest setParameters(String parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public String getParameters() {
+        return this.parameters;
     }
 
     public ChatWithDesensitizeSSERequest setPresencePenalty(String presencePenalty) {
