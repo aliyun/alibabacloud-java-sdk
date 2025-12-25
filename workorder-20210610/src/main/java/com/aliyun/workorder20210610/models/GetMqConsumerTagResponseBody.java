@@ -4,6 +4,9 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class GetMqConsumerTagResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("Code")
     public Integer code;
 
@@ -22,6 +25,14 @@ public class GetMqConsumerTagResponseBody extends TeaModel {
     public static GetMqConsumerTagResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMqConsumerTagResponseBody self = new GetMqConsumerTagResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMqConsumerTagResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetMqConsumerTagResponseBody setCode(Integer code) {

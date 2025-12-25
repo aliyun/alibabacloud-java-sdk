@@ -4,9 +4,21 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
+    /**
+     * <p>The language that you use, supporting English, Chinese, and Japanese. Valid values: en, zh, and jp, which indicate English, Chinese, and Japanese, respectively.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The name of the product. Fuzzy search is supported. This parameter is optional.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("Name")
     public String name;
 

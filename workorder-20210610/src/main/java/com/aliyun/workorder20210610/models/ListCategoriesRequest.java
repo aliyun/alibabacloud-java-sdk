@@ -4,12 +4,31 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesRequest extends TeaModel {
+    /**
+     * <p>Multi-language, support, Chinese, English. Value definition: zh: Chinese, en: English.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The name of the classification question. Fuzzy search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the product. You can call the ListProducts operation to obtain the product ID. The ProductId parameter is the ID of an Alibaba Cloud product. Multiple Categories are displayed for each product.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18550</p>
+     */
     @NameInMap("ProductId")
     public Long productId;
 

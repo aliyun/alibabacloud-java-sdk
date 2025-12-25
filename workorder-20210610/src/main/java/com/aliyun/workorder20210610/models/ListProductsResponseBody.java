@@ -4,18 +4,45 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
+    /**
+     * <p>The return code of the request result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Return value, that is, product list</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListProductsResponseBodyData> data;
 
+    /**
+     * <p>The error message. If success is set to false, the message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The unique ID of the API request. The requestID is unique for each call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC0AB2EC-AFBC-44BA-AE77-132A5A1EC0AD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +92,21 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyDataProductList extends TeaModel {
+        /**
+         * <p>Alibaba Cloud product ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7160</p>
+         */
         @NameInMap("ProductId")
         public Long productId;
 
+        /**
+         * <p>Alibaba Cloud product name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
@@ -95,12 +134,27 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the product catalog, which represents the product category, such as elastic computing</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DirectoryId")
         public Long directoryId;
 
+        /**
+         * <p>The name of the product catalog, which represents the product category, such as elastic computing</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("DirectoryName")
         public String directoryName;
 
+        /**
+         * <p>List of Alibaba Cloud products</p>
+         */
         @NameInMap("ProductList")
         public java.util.List<ListProductsResponseBodyDataProductList> productList;
 

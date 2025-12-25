@@ -4,18 +4,45 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class GetAttachmentUploadUrlResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned after the call succeeds.</p>
+     */
     @NameInMap("Data")
     public GetAttachmentUploadUrlResponseBodyData data;
 
+    /**
+     * <p>The error message. If success is set to false, the message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ED195C2C-787F-511C-8204-714456781861</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +92,32 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
     }
 
     public static class GetAttachmentUploadUrlResponseBodyData extends TeaModel {
+        /**
+         * <p>Query the signed URL of an OSS object</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com">https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com</a>
+         * /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI****************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</p>
+         */
         @NameInMap("GetSignedUrl")
         public String getSignedUrl;
 
+        /**
+         * <p>Uploaded file identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdb5d174-c282-4b2d-9048-e74ea2223127.jpg</p>
+         */
         @NameInMap("ObjectKey")
         public String objectKey;
 
+        /**
+         * <p>The signed URL used to upload the object to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com">https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com</a>
+         * /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI****************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</p>
+         */
         @NameInMap("PutSignedUrl")
         public String putSignedUrl;
 

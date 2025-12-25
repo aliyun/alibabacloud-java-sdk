@@ -4,28 +4,77 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class CreateTicketShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the problem category. You can obtain the returned value from the ListCategories operation by using the CategoryId parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7161</p>
+     */
     @NameInMap("CategoryId")
     public String categoryId;
 
+    /**
+     * <p>Submit the Alibaba Cloud UID of the account, which is required for the MPK virtual market scene.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1289427240739141</p>
+     */
     @NameInMap("CreatorId")
     public String creatorId;
 
+    /**
+     * <p>The description of the ticket. Only pure text format is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Why ECS backup failed?</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // sdahkjdshga@qq.com
+    /**
+     * <p><a href="mailto:sdahkjdshga@qq.com">sdahkjdshga@qq.com</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:163@163.com">163@163.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The list of attachment names, GetAttachmentUploadUrl the ObjectKey field returned by the interface.</p>
+     */
     @NameInMap("FileNameList")
     public String fileNameListShrink;
 
+    /**
+     * <p>Sensitive information</p>
+     */
     @NameInMap("SecretInfo")
     public String secretInfoShrink;
 
+    /**
+     * <p>Enumeration value, 1 for general problem, 2 for urgent problem</p>
+     * <p>Enumeration values:</p>
+     * <ul>
+     * <li>1: regular.</li>
+     * <li>2: emergency.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Severity")
     public Integer severity;
 
+    /**
+     * <p>The title of the ticket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Why ECS backup failed?</p>
+     */
     @NameInMap("Title")
     public String title;
 

@@ -4,33 +4,89 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class GetTicketResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
+     * <p>The return code of the request result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned after the call succeeds.</p>
+     */
     @NameInMap("Data")
     public GetTicketResponseBodyData data;
 
+    /**
+     * <p>The error message. If success is set to false, the message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Page number of the paging query parameter</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page in a pagination query parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C499BB0F-630D-5BE6-B3EA-5FCD95B85503</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of query results, that is, the total number of my ticket records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>108</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
     public static GetTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTicketResponseBody self = new GetTicketResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTicketResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetTicketResponseBody setCode(Integer code) {
@@ -98,9 +154,21 @@ public class GetTicketResponseBody extends TeaModel {
     }
 
     public static class GetTicketResponseBodyDataSeverity extends TeaModel {
+        /**
+         * <p>Enumeration Text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>Enumeration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -128,9 +196,21 @@ public class GetTicketResponseBody extends TeaModel {
     }
 
     public static class GetTicketResponseBodyDataStatus extends TeaModel {
+        /**
+         * <p>Status Enumeration Text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>State enumeration value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -158,27 +238,69 @@ public class GetTicketResponseBody extends TeaModel {
     }
 
     public static class GetTicketResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the ticket issue category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7161</p>
+         */
         @NameInMap("CategoryId")
         public String categoryId;
 
+        /**
+         * <p>The timestamp when the ticket was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623396736000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The uid of the ticket creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1168025</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The description of the ticket. Only pure text format is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Why ECS renewal failed?</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Urgency enumeration value, 1 for general problem, 2 for urgent problem</p>
+         */
         @NameInMap("Severity")
         public GetTicketResponseBodyDataSeverity severity;
 
+        /**
+         * <p>The status of the ticket. The reference values are as follows 1, &quot;assigned&quot;, &quot;Pending Response&quot;, 2, &quot;handling&quot;, &quot;handling&quot;, 3, &quot;wait_feedback&quot;, &quot;Pending feedback&quot;, 4: &quot;feedback&quot;, &quot;Feedback&quot;, 5, &quot;wait_confirm&quot;, &quot;To be confirmed&quot;, 6, &quot;confirmed&quot;, &quot;Completed&quot;</p>
+         */
         @NameInMap("Status")
         public GetTicketResponseBodyDataStatus status;
 
+        /**
+         * <p>Work Order Number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0005PYGCW</p>
+         */
         @NameInMap("TicketId")
         public String ticketId;
 
+        /**
+         * <p>The title of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Why ECS renewal failed?</p>
+         */
         @NameInMap("Title")
         public String title;
 

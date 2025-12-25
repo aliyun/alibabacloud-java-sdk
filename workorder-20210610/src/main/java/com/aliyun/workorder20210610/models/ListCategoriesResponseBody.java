@@ -4,18 +4,45 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The return value, which is a list of question categories</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCategoriesResponseBodyData> data;
 
+    /**
+     * <p>The error message. If success is set to false, the message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CA6204AC-6AA9-4CFA-9310-7DFD20C19EBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values: The value true indicates a success. The value false indicates a failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +92,21 @@ public class ListCategoriesResponseBody extends TeaModel {
     }
 
     public static class ListCategoriesResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the ticket issue category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7161</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <p>The name of the ticket issue category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 

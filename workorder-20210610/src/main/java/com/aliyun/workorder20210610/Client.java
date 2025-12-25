@@ -30,6 +30,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Closes a ticket.</p>
+     * 
+     * @param request CloseTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloseTicketResponse
+     */
     public CloseTicketResponse closeTicketWithOptions(CloseTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -58,11 +66,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CloseTicketResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Closes a ticket.</p>
+     * 
+     * @param request CloseTicketRequest
+     * @return CloseTicketResponse
+     */
     public CloseTicketResponse closeTicket(CloseTicketRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeTicketWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a ticket.</p>
+     * 
+     * @param tmpReq CreateTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTicketResponse
+     */
     public CreateTicketResponse createTicketWithOptions(CreateTicketRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateTicketShrinkRequest request = new CreateTicketShrinkRequest();
@@ -127,11 +150,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTicketResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a ticket.</p>
+     * 
+     * @param request CreateTicketRequest
+     * @return CreateTicketResponse
+     */
     public CreateTicketResponse createTicket(CreateTicketRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTicketWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Evaluates a ticket.</p>
+     * 
+     * @param request EvaluateTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EvaluateTicketResponse
+     */
     public EvaluateTicketResponse evaluateTicketWithOptions(EvaluateTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -172,11 +210,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EvaluateTicketResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Evaluates a ticket.</p>
+     * 
+     * @param request EvaluateTicketRequest
+     * @return EvaluateTicketResponse
+     */
     public EvaluateTicketResponse evaluateTicket(EvaluateTicketRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.evaluateTicketWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Object Storage Service (OSS) URL that is used to upload attachments.</p>
+     * 
+     * @param request GetAttachmentUploadUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAttachmentUploadUrlResponse
+     */
     public GetAttachmentUploadUrlResponse getAttachmentUploadUrlWithOptions(GetAttachmentUploadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -201,11 +254,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAttachmentUploadUrlResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Object Storage Service (OSS) URL that is used to upload attachments.</p>
+     * 
+     * @param request GetAttachmentUploadUrlRequest
+     * @return GetAttachmentUploadUrlResponse
+     */
     public GetAttachmentUploadUrlResponse getAttachmentUploadUrl(GetAttachmentUploadUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAttachmentUploadUrlWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetMqConsumerTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMqConsumerTagResponse
+     */
     public GetMqConsumerTagResponse getMqConsumerTagWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -222,11 +287,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMqConsumerTagResponse());
     }
 
+    /**
+     * @return GetMqConsumerTagResponse
+     */
     public GetMqConsumerTagResponse getMqConsumerTag() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMqConsumerTagWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query tickets.</p>
+     * 
+     * @param request GetTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTicketResponse
+     */
     public GetTicketResponse getTicketWithOptions(GetTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -255,11 +331,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTicketResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query tickets.</p>
+     * 
+     * @param request GetTicketRequest
+     * @return GetTicketResponse
+     */
     public GetTicketResponse getTicket(GetTicketRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTicketWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the list data of ticket problem categories.</p>
+     * 
+     * @param request ListCategoriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCategoriesResponse
+     */
     public ListCategoriesResponse listCategoriesWithOptions(ListCategoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -294,11 +385,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCategoriesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the list data of ticket problem categories.</p>
+     * 
+     * @param request ListCategoriesRequest
+     * @return ListCategoriesResponse
+     */
     public ListCategoriesResponse listCategories(ListCategoriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCategoriesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the data of the Alibaba Cloud product list.</p>
+     * 
+     * @param request ListProductsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProductsResponse
+     */
     public ListProductsResponse listProductsWithOptions(ListProductsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -327,11 +433,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the data of the Alibaba Cloud product list.</p>
+     * 
+     * @param request ListProductsRequest
+     * @return ListProductsResponse
+     */
     public ListProductsResponse listProducts(ListProductsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listProductsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the ticket communication records.</p>
+     * 
+     * @param request ListTicketNotesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTicketNotesResponse
+     */
     public ListTicketNotesResponse listTicketNotesWithOptions(ListTicketNotesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -360,11 +481,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTicketNotesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the ticket communication records.</p>
+     * 
+     * @param request ListTicketNotesRequest
+     * @return ListTicketNotesResponse
+     */
     public ListTicketNotesResponse listTicketNotes(ListTicketNotesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTicketNotesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>You can call this operation to obtain the list of my tickets.</p>
+     * 
+     * @param tmpReq ListTicketsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTicketsResponse
+     */
     public ListTicketsResponse listTicketsWithOptions(ListTicketsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListTicketsShrinkRequest request = new ListTicketsShrinkRequest();
@@ -429,11 +565,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTicketsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>You can call this operation to obtain the list of my tickets.</p>
+     * 
+     * @param request ListTicketsRequest
+     * @return ListTicketsResponse
+     */
     public ListTicketsResponse listTickets(ListTicketsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTicketsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Reopens a ticket</p>
+     * 
+     * @param request ReopenTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReopenTicketResponse
+     */
     public ReopenTicketResponse reopenTicketWithOptions(ReopenTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -466,11 +617,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReopenTicketResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Reopens a ticket</p>
+     * 
+     * @param request ReopenTicketRequest
+     * @return ReopenTicketResponse
+     */
     public ReopenTicketResponse reopenTicket(ReopenTicketRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reopenTicketWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Reply to the ticket. You can call the ListTicketNotes operation to obtain the content of the reply.</p>
+     * 
+     * @param tmpReq ReplyTicketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReplyTicketResponse
+     */
     public ReplyTicketResponse replyTicketWithOptions(ReplyTicketRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ReplyTicketShrinkRequest request = new ReplyTicketShrinkRequest();
@@ -519,6 +685,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReplyTicketResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Reply to the ticket. You can call the ListTicketNotes operation to obtain the content of the reply.</p>
+     * 
+     * @param request ReplyTicketRequest
+     * @return ReplyTicketResponse
+     */
     public ReplyTicketResponse replyTicket(ReplyTicketRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.replyTicketWithOptions(request, runtime);
