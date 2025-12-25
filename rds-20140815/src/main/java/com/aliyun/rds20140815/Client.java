@@ -27974,6 +27974,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改RDS用户磁盘付费类型</p>
+     * 
+     * @param request ModifyRCDiskChargeTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyRCDiskChargeTypeResponse
+     */
+    public ModifyRCDiskChargeTypeResponse modifyRCDiskChargeTypeWithOptions(ModifyRCDiskChargeTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInfo)) {
+            query.put("BusinessInfo", request.businessInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyRCDiskChargeType"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRCDiskChargeTypeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改RDS用户磁盘付费类型</p>
+     * 
+     * @param request ModifyRCDiskChargeTypeRequest
+     * @return ModifyRCDiskChargeTypeResponse
+     */
+    public ModifyRCDiskChargeTypeResponse modifyRCDiskChargeType(ModifyRCDiskChargeTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyRCDiskChargeTypeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> To minimize the impacts on your business, we recommend that you change specifications during off-peak hours.

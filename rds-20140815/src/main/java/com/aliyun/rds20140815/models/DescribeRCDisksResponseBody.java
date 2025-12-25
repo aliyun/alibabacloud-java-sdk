@@ -135,6 +135,13 @@ public class DescribeRCDisksResponseBody extends TeaModel {
 
     public static class DescribeRCDisksResponseBodyDisks extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>2017-12-05T2340:00Z</p>
+         */
+        @NameInMap("AttachedTime")
+        public String attachedTime;
+
+        /**
          * <p>The category of the disk. Valid values:</p>
          * <ul>
          * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
@@ -407,6 +414,14 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         public static DescribeRCDisksResponseBodyDisks build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCDisksResponseBodyDisks self = new DescribeRCDisksResponseBodyDisks();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRCDisksResponseBodyDisks setAttachedTime(String attachedTime) {
+            this.attachedTime = attachedTime;
+            return this;
+        }
+        public String getAttachedTime() {
+            return this.attachedTime;
         }
 
         public DescribeRCDisksResponseBodyDisks setCategory(String category) {

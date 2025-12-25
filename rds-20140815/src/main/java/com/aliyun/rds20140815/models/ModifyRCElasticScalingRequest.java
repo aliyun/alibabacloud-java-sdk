@@ -9,7 +9,7 @@ public class ModifyRCElasticScalingRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>mysql.x2.medium.9cm</p>
+     * <p>rc-3ndh4shwes*</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
