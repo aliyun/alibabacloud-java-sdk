@@ -125,7 +125,6 @@ public class DetachServerGroupsRequest extends TeaModel {
     public static class DetachServerGroupsRequestServerGroups extends TeaModel {
         /**
          * <p>The port used by ECS instances or elastic container instances as backend servers of the server group.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
