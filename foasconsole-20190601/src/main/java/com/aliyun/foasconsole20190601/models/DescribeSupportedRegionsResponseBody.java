@@ -7,9 +7,17 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public java.util.List<DescribeSupportedRegionsResponseBodyRegions> regions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B21DC47E-8928-199A-9F32-36D45E4693B4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +51,17 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSupportedRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>华北2 (北京)</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 

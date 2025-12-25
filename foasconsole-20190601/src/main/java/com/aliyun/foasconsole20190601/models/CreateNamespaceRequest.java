@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CreateNamespaceRequest")
     public CreateNamespaceRequestCreateNamespaceRequest createNamespaceRequest;
 
@@ -21,9 +24,17 @@ public class CreateNamespaceRequest extends TeaModel {
     }
 
     public static class CreateNamespaceRequestCreateNamespaceRequestResourceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -51,15 +62,37 @@ public class CreateNamespaceRequest extends TeaModel {
     }
 
     public static class CreateNamespaceRequestCreateNamespaceRequest extends TeaModel {
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Ha")
         public Boolean ha;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223493C7-FCA9-13D4-B75B-AF8B32F4****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns-1</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 

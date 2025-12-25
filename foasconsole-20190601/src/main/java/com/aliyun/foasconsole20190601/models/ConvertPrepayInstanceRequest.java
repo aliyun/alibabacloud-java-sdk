@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class ConvertPrepayInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConvertPrepayInstanceRequest")
     public ConvertPrepayInstanceRequestConvertPrepayInstanceRequest convertPrepayInstanceRequest;
 
@@ -21,9 +24,15 @@ public class ConvertPrepayInstanceRequest extends TeaModel {
     }
 
     public static class ConvertPrepayInstanceRequestConvertPrepayInstanceRequest extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Region")
         public String region;
 

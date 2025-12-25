@@ -4,9 +4,17 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportedZonesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>23A9C718-DDAB-1696-B025-18FBC830F7C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

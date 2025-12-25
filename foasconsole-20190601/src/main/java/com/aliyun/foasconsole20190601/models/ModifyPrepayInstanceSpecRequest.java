@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ModifyPrepayInstanceSpecRequest")
     public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest modifyPrepayInstanceSpecRequest;
 
@@ -51,9 +54,21 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     }
 
     public static class ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -81,24 +96,55 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     }
 
     public static class ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest extends TeaModel {
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Ha")
         public Boolean ha;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaResourceSpec")
         public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec haResourceSpec;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaVSwitchIds")
         public java.util.List<String> haVSwitchIds;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaZoneId")
         public String haZoneId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc_flinkserverlesspost_public_cn-0ju2bj2i104</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ResourceSpec")
         public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec resourceSpec;
 

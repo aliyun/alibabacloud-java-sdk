@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeleteNamespaceRequest")
     public DeleteNamespaceRequestDeleteNamespaceRequest deleteNamespaceRequest;
 
@@ -21,12 +24,30 @@ public class DeleteNamespaceRequest extends TeaModel {
     }
 
     public static class DeleteNamespaceRequestDeleteNamespaceRequest extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc_flinkserverlesspost_public_cn-0ju2bj2****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns-1</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 

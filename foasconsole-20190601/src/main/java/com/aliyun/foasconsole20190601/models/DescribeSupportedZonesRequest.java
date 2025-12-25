@@ -7,6 +7,10 @@ public class DescribeSupportedZonesRequest extends TeaModel {
     @NameInMap("ArchitectureType")
     public String architectureType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 

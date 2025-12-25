@@ -7,21 +7,45 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     @NameInMap("Namespaces")
     public java.util.List<DescribeNamespacesResponseBodyNamespaces> namespaces;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -87,9 +111,17 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -117,12 +149,24 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceUsed extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.6</p>
+         */
         @NameInMap("Cu")
         public Float cu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6.6</p>
+         */
         @NameInMap("MemoryGB")
         public Float memoryGB;
 
@@ -158,9 +202,17 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespacesTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>flink</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -188,15 +240,27 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1629879567394</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1629879567394</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         @NameInMap("Ha")
         public Boolean ha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ns-1</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -206,6 +270,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("ResourceUsed")
         public DescribeNamespacesResponseBodyNamespacesResourceUsed resourceUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -7,9 +7,17 @@ public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("OrderInfo")
     public CreateInstanceResponseBodyOrderInfo orderInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +51,17 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceResponseBodyOrderInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8D2D5BBF-C302-1A21-80E1-27799802****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>210406354694567</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 

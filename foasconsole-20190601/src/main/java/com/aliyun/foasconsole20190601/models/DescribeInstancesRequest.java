@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DescribeInstancesRequest")
     public DescribeInstancesRequestDescribeInstancesRequest describeInstancesRequest;
 
@@ -21,9 +24,17 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestDescribeInstancesRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>flink</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -54,21 +65,47 @@ public class DescribeInstancesRequest extends TeaModel {
         @NameInMap("ArchitectureType")
         public String architectureType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRE</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>223493C7-FCA9-13D4-B75B-AF8B32F4****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageIndex")
         public Integer pageIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-***</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

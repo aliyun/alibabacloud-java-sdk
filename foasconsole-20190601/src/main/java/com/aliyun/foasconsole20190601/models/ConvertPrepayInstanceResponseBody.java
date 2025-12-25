@@ -7,6 +7,10 @@ public class ConvertPrepayInstanceResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

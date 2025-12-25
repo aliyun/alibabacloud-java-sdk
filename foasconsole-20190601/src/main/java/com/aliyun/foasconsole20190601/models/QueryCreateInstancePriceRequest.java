@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class QueryCreateInstancePriceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CreateInstanceRequest")
     public QueryCreateInstancePriceRequestCreateInstanceRequest createInstanceRequest;
 
@@ -51,9 +54,17 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceRequestCreateInstanceRequestResourceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -81,6 +92,10 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceRequestCreateInstanceRequestStorageOss extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss_flink</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
@@ -122,33 +137,73 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         @NameInMap("ArchitectureType")
         public String architectureType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Ha")
         public Boolean ha;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaResourceSpec")
         public QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec haResourceSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vvp1</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5ef***</p>
+         */
         @NameInMap("PromotionCode")
         public String promotionCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -158,6 +213,10 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         @NameInMap("Storage")
         public QueryCreateInstancePriceRequestCreateInstanceRequestStorage storage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UsePromotionCode")
         public Boolean usePromotionCode;
 
@@ -166,10 +225,17 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze9*******nxfmfcdi</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing-g</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

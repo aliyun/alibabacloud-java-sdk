@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CreateInstanceRequest")
     public CreateInstanceRequestCreateInstanceRequest createInstanceRequest;
 
@@ -51,9 +54,17 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestCreateInstanceRequestResourceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -81,6 +92,12 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestCreateInstanceRequestStorageOss extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss_flink</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
@@ -100,6 +117,9 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestCreateInstanceRequestStorage extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Oss")
         public CreateInstanceRequestCreateInstanceRequestStorageOss oss;
 
@@ -122,66 +142,146 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("ArchitectureType")
         public String architectureType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Ha")
         public Boolean ha;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaResourceSpec")
         public CreateInstanceRequestCreateInstanceRequestHaResourceSpec haResourceSpec;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaVSwitchIds")
         public java.util.List<String> haVSwitchIds;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaZoneId")
         public String haZoneId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vvp1</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
         @NameInMap("MonitorType")
         public String monitorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5RT******</p>
+         */
         @NameInMap("PromotionCode")
         public String promotionCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-******</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("ResourceSpec")
         public CreateInstanceRequestCreateInstanceRequestResourceSpec resourceSpec;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Storage")
         public CreateInstanceRequestCreateInstanceRequestStorage storage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UsePromotionCode")
         public Boolean usePromotionCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
          * <p>VPC ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze9*******nxfmfcdi</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-g</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

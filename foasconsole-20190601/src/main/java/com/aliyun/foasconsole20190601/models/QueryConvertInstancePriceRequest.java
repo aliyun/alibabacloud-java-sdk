@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class QueryConvertInstancePriceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConvertPostpayInstanceRequest")
     public QueryConvertInstancePriceRequestConvertPostpayInstanceRequest convertPostpayInstanceRequest;
 
@@ -21,9 +24,21 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryConvertInstancePriceRequestConvertPostpayInstanceRequestNamespaceResourceSpecsResourceSpec extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -51,9 +66,18 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryConvertInstancePriceRequestConvertPostpayInstanceRequestNamespaceResourceSpecs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns-1</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ResourceSpec")
         public QueryConvertInstancePriceRequestConvertPostpayInstanceRequestNamespaceResourceSpecsResourceSpec resourceSpec;
 
@@ -81,21 +105,54 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryConvertInstancePriceRequestConvertPostpayInstanceRequest extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc_flinkserverlesspost_public_cn-******</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsAutoRenew")
         public Boolean isAutoRenew;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("NamespaceResourceSpecs")
         public java.util.List<QueryConvertInstancePriceRequestConvertPostpayInstanceRequestNamespaceResourceSpecs> namespaceResourceSpecs;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 

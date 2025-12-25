@@ -7,21 +7,45 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -117,9 +141,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesHostAliases extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("HostNames")
         public java.util.List<String> hostNames;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
@@ -147,9 +177,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResourceSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -177,6 +215,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesStorageOss extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss_flink</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
@@ -215,9 +257,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>flink</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -248,12 +298,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ArchitectureType")
         public String architectureType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c20c******404</p>
+         */
         @NameInMap("AskClusterId")
         public String askClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRE</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("ClusterStatus")
         public String clusterStatus;
 
@@ -269,33 +331,68 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("HaZoneId")
         public String haZoneId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("HostAliases")
         public java.util.List<DescribeInstancesResponseBodyInstancesHostAliases> hostAliases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sc_flinkserverlesspost_public_cn-0ju2bj2****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vvp1</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
         @NameInMap("MonitorType")
         public String monitorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("OrderState")
         public String orderState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1629879567394</p>
+         */
         @NameInMap("ResourceCreateTime")
         public Long resourceCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1637337600000</p>
+         */
         @NameInMap("ResourceExpiredTime")
         public Long resourceExpiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-***</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b3690a1655da47</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
@@ -308,15 +405,27 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<DescribeInstancesResponseBodyInstancesTags> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>183899668736****</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2ze9*******nxfmfcdi</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing-g</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

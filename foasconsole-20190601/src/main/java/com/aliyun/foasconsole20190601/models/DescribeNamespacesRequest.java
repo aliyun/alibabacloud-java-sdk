@@ -4,6 +4,9 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespacesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DescribeNamespacesRequest")
     public DescribeNamespacesRequestDescribeNamespacesRequest describeNamespacesRequest;
 
@@ -21,9 +24,17 @@ public class DescribeNamespacesRequest extends TeaModel {
     }
 
     public static class DescribeNamespacesRequestDescribeNamespacesRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>flink</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -51,21 +62,49 @@ public class DescribeNamespacesRequest extends TeaModel {
     }
 
     public static class DescribeNamespacesRequestDescribeNamespacesRequest extends TeaModel {
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Ha")
         public Boolean ha;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223493C7-FCA9-13D4-B75B-AF8B32F4****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ns-1</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageIndex")
         public Integer pageIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 

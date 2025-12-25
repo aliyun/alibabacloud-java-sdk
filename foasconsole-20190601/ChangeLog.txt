@@ -1,3 +1,31 @@
+2025-12-25 Version: 1.0.8
+- Update API QueryConvertInstancePrice: add response parameters Body.PriceInfo.DepreciateInfo.
+- Update API QueryConvertInstancePrice: add response parameters Body.PriceInfo.IsContractActivity.
+- Update API QueryConvertInstancePrice: add response parameters Body.PriceInfo.LxRequestId.
+- Update API QueryConvertInstancePrice: add response parameters Body.PriceInfo.StandDiscountPrice.
+- Update API QueryConvertInstancePrice: add response parameters Body.PriceInfo.StandPrice.
+- Update API QueryConvertPrepayInstancePrice: add response parameters Body.PriceInfo.DepreciateInfo.
+- Update API QueryConvertPrepayInstancePrice: add response parameters Body.PriceInfo.IsContractActivity.
+- Update API QueryConvertPrepayInstancePrice: add response parameters Body.PriceInfo.LxRequestId.
+- Update API QueryConvertPrepayInstancePrice: add response parameters Body.PriceInfo.StandDiscountPrice.
+- Update API QueryConvertPrepayInstancePrice: add response parameters Body.PriceInfo.StandPrice.
+- Update API QueryCreateInstancePrice: add response parameters Body.PriceInfo.DepreciateInfo.
+- Update API QueryCreateInstancePrice: add response parameters Body.PriceInfo.IsContractActivity.
+- Update API QueryCreateInstancePrice: add response parameters Body.PriceInfo.LxRequestId.
+- Update API QueryCreateInstancePrice: add response parameters Body.PriceInfo.StandDiscountPrice.
+- Update API QueryCreateInstancePrice: add response parameters Body.PriceInfo.StandPrice.
+- Update API QueryModifyInstancePrice: add response parameters Body.PriceInfo.DepreciateInfo.
+- Update API QueryModifyInstancePrice: add response parameters Body.PriceInfo.IsContractActivity.
+- Update API QueryModifyInstancePrice: add response parameters Body.PriceInfo.LxRequestId.
+- Update API QueryModifyInstancePrice: add response parameters Body.PriceInfo.StandDiscountPrice.
+- Update API QueryModifyInstancePrice: add response parameters Body.PriceInfo.StandPrice.
+- Update API QueryRenewInstancePrice: add response parameters Body.PriceInfo.DepreciateInfo.
+- Update API QueryRenewInstancePrice: add response parameters Body.PriceInfo.IsContractActivity.
+- Update API QueryRenewInstancePrice: add response parameters Body.PriceInfo.LxRequestId.
+- Update API QueryRenewInstancePrice: add response parameters Body.PriceInfo.StandDiscountPrice.
+- Update API QueryRenewInstancePrice: add response parameters Body.PriceInfo.StandPrice.
+
+
 2024-02-04 Version: 1.0.7
 - Update API CreateInstanceupdate CreateInstanceRequest param.
 - Update API CreateNamespaceupdate CreateNamespaceRequest param.
