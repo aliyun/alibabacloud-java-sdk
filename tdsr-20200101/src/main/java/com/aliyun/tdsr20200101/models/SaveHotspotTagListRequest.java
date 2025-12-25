@@ -4,9 +4,21 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class SaveHotspotTagListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{}]</p>
+     */
     @NameInMap("HotspotListJson")
     public String hotspotListJson;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tqwiuwetwet****</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

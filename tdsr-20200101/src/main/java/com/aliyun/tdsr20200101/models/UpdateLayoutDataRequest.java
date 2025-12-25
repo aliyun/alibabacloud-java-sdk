@@ -4,9 +4,21 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLayoutDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("LayoutData")
     public String layoutData;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234****</p>
+     */
     @NameInMap("SubSceneId")
     public String subSceneId;
 

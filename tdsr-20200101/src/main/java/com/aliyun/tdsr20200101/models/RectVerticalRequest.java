@@ -4,15 +4,35 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class RectVerticalRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CountDetectDoor")
     public Integer countDetectDoor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DetectDoor")
     public Boolean detectDoor;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234****</p>
+     */
     @NameInMap("SubSceneId")
     public String subSceneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;844946777965268992&quot;:[[0.42418407210144654,0.33625107620738004,0.42620819117478337,0.635753199572695],[0.5158627587152769,0.3071978991900134,0.5177513758740194,0.6312118011104786],[0.582693212445534,0.3733969265933281,0.5807612760319687,0.6139402811250833]]}</p>
+     */
     @NameInMap("VerticalRect")
     public String verticalRect;
 

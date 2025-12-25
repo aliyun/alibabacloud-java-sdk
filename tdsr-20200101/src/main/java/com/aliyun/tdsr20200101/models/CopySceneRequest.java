@@ -4,12 +4,25 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class CopySceneRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>opwuoieywtyqw****</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgyuyewyew****</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneName")
     public String sceneName;
 

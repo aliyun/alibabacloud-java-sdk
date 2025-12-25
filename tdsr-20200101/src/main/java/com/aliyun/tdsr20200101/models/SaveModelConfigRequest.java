@@ -4,9 +4,21 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class SaveModelConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iyweyteyue****</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

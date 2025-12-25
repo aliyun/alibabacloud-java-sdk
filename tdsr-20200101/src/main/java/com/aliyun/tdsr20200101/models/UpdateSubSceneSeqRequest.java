@@ -4,9 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubSceneSeqRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgyuyewyew****</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SortSubSceneIds")
     public java.util.List<String> sortSubSceneIds;
 

@@ -4,36 +4,81 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListProjectResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public ListProjectResponseBodyAccessDeniedDetail accessDeniedDetail;
+
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>count</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HasNext")
     public Boolean hasNext;
 
     @NameInMap("List")
     public java.util.List<ListProjectResponseBodyList> list;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4F882EA7-3A1D-0113-94E4-70162C4B***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalPage")
     public Long totalPage;
 
     public static ListProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListProjectResponseBody self = new ListProjectResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListProjectResponseBody setAccessDeniedDetail(ListProjectResponseBodyAccessDeniedDetail accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public ListProjectResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListProjectResponseBody setCode(Long code) {
@@ -108,25 +153,132 @@ public class ListProjectResponseBody extends TeaModel {
         return this.totalPage;
     }
 
+    public static class ListProjectResponseBodyAccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        public String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        public String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        public String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        public String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        public String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        public String noPermissionType;
+
+        @NameInMap("PolicyType")
+        public String policyType;
+
+        public static ListProjectResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            ListProjectResponseBodyAccessDeniedDetail self = new ListProjectResponseBodyAccessDeniedDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProjectResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+            this.authAction = authAction;
+            return this;
+        }
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        public ListProjectResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+            this.authPrincipalDisplayName = authPrincipalDisplayName;
+            return this;
+        }
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        public ListProjectResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+            this.authPrincipalOwnerId = authPrincipalOwnerId;
+            return this;
+        }
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        public ListProjectResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+            this.authPrincipalType = authPrincipalType;
+            return this;
+        }
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        public ListProjectResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+            return this;
+        }
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        public ListProjectResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+            this.noPermissionType = noPermissionType;
+            return this;
+        }
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        public ListProjectResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+    }
+
     public static class ListProjectResponseBodyList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5244****</p>
+         */
         @NameInMap("BusinessId")
         public Long businessId;
 
         @NameInMap("BusinessName")
         public String businessName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123214</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d989623696ab4f87a80b8d5b0b0****</p>
+         */
         @NameInMap("Token")
         public String token;
 

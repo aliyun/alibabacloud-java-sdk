@@ -4,9 +4,17 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class SaveHotspotConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{enabledTitleTag: 0, watermarkImg: []}</p>
+     */
     @NameInMap("ParamTag")
     public String paramTag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5dc5c2dd927e45039dadb312384b****</p>
+     */
     @NameInMap("PreviewToken")
     public String previewToken;
 

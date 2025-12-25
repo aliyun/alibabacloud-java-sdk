@@ -4,9 +4,19 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePreviewResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Draft")
     public Boolean draft;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2deb941b3e1****</p>
+     */
     @NameInMap("PreviewToken")
     public String previewToken;
 

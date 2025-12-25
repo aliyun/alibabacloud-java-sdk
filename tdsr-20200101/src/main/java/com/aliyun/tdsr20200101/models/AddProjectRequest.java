@@ -4,9 +4,16 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddProjectRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5432****</p>
+     */
     @NameInMap("BusinessId")
     public Long businessId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

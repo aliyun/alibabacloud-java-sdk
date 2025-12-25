@@ -4,15 +4,37 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddSceneRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2345****</p>
+     */
     @NameInMap("CustomerUid")
     public String customerUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试名称</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234****</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MODEL_3D</p>
+     */
     @NameInMap("Type")
     public String type;
 

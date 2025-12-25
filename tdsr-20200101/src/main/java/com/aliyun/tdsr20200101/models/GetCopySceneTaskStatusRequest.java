@@ -4,6 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetCopySceneTaskStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yuywey****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

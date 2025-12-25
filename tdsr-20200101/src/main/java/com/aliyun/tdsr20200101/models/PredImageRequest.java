@@ -4,15 +4,37 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class PredImageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CorrectVertical")
     public Boolean correctVertical;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CountDetectDoor")
     public Long countDetectDoor;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DetectDoor")
     public Boolean detectDoor;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2345****</p>
+     */
     @NameInMap("SubSceneId")
     public String subSceneId;
 

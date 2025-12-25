@@ -4,9 +4,19 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class RectifyImageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>160</p>
+     */
     @NameInMap("CameraHeight")
     public Long cameraHeight;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.aliyundoc.com/****.jpg">https://www.aliyundoc.com/****.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

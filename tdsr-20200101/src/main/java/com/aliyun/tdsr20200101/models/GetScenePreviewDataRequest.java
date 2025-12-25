@@ -4,15 +4,33 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePreviewDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true/false</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2735913e96da44ea8c86f8e777c8****</p>
+     */
     @NameInMap("PreviewToken")
     public String previewToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true/false</p>
+     */
     @NameInMap("ShowTag")
     public Boolean showTag;
 

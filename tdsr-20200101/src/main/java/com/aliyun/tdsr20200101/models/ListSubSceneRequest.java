@@ -4,18 +4,44 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListSubSceneRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>L2omaCMmQZZkEg4pE****</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ShowLayoutData")
     public Boolean showLayoutData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NAME</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 

@@ -4,6 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetSourcePackStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hjsyuyiuwe7wehg****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

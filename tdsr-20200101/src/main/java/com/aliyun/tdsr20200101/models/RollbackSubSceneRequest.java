@@ -4,6 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class RollbackSubSceneRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skjjskjk****</p>
+     */
     @NameInMap("Id")
     public String id;
 

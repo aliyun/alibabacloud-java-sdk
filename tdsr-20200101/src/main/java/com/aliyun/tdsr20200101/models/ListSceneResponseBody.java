@@ -4,36 +4,79 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListSceneResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public ListSceneResponseBodyAccessDeniedDetail accessDeniedDetail;
+
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HasNext")
     public Boolean hasNext;
 
     @NameInMap("List")
     public java.util.List<ListSceneResponseBodyList> list;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4F882EA7-3A1D-0113-94E4-70162C4B***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalPage")
     public Long totalPage;
 
     public static ListSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSceneResponseBody self = new ListSceneResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSceneResponseBody setAccessDeniedDetail(ListSceneResponseBodyAccessDeniedDetail accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public ListSceneResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListSceneResponseBody setCode(Long code) {
@@ -108,40 +151,169 @@ public class ListSceneResponseBody extends TeaModel {
         return this.totalPage;
     }
 
+    public static class ListSceneResponseBodyAccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        public String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        public String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        public String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        public String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        public String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        public String noPermissionType;
+
+        @NameInMap("PolicyType")
+        public String policyType;
+
+        public static ListSceneResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            ListSceneResponseBodyAccessDeniedDetail self = new ListSceneResponseBodyAccessDeniedDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSceneResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+            this.authAction = authAction;
+            return this;
+        }
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        public ListSceneResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+            this.authPrincipalDisplayName = authPrincipalDisplayName;
+            return this;
+        }
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        public ListSceneResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+            this.authPrincipalOwnerId = authPrincipalOwnerId;
+            return this;
+        }
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        public ListSceneResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+            this.authPrincipalType = authPrincipalType;
+            return this;
+        }
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        public ListSceneResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+            return this;
+        }
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        public ListSceneResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+            this.noPermissionType = noPermissionType;
+            return this;
+        }
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        public ListSceneResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+    }
+
     public static class ListSceneResponseBodyList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/xxxx/xxx.jpg">www.example.com/xxxx/xxx.jpg</a></p>
+         */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1621236933677</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1621236933677</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>厨房</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d989623696ab4f87a80b8d5b0b00****</p>
+         */
         @NameInMap("PreviewToken")
         public String previewToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Published")
         public Boolean published;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SourceNum")
         public Long sourceNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>init</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("StatusName")
         public String statusName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("SubSceneNum")
         public Long subSceneNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MODEL_3D</p>
+         */
         @NameInMap("Type")
         public String type;
 

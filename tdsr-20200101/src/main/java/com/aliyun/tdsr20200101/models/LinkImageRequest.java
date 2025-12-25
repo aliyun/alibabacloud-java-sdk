@@ -4,15 +4,35 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class LinkImageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>160</p>
+     */
     @NameInMap("CameraHeight")
     public Integer cameraHeight;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>****.jpg</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PC</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234****</p>
+     */
     @NameInMap("SubSceneId")
     public String subSceneId;
 

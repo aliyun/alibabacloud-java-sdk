@@ -7,6 +7,10 @@ public class PublishHotspotRequest extends TeaModel {
     @NameInMap("ParamTag")
     public String paramTag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2345****</p>
+     */
     @NameInMap("SubSceneUuid")
     public String subSceneUuid;
 

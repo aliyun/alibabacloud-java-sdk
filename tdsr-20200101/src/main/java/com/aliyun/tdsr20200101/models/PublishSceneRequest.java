@@ -4,6 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class PublishSceneRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m+0cmndEGjg9pv/hy4jh****</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

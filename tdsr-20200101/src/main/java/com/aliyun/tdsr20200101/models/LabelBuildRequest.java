@@ -7,18 +7,40 @@ public class LabelBuildRequest extends TeaModel {
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PATCH</p>
+     */
     @NameInMap("ModelStyle")
     public String modelStyle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OFF</p>
+     */
     @NameInMap("OptimizeWallWidth")
     public String optimizeWallWidth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DEFAULT</p>
+     */
     @NameInMap("PlanStyle")
     public String planStyle;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234****</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("WallHeight")
     public Long wallHeight;
 

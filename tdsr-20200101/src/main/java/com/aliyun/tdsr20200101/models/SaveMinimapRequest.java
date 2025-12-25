@@ -4,9 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class SaveMinimapRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

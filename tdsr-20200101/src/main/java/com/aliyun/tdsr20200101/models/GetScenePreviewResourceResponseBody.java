@@ -4,24 +4,53 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePreviewResourceResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public GetScenePreviewResourceResponseBodyAccessDeniedDetail accessDeniedDetail;
+
+    /**
+     * <strong>example:</strong>
+     * <p>0：成功，其他：失败</p>
+     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetScenePreviewResourceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8CD0AD9-8A92-455A-A984-A7E4B76*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true/false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     public static GetScenePreviewResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetScenePreviewResourceResponseBody self = new GetScenePreviewResourceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetScenePreviewResourceResponseBody setAccessDeniedDetail(GetScenePreviewResourceResponseBodyAccessDeniedDetail accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public GetScenePreviewResourceResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetScenePreviewResourceResponseBody setCode(Long code) {
@@ -64,16 +93,117 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetScenePreviewResourceResponseBodyAccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        public String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        public String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        public String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        public String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        public String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        public String noPermissionType;
+
+        @NameInMap("PolicyType")
+        public String policyType;
+
+        public static GetScenePreviewResourceResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
+            GetScenePreviewResourceResponseBodyAccessDeniedDetail self = new GetScenePreviewResourceResponseBodyAccessDeniedDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public GetScenePreviewResourceResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
+            this.authAction = authAction;
+            return this;
+        }
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        public GetScenePreviewResourceResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
+            this.authPrincipalDisplayName = authPrincipalDisplayName;
+            return this;
+        }
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        public GetScenePreviewResourceResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
+            this.authPrincipalOwnerId = authPrincipalOwnerId;
+            return this;
+        }
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        public GetScenePreviewResourceResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
+            this.authPrincipalType = authPrincipalType;
+            return this;
+        }
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        public GetScenePreviewResourceResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
+            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+            return this;
+        }
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        public GetScenePreviewResourceResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
+            this.noPermissionType = noPermissionType;
+            return this;
+        }
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        public GetScenePreviewResourceResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
+            this.policyType = policyType;
+            return this;
+        }
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+    }
+
     public static class GetScenePreviewResourceResponseBodyDataResourceDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hotspotTag.json</p>
+         */
         @NameInMap("HotspotTagConfig")
         public String hotspotTagConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>config.json</p>
+         */
         @NameInMap("ModelConfig")
         public String modelConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>orthomap/orthomap.json</p>
+         */
         @NameInMap("OrthomapConfig")
         public String orthomapConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A.e.YKPYuuYuituy****</p>
+         */
         @NameInMap("RootPath")
         public String rootPath;
 
@@ -123,6 +253,10 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         @NameInMap("ResourceDirectory")
         public GetScenePreviewResourceResponseBodyDataResourceDirectory resourceDirectory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Version")
         public String version;
 

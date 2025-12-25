@@ -4,18 +4,38 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotTagRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true/false</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>344794c32937474a9c59eb130936****</p>
+     */
     @NameInMap("PreviewToken")
     public String previewToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("SubSceneUuid")
     public String subSceneUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Type")
     public String type;
 
