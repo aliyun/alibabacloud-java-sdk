@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>paicopilot20250731</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>paicopilot20250731</name>
   <description>Alibaba Cloud PAICopilot (20250731) SDK for Java

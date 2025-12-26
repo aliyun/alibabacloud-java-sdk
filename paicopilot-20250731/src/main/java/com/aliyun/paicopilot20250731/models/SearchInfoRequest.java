@@ -104,6 +104,9 @@ public class SearchInfoRequest extends TeaModel {
     }
 
     public static class SearchInfoRequestWebFilters extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("IncludeSites")
         public java.util.List<String> includeSites;
 
@@ -133,6 +136,14 @@ public class SearchInfoRequest extends TeaModel {
         public static SearchInfoRequestWebFilters build(java.util.Map<String, ?> map) throws Exception {
             SearchInfoRequestWebFilters self = new SearchInfoRequestWebFilters();
             return TeaModel.build(map, self);
+        }
+
+        public SearchInfoRequestWebFilters setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public SearchInfoRequestWebFilters setIncludeSites(java.util.List<String> includeSites) {
