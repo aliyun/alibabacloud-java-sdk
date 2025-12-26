@@ -3,7 +3,7 @@ package com.aliyun.cms20240330.models;
 
 import com.aliyun.tea.*;
 
-public class ListServicesRequest extends TeaModel {
+public class ListServicesShrinkRequest extends TeaModel {
     /**
      * <p>The maximum number of records to return in this request.</p>
      * 
@@ -50,14 +50,14 @@ public class ListServicesRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("tags")
-    public java.util.List<ListServicesRequestTags> tags;
+    public String tagsShrink;
 
-    public static ListServicesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListServicesRequest self = new ListServicesRequest();
+    public static ListServicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListServicesShrinkRequest self = new ListServicesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListServicesRequest setMaxResults(Integer maxResults) {
+    public ListServicesShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -65,7 +65,7 @@ public class ListServicesRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListServicesRequest setNextToken(String nextToken) {
+    public ListServicesShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -73,7 +73,7 @@ public class ListServicesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListServicesRequest setResourceGroupId(String resourceGroupId) {
+    public ListServicesShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -81,7 +81,7 @@ public class ListServicesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListServicesRequest setServiceName(String serviceName) {
+    public ListServicesShrinkRequest setServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListServicesRequest extends TeaModel {
         return this.serviceName;
     }
 
-    public ListServicesRequest setServiceType(String serviceType) {
+    public ListServicesShrinkRequest setServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
@@ -97,50 +97,12 @@ public class ListServicesRequest extends TeaModel {
         return this.serviceType;
     }
 
-    public ListServicesRequest setTags(java.util.List<ListServicesRequestTags> tags) {
-        this.tags = tags;
+    public ListServicesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<ListServicesRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public static class ListServicesRequestTags extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>evn</p>
-         */
-        @NameInMap("key")
-        public String key;
-
-        /**
-         * <strong>example:</strong>
-         * <p>prod</p>
-         */
-        @NameInMap("value")
-        public String value;
-
-        public static ListServicesRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListServicesRequestTags self = new ListServicesRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListServicesRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListServicesRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

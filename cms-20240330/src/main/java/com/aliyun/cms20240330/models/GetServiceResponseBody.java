@@ -40,6 +40,44 @@ public class GetServiceResponseBody extends TeaModel {
         return this.service;
     }
 
+    public static class GetServiceResponseBodyServiceTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static GetServiceResponseBodyServiceTags build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyServiceTags self = new GetServiceResponseBodyServiceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyServiceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetServiceResponseBodyServiceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetServiceResponseBodyService extends TeaModel {
         /**
          * <p>Extended information.</p>
@@ -96,6 +134,13 @@ public class GetServiceResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <strong>example:</strong>
+         * <p>rg-aekxxzuad5zzzz</p>
+         */
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>Service ID.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +175,9 @@ public class GetServiceResponseBody extends TeaModel {
          */
         @NameInMap("serviceType")
         public String serviceType;
+
+        @NameInMap("tags")
+        public java.util.List<GetServiceResponseBodyServiceTags> tags;
 
         /**
          * <p>Workspace name</p>
@@ -193,6 +241,14 @@ public class GetServiceResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetServiceResponseBodyService setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public GetServiceResponseBodyService setServiceId(String serviceId) {
             this.serviceId = serviceId;
             return this;
@@ -223,6 +279,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        public GetServiceResponseBodyService setTags(java.util.List<GetServiceResponseBodyServiceTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyServiceTags> getTags() {
+            return this.tags;
         }
 
         public GetServiceResponseBodyService setWorkspace(String workspace) {

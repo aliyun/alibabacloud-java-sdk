@@ -41,6 +41,13 @@ public class CreateServiceRequest extends TeaModel {
     public String pid;
 
     /**
+     * <strong>example:</strong>
+     * <p>rg-xxekxxzuad5zzzz</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
      * <p>Service name</p>
      * <p>This parameter is required.</p>
      * 
@@ -68,6 +75,9 @@ public class CreateServiceRequest extends TeaModel {
      */
     @NameInMap("serviceType")
     public String serviceType;
+
+    @NameInMap("tags")
+    public java.util.List<CreateServiceRequestTags> tags;
 
     public static CreateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceRequest self = new CreateServiceRequest();
@@ -106,6 +116,14 @@ public class CreateServiceRequest extends TeaModel {
         return this.pid;
     }
 
+    public CreateServiceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateServiceRequest setServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -128,6 +146,52 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getServiceType() {
         return this.serviceType;
+    }
+
+    public CreateServiceRequest setTags(java.util.List<CreateServiceRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateServiceRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class CreateServiceRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static CreateServiceRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceRequestTags self = new CreateServiceRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServiceRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

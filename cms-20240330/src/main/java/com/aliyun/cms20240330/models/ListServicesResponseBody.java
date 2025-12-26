@@ -138,6 +138,13 @@ public class ListServicesResponseBody extends TeaModel {
         public String pid;
 
         /**
+         * <strong>example:</strong>
+         * <p>rg-aekxxzuad5zzzz</p>
+         */
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>Service ID</p>
          * 
          * <strong>example:</strong>
@@ -225,6 +232,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getPid() {
             return this.pid;
+        }
+
+        public ListServicesResponseBodyServices setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListServicesResponseBodyServices setServiceId(String serviceId) {
