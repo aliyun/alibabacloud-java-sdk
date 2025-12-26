@@ -89,6 +89,9 @@ public class CreateWuyingServerRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("MaxPrice")
+    public Float maxPrice;
+
     /**
      * <p>The type of the network policy (in invitational preview).</p>
      * 
@@ -165,6 +168,9 @@ public class CreateWuyingServerRequest extends TeaModel {
 
     @NameInMap("ServerPortRange")
     public String serverPortRange;
+
+    @NameInMap("SubPayType")
+    public String subPayType;
 
     /**
      * <p>The system disk category.</p>
@@ -304,6 +310,14 @@ public class CreateWuyingServerRequest extends TeaModel {
         return this.imageId;
     }
 
+    public CreateWuyingServerRequest setMaxPrice(Float maxPrice) {
+        this.maxPrice = maxPrice;
+        return this;
+    }
+    public Float getMaxPrice() {
+        return this.maxPrice;
+    }
+
     public CreateWuyingServerRequest setNetworkStrategyType(String networkStrategyType) {
         this.networkStrategyType = networkStrategyType;
         return this;
@@ -374,6 +388,14 @@ public class CreateWuyingServerRequest extends TeaModel {
     }
     public String getServerPortRange() {
         return this.serverPortRange;
+    }
+
+    public CreateWuyingServerRequest setSubPayType(String subPayType) {
+        this.subPayType = subPayType;
+        return this;
+    }
+    public String getSubPayType() {
+        return this.subPayType;
     }
 
     public CreateWuyingServerRequest setSystemDiskCategory(String systemDiskCategory) {

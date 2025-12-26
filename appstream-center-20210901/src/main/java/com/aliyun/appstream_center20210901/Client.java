@@ -559,6 +559,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ImageId", request.imageId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxPrice)) {
+            body.put("MaxPrice", request.maxPrice);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkStrategyType)) {
             body.put("NetworkStrategyType", request.networkStrategyType);
         }
@@ -593,6 +597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serverPortRange)) {
             body.put("ServerPortRange", request.serverPortRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subPayType)) {
+            body.put("SubPayType", request.subPayType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemDiskCategory)) {

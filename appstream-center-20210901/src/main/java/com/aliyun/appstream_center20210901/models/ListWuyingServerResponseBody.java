@@ -352,6 +352,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("InstanceInfoList")
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListInstanceInfoList> instanceInfoList;
 
+        @NameInMap("MaxPrice")
+        public Float maxPrice;
+
         /**
          * <p>The private IP address.</p>
          * 
@@ -414,6 +417,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("SubPayType")
+        public String subPayType;
 
         /**
          * <p>The type of the system disk.</p>
@@ -540,6 +546,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             return this.instanceInfoList;
         }
 
+        public ListWuyingServerResponseBodyWuyingServerList setMaxPrice(Float maxPrice) {
+            this.maxPrice = maxPrice;
+            return this;
+        }
+        public Float getMaxPrice() {
+            return this.maxPrice;
+        }
+
         public ListWuyingServerResponseBodyWuyingServerList setNetworkInterfaceIp(String networkInterfaceIp) {
             this.networkInterfaceIp = networkInterfaceIp;
             return this;
@@ -602,6 +616,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setSubPayType(String subPayType) {
+            this.subPayType = subPayType;
+            return this;
+        }
+        public String getSubPayType() {
+            return this.subPayType;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setSystemDiskCategory(String systemDiskCategory) {
