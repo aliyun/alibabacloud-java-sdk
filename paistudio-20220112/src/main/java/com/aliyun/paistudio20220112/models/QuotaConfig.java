@@ -27,6 +27,9 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("EnablePreemptSubquotaWorkloads")
     public Boolean enablePreemptSubquotaWorkloads;
 
+    @NameInMap("EnableSelfQuotaPreemption")
+    public Boolean enableSelfQuotaPreemption;
+
     @NameInMap("EnableSubQuotaPreemption")
     public Boolean enableSubQuotaPreemption;
 
@@ -107,6 +110,14 @@ public class QuotaConfig extends TeaModel {
     }
     public Boolean getEnablePreemptSubquotaWorkloads() {
         return this.enablePreemptSubquotaWorkloads;
+    }
+
+    public QuotaConfig setEnableSelfQuotaPreemption(Boolean enableSelfQuotaPreemption) {
+        this.enableSelfQuotaPreemption = enableSelfQuotaPreemption;
+        return this;
+    }
+    public Boolean getEnableSelfQuotaPreemption() {
+        return this.enableSelfQuotaPreemption;
     }
 
     public QuotaConfig setEnableSubQuotaPreemption(Boolean enableSubQuotaPreemption) {
