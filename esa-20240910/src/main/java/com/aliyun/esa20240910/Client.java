@@ -9986,6 +9986,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询Key-Value对的某个Key的详情</p>
+     * 
+     * @param request GetKvDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKvDetailResponse
+     */
+    public GetKvDetailResponse getKvDetailWithOptions(GetKvDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKvDetail"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKvDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Key-Value对的某个Key的详情</p>
+     * 
+     * @param request GetKvDetailRequest
+     * @return GetKvDetailResponse
+     */
+    public GetKvDetailResponse getKvDetail(GetKvDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKvDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about a namespace in your Alibaba Cloud account.</p>
      * 
      * @param request GetKvNamespaceRequest
