@@ -59,6 +59,9 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The ID of the cloud desktop type.</p>
          * 
@@ -179,6 +182,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
         public String getDataDiskSize() {
             return this.dataDiskSize;
+        }
+
+        public DescribeDesktopTypesResponseBodyDesktopTypes setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeDesktopTypesResponseBodyDesktopTypes setDesktopTypeId(String desktopTypeId) {

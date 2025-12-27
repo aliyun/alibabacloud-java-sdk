@@ -93,6 +93,9 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
+        @NameInMap("DesktopType")
+        public String desktopType;
+
         /**
          * <strong>example:</strong>
          * <p>2021-12-31T15:59Z</p>
@@ -113,12 +116,18 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
+        @NameInMap("MemberEniIp")
+        public String memberEniIp;
+
         /**
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
+
+        @NameInMap("Platform")
+        public String platform;
 
         /**
          * <strong>example:</strong>
@@ -201,6 +210,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             return this.desktopStatus;
         }
 
+        public DescribeDesktopMetadataResponseBodyDesktops setDesktopType(String desktopType) {
+            this.desktopType = desktopType;
+            return this;
+        }
+        public String getDesktopType() {
+            return this.desktopType;
+        }
+
         public DescribeDesktopMetadataResponseBodyDesktops setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
@@ -233,12 +250,28 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             return this.managementFlags;
         }
 
+        public DescribeDesktopMetadataResponseBodyDesktops setMemberEniIp(String memberEniIp) {
+            this.memberEniIp = memberEniIp;
+            return this;
+        }
+        public String getMemberEniIp() {
+            return this.memberEniIp;
+        }
+
         public DescribeDesktopMetadataResponseBodyDesktops setOfficeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
             return this;
         }
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        public DescribeDesktopMetadataResponseBodyDesktops setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public DescribeDesktopMetadataResponseBodyDesktops setRegionId(String regionId) {
