@@ -3405,6 +3405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListGitAccountsResponse listGitAccountsWithOptions(ListGitAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bindType)) {
+            query.put("BindType", request.bindType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -3529,6 +3533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListGitOrganizationsResponse listGitOrganizationsWithOptions(ListGitOrganizationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bindType)) {
+            query.put("BindType", request.bindType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -5320,6 +5328,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetServiceSettingsResponse setServiceSettings(SetServiceSettingsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setServiceSettingsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动一个调试执行</p>
+     * 
+     * @param request StartDebugExecutionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartDebugExecutionResponse
+     */
+    public StartDebugExecutionResponse startDebugExecutionWithOptions(StartDebugExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.properties)) {
+            query.put("Properties", request.properties);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            query.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartDebugExecution"),
+            new TeaPair("version", "2019-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartDebugExecutionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动一个调试执行</p>
+     * 
+     * @param request StartDebugExecutionRequest
+     * @return StartDebugExecutionResponse
+     */
+    public StartDebugExecutionResponse startDebugExecution(StartDebugExecutionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startDebugExecutionWithOptions(request, runtime);
     }
 
     /**

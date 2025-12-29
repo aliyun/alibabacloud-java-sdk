@@ -4,6 +4,9 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListGitOrganizationsRequest extends TeaModel {
+    @NameInMap("BindType")
+    public String bindType;
+
     /**
      * <strong>example:</strong>
      * <ul>
@@ -41,6 +44,14 @@ public class ListGitOrganizationsRequest extends TeaModel {
     public static ListGitOrganizationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGitOrganizationsRequest self = new ListGitOrganizationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListGitOrganizationsRequest setBindType(String bindType) {
+        this.bindType = bindType;
+        return this;
+    }
+    public String getBindType() {
+        return this.bindType;
     }
 
     public ListGitOrganizationsRequest setClientToken(String clientToken) {
