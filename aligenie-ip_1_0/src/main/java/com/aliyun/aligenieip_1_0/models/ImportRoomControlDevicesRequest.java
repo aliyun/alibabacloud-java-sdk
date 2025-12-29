@@ -7,6 +7,9 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
     @NameInMap("EnableInfraredDeviceImport")
     public String enableInfraredDeviceImport;
 
+    @NameInMap("EnableMeshDeviceImport")
+    public String enableMeshDeviceImport;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -42,6 +45,14 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
     }
     public String getEnableInfraredDeviceImport() {
         return this.enableInfraredDeviceImport;
+    }
+
+    public ImportRoomControlDevicesRequest setEnableMeshDeviceImport(String enableMeshDeviceImport) {
+        this.enableMeshDeviceImport = enableMeshDeviceImport;
+        return this;
+    }
+    public String getEnableMeshDeviceImport() {
+        return this.enableMeshDeviceImport;
     }
 
     public ImportRoomControlDevicesRequest setHotelId(String hotelId) {
