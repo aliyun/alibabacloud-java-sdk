@@ -8624,6 +8624,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Deploy", request.deploy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
+            query.put("MinReadyInstanceRatio", request.minReadyInstanceRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstances)) {
+            query.put("MinReadyInstances", request.minReadyInstances);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             query.put("VSwitchId", request.vSwitchId);
         }

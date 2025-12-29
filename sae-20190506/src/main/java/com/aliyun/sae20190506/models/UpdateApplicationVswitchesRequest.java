@@ -17,6 +17,12 @@ public class UpdateApplicationVswitchesRequest extends TeaModel {
     @NameInMap("Deploy")
     public Boolean deploy;
 
+    @NameInMap("MinReadyInstanceRatio")
+    public Integer minReadyInstanceRatio;
+
+    @NameInMap("MinReadyInstances")
+    public Integer minReadyInstances;
+
     /**
      * <p>The ID of the vSwitch.</p>
      * <p>This parameter is required.</p>
@@ -46,6 +52,22 @@ public class UpdateApplicationVswitchesRequest extends TeaModel {
     }
     public Boolean getDeploy() {
         return this.deploy;
+    }
+
+    public UpdateApplicationVswitchesRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+        this.minReadyInstanceRatio = minReadyInstanceRatio;
+        return this;
+    }
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
+    }
+
+    public UpdateApplicationVswitchesRequest setMinReadyInstances(Integer minReadyInstances) {
+        this.minReadyInstances = minReadyInstances;
+        return this;
+    }
+    public Integer getMinReadyInstances() {
+        return this.minReadyInstances;
     }
 
     public UpdateApplicationVswitchesRequest setVSwitchId(String vSwitchId) {

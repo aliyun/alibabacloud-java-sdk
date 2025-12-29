@@ -195,6 +195,36 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationInstancesResponseBodyDataInstancesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeApplicationInstancesResponseBodyDataInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationInstancesResponseBodyDataInstancesTags self = new DescribeApplicationInstancesResponseBodyDataInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstancesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstancesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeApplicationInstancesResponseBodyDataInstances extends TeaModel {
         /**
          * <p>The start time of the instance creation process. Unit: milliseconds.</p>
@@ -343,6 +373,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("SidecarContainersStatus")
         public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> sidecarContainersStatus;
 
+        @NameInMap("Tags")
+        public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesTags> tags;
+
         /**
          * <strong>example:</strong>
          * <p>1750061980000</p>
@@ -486,6 +519,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> getSidecarContainersStatus() {
             return this.sidecarContainersStatus;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setTags(java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesTags> getTags() {
+            return this.tags;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setTimestamp(Long timestamp) {
