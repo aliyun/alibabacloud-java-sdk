@@ -4,9 +4,6 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DeleteThreadResponseBody extends TeaModel {
-    @NameInMap("deleted")
-    public Boolean deleted;
-
     /**
      * <p>Id of the request</p>
      * 
@@ -19,14 +16,6 @@ public class DeleteThreadResponseBody extends TeaModel {
     public static DeleteThreadResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteThreadResponseBody self = new DeleteThreadResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteThreadResponseBody setDeleted(Boolean deleted) {
-        this.deleted = deleted;
-        return this;
-    }
-    public Boolean getDeleted() {
-        return this.deleted;
     }
 
     public DeleteThreadResponseBody setRequestId(String requestId) {
