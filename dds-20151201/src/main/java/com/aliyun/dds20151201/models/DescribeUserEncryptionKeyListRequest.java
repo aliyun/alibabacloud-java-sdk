@@ -26,6 +26,9 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RoleARN")
+    public String roleARN;
+
     /**
      * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
      * 
@@ -78,6 +81,14 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeUserEncryptionKeyListRequest setRoleARN(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    public String getRoleARN() {
+        return this.roleARN;
     }
 
     public DescribeUserEncryptionKeyListRequest setTargetRegionId(String targetRegionId) {

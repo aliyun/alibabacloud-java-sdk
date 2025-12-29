@@ -14,6 +14,9 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ForceEncryption")
+    public String forceEncryption;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -55,6 +58,14 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceSSLRequest setForceEncryption(String forceEncryption) {
+        this.forceEncryption = forceEncryption;
+        return this;
+    }
+    public String getForceEncryption() {
+        return this.forceEncryption;
     }
 
     public ModifyDBInstanceSSLRequest setOwnerAccount(String ownerAccount) {

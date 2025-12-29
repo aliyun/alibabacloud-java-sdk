@@ -51,7 +51,6 @@ public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>d-bp128a003436****</p>

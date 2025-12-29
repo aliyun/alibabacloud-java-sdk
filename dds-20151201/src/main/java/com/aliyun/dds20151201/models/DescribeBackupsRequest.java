@@ -15,6 +15,13 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupId;
 
     /**
+     * <strong>example:</strong>
+     * <p>775051</p>
+     */
+    @NameInMap("BackupJobId")
+    public String backupJobId;
+
+    /**
      * <p>The instance ID.</p>
      * <blockquote>
      * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
@@ -89,6 +96,13 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-xxxx</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -130,6 +144,14 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public String getBackupId() {
         return this.backupId;
+    }
+
+    public DescribeBackupsRequest setBackupJobId(String backupJobId) {
+        this.backupJobId = backupJobId;
+        return this;
+    }
+    public String getBackupJobId() {
+        return this.backupJobId;
     }
 
     public DescribeBackupsRequest setDBInstanceId(String DBInstanceId) {
@@ -194,6 +216,14 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeBackupsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeBackupsRequest setResourceOwnerAccount(String resourceOwnerAccount) {

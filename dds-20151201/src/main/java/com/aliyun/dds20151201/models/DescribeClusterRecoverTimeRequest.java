@@ -14,17 +14,30 @@ public class DescribeClusterRecoverTimeRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DestRegion")
+    public String destRegion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-xxxx</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("SrcRegion")
+    public String srcRegion;
 
     public static DescribeClusterRecoverTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterRecoverTimeRequest self = new DescribeClusterRecoverTimeRequest();
@@ -37,6 +50,14 @@ public class DescribeClusterRecoverTimeRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeClusterRecoverTimeRequest setDestRegion(String destRegion) {
+        this.destRegion = destRegion;
+        return this;
+    }
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     public DescribeClusterRecoverTimeRequest setOwnerAccount(String ownerAccount) {
@@ -55,6 +76,14 @@ public class DescribeClusterRecoverTimeRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeClusterRecoverTimeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeClusterRecoverTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -69,6 +98,14 @@ public class DescribeClusterRecoverTimeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeClusterRecoverTimeRequest setSrcRegion(String srcRegion) {
+        this.srcRegion = srcRegion;
+        return this;
+    }
+    public String getSrcRegion() {
+        return this.srcRegion;
     }
 
 }

@@ -14,6 +14,13 @@ public class CreateBackupResponseBody extends TeaModel {
     public String backupId;
 
     /**
+     * <strong>example:</strong>
+     * <p>775051</p>
+     */
+    @NameInMap("BackupJobId")
+    public String backupJobId;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,14 @@ public class CreateBackupResponseBody extends TeaModel {
     }
     public String getBackupId() {
         return this.backupId;
+    }
+
+    public CreateBackupResponseBody setBackupJobId(String backupJobId) {
+        this.backupJobId = backupJobId;
+        return this;
+    }
+    public String getBackupJobId() {
+        return this.backupJobId;
     }
 
     public CreateBackupResponseBody setRequestId(String requestId) {

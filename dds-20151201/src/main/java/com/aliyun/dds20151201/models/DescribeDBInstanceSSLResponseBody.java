@@ -13,6 +13,9 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     @NameInMap("CertCommonName")
     public String certCommonName;
 
+    @NameInMap("ForceEncryption")
+    public String forceEncryption;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -55,6 +58,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     }
     public String getCertCommonName() {
         return this.certCommonName;
+    }
+
+    public DescribeDBInstanceSSLResponseBody setForceEncryption(String forceEncryption) {
+        this.forceEncryption = forceEncryption;
+        return this;
+    }
+    public String getForceEncryption() {
+        return this.forceEncryption;
     }
 
     public DescribeDBInstanceSSLResponseBody setRequestId(String requestId) {

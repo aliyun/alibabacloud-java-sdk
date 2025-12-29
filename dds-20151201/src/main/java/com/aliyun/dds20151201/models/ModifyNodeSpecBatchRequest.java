@@ -124,6 +124,18 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("TargetHiddenZoneId")
+    public String targetHiddenZoneId;
+
+    @NameInMap("TargetSecondaryZoneId")
+    public String targetSecondaryZoneId;
+
+    @NameInMap("TargetVswitchId")
+    public String targetVswitchId;
+
+    @NameInMap("TargetZoneId")
+    public String targetZoneId;
+
     public static ModifyNodeSpecBatchRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNodeSpecBatchRequest self = new ModifyNodeSpecBatchRequest();
         return TeaModel.build(map, self);
@@ -231,6 +243,38 @@ public class ModifyNodeSpecBatchRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyNodeSpecBatchRequest setTargetHiddenZoneId(String targetHiddenZoneId) {
+        this.targetHiddenZoneId = targetHiddenZoneId;
+        return this;
+    }
+    public String getTargetHiddenZoneId() {
+        return this.targetHiddenZoneId;
+    }
+
+    public ModifyNodeSpecBatchRequest setTargetSecondaryZoneId(String targetSecondaryZoneId) {
+        this.targetSecondaryZoneId = targetSecondaryZoneId;
+        return this;
+    }
+    public String getTargetSecondaryZoneId() {
+        return this.targetSecondaryZoneId;
+    }
+
+    public ModifyNodeSpecBatchRequest setTargetVswitchId(String targetVswitchId) {
+        this.targetVswitchId = targetVswitchId;
+        return this;
+    }
+    public String getTargetVswitchId() {
+        return this.targetVswitchId;
+    }
+
+    public ModifyNodeSpecBatchRequest setTargetZoneId(String targetZoneId) {
+        this.targetZoneId = targetZoneId;
+        return this;
+    }
+    public String getTargetZoneId() {
+        return this.targetZoneId;
     }
 
 }

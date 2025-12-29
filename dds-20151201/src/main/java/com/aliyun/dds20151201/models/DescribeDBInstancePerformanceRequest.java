@@ -104,6 +104,9 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     @NameInMap("RoleId")
     public String roleId;
 
+    @NameInMap("SearchId")
+    public String searchId;
+
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
@@ -205,6 +208,14 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     }
     public String getRoleId() {
         return this.roleId;
+    }
+
+    public DescribeDBInstancePerformanceRequest setSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
+    public String getSearchId() {
+        return this.searchId;
     }
 
     public DescribeDBInstancePerformanceRequest setStartTime(String startTime) {

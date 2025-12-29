@@ -300,6 +300,9 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         @NameInMap("SwitchTime")
         public String switchTime;
 
+        @NameInMap("TaskParams")
+        public String taskParams;
+
         /**
          * <p>The task type.</p>
          * 
@@ -514,6 +517,14 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
         public String getSwitchTime() {
             return this.switchTime;
+        }
+
+        public DescribeActiveOperationTasksResponseBodyItems setTaskParams(String taskParams) {
+            this.taskParams = taskParams;
+            return this;
+        }
+        public String getTaskParams() {
+            return this.taskParams;
         }
 
         public DescribeActiveOperationTasksResponseBodyItems setTaskType(String taskType) {

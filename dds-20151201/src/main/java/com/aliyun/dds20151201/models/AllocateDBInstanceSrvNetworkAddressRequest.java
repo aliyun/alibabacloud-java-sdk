@@ -3,28 +3,19 @@ package com.aliyun.dds20151201.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeShardingNetworkAddressRequest extends TeaModel {
+public class AllocateDBInstanceSrvNetworkAddressRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dds-bpxxxxxxxx</p>
+     * <p>dds-2ze5eb9514e31364</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("NetworkType")
-    public String networkType;
-
     /**
-     * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
-     * <p>d-bpxxxxxxxx</p>
+     * <p>d-bp1b7bb3bbe****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -41,12 +32,19 @@ public class DescribeShardingNetworkAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static DescribeShardingNetworkAddressRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeShardingNetworkAddressRequest self = new DescribeShardingNetworkAddressRequest();
+    /**
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
+    @NameInMap("SrvConnectionType")
+    public String srvConnectionType;
+
+    public static AllocateDBInstanceSrvNetworkAddressRequest build(java.util.Map<String, ?> map) throws Exception {
+        AllocateDBInstanceSrvNetworkAddressRequest self = new AllocateDBInstanceSrvNetworkAddressRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeShardingNetworkAddressRequest setDBInstanceId(String DBInstanceId) {
+    public AllocateDBInstanceSrvNetworkAddressRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -54,15 +52,7 @@ public class DescribeShardingNetworkAddressRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeShardingNetworkAddressRequest setNetworkType(String networkType) {
-        this.networkType = networkType;
-        return this;
-    }
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    public DescribeShardingNetworkAddressRequest setNodeId(String nodeId) {
+    public AllocateDBInstanceSrvNetworkAddressRequest setNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
@@ -70,7 +60,7 @@ public class DescribeShardingNetworkAddressRequest extends TeaModel {
         return this.nodeId;
     }
 
-    public DescribeShardingNetworkAddressRequest setOwnerAccount(String ownerAccount) {
+    public AllocateDBInstanceSrvNetworkAddressRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -78,7 +68,7 @@ public class DescribeShardingNetworkAddressRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeShardingNetworkAddressRequest setOwnerId(Long ownerId) {
+    public AllocateDBInstanceSrvNetworkAddressRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -86,7 +76,7 @@ public class DescribeShardingNetworkAddressRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeShardingNetworkAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public AllocateDBInstanceSrvNetworkAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -94,12 +84,20 @@ public class DescribeShardingNetworkAddressRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeShardingNetworkAddressRequest setResourceOwnerId(Long resourceOwnerId) {
+    public AllocateDBInstanceSrvNetworkAddressRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public AllocateDBInstanceSrvNetworkAddressRequest setSrvConnectionType(String srvConnectionType) {
+        this.srvConnectionType = srvConnectionType;
+        return this;
+    }
+    public String getSrvConnectionType() {
+        return this.srvConnectionType;
     }
 
 }

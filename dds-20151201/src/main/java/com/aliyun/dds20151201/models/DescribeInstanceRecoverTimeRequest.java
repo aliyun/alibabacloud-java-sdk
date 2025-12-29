@@ -14,11 +14,21 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DestRegion")
+    public String destRegion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>rg-xxxx</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -28,6 +38,9 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
 
     @NameInMap("SecurityToken")
     public String securityToken;
+
+    @NameInMap("SrcRegion")
+    public String srcRegion;
 
     public static DescribeInstanceRecoverTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceRecoverTimeRequest self = new DescribeInstanceRecoverTimeRequest();
@@ -40,6 +53,14 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeInstanceRecoverTimeRequest setDestRegion(String destRegion) {
+        this.destRegion = destRegion;
+        return this;
+    }
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     public DescribeInstanceRecoverTimeRequest setOwnerAccount(String ownerAccount) {
@@ -56,6 +77,14 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeInstanceRecoverTimeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeInstanceRecoverTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -80,6 +109,14 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeInstanceRecoverTimeRequest setSrcRegion(String srcRegion) {
+        this.srcRegion = srcRegion;
+        return this;
+    }
+    public String getSrcRegion() {
+        return this.srcRegion;
     }
 
 }

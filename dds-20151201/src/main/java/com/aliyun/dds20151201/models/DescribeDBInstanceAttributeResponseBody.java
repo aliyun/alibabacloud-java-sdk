@@ -1493,6 +1493,27 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <strong>example:</strong>
+         * <p>mdb.shard.2x.xlarge.d</p>
+         */
+        @NameInMap("SearchNodeClass")
+        public String searchNodeClass;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("SearchNodeCount")
+        public Integer searchNodeCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("SearchNodeStorage")
+        public Integer searchNodeStorage;
+
+        /**
          * <p>The ID of the secondary zone 1 of the instance. Valid values:</p>
          * <ul>
          * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
@@ -1975,6 +1996,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setSearchNodeClass(String searchNodeClass) {
+            this.searchNodeClass = searchNodeClass;
+            return this;
+        }
+        public String getSearchNodeClass() {
+            return this.searchNodeClass;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setSearchNodeCount(Integer searchNodeCount) {
+            this.searchNodeCount = searchNodeCount;
+            return this;
+        }
+        public Integer getSearchNodeCount() {
+            return this.searchNodeCount;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setSearchNodeStorage(Integer searchNodeStorage) {
+            this.searchNodeStorage = searchNodeStorage;
+            return this;
+        }
+        public Integer getSearchNodeStorage() {
+            return this.searchNodeStorage;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setSecondaryZoneId(String secondaryZoneId) {

@@ -169,6 +169,39 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mdb.shard.2x.xlarge.d</p>
+     */
+    @NameInMap("SearchNodeClass")
+    public String searchNodeClass;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("SearchNodeCount")
+    public Long searchNodeCount;
+
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("SearchNodeStorage")
+    public Long searchNodeStorage;
+
+    @NameInMap("TargetHiddenZoneId")
+    public String targetHiddenZoneId;
+
+    @NameInMap("TargetSecondaryZoneId")
+    public String targetSecondaryZoneId;
+
+    @NameInMap("TargetVswitchId")
+    public String targetVswitchId;
+
+    @NameInMap("TargetZoneId")
+    public String targetZoneId;
+
     public static ModifyDBInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSpecRequest self = new ModifyDBInstanceSpecRequest();
         return TeaModel.build(map, self);
@@ -292,6 +325,62 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBInstanceSpecRequest setSearchNodeClass(String searchNodeClass) {
+        this.searchNodeClass = searchNodeClass;
+        return this;
+    }
+    public String getSearchNodeClass() {
+        return this.searchNodeClass;
+    }
+
+    public ModifyDBInstanceSpecRequest setSearchNodeCount(Long searchNodeCount) {
+        this.searchNodeCount = searchNodeCount;
+        return this;
+    }
+    public Long getSearchNodeCount() {
+        return this.searchNodeCount;
+    }
+
+    public ModifyDBInstanceSpecRequest setSearchNodeStorage(Long searchNodeStorage) {
+        this.searchNodeStorage = searchNodeStorage;
+        return this;
+    }
+    public Long getSearchNodeStorage() {
+        return this.searchNodeStorage;
+    }
+
+    public ModifyDBInstanceSpecRequest setTargetHiddenZoneId(String targetHiddenZoneId) {
+        this.targetHiddenZoneId = targetHiddenZoneId;
+        return this;
+    }
+    public String getTargetHiddenZoneId() {
+        return this.targetHiddenZoneId;
+    }
+
+    public ModifyDBInstanceSpecRequest setTargetSecondaryZoneId(String targetSecondaryZoneId) {
+        this.targetSecondaryZoneId = targetSecondaryZoneId;
+        return this;
+    }
+    public String getTargetSecondaryZoneId() {
+        return this.targetSecondaryZoneId;
+    }
+
+    public ModifyDBInstanceSpecRequest setTargetVswitchId(String targetVswitchId) {
+        this.targetVswitchId = targetVswitchId;
+        return this;
+    }
+    public String getTargetVswitchId() {
+        return this.targetVswitchId;
+    }
+
+    public ModifyDBInstanceSpecRequest setTargetZoneId(String targetZoneId) {
+        this.targetZoneId = targetZoneId;
+        return this;
+    }
+    public String getTargetZoneId() {
+        return this.targetZoneId;
     }
 
 }

@@ -1872,6 +1872,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("TotalProductFee")
         public Double totalProductFee;
 
+        @NameInMap("UnitPriceUnit4Buy")
+        public String unitPriceUnit4Buy;
+
         /**
          * <p>The price type.</p>
          * 
@@ -2013,6 +2016,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public Double getTotalProductFee() {
             return this.totalProductFee;
+        }
+
+        public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance setUnitPriceUnit4Buy(String unitPriceUnit4Buy) {
+            this.unitPriceUnit4Buy = unitPriceUnit4Buy;
+            return this;
+        }
+        public String getUnitPriceUnit4Buy() {
+            return this.unitPriceUnit4Buy;
         }
 
         public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance setPriceType(String priceType) {
