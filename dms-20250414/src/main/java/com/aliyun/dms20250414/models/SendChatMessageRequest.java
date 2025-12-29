@@ -348,6 +348,9 @@ public class SendChatMessageRequest extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("ReportWaterMark")
+        public String reportWaterMark;
+
         public static SendChatMessageRequestSessionConfig build(java.util.Map<String, ?> map) throws Exception {
             SendChatMessageRequestSessionConfig self = new SendChatMessageRequestSessionConfig();
             return TeaModel.build(map, self);
@@ -375,6 +378,14 @@ public class SendChatMessageRequest extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public SendChatMessageRequestSessionConfig setReportWaterMark(String reportWaterMark) {
+            this.reportWaterMark = reportWaterMark;
+            return this;
+        }
+        public String getReportWaterMark() {
+            return this.reportWaterMark;
         }
 
     }
