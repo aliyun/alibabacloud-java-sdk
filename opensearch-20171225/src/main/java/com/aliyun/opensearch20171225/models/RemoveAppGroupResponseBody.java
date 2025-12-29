@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveAppGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3AA29D02-54F3-8569-F71A-90E1B7BE4E7E</p>
@@ -14,7 +14,7 @@ public class RemoveAppGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>N/A</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("result")
     public java.util.List<Integer> result;

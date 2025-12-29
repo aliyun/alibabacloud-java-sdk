@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStatisticReportRequest extends TeaModel {
     /**
-     * <p>pv,uv</p>
+     * <p>The fields to query. Set this parameter in the format of columns=&quot;pv,uv,ipv&quot;. For more information, see <a href="https://help.aliyun.com/document_detail/187665.html">Metrics of statistical reports</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>pv,uv</p>
@@ -14,7 +14,7 @@ public class ListStatisticReportRequest extends TeaModel {
     public String columns;
 
     /**
-     * <p>1582646399</p>
+     * <p>The end timestamp of the query. By default, the end time is the current time. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1582646399</p>
@@ -23,7 +23,8 @@ public class ListStatisticReportRequest extends TeaModel {
     public Integer endTime;
 
     /**
-     * <p>1</p>
+     * <p>The page number.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +33,7 @@ public class ListStatisticReportRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +42,13 @@ public class ListStatisticReportRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>bizType:test,sceneTag:myTag</p>
+     * <p>The query conditions. Set this parameter in the format of k1:v1,k2:v2. Valid values:</p>
+     * <ul>
+     * <li>experimentSerialNumber: the globally unique sequence number of the test</li>
+     * <li>sceneTag: the tag of the test scenario</li>
+     * <li>bizType: the type of the business</li>
+     * <li>modelId: the ID of the algorithm model</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>bizType:test,sceneTag:myTag</p>
@@ -50,7 +57,7 @@ public class ListStatisticReportRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>1582214400</p>
+     * <p>The start timestamp of the query. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1582214400</p>

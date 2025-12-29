@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFirstRankResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
@@ -60,8 +60,7 @@ public class DescribeFirstRankResponseBody extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The weight.</p>
-         * <p>Valid values: [-100000,100000] (excluding 0).</p>
+         * <p>The weight. Valid values: -100000 to 100000. The value cannot be 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +110,7 @@ public class DescribeFirstRankResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The description of the expression.</p>
+         * <p>Description</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -122,13 +121,13 @@ public class DescribeFirstRankResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The content of the expression.</p>
+         * <p>The information about the expression.</p>
          */
         @NameInMap("meta")
         public java.util.List<DescribeFirstRankResponseBodyResultMeta> meta;
 
         /**
-         * <p>The name of the expression.</p>
+         * <p>Parameter</p>
          * 
          * <strong>example:</strong>
          * <p>ar_wear_edit_time</p>

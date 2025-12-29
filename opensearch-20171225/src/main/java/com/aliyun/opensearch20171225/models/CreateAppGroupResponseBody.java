@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>766CF6DB-CA02-3E12-7CBA-6AC21FC978FD</p>
@@ -14,7 +14,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>N/A</p>
+     * <p>None</p>
      */
     @NameInMap("result")
     public CreateAppGroupResponseBodyResult result;
@@ -60,15 +60,15 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public Integer docSize;
 
         /**
-         * <p>The specifications of the application. Valid values:</p>
+         * <p>The specifications. Valid values:</p>
          * <ul>
-         * <li>opensearch.share.junior: basic</li>
-         * <li>opensearch.share.common: shared general-purpose</li>
-         * <li>opensearch.share.compute: shared computing</li>
-         * <li>opensearch.share.storage: shared storage</li>
-         * <li>opensearch.private.common: exclusive general-purpose</li>
-         * <li>opensearch.private.compute: exclusive computing</li>
-         * <li>opensearch.private.storage: exclusive storage</li>
+         * <li>opensearch.share.junior: basic.</li>
+         * <li>opensearch.share.common: shared general-purpose.</li>
+         * <li>opensearch.share.compute: shared computing.</li>
+         * <li>opensearch.share.storage: shared storage.</li>
+         * <li>opensearch.private.common: exclusive general-purpose.</li>
+         * <li>opensearch.private.compute: exclusive computing.</li>
+         * <li>opensearch.private.storage: exclusive storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,10 +110,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
 
     public static class CreateAppGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>The billing method of the application. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go</li>
-         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,10 +123,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The billing model. Valid values:</p>
+         * <p>The type of billing. Valid values:</p>
          * <ul>
-         * <li>1: computing resources</li>
-         * <li>2: queries per second (QPS)</li>
+         * <li>1: computing resources.</li>
+         * <li>2: queries per second (QPS).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public Integer chargingWay;
 
         /**
-         * <p>The code of the commodity.</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
          * <p>opensearch</p>
@@ -176,9 +176,9 @@ public class CreateAppGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the industry. Valid values:</p>
          * <ul>
-         * <li>GENERAL: general.</li>
-         * <li>ECOMMERCE: e-commerce.</li>
-         * <li>IT_CONTENT: IT content.</li>
+         * <li>GENERAL</li>
+         * <li>ECOMMERCE</li>
+         * <li>IT_CONTENT</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,6 +187,12 @@ public class CreateAppGroupResponseBody extends TeaModel {
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3</p>
+         */
         @NameInMap("engineType")
         public String engineType;
 
@@ -202,10 +208,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String expireOn;
 
         /**
-         * <p>The approval status of the quotas. Valid values:</p>
+         * <p>The approval state of the quotas. Valid values:</p>
          * <ul>
-         * <li>0: The quotas are approved.</li>
-         * <li>1: The quotas are being approved.</li>
+         * <li>0: The application is in service.</li>
+         * <li>1: The quotas are being reviewed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +221,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public Integer hasPendingQuotaReviewTask;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100302881</p>
@@ -235,9 +241,9 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The lock mode of the instance. Valid values:</p>
+         * <p>The lock state. Valid values:</p>
          * <ul>
-         * <li>Unlock: The instance is not locked.</li>
+         * <li>Unlock: The instance is unlocked.</li>
          * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
          * <li>ManualLock: The instance is manually locked.</li>
          * </ul>
@@ -258,10 +264,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the order is complete. Valid values:</p>
+         * <p>Indicates whether the application is created. Valid values:</p>
          * <ul>
-         * <li>0: The order is in progress.</li>
-         * <li>1: The order is complete.</li>
+         * <li>0: The application is being created.</li>
+         * <li>1: The application is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,11 +296,11 @@ public class CreateAppGroupResponseBody extends TeaModel {
         /**
          * <p>The status of the application. Valid values:</p>
          * <ul>
-         * <li>producing</li>
-         * <li>review_pending</li>
-         * <li>config_pending</li>
-         * <li>normal</li>
-         * <li>frozen</li>
+         * <li>producing: The application is being created.</li>
+         * <li>review_pending: The application is being reviewed.</li>
+         * <li>config_pending: The application is to be configured.</li>
+         * <li>normal: The application is in service.</li>
+         * <li>frozen: The application is frozen.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,9 +321,9 @@ public class CreateAppGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the application. Valid values:</p>
          * <ul>
-         * <li>standard: a standard application.</li>
-         * <li>advance: an advanced application which is of an old application type. New applications cannot be of this type.</li>
-         * <li>enhanced: an advanced application which is of a new application type.</li>
+         * <li>standard: a standard edition application.</li>
+         * <li>advance: an advanced edition which is of an old version. New version is not supported for this edition.</li>
+         * <li>enhanced: an advanced edition application of a new version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +333,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The timestamp when the application was last updated.</p>
+         * <p>The timestamp when the application was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1590978265</p>

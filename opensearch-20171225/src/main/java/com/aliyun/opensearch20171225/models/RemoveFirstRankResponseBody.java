@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveFirstRankResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E676FAB6-A0AC-64D9-F9D7-D0D33C930CFF</p>
@@ -42,8 +42,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
 
     public static class RemoveFirstRankResponseBodyResultMeta extends TeaModel {
         /**
-         * <p>The parameters that are used by a function in the expression.</p>
-         * <p>For more information, see Rough sort functions.</p>
+         * <p>The parameters that are used by a function in the expression. For more information, see Rough sort functions.<a href="~~170007~~"></a></p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -52,8 +51,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         public String arg;
 
         /**
-         * <p>The attribute, feature function, or field to be searched for.</p>
-         * <p>For more information about supported feature functions, see Rough sort functions.</p>
+         * <p>The attribute, which refers to the scoring feature or search field, For more information about supported feature functions, see Rough sort functions.<a href="~~170007~~"></a></p>
          * 
          * <strong>example:</strong>
          * <p>static_bm25()</p>
@@ -62,8 +60,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The weight.</p>
-         * <p>Valid values: [-100000,100000] (excluding 0).</p>
+         * <p>The weight. Valid values: -100000 to 100000. The value cannot be 0.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -104,7 +101,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
 
     public static class RemoveFirstRankResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the expression is the default one.</p>
+         * <p>Specifies whether to set the fine sort expression as the default sort expression.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -113,7 +110,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The description of the expression.</p>
+         * <p>Description</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -122,13 +119,13 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The content of the expression.</p>
+         * <p>The information about the expression.</p>
          */
         @NameInMap("meta")
         public java.util.List<RemoveFirstRankResponseBodyResultMeta> meta;
 
         /**
-         * <p>The name of the expression.</p>
+         * <p>Parameter</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

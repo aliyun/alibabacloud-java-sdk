@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteABTestExperimentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABCDEFGH</p>
@@ -14,7 +14,7 @@ public class DeleteABTestExperimentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result that was returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

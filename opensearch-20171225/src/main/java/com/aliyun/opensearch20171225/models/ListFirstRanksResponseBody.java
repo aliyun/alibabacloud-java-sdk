@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFirstRanksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
@@ -14,7 +14,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about each rough sort expression.</p>
+     * <p>The information about the rough sort expression.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170007.html">FirstRank</a>.</p>
      * 
      * <strong>example:</strong>
@@ -66,8 +66,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The weight.</p>
-         * <p>Valid values: [-100000,100000] (excluding 0).</p>
+         * <p>The weight. Valid values: -100000 to 100000. The value cannot be 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -108,7 +107,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
 
     public static class ListFirstRanksResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the expression is the default one.</p>
+         * <p>Specifies whether to set the fine sort expression as the default sort expression.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -117,7 +116,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The time when the cluster was created.</p>
+         * <p>The time when the expression was created.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -126,7 +125,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The description of the expression.</p>
+         * <p>Description</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -135,7 +134,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The content of the expression.</p>
+         * <p>The information about the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -144,7 +143,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         public java.util.List<ListFirstRanksResponseBodyResultMeta> meta;
 
         /**
-         * <p>The name of the expression.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -153,7 +152,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the cluster was updated.</p>
+         * <p>The time when the expression was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

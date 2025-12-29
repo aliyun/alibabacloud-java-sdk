@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStatisticReportResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F65C8BB2-C14F-5983-888B-41C4E082D3BC</p>
@@ -14,10 +14,12 @@ public class ListStatisticReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried reports. Valid values:</p>
-     * <p>For more information about the metrics in data quality reports, see the Upload behavioral data section of <a href="https://help.aliyun.com/document_detail/131547.html">Data collection 2.0</a>.</p>
-     * <p>For more information about the metrics in application and A/B test reports, see the Core metrics section of <a href="https://help.aliyun.com/document_detail/187654.html">Metrics of statistical reports</a>.</p>
-     * <p>For more information about the metrics in query analysis reports, see the Query analysis metrics section of <a href="https://help.aliyun.com/document_detail/187654.html">Metrics of statistical reports</a>.</p>
+     * <p>The statistical reports. Valid values:</p>
+     * <ul>
+     * <li>For more information about the metrics in data quality reports, see the Upload behavioral data section of <a href="https://help.aliyun.com/document_detail/131547.html">Data collection 2.0</a>.</li>
+     * <li>For more information about the metrics in application and A/B test reports, see the Core metrics section of <a href="https://help.aliyun.com/document_detail/187665.html">Metrics of statistical reports</a>.</li>
+     * <li>For more information about the metrics in query analysis reports, see the Query analysis metrics section of <a href="https://help.aliyun.com/document_detail/187665.html">Metrics of statistical reports</a>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -26,7 +28,7 @@ public class ListStatisticReportResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> result;
 
     /**
-     * <p>The total number of the queried reports.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>43</p>

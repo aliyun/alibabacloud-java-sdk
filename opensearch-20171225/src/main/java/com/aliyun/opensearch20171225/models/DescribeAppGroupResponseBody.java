@@ -224,6 +224,12 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3</p>
+         */
         @NameInMap("engineType")
         public String engineType;
 
@@ -363,7 +369,7 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         public DescribeAppGroupResponseBodyResultQuota quota;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the network instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmoiyerh6nzly</p>
@@ -415,7 +421,6 @@ public class DescribeAppGroupResponseBody extends TeaModel {
          * <p>The type of the application. Valid values:</p>
          * <ul>
          * <li>standard: a High-performance Search Edition application.</li>
-         * <li></li>
          * <li>enhanced: an Industry Algorithm Edition application.</li>
          * </ul>
          * 

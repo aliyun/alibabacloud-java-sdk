@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListABTestScenesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -14,7 +14,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the test scenarios.</p>
+     * <p>The details of the test scenario.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a>.</p>
      */
     @NameInMap("result")
@@ -43,7 +43,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
 
     public static class ListABTestScenesResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the test scenario was created.</p>
+         * <p>The time when the test group was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1588836130</p>
@@ -61,7 +61,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the test group.</p>
+         * <p>The alias of the test group.</p>
          * 
          * <strong>example:</strong>
          * <p>kevintest_2020-5-7_15:21:482</p>
@@ -70,7 +70,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the test scenario. Valid values:</p>
+         * <p>The status of the test group. Valid values:</p>
          * <ul>
          * <li>0: not in effect</li>
          * <li>1: in effect</li>
@@ -83,7 +83,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the test scenario was last modified.</p>
+         * <p>The time when the test group was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1588836129</p>

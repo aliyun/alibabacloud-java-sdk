@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppGroupQuotaResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
@@ -42,7 +42,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
 
     public static class ModifyAppGroupQuotaResponseBodyResultQuota extends TeaModel {
         /**
-         * <p>The computing resources. Unit: logical computing units (LCUs).</p>
+         * <p>The computing resources. Unit: logical computing unit (LCU).</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -60,15 +60,15 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer docSize;
 
         /**
-         * <p>The specifications of the application. Valid values:</p>
+         * <p>The specifications. Valid values:</p>
          * <ul>
-         * <li>opensearch.share.junior: basic</li>
-         * <li>opensearch.share.common: shared general-purpose</li>
-         * <li>opensearch.share.compute: shared computing</li>
-         * <li>opensearch.share.storage: shared storage</li>
-         * <li>opensearch.private.common: exclusive general-purpose</li>
-         * <li>opensearch.private.compute: exclusive computing</li>
-         * <li>opensearch.private.storage: exclusive storage</li>
+         * <li>opensearch.share.junior: basic.</li>
+         * <li>opensearch.share.common: shared general-purpose.</li>
+         * <li>opensearch.share.compute: shared computing.</li>
+         * <li>opensearch.share.storage: shared storage.</li>
+         * <li>opensearch.private.common: exclusive general-purpose.</li>
+         * <li>opensearch.private.compute: exclusive computing.</li>
+         * <li>opensearch.private.storage: exclusive storage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,10 +110,10 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
 
     public static class ModifyAppGroupQuotaResponseBodyResult extends TeaModel {
         /**
-         * <p>The billing method of the application. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go</li>
-         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,10 +123,10 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The billing model. Valid values:</p>
+         * <p>The billable item. Valid values:</p>
          * <ul>
-         * <li>1: computing resources</li>
-         * <li>2: queries per second (QPS)</li>
+         * <li>1: computing resources.</li>
+         * <li>2: queries per second (QPS).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer chargingWay;
 
         /**
-         * <p>The code of the commodity.</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
          * <p>opensearch</p>
@@ -171,11 +171,21 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The engine type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ha3: ha3.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3</p>
+         */
         @NameInMap("engineType")
         public String engineType;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the application expired.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,10 +194,10 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String expireOn;
 
         /**
-         * <p>The approval status of the quotas. Valid values:</p>
+         * <p>The approval state of the quotas. Valid values:</p>
          * <ul>
-         * <li>0: The quotas are approved.</li>
-         * <li>1: The quotas are being approved.</li>
+         * <li>0: The application is in service.</li>
+         * <li>1: The quotas are being reviewed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +207,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer hasPendingQuotaReviewTask;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100302881</p>
@@ -206,7 +216,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,9 +225,9 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The lock mode of the instance. Valid values:</p>
+         * <p>The lock state. Valid values:</p>
          * <ul>
-         * <li>Unlock: The instance is not locked.</li>
+         * <li>Unlock: The instance is unlocked.</li>
          * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
          * <li>ManualLock: The instance is manually locked.</li>
          * </ul>
@@ -229,7 +239,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The name of the application</p>
          * 
          * <strong>example:</strong>
          * <p>lsh_test_1</p>
@@ -238,10 +248,10 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the order is complete. Valid values:</p>
+         * <p>Indicates whether the application is created. Valid values:</p>
          * <ul>
-         * <li>0: The order is in progress.</li>
-         * <li>1: The order is complete.</li>
+         * <li>0: The application is being created.</li>
+         * <li>1: The application is created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,17 +275,23 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         @NameInMap("quota")
         public ModifyAppGroupQuotaResponseBodyResultQuota quota;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmoiyerh6nzly</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The status of the application. Valid values:</p>
+         * <p>The state of the application. Valid values:</p>
          * <ul>
-         * <li>producing</li>
-         * <li>review_pending</li>
-         * <li>config_pending</li>
-         * <li>normal</li>
-         * <li>frozen</li>
+         * <li>producing: The application is being created.</li>
+         * <li>review_pending: The application is being reviewed.</li>
+         * <li>config_pending: The application is to be configured.</li>
+         * <li>normal: The application is in service.</li>
+         * <li>frozen: The application is frozen.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,9 +312,9 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         /**
          * <p>The type of the application. Valid values:</p>
          * <ul>
-         * <li>standard: a standard application.</li>
-         * <li>advance: an advanced application which is of an old application type. New applications cannot be of this type.</li>
-         * <li>enhanced: an advanced application which is of a new application type.</li>
+         * <li>standard: a standard edition application.</li>
+         * <li>advance: an advanced edition application of an old version. New versions are not supported for this edition.</li>
+         * <li>enhanced: an advanced edition application of a new version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,7 +324,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The timestamp when the application was last updated.</p>
+         * <p>The timestamp when the application was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1590978265</p>

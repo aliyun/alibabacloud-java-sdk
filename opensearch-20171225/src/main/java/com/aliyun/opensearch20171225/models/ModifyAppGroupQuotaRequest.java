@@ -10,8 +10,16 @@ public class ModifyAppGroupQuotaRequest extends TeaModel {
     @NameInMap("body")
     public Quota body;
 
+    @NameInMap("clientToken")
+    public String clientToken;
+
     /**
-     * <p>Specifies whether to verify the application before modification. Valid values: true and false.</p>
+     * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: checks only the validity of input parameters.</li>
+     * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -30,6 +38,14 @@ public class ModifyAppGroupQuotaRequest extends TeaModel {
     }
     public Quota getBody() {
         return this.body;
+    }
+
+    public ModifyAppGroupQuotaRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyAppGroupQuotaRequest setDryRun(Boolean dryRun) {

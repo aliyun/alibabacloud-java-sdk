@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataCollectionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>959D8782-B130-95EB-86CC-1F6ED447981F</p>
@@ -14,14 +14,14 @@ public class ListDataCollectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the data collection tasks.</p>
+     * <p>The details of the data collection task.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173605.html">DataCollection</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListDataCollectionsResponseBodyResult> result;
 
     /**
-     * <p>The total number of the returned data collection tasks.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
 
     public static class ListDataCollectionsResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the data collection task was created.</p>
+         * <p>The time when the task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1581065837</p>
@@ -69,11 +69,11 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The type of the data that is collected by the task. Valid values:</p>
+         * <p>The type of data collected. Valid values:</p>
          * <ul>
-         * <li>behavior: behavioral data</li>
-         * <li>item_info: project data</li>
-         * <li>industry_specific: industry-specific data</li>
+         * <li>behavior: behavioral data.</li>
+         * <li>item_info: project information.</li>
+         * <li>industry_specific: industry-specific data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String dataCollectionType;
 
         /**
-         * <p>The ID of the data collection task.</p>
+         * <p>The data collection ID.</p>
          * 
          * <strong>example:</strong>
          * <p>286</p>
@@ -92,7 +92,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The industry to which the data collection task applies. Valid values:</p>
+         * <p>The industry name. Valid values:</p>
          * <ul>
          * <li>general</li>
          * <li>ecommerce</li>
@@ -114,12 +114,12 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the data collection task. Valid values:</p>
+         * <p>The status of the data collection feature. Valid values:</p>
          * <ul>
-         * <li>0: disabled</li>
-         * <li>1: being enabled</li>
-         * <li>2: enabled</li>
-         * <li>3: failed to be enabled</li>
+         * <li>0: The feature is disabled.</li>
+         * <li>1: The feature is being enabled.</li>
+         * <li>2: The feature is enabled.</li>
+         * <li>3: The feature failed to be enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The ID of the sundial.</p>
+         * <p>The sundial ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1755</p>
@@ -138,13 +138,13 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String sundialId;
 
         /**
-         * <p>The type of the data source. Valid values:</p>
+         * <p>The type of the source from which data was collected. Valid values:</p>
          * <ul>
          * <li>server</li>
          * <li>web</li>
          * <li>app</li>
          * </ul>
-         * <p>Note: Only server is supported.</p>
+         * <p>Only server is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>server</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeABTestGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -60,7 +60,7 @@ public class DescribeABTestGroupResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the test group.</p>
+         * <p>The alias of the test group.</p>
          * 
          * <strong>example:</strong>
          * <p>Group_2020-5-7_15:23:3</p>
@@ -82,7 +82,7 @@ public class DescribeABTestGroupResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the test group was last modified.</p>
+         * <p>The time when the test group was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1588839490</p>

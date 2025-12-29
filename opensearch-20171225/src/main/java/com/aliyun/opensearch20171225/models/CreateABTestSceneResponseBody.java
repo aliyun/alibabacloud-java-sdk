@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateABTestSceneResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -14,7 +14,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("result")
     public CreateABTestSceneResponseBodyResult result;
@@ -60,7 +60,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the test group.</p>
+         * <p>The name of the A/B test group.</p>
          * 
          * <strong>example:</strong>
          * <p>kevintest_2020-5-7_15:21:48</p>
@@ -69,7 +69,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the test scenario. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
          * <li>0: not in effect</li>
          * <li>1: in effect</li>
@@ -82,7 +82,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the test scenario was last modified.</p>
+         * <p>The time when the test scenario was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1589012351</p>
@@ -91,7 +91,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public Integer updated;
 
         /**
-         * <p>The tag of the test scenario.</p>
+         * <p>The ID of the test scenario</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;

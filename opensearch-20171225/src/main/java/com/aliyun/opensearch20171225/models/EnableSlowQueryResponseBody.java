@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableSlowQueryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>728E89C6-8673-D39B-39A1-5BA2B56D448F</p>
@@ -14,7 +14,7 @@ public class EnableSlowQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return result.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

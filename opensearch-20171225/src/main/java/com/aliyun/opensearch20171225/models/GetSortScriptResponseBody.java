@@ -50,6 +50,9 @@ public class GetSortScriptResponseBody extends TeaModel {
         @NameInMap("createTime")
         public String createTime;
 
+        @NameInMap("description")
+        public String description;
+
         /**
          * <p>The time when the script was last modified.</p>
          * 
@@ -106,6 +109,14 @@ public class GetSortScriptResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetSortScriptResponseBodyResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetSortScriptResponseBodyResult setModifyTime(String modifyTime) {

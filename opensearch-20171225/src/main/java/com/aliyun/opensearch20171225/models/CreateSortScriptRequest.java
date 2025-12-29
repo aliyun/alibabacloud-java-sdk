@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateSortScriptRequest extends TeaModel {
+    @NameInMap("description")
+    public String description;
+
     /**
      * <p>The sort phase to which the script applies.</p>
      * 
@@ -34,6 +37,14 @@ public class CreateSortScriptRequest extends TeaModel {
     public static CreateSortScriptRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSortScriptRequest self = new CreateSortScriptRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSortScriptRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateSortScriptRequest setScope(String scope) {

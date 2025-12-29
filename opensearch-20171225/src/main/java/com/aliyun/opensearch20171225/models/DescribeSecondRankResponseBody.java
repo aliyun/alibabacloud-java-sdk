@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecondRankResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
@@ -42,7 +42,7 @@ public class DescribeSecondRankResponseBody extends TeaModel {
 
     public static class DescribeSecondRankResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the expression is the default one.</p>
+         * <p>Specifies whether to set the fine sort expression as the default sort expression.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class DescribeSecondRankResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The description of the expression.</p>
+         * <p>Description</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -106,8 +106,7 @@ public class DescribeSecondRankResponseBody extends TeaModel {
         public String isSys;
 
         /**
-         * <p>The content of the fine sort expression.</p>
-         * <p>You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+         * <p>The content of the fine sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
          * 
          * <strong>example:</strong>
          * <p>random()+now()</p>
@@ -116,7 +115,7 @@ public class DescribeSecondRankResponseBody extends TeaModel {
         public String meta;
 
         /**
-         * <p>The name of the expression.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>tests</p>
@@ -125,7 +124,7 @@ public class DescribeSecondRankResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the expression was last updated.</p>
+         * <p>The time when the expression was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1587052801</p>

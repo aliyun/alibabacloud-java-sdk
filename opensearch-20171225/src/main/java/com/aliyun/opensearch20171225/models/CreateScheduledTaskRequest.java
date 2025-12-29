@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledTaskRequest extends TeaModel {
     /**
-     * <p>请求体</p>
+     * <p>The request body.</p>
      */
     @NameInMap("body")
     public ScheduledTask body;

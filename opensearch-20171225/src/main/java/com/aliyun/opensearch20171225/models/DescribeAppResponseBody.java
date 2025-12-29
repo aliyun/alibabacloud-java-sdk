@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>33477D76-C380-1D84-A4AD-043F52876CB1</p>
@@ -14,7 +14,7 @@ public class DescribeAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the version.</p>
+     * <p>The version information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -44,9 +44,21 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultCluster extends TeaModel {
+        /**
+         * <p>The maximum length of the query clause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("maxQueryClauseLength")
         public Integer maxQueryClauseLength;
 
+        /**
+         * <p>The timeout period. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>750</p>
+         */
         @NameInMap("maxTimeoutMS")
         public Integer maxTimeoutMS;
 
@@ -74,24 +86,98 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultDataSources extends TeaModel {
+        /**
+         * <p>The information about field mappings.</p>
+         */
         @NameInMap("fields")
         public java.util.List<java.util.Map<String, ?>> fields;
 
+        /**
+         * <p>The primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("keyField")
         public String keyField;
 
+        /**
+         * <p>The information about the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;instanceId&quot;: &quot;rds-instance-id&quot;,
+         *   &quot;dbName&quot;: &quot;my_db&quot;,
+         *   &quot;dbTableName&quot;: &quot;my_table&quot;,
+         *   &quot;dbUser&quot;: &quot;my&quot;,
+         *   &quot;dbPassword&quot;: &quot;my_passwd&quot;,
+         *   &quot;filter&quot;:&quot;&quot;,
+         *   &quot;autoSync&quot;: true
+         * }</p>
+         */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
 
+        /**
+         * <p>The plug-ins that are used for data processing.</p>
+         * <p>name:</p>
+         * <ul>
+         * <li>JsonKeyValueExtractor</li>
+         * <li>MultiValueSpliter</li>
+         * <li>KeyValueExtractor</li>
+         * <li>StringCatenateExtractor</li>
+         * <li>HTMLTagRemover</li>
+         * </ul>
+         * <p>parameters:</p>
+         * <ul>
+         * <li>JsonKeyValueExtractor</li>
+         * <li>MultiValueSpliter</li>
+         * <li>KeyValueExtractor</li>
+         * <li>StringCatenateExtractor</li>
+         * <li>HTMLTagRemover</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;name&quot;: &quot;JsonKeyValueExtractor&quot;,
+         *   &quot;parameters&quot;: {
+         *   &quot;key&quot;: &quot;my_field&quot;
+         * }
+         * }</p>
+         */
         @NameInMap("plugins")
         public java.util.Map<String, ?> plugins;
 
+        /**
+         * <p>The name of the wide table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("schemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table in the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
+         */
         @NameInMap("tableName")
         public String tableName;
 
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>rds</li>
+         * <li>odps</li>
+         * <li>opensearch</li>
+         * <li>polardb</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -160,7 +246,7 @@ public class DescribeAppResponseBody extends TeaModel {
 
     public static class DescribeAppResponseBodyResultDomainFunctions extends TeaModel {
         /**
-         * <p>Algorithm structure</p>
+         * <p>The structure of the algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -169,7 +255,7 @@ public class DescribeAppResponseBody extends TeaModel {
         public java.util.List<String> algo;
 
         /**
-         * <p>Queryprocessor description</p>
+         * <p>The information about the layout.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -178,7 +264,7 @@ public class DescribeAppResponseBody extends TeaModel {
         public java.util.List<String> qp;
 
         /**
-         * <p>Function description</p>
+         * <p>The description of each feature.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -219,7 +305,7 @@ public class DescribeAppResponseBody extends TeaModel {
 
     public static class DescribeAppResponseBodyResultDomain extends TeaModel {
         /**
-         * <p>The category. By default, this parameter is left empty.</p>
+         * <p>The type of the edition. Valid values: standard, advance, and enhanced. A value of standard indicates a standard edition. A value of advance indicates an advanced edition which is of an old version. New version is not supported for this edition. A value of enhanced indicates an advanced edition which is of a new version.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -230,7 +316,7 @@ public class DescribeAppResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>search functions</p>
+         * <p>The search results.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -239,7 +325,7 @@ public class DescribeAppResponseBody extends TeaModel {
         public DescribeAppResponseBodyResultDomainFunctions functions;
 
         /**
-         * <p>The name</p>
+         * <p>The name (in English).</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -279,18 +365,56 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultFirstRanks extends TeaModel {
+        /**
+         * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The information about the expression. The information can be of the array or string type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String :&quot;random()*100+now()&quot;;
+         * Array: [
+         *     {
+         *       &quot;attribute&quot;: &quot;static_bm25()&quot;,
+         *       &quot;arg&quot;: &quot;&quot;,
+         *       &quot;weight&quot;: 10
+         *     }
+         *   ]</p>
+         */
         @NameInMap("meta")
         public Object meta;
 
+        /**
+         * <p>The name of the rough sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The expression type. Valid values:</p>
+         * <p>STRUCT: The content of the expression is a structure. STRING (default): custom formula.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -342,21 +466,56 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultQueryProcessors extends TeaModel {
+        /**
+         * <p>Indicates whether the rule is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The industry category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("category")
         public String category;
 
+        /**
+         * <p>The industry type. Valid values:</p>
+         * <ul>
+         * <li>GENERAL</li>
+         * <li>ECOMMERCE</li>
+         * <li>IT_CONTENT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GENERAL</p>
+         */
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>Then index range.</p>
+         */
         @NameInMap("indexes")
         public java.util.List<String> indexes;
 
+        /**
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The features.</p>
+         */
         @NameInMap("processors")
         public java.util.List<java.util.Map<String, ?>> processors;
 
@@ -417,7 +576,7 @@ public class DescribeAppResponseBody extends TeaModel {
 
     public static class DescribeAppResponseBodyResultQuota extends TeaModel {
         /**
-         * <p>The computing resources. Unit: logical computing units (LCUs).</p>
+         * <p>The computing resources. Unit: logical computing unit (LCU).</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -444,7 +603,7 @@ public class DescribeAppResponseBody extends TeaModel {
         public Integer qps;
 
         /**
-         * <p>The specifications of the application. Valid values:</p>
+         * <p>The specifications. Valid values:</p>
          * <ul>
          * <li>opensearch.share.junior: basic</li>
          * <li>opensearch.share.common: shared general-purpose</li>
@@ -501,9 +660,25 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSchemaIndexSortConfig extends TeaModel {
+        /**
+         * <p>The sort method. Valid values:</p>
+         * <ul>
+         * <li>ASC</li>
+         * <li>DESC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
+         */
         @NameInMap("direction")
         public String direction;
 
+        /**
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field1</p>
+         */
         @NameInMap("field")
         public String field;
 
@@ -531,9 +706,21 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSchemaIndexes extends TeaModel {
+        /**
+         * <p>The attribute fields.</p>
+         */
         @NameInMap("filterFields")
         public java.util.List<String> filterFields;
 
+        /**
+         * <p>The index fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;fields&quot;: [&quot;title&quot;],
+         *   &quot;analyzer&quot;: &quot;chn_standard&quot;
+         * }</p>
+         */
         @NameInMap("searchFields")
         public java.util.Map<String, ?> searchFields;
 
@@ -561,9 +748,21 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSchemaTtlField extends TeaModel {
+        /**
+         * <p>The document time field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The TTL. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ttl")
         public Long ttl;
 
@@ -591,27 +790,93 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSchema extends TeaModel {
+        /**
+         * <p>The sort configurations.</p>
+         */
         @NameInMap("indexSortConfig")
         public java.util.List<DescribeAppResponseBodyResultSchemaIndexSortConfig> indexSortConfig;
 
+        /**
+         * <p>The index schema.</p>
+         */
         @NameInMap("indexes")
         public DescribeAppResponseBodyResultSchemaIndexes indexes;
 
+        /**
+         * <p>The name of the wide table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of the level-1 routing field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field1</p>
+         */
         @NameInMap("routeField")
         public String routeField;
 
+        /**
+         * <p>The hot values of the level-1 routing field.</p>
+         */
         @NameInMap("routeFieldValues")
         public java.util.List<String> routeFieldValues;
 
+        /**
+         * <p>The name of the level-2 routing field. This parameter takes effect only when the routeFieldValues parameter is configured. By default, the wide-table primary key field is used as the level-2 routing field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field2</p>
+         */
         @NameInMap("secondRouteField")
         public String secondRouteField;
 
+        /**
+         * <p>The table schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;primaryTable&quot;: true,
+         *     &quot;name&quot;: &quot;main&quot;,
+         *     &quot;fields&quot;: {
+         *         &quot;id&quot;: {
+         *             &quot;name&quot;: &quot;id&quot;,
+         *             &quot;type&quot;: &quot;LITERAL&quot;,
+         *             &quot;primaryKey&quot;: true
+         *         },
+         *         &quot;title&quot;: {
+         *             &quot;name&quot;: &quot;title&quot;,
+         *             &quot;type&quot;: &quot;TEXT&quot;,
+         *             &quot;primaryKey&quot;: false
+         *         },
+         *         &quot;buy&quot;: {
+         *             &quot;name&quot;: &quot;buy&quot;,
+         *             &quot;type&quot;: &quot;INT&quot;,
+         *             &quot;primaryKey&quot;: false
+         *         },
+         *         &quot;cate_id&quot;: {
+         *             &quot;name&quot;: &quot;cate_id&quot;,
+         *             &quot;type&quot;: &quot;INT&quot;,
+         *             &quot;primaryKey&quot;: false
+         *         },
+         *         &quot;cate_name&quot;: {
+         *             &quot;name&quot;: &quot;cate_name&quot;,
+         *             &quot;type&quot;: &quot;LITERAL&quot;,
+         *             &quot;primaryKey&quot;: false
+         *         }
+         *     }
+         * }</p>
+         */
         @NameInMap("tables")
         public java.util.Map<String, ?> tables;
 
+        /**
+         * <p>The document clearing configurations.</p>
+         */
         @NameInMap("ttlField")
         public DescribeAppResponseBodyResultSchemaTtlField ttlField;
 
@@ -687,9 +952,25 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSchemasIndexSortConfig extends TeaModel {
+        /**
+         * <p>The sort method. Valid values:</p>
+         * <ul>
+         * <li>ASC</li>
+         * <li>DESC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
+         */
         @NameInMap("direction")
         public String direction;
 
+        /**
+         * <p>The sort field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fIeld1</p>
+         */
         @NameInMap("field")
         public String field;
 
@@ -717,9 +998,21 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSchemasIndexes extends TeaModel {
+        /**
+         * <p>The attribute fields.</p>
+         */
         @NameInMap("filterFields")
         public java.util.List<String> filterFields;
 
+        /**
+         * <p>The index fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;fields&quot;: [&quot;title&quot;],
+         *   &quot;analyzer&quot;: &quot;chn_standard&quot;
+         * }</p>
+         */
         @NameInMap("searchFields")
         public java.util.Map<String, ?> searchFields;
 
@@ -747,9 +1040,21 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSchemasTtlField extends TeaModel {
+        /**
+         * <p>The document time field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fIeld1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The TTL. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ttl")
         public Long ttl;
 
@@ -777,27 +1082,93 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSchemas extends TeaModel {
+        /**
+         * <p>The sort configurations.</p>
+         */
         @NameInMap("indexSortConfig")
         public java.util.List<DescribeAppResponseBodyResultSchemasIndexSortConfig> indexSortConfig;
 
+        /**
+         * <p>The index schema.</p>
+         */
         @NameInMap("indexes")
         public DescribeAppResponseBodyResultSchemasIndexes indexes;
 
+        /**
+         * <p>The name of the wide table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of the level-1 routing field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field1</p>
+         */
         @NameInMap("routeField")
         public String routeField;
 
+        /**
+         * <p>The hot values of the level-1 routing field.</p>
+         */
         @NameInMap("routeFieldValues")
         public java.util.List<String> routeFieldValues;
 
+        /**
+         * <p>The name of the level-2 routing field. This parameter takes effect only when the routeFieldValues parameter is configured. By default, the wide-table primary key field is used as the level-2 routing field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field2</p>
+         */
         @NameInMap("secondRouteField")
         public String secondRouteField;
 
+        /**
+         * <p>The table schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;primaryTable&quot;: true,
+         *     &quot;name&quot;: &quot;main&quot;,
+         *     &quot;fields&quot;: {
+         *         &quot;id&quot;: {
+         *             &quot;name&quot;: &quot;id&quot;,
+         *             &quot;type&quot;: &quot;LITERAL&quot;,
+         *             &quot;primaryKey&quot;: true
+         *         },
+         *         &quot;title&quot;: {
+         *             &quot;name&quot;: &quot;title&quot;,
+         *             &quot;type&quot;: &quot;TEXT&quot;,
+         *             &quot;primaryKey&quot;: false
+         *         },
+         *         &quot;buy&quot;: {
+         *             &quot;name&quot;: &quot;buy&quot;,
+         *             &quot;type&quot;: &quot;INT&quot;,
+         *             &quot;primaryKey&quot;: false
+         *         },
+         *         &quot;cate_id&quot;: {
+         *             &quot;name&quot;: &quot;cate_id&quot;,
+         *             &quot;type&quot;: &quot;INT&quot;,
+         *             &quot;primaryKey&quot;: false
+         *         },
+         *         &quot;cate_name&quot;: {
+         *             &quot;name&quot;: &quot;cate_name&quot;,
+         *             &quot;type&quot;: &quot;LITERAL&quot;,
+         *             &quot;primaryKey&quot;: false
+         *         }
+         *     }
+         * }</p>
+         */
         @NameInMap("tables")
         public java.util.Map<String, ?> tables;
 
+        /**
+         * <p>The document clearing configurations.</p>
+         */
         @NameInMap("ttlField")
         public DescribeAppResponseBodyResultSchemasTtlField ttlField;
 
@@ -873,15 +1244,39 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSecondRanks extends TeaModel {
+        /**
+         * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("active")
         public Boolean active;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The fine sort expression. You can define an expression that contains fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;cate_id &gt; 0 and cate_id &lt; 1000&quot;</p>
+         */
         @NameInMap("meta")
         public Object meta;
 
+        /**
+         * <p>The name of the fine sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -925,18 +1320,48 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSummariesMeta extends TeaModel {
+        /**
+         * <p>The element that is used for highlighting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>em</p>
+         */
         @NameInMap("element")
         public String element;
 
+        /**
+         * <p>The connector that is used to connect segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>...</p>
+         */
         @NameInMap("ellipsis")
         public String ellipsis;
 
+        /**
+         * <p>The field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>field1</p>
+         */
         @NameInMap("field")
         public String field;
 
+        /**
+         * <p>The length of the segment. Valid values: 1 to 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("len")
         public Integer len;
 
+        /**
+         * <p>The number of segments. Valid values: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("snippet")
         public String snippet;
 
@@ -988,9 +1413,18 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     public static class DescribeAppResponseBodyResultSummaries extends TeaModel {
+        /**
+         * <p>The summary configurations.</p>
+         */
         @NameInMap("meta")
         public java.util.List<DescribeAppResponseBodyResultSummariesMeta> meta;
 
+        /**
+         * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -1019,7 +1453,7 @@ public class DescribeAppResponseBody extends TeaModel {
 
     public static class DescribeAppResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the version is automatically published to the online environment.</p>
+         * <p>Indicates whether the version is automatically switched to an online version.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1027,11 +1461,14 @@ public class DescribeAppResponseBody extends TeaModel {
         @NameInMap("autoSwitch")
         public Boolean autoSwitch;
 
+        /**
+         * <p>The capability opening configurations.</p>
+         */
         @NameInMap("cluster")
         public DescribeAppResponseBodyResultCluster cluster;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1041,6 +1478,9 @@ public class DescribeAppResponseBody extends TeaModel {
         @NameInMap("clusterName")
         public String clusterName;
 
+        /**
+         * <p>The configurations of the data sources.</p>
+         */
         @NameInMap("dataSources")
         public java.util.List<DescribeAppResponseBodyResultDataSources> dataSources;
 
@@ -1056,7 +1496,7 @@ public class DescribeAppResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of the industry. Valid values:</p>
+         * <p>The industry type. Valid values:</p>
          * <ul>
          * <li>GENERAL</li>
          * <li>ECOMMERCE</li>
@@ -1078,11 +1518,14 @@ public class DescribeAppResponseBody extends TeaModel {
         @NameInMap("fetchFields")
         public java.util.List<String> fetchFields;
 
+        /**
+         * <p>The configurations of rough sort.</p>
+         */
         @NameInMap("firstRanks")
         public java.util.List<DescribeAppResponseBodyResultFirstRanks> firstRanks;
 
         /**
-         * <p>The ID of the version.</p>
+         * <p>The version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100303063</p>
@@ -1090,9 +1533,21 @@ public class DescribeAppResponseBody extends TeaModel {
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The industry model module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;table&quot;: &quot;table1&quot;, &quot;fields&quot;: [ { &quot;name&quot;: &quot;field1&quot;, &quot;interpretation&quot;: &quot;Title&quot; }, { &quot;name&quot;: &quot;field2&quot;, &quot;interpretation&quot;: &quot;Number&quot; } ] } ]</p>
+         */
         @NameInMap("interpretations")
         public java.util.Map<String, ?> interpretations;
 
+        /**
+         * <p>Indices whether the version is an online version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("isCurrent")
         public Boolean isCurrent;
 
@@ -1105,14 +1560,20 @@ public class DescribeAppResponseBody extends TeaModel {
         @NameInMap("progressPercent")
         public Integer progressPercent;
 
+        /**
+         * <p>The prompt configurations.</p>
+         */
         @NameInMap("prompts")
         public java.util.List<java.util.Map<String, ?>> prompts;
 
+        /**
+         * <p>The query intent understanding configurations.</p>
+         */
         @NameInMap("queryProcessors")
         public java.util.List<DescribeAppResponseBodyResultQueryProcessors> queryProcessors;
 
         /**
-         * <p>The quota information about the version.</p>
+         * <p>The quota information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -1121,7 +1582,7 @@ public class DescribeAppResponseBody extends TeaModel {
         public DescribeAppResponseBodyResultQuota quota;
 
         /**
-         * <p>The application schema.</p>
+         * <p>The schema of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -1129,22 +1590,28 @@ public class DescribeAppResponseBody extends TeaModel {
         @NameInMap("schema")
         public DescribeAppResponseBodyResultSchema schema;
 
+        /**
+         * <p>The multi-table schema.</p>
+         */
         @NameInMap("schemas")
         public java.util.List<DescribeAppResponseBodyResultSchemas> schemas;
 
+        /**
+         * <p>The configurations of fine sort.</p>
+         */
         @NameInMap("secondRanks")
         public java.util.List<DescribeAppResponseBodyResultSecondRanks> secondRanks;
 
         /**
          * <p>The status of the version. Valid values:</p>
          * <ul>
-         * <li>ok</li>
-         * <li>stopped</li>
-         * <li>frozen</li>
-         * <li>initializing</li>
-         * <li>unavailable</li>
-         * <li>data_waiting</li>
-         * <li>data_preparing</li>
+         * <li>ok: The version is normal.</li>
+         * <li>stopped: The version is suspended.</li>
+         * <li>frozen: The version is frozen.</li>
+         * <li>initializing: The version is being initialized.</li>
+         * <li>unavailable: The version is invalid.</li>
+         * <li>data_waiting: Data is to be initialized.</li>
+         * <li>data_preparing: Data is being initialized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1153,15 +1620,18 @@ public class DescribeAppResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The summary configurations of search results.</p>
+         */
         @NameInMap("summaries")
         public java.util.List<DescribeAppResponseBodyResultSummaries> summaries;
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The edition type. Valid values:</p>
          * <ul>
-         * <li>standard: a standard application.</li>
-         * <li>advance: an advanced application which is of an old application type. New applications cannot be of this type.</li>
-         * <li>enhanced: an advanced application which is of a new application type.</li>
+         * <li>standard: a standard edition application.</li>
+         * <li>advance: an advanced edition application of an old version. New versions are not supported for this edition.</li>
+         * <li>enhanced: an advanced edition application of a new version.</li>
          * </ul>
          * 
          * <strong>example:</strong>

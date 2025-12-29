@@ -50,8 +50,8 @@ public class CreateUserAnalyzerRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.</p>
-     * <p>Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
+     * Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>

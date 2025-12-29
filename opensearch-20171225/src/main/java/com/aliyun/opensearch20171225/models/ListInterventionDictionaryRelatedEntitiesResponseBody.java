@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInterventionDictionaryRelatedEntitiesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -14,7 +14,7 @@ public class ListInterventionDictionaryRelatedEntitiesResponseBody extends TeaMo
     public String requestId;
 
     /**
-     * <p>The information about each application and each query analysis rule. If no query analysis rule references the intervention dictionary, the value of the result parameter is an empty list.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("result")
     public java.util.List<java.util.Map<String, ?>> result;

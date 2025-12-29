@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUserAnalyzerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -14,7 +14,7 @@ public class RemoveUserAnalyzerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>N/A</p>
+     * <p>The result set. This parameter is not returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>

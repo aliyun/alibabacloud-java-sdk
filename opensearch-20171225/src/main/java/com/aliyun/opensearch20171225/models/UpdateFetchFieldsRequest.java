@@ -11,7 +11,7 @@ public class UpdateFetchFieldsRequest extends TeaModel {
     public java.util.List<String> body;
 
     /**
-     * <p>true</p>
+     * <p>Specifies whether the request is a dry run.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

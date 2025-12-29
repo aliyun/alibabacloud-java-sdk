@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABCDEFGH</p>
@@ -14,7 +14,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the scheduled task.</p>
+     * <p>For more information about a scheduled task, see <a href="https://help.aliyun.com/document_detail/173610.html">ScheduledTask</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

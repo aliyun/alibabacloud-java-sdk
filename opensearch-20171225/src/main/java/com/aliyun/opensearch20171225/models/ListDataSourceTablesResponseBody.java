@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceTablesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
@@ -13,9 +13,6 @@ public class ListDataSourceTablesResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <p>The data tables.</p>
-     */
     @NameInMap("result")
     public java.util.List<String> result;
 

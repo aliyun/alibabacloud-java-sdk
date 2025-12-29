@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateABTestSceneRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The ABTest scenario. For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a></p>
      */
     @NameInMap("body")
     public ABTestScene body;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.</p>
+     * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: checks only the validity of input parameters.</li>
+     * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveInterventionDictionaryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>06BBD41A-5F72-34E4-2DAF-E43B0526051D</p>
@@ -60,7 +60,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The name of the intervention dictionary.</p>
+         * <p>Parameter</p>
          * 
          * <strong>example:</strong>
          * <p>tongyici</p>
@@ -69,14 +69,14 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the intervention dictionary. Valid values:</p>
+         * <p>Type</p>
          * <ul>
-         * <li>stopword: an intervention dictionary for stop word filtering</li>
-         * <li>synonym: an intervention dictionary for synonym configuration</li>
-         * <li>correction: an intervention dictionary for spelling correction</li>
-         * <li>category_prediction: an intervention dictionary for category prediction</li>
-         * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
-         * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+         * <li>stopword: an intervention dictionary for stop word filtering.</li>
+         * <li>synonym: an intervention dictionary for synonym configuration.</li>
+         * <li>correction: an intervention dictionary for spelling correction.</li>
+         * <li>category_prediction: an intervention dictionary for category prediction.</li>
+         * <li>ner: an intervention dictionary for named entity recognition.</li>
+         * <li>term_weighting: an intervention dictionary for term weight analysis.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the intervention dictionary was last updated.</p>
+         * <p>The time when the the intervention dictionary was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1539158313</p>

@@ -14,7 +14,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>Response parameters</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -188,6 +188,12 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3</p>
+         */
         @NameInMap("engineType")
         public String engineType;
 
@@ -285,6 +291,12 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         @NameInMap("quota")
         public ModifyAppGroupResponseBodyResultQuota quota;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmoiyerh6nzly</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
