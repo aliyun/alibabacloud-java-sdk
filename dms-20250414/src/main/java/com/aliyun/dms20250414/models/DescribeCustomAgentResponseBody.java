@@ -1,0 +1,414 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dms20250414.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeCustomAgentResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public DescribeCustomAgentResponseBodyData data;
+
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Specified parameter Tid is not valid.</p>
+     */
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static DescribeCustomAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeCustomAgentResponseBody self = new DescribeCustomAgentResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeCustomAgentResponseBody setData(DescribeCustomAgentResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeCustomAgentResponseBodyData getData() {
+        return this.data;
+    }
+
+    public DescribeCustomAgentResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public DescribeCustomAgentResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public DescribeCustomAgentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCustomAgentResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class DescribeCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("SkipPlan")
+        public Boolean skipPlan;
+
+        public static DescribeCustomAgentResponseBodyDataExecutionConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomAgentResponseBodyDataExecutionConfig self = new DescribeCustomAgentResponseBodyDataExecutionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomAgentResponseBodyDataExecutionConfig setSkipPlan(Boolean skipPlan) {
+            this.skipPlan = skipPlan;
+            return this;
+        }
+        public Boolean getSkipPlan() {
+            return this.skipPlan;
+        }
+
+    }
+
+    public static class DescribeCustomAgentResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>16738266********</p>
+         */
+        @NameInMap("AliyunParentUid")
+        public String aliyunParentUid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>20372822********</p>
+         */
+        @NameInMap("AliyunUid")
+        public String aliyunUid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HaoY*****</p>
+         */
+        @NameInMap("CreatorUserName")
+        public String creatorUserName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ca-4y3ca4khkcu**********ysf</p>
+         */
+        @NameInMap("CustomAgentId")
+        public String customAgentId;
+
+        @NameInMap("DataJson")
+        public String dataJson;
+
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("DmsUnit")
+        public String dmsUnit;
+
+        @NameInMap("ExecutionConfig")
+        public DescribeCustomAgentResponseBodyDataExecutionConfig executionConfig;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2025-12-11T14:04:32.000+00:00</p>
+         */
+        @NameInMap("GmtCreated")
+        public String gmtCreated;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2025-12-11T14:04:32.000+00:00</p>
+         */
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        @NameInMap("Instruction")
+        public String instruction;
+
+        @NameInMap("Knowledge")
+        public String knowledge;
+
+        /**
+         * <strong>example:</strong>
+         * <p>20372822********</p>
+         */
+        @NameInMap("Modifier")
+        public String modifier;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HaoY*****</p>
+         */
+        @NameInMap("ModifierUserName")
+        public String modifierUserName;
+
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2025-12-11T14:04:32.000+00:00</p>
+         */
+        @NameInMap("OfflineTime")
+        public String offlineTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("Region")
+        public String region;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2025-12-11T14:04:32.000+00:00</p>
+         */
+        @NameInMap("ReleaseTime")
+        public String releaseTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>RELEASED</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TextReportConfig")
+        public String textReportConfig;
+
+        @NameInMap("WebReportConfig")
+        public String webReportConfig;
+
+        /**
+         * <strong>example:</strong>
+         * <p>56kv1pvl9uvt9**********bb</p>
+         */
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
+
+        public static DescribeCustomAgentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomAgentResponseBodyData self = new DescribeCustomAgentResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomAgentResponseBodyData setAliyunParentUid(String aliyunParentUid) {
+            this.aliyunParentUid = aliyunParentUid;
+            return this;
+        }
+        public String getAliyunParentUid() {
+            return this.aliyunParentUid;
+        }
+
+        public DescribeCustomAgentResponseBodyData setAliyunUid(String aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
+        public String getAliyunUid() {
+            return this.aliyunUid;
+        }
+
+        public DescribeCustomAgentResponseBodyData setCreatorUserName(String creatorUserName) {
+            this.creatorUserName = creatorUserName;
+            return this;
+        }
+        public String getCreatorUserName() {
+            return this.creatorUserName;
+        }
+
+        public DescribeCustomAgentResponseBodyData setCustomAgentId(String customAgentId) {
+            this.customAgentId = customAgentId;
+            return this;
+        }
+        public String getCustomAgentId() {
+            return this.customAgentId;
+        }
+
+        public DescribeCustomAgentResponseBodyData setDataJson(String dataJson) {
+            this.dataJson = dataJson;
+            return this;
+        }
+        public String getDataJson() {
+            return this.dataJson;
+        }
+
+        public DescribeCustomAgentResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeCustomAgentResponseBodyData setDmsUnit(String dmsUnit) {
+            this.dmsUnit = dmsUnit;
+            return this;
+        }
+        public String getDmsUnit() {
+            return this.dmsUnit;
+        }
+
+        public DescribeCustomAgentResponseBodyData setExecutionConfig(DescribeCustomAgentResponseBodyDataExecutionConfig executionConfig) {
+            this.executionConfig = executionConfig;
+            return this;
+        }
+        public DescribeCustomAgentResponseBodyDataExecutionConfig getExecutionConfig() {
+            return this.executionConfig;
+        }
+
+        public DescribeCustomAgentResponseBodyData setGmtCreated(String gmtCreated) {
+            this.gmtCreated = gmtCreated;
+            return this;
+        }
+        public String getGmtCreated() {
+            return this.gmtCreated;
+        }
+
+        public DescribeCustomAgentResponseBodyData setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public DescribeCustomAgentResponseBodyData setInstruction(String instruction) {
+            this.instruction = instruction;
+            return this;
+        }
+        public String getInstruction() {
+            return this.instruction;
+        }
+
+        public DescribeCustomAgentResponseBodyData setKnowledge(String knowledge) {
+            this.knowledge = knowledge;
+            return this;
+        }
+        public String getKnowledge() {
+            return this.knowledge;
+        }
+
+        public DescribeCustomAgentResponseBodyData setModifier(String modifier) {
+            this.modifier = modifier;
+            return this;
+        }
+        public String getModifier() {
+            return this.modifier;
+        }
+
+        public DescribeCustomAgentResponseBodyData setModifierUserName(String modifierUserName) {
+            this.modifierUserName = modifierUserName;
+            return this;
+        }
+        public String getModifierUserName() {
+            return this.modifierUserName;
+        }
+
+        public DescribeCustomAgentResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeCustomAgentResponseBodyData setOfflineTime(String offlineTime) {
+            this.offlineTime = offlineTime;
+            return this;
+        }
+        public String getOfflineTime() {
+            return this.offlineTime;
+        }
+
+        public DescribeCustomAgentResponseBodyData setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeCustomAgentResponseBodyData setReleaseTime(String releaseTime) {
+            this.releaseTime = releaseTime;
+            return this;
+        }
+        public String getReleaseTime() {
+            return this.releaseTime;
+        }
+
+        public DescribeCustomAgentResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeCustomAgentResponseBodyData setTextReportConfig(String textReportConfig) {
+            this.textReportConfig = textReportConfig;
+            return this;
+        }
+        public String getTextReportConfig() {
+            return this.textReportConfig;
+        }
+
+        public DescribeCustomAgentResponseBodyData setWebReportConfig(String webReportConfig) {
+            this.webReportConfig = webReportConfig;
+            return this;
+        }
+        public String getWebReportConfig() {
+            return this.webReportConfig;
+        }
+
+        public DescribeCustomAgentResponseBodyData setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
+        }
+
+    }
+
+}
