@@ -20,6 +20,13 @@ public class RunTextPolishingRequest extends TeaModel {
     public String prompt;
 
     /**
+     * <strong>example:</strong>
+     * <p>taskld-xxxxx</p>
+     */
+    @NameInMap("TaskId")
+    public String taskId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +62,14 @@ public class RunTextPolishingRequest extends TeaModel {
     }
     public String getPrompt() {
         return this.prompt;
+    }
+
+    public RunTextPolishingRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public RunTextPolishingRequest setWorkspaceId(String workspaceId) {

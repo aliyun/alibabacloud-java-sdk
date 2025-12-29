@@ -9689,6 +9689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Prompt", request.prompt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
