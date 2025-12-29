@@ -4890,6 +4890,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>为ACK集群节点池安装节点组件</p>
+     * 
+     * @param request InstallNodePoolComponentsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallNodePoolComponentsResponse
+     */
+    public InstallNodePoolComponentsResponse installNodePoolComponentsWithOptions(String clusterId, String nodePoolId, InstallNodePoolComponentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.components)) {
+            body.put("components", request.components);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNames)) {
+            body.put("nodeNames", request.nodeNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rollingPolicy)) {
+            body.put("rollingPolicy", request.rollingPolicy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallNodePoolComponents"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodePoolId) + "/components"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallNodePoolComponentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为ACK集群节点池安装节点组件</p>
+     * 
+     * @param request InstallNodePoolComponentsRequest
+     * @return InstallNodePoolComponentsResponse
+     */
+    public InstallNodePoolComponentsResponse installNodePoolComponents(String clusterId, String nodePoolId, InstallNodePoolComponentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.installNodePoolComponentsWithOptions(clusterId, nodePoolId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the available components based on specific conditions such as the region, cluster type, cluster subtype defined by cluster profile, and cluster version and queries the detailed information about a component. The information includes whether the component is managed, the supported custom parameter schema, and compatible operating system architecture.</p>
      * 
      * @param request ListAddonsRequest
@@ -7416,6 +7471,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateK8sClusterUserConfigExpireWithOptions(ClusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新节点组件</p>
+     * 
+     * @param request UpdateNodePoolComponentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNodePoolComponentResponse
+     */
+    public UpdateNodePoolComponentResponse updateNodePoolComponentWithOptions(String clusterId, String nodepoolId, UpdateNodePoolComponentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disableRolling)) {
+            body.put("disableRolling", request.disableRolling);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNames)) {
+            body.put("nodeNames", request.nodeNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rollingPolicy)) {
+            body.put("rollingPolicy", request.rollingPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNodePoolComponent"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/component"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNodePoolComponentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新节点组件</p>
+     * 
+     * @param request UpdateNodePoolComponentRequest
+     * @return UpdateNodePoolComponentResponse
+     */
+    public UpdateNodePoolComponentResponse updateNodePoolComponent(String clusterId, String nodepoolId, UpdateNodePoolComponentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateNodePoolComponentWithOptions(clusterId, nodepoolId, request, headers, runtime);
     }
 
     /**
