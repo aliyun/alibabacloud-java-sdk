@@ -1,3 +1,7 @@
+2025-12-29 Version: 4.2.0
+- Support API ListServiceInstanceForPage.
+
+
 2025-12-04 Version: 4.1.0
 - Support API CancelCall.
 - Support API QueryVmsRealNumberCallConnectionRateInfo.
