@@ -851,6 +851,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Dashscope异步任务完成事件处理</p>
+     * 
+     * @param request DashscopeAsyncTaskFinishEventRequest
+     * @param headers DashscopeAsyncTaskFinishEventHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DashscopeAsyncTaskFinishEventResponse
+     */
+    public DashscopeAsyncTaskFinishEventResponse dashscopeAsyncTaskFinishEventWithOptions(String workspaceId, DashscopeAsyncTaskFinishEventRequest request, DashscopeAsyncTaskFinishEventHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("body", request.body);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xLoadTest)) {
+            realHeaders.put("X-Load-Test", com.aliyun.teautil.Common.toJSONString(headers.xLoadTest));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DashscopeAsyncTaskFinishEvent"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/event/dashscopeAsyncTaskFinish"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DashscopeAsyncTaskFinishEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Dashscope异步任务完成事件处理</p>
+     * 
+     * @param request DashscopeAsyncTaskFinishEventRequest
+     * @return DashscopeAsyncTaskFinishEventResponse
+     */
+    public DashscopeAsyncTaskFinishEventResponse dashscopeAsyncTaskFinishEvent(String workspaceId, DashscopeAsyncTaskFinishEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DashscopeAsyncTaskFinishEventHeaders headers = new DashscopeAsyncTaskFinishEventHeaders();
+        return this.dashscopeAsyncTaskFinishEventWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除文档</p>
      * 
      * @param request DeleteDocumentRequest
