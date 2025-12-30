@@ -843,6 +843,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
     }
 
     public static class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo extends TeaModel {
+        @NameInMap("Comment")
+        public String comment;
+
         /**
          * <strong>example:</strong>
          * <p>013c68142fec4f0899fa6ee0exxx</p>
@@ -884,6 +887,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
         public static GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo build(java.util.Map<String, ?> map) throws Exception {
             GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo self = new GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo setHitId(String hitId) {
