@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>companyreg20200306</artifactId>
-  <version>2.2.3</version>
+  <version>2.2.4</version>
   <packaging>jar</packaging>
   <name>companyreg20200306</name>
   <description>Alibaba Cloud Company Registration (20200306) SDK for Java

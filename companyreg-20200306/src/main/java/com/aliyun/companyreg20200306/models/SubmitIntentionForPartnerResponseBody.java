@@ -7,6 +7,9 @@ public class SubmitIntentionForPartnerResponseBody extends TeaModel {
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    @NameInMap("ExtInfo")
+    public String extInfo;
+
     /**
      * <strong>example:</strong>
      * <p>I20211223101045000001</p>
@@ -41,6 +44,14 @@ public class SubmitIntentionForPartnerResponseBody extends TeaModel {
     }
     public String getErrorMsg() {
         return this.errorMsg;
+    }
+
+    public SubmitIntentionForPartnerResponseBody setExtInfo(String extInfo) {
+        this.extInfo = extInfo;
+        return this;
+    }
+    public String getExtInfo() {
+        return this.extInfo;
     }
 
     public SubmitIntentionForPartnerResponseBody setIntentionBizId(String intentionBizId) {
