@@ -161,6 +161,9 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("errorCode")
+        public String errorCode;
+
         /**
          * <strong>example:</strong>
          * <p>Error</p>
@@ -270,6 +273,14 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListPrivateTTSVoicesCustomResponseBodyDataData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public ListPrivateTTSVoicesCustomResponseBodyDataData setErrorDetail(String errorDetail) {

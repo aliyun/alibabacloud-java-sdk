@@ -131,6 +131,9 @@ public class GetTTSVoiceByIdCustomResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("errorCode")
+        public String errorCode;
+
         @NameInMap("errorDetail")
         public String errorDetail;
 
@@ -232,6 +235,14 @@ public class GetTTSVoiceByIdCustomResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetTTSVoiceByIdCustomResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public GetTTSVoiceByIdCustomResponseBodyData setErrorDetail(String errorDetail) {
