@@ -854,6 +854,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改库</p>
+     * 
+     * @param request AlterSearchLibRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AlterSearchLibResponse
+     */
+    public AlterSearchLibResponse alterSearchLibWithOptions(AlterSearchLibRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibConfig)) {
+            query.put("SearchLibConfig", request.searchLibConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AlterSearchLib"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AlterSearchLibResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改库</p>
+     * 
+     * @param request AlterSearchLibRequest
+     * @return AlterSearchLibResponse
+     */
+    public AlterSearchLibResponse alterSearchLib(AlterSearchLibRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.alterSearchLibWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Ingests multiple assets for VOD packaging.</p>
      * 
      * @param tmpReq BatchCreateVodPackagingAssetRequest
@@ -3013,6 +3061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSearchLibResponse createSearchLibWithOptions(CreateSearchLibRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibConfig)) {
+            query.put("SearchLibConfig", request.searchLibConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
             query.put("SearchLibName", request.searchLibName);
         }

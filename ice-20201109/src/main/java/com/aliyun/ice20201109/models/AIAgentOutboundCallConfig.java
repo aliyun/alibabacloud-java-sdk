@@ -13,6 +13,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     @NameInMap("AutoSpeechConfig")
     public AIAgentOutboundCallConfigAutoSpeechConfig autoSpeechConfig;
 
+    @NameInMap("BackChannelingConfig")
+    public AIAgentOutboundCallConfigBackChannelingConfig backChannelingConfig;
+
     @NameInMap("EnableIntelligentSegment")
     public Boolean enableIntelligentSegment;
 
@@ -67,6 +70,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
     public AIAgentOutboundCallConfigAutoSpeechConfig getAutoSpeechConfig() {
         return this.autoSpeechConfig;
+    }
+
+    public AIAgentOutboundCallConfig setBackChannelingConfig(AIAgentOutboundCallConfigBackChannelingConfig backChannelingConfig) {
+        this.backChannelingConfig = backChannelingConfig;
+        return this;
+    }
+    public AIAgentOutboundCallConfigBackChannelingConfig getBackChannelingConfig() {
+        return this.backChannelingConfig;
     }
 
     public AIAgentOutboundCallConfig setEnableIntelligentSegment(Boolean enableIntelligentSegment) {
@@ -406,16 +417,114 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
     }
 
+    public static class AIAgentOutboundCallConfigBackChannelingConfigWords extends TeaModel {
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static AIAgentOutboundCallConfigBackChannelingConfigWords build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentOutboundCallConfigBackChannelingConfigWords self = new AIAgentOutboundCallConfigBackChannelingConfigWords();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfigWords setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfigWords setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class AIAgentOutboundCallConfigBackChannelingConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("TriggerStage")
+        public String triggerStage;
+
+        @NameInMap("Words")
+        public AIAgentOutboundCallConfigBackChannelingConfigWords words;
+
+        public static AIAgentOutboundCallConfigBackChannelingConfig build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentOutboundCallConfigBackChannelingConfig self = new AIAgentOutboundCallConfigBackChannelingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfig setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfig setTriggerStage(String triggerStage) {
+            this.triggerStage = triggerStage;
+            return this;
+        }
+        public String getTriggerStage() {
+            return this.triggerStage;
+        }
+
+        public AIAgentOutboundCallConfigBackChannelingConfig setWords(AIAgentOutboundCallConfigBackChannelingConfigWords words) {
+            this.words = words;
+            return this;
+        }
+        public AIAgentOutboundCallConfigBackChannelingConfigWords getWords() {
+            return this.words;
+        }
+
+    }
+
     public static class AIAgentOutboundCallConfigInterruptConfig extends TeaModel {
+        @NameInMap("Eagerness")
+        @Deprecated
+        public String eagerness;
+
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
         @NameInMap("InterruptWords")
         public java.util.List<String> interruptWords;
 
+        @NameInMap("NoInterruptMode")
+        public String noInterruptMode;
+
         public static AIAgentOutboundCallConfigInterruptConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentOutboundCallConfigInterruptConfig self = new AIAgentOutboundCallConfigInterruptConfig();
             return TeaModel.build(map, self);
+        }
+
+        @Deprecated
+        public AIAgentOutboundCallConfigInterruptConfig setEagerness(String eagerness) {
+            this.eagerness = eagerness;
+            return this;
+        }
+        public String getEagerness() {
+            return this.eagerness;
         }
 
         public AIAgentOutboundCallConfigInterruptConfig setEnableVoiceInterrupt(Boolean enableVoiceInterrupt) {
@@ -432,6 +541,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
         public java.util.List<String> getInterruptWords() {
             return this.interruptWords;
+        }
+
+        public AIAgentOutboundCallConfigInterruptConfig setNoInterruptMode(String noInterruptMode) {
+            this.noInterruptMode = noInterruptMode;
+            return this;
+        }
+        public String getNoInterruptMode() {
+            return this.noInterruptMode;
         }
 
     }
@@ -741,6 +858,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
 
     public static class AIAgentOutboundCallConfigTurnDetectionConfig extends TeaModel {
+        @NameInMap("Eagerness")
+        public String eagerness;
+
         @NameInMap("Mode")
         public String mode;
 
@@ -753,6 +873,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         public static AIAgentOutboundCallConfigTurnDetectionConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentOutboundCallConfigTurnDetectionConfig self = new AIAgentOutboundCallConfigTurnDetectionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigTurnDetectionConfig setEagerness(String eagerness) {
+            this.eagerness = eagerness;
+            return this;
+        }
+        public String getEagerness() {
+            return this.eagerness;
         }
 
         public AIAgentOutboundCallConfigTurnDetectionConfig setMode(String mode) {

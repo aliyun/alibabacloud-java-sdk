@@ -3,12 +3,15 @@ package com.aliyun.ice20201109.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSearchLibRequest extends TeaModel {
+public class AlterSearchLibRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;faceGroupIds&quot;:&quot;xxx1,xxx2,xx3&quot;}</p>
+     */
     @NameInMap("SearchLibConfig")
     public String searchLibConfig;
 
     /**
-     * <p>The name of the search library. The name can contain letters and digits and must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,12 +20,12 @@ public class CreateSearchLibRequest extends TeaModel {
     @NameInMap("SearchLibName")
     public String searchLibName;
 
-    public static CreateSearchLibRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateSearchLibRequest self = new CreateSearchLibRequest();
+    public static AlterSearchLibRequest build(java.util.Map<String, ?> map) throws Exception {
+        AlterSearchLibRequest self = new AlterSearchLibRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSearchLibRequest setSearchLibConfig(String searchLibConfig) {
+    public AlterSearchLibRequest setSearchLibConfig(String searchLibConfig) {
         this.searchLibConfig = searchLibConfig;
         return this;
     }
@@ -30,7 +33,7 @@ public class CreateSearchLibRequest extends TeaModel {
         return this.searchLibConfig;
     }
 
-    public CreateSearchLibRequest setSearchLibName(String searchLibName) {
+    public AlterSearchLibRequest setSearchLibName(String searchLibName) {
         this.searchLibName = searchLibName;
         return this;
     }

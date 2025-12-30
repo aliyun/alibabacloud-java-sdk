@@ -148,6 +148,9 @@ public class ListSearchLibResponseBody extends TeaModel {
         @NameInMap("IndexInfo")
         public java.util.List<ListSearchLibResponseBodySearchLibInfoListIndexInfo> indexInfo;
 
+        @NameInMap("SearchLibConfig")
+        public String searchLibConfig;
+
         /**
          * <p>The search library.</p>
          * 
@@ -182,6 +185,14 @@ public class ListSearchLibResponseBody extends TeaModel {
         }
         public java.util.List<ListSearchLibResponseBodySearchLibInfoListIndexInfo> getIndexInfo() {
             return this.indexInfo;
+        }
+
+        public ListSearchLibResponseBodySearchLibInfoList setSearchLibConfig(String searchLibConfig) {
+            this.searchLibConfig = searchLibConfig;
+            return this;
+        }
+        public String getSearchLibConfig() {
+            return this.searchLibConfig;
         }
 
         public ListSearchLibResponseBodySearchLibInfoList setSearchLibName(String searchLibName) {

@@ -25,6 +25,9 @@ public class QuerySearchLibResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SearchLibConfig")
+    public String searchLibConfig;
+
     /**
      * <p>The name of the search library.</p>
      * 
@@ -89,6 +92,14 @@ public class QuerySearchLibResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QuerySearchLibResponseBody setSearchLibConfig(String searchLibConfig) {
+        this.searchLibConfig = searchLibConfig;
+        return this;
+    }
+    public String getSearchLibConfig() {
+        return this.searchLibConfig;
     }
 
     public QuerySearchLibResponseBody setSearchLibName(String searchLibName) {

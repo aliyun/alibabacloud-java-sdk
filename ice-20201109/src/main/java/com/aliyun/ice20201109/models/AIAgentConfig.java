@@ -22,6 +22,9 @@ public class AIAgentConfig extends TeaModel {
     @NameInMap("AvatarUrlType")
     public String avatarUrlType;
 
+    @NameInMap("BackChannelingConfig")
+    public java.util.List<AIAgentConfigBackChannelingConfig> backChannelingConfig;
+
     @NameInMap("EnableIntelligentSegment")
     public Boolean enableIntelligentSegment;
 
@@ -124,6 +127,14 @@ public class AIAgentConfig extends TeaModel {
     }
     public String getAvatarUrlType() {
         return this.avatarUrlType;
+    }
+
+    public AIAgentConfig setBackChannelingConfig(java.util.List<AIAgentConfigBackChannelingConfig> backChannelingConfig) {
+        this.backChannelingConfig = backChannelingConfig;
+        return this;
+    }
+    public java.util.List<AIAgentConfigBackChannelingConfig> getBackChannelingConfig() {
+        return this.backChannelingConfig;
     }
 
     public AIAgentConfig setEnableIntelligentSegment(Boolean enableIntelligentSegment) {
@@ -546,12 +557,97 @@ public class AIAgentConfig extends TeaModel {
 
     }
 
+    public static class AIAgentConfigBackChannelingConfigWords extends TeaModel {
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static AIAgentConfigBackChannelingConfigWords build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigBackChannelingConfigWords self = new AIAgentConfigBackChannelingConfigWords();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigBackChannelingConfigWords setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentConfigBackChannelingConfigWords setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class AIAgentConfigBackChannelingConfig extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Probability")
+        public Double probability;
+
+        @NameInMap("TriggerStage")
+        public String triggerStage;
+
+        @NameInMap("Words")
+        public java.util.List<AIAgentConfigBackChannelingConfigWords> words;
+
+        public static AIAgentConfigBackChannelingConfig build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigBackChannelingConfig self = new AIAgentConfigBackChannelingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigBackChannelingConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public AIAgentConfigBackChannelingConfig setProbability(Double probability) {
+            this.probability = probability;
+            return this;
+        }
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        public AIAgentConfigBackChannelingConfig setTriggerStage(String triggerStage) {
+            this.triggerStage = triggerStage;
+            return this;
+        }
+        public String getTriggerStage() {
+            return this.triggerStage;
+        }
+
+        public AIAgentConfigBackChannelingConfig setWords(java.util.List<AIAgentConfigBackChannelingConfigWords> words) {
+            this.words = words;
+            return this;
+        }
+        public java.util.List<AIAgentConfigBackChannelingConfigWords> getWords() {
+            return this.words;
+        }
+
+    }
+
     public static class AIAgentConfigInterruptConfig extends TeaModel {
         @NameInMap("EnableVoiceInterrupt")
         public Boolean enableVoiceInterrupt;
 
         @NameInMap("InterruptWords")
         public java.util.List<String> interruptWords;
+
+        @NameInMap("NoInterruptMode")
+        public String noInterruptMode;
 
         public static AIAgentConfigInterruptConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentConfigInterruptConfig self = new AIAgentConfigInterruptConfig();
@@ -572,6 +668,14 @@ public class AIAgentConfig extends TeaModel {
         }
         public java.util.List<String> getInterruptWords() {
             return this.interruptWords;
+        }
+
+        public AIAgentConfigInterruptConfig setNoInterruptMode(String noInterruptMode) {
+            this.noInterruptMode = noInterruptMode;
+            return this;
+        }
+        public String getNoInterruptMode() {
+            return this.noInterruptMode;
         }
 
     }
@@ -881,6 +985,9 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigTurnDetectionConfig extends TeaModel {
+        @NameInMap("Eagerness")
+        public String eagerness;
+
         @NameInMap("Mode")
         public String mode;
 
@@ -893,6 +1000,14 @@ public class AIAgentConfig extends TeaModel {
         public static AIAgentConfigTurnDetectionConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentConfigTurnDetectionConfig self = new AIAgentConfigTurnDetectionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigTurnDetectionConfig setEagerness(String eagerness) {
+            this.eagerness = eagerness;
+            return this;
+        }
+        public String getEagerness() {
+            return this.eagerness;
         }
 
         public AIAgentConfigTurnDetectionConfig setMode(String mode) {
