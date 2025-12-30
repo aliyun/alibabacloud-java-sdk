@@ -45,6 +45,9 @@ public class UpdateResolverRuleRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PriorityForwardConfigs")
+    public java.util.List<UpdateResolverRuleRequestPriorityForwardConfigs> priorityForwardConfigs;
+
     /**
      * <p>The ID of the forwarding rule.</p>
      * <p>This parameter is required.</p>
@@ -90,6 +93,14 @@ public class UpdateResolverRuleRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateResolverRuleRequest setPriorityForwardConfigs(java.util.List<UpdateResolverRuleRequestPriorityForwardConfigs> priorityForwardConfigs) {
+        this.priorityForwardConfigs = priorityForwardConfigs;
+        return this;
+    }
+    public java.util.List<UpdateResolverRuleRequestPriorityForwardConfigs> getPriorityForwardConfigs() {
+        return this.priorityForwardConfigs;
     }
 
     public UpdateResolverRuleRequest setRuleId(String ruleId) {
@@ -141,6 +152,69 @@ public class UpdateResolverRuleRequest extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+    }
+
+    public static class UpdateResolverRuleRequestPriorityForwardConfigs extends TeaModel {
+        @NameInMap("AlidnsServiceAddresses")
+        public java.util.List<String> alidnsServiceAddresses;
+
+        @NameInMap("CustomAddresses")
+        public java.util.List<String> customAddresses;
+
+        @NameInMap("EnableStatus")
+        public String enableStatus;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static UpdateResolverRuleRequestPriorityForwardConfigs build(java.util.Map<String, ?> map) throws Exception {
+            UpdateResolverRuleRequestPriorityForwardConfigs self = new UpdateResolverRuleRequestPriorityForwardConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateResolverRuleRequestPriorityForwardConfigs setAlidnsServiceAddresses(java.util.List<String> alidnsServiceAddresses) {
+            this.alidnsServiceAddresses = alidnsServiceAddresses;
+            return this;
+        }
+        public java.util.List<String> getAlidnsServiceAddresses() {
+            return this.alidnsServiceAddresses;
+        }
+
+        public UpdateResolverRuleRequestPriorityForwardConfigs setCustomAddresses(java.util.List<String> customAddresses) {
+            this.customAddresses = customAddresses;
+            return this;
+        }
+        public java.util.List<String> getCustomAddresses() {
+            return this.customAddresses;
+        }
+
+        public UpdateResolverRuleRequestPriorityForwardConfigs setEnableStatus(String enableStatus) {
+            this.enableStatus = enableStatus;
+            return this;
+        }
+        public String getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        public UpdateResolverRuleRequestPriorityForwardConfigs setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public UpdateResolverRuleRequestPriorityForwardConfigs setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }

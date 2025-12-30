@@ -305,6 +305,69 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs extends TeaModel {
+        @NameInMap("AlidnsServiceAddresses")
+        public java.util.List<String> alidnsServiceAddresses;
+
+        @NameInMap("CustomAddresses")
+        public java.util.List<String> customAddresses;
+
+        @NameInMap("EnableStatus")
+        public String enableStatus;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs self = new DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs setAlidnsServiceAddresses(java.util.List<String> alidnsServiceAddresses) {
+            this.alidnsServiceAddresses = alidnsServiceAddresses;
+            return this;
+        }
+        public java.util.List<String> getAlidnsServiceAddresses() {
+            return this.alidnsServiceAddresses;
+        }
+
+        public DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs setCustomAddresses(java.util.List<String> customAddresses) {
+            this.customAddresses = customAddresses;
+            return this;
+        }
+        public java.util.List<String> getCustomAddresses() {
+            return this.customAddresses;
+        }
+
+        public DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs setEnableStatus(String enableStatus) {
+            this.enableStatus = enableStatus;
+            return this;
+        }
+        public String getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        public DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
     public static class DescribeResolverRulesResponseBodyRules extends TeaModel {
         @NameInMap("BindEdgeDnsClusters")
         public java.util.List<DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters> bindEdgeDnsClusters;
@@ -374,6 +437,9 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("PriorityForwardConfigs")
+        public java.util.List<DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs> priorityForwardConfigs;
 
         /**
          * <p>The type of the forwarding rule.</p>
@@ -487,6 +553,14 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeResolverRulesResponseBodyRules setPriorityForwardConfigs(java.util.List<DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs> priorityForwardConfigs) {
+            this.priorityForwardConfigs = priorityForwardConfigs;
+            return this;
+        }
+        public java.util.List<DescribeResolverRulesResponseBodyRulesPriorityForwardConfigs> getPriorityForwardConfigs() {
+            return this.priorityForwardConfigs;
         }
 
         public DescribeResolverRulesResponseBodyRules setType(String type) {

@@ -2843,6 +2843,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.priorityForwardConfigs)) {
+            query.put("PriorityForwardConfigs", request.priorityForwardConfigs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
             query.put("RuleId", request.ruleId);
         }
