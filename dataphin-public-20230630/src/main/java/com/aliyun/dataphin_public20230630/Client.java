@@ -972,6 +972,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新建业务指标</p>
+     * 
+     * @param tmpReq CreateBizMetricRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBizMetricResponse
+     */
+    public CreateBizMetricResponse createBizMetricWithOptions(CreateBizMetricRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateBizMetricShrinkRequest request = new CreateBizMetricShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createBizMetricCommand)) {
+            request.createBizMetricCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createBizMetricCommand, "CreateBizMetricCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createBizMetricCommandShrink)) {
+            body.put("CreateBizMetricCommand", request.createBizMetricCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBizMetric"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBizMetricResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新建业务指标</p>
+     * 
+     * @param request CreateBizMetricRequest
+     * @return CreateBizMetricResponse
+     */
+    public CreateBizMetricResponse createBizMetric(CreateBizMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBizMetricWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建数据板块。</p>
      * 
      * @param tmpReq CreateBizUnitRequest
@@ -1992,6 +2048,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteBizEntityResponse deleteBizEntity(DeleteBizEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteBizEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除业务指标</p>
+     * 
+     * @param tmpReq DeleteBizMetricRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBizMetricResponse
+     */
+    public DeleteBizMetricResponse deleteBizMetricWithOptions(DeleteBizMetricRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteBizMetricShrinkRequest request = new DeleteBizMetricShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deleteBizMetricCommand)) {
+            request.deleteBizMetricCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deleteBizMetricCommand, "DeleteBizMetricCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteBizMetricCommandShrink)) {
+            body.put("DeleteBizMetricCommand", request.deleteBizMetricCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBizMetric"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBizMetricResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除业务指标</p>
+     * 
+     * @param request DeleteBizMetricRequest
+     * @return DeleteBizMetricResponse
+     */
+    public DeleteBizMetricResponse deleteBizMetric(DeleteBizMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteBizMetricWithOptions(request, runtime);
     }
 
     /**
@@ -3300,6 +3412,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询业务指标详情</p>
+     * 
+     * @param tmpReq GetBizMetricByNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBizMetricByNameResponse
+     */
+    public GetBizMetricByNameResponse getBizMetricByNameWithOptions(GetBizMetricByNameRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetBizMetricByNameShrinkRequest request = new GetBizMetricByNameShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.bizMetricByNameQuery)) {
+            request.bizMetricByNameQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.bizMetricByNameQuery, "BizMetricByNameQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizMetricByNameQueryShrink)) {
+            body.put("BizMetricByNameQuery", request.bizMetricByNameQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBizMetricByName"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBizMetricByNameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询业务指标详情</p>
+     * 
+     * @param request GetBizMetricByNameRequest
+     * @return GetBizMetricByNameResponse
+     */
+    public GetBizMetricByNameResponse getBizMetricByName(GetBizMetricByNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBizMetricByNameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取数据板块详情。</p>
      * 
      * @param request GetBizUnitInfoRequest
@@ -3344,6 +3512,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetBizUnitInfoResponse getBizUnitInfo(GetBizUnitInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getBizUnitInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数据源连通性检查任务。</p>
+     * 
+     * @param request GetCheckConnectivityJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCheckConnectivityJobsResponse
+     */
+    public GetCheckConnectivityJobsResponse getCheckConnectivityJobsWithOptions(GetCheckConnectivityJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            query.put("DataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCheckConnectivityJobs"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCheckConnectivityJobsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数据源连通性检查任务。</p>
+     * 
+     * @param request GetCheckConnectivityJobsRequest
+     * @return GetCheckConnectivityJobsResponse
+     */
+    public GetCheckConnectivityJobsResponse getCheckConnectivityJobs(GetCheckConnectivityJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCheckConnectivityJobsWithOptions(request, runtime);
     }
 
     /**
@@ -9712,6 +9928,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateBizEntityResponse updateBizEntity(UpdateBizEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateBizEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新业务指标</p>
+     * 
+     * @param tmpReq UpdateBizMetricRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateBizMetricResponse
+     */
+    public UpdateBizMetricResponse updateBizMetricWithOptions(UpdateBizMetricRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateBizMetricShrinkRequest request = new UpdateBizMetricShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateBizMetricCommand)) {
+            request.updateBizMetricCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateBizMetricCommand, "UpdateBizMetricCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.updateBizMetricCommandShrink)) {
+            body.put("UpdateBizMetricCommand", request.updateBizMetricCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateBizMetric"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBizMetricResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新业务指标</p>
+     * 
+     * @param request UpdateBizMetricRequest
+     * @return UpdateBizMetricResponse
+     */
+    public UpdateBizMetricResponse updateBizMetric(UpdateBizMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateBizMetricWithOptions(request, runtime);
     }
 
     /**
