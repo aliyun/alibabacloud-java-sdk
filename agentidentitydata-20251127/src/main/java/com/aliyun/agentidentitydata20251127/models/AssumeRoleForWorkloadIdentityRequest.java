@@ -9,7 +9,7 @@ public class AssumeRoleForWorkloadIdentityRequest extends TeaModel {
      * <p>3600</p>
      */
     @NameInMap("DurationSeconds")
-    public String durationSeconds;
+    public Long durationSeconds;
 
     /**
      * <strong>example:</strong>
@@ -37,11 +37,11 @@ public class AssumeRoleForWorkloadIdentityRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AssumeRoleForWorkloadIdentityRequest setDurationSeconds(String durationSeconds) {
+    public AssumeRoleForWorkloadIdentityRequest setDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
     }
-    public String getDurationSeconds() {
+    public Long getDurationSeconds() {
         return this.durationSeconds;
     }
 
