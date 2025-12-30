@@ -3,7 +3,7 @@ package com.aliyun.eflo_controller20221215.models;
 
 import com.aliyun.tea.*;
 
-public class ListHyperNodesRequest extends TeaModel {
+public class ListHyperNodesShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
@@ -57,7 +57,7 @@ public class ListHyperNodesRequest extends TeaModel {
     public String nodeGroupName;
 
     @NameInMap("OperatingStates")
-    public java.util.List<String> operatingStates;
+    public String operatingStatesShrink;
 
     /**
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class ListHyperNodesRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Tags")
-    public java.util.List<ListHyperNodesRequestTags> tags;
+    public java.util.List<ListHyperNodesShrinkRequestTags> tags;
 
     /**
      * <strong>example:</strong>
@@ -76,12 +76,12 @@ public class ListHyperNodesRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    public static ListHyperNodesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListHyperNodesRequest self = new ListHyperNodesRequest();
+    public static ListHyperNodesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListHyperNodesShrinkRequest self = new ListHyperNodesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListHyperNodesRequest setClusterName(String clusterName) {
+    public ListHyperNodesShrinkRequest setClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.clusterName;
     }
 
-    public ListHyperNodesRequest setCommodityCode(String commodityCode) {
+    public ListHyperNodesShrinkRequest setCommodityCode(String commodityCode) {
         this.commodityCode = commodityCode;
         return this;
     }
@@ -97,7 +97,7 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.commodityCode;
     }
 
-    public ListHyperNodesRequest setHpnZone(String hpnZone) {
+    public ListHyperNodesShrinkRequest setHpnZone(String hpnZone) {
         this.hpnZone = hpnZone;
         return this;
     }
@@ -105,7 +105,7 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.hpnZone;
     }
 
-    public ListHyperNodesRequest setHyperNodeId(String hyperNodeId) {
+    public ListHyperNodesShrinkRequest setHyperNodeId(String hyperNodeId) {
         this.hyperNodeId = hyperNodeId;
         return this;
     }
@@ -113,7 +113,7 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.hyperNodeId;
     }
 
-    public ListHyperNodesRequest setMachineType(String machineType) {
+    public ListHyperNodesShrinkRequest setMachineType(String machineType) {
         this.machineType = machineType;
         return this;
     }
@@ -121,7 +121,7 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.machineType;
     }
 
-    public ListHyperNodesRequest setMaxResults(Integer maxResults) {
+    public ListHyperNodesShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -129,7 +129,7 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListHyperNodesRequest setNextToken(String nextToken) {
+    public ListHyperNodesShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -137,7 +137,7 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListHyperNodesRequest setNodeGroupName(String nodeGroupName) {
+    public ListHyperNodesShrinkRequest setNodeGroupName(String nodeGroupName) {
         this.nodeGroupName = nodeGroupName;
         return this;
     }
@@ -145,15 +145,15 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.nodeGroupName;
     }
 
-    public ListHyperNodesRequest setOperatingStates(java.util.List<String> operatingStates) {
-        this.operatingStates = operatingStates;
+    public ListHyperNodesShrinkRequest setOperatingStatesShrink(String operatingStatesShrink) {
+        this.operatingStatesShrink = operatingStatesShrink;
         return this;
     }
-    public java.util.List<String> getOperatingStates() {
-        return this.operatingStates;
+    public String getOperatingStatesShrink() {
+        return this.operatingStatesShrink;
     }
 
-    public ListHyperNodesRequest setResourceGroupId(String resourceGroupId) {
+    public ListHyperNodesShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -161,15 +161,15 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListHyperNodesRequest setTags(java.util.List<ListHyperNodesRequestTags> tags) {
+    public ListHyperNodesShrinkRequest setTags(java.util.List<ListHyperNodesShrinkRequestTags> tags) {
         this.tags = tags;
         return this;
     }
-    public java.util.List<ListHyperNodesRequestTags> getTags() {
+    public java.util.List<ListHyperNodesShrinkRequestTags> getTags() {
         return this.tags;
     }
 
-    public ListHyperNodesRequest setZoneId(String zoneId) {
+    public ListHyperNodesShrinkRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
@@ -177,7 +177,7 @@ public class ListHyperNodesRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class ListHyperNodesRequestTags extends TeaModel {
+    public static class ListHyperNodesShrinkRequestTags extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>alarm_xdc</p>
@@ -192,12 +192,12 @@ public class ListHyperNodesRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static ListHyperNodesRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListHyperNodesRequestTags self = new ListHyperNodesRequestTags();
+        public static ListHyperNodesShrinkRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListHyperNodesShrinkRequestTags self = new ListHyperNodesShrinkRequestTags();
             return TeaModel.build(map, self);
         }
 
-        public ListHyperNodesRequestTags setKey(String key) {
+        public ListHyperNodesShrinkRequestTags setKey(String key) {
             this.key = key;
             return this;
         }
@@ -205,7 +205,7 @@ public class ListHyperNodesRequest extends TeaModel {
             return this.key;
         }
 
-        public ListHyperNodesRequestTags setValue(String value) {
+        public ListHyperNodesShrinkRequestTags setValue(String value) {
             this.value = value;
             return this;
         }

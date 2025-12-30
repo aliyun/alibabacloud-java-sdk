@@ -2038,12 +2038,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>机器列表</p>
      * 
-     * @param request ListHyperNodesRequest
+     * @param tmpReq ListHyperNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListHyperNodesResponse
      */
-    public ListHyperNodesResponse listHyperNodesWithOptions(ListHyperNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListHyperNodesResponse listHyperNodesWithOptions(ListHyperNodesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListHyperNodesShrinkRequest request = new ListHyperNodesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.operatingStates)) {
+            request.operatingStatesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operatingStates, "OperatingStates", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
+            query.put("CommodityCode", request.commodityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatingStatesShrink)) {
+            query.put("OperatingStates", request.operatingStatesShrink);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
             body.put("ClusterName", request.clusterName);
@@ -2086,6 +2101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
