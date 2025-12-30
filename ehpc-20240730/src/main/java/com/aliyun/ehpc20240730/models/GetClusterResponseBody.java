@@ -1072,6 +1072,9 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodySchedulerSpec extends TeaModel {
+        @NameInMap("EnablePowerSaving")
+        public Boolean enablePowerSaving;
+
         /**
          * <p>Indicates whether the topology awareness feature is enabled for the cluster. Valid values:</p>
          * <ul>
@@ -1088,6 +1091,14 @@ public class GetClusterResponseBody extends TeaModel {
         public static GetClusterResponseBodySchedulerSpec build(java.util.Map<String, ?> map) throws Exception {
             GetClusterResponseBodySchedulerSpec self = new GetClusterResponseBodySchedulerSpec();
             return TeaModel.build(map, self);
+        }
+
+        public GetClusterResponseBodySchedulerSpec setEnablePowerSaving(Boolean enablePowerSaving) {
+            this.enablePowerSaving = enablePowerSaving;
+            return this;
+        }
+        public Boolean getEnablePowerSaving() {
+            return this.enablePowerSaving;
         }
 
         public GetClusterResponseBodySchedulerSpec setEnableTopologyAwareness(Boolean enableTopologyAwareness) {

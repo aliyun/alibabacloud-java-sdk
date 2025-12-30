@@ -74,6 +74,9 @@ public class CreateNodesRequest extends TeaModel {
     @NameInMap("HostnameSuffix")
     public String hostnameSuffix;
 
+    @NameInMap("Hostnames")
+    public java.util.List<String> hostnames;
+
     /**
      * <p>Specifies whether to enable deletion protection for the added compute nodes.</p>
      * 
@@ -178,6 +181,14 @@ public class CreateNodesRequest extends TeaModel {
     }
     public String getHostnameSuffix() {
         return this.hostnameSuffix;
+    }
+
+    public CreateNodesRequest setHostnames(java.util.List<String> hostnames) {
+        this.hostnames = hostnames;
+        return this;
+    }
+    public java.util.List<String> getHostnames() {
+        return this.hostnames;
     }
 
     public CreateNodesRequest setKeepAlive(String keepAlive) {

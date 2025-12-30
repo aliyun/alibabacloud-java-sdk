@@ -429,6 +429,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.computeNodeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.computeNode, "ComputeNode", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hostnames)) {
+            request.hostnamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hostnames, "Hostnames", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
@@ -456,6 +460,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hostnameSuffix)) {
             query.put("HostnameSuffix", request.hostnameSuffix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostnamesShrink)) {
+            query.put("Hostnames", request.hostnamesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.keepAlive)) {

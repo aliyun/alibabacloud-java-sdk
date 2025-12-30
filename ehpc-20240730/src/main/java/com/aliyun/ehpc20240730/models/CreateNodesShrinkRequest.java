@@ -74,6 +74,9 @@ public class CreateNodesShrinkRequest extends TeaModel {
     @NameInMap("HostnameSuffix")
     public String hostnameSuffix;
 
+    @NameInMap("Hostnames")
+    public String hostnamesShrink;
+
     /**
      * <p>Specifies whether to enable deletion protection for the added compute nodes.</p>
      * 
@@ -178,6 +181,14 @@ public class CreateNodesShrinkRequest extends TeaModel {
     }
     public String getHostnameSuffix() {
         return this.hostnameSuffix;
+    }
+
+    public CreateNodesShrinkRequest setHostnamesShrink(String hostnamesShrink) {
+        this.hostnamesShrink = hostnamesShrink;
+        return this;
+    }
+    public String getHostnamesShrink() {
+        return this.hostnamesShrink;
     }
 
     public CreateNodesShrinkRequest setKeepAlive(String keepAlive) {
