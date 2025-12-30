@@ -14079,6 +14079,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取文件列表</p>
+     * 
+     * @param request ListTransferFileDownloadUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTransferFileDownloadUrlResponse
+     */
+    public ListTransferFileDownloadUrlResponse listTransferFileDownloadUrlWithOptions(ListTransferFileDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileIds)) {
+            query.put("FileIds", request.fileIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTransferFileDownloadUrl"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTransferFileDownloadUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件列表</p>
+     * 
+     * @param request ListTransferFileDownloadUrlRequest
+     * @return ListTransferFileDownloadUrlResponse
+     */
+    public ListTransferFileDownloadUrlResponse listTransferFileDownloadUrl(ListTransferFileDownloadUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTransferFileDownloadUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the file information of a file transmission task.</p>
      * 
      * @param request ListTransferFilesRequest
