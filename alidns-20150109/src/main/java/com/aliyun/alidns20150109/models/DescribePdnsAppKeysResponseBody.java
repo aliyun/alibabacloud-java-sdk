@@ -31,9 +31,53 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("ClusterName")
+        public String clusterName;
+
+        @NameInMap("ClusterUserId")
+        public String clusterUserId;
+
+        public static DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters self = new DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        public DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters setClusterUserId(String clusterUserId) {
+            this.clusterUserId = clusterUserId;
+            return this;
+        }
+        public String getClusterUserId() {
+            return this.clusterUserId;
+        }
+
+    }
+
     public static class DescribePdnsAppKeysResponseBodyAppKeys extends TeaModel {
         @NameInMap("AppKeyId")
         public String appKeyId;
+
+        @NameInMap("BindEdgeDnsClusters")
+        public java.util.List<DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters> bindEdgeDnsClusters;
 
         @NameInMap("CreateDate")
         public String createDate;
@@ -58,6 +102,14 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
         }
         public String getAppKeyId() {
             return this.appKeyId;
+        }
+
+        public DescribePdnsAppKeysResponseBodyAppKeys setBindEdgeDnsClusters(java.util.List<DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters> bindEdgeDnsClusters) {
+            this.bindEdgeDnsClusters = bindEdgeDnsClusters;
+            return this;
+        }
+        public java.util.List<DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters> getBindEdgeDnsClusters() {
+            return this.bindEdgeDnsClusters;
         }
 
         public DescribePdnsAppKeysResponseBodyAppKeys setCreateDate(String createDate) {

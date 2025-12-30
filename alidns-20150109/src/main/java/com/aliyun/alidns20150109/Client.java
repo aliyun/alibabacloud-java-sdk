@@ -1096,6 +1096,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为网关用户设计，允许他们添加指定域名的serverHold属性。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * 
+     * @param request AddRspDomainServerHoldStatusForGatewayRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddRspDomainServerHoldStatusForGatewayResponse
+     */
+    public AddRspDomainServerHoldStatusForGatewayResponse addRspDomainServerHoldStatusForGatewayWithOptions(AddRspDomainServerHoldStatusForGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusMsg)) {
+            query.put("StatusMsg", request.statusMsg);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddRspDomainServerHoldStatusForGateway"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddRspDomainServerHoldStatusForGatewayResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为网关用户设计，允许他们添加指定域名的serverHold属性。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * 
+     * @param request AddRspDomainServerHoldStatusForGatewayRequest
+     * @return AddRspDomainServerHoldStatusForGatewayResponse
+     */
+    public AddRspDomainServerHoldStatusForGatewayResponse addRspDomainServerHoldStatusForGateway(AddRspDomainServerHoldStatusForGatewayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addRspDomainServerHoldStatusForGatewayWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.</p>
      * 
