@@ -95,6 +95,12 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         @NameInMap("FreezeAmount")
         public Double freezeAmount;
 
+        @NameInMap("IcpNumber")
+        public String icpNumber;
+
+        @NameInMap("IcpStatus")
+        public Boolean icpStatus;
+
         @NameInMap("Introduction")
         public String introduction;
 
@@ -329,6 +335,22 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         }
         public Double getFreezeAmount() {
             return this.freezeAmount;
+        }
+
+        public QueryExportDomainExpireSnatchsResponseBodyData setIcpNumber(String icpNumber) {
+            this.icpNumber = icpNumber;
+            return this;
+        }
+        public String getIcpNumber() {
+            return this.icpNumber;
+        }
+
+        public QueryExportDomainExpireSnatchsResponseBodyData setIcpStatus(Boolean icpStatus) {
+            this.icpStatus = icpStatus;
+            return this;
+        }
+        public Boolean getIcpStatus() {
+            return this.icpStatus;
         }
 
         public QueryExportDomainExpireSnatchsResponseBodyData setIntroduction(String introduction) {

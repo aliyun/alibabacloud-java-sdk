@@ -235,6 +235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>出价</p>
+     * 
      * @param request BidDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BidDomainResponse
@@ -272,6 +275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>出价</p>
+     * 
      * @param request BidDomainRequest
      * @return BidDomainResponse
      */
