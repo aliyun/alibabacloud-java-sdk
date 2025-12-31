@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cas20200630</artifactId>
-  <version>1.6.1</version>
+  <version>1.6.2</version>
   <packaging>jar</packaging>
   <name>cas20200630</name>
   <description>Alibaba Cloud SSL Certificates Service (20200630) SDK for Java
