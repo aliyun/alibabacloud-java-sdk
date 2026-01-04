@@ -7514,6 +7514,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>The <strong>CreateRouteTargetGroup</strong> interface is an asynchronous interface, meaning the system will return an instance ID, but the route target group instance has not yet been fully created, and the system\&quot;s background creation task is still in progress. You can call <strong>ListRouteTargetGroup</strong> to query the creation status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Pending</strong> state, it indicates that the route target group is being created.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the route target group has been created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Active-Standby Mode</strong>: When creating a route target group, you need to configure primary and standby instances that are located in different availability zones and have the same type.</li>
+     * <li><strong>Primary Instance</strong>: The weight is 100. Under normal circumstances, it carries all traffic and takes effect when the health check is normal.</li>
+     * <li><strong>Standby Instance</strong>: The weight is 0. It takes over the traffic after the primary instance fails, serving as a disaster recovery backup.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Route Target Group</p>
+     * 
+     * @param request CreateRouteTargetGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRouteTargetGroupResponse
+     */
+    public CreateRouteTargetGroupResponse createRouteTargetGroupWithOptions(CreateRouteTargetGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configMode)) {
+            query.put("ConfigMode", request.configMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupDescription)) {
+            query.put("RouteTargetGroupDescription", request.routeTargetGroupDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupName)) {
+            query.put("RouteTargetGroupName", request.routeTargetGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetMemberList)) {
+            query.put("RouteTargetMemberList", request.routeTargetMemberList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRouteTargetGroup"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRouteTargetGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>CreateRouteTargetGroup</strong> interface is an asynchronous interface, meaning the system will return an instance ID, but the route target group instance has not yet been fully created, and the system\&quot;s background creation task is still in progress. You can call <strong>ListRouteTargetGroup</strong> to query the creation status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Pending</strong> state, it indicates that the route target group is being created.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the route target group has been created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Active-Standby Mode</strong>: When creating a route target group, you need to configure primary and standby instances that are located in different availability zones and have the same type.</li>
+     * <li><strong>Primary Instance</strong>: The weight is 100. Under normal circumstances, it carries all traffic and takes effect when the health check is normal.</li>
+     * <li><strong>Standby Instance</strong>: The weight is 0. It takes over the traffic after the primary instance fails, serving as a disaster recovery backup.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Route Target Group</p>
+     * 
+     * @param request CreateRouteTargetGroupRequest
+     * @return CreateRouteTargetGroupResponse
+     */
+    public CreateRouteTargetGroupResponse createRouteTargetGroup(CreateRouteTargetGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRouteTargetGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
      * <li>You can create only one pair of interfaces to be connected between two routers.</li>
@@ -13246,6 +13346,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRouteTableResponse deleteRouteTable(DeleteRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRouteTableWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>DeleteRouteTargetGroup</strong> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been successfully deleted as the deletion task is still in progress in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Deleting</strong> state, it indicates that the route target group is being deleted.</li>
+     * <li>If you cannot find the specified route target group, it means the route target group has been successfully deleted.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Route Target Group</p>
+     * 
+     * @param request DeleteRouteTargetGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRouteTargetGroupResponse
+     */
+    public DeleteRouteTargetGroupResponse deleteRouteTargetGroupWithOptions(DeleteRouteTargetGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupId)) {
+            query.put("RouteTargetGroupId", request.routeTargetGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRouteTargetGroup"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRouteTargetGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>DeleteRouteTargetGroup</strong> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been successfully deleted as the deletion task is still in progress in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Deleting</strong> state, it indicates that the route target group is being deleted.</li>
+     * <li>If you cannot find the specified route target group, it means the route target group has been successfully deleted.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Route Target Group</p>
+     * 
+     * @param request DeleteRouteTargetGroupRequest
+     * @return DeleteRouteTargetGroupResponse
+     */
+    public DeleteRouteTargetGroupResponse deleteRouteTargetGroup(DeleteRouteTargetGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRouteTargetGroupWithOptions(request, runtime);
     }
 
     /**
@@ -22951,6 +23125,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the information of the route target group instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get the route target group</p>
+     * 
+     * @param request GetRouteTargetGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRouteTargetGroupResponse
+     */
+    public GetRouteTargetGroupResponse getRouteTargetGroupWithOptions(GetRouteTargetGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupId)) {
+            query.put("RouteTargetGroupId", request.routeTargetGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRouteTargetGroup"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRouteTargetGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Get the information of the route target group instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get the route target group</p>
+     * 
+     * @param request GetRouteTargetGroupRequest
+     * @return GetRouteTargetGroupResponse
+     */
+    public GetRouteTargetGroupResponse getRouteTargetGroup(GetRouteTargetGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRouteTargetGroupWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the status of the traffic mirror feature.</p>
      * 
@@ -24846,6 +25082,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPublicIpAddressPoolsResponse listPublicIpAddressPools(ListPublicIpAddressPoolsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPublicIpAddressPoolsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists the route target groups.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Batch query for route target groups</p>
+     * 
+     * @param request ListRouteTargetGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRouteTargetGroupsResponse
+     */
+    public ListRouteTargetGroupsResponse listRouteTargetGroupsWithOptions(ListRouteTargetGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupIds)) {
+            query.put("RouteTargetGroupIds", request.routeTargetGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRouteTargetGroups"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRouteTargetGroupsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists the route target groups.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Batch query for route target groups</p>
+     * 
+     * @param request ListRouteTargetGroupsRequest
+     * @return ListRouteTargetGroupsResponse
+     */
+    public ListRouteTargetGroupsResponse listRouteTargetGroups(ListRouteTargetGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRouteTargetGroupsWithOptions(request, runtime);
     }
 
     /**
@@ -33128,6 +33446,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Switch Active and Standby For RouteTargetGroup.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Switch Active and Standby For RouteTargetGroup.</p>
+     * 
+     * @param request SwitchActiveRouteTargetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SwitchActiveRouteTargetResponse
+     */
+    public SwitchActiveRouteTargetResponse switchActiveRouteTargetWithOptions(SwitchActiveRouteTargetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupId)) {
+            query.put("RouteTargetGroupId", request.routeTargetGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SwitchActiveRouteTarget"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchActiveRouteTargetResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Switch Active and Standby For RouteTargetGroup.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Switch Active and Standby For RouteTargetGroup.</p>
+     * 
+     * @param request SwitchActiveRouteTargetRequest
+     * @return SwitchActiveRouteTargetResponse
+     */
+    public SwitchActiveRouteTargetResponse switchActiveRouteTarget(SwitchActiveRouteTargetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.switchActiveRouteTargetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:</p>
      * <ul>
      * <li>The keys of tags that are added to the same instance must be unique.</li>
@@ -35128,6 +35508,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePublicIpAddressPoolAttributeResponse updatePublicIpAddressPoolAttribute(UpdatePublicIpAddressPoolAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePublicIpAddressPoolAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>UpdateRouteTargetGroup</strong> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been fully updated, and the system\&quot;s background update task is still in progress. You can call ListRouteTargetGroup to query the update status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Updating</strong> state, it indicates that the route target group is being created.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the route target group has completed its update.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Route Target Group</p>
+     * 
+     * @param request UpdateRouteTargetGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRouteTargetGroupResponse
+     */
+    public UpdateRouteTargetGroupResponse updateRouteTargetGroupWithOptions(UpdateRouteTargetGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupDescription)) {
+            query.put("RouteTargetGroupDescription", request.routeTargetGroupDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupId)) {
+            query.put("RouteTargetGroupId", request.routeTargetGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetGroupName)) {
+            query.put("RouteTargetGroupName", request.routeTargetGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTargetMemberList)) {
+            query.put("RouteTargetMemberList", request.routeTargetMemberList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRouteTargetGroup"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRouteTargetGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>UpdateRouteTargetGroup</strong> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been fully updated, and the system\&quot;s background update task is still in progress. You can call ListRouteTargetGroup to query the update status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Updating</strong> state, it indicates that the route target group is being created.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the route target group has completed its update.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Route Target Group</p>
+     * 
+     * @param request UpdateRouteTargetGroupRequest
+     * @return UpdateRouteTargetGroupResponse
+     */
+    public UpdateRouteTargetGroupResponse updateRouteTargetGroup(UpdateRouteTargetGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRouteTargetGroupWithOptions(request, runtime);
     }
 
     /**

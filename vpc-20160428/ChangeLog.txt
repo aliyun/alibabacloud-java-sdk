@@ -1,3 +1,12 @@
+2026-01-04 Version: 7.18.0
+- Support API CreateRouteTargetGroup.
+- Support API DeleteRouteTargetGroup.
+- Support API GetRouteTargetGroup.
+- Support API ListRouteTargetGroups.
+- Support API SwitchActiveRouteTarget.
+- Support API UpdateRouteTargetGroup.
+
+
 2025-12-19 Version: 7.17.0
 - Support API DeleteExpressConnect.
 - Support API DescribeGrantRulesToEcr.
