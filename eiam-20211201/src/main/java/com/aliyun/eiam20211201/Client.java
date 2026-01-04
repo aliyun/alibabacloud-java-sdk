@@ -6405,6 +6405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListApplicationsResponse listApplicationsWithOptions(ListApplicationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationCreationType)) {
+            query.put("ApplicationCreationType", request.applicationCreationType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applicationIds)) {
             query.put("ApplicationIds", request.applicationIds);
         }

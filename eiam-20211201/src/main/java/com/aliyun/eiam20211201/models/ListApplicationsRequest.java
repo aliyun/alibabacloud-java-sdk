@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>system_init</p>
+     */
+    @NameInMap("ApplicationCreationType")
+    public String applicationCreationType;
+
+    /**
      * <p>The IDs of the applications.</p>
      * 
      * <strong>example:</strong>
@@ -119,6 +126,14 @@ public class ListApplicationsRequest extends TeaModel {
     public static ListApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationsRequest self = new ListApplicationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListApplicationsRequest setApplicationCreationType(String applicationCreationType) {
+        this.applicationCreationType = applicationCreationType;
+        return this;
+    }
+    public String getApplicationCreationType() {
+        return this.applicationCreationType;
     }
 
     public ListApplicationsRequest setApplicationIds(java.util.List<String> applicationIds) {

@@ -55,6 +55,13 @@ public class GetApplicationResponseBody extends TeaModel {
         public String apiInvokeStatus;
 
         /**
+         * <strong>example:</strong>
+         * <p>user_custom</p>
+         */
+        @NameInMap("ApplicationCreationType")
+        public String applicationCreationType;
+
+        /**
          * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +210,13 @@ public class GetApplicationResponseBody extends TeaModel {
         public String resourceServerIdentifier;
 
         /**
+         * <strong>example:</strong>
+         * <p>urn:cloud:idaas:resourceserver:source:custom</p>
+         */
+        @NameInMap("ResourceServerSourceType")
+        public String resourceServerSourceType;
+
+        /**
          * <p>Resource server status.</p>
          * 
          * <strong>example:</strong>
@@ -266,6 +280,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getApiInvokeStatus() {
             return this.apiInvokeStatus;
+        }
+
+        public GetApplicationResponseBodyApplication setApplicationCreationType(String applicationCreationType) {
+            this.applicationCreationType = applicationCreationType;
+            return this;
+        }
+        public String getApplicationCreationType() {
+            return this.applicationCreationType;
         }
 
         public GetApplicationResponseBodyApplication setApplicationId(String applicationId) {
@@ -394,6 +416,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getResourceServerIdentifier() {
             return this.resourceServerIdentifier;
+        }
+
+        public GetApplicationResponseBodyApplication setResourceServerSourceType(String resourceServerSourceType) {
+            this.resourceServerSourceType = resourceServerSourceType;
+            return this;
+        }
+        public String getResourceServerSourceType() {
+            return this.resourceServerSourceType;
         }
 
         public GetApplicationResponseBodyApplication setResourceServerStatus(String resourceServerStatus) {

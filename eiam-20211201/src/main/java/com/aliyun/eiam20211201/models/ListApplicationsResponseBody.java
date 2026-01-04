@@ -59,6 +59,13 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyApplications extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>user_created</p>
+         */
+        @NameInMap("ApplicationCreationType")
+        public String applicationCreationType;
+
+        /**
          * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +178,27 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String managedServiceCode;
 
         /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("ResourceServerIdentifier")
+        public String resourceServerIdentifier;
+
+        /**
+         * <strong>example:</strong>
+         * <p>urn:cloud:idaas:resourceserver:source:custom</p>
+         */
+        @NameInMap("ResourceServerSourceType")
+        public String resourceServerSourceType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        @NameInMap("ResourceServerStatus")
+        public String resourceServerStatus;
+
+        /**
          * <p>Indicates whether the application template is managed by a cloud service.</p>
          * 
          * <strong>example:</strong>
@@ -219,6 +247,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         public static ListApplicationsResponseBodyApplications build(java.util.Map<String, ?> map) throws Exception {
             ListApplicationsResponseBodyApplications self = new ListApplicationsResponseBodyApplications();
             return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsResponseBodyApplications setApplicationCreationType(String applicationCreationType) {
+            this.applicationCreationType = applicationCreationType;
+            return this;
+        }
+        public String getApplicationCreationType() {
+            return this.applicationCreationType;
         }
 
         public ListApplicationsResponseBodyApplications setApplicationId(String applicationId) {
@@ -307,6 +343,30 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getManagedServiceCode() {
             return this.managedServiceCode;
+        }
+
+        public ListApplicationsResponseBodyApplications setResourceServerIdentifier(String resourceServerIdentifier) {
+            this.resourceServerIdentifier = resourceServerIdentifier;
+            return this;
+        }
+        public String getResourceServerIdentifier() {
+            return this.resourceServerIdentifier;
+        }
+
+        public ListApplicationsResponseBodyApplications setResourceServerSourceType(String resourceServerSourceType) {
+            this.resourceServerSourceType = resourceServerSourceType;
+            return this;
+        }
+        public String getResourceServerSourceType() {
+            return this.resourceServerSourceType;
+        }
+
+        public ListApplicationsResponseBodyApplications setResourceServerStatus(String resourceServerStatus) {
+            this.resourceServerStatus = resourceServerStatus;
+            return this;
+        }
+        public String getResourceServerStatus() {
+            return this.resourceServerStatus;
         }
 
         public ListApplicationsResponseBodyApplications setServiceManaged(Boolean serviceManaged) {
