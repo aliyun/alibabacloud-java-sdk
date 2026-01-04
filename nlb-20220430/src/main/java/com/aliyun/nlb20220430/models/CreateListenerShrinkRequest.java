@@ -252,7 +252,6 @@ public class CreateListenerShrinkRequest extends TeaModel {
      * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCPSSL</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation disabled</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation enabled</strong> or server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>.</li>
      * </ul>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>sgp-ppdpc14gdm3x4o****</p>
