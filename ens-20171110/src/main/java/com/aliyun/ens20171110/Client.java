@@ -12586,6 +12586,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询可用的组件列表</p>
+     * 
+     * @param request ListAddonsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAddonsResponse
+     */
+    public ListAddonsResponse listAddonsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAddons"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAddonsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询可用的组件列表</p>
+     * @return ListAddonsResponse
+     */
+    public ListAddonsResponse listAddons() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAddonsWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the created applications.</p>
      * 
      * @param request ListApplicationsRequest
@@ -12706,6 +12740,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListBucketsResponse listBuckets(ListBucketsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listBucketsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询集群已安装的组件实例列表</p>
+     * 
+     * @param request ListClusterAddonInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListClusterAddonInstancesResponse
+     */
+    public ListClusterAddonInstancesResponse listClusterAddonInstancesWithOptions(ListClusterAddonInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListClusterAddonInstances"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListClusterAddonInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询集群已安装的组件实例列表</p>
+     * 
+     * @param request ListClusterAddonInstancesRequest
+     * @return ListClusterAddonInstancesResponse
+     */
+    public ListClusterAddonInstancesResponse listClusterAddonInstances(ListClusterAddonInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listClusterAddonInstancesWithOptions(request, runtime);
     }
 
     /**
