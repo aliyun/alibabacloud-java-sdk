@@ -1054,6 +1054,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>DeleteFileUpload</p>
+     * 
+     * @param request DeleteFileUploadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFileUploadResponse
+     */
+    public DeleteFileUploadResponse deleteFileUploadWithOptions(DeleteFileUploadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callFrom)) {
+            query.put("CallFrom", request.callFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
+            query.put("DmsUnit", request.dmsUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFileUpload"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFileUploadResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteFileUpload</p>
+     * 
+     * @param request DeleteFileUploadRequest
+     * @return DeleteFileUploadResponse
+     */
+    public DeleteFileUploadResponse deleteFileUpload(DeleteFileUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFileUploadWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>DescribeCustomAgent</p>
      * 
      * @param request DescribeCustomAgentRequest
@@ -1150,6 +1202,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDataAgentSessionResponse describeDataAgentSession(DescribeDataAgentSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDataAgentSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeFileUploadSignature</p>
+     * 
+     * @param request DescribeFileUploadSignatureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFileUploadSignatureResponse
+     */
+    public DescribeFileUploadSignatureResponse describeFileUploadSignatureWithOptions(DescribeFileUploadSignatureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callFrom)) {
+            query.put("CallFrom", request.callFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
+            query.put("DmsUnit", request.dmsUnit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFileUploadSignature"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFileUploadSignatureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeFileUploadSignature</p>
+     * 
+     * @param request DescribeFileUploadSignatureRequest
+     * @return DescribeFileUploadSignatureResponse
+     */
+    public DescribeFileUploadSignatureResponse describeFileUploadSignature(DescribeFileUploadSignatureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFileUploadSignatureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>FileUploadCallback</p>
+     * 
+     * @param request FileUploadCallbackRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FileUploadCallbackResponse
+     */
+    public FileUploadCallbackResponse fileUploadCallbackWithOptions(FileUploadCallbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callFrom)) {
+            query.put("CallFrom", request.callFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
+            query.put("DmsUnit", request.dmsUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSize)) {
+            query.put("FileSize", request.fileSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filename)) {
+            query.put("Filename", request.filename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadLocation)) {
+            query.put("UploadLocation", request.uploadLocation);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FileUploadCallback"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FileUploadCallbackResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>FileUploadCallback</p>
+     * 
+     * @param request FileUploadCallbackRequest
+     * @return FileUploadCallbackResponse
+     */
+    public FileUploadCallbackResponse fileUploadCallback(FileUploadCallbackRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.fileUploadCallbackWithOptions(request, runtime);
     }
 
     /**
