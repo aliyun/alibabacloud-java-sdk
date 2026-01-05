@@ -12,33 +12,43 @@ public class ListTagOptionsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The information based on which you want to sort the query results.</p>
-     * <br>
      * <p>Set the value to CreateTime, which specifies the creation time of tag options.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The order in which you want to sort the query results. Valid values:</p>
-     * <br>
-     * <p>*   Asc: the ascending order</p>
-     * <p>*   Desc (default): the descending order</p>
+     * <ul>
+     * <li>Asc: the ascending order</li>
+     * <li>Desc (default): the descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Desc</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
@@ -91,27 +101,40 @@ public class ListTagOptionsRequest extends TeaModel {
     public static class ListTagOptionsRequestFilters extends TeaModel {
         /**
          * <p>Specifies whether to enable the tag option. Valid values:</p>
-         * <br>
-         * <p>*   true (default)</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The full-text search method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("FullTextSearch")
         public String fullTextSearch;
 
         /**
          * <p>The key of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

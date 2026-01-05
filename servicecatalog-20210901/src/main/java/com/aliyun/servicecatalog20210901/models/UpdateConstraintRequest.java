@@ -6,22 +6,34 @@ import com.aliyun.tea.*;
 public class UpdateConstraintRequest extends TeaModel {
     /**
      * <p>The configurations of the constraint.</p>
-     * <br>
-     * <p>Format: { "LocalRoleName": "\<role_name>" }.</p>
+     * <p>Format: { &quot;LocalRoleName&quot;: &quot;\<role_name>&quot; }.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;LocalRoleName&quot;: &quot;TestRole&quot; }</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The ID of the constraint.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cons-bp1yx7x42v****</p>
      */
     @NameInMap("ConstraintId")
     public String constraintId;
 
     /**
      * <p>The description of the constraint.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Launch as local role TestRole</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;

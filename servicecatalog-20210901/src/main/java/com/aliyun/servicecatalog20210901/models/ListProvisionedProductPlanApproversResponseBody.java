@@ -12,6 +12,9 @@ public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
     public static class ListProvisionedProductPlanApproversResponseBodyApprovers extends TeaModel {
         /**
          * <p>The name of the reviewer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approver-1</p>
          */
         @NameInMap("PrincipalName")
         public String principalName;
 
         /**
          * <p>The type of the Resource Access Management (RAM) entity of the reviewer. Valid values:</p>
-         * <br>
-         * <p>*   RamUser: a RAM user</p>
-         * <p>*   RamRole: a RAM role</p>
+         * <ul>
+         * <li>RamUser: a RAM user</li>
+         * <li>RamRole: a RAM role</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;

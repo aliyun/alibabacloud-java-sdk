@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTagOptionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,37 +43,51 @@ public class UpdateTagOptionResponseBody extends TeaModel {
     public static class UpdateTagOptionResponseBodyTagOptionDetail extends TeaModel {
         /**
          * <p>Indicates whether the tag option is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true (default)</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The key of the tag option.</p>
-         * <br>
-         * <p>The key must be 1 to 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         * <p>The key must be 1 to 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the tag option belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133413081827****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-bp1u6mdf3d****</p>
          */
         @NameInMap("TagOptionId")
         public String tagOptionId;
 
         /**
          * <p>The value of the tag option.</p>
-         * <br>
-         * <p>The value must be 1 to 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         * <p>The value must be 1 to 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

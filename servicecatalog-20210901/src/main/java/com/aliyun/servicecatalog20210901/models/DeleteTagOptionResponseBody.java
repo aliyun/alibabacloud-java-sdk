@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTagOptionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

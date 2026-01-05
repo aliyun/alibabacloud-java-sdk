@@ -6,21 +6,29 @@ import com.aliyun.tea.*;
 public class ListProvisionedProductPlansRequest extends TeaModel {
     /**
      * <p>The access filter. Valid values:</p>
-     * <br>
-     * <p>*   User (default): queries the plans that are created by the current requester.</p>
-     * <p>*   Account: queries the plans that belong to the current Alibaba Cloud account.</p>
-     * <p>*   ResourceDirectory: queries the plans that belong to the current resource directory.</p>
+     * <ul>
+     * <li>User (default): queries the plans that are created by the current requester.</li>
+     * <li>Account: queries the plans that belong to the current Alibaba Cloud account.</li>
+     * <li>ResourceDirectory: queries the plans that belong to the current resource directory.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>User</p>
      */
     @NameInMap("AccessLevelFilter")
     public String accessLevelFilter;
 
     /**
      * <p>The access filter of the review dimension. Valid values:</p>
-     * <br>
-     * <p>*   ReceivedRequests: queries plans that are pending for review.</p>
-     * <p>*   ApprovalHistory: queries review history.</p>
-     * <p>*   AccountRequests: queries all plans that belong to the current Alibaba Cloud account.</p>
-     * <p>*   AccountRequests: queries all plans that belong to the current Alibaba Cloud account.</p>
+     * <ul>
+     * <li>ReceivedRequests: queries plans that are pending for review.</li>
+     * <li>ApprovalHistory: queries review history.</li>
+     * <li>AccountRequests: queries all plans that belong to the current Alibaba Cloud account.</li>
+     * <li>AccountRequests: queries all plans that belong to the current Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ReceivedRequests</p>
      */
     @NameInMap("ApprovalFilter")
     public String approvalFilter;
@@ -33,39 +41,52 @@ public class ListProvisionedProductPlansRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the product instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pp-bp1ddg1n2a****</p>
      */
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;
 
     /**
      * <p>The information based on which you want to sort the query results.</p>
-     * <br>
      * <p>Set the value to CreateTime, which specifies the creation time of plans.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The order in which you want to sort the query results. Valid values:</p>
-     * <br>
-     * <p>*   Asc: the ascending order</p>
-     * <p>*   Desc (default): the descending order.</p>
+     * <ul>
+     * <li>Asc: the ascending order</li>
+     * <li>Desc (default): the descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Desc</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
@@ -142,19 +163,26 @@ public class ListProvisionedProductPlansRequest extends TeaModel {
     public static class ListProvisionedProductPlansRequestFilters extends TeaModel {
         /**
          * <p>The name of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   ProvisionedProductPlanName: performs exact matches by plan name. Plan names are not case-sensitive.</p>
-         * <p>*   ProvisionedProductPlanApprover: performs exact matches by reviewer. You must specify a reviewer in the `RamUser/RamRole:<Name of the reviewer>` format. You can specify multiple reviewers.</p>
-         * <p>*   ProvisionedProductPlanApproverName: performs matches by reviewer name. You must specify the Resource Access Management (RAM) entity name of the reviewer. You can specify multiple reviewer names.</p>
-         * <p>*   ProvisionedProductPlanStatus: performs matches by plan status. You must specify the state of the plan. You can specify multiple states.</p>
-         * <p>*   ProvisionedProductPlanOwnerUid: performs exact matches by ID of Alibaba Cloud account to which a plan belongs.</p>
-         * <p>*   FullTextSearch: performs fuzzy full-text searches by plan name.</p>
+         * <ul>
+         * <li>ProvisionedProductPlanName: performs exact matches by plan name. Plan names are not case-sensitive.</li>
+         * <li>ProvisionedProductPlanApprover: performs exact matches by reviewer. You must specify a reviewer in the <code>RamUser/RamRole:&lt;Name of the reviewer&gt;</code> format. You can specify multiple reviewers.</li>
+         * <li>ProvisionedProductPlanApproverName: performs matches by reviewer name. You must specify the Resource Access Management (RAM) entity name of the reviewer. You can specify multiple reviewer names.</li>
+         * <li>ProvisionedProductPlanStatus: performs matches by plan status. You must specify the state of the plan. You can specify multiple states.</li>
+         * <li>ProvisionedProductPlanOwnerUid: performs exact matches by ID of Alibaba Cloud account to which a plan belongs.</li>
+         * <li>FullTextSearch: performs fuzzy full-text searches by plan name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FullTextSearch</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Value")
         public String value;

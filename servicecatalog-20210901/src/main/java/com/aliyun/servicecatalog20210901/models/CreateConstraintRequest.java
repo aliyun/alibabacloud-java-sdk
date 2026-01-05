@@ -6,36 +6,55 @@ import com.aliyun.tea.*;
 public class CreateConstraintRequest extends TeaModel {
     /**
      * <p>The configuration of the constraint.</p>
-     * <br>
-     * <p>Format: { "LocalRoleName": "\<role_name>" }.</p>
+     * <p>Format: { &quot;LocalRoleName&quot;: &quot;\<role_name>&quot; }.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;LocalRoleName&quot;: &quot;TestRole&quot; }</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The type of the constraint.</p>
-     * <br>
      * <p>The value is fixed as Launch, which specifies the launch constraint.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Launch</p>
      */
     @NameInMap("ConstraintType")
     public String constraintType;
 
     /**
      * <p>The description of the constraint.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Launch as local role TestRole</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the product portfolio to which the constraint belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>port-bp1yt7582g****</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
     /**
      * <p>The ID of the product for which the constraint is created.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod-bp18r7q127****</p>
      */
     @NameInMap("ProductId")
     public String productId;

@@ -12,6 +12,9 @@ public class GetConstraintResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,75 @@ public class GetConstraintResponseBody extends TeaModel {
     public static class GetConstraintResponseBodyConstraintDetail extends TeaModel {
         /**
          * <p>The configuration of the constraint.</p>
-         * <br>
-         * <p>Format: { "LocalRoleName": "\<role_name>" }.</p>
+         * <p>Format: { &quot;LocalRoleName&quot;: &quot;\<role_name>&quot; }.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;LocalRoleName&quot;: &quot;TestRole&quot; }</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The ID of the constraint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cons-bp1yx7x42v****</p>
          */
         @NameInMap("ConstraintId")
         public String constraintId;
 
         /**
          * <p>The type of the constraint.</p>
-         * <br>
          * <p>The value is fixed as Launch, which indicates the launch constraint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Launch</p>
          */
         @NameInMap("ConstraintType")
         public String constraintType;
 
         /**
          * <p>The time when the constraint was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:11:26Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the constraint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Launch as local role TestRole</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the product portfolio to which the constraint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
         /**
          * <p>The ID of the product for which the constraint is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
          * <p>The name of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-Create an ECS instance.</p>
          */
         @NameInMap("ProductName")
         public String productName;

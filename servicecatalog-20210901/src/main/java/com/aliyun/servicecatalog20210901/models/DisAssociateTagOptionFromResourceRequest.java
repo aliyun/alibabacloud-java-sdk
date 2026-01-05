@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DisAssociateTagOptionFromResourceRequest extends TeaModel {
     /**
      * <p>The ID of the resource with which the tag option is associated.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod-bp14katy3d****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The ID of the tag option.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag-bp1u6mdf3d****</p>
      */
     @NameInMap("TagOptionId")
     public String tagOptionId;

@@ -6,60 +6,79 @@ import com.aliyun.tea.*;
 public class LaunchProductRequest extends TeaModel {
     /**
      * <p>The input parameters of the template.</p>
-     * <br>
      * <p>You can specify up to 200 parameters.</p>
-     * <br>
-     * <p>> This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</p>
+     * <blockquote>
+     * <p>This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</p>
+     * </blockquote>
      */
     @NameInMap("Parameters")
     public java.util.List<LaunchProductRequestParameters> parameters;
 
     /**
      * <p>The ID of the product portfolio.</p>
-     * <br>
-     * <p>> If the PortfolioId parameter is not required, you do not need to specify the PortfolioId parameter. If the PortfolioId parameter is required, you must specify the PortfolioId parameter. For more information about how to obtain the value of the PortfolioId parameter, see [ListLaunchOptions](~~ListLaunchOptions~~).</p>
+     * <blockquote>
+     * <p>If the PortfolioId parameter is not required, you do not need to specify the PortfolioId parameter. If the PortfolioId parameter is required, you must specify the PortfolioId parameter. For more information about how to obtain the value of the PortfolioId parameter, see <a href="~~ListLaunchOptions~~">ListLaunchOptions</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>port-bp1yt7582g****</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
     /**
      * <p>The ID of the product.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod-bp18r7q127****</p>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
      * <p>The ID of the product version.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv-bp15e79d26****</p>
      */
     @NameInMap("ProductVersionId")
     public String productVersionId;
 
     /**
      * <p>The name of the product instance.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEMO-ECS instance</p>
      */
     @NameInMap("ProvisionedProductName")
     public String provisionedProductName;
 
     /**
      * <p>The ID of the region to which the Resource Orchestration Service (ROS) stack belongs.</p>
-     * <br>
-     * <p>For more information about how to obtain the regions that are supported by ROS, see [DescribeRegions](~~131035~~).</p>
+     * <p>For more information about how to obtain the regions that are supported by ROS, see <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("StackRegionId")
     public String stackRegionId;
 
     /**
      * <p>The custom tags that are specified by the end user.</p>
-     * <br>
      * <p>Maximum value of N: 20.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.</p>
-     * <br>
-     * <p>*   The tag is propagated to each stack resource that supports the tag feature.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.</p>
+     * </li>
+     * <li><p>The tag is propagated to each stack resource that supports the tag feature.</p>
+     * </li>
+     * </ul>
      */
     @NameInMap("Tags")
     public java.util.List<LaunchProductRequestTags> tags;
@@ -128,12 +147,18 @@ public class LaunchProductRequest extends TeaModel {
     public static class LaunchProductRequestParameters extends TeaModel {
         /**
          * <p>The name of the input parameter for the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_type</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the input parameter for the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.s6-c1m1.small</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -164,16 +189,20 @@ public class LaunchProductRequest extends TeaModel {
     public static class LaunchProductRequestTags extends TeaModel {
         /**
          * <p>The tag key of the custom tag.</p>
-         * <br>
-         * <p>The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         * <p>The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the custom tag.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

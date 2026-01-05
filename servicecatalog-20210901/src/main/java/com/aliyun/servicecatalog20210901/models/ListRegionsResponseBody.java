@@ -12,6 +12,9 @@ public class ListRegionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListRegionsResponseBody extends TeaModel {
     public static class ListRegionsResponseBodyRegions extends TeaModel {
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The endpoint of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>servicecatalog.cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

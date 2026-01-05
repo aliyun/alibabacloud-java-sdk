@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class CreateProductShrinkRequest extends TeaModel {
     /**
      * <p>The description of the product.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the product.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the product.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEMO-Create an ECS instance</p>
      */
     @NameInMap("ProductName")
     public String productName;
 
     /**
      * <p>The type of the product.</p>
-     * <br>
      * <p>Set the value to Ros, which specifies Resource Orchestration Service (ROS).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ros</p>
      */
     @NameInMap("ProductType")
     public String productType;
@@ -36,11 +47,27 @@ public class CreateProductShrinkRequest extends TeaModel {
 
     /**
      * <p>The provider of the product.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IT team</p>
      */
     @NameInMap("ProviderName")
     public String providerName;
+
+    /**
+     * <p>The type of the product template. Valid values:</p>
+     * <ul>
+     * <li>RosTerraformTemplate: the Terraform template that is supported by ROS.</li>
+     * <li>RosStandardTemplate: the standard ROS template.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RosTerraformTemplate</p>
+     */
+    @NameInMap("TemplateType")
+    public String templateType;
 
     public static CreateProductShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductShrinkRequest self = new CreateProductShrinkRequest();
@@ -85,6 +112,14 @@ public class CreateProductShrinkRequest extends TeaModel {
     }
     public String getProviderName() {
         return this.providerName;
+    }
+
+    public CreateProductShrinkRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
 }

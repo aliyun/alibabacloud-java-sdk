@@ -12,6 +12,9 @@ public class GetProductAsAdminResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,49 +57,81 @@ public class GetProductAsAdminResponseBody extends TeaModel {
     public static class GetProductAsAdminResponseBodyProductDetail extends TeaModel {
         /**
          * <p>The creation time.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:10:37Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a product description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:servicecatalog:cn-hangzhou:146611588617****:product/prod-bp18r7q127****</p>
          */
         @NameInMap("ProductArn")
         public String productArn;
 
         /**
          * <p>The ID of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
          * <p>The name of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-Create an ECS instance</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The type of the product.</p>
-         * <br>
          * <p>The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ros</p>
          */
         @NameInMap("ProductType")
         public String productType;
 
         /**
          * <p>The provider of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT team</p>
          */
         @NameInMap("ProviderName")
         public String providerName;
+
+        /**
+         * <p>The type of the product template. Valid values:</p>
+         * <ul>
+         * <li>RosTerraformTemplate: the Terraform template that is supported by Resource Orchestration Service (ROS).</li>
+         * <li>RosStandardTemplate: the standard ROS template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RosTerraformTemplate</p>
+         */
+        @NameInMap("TemplateType")
+        public String templateType;
 
         public static GetProductAsAdminResponseBodyProductDetail build(java.util.Map<String, ?> map) throws Exception {
             GetProductAsAdminResponseBodyProductDetail self = new GetProductAsAdminResponseBodyProductDetail();
@@ -159,38 +194,62 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             return this.providerName;
         }
 
+        public GetProductAsAdminResponseBodyProductDetail setTemplateType(String templateType) {
+            this.templateType = templateType;
+            return this;
+        }
+        public String getTemplateType() {
+            return this.templateType;
+        }
+
     }
 
     public static class GetProductAsAdminResponseBodyTagOptions extends TeaModel {
         /**
          * <p>Indicates whether the tag option is enabled. Valid values:</p>
-         * <br>
-         * <p>- true (default)</p>
-         * <p>- false</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The key of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the owner of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133413081827****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-bp1q65xd3j****</p>
          */
         @NameInMap("TagOptionId")
         public String tagOptionId;
 
         /**
          * <p>The value of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

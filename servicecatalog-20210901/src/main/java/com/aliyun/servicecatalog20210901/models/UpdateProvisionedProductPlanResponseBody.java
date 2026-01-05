@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateProvisionedProductPlanResponseBody extends TeaModel {
     /**
      * <p>The ID of the plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plan-bp1jvmdk2k****</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
      * <p>The ID of the product instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pp-bp1ddg1n2a****</p>
      */
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

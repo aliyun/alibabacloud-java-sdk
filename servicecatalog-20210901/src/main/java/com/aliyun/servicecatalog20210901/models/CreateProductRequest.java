@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class CreateProductRequest extends TeaModel {
     /**
      * <p>The description of the product.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the product.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the product.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEMO-Create an ECS instance</p>
      */
     @NameInMap("ProductName")
     public String productName;
 
     /**
      * <p>The type of the product.</p>
-     * <br>
      * <p>Set the value to Ros, which specifies Resource Orchestration Service (ROS).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ros</p>
      */
     @NameInMap("ProductType")
     public String productType;
@@ -36,11 +47,27 @@ public class CreateProductRequest extends TeaModel {
 
     /**
      * <p>The provider of the product.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IT team</p>
      */
     @NameInMap("ProviderName")
     public String providerName;
+
+    /**
+     * <p>The type of the product template. Valid values:</p>
+     * <ul>
+     * <li>RosTerraformTemplate: the Terraform template that is supported by ROS.</li>
+     * <li>RosStandardTemplate: the standard ROS template.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RosTerraformTemplate</p>
+     */
+    @NameInMap("TemplateType")
+    public String templateType;
 
     public static CreateProductRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductRequest self = new CreateProductRequest();
@@ -87,55 +114,79 @@ public class CreateProductRequest extends TeaModel {
         return this.providerName;
     }
 
+    public CreateProductRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static class CreateProductRequestProductVersionParameters extends TeaModel {
         /**
          * <p>Specifies whether to enable the product version. Valid values:</p>
-         * <br>
-         * <p>*   true: enables the product version. This is the default value.</p>
-         * <p>*   false: disables the product version.</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The description of the product version.</p>
-         * <br>
          * <p>The value must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the product version.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The recommendation information. Valid values:</p>
-         * <br>
-         * <p>*   Default: No recommendation information is provided. This is the default value.</p>
-         * <p>*   Recommended: the recommended version.</p>
-         * <p>*   Latest: the latest version.</p>
-         * <p>*   Deprecated: the version that is about to be discontinued.</p>
+         * <p>The recommended product version. Valid values:</p>
+         * <ul>
+         * <li>Default (default): No product version is recommended.</li>
+         * <li>Recommended: the stable version.</li>
+         * <li>Latest: the latest version.</li>
+         * <li>Deprecated: the version that is about to be deprecated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("Guidance")
         public String guidance;
 
         /**
          * <p>The name of the product version.</p>
-         * <br>
          * <p>The value must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("ProductVersionName")
         public String productVersionName;
 
         /**
          * <p>The type of the template.</p>
-         * <br>
-         * <p>Set the value to RosTerraformTemplate, which specifies the Terraform template that is supported by ROS.</p>
+         * <p>Set the value to RosTerraformTemplate, which indicates the Terraform template that is supported by Resource Orchestration Service (ROS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RosTerraformTemplate</p>
          */
         @NameInMap("TemplateType")
         public String templateType;
 
         /**
          * <p>The URL of the template.</p>
-         * <br>
-         * <p>For more information about how to obtain the URL of a template, see [CreateTemplate](~~CreateTemplate~~).</p>
+         * <p>To obtain the URL of a template, you can call the <a href="~~CreateTemplate~~">CreateTemplate</a> operation.</p>
          */
         @NameInMap("TemplateUrl")
         public String templateUrl;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CancelProvisionedProductPlanRequest extends TeaModel {
     /**
      * <p>The ID of the plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plan-bp1jvmdk2k****</p>
      */
     @NameInMap("PlanId")
     public String planId;

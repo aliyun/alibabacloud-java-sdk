@@ -12,6 +12,9 @@ public class ListLaunchOptionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class ListLaunchOptionsResponseBody extends TeaModel {
     public static class ListLaunchOptionsResponseBodyLaunchOptionSummariesConstraintSummaries extends TeaModel {
         /**
          * <p>The type of the constraint. Valid values:</p>
-         * <br>
-         * <p>1.  Launch</p>
-         * <p>2.  Template</p>
-         * <p>3.  Approval</p>
-         * <p>4.  StackRegion</p>
+         * <ol>
+         * <li>Launch</li>
+         * <li>Template</li>
+         * <li>Approval</li>
+         * <li>StackRegion</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>Launch</p>
          */
         @NameInMap("ConstraintType")
         public String constraintType;
 
         /**
          * <p>The description of the constraint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Launch as local role TestRole</p>
          */
         @NameInMap("Description")
         public String description;
@@ -115,12 +125,18 @@ public class ListLaunchOptionsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
         /**
          * <p>The name of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-IT services</p>
          */
         @NameInMap("PortfolioName")
         public String portfolioName;

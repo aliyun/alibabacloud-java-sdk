@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,38 @@ public class GetTaskResponseBody extends TeaModel {
     public static class GetTaskResponseBodyTaskDetailLogTerraformLogs extends TeaModel {
         /**
          * <p>The name of the Terraform command that is run. Valid values:</p>
-         * <br>
-         * <p>*   apply</p>
-         * <p>*   plan</p>
-         * <p>*   destroy</p>
-         * <p>*   version</p>
-         * <br>
-         * <p>For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).</p>
+         * <ul>
+         * <li>apply</li>
+         * <li>plan</li>
+         * <li>destroy</li>
+         * <li>version</li>
+         * </ul>
+         * <p>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Basic CLI Features</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apply</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The content of the output stream that is returned after the command is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The output stream. Valid values:</p>
-         * <br>
-         * <p>*   stdout: a standard output stream</p>
-         * <p>*   stderr: a standard error stream</p>
+         * <ul>
+         * <li>stdout: a standard output stream</li>
+         * <li>stderr: a standard error stream</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>stdout</p>
          */
         @NameInMap("Stream")
         public String stream;
@@ -122,18 +135,27 @@ public class GetTaskResponseBody extends TeaModel {
     public static class GetTaskResponseBodyTaskDetailOutputs extends TeaModel {
         /**
          * <p>The description of the output parameter for the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ECS instance ID.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the output parameter for the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_id</p>
          */
         @NameInMap("OutputKey")
         public String outputKey;
 
         /**
          * <p>The value of the output parameter for the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxxxxx</p>
          */
         @NameInMap("OutputValue")
         public String outputValue;
@@ -172,12 +194,18 @@ public class GetTaskResponseBody extends TeaModel {
     public static class GetTaskResponseBodyTaskDetailParameters extends TeaModel {
         /**
          * <p>The name of the input parameter for the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_type</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the input parameter for the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.s6-c1m1.small</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -208,16 +236,20 @@ public class GetTaskResponseBody extends TeaModel {
     public static class GetTaskResponseBodyTaskDetailTaskTags extends TeaModel {
         /**
          * <p>The custom tag key.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The custom tag value.</p>
-         * <br>
-         * <p>The value must be 1 to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.</p>
+         * <p>The value must be 1 to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -248,8 +280,10 @@ public class GetTaskResponseBody extends TeaModel {
     public static class GetTaskResponseBodyTaskDetail extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-23T09:46:27Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -274,66 +308,98 @@ public class GetTaskResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
         /**
          * <p>The ID of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
          * <p>The name of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-Create an ECS instance</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The ID of the product version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
          */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
         /**
          * <p>The name of the product version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("ProductVersionName")
         public String productVersionName;
 
         /**
          * <p>The ID of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pp-bp1ddg1n2a****</p>
          */
         @NameInMap("ProvisionedProductId")
         public String provisionedProductId;
 
         /**
          * <p>The name of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-ECS instance</p>
          */
         @NameInMap("ProvisionedProductName")
         public String provisionedProductName;
 
         /**
          * <p>The state of the task. Valid values:</p>
-         * <br>
-         * <p>*   Succeeded: The task was successful.</p>
-         * <p>*   InProgress: The task was in progress.</p>
-         * <p>*   Failed: The task failed.</p>
+         * <ul>
+         * <li>Succeeded: The task was successful.</li>
+         * <li>InProgress: The task was in progress.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The message that is returned for the status of the task.</p>
-         * <br>
-         * <p>> This parameter is returned only when Failed is returned for the Status parameter.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when Failed is returned for the Status parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource CREATE failed: terraform stack sc-146611588617****-pp-bp1ddg1n2a**** failure...</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-bp1dmg242c****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -346,18 +412,24 @@ public class GetTaskResponseBody extends TeaModel {
 
         /**
          * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   LaunchProduct: a task that launches the product.</p>
-         * <p>*   UpdateProvisionedProduct: a task that updates the information about the product instance.</p>
-         * <p>*   TerminateProvisionedProduct: a task that terminates the product instance.</p>
+         * <ul>
+         * <li>LaunchProduct: a task that launches the product.</li>
+         * <li>UpdateProvisionedProduct: a task that updates the information about the product instance.</li>
+         * <li>TerminateProvisionedProduct: a task that terminates the product instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LaunchProduct</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The time when the task was last modified.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-23T09:47:29Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

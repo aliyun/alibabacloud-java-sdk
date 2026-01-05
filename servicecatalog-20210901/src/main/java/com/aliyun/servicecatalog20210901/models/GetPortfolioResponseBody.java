@@ -12,6 +12,9 @@ public class GetPortfolioResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,13 +57,18 @@ public class GetPortfolioResponseBody extends TeaModel {
     public static class GetPortfolioResponseBodyPortfolioDetail extends TeaModel {
         /**
          * <p>The time when the product portfolio was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:11:12Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
+         * <p>The description of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
          * <p>The description of the product portfolio.</p>
          */
         @NameInMap("Description")
@@ -68,24 +76,36 @@ public class GetPortfolioResponseBody extends TeaModel {
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:servicecatalog:cn-hangzhou:146611588617****:portfolio/port-bp1yt7582g****</p>
          */
         @NameInMap("PortfolioArn")
         public String portfolioArn;
 
         /**
          * <p>The ID of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
         /**
          * <p>The name of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-IT services</p>
          */
         @NameInMap("PortfolioName")
         public String portfolioName;
 
         /**
          * <p>The provider of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT team</p>
          */
         @NameInMap("ProviderName")
         public String providerName;
@@ -148,33 +168,49 @@ public class GetPortfolioResponseBody extends TeaModel {
     public static class GetPortfolioResponseBodyTagOptions extends TeaModel {
         /**
          * <p>Indicates whether the tag option is enabled. Valid values:</p>
-         * <br>
-         * <p>- true (default)</p>
-         * <p>- false</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The key of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the owner of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133413081827****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-bp1q65xd3j****</p>
          */
         @NameInMap("TagOptionId")
         public String tagOptionId;
 
         /**
          * <p>The value of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

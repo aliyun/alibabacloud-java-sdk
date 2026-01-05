@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class CreateTagOptionRequest extends TeaModel {
     /**
      * <p>The key of the tag option.</p>
-     * <br>
-     * <p>The key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
+     * <p>The key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k1</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The value of the tag option.</p>
-     * <br>
-     * <p>The value can be up to 128 characters in length. It cannot start with `acs:`and cannot contain `http://` or `https://`.</p>
+     * <p>The value can be up to 128 characters in length. It cannot start with <code>acs:</code>and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("Value")
     public String value;

@@ -6,23 +6,33 @@ import com.aliyun.tea.*;
 public class UpdateTagOptionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the tag option. Valid values:</p>
-     * <br>
-     * <p>*   true (default)</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true (default)</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Active")
     public Boolean active;
 
     /**
      * <p>The ID of the tag option.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag-bp1u6mdf3d****</p>
      */
     @NameInMap("TagOptionId")
     public String tagOptionId;
 
     /**
      * <p>The value of the tag option.</p>
-     * <br>
-     * <p>The value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.</p>
+     * <p>The value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("Value")
     public String value;

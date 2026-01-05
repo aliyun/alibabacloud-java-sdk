@@ -4,18 +4,34 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskDetails")
     public java.util.List<ListTasksResponseBodyTaskDetails> taskDetails;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +81,24 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetailsLogTerraformLogs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>apply</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>stdout</p>
+         */
         @NameInMap("Stream")
         public String stream;
 
@@ -125,12 +153,24 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetailsOutputs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>The ECS instance ID.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>instance_id</p>
+         */
         @NameInMap("OutputKey")
         public String outputKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-xxxxxx</p>
+         */
         @NameInMap("OutputValue")
         public String outputValue;
 
@@ -166,9 +206,17 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetailsParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>instance_type</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.s6-c1m1.small</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -196,6 +244,10 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-23T09:46:27Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -208,42 +260,81 @@ public class ListTasksResponseBody extends TeaModel {
         @NameInMap("Parameters")
         public java.util.List<ListTasksResponseBodyTaskDetailsParameters> parameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
+         */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
+         */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("ProductVersionName")
         public String productVersionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pp-bp1ddg1n2a****</p>
+         */
         @NameInMap("ProvisionedProductId")
         public String provisionedProductId;
 
         @NameInMap("ProvisionedProductName")
         public String provisionedProductName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Resource CREATE failed: terraform stack sc-146611588617****-pp-bp1ddg1n2a**** failure...</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-bp1dmg242c****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LaunchProduct</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-26T03:28:45Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

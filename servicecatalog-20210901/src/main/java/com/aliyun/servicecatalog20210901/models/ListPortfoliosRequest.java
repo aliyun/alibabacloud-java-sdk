@@ -7,21 +7,45 @@ public class ListPortfoliosRequest extends TeaModel {
     @NameInMap("Filters")
     public java.util.List<ListPortfoliosRequestFilters> filters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prod-bp18r7q127****</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Local</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Desc</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
@@ -87,6 +111,10 @@ public class ListPortfoliosRequest extends TeaModel {
     }
 
     public static class ListPortfoliosRequestFilters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PortfolioName</p>
+         */
         @NameInMap("Key")
         public String key;
 

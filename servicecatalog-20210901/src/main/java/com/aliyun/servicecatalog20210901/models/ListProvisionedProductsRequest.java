@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListProvisionedProductsRequest extends TeaModel {
     /**
      * <p>The access filter. Valid values:</p>
-     * <br>
-     * <p>*   User: queries the product instances that are created by the current requester. This is the default value.</p>
-     * <p>*   Account: queries the product instances that belong to the current Alibaba Cloud account.</p>
+     * <ul>
+     * <li>User: queries the product instances that are created by the current requester. This is the default value.</li>
+     * <li>Account: queries the product instances that belong to the current Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>User</p>
      */
     @NameInMap("AccessLevelFilter")
     public String accessLevelFilter;
@@ -21,33 +25,43 @@ public class ListProvisionedProductsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The field that is used to sort the queried data.</p>
-     * <br>
      * <p>Set the value to CreateTime, which specifies the time when the product instance was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The sorting method. Valid values:</p>
-     * <br>
-     * <p>*   Asc: the ascending order.</p>
-     * <p>*   Desc (default): the descending order.</p>
+     * <ul>
+     * <li>Asc: the ascending order.</li>
+     * <li>Desc (default): the descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Desc</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
@@ -108,15 +122,22 @@ public class ListProvisionedProductsRequest extends TeaModel {
     public static class ListProvisionedProductsRequestFilters extends TeaModel {
         /**
          * <p>The name of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   ProvisionedProductName: performs exact matches by product instance name. Product instance names are not case-sensitive.</p>
-         * <p>*   FullTextSearch: performs full-text searches by product instance name. Fuzzy match is supported.</p>
+         * <ul>
+         * <li>ProvisionedProductName: performs exact matches by product instance name. Product instance names are not case-sensitive.</li>
+         * <li>FullTextSearch: performs full-text searches by product instance name. Fuzzy match is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ProvisionedProductName</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-ECS instance</p>
          */
         @NameInMap("Value")
         public String value;

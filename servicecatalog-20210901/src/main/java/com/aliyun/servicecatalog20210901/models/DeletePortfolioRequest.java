@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeletePortfolioRequest extends TeaModel {
     /**
      * <p>The ID of the product portfolio.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>port-bp1yt7582g****</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;

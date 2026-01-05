@@ -4,18 +4,34 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListPortfoliosResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PortfolioDetails")
     public java.util.List<ListPortfoliosResponseBodyPortfolioDetails> portfolioDetails;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -67,6 +83,9 @@ public class ListPortfoliosResponseBody extends TeaModel {
     public static class ListPortfoliosResponseBodyPortfolioDetails extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:11:12Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -77,11 +96,18 @@ public class ListPortfoliosResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs:servicecatalog:cn-hangzhou:146611588617****:portfolio/port-bp1yt7582g****</p>
+         */
         @NameInMap("PortfolioArn")
         public String portfolioArn;
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         @NameInMap("PortfolioId")
         public String portfolioId;

@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class ListResourcesForTagOptionResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100 Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E465F21C-8712-5794-A754-5E4D9152****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -34,6 +41,9 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -86,34 +96,47 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
     public static class ListResourcesForTagOptionResponseBodyResourceDetails extends TeaModel {
         /**
          * <p>The time when the resource was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-04T08:07:04.281986714Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the resource.</p>
-         * <br>
          * <p>The value must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the resource.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:servicecatalog:cn-hangzhou:146611588617****:product/prod-bp18r7q127****</p>
          */
         @NameInMap("ResourceArn")
         public String resourceArn;
 
         /**
          * <p>The ID of the resource with which the tag option is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp15p96922****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-ECS</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;

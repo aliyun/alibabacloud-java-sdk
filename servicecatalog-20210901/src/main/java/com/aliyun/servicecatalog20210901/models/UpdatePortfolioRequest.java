@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class UpdatePortfolioRequest extends TeaModel {
     /**
      * <p>产品组合描述</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>代表资源一级ID的资源属性字段</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>port-bp1yt7582g****</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
     /**
      * <p>代表资源名称的资源属性字段</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PortfolioName")
     public String portfolioName;
 
     /**
      * <p>产品组合提供方</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProviderName")
     public String providerName;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetProvisionedProductRequest extends TeaModel {
     /**
      * <p>The ID of the product instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pp-bp1ddg1n2a****</p>
      */
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;

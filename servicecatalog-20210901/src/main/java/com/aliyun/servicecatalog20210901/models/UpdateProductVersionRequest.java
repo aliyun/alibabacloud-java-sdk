@@ -6,42 +6,62 @@ import com.aliyun.tea.*;
 public class UpdateProductVersionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the product version. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the product version. This is the default value.</p>
-     * <p>*   false: disables the product version.</p>
+     * <ul>
+     * <li>true: enables the product version. This is the default value.</li>
+     * <li>false: disables the product version.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Active")
     public Boolean active;
 
     /**
      * <p>The description of the product version.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the product version.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The recommendation information. Valid values:</p>
-     * <br>
-     * <p>*   Default: No recommendation information is provided. This is the default value.</p>
-     * <p>*   Recommended: the recommended version.</p>
-     * <p>*   Latest: the latest version.</p>
-     * <p>*   Deprecated: the version that is about to be discontinued.</p>
+     * <ul>
+     * <li>Default: No recommendation information is provided. This is the default value.</li>
+     * <li>Recommended: the recommended version.</li>
+     * <li>Latest: the latest version.</li>
+     * <li>Deprecated: the version that is about to be discontinued.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("Guidance")
     public String guidance;
 
     /**
      * <p>The ID of the product version.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv-bp15e79d26****</p>
      */
     @NameInMap("ProductVersionId")
     public String productVersionId;
 
     /**
      * <p>The name of the product version.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("ProductVersionName")
     public String productVersionName;

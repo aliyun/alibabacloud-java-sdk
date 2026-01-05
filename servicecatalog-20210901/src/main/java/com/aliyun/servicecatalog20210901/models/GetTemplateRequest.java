@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the product.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod-bp18r7q127****</p>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
      * <p>The ID of the product version.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv-bp15e79d26****</p>
      */
     @NameInMap("ProductVersionId")
     public String productVersionId;

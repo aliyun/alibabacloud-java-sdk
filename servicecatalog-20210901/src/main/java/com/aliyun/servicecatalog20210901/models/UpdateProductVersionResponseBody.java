@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateProductVersionResponseBody extends TeaModel {
     /**
      * <p>The ID of the product version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv-bp15e79d26****</p>
      */
     @NameInMap("ProductVersionId")
     public String productVersionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

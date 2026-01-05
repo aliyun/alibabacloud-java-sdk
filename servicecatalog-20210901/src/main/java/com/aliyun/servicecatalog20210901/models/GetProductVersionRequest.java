@@ -4,6 +4,13 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class GetProductVersionRequest extends TeaModel {
+    /**
+     * <p>The ID of the product version.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv-bp15e79d26****</p>
+     */
     @NameInMap("ProductVersionId")
     public String productVersionId;
 

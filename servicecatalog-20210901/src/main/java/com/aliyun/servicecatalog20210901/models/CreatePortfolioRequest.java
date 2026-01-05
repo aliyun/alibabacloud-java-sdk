@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class CreatePortfolioRequest extends TeaModel {
     /**
      * <p>The description of the product portfolio.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the product portfolio.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the product portfolio.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEMO-IT services</p>
      */
     @NameInMap("PortfolioName")
     public String portfolioName;
 
     /**
      * <p>The provider of the product portfolio.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IT team</p>
      */
     @NameInMap("ProviderName")
     public String providerName;

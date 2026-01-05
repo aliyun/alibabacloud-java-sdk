@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DisAssociateTagOptionFromResourceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E23D1F3-4333-587B-909C-39EA4626****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

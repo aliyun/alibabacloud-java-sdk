@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteConstraintRequest extends TeaModel {
     /**
      * <p>The ID of the constraint.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cons-bp1yx7x42v****</p>
      */
     @NameInMap("ConstraintId")
     public String constraintId;

@@ -6,21 +6,33 @@ import com.aliyun.tea.*;
 public class ApproveProvisionedProductPlanRequest extends TeaModel {
     /**
      * <p>The review action. Valid values:</p>
-     * <br>
-     * <p>*   Approve</p>
-     * <p>*   Reject</p>
+     * <ul>
+     * <li>Approve</li>
+     * <li>Reject</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Approve</p>
      */
     @NameInMap("ApprovalAction")
     public String approvalAction;
 
     /**
      * <p>The review description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Approved. You can create a resource.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The ID of the plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plan-bp1jvmdk2k****</p>
      */
     @NameInMap("PlanId")
     public String planId;

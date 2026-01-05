@@ -12,6 +12,9 @@ public class ListPrincipalsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class ListPrincipalsResponseBody extends TeaModel {
     public static class ListPrincipalsResponseBodyPrincipals extends TeaModel {
         /**
          * <p>The ID of the RAM entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24477111603637****</p>
          */
         @NameInMap("PrincipalId")
         public String principalId;
 
         /**
          * <p>The type of the RAM entity. Valid values:</p>
-         * <br>
-         * <p>*   RamUser: a RAM user</p>
-         * <p>*   RamRole: a RAM role</p>
+         * <ul>
+         * <li>RamUser: a RAM user</li>
+         * <li>RamRole: a RAM role</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;

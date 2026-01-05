@@ -6,25 +6,36 @@ import com.aliyun.tea.*;
 public class DisassociatePrincipalFromPortfolioRequest extends TeaModel {
     /**
      * <p>The ID of the product portfolio.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>port-bp1yt7582g****</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
     /**
      * <p>The ID of the RAM entity.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a RAM user, see [GetUser](~~28681~~).</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a RAM role, see [GetRole](~~28711~~).</p>
+     * <p>For more information about how to obtain the ID of a RAM user, see <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a>.</p>
+     * <p>For more information about how to obtain the ID of a RAM role, see <a href="https://help.aliyun.com/document_detail/28711.html">GetRole</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24477111603637****</p>
      */
     @NameInMap("PrincipalId")
     public String principalId;
 
     /**
      * <p>The type of the Resource Access Management (RAM) entity. Valid values:</p>
-     * <br>
-     * <p>*   RamUser: a RAM user</p>
-     * <p>*   RamRole: a RAM role</p>
+     * <ul>
+     * <li>RamUser: a RAM user</li>
+     * <li>RamRole: a RAM role</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RamUser</p>
      */
     @NameInMap("PrincipalType")
     public String principalType;

@@ -6,58 +6,84 @@ import com.aliyun.tea.*;
 public class CreateProductVersionRequest extends TeaModel {
     /**
      * <p>Specifies whether the product version is active. Valid values:</p>
-     * <br>
-     * <p>*   true: The product version is active. This is the default value.</p>
-     * <p>*   false: The product version is inactive.</p>
+     * <ul>
+     * <li>true: The product version is active. This is the default value.</li>
+     * <li>false: The product version is inactive.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Active")
     public Boolean active;
 
     /**
      * <p>The description of the product version.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The description of the product version.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The recommendation information. Valid values:</p>
-     * <br>
-     * <p>*   Default: No recommendation information is provided. This is the default value.</p>
-     * <p>*   Recommended: the recommendation version.</p>
-     * <p>*   Latest: the latest version.</p>
-     * <p>*   Deprecated: the version that is about to be discontinued.</p>
+     * <ul>
+     * <li>Default: No recommendation information is provided. This is the default value.</li>
+     * <li>Recommended: the recommendation version.</li>
+     * <li>Latest: the latest version.</li>
+     * <li>Deprecated: the version that is about to be discontinued.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("Guidance")
     public String guidance;
 
     /**
      * <p>The ID of the product to which the product version belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod-bp18r7q127****</p>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
      * <p>The name of the product version.</p>
-     * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("ProductVersionName")
     public String productVersionName;
 
     /**
-     * <p>The type of the template.</p>
-     * <br>
-     * <p>The value is fixed as RosTerraformTemplate, which specifies the Terraform template that is supported by Resource Orchestration Service (ROS).</p>
+     * <p>The type of the product template. Valid values:</p>
+     * <ul>
+     * <li>RosTerraformTemplate: the Terraform template that is supported by Resource Orchestration Service (ROS).</li>
+     * <li>RosStandardTemplate: the standard ROS template.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RosTerraformTemplate</p>
      */
     @NameInMap("TemplateType")
     public String templateType;
 
     /**
      * <p>The URL of the template.</p>
-     * <br>
-     * <p>For more information about how to obtain the URL of a template, see [CreateTemplate](~~CreateTemplate~~).</p>
+     * <p>For more information about how to obtain the URL of a template, see <a href="~~CreateTemplate~~">CreateTemplate</a>.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateUrl")
     public String templateUrl;

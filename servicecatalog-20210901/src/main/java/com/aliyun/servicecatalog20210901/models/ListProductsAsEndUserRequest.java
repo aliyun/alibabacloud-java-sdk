@@ -12,33 +12,43 @@ public class ListProductsAsEndUserRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The field that is used to sort the queried data.</p>
-     * <br>
-     * <p>Set the value to CreateTime, which specifies the time when the product was created.</p>
+     * <p>The field that is used to sort data.</p>
+     * <p>The default value is CreateTime, which specifies the time when the product was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The order in which you want to sort the queried data. Valid values:</p>
-     * <br>
-     * <p>*   Asc: the ascending order</p>
-     * <p>*   Desc: the descending order</p>
+     * <p>The method that is used to sort the returned entries. Valid values:</p>
+     * <ul>
+     * <li>Asc: sorts the entries in ascending order.</li>
+     * <li>Desc (default): sorts the entries in descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Desc</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
@@ -91,15 +101,22 @@ public class ListProductsAsEndUserRequest extends TeaModel {
     public static class ListProductsAsEndUserRequestFilters extends TeaModel {
         /**
          * <p>The name of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   ProductName: performs exact matches by product name. Product names are not case-sensitive.</p>
-         * <p>*   FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.</p>
+         * <ul>
+         * <li>ProductName: performs exact matches by product name. Product names are not case-sensitive.</li>
+         * <li>FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductName</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-Create an ECS instance</p>
          */
         @NameInMap("Value")
         public String value;

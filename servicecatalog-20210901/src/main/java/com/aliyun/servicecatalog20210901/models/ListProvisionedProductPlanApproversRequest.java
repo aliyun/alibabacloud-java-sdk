@@ -6,23 +6,33 @@ import com.aliyun.tea.*;
 public class ListProvisionedProductPlanApproversRequest extends TeaModel {
     /**
      * <p>The access filter. Valid values:</p>
-     * <br>
-     * <p>*   User (default): queries the plans that are created by the current requester.</p>
-     * <p>*   Account: queries the plans that belong to the current Alibaba Cloud account.</p>
-     * <p>*   ResourceDirectory: queries the plans that belong to the current resource directory.</p>
-     * <br>
-     * <p>>  You must specify one of the `ApprovalFilter` and `AccessLevelFilter` parameters, but not both.</p>
+     * <ul>
+     * <li>User (default): queries the plans that are created by the current requester.</li>
+     * <li>Account: queries the plans that belong to the current Alibaba Cloud account.</li>
+     * <li>ResourceDirectory: queries the plans that belong to the current resource directory.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify one of the <code>ApprovalFilter</code> and <code>AccessLevelFilter</code> parameters, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>User</p>
      */
     @NameInMap("AccessLevelFilter")
     public String accessLevelFilter;
 
     /**
      * <p>The access filter of the review dimension. Valid values:</p>
-     * <br>
-     * <p>*   AccountRequests: queries all reviewed plans that belong to the current Alibaba Cloud account.</p>
-     * <p>*   ResourceDirectoryRequests: queries all plans that belong to the current resource directory.</p>
-     * <br>
-     * <p>>  You must specify one of the `ApprovalFilter` and `AccessLevelFilter` parameters, but not both.</p>
+     * <ul>
+     * <li>AccountRequests: queries all reviewed plans that belong to the current Alibaba Cloud account.</li>
+     * <li>ResourceDirectoryRequests: queries all plans that belong to the current resource directory.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify one of the <code>ApprovalFilter</code> and <code>AccessLevelFilter</code> parameters, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>AccountRequests</p>
      */
     @NameInMap("ApprovalFilter")
     public String approvalFilter;
@@ -65,14 +75,21 @@ public class ListProvisionedProductPlanApproversRequest extends TeaModel {
     public static class ListProvisionedProductPlanApproversRequestFilters extends TeaModel {
         /**
          * <p>The name of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   ProvisionedProductPlanApproverName: performs fuzzy match by reviewer name.</p>
+         * <ul>
+         * <li>ProvisionedProductPlanApproverName: performs fuzzy match by reviewer name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ProvisionedProductPlanApproverName</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approver</p>
          */
         @NameInMap("Value")
         public String value;

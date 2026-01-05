@@ -12,6 +12,9 @@ public class ListProductVersionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,59 +43,87 @@ public class ListProductVersionsResponseBody extends TeaModel {
     public static class ListProductVersionsResponseBodyProductVersionDetails extends TeaModel {
         /**
          * <p>Indicates whether the product version is enabled. Valid values:</p>
-         * <br>
-         * <p>true: The product version is enabled. This is the default value. false: The product version is disabled.</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The time when the product version was created.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-12T06:10:37Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the product version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the product version.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The recommendation information. Valid values:</p>
-         * <br>
-         * <p>*   Default: No recommendation information is provided. This is the default value.</p>
-         * <p>*   Recommended: the recommended version.</p>
-         * <p>*   Latest: the latest version.</p>
-         * <p>*   Deprecated: the version that is about to be discontinued.</p>
+         * <p>The recommended product version. Valid values:</p>
+         * <ul>
+         * <li>Default (default): No product version is recommended.</li>
+         * <li>Recommended: the stable version.</li>
+         * <li>Latest: the latest version.</li>
+         * <li>Deprecated: the version that is about to be deprecated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("Guidance")
         public String guidance;
 
         /**
          * <p>The ID of the product to which the product version belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
-         * <p>The ID of the product version.</p>
+         * <p>The product version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
          */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
         /**
          * <p>The name of the product version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("ProductVersionName")
         public String productVersionName;
 
         /**
-         * <p>The type of the template.</p>
-         * <br>
-         * <p>The value is fixed as RosTerraformTemplate, which indicates the Terraform template that is supported by Resource Orchestration Service (ROS).</p>
+         * <p>The type of the product template. Valid values:</p>
+         * <ul>
+         * <li>RosTerraformTemplate: the Terraform template that is supported by Resource Orchestration Service (ROS).</li>
+         * <li>RosStandardTemplate: the standard ROS template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RosTerraformTemplate</p>
          */
         @NameInMap("TemplateType")
         public String templateType;

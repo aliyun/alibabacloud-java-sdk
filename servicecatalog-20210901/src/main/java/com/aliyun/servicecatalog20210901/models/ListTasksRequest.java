@@ -4,18 +4,40 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pp-bp1ddg1n2a****</p>
+     */
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Desc</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 

@@ -4,12 +4,30 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class AssociatePrincipalWithPortfolioRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>port-bp1yt7582g****</p>
+     */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24477111603637****</p>
+     */
     @NameInMap("PrincipalId")
     public String principalId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RamUser</p>
+     */
     @NameInMap("PrincipalType")
     public String principalType;
 

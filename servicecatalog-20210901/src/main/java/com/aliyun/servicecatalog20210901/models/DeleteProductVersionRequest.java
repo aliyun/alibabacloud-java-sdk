@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteProductVersionRequest extends TeaModel {
     /**
      * <p>The ID of the product version.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv-bp15e79d26****</p>
      */
     @NameInMap("ProductVersionId")
     public String productVersionId;

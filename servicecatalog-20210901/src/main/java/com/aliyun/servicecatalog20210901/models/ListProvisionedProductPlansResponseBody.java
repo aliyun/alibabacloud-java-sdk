@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ListProvisionedProductPlansResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -28,12 +32,18 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -86,15 +96,22 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     public static class ListProvisionedProductPlansResponseBodyPlanDetailsAssignedApprovers extends TeaModel {
         /**
          * <p>The RAM entity name of the reviewer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>endUser</p>
          */
         @NameInMap("PrincipalName")
         public String principalName;
 
         /**
          * <p>The type of the RAM entity of the reviewer. Valid values:</p>
-         * <br>
-         * <p>*   RamUser: a RAM user</p>
-         * <p>*   RamRole: a RAM role</p>
+         * <ul>
+         * <li>RamUser: a RAM user</li>
+         * <li>RamRole: a RAM role</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;
@@ -125,12 +142,18 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     public static class ListProvisionedProductPlansResponseBodyPlanDetailsParameters extends TeaModel {
         /**
          * <p>The name of the parameter in the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_name</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the parameter in the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-8</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -161,12 +184,18 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     public static class ListProvisionedProductPlansResponseBodyPlanDetailsTags extends TeaModel {
         /**
          * <p>The key of the custom tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the custom tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -203,45 +232,64 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
 
         /**
          * <p>The time when the plan was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-13T02:01:22Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For development team.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The purpose of the plan. Valid values:</p>
-         * <br>
-         * <p>*   LaunchProduct: launches the product. This is the default value.</p>
-         * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
-         * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+         * <ul>
+         * <li>LaunchProduct: launches the product. This is the default value.</li>
+         * <li>UpdateProvisionedProduct: updates the information about the product instance.</li>
+         * <li>TerminateProvisionedProduct: terminates the product instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LaunchProduct</p>
          */
         @NameInMap("OperationType")
         public String operationType;
 
         /**
          * <p>The ID of the RAM entity to which the plan belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24477111603637****</p>
          */
         @NameInMap("OwnerPrincipalId")
         public String ownerPrincipalId;
 
         /**
          * <p>The name of the RAM entity to which the plan belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enduser</p>
          */
         @NameInMap("OwnerPrincipalName")
         public String ownerPrincipalName;
 
         /**
          * <p>The type of the RAM entity to which the plan belongs. Valid values:</p>
-         * <br>
-         * <p>*   RamUser: a RAM user</p>
-         * <p>*   RamRole: a RAM role</p>
+         * <ul>
+         * <li>RamUser: a RAM user</li>
+         * <li>RamRole: a RAM role</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         @NameInMap("OwnerPrincipalType")
         public String ownerPrincipalType;
@@ -254,93 +302,133 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-bp18mmdh2u****</p>
          */
         @NameInMap("PlanId")
         public String planId;
 
         /**
          * <p>The name of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-Create an ECS instance-637\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("PlanName")
         public String planName;
 
         /**
          * <p>The type of the plan.</p>
-         * <br>
          * <p>The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ros</p>
          */
         @NameInMap("PlanType")
         public String planType;
 
         /**
          * <p>The ID of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1438kf2j****</p>
          */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
         /**
          * <p>The ID of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp1rtrnh2c****</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
          * <p>The name of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create an ECS instance</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The ID of the product version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv-bp19udk22v****</p>
          */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
         /**
          * <p>The ID of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pp-bp1c35162d****</p>
          */
         @NameInMap("ProvisionedProductId")
         public String provisionedProductId;
 
         /**
          * <p>The name of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds-MYSQL-875****</p>
          */
         @NameInMap("ProvisionedProductName")
         public String provisionedProductName;
 
         /**
          * <p>The ID of the ROS stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2599090a-309e-4306-b989-17ba66a9****</p>
          */
         @NameInMap("StackId")
         public String stackId;
 
         /**
          * <p>The ID of the region to which the ROS stack belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("StackRegionId")
         public String stackRegionId;
 
         /**
          * <p>The state of the plan. Valid values:</p>
-         * <br>
-         * <p>*   PreviewInProgress: The plan is being prechecked.</p>
-         * <p>*   PreviewSuccess: The precheck is successful.</p>
-         * <p>*   PreviewFailed: The precheck fails.</p>
-         * <p>*   ApplicationInProgress: The plan is being reviewed.</p>
-         * <p>*   ApplicationApproved: The plan is approved.</p>
-         * <p>*   ApplicationRejected: The approval is rejected.</p>
-         * <p>*   ExecuteInProgress: The plan is being run.</p>
-         * <p>*   ExecuteSuccess: The plan is run.</p>
-         * <p>*   ExecuteFailed: The plan fails to be run.</p>
-         * <p>*   Canceled: The plan is canceled.</p>
+         * <ul>
+         * <li>PreviewInProgress: The plan is being prechecked.</li>
+         * <li>PreviewSuccess: The precheck is successful.</li>
+         * <li>PreviewFailed: The precheck fails.</li>
+         * <li>ApplicationInProgress: The plan is being reviewed.</li>
+         * <li>ApplicationApproved: The plan is approved.</li>
+         * <li>ApplicationRejected: The approval is rejected.</li>
+         * <li>ExecuteInProgress: The plan is being run.</li>
+         * <li>ExecuteSuccess: The plan is run.</li>
+         * <li>ExecuteFailed: The plan fails to be run.</li>
+         * <li>Canceled: The plan is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PreviewSuccess</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The message returned for the state.</p>
-         * <br>
-         * <p>> This parameter is returned only when PreviewFailed or ExecuteFailed is returned for the Status parameter.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when PreviewFailed or ExecuteFailed is returned for the Status parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Create stack failed: Resource CREATE failed: terraform stack sc-146611588617****-pp-bp1ddg1n2a**** failure...</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
@@ -353,14 +441,19 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the plan belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>146611588617****</p>
          */
         @NameInMap("Uid")
         public String uid;
 
         /**
          * <p>The last time when the task was modified.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-18T06:02:35.075Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

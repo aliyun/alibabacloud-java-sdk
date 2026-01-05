@@ -1,3 +1,11 @@
+2026-01-05 Version: 1.2.2
+- Update API CreateProduct: add request parameters TemplateType.
+- Update API GetProductAsAdmin: add response parameters Body.ProductDetail.TemplateType.
+- Update API GetProductAsEndUser: add response parameters Body.ProductSummary.TemplateType.
+- Update API ListProductsAsAdmin: add response parameters Body.ProductDetails.$.TemplateType.
+- Update API ListProductsAsEndUser: add response parameters Body.ProductSummaries.$.TemplateType.
+
+
 2023-12-26 Version: 1.2.1
 - Generated java 2021-09-01 for servicecatalog.
 

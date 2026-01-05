@@ -12,6 +12,9 @@ public class GetProvisionedProductResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,139 +43,197 @@ public class GetProvisionedProductResponseBody extends TeaModel {
     public static class GetProvisionedProductResponseBodyProvisionedProductDetail extends TeaModel {
         /**
          * <p>The time when the product instance was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-23T09:46:27Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the task that was last run on the product instance.</p>
-         * <br>
          * <p>The task can be one of the following types:</p>
-         * <br>
-         * <p>*   LaunchProduct: a task that launches the product.</p>
-         * <p>*   UpdateProvisionedProduct: a task that updates the information about the product instance.</p>
-         * <p>*   TerminateProvisionedProduct: a task that terminates the product instance.</p>
+         * <ul>
+         * <li>LaunchProduct: a task that launches the product.</li>
+         * <li>UpdateProvisionedProduct: a task that updates the information about the product instance.</li>
+         * <li>TerminateProvisionedProduct: a task that terminates the product instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>task-bp1dmg242c****</p>
          */
         @NameInMap("LastProvisioningTaskId")
         public String lastProvisioningTaskId;
 
         /**
          * <p>The ID of the last task that was successfully run on the product instance.</p>
-         * <br>
          * <p>The task can be one of the following types:</p>
-         * <br>
-         * <p>*   LaunchProduct: a task that launches the product.</p>
-         * <p>*   UpdateProvisionedProduct: a task that updates the information about the product instance.</p>
-         * <p>*   TerminateProvisionedProduct: a task that terminates the product instance.</p>
+         * <ul>
+         * <li>LaunchProduct: a task that launches the product.</li>
+         * <li>UpdateProvisionedProduct: a task that updates the information about the product instance.</li>
+         * <li>TerminateProvisionedProduct: a task that terminates the product instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>task-bp1dmg242c****</p>
          */
         @NameInMap("LastSuccessfulProvisioningTaskId")
         public String lastSuccessfulProvisioningTaskId;
 
         /**
          * <p>The ID of the task that was last run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-bp1dmg242c****</p>
          */
         @NameInMap("LastTaskId")
         public String lastTaskId;
 
         /**
          * <p>The ID of the RAM entity to which the product instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24477111603637****</p>
          */
         @NameInMap("OwnerPrincipalId")
         public String ownerPrincipalId;
 
         /**
          * <p>The type of the Resource Access Management (RAM) entity to which the product instance belongs. Valid values:</p>
-         * <br>
-         * <p>*   RamUser: a RAM user</p>
-         * <p>*   RamRole: a RAM role</p>
+         * <ul>
+         * <li>RamUser: a RAM user</li>
+         * <li>RamRole: a RAM role</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         @NameInMap("OwnerPrincipalType")
         public String ownerPrincipalType;
 
         /**
          * <p>The ID of the product portfolio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
         /**
          * <p>The ID of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
          * <p>The name of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-Create an ECS instance</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The ID of the product version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
          */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
         /**
          * <p>The name of the product version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("ProductVersionName")
         public String productVersionName;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:servicecatalog:cn-hangzhou:146611588617****:provisionedproduct/pp-bp1ddg1n2a****</p>
          */
         @NameInMap("ProvisionedProductArn")
         public String provisionedProductArn;
 
         /**
          * <p>The ID of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pp-bp1ddg1n2a****</p>
          */
         @NameInMap("ProvisionedProductId")
         public String provisionedProductId;
 
         /**
          * <p>The name of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-ECS instance</p>
          */
         @NameInMap("ProvisionedProductName")
         public String provisionedProductName;
 
         /**
          * <p>The type of the product instance.</p>
-         * <br>
          * <p>The value is fixed as RosStack, which indicates an ROS stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RosStack</p>
          */
         @NameInMap("ProvisionedProductType")
         public String provisionedProductType;
 
         /**
          * <p>The ID of the Resource Orchestration Service (ROS) stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137e31df-3754-40b4-be2f-c793ad84****</p>
          */
         @NameInMap("StackId")
         public String stackId;
 
         /**
          * <p>The ID of the region to which the ROS stack belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("StackRegionId")
         public String stackRegionId;
 
         /**
          * <p>The state of the product instance. Valid values:</p>
-         * <br>
-         * <p>*   Available: The product instance was available.</p>
-         * <p>*   UnderChange: The information about the product instance was being changed.</p>
-         * <p>*   Error: An exception occurred on the product instance.</p>
+         * <ul>
+         * <li>Available: The product instance was available.</li>
+         * <li>UnderChange: The information about the product instance was being changed.</li>
+         * <li>Error: An exception occurred on the product instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The message that is returned for the status of the product instance.</p>
-         * <br>
-         * <p>> This parameter is returned only when Error is returned for the Status parameter.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when Error is returned for the Status parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource CREATE failed: terraform stack sc-146611588617****-pp-bp1ddg1n2a**** failure...</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;

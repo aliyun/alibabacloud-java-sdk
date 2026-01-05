@@ -12,49 +12,66 @@ public class ListProductsAsAdminRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the product portfolio.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>port-bp1yt7582g****</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
     /**
      * <p>The query scope. Valid values:</p>
-     * <br>
-     * <p>*   Local: the products that are created by using the current account. This is the default value.</p>
-     * <p>*   Import: the products that are imported from other accounts.</p>
-     * <p>*   All: all available products.</p>
+     * <ul>
+     * <li>Local: the products that are created by using the current account. This is the default value.</li>
+     * <li>Import: the products that are imported from other accounts.</li>
+     * <li>All: all available products.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Local</p>
      */
     @NameInMap("Scope")
     public String scope;
 
     /**
      * <p>The field that is used to sort the queried data.</p>
-     * <br>
      * <p>Set the value to CreateTime, which specifies the time when the product was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The order in which you want to sort the queried data. Valid values:</p>
-     * <br>
-     * <p>*   Asc: the ascending order</p>
-     * <p>*   Desc: the descending order</p>
+     * <ul>
+     * <li>Asc: the ascending order</li>
+     * <li>Desc: the descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Desc</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
@@ -123,15 +140,22 @@ public class ListProductsAsAdminRequest extends TeaModel {
     public static class ListProductsAsAdminRequestFilters extends TeaModel {
         /**
          * <p>The name of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   ProductName: performs exact matches by product name. Product names are not case-sensitive.</p>
-         * <p>*   FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.</p>
+         * <ul>
+         * <li>ProductName: performs exact matches by product name. Product names are not case-sensitive.</li>
+         * <li>FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductName</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO-Create an ECS instance</p>
          */
         @NameInMap("Value")
         public String value;

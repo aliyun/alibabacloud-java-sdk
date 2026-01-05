@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetTagOptionRequest extends TeaModel {
     /**
      * <p>The ID of the tag option.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag-bp1r3mxq3t****</p>
      */
     @NameInMap("TagOptionId")
     public String tagOptionId;

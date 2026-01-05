@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ListTagOptionsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37C9C1DF-EFFC-5D8A-80D0-8657B1F3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -32,6 +40,9 @@ public class ListTagOptionsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -84,33 +95,49 @@ public class ListTagOptionsResponseBody extends TeaModel {
     public static class ListTagOptionsResponseBodyTagOptionDetails extends TeaModel {
         /**
          * <p>Indicates whether the tag option is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The key of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the tag option belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133413081827****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-bp1r3mxq3t****</p>
          */
         @NameInMap("TagOptionId")
         public String tagOptionId;
 
         /**
          * <p>The value of the tag option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;
