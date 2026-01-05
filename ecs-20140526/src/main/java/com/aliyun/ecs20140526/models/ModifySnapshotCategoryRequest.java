@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySnapshotCategoryRequest extends TeaModel {
     /**
-     * <p>The type of the snapshot. Valid value:</p>
+     * <p>The type of the snapshot.</p>
      * <ul>
      * <li>Archive: archive snapshot</li>
      * </ul>

@@ -176,6 +176,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("PrivateIpSets")
     public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets;
 
+    /**
+     * <p>QoS Speed Limit Settings</p>
+     */
     @NameInMap("QoSConfig")
     public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig qoSConfig;
 
@@ -1393,6 +1396,8 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS extends TeaModel {
         /**
+         * <p>maximum inbound internal bandwidth</p>
+         * 
          * <strong>example:</strong>
          * <p>50000</p>
          */
@@ -1400,6 +1405,8 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Long bandwidthRx;
 
         /**
+         * <p>Maximum outbound internal bandwidth</p>
+         * 
          * <strong>example:</strong>
          * <p>50000</p>
          */
@@ -1407,6 +1414,8 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Long bandwidthTx;
 
         /**
+         * <p>Maximum number of sessions</p>
+         * 
          * <strong>example:</strong>
          * <p>50000</p>
          */
@@ -1414,6 +1423,8 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Long concurrentConnections;
 
         /**
+         * <p>Inbound packet forwarding rate over the internal network</p>
+         * 
          * <strong>example:</strong>
          * <p>50000</p>
          */
@@ -1421,6 +1432,8 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Long ppsRx;
 
         /**
+         * <p>Outbound packet forwarding rate over the internal network</p>
+         * 
          * <strong>example:</strong>
          * <p>50000</p>
          */
@@ -1475,9 +1488,15 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyQoSConfig extends TeaModel {
+        /**
+         * <p>Whether to enable QoS speed limit settings</p>
+         */
         @NameInMap("EnableQoS")
         public Boolean enableQoS;
 
+        /**
+         * <p>QoS Speed Limit Settings</p>
+         */
         @NameInMap("QoS")
         public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS qoS;
 

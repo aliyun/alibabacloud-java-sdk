@@ -13,6 +13,10 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     @NameInMap("ActivationId")
     public String activationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Connected")
     public String connected;
 

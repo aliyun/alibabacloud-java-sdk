@@ -77,15 +77,16 @@ public class StopInstanceRequest extends TeaModel {
     /**
      * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
      * <ul>
-     * <li><p>StopCharging: economical mode. After the economical mode is enabled, billing for the following resources of the instance stops: computing resources (vCPUs, memory, and GPUs), image licenses, and public bandwidth of the static public IP address (if any) that uses the pay-by-bandwidth metering method. Billing for the following resources of the instance continues: system disk, data disks, and public bandwidth of the elastic IP address (EIP) (if any) that uses the pay-by-bandwidth metering method. For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
+     * <li><p>StopCharging: economical mode. After an instance is stopped in economical mode:</p>
+     * <ul>
+     * <li>Billing for the following resources of the instance stops: computing resources (vCPUs, memory, and GPUs), image licenses, and public bandwidth of the static public IP address (if any) that uses the pay-by-bandwidth metering method.</li>
+     * <li>Billing for the following resources of the instance continues: system disk, data disks, and public bandwidth of the elastic IP address (EIP) (if any) that uses the pay-by-bandwidth metering method.</li>
+     * <li>The instance may fail to restart due to the reclaimed computing resources or insufficient resources. Try again later or change the instance type of the instance.</li>
+     * <li>If an EIP is associated with the instance before the instance is stopped, the EIP remains unchanged after the instance is restarted. If a static public IP address is associated with the instance before the instance is stopped, the static public IP address may change, but the private IP address does not change.</li>
+     * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
      * <p>**</p>
-     * <p><strong>Note</strong></p>
-     * </li>
-     * <li><p>If the instance does not support the <strong>economical</strong> mode, the system stops the instance and does not report errors during the operation call. The economical mode cannot be enabled for instances of the classic network type, instances that use local disks, and instances that use persistent memory.</p>
-     * </li>
-     * <li><p>The instance may fail to restart due to the reclaimed computing resources or insufficient resources. Try again later or change the instance type of the instance.</p>
-     * </li>
-     * <li><p>If an EIP is associated with the instance before the instance is stopped, the EIP remains unchanged after the instance is restarted. If a static public IP address is associated with the instance before the instance is stopped, the static public IP address may change, but the private IP address does not change.</p>
+     * <p><strong>Note</strong> If the instance does not support the economical mode, the system stops the instance and does not report errors during the operation call. The following types of instances are not supported: classic network instances, local disks, and monthly instances.</p>
      * </li>
      * <li><p>KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for the instance.</p>
      * </li>

@@ -17598,6 +17598,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the lock information of a snapshot, such as snapshot lock status and lock configuration.</p>
+     * 
+     * @param request DescribeLockedSnapshotsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLockedSnapshotsResponse
+     */
+    public DescribeLockedSnapshotsResponse describeLockedSnapshotsWithOptions(DescribeLockedSnapshotsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lockStatus)) {
+            query.put("LockStatus", request.lockStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotIds)) {
+            query.put("SnapshotIds", request.snapshotIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLockedSnapshots"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLockedSnapshotsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the lock information of a snapshot, such as snapshot lock status and lock configuration.</p>
+     * 
+     * @param request DescribeLockedSnapshotsRequest
+     * @return DescribeLockedSnapshotsResponse
+     */
+    public DescribeLockedSnapshotsResponse describeLockedSnapshots(DescribeLockedSnapshotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLockedSnapshotsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>During a paged query, when you call the DescribeManagedInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeManagedInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
      * 
@@ -23063,7 +23143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用弹性网卡QoS限速设置</p>
+     * <p>Disables Elastic Network Interface (ENI) QoS speed setting.</p>
      * 
      * @param request DisableNetworkInterfaceQoSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23119,7 +23199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用弹性网卡QoS限速设置</p>
+     * <p>Disables Elastic Network Interface (ENI) QoS speed setting.</p>
      * 
      * @param request DisableNetworkInterfaceQoSRequest
      * @return DisableNetworkInterfaceQoSResponse
@@ -25073,6 +25153,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can also use this operation to reconfigure locked snapshots. The configurable items depend on the lock mode and lock status:</p>
+     * <ul>
+     * <li>If a snapshot is locked in compliance mode and is in a cooling-off period, you can extend or shorten the cooling-off period and extend or shorten the lock duration.</li>
+     * <li>If the snapshot is locked in compliance mode and the cooling-off period has expired, you can only extend the lock duration.<blockquote>
+     * <p> If you reconfigure a locked snapshot during the cooling-off period, the system will be regarded as a relock operation, and all lock parameters will be reset instead of individual adjustments.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Lock the snapshot in compliance mode to prevent it from being accidentally or maliciously deleted. During the snapshot lock period, no user can delete it.</p>
+     * 
+     * @param request LockSnapshotRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LockSnapshotResponse
+     */
+    public LockSnapshotResponse lockSnapshotWithOptions(LockSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.coolOffPeriod)) {
+            query.put("CoolOffPeriod", request.coolOffPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lockDuration)) {
+            query.put("LockDuration", request.lockDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lockMode)) {
+            query.put("LockMode", request.lockMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
+            query.put("SnapshotId", request.snapshotId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LockSnapshot"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LockSnapshotResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can also use this operation to reconfigure locked snapshots. The configurable items depend on the lock mode and lock status:</p>
+     * <ul>
+     * <li>If a snapshot is locked in compliance mode and is in a cooling-off period, you can extend or shorten the cooling-off period and extend or shorten the lock duration.</li>
+     * <li>If the snapshot is locked in compliance mode and the cooling-off period has expired, you can only extend the lock duration.<blockquote>
+     * <p> If you reconfigure a locked snapshot during the cooling-off period, the system will be regarded as a relock operation, and all lock parameters will be reset instead of individual adjustments.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Lock the snapshot in compliance mode to prevent it from being accidentally or maliciously deleted. During the snapshot lock period, no user can delete it.</p>
+     * 
+     * @param request LockSnapshotRequest
+     * @return LockSnapshotResponse
+     */
+    public LockSnapshotResponse lockSnapshot(LockSnapshotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.lockSnapshotWithOptions(request, runtime);
     }
 
     /**
@@ -36879,6 +37063,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnassociateHaVipResponse unassociateHaVip(UnassociateHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unassociateHaVipWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unlock snapshots that are locked in compliance mode but are still in a cooling-off period. If the snapshot is locked in compliance mode and the cooling-off period has ended, it cannot be unlocked.</p>
+     * 
+     * @param request UnlockSnapshotRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnlockSnapshotResponse
+     */
+    public UnlockSnapshotResponse unlockSnapshotWithOptions(UnlockSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
+            query.put("SnapshotId", request.snapshotId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnlockSnapshot"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnlockSnapshotResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unlock snapshots that are locked in compliance mode but are still in a cooling-off period. If the snapshot is locked in compliance mode and the cooling-off period has ended, it cannot be unlocked.</p>
+     * 
+     * @param request UnlockSnapshotRequest
+     * @return UnlockSnapshotResponse
+     */
+    public UnlockSnapshotResponse unlockSnapshot(UnlockSnapshotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unlockSnapshotWithOptions(request, runtime);
     }
 
     /**

@@ -110,6 +110,9 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         @NameInMap("Duration")
         public Integer duration;
 
+        @NameInMap("EnableExpectedRenewDay")
+        public Boolean enableExpectedRenewDay;
+
         /**
          * <p>The ID of the instance.</p>
          * 
@@ -161,6 +164,14 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
         public Integer getDuration() {
             return this.duration;
+        }
+
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setEnableExpectedRenewDay(Boolean enableExpectedRenewDay) {
+            this.enableExpectedRenewDay = enableExpectedRenewDay;
+            return this;
+        }
+        public Boolean getEnableExpectedRenewDay() {
+            return this.enableExpectedRenewDay;
         }
 
         public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setInstanceId(String instanceId) {

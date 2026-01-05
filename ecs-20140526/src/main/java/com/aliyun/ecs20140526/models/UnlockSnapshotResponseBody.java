@@ -3,22 +3,22 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class DisableNetworkInterfaceQoSResponseBody extends TeaModel {
+public class UnlockSnapshotResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>745CEC9F-0DD7-4451-9FE7-8B752F39****</p>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DisableNetworkInterfaceQoSResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DisableNetworkInterfaceQoSResponseBody self = new DisableNetworkInterfaceQoSResponseBody();
+    public static UnlockSnapshotResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UnlockSnapshotResponseBody self = new UnlockSnapshotResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DisableNetworkInterfaceQoSResponseBody setRequestId(String requestId) {
+    public UnlockSnapshotResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
