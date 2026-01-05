@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the file resource.</p>
+     * <p>The unique identifier of the resource file.</p>
+     * <blockquote>
+     * <p>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>631478864897630XXXX</p>
      */
     @NameInMap("Id")
-    public Long id;
+    public String id;
 
     /**
      * <p>A5B97987-66EA-5563-9599-A2752292XXXX</p>
@@ -27,11 +30,11 @@ public class CreateResourceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateResourceResponseBody setId(Long id) {
+    public CreateResourceResponseBody setId(String id) {
         this.id = id;
         return this;
     }
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 

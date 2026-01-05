@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowsResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>Pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListWorkflowsResponseBodyPagingInfo pagingInfo;
@@ -42,6 +42,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
 
     public static class ListWorkflowsResponseBodyPagingInfoWorkflowsTags extends TeaModel {
         /**
+         * <p>The key of a tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -49,6 +51,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of a tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */

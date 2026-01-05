@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateNodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the node.</p>
+     * <p>The unique identifier of the Data Studio node.</p>
+     * <blockquote>
+     * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
      */
     @NameInMap("Id")
-    public Long id;
+    public String id;
 
     /**
      * <p>The request ID.</p>
@@ -27,11 +30,11 @@ public class CreateNodeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateNodeResponseBody setId(Long id) {
+    public CreateNodeResponseBody setId(String id) {
         this.id = id;
         return this;
     }
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 

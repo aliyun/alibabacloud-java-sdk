@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDatasetResponseBody extends TeaModel {
+    /**
+     * <p>The dataset information.</p>
+     */
     @NameInMap("Dataset")
     public Dataset dataset;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>204EAF68-CCE3-5112-8DA0-E7A60F02XXXX</p>
@@ -17,6 +20,8 @@ public class GetDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

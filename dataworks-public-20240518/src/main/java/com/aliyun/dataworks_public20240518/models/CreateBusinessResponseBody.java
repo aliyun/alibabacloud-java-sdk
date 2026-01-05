@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateBusinessResponseBody extends TeaModel {
     /**
-     * <p>The workflow ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>100001</p>
      */
@@ -14,13 +12,6 @@ public class CreateBusinessResponseBody extends TeaModel {
     public Long businessId;
 
     /**
-     * <p>The error code.</p>
-     * <ul>
-     * <li>Request succeeded: The ErrorCode field is not returned.</li>
-     * <li>Request failed: The ErrorCode field is returned.</li>
-     * </ul>
-     * <p>For more information, see the error code section.</p>
-     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -28,8 +19,6 @@ public class CreateBusinessResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
-     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -37,8 +26,6 @@ public class CreateBusinessResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -46,8 +33,6 @@ public class CreateBusinessResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The unique ID of this request. You can troubleshoot issues based on the ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -55,12 +40,6 @@ public class CreateBusinessResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded. Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

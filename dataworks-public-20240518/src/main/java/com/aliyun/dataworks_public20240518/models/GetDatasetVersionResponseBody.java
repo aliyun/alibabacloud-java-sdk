@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetDatasetVersionResponseBody extends TeaModel {
+    /**
+     * <p>The dataset version.</p>
+     */
     @NameInMap("DatasetVersion")
     public DatasetVersion datasetVersion;
 
@@ -17,6 +20,8 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -73,6 +73,9 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         @NameInMap("WorkflowInstanceIds")
         public java.util.List<Long> workflowInstanceIds;
 
+        /**
+         * <p>The list of task instance IDs corresponding to the workflow instance. This field is returned after successful creation.</p>
+         */
         @NameInMap("WorkflowTaskInstanceIds")
         public java.util.List<Long> workflowTaskInstanceIds;
 

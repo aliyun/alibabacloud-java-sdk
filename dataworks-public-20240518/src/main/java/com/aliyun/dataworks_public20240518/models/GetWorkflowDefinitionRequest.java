@@ -12,7 +12,7 @@ public class GetWorkflowDefinitionRequest extends TeaModel {
      * <p>860438872620113XXXX</p>
      */
     @NameInMap("Id")
-    public Long id;
+    public String id;
 
     /**
      * <p>查询结果是否包含工作流内部节点的脚本内容（对于内容较多的节点，可能存在较长的网络传输延时）。</p>
@@ -38,11 +38,11 @@ public class GetWorkflowDefinitionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetWorkflowDefinitionRequest setId(Long id) {
+    public GetWorkflowDefinitionRequest setId(String id) {
         this.id = id;
         return this;
     }
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 

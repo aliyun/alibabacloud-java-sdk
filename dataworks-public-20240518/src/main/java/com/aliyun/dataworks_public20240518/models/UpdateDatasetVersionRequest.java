@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetVersionRequest extends TeaModel {
     /**
+     * <p>The dataset version description. Maximum length: 1024 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
@@ -12,6 +14,7 @@ public class UpdateDatasetVersionRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The dataset version ID. Only DataWorks datasets can be updated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

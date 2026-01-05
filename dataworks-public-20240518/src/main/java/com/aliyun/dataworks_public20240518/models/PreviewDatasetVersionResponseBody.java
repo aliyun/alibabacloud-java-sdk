@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class PreviewDatasetVersionResponseBody extends TeaModel {
+    /**
+     * <p>Preview results</p>
+     */
     @NameInMap("PreviewResult")
     public PreviewDatasetVersionResponseBodyPreviewResult previewResult;
 
@@ -17,6 +20,8 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +59,8 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
 
     public static class PreviewDatasetVersionResponseBodyPreviewResult extends TeaModel {
         /**
+         * <p>Content</p>
+         * 
          * <strong>example:</strong>
          * <p>this is content</p>
          */
@@ -61,6 +68,8 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>File name</p>
+         * 
          * <strong>example:</strong>
          * <p>parth/data.csv</p>
          */
@@ -68,6 +77,8 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The MIME type</p>
+         * 
          * <strong>example:</strong>
          * <p>text/plain</p>
          */
@@ -75,6 +86,8 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
         public String mimeType;
 
         /**
+         * <p>Preview availability</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

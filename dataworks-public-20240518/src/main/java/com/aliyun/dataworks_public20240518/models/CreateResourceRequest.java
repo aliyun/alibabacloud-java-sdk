@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceRequest extends TeaModel {
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +14,15 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The specific file stream or OSS download link contained in the resource.</p>
+     * <blockquote>
+     * <p> This field allows users to provide a file stream or an OSS download link. When providing an OSS download link, ensure that the OSS link is publicly accessible. A presigned URL is recommended.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://bucketname1.oss-cn-shanghai.aliyuncs.com/example">http://bucketname1.oss-cn-shanghai.aliyuncs.com/example</a></p>
+     */
     @NameInMap("ResourceFile")
     public String resourceFile;
 

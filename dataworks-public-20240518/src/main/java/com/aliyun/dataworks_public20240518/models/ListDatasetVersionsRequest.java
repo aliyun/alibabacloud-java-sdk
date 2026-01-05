@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDatasetVersionsRequest extends TeaModel {
     /**
+     * <p>The creator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12103XXX46492139</p>
      */
@@ -12,6 +14,7 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String creatorId;
 
     /**
+     * <p>The dataset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,13 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String datasetId;
 
     /**
+     * <p>The sort order. Default: Desc.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Asc: Ascending.</li>
+     * <li>Desc: Descending.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Desc</p>
      */
@@ -28,6 +38,8 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +47,8 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +56,14 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sort field. Default: VersionNumber.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ModifyTime: Modification time.</li>
+     * <li>CreateTime: Creation time.</li>
+     * <li>VersionNumber: Version number.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */

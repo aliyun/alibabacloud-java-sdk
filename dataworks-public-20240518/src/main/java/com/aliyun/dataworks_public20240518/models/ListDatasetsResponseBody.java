@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDatasetsResponseBodyPagingInfo pagingInfo;
 
@@ -17,6 +20,8 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -53,10 +58,15 @@ public class ListDatasetsResponseBody extends TeaModel {
     }
 
     public static class ListDatasetsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The dataset list.</p>
+         */
         @NameInMap("Datasets")
         public java.util.List<Dataset> datasets;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -64,6 +74,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries on this page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -71,6 +83,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

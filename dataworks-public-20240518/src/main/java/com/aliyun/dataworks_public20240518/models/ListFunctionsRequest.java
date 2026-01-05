@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
+    /**
+     * <p>Filter criteria: UDF name. Supports fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 

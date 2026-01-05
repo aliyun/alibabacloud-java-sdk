@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDatasetRequest extends TeaModel {
     /**
+     * <p>The dataset ID. Only DataWorks datasets are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

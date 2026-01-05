@@ -57,7 +57,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
          * <p>463497880880954XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The time when the workflow was last modified. This value is a UNIX timestamp.</p>
@@ -199,11 +199,11 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetWorkflowDefinitionResponseBodyWorkflowDefinition setId(Long id) {
+        public GetWorkflowDefinitionResponseBodyWorkflowDefinition setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 

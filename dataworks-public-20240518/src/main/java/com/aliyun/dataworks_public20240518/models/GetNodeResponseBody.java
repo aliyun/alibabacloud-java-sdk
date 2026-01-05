@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeResponseBody extends TeaModel {
     /**
-     * <p>The information about the node.</p>
+     * <p>Data Studio node details.</p>
      */
     @NameInMap("Node")
     public GetNodeResponseBodyNode node;
@@ -51,13 +51,16 @@ public class GetNodeResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The unique identifier of the Data Studio node.</p>
+         * <blockquote>
+         * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The time when the node was last modified. This value is a UNIX timestamp.</p>
@@ -188,7 +191,7 @@ public class GetNodeResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The Id of the scheduled task after the node is published.</p>
+         * <p>The ID of the corresponding scheduling task after the node is published.</p>
          * 
          * <strong>example:</strong>
          * <p>700006680527</p>
@@ -209,11 +212,11 @@ public class GetNodeResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetNodeResponseBodyNode setId(Long id) {
+        public GetNodeResponseBodyNode setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 

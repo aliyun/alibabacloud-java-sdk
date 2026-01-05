@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreviewDatasetVersionRequest extends TeaModel {
     /**
+     * <p>The dataset version ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

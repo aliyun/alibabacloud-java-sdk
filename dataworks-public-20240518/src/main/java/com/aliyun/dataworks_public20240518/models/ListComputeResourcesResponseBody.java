@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListComputeResourcesResponseBody extends TeaModel {
+    /**
+     * <p>Pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListComputeResourcesResponseBodyPagingInfo pagingInfo;
 
+    /**
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +41,88 @@ public class ListComputeResourcesResponseBody extends TeaModel {
     }
 
     public static class ListComputeResourcesResponseBodyPagingInfoComputeResourcesComputeResource extends TeaModel {
+        /**
+         * <p>The category of the added compute resource. Different types have different subtypes with corresponding parameter constraints. Examples: InstanceMode: The instance mode. UrlMode: The connection string mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\n    \&quot;clusterIdentifier\&quot;: \&quot;c-da123456\&quot;,\n    \&quot;database\&quot;: \&quot;testdb\&quot;,\n    \&quot;loginMode\&quot;:\&quot;Anonymous\&quot;,\n    \&quot;defaultFS\&quot;:\&quot;127.0.0.1\&quot;,\n    \&quot;envType\&quot;: \&quot;Prod\&quot;\n}</p>
+         */
         @NameInMap("ConnectionProperties")
         public Object connectionProperties;
 
+        /**
+         * <p>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</p>
+         * <ul>
+         * <li>Dev</li>
+         * <li>Prod Different types of computing resources have different attribute specifications under different configuration modes (ConnectionPropertiesMode).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UrlMode</p>
+         */
         @NameInMap("ConnectionPropertiesMode")
         public String connectionPropertiesMode;
 
+        /**
+         * <p>The creation time (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624387842781448</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648711113000</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The unique identifier of the computing resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>home_feed</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The computing resource ID, which is the unique identifier for the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8649832502405358603</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The last modified time of the computing resource (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624387842781448</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The modifier ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1648711113000</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>Specifies whether it is the default compute resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("WhetherDefault")
         public Boolean whetherDefault;
 
@@ -139,12 +206,27 @@ public class ListComputeResourcesResponseBody extends TeaModel {
     }
 
     public static class ListComputeResourcesResponseBodyPagingInfoComputeResources extends TeaModel {
+        /**
+         * <p>Details of a single computing resource.</p>
+         */
         @NameInMap("ComputeResource")
         public java.util.List<ListComputeResourcesResponseBodyPagingInfoComputeResourcesComputeResource> computeResource;
 
+        /**
+         * <p>The name of the computing resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cal_all_vemg_workflow_parallel</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the computing resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hologres</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -180,15 +262,36 @@ public class ListComputeResourcesResponseBody extends TeaModel {
     }
 
     public static class ListComputeResourcesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The list of computing resources. Each element is a computing resource group that contains information about the development environment (if any) and the production environment.</p>
+         */
         @NameInMap("ComputeResources")
         public java.util.List<ListComputeResourcesResponseBodyPagingInfoComputeResources> computeResources;
 
+        /**
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
+        /**
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

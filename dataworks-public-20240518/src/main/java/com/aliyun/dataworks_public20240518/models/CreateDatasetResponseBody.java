@@ -23,6 +23,8 @@ public class CreateDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the creation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

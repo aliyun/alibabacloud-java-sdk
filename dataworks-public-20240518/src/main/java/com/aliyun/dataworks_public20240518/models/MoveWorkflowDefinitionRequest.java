@@ -5,14 +5,17 @@ import com.aliyun.tea.*;
 
 public class MoveWorkflowDefinitionRequest extends TeaModel {
     /**
-     * <p>The ID of the workflow.</p>
+     * <p>The unique identifier of the Data Studio workflow.</p>
+     * <blockquote>
+     * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>543217824470354XXXX</p>
      */
     @NameInMap("Id")
-    public Long id;
+    public String id;
 
     /**
      * <p>The path to which you want to move the workflow. You do not need to specify a workflow name in the path.</p>
@@ -40,11 +43,11 @@ public class MoveWorkflowDefinitionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public MoveWorkflowDefinitionRequest setId(Long id) {
+    public MoveWorkflowDefinitionRequest setId(String id) {
         this.id = id;
         return this;
     }
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 

@@ -14,7 +14,7 @@ public class GetResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the file resource.</p>
+     * <p>File resource details</p>
      */
     @NameInMap("Resource")
     public GetResourceResponseBodyResource resource;
@@ -51,13 +51,16 @@ public class GetResourceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the file resource.</p>
+         * <p>The unique identifier of the file resource.</p>
+         * <blockquote>
+         * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The time when the file resource was last modified. This value is a UNIX timestamp.</p>
@@ -146,11 +149,11 @@ public class GetResourceResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetResourceResponseBodyResource setId(Long id) {
+        public GetResourceResponseBodyResource setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 

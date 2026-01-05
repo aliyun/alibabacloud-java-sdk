@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowInstancesResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>Pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListWorkflowInstancesResponseBodyPagingInfo pagingInfo;
@@ -167,6 +167,8 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The account ID of the workflow owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -233,6 +235,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("UnifiedWorkflowInstanceId")
         public Long unifiedWorkflowInstanceId;
 
@@ -252,6 +258,8 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String workflowParameters;
 
         /**
+         * <p>The task instance ID corresponding to the workflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */

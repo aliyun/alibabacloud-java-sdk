@@ -52,12 +52,15 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
 
         /**
          * <p>The unique identifier of the deployment.</p>
+         * <blockquote>
+         * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The error message if the deployment failed.</p>
@@ -148,11 +151,11 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListPipelineRunItemsResponseBodyPagingInfoPipelineRunItems setId(Long id) {
+        public ListPipelineRunItemsResponseBodyPagingInfoPipelineRunItems setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 

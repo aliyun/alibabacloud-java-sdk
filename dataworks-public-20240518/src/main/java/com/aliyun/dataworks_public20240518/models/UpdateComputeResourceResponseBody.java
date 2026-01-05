@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class UpdateComputeResourceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -169,12 +169,15 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
         /**
          * <p>The variable ID.</p>
+         * <blockquote>
+         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>543218872620113XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The variable name.</p>
@@ -244,11 +247,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.artifactType;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables setId(Long id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariables setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -431,12 +434,15 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
         /**
          * <p>The variable ID.</p>
+         * <blockquote>
+         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>543217824470354XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The variable name.</p>
@@ -506,11 +512,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.artifactType;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables setId(Long id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariables setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -658,13 +664,16 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
     public static class ListNodeDependenciesResponseBodyPagingInfoNodesScript extends TeaModel {
         /**
-         * <p>The script ID.</p>
+         * <p>The ID of the script.</p>
+         * <blockquote>
+         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>853573334108680XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The script path.</p>
@@ -686,11 +695,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodesScript setId(Long id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodesScript setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -877,12 +886,15 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
         /**
          * <p>The unique identifier of the trigger.</p>
+         * <blockquote>
+         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>543680677872062XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The effective start time of the schedule, in the format yyyy-MM-dd HH:mm:ss.</p>
@@ -938,11 +950,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodesTrigger setId(Long id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodesTrigger setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -998,16 +1010,19 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The unique identifier of the Data Studio node.</p>
+         * <blockquote>
+         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>723932906364267XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
-         * <p>The input of the node.</p>
+         * <p>The node input.</p>
          */
         @NameInMap("Inputs")
         public ListNodeDependenciesResponseBodyPagingInfoNodesInputs inputs;
@@ -1137,11 +1152,11 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListNodeDependenciesResponseBodyPagingInfoNodes setId(Long id) {
+        public ListNodeDependenciesResponseBodyPagingInfoNodes setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 

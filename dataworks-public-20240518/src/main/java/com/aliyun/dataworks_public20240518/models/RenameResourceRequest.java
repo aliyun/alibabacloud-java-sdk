@@ -5,14 +5,17 @@ import com.aliyun.tea.*;
 
 public class RenameResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the file resource.</p>
+     * <p>The unique identifier of the Data Studio file resource.</p>
+     * <blockquote>
+     * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>543217824470354XXXX</p>
      */
     @NameInMap("Id")
-    public Long id;
+    public String id;
 
     /**
      * <p>The new name.</p>
@@ -40,11 +43,11 @@ public class RenameResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RenameResourceRequest setId(Long id) {
+    public RenameResourceRequest setId(String id) {
         this.id = id;
         return this;
     }
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 

@@ -11,6 +11,8 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
     public ListResourceGroupMetricDataResponseBodyMetricData metricData;
 
     /**
+     * <p>The request ID, used for locating logs and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
      */
@@ -18,6 +20,8 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -55,6 +59,8 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
 
     public static class ListResourceGroupMetricDataResponseBodyMetricDataMetrics extends TeaModel {
         /**
+         * <p>The timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1761184929633</p>
          */
@@ -62,6 +68,8 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The value of the metric data.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -93,6 +101,8 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
 
     public static class ListResourceGroupMetricDataResponseBodyMetricData extends TeaModel {
         /**
+         * <p>The unique identifier for the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
          */
@@ -100,12 +110,12 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The metric name. Available metrics include:</p>
+         * <p>The metric name. Valid values:</p>
          * <ul>
          * <li>CUSpec: Maximum CU capacity of the resource group, in CUs.</li>
          * <li>CUUsage: CU usage of the resource group, in CUs.</li>
          * <li>CUUtilization: CU utilization of the resource group, in %.</li>
-         * <li>SlotSpec: Maximum concurrency for resource group scheduling, in slots.</li>
+         * <li>SlotSpec: Maximum number of concurrent slots for resource group scheduling, in slots.</li>
          * <li>SlotUsage: Used concurrency for resource group scheduling, in slots.</li>
          * <li>SchedulerCUMaxSpec: Maximum CU quota for data computing, in CUs.</li>
          * <li>SchedulerCUUsage: CU usage for data computing, in CUs.</li>
@@ -127,10 +137,15 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The list of metric data.</p>
+         */
         @NameInMap("Metrics")
         public java.util.List<ListResourceGroupMetricDataResponseBodyMetricDataMetrics> metrics;
 
         /**
+         * <p>The pagination cursor.</p>
+         * 
          * <strong>example:</strong>
          * <p>tSBOXZcAmk+akxRkwRuXnGQEsIDODyd5ulPqgytNTbLp4bhb7fuvz13FXtm87Kfl</p>
          */

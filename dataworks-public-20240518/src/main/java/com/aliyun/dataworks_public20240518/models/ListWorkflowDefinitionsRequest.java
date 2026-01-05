@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListWorkflowDefinitionsRequest extends TeaModel {
+    /**
+     * <p>The name of the workflow. Fuzzy search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -17,7 +23,7 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the data to retrieve, used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,7 +52,7 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The workflow type. This parameter specifies a filter condition.</p>
+     * <p>Filter condition: The type of the workflow. The default value is CycleWorkflow.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>CycleWorkflow</li>

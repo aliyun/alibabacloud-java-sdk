@@ -67,7 +67,7 @@ public class UpdateTaskRequest extends TeaModel {
      * <p>The instance generation mode.</p>
      * <ul>
      * <li>T+1: the next day</li>
-     * <li>Immediately</li>
+     * <li>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -14,6 +14,17 @@ public class ListTaskInstancesRequest extends TeaModel {
     @NameInMap("Bizdate")
     public Long bizdate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;startedTimeStart&quot;: &quot;1763481600000&quot;,
+     *     &quot;startedTimeEnd&quot;: &quot;1763481600000&quot;,
+     *     &quot;finishedTimeStart&quot;: &quot;1763481600000&quot;,
+     *     &quot;finishedTimeEnd&quot;: &quot;1763481600000&quot;,
+     *     &quot;createTimeStart&quot;: &quot;1763481600000&quot;,
+     *     &quot;createTimeEnd&quot;: &quot;1763481600000&quot;
+     * }</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
@@ -190,6 +201,10 @@ public class ListTaskInstancesRequest extends TeaModel {
     @NameInMap("TriggerType")
     public String triggerType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("UnifiedWorkflowInstanceId")
     public Long unifiedWorkflowInstanceId;
 
@@ -219,6 +234,7 @@ public class ListTaskInstancesRequest extends TeaModel {
      * <li>SupplementData: Data backfill</li>
      * <li>ManualWorkflow: Manually triggered workflow</li>
      * <li>Normal: Scheduled execution</li>
+     * <li>TriggerWorkflow: Triggered Workflow</li>
      * </ul>
      * 
      * <strong>example:</strong>

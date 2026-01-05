@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteComputeResourceRequest extends TeaModel {
     /**
+     * <p>The computing resource ID, the unique identifier of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteComputeResourceRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

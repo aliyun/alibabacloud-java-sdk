@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
+    /**
+     * <p>The name of the file resource. Supports fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -17,7 +23,7 @@ public class ListResourcesRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the data to retrieve, used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatasetRequest extends TeaModel {
     /**
+     * <p>The dataset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

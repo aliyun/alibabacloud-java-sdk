@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFunctionResponseBody extends TeaModel {
     /**
-     * <p>The information about the UDF.</p>
+     * <p>UDF function details</p>
      */
     @NameInMap("Function")
     public GetFunctionResponseBodyFunction function;
@@ -51,13 +51,16 @@ public class GetFunctionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the UDF.</p>
+         * <p>The unique identifier of the UDF function.</p>
+         * <blockquote>
+         * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The time when the UDF was last modified. This value is a UNIX timestamp.</p>
@@ -147,11 +150,11 @@ public class GetFunctionResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetFunctionResponseBodyFunction setId(Long id) {
+        public GetFunctionResponseBodyFunction setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 

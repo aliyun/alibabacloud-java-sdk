@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetShrinkRequest extends TeaModel {
     /**
+     * <p>The description of the dataset. It must not exceed 1,024 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
      */
@@ -12,6 +14,17 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The data type. Valid values:</p>
+     * <ul>
+     * <li>COMMON: Common (Default)</li>
+     * <li>PIC</li>
+     * <li>TEXT</li>
+     * <li>TABLE</li>
+     * <li>VIDEO</li>
+     * <li>AUDIO</li>
+     * <li>INDEX</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>COMMON</p>
      */
@@ -19,12 +32,14 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String dataType;
 
     /**
+     * <p>The initial version of the dataset.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InitVersion")
     public String initVersionShrink;
 
     /**
+     * <p>The name of the dataset. It cannot be an empty string and must not exceed 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +49,8 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The source of the dataset. Currently, only DataWorks is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>DataWorks</p>
      */
@@ -41,6 +58,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String origin;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +68,23 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The storage type. Currently supported values:</p>
+     * <ul>
+     * <li>OSS</li>
+     * <li>NAS: General-purpose NAS file systems</li>
+     * <li>EXTREMENAS: Extreme NAS file systems</li>
+     * <li>DLF_LANCE: Data Lake Formation</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>NAS: General-purpose NAS file systems</li>
+     * <li>MAXCOMPUTE: MaxCompute table</li>
+     * <li>CPFS: Cloud Parallel File Storage</li>
+     * <li>BMCPFS: CPFS for Lingjun</li>
+     * <li>EXTREMENAS: Extreme NAS file systems</li>
+     * <li>OSS: Object Storage Service</li>
+     * <li>DLF_LANCE: Data Lake Formation.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,6 +14,12 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     @NameInMap("BizDate")
     public Long bizDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{<br>    &quot;status&quot;: &quot;Success&quot;,
+     *     &quot;executionDate&quot;: &quot;1763481600000&quot;
+     * }</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
@@ -106,6 +112,10 @@ public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("UnifiedWorkflowInstanceId")
     public Long unifiedWorkflowInstanceId;
 

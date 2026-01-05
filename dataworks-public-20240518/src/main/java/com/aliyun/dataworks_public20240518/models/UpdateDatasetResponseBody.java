@@ -14,6 +14,8 @@ public class UpdateDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the update is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

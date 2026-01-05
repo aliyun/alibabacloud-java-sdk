@@ -16,7 +16,16 @@ public class ImportWorkflowDefinitionRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The FlowSpec field information about the workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
+     * <p>The FlowSpec information for this workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
+     * <blockquote>
+     * <p>How to quickly obtain a FlowSpec template?</p>
+     * </blockquote>
+     * <ul>
+     * <li>Open a workflow in Data Studio, then click &quot;Show Spec&quot; in the top-right corner to retrieve the FlowSpec description for the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This interface supports creating both the workflow and its internal nodes simultaneously. Therefore, please pay close attention to the ID specified in the FlowSpec. If the provided ID already exists, the operation will be treated as an update. A create operation is performed only if the ID is omitted or does not exist.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

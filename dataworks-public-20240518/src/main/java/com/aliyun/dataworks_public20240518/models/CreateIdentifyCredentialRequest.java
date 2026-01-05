@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateIdentifyCredentialRequest extends TeaModel {
+    /**
+     * <p>The user credential object.</p>
+     */
     @NameInMap("IdentifyCredential")
     public IdentifyCredential identifyCredential;
 

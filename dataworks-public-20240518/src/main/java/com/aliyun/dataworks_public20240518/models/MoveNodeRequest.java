@@ -12,7 +12,7 @@ public class MoveNodeRequest extends TeaModel {
      * <p>652567824470354XXXX</p>
      */
     @NameInMap("Id")
-    public Long id;
+    public String id;
 
     /**
      * <p>The path to which you want to move the node. You do not need to specify a node name in the path.</p>
@@ -41,11 +41,11 @@ public class MoveNodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public MoveNodeRequest setId(Long id) {
+    public MoveNodeRequest setId(String id) {
         this.id = id;
         return this;
     }
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 

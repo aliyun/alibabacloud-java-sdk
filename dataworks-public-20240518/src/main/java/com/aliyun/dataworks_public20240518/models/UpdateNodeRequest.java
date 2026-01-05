@@ -5,14 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeRequest extends TeaModel {
     /**
-     * <p>The ID of the node.</p>
+     * <p>The unique identifier of the Data Studio node.</p>
+     * <blockquote>
+     * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>652567824470354XXXX</p>
      */
     @NameInMap("Id")
-    public Long id;
+    public String id;
 
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
@@ -106,11 +109,11 @@ public class UpdateNodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateNodeRequest setId(Long id) {
+    public UpdateNodeRequest setId(String id) {
         this.id = id;
         return this;
     }
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 

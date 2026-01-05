@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetComputeResourceResponseBody extends TeaModel {
+    /**
+     * <p>The details of the computing resource.</p>
+     */
     @NameInMap("ComputeResource")
     public GetComputeResourceResponseBodyComputeResource computeResource;
 
     /**
+     * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
      */
@@ -37,6 +42,12 @@ public class GetComputeResourceResponseBody extends TeaModel {
 
     public static class GetComputeResourceResponseBodyComputeResource extends TeaModel {
         /**
+         * <p>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</p>
+         * <ul>
+         * <li>Dev</li>
+         * <li>Prod Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;envType&quot;: &quot;Prod&quot;,
@@ -52,6 +63,13 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public Object connectionProperties;
 
         /**
+         * <p>The addition category of the computing resource. Different types will have different subtypes, each with corresponding parameter constraints. For instance:</p>
+         * <ul>
+         * <li>InstanceMode: Instance mode</li>
+         * <li>UrlMode: Connection String Mode</li>
+         * <li>CdhMode: CDH mode</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>InstanceMode</p>
          */
@@ -59,6 +77,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public String connectionPropertiesMode;
 
         /**
+         * <p>The creation time, in timestamp format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1698286929333</p>
          */
@@ -66,6 +86,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107550004253538</p>
          */
@@ -73,6 +95,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The description of the computing resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>My Description</p>
          */
@@ -80,6 +104,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the computing resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>16738</p>
          */
@@ -87,6 +113,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The last modification time, in timestamp format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1698286929333</p>
          */
@@ -94,6 +122,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
+         * <p>The ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107550004253538</p>
          */
@@ -101,6 +131,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The name of the computing resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>MyCs</p>
          */
@@ -108,6 +140,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the workspace to which the computing resource belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>52660</p>
          */
@@ -115,6 +149,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The business unique key for the computing resource. For example, the format for Hologres is ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107550004253538:cn-beijing:holo:hgprecn-cn-x0r3oun4k001:testdb</p>
          */
@@ -122,6 +158,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public String qualifiedName;
 
         /**
+         * <p>The type of the computing resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>hologres</p>
          */
@@ -129,6 +167,8 @@ public class GetComputeResourceResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Specifies whether it is the default computing resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

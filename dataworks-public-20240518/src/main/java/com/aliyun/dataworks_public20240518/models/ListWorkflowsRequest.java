@@ -92,6 +92,7 @@ public class ListWorkflowsRequest extends TeaModel {
      * <ul>
      * <li>Scheduler</li>
      * <li>Manual</li>
+     * <li>TriggerWorkflow</li>
      * </ul>
      * 
      * <strong>example:</strong>

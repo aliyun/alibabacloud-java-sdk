@@ -17,29 +17,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "dataworks.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "dataworks.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "dataworks.aliyuncs.com"),
+            new TeaPair("ap-south-1", "dataworks.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "dataworks.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "dataworks.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "dataworks.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "dataworks.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "dataworks.ap-southeast-5.aliyuncs.com"),
             new TeaPair("cn-beijing", "dataworks.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "dataworks.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "dataworks.aliyuncs.com"),
             new TeaPair("cn-chengdu", "dataworks.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-fujian", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "dataworks.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "dataworks.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "dataworks.aliyuncs.com"),
             new TeaPair("cn-hongkong", "dataworks.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "dataworks.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "dataworks.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("cn-qingdao", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "dataworks.aliyuncs.com"),
             new TeaPair("cn-shanghai", "dataworks.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "dataworks.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "dataworks.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "dataworks.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "dataworks.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "dataworks.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "dataworks.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "dataworks.aliyuncs.com"),
             new TeaPair("eu-central-1", "dataworks.eu-central-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "dataworks.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "dataworks.aliyuncs.com"),
             new TeaPair("me-east-1", "dataworks.me-east-1.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "dataworks.aliyuncs.com"),
             new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "dataworks.aliyuncs.com")
+            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dataworks-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -157,8 +190,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation may not be available in earlier versions of the SDK. In this case, use the AbolishDeployment operation. The parameters for AbolishDeployment are the same as those described in this topic.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Terminates the process for deploying or undeploying an entity. The process is not deleted and can still be queried by calling query operations.</p>
+     * <p>Terminates the specified deployment process. This operation changes the status of the process to Terminated but does not delete the process. You can still query the process.</p>
      * 
      * @param request AbolishPipelineRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -193,8 +231,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation may not be available in earlier versions of the SDK. In this case, use the AbolishDeployment operation. The parameters for AbolishDeployment are the same as those described in this topic.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Terminates the process for deploying or undeploying an entity. The process is not deleted and can still be queried by calling query operations.</p>
+     * <p>Terminates the specified deployment process. This operation changes the status of the process to Terminated but does not delete the process. You can still query the process.</p>
      * 
      * @param request AbolishPipelineRunRequest
      * @return AbolishPipelineRunResponse
@@ -1826,7 +1869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据集</p>
+     * <p>Creates a dataset. This operation is supported only in workspaces that the user has joined. Currently, only DataWorks datasets are supported. The maximum number of datasets allowed per tenant is 2,000.</p>
      * 
      * @param tmpReq CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1888,7 +1931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据集</p>
+     * <p>Creates a dataset. This operation is supported only in workspaces that the user has joined. Currently, only DataWorks datasets are supported. The maximum number of datasets allowed per tenant is 2,000.</p>
      * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -1900,7 +1943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据集版本</p>
+     * <p>Creates a dataset version. Currently supports DataWorks datasets only, with a maximum of 20 versions.</p>
      * 
      * @param tmpReq CreateDatasetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1954,7 +1997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据集版本</p>
+     * <p>Creates a dataset version. Currently supports DataWorks datasets only, with a maximum of 20 versions.</p>
      * 
      * @param request CreateDatasetVersionRequest
      * @return CreateDatasetVersionResponse
@@ -2239,8 +2282,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation does not support batch processing. If multiple publishing entities are specified in the parameters, only the first one will be processed; the others will be ignored.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建身份凭证</p>
+     * <p>Creates an identity credential.</p>
      * 
      * @param tmpReq CreateIdentifyCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2277,8 +2325,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation does not support batch processing. If multiple publishing entities are specified in the parameters, only the first one will be processed; the others will be ignored.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建身份凭证</p>
+     * <p>Creates an identity credential.</p>
      * 
      * @param request CreateIdentifyCredentialRequest
      * @return CreateIdentifyCredentialResponse
@@ -2541,11 +2594,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</p>
+     * <p> Batch operations are not currently supported. If you specify multiple entities in the parameters, only the first entity takes effect, and the rest are ignored.
+     *  This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters for CreateDeployment are the same as those described in this topic.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a process for deploying or undeploying an entity in Data Studio.</p>
+     * <p>Creates a deployment process for entities in the Data Studio (new version).</p>
      * 
      * @param tmpReq CreatePipelineRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2596,11 +2650,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</p>
+     * <p> Batch operations are not currently supported. If you specify multiple entities in the parameters, only the first entity takes effect, and the rest are ignored.
+     *  This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters for CreateDeployment are the same as those described in this topic.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a process for deploying or undeploying an entity in Data Studio.</p>
+     * <p>Creates a deployment process for entities in the Data Studio (new version).</p>
      * 
      * @param request CreatePipelineRunRequest
      * @return CreatePipelineRunResponse
@@ -3701,6 +3756,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>验证用</p>
      * 
@@ -3737,6 +3799,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>验证用</p>
      * 
@@ -4324,7 +4393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据集</p>
+     * <p>Delete a dataset. Only DataWorks datasets are supported. This operation cascades to delete all associated dataset versions. Requires dataset creator or workspace administrator permissions.</p>
      * 
      * @param request DeleteDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4356,7 +4425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据集</p>
+     * <p>Delete a dataset. Only DataWorks datasets are supported. This operation cascades to delete all associated dataset versions. Requires dataset creator or workspace administrator permissions.</p>
      * 
      * @param request DeleteDatasetRequest
      * @return DeleteDatasetResponse
@@ -4368,7 +4437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据集版本</p>
+     * <p>Deletes a dataset version. Only non-v1 DataWorks datasets are supported. To delete v1 datasets, use the DeleteDataset operation. Requires dataset creator or workspace administrator permissions.</p>
      * 
      * @param request DeleteDatasetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4400,7 +4469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据集版本</p>
+     * <p>Deletes a dataset version. Only non-v1 DataWorks datasets are supported. To delete v1 datasets, use the DeleteDataset operation. Requires dataset creator or workspace administrator permissions.</p>
      * 
      * @param request DeleteDatasetVersionRequest
      * @return DeleteDatasetVersionResponse
@@ -6602,7 +6671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集版本</p>
+     * <p>Gets information for a given dataset version.</p>
      * 
      * @param request GetDatasetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6634,7 +6703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集版本</p>
+     * <p>Gets information for a given dataset version.</p>
      * 
      * @param request GetDatasetVersionRequest
      * @return GetDatasetVersionResponse
@@ -9644,7 +9713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集版本列表</p>
+     * <p>Retrieves the version list for a given dataset.</p>
      * 
      * @param request ListDatasetVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9696,7 +9765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集版本列表</p>
+     * <p>Retrieves the version list for a given dataset.</p>
      * 
      * @param request ListDatasetVersionsRequest
      * @return ListDatasetVersionsResponse
@@ -9708,7 +9777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集列表</p>
+     * <p>Queries a list of datasets. Currently, DataWorks datasets and PAI datasets are supported.</p>
      * 
      * @param tmpReq ListDatasetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9786,7 +9855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据集列表</p>
+     * <p>Queries a list of datasets. Currently, DataWorks datasets and PAI datasets are supported.</p>
      * 
      * @param request ListDatasetsRequest
      * @return ListDatasetsResponse
@@ -10384,7 +10453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</p>
+     * <p>查询实体血缘</p>
      * 
      * @param request ListLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10412,7 +10481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</p>
+     * <p>查询实体血缘</p>
      * 
      * @param request ListLineagesRequest
      * @return ListLineagesResponse
@@ -12192,7 +12261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预览数据集版本内容</p>
+     * <p>Previews the content of a specified dataset version. Currently only text file preview is supported for OSS-type datasets. Supported MIME types 1. application/json 2. application/xml 3. text/html 4. text/plain 5. application/octet-stream</p>
      * 
      * @param request PreviewDatasetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12224,7 +12293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预览数据集版本内容</p>
+     * <p>Previews the content of a specified dataset version. Currently only text file preview is supported for OSS-type datasets. Supported MIME types 1. application/json 2. application/xml 3. text/html 4. text/plain 5. application/octet-stream</p>
      * 
      * @param request PreviewDatasetVersionRequest
      * @return PreviewDatasetVersionResponse
@@ -14708,7 +14777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据集</p>
+     * <p>Updates dataset information. Only DataWorks datasets are supported. The operator must be the creator of the dataset or the administrator of the workspace where the dataset is located.</p>
      * 
      * @param request UpdateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14752,7 +14821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据集</p>
+     * <p>Updates dataset information. Only DataWorks datasets are supported. The operator must be the creator of the dataset or the administrator of the workspace where the dataset is located.</p>
      * 
      * @param request UpdateDatasetRequest
      * @return UpdateDatasetResponse
@@ -14764,7 +14833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据集版本信息</p>
+     * <p>Updates dataset version information. Only DataWorks datasets are supported. Requires dataset creator or workspace administrator permissions.</p>
      * 
      * @param request UpdateDatasetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14800,7 +14869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据集版本信息</p>
+     * <p>Updates dataset version information. Only DataWorks datasets are supported. Requires dataset creator or workspace administrator permissions.</p>
      * 
      * @param request UpdateDatasetVersionRequest
      * @return UpdateDatasetVersionResponse

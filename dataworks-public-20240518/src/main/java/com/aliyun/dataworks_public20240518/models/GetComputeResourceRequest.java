@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetComputeResourceRequest extends TeaModel {
     /**
+     * <p>The computing resource ID, which is the unique identifier for the resource.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11792</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
+     * <p>The ID of the DataWorks workspace.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10003</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

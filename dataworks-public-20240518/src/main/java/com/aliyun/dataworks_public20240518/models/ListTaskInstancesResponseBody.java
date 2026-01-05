@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>Pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListTaskInstancesResponseBodyPagingInfo pagingInfo;
@@ -453,6 +453,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("UnifiedWorkflowInstanceId")
         public Long unifiedWorkflowInstanceId;
 

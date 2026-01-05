@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
     /**
-     * <p>The container ID, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. The container ID that you specify is unrelated to the resource group ID indicated by the ResourceGroupId parameter.</p>
+     * <p>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</p>
+     * <blockquote>
+     * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
      */
     @NameInMap("ContainerId")
-    public Long containerId;
+    public String containerId;
 
     /**
      * <p>The name of the node. Fuzzy search is supported.</p>
@@ -97,11 +100,11 @@ public class ListNodesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListNodesRequest setContainerId(Long containerId) {
+    public ListNodesRequest setContainerId(String containerId) {
         this.containerId = containerId;
         return this;
     }
-    public Long getContainerId() {
+    public String getContainerId() {
         return this.containerId;
     }
 

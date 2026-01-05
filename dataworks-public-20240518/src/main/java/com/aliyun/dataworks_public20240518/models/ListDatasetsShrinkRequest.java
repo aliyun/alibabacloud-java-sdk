@@ -5,16 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListDatasetsShrinkRequest extends TeaModel {
     /**
+     * <p>The creator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12103XXX46492139</p>
      */
     @NameInMap("CreatorId")
     public String creatorId;
 
+    /**
+     * <p>The data type. Multiple selections are allowed. Valid values:</p>
+     * <ul>
+     * <li>COMMON</li>
+     * <li>PIC</li>
+     * <li>TEXT</li>
+     * <li>TABLE</li>
+     * <li>VIDEO</li>
+     * <li>AUDIO</li>
+     * <li>INDEX</li>
+     * </ul>
+     */
     @NameInMap("DataTypeList")
     public String dataTypeListShrink;
 
     /**
+     * <p>The dataset name. Supports fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_dataset</p>
      */
@@ -22,6 +38,13 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order. Default: Desc.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Asc: Ascending.</li>
+     * <li>Desc: Descending.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Asc</p>
      */
@@ -29,6 +52,12 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The dataset source. Valid values:</p>
+     * <ul>
+     * <li>DataWorks</li>
+     * <li>PAI</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DataWorks</p>
      */
@@ -36,6 +65,8 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     public String origin;
 
     /**
+     * <p>The page number. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +74,8 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +83,8 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>251363</p>
      */
@@ -57,12 +92,32 @@ public class ListDatasetsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The sort field. Default: CreateTime.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ModifyTime: Modification time.</li>
+     * <li>CreateTime: Creation time.</li>
+     * <li>Name</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The storage type. Multiple selections are allowed. Supported values:</p>
+     * <ul>
+     * <li>OSS</li>
+     * <li>NAS: General-purpose NAS file systems</li>
+     * <li>EXTREMENAS: Extreme NAS file systems</li>
+     * <li>DLF_LANCE: Data Lake Formation</li>
+     * <li>CPFS: Cloud Parallel File Storage</li>
+     * <li>BMCPFS: CPFS for Lingjun</li>
+     * <li>MAXCOMPUTE: MaxCompute table</li>
+     * </ul>
+     */
     @NameInMap("StorageTypeList")
     public String storageTypeListShrink;
 

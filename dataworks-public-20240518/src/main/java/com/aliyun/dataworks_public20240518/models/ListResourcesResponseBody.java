@@ -42,7 +42,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyPagingInfoResourcesDataSource extends TeaModel {
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
          * <p>odps_first</p>
@@ -84,7 +84,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyPagingInfoResourcesScriptRuntime extends TeaModel {
         /**
-         * <p>The command used to distinguish file resource types.</p>
+         * <p>Command. This parameter indicates the file type.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS_PYTHON</p>
@@ -109,13 +109,16 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyPagingInfoResourcesScript extends TeaModel {
         /**
-         * <p>The script ID.</p>
+         * <p>Script ID.</p>
+         * <blockquote>
+         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>123348864897630XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
          * <p>The script path.</p>
@@ -127,7 +130,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The runtime.</p>
+         * <p>Runtime</p>
          */
         @NameInMap("Runtime")
         public ListResourcesResponseBodyPagingInfoResourcesScriptRuntime runtime;
@@ -137,11 +140,11 @@ public class ListResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListResourcesResponseBodyPagingInfoResourcesScript setId(Long id) {
+        public ListResourcesResponseBodyPagingInfoResourcesScript setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -174,22 +177,25 @@ public class ListResourcesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The information about the data source.</p>
+         * <p>The data source.</p>
          */
         @NameInMap("DataSource")
         public ListResourcesResponseBodyPagingInfoResourcesDataSource dataSource;
 
         /**
-         * <p>The ID of the file resource.</p>
+         * <p>The unique identifier of the file resource.</p>
+         * <blockquote>
+         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>631478864897630XXXX</p>
          */
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         /**
-         * <p>The times when the file resource was last modified. This value is a UNIX timestamp.</p>
+         * <p>The timestamp when the file resource was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1724505917000</p>
@@ -198,7 +204,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The name of the file resource.</p>
+         * <p>The resource name.</p>
          * 
          * <strong>example:</strong>
          * <p>math.py</p>
@@ -216,7 +222,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
+         * <p>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
          * 
          * <strong>example:</strong>
          * <p>344247</p>
@@ -231,7 +237,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public ListResourcesResponseBodyPagingInfoResourcesScript script;
 
         /**
-         * <p>The path of the source of the file resource. If the SourecType parameter is set to Local, this parameter is left empty.</p>
+         * <p>Source path of the file resource. This parameter is empty if the type is Local.</p>
          * 
          * <strong>example:</strong>
          * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
@@ -240,11 +246,11 @@ public class ListResourcesResponseBody extends TeaModel {
         public String sourcePath;
 
         /**
-         * <p>The storage type of the source of the file resource.</p>
+         * <p>The source storage type of the file resource.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Local</li>
-         * <li>Oss</li>
+         * <li>Local: Local storage</li>
+         * <li>OSS: Object Storage Service</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,7 +260,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The storage path of the destination of the file resource.</p>
+         * <p>The destination storage path</p>
          * 
          * <strong>example:</strong>
          * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>
@@ -263,12 +269,12 @@ public class ListResourcesResponseBody extends TeaModel {
         public String targetPath;
 
         /**
-         * <p>The storage type of the destination of the file resource.</p>
+         * <p>The destination storage type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Gateway</li>
-         * <li>Oss</li>
-         * <li>Hdfs</li>
+         * <li>OSS</li>
+         * <li>HDFS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +284,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The type of the file resource.</p>
+         * <p>The resource type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Python</li>
@@ -314,11 +320,11 @@ public class ListResourcesResponseBody extends TeaModel {
             return this.dataSource;
         }
 
-        public ListResourcesResponseBodyPagingInfoResources setId(Long id) {
+        public ListResourcesResponseBodyPagingInfoResources setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -424,7 +430,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The queried file resources.</p>
+         * <p>The returned resource list.</p>
          */
         @NameInMap("Resources")
         public java.util.List<ListResourcesResponseBodyPagingInfoResources> resources;
