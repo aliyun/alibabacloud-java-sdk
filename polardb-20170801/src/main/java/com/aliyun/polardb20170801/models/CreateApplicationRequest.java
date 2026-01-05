@@ -22,6 +22,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    @NameInMap("AutoCreatePolarFs")
+    public Boolean autoCreatePolarFs;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,6 +147,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    public CreateApplicationRequest setAutoCreatePolarFs(Boolean autoCreatePolarFs) {
+        this.autoCreatePolarFs = autoCreatePolarFs;
+        return this;
+    }
+    public Boolean getAutoCreatePolarFs() {
+        return this.autoCreatePolarFs;
     }
 
     public CreateApplicationRequest setAutoRenew(Boolean autoRenew) {

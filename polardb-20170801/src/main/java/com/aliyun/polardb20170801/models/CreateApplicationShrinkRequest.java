@@ -22,6 +22,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    @NameInMap("AutoCreatePolarFs")
+    public Boolean autoCreatePolarFs;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -144,6 +147,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    public CreateApplicationShrinkRequest setAutoCreatePolarFs(Boolean autoCreatePolarFs) {
+        this.autoCreatePolarFs = autoCreatePolarFs;
+        return this;
+    }
+    public Boolean getAutoCreatePolarFs() {
+        return this.autoCreatePolarFs;
     }
 
     public CreateApplicationShrinkRequest setAutoRenew(Boolean autoRenew) {

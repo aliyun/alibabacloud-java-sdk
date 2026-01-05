@@ -1706,6 +1706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Architecture", request.architecture);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoCreatePolarFs)) {
+            query.put("AutoCreatePolarFs", request.autoCreatePolarFs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
         }
