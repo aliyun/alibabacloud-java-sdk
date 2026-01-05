@@ -1999,6 +1999,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询资源预留</p>
+     * 
+     * @param request DescribeCapacityReservationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCapacityReservationResponse
+     */
+    public DescribeCapacityReservationResponse describeCapacityReservationWithOptions(DescribeCapacityReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
+            query.put("LoadBalancerId", request.loadBalancerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCapacityReservation"),
+            new TeaPair("version", "2020-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCapacityReservationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资源预留</p>
+     * 
+     * @param request DescribeCapacityReservationRequest
+     * @return DescribeCapacityReservationResponse
+     */
+    public DescribeCapacityReservationResponse describeCapacityReservation(DescribeCapacityReservationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCapacityReservationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries available regions.</p>
      * 
      * @param request DescribeRegionsRequest
@@ -4127,6 +4171,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LoadBalancerLeaveSecurityGroupResponse loadBalancerLeaveSecurityGroup(LoadBalancerLeaveSecurityGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.loadBalancerLeaveSecurityGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改资源预留</p>
+     * 
+     * @param request ModifyCapacityReservationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCapacityReservationResponse
+     */
+    public ModifyCapacityReservationResponse modifyCapacityReservationWithOptions(ModifyCapacityReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
+            query.put("LoadBalancerId", request.loadBalancerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minimumLoadBalancerCapacity)) {
+            query.put("MinimumLoadBalancerCapacity", request.minimumLoadBalancerCapacity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resetCapacityReservation)) {
+            query.put("ResetCapacityReservation", request.resetCapacityReservation);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCapacityReservation"),
+            new TeaPair("version", "2020-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCapacityReservationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改资源预留</p>
+     * 
+     * @param request ModifyCapacityReservationRequest
+     * @return ModifyCapacityReservationResponse
+     */
+    public ModifyCapacityReservationResponse modifyCapacityReservation(ModifyCapacityReservationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCapacityReservationWithOptions(request, runtime);
     }
 
     /**
