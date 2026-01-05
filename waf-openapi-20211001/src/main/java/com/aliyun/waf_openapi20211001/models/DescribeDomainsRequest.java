@@ -22,6 +22,9 @@ public class DescribeDomainsRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("DomainId")
+    public String domainId;
+
     /**
      * <p>The page number of the page to return. Default value: 1.</p>
      * <p>This parameter is required.</p>
@@ -97,6 +100,14 @@ public class DescribeDomainsRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public DescribeDomainsRequest setDomainId(String domainId) {
+        this.domainId = domainId;
+        return this;
+    }
+    public String getDomainId() {
+        return this.domainId;
     }
 
     public DescribeDomainsRequest setInstanceId(String instanceId) {

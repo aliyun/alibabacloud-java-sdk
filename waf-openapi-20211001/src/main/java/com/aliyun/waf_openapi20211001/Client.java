@@ -6583,6 +6583,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Domain", request.domain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
+            query.put("DomainId", request.domainId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
