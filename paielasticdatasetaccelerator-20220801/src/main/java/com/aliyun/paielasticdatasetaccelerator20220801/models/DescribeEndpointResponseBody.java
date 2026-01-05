@@ -4,36 +4,76 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndpointResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2014-10-02T15:01:23Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2014-10-02T15:01:23Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>endpoint-1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1557702098194904</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Status")
     public EndpointStatus status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>276065346797410278</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>end-ivrq92qhbyrg4jctih</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-j6co2fcdsl1q0gnuc3ym3</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-j6cmr00qjyrft6jo2mg7g</p>
+     */
     @NameInMap("VswitchId")
     public String vswitchId;
 

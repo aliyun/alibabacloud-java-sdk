@@ -4,21 +4,47 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class UpdateSlotRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30.0G</p>
+     */
     @NameInMap("Capacity")
     public String capacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xgboost数据集加速槽</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("LifeCycle")
     public SlotLifeCycle lifeCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>slot_1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://pai-vision-data-hz2.oss-cn-hangzhou-internal.aliyuncs.com/data/VOCdevkit/VOC2007/ImageSets/Main/val.txt</p>
+     */
     @NameInMap("StorageUri")
     public String storageUri;
 
@@ -87,9 +113,17 @@ public class UpdateSlotRequest extends TeaModel {
     }
 
     public static class UpdateSlotRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dataset_version</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v0.1.0</p>
+         */
         @NameInMap("Value")
         public String value;
 

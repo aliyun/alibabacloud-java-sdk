@@ -7,9 +7,19 @@ public class QuerySlotMetricsResponseBody extends TeaModel {
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60s</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

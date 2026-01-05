@@ -4,9 +4,17 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class Metric extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1655897743</p>
+     */
     @NameInMap("Timestamp")
     public String timestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>98.35</p>
+     */
     @NameInMap("Value")
     public Double value;
 

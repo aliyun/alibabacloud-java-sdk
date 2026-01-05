@@ -4,6 +4,10 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateSlotsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -32,9 +36,17 @@ public class CreateSlotsRequest extends TeaModel {
     }
 
     public static class CreateSlotsRequestSlotsTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dataset_version</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v0.1.0</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,15 +74,33 @@ public class CreateSlotsRequest extends TeaModel {
     }
 
     public static class CreateSlotsRequestSlots extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30.0G</p>
+         */
         @NameInMap("Capacity")
         public String capacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xgboost数据集加速槽</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>end-my1tk3jggooi5uwks5,end-n69468yvjz8d12as7d,end-tga4omjrepklkg1onn</p>
+         */
         @NameInMap("EndpointIds")
         public String endpointIds;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inst-my1tk3jggooi5uwks5</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -80,12 +110,28 @@ public class CreateSlotsRequest extends TeaModel {
         @NameInMap("LifeCycle")
         public SlotLifeCycle lifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>slot_1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://pai-vision-data-hz2.oss-cn-hangzhou-internal.aliyuncs.com/data/VOCdevkit/VOC2007/ImageSets/Main/val.txt</p>
+         */
         @NameInMap("StorageUri")
         public String storageUri;
 

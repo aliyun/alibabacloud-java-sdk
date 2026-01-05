@@ -4,12 +4,24 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class SlotStatusDetail extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000000</p>
+     */
     @NameInMap("LoadedFileNum")
     public Long loadedFileNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200G</p>
+     */
     @NameInMap("LoadedFileSize")
     public String loadedFileSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1800000</p>
+     */
     @NameInMap("LoadingTimeCost")
     public Long loadingTimeCost;
 

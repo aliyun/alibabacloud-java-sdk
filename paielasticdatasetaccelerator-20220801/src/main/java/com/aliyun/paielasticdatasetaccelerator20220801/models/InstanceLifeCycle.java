@@ -7,6 +7,10 @@ public class InstanceLifeCycle extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Type")
     public String type;
 

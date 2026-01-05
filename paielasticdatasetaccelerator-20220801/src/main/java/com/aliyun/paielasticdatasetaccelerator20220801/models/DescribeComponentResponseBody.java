@@ -4,33 +4,69 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class DescribeComponentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2014-10-02T15:01:23Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2014-10-02T15:01:23Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dataset-accelerator</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1557702098194904</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>---\n# Source: dataset-accelerator/templates/dataset-accelerator\napiVersion: data.datasetacc.io/v1\nkind: DataSetAccelerator\nmetadata:\n  name: dataset-accelerator\nspec:\n  frontEndAddr: 10.0.0.2\n  frontEndPort: 7001\n</p>
+     */
     @NameInMap("RenderedContent")
     public String renderedContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Template")
     public DescribeComponentResponseBodyTemplate template;
 
+    /**
+     * <strong>example:</strong>
+     * <p>276065346797410278</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cmpt-5zk866779me51jgu3w</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1.0.0</p>
+     */
     @NameInMap("Version")
     public String version;
 
@@ -120,9 +156,17 @@ public class DescribeComponentResponseBody extends TeaModel {
     }
 
     public static class DescribeComponentResponseBodyTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>data/VOCdevkit/VOC2007/ImageSets/Main/val.txt</p>
+         */
         @NameInMap("Uri")
         public String uri;
 

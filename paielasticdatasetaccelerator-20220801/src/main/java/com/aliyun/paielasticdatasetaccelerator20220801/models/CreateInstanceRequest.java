@@ -4,33 +4,75 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30.0G</p>
+     */
     @NameInMap("Capacity")
     public String capacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xgboost数据集加速实例</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxEndpoint")
     public String maxEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxSlot")
     public String maxSlot;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acc_instance_1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ecs</p>
+     */
     @NameInMap("ProviderType")
     public String providerType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
     @NameInMap("Tags")
     public java.util.List<CreateInstanceRequestTags> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>basic</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -120,9 +162,17 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dataset_version</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v0.1.0</p>
+         */
         @NameInMap("Value")
         public String value;
 

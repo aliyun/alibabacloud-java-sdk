@@ -4,9 +4,17 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateEndpointResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>end-5zk866779me51jgu3w</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

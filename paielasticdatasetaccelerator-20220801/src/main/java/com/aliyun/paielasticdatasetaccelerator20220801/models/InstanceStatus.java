@@ -4,18 +4,38 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class InstanceStatus extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Init Succeed</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Phase")
     public String phase;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("SlotNum")
     public Integer slotNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20.0G</p>
+     */
     @NameInMap("UsedCapacity")
     public String usedCapacity;
 

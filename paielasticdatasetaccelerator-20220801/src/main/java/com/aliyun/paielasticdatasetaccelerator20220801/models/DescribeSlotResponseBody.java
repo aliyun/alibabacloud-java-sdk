@@ -4,23 +4,46 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlotResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>30.0G</p>
+     */
     @NameInMap("Capacity")
     public String capacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xgboost数据集加速槽</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2014-10-02T15:01:23Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2014-10-02T15:01:23Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>inst-my1tk3jggooi5uwks5</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>数据集加速槽的读写类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>readonly</p>
      */
     @NameInMap("IoType")
     public String ioType;
@@ -28,30 +51,60 @@ public class DescribeSlotResponseBody extends TeaModel {
     @NameInMap("LifeCycle")
     public SlotLifeCycle lifeCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>slot_1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1557702098194904</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Status")
     public SlotStatus status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://pai-vision-data-hz2.oss-cn-hangzhou-internal.aliyuncs.com/data/VOCdevkit/VOC2007/ImageSets/Main/val.txt</p>
+     */
     @NameInMap("StorageUri")
     public String storageUri;
 
     @NameInMap("Tags")
     public java.util.List<DescribeSlotResponseBodyTags> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>276065346797410278</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>slot-5zk866779me51jgu3w</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
@@ -189,9 +242,17 @@ public class DescribeSlotResponseBody extends TeaModel {
     }
 
     public static class DescribeSlotResponseBodyTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dataset_version</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v0.1.0</p>
+         */
         @NameInMap("Value")
         public String value;
 

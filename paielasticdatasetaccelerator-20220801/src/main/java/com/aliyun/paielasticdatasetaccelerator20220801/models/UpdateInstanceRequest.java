@@ -4,12 +4,24 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xgboost数据集加速实例</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxSlot")
     public String maxSlot;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acc_instance_1</p>
+     */
     @NameInMap("Name")
     public String name;
 

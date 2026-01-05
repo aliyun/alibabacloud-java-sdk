@@ -4,12 +4,24 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class QueryStatisticRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InstanceCapacityEachType</p>
+     */
     @NameInMap("Fields")
     public String fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

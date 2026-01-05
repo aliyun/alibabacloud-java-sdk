@@ -10,6 +10,10 @@ public class QueryStatisticResponseBody extends TeaModel {
     @NameInMap("InstanceNumEachType")
     public java.util.Map<String, ?> instanceNumEachType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,18 +4,40 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceMetricsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SlotIDs: xxx</p>
+     */
     @NameInMap("Dimensions")
     public java.util.Map<String, ?> dimensions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StorageUsage</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5m</p>
+     */
     @NameInMap("TimeStep")
     public String timeStep;
 

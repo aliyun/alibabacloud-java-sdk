@@ -4,18 +4,38 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateSlotRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30.0G</p>
+     */
     @NameInMap("Capacity")
     public String capacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xgboost数据集加速槽</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>end-my1tk3jggooi5uwks5,end-n69468yvjz8d12as7d,end-tga4omjrepklkg1onn</p>
+     */
     @NameInMap("EndpointIds")
     public String endpointIds;
 
     @NameInMap("Endpoints")
     public java.util.List<CreateSlotRequestEndpoints> endpoints;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inst-my1tk3jggooi5uwks5</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -25,12 +45,28 @@ public class CreateSlotRequest extends TeaModel {
     @NameInMap("LifeCycle")
     public SlotLifeCycle lifeCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>slot_1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://pai-vision-data-hz2.oss-cn-hangzhou-internal.aliyuncs.com/data/VOCdevkit/VOC2007/ImageSets/Main/val.txt</p>
+     */
     @NameInMap("StorageUri")
     public String storageUri;
 
@@ -131,15 +167,31 @@ public class CreateSlotRequest extends TeaModel {
     }
 
     public static class CreateSlotRequestEndpoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>endpoint-1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-j6co2fcdsl1q0gnuc3ym3</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-j6cmr00qjyrft6jo2mg7g</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
@@ -183,9 +235,17 @@ public class CreateSlotRequest extends TeaModel {
     }
 
     public static class CreateSlotRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dataset_version</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v0.1.0</p>
+         */
         @NameInMap("Value")
         public String value;
 

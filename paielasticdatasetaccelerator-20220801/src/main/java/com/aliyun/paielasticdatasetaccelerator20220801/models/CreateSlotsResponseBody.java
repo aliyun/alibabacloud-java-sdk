@@ -4,9 +4,17 @@ package com.aliyun.paielasticdatasetaccelerator20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateSlotsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>slot-5zk866779me51jgu3w</p>
+     */
     @NameInMap("SlotIds")
     public String slotIds;
 
