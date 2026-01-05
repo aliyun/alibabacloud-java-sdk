@@ -710,6 +710,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建APP-ICP备案对客openAPI</p>
+     * 
+     * @param request CreateSmsAppIcpRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSmsAppIcpRecordResponse
+     */
+    public CreateSmsAppIcpRecordResponse createSmsAppIcpRecordWithOptions(CreateSmsAppIcpRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appApprovalDate)) {
+            query.put("AppApprovalDate", request.appApprovalDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appIcpLicenseNumber)) {
+            query.put("AppIcpLicenseNumber", request.appIcpLicenseNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appIcpRecordPic)) {
+            query.put("AppIcpRecordPic", request.appIcpRecordPic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appPrincipalUnitName)) {
+            query.put("AppPrincipalUnitName", request.appPrincipalUnitName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appServiceName)) {
+            query.put("AppServiceName", request.appServiceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSmsAppIcpRecord"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSmsAppIcpRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建APP-ICP备案对客openAPI</p>
+     * 
+     * @param request CreateSmsAppIcpRecordRequest
+     * @return CreateSmsAppIcpRecordResponse
+     */
+    public CreateSmsAppIcpRecordResponse createSmsAppIcpRecord(CreateSmsAppIcpRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSmsAppIcpRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建委托授权书</p>
      * 
      * @param tmpReq CreateSmsAuthorizationLetterRequest
@@ -1028,6 +1104,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSmsTemplateResponse createSmsTemplate(CreateSmsTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSmsTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建商标对客openAPI</p>
+     * 
+     * @param request CreateSmsTrademarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSmsTrademarkResponse
+     */
+    public CreateSmsTrademarkResponse createSmsTrademarkWithOptions(CreateSmsTrademarkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trademarkApplicantName)) {
+            query.put("TrademarkApplicantName", request.trademarkApplicantName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trademarkEffExpDate)) {
+            query.put("TrademarkEffExpDate", request.trademarkEffExpDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trademarkName)) {
+            query.put("TrademarkName", request.trademarkName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trademarkPic)) {
+            query.put("TrademarkPic", request.trademarkPic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trademarkRegistrationNumber)) {
+            query.put("TrademarkRegistrationNumber", request.trademarkRegistrationNumber);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSmsTrademark"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSmsTrademarkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建商标对客openAPI</p>
+     * 
+     * @param request CreateSmsTrademarkRequest
+     * @return CreateSmsTrademarkResponse
+     */
+    public CreateSmsTrademarkResponse createSmsTrademark(CreateSmsTrademarkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSmsTrademarkWithOptions(request, runtime);
     }
 
     /**
@@ -1961,6 +2109,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询模板列表详情（新接口）</p>
+     * 
+     * @param tmpReq GetSmsTemplateListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSmsTemplateListResponse
+     */
+    public GetSmsTemplateListResponse getSmsTemplateListWithOptions(GetSmsTemplateListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetSmsTemplateListShrinkRequest request = new GetSmsTemplateListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.usableStateList)) {
+            request.usableStateListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.usableStateList, "UsableStateList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auditStatus)) {
+            query.put("AuditStatus", request.auditStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateTag)) {
+            query.put("TemplateTag", request.templateTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usableStateListShrink)) {
+            query.put("UsableStateList", request.usableStateListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSmsTemplateList"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSmsTemplateListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询模板列表详情（新接口）</p>
+     * 
+     * @param request GetSmsTemplateListRequest
+     * @return GetSmsTemplateListResponse
+     */
+    public GetSmsTemplateListResponse getSmsTemplateList(GetSmsTemplateListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSmsTemplateListWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
      * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -2846,6 +3088,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询APP-ICP备案对客openAPI</p>
+     * 
+     * @param tmpReq QuerySmsAppIcpRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuerySmsAppIcpRecordResponse
+     */
+    public QuerySmsAppIcpRecordResponse querySmsAppIcpRecordWithOptions(QuerySmsAppIcpRecordRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QuerySmsAppIcpRecordShrinkRequest request = new QuerySmsAppIcpRecordShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.appIcpRecordIdList)) {
+            request.appIcpRecordIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.appIcpRecordIdList, "AppIcpRecordIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appIcpRecordIdListShrink)) {
+            query.put("AppIcpRecordIdList", request.appIcpRecordIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySmsAppIcpRecord"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySmsAppIcpRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询APP-ICP备案对客openAPI</p>
+     * 
+     * @param request QuerySmsAppIcpRecordRequest
+     * @return QuerySmsAppIcpRecordResponse
+     */
+    public QuerySmsAppIcpRecordResponse querySmsAppIcpRecord(QuerySmsAppIcpRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySmsAppIcpRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询委托授权书</p>
      * 
      * @param tmpReq QuerySmsAuthorizationLetterRequest
@@ -3284,6 +3588,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QuerySmsTemplateListResponse querySmsTemplateList(QuerySmsTemplateListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.querySmsTemplateListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询商标对客openAPI</p>
+     * 
+     * @param tmpReq QuerySmsTrademarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuerySmsTrademarkResponse
+     */
+    public QuerySmsTrademarkResponse querySmsTrademarkWithOptions(QuerySmsTrademarkRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QuerySmsTrademarkShrinkRequest request = new QuerySmsTrademarkShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.trademarkIdList)) {
+            request.trademarkIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.trademarkIdList, "TrademarkIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trademarkIdListShrink)) {
+            query.put("TrademarkIdList", request.trademarkIdListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySmsTrademark"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySmsTrademarkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询商标对客openAPI</p>
+     * 
+     * @param request QuerySmsTrademarkRequest
+     * @return QuerySmsTrademarkResponse
+     */
+    public QuerySmsTrademarkResponse querySmsTrademark(QuerySmsTrademarkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySmsTrademarkWithOptions(request, runtime);
     }
 
     /**
