@@ -5797,6 +5797,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询特定智能目录</p>
+     * 
+     * @param request GetFilesetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFilesetResponse
+     */
+    public GetFilesetResponse getFilesetWithOptions(GetFilesetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fsetId)) {
+            query.put("FsetId", request.fsetId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFileset"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFilesetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询特定智能目录</p>
+     * 
+     * @param request GetFilesetRequest
+     * @return GetFilesetResponse
+     */
+    public GetFilesetResponse getFileset(GetFilesetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFilesetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询协议机挂载点</p>
+     * 
+     * @param request GetProtocolMountTargetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProtocolMountTargetResponse
+     */
+    public GetProtocolMountTargetResponse getProtocolMountTargetWithOptions(GetProtocolMountTargetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exportId)) {
+            query.put("ExportId", request.exportId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocolServiceId)) {
+            query.put("ProtocolServiceId", request.protocolServiceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProtocolMountTarget"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProtocolMountTargetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询协议机挂载点</p>
+     * 
+     * @param request GetProtocolMountTargetRequest
+     * @return GetProtocolMountTargetResponse
+     */
+    public GetProtocolMountTargetResponse getProtocolMountTarget(GetProtocolMountTargetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProtocolMountTargetWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Only General-purpose File Storage NAS (NAS) file systems support this operation.</p>
      * 
