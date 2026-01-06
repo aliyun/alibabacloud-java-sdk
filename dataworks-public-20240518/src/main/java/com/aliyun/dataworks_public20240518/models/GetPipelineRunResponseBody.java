@@ -218,6 +218,13 @@ public class GetPipelineRunResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <strong>example:</strong>
+         * <p>发布流程描述信息</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
          * <p>The process ID.</p>
          * 
          * <strong>example:</strong>
@@ -296,6 +303,14 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public GetPipelineRunResponseBodyPipeline setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetPipelineRunResponseBodyPipeline setId(String id) {

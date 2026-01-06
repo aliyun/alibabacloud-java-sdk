@@ -84,7 +84,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesInputsNodeOutputs extends TeaModel {
         /**
-         * <p>The node output.</p>
+         * <p>The output of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>623731286945488XXXX</p>
@@ -134,7 +134,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesInputsVariablesNode extends TeaModel {
         /**
-         * <p>The node output.</p>
+         * <p>The output of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>623731286945488XXXX</p>
@@ -349,7 +349,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesOutputsNodeOutputs extends TeaModel {
         /**
-         * <p>The node output.</p>
+         * <p>The output of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
@@ -399,7 +399,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode extends TeaModel {
         /**
-         * <p>The node output.</p>
+         * <p>The output of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
@@ -683,7 +683,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The ID of the script.</p>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -884,7 +884,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodesTrigger extends TeaModel {
         /**
-         * <p>The cron expression for scheduling</p>
+         * <p>The cron expression for scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
@@ -935,9 +935,9 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>The trigger type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Scheduler: periodic scheduling</li>
-         * <li>Manual: manual trigger</li>
-         * <li>Streaming: streaming task</li>
+         * <li>Scheduler: Periodic scheduling</li>
+         * <li>Manual: Manual trigger</li>
+         * <li>Streaming: Streaming task</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1003,7 +1003,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyPagingInfoNodes extends TeaModel {
         /**
-         * <p>The timestamp when the node in DataStudio was created.</p>
+         * <p>The timestamp when the node in Data Studio was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1722910655000</p>
@@ -1029,7 +1029,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The unique identifier of the Data Studio node.</p>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1069,7 +1069,7 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyPagingInfoNodesOutputs outputs;
 
         /**
-         * <p>The owner of nodes in DataStudio.</p>
+         * <p>The owner of nodes in Data Studio.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -1126,7 +1126,7 @@ public class ListNodesResponseBody extends TeaModel {
         public java.util.List<ListNodesResponseBodyPagingInfoNodesTags> tags;
 
         /**
-         * <p>The scheduling task ID.</p>
+         * <p>The ID of the scheduling task.</p>
          * 
          * <strong>example:</strong>
          * <p>88888888888</p>

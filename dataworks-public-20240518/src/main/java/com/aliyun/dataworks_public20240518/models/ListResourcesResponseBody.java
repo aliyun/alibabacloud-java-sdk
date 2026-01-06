@@ -42,7 +42,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyPagingInfoResourcesDataSource extends TeaModel {
         /**
-         * <p>The data source name.</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>odps_first</p>
@@ -109,9 +109,9 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyPagingInfoResourcesScript extends TeaModel {
         /**
-         * <p>Script ID.</p>
+         * <p>The ID of the script.</p>
          * <blockquote>
-         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -249,8 +249,8 @@ public class ListResourcesResponseBody extends TeaModel {
          * <p>The source storage type of the file resource.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Local: Local storage</li>
-         * <li>OSS: Object Storage Service</li>
+         * <li>Local</li>
+         * <li>OSS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The destination storage path</p>
+         * <p>The destination storage path.</p>
          * 
          * <strong>example:</strong>
          * <p>XXX/unknown/ide/1/XXX/20240820200851_963a9da676de44ef8d06a6576a8c4d6a.py</p>

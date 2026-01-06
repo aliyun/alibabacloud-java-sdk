@@ -18,7 +18,10 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The page number, starting from 1. Default value: 1.</p>
+     * <p>The unique identifier of the Data Studio node.</p>
+     * <blockquote>
+     * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +30,7 @@ public class ListNodeDependenciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The page number, starting from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

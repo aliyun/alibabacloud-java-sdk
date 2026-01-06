@@ -32,7 +32,7 @@ public class ListFunctionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The page number. Default value: 1. Minimum value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

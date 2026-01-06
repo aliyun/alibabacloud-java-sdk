@@ -31,6 +31,17 @@ public class ListDataQualityScanRunsShrinkRequest extends TeaModel {
     @NameInMap("DataQualityScanId")
     public Long dataQualityScanId;
 
+    /**
+     * <p>The extended query filter. Supported parameters:</p>
+     * <ul>
+     * <li>TaskInstanceId</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;TaskInstanceId&quot;: 111L
+     * }</p>
+     */
     @NameInMap("Filter")
     public String filterShrink;
 

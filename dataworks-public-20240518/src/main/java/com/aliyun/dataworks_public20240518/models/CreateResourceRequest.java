@@ -27,7 +27,7 @@ public class CreateResourceRequest extends TeaModel {
     public String resourceFile;
 
     /**
-     * <p>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
+     * <p>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

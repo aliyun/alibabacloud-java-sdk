@@ -32,7 +32,7 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The page number of the data to retrieve, used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

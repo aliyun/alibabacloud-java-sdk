@@ -35,7 +35,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default is 10, and the maximum is 100.</p>
+     * <p>The page number of the data to retrieve, used for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,12 +54,10 @@ public class ListNodesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The scheduling type, which is a filter condition. Valid values:</p>
-     * <ul>
-     * <li>Normal: The nodes are scheduled as expected.</li>
-     * <li>Pause: The nodes are paused, and the running of their descendant nodes is blocked.</li>
-     * <li>Skip: The nodes are dry run. The system does not actually run the nodes, but directly returns a success response. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</li>
-     * </ul>
+     * <p>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</p>
+     * <blockquote>
+     * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>

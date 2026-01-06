@@ -13,6 +13,9 @@ public class ListPipelineRunsRequest extends TeaModel {
     @NameInMap("Creator")
     public String creator;
 
+    @NameInMap("ObjectId")
+    public String objectId;
+
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
@@ -71,6 +74,14 @@ public class ListPipelineRunsRequest extends TeaModel {
     }
     public String getCreator() {
         return this.creator;
+    }
+
+    public ListPipelineRunsRequest setObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+    public String getObjectId() {
+        return this.objectId;
     }
 
     public ListPipelineRunsRequest setPageNumber(Integer pageNumber) {

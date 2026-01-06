@@ -29,10 +29,10 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The environment of the workspace. Valid values:</p>
+     * <p>The project environment.</p>
      * <ul>
-     * <li>Prod: production environment</li>
-     * <li>Dev: development environment</li>
+     * <li>Prod</li>
+     * <li>Dev</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,6 +51,16 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The instance generation mode.</p>
+     * <ul>
+     * <li>T+1: the next day</li>
+     * <li>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>T+1</p>
+     */
     @NameInMap("InstanceMode")
     public String instanceMode;
 
@@ -96,7 +106,7 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The tasks.</p>
+     * <p>Details about tasks.</p>
      */
     @NameInMap("Tasks")
     public String tasksShrink;
