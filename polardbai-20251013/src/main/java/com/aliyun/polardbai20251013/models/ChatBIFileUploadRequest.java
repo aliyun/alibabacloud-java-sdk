@@ -4,6 +4,12 @@ package com.aliyun.polardbai20251013.models;
 import com.aliyun.tea.*;
 
 public class ChatBIFileUploadRequest extends TeaModel {
+    @NameInMap("AuthMessage")
+    public String authMessage;
+
+    @NameInMap("AuthType")
+    public String authType;
+
     /**
      * <strong>example:</strong>
      * <p>pattern_test.csv</p>
@@ -23,6 +29,22 @@ public class ChatBIFileUploadRequest extends TeaModel {
     public static ChatBIFileUploadRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBIFileUploadRequest self = new ChatBIFileUploadRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChatBIFileUploadRequest setAuthMessage(String authMessage) {
+        this.authMessage = authMessage;
+        return this;
+    }
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    public ChatBIFileUploadRequest setAuthType(String authType) {
+        this.authType = authType;
+        return this;
+    }
+    public String getAuthType() {
+        return this.authType;
     }
 
     public ChatBIFileUploadRequest setFileName(String fileName) {

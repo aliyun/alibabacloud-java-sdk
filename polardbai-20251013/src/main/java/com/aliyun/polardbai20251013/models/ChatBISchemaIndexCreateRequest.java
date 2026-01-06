@@ -4,6 +4,12 @@ package com.aliyun.polardbai20251013.models;
 import com.aliyun.tea.*;
 
 public class ChatBISchemaIndexCreateRequest extends TeaModel {
+    @NameInMap("AuthMessage")
+    public String authMessage;
+
+    @NameInMap("AuthType")
+    public String authType;
+
     /**
      * <strong>example:</strong>
      * <p>空字符串, &quot;graph_info.time,text_info.ext&quot;</p>
@@ -53,6 +59,22 @@ public class ChatBISchemaIndexCreateRequest extends TeaModel {
     public static ChatBISchemaIndexCreateRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBISchemaIndexCreateRequest self = new ChatBISchemaIndexCreateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChatBISchemaIndexCreateRequest setAuthMessage(String authMessage) {
+        this.authMessage = authMessage;
+        return this;
+    }
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    public ChatBISchemaIndexCreateRequest setAuthType(String authType) {
+        this.authType = authType;
+        return this;
+    }
+    public String getAuthType() {
+        return this.authType;
     }
 
     public ChatBISchemaIndexCreateRequest setColumnsExcluded(String columnsExcluded) {

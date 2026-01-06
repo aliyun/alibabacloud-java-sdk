@@ -4,6 +4,12 @@ package com.aliyun.polardbai20251013.models;
 import com.aliyun.tea.*;
 
 public class ChatBISchemaIndexDeleteRequest extends TeaModel {
+    @NameInMap("AuthMessage")
+    public String authMessage;
+
+    @NameInMap("AuthType")
+    public String authType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -34,6 +40,22 @@ public class ChatBISchemaIndexDeleteRequest extends TeaModel {
     public static ChatBISchemaIndexDeleteRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBISchemaIndexDeleteRequest self = new ChatBISchemaIndexDeleteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChatBISchemaIndexDeleteRequest setAuthMessage(String authMessage) {
+        this.authMessage = authMessage;
+        return this;
+    }
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    public ChatBISchemaIndexDeleteRequest setAuthType(String authType) {
+        this.authType = authType;
+        return this;
+    }
+    public String getAuthType() {
+        return this.authType;
     }
 
     public ChatBISchemaIndexDeleteRequest setDbName(String dbName) {

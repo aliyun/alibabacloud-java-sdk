@@ -4,6 +4,12 @@ package com.aliyun.polardbai20251013.models;
 import com.aliyun.tea.*;
 
 public class ChatBIConfigDeleteEntryRequest extends TeaModel {
+    @NameInMap("AuthMessage")
+    public String authMessage;
+
+    @NameInMap("AuthType")
+    public String authType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -34,6 +40,22 @@ public class ChatBIConfigDeleteEntryRequest extends TeaModel {
     public static ChatBIConfigDeleteEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBIConfigDeleteEntryRequest self = new ChatBIConfigDeleteEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChatBIConfigDeleteEntryRequest setAuthMessage(String authMessage) {
+        this.authMessage = authMessage;
+        return this;
+    }
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    public ChatBIConfigDeleteEntryRequest setAuthType(String authType) {
+        this.authType = authType;
+        return this;
+    }
+    public String getAuthType() {
+        return this.authType;
     }
 
     public ChatBIConfigDeleteEntryRequest setDbName(String dbName) {

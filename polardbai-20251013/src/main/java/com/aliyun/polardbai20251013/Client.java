@@ -37,6 +37,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIConfigCreateResponse chatBIConfigCreateWithOptions(ChatBIConfigCreateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -85,6 +93,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIConfigDeleteResponse chatBIConfigDeleteWithOptions(ChatBIConfigDeleteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -133,6 +149,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIConfigDeleteEntryResponse chatBIConfigDeleteEntryWithOptions(ChatBIConfigDeleteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -185,6 +209,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIConfigQueryEntriesResponse chatBIConfigQueryEntriesWithOptions(ChatBIConfigQueryEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -245,6 +277,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIConfigQueryTablesResponse chatBIConfigQueryTablesWithOptions(ChatBIConfigQueryTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -297,6 +337,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIConfigUpdateEntryResponse chatBIConfigUpdateEntryWithOptions(ChatBIConfigUpdateEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -373,6 +421,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIFileTemplateDownloadResponse chatBIFileTemplateDownloadWithOptions(ChatBIFileTemplateDownloadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             query.put("InstanceName", request.instanceName);
         }
@@ -421,6 +477,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIFileUploadResponse chatBIFileUploadWithOptions(ChatBIFileUploadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             query.put("FileName", request.fileName);
         }
@@ -469,6 +533,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIFileUploadCallbackResponse chatBIFileUploadCallbackWithOptions(ChatBIFileUploadCallbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.characterSetName)) {
             query.put("CharacterSetName", request.characterSetName);
         }
@@ -533,6 +605,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternCreateResponse chatBIPatternCreateWithOptions(ChatBIPatternCreateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -585,6 +665,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternDeleteResponse chatBIPatternDeleteWithOptions(ChatBIPatternDeleteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -637,6 +725,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternDeleteEntryResponse chatBIPatternDeleteEntryWithOptions(ChatBIPatternDeleteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -693,6 +789,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternIndexCreateResponse chatBIPatternIndexCreateWithOptions(ChatBIPatternIndexCreateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -749,6 +853,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternIndexDeleteResponse chatBIPatternIndexDeleteWithOptions(ChatBIPatternIndexDeleteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -801,6 +913,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternIndexQueryTablesResponse chatBIPatternIndexQueryTablesWithOptions(ChatBIPatternIndexQueryTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -861,6 +981,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternQueryEntriesResponse chatBIPatternQueryEntriesWithOptions(ChatBIPatternQueryEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -925,6 +1053,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternQueryTablesResponse chatBIPatternQueryTablesWithOptions(ChatBIPatternQueryTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -985,6 +1121,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIPatternUpdateEntryResponse chatBIPatternUpdateEntryWithOptions(ChatBIPatternUpdateEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -1063,6 +1207,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -1097,6 +1249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.selectData)) {
             query.put("SelectData", request.selectData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thinkingMode)) {
+            query.put("ThinkingMode", request.thinkingMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1139,6 +1295,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBISchemaIndexCreateResponse chatBISchemaIndexCreateWithOptions(ChatBISchemaIndexCreateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.columnsExcluded)) {
             query.put("ColumnsExcluded", request.columnsExcluded);
         }
@@ -1203,6 +1367,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBISchemaIndexDeleteResponse chatBISchemaIndexDeleteWithOptions(ChatBISchemaIndexDeleteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -1255,6 +1427,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBISchemaIndexQueryTablesResponse chatBISchemaIndexQueryTablesWithOptions(ChatBISchemaIndexQueryTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -1315,6 +1495,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ChatBIUpdateTableValidationColumnsResponse chatBIUpdateTableValidationColumnsWithOptions(ChatBIUpdateTableValidationColumnsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
             query.put("DbName", request.dbName);
         }
@@ -1680,6 +1868,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获得鉴权token</p>
+     * 
+     * @param request GetUserTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserTokenResponse
+     */
+    public GetUserTokenResponse getUserTokenWithOptions(GetUserTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserToken"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获得鉴权token</p>
+     * 
+     * @param request GetUserTokenRequest
+     * @return GetUserTokenResponse
+     */
+    public GetUserTokenResponse getUserToken(GetUserTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询多模态数据集列表</p>
      * 
      * @param request ListMultimodalDatasetRequest
@@ -1840,6 +2080,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询search task结果列表</p>
+     * 
+     * @param request ListMultimodalSearchTaskResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMultimodalSearchTaskResultResponse
+     */
+    public ListMultimodalSearchTaskResultResponse listMultimodalSearchTaskResultWithOptions(ListMultimodalSearchTaskResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMultimodalSearchTaskResult"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultimodalSearchTaskResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询search task结果列表</p>
+     * 
+     * @param request ListMultimodalSearchTaskResultRequest
+     * @return ListMultimodalSearchTaskResultResponse
+     */
+    public ListMultimodalSearchTaskResultResponse listMultimodalSearchTaskResult(ListMultimodalSearchTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMultimodalSearchTaskResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>更新数据集信息</p>
      * 
      * @param request UpdateMultimodalDatasetRequest
@@ -1944,5 +2240,113 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadOSSMultimodalDatasetResponse uploadOSSMultimodalDataset(UploadOSSMultimodalDatasetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadOSSMultimodalDatasetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预检验鉴权token</p>
+     * 
+     * @param request ValidateDatabaseUserTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateDatabaseUserTokenResponse
+     */
+    public ValidateDatabaseUserTokenResponse validateDatabaseUserTokenWithOptions(ValidateDatabaseUserTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBName)) {
+            query.put("DBName", request.DBName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ValidateDatabaseUserToken"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateDatabaseUserTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预检验鉴权token</p>
+     * 
+     * @param request ValidateDatabaseUserTokenRequest
+     * @return ValidateDatabaseUserTokenResponse
+     */
+    public ValidateDatabaseUserTokenResponse validateDatabaseUserToken(ValidateDatabaseUserTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.validateDatabaseUserTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预检验鉴权token</p>
+     * 
+     * @param request ValidateUserTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateUserTokenResponse
+     */
+    public ValidateUserTokenResponse validateUserTokenWithOptions(ValidateUserTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authMessage)) {
+            query.put("AuthMessage", request.authMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            query.put("AuthType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ValidateUserToken"),
+            new TeaPair("version", "2025-10-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateUserTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预检验鉴权token</p>
+     * 
+     * @param request ValidateUserTokenRequest
+     * @return ValidateUserTokenResponse
+     */
+    public ValidateUserTokenResponse validateUserToken(ValidateUserTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.validateUserTokenWithOptions(request, runtime);
     }
 }

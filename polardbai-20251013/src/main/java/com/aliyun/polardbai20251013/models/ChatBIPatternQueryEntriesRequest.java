@@ -4,6 +4,12 @@ package com.aliyun.polardbai20251013.models;
 import com.aliyun.tea.*;
 
 public class ChatBIPatternQueryEntriesRequest extends TeaModel {
+    @NameInMap("AuthMessage")
+    public String authMessage;
+
+    @NameInMap("AuthType")
+    public String authType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -55,6 +61,22 @@ public class ChatBIPatternQueryEntriesRequest extends TeaModel {
     public static ChatBIPatternQueryEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBIPatternQueryEntriesRequest self = new ChatBIPatternQueryEntriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChatBIPatternQueryEntriesRequest setAuthMessage(String authMessage) {
+        this.authMessage = authMessage;
+        return this;
+    }
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    public ChatBIPatternQueryEntriesRequest setAuthType(String authType) {
+        this.authType = authType;
+        return this;
+    }
+    public String getAuthType() {
+        return this.authType;
     }
 
     public ChatBIPatternQueryEntriesRequest setDbName(String dbName) {

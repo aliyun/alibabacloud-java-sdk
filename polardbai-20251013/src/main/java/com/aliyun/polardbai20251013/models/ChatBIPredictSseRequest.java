@@ -4,6 +4,12 @@ package com.aliyun.polardbai20251013.models;
 import com.aliyun.tea.*;
 
 public class ChatBIPredictSseRequest extends TeaModel {
+    @NameInMap("AuthMessage")
+    public String authMessage;
+
+    @NameInMap("AuthType")
+    public String authType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -69,9 +75,32 @@ public class ChatBIPredictSseRequest extends TeaModel {
     @NameInMap("SelectData")
     public Boolean selectData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("ThinkingMode")
+    public Boolean thinkingMode;
+
     public static ChatBIPredictSseRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatBIPredictSseRequest self = new ChatBIPredictSseRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChatBIPredictSseRequest setAuthMessage(String authMessage) {
+        this.authMessage = authMessage;
+        return this;
+    }
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    public ChatBIPredictSseRequest setAuthType(String authType) {
+        this.authType = authType;
+        return this;
+    }
+    public String getAuthType() {
+        return this.authType;
     }
 
     public ChatBIPredictSseRequest setDbName(String dbName) {
@@ -144,6 +173,14 @@ public class ChatBIPredictSseRequest extends TeaModel {
     }
     public Boolean getSelectData() {
         return this.selectData;
+    }
+
+    public ChatBIPredictSseRequest setThinkingMode(Boolean thinkingMode) {
+        this.thinkingMode = thinkingMode;
+        return this;
+    }
+    public Boolean getThinkingMode() {
+        return this.thinkingMode;
     }
 
     public static class ChatBIPredictSseRequestParameters extends TeaModel {
