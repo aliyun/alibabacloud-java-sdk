@@ -55,7 +55,7 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
-    public Long resourceOwnerAccount;
+    public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
@@ -172,11 +172,11 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeHistoryTasksStatRequest setResourceOwnerAccount(Long resourceOwnerAccount) {
+    public DescribeHistoryTasksStatRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Long getResourceOwnerAccount() {
+    public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
     }
 
