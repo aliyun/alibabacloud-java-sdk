@@ -58,6 +58,9 @@ public class DecryptRequest extends TeaModel {
     @NameInMap("MessageType")
     public String messageType;
 
+    @NameInMap("WarehouseId")
+    public Long warehouseId;
+
     public static DecryptRequest build(java.util.Map<String, ?> map) throws Exception {
         DecryptRequest self = new DecryptRequest();
         return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class DecryptRequest extends TeaModel {
     }
     public String getMessageType() {
         return this.messageType;
+    }
+
+    public DecryptRequest setWarehouseId(Long warehouseId) {
+        this.warehouseId = warehouseId;
+        return this;
+    }
+    public Long getWarehouseId() {
+        return this.warehouseId;
     }
 
 }

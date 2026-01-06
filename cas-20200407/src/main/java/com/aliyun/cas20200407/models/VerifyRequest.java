@@ -75,6 +75,9 @@ public class VerifyRequest extends TeaModel {
     @NameInMap("SigningAlgorithm")
     public String signingAlgorithm;
 
+    @NameInMap("WarehouseId")
+    public String warehouseId;
+
     public static VerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifyRequest self = new VerifyRequest();
         return TeaModel.build(map, self);
@@ -126,6 +129,14 @@ public class VerifyRequest extends TeaModel {
     }
     public String getSigningAlgorithm() {
         return this.signingAlgorithm;
+    }
+
+    public VerifyRequest setWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
+        return this;
+    }
+    public String getWarehouseId() {
+        return this.warehouseId;
     }
 
 }

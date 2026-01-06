@@ -63,6 +63,9 @@ public class EncryptRequest extends TeaModel {
     @NameInMap("Plaintext")
     public String plaintext;
 
+    @NameInMap("WarehouseId")
+    public Long warehouseId;
+
     public static EncryptRequest build(java.util.Map<String, ?> map) throws Exception {
         EncryptRequest self = new EncryptRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class EncryptRequest extends TeaModel {
     }
     public String getPlaintext() {
         return this.plaintext;
+    }
+
+    public EncryptRequest setWarehouseId(Long warehouseId) {
+        this.warehouseId = warehouseId;
+        return this;
+    }
+    public Long getWarehouseId() {
+        return this.warehouseId;
     }
 
 }

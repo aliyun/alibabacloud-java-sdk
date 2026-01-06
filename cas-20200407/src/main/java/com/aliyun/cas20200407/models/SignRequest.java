@@ -65,6 +65,9 @@ public class SignRequest extends TeaModel {
     @NameInMap("SigningAlgorithm")
     public String signingAlgorithm;
 
+    @NameInMap("WarehouseId")
+    public Long warehouseId;
+
     public static SignRequest build(java.util.Map<String, ?> map) throws Exception {
         SignRequest self = new SignRequest();
         return TeaModel.build(map, self);
@@ -108,6 +111,14 @@ public class SignRequest extends TeaModel {
     }
     public String getSigningAlgorithm() {
         return this.signingAlgorithm;
+    }
+
+    public SignRequest setWarehouseId(Long warehouseId) {
+        this.warehouseId = warehouseId;
+        return this;
+    }
+    public Long getWarehouseId() {
+        return this.warehouseId;
     }
 
 }

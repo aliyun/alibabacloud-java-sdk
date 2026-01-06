@@ -621,6 +621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MessageType", request.messageType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.warehouseId)) {
+            query.put("WarehouseId", request.warehouseId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1211,6 +1215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.plaintext)) {
             query.put("Plaintext", request.plaintext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warehouseId)) {
+            query.put("WarehouseId", request.warehouseId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2199,6 +2207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SigningAlgorithm", request.signingAlgorithm);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.warehouseId)) {
+            query.put("WarehouseId", request.warehouseId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2617,6 +2629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.signingAlgorithm)) {
             query.put("SigningAlgorithm", request.signingAlgorithm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warehouseId)) {
+            query.put("WarehouseId", request.warehouseId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

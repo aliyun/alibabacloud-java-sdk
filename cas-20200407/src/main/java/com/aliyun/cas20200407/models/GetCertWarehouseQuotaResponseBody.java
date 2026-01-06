@@ -4,6 +4,12 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class GetCertWarehouseQuotaResponseBody extends TeaModel {
+    @NameInMap("AppTotalQuota")
+    public Long appTotalQuota;
+
+    @NameInMap("AppUseCount")
+    public Long appUseCount;
+
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
@@ -34,6 +40,22 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
     public static GetCertWarehouseQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCertWarehouseQuotaResponseBody self = new GetCertWarehouseQuotaResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCertWarehouseQuotaResponseBody setAppTotalQuota(Long appTotalQuota) {
+        this.appTotalQuota = appTotalQuota;
+        return this;
+    }
+    public Long getAppTotalQuota() {
+        return this.appTotalQuota;
+    }
+
+    public GetCertWarehouseQuotaResponseBody setAppUseCount(Long appUseCount) {
+        this.appUseCount = appUseCount;
+        return this;
+    }
+    public Long getAppUseCount() {
+        return this.appUseCount;
     }
 
     public GetCertWarehouseQuotaResponseBody setRequestId(String requestId) {
