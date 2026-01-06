@@ -8034,6 +8034,634 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取钉钉会议信息</p>
+     * 
+     * @param tmpReq GetDingtalkMeetingInfoRequest
+     * @param tmpHeader GetDingtalkMeetingInfoHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDingtalkMeetingInfoResponse
+     */
+    public GetDingtalkMeetingInfoResponse getDingtalkMeetingInfoWithOptions(GetDingtalkMeetingInfoRequest tmpReq, GetDingtalkMeetingInfoHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDingtalkMeetingInfoShrinkRequest request = new GetDingtalkMeetingInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetDingtalkMeetingInfoShrinkHeaders headers = new GetDingtalkMeetingInfoShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("orgId", request.orgId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDingtalkMeetingInfo"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/getDingtalkMeetingInfo"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDingtalkMeetingInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉会议信息</p>
+     * 
+     * @param request GetDingtalkMeetingInfoRequest
+     * @return GetDingtalkMeetingInfoResponse
+     */
+    public GetDingtalkMeetingInfoResponse getDingtalkMeetingInfo(GetDingtalkMeetingInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDingtalkMeetingInfoHeaders headers = new GetDingtalkMeetingInfoHeaders();
+        return this.getDingtalkMeetingInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉会议列表</p>
+     * 
+     * @param tmpReq GetDingtalkMeetingListRequest
+     * @param tmpHeader GetDingtalkMeetingListHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDingtalkMeetingListResponse
+     */
+    public GetDingtalkMeetingListResponse getDingtalkMeetingListWithOptions(GetDingtalkMeetingListRequest tmpReq, GetDingtalkMeetingListHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDingtalkMeetingListShrinkRequest request = new GetDingtalkMeetingListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetDingtalkMeetingListShrinkHeaders headers = new GetDingtalkMeetingListShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("currentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("orgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roomCode)) {
+            body.put("roomCode", request.roomCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roomName)) {
+            body.put("roomName", request.roomName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workNo)) {
+            body.put("workNo", request.workNo);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDingtalkMeetingList"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/getDingtalkMeetingList"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDingtalkMeetingListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉会议列表</p>
+     * 
+     * @param request GetDingtalkMeetingListRequest
+     * @return GetDingtalkMeetingListResponse
+     */
+    public GetDingtalkMeetingListResponse getDingtalkMeetingList(GetDingtalkMeetingListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDingtalkMeetingListHeaders headers = new GetDingtalkMeetingListHeaders();
+        return this.getDingtalkMeetingListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉会议成员事件</p>
+     * 
+     * @param tmpReq GetDingtalkMeetingMemberEventRequest
+     * @param tmpHeader GetDingtalkMeetingMemberEventHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDingtalkMeetingMemberEventResponse
+     */
+    public GetDingtalkMeetingMemberEventResponse getDingtalkMeetingMemberEventWithOptions(GetDingtalkMeetingMemberEventRequest tmpReq, GetDingtalkMeetingMemberEventHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDingtalkMeetingMemberEventShrinkRequest request = new GetDingtalkMeetingMemberEventShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetDingtalkMeetingMemberEventShrinkHeaders headers = new GetDingtalkMeetingMemberEventShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            body.put("beginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("orgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workNo)) {
+            body.put("workNo", request.workNo);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDingtalkMeetingMemberEvent"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/getDingtalkMeetingMemberEvent"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDingtalkMeetingMemberEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉会议成员事件</p>
+     * 
+     * @param request GetDingtalkMeetingMemberEventRequest
+     * @return GetDingtalkMeetingMemberEventResponse
+     */
+    public GetDingtalkMeetingMemberEventResponse getDingtalkMeetingMemberEvent(GetDingtalkMeetingMemberEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDingtalkMeetingMemberEventHeaders headers = new GetDingtalkMeetingMemberEventHeaders();
+        return this.getDingtalkMeetingMemberEventWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉会议成员列表</p>
+     * 
+     * @param tmpReq GetDingtalkMeetingMemberListRequest
+     * @param tmpHeader GetDingtalkMeetingMemberListHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDingtalkMeetingMemberListResponse
+     */
+    public GetDingtalkMeetingMemberListResponse getDingtalkMeetingMemberListWithOptions(GetDingtalkMeetingMemberListRequest tmpReq, GetDingtalkMeetingMemberListHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDingtalkMeetingMemberListShrinkRequest request = new GetDingtalkMeetingMemberListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetDingtalkMeetingMemberListShrinkHeaders headers = new GetDingtalkMeetingMemberListShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
+            body.put("clusterName", request.clusterName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("currentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("orgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDingtalkMeetingMemberList"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/getDingtalkMeetingMemberList"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDingtalkMeetingMemberListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉会议成员列表</p>
+     * 
+     * @param request GetDingtalkMeetingMemberListRequest
+     * @return GetDingtalkMeetingMemberListResponse
+     */
+    public GetDingtalkMeetingMemberListResponse getDingtalkMeetingMemberList(GetDingtalkMeetingMemberListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDingtalkMeetingMemberListHeaders headers = new GetDingtalkMeetingMemberListHeaders();
+        return this.getDingtalkMeetingMemberListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取会议指标数据</p>
+     * 
+     * @param tmpReq GetDingtalkMeetingMetricDataRequest
+     * @param tmpHeader GetDingtalkMeetingMetricDataHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDingtalkMeetingMetricDataResponse
+     */
+    public GetDingtalkMeetingMetricDataResponse getDingtalkMeetingMetricDataWithOptions(GetDingtalkMeetingMetricDataRequest tmpReq, GetDingtalkMeetingMetricDataHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDingtalkMeetingMetricDataShrinkRequest request = new GetDingtalkMeetingMetricDataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetDingtalkMeetingMetricDataShrinkHeaders headers = new GetDingtalkMeetingMetricDataShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            body.put("beginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("orgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.typeName)) {
+            body.put("typeName", request.typeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workNo)) {
+            body.put("workNo", request.workNo);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDingtalkMeetingMetricData"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/getDingtalkMeetingMetricData"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDingtalkMeetingMetricDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取会议指标数据</p>
+     * 
+     * @param request GetDingtalkMeetingMetricDataRequest
+     * @return GetDingtalkMeetingMetricDataResponse
+     */
+    public GetDingtalkMeetingMetricDataResponse getDingtalkMeetingMetricData(GetDingtalkMeetingMetricDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDingtalkMeetingMetricDataHeaders headers = new GetDingtalkMeetingMetricDataHeaders();
+        return this.getDingtalkMeetingMetricDataWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉投屏信息</p>
+     * 
+     * @param tmpReq GetDingtalkProjectionInfoRequest
+     * @param tmpHeader GetDingtalkProjectionInfoHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDingtalkProjectionInfoResponse
+     */
+    public GetDingtalkProjectionInfoResponse getDingtalkProjectionInfoWithOptions(GetDingtalkProjectionInfoRequest tmpReq, GetDingtalkProjectionInfoHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDingtalkProjectionInfoShrinkRequest request = new GetDingtalkProjectionInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetDingtalkProjectionInfoShrinkHeaders headers = new GetDingtalkProjectionInfoShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.client)) {
+            body.put("client", request.client);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTs)) {
+            body.put("endTs", request.endTs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("orgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pubWorkNo)) {
+            body.put("pubWorkNo", request.pubWorkNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roomId)) {
+            body.put("roomId", request.roomId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTs)) {
+            body.put("startTs", request.startTs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subUid)) {
+            body.put("subUid", request.subUid);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDingtalkProjectionInfo"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/getDingtalkProjectionInfo"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDingtalkProjectionInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉投屏信息</p>
+     * 
+     * @param request GetDingtalkProjectionInfoRequest
+     * @return GetDingtalkProjectionInfoResponse
+     */
+    public GetDingtalkProjectionInfoResponse getDingtalkProjectionInfo(GetDingtalkProjectionInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDingtalkProjectionInfoHeaders headers = new GetDingtalkProjectionInfoHeaders();
+        return this.getDingtalkProjectionInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉投屏列表</p>
+     * 
+     * @param tmpReq GetDingtalkProjectionListRequest
+     * @param tmpHeader GetDingtalkProjectionListHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDingtalkProjectionListResponse
+     */
+    public GetDingtalkProjectionListResponse getDingtalkProjectionListWithOptions(GetDingtalkProjectionListRequest tmpReq, GetDingtalkProjectionListHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDingtalkProjectionListShrinkRequest request = new GetDingtalkProjectionListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetDingtalkProjectionListShrinkHeaders headers = new GetDingtalkProjectionListShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            body.put("code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("currentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("orgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectorWorkNo)) {
+            body.put("projectorWorkNo", request.projectorWorkNo);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDingtalkProjectionList"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/getDingtalkProjectionList"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDingtalkProjectionListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取钉钉投屏列表</p>
+     * 
+     * @param request GetDingtalkProjectionListRequest
+     * @return GetDingtalkProjectionListResponse
+     */
+    public GetDingtalkProjectionListResponse getDingtalkProjectionList(GetDingtalkProjectionListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetDingtalkProjectionListHeaders headers = new GetDingtalkProjectionListHeaders();
+        return this.getDingtalkProjectionListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>委托权限获取文档内容</p>
      * 
      * @param tmpReq GetDocContentRequest
@@ -16738,6 +17366,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         QueryReportDetailHeaders headers = new QueryReportDetailHeaders();
         return this.queryReportDetailWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询钉钉机器人退订工号</p>
+     * 
+     * @param request QueryRobotUnsubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRobotUnsubscriptionResponse
+     */
+    public QueryRobotUnsubscriptionResponse queryRobotUnsubscriptionWithOptions(QueryRobotUnsubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
+            body.put("RobotCode", request.robotCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            body.put("SceneCode", request.sceneCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRobotUnsubscription"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/aliding/v1/robot/queryRobotUnsubscription"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRobotUnsubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询钉钉机器人退订工号</p>
+     * 
+     * @param request QueryRobotUnsubscriptionRequest
+     * @return QueryRobotUnsubscriptionResponse
+     */
+    public QueryRobotUnsubscriptionResponse queryRobotUnsubscription(QueryRobotUnsubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.queryRobotUnsubscriptionWithOptions(request, headers, runtime);
     }
 
     /**

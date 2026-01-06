@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.aliding20230426.models;
+
+import com.aliyun.tea.*;
+
+public class GetDingtalkProjectionListResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public GetDingtalkProjectionListResponseBody body;
+
+    public static GetDingtalkProjectionListResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetDingtalkProjectionListResponse self = new GetDingtalkProjectionListResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetDingtalkProjectionListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetDingtalkProjectionListResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public GetDingtalkProjectionListResponse setBody(GetDingtalkProjectionListResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetDingtalkProjectionListResponseBody getBody() {
+        return this.body;
+    }
+
+}
