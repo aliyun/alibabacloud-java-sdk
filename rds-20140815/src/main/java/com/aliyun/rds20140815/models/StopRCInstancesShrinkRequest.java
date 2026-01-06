@@ -41,6 +41,9 @@ public class StopRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StoppedMode")
+    public String stoppedMode;
+
     public static StopRCInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         StopRCInstancesShrinkRequest self = new StopRCInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -76,6 +79,14 @@ public class StopRCInstancesShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public StopRCInstancesShrinkRequest setStoppedMode(String stoppedMode) {
+        this.stoppedMode = stoppedMode;
+        return this;
+    }
+    public String getStoppedMode() {
+        return this.stoppedMode;
     }
 
 }

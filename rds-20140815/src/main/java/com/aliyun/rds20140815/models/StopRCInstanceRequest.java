@@ -36,6 +36,9 @@ public class StopRCInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StoppedMode")
+    public String stoppedMode;
+
     public static StopRCInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopRCInstanceRequest self = new StopRCInstanceRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class StopRCInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public StopRCInstanceRequest setStoppedMode(String stoppedMode) {
+        this.stoppedMode = stoppedMode;
+        return this;
+    }
+    public String getStoppedMode() {
+        return this.stoppedMode;
     }
 
 }

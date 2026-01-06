@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyRCDiskChargeTypeResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>POSTPAY</p>
+     * <p>Prepaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;

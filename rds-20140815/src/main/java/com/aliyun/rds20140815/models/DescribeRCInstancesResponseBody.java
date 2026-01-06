@@ -284,6 +284,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testHostName</p>
+         */
+        @NameInMap("EcsHostName")
+        public String ecsHostName;
+
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
@@ -348,6 +355,20 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CentOS  7.4 64 位</p>
+         */
+        @NameInMap("OSName")
+        public String OSName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
+        @NameInMap("OSType")
+        public String OSType;
+
         @NameInMap("PublicIp")
         public String publicIp;
 
@@ -367,6 +388,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
+         * <strong>example:</strong>
+         * <p>2017-12-10T04:04Z</p>
+         */
+        @NameInMap("StartTime")
+        public String startTime;
+
+        /**
          * <p>The instance status. Valid values:</p>
          * <ul>
          * <li><strong>Pending</strong></li>
@@ -384,6 +412,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("StoppedMode")
+        public String stoppedMode;
 
         @NameInMap("TagResources")
         public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTagResources> tagResources;
@@ -461,6 +492,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setEcsHostName(String ecsHostName) {
+            this.ecsHostName = ecsHostName;
+            return this;
+        }
+        public String getEcsHostName() {
+            return this.ecsHostName;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setExpiredTime(String expiredTime) {
@@ -559,6 +598,22 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             return this.nodeType;
         }
 
+        public DescribeRCInstancesResponseBodyRCInstances setOSName(String OSName) {
+            this.OSName = OSName;
+            return this;
+        }
+        public String getOSName() {
+            return this.OSName;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setOSType(String OSType) {
+            this.OSType = OSType;
+            return this;
+        }
+        public String getOSType() {
+            return this.OSType;
+        }
+
         public DescribeRCInstancesResponseBodyRCInstances setPublicIp(String publicIp) {
             this.publicIp = publicIp;
             return this;
@@ -591,12 +646,28 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             return this.spotStrategy;
         }
 
+        public DescribeRCInstancesResponseBodyRCInstances setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public DescribeRCInstancesResponseBodyRCInstances setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setStoppedMode(String stoppedMode) {
+            this.stoppedMode = stoppedMode;
+            return this;
+        }
+        public String getStoppedMode() {
+            return this.stoppedMode;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setTagResources(java.util.List<DescribeRCInstancesResponseBodyRCInstancesTagResources> tagResources) {
