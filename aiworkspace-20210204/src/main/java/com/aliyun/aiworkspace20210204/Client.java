@@ -3900,6 +3900,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("QueryType", request.queryType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryVideo)) {
+            query.put("QueryVideo", request.queryVideo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scoreThreshold)) {
             query.put("ScoreThreshold", request.scoreThreshold);
         }

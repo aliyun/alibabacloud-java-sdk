@@ -133,6 +133,9 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     @NameInMap("QueryType")
     public String queryType;
 
+    @NameInMap("QueryVideo")
+    public String queryVideo;
+
     /**
      * <p>The similarity score. Only dataset files whose similarity score is greater than the value of ScoreThreshold are returned. This parameter is valid only when QueryType is set to VECTOR.</p>
      * 
@@ -351,6 +354,14 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     }
     public String getQueryType() {
         return this.queryType;
+    }
+
+    public ListDatasetFileMetasRequest setQueryVideo(String queryVideo) {
+        this.queryVideo = queryVideo;
+        return this;
+    }
+    public String getQueryVideo() {
+        return this.queryVideo;
     }
 
     public ListDatasetFileMetasRequest setScoreThreshold(Float scoreThreshold) {
