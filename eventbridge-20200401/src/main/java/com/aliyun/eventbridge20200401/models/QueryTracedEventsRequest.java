@@ -82,6 +82,9 @@ public class QueryTracedEventsRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("Subject")
+    public String subject;
+
     public static QueryTracedEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTracedEventsRequest self = new QueryTracedEventsRequest();
         return TeaModel.build(map, self);
@@ -149,6 +152,14 @@ public class QueryTracedEventsRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public QueryTracedEventsRequest setSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    public String getSubject() {
+        return this.subject;
     }
 
 }
