@@ -57,7 +57,38 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         return this.users;
     }
 
+    public static class ListUsersForApplicationResponseBodyUsersApplicationRoles extends TeaModel {
+        /**
+         * <p>应用角色标识。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+         */
+        @NameInMap("ApplicationRoleId")
+        public String applicationRoleId;
+
+        public static ListUsersForApplicationResponseBodyUsersApplicationRoles build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersForApplicationResponseBodyUsersApplicationRoles self = new ListUsersForApplicationResponseBodyUsersApplicationRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUsersForApplicationResponseBodyUsersApplicationRoles setApplicationRoleId(String applicationRoleId) {
+            this.applicationRoleId = applicationRoleId;
+            return this;
+        }
+        public String getApplicationRoleId() {
+            return this.applicationRoleId;
+        }
+
+    }
+
     public static class ListUsersForApplicationResponseBodyUsers extends TeaModel {
+        /**
+         * <p>应用角色列表。</p>
+         */
+        @NameInMap("ApplicationRoles")
+        public java.util.List<ListUsersForApplicationResponseBodyUsersApplicationRoles> applicationRoles;
+
         /**
          * <p>The ID of the account.</p>
          * 
@@ -70,6 +101,14 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         public static ListUsersForApplicationResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListUsersForApplicationResponseBodyUsers self = new ListUsersForApplicationResponseBodyUsers();
             return TeaModel.build(map, self);
+        }
+
+        public ListUsersForApplicationResponseBodyUsers setApplicationRoles(java.util.List<ListUsersForApplicationResponseBodyUsersApplicationRoles> applicationRoles) {
+            this.applicationRoles = applicationRoles;
+            return this;
+        }
+        public java.util.List<ListUsersForApplicationResponseBodyUsersApplicationRoles> getApplicationRoles() {
+            return this.applicationRoles;
         }
 
         public ListUsersForApplicationResponseBodyUsers setUserId(String userId) {

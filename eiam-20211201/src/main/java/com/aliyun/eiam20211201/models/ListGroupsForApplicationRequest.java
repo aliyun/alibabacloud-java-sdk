@@ -15,6 +15,15 @@ public class ListGroupsForApplicationRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>应用角色ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+     */
+    @NameInMap("ApplicationRoleId")
+    public String applicationRoleId;
+
+    /**
      * <p>The group IDs. You can specify up to 100 group IDs at a time.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +71,14 @@ public class ListGroupsForApplicationRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public ListGroupsForApplicationRequest setApplicationRoleId(String applicationRoleId) {
+        this.applicationRoleId = applicationRoleId;
+        return this;
+    }
+    public String getApplicationRoleId() {
+        return this.applicationRoleId;
     }
 
     public ListGroupsForApplicationRequest setGroupIds(java.util.List<String> groupIds) {

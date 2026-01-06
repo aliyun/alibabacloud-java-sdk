@@ -57,7 +57,38 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListGroupsForApplicationResponseBodyGroupsApplicationRoles extends TeaModel {
+        /**
+         * <p>应用角色标识。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+         */
+        @NameInMap("ApplicationRoleId")
+        public String applicationRoleId;
+
+        public static ListGroupsForApplicationResponseBodyGroupsApplicationRoles build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupsForApplicationResponseBodyGroupsApplicationRoles self = new ListGroupsForApplicationResponseBodyGroupsApplicationRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGroupsForApplicationResponseBodyGroupsApplicationRoles setApplicationRoleId(String applicationRoleId) {
+            this.applicationRoleId = applicationRoleId;
+            return this;
+        }
+        public String getApplicationRoleId() {
+            return this.applicationRoleId;
+        }
+
+    }
+
     public static class ListGroupsForApplicationResponseBodyGroups extends TeaModel {
+        /**
+         * <p>应用角色列表。</p>
+         */
+        @NameInMap("ApplicationRoles")
+        public java.util.List<ListGroupsForApplicationResponseBodyGroupsApplicationRoles> applicationRoles;
+
         /**
          * <p>The group ID.</p>
          * 
@@ -70,6 +101,14 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         public static ListGroupsForApplicationResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
             ListGroupsForApplicationResponseBodyGroups self = new ListGroupsForApplicationResponseBodyGroups();
             return TeaModel.build(map, self);
+        }
+
+        public ListGroupsForApplicationResponseBodyGroups setApplicationRoles(java.util.List<ListGroupsForApplicationResponseBodyGroupsApplicationRoles> applicationRoles) {
+            this.applicationRoles = applicationRoles;
+            return this;
+        }
+        public java.util.List<ListGroupsForApplicationResponseBodyGroupsApplicationRoles> getApplicationRoles() {
+            return this.applicationRoles;
         }
 
         public ListGroupsForApplicationResponseBodyGroups setGroupId(String groupId) {

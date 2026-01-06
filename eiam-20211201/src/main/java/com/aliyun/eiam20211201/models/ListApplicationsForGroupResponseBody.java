@@ -50,6 +50,31 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListApplicationsForGroupResponseBodyApplicationsApplicationRoles extends TeaModel {
+        /**
+         * <p>应用角色标识。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+         */
+        @NameInMap("ApplicationRoleId")
+        public String applicationRoleId;
+
+        public static ListApplicationsForGroupResponseBodyApplicationsApplicationRoles build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsForGroupResponseBodyApplicationsApplicationRoles self = new ListApplicationsForGroupResponseBodyApplicationsApplicationRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsForGroupResponseBodyApplicationsApplicationRoles setApplicationRoleId(String applicationRoleId) {
+            this.applicationRoleId = applicationRoleId;
+            return this;
+        }
+        public String getApplicationRoleId() {
+            return this.applicationRoleId;
+        }
+
+    }
+
     public static class ListApplicationsForGroupResponseBodyApplications extends TeaModel {
         /**
          * <p>应用的唯一标识。</p>
@@ -59,6 +84,12 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
          */
         @NameInMap("ApplicationId")
         public String applicationId;
+
+        /**
+         * <p>应用角色列表。</p>
+         */
+        @NameInMap("ApplicationRoles")
+        public java.util.List<ListApplicationsForGroupResponseBodyApplicationsApplicationRoles> applicationRoles;
 
         /**
          * <p>直接分配给当前用户的权限，视为直接授权。</p>
@@ -89,6 +120,14 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         }
         public String getApplicationId() {
             return this.applicationId;
+        }
+
+        public ListApplicationsForGroupResponseBodyApplications setApplicationRoles(java.util.List<ListApplicationsForGroupResponseBodyApplicationsApplicationRoles> applicationRoles) {
+            this.applicationRoles = applicationRoles;
+            return this;
+        }
+        public java.util.List<ListApplicationsForGroupResponseBodyApplicationsApplicationRoles> getApplicationRoles() {
+            return this.applicationRoles;
         }
 
         public ListApplicationsForGroupResponseBodyApplications setHasDirectAuthorization(Boolean hasDirectAuthorization) {

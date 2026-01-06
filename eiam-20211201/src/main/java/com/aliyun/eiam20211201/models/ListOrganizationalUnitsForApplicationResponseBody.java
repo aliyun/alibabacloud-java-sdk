@@ -57,7 +57,38 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         return this.totalCount;
     }
 
+    public static class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles extends TeaModel {
+        /**
+         * <p>应用角色标识。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+         */
+        @NameInMap("ApplicationRoleId")
+        public String applicationRoleId;
+
+        public static ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles build(java.util.Map<String, ?> map) throws Exception {
+            ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles self = new ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles setApplicationRoleId(String applicationRoleId) {
+            this.applicationRoleId = applicationRoleId;
+            return this;
+        }
+        public String getApplicationRoleId() {
+            return this.applicationRoleId;
+        }
+
+    }
+
     public static class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits extends TeaModel {
+        /**
+         * <p>应用角色列表。</p>
+         */
+        @NameInMap("ApplicationRoles")
+        public java.util.List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles> applicationRoles;
+
         /**
          * <p>The ID of the organization that is allowed to access the application.</p>
          * 
@@ -70,6 +101,14 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         public static ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits build(java.util.Map<String, ?> map) throws Exception {
             ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits self = new ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits();
             return TeaModel.build(map, self);
+        }
+
+        public ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits setApplicationRoles(java.util.List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles> applicationRoles) {
+            this.applicationRoles = applicationRoles;
+            return this;
+        }
+        public java.util.List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles> getApplicationRoles() {
+            return this.applicationRoles;
         }
 
         public ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits setOrganizationalUnitId(String organizationalUnitId) {

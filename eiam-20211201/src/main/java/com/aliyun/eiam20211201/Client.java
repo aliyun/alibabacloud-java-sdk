@@ -253,6 +253,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupIds)) {
             query.put("GroupIds", request.groupIds);
         }
@@ -305,6 +309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -355,6 +363,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
             query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -7497,6 +7509,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupIds)) {
             query.put("GroupIds", request.groupIds);
         }
@@ -8151,6 +8167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -8495,6 +8515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
             query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -8985,6 +9009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupIds)) {
             query.put("GroupIds", request.groupIds);
         }
@@ -9037,6 +9065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -9087,6 +9119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
             query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationRoleId)) {
+            query.put("ApplicationRoleId", request.applicationRoleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {

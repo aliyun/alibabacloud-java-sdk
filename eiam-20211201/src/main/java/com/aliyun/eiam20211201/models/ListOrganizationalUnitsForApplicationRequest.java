@@ -15,6 +15,15 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>应用角色ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+     */
+    @NameInMap("ApplicationRoleId")
+    public String applicationRoleId;
+
+    /**
      * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
@@ -62,6 +71,14 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public ListOrganizationalUnitsForApplicationRequest setApplicationRoleId(String applicationRoleId) {
+        this.applicationRoleId = applicationRoleId;
+        return this;
+    }
+    public String getApplicationRoleId() {
+        return this.applicationRoleId;
     }
 
     public ListOrganizationalUnitsForApplicationRequest setInstanceId(String instanceId) {
