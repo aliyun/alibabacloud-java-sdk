@@ -125,6 +125,9 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         @NameInMap("clusterId")
         public String clusterId;
 
+        @NameInMap("clusterNamespace")
+        public String clusterNamespace;
+
         /**
          * <p>Whether to disable the unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</p>
          * 
@@ -180,6 +183,14 @@ public class CreateIntegrationPolicyRequest extends TeaModel {
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        public CreateIntegrationPolicyRequestEntityGroup setClusterNamespace(String clusterNamespace) {
+            this.clusterNamespace = clusterNamespace;
+            return this;
+        }
+        public String getClusterNamespace() {
+            return this.clusterNamespace;
         }
 
         public CreateIntegrationPolicyRequestEntityGroup setDisablePolicyShare(Boolean disablePolicyShare) {

@@ -937,6 +937,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建应用可观测实例</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceObservabilityResponse
+     */
+    public CreateServiceObservabilityResponse createServiceObservabilityWithOptions(String workspace, String type, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceObservability"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/service-observability/" + com.aliyun.openapiutil.Client.getEncodeParam(type) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceObservabilityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建应用可观测实例</p>
+     * @return CreateServiceObservabilityResponse
+     */
+    public CreateServiceObservabilityResponse createServiceObservability(String workspace, String type) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createServiceObservabilityWithOptions(workspace, type, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建会话</p>
      * 
      * @param request CreateThreadRequest
@@ -3245,6 +3282,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDigitalEmployeesResponse listDigitalEmployeesWithOptions(ListDigitalEmployeesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.employeeType)) {
+            query.put("employeeType", request.employeeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
         }

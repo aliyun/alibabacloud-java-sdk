@@ -198,6 +198,9 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         @NameInMap("displayName")
         public String displayName;
 
+        @NameInMap("employeeType")
+        public String employeeType;
+
         @NameInMap("knowledges")
         public ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges knowledges;
 
@@ -259,6 +262,14 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public ListDigitalEmployeesResponseBodyDigitalEmployees setEmployeeType(String employeeType) {
+            this.employeeType = employeeType;
+            return this;
+        }
+        public String getEmployeeType() {
+            return this.employeeType;
         }
 
         public ListDigitalEmployeesResponseBodyDigitalEmployees setKnowledges(ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges knowledges) {
