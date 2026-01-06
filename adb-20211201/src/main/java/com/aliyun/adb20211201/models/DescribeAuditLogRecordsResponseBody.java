@@ -140,6 +140,13 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public Long executeTimestamp;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("HasDiagnosticInfo")
+        public Boolean hasDiagnosticInfo;
+
+        /**
          * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +248,14 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
         public Long getExecuteTimestamp() {
             return this.executeTimestamp;
+        }
+
+        public DescribeAuditLogRecordsResponseBodyItems setHasDiagnosticInfo(Boolean hasDiagnosticInfo) {
+            this.hasDiagnosticInfo = hasDiagnosticInfo;
+            return this;
+        }
+        public Boolean getHasDiagnosticInfo() {
+            return this.hasDiagnosticInfo;
         }
 
         public DescribeAuditLogRecordsResponseBodyItems setHostAddress(String hostAddress) {

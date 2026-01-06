@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoRenewalAttributeRequest extends TeaModel {
     /**
+     * <p>The duration of the auto-renewal. Default value: 1. Valid values:</p>
+     * <ul>
+     * <li>When <strong>AutoRenewalPeriod</strong> is set to <strong>Month</strong>, the value ranges from 1 to 11 (integer).</li>
+     * <li>When <strong>AutoRenewalPeriod</strong> is set to <strong>Month</strong>, the valid values are 1, 2, 3, and 5 (integer).</li>
+     * </ul>
+     * <blockquote>
+     * <p> Longer renewal periods offer better pricing. Renewing for 1 year is more cost-effective than renewing for 10 or 11 months.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +21,12 @@ public class ModifyAutoRenewalAttributeRequest extends TeaModel {
     public String autoRenewalPeriod;
 
     /**
+     * <p>Auto-renewal duration. Valid values:</p>
+     * <ul>
+     * <li>Year.</li>
+     * <li>Month.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Year</p>
      */
@@ -19,6 +34,13 @@ public class ModifyAutoRenewalAttributeRequest extends TeaModel {
     public String autoRenewalPeriodUnit;
 
     /**
+     * <p>The renewal method. Valid values:</p>
+     * <ul>
+     * <li><strong>AutoRenewal</strong>: The cluster is automatically renewed.</li>
+     * <li><strong>Normal</strong>: The cluster is manually renewed. Before the cluster expires, the system sends you a reminder by SMS message.</li>
+     * <li><strong>NotRenewal</strong>: The cluster is not renewed. Reminders are only sent three days before cluster expiration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AutoRenewal</p>
      */
@@ -26,6 +48,7 @@ public class ModifyAutoRenewalAttributeRequest extends TeaModel {
     public String autoRenewalStatus;
 
     /**
+     * <p>The ID of cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +64,7 @@ public class ModifyAutoRenewalAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

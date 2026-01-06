@@ -4,6 +4,9 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoRenewalAttributeRequest extends TeaModel {
+    /**
+     * <p>The cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public java.util.List<String> DBClusterId;
 
@@ -14,6 +17,8 @@ public class DescribeAutoRenewalAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. A positive integer greater than 0 and not exceeding the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +26,13 @@ public class DescribeAutoRenewalAttributeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on each page. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong>(Default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -28,6 +40,7 @@ public class DescribeAutoRenewalAttributeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +50,8 @@ public class DescribeAutoRenewalAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
      */

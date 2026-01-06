@@ -30,6 +30,7 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
      * <p>zh</p>
      */
     @NameInMap("Lang")
+    @Deprecated
     public String lang;
 
     /**
@@ -55,6 +56,7 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    @Deprecated
     public DescribeDownloadRecordsRequest setLang(String lang) {
         this.lang = lang;
         return this;

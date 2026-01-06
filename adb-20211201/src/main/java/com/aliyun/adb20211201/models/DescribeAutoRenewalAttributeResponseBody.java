@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The list of auto-renewal details.</p>
+     */
     @NameInMap("Items")
     public DescribeAutoRenewalAttributeResponseBodyItems items;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA0F6761-7A8C-59F8-9624-FB56788C0EDF</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,12 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
 
     public static class DescribeAutoRenewalAttributeResponseBodyItemsAutoRenewalAttribute extends TeaModel {
         /**
+         * <p>Indicates whether auto-renewal is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enables.</li>
+         * <li><strong>false</strong>: Disables.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +106,8 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         public Boolean autoRenewalEnabled;
 
         /**
+         * <p>The auto-renewal duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -96,6 +115,12 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         public Long autoRenewalPeriod;
 
         /**
+         * <p>The unit of auto-renewal duration. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Year</p>
          */
@@ -103,6 +128,13 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         public String autoRenewalPeriodUnit;
 
         /**
+         * <p>The renewal method. Valid values:</p>
+         * <ul>
+         * <li><strong>AutoRenewal</strong>: The cluster is automatically renewed.</li>
+         * <li><strong>Normal</strong>: The cluster is manually renewed. Before the cluster expires, the system sends you a reminder by SMS message.</li>
+         * <li><strong>NotRenewal</strong>: The cluster is not renewed. Reminders are only sent three days before cluster expiration.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AutoRenewal</p>
          */
@@ -110,6 +142,8 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         public String autoRenewalStatus;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>amv-uf6485635fz8****</p>
          */
@@ -117,6 +151,8 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */

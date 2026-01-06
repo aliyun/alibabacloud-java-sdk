@@ -4868,7 +4868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自动续费参数</p>
+     * <p>Queries the auto-renewal status of a subscription cluster.</p>
      * 
      * @param tmpReq DescribeAutoRenewalAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4938,7 +4938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自动续费参数</p>
+     * <p>Queries the auto-renewal status of a subscription cluster.</p>
      * 
      * @param request DescribeAutoRenewalAttributeRequest
      * @return DescribeAutoRenewalAttributeResponse
@@ -13914,7 +13914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自动续费配置</p>
+     * <p>Configures auto-renewal for a subscription cluster.</p>
      * 
      * @param request ModifyAutoRenewalAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13978,7 +13978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自动续费配置</p>
+     * <p>Configures auto-renewal for a subscription cluster.</p>
      * 
      * @param request ModifyAutoRenewalAttributeRequest
      * @return ModifyAutoRenewalAttributeResponse
