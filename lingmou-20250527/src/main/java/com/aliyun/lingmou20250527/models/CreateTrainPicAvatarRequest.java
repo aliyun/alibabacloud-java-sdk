@@ -36,8 +36,6 @@ public class CreateTrainPicAvatarRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>M16vSG46Pby9HWOrFSZ7QaQA</p>
      */

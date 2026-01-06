@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>lingmou20250527</artifactId>
-  <version>1.5.2</version>
+  <version>1.5.3</version>
   <packaging>jar</packaging>
   <name>lingmou20250527</name>
   <description>Alibaba Cloud LingMou (20250527) SDK for Java
