@@ -1908,6 +1908,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除客户端</p>
+     * 
      * @param request DeleteClientRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteClientResponse
@@ -1945,6 +1948,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除客户端</p>
+     * 
      * @param request DeleteClientRequest
      * @return DeleteClientResponse
      */

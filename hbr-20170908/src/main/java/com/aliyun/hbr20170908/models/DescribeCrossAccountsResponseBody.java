@@ -175,6 +175,13 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         public String crossAccountRoleName;
 
         /**
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
+         */
+        @NameInMap("CrossAccountType")
+        public String crossAccountType;
+
+        /**
          * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
          * 
          * <strong>example:</strong>
@@ -237,6 +244,14 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
         public String getCrossAccountRoleName() {
             return this.crossAccountRoleName;
+        }
+
+        public DescribeCrossAccountsResponseBodyCrossAccountsCrossAccount setCrossAccountType(String crossAccountType) {
+            this.crossAccountType = crossAccountType;
+            return this;
+        }
+        public String getCrossAccountType() {
+            return this.crossAccountType;
         }
 
         public DescribeCrossAccountsResponseBodyCrossAccountsCrossAccount setCrossAccountUserId(Long crossAccountUserId) {
