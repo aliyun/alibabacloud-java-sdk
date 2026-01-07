@@ -76,6 +76,9 @@ public class ListDIJobsRequest extends TeaModel {
     @NameInMap("SourceDataSourceType")
     public String sourceDataSourceType;
 
+    @NameInMap("SpecType")
+    public String specType;
+
     public static ListDIJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDIJobsRequest self = new ListDIJobsRequest();
         return TeaModel.build(map, self);
@@ -135,6 +138,14 @@ public class ListDIJobsRequest extends TeaModel {
     }
     public String getSourceDataSourceType() {
         return this.sourceDataSourceType;
+    }
+
+    public ListDIJobsRequest setSpecType(String specType) {
+        this.specType = specType;
+        return this;
+    }
+    public String getSpecType() {
+        return this.specType;
     }
 
 }
