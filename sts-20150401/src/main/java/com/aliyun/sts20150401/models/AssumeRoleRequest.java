@@ -70,6 +70,9 @@ public class AssumeRoleRequest extends TeaModel {
     @NameInMap("RoleSessionName")
     public String roleSessionName;
 
+    @NameInMap("SourceIdentity")
+    public String sourceIdentity;
+
     public static AssumeRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         AssumeRoleRequest self = new AssumeRoleRequest();
         return TeaModel.build(map, self);
@@ -113,6 +116,14 @@ public class AssumeRoleRequest extends TeaModel {
     }
     public String getRoleSessionName() {
         return this.roleSessionName;
+    }
+
+    public AssumeRoleRequest setSourceIdentity(String sourceIdentity) {
+        this.sourceIdentity = sourceIdentity;
+        return this;
+    }
+    public String getSourceIdentity() {
+        return this.sourceIdentity;
     }
 
 }

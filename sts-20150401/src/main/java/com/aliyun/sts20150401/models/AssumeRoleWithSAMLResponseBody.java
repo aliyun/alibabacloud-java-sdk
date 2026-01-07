@@ -31,6 +31,9 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
     @NameInMap("SAMLAssertionInfo")
     public AssumeRoleWithSAMLResponseBodySAMLAssertionInfo SAMLAssertionInfo;
 
+    @NameInMap("SourceIdentity")
+    public String sourceIdentity;
+
     public static AssumeRoleWithSAMLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssumeRoleWithSAMLResponseBody self = new AssumeRoleWithSAMLResponseBody();
         return TeaModel.build(map, self);
@@ -66,6 +69,14 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
     }
     public AssumeRoleWithSAMLResponseBodySAMLAssertionInfo getSAMLAssertionInfo() {
         return this.SAMLAssertionInfo;
+    }
+
+    public AssumeRoleWithSAMLResponseBody setSourceIdentity(String sourceIdentity) {
+        this.sourceIdentity = sourceIdentity;
+        return this;
+    }
+    public String getSourceIdentity() {
+        return this.sourceIdentity;
     }
 
     public static class AssumeRoleWithSAMLResponseBodyAssumedRoleUser extends TeaModel {

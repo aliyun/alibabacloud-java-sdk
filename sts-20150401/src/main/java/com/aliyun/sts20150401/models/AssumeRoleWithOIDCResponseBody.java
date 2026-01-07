@@ -31,6 +31,9 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SourceIdentity")
+    public String sourceIdentity;
+
     public static AssumeRoleWithOIDCResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssumeRoleWithOIDCResponseBody self = new AssumeRoleWithOIDCResponseBody();
         return TeaModel.build(map, self);
@@ -66,6 +69,14 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AssumeRoleWithOIDCResponseBody setSourceIdentity(String sourceIdentity) {
+        this.sourceIdentity = sourceIdentity;
+        return this;
+    }
+    public String getSourceIdentity() {
+        return this.sourceIdentity;
     }
 
     public static class AssumeRoleWithOIDCResponseBodyAssumedRoleUser extends TeaModel {

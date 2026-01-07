@@ -8,11 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "sts.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "sts.aliyuncs.com"),
+            new TeaPair("ap-south-1", "sts.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "sts.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "sts.aliyuncs.com"),
             new TeaPair("cn-beijing-gov-1", "sts.aliyuncs.com"),
             new TeaPair("cn-beijing-nu16-b01", "sts.aliyuncs.com"),
@@ -20,7 +20,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-fujian", "sts.aliyuncs.com"),
             new TeaPair("cn-haidian-cm12-c01", "sts.aliyuncs.com"),
             new TeaPair("cn-hangzhou-bj-b01", "sts.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "sts.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-prod-1", "sts.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-1", "sts.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-2", "sts.aliyuncs.com"),
@@ -28,13 +27,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-hangzhou-test-306", "sts.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "sts.aliyuncs.com"),
             new TeaPair("cn-huhehaote-nebula-1", "sts.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "sts-vpc.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "sts.aliyuncs.com"),
             new TeaPair("cn-shanghai-et15-b01", "sts.aliyuncs.com"),
             new TeaPair("cn-shanghai-et2-b01", "sts.aliyuncs.com"),
             new TeaPair("cn-shanghai-inner", "sts.aliyuncs.com"),
             new TeaPair("cn-shanghai-internal-test-1", "sts.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "sts-vpc.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen-inner", "sts.aliyuncs.com"),
             new TeaPair("cn-shenzhen-st4-d01", "sts.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "sts.aliyuncs.com"),
@@ -109,6 +105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RoleSessionName", request.roleSessionName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIdentity)) {
+            query.put("SourceIdentity", request.sourceIdentity);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -123,12 +123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AssumeRoleResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AssumeRoleResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssumeRoleResponse());
     }
 
     /**
@@ -214,12 +209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AssumeRoleWithOIDCResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AssumeRoleWithOIDCResponse());
-        }
-
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new AssumeRoleWithOIDCResponse());
     }
 
     /**
@@ -295,12 +285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AssumeRoleWithSAMLResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AssumeRoleWithSAMLResponse());
-        }
-
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new AssumeRoleWithSAMLResponse());
     }
 
     /**
@@ -344,12 +329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetCallerIdentityResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetCallerIdentityResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCallerIdentityResponse());
     }
 
     /**
