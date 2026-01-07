@@ -7,6 +7,13 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("AutoscalerEnabled")
     public Boolean autoscalerEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19989224166xxxxxxx</p>
+     */
+    @NameInMap("CallerUid")
+    public String callerUid;
+
     @NameInMap("CronscalerEnabled")
     public Boolean cronscalerEnabled;
 
@@ -370,6 +377,14 @@ public class ListServicesShrinkRequest extends TeaModel {
     }
     public Boolean getAutoscalerEnabled() {
         return this.autoscalerEnabled;
+    }
+
+    public ListServicesShrinkRequest setCallerUid(String callerUid) {
+        this.callerUid = callerUid;
+        return this;
+    }
+    public String getCallerUid() {
+        return this.callerUid;
     }
 
     public ListServicesShrinkRequest setCronscalerEnabled(Boolean cronscalerEnabled) {

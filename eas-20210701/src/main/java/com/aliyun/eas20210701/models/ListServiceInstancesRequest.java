@@ -123,8 +123,14 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("QuotaId")
+    public String quotaId;
+
     @NameInMap("ReplicaName")
     public String replicaName;
+
+    @NameInMap("Resource")
+    public String resource;
 
     /**
      * <p>The type of the resource group to which the instance belongs.</p>
@@ -329,12 +335,28 @@ public class ListServiceInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListServiceInstancesRequest setQuotaId(String quotaId) {
+        this.quotaId = quotaId;
+        return this;
+    }
+    public String getQuotaId() {
+        return this.quotaId;
+    }
+
     public ListServiceInstancesRequest setReplicaName(String replicaName) {
         this.replicaName = replicaName;
         return this;
     }
     public String getReplicaName() {
         return this.replicaName;
+    }
+
+    public ListServiceInstancesRequest setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
     }
 
     public ListServiceInstancesRequest setResourceType(String resourceType) {

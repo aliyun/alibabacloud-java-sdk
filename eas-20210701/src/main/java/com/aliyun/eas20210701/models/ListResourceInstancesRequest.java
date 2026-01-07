@@ -244,6 +244,9 @@ public class ListResourceInstancesRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    @NameInMap("Zone")
+    public String zone;
+
     public static ListResourceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceInstancesRequest self = new ListResourceInstancesRequest();
         return TeaModel.build(map, self);
@@ -335,6 +338,14 @@ public class ListResourceInstancesRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public ListResourceInstancesRequest setZone(String zone) {
+        this.zone = zone;
+        return this;
+    }
+    public String getZone() {
+        return this.zone;
     }
 
 }

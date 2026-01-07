@@ -244,6 +244,9 @@ public class ListResourceInstancesShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    @NameInMap("Zone")
+    public String zone;
+
     public static ListResourceInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceInstancesShrinkRequest self = new ListResourceInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -335,6 +338,14 @@ public class ListResourceInstancesShrinkRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public ListResourceInstancesShrinkRequest setZone(String zone) {
+        this.zone = zone;
+        return this;
+    }
+    public String getZone() {
+        return this.zone;
     }
 
 }
