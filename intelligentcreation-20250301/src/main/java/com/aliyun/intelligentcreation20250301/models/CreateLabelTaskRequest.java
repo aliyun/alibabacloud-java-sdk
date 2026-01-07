@@ -36,6 +36,13 @@ public class CreateLabelTaskRequest extends TeaModel {
     @NameInMap("LabelTemplateId")
     public String labelTemplateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1733766254635026</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static CreateLabelTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLabelTaskRequest self = new CreateLabelTaskRequest();
         return TeaModel.build(map, self);
@@ -71,6 +78,14 @@ public class CreateLabelTaskRequest extends TeaModel {
     }
     public String getLabelTemplateId() {
         return this.labelTemplateId;
+    }
+
+    public CreateLabelTaskRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

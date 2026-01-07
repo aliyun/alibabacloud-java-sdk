@@ -4,6 +4,10 @@ package com.aliyun.intelligentcreation20250301.models;
 import com.aliyun.tea.*;
 
 public class CreateTextLabelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;textID&quot;: &quot;12345&quot;, &quot;type&quot;:&quot;dialogue&quot;, &quot;text&quot;: &quot;您好&quot;}</p>
+     */
     @NameInMap("Data")
     public String data;
 
@@ -13,6 +17,13 @@ public class CreateTextLabelRequest extends TeaModel {
      */
     @NameInMap("LabelTemplateId")
     public String labelTemplateId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1241148226163200</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     public static CreateTextLabelRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTextLabelRequest self = new CreateTextLabelRequest();
@@ -33,6 +44,14 @@ public class CreateTextLabelRequest extends TeaModel {
     }
     public String getLabelTemplateId() {
         return this.labelTemplateId;
+    }
+
+    public CreateTextLabelRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

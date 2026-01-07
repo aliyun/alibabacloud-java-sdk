@@ -18,6 +18,13 @@ public class CreateOssUploadTokenRequest extends TeaModel {
     @NameInMap("FileType")
     public String fileType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1413094986355164</p>
+     */
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static CreateOssUploadTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOssUploadTokenRequest self = new CreateOssUploadTokenRequest();
         return TeaModel.build(map, self);
@@ -37,6 +44,14 @@ public class CreateOssUploadTokenRequest extends TeaModel {
     }
     public String getFileType() {
         return this.fileType;
+    }
+
+    public CreateOssUploadTokenRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }
