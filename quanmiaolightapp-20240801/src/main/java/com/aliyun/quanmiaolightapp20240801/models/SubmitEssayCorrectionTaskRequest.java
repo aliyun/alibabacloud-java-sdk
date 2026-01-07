@@ -118,6 +118,9 @@ public class SubmitEssayCorrectionTaskRequest extends TeaModel {
         @NameInMap("answer")
         public String answer;
 
+        @NameInMap("customId")
+        public String customId;
+
         /**
          * <strong>example:</strong>
          * <p>高中二年级</p>
@@ -164,6 +167,14 @@ public class SubmitEssayCorrectionTaskRequest extends TeaModel {
         }
         public String getAnswer() {
             return this.answer;
+        }
+
+        public SubmitEssayCorrectionTaskRequestTasks setCustomId(String customId) {
+            this.customId = customId;
+            return this;
+        }
+        public String getCustomId() {
+            return this.customId;
         }
 
         public SubmitEssayCorrectionTaskRequestTasks setGrade(String grade) {
