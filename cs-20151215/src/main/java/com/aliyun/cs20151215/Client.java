@@ -5206,6 +5206,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListClusterKubeconfigStatesResponse listClusterKubeconfigStatesWithOptions(String ClusterId, ListClusterKubeconfigStatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudServiceKubeConfig)) {
+            query.put("cloudServiceKubeConfig", request.cloudServiceKubeConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }

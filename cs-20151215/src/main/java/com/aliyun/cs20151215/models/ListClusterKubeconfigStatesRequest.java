@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListClusterKubeconfigStatesRequest extends TeaModel {
+    @NameInMap("cloudServiceKubeConfig")
+    public Boolean cloudServiceKubeConfig;
+
     /**
      * <p>The page number.</p>
      * <ul>
@@ -33,6 +36,14 @@ public class ListClusterKubeconfigStatesRequest extends TeaModel {
     public static ListClusterKubeconfigStatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterKubeconfigStatesRequest self = new ListClusterKubeconfigStatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterKubeconfigStatesRequest setCloudServiceKubeConfig(Boolean cloudServiceKubeConfig) {
+        this.cloudServiceKubeConfig = cloudServiceKubeConfig;
+        return this;
+    }
+    public Boolean getCloudServiceKubeConfig() {
+        return this.cloudServiceKubeConfig;
     }
 
     public ListClusterKubeconfigStatesRequest setPageNumber(Integer pageNumber) {

@@ -96,6 +96,58 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
 
     }
 
+    public static class ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles extends TeaModel {
+        @NameInMap("is_default_template")
+        public Boolean isDefaultTemplate;
+
+        @NameInMap("role_name")
+        public String roleName;
+
+        @NameInMap("role_namespace")
+        public String roleNamespace;
+
+        @NameInMap("type")
+        public String type;
+
+        public static ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles build(java.util.Map<String, ?> map) throws Exception {
+            ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles self = new ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles setIsDefaultTemplate(Boolean isDefaultTemplate) {
+            this.isDefaultTemplate = isDefaultTemplate;
+            return this;
+        }
+        public Boolean getIsDefaultTemplate() {
+            return this.isDefaultTemplate;
+        }
+
+        public ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles setRoleNamespace(String roleNamespace) {
+            this.roleNamespace = roleNamespace;
+            return this;
+        }
+        public String getRoleNamespace() {
+            return this.roleNamespace;
+        }
+
+        public ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListClusterKubeconfigStatesResponseBodyStates extends TeaModel {
         /**
          * <p>The displayed name or role name of the RAM user.</p>
@@ -175,6 +227,9 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         @NameInMap("cert_state")
         public String certState;
 
+        @NameInMap("cloud_service_roles")
+        public java.util.List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> cloudServiceRoles;
+
         /**
          * <p>Indicates whether the client certificate for the kubeconfig file can be revoked.</p>
          * 
@@ -243,6 +298,14 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         }
         public String getCertState() {
             return this.certState;
+        }
+
+        public ListClusterKubeconfigStatesResponseBodyStates setCloudServiceRoles(java.util.List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> cloudServiceRoles) {
+            this.cloudServiceRoles = cloudServiceRoles;
+            return this;
+        }
+        public java.util.List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> getCloudServiceRoles() {
+            return this.cloudServiceRoles;
         }
 
         public ListClusterKubeconfigStatesResponseBodyStates setRevokable(Boolean revokable) {
