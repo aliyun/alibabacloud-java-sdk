@@ -28,6 +28,396 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加私有联系人</p>
+     * 
+     * @param request AccountContactAddRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AccountContactAddResponse
+     */
+    public AccountContactAddResponse accountContactAddWithOptions(AccountContactAddRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncEmailVerify)) {
+            body.put("AsyncEmailVerify", request.asyncEmailVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncMobileVerify)) {
+            body.put("AsyncMobileVerify", request.asyncMobileVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactEmail)) {
+            body.put("ContactEmail", request.contactEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactMobile)) {
+            body.put("ContactMobile", request.contactMobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactName)) {
+            body.put("ContactName", request.contactName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactPosition)) {
+            body.put("ContactPosition", request.contactPosition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emailCode)) {
+            body.put("EmailCode", request.emailCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileCode)) {
+            body.put("MobileCode", request.mobileCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedContact)) {
+            body.put("SharedContact", request.sharedContact);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AccountContactAdd"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AccountContactAddResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加私有联系人</p>
+     * 
+     * @param request AccountContactAddRequest
+     * @return AccountContactAddResponse
+     */
+    public AccountContactAddResponse accountContactAdd(AccountContactAddRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.accountContactAddWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除私有联系人</p>
+     * 
+     * @param request AccountContactDeleteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AccountContactDeleteResponse
+     */
+    public AccountContactDeleteResponse accountContactDeleteWithOptions(AccountContactDeleteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            body.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AccountContactDelete"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AccountContactDeleteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除私有联系人</p>
+     * 
+     * @param request AccountContactDeleteRequest
+     * @return AccountContactDeleteResponse
+     */
+    public AccountContactDeleteResponse accountContactDelete(AccountContactDeleteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.accountContactDeleteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改私有联系人</p>
+     * 
+     * @param request AccountContactEditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AccountContactEditResponse
+     */
+    public AccountContactEditResponse accountContactEditWithOptions(AccountContactEditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncEmailVerify)) {
+            body.put("AsyncEmailVerify", request.asyncEmailVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncMobileVerify)) {
+            body.put("AsyncMobileVerify", request.asyncMobileVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactEmail)) {
+            body.put("ContactEmail", request.contactEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            body.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactMobile)) {
+            body.put("ContactMobile", request.contactMobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactName)) {
+            body.put("ContactName", request.contactName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactPosition)) {
+            body.put("ContactPosition", request.contactPosition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emailCode)) {
+            body.put("EmailCode", request.emailCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileCode)) {
+            body.put("MobileCode", request.mobileCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedContact)) {
+            body.put("SharedContact", request.sharedContact);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AccountContactEdit"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AccountContactEditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改私有联系人</p>
+     * 
+     * @param request AccountContactEditRequest
+     * @return AccountContactEditResponse
+     */
+    public AccountContactEditResponse accountContactEdit(AccountContactEditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.accountContactEditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询联系人详情</p>
+     * 
+     * @param request AccountContactQueryDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AccountContactQueryDetailResponse
+     */
+    public AccountContactQueryDetailResponse accountContactQueryDetailWithOptions(AccountContactQueryDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            body.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AccountContactQueryDetail"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AccountContactQueryDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询联系人详情</p>
+     * 
+     * @param request AccountContactQueryDetailRequest
+     * @return AccountContactQueryDetailResponse
+     */
+    public AccountContactQueryDetailResponse accountContactQueryDetail(AccountContactQueryDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.accountContactQueryDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询联系人列表</p>
+     * 
+     * @param request AccountContactQueryPageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AccountContactQueryPageListResponse
+     */
+    public AccountContactQueryPageListResponse accountContactQueryPageListWithOptions(AccountContactQueryPageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.showCompleteInfo)) {
+            query.put("ShowCompleteInfo", request.showCompleteInfo);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateContact)) {
+            body.put("PrivateContact", request.privateContact);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedContact)) {
+            body.put("SharedContact", request.sharedContact);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AccountContactQueryPageList"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AccountContactQueryPageListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询联系人列表</p>
+     * 
+     * @param request AccountContactQueryPageListRequest
+     * @return AccountContactQueryPageListResponse
+     */
+    public AccountContactQueryPageListResponse accountContactQueryPageList(AccountContactQueryPageListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.accountContactQueryPageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改登录密码</p>
      * 
      * @param request EnterpriseAccountChangeLoginPasswordRequest
@@ -1020,6 +1410,396 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>增加企业联系人</p>
+     * 
+     * @param request EnterpriseContactAddRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnterpriseContactAddResponse
+     */
+    public EnterpriseContactAddResponse enterpriseContactAddWithOptions(EnterpriseContactAddRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncEmailVerify)) {
+            body.put("AsyncEmailVerify", request.asyncEmailVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncMobileVerify)) {
+            body.put("AsyncMobileVerify", request.asyncMobileVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactEmail)) {
+            body.put("ContactEmail", request.contactEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactMobile)) {
+            body.put("ContactMobile", request.contactMobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactName)) {
+            body.put("ContactName", request.contactName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactPosition)) {
+            body.put("ContactPosition", request.contactPosition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emailCode)) {
+            body.put("EmailCode", request.emailCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileCode)) {
+            body.put("MobileCode", request.mobileCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedContact)) {
+            body.put("SharedContact", request.sharedContact);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnterpriseContactAdd"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnterpriseContactAddResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>增加企业联系人</p>
+     * 
+     * @param request EnterpriseContactAddRequest
+     * @return EnterpriseContactAddResponse
+     */
+    public EnterpriseContactAddResponse enterpriseContactAdd(EnterpriseContactAddRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enterpriseContactAddWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除企业联系人</p>
+     * 
+     * @param request EnterpriseContactDeleteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnterpriseContactDeleteResponse
+     */
+    public EnterpriseContactDeleteResponse enterpriseContactDeleteWithOptions(EnterpriseContactDeleteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            body.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnterpriseContactDelete"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnterpriseContactDeleteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除企业联系人</p>
+     * 
+     * @param request EnterpriseContactDeleteRequest
+     * @return EnterpriseContactDeleteResponse
+     */
+    public EnterpriseContactDeleteResponse enterpriseContactDelete(EnterpriseContactDeleteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enterpriseContactDeleteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改私企业联系人</p>
+     * 
+     * @param request EnterpriseContactEditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnterpriseContactEditResponse
+     */
+    public EnterpriseContactEditResponse enterpriseContactEditWithOptions(EnterpriseContactEditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncEmailVerify)) {
+            body.put("AsyncEmailVerify", request.asyncEmailVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncMobileVerify)) {
+            body.put("AsyncMobileVerify", request.asyncMobileVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactEmail)) {
+            body.put("ContactEmail", request.contactEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            body.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactMobile)) {
+            body.put("ContactMobile", request.contactMobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactName)) {
+            body.put("ContactName", request.contactName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactPosition)) {
+            body.put("ContactPosition", request.contactPosition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emailCode)) {
+            body.put("EmailCode", request.emailCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileCode)) {
+            body.put("MobileCode", request.mobileCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedContact)) {
+            body.put("SharedContact", request.sharedContact);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnterpriseContactEdit"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnterpriseContactEditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改私企业联系人</p>
+     * 
+     * @param request EnterpriseContactEditRequest
+     * @return EnterpriseContactEditResponse
+     */
+    public EnterpriseContactEditResponse enterpriseContactEdit(EnterpriseContactEditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enterpriseContactEditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询联系人详情</p>
+     * 
+     * @param request EnterpriseContactQueryDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnterpriseContactQueryDetailResponse
+     */
+    public EnterpriseContactQueryDetailResponse enterpriseContactQueryDetailWithOptions(EnterpriseContactQueryDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            body.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnterpriseContactQueryDetail"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnterpriseContactQueryDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询联系人详情</p>
+     * 
+     * @param request EnterpriseContactQueryDetailRequest
+     * @return EnterpriseContactQueryDetailResponse
+     */
+    public EnterpriseContactQueryDetailResponse enterpriseContactQueryDetail(EnterpriseContactQueryDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enterpriseContactQueryDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询联系人列表</p>
+     * 
+     * @param request EnterpriseContactQueryPageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnterpriseContactQueryPageListResponse
+     */
+    public EnterpriseContactQueryPageListResponse enterpriseContactQueryPageListWithOptions(EnterpriseContactQueryPageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.showCompleteInfo)) {
+            query.put("ShowCompleteInfo", request.showCompleteInfo);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedEcId)) {
+            body.put("OrientedEcId", request.orientedEcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedLeId)) {
+            body.put("OrientedLeId", request.orientedLeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orientedNbId)) {
+            body.put("OrientedNbId", request.orientedNbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            body.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateContact)) {
+            body.put("PrivateContact", request.privateContact);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedContact)) {
+            body.put("SharedContact", request.sharedContact);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnterpriseContactQueryPageList"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnterpriseContactQueryPageListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询联系人列表</p>
+     * 
+     * @param request EnterpriseContactQueryPageListRequest
+     * @return EnterpriseContactQueryPageListResponse
+     */
+    public EnterpriseContactQueryPageListResponse enterpriseContactQueryPageList(EnterpriseContactQueryPageListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enterpriseContactQueryPageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>组织目录树查询</p>
      * 
      * @param request EnterpriseOrgQueryLoadTreeRequest
@@ -1928,5 +2708,109 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnterpriseUninvitedAdminInviteJoinEnterpriseResponse enterpriseUninvitedAdminInviteJoinEnterprise(EnterpriseUninvitedAdminInviteJoinEnterpriseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enterpriseUninvitedAdminInviteJoinEnterpriseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>账号中心发送异步验证邮件</p>
+     * 
+     * @param request SendAsyncEmailCaptchaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendAsyncEmailCaptchaResponse
+     */
+    public SendAsyncEmailCaptchaResponse sendAsyncEmailCaptchaWithOptions(SendAsyncEmailCaptchaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactInfo)) {
+            body.put("ContactInfo", request.contactInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactorId)) {
+            body.put("ContactorId", request.contactorId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendAsyncEmailCaptcha"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendAsyncEmailCaptchaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>账号中心发送异步验证邮件</p>
+     * 
+     * @param request SendAsyncEmailCaptchaRequest
+     * @return SendAsyncEmailCaptchaResponse
+     */
+    public SendAsyncEmailCaptchaResponse sendAsyncEmailCaptcha(SendAsyncEmailCaptchaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendAsyncEmailCaptchaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>账号中心发送异步验证短信</p>
+     * 
+     * @param request SendAsyncMobileCaptchaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendAsyncMobileCaptchaResponse
+     */
+    public SendAsyncMobileCaptchaResponse sendAsyncMobileCaptchaWithOptions(SendAsyncMobileCaptchaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactInfo)) {
+            body.put("ContactInfo", request.contactInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactorId)) {
+            body.put("ContactorId", request.contactorId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendAsyncMobileCaptcha"),
+            new TeaPair("version", "2024-12-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendAsyncMobileCaptchaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>账号中心发送异步验证短信</p>
+     * 
+     * @param request SendAsyncMobileCaptchaRequest
+     * @return SendAsyncMobileCaptchaResponse
+     */
+    public SendAsyncMobileCaptchaResponse sendAsyncMobileCaptcha(SendAsyncMobileCaptchaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendAsyncMobileCaptchaWithOptions(request, runtime);
     }
 }
