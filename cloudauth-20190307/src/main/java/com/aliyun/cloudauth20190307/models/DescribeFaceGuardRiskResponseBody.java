@@ -84,6 +84,9 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         @NameInMap("CertifyId")
         public String certifyId;
 
+        @NameInMap("GuardRiskScore")
+        public Double guardRiskScore;
+
         /**
          * <p>Extended information, in JSON format. (Customized return based on tenant requirements)</p>
          * 
@@ -128,6 +131,14 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
         public String getCertifyId() {
             return this.certifyId;
+        }
+
+        public DescribeFaceGuardRiskResponseBodyResultObject setGuardRiskScore(Double guardRiskScore) {
+            this.guardRiskScore = guardRiskScore;
+            return this;
+        }
+        public Double getGuardRiskScore() {
+            return this.guardRiskScore;
         }
 
         public DescribeFaceGuardRiskResponseBodyResultObject setRiskExtends(String riskExtends) {
