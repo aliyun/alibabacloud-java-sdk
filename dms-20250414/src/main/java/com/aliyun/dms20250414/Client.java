@@ -28,6 +28,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>为空间添加用户</p>
+     * 
+     * @param request AddUserToDataAgentWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddUserToDataAgentWorkspaceResponse
+     */
+    public AddUserToDataAgentWorkspaceResponse addUserToDataAgentWorkspaceWithOptions(AddUserToDataAgentWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            query.put("RoleName", request.roleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUserToDataAgentWorkspace"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUserToDataAgentWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为空间添加用户</p>
+     * 
+     * @param request AddUserToDataAgentWorkspaceRequest
+     * @return AddUserToDataAgentWorkspaceResponse
+     */
+    public AddUserToDataAgentWorkspaceResponse addUserToDataAgentWorkspace(AddUserToDataAgentWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addUserToDataAgentWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>批量新建湖仓表分区</p>
      * 
      * @param tmpReq BatchCreateDataLakePartitionsRequest
@@ -462,6 +518,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建DataAgent工作空间</p>
+     * 
+     * @param request CreateDataAgentWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataAgentWorkspaceResponse
+     */
+    public CreateDataAgentWorkspaceResponse createDataAgentWorkspaceWithOptions(CreateDataAgentWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceDesc)) {
+            query.put("WorkspaceDesc", request.workspaceDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataAgentWorkspace"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataAgentWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建DataAgent工作空间</p>
+     * 
+     * @param request CreateDataAgentWorkspaceRequest
+     * @return CreateDataAgentWorkspaceResponse
+     */
+    public CreateDataAgentWorkspaceResponse createDataAgentWorkspace(CreateDataAgentWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataAgentWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>新建湖仓数据库</p>
      * 
      * @param tmpReq CreateDataLakeDatabaseRequest
@@ -800,6 +908,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAirflowResponse deleteAirflow(DeleteAirflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAirflowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除DataAgent工作空间</p>
+     * 
+     * @param request DeleteDataAgentWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataAgentWorkspaceResponse
+     */
+    public DeleteDataAgentWorkspaceResponse deleteDataAgentWorkspaceWithOptions(DeleteDataAgentWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataAgentWorkspace"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataAgentWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除DataAgent工作空间</p>
+     * 
+     * @param request DeleteDataAgentWorkspaceRequest
+     * @return DeleteDataAgentWorkspaceResponse
+     */
+    public DeleteDataAgentWorkspaceResponse deleteDataAgentWorkspace(DeleteDataAgentWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataAgentWorkspaceWithOptions(request, runtime);
     }
 
     /**
@@ -1418,6 +1574,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取主账号下的子账号信息</p>
+     * 
+     * @param request GetDataAgentSubAccountInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataAgentSubAccountInfoResponse
+     */
+    public GetDataAgentSubAccountInfoResponse getDataAgentSubAccountInfoWithOptions(GetDataAgentSubAccountInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
+            query.put("DmsUnit", request.dmsUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subAccountId)) {
+            query.put("SubAccountId", request.subAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataAgentSubAccountInfo"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataAgentSubAccountInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取主账号下的子账号信息</p>
+     * 
+     * @param request GetDataAgentSubAccountInfoRequest
+     * @return GetDataAgentSubAccountInfoResponse
+     */
+    public GetDataAgentSubAccountInfoResponse getDataAgentSubAccountInfo(GetDataAgentSubAccountInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataAgentSubAccountInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取空间信息</p>
+     * 
+     * @param request GetDataAgentWorkspaceInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataAgentWorkspaceInfoResponse
+     */
+    public GetDataAgentWorkspaceInfoResponse getDataAgentWorkspaceInfoWithOptions(GetDataAgentWorkspaceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataAgentWorkspaceInfo"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataAgentWorkspaceInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取空间信息</p>
+     * 
+     * @param request GetDataAgentWorkspaceInfoRequest
+     * @return GetDataAgentWorkspaceInfoResponse
+     */
+    public GetDataAgentWorkspaceInfoResponse getDataAgentWorkspaceInfo(GetDataAgentWorkspaceInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataAgentWorkspaceInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取uc的数据库目录</p>
      * 
      * @param request GetDataLakeCatalogRequest
@@ -1950,6 +2202,162 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCustomAgentResponse listCustomAgent(ListCustomAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCustomAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取主账号下的空间（分页）</p>
+     * 
+     * @param request ListDataAgentWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentWorkspaceResponse
+     */
+    public ListDataAgentWorkspaceResponse listDataAgentWorkspaceWithOptions(ListDataAgentWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceType)) {
+            query.put("WorkspaceType", request.workspaceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentWorkspace"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取主账号下的空间（分页）</p>
+     * 
+     * @param request ListDataAgentWorkspaceRequest
+     * @return ListDataAgentWorkspaceResponse
+     */
+    public ListDataAgentWorkspaceResponse listDataAgentWorkspace(ListDataAgentWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取空间所有成员</p>
+     * 
+     * @param request ListDataAgentWorkspaceMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentWorkspaceMemberResponse
+     */
+    public ListDataAgentWorkspaceMemberResponse listDataAgentWorkspaceMemberWithOptions(ListDataAgentWorkspaceMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchMemberId)) {
+            query.put("SearchMemberId", request.searchMemberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRoleName)) {
+            query.put("SearchRoleName", request.searchRoleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentWorkspaceMember"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentWorkspaceMemberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取空间所有成员</p>
+     * 
+     * @param request ListDataAgentWorkspaceMemberRequest
+     * @return ListDataAgentWorkspaceMemberResponse
+     */
+    public ListDataAgentWorkspaceMemberResponse listDataAgentWorkspaceMember(ListDataAgentWorkspaceMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentWorkspaceMemberWithOptions(request, runtime);
     }
 
     /**
@@ -2712,6 +3120,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>从空间中移除用户</p>
+     * 
+     * @param request RemoveUserToDataAgentWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveUserToDataAgentWorkspaceResponse
+     */
+    public RemoveUserToDataAgentWorkspaceResponse removeUserToDataAgentWorkspaceWithOptions(RemoveUserToDataAgentWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveUserToDataAgentWorkspace"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveUserToDataAgentWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>从空间中移除用户</p>
+     * 
+     * @param request RemoveUserToDataAgentWorkspaceRequest
+     * @return RemoveUserToDataAgentWorkspaceResponse
+     */
+    public RemoveUserToDataAgentWorkspaceResponse removeUserToDataAgentWorkspace(RemoveUserToDataAgentWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeUserToDataAgentWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>SendChatMessage</p>
      * 
      * @param tmpReq SendChatMessageRequest
@@ -2882,6 +3342,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAirflowResponse updateAirflow(UpdateAirflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAirflowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新空间的信息</p>
+     * 
+     * @param request UpdateDataAgentSpaceInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataAgentSpaceInfoResponse
+     */
+    public UpdateDataAgentSpaceInfoResponse updateDataAgentSpaceInfoWithOptions(UpdateDataAgentSpaceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceDesc)) {
+            query.put("WorkspaceDesc", request.workspaceDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataAgentSpaceInfo"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataAgentSpaceInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新空间的信息</p>
+     * 
+     * @param request UpdateDataAgentSpaceInfoRequest
+     * @return UpdateDataAgentSpaceInfoResponse
+     */
+    public UpdateDataAgentSpaceInfoResponse updateDataAgentSpaceInfo(UpdateDataAgentSpaceInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataAgentSpaceInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调整空间成员的角色</p>
+     * 
+     * @param request UpdateDataAgentWorkspaceMemberRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataAgentWorkspaceMemberRoleResponse
+     */
+    public UpdateDataAgentWorkspaceMemberRoleResponse updateDataAgentWorkspaceMemberRoleWithOptions(UpdateDataAgentWorkspaceMemberRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            query.put("RoleName", request.roleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataAgentWorkspaceMemberRole"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataAgentWorkspaceMemberRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调整空间成员的角色</p>
+     * 
+     * @param request UpdateDataAgentWorkspaceMemberRoleRequest
+     * @return UpdateDataAgentWorkspaceMemberRoleResponse
+     */
+    public UpdateDataAgentWorkspaceMemberRoleResponse updateDataAgentWorkspaceMemberRole(UpdateDataAgentWorkspaceMemberRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataAgentWorkspaceMemberRoleWithOptions(request, runtime);
     }
 
     /**
