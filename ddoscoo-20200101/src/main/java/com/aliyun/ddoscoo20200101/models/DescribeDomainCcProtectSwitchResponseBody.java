@@ -78,6 +78,9 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
         @NameInMap("CcEnable")
         public Integer ccEnable;
 
+        @NameInMap("CcGlobalSwitch")
+        public String ccGlobalSwitch;
+
         /**
          * <strong>example:</strong>
          * <p>default</p>
@@ -157,6 +160,14 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
         }
         public Integer getCcEnable() {
             return this.ccEnable;
+        }
+
+        public DescribeDomainCcProtectSwitchResponseBodyProtectSwitchList setCcGlobalSwitch(String ccGlobalSwitch) {
+            this.ccGlobalSwitch = ccGlobalSwitch;
+            return this;
+        }
+        public String getCcGlobalSwitch() {
+            return this.ccGlobalSwitch;
         }
 
         public DescribeDomainCcProtectSwitchResponseBodyProtectSwitchList setCcTemplate(String ccTemplate) {
