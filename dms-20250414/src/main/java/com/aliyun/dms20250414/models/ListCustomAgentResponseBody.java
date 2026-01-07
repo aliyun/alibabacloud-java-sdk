@@ -83,6 +83,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
     }
 
     public static class ListCustomAgentResponseBodyDataContentExecutionConfig extends TeaModel {
+        @NameInMap("SkipAskHuman")
+        public Boolean skipAskHuman;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -90,9 +93,23 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @NameInMap("SkipPlan")
         public Boolean skipPlan;
 
+        @NameInMap("SkipSqlConfirm")
+        public Boolean skipSqlConfirm;
+
+        @NameInMap("SkipWebReportConfirm")
+        public Boolean skipWebReportConfirm;
+
         public static ListCustomAgentResponseBodyDataContentExecutionConfig build(java.util.Map<String, ?> map) throws Exception {
             ListCustomAgentResponseBodyDataContentExecutionConfig self = new ListCustomAgentResponseBodyDataContentExecutionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentResponseBodyDataContentExecutionConfig setSkipAskHuman(Boolean skipAskHuman) {
+            this.skipAskHuman = skipAskHuman;
+            return this;
+        }
+        public Boolean getSkipAskHuman() {
+            return this.skipAskHuman;
         }
 
         public ListCustomAgentResponseBodyDataContentExecutionConfig setSkipPlan(Boolean skipPlan) {
@@ -101,6 +118,22 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
         public Boolean getSkipPlan() {
             return this.skipPlan;
+        }
+
+        public ListCustomAgentResponseBodyDataContentExecutionConfig setSkipSqlConfirm(Boolean skipSqlConfirm) {
+            this.skipSqlConfirm = skipSqlConfirm;
+            return this;
+        }
+        public Boolean getSkipSqlConfirm() {
+            return this.skipSqlConfirm;
+        }
+
+        public ListCustomAgentResponseBodyDataContentExecutionConfig setSkipWebReportConfirm(Boolean skipWebReportConfirm) {
+            this.skipWebReportConfirm = skipWebReportConfirm;
+            return this;
+        }
+        public Boolean getSkipWebReportConfirm() {
+            return this.skipWebReportConfirm;
         }
 
     }
