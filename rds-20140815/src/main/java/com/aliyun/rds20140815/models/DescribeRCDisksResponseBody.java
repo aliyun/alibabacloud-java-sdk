@@ -141,6 +141,9 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         @NameInMap("AttachedTime")
         public String attachedTime;
 
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         /**
          * <p>The category of the disk. Valid values:</p>
          * <ul>
@@ -302,6 +305,9 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        @NameInMap("Portable")
+        public Boolean portable;
+
         /**
          * <p>The region ID.</p>
          * 
@@ -424,6 +430,14 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             return this.attachedTime;
         }
 
+        public DescribeRCDisksResponseBodyDisks setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
+        }
+
         public DescribeRCDisksResponseBodyDisks setCategory(String category) {
             this.category = category;
             return this;
@@ -542,6 +556,14 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+        public DescribeRCDisksResponseBodyDisks setPortable(Boolean portable) {
+            this.portable = portable;
+            return this;
+        }
+        public Boolean getPortable() {
+            return this.portable;
         }
 
         public DescribeRCDisksResponseBodyDisks setRegionId(String regionId) {
