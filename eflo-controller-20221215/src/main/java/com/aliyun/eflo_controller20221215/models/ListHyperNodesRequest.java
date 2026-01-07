@@ -28,6 +28,9 @@ public class ListHyperNodesRequest extends TeaModel {
     @NameInMap("HyperNodeId")
     public String hyperNodeId;
 
+    @NameInMap("HyperNodeIds")
+    public java.util.List<String> hyperNodeIds;
+
     /**
      * <strong>example:</strong>
      * <p>efg1.nvga1</p>
@@ -111,6 +114,14 @@ public class ListHyperNodesRequest extends TeaModel {
     }
     public String getHyperNodeId() {
         return this.hyperNodeId;
+    }
+
+    public ListHyperNodesRequest setHyperNodeIds(java.util.List<String> hyperNodeIds) {
+        this.hyperNodeIds = hyperNodeIds;
+        return this;
+    }
+    public java.util.List<String> getHyperNodeIds() {
+        return this.hyperNodeIds;
     }
 
     public ListHyperNodesRequest setMachineType(String machineType) {

@@ -28,6 +28,9 @@ public class ListHyperNodesShrinkRequest extends TeaModel {
     @NameInMap("HyperNodeId")
     public String hyperNodeId;
 
+    @NameInMap("HyperNodeIds")
+    public String hyperNodeIdsShrink;
+
     /**
      * <strong>example:</strong>
      * <p>efg1.nvga1</p>
@@ -111,6 +114,14 @@ public class ListHyperNodesShrinkRequest extends TeaModel {
     }
     public String getHyperNodeId() {
         return this.hyperNodeId;
+    }
+
+    public ListHyperNodesShrinkRequest setHyperNodeIdsShrink(String hyperNodeIdsShrink) {
+        this.hyperNodeIdsShrink = hyperNodeIdsShrink;
+        return this;
+    }
+    public String getHyperNodeIdsShrink() {
+        return this.hyperNodeIdsShrink;
     }
 
     public ListHyperNodesShrinkRequest setMachineType(String machineType) {
