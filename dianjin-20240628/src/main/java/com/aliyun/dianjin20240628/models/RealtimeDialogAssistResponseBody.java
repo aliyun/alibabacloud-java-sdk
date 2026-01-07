@@ -367,6 +367,9 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         @NameInMap("conversationModel")
         public java.util.List<RealtimeDialogAssistResponseBodyDataConversationModel> conversationModel;
 
+        @NameInMap("interrupt")
+        public Boolean interrupt;
+
         /**
          * <strong>example:</strong>
          * <p>0FC6636E-380A-5369-AE01-D1C15BB9B254</p>
@@ -416,6 +419,14 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
         public java.util.List<RealtimeDialogAssistResponseBodyDataConversationModel> getConversationModel() {
             return this.conversationModel;
+        }
+
+        public RealtimeDialogAssistResponseBodyData setInterrupt(Boolean interrupt) {
+            this.interrupt = interrupt;
+            return this;
+        }
+        public Boolean getInterrupt() {
+            return this.interrupt;
         }
 
         public RealtimeDialogAssistResponseBodyData setRequestId(String requestId) {

@@ -56,6 +56,13 @@ public class RealtimeDialogAssistRequest extends TeaModel {
     public String requestId;
 
     /**
+     * <strong>example:</strong>
+     * <p>你好</p>
+     */
+    @NameInMap("scriptContentPlayed")
+    public String scriptContentPlayed;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +70,9 @@ public class RealtimeDialogAssistRequest extends TeaModel {
      */
     @NameInMap("sessionId")
     public String sessionId;
+
+    @NameInMap("userVad")
+    public Boolean userVad;
 
     public static RealtimeDialogAssistRequest build(java.util.Map<String, ?> map) throws Exception {
         RealtimeDialogAssistRequest self = new RealtimeDialogAssistRequest();
@@ -125,6 +135,14 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         return this.requestId;
     }
 
+    public RealtimeDialogAssistRequest setScriptContentPlayed(String scriptContentPlayed) {
+        this.scriptContentPlayed = scriptContentPlayed;
+        return this;
+    }
+    public String getScriptContentPlayed() {
+        return this.scriptContentPlayed;
+    }
+
     public RealtimeDialogAssistRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -133,7 +151,29 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         return this.sessionId;
     }
 
+    public RealtimeDialogAssistRequest setUserVad(Boolean userVad) {
+        this.userVad = userVad;
+        return this;
+    }
+    public Boolean getUserVad() {
+        return this.userVad;
+    }
+
     public static class RealtimeDialogAssistRequestConversationModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("begin")
+        public Integer begin;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2025-12-12 09:00:00</p>
+         */
+        @NameInMap("beginTime")
+        public String beginTime;
+
         /**
          * <p>This parameter is required.</p>
          */
@@ -162,6 +202,13 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public String customerServiceType;
 
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("end")
+        public Integer end;
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +227,22 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         public static RealtimeDialogAssistRequestConversationModel build(java.util.Map<String, ?> map) throws Exception {
             RealtimeDialogAssistRequestConversationModel self = new RealtimeDialogAssistRequestConversationModel();
             return TeaModel.build(map, self);
+        }
+
+        public RealtimeDialogAssistRequestConversationModel setBegin(Integer begin) {
+            this.begin = begin;
+            return this;
+        }
+        public Integer getBegin() {
+            return this.begin;
+        }
+
+        public RealtimeDialogAssistRequestConversationModel setBeginTime(String beginTime) {
+            this.beginTime = beginTime;
+            return this;
+        }
+        public String getBeginTime() {
+            return this.beginTime;
         }
 
         public RealtimeDialogAssistRequestConversationModel setContent(String content) {
@@ -212,6 +275,14 @@ public class RealtimeDialogAssistRequest extends TeaModel {
         }
         public String getCustomerServiceType() {
             return this.customerServiceType;
+        }
+
+        public RealtimeDialogAssistRequestConversationModel setEnd(Integer end) {
+            this.end = end;
+            return this;
+        }
+        public Integer getEnd() {
+            return this.end;
         }
 
         public RealtimeDialogAssistRequestConversationModel setRole(Integer role) {

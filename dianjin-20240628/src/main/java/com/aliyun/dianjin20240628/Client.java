@@ -2481,8 +2481,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("requestId", request.requestId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptContentPlayed)) {
+            body.put("scriptContentPlayed", request.scriptContentPlayed);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             body.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userVad)) {
+            body.put("userVad", request.userVad);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
